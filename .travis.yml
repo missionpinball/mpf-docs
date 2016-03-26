@@ -2,7 +2,7 @@ language: python
 python:
   - "3.4"
 
-install: "pip install sphinx sphinx_boostrap_theme"
+install: "pip3 install sphinx_bootstrap_theme"
 
 script: "make html"
 
