@@ -1,3 +1,6 @@
+This document explains how to create a new branch of mpf-docs for a new version of MPF. If you're looking for
+instructions on how to edit or use the documentation, see README.md
+
 To create a new branch for a new version of MPF:
 ------------------------------------------------
 

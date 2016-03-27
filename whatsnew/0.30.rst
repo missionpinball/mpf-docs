@@ -1,5 +1,5 @@
-MPF 0.30.0 Release Notes
-========================
+What's New In MPF 0.30
+======================
 
 Version 0.30 is the biggest change to MPF yet in terms of changes to a
 single version. We knew we had to make some big changes at some point
@@ -45,8 +45,8 @@ The Media Controller is now a separate package from MPF
 -------------------------------------------------------
 Starting in MPF 0.30, the MPF Media Controller (also referred to as
 the "Media Controller" or simply the "MC") is now a separate package
-from MPF. This means there are two packages in GitHub: `mpf`_ (the MPF
-core engine) and `mpf-mc`_ (the media controller). We did this for
+from MPF. This means there are two packages in GitHub: `mpf <https://github.com/missionpinball/mpf/>`_ (the MPF
+core engine) and `mpf-mc <https://github.com/missionpinball/mpf-mc/>`__ (the media controller). We did this for
 several reasons:
 
 + It allows us to tie the pre-reqs for the MC to the MC package,
