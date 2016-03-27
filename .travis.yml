@@ -9,7 +9,9 @@ install:
 script: "make html"
 
 after_success:
-    "find _build/html -type f -exec curl --ftp-create-dirs -T {} -u $USER:$PASSWORD ftp://missionpinball.com/docs/0.30/{} \\;"
+  - "cd _build"
+  - "cd html"
+  - "find . -type f -exec curl --ftp-create-dirs -T {} -u $USER:$PASSWORD ftp://missionpinball.com/docs/0.30/{} \\;"
 
 env:
   global:
