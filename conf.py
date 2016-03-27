@@ -125,8 +125,10 @@ html_theme_options = {
     'navbar_site_name': "All Docs",
     'navbar_pagenav_name': "This Page",
     'globaltoc_depth': -1,
-    # 'navbar_class': "navbar navbar-inverse",
     'bootswatch_theme': "cosmo",
+    'navbar_sidebarrel': False,
+    'navbar_pagenav': False,
+    'source_link_position': False,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -167,7 +169,7 @@ html_last_updated_fmt = '%b %d, %Y'
 html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+# html_sidebars = {'**': ['localtoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
