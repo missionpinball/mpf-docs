@@ -60,7 +60,7 @@ author = 'The Mission Pinball Framework Team'
 # built documents.
 #
 # The short X.Y version.
-version = '0.30.0'
+version = '0.30'
 # The full version, including alpha/beta/rc tags.
 release = '0.30.0'
 
