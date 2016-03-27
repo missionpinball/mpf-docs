@@ -9,7 +9,7 @@
         </button>
         <a class="navbar-brand" href="{{ pathto(master_doc) }}">
           {%- block sidebarlogo %}
-            {%- if logo %}<img src="{{ pathto('_static/' + logo, 1) }}">{%- endif %}
+            {%- if logo %}<img class="pull-left" src="{{ pathto('_static/' + logo, 1) }}">{%- endif %}
           {%- endblock %}
           {% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}
         </a>
@@ -32,7 +32,7 @@
                   <ul class="dropdown-menu localtoc"
                       role="menu"
                       aria-labelledby="dLabelLocalToc"><ul>
-                <li><a class="reference internal" href="docs.missionpinball.com/0.30">0.30</a></li>
+                <li><a class="reference internal" href="http://docs.missionpinball.com/0.30">0.30</a></li>
                 <li><a class="reference internal" href="https://missionpinball.com/docs">0.21</a></li>
                 </ul>
                 </ul>

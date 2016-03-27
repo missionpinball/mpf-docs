@@ -44,3 +44,9 @@
     padding-top:0;
   }
 }
+
+.navbar-brand img {
+  margin-top: -6px;
+  margin-right: 10px;
+  margin-left: -70px;
+}
