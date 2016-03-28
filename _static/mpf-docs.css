@@ -1,7 +1,6 @@
 #sidebar {
   height: 100%;
-  padding-top: 20px;
-  font-size: 13px;
+  padding-top: 25px;
 }
 #sidebar .nav {
   width: 95%;
@@ -61,4 +60,8 @@ h2 em {
   height: auto;
   padding: 1px 2px;
   margin-block-end: 9px;
+}
+
+.jstree-default .jstree-clicked {
+  box-shadow: none;
 }
