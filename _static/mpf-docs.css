@@ -45,11 +45,21 @@
   }
 }
 
+/* Align the logo in the navbar */
 .navbar-brand img {
   margin-top: -6px;
   margin-right: 10px;
 }
 
+/* Make h2 <em> not italics */
+
 h2 em {
-    font-style: normal;
+  font-style: normal;
 }
+
+/* Add space under the nav buttons in the body */
+
+.col-sm-9 {
+  margin-bottom: 10px
+}
+

@@ -131,7 +131,7 @@ html_theme_options = {
     'source_link_position': False,
 }
 
-html_add_permalinks = False
+html_add_permalinks = ''
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []

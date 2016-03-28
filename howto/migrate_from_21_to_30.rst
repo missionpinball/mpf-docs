@@ -1,11 +1,17 @@
+How to Migrate from MPF 0.21 to MPF 0.30
+========================================
 
 This How To guide walks you through updating your machine configs and
-code from MPF 0.21 (released in Dec, 2015) to MPF 0.30. Note that we
-skipped a few versions since so much changed from 0.21, which is why
-this is now 0.30. Also note that 0.30 is pronounced "thirty", not
-"three", as MPF 0.3 was released in July 2014. (We use semantic
-versioning, which means version number order is different than
-mathematical order. Details `here`_.) This guide was last updated on
+code from MPF 0.21 (released in Dec, 2015) to MPF 0.30.
+
+.. note:: We skipped a few versions since so much changed from 0.21, which is why
+   MPF is now 0.30. Also note that 0.30 is pronounced "thirty", not
+   "three", as MPF 0.3 was released in July 2014. (We use semantic
+   versioning, which means version number order is different than
+   mathematical order. Details `here <http://semver.org>`_.)
+
+
+This guide was last updated on
 March 16, 2016. At this point MPF 0.30 is not actually released. So
 this documentation currently applies to the pre-release "dev" version.
 Feel free to use it to start playing with MPF 0.30 today, but know
