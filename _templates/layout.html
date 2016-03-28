@@ -16,6 +16,7 @@
         '_static/bootswatch-' + bootstrap_version + '/' + theme_bootswatch_theme + '/bootstrap.min.css',
         '_static/bootstrap-sphinx.css',
         '_static/mpf-docs.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css',
       ]
     %}
   {% else %}
@@ -46,6 +47,8 @@
     '_static/bootstrap-' + bootstrap_version + '/js/bootstrap.min.js',
     '_static/bootstrap-sphinx.js',
     '_static/mpf-docs.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js',
   ]
 %}
 
@@ -76,7 +79,9 @@
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-            {{ toctree()|replace("li class=\"toctree", "li class=\"d")  }}
+            <div id="jstree">
+                {{ toctree(maxdepth=4)|replace("li class=\"toctree", "li class=\"d")  }}
+            </div>
         </div>
     <div class="col-xs-12 col-sm-9">
       {% block body %}{% endblock %}
@@ -109,10 +114,23 @@
       {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
     {%- endif %}
     {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created with <a href="http://sphinx-doc.org/">Sphinx</a> &
-      <a href="http://getbootstrap.com/">Bootstrap</a>.{% endtrans %}<br/>
+      {% trans sphinx_version=sphinx_version|e %}Created with <a href="http://sphinx-doc.org/">Sphinx</a>,
+      <a href="http://getbootstrap.com/">Bootstrap</a>, & <a href="https://www.jstree.com/">jsTree.</a>{% endtrans %}<br/>
     {%- endif %}
     </p>
   </div>
 </footer>
+    <script>
+    $(function () {
+    $('#jstree').jstree();
+    $('#jstree').on("changed.jstree", function (e, data) {
+      console.log(data.selected);
+    });
+    $('button').on('click', function () {
+      $('#jstree').jstree(true).select_node('child_node_1');
+      $('#jstree').jstree('select_node', 'child_node_1');
+      $.jstree.reference('#jstree').select_node('child_node_1');
+    });
+    });
+    </script>
 {%- endblock %}
