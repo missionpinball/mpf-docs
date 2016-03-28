@@ -51,10 +51,24 @@ Sometimes it's more convenient to specify the timing of a step in a show relativ
 that, enter the *time* value with a + in front of it, like this:
 
 ::
+
    time: +1
 
-Note that you *can* mix-and-match incremental and absolute times in the same show, and you can also combine the plus
-sign for relative times with seconds or millisecond values.
+Note that you can mix-and-match incremental and absolute times in the same show, and you can also combine the plus
+sign for relative times with seconds or millisecond values. For example:
+
+::
+
+  - time: 0  # plays right away, at 0 seconds
+    ...
+  - time: +1  # plays 1 sec after the previous, 1 sec after show start
+    ...
+  - time: +1  # plays 1 sec after the previous, 2 secs after show start
+    ...
+  - time: 4  # plays 4 seconds after show start, 2 secs after the previous
+    ...
+  - time: +1  # plays 1 sec after the previous, 5 secs after show start
+    ...
 
 Setting the duration of the last step
 -------------------------------------
