@@ -1,0 +1,121 @@
+
+The `dmd:` section of your machine configuration file is how you
+configure your DMD (dot matrix display). Note that you need to do this
+for both physical DMDs *and* if you just want to have a virtual
+window-based DMD that looks like an old school physical DMD. This
+sectioncan be used in your machine-wide config files. This section
+*cannot* be used in mode-specific config files. Here's an example of a
+traditional single-color DMD:
+
+
+::
+
+    
+    dmd:
+        physical: yes
+        width: 128
+        height: 32
+        shades: 16
+        fps: auto
+
+
+And here's an example of a full-color DMD:
+
+
+::
+
+    
+    dmd:
+        physical: yes
+        width: 128
+        height: 32
+        fps: auto
+        type: color
+
+
+Specific settings include:
+
+
+
+physical:
+~~~~~~~~~
+
+This is a True / False (or Yes / No) entry which is used to specify
+whether you have a physical DMD attached. A "physical DMD" in this
+case is a hardware DMD connected to a P-ROC or FAST Pinball Controller
+via the 14-pin ribbon cable, or a "SmartMatrix" RGB LED-based DMD. If
+you configure this for *no*, then your physical DMD won't work, but
+you can still configure a virtual dot-like DMD display element for
+your on screen LCD window (which can be single- or full-color). The
+default is "No."
+
+
+
+width:
+~~~~~~
+
+The width of your DMD in pixels. If you have a traditional single-
+color physical pinball hardware DMD connected via the 14-pin DMD
+cable, this will be `128`. If you don't have a physical DMD (and
+you're just configuring the DMD here so you can have an on screen
+virtual DMD), then you can set this to whatever you want. (You can
+even go higher than 128 if you want high res while keeping the look of
+dots.) The default is 128.
+
+
+
+height:
+~~~~~~~
+
+The height of your DMD in pixels. Like `width:`above, if you have a
+physical pinball DMD attached then this will be `32`. If you're
+setting up your DMD for use as a virtual on screen DMD, then this can
+be whatever you want. The default is 32.
+
+
+
+shades:
+~~~~~~~
+
+This is the total number of shades (intensity levels) your mono-color
+DMD can support. Most of your favorite 90s Williams/Bally games used 4
+shades (loosely called "bright orange," "orange", "dark orange", and
+"off"), though today's pinball controllerscan drive 16 shades (even on
+old pinball machines with old high-voltage gas DMDs). If you use a
+value other than 16 here then you'll have to make sure that any images
+and animations you import are also set to only use your smaller number
+of shades. You can also go higher than 16 if you don't have a physical
+DMD (since the on screen virtual DMD can use as many shades as you
+want). If you have a color DMD, this setting is ignored. The default
+value is 16.
+
+
+
+fps:
+~~~~
+
+How many frames per second you want you DMD to operate at. The default
+value is `auto`which means it will operate at the same speed as your
+`Machine HZ`_. Note that you can't set this higher than your machine
+Hz. (Well, you can, but it would just update at the machine Hz rate.)
+Also some display hardware has speed limitations, so if you're running
+your machine Hz at a really high rate (say, higher than 60) then you
+should hard code your DMD fps to something more sane here. The default
+is "auto."
+
+
+
+type:
+~~~~~
+
+This is let's you specify whether you have a mono-color or full-color
+DMD. The only valid option here is `type: color` (for full-color
+DMDs). Any other value, or a not including this setting in your DMD
+config, means that the DMD will be setup as a mono-color DMD. This
+setting affects this DMD regardless of whether it's phsyical or
+virtual. ("Virtual" meaning it's show in a window on your LCD via the
+Virtual DMD display element.)
+
+.. _Machine HZ: https://missionpinball.com/docs/mpf-core-architecture/machine-hz-loop-rates/
+
+

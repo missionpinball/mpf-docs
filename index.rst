@@ -6,11 +6,15 @@
 Mission Pinball Framework 0.30.0 documentation
 ==============================================
 
-Welcome! This is the documentation for the Mission Pinball Framework (MPF) v0.30.0
+Welcome! This is the documentation for the Mission Pinball Framework (MPF) v0.30.0, last updated |today|.
+
+.. note:: This is the new documentation site for MPF documentation, starting with MPF v0.30. Everything you see here
+   has been updated and applies to MPF 0.30. However, we have 342 separate documents to update with 206,937 total words,
+   so this process may take awhile. :)
 
 :doc:`What's new in MPF 0.30? </whatsnew/0.30>`
 -----------------------------------------------
-Or all `"What's New" </whatsnew/index>` documents
+Or all `"What's New" </whatsnew/index>`_ documents
 
 :doc:`Tutorial </tutorial/index>`
 ---------------------------------
@@ -29,8 +33,8 @@ Installation & Setup
 FAQs
 ----
 
-How to Recipes / "Cookbook"
----------------------------
+How to Guides / "Cookbook"
+--------------------------
 
 Contributing to MPF
 -------------------

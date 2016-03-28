@@ -1,0 +1,39 @@
+
+The *system11:* section of the machine-wide config file contains
+settings which control how MPF works with System 11 machines. See the
+`How To guide for System 11 machines`_ for details of this interface.
+This sectioncan be used in your machine-wide config files. This
+section *cannot* be used in mode-specific config files.
+
+
+::
+
+    
+    system11:
+        ac_relay_delay_ms: 75
+        ac_relay_driver_number: c14
+
+
+
+
+ac_relay_delay_ms:
+~~~~~~~~~~~~~~~~~~
+
+The number of milliseconds MPF waits before and after flipping the A/C
+select relay to allow for it to fully switch positions. Default is
+*75ms*.
+
+
+
+ac_relay_driver_number:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The driver (with a “C” added to it) from the operator's manual of your
+System 11 machine which controls the A/C select relay. Note that this
+relay is labeled differently in different manuals. Sometimes it's
+called the *A/C Select Relay*, and sometimes it’s called the *Solenoid
+Select Relay*.
+
+.. _How To guide for System 11 machines: https://missionpinball.com/docs/howto/system-11/
+
+

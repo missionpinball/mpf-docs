@@ -1,0 +1,54 @@
+
+MPF supports dot matrix displays (DMD) devices. It can support
+physical devices plugged into the 14-pin DMD ribbon cable on a modern
+pinball controller, as well as on-screen "virtual" DMDs: ` `_` `_ For
+physical DMDs (left photo above), MPF can support up to 16 shades of
+pixel brightness for traditional mono-color DMDs. (This can be both
+new LED-style and older gas discharge displays, and even old displays
+that were only only 2 or 4 shades can be driven at 16 shades by modern
+pinball hardware.)MPF can support refresh rates at the limit of the
+hardware, typically about 60 Hz. MPF can also support newer full color
+RGB LED "matrix" displays that are arrays of RGB LEDs. (These are
+similar to the Color DMD product, except they're actual arrays of RGB
+LEDs and not an LCD screen.) MPF can also drive on screen virtual DMDs
+(right photo above). You can configure the color of the dots, the
+shape, the spacing between pixels, etc. You can also specify the size
+of how big the DMD is rendered on screen, including rendering it in
+"life size" at high resolution (meaning you could put an LCD monitor
+in your backbox instead of a hardware DMD to save money. ($70 for a
+14" LCD versus $400 for a DMD) MPF can also support driving a physical
+DMD and on screen virtualDMD at the same time. (With the DMD content
+from the physical DMD automatically showing up in the virtual DMD.)
+
+
+
+What about Color DMDs?
+----------------------
+
+MPF can support both "real" and "LCD" color DMDs. LCD color DMDs
+aren't physical DMDs per say, rather, they're LCD monitors in the back
+box which run software to make the displays look like they're low-
+resolution color DMDs. (So we use modern high-res displays to look
+like they're simple multi-color hardware DMDs.) "Real" color DMDs are
+matrix arrays of RGB LEDs (often referred to as "Smart Matrix"
+displays) which you drive via separate hardware such as a Teensy with
+SmartMatrix shield. In either case, you create your content for a low-
+res DMD which you then display on an LCD window or on the physical
+matrix hardware: ` `_ All DMD options let you adjust the pixel style
+and spacing, color palettes, and other characteristics of the display
+to get it dialed in exactly how you like it.
+
+
+
+Configuring your DMD
+--------------------
+
+You configure your DMD in the ` `dmd:` section`_ of your machine
+configuration file. If you would also like to have a virtual DMD in
+your on screen window, youconfigure that as a `virtual_dmd display
+element`_.
+
+.. _ section: https://missionpinball.com/docs/configuration-file-reference/dmd/
+.. _virtual_dmd display element: https://missionpinball.com/docs/displays/display-elements/virtual-dmd/
+
+

@@ -1,0 +1,103 @@
+
+The *tilt:* section of your config lets you specify the settings that
+the tilt mode will use to process tilts. This sectioncan be used in
+your machine-wide config files. This sectioncanbe used in mode-
+specific config files. Here's an example:
+
+
+::
+
+    
+    tilt:
+      tilt_warning_switch_tag: tilt_warning
+      tilt_switch_tag: tilt
+      slam_tilt_switch_tag: slam_tilt
+      warnings_to_tilt: 3
+      reset_warnings_events: ball_ended
+      multiple_hit_window: 300ms
+      settle_time: 5s
+      tilt_warnings_player_var: tilt_warnings
+
+
+Let's look at each of these settings in more detail:
+
+
+
+tilt_warning_switch_tag:
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The tag of the switch (or switches) that will cause a tilt warning to
+occur. When a switch tagged with this tag is activated for the
+*warnings_to_tilt* value, a tilt will occur. The count that keeps
+track of these warnings is specified in the
+*tilt_warnings_player_var*.
+
+
+
+tilt_switch_tag:
+~~~~~~~~~~~~~~~~
+
+The tag of the switch (or switches) that will cause a tilt to occur.
+Switches with this tag do not use the tilt warnings, rather they cause
+a tilt to occur immediately. So don't use this for the plumb bob (use
+the *tilt_warning_switch_tag* for that). Instead this might be for an
+older machine that has the roller ball tilt that detects the front of
+the machine being lifted off the ground.
+
+
+
+slam_tilt_switch_tag:
+~~~~~~~~~~~~~~~~~~~~~
+
+The tag of the switch (or switches) that, when activated, will cause a
+slam tilt to occur.
+
+
+
+warnings_to_tilt:
+~~~~~~~~~~~~~~~~~
+
+The number of warnings that will generate a tilt. The tilt is the
+result of the last warning here, so a value of 3 here means the player
+will get 2 warnings and then tilt on the 3rd.
+
+
+
+reset_warnings_events:
+~~~~~~~~~~~~~~~~~~~~~~
+
+A event (or list of events, in `MPF device control event format`_)
+that will reset the number of warnings for the player. For example, if
+you configure your machine for three warnings to tilt, if
+*reset_warnings_events* is *ball_ended* then that means the player
+will get two warnings per ball before the tilt. If you change it to
+*game_ended*, that means they'll get two warnings per game.
+
+
+
+multiple_hit_window:
+~~~~~~~~~~~~~~~~~~~~
+
+The amount of time (in `MPF time string format`_) where multiple hits
+to the tilt warning switch will be counted as a single warning.
+
+
+
+settle_time:
+~~~~~~~~~~~~
+
+The amount of time (in `MPF time string format`_) that has to pass
+before the next ball will be served after a tilt.
+
+
+
+tilt_warnings_player_var:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The name of the player variable that will be used to track the number
+of tilt warnings.
+
+.. _MPF time string format: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/entering-time-duration-values/
+.. _MPF device control event format: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/configuring-device-control-events/
+
+
