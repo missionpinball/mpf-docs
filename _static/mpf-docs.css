@@ -1,14 +1,12 @@
 #sidebar {
   height: 100%;
-  padding-right: 0;
   padding-top: 20px;
+  font-size: 13px;
 }
 #sidebar .nav {
   width: 95%;
 }
 #sidebar li {
-  border:0 #f2f2f2 solid;
-  border-bottom-width:1px;
   list-style-type: none;
 }
 
@@ -55,4 +53,12 @@
 
 h2 em {
   font-style: normal;
+}
+
+.jstree-default .jstree-anchor {
+  line-height: 15px;
+  white-space: normal !important;
+  height: auto;
+  padding: 1px 2px;
+  margin-block-end: 9px;
 }

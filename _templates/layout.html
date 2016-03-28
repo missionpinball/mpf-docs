@@ -15,8 +15,8 @@
     {% set theme_css_files = theme_css_files + [
         '_static/bootswatch-' + bootstrap_version + '/' + theme_bootswatch_theme + '/bootstrap.min.css',
         '_static/bootstrap-sphinx.css',
-        '_static/mpf-docs.css',
         'https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css',
+        '_static/mpf-docs.css',
       ]
     %}
   {% else %}
@@ -46,9 +46,9 @@
     '_static/js/jquery-fix.js',
     '_static/bootstrap-' + bootstrap_version + '/js/bootstrap.min.js',
     '_static/bootstrap-sphinx.js',
-    '_static/mpf-docs.js',
     'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js',
+    '_static/mpf-docs.js',
   ]
 %}
 
@@ -80,8 +80,7 @@
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div id="jstree">
-                {{ toctree(maxdepth=4)|
-                replace("li class=\"toctree", "li class=\"d")|
+                {{ toctree(maxdepth=4, titles_only=True, collapse=False)|
                 replace("a class=\"current", "a class=\"jstree-clicked")|
                 replace("current", "jstree-open") }}
             </div>
@@ -124,22 +123,27 @@
   </div>
 </footer>
     <script>
+    $.jstree.defaults.core.themes.dots = false;
+    $.jstree.defaults.core.themes.icons = false;
     $(function () {
-    $('#jstree').jstree();
-    $('#jstree').on("changed.jstree", function (e, data) {
-      console.log(data.selected);
-    });
-    $('button').on('click', function () {
-      $('#jstree').jstree(true).select_node('child_node_1');
-      $('#jstree').jstree('select_node', 'child_node_1');
-      $.jstree.reference('#jstree').select_node('child_node_1');
-    });
+        $('#jstree').jstree({
+            "plugins" : [ "wholerow" ]
+        });
+
+        $('#jstree').on("changed.jstree", function (e, data) {
+            console.log(data.selected);
+        });
+
+        $('button').on('click', function () {
+            $('#jstree').jstree('select_node', 'child_node_1');
+        });
     });
 
     $("#jstree").jstree().bind("select_node.jstree", function (e, data) {
      var href = data.node.a_attr.href;
      document.location.href = href;
     });
+
 
     </script>
 {%- endblock %}
