@@ -80,7 +80,10 @@
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div id="jstree">
-                {{ toctree(maxdepth=4)|replace("li class=\"toctree", "li class=\"d")  }}
+                {{ toctree(maxdepth=4)|
+                replace("li class=\"toctree", "li class=\"d")|
+                replace("a class=\"current", "a class=\"jstree-clicked")|
+                replace("current", "jstree-open") }}
             </div>
         </div>
     <div class="col-xs-12 col-sm-9">
@@ -132,5 +135,11 @@
       $.jstree.reference('#jstree').select_node('child_node_1');
     });
     });
+
+    $("#jstree").jstree().bind("select_node.jstree", function (e, data) {
+     var href = data.node.a_attr.href;
+     document.location.href = href;
+    });
+
     </script>
 {%- endblock %}
