@@ -80,16 +80,14 @@
         </div>
     <div class="col-xs-12 col-sm-9">
       {% block body %}{% endblock %}
+        <ul class="pager">
         {% if prev %}
-            <a href={{ prev.link|e }} role="button">
-                <button  type="button" class="btn btn-primary pull-left">{{ prev.title }}</button>
-            </a>
+          <li class="previous"><a href={{ prev.link|e }}>Previous: <em>{{ prev.title }}</em></a></li>
         {% endif %}
         {% if next %}
-            <a href={{ next.link|e }} role="button">
-                <button type="button" class="btn btn-primary pull-right">{{ next.title }}</button>
-            </a>
+          <li class="next"><a href={{ next.link|e }}>Next: <em>{{ next.title }}</em></a></li>
         {% endif %}
+        </ul>
     </div>
     {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
   </div>
