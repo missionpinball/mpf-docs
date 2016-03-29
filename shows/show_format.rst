@@ -123,8 +123,8 @@ millisecond values. For example:
 Note that since shows use YAML formatting, you can use the hash sign (``#``) to
 add comments which MPF ignores.
 
-Setting the duration of the last step
--------------------------------------
+Setting the duration of the final step
+--------------------------------------
 Since the time values of shows control the timing of when a step starts, you
 need to add a final step with no actions to the end of your show which controls
 the duration of the final step.
