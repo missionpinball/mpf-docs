@@ -1,15 +1,16 @@
 Getting Started with MPF
 ========================
 
-We assume that if you're on this page, you know what the Mission Pinball Framework (which we often refer to as *MPF*)
-is. If not, checkout out our overview of the `MPF Project <https://missionpinball.com/mpf/>`_.
+We assume that if you're on this page, you know what the Mission Pinball
+Framework is (which we often refer to as *MPF*). If not, checkout out our overview of the `MPF Project <https://missionpinball.com/mpf/>`_.
 
-If you're still reading, it's because you want to write your own software to control a pinball machine. Awesome! MPF
-will try to make that as easy as possible, but it's going to be a lot of work. "Pinball is hard", as many have said.
-Even with MPF, pinball is still hard.
+If you're still reading, it's because you want to write your own software to
+control a pinball machine. Awesome! MPF will try to make that as easy as
+possible, but it's going to be a lot of work. "Pinball is hard", as many have
+said. Even with MPF, pinball is still hard.
 
-The good news is that MPF tries to make the software part of creating a pinball machine easy. MPF does all the boring
-stuff so you can focus on the fun parts.
+The good news is that MPF tries to make the software part of creating a pinball
+machine easy. MPF does all the boring stuff so you can focus on the fun parts.
 
 You'll use MPF to configure and control everything in your machine, including:
 
@@ -23,9 +24,10 @@ You'll use MPF to configure and control everything in your machine, including:
 * Player management, including player progress and tracking towards goals.
 * Plus lots of other things that we'll get to eventually.
 
-We tried to build all this "standard" pinball stuff into the base MPF project in a way that lets you configure
-everything with text-based configuration files that are easy for beginners and people without prior programming
-experience to understand.
+We tried to build all this "standard" pinball stuff into the base MPF project in
+a way that lets you configure everything with text-based configuration files
+that are easy for beginners and people without prior programming experience to
+understand.
 
 We also built MPF so that it's hardware-independent. It currently supports `FAST Pinball <http://fastpinball.com>`_ (Core,
 WPC, and Nano) controllers, `Multimorphic <http://www.pinballcontrollers.com>`_ (P-ROC and P3-ROC) controllers, and the

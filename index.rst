@@ -8,7 +8,7 @@ Welcome! This is the documentation for the Mission Pinball Framework (MPF) |rele
    applies to MPF 0.30. Documentation for prior versions of MPF is still available
    at *missionpinball.com/docs*.
 
-This documentation is available for :doc:`/download` in many popular formats.
+This documentation is available for :doc:`download</download>` in many popular formats.
 
 Documentation Migration Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
