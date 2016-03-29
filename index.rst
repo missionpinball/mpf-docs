@@ -67,7 +67,7 @@ Common questions (and answers) about MPF.
 Wanna help? We'd love it! (Even if you can't write code, you can help with the
 documentation.)
 
-:doc:`/License & copyright </license>`
+:doc:`License & copyright </license>`
 --------------------------------------
 The MPF code is licensed via the MIT license. The documentation is licensed
 via Creative Commons Attribution 4.0 International (CC BY 4.0). Both of these

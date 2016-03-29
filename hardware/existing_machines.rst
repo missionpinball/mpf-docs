@@ -16,8 +16,8 @@ Pinball Framework on there.
 (As a side note, if you want to write software which runs on the original 6809
 Williams hardware, check out Brian Dominy's `FreeWPC project <http://freewpc.googlecode.com>`_.
 You can use FreeWPC to write new game code in C++, compile it for the 6809, burn
- it to a ROM chip, and replace your existing machine ROMs with your custom ones.
-  Crazy! And awesome!)
+it to a ROM chip, and replace your existing machine ROMs with your custom ones.
+Crazy! And awesome!)
 
 If you want to use MPF to write your own custom game code for an *existing*
 Williams or Stern pinball machine, you replace the originalCPU board in the
