@@ -6,6 +6,7 @@ MPF Documentation
 
    Start here </intro/index>
    Installation </installation/index>
+   Supported hardware </hardware/index>
    Tutorial </tutorial/index>
    How to guides / Recipes </howto/index>
    Shows </shows/index>

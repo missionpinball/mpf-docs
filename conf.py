@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Mission Pinball Framework Documentation documentation build configuration
+# Mission Pinball Framework documentation build configuration
 # file, created by sphinx-quickstart on Fri Mar 25 18:39:44 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -34,6 +34,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
+    'sphinxcontrib.css3image',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
