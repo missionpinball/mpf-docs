@@ -1,0 +1,2 @@
+mpf both (MPF command)
+======================

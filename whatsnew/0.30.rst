@@ -1,4 +1,4 @@
-What's New In MPF 0.30
+What's new in MPF 0.30
 ======================
 
 Version 0.30 is the biggest change to MPF yet in terms of changes to a
@@ -9,20 +9,21 @@ fundamental concepts of MPF did not change, (it's mostly internal
 architecture stuff). Also, we have a migration tool which will migrate
 your existing config files and show files to the new format, so you
 should be able to get your game up and running quickly on the new
-version. Note that this document merely lists the big new features and
-changes to MPF 0.30. All of these changes will be incorporated into
-the general MPF documentation as we get that documentation updated. If
-you have an existing machine project on MPF 0.21, refer to our MPF
-0.21 to MPF 0.30 migration guide for details on how to migrate your
-machine code and configs to MPF 0.30. Here's an overview of the
-changes to MPF in v0.30. Not every change is listed here, but these
-are the big ones:
+version.
+
+Note that this document merely lists the big new features and changes to MPF 0.30. All of
+these changes will be incorporated into the general MPF documentation as we get
+that documentation updated. If you have an existing machine project on MPF
+0.21, refer to our MPF 0.21 to MPF 0.30 :doc:`migration guide </howto/migrate_from_21_to_30>`
+for details on how to migrate your machine
+code and configs to MPF 0.30. Here's an overview of the changes to MPF in
+v0.30. Not every change is listed here, but these are the big ones:
 
 
 MPF now requires Python 3
 -------------------------
 Prior versions of MPF used Python 2.7. Python 2.7 is now about 8 years
-old, and no longer receives new features. Python 3 was released in
+old and no longer receives new features. Python 3 was released in
 2008 and is currently on version 3.5. MPF 0.30 requires at least
 Python 3.4. If you plan to use the MPF Media Controller on Windows
 (more on that in a bit), you need to use Python 3.4. If you're on Mac
@@ -91,9 +92,9 @@ with Pygame, including:
   on the screen, which is a problem for machines that have an LCD in the
   backbox that is partially obscured.
 
-The `Kivy`_ multimedia library is modern and updated often. It
-leverages modern base multimedia libraries (like `SDL2`_ and
-`GStreamer`_), and it can fully leverage the GPU. It's also licensed
+The `Kivy <http://kivy.org>`_ multimedia library is modern and updated often. It
+leverages modern base multimedia libraries (like SDL2 and GStreamer),
+and it can fully leverage the GPU. It's also licensed
 via the MIT license (which is the license MPF uses), and Kivy apps can
 also be built for iOS and Android (in addition to Windows, Mac, and
 Linux), opening up future possibilities for MPF.
@@ -104,7 +105,7 @@ Proper Python package installers, and inclusion in PyPI
 Starting in MPF 0.30, we have created "proper" Python installers
 (rather than the hand-build scripts we used in the past). We have also
 uploaded the MPF source packages into the Python Package Index
-(`PyPI`_, also called the "Cheese Shop"), which is sort of like an app
+(PyPI, also called the "Cheese Shop"), which is sort of like an app
 store for Python packages. This means that installing MPF is now as
 simple as running `pip install mpf` from a command line, and it will
 automatically connect and download all the prerequisites you need.
@@ -225,7 +226,7 @@ shared from a base class and each individual player only needs to know
 how to deal with its own type of devices.
 
 
-Shows become playlists
+Playlists become shows
 ~~~~~~~~~~~~~~~~~~~~~~
 Prior versions of MPF were very hit-or-miss when it came to putting
 together playlists, again because every component had to implement its
@@ -275,7 +276,7 @@ Show in MPF 0.30:
       leds: ...
     - time: +2
 
-The *time:* entries in shows are `standard MPF time strings`_. The
+The *time:* entries in shows are standard MPF time strings. The
 default is seconds, but you can enter ms, minutes, etc. Also note the
 `+` before the time in the example above. Time values that start with
 plus are *incremental*, meaning they are the time since the previous
@@ -364,8 +365,10 @@ MPF 0.30 now supports specifying colors by name instead of by hex
 value. This works anywhere that colors are specified, including in
 shows and for commands that are executed directly, and it applies
 everywhere colors are used (for LEDs, display widgets, etc.). By
-default, MPF includes a built-in list of the `standard W3C web
-colors`_. You can also define your own colors and add them to the
+default, MPF includes a built-in list of the standard W3C web
+colors.
+
+You can also define your own colors and add them to the
 list. What's really cool is that the lookup process which converts a
 color name to a color value is done in every time a color is used, so
 you can actually redefine or update the values for colors dynamically

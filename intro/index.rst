@@ -50,3 +50,9 @@ timeframes in mind for a 1.0 release. (We've been releasing new stable-ish versi
 dev versions almost daily.) That said, we have a "to do" list with probably `2 or 3 years' worth of ideas
 <https://missionpinball.com/blog/2014/10/the-mission-pinball-framework-roadmap-vision-for-the-future-of-pinball/>`_,
 and we're sure that list will continue to grow.
+
+.. toctree::
+
+   machine_config_files
+   running_your_game
+   config_files_vs_programming

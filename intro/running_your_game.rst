@@ -1,20 +1,23 @@
+How to start MPF and run your game
+==================================
 
-(Note: This page is a reference for how to start MPF and all the
-various command-line options. If you're brand-new to MPF and running
-it for the first time, we recommend that you follow our `step-by-step
-getting started tutorial`_. The first few steps will walk you through
-downloading and installing MPF and getting our sample *Demo Man*
-machine up and running.) MPF is a console-based application which you
+.. note:: This page is a reference for how to start MPF and all the
+   various command-line options. If you're brand-new to MPF and running
+   it for the first time, we recommend that you follow our :doc:`step-by-step
+   getting started tutorial </tutorial/index>`. The first few steps will walk you through
+   downloading and installing MPF and getting our sample *Demo Man*
+   machine up and running.)
+
+MPF is a console-based application which you
 run from the command line. There are actually two separate processes
 that you need to run for MPF: The core MPF game engine and the
 separate media controller . The game engine talks to the pinball
 hardware and runs the game logic, and the media controller drives the
 LCD/DMD and audio. The game engine and media controller talk to each
-other via an open protocol called "`BCP`_" (for "Backbox Control
+other via an open protocol called *BCP* (for "Backbox Control
 Protocol") via a TCP socket. At this point you might be wondering why
 the game engine and media controller are two separate processes? Two
 reasons:
-
 
 + Having two processes means that each one can run on a separate core
   in a multi-core host computer. This makes efficient use of hardware
@@ -28,6 +31,10 @@ reasons:
   3D-based media controller which can be used for very advanced 3D
   display graphics.
 
+.. note:: Prior to MPF 0.30, we recommended that you put your machine's folder
+   in the ``/machine_files`` folder inside the MPF package. That is changed now,
+   since starting in MPF 0.30, MPF is properly installed into a system location.
+   Now you can put your machine folder(s) wherever you want.
 
 To run an MPF game, you have to start both the media controller and
 the MPF game engine. You can do both of these via the command line.
@@ -37,32 +44,45 @@ and run the MPF core engine in one and the media controller in the
 other. If you don't want to do this we also have a batch file which
 you can use instead which automatically pops up the two separate
 windows and runs both pieces. (More on that in the next section.)
-Anyway, to run MPF, first start the media controller, like this:
-`python mc.py <path to the machine files you want to run>` For
-example:
+Anyway, to run MPF, first start the media controller.
 
-
-::
-
-    
-    python mc.py demo_man
-
-
-Then in a second terminal window, start the MPF game engine, like
-this: `python mpf.py <pathto the machine you want to run>` For
-example:
-
+Open a command window and change into the root of your machine folder. Then run:
 
 ::
 
-    
-    python mpf.py demo_man
+    mpf mc <enter>
 
+Then in a second terminal window, start the MPF game engine:
 
+::
 
+    mpf <enter)
 
-Command line parameters & options
----------------------------------
+.. note:: Prior to MPF 0.30, you launched MPF by actually running ``python``
+   from the command prompt. Starting in MPF 0.30, when you install MPF, the
+   command ``mpf`` is registered in a system path, so now you switch to your
+   machine folder and start the game by running MPF directly.
+
+Understanding MPF commands
+--------------------------
+
+When you install MPF, the command "mpf" is registered with your system. You can
+open a terminal window or command prompt and run "mpf", by itself, from anywhere.
+
+There are several sub-commands you can specify when you run MPF. You specify a
+sub-command by running `mpf <command>`. (Some mpf commands take additional
+options).
+
+Here are a list of valid MPF commands:
+
+* ``mpf core`` (Starts the core MPF game engine)
+* ``mpf md`` (Stars the MPF Media Controller)
+* ``mpf both`` (Starts both the core game engine and the media controller)
+* ``mpf migrate`` (Runs the migration tool to migrate your config and show files
+  to the current version of MPF.)
+
+Note that if you just run ``mpf`` by itself, that's the same thing as running
+``mpf core``.
 
 There are several command line parameters and options you can add to
 both the MPF engine and the media controller. The order of these
@@ -81,7 +101,7 @@ machine folder is *c:\pinball\your_machine*, you would switch to the
 
 ::
 
-    
+
     python mpf.py c:\pinball\your_machine
 
 
@@ -91,7 +111,7 @@ media controller at the same time:
 
 ::
 
-    
+
     mpf c:\pinball\your_machine
 
 
@@ -113,7 +133,7 @@ machine in full screen mode via:
 
 ::
 
-    
+
     mpf c:\pinball\your_machine
 
 
@@ -122,7 +142,7 @@ And then you could run the small windowed version via:
 
 ::
 
-    
+
     mpf c:\pinball\your_machine -c config,small_window
 
 
@@ -155,8 +175,8 @@ loadan system-wideconfiguration file from
 the log file that will be generated. (This log file contains the same
 content as the console window output.) By default it creates a file in
 the `mpf/logs`folder with a filename that's based on the computer host
-name plus a time and date stamp. For example, `2014-06-26-13-39-39
--mpf-computername.log`represents June 06, 2014 at 1:39:39pm. A
+name plus a time and date stamp. For example, 2014-06-26-13-39-39
+-mpf-computername.log represents June 06, 2014 at 1:39:39pm. A
 separate log file will be created by the MPF game engine and the media
 controller. Their formats are the same with the example of "mpf" in
 the game engine log file and "mc" in the media controller log file.
@@ -165,52 +185,3 @@ just describes everything here.) `--version:` Prints the version of
 MPF, the config file version required, and the version of BCP this
 build of MPF is using. Then it quits. So you use it like this: *python
 mpf.py --version.*
-
-
-
-Using the Windows batch file to launch MPF and the media controller
--------------------------------------------------------------------
-
-If you're using Windows, we created a batch file called "mpf.bat" (in
-the same folder as `mpf.py`) which you can use to easily launch both
-the MPF game engine and the media controller at the same time. To use
-it, you type `mpf your_machine`, followed by whatever command line
-options you want (which will be passed to both). For example:
-
-
-::
-
-    
-    mpf demo_man -x -v -V
-
-
-By default this batch file will launch the game engine and the media
-controller each in their own separate windows, and then it will leave
-them open when you exit the game. (It leaves them open so you can see
-the errors if there's a crash. You can just click the "X" to close
-each window when you're done.) If you view the contents of the batch
-file, you can see some notes about editing the batch file to change
-this behavior. For example, you can set it so that the MPF game engine
-launches in the current console window instead of popping open a new
-window, or you can configure it so that the popup console windows are
-automatically closed when MPF exits.
-
-
-
-Using the Linuxshell scriptto launch MPF and the media controller
------------------------------------------------------------------
-
-The Linux shell script method is nearly the same as the Windows method
-above. Just run mpf.sh rather than mpf.bat:
-
-
-::
-
-    
-    ./mpf.sh demo_man -x -v -V
-
-
-.. _BCP: https://missionpinball.com/docs/programming-guide/bcp1-0-spec/
-.. _step-by-step getting started tutorial: /tutorial
-
-
