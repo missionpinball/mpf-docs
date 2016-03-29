@@ -8,7 +8,7 @@ Welcome! This is the documentation for the Mission Pinball Framework (MPF) |rele
    applies to MPF 0.30. Documentation for prior versions of MPF is still available
    at *missionpinball.com/docs*.
 
-This documentation is available for :doc:`download</download>` in many popular formats.
+This documentation is available for :doc:`download </download>` in many popular formats.
 
 Documentation Migration Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,11 +16,11 @@ Documentation Migration Status
 .. raw:: html
 
  <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="342" style="width:2.3%">
+  <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="342" style="width:3.5%">
   </div>
  </div>
 
-8 of 342 documents have been updated for 0.30 and added to this site. We're
+12 of 342 documents have been updated for 0.30 and added to this site. We're
 working as fast as we can, but there are 206,937 total words in the MPF
 documentation, so this process may take awhile. :)
 
@@ -37,13 +37,13 @@ Getting MPF up and running on your computer.
 Walks you through building a new game, getting flipping, setting the display,
 a base mode, scoring, and playing.
 
-How to Guides / "Cookbook"
---------------------------
+:doc:`How to Guides / "Cookbook"</howto/index>`
+------------------------------------------------
 Step-by-step guides that show you how to do different things in MPF once you
 finish the tutorial.
 
-Config File Reference
----------------------
+:doc:`Config File Reference</config-file-reference/index>`
+----------------------------------------------------------
 Reference for every option in the MPF config and show YAML files.
 
 :doc:`What's new in MPF 0.30? </whatsnew/0.30>`
@@ -62,23 +62,14 @@ FAQs
 ----
 Common questions (and answers) about MPF.
 
-Contributing to MPF
--------------------
-Do you want to help with MPF? Great! MPF was started by Brian Madden and Gabe
-Knuth in 2014, but the core team is not 4 people and many more who have
-contributed ideas and fixes.
+:doc:`/contribute/index`
+------------------------
+Wanna help? We'd love it! (Even if you can't write code, you can help with the
+documentation.)
 
-Not a coder? No problem! You can contribute to the documentation too. Whether
-it's a simple as fixing a typo or adding a How To Guide which explains something
-you've done, we'd love to hear from you!
-
-License & Copyright
--------------------
-All the MPF code is licensed via the MIT license. The documentation is licensed
+:doc:`/License & copyright </license>`
+--------------------------------------
+The MPF code is licensed via the MIT license. The documentation is licensed
 via Creative Commons Attribution 4.0 International (CC BY 4.0). Both of these
-licenses mean you can essentially do whatever you want with the source code and
-the documentation.
-
-
-About the documentation
------------------------
+licenses mean you can essentially do whatever you want with them, so go nuts and
+make pinball!

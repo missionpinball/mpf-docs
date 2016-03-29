@@ -8,9 +8,12 @@ MPF Documentation
    Installation </installation/index>
    Tutorial </tutorial/index>
    How to guides / Recipes </howto/index>
-   /shows/index
-   /config-file-reference/index
+   Shows </shows/index>
+   Config file reference </config-file-reference/index>
+   Launch command reference </commands/index>
    Feature list </features/index>
-   /whatsnew/0.30
-   /whatsnew/index
-   Download offline documentation </documentation>
+   What's new in MPF 0.30 </whatsnew/0.30>
+   Version history </whatsnew/index>
+   Contributing </contribute/index>
+   Download offline documentation </download>
+   License & copyright </license>
