@@ -1,3 +1,9 @@
+MPF Feature List
+================
+
+Even though MPF is a work-in-progress that's not yet complete, the core dev team
+has been working on it for about two years, with over 5,000 hours of combined
+effort.
 
 As we mentioned already, the MPFis a work in progress and not yet
 complete. That said, here's a list of features that are actually
@@ -7,11 +13,8 @@ features`_ we want to get done before "v1". (And you can read our
 `super-long-term list of features`_ that will probably take years to
 do!)
 
-
-
 Major Features of MPF that are real today
 -----------------------------------------
-
 
 + Support for `Multimorphic`_ *P-ROC* and *P3-ROC* pinball
   controllers(with either Williams WPC, Williams System 11, Data East,
@@ -100,5 +103,3 @@ Major Features of MPF that are real today
 .. _FadeCandy: http://www.adafruit.com/products/1689
 .. _long-term list of features: https://missionpinball.com/docs/road-map/
 .. _convert an EM game to solid state: /blog/category/big-shot-em-conversion/
-
-

@@ -70,101 +70,15 @@ to migrate to 0.30:
 (1) Review the Changes in MPF 0.30
 ----------------------------------
 
-We've posted a `release notes guide with a list of changes to MPF
-0.30`_. Before you start your migration to MPF 0.30, you should read
+We've posted a release notes guide with a list of changes to MPF
+0.30. Before you start your migration to MPF 0.30, you should read
 that guide to see what's new.
 
 
+2 Install Python 3 & MPF
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-(2) Installation for Windows
-----------------------------
-
-Note that these instructions are only for Windows. If you're on a Mac,
-skip to Section 3.
-
-
-
-(2A) Install Python 3
-~~~~~~~~~~~~~~~~~~~~~
-
-Since MPF 0.30 requires Python 3, the first thing you need to do is
-install Python 3. On Windows you should use Python 3.4.4, because Kivy
-does not support Python 3.5 on Windows at this time. If you're on
-64-bit Windows, install the 64-bit version of Python. 32-bit should
-use 32-bit. The easiest way to tell whether you have 32-bit or 64-bit
-Windows is to open a command prompt and run (note this is case-
-sensitive):
-
-
-::
-
-    
-    echo %PROCESSOR_ARCHITECTURE%
-
-
-If it prints "x86", that's 32-bit. If it prints "x64", that's 64-bit.
-
-
-+ You can download the Python 3.4.4. x86 / 32-bit MSI installer
-  `here`_.
-+ You can download the Python 3.4.4 x64 / 64-bit MSI installer
-  `here`_.
-
-
-Python 3 and Python 2 can run side-by-side no problem. If you just
-installed Python for use with MPF, then you can first just remove the
-old version of Python (via Add/Remove Programs). This will eventually
-be our recommendation, but since MPF 0.30 is not done yet, you may
-want to keep Python 2 and MPF 0.21 around for awhile. Then install
-Python 3.4.4. On the "Customize Python 3.4.4" screen, we like to
-select the option "Add python.exe" to Path. That way you can run
-Python from anywhere. If you have both Python 3 and Python 2 installed
-side-by-side, then every Python 3 command will have a "3" added to it.
-(So you run "python3" instead of "python", "pip3" instead of "pip",
-etc.) Once Python is installed, open a command prompt and type `python
---version <enter>`. It should print *Python 3.4.4*. If you get a
-message about how 'python' is not recognized, log out and log back in.
-(You have to do this when running a non-admin command prompt so it can
-update the system path setting.) If you get a message that says you
-have Python 2.x.x, then try `python3 --version`.
-
-
-
-(2B) Install MPF
-~~~~~~~~~~~~~~~~
-
-Now open a command prompt and run this (type this, then press
-<enter>):
-
-
-::
-
-    
-    pip install mpf-mc
-
-
-If you have both Python 2 and Python 3 installed on your system, you
-need to use the Python 3 version of this command, which is:
-
-
-::
-
-    
-    pip3 install mpf-mc
-
-
-Pip is the name of the Python Package Manager. This command is telling
-pip to install a package called "mpf-mc", which is the *Mission
-Pinball Framework - Media Controller* package. When you run this, pip
-will connect to the internet to the `Python Package Index`_ (called
-"PyPI") where the *mpf-mc* is registered as a package. Pip will
-download MPF-MC, as well as all the prerequisites for MPF-MC, and then
-install them onto your computer. Note that the MPF-MC package is
-technically the package for the MPF Media Controller, however, MPF-MC
-includes MPF in its list of prerequisites, meaning if you install MPF-
-MC then you also get MPF. So installing MPF-MC right off the bat is
-just a shortcut to install both MPF and MPF-MC in a single step.
-
+We have a guide :doc:`here </installation/index>`.
 
 
 (2C) Install the fonts
@@ -198,7 +112,7 @@ mpf-examples, for example:
 
 ::
 
-    
+
     c:\mpf-examples\demo_man\
 
 
@@ -207,7 +121,7 @@ Then from within the first one, run:
 
 ::
 
-    
+
     mpf mc
 
 
@@ -216,7 +130,7 @@ And from within the second one, run:
 
 ::
 
-    
+
     mpf
 
 
@@ -275,7 +189,7 @@ windows, just run:
 
 ::
 
-    
+
     mpf migrate
 
 
@@ -322,7 +236,7 @@ like this: On Windows:
 
 ::
 
-    
+
     2to3 -w .
 
 
@@ -352,7 +266,7 @@ you ran the migration utility from), in the first window run:
 
 ::
 
-    
+
     mpf mc
 
 
@@ -361,7 +275,7 @@ This will start the media controller. In the second window, run:
 
 ::
 
-    
+
     mpf
 
 
@@ -388,14 +302,10 @@ files now with the confidence that they won't change between now and
 the final release.
 
 .. _here: https://github.com/missionpinball/mpf-examples/archive/dev.zip
-.. _here: https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 .. _Python Package Index: https://pypi.python.org/pypi
 .. _old MPF 0.21 (master) repository: https://github.com/missionpinball/mpf
 .. _mpf-examples repository: https://github.com/missionpinball/mpf-examples
 .. _here: https://groups.google.com/forum/#!topic/kivy-users/YAZ64mNt9Kg
 .. _release notes: https://missionpinball.com/docs/mpf-0-30-release-notes/
-.. _here: https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
 .. _here: https://groups.google.com/forum/#!topic/kivy-users/5H5tSJAX1bs
 .. _here: http://semver.org/
-
-
