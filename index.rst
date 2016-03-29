@@ -13,12 +13,16 @@ Documentation Migration Status
 .. raw:: html
 
  <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="342" style="width:1%">
+  <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="342" style="width:2.3%">
   </div>
  </div>
 
-4 of 342 documents have been updated for 0.30 and added to this site. We're working as fast as we can, but there are
+8 of 342 documents have been updated for 0.30 and added to this site. We're working as fast as we can, but there are
 206,937 total words in the MPF documentation, so this process may take awhile. :)
+
+:doc:`Getting Started with MPF </intro/index>`
+-------------------------------------------------
+Start here.
 
 :doc:`Installation & Setup </installation/index>`
 -------------------------------------------------
@@ -39,6 +43,10 @@ Reference for every option in the MPF config and show YAML files.
 :doc:`What's new in MPF 0.30? </whatsnew/0.30>`
 -----------------------------------------------
 Or view the complete `version history </whatsnew/index>`_.
+
+Community & Support
+-------------------
+Have a question or problem? Visit `our support forum <https://missionpinball.com/forum>`_
 
 API Reference
 -------------
@@ -64,9 +72,10 @@ All Documentation
 .. toctree::
    :maxdepth: 1
 
-   /installation/index
-   /tutorial/index
-   /howto/index
+   Start Here </intro/index>
+   Installation </installation/index>
+   Tutorial </tutorial/index>
+   How to Guides / Recipes </howto/index>
    /shows/index
    /config-file-reference/index
    /whatsnew/0.30
