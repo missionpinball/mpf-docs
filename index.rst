@@ -8,6 +8,8 @@ Welcome! This is the documentation for the Mission Pinball Framework (MPF) |rele
    applies to MPF 0.30. Documentation for prior versions of MPF is still available
    at *missionpinball.com/docs*.
 
+This documentation is available for :doc:`/download` in many popular formats.
+
 Documentation Migration Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,34 +56,29 @@ Have a question or problem? Visit `our support forum <https://missionpinball.com
 
 API Reference
 -------------
+If you're a programmer, we have Sphinx-based API docs for both MPF and the MPF-MC.
 
 FAQs
 ----
+Common questions (and answers) about MPF.
 
 Contributing to MPF
 -------------------
+Do you want to help with MPF? Great! MPF was started by Brian Madden and Gabe
+Knuth in 2014, but the core team is not 4 people and many more who have
+contributed ideas and fixes.
 
-License
--------
+Not a coder? No problem! You can contribute to the documentation too. Whether
+it's a simple as fixing a typo or adding a How To Guide which explains something
+you've done, we'd love to hear from you!
 
-Copyright
----------
+License & Copyright
+-------------------
+All the MPF code is licensed via the MIT license. The documentation is licensed
+via Creative Commons Attribution 4.0 International (CC BY 4.0). Both of these
+licenses mean you can essentially do whatever you want with the source code and
+the documentation.
+
 
 About the documentation
 -----------------------
-
-All Documentation
------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   Start Here </intro/index>
-   Installation </installation/index>
-   Tutorial </tutorial/index>
-   How to Guides / Recipes </howto/index>
-   /shows/index
-   /config-file-reference/index
-   Features List </features/index>
-   /whatsnew/0.30
-   /whatsnew/index

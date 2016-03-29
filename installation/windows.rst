@@ -4,7 +4,7 @@ Installing MPF on Windows
 
 
 1. Install Python 3.4
-=====================
+---------------------
 
 On Windows platforms, MPF requires Python 3.4. If you're on
 64-bit Windows, install the 64-bit version of Python. 32-bit should
