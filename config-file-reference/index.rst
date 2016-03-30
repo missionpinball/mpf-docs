@@ -5,3 +5,4 @@ Config File Reference
    :maxdepth: 1
 
    accruals
+   displays

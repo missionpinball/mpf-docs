@@ -159,7 +159,7 @@ Using MPF means you have a team of programmers making your machine better
 The MPF project was started in May 2014. Since then we have over 5,000 hours of
 time spent (both in code and documentation). More importantly, we're continuing
 to update and expand MPF, with dozens of commits to the core code and docs
-every week. (Probbly an average of 60 hours a week of work.)
+every week. (Probably an average of 60 hours a week of work.)
 
 If you use MPF, you get all that work for free. :) It's like having a team of
 developers working 60 hours a week to make your game better. Pretty cool!
