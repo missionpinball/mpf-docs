@@ -19,18 +19,31 @@ via the machine configuration files.
 Here are a few photos of the MPF Media Controller's display system in action.
 These were all created with configuration files and without manual programming.
 
-.. image:: /_static/images/display_examples.jpg
+Here's a traditional DMD with a single text widget:
 
-* The upper-left photo shows a traditional DMD with a single text widget.
-* The upper-right photo shows an on-screen display window made up of an image
-  widget (the background), a virtual DMD widget, a rectangle widget (the thin
-  white box around the DMD), and a text widget (the "Judge Dredd" words in the
-  lower right corner). The image on the DMD is an image widget which has been
-  targeted to DMD instead of the window.
-* The lower-left image is a "color" DMD on an LCD monitor. (It's a DMD widget
-  surrounded by a blue rectangle widget.
-* The lower-right image is a full-color RGB DMD LED matrix. (So it's like a
-  color DMD, but a matrix of 2.5mm RGB LEDs rather than an LCD).
+.. image:: /_static/images/display_mono_dmd.jpg
+
+
+Here's an on-screen display window made up of an image widget (the background),
+a virtual DMD widget, a rectangle widget (the thin white box around the DMD),
+and a text widget (the "Judge Dredd" words in the lower right corner). The image
+on the DMD is an image widget which has been targeted to DMD instead of the
+window.
+
+.. image:: /_static/images/display_window.jpg
+
+
+Here's a "color" DMD on an LCD monitor. (It's a DMD widget surrounded by a blue
+rectangle widget:
+
+.. image:: /_static/images/display_color_dmd.jpg
+
+
+Here's a full-color RGB DMD LED matrix. (So it's like a color DMD, but a matrix of
+2.5mm RGB LEDs rather than an LCD):
+
+.. image:: /_static/images/display_rgb_dmd.jpg
+
 
 Before we go into the details of all the various display components, let's start
 with an overview of how the MPF display architecture works. (If you don't care
@@ -54,7 +67,6 @@ running just with a few config file entries.) But as you start to create more
 advanced display effects, it will be helpful to understand how everything fits
 together. The major components of the MPF Media Controller's display system are:
 
-
 + Your game logic which is responsible for generating the content that
   will be displayed. This could come from settings in your config files,
   entries in show files, or game code you write manually.
@@ -62,17 +74,17 @@ together. The major components of the MPF Media Controller's display system are:
   MPF supports several different types of widgets, each with
   their own settings and properties.
 
-    + *Text widgets* let you display text.You can pick the font, the
-      color, etc. The actual text strings in Text elements can be run
-      through the Language module before they're sent to the display so you
-      can do on-the-fly text replacements. This is used for multi-language
-      translation and for installing alternate (i.e. "family friendly") text
-      strings.
-    + *Image widgets* let you show static images or animated sequences of images.
-    + *Video widgets* let you play videos. You can start and stop them, specify
-      whether they should repeat, specify the playback rate, etc.
-    + *Shape widgets* let you draw simple shapes onto the display.
-      Boxes, lines, circles, etc.
+  + *Text widgets* let you display text.You can pick the font, the
+    color, etc. The actual text strings in Text elements can be run
+    through the Language module before they're sent to the display so you
+    can do on-the-fly text replacements. This is used for multi-language
+    translation and for installing alternate (i.e. "family friendly") text
+    strings.
+  + *Image widgets* let you show static images or animated sequences of images.
+  + *Video widgets* let you play videos. You can start and stop them, specify
+    whether they should repeat, specify the playback rate, etc.
+  + *Shape widgets* let you draw simple shapes onto the display.
+    Boxes, lines, circles, etc.
 
 + Every display widget lets you specify its position on the
   display, either via pixel-level accuracy, or with positional
