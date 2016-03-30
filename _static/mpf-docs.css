@@ -54,6 +54,20 @@ h2 em {
   font-style: normal;
 }
 
+.section img {
+    vertical-align: middle;
+    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.red.admonition {
+    background-color: red;
+}
+.green.admonition {
+    background-color: #00c300;
+}
+
 .jstree-default .jstree-anchor {
   line-height: 15px;
   white-space: normal !important;
