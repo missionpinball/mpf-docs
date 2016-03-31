@@ -1,5 +1,5 @@
-Switch (MPF device)
-===================
+Switch (device)
+===============
 
 MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
