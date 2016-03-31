@@ -126,3 +126,7 @@ next. So if the MPF display system seems kind of complex, just think of it like
 a giant PowerPoint presentation and it should all hopefully make sense. Now
 let's start digging into some of the details of each of the parts of the display
 system.
+
+.. toctree::
+
+   Widgets </displays/widgets/index>

@@ -1,4 +1,4 @@
 .. admonition:: Mode config: *NO*
-   :class: red
+   :class: mode-no
 
-   This section may *not* be included in mode-specific config files.
+   This section may *not* be included in mode config files.

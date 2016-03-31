@@ -4,7 +4,6 @@ Sets the names and resolutions of the logical displays in your machine.
 
 .. include:: _machine_config_yes.rst
 .. include:: _mode_config_no.rst
-.. include:: _mpf-mc.rst
 
 ::
 

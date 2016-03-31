@@ -9,7 +9,8 @@ MPF Documentation
    Supported hardware </hardware/index>
    Tutorial </tutorial/index>
    How to guides / Recipes </howto/index>
-   Displays & DMDs </displays_dmd/index>
+   Devices </devices/index>
+   Displays & DMDs </displays/index>
    Shows </shows/index>
    Config file reference </config-file-reference/index>
    Launch command reference </commands/index>

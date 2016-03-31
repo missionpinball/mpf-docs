@@ -33,7 +33,7 @@ we'll be using as we go through the tutorial.
 
 Here are the docs that I suggest you read before we proceed.
 
-* :doc:`/intro/how_mpf_talks_to_real_hardware`
+* :doc:`/hardware/index`
 
 (C) Install MPF
 ---------------

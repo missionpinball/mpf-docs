@@ -61,11 +61,32 @@ h2 em {
     margin: 0 auto;
 }
 
-.red.admonition {
-    background-color: red;
-}
-.green.admonition {
+.mode-yes.admonition {
     background-color: #00c300;
+    width: 49%;
+    float: right;
+    margin-left: 1%;
+}
+
+.mode-no.admonition {
+    background-color: red;
+    width: 49%;
+    float: right;
+    margin-left: 1%;
+}
+
+.machine-yes.admonition {
+    background-color: #00c300;
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+}
+
+.machine-no.admonition {
+    background-color: red;
+    width: 49%;
+    float: left;
+    margin-right: 1%;
 }
 
 .jstree-default .jstree-anchor {

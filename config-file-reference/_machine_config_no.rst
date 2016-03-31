@@ -1,4 +1,4 @@
 .. admonition:: Machine Config: NO
-   :class: red
+   :class: machine-no
 
-   This section may not be included in machine-wide config files.
+   This section may *not* be included in machine config files.
