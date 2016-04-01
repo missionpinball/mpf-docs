@@ -3,6 +3,38 @@ Version history
 Here's the history of the various release versions and changes of the Mission Pinball Framework. (Patch releases and bug
 fixes are not included in this list.)
 
+0.30
+~~~~
+
+Release Date: TBD
+
+
+* Python 3 required
+* Mac OS X support
+* The Media Controller is now a separate package from MPF
+* The MPF-MC has been completely rewritten from scratch (based on Kivy, SDL2,
+  and Gstreamer)
+* GPU is used for graphics
+* Brand-new audio interface specifically written for pinball audio, which
+  includes advanced feature like ducking, attack, attenuation, etc.
+* Proper Python package installers, and inclusion in PyPI so install can be done
+  via *pip*.
+* System-wide *mpf* launcher utility with pluggable commands
+* All shows are driven by MPF
+* Show content is "played" by the standard config_players
+* Playlists become shows
+* Tocks: are gone, shows now operate on real-world time
+* Light scripts are gone, replaced by placeholder "tokens" in shows
+* Named colors
+* Hardware accelerated LED fades
+* Asset Pools
+* Ball Search
+* Accelerometer-based tilts
+* Servo support
+* Text string support
+
+
+
 0.21
 ~~~~
 
@@ -604,7 +636,7 @@ October 7, 2014
   modules to act on it. (For example the score reel controller uses this
   to turn off the lights for a score reel while it’s resyncing.)
 * Added option to remove all handlers for an event regardless of what
-  their registered **kwargs are.
+  their registered \**kwargs are.
 * Added mpf command line options for verbose to console and optimized
   loops. (Now we can support different logging levels to the console and
   log file, meaning you can configure it so you only see important
@@ -891,7 +923,3 @@ June 27, 2014
   do blah() when switch_1 is active for 500ms.)
 * Event manager handles system events, including registering handlers,
   priorities, aborting events, and maintaining a queue.
-
-
-
-

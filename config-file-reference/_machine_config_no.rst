@@ -1,3 +1,5 @@
+:orphan:
+
 .. admonition:: Machine Config: NO
    :class: machine-no
 

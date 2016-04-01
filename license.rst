@@ -7,7 +7,7 @@ is that you use it at your own risk, and we don't provide any warranties.
 
 The code is licensed under the `MIT <https://opensource.org/licenses/MIT>`_
 license, and the documentation is licensed via
-`Creative Commons Attribution 4.0 International (CC BY 4.0)<https://creativecommons.org/licenses/by/4.0/>`_.
+`Creative Commons Attribution 4.0 International (CC BY 4.0) <https://creativecommons.org/licenses/by/4.0/>`_.
 
 It a nutshell, you can use MPF and the docs however you want. You can use MPF
 in a commercial product. You can make changes to it, and you don't have to share

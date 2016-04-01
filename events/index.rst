@@ -98,7 +98,6 @@ is processed, which might not be immediate. In most cases you combine callbacks
 with special types of events. So to understand how this all works, we need to
 look at the different types of events you can call.
 
-
 Types of events
 ---------------
 
@@ -127,7 +126,6 @@ last registered handler has returned after handling the event.
 
 Boolean Events
 ~~~~~~~~~~~~~~
-
 Boolean events are used when the you want get some feedback from all
 of the handlers that have registered for that event. When you post a
 boolean event, if any of the registered handlers return `False` then
@@ -179,7 +177,6 @@ Sequence documentation.
 
 Queue Events
 ~~~~~~~~~~~~
-
 Queue events are used when an event handler wants to temporarily
 "pause" the event processing while it finishes up some task. This is
 called a queue event because the event manager literally creates a
@@ -266,7 +263,7 @@ if a ball drains, the game calls a ball drain event with kwargs
 balls=1. Then if there’s some other module that wants to save that
 ball, it can receive balls=1 and change it to balls=0. Then when the
 event gets back to the original caller, it has new data. Note a
-handler must return a dictionary that will later be packed via **. So
+handler must return a dictionary that will later be packed via \**. So
 a handler would do:
 
 
@@ -382,3 +379,10 @@ Correct, if it is *not* a boolean event, then the event is sent to all
 5 handlers regardless of the results. Nothing can stop it. If you
 don't want this behavior, then post a boolean event instead of a
 regular event.
+
+List of events used in MPF
+--------------------------
+
+.. toctree::
+   player_(var_name) <player_var_name>
+   player_add_success <player_add_success>

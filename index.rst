@@ -1,3 +1,5 @@
+:orphan:
+
 Mission Pinball Framework |release| documentation
 =================================================
 
@@ -46,9 +48,9 @@ finish the tutorial.
 ----------------------------------------------------------
 Reference for every option in the MPF config and show YAML files.
 
-:doc:`What's new in MPF 0.30? </whatsnew/0.30>`
+:doc:`What's new in MPF 0.30? </features/0.30>`
 -----------------------------------------------
-Or view the complete `version history </whatsnew/index>`_.
+Or view the complete `version history </version_history/index>`_.
 
 Community & Support
 -------------------

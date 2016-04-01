@@ -94,6 +94,10 @@ Major Features of MPF that are real today
   coding, and `API documentation`_ mean that if you want to use MPF for
   your groundwork and code your game in "real" Python, that's fine too.)
 
+.. toctree::
+
+   0.30
+   /version_history/index
 
 .. _FAST Pinball: http://www.fastpinball.com
 .. _API documentation: /apidocs
