@@ -1,39 +1,85 @@
-How MPF talks to "real" pinball machines
-========================================
+MPF compatible hardware
+=======================
 
-MPF is written in the Python computer language and requires a "real" computer
-to that can run Windows, Mac OS X, or Linux in order to function. So if you
-write your pinball machine's software using MPF, you need a computer connected
-to your pinball machine the entire time the pinball machine is on. In a sense,
-MPF and the "host computer" is the brain of the pinball machine.
+One of the primary goals of MPF is to behardware-independent. In other words, we
+want MPF to work with any hardware pinball controller out there. We achieve
+hardware independence by abstracting all the hardware calls to MPF's platform
+interface modules, and then the platform modules talk to the actual hardware
+platform you're using.
 
-This doesn't mean that you have to have your laptop connected to your pinball
-machine just to play a game. Most people use a laptop while they're developing
-their MPF game code, and then when their game is done, they permanently install
-a small cheap computer inside their machine. (This could be something as small
-and cheap as $30 Raspberry Pi 3, or maybe a $100 small form factor Intel Atom
-motherboard. The exact requirements for the computer that runs MPF depend on
-what you want to do in your game. More on that later...)
+This also means that a game programmer, you have the flexibility to change your
+hardware platform at any time without having to change any game code. You could
+even release a game code update that works on multiple platforms—-all with the
+same code!
 
-.. image:: /_static/images/how-mpf-runs-a-pinball-machine.png
+If you're using your custom code in an existing Williams WPC game, you can
+literally switch platforms by changing a single line in a config file. `Here's a demo video`_
+of us switching out a P-ROC controller for a FAST controller in 3 minutes and
+running the same game code on both.
 
-The most important thing to understand is that the P-ROC and FAST hardware
-controllers *do notactually run your Python-based code themselves*, rather, they
-act as the interface between the physical pinball machine and a host computer
-running your game code (though they are configured to respond to some
-time-critical events themselves, such as directly firing coils based on switches
-like the flippers, slingshots, and pop bumpers). At this point you might be
-thinking, "What??? I don't want to have my laptop attached to my pinball machine
-to run it!" While it's true you *could* just put a laptop in the bottom of the
-machine to run it, most people end up buying a small form-factor PC board
-running Linux or something and putthat inside the machine to run the actual
-python game code. There are several options for this today, including
-theBeagleBone Black, ODROID, Raspberry Pi 2, etc. Or you can use a
-mini-ITX Intel-based board and run Windows or put a Mac Mini in your cabinet.
-Really it can be anything as long as it can run Python.
+Note that it's possible to mix-and-match multiple hardware platforms in a single
+MPF machine config. (For example, you can combine the SmartMatrix RGB DMD with
+a FAST Core controller, or a FadeCandy LED controller with a P-ROC, etc.)
+
+MPF currently supports the following hardware devices. We are always adding
+more, so if there's some device that you'd like to use that we don't support,
+let us know. (Or better yet, write your own interface to it and submit a pull
+request to the MPF codebase!)
+
+FAST Pinball
+------------
+* All FAST controllers, including Core, Nano, and WPC
+* All FAST I/O boards, including 0804, 1616, 3208
+* FAST servo controller daughter board
+* FAST auxilery boards, including the power filter board and smart fuse block
+* Plasma & LED mono DMDs (Core & WPC controllers)
+
+Multimorphic (P-ROC / P3-ROC)
+-----------------------------
+* P-ROC with PDB driver boards (PD-16, PD-8x8, PD-LED)
+* P-ROC in all supported existing machines (Williams, Stern, etc.)
+* P3-ROC with PDB driver boards (PD-16, SW-16, PD-LED)
+* Plasma & LED mono DMDs (P-ROC)
+* Accelerometer-based tilt (P3-ROC)
+
+Snux System 11 driver board
+---------------------------
+* Supported in combination with the P-ROC or FAST WPC controller
+* Supported for System 11, 11A, 11B, 11C
+* Should work in Data East machines too, though it's never been tried
+
+Open Pinball Project Gen2 controllers
+-------------------------------------
+
+Fadecandy RGB LEDs
+------------------
+* 512 RGB LEDs per Fadecandy
+* Can connect multiple Fadecandys to support more LEDs
+
+SmartMatrix RGB LED display controller
+--------------------------------------
+
+RGB.DMD RGB LED display controller
+----------------------------------
+
+Existing versus new ("home brew") machines
+==========================================
+You can use MPF to rewrite the rules for existing commercial machines, or to
+power a branch new "home brew" machine you build yourself:
 
 .. toctree::
 
-   custom_machines
    existing_machines
-   supported_hardware
+   homebrew_machines
+
+Detailed hardware support information
+=====================================
+
+Now that we've done a rundown of the various types of hardware that's supported,
+here's are details about each platform:
+
+.. toctree::
+   :maxdepth: 1
+
+   fast
+   multimorphic

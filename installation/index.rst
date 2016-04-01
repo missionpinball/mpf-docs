@@ -1,10 +1,7 @@
 MPF Installation
 ================
 
-Installing MPF is easy, and there are a few ways you can do it. (Note
-this page is only about the actual installation of the MPF software
-and hardware drivers. You can use our :doc:`step-by-step tutorial </tutorial/index>`
-to walk you through actually building your game config with MPF.)
+Installing MPF is fairly straightforward.
 
 OS Platforms supported
 ----------------------
@@ -35,4 +32,3 @@ installation guide:
    Windows <windows>
    Mac OS X <mac>
    Linux <linux>
-   
