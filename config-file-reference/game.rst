@@ -6,7 +6,7 @@ Holds settings related to the game play.
 .. include:: _machine_config_yes.rst
 .. include:: _mode_config_no.rst
 
-Here's a same ``game:`` section which shows all the settings along with their
+Here's a sample ``game:`` section which shows all the settings along with their
 default values. Note that you do not need to include a ``game:`` section in your
 machine config, as MPF will use these default values unless you specifically
 override them.

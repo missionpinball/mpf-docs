@@ -1,9 +1,9 @@
-player\_(var_name) (MPF event)
+player_(var_name) (MPF event)
 ============================
 
 Posted when a player variable is added or changes value.
 
-The actual event has [var_name] replaced with the name of the player variable
+The actual event has (var_name) replaced with the name of the player variable
 that changed. Some examples:
 
 * player_score

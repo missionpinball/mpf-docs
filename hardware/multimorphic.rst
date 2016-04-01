@@ -28,8 +28,8 @@ driver boards. We haven't tested with a Stern Whitestar machine yet but it
 should work. Contact us for details if you'd like to help us test!)
 
 More information about these controller boards (and ordering information) is
-available at`pinballcontrollers.com <http://pinballcontrollers.com/>`_.
-They also have an active`forum <http://www.pinballcontrollers.com/forum/>`.
+available at `pinballcontrollers.com <http://pinballcontrollers.com/>`_.
+They also have an active `forum <http://www.pinballcontrollers.com/forum/>`_.
 
 Multimorphic hardware options
 -----------------------------

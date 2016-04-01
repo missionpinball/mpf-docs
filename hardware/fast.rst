@@ -50,14 +50,14 @@ also adds:
 
 * 34-pin header to connect to the Williams power driver board
 * Switch headers to connect to the WPC switch matrix inputs
-* 20pinb header to connect to the Williams Fliptronics boards
+* Header to connect to the Williams Fliptronics boards
 * Aux header to connect to Williams Aux bus
 
-..note::
-  The FAST WPC controller also contains connections for FAST I/O boards,
-  meaning you can add drivers and switches to existing machines for some really
-  cool mods! The WPC controller also has the 256 RGB LED connectors to add more
-  LEDs to existing WPC machines.
+.. note::
+   The FAST WPC controller also contains connections for FAST I/O boards,
+   meaning you can add drivers and switches to existing machines for some really
+   cool mods! The WPC controller also has the 256 RGB LED connectors to add more
+   LEDs to existing WPC machines.
 
 I/O boards
 ----------
@@ -84,7 +84,6 @@ Daughter boards
 
 Other boards
 ------------
-
 Finally, FAST has a few other types of boards which are useful when building
 your own pinball machine. None of these boards are FAST-specific, meaning you
 can use them in your machine even if you're not using FAST for your control

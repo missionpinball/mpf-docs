@@ -20,6 +20,7 @@ Release Date: TBD
 * Proper Python package installers, and inclusion in PyPI so install can be done
   via *pip*.
 * System-wide *mpf* launcher utility with pluggable commands
+* New MPF clock module replaces the old timing and timers
 * All shows are driven by MPF
 * Show content is "played" by the standard config_players
 * Playlists become shows

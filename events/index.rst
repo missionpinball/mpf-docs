@@ -386,8 +386,16 @@ List of events used in MPF
 .. toctree::
    :hidden:
 
+   ball_search_failed <ball_search_failed>
+   ball_search_started <ball_search_started>
+   ball_search_stopped <ball_search_stopped>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
+   init_phase_(number) <init_phase_x>
    loading_assets <loading_assets>
+   machine_var_(name) <machine_var_name>
+   machine_reset_phase_(number) <machine_reset_phase_x>
    player_(var_name) <player_var_name>
    player_add_success <player_add_success>
+   reset_complete <reset_complete>
+   shutdown <shutdown>
