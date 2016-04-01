@@ -384,7 +384,6 @@ List of events used in MPF
 --------------------------
 
 .. toctree::
-   :hidden:
 
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>

@@ -17,7 +17,7 @@ after_success:
 #  - "cd _build"
 #  - "cd html"
 #  - "find . -type f -exec curl --ftp-create-dirs -T {} -u $USER:$PASSWORD ftp://missionpinball.com/docs/0.30/{} \\;"
-  - lftp -v -c "set ftp:ssl-allow no; open -u $USER,$PASSWORD missionpinball.com; mirror -R _build/html /docs/0.30"
+  - lftp -c "set ftp:ssl-allow no; open -u $USER,$PASSWORD missionpinball.com; mirror -R _build/html /docs/0.30 -e -v"
 
 env:
   global:
