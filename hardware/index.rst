@@ -83,3 +83,8 @@ here's are details about each platform:
 
    fast
    multimorphic
+
+.. toctree::
+   :hidden:
+
+   host_computer

@@ -53,7 +53,8 @@ also adds:
 * 20pinb header to connect to the Williams Fliptronics boards
 * Aux header to connect to Williams Aux bus
 
-..note:: The FAST WPC controller also contains connections for FAST I/O boards,
+..note::
+  The FAST WPC controller also contains connections for FAST I/O boards,
   meaning you can add drivers and switches to existing machines for some really
   cool mods! The WPC controller also has the 256 RGB LED connectors to add more
   LEDs to existing WPC machines.

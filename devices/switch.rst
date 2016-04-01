@@ -37,7 +37,7 @@ with "sw\_" followed by the tag name.
 Configuring your switches
 -------------------------
 
-Switches are configured in the ``switches:``` section of the machine
+Switches are configured in the ``switches:`` section of the machine
 configuration file.
 
 Tutorial for step-by-step switch setup

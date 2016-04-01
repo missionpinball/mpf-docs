@@ -9,4 +9,5 @@ your machine-wide config, a mode-specific config, or both.
    :maxdepth: 1
 
    accruals: <accruals>
-   displays:
+   displays: <displays>
+   game: <game>

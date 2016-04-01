@@ -1,3 +1,5 @@
+Choosing a computer to run MPF
+==============================
 
 In addition to picking apinball controller platform you also need to
 decide what type of host computer you'll use. (By "host computer,"
@@ -108,9 +110,8 @@ You get headaches with OS X with MPF.)
 
 
 
-Is this a one-off machine, or are you taking something into
-production?
-~~~~~~~~~~~
+Is this a one-off machine, or are you taking something into production?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -129,6 +130,3 @@ having to change any of your code or configuration files. So if you
 have an old laptop sitting around then go ahead and use it for MPF.
 You can always swap it out with a small single-board computer down the
 road.
-
-
-
