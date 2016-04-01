@@ -1,7 +1,7 @@
 MPF compatible hardware
 =======================
 
-One of the primary goals of MPF is to behardware-independent. In other words, we
+One of the primary goals of MPF is to be hardware-independent. In other words, we
 want MPF to work with any hardware pinball controller out there. We achieve
 hardware independence by abstracting all the hardware calls to MPF's platform
 interface modules, and then the platform modules talk to the actual hardware
@@ -63,7 +63,7 @@ RGB.DMD RGB LED display controller
 ----------------------------------
 
 Existing versus new ("home brew") machines
-==========================================
+------------------------------------------
 You can use MPF to rewrite the rules for existing commercial machines, or to
 power a branch new "home brew" machine you build yourself:
 
@@ -73,7 +73,7 @@ power a branch new "home brew" machine you build yourself:
    homebrew_machines
 
 Detailed hardware support information
-=====================================
+-------------------------------------
 
 Now that we've done a rundown of the various types of hardware that's supported,
 here's are details about each platform:

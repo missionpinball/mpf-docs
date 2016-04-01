@@ -1,5 +1,5 @@
-displays:
-=========
+displays: (config setting)
+==========================
 Sets the names and resolutions of the logical displays in your machine.
 
 .. include:: _machine_config_yes.rst

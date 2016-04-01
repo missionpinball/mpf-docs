@@ -384,5 +384,10 @@ List of events used in MPF
 --------------------------
 
 .. toctree::
+   :hidden:
+
+   collecting_balls <collecting_balls>
+   collecting_balls_complete <collecting_balls_complete>
+   loading_assets <loading_assets>
    player_(var_name) <player_var_name>
    player_add_success <player_add_success>

@@ -1,5 +1,3 @@
-:orphan:
-
 .. admonition:: Machine config: *YES*
    :class: machine-yes
 

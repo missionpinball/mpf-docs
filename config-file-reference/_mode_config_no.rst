@@ -1,5 +1,3 @@
-:orphan:
-
 .. admonition:: Mode config: *NO*
    :class: mode-no
 
