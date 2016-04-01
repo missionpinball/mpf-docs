@@ -8,6 +8,11 @@ install:
 
 script: "make html"
 
+addons:
+  apt:
+    packages:
+    - lftp
+
 after_success:
 #  - "cd _build"
 #  - "cd html"
