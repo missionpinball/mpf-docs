@@ -17,6 +17,7 @@ MPF Documentation
    Modes </modes/index>
    Displays & DMDs </displays/index>
    Shows </shows/index>
+   Tech notes </tech_notes/index>
    Events reference </events/index>
    YAML config reference </config-file-reference/index>
    Contributing </contribute/index>
