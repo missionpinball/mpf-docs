@@ -1,5 +1,5 @@
-Switch debounce timing
-======================
+Platform differences, and the effects on switch debounce timing
+===============================================================
 
 There's a lot of confusion around how "debounce" works in pinball machines and
 in MPF, mainly because different hardware platforms do things in very different
@@ -7,7 +7,7 @@ ways. So this tech note will explain the different ways that debounce works,
 how MPF deals with it, and the technical backstories.
 
 Understanding debounce
-======================
+----------------------
 
 On the surface, switch *debounce* is pretty straightforward. Switches are
 mechanical things, computers are fast, and your pinball software wants to make
@@ -37,7 +37,7 @@ multiple switch events which led to multiple scores, multiple sound effects,
 etc.)
 
 Understanding switch scanning loop speed
-========================================
+----------------------------------------
 
 The other major factor which affects debounce involves the timing of how the
 switches are read.
@@ -55,7 +55,7 @@ or every 2ms, or every 8ms... really it's up to the controller and switch type
 as they're all different.
 
 Debounce + switch scanning loop speed = confusion!
-==================================================
+--------------------------------------------------
 
 Now combine the two previous concepts, and you quickly see we have some complex
 scenarios about how "debounce" *really* works.

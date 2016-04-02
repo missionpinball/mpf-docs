@@ -3,5 +3,6 @@ Tech notes
 
 .. toctree::
    :maxdepth: 1
+   :titlesonly:
 
-   switch_debounce_timing
+   Switch debounce timing <switch_debounce_timing>
