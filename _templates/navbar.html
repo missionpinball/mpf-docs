@@ -15,39 +15,47 @@
         </a>
       </div>
 
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a role="button"
-                     id="dLabelLocalToc"
-                     data-toggle="dropdown"
-                     data-target="#"
-                     href="#"><b>{{version}}</b> (latest)<b class="caret"></b></a>
-                  <ul class="dropdown-menu localtoc"
-                      role="menu"
-                      aria-labelledby="dLabelLocalToc"><ul>
-                <li><a class="reference internal" href="http://docs.missionpinball.com/0.30">{{release}}</a></li>
-                <li><a class="reference internal" href="https://missionpinball.com/docs">0.21</a></li>
-                </ul>
-                </ul>
-                </li>
+      <div class="collapse navbar-collapse nav-collapse">
+         <ul class="nav navbar-nav">
+            <li class="dropdown">
+               <a role="button"
+                  id="dLabelLocalToc"
+                  data-toggle="dropdown"
+                  data-target="#"
+                  href="#">v<b>{{version}}</b> (latest)<b class="caret"></b>
+               </a>
+               <ul class="dropdown-menu localtoc"
+                   role="menu"
+                   aria-labelledby="dLabelLocalToc">
+                  <ul>
+                     <li><a class="reference internal" href="http://docs.missionpinball.com/0.30">{{release}}</a></li>
+                     <li><a class="reference internal" href="https://missionpinball.com/docs">0.21</a></li>
+                  </ul>
+               </ul>
+             </li>
 
             {% block navbartoc %}
-              {% include "globaltoc.html" %}
-              {% if theme_navbar_pagenav %}
-                {% include "navbartoc.html" %}
-              {% endif %}
+               {% include "globaltoc.html" %}
+               {% if theme_navbar_pagenav %}
+                  {% include "navbartoc.html" %}
+               {% endif %}
             {% endblock %}
+
             {% if theme_navbar_sidebarrel %}
-              {% block sidebarrel %}
-                {% include "relations.html" %}
-              {% endblock %}
+               {% block sidebarrel %}
+                  {% include "relations.html" %}
+               {% endblock %}
             {% endif %}
+
             {% block navbarextra %}
             {% endblock %}
+
             {% if theme_source_link_position == "nav" %}
-              <li class="hidden-sm">{% include "sourcelink.html" %}</li>
+               <li class="hidden-sm">{% include "sourcelink.html" %}</li>
             {% endif %}
+
+            <li><a href="https://missionpinball.com/blog">Blog</a></li>
+            <li><a href="https://missionpinball.com/forum">Forum</a></li>
           </ul>
 
           {% block navbarsearch %}

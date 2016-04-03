@@ -1,3 +1,5 @@
+:orphan:
+
 Download MPF |version| Documentation
 ====================================
 Last updated on |today|.

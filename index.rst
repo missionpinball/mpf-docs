@@ -3,14 +3,16 @@
 Mission Pinball Framework |release| documentation
 =================================================
 
-Welcome! This is the documentation for the Mission Pinball Framework (MPF) |release|, last updated |today|.
+Welcome! This is the documentation for the Mission Pinball Framework (MPF)
+|version|, last updated |today|.
 
 .. note:: This is the new documentation site for MPF documentation, starting
-   with MPF v0.30. Everything on *docs.missionpinball.com* has been updated and
-   applies to MPF 0.30. Documentation for prior versions of MPF is still available
-   at *missionpinball.com/docs*.
+   with MPF v0.30. Everything on *docs.missionpinball.com* has been updated
+   and applies to MPF 0.30. Documentation for prior versions of MPF is still
+   available at *missionpinball.com/docs*.
 
-This documentation is available for :doc:`download </download>` in many popular formats.
+This documentation is available for :doc:`download </download>` in many popular
+formats.
 
 Documentation Migration Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +56,8 @@ Or view the complete `version history </version_history/index>`_.
 
 Community & Support
 -------------------
-Have a question or problem? Visit `our support forum <https://missionpinball.com/forum>`_
+Have a question or problem? Visit
+`our support forum <https://missionpinball.com/forum>`_
 
 API Reference
 -------------
@@ -69,8 +72,8 @@ Common questions (and answers) about MPF.
 Wanna help? We'd love it! (Even if you can't write code, you can help with the
 documentation.)
 
-:doc:`License & copyright </license>`
---------------------------------------
+:doc:`License & copyright </about/license>`
+-------------------------------------------
 The MPF code is licensed via the MIT license. The documentation is licensed
 via Creative Commons Attribution 4.0 International (CC BY 4.0). Both of these
 licenses mean you can essentially do whatever you want with them, so go nuts and

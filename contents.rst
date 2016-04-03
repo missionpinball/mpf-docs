@@ -21,6 +21,4 @@ MPF Documentation
    Events reference </events/index>
    YAML config reference </config-file-reference/index>
    Contributing </contribute/index>
-   Download offline documentation </download>
-   Authors </authors/index>
-   License & copyright </license>
+   About </about/index>
