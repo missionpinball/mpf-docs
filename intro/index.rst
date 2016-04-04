@@ -24,7 +24,7 @@ including:
   video, etc.
 * Game modes, including basic modes like attract, ball search, tilt, high score
   entry, match, bonus, etc., as well as whatever modes you think up for your
-  machine (shoot the clown, zap the aliean, etc.)
+  machine (shoot the clown, zap the alien, etc.)
 * Player management, including player progress and tracking towards goals.
 * Plus lots of other things that we'll get to eventually.
 
@@ -54,7 +54,16 @@ months with dev versions almost daily.) That said, we have a "to do" list with
 probably `2 or 3 years' worth of ideas <https://missionpinball.com/blog/2014/10/the-mission-pinball-framework-roadmap-vision-for-the-future-of-pinball/>`_,
 and we're sure that list will continue to grow.
 
+Next steps
+----------
+We recommend that you at least glance over the following sections of the
+documentation to get familiar with some additional MPF concepts. (Though if
+you're really chomping at the bit to get started, go ahead and jump into the
+:doc:`tutorial </tutorial/index>` now, and you can read these additional things
+as they come up.)
+
 .. toctree::
+   :maxdepth: 1
 
    how_mpf_talks_to_hardware
    machine_config_files

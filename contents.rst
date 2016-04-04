@@ -22,3 +22,4 @@ MPF Documentation
    YAML config reference </config-file-reference/index>
    Contributing </contribute/index>
    About </about/index>
+   Download docs </download>
