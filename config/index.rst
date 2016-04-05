@@ -11,3 +11,4 @@ your machine-wide config, a mode-specific config, or both.
    accruals: <accruals>
    displays: <displays>
    game: <game>
+   slide_player: <slide_player>

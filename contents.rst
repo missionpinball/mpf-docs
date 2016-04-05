@@ -17,9 +17,10 @@ MPF Documentation
    Modes </modes/index>
    Displays & DMDs </displays/index>
    Shows </shows/index>
+   Config players </config_players/index>
    Tech notes </tech_notes/index>
    Events reference </events/index>
-   YAML config reference </config-file-reference/index>
+   YAML config reference </config/index>
    Contributing </contribute/index>
    About </about/index>
    Download docs </download>
