@@ -119,7 +119,7 @@ The basic event is just a just a simple event name. Your code just
 calls the Event Manager and tells it to post an event with a given
 name, like `events.post('your_event_name')`. Then the event manager
 calls each of the registered handlers one-by-one. If you have
-specified a callback, like ```events.post('your_event_name',
+specified a callback, like ``events.post('your_event_name',
 callback=self.some_function)``, that callback will be called after the
 last registered handler has returned after handling the event.
 

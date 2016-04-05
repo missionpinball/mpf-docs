@@ -11,21 +11,33 @@ how MPF uses events.
 .. toctree ::
    :maxdepth: 1
 
+   ball_lock_(name)_balls_released <ball_lock_name_balls_released>
+   ball_lock_(name)_full <ball_lock_name_full>
+   ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
+   ball_save_(name)_disabled: <ball_save_name_disabled:>
+   ball_save_(name)_enabled: <ball_save_name_enabled:>
+   ball_save_(name)_grace_period: <ball_save_name_grace_period:>
+   ball_save_(name)_hurry_up: <ball_save_name_hurry_up:>
+   ball_save_(name)_saving_ball: <ball_save_name_saving_ball:>
+   ball_save_(name)_timer_start: <ball_save_name_timer_start:>
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
    balldevice_(balls)_ball_missing. <balldevice_balls_ball_missing.>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
+   balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
    balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
    balldevice_(name)_ball_left <balldevice_name_ball_left>
    balldevice_(name)_ball_lost <balldevice_name_ball_lost>
    balldevice_(name)_eject_broken <balldevice_name_eject_broken>
    balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
-   balldevice_(name)ball_eject_permanent_failure <balldevice_nameball_eject_permanent_failure>
    balldevice_ball_missing <balldevice_ball_missing>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
+   diverter_(name)_deactivating <diverter_name_deactivating>
+   diverter_(name)_disabling <diverter_name_disabling>
+   diverter_(name)_enabling <diverter_name_enabling>
    event_(mode_name)_started <event_mode_name_started>
    event_(mode_name)_stopped <event_mode_name_stopped>
    init_phase_1 <init_phase_1>
