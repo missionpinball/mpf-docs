@@ -41,12 +41,12 @@ Getting MPF up and running on your computer.
 Walks you through building a new game, getting flipping, setting the display,
 a base mode, scoring, and playing.
 
-:doc:`How to Guides / "Cookbook"</howto/index>`
+:doc:`How to Guides / "Cookbook" </howto/index>`
 ------------------------------------------------
 Step-by-step guides that show you how to do different things in MPF once you
 finish the tutorial.
 
-:doc:`Config File Reference</config-file-reference/index>`
+:doc:`Config File Reference </config/index>`
 ----------------------------------------------------------
 Reference for every option in the MPF config and show YAML files.
 

@@ -44,14 +44,38 @@
 
 /* Align the logo in the navbar */
 .navbar-brand img {
-  margin-top: -6px;
+  margin-top: -5px;
   margin-right: 10px;
+}
+
+.navbar-brand {
+  color: #888;
+  padding: 15px 15px;
+  font-size: 30px;
+}
+
+.navbar-default .navbar-brand {
+    color: #888;
+}
+
+.navbar-default {
+  background-color: #eee;
+  border-color: #eee;
+  color: #888;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:  #888;
 }
 
 /* Make h2 <em> not italics */
 
 h2 em {
   font-style: normal;
+}
+
+body {
+  color: #666;
 }
 
 .section img {
