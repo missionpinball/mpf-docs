@@ -11,6 +11,11 @@ how MPF uses events.
 .. toctree ::
    :maxdepth: 1
 
+   (drop_target_bank_name)_down <drop_target_bank_name_down>
+   (drop_target_bank_name)_mixed <drop_target_bank_name_mixed>
+   (drop_target_bank_name)_up <drop_target_bank_name_up>
+   (drop_target_name)_down <drop_target_name_down>
+   (drop_target_name)_up <drop_target_name_up>
    ball_lock_(name)_balls_released <ball_lock_name_balls_released>
    ball_lock_(name)_full <ball_lock_name_full>
    ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
@@ -51,6 +56,9 @@ how MPF uses events.
    machine_reset_phase_3 <machine_reset_phase_3>
    machine_var_(name) <machine_var_name>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
+   multiball_(name)_ended <multiball_name_ended>
+   multiball_(name)_shoot_again <multiball_name_shoot_again>
+   multiball_(name)_started <multiball_name_started>
    player_(var_name) <player_var_name>
    player_add_success <player_add_success>
    reset_complete <reset_complete>
