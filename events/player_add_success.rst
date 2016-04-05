@@ -3,6 +3,7 @@ player_add_success (MPF event)
 
 A new player was just added to this game
 
+
 Keyword arguments:
 
 num

@@ -111,9 +111,9 @@ how MPF uses events.
         return final_dict
 
     def build_rst_entry(self, final_dict):
-
         rst_output = str()
 
+        # write the title
         try:
             rst_output += final_dict['event'] + ' (MPF event)\n'
         except KeyError:
@@ -121,8 +121,10 @@ how MPF uses events.
 
         rst_output += ('=' * (len(final_dict['event']) + 12)) + '\n\n'
 
-        rst_output += final_dict['desc'] + '\n\n'
+        # add the description
+        rst_output += final_dict['desc'] + '\n\n\n'
 
+        # add the keyword arguments section
         if 'args' in final_dict:
             rst_output += 'Keyword arguments:\n\n'
             rst_output += self.parse_args(final_dict['args'])
@@ -158,9 +160,11 @@ if __name__ == '__main__':
             if file != 'index.rst':
                 os.remove(os.path.join(path, file))
 
+    # walk through the folders to scan
     for path in paths:
         for root, _, files in os.walk(path):
             for file in [x for x in files if x.endswith('.py')]:
                 a.parse_file(os.path.join(root, file))
 
+    # create the index.rst based on everything that was found
     a.write_index()

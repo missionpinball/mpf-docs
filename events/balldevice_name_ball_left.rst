@@ -3,6 +3,7 @@ balldevice_(name)_ball_left (MPF event)
 
 A ball (or balls) just left the device (name).
 
+
 Keyword arguments:
 
 balls

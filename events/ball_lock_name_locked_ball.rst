@@ -3,6 +3,7 @@ ball_lock_(name)_locked_ball (MPF event)
 
 The ball lock device (name) has just locked additional ball(s).
 
+
 Keyword arguments:
 
 balls_locked

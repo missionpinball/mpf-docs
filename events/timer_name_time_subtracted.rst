@@ -3,6 +3,7 @@ timer_(name)_time_subtracted (MPF event)
 
 The timer named (name) just had some ticks removed.
 
+
 Keyword arguments:
 
 ticks

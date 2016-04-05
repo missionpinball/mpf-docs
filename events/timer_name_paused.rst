@@ -3,6 +3,7 @@ timer_(name)_paused (MPF event)
 
 The timer named (name) has paused.
 
+
 Keyword arguments:
 
 ticks

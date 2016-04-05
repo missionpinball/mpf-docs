@@ -4,6 +4,7 @@ balldevice_(name)_ball_eject_success (MPF event)
 One or more balls has successfully ejected from the device
 (name).
 
+
 Keyword arguments:
 
 balls

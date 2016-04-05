@@ -6,6 +6,7 @@ diverter has ``activation_switches:`` configured, it will not
 physically activate until one of those switches is hit. Otherwise
 this diverter will activate immediately.
 
+
 Keyword arguments:
 
 auto
