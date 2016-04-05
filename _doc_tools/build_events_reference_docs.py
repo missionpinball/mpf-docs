@@ -30,15 +30,22 @@ class EventDocParser(object):
 
     def write_index(self):
 
-        index = '''List of events used in MPF
---------------------------
+        index = '''Event reference
+===============
+
+Here's a list of all the "built in" events that are included in MPF and the
+MPF MC. Of course your own machine could include custom events that aren't
+on the list here.
+
+See the :doc:`Event Manager overview </core/events>` for more information on
+how MPF uses events.
 
 .. toctree ::
+   :maxdepth: 1
 
 '''
 
         self.file_list.sort()
-        print(self.file_list)
 
         for file in self.file_list:
             index += '   {} <{}>\n'.format(file[0], file[1][:-4])
@@ -55,8 +62,10 @@ class EventDocParser(object):
         return filename
 
     def parse_string(self, string):
-        string = string.s.replace('\n', ' ')  # strip newlines
-        string = ' '.join(string.split())  # strip extra spaces
+        # string = string.s.replace('\n', ' ')  # strip newlines
+        # string = ' '.join(string.s.split(' '))  # strip extra spaces
+        string = '\n'.join(' '.join(line.split())
+                           for line in string.s.split('\n'))
 
         string = string.replace('Event:', 'event:')
         string = string.replace('Desc:', 'desc:')
@@ -96,8 +105,8 @@ class EventDocParser(object):
         final_dict = dict()
 
         for entry in sliced_list:
-            spilt_entry = entry.split(':', 1)
-            final_dict[spilt_entry[0].strip()] = spilt_entry[1].strip()
+            split_entry = entry.split(':', 1)
+            final_dict[split_entry[0].strip()] = split_entry[1].strip()
 
         return final_dict
 

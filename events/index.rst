@@ -1,7 +1,15 @@
-List of events used in MPF
---------------------------
+MPF event reference
+==========================
+
+Here's a list of all the "built in" events that are included in MPF and the
+MPF MC. Of course your own machine could include custom events that aren't
+on the list here.
+
+See the :doc:`Event Manager overview </core/events>` for more information on
+how MPF uses events.
 
 .. toctree ::
+   :maxdepth: 1
 
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>

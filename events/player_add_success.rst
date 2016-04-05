@@ -7,7 +7,8 @@ Keyword arguments:
 
 num
 ~~~
-The number of the player that was just added. (e.g. Player 1 will have *num=1*, Player 4 will have *num=4*, etc.)
+The number of the player that was just added. (e.g. Player 1 will
+have *num=1*, Player 4 will have *num=4*, etc.)
 
 player
 ~~~~~~

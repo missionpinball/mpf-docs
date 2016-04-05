@@ -1,6 +1,7 @@
 collecting_balls (MPF event)
 ============================
 
-Posted by the ball controller when it starts the collecting balls process.
+Posted by the ball controller when it starts the collecting
+balls process.
 
 Keyword arguments: None
