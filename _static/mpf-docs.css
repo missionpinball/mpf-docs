@@ -68,13 +68,23 @@
     color:  #888;
 }
 
-/* Make h2 <em> not italics */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff;
+    background-color: #9954bb;
+}
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #9954bb;
+}
+
+/* Make h2 <em> not italics */
 h2 em {
   font-style: normal;
 }
 
-body {
+/* General text */
+body ul ol {
   color: #666;
 }
 
@@ -86,7 +96,7 @@ body {
 }
 
 .mode-yes.admonition {
-    background-color: #00c300;
+    background-color: #00bb00;
     width: 49%;
     float: right;
     margin-left: 1%;
@@ -114,13 +124,27 @@ body {
 }
 
 .jstree-default .jstree-anchor {
-  line-height: 15px;
+  line-height: 13px;
   white-space: normal !important;
   height: auto;
   padding: 1px 2px;
   margin-block-end: 9px;
+  font-size: 13px;
 }
 
 .jstree-default .jstree-clicked {
   box-shadow: none;
+}
+
+.jstree-default > .jstree-no-dots .jstree-open > .jstree-ocl {
+    background-position: -36px -6px;
+}
+
+.jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
+    background-position: -4px -7px;
+}
+
+.jstree .jstree-open > .jstree-children {
+    display: block;
+    margin-left: -8px;
 }
