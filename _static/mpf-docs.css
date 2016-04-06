@@ -97,6 +97,11 @@ body {
   color: #666;
 }
 
+.alert a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .section img {
     vertical-align: middle;
     padding-bottom: 40px;

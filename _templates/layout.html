@@ -94,6 +94,14 @@
           <li class="next"><a href={{ next.link|e }}>Next: <em>{{ next.title }}</em></a></li>
         {% endif %}
         </ul>
+
+        <div class="alert alert-warning">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          Something wrong? Something missing? You can
+          <a href="https://github.com/missionpinball/mpf-docs/tree/{{version}}/{{pagename}}{{page_source_suffix}}">edit this page on GitHub</a>
+          and send us a pull request!
+        </div>
+
     </div>
     {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
   </div>
