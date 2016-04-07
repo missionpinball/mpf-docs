@@ -17,7 +17,7 @@ build: off
 test_script:
   - "echo None"
 
-after_tests:
+after_test:
   - "make html"
 
 artifacts:
