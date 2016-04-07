@@ -10,7 +10,7 @@ environment:
 
 install:
   - "%PYTHON%\\python.exe -m pip install sphinx"
-  - "pip3 install sphinx_bootstrap_theme"
+  - "%PYTHON%\\python.exe -m pip install sphinx_bootstrap_theme"
 
 build: off
 
@@ -31,4 +31,4 @@ deploy:
     secure: lkBU5jRtZ6on50zB6c9u+g==
   password:
     secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
-  folder: docs/0.30
+  folder: docs/$(APPVEYOR_REPO_BRANCH)
