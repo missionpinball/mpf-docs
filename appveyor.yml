@@ -26,7 +26,7 @@ artifacts:
 
 deploy:
   provider: FTP
-  protocol: ftp
+  protocol: ftps
   host: missionpinball.com
   username:
     secure: lkBU5jRtZ6on50zB6c9u+g==
