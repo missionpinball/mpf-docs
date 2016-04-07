@@ -22,6 +22,7 @@ after_test:
 
 artifacts:
   - path: _build/html
+    name: html
 
 deploy:
   provider: FTP
@@ -32,3 +33,4 @@ deploy:
   password:
     secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
   folder: docs/$(APPVEYOR_REPO_BRANCH)
+  application: html
