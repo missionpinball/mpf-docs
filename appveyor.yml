@@ -24,16 +24,20 @@ artifacts:
   - path: _build/html
     name: html
 
+#deploy:
+#  provider: FTP
+#  protocol: ftps
+#  host: missionpinball.com
+#  username:
+#    secure: lkBU5jRtZ6on50zB6c9u+g==
+#  password:
+#    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
+#  folder: docs/$(APPVEYOR_REPO_BRANCH)
+#  application: html
+#  active_mode: false
+#  beta: true
+#  debug: true
+
 deploy:
-  provider: FTP
-  protocol: ftps
-  host: missionpinball.com
-  username:
-    secure: lkBU5jRtZ6on50zB6c9u+g==
-  password:
-    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
-  folder: docs/$(APPVEYOR_REPO_BRANCH)
-  application: html
-  active_mode: false
-  beta: true
-  debug: true
+  provider: Environment
+  name: mpf-docs
