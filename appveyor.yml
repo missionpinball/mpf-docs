@@ -1,0 +1,34 @@
+environment:
+
+  matrix:
+    - PYTHON: "C:\\Python35-x64"
+
+  ftp_user:
+    secure: lkBU5jRtZ6on50zB6c9u+g==
+  ftp_pass:
+    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
+
+install:
+  - "%PYTHON%\\python.exe -m pip install sphinx"
+  - "pip3 install sphinx_bootstrap_theme"
+
+build: off
+
+test_script:
+  - "echo None"
+
+after_tests:
+  - "make html"
+
+artifacts:
+  - path: _build\html
+
+deploy:
+  provider: FTP
+  protocol: ftp
+  host: missionpinball.com
+  username:
+    secure: lkBU5jRtZ6on50zB6c9u+g==
+  password:
+    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
+  folder: docs/0.30
