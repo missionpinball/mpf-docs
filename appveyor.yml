@@ -34,3 +34,4 @@ deploy:
     secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
   folder: docs/$(APPVEYOR_REPO_BRANCH)
   application: html
+  active_mode: false
