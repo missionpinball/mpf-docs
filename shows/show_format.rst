@@ -86,8 +86,8 @@ show back at any speed. You can even change the speed of a running show.
 Absolute time
 ~~~~~~~~~~~~~
 The time value for each step indicates when this step will play measured in
-time since the start of the show. This is useful if you're syncrhonizing show
-steps with sound of video.
+time since the start of the show. This is useful if you're synchronizing show
+steps with sound or video.
 
 Relative time
 ~~~~~~~~~~~~~

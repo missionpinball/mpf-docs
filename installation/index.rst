@@ -17,7 +17,7 @@ OS                                              Python version
 =============================================== ==============
 Windows 7, Windows 8, Windows 10 (32-bit)       3.4
 Windows 7, Windows 8, Windows 10 (x64 / 64-bit) 3.4
-Mac OS X (Yosemite or El Capitan)               3.5
+Mac OS X (Mavericks, Yosemite, or El Capitan)   3.5
 Linux (on both Intel and ARM hardware)          3.4 or 3.5
 =============================================== ==============
 

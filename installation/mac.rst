@@ -16,7 +16,8 @@ you can just drag and drop and be done.
 
 .. note::
 
-   Note: When running on OS X, MPF cannot run in a virtual machine (like in VMware Fusion or Parallels).
+   MPF cannot run in an OS X virtual machine (like in VMware Fusion or Parallels). Please direct complaints to
+   Cupertino.
 
 Here are the steps to install MPF on OS X:
 
