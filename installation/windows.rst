@@ -128,7 +128,7 @@ it via *pip*.)
 When you run these tests, you should see a graphical window pop up on the
 screen, and many of the tests will put graphics and words in that window. Also,
 some of the tests include audio, so if your speakers are on you should hear some
-stuff at some point.
+sounds at some point.
 
 These tests take longer, maybe a minute or more, but when they're done, that
 graphical window should close, and you'll see all the dots in your command
