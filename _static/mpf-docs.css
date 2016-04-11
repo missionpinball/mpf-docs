@@ -102,6 +102,10 @@ body {
     text-decoration: underline;
 }
 
+.alert > .close {
+    text-decoration: none;
+}
+
 .section img {
     vertical-align: middle;
     padding-bottom: 40px;

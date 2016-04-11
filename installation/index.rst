@@ -9,8 +9,8 @@ OS Platforms supported
 MPF works on several different platforms, on both Intel x86 and ARM processors,
 and in 64-bit and 32-bit systems.
 
-Due to some peculiarities of Python and graphics libraries, only certain versions
-of Python are supported on certain OSes:
+Due to some peculiarities of Python and graphics libraries, only certain
+versions of Python are supported on certain OSes:
 
 =============================================== ==============
 OS                                              Python version

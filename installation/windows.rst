@@ -32,9 +32,13 @@ number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.)
 Installing Python 3 is pretty straightforward. It's a normal Windows installer.
 
 The only thing you should change from the defaults is on the "Customize Python
-3.4.4" screen, we like to select the option "Add python.exe" to Path. That way
+3.4.4" screen, we like to select the option "Add python.exe to Path". That way
 you can run ``python`` from any folder, rather than having to specify the full
 path to it.
+
+Note that you have to log out and then log back in for the path to be updated
+once you install Python. If you don't, then you'll get an error about Python not
+being found when you try to install MPF.
 
 Note for running Python 2 and Python 3 side-by-side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,8 +64,11 @@ Python 2 on it. If you don't want to do this, just uninstall Python 2 first.
 2. Install MPF
 --------------
 
-Now that Python is installed, it's time to install MPF! This is simple, just
-open a command prompt and type the following, then press <Enter>:
+Now that Python is installed, it's time to install MPF! (If you just
+installed Python now, remember to log out and log in again so the path setting
+can be updated). To actually install MPF, just open a command prompt (right-
+click on the Windows menu icon and select "Command Prompt" and type the
+following, then press <Enter>:
 
 ::
 
@@ -90,6 +97,10 @@ core engine is in a separate package called *mpf*. But since *mpf-mc* includes
 the *mpf* core engine too. (And it installs a bunch of other things MPF needs,
 like libraries to communicate with pinball hardware, graphics and sound
 libraries, etc.)
+
+When the installation is done, you'll probably see a yellow warning saying that
+you do not have the latest version of *pip*, and telling you that you should
+upgrade it. You can do that if you want. Or not. Doesn't really matter to MPF.
 
 3. Test your installation
 -------------------------

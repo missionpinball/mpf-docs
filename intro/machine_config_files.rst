@@ -13,7 +13,7 @@ config files. (Seriously. Almost everything: switches, coils, lights,
 light and sound shows, animations, scoring, game logic, modes, display
 effects, cut scenes...)
 
-We have a :doc:`detailed configuration file reference </config-file-reference/index>`
+We have a :doc:`detailed configuration file reference </config/index>`
 that explains all the options for all the files, but for now we just want to
 explain the basic concept ofhow these files work.
 
@@ -107,6 +107,6 @@ which files are used is specified in the list in the initial file. We picked
 default file names and broke them into logical file groupings, but if you want
 to call your files ``potato.yaml`` and ``hubcap.yaml``, that's fine too.
 
-Again, you can check out the :doc:`config file reference </config-file-reference/index>`
+Again, you can check out the :doc:`config file reference </config/index>`
 to see all the settings and options for things you can configure via these
 files.
