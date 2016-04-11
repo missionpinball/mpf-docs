@@ -16,8 +16,7 @@ class EventDocParser(object):
 
         self.file = file_name
 
-        with open(file) as f:
-
+        with open(file_name) as f:
             my_ast = ast.parse(f.read())
 
         for x in ast.walk(my_ast):
