@@ -41,7 +41,6 @@ your machine-wide config, a mode-specific config, or both.
    hardware: <hardware>
    high_score: <high_score>
    images: <images>
-   index: <index>
    led_player: <led_player>
    led_settings: <led_settings>
    leds: <leds>

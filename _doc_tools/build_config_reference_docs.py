@@ -51,7 +51,8 @@ your machine-wide config, a mode-specific config, or both.
         self.existing_rsts.sort()
 
         for file_name in self.existing_rsts:
-            index += '   {}: <{}>\n'.format(file_name, file_name)
+            if file_name != 'index':
+                index += '   {}: <{}>\n'.format(file_name, file_name)
 
         with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
             f.write(index)
@@ -113,8 +114,8 @@ your machine-wide config, a mode-specific config, or both.
             elif isinstance(spec_settings[s], dict):
                 final_rst += '\n'
                 for k, v in spec_settings[s].items():
-                    final_rst += '* *{}*: {}'.format(k, v)
-                final_rst += '\n\n'
+                    final_rst += '* *{}*: {}\n'.format(k, v)
+                final_rst += '\n'
 
             final_rst += settings[s] + '\n\n'
 
