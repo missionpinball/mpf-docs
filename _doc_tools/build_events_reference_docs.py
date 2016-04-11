@@ -5,15 +5,16 @@ import re
 paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
 rst_path = '../events'
 
+
 class EventDocParser(object):
 
     def __init__(self):
         self.file = None
         self.file_list = list()
 
-    def parse_file(self, file):
+    def parse_file(self, file_name):
 
-        self.file = file
+        self.file = file_name
 
         with open(file) as f:
 
@@ -47,8 +48,8 @@ how MPF uses events.
 
         self.file_list.sort()
 
-        for file in self.file_list:
-            index += '   {} <{}>\n'.format(file[0], file[1][:-4])
+        for file_name in self.file_list:
+            index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
         with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
             f.write(index)
