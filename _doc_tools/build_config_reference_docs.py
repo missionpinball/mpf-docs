@@ -22,9 +22,10 @@ class ConfigDocParser(object):
         self._load_existing_rsts()
 
         for k, v in self.config_spec.items():
-            if k == 'game':
-                rst = self.create_spec(k, v)
-            # self.create_file(k, rst)
+            rst = self.create_spec(k, v)
+            self.create_file(k, rst)
+
+        self.write_index()
 
     def create_file(self, config_section, rst):
         filename = config_section + '.rst'
@@ -33,6 +34,27 @@ class ConfigDocParser(object):
             f.write(rst)
 
         return filename
+
+    def write_index(self):
+        index = '''Event reference
+===============
+
+This section contains details about every possible entry you can use in your
+YAML config files. Each entry also has information about whether it's valid in
+your machine-wide config, a mode-specific config, or both.
+
+.. toctree ::
+   :maxdepth: 1
+
+'''
+        self._load_existing_rsts()
+        self.existing_rsts.sort()
+
+        for file_name in self.existing_rsts:
+            index += '   {}: <{}>\n'.format(file_name, file_name)
+
+        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
+            f.write(index)
 
     def _load_config_spec(self):
         self.config_spec = yaml.load(mpf_config_spec)
@@ -57,9 +79,7 @@ class ConfigDocParser(object):
 
         # add spec items not in rst
         for k in spec_settings.keys():
-            print("CHECKING SECTION", k)
             if k not in settings:
-                print("DID NOT FIND SECTION", k)
                 settings[k] = '.. todo::\n   Add description.'
 
         # deprecate rst items not in spec
@@ -105,8 +125,9 @@ class ConfigDocParser(object):
                           "when it's used.")
 
         final_rst = final_rst.replace('\n\n\n\n', '\n\n\n')
-
+        print()
         print(final_rst)
+        print()
         return final_rst
 
     def tokenize_existing_rst(self, filename):
@@ -205,7 +226,7 @@ class ConfigDocParser(object):
         if default:
             return_string += 'Default: {}\n'.format(default)
         else:
-            return_string += 'Default: None (a value is required)'
+            return_string += 'Default: n/a (a value is required)\n'
 
         return return_string
 
