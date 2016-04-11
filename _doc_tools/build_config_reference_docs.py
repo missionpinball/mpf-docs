@@ -36,8 +36,8 @@ class ConfigDocParser(object):
         return filename
 
     def write_index(self):
-        index = '''Event reference
-===============
+        index = '''YAML config file reference
+==========================
 
 This section contains details about every possible entry you can use in your
 YAML config files. Each entry also has information about whether it's valid in

@@ -27,6 +27,7 @@ of the machine config, and you specify which of these logical displays is the
 source for your DMD or RGB DMD in the ``dmd:`` or ``color_dmd:`` section of your
 machine config.
 
+
 Settings & options
 ------------------
 
@@ -61,18 +62,36 @@ Note that you do not set color settings (number of colors, etc) at the display
 level. Color is handled at the physical display level or on screen widget level,
 not at the display level.
 
-height:
-~~~~~~~
-Height of the display, in pixels.
-
-width:
-~~~~~~
-Width of the display, in pixels.
 
 default:
 ~~~~~~~~
+Single value, type: boolean (Yes/No or True/False). Default: False
+
 True/False value which specifies whether a display is the default display. If a
 display is set to be the default, that's the display that receives slides and
 widgets if the slides/widgets are posted without a target.
 
 Note that only one display can be the default.
+
+
+fps:
+~~~~
+Single value, type: integer. Default: 0
+
+.. todo::
+   Add description.
+
+
+height:
+~~~~~~~
+Single value, type: integer. Default: 600
+
+Height of the display, in pixels.
+
+
+width:
+~~~~~~
+Single value, type: integer. Default: 800
+
+Width of the display, in pixels.
+

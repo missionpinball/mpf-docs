@@ -256,11 +256,14 @@ Here's a list of the additional options you can use when you work with slides in
 either the ``slide_player:`` section of a config file or the ``slides:`` section
 of a show file.
 
+
 Settings & options
 ------------------
 
 expire:
 ~~~~~~~
+Single value, type: time string (will be converted to seconds). Default: None
+
 Configures the slide to *expire*, meaning it will be automatically removed after
 the time expires, and the display will show whatever the next-highest priority
 slide is.
@@ -272,8 +275,11 @@ higher priority).
 Times here are entered in the standard MPF time string format, like
 ``expire: 2s`` or ``expire: 500ms``.
 
+
 force:
 ~~~~~~
+Single value, type: boolean (Yes/No or True/False). Default: False
+
 True/false setting which "forces" this slide to be shown, regardless of its
 priority and the priority of whatever other current slide is on the display.
 
@@ -281,8 +287,11 @@ Note that this forcing is a one-time thing, as any subsequent slides that are
 played might play on top of it. If you really want a slide to show and not to
 be overridden, you can use the *priority* setting.
 
+
 priority:
 ~~~~~~~~~
+Single value, type: integer. Default: None
+
 Used to adjust (up or down) the priority of this slide. By default, slides are
 played with the priority of the mode (for ``slide_player:`` sections from
 configs) or the priority of the show (for ``slides:`` sections from shows), so
@@ -298,13 +307,19 @@ relative priority of a slide.
 Note that if you have a ``slide_player:`` section in your machine-wide config
 files, its base priority is zero.
 
+
 show:
 ~~~~~
+Single value, type: boolean (Yes/No or True/False). Default: True
+
 True/false setting that lets you add an active slide to the display without
 actually showing it right away.
 
+
 target:
 ~~~~~~~
+Single value, type: string. Default: None
+
 Let's you specific the *display target* this slide will be shown on. This is
 only needed if you have more than one display, or if you have a "picture in
 picture" style slide which has subsections which are other slides.
@@ -315,8 +330,12 @@ To use the target, you specify the target name, such as ``target: window`` or
 Targets must be previously defined in order for them to work here. If you don't
 specify a target, then the default display target is used.
 
+
 transition:
 ~~~~~~~~~~~
+.. todo::
+   Need to add details here.
+
 Used to specify a transition (move_in, fade, etc.) for how which animated
 transition effect will be used to move from the current slide to this slide. If
 you play a slide that will not be shown (which would happen if you play a slide
@@ -324,8 +343,13 @@ at a lower priority than the current slide that's being shown), then this
 transition effect will not be shown since the new slide you're playing here will
 be added to the display in the background.
 
+
 widgets:
 ~~~~~~~~
+.. todo::
+   Need to add details here.
+
 Lets you specify a list of widgets that will be added to a slide when you're
 using the slide_player to define and name a new slide rather than just showing
 an existing already-defined slide. See the slides documentation for details.
+
