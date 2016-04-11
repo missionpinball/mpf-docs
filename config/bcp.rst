@@ -10,7 +10,11 @@ Settings & options
 connections:
 ~~~~~~~~~~~~
 
-* *connection_attempts*: single|int|-1* *port*: single|int|5050* *require_connection*: single|bool|False* *host*: single|str|None
+* *host*: single|str|None
+* *require_connection*: single|bool|False
+* *port*: single|int|5050
+* *connection_attempts*: single|int|-1
+
 .. todo::
    Add description.
 

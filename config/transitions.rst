@@ -10,7 +10,9 @@ Settings & options
 fade:
 ~~~~~
 
-* *duration*: single|secs|1* *type*: single|str|
+* *type*: single|str|
+* *duration*: single|secs|1
+
 .. todo::
    Add description.
 
@@ -18,7 +20,9 @@ fade:
 fade_back:
 ~~~~~~~~~~
 
-* *duration*: single|secs|2* *type*: single|str|
+* *type*: single|str|
+* *duration*: single|secs|2
+
 .. todo::
    Add description.
 
@@ -26,7 +30,11 @@ fade_back:
 move_in:
 ~~~~~~~~
 
-* *easing*: single|str|out_quad* *duration*: single|secs|1* *type*: single|str|* *direction*: single|str|left
+* *easing*: single|str|out_quad
+* *type*: single|str|
+* *duration*: single|secs|1
+* *direction*: single|str|left
+
 .. todo::
    Add description.
 
@@ -34,7 +42,11 @@ move_in:
 move_out:
 ~~~~~~~~~
 
-* *easing*: single|str|out_quad* *duration*: single|secs|1* *type*: single|str|* *direction*: single|str|left
+* *easing*: single|str|out_quad
+* *type*: single|str|
+* *duration*: single|secs|1
+* *direction*: single|str|left
+
 .. todo::
    Add description.
 
@@ -43,6 +55,7 @@ none:
 ~~~~~
 
 * *type*: ignore
+
 .. todo::
    Add description.
 
@@ -50,7 +63,11 @@ none:
 push:
 ~~~~~
 
-* *easing*: single|str|out_quad* *duration*: single|secs|1* *type*: single|str|* *direction*: single|str|left
+* *easing*: single|str|out_quad
+* *type*: single|str|
+* *duration*: single|secs|1
+* *direction*: single|str|left
+
 .. todo::
    Add description.
 
@@ -58,7 +75,9 @@ push:
 rise_in:
 ~~~~~~~~
 
-* *duration*: single|secs|2* *type*: single|str|
+* *type*: single|str|
+* *duration*: single|secs|2
+
 .. todo::
    Add description.
 
@@ -66,7 +85,9 @@ rise_in:
 swap:
 ~~~~~
 
-* *duration*: single|secs|2* *type*: single|str|
+* *type*: single|str|
+* *duration*: single|secs|2
+
 .. todo::
    Add description.
 
@@ -75,6 +96,7 @@ wipe:
 ~~~~~
 
 * *type*: single|str|
+
 .. todo::
    Add description.
 

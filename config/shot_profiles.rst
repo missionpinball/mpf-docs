@@ -82,7 +82,16 @@ List of one (or more) values, each is a type: string. Default: None
 states:
 ~~~~~~~
 
-* *speed*: single|float|1* *hold*: single|bool|True* *repeat*: single|bool|True* *__allow_others__*: None* *name*: single|str|* *show*: single|str|None* *blend*: single|bool|False* *reset*: single|bool|False* *sync_ms*: single|int|0
+* *speed*: single|float|1
+* *reset*: single|bool|False
+* *__allow_others__*: None
+* *repeat*: single|bool|True
+* *name*: single|str|
+* *blend*: single|bool|False
+* *sync_ms*: single|int|0
+* *show*: single|str|None
+* *hold*: single|bool|True
+
 .. todo::
    Add description.
 

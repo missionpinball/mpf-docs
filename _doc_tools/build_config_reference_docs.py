@@ -147,10 +147,10 @@ your machine-wide config, a mode-specific config, or both.
             setting_names.append(x[0].strip(':'))
 
         for i, setting_name in enumerate(setting_names):
-            start = setting_name + ':\n' + ('~' * (len(setting_name) + 1))
+            start = '\n' + setting_name + ':\n' + ('~' * (len(setting_name) + 1))
 
             try:
-                end = setting_names[i+1] + ':\n' + ('~' * (len(setting_names[i+1]) +1))
+                end = '\n' + setting_names[i+1] + ':\n' + ('~' * (len(setting_names[i+1]) +1))
             except IndexError:
                 end = None
 
@@ -165,6 +165,7 @@ your machine-wide config, a mode-specific config, or both.
             if not k.startswith('<'):
                 v = v.strip('\n')
                 v = '\n'.join(v.split('\n')[1:])
+                v = v.strip('\n')
                 settings_dict[k] = v
 
         return beginning, settings_dict
@@ -175,7 +176,7 @@ your machine-wide config, a mode-specific config, or both.
         except AttributeError:
             return config_spec
         except:
-            return('.. todo::\n   Need to add details here.\n')
+            return('.. todo::  Need to add details here.\n')
 
         if num == 'single':
             return_string = 'Single value, '

@@ -30,7 +30,6 @@ machine config.
 
 Settings & options
 ------------------
-
 <name>:
 ~~~~~~~
 The sub-entries in the ``displays:`` section sepcify the name of each display,

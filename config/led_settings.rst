@@ -9,7 +9,7 @@ Settings & options
 
 brightness_compensation:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-.. todo:: Need to add details here.
+.. todo::  Need to add details here.
 
 .. todo::
    Add description.

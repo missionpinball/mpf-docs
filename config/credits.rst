@@ -66,7 +66,9 @@ Single value, type: time string (will be converted to seconds). Default: 1h
 pricing_tiers:
 ~~~~~~~~~~~~~~
 
-* *price*: single|float|.50* *credits*: single|int|1
+* *price*: single|float|.50
+* *credits*: single|int|1
+
 .. todo::
    Add description.
 
@@ -82,7 +84,10 @@ List of one (or more) values, each is a type: string name of a 'switches' device
 switches:
 ~~~~~~~~~
 
-* *value*: single|float|0.25* *switch*: single|machine(switches)|None* *type*: single|str|money
+* *switch*: single|machine(switches)|None
+* *value*: single|float|0.25
+* *type*: single|str|money
+
 .. todo::
    Add description.
 

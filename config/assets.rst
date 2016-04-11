@@ -10,33 +10,44 @@ Settings & options
 common:
 ~~~~~~~
 
-* *load*: single|str|preload* *priority*: single|int|0* *file*: single|str|None
+* *file*: single|str|None
+* *load*: single|str|preload
+* *priority*: single|int|0
+
 .. todo::
    Add description.
 
 
 images:
 ~~~~~~~
-.. todo::
+
+* *__allow_others__*: None
+
    Add description.
 
 
 shows:
 ~~~~~~
-.. todo::
+
+* *__allow_others__*: None
+
    Add description.
 
 
 sounds:
 ~~~~~~~
-.. todo::
+
+* *__allow_others__*: None
+
    Add description.
 
 
 videos:
 ~~~~~~~
 
-* *height*: single|num|None* *width*: single|num|None
+* *height*: single|num|None
+* *width*: single|num|None
+
 .. todo::
    Add description.
 

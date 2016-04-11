@@ -10,7 +10,13 @@ Settings & options
 ducking:
 ~~~~~~~~
 
-* *release_point*: single|str|0* *target*: single|str|* *attack*: single|str|10ms* *release*: single|str|10ms* *attenuation*: single|gain|1.0* *delay*: single|str|0
+* *release*: single|str|10ms
+* *attack*: single|str|10ms
+* *target*: single|str|
+* *release_point*: single|str|0
+* *delay*: single|str|0
+* *attenuation*: single|gain|1.0
+
 .. todo::
    Add description.
 
