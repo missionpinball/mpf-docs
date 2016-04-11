@@ -25,8 +25,7 @@ Single value, type: integer. Default: -1
 
 time:
 ~~~~~
-.. todo::
-   Need to add details here.
+.. todo:: Need to add details here.
 
 .. todo::
    Add description.

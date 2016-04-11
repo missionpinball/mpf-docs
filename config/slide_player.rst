@@ -333,8 +333,7 @@ specify a target, then the default display target is used.
 
 transition:
 ~~~~~~~~~~~
-.. todo::
-   Need to add details here.
+.. todo:: Need to add details here.
 
 Used to specify a transition (move_in, fade, etc.) for how which animated
 transition effect will be used to move from the current slide to this slide. If
@@ -346,8 +345,7 @@ be added to the display in the background.
 
 widgets:
 ~~~~~~~~
-.. todo::
-   Need to add details here.
+.. todo:: Need to add details here.
 
 Lets you specify a list of widgets that will be added to a slide when you're
 using the slide_player to define and name a new slide rather than just showing

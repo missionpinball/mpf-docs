@@ -17,8 +17,7 @@ Single value, type: string. Default: machine_reset_phase_3
 
 steps:
 ~~~~~~
-.. todo::
-   Need to add details here.
+.. todo:: Need to add details here.
 
 .. todo::
    Add description.

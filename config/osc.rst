@@ -9,8 +9,7 @@ Settings & options
 
 approved_client_ips:
 ~~~~~~~~~~~~~~~~~~~~
-.. todo::
-   Need to add details here.
+.. todo:: Need to add details here.
 
 .. todo::
    Add description.
