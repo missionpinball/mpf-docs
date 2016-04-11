@@ -114,7 +114,7 @@ your machine-wide config, a mode-specific config, or both.
                 final_rst += '\n'
                 for k, v in spec_settings[s].items():
                     final_rst += '* *{}*: {}'.format(k, v)
-                final_rst += '\n'
+                final_rst += '\n\n'
 
             final_rst += settings[s] + '\n\n'
 
@@ -160,10 +160,11 @@ your machine-wide config, a mode-specific config, or both.
                 settings_dict[setting_name] = settings[settings.index(start):].replace(start, '').strip('\n')
 
         # strip out the old spec string so the latest replaces it
-        # for k, v in settings_dict.items():
-        #     if not k.startswith('<'):
-        #         v = v.strip('\n')
-        #         v = '\n'.join(v.split('\n')[1:])
+        for k, v in settings_dict.items():
+            if not k.startswith('<'):
+                v = v.strip('\n')
+                v = '\n'.join(v.split('\n')[1:])
+                settings_dict[k] = v
 
         return beginning, settings_dict
 
