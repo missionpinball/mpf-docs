@@ -21,6 +21,9 @@ override them.
         allow_start_with_loose_balls: False
         allow_start_with_ball_in_drain: False
 
+Settings & options
+------------------
+
 balls_per_game:
 ~~~~~~~~~~~~~~~
 The number of balls per game. Typically it's 3 or 5 but you can set this value
