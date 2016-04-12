@@ -308,12 +308,12 @@ sharing a list of questions that have been asked as well as our
 answers:
 
  The documentation states, "One 'gotcha' with callbacks is
- they'recalled after the event is done processing. If the event manager
- isbusy (because another event is in progress), then the callback
+ they're called after the event is done processing. If the event manager
+ is busy (because another event is in progress), then the callback
  won'tactually be called until the actual event is processed, which
- mightnot be immediate." Does this mean that the callback is
- calledafter the event has beensent to all registered handlers or until
- the current handler iscomplete?
+ might not be immediate." Does this mean that the callback is
+ called after the event has been sent to all registered handlers or until
+ the current handler is complete?
 
 The callback is called after all the handlers for that event have been called.
 When an event is posted, if there's another current event in progress (meaning
