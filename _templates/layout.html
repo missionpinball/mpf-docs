@@ -2,7 +2,7 @@
 
 {% set theme_css_files = [] %}
 {% if theme_bootstrap_version == "3" %}
-  {% set bootstrap_version, bootstrap_additional_css, navbar_version = "3.3.4", "theme", "" %}
+  {% set bootstrap_version, bootstrap_additional_css, navbar_version = "3.3.6", "theme", "" %}
   {% set bs_span_prefix = "col-md-" %}
 {% else %}
   {% set bootstrap_version, bootstrap_additional_css, navbar_version = "2.3.2", "responsive", "-2" %}
@@ -127,7 +127,7 @@
     {%- endif %}
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created with <a href="http://sphinx-doc.org/">Sphinx</a>,
-      <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://www.jstree.com/">jsTree</a>{% endtrans %}, &amp; Love.<br/>
+      <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://www.jstree.com/">jsTree</a>{% endtrans %}, &amp; Love. &hearts;<br/>
     {%- endif %}
     </p>
   </div>

@@ -10,7 +10,7 @@ environment:
 
 install:
   - "%PYTHON%\\python.exe -m pip install sphinx"
-  - "%PYTHON%\\python.exe -m pip install sphinx_bootstrap_theme"
+  - "%PYTHON%\\python.exe -m pip install sphinx_bootstrap_theme==0.4.9"
 
 build: off
 

@@ -1,10 +1,10 @@
 :orphan:
 
-Mission Pinball Framework |release| documentation
+Mission Pinball Framework |version| documentation
 =================================================
 
 Welcome! This is the documentation for the Mission Pinball Framework (MPF)
-|version|, last updated |today|.
+|release|, last updated |today|.
 
 .. note:: This is the new documentation site for MPF documentation, starting
    with MPF v0.30. Everything on *docs.missionpinball.com* has been updated
@@ -20,11 +20,11 @@ Documentation Migration Status
 .. raw:: html
 
  <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="342" style="width:10.5%">
-  </div>
+  <div class="progress-bar" role="progressbar" aria-valuenow="4"
+  aria-valuemin="0" aria-valuemax="342" style="width:11.1%"></div>
  </div>
 
-36 of 342 documents have been updated for 0.30 and added to this site. We're
+38 of 342 documents have been updated for 0.30 and added to this site. We're
 working as fast as we can, but there are 206,937 total words in the MPF
 documentation, so this process may take awhile. :)
 
@@ -59,9 +59,11 @@ Community & Support
 Have a question or problem? Visit
 `our support forum <https://missionpinball.com/forum>`_
 
-API Reference
--------------
-If you're a programmer, we have Sphinx-based API docs for both MPF and the MPF-MC.
+`API Reference <http://api.missionpinball.com>`_
+------------------------------------------------
+If you're a programmer or want to extend what's possible with MPF's config
+files, the API / Developer's Reference is at
+`api.missionpinball.com <http://api.missionpinball.com>`_
 
 FAQs
 ----

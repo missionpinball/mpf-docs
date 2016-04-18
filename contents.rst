@@ -11,7 +11,7 @@ MPF Documentation
    Installing MPF </installation/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
-   How to guides & recipes </howto/index>
+   How to guides / "cookbook" </howto/index>
    Core modules </core/index>
    Devices </devices/index>
    Modes </modes/index>
@@ -19,6 +19,8 @@ MPF Documentation
    Shows </shows/index>
    Config players </config_players/index>
    Tech notes </tech_notes/index>
+   BCP protocol </bcp/index>
+   API / programmer's reference <http://api.missionpinball.com>
    Events reference </events/index>
    YAML config reference </config/index>
    Contributing </contribute/index>
