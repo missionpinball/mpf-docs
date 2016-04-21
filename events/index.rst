@@ -67,6 +67,8 @@ how MPF uses events.
    reset_complete <reset_complete>
    shutdown <shutdown>
    sw_(tag_name) <sw_tag_name>
+   text_input_(key)_abort <text_input_key_abort>
+   text_input_(key)_complete <text_input_key_complete>
    timer_(name)_complete <timer_name_complete>
    timer_(name)_paused <timer_name_paused>
    timer_(name)_started <timer_name_started>
