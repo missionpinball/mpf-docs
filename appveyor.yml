@@ -3,11 +3,6 @@ environment:
   matrix:
     - PYTHON: "C:\\Python27"
 
-  ftp_user:
-    secure: lkBU5jRtZ6on50zB6c9u+g==
-  ftp_pass:
-    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
-
 install:
   - "%PYTHON%\\python.exe -m pip install sphinx"
   - "%PYTHON%\\python.exe -m pip install sphinx_bootstrap_theme==0.4.9"
@@ -23,20 +18,6 @@ after_test:
 artifacts:
   - path: _build/html
     name: html
-
-#deploy:
-#  provider: FTP
-#  protocol: ftps
-#  host: missionpinball.com
-#  username:
-#    secure: lkBU5jRtZ6on50zB6c9u+g==
-#  password:
-#    secure: rXqWX2Awlga6CEXP/8aFEUYsrExFiTiuySJMWqSqrfU=
-#  folder: docs/$(APPVEYOR_REPO_BRANCH)
-#  application: html
-#  active_mode: false
-#  beta: true
-#  debug: true
 
 deploy:
   provider: Environment
