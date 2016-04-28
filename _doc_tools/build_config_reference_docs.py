@@ -66,17 +66,25 @@ your machine-wide config, a mode-specific config, or both.
                                   not x.startswith('_'))]
 
     def create_spec(self, section, spec_settings):
+        # creates the actual spec entry. Will merge in existing text
+        # descriptions if their are any.
+
+        # section = the setting name, e.g. "leds:" or "coils:"
+        # spec_settings = the spec code, e.g. single|str|hellow
 
         beginning = '{}: (config_setting)\n'.format(section)
         beginning += '=' * (len(section) + 18)
         beginning += '\n.. todo::\n'
         beginning += '   Add description.'
-        settings = dict()
+        required_settings = dict()
+        optional_settings = dict()
 
+        # do we already have an RST for this config section?
         if section in self.existing_rsts:
             print('found existing RST for', section)
-            beginning, settings = self.tokenize_existing_rst(
-                '{}/{}.rst'.format(rst_path, section))
+            beginning, required_settings, optional_settings = (
+                self.tokenize_existing_rst(
+                    '{}/{}.rst'.format(rst_path, section)))
 
         # add spec items not in rst
         for k in spec_settings.keys():
@@ -109,6 +117,11 @@ your machine-wide config, a mode-specific config, or both.
                 continue
             final_rst += '\n' + s + ':\n' + ('~' * (len(s) + 1)) + '\n'
 
+            if s not in spec_settings:
+                final_rst += '''.. deprecated:: {}
+This config option is no longer used.'''.format(__version__)
+                return final_rst + '\n\n'
+
             if isinstance(spec_settings[s], str):
                 final_rst += self._get_spec_string(spec_settings[s]) + '\n'
             elif isinstance(spec_settings[s], dict):
@@ -134,6 +147,10 @@ your machine-wide config, a mode-specific config, or both.
     def tokenize_existing_rst(self, filename):
         with open(filename, 'r') as f:
             doc = f.read()
+
+        beginning = ''
+        required_settings = ''
+        optional_settings = ''
 
         beginning, settings = doc.split(
             'Settings & options\n------------------')
@@ -187,31 +204,31 @@ your machine-wide config, a mode-specific config, or both.
                              'Each sub-setting is a ')
 
         if stype == 'str':
-            ftype = 'string'
+            ftype = '``string``'
         elif stype == 'lstr':
-            ftype = 'string (case-insensitive)'
+            ftype = '``string`` (case-insensitive)'
         elif stype == 'float':
-            ftype = 'number (will be converted to floating point)'
+            ftype = '``number`` (will be converted to floating point)'
         elif stype == 'int':
-            ftype = 'integer'
+            ftype = '``integer``'
         elif stype == 'num':
-            ftype = 'number (can be integer or floating point'
+            ftype = '``number`` (can be integer or floating point'
         elif stype == 'bool' or stype == 'boolean' or stype == 'bool_int':
-            ftype = 'boolean (Yes/No or True/False)'
+            ftype = '``boolean`` (Yes/No or True/False)'
         elif stype == 'ms':
-            ftype = 'time string (will be converted to milliseconds)'
+            ftype = '``time string`` (will be converted to milliseconds)'
         elif stype == 'secs':
-            ftype = 'time string (will be converted to seconds)'
+            ftype = '``time string`` (will be converted to seconds)'
         elif stype == 'list':
-            ftype = 'list'
+            ftype = '``list``'
         elif stype == 'int_from_hex':
-            ftype = '2-byte hex value (00 to ff)'
+            ftype = '2-byte hex value (``00`` to ``ff``)'
         elif stype == 'kivycolor' or stype == 'color':
-            ftype = 'color (color name, hex, or list'
+            ftype = '``color`` (color name, hex, or list'
         elif stype == 'pow2':
-            ftype = 'integer (must be a power of 2'
+            ftype = '``integer`` (must be a power of 2'
         elif stype == 'gain':
-            ftype = 'gain setting (-inf, db, or float between 0.0 and 1.0'
+            ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0'
         elif stype.startswith('subconfig'):
             ftype = 'sub-configurating containing {} settings'.format(
                 stype.replace('subconfig(', '')[:-1])
@@ -227,9 +244,9 @@ your machine-wide config, a mode-specific config, or both.
         return_string += 'type: {}. '.format(ftype)
 
         if default:
-            return_string += 'Default: {}\n'.format(default)
+            return_string += 'Default: *{}*\n'.format(default)
         else:
-            return_string += 'Default: n/a (a value is required)\n'
+            return_string += 'Default: *n/a* (a value is required)\n'
 
         return return_string
 
