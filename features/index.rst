@@ -13,8 +13,21 @@ features`_ we want to get done before "v1". (And you can read our
 `super-long-term list of features`_ that will probably take years to
 do!)
 
-Major Features of MPF that are real today
------------------------------------------
+Major Features & Concepts
+-------------------------
+
++ The vast majority of "programming" your game can be done with text-based
+  config files that make it easy to get powerful and complex pinball
+  features running in your game. They're also easy for non-programmers to use.
++ Advanced programmers and customization can be done via the API. (The
+  API is fully documented at `api.missionpinball.com <http://api.missionpinball.com>`_
++ Easily switch between hardware platforms, so if sometime down the road
+  you want to switch hardware or the company whose hardware you're using
+  goes out of business, all your effort is not lost as you can easily move
+  everything to a new hardware platform with a simple config file change.
+
+Full feature list (all real today)
+----------------------------------
 
 + Support for `Multimorphic`_ *P-ROC* and *P3-ROC* pinball
   controllers(with either Williams WPC, Williams System 11, Data East,
@@ -80,8 +93,7 @@ Major Features of MPF that are real today
   with alternate versions for other languages.
 + And OSC interface which lets you interface, control, and view status
   of your pinball machine via a tablet or phone.
-+ An EM-style score reel controller (in case you want to `convert an
-  EM game to solid state`_).
++ An EM-style score reel controller (in case you want to `convert an EM game to solid state`_).
 + A plugin architecture which allows you to write your own plugins to
   extend baseline functionality.
 + A "scriptlet" interface lets you add Python code snippets to extend

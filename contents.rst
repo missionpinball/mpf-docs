@@ -22,7 +22,7 @@ MPF Documentation
    BCP protocol </bcp/index>
    API / programmer's reference <http://api.missionpinball.com>
    Events reference </events/index>
-   YAML config reference </config/index>
+   Config file reference </config/index>
    Contributing </contribute/index>
    About </about/index>
    Download docs </download>
