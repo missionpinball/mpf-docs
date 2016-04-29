@@ -1,10 +1,13 @@
-ball_lock_(name)_locked_ball (MPF event)
-========================================
+ball_lock_(name)_locked_ball
+============================
+
+*MPF Event*
 
 The ball lock device (name) has just locked additional ball(s).
 
 
 Keyword arguments:
+------------------
 
 balls_locked
 ~~~~~~~~~~~~

@@ -1,5 +1,7 @@
-loading_assets (MPF event)
-==========================
+loading_assets
+==============
+
+*MPF Event*
 
 Posted when the number of assets waiting to be loaded changes.
 
@@ -8,6 +10,7 @@ reset to zero.
 
 
 Keyword arguments:
+------------------
 
 loaded
 ~~~~~~

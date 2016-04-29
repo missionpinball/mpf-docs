@@ -15,16 +15,14 @@ class ConfigDocParser(object):
         self.file = None
         self.file_list = list()
         self.config_spec = dict()
+        self.config_specs = dict()
 
         self.existing_rsts = list()
 
         self._load_config_spec()
+        self.config_specs = self._create_config_specs(self.config_spec)
         self._load_existing_rsts()
-
-        for k, v in self.config_spec.items():
-            rst = self.create_spec(k, v)
-            self.create_file(k, rst)
-
+        self.create_rsts()
         self.write_index()
 
     def create_file(self, config_section, rst):
@@ -36,8 +34,8 @@ class ConfigDocParser(object):
         return filename
 
     def write_index(self):
-        index = '''YAML config file reference
-==========================
+        index = '''Config file reference
+=====================
 
 This section contains details about every possible entry you can use in your
 YAML config files. Each entry also has information about whether it's valid in
@@ -65,84 +63,203 @@ your machine-wide config, a mode-specific config, or both.
                               if (x.endswith('.rst') and
                                   not x.startswith('_'))]
 
-    def create_spec(self, section, spec_settings):
-        # creates the actual spec entry. Will merge in existing text
-        # descriptions if their are any.
+    def _create_config_specs(self, source_dict):
+        final_dict = dict()
 
-        # section = the setting name, e.g. "leds:" or "coils:"
-        # spec_settings = the spec code, e.g. single|str|hellow
+        for section, settings in source_dict.items():
+            if settings['__valid_in__'].lower() != 'none':
+                final_dict[section] = (
+                    self._create_subsection_config_spec(settings))
 
-        beginning = '{}: (config_setting)\n'.format(section)
-        beginning += '=' * (len(section) + 18)
-        beginning += '\n.. todo::\n'
-        beginning += '   Add description.'
-        required_settings = dict()
-        optional_settings = dict()
+        return final_dict
 
-        # do we already have an RST for this config section?
-        if section in self.existing_rsts:
-            print('found existing RST for', section)
-            beginning, required_settings, optional_settings = (
-                self.tokenize_existing_rst(
-                    '{}/{}.rst'.format(rst_path, section)))
+    def _create_subsection_config_spec(self, settings):
+        final_dict = dict()
+        final_dict['required'] = list()
+        final_dict['optional'] = list()
+        final_dict['ignored'] = list()
+        final_dict['sub_sections'] = dict()
+        final_dict['allow_others'] = False
 
-        # add spec items not in rst
-        for k in spec_settings.keys():
-            if k not in settings:
-                settings[k] = '.. todo::\n   Add description.'
+        for setting_name, setting_spec in settings.items():
 
-        # deprecate rst items not in spec
-        for k in settings.keys():
-            if k not in spec_settings and not k.startswith('<'):
-                settings[k] = '.. deprecated:: {}'.format(__version__)
+            if setting_name == '__valid_in__':
+                final_dict['valid_in'] = setting_spec
 
-        # put the keys in order
-        ordered_settings = sorted(settings.keys())
+            if isinstance(setting_spec, dict):
 
-        # build the final
-        final_rst = beginning + '\n\n\n'
-        final_rst += 'Settings & options\n------------------\n'
+                final_dict['sub_sections'][setting_name] = (
+                    self._create_subsection_config_spec(setting_spec))
 
-        if '<name>' in ordered_settings:
-            final_rst += '<name>:\n~~~~~~~\n'
-            final_rst += settings['<name>'] + '\n\n'
+            elif isinstance(setting_spec, str):
 
-        for s in ordered_settings:
+                try:
+                    num, stype, default = setting_spec.split('|')
 
-            s = s.strip(':')
+                    if default:
+                        final_dict['optional'].append((setting_name, num,
+                                                       stype, default))
+                    else:
+                        final_dict['required'].append((setting_name, num, stype))
+                except ValueError:
+                    final_dict['ignored'].append((setting_name, setting_spec))
 
-            if s == '__allow_others__':
-                continue
-            if s == '<name>':
-                continue
-            final_rst += '\n' + s + ':\n' + ('~' * (len(s) + 1)) + '\n'
+            elif setting_name == '__allow_others__':
+                final_dict['allow_others'] = True
 
-            if s not in spec_settings:
-                final_rst += '''.. deprecated:: {}
-This config option is no longer used.'''.format(__version__)
-                return final_rst + '\n\n'
+        final_dict['required'].sort()
+        final_dict['optional'].sort()
+        final_dict['ignored'].sort()
 
-            if isinstance(spec_settings[s], str):
-                final_rst += self._get_spec_string(spec_settings[s]) + '\n'
-            elif isinstance(spec_settings[s], dict):
-                final_rst += '\n'
-                for k, v in spec_settings[s].items():
-                    final_rst += '* *{}*: {}\n'.format(k, v)
-                final_rst += '\n'
+        return final_dict
 
-            final_rst += settings[s] + '\n\n'
+    def create_rsts(self):
+        for k, v in self.config_specs.items():
+            self.create_rst(k, v)
 
-        if '__allow_others' in s:
-            final_rst += ('.. note::\n   Your config may have additional '
-                          'settings not included here since the {}: config '
-                          'section allows additional settings that are passed '
-                          "when it's used.")
+    def create_rst(self, name, spec):
 
-        final_rst = final_rst.replace('\n\n\n\n', '\n\n\n')
-        print()
-        print(final_rst)
-        print()
-        return final_rst
+        # todo check for existing and tokenize it
+
+        existing_intro = ''
+        existing_settings = dict()
+        final_text = ''
+
+        final_text += '{}:\n'.format(name)
+        final_text += '=' * (len(name) + 1)
+        final_text += '\n\n*Config file section*\n\n'
+
+        if 'machine' in spec['valid_in']:
+            final_text += '.. include:: _machine_config_yes.rst\n'
+        else:
+            final_text += '.. include:: _machine_config_no.rst\n'
+
+        if 'mode' in spec['valid_in']:
+            final_text += '.. include:: _mode_config_yes.rst\n\n'
+        else:
+            final_text += '.. include:: _mode_config_no.rst\n\n'
+
+        if 'show' in spec['valid_in']:
+            final_text += '.. note:: This section can also be used in a show '
+            final_text += 'file in the ``{}s:`` section of a step.\n\n'.format(
+                          name.split('_')[0])
+
+        final_text += '.. overview\n\n'
+
+        if existing_intro:
+            final_text += existing_intro
+        else:
+            final_text += 'The ``{}:`` section of your config is where ' \
+                          'you...\n\n'.format(name)
+            final_text += '.. todo::\n'
+            final_text += '   Add description.'
+
+        final_text += '\n\n\n'
+
+        final_text += self.build_sections(name, spec)
+
+        self.create_file(name, final_text)
+
+    def build_sections(self, name, spec, sep='-'):
+        final_text = ''
+
+        if spec['required']:
+            final_text += self.add_required_section(spec['required'], name,
+                                                    sep)
+            final_text += '\n'
+
+        if spec['optional']:
+            final_text += self.add_optional_section(spec['optional'], name,
+                                                    sep)
+            final_text += '\n'
+
+        if 'sub_sections' in spec and spec['sub_sections']:
+            final_text += self.add_subsection_section(spec['sub_sections'],
+                                                      name, sep)
+            final_text += '\n'
+
+        if spec['allow_others']:
+            final_text += '.. note:: The ``{}:`` section of your config may ' \
+                          'contain additional settings not mentioned here. ' \
+                          'Read the introductory text for details of what ' \
+                          'those might be.\n\n'.format(name)
+
+        return final_text
+
+
+    def add_required_section(self, required_list, name, sep='-'):
+
+        if sep == '-':
+            sep2 = '~'
+        elif sep == '~':
+            sep2 = '^'
+
+        final_text = 'Required settings\n'
+        final_text += sep * 17
+        final_text += '\n\nThe following sections are required in the ``{}:`` ' \
+                      'section of your config:\n\n'.format(name)
+
+        for setting in required_list:
+            final_text += setting[0] + ':\n'
+            final_text += sep2 * (len(setting[0]) + 1)
+            final_text += '\n'
+            final_text += self._get_spec_string(setting[1], setting[2])
+            final_text += '\n'
+
+            # todo add to pull in existing
+            final_text += '.. todo::\n   Add description.'
+
+            final_text += '\n\n'
+
+        return final_text
+
+    def add_optional_section(self, optional_list, name, sep='-'):
+
+        if sep == '-':
+            sep2 = '~'
+        elif sep == '~':
+            sep2 = '^'
+
+        final_text = 'Optional settings\n'
+        final_text += sep * 17
+        final_text += '\n\nThe following sections are optional in the ``{}:`` ' \
+                      "section of your config. (If you don't include them, " \
+                      "the default will be used).\n\n".format(name)
+
+        for setting in optional_list:
+            final_text += setting[0] + ':\n'
+            final_text += sep2 * (len(setting[0]) + 1)
+            final_text += '\n'
+            final_text += self._get_spec_string(setting[1], setting[2],
+                                                setting[3])
+            final_text += '\n'
+
+            # todo add to pull in existing
+            final_text += '.. todo::\n   Add description.'
+
+            final_text += '\n\n'
+
+        return final_text
+
+    def add_subsection_section(self, subsection_dict, name, sep='-'):
+        if sep == '-':
+            sep2 = '~'
+        elif sep == '~':
+            sep2 = '^'
+
+        final_text = ''
+
+        for k, v in subsection_dict.items():
+
+            final_text += '{}:\n'.format(k)
+            final_text += sep * (len(k) + 1)
+            final_text += '\n\n'
+            final_text += "The ``{}:`` section contains " \
+                          "the following nested sub-settings\n\n".format(k)
+
+            final_text += self.build_sections(k, v, sep=sep2)
+
+        return final_text
 
     def tokenize_existing_rst(self, filename):
         with open(filename, 'r') as f:
@@ -187,14 +304,7 @@ This config option is no longer used.'''.format(__version__)
 
         return beginning, settings_dict
 
-    def _get_spec_string(self, config_spec):
-        try:
-            num, stype, default = config_spec.split('|')
-        except AttributeError:
-            return config_spec
-        except:
-            return('.. todo::  Need to add details here.\n')
-
+    def _get_spec_string(self, num, stype, default=None):
         if num == 'single':
             return_string = 'Single value, '
         elif num == 'list' or num == 'set':
@@ -202,51 +312,75 @@ This config option is no longer used.'''.format(__version__)
         elif num == 'dict':
             return_string = ('Parent setting for one (or more) sub-settings. '
                              'Each sub-setting is a ')
+        else:
+            raise AssertionError("Invalid config spec num: {}".format(num))
 
         if stype == 'str':
             ftype = '``string``'
+
         elif stype == 'lstr':
             ftype = '``string`` (case-insensitive)'
+
         elif stype == 'float':
             ftype = '``number`` (will be converted to floating point)'
+
         elif stype == 'int':
             ftype = '``integer``'
+
         elif stype == 'num':
-            ftype = '``number`` (can be integer or floating point'
+            ftype = '``number`` (can be integer or floating point)'
+
         elif stype == 'bool' or stype == 'boolean' or stype == 'bool_int':
             ftype = '``boolean`` (Yes/No or True/False)'
-        elif stype == 'ms':
-            ftype = '``time string`` (will be converted to milliseconds)'
-        elif stype == 'secs':
-            ftype = '``time string`` (will be converted to seconds)'
+
+        elif stype in ('ms', 'secs'):
+            ftype = '``time string`` (:doc:`Instructions ' \
+                      '</config/instructions/lists>` for entering time ' \
+                      'strings)'
+
         elif stype == 'list':
-            ftype = '``list``'
+            ftype = '``list`` (:doc:`Instructions ' \
+                      '</config/instructions/lists>` for entering lists)'
+
         elif stype == 'int_from_hex':
             ftype = '2-byte hex value (``00`` to ``ff``)'
+
         elif stype == 'kivycolor' or stype == 'color':
-            ftype = '``color`` (color name, hex, or list'
+            ftype = '``color`` (*color name*, *hex*, or list of values ' \
+                    '*0*-*255*)'
+
         elif stype == 'pow2':
             ftype = '``integer`` (must be a power of 2'
+
         elif stype == 'gain':
             ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0'
+
         elif stype.startswith('subconfig'):
             ftype = 'sub-configurating containing {} settings'.format(
                 stype.replace('subconfig(', '')[:-1])
+
         elif stype.startswith('enum'):
             ftype = 'one of the following options: {}'.format(
                 stype.replace('enum(', '').replace(',', ', ')[:-1])
+
         elif stype.startswith('machine'):
-            ftype = "string name of a '{}' device".format(
+            ftype = "string name of a ``{}:`` device".format(
                 stype.replace('machine(', '')[:-1])
+
+        elif ':' in stype:
+            stype = tuple(stype.split(':'))
+            return_string = 'One or more sub-entries, each in the format of '
+            ftype = '``{}``:``{}``'.format(stype[0], stype[1])
+
         else:
             ftype = stype
 
         return_string += 'type: {}. '.format(ftype)
 
         if default:
-            return_string += 'Default: *{}*\n'.format(default)
-        else:
-            return_string += 'Default: *n/a* (a value is required)\n'
+            return_string += 'Default: ``{}``'.format(default)
+
+        return_string += '\n'
 
         return return_string
 

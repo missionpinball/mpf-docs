@@ -1,10 +1,13 @@
-multiball_(name)_started (MPF event)
-====================================
+multiball_(name)_started
+========================
+
+*MPF Event*
 
 The multiball called (name) has just started.
 
 
 Keyword arguments:
+------------------
 
 balls
 ~~~~~

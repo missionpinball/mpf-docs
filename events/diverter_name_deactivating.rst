@@ -1,7 +1,12 @@
-diverter_(name)_deactivating (MPF event)
-========================================
+diverter_(name)_deactivating
+============================
+
+*MPF Event*
 
 The diverter called (name) is deativating itself.
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

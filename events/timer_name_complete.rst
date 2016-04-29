@@ -1,5 +1,7 @@
-timer_(name)_complete (MPF event)
-=================================
+timer_(name)_complete
+=====================
+
+*MPF Event*
 
 The timer named (name) has completed.
 
@@ -8,6 +10,7 @@ posted, depending on its settings.
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

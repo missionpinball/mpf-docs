@@ -1,5 +1,7 @@
-machine_var_(name) (MPF event)
-==============================
+machine_var_(name)
+==================
+
+*MPF Event*
 
 Posted when a machine variable is added or changes value.
 (Machine variables are like player variables, except they're
@@ -7,6 +9,7 @@ maintained machine-wide instead of per-player or per-game.)
 
 
 Keyword arguments:
+------------------
 
 change
 ~~~~~~

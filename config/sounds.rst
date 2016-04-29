@@ -1,70 +1,124 @@
-sounds: (config_setting)
-========================
-.. todo::
-   Add description.
+sounds:
+=======
 
+*Config file section*
 
-Settings & options
-------------------
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_yes.rst
 
-ducking:
-~~~~~~~~
+.. overview
 
-* *release*: single|str|10ms
-* *attack*: single|str|10ms
-* *target*: single|str|
-* *release_point*: single|str|0
-* *delay*: single|str|0
-* *attenuation*: single|gain|1.0
+The ``sounds:`` section of your config is where you...
 
 .. todo::
    Add description.
 
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``sounds:`` section of your config. (If you don't include them, the default will be used).
 
 file:
 ~~~~~
-Single value, type: string. Default: None
+Single value, type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 loops:
 ~~~~~~
-Single value, type: integer. Default: 0
+Single value, type: ``integer``. Default: ``0``
 
 .. todo::
    Add description.
-
 
 max_queue_time:
 ~~~~~~~~~~~~~~~
-Single value, type: time string (will be converted to seconds). Default: None
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
 
 .. todo::
    Add description.
-
 
 priority:
 ~~~~~~~~~
-Single value, type: integer. Default: 0
+Single value, type: ``integer``. Default: ``0``
 
 .. todo::
    Add description.
-
 
 track:
 ~~~~~~
-Single value, type: string. Default: None
+Single value, type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 volume:
 ~~~~~~~
-Single value, type: gain setting (-inf, db, or float between 0.0 and 1.0. Default: 0.5
+Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 .. todo::
    Add description.
+
+
+ducking:
+--------
+
+The ``ducking:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``ducking:`` section of your config:
+
+target:
+^^^^^^^
+Single value, type: ``string``. 
+
+.. todo::
+   Add description.
+
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``ducking:`` section of your config. (If you don't include them, the default will be used).
+
+attack:
+^^^^^^^
+Single value, type: ``string``. Default: ``10ms``
+
+.. todo::
+   Add description.
+
+attenuation:
+^^^^^^^^^^^^
+Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0. Default: ``1.0``
+
+.. todo::
+   Add description.
+
+delay:
+^^^^^^
+Single value, type: ``string``. Default: ``0``
+
+.. todo::
+   Add description.
+
+release:
+^^^^^^^^
+Single value, type: ``string``. Default: ``10ms``
+
+.. todo::
+   Add description.
+
+release_point:
+^^^^^^^^^^^^^^
+Single value, type: ``string``. Default: ``0``
+
+.. todo::
+   Add description.
+
+
 

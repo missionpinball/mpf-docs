@@ -1,10 +1,13 @@
-timer_(name)_paused (MPF event)
-===============================
+timer_(name)_paused
+===================
+
+*MPF Event*
 
 The timer named (name) has paused.
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

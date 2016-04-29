@@ -1,11 +1,14 @@
-timer_(name)_tick (MPF event)
-=============================
+timer_(name)_tick
+=================
+
+*MPF Event*
 
 The timer named (name) has just counted down (or up,
 depending on its settings).
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

@@ -1,5 +1,7 @@
-timer_(name)_stopped (MPF event)
-================================
+timer_(name)_stopped
+====================
+
+*MPF Event*
 
 The timer named (name) has stopped.
 
@@ -8,6 +10,7 @@ it ended or because it was stopped early by some other event.
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

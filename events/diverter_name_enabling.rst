@@ -1,5 +1,7 @@
-diverter_(name)_enabling (MPF event)
-====================================
+diverter_(name)_enabling
+========================
+
+*MPF Event*
 
 The diverter called (name) is enabling itself. Note that if this
 diverter has ``activation_switches:`` configured, it will not
@@ -8,6 +10,7 @@ this diverter will activate immediately.
 
 
 Keyword arguments:
+------------------
 
 auto
 ~~~~

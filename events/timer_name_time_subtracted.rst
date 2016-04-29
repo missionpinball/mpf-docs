@@ -1,10 +1,13 @@
-timer_(name)_time_subtracted (MPF event)
-========================================
+timer_(name)_time_subtracted
+============================
+
+*MPF Event*
 
 The timer named (name) just had some ticks removed.
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

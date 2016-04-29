@@ -1,10 +1,13 @@
-timer_(name)_started (MPF event)
-================================
+timer_(name)_started
+====================
+
+*MPF Event*
 
 The timer named (name) has just started.
 
 
 Keyword arguments:
+------------------
 
 ticks
 ~~~~~

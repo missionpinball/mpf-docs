@@ -1,10 +1,13 @@
-player_add_success (MPF event)
-==============================
+player_add_success
+==================
+
+*MPF Event*
 
 A new player was just added to this game
 
 
 Keyword arguments:
+------------------
 
 num
 ~~~

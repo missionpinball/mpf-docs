@@ -1,5 +1,7 @@
-asset_loading_complete (MPF event)
-==================================
+asset_loading_complete
+======================
+
+*MPF Event*
 
 Posted when the asset manager has loaded all the assets in
 its queue.
@@ -18,4 +20,7 @@ a final *asset_loading_complete* event a second time for the
 MPF-based assets.
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

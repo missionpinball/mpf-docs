@@ -1,24 +1,42 @@
-system11: (config_setting)
-==========================
+system11:
+=========
+
+*Config file section*
+
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_no.rst
+
+.. overview
+
+The ``system11:`` section of your config is where you...
+
 .. todo::
    Add description.
 
 
-Settings & options
-------------------
+Required settings
+-----------------
+
+The following sections are required in the ``system11:`` section of your config:
+
+ac_relay_driver:
+~~~~~~~~~~~~~~~~
+Single value, type: string name of a ``coils:`` device. 
+
+.. todo::
+   Add description.
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``system11:`` section of your config. (If you don't include them, the default will be used).
 
 ac_relay_delay_ms:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: integer. Default: 75
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``75ms``
 
 .. todo::
    Add description.
 
-
-ac_relay_driver_number:
-~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: string. Default: n/a (a value is required)
-
-.. todo::
-   Add description.
 

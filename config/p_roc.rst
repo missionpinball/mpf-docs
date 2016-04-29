@@ -1,48 +1,57 @@
-p_roc: (config_setting)
-=======================
+p_roc:
+======
+
+*Config file section*
+
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_no.rst
+
+.. overview
+
+The ``p_roc:`` section of your config is where you...
+
 .. todo::
    Add description.
 
 
-Settings & options
-------------------
+Optional settings
+-----------------
+
+The following sections are optional in the ``p_roc:`` section of your config. (If you don't include them, the default will be used).
 
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: integer. Default: None
+List of one (or more) values, each is a type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 dmd_update_interval:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: time string (will be converted to milliseconds). Default: 33ms
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``33ms``
 
 .. todo::
    Add description.
-
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: time string (will be converted to milliseconds). Default: 100ms
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``100ms``
 
 .. todo::
    Add description.
-
 
 use_watchdog:
 ~~~~~~~~~~~~~
-Single value, type: boolean (Yes/No or True/False). Default: True
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 .. todo::
    Add description.
-
 
 watchdog_time:
 ~~~~~~~~~~~~~~
-Single value, type: time string (will be converted to milliseconds). Default: 1s
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1s``
 
 .. todo::
    Add description.
+
 

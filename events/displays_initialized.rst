@@ -1,5 +1,7 @@
-displays_initialized (MPF event)
-================================
+displays_initialized
+====================
+
+*MPF Event*
 
 Posted as soon as MPF MC displays have been initialized.
 
@@ -18,4 +20,7 @@ Also note that if you're using a media controller other than the MPF-MC
 (such as the Unity 3D backbox controller), then this event won't exist.
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

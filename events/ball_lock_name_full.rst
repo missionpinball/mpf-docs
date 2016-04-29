@@ -1,10 +1,13 @@
-ball_lock_(name)_full (MPF event)
-=================================
+ball_lock_(name)_full
+=====================
+
+*MPF Event*
 
 The ball lock device (name) is now full.
 
 
 Keyword arguments:
+------------------
 
 balls
 ~~~~~

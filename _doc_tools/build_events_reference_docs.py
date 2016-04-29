@@ -115,21 +115,25 @@ how MPF uses events.
 
         # write the title
         try:
-            rst_output += final_dict['event'] + ' (MPF event)\n'
+            rst_output += final_dict['event']+ '\n'
         except KeyError:
             print("Events entry missing from: {}".format(self.file))
 
-        rst_output += ('=' * (len(final_dict['event']) + 12)) + '\n\n'
+        rst_output += ('=' * len(final_dict['event'])) + '\n\n'
+        rst_output += '*MPF Event*\n\n'
 
         # add the description
         rst_output += final_dict['desc'] + '\n\n\n'
 
         # add the keyword arguments section
+
+        rst_output += 'Keyword arguments\n'
+        rst_output += '-----------------\n\n'
+
         if 'args' in final_dict:
-            rst_output += 'Keyword arguments:\n\n'
             rst_output += self.parse_args(final_dict['args'])
         else:
-            rst_output += 'Keyword arguments: None\n'
+            rst_output += '*None*\n'
 
         return final_dict['event'], rst_output
 

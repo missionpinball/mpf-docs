@@ -1,5 +1,7 @@
-mode_(mode_name)_(var_name)_score (MPF event)
-=============================================
+mode_(mode_name)_(var_name)_score
+=================================
+
+*MPF Event*
 
 A scoring event was just processed to add (or remove) value
 from a player variable. (Remember that scoring events can affect
@@ -12,6 +14,7 @@ player variable called *ramps*, the event posted would be
 
 
 Keyword arguments:
+------------------
 
 change
 ~~~~~~

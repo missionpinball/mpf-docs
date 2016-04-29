@@ -1,20 +1,56 @@
-bcp: (config_setting)
-=====================
+bcp:
+====
+
+*Config file section*
+
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_no.rst
+
+.. overview
+
+The ``bcp:`` section of your config is where you...
+
 .. todo::
    Add description.
 
-
-Settings & options
-------------------
 
 connections:
-~~~~~~~~~~~~
+------------
 
-* *host*: single|str|None
-* *require_connection*: single|bool|False
-* *port*: single|int|5050
-* *connection_attempts*: single|int|-1
+The ``connections:`` section contains the following nested sub-settings
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``connections:`` section of your config. (If you don't include them, the default will be used).
+
+connection_attempts:
+^^^^^^^^^^^^^^^^^^^^
+Single value, type: ``integer``. Default: ``-1``
 
 .. todo::
    Add description.
+
+host:
+^^^^^
+Single value, type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+port:
+^^^^^
+Single value, type: ``integer``. Default: ``5050``
+
+.. todo::
+   Add description.
+
+require_connection:
+^^^^^^^^^^^^^^^^^^^
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
+
+
 

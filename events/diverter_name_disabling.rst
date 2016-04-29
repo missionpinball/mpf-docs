@@ -1,5 +1,7 @@
-diverter_(name)_disabling (MPF event)
-=====================================
+diverter_(name)_disabling
+=========================
+
+*MPF Event*
 
 The diverter called (name) is disabling itself. Note that if this
 diverter has ``activation_switches:`` configured, it will not
@@ -8,6 +10,7 @@ hits and timing. Otherwise this diverter will deactivate immediately.
 
 
 Keyword arguments:
+------------------
 
 auto
 ~~~~

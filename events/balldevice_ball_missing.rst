@@ -1,10 +1,13 @@
-balldevice_ball_missing (MPF event)
-===================================
+balldevice_ball_missing
+=======================
+
+*MPF Event*
 
 A ball is missing from a device.
 
 
 Keyword arguments:
+------------------
 
 balls
 ~~~~~

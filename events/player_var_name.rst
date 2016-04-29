@@ -1,5 +1,7 @@
-player_(var_name) (MPF event)
-=============================
+player_(var_name)
+=================
+
+*MPF Event*
 
 Posted when a player variable is added or changes value.
 
@@ -21,6 +23,7 @@ events will be posted, one for each change.
 
 
 Keyword arguments:
+------------------
 
 change
 ~~~~~~

@@ -1,7 +1,12 @@
-init_phase_1 (MPF event)
-========================
+init_phase_1
+============
+
+*MPF Event*
 
 Posted during the initial boot up of MPF.
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

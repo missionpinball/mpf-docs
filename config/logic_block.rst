@@ -1,58 +1,195 @@
-logic_block: (config_setting)
-=============================
+logic_block:
+============
+
+*Config file section*
+
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_yes.rst
+
+.. note:: This section can also be used in a show file in the ``logics:`` section of a step.
+
+.. overview
+
+The ``logic_block:`` section of your config is where you...
+
 .. todo::
    Add description.
 
 
-Settings & options
-------------------
-
 accrual:
-~~~~~~~~
+--------
 
-* *events*: list|str|
+The ``accrual:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``accrual:`` section of your config:
+
+events:
+^^^^^^^
+List of one (or more) values, each is a type: ``string``. 
 
 .. todo::
    Add description.
 
 
 common:
-~~~~~~~
+-------
 
-* *reset_events*: list|str|None
-* *events_when_complete*: list|str|None
-* *player_variable*: single|str|None
-* *enable_events*: list|str|None
-* *reset_on_complete*: single|bool|True
-* *restart_events*: list|str|None
-* *disable_on_complete*: single|bool|True
-* *persist_state*: single|bool|False
-* *disable_events*: list|str|None
+The ``common:`` section contains the following nested sub-settings
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``common:`` section of your config. (If you don't include them, the default will be used).
+
+disable_events:
+^^^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+disable_on_complete:
+^^^^^^^^^^^^^^^^^^^^
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+.. todo::
+   Add description.
+
+enable_events:
+^^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+events_when_complete:
+^^^^^^^^^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+persist_state:
+^^^^^^^^^^^^^^
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
+
+player_variable:
+^^^^^^^^^^^^^^^^
+Single value, type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+reset_events:
+^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+reset_on_complete:
+^^^^^^^^^^^^^^^^^^
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+.. todo::
+   Add description.
+
+restart_events:
+^^^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
 
 
 counter:
-~~~~~~~~
+--------
 
-* *count_complete_value*: single|int|
-* *event_when_hit*: single|str|None
-* *direction*: single|str|up
-* *count_interval*: single|int|1
-* *count_events*: list|str|
-* *multiple_hit_window*: single|ms|0
-* *starting_count*: single|int|0
+The ``counter:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``counter:`` section of your config:
+
+count_complete_value:
+^^^^^^^^^^^^^^^^^^^^^
+Single value, type: ``integer``. 
+
+.. todo::
+   Add description.
+
+count_events:
+^^^^^^^^^^^^^
+List of one (or more) values, each is a type: ``string``. 
+
+.. todo::
+   Add description.
+
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``counter:`` section of your config. (If you don't include them, the default will be used).
+
+count_interval:
+^^^^^^^^^^^^^^^
+Single value, type: ``integer``. Default: ``1``
+
+.. todo::
+   Add description.
+
+direction:
+^^^^^^^^^^
+Single value, type: ``string``. Default: ``up``
+
+.. todo::
+   Add description.
+
+event_when_hit:
+^^^^^^^^^^^^^^^
+Single value, type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+multiple_hit_window:
+^^^^^^^^^^^^^^^^^^^^
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+
+.. todo::
+   Add description.
+
+starting_count:
+^^^^^^^^^^^^^^^
+Single value, type: ``integer``. Default: ``0``
 
 .. todo::
    Add description.
 
 
 sequence:
-~~~~~~~~~
+---------
 
-* *events*: list|str|
+The ``sequence:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``sequence:`` section of your config:
+
+events:
+^^^^^^^
+List of one (or more) values, each is a type: ``string``. 
 
 .. todo::
    Add description.
+
+
 

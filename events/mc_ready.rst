@@ -1,5 +1,7 @@
-mc_ready (MPF event)
-====================
+mc_ready
+========
+
+*MPF Event*
 
 Posted when the MPF-MC is available to start showing slides and
 playing sounds.
@@ -11,4 +13,7 @@ could in turn be used to show asset loading status, boot progress,
 etc.)
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

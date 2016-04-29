@@ -1,5 +1,7 @@
-machine_reset_phase_3 (MPF event)
-=================================
+machine_reset_phase_3
+=====================
+
+*MPF Event*
 
 The third phase of resetting the machine.
 
@@ -8,4 +10,7 @@ posted), and they're also posted subsequently when the machine is reset
 (after existing the service mode, for example).
 
 
-Keyword arguments: None
+Keyword arguments:
+------------------
+
+*None*

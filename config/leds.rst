@@ -1,136 +1,126 @@
-leds: (config_setting)
-======================
-.. todo::
-   Add description.
+leds:
+=====
 
+*Config file section*
 
-Settings & options
-------------------
+.. include:: _machine_config_yes.rst
+.. include:: _mode_config_no.rst
 
-color_channel_map:
-~~~~~~~~~~~~~~~~~~
-Single value, type: string. Default: rgb
+.. overview
 
-.. todo::
-   Add description.
-
-
-color_correction_profile:
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: string. Default: None
+The ``leds:`` section of your config is where you...
 
 .. todo::
    Add description.
 
 
-debug:
-~~~~~~
-Single value, type: boolean (Yes/No or True/False). Default: False
+Required settings
+-----------------
 
-.. todo::
-   Add description.
-
-
-default_color:
-~~~~~~~~~~~~~~
-Single value, type: color (color name, hex, or list. Default: ffffff
-
-.. todo::
-   Add description.
-
-
-fade_ms:
-~~~~~~~~
-Single value, type: integer. Default: None
-
-.. todo::
-   Add description.
-
-
-label:
-~~~~~~
-Single value, type: string. Default: %
-
-.. todo::
-   Add description.
-
+The following sections are required in the ``leds:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: string. Default: n/a (a value is required)
+Single value, type: ``string``. 
 
 .. todo::
    Add description.
 
 
-number_str:
-~~~~~~~~~~~
-Single value, type: string. Default: n/a (a value is required)
+Optional settings
+-----------------
+
+The following sections are optional in the ``leds:`` section of your config. (If you don't include them, the default will be used).
+
+color_correction_profile:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
 
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
+
+default_color:
+~~~~~~~~~~~~~~
+Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``ffffff``
+
+.. todo::
+   Add description.
+
+fade_ms:
+~~~~~~~~
+Single value, type: ``integer``. Default: ``None``
+
+.. todo::
+   Add description.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+.. todo::
+   Add description.
 
 off_events:
 ~~~~~~~~~~~
-Parent setting for one (or more) sub-settings. Each sub-setting is a type: str:ms. Default: None
+One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 on_events:
 ~~~~~~~~~~
-Parent setting for one (or more) sub-settings. Each sub-setting is a type: str:ms. Default: None
+One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 platform:
 ~~~~~~~~~
-Single value, type: string. Default: None
+Single value, type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 polarity:
 ~~~~~~~~~
-Single value, type: boolean (Yes/No or True/False). Default: False
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
    Add description.
-
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: string. Default: None
+List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 x:
 ~~
-Single value, type: integer. Default: None
+Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 y:
 ~~
-Single value, type: integer. Default: None
+Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
-
 
 z:
 ~~
-Single value, type: integer. Default: None
+Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
+
 

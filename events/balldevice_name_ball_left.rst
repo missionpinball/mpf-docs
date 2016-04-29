@@ -1,10 +1,13 @@
-balldevice_(name)_ball_left (MPF event)
-=======================================
+balldevice_(name)_ball_left
+===========================
+
+*MPF Event*
 
 A ball (or balls) just left the device (name).
 
 
 Keyword arguments:
+------------------
 
 balls
 ~~~~~
