@@ -14,7 +14,7 @@ We're working on this. Stand by.
 Mac OS X
 --------
 
-Installing the P-ROC drivers (libpinproc and pypinproc) on the Mac is a manual process that requires a few prerequisites and some supporting software. We chose to use the "homebrew" package manager to help us with the install, which is similar to the apt-get package manager in Linux. The following instructions will help you get homebrew installed, along with everything else.
+Installing the P-ROC drivers (libpinproc and pypinproc) on the Mac is a manual process that requires a few prerequisites and some supporting software. We chose to use the "`homebrew <http://brew.sh>`_" package manager to help us with the install, which is similar to the apt-get package manager in Linux. The following instructions will help you get homebrew installed, along with everything else.
 
 These instructions assume you have already installed MPF.app. If you haven't, you will need to go back and do that first, since it has to be installed before you can build the P-ROC drivers.
 
