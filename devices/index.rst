@@ -19,8 +19,8 @@ level logical device called a drop target bank.
 
 Here's a list of all the devices that exist in the MPF:
 
-Low-level devices
------------------
+Physical devices
+----------------
 
 + Switch
 + Coil
@@ -28,6 +28,8 @@ Low-level devices
 + RGB LED
 + Flasher
 + GI String
++ Servo
++ Motor
 
 Logical devices
 ---------------
@@ -36,7 +38,6 @@ Logical devices
 + Flipper
 + Ball Device (anything that holds balls, like the trough, plunger
   lane, playfield lock, etc.)
-+ Autofire Coil
 + Score Reel
 + Score Reel Group
 + Drop Target
@@ -49,11 +50,11 @@ Logical devices
 Abstract Devices
 ----------------
 
-
 + Ball Lock
 + Ball Saver
 + Multiball
 
 
 .. toctree::
+   Ball device <ball_device>
    Switch <switch>

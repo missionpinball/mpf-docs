@@ -1,5 +1,5 @@
-Core modules (mpf)
-==================
+MPF core modules
+================
 
 The MPF core engine contains several core system components which live in the
 ``/mpf/core`` folder. Some of the components do OS-like things (the system

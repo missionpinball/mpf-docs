@@ -1,17 +1,28 @@
 Installing MPF on Mac OS X
 ==========================
 
-Installing MPF on Mac OS X is straightforward, though it's a bit different than how it works on other platforms. For OS X, we have a pre-built MPF.app application package which contains everything you need, including Python and all the graphics and audio libraries. So you just download this app, copy it to your *Applications* folder, register it with your system, and you're all set!
+Installing MPF on Mac OS X is straightforward, though it's a bit different than how it works on
+other platforms. For OS X, we have a pre-built MPF.app application package which contains everything
+you need, including Python and all the graphics and audio libraries. So you just download this
+app, copy it to your *Applications* folder, register it with your system, and you're all set!
 
 MPF works on Max OS X 10.9 and newer (Mavericks, Yosemite, and El Capitan).
 
-The reason went with the single MPF bundle which has everything built in is because Mac OS X has Python 2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to deal with side-by-side Python installations which can get hairy. Plus MPF requires several graphics and sound libraries which are sort of a pain to get installed, so really it's easier to just get everything you need bundled up into a single application package which you can just drag and drop and be done.
+The reason went with the single MPF bundle which has everything built in is because Mac OS X has Python
+2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
+deal with side-by-side Python installations which can get hairy. Plus MPF requires several graphics and
+sound libraries which are sort of a pain to get installed, so really it's easier to just get everything
+you need bundled up into a single application package which you can just drag and drop and be done.
 
 .. note::
 
-   MPF cannot run in an OS X virtual machine (like in VMware Fusion or Parallels). Please direct complaints to Cupertino.
+   MPF cannot run in an OS X virtual machine (like in VMware Fusion or Parallels). Please direct
+   complaints to Cupertino.
 
-Download a zip of the latest MPF app for OS X from `here <https://missionpinball.com/Mission%20Pinball%20Framework.dmg>`_. The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That seems crazy huge, right? Remember though that it has *everything* in it, including Python and all the multimedia and video playback libraries, audio libraries, etc.)
+Download a zip of the latest MPF app for OS X from `here <https://missionpinball.com/Mission%20Pinball%20Framework.dmg>`_.
+The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That
+seems crazy huge, right? Remember though that it has *everything* in it, including
+Python and all the multimedia and video playback libraries, audio libraries, etc.)
 
 Once you've downloaded the file, here are the steps to install MPF on OS X:
 
@@ -27,13 +38,18 @@ Then drag and drop MPF.app file to your *Applications* folder.
 2. Update MPF and link it with OS X
 -----------------------------------
 
-The final step is to run a command which will update MPF and make it available from anywhere on your system. We've created a script to do this for you, so all you have to do is double click on the RunMeOnce.command file. You'll be prompted for your password, and in a few seconds you'll be ready to go!
+The final step is to run a command which will update MPF and make it available from anywhere on
+your system. We've created a script to do this for you, so all you have to do is double click on the
+RunMeOnce.command file. You'll be prompted for your password, and in a few seconds you'll be ready to go!
 
 This command does a few things:
 
-First, it registers a system-wide shortcut called ``mpf`` with your system, so that whwen your in your pinball machine folder you can type ``mpf`` and it will be able to find the MPF launch command inside the MPF app. 
+First, it registers a system-wide shortcut called ``mpf`` with your system, so that whwen your in your pinball
+machine folder you can type ``mpf`` and it will be able to find the MPF launch command inside the MPF app.
 
-Second it registers a command ``kivy`` which is a link to the copy of Python that's included inside the MPF app package, which is actually based on a media framework called Kivy. (You'll need this if you want to update anything inside the MPF app without having to re-download the whole thing again.)
+Second it registers a command ``kivy`` which is a link to the copy of Python that's included inside
+the MPF app package, which is actually based on a media framework called Kivy. (You'll need this if
+you want to update anything inside the MPF app without having to re-download the whole thing again.)
 
 3. Test your installation
 -------------------------

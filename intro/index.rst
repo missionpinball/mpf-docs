@@ -67,5 +67,5 @@ as they come up.)
 
    how_mpf_talks_to_hardware
    machine_config_files
-   running_your_game
    config_files_vs_programming
+   /running/index

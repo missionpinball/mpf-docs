@@ -1,7 +1,9 @@
+Abstract devices
+================
 
 Abstract devices are logical devices in MPF that are based on concepts
 rather than physical devices, though they are created and managed just
-like low-level and logical devices, so they're included here for
+like physical and logical devices, so they're included here for
 completeness. For example, a ball saver in MPF is a "ball saver"
 device. You might actually have several ball savers in your machine,
 each running based on different conditions and with different
@@ -13,5 +15,8 @@ could have a phantom (unadvertised) ball saver attached to it. There
 are also abstract devices for things like multiball and ball locks
 (whether physical or virtual).
 
+Abstract devices in MPF include:
 
+.. toctree::
+   :maxdepth: 1
 
