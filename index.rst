@@ -21,10 +21,10 @@ Documentation Migration Status
 
  <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="4"
-  aria-valuemin="0" aria-valuemax="342" style="width:12.2%"></div>
+  aria-valuemin="0" aria-valuemax="342" style="width:12.5%"></div>
  </div>
 
-42 of 342 documents have been updated for 0.30 and added to this site. We're
+43 of 342 documents have been updated for 0.30 and added to this site. We're
 working as fast as we can, but there are 206,937 total words in the MPF
 documentation, so this process may take awhile. :)
 
