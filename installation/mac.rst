@@ -40,7 +40,9 @@ Then drag and drop MPF.app file to your *Applications* folder.
 
 The final step is to run a command which will update MPF and make it available from anywhere on
 your system. We've created a script to do this for you, so all you have to do is double click on the
-RunMeOnce.command file. You'll be prompted for your password, and in a few seconds you'll be ready to go!
+RunMeOnce.command file. You may be told that you can't open this file due to security restrictions. If you do, go to the Security & Privacy pane in System Preferences and choose "Allow apps downloaded from anywhere." You can turn this off agian after you run the script (or it will turn off automatically after 30 days). 
+
+When you run the script, you'll be prompted for your password. After you enter it, you'll be ready to go in just a few seconds!
 
 This command does a few things:
 
