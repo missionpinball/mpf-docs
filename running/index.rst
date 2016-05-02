@@ -157,30 +157,37 @@ And then you could run the small windowed version via:
 `-X` : (Uppercase "X") Forces MPF to use the smart virtual platform
 interface, regardless of what your *hardware: platform:* is set to.
 Note that the smart virtual platform is the default which is used if
-you do not specify a platform in your machine config file. `-x` :
-(Lowercase "x") Forces MPF to use the virtual platform interface,
-regardless of what your *hardware: platform:* is set to. `-b` : Sets
-MPF to not connect to the Media Controller via BCP. This is nice if
+you do not specify a platform in your machine config file.
+
+`-x` : (Lowercase "x") Forces MPF to use the virtual platform interface,
+regardless of what your *hardware: platform:* is set to. 
+
+`-b` : Sets MPF to not connect to the Media Controller via BCP. This is nice if
 you're just running the MPF core engine without a media controller so
 you don't get all those timeout messages about it not being able to
-connect to a BCP server. `-v` : (Lowercase "v") Enables verbose
-logging to the log file. Warning: Your log files will be huge, perhaps
+connect to a BCP server. 
+
+`-v` : (Lowercase "v") Enables verbose logging to the log file. Warning: Your log files will be huge, perhaps
 1MB per minute of game time. Definitely only use this when you're
-troubleshooting. `-V` : (Uppercase "V") Enables verbose logging to the
-console output. Note that on due to the way the command prompt console
+troubleshooting. 
+
+`-V` : (Uppercase "V") Enables verbose logging to the console output. Note that on due to the way the command prompt console
 works on Windows, enabling verbose logging on Windows will
 significantly affect MPF (in a bad way). Windows computers can run MPF
 no problem, but because of their weird console slowness we recommend
-that you do notuse the `-V`command line option from a Windows
-computer. `-C` : Sets the location of the default system-wide
+that you do notuse the `-V` command line option from a Windows
+computer. 
+
+`-C` : Sets the location of the default system-wide
 configuration file. This file has the same format (and can contain the
 same information) as any machine configuration file, but it's read in
 first. This parameter is optional. If you do not specify it, MPF will
 automatically loadan MPF configuration file from
 `/mpf/mpf/mpfconfig.yaml`, and the media controllerwill automatically
 loadan system-wideconfiguration file from
-`/mpf/media_controller/mcconfig.yaml`. `-l` : Specifies the name of
-the log file that will be generated. (This log file contains the same
+`/mpf/media_controller/mcconfig.yaml`.
+
+`-l` : Specifies the name of the log file that will be generated. (This log file contains the same
 content as the console window output.) By default it creates a file in
 the `mpf/logs`folder with a filename that's based on the computer host
 name plus a time and date stamp. For example, 2014-06-26-13-39-39
@@ -188,8 +195,5 @@ name plus a time and date stamp. For example, 2014-06-26-13-39-39
 separate log file will be created by the MPF game engine and the media
 controller. Their formats are the same with the example of "mpf" in
 the game engine log file and "mc" in the media controller log file.
-`-h` : Displays the command-line option help message. (Basically it
-just describes everything here.) `--version:` Prints the version of
-MPF, the config file version required, and the version of BCP this
-build of MPF is using. Then it quits. So you use it like this: *python
-mpf.py --version.*
+
+`-h` : Displays the command-line option help message. (Basically it just describes everything here.) `--version:` Prints the version of MPF, the config file version required, and the version of BCP this build of MPF is using. Then it quits. So you use it like this: *python mpf.py --version.*
