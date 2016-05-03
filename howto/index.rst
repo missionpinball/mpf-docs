@@ -15,3 +15,4 @@ List of How to Guides
    :maxdepth: 1
 
    /howto/migrate_from_21_to_30
+   /howto/opp
