@@ -8,11 +8,14 @@ physical_dmd:
 
 .. overview
 
-The ``physical_dmd:`` section of your config is where you...
+The ``physical_dmd:`` section of your config is where you configure the settings for a physical DMD (dot matrix
+display). You only need this section if you have a physical monochrome DMD connected to a 14-pin header on a hardware
+controller. If you have an RGB DMD, configure that in the ``physical_rgb_dmd:`` section.
 
-.. todo::
-   Add description.
+If you want to show a virtual DMD in an on-screen window, you configure that as a DMD widget, not here.
 
+Note that there are no *height* and *width* settings here. The pixel size of your DMD is determined by the size of the
+``source:`` display which drives the content for this DMD.
 
 Optional settings
 -----------------
@@ -23,42 +26,40 @@ brightness:
 ~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-.. todo::
-   Add description.
+A brightness multiplier for the DMD. Default is 1.0 which is full brightness, but if you want to dim the DMD, you can
+set this to some value lower than 1.0. (e.g. a value of 0.9 will be 90% brightness, etc.)
 
 fps:
 ~~~~
 Single value, type: ``integer``. Default: ``0``
 
-.. todo::
-   Add description.
+How many frames per second this DMD will be updated. The default of 0 means it will run at the same rate as the MPF Hz.
+A value of 30 should be fine and smooth. Some people claim that higher values look better, but as far as we can tell,
+that just makes your CPU work harder. But feel free to expirement.
 
 luminosity:
 ~~~~~~~~~~~
 List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``.299, .587, .114``
 
-.. todo::
-   Add description.
+A list of three values (from 0.0 to 1.0) that represent the percentage of red, green, and blue that will be used to
+produce the monocrhome colors from the source display. All three of these values should add up to 1.0.
 
 only_send_changes:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Specifies whether every frame is sent to the DMD, or only changed frames.
 
 shades:
 ~~~~~~~
 Single value, type: ``integer`` (must be a power of 2. Default: ``16``
 
-.. todo::
-   Add description.
+How many shades the physical DMD can show. Modern pinball controllers support 16 shades.
 
 source_display:
 ~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``dmd``
 
-.. todo::
-   Add description.
-
-
+The name of the display (from the ``displays:`` section of your machine config) that is the source for this physical
+DMD. Whatever's on the source display will be displayed on the DMD. If you don't specify a source, MPF will
+automatically use a source display called "dmd".
