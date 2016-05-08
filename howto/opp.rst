@@ -175,12 +175,20 @@ When MPF sends this coil a pulse command, the coil will be fired for
 
 Hold Power
 ~~~~~~~~~~
+If you want to hold a driver on at less than full power, MPF does this by using
+"hold_power" parameter which works for all platforms. It can range from 0 to 8
+and hold_power/8 = time share the coil is on.
 
-If you want to hold a driver on at less than full power, the OPP
-does this by using "hold_power" parameter.  The period is fixed at
-16ms.  To set the hold power to 25%, set hold_power to 4 or
-4ms/16ms = 25%.  The `hold_power:` entry can range from 0 to 15.
+The period is fixed at 16ms for OPP. To set the hold power to 25%, set
+hold_power to 2 and OPP will use 4ms/16ms = 25%.
 
+Because of firmware limitations in OPP hold_power 8 will translate to 15ms/16ms
+= 93.75% on. Same happens when allow_enable is set to true and no hold_power is
+provided. There is currently no way to permanently enable a hold coil in OPP. 
+
+By using the MPF hold_power parameter you can only use 8 out of 16 possible
+steps. Therefore, you can also use the OPP specific parameter hold_power16
+which can range from 0 to 15.
 
 ::
 
@@ -189,7 +197,7 @@ does this by using "hold_power" parameter.  The period is fixed at
       some_coil:
         number: 0-3
         pulse_ms: 32
-        hold_power: 8
+        hold_power: 4
 
 This will configure OPP card 0, solenoid wing 0, last solenoid to
 have an initial pulse of 32 ms, and then be held on at 50% power.
