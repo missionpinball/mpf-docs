@@ -18,6 +18,7 @@ class ConfigDocParser(object):
         self.config_specs = dict()
 
         self.existing_rsts = list()
+        self.existing_settings = dict()
 
         self._load_config_spec()
         self.config_specs = self._create_config_specs(self.config_spec)
@@ -119,12 +120,16 @@ your machine-wide config, a mode-specific config, or both.
 
     def create_rst(self, name, spec):
 
-        # todo check for existing and tokenize it
+        if name in self.existing_rsts:
+            existing_intro, self.existing_settings = (
+                self.tokenize_existing_rst(os.path.join(rst_path,
+                                                        name + '.rst')))
 
-        existing_intro = ''
-        existing_settings = dict()
+        else:
+            existing_intro = ''
+            self.existing_settings = dict()
+
         final_text = ''
-
         final_text += '{}:\n'.format(name)
         final_text += '=' * (len(name) + 1)
         final_text += '\n\n*Config file section*\n\n'
@@ -160,39 +165,36 @@ your machine-wide config, a mode-specific config, or both.
 
         self.create_file(name, final_text)
 
-    def build_sections(self, name, spec, sep='-'):
+    def build_sections(self, name, spec, level=1):
         final_text = ''
 
         if spec['required']:
             final_text += self.add_required_section(spec['required'], name,
-                                                    sep)
+                                                    level)
             final_text += '\n'
 
         if spec['optional']:
             final_text += self.add_optional_section(spec['optional'], name,
-                                                    sep)
+                                                    level)
             final_text += '\n'
 
         if 'sub_sections' in spec and spec['sub_sections']:
             final_text += self.add_subsection_section(spec['sub_sections'],
-                                                      name, sep)
+                                                      name, level)
             final_text += '\n'
-
-        if spec['allow_others']:
-            final_text += '.. note:: The ``{}:`` section of your config may ' \
-                          'contain additional settings not mentioned here. ' \
-                          'Read the introductory text for details of what ' \
-                          'those might be.\n\n'.format(name)
 
         return final_text
 
+    def add_required_section(self, required_list, name, level):
 
-    def add_required_section(self, required_list, name, sep='-'):
-
-        if sep == '-':
+        if level == 1:
+            sep = '-'
             sep2 = '~'
-        elif sep == '~':
+        elif level == 2:
+            sep = '~'
             sep2 = '^'
+        elif level == 3:
+            sep = '^'
 
         final_text = 'Required settings\n'
         final_text += sep * 17
@@ -206,19 +208,31 @@ your machine-wide config, a mode-specific config, or both.
             final_text += self._get_spec_string(setting[1], setting[2])
             final_text += '\n'
 
-            # todo add to pull in existing
-            final_text += '.. todo::\n   Add description.'
+            found = False
+
+            for k1, v1 in self.existing_settings.items():
+                if k1[0] == setting[0] and k1[2] == level + 1:
+                    final_text += v1
+                    found = True
+                    break
+
+            if not found:
+                final_text += '.. todo::\n   Add description.'
 
             final_text += '\n\n'
 
         return final_text
 
-    def add_optional_section(self, optional_list, name, sep='-'):
+    def add_optional_section(self, optional_list, name, level):
 
-        if sep == '-':
+        if level == 1:
+            sep = '-'
             sep2 = '~'
-        elif sep == '~':
+        elif level == 2:
+            sep = '~'
             sep2 = '^'
+        elif level == 3:
+            sep = '^'
 
         final_text = 'Optional settings\n'
         final_text += sep * 17
@@ -234,18 +248,30 @@ your machine-wide config, a mode-specific config, or both.
                                                 setting[3])
             final_text += '\n'
 
-            # todo add to pull in existing
-            final_text += '.. todo::\n   Add description.'
+            found = False
+
+            for k1, v1 in self.existing_settings.items():
+                if k1[0] == setting[0] and k1[2] == level + 1:
+                    final_text += v1
+                    found = True
+                    break
+
+            if not found:
+                final_text += '.. todo::\n   Add description.'
 
             final_text += '\n\n'
 
         return final_text
 
-    def add_subsection_section(self, subsection_dict, name, sep='-'):
-        if sep == '-':
+    def add_subsection_section(self, subsection_dict, name, level):
+        if level == 1:
+            sep = '-'
             sep2 = '~'
-        elif sep == '~':
+        elif level == 2:
+            sep = '~'
             sep2 = '^'
+        elif level == 3:
+            sep = '^'
 
         final_text = ''
 
@@ -254,55 +280,93 @@ your machine-wide config, a mode-specific config, or both.
             final_text += '{}:\n'.format(k)
             final_text += sep * (len(k) + 1)
             final_text += '\n\n'
-            final_text += "The ``{}:`` section contains " \
-                          "the following nested sub-settings\n\n".format(k)
 
-            final_text += self.build_sections(k, v, sep=sep2)
+            found = False
+
+            for k1, v1 in self.existing_settings.items():
+                if k1[0] == k and k1[2] == level + 1:
+                    final_text += v1
+                    found = True
+                    break
+
+            if not found:
+                final_text += "The ``{}:`` section contains " \
+                              "the following nested sub-settings".format(k)
+
+            final_text += '\n\n'
+            final_text += self.build_sections(k, v, level+1)
 
         return final_text
 
     def tokenize_existing_rst(self, filename):
+
         with open(filename, 'r') as f:
             doc = f.read()
 
-        beginning = ''
-        required_settings = ''
-        optional_settings = ''
+        settings_dict = dict()
 
-        beginning, settings = doc.split(
-            'Settings & options\n------------------')
+        # trim off the header info
+        doc = doc.split('.. overview\n\n')[1]
+
+        # split the doc into a list of lines
+        # doc = doc.split['\n']
+
+        levels = ['=', '-', '~', '^']
+        last_parents = [None, None, None, None]
+        sections = list()  # tuple (name, level, parent)
+
+        for x in re.findall('([^\n]+)\n([~\-\^]+)', doc):
+
+            level = levels.index(x[1][0])
+            name = x[0].strip(':')
+            heading = x[0]
+            last_parents[level] = name
+
+            if level:
+                parent = last_parents[level - 1]
+            else:
+                parent = None
+
+            sections.append((name, heading, level, parent))
+
+        try:
+            beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
+        except IndexError:
+            beginning = ''
 
         beginning = beginning.strip('\n')
 
-        setting_names = list()
-        settings_dict = dict()
-
-        for x in re.findall('([^\n]+)\n(~+)', settings):
-            setting_names.append(x[0].strip(':'))
-
-        for i, setting_name in enumerate(setting_names):
-            start = '\n' + setting_name + ':\n' + ('~' * (len(setting_name) + 1))
+        for i, (name, heading, level, parent) in enumerate(sections):
+            start = '\n' + heading + '\n' + (levels[level] * (len(heading)))
 
             try:
-                end = '\n' + setting_names[i+1] + ':\n' + ('~' * (len(setting_names[i+1]) +1))
+                end = '\n' + sections[i+1][1] + '\n' + (levels[sections[i+1][2]] * (len(sections[i+1][1])))
             except IndexError:
                 end = None
 
             try:
-                settings_dict[setting_name] = settings[settings.index(start):
-                    settings.index(end)].replace(start, '').strip('\n')
+                body = doc[doc.index(start):doc.index(end)].replace(start, '').strip('\n')
             except TypeError:
-                settings_dict[setting_name] = settings[settings.index(start):].replace(start, '').strip('\n')
+                body = doc[doc.index(start):].replace(start, '').strip('\n')
 
-        # strip out the old spec string so the latest replaces it
-        for k, v in settings_dict.items():
-            if not k.startswith('<'):
-                v = v.strip('\n')
-                v = '\n'.join(v.split('\n')[1:])
-                v = v.strip('\n')
-                settings_dict[k] = v
+            # strip out the old spec string so the latest replaces it
+            if level:
+                body = body.strip('\n')
+                body = '\n'.join(body.split('\n')[1:])
+                body = body.strip('\n')
+
+            settings_dict[(name, heading, level, parent)] = body
 
         return beginning, settings_dict
+
+    def _get_index_of_next_heading(self, doc_lines):
+
+        heading_chars = set(('-', '~', '^'))
+
+        for i in range(len(doc_lines)):
+            if set(doc_lines[i]).issubset(heading_chars):
+                # we have a heading sep
+                return i - 1
 
     def _get_spec_string(self, num, stype, default=None):
         if num == 'single':
