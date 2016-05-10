@@ -5,13 +5,14 @@ MPF Documentation
    :maxdepth: 1
    :titlesonly:
 
-   Start here </intro/index>
-   Feature list </features/index>
-   Compatible hardware </hardware/index>
+   Start here </start/index>
    Installing MPF </installation/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to guides / "cookbook" </howto/index>
+   Feature list </features/index>
+   Compatible hardware </hardware/index>
+
    Core modules </core/index>
    Devices </devices/index>
    Modes </modes/index>
@@ -20,7 +21,7 @@ MPF Documentation
    Config players </config_players/index>
    Tech notes </tech_notes/index>
    BCP protocol </bcp/index>
-   API / programmer's reference <http://api.missionpinball.com>
+   Writing custome code </code/index>
    Events reference </events/index>
    Config file reference </config/index>
    Contributing </contribute/index>

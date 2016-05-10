@@ -1,10 +1,9 @@
 Show configuration format
 =========================
-Shows are defined via nested key/value pairs in YAML files. You can define shows in the
-``shows:`` section of a regular machine or mode config file, or you can define
-them in their own standalone files. It makes no difference from a functional
-standpoint--it's purely up to you and a matter of preference. (We tend to
-create small simple shows in existing config files and make bigger shows their own standalone files.)
+Shows are defined via nested key/value pairs in YAML files.
+
+A show contains multiple steps, and each step contains a time (for when that step should run) and instructions (for
+what actions should happen in that step).
 
 Here is a very simple show with two steps. The first step sets the color of
 *led1* to *red*, then one second later, it turns *led1* off again. Then after
@@ -21,14 +20,14 @@ to *loop*, meaning this should could be used to flash *led1* on and off.)
        led1: off
    - time: + 1
 
-There are lots of different actions you can configure in a show step (LEDs, lights,
-sounds, coils, display slides, etc.), but for now we'll just use thie very
-simple show as an example.
+There are `lots of different actions you can configure in a show step </config_players/index>`_ (LEDs, lights,
+sounds, coils, display slides, etc.), but for now we'll just use this very simple show as an example.
 
-Separating steps
-----------------
-Shows are configured via YAML-like format (more on that in a bit). Note that
-each *step* in the show starts with a key/value pair that's separated with a
+Defining steps
+--------------
+Shows are configured via YAML-like format, just like config files.
+
+In the example show above, note that each *step* in the show starts with a key/value pair that's separated with a
 dash, then a space. So you could say that the example show above has three steps:
 
 Step 1:
@@ -61,7 +60,7 @@ Step 3:
 
 Setting step time
 -----------------
-The time for each step represents the time when that step *starts*. The first
+The ``time:`` setting in each step represents the time when that step *starts*. The first
 step will always be ``time: 0``
 
 If you just enter a number for the *time*, that number represents seconds.
@@ -72,6 +71,8 @@ However, you can enter the time in standard MPF time format, which could be *ms*
 * ``time: 1.0`` (1 second)
 * ``time: 1s`` (1 second)
 * ``time: 1000ms`` (1 second)
+
+If you do not enter a ``time:`` setting for a step, MPF automatically uses ``time: +1``.
 
 When shows are played, it's possible to specify a *speed* setting which is a
 multiplier for how fast the show is played. The default is ``1.0`` which would
@@ -115,7 +116,7 @@ millisecond values. For example:
     ...
   - time: +1  # plays 1 sec after the previous, 2 secs after show start
     ...
-  - time: 4  # plays 4 seconds after show start, 2 secs after the previous
+  - time: 4  # plays 4 secs after show start, 2 secs after the previous
     ...
   - time: +1  # plays 1 sec after the previous, 5 secs after show start
     ...

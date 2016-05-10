@@ -20,3 +20,8 @@ Abstract devices in MPF include:
 .. toctree::
    :maxdepth: 1
 
+   Ball locks <ball_lock>
+   Ball saves <ball_saves>
+   Extra balls <extra_ball>
+   Multiballs <multiball>
+

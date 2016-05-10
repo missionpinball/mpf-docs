@@ -19,7 +19,9 @@ List of MPF core modules
 ------------------------
 
 .. toctree::
+   :titlesonly:
 
    ball_controller
+   data_manager
    events
    switch_controller

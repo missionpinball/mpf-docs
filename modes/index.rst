@@ -25,22 +25,22 @@ In fact even the "game" itself is a mode in MPF! MPF includes many built-in
 modes (that you can use outright or customize), and you can create your own
 modes as needed.
 
-
-
 How modes work in MPF
 ---------------------
 
 To add a mode to your MPF machine configuration, you create a folder called
 *modes* in your machine's folder. Then inside there, you create subfolders for
-each mode in your machine, like this. (Note that if you want to run custom
-Python code from a mode, you also have to put a blank file called
-``__init__.py`` in your modes folder. That's two underscores before and after
-"init". More on that later.): In your game, you might have dozens (or even
+each mode in your machine, like this.
+
+
+.. todo:
+   Add image
+
+In your game, you might have dozens (or even
 hundreds) of mode folders. Each of your modes folders is almost like a mini-MPF
 configuration that's only active during that mode. You can have subfolders in
 each mode folder for game assets, config files, and code that only apply to that
 mode, like this:
-
 
 Each of a mode's subfolders follows the same structure as your machine folder in
 general. The *config* folder holds YAML configuration files, the *shows* folder
@@ -54,38 +54,29 @@ types of configuration entries (as detailed in the configuration file
 reference), that only apply when that mode is active, including:
 
 
-+ Animations
-+ Images
-+ Logic Blocks
-+ Movies
-+ Scoring
-+ Shots
-+ Show Player entries
-+ Slide Player entires
-+ Light Player entries
-+ Timers
++ shows
++ slides
++ multiballs
++ ball locks
++ sounds
++ shows
++ scoring
 + etc.
-
 
 Again, anything that's specified in a mode's configuration file is only active
 while that mode is active. So if you have a mode called "multiball" with the
 following entry in that mode's config file:
 
-
 ::
-
 
     scoring:
         right_ramp_hit:
             score: 50000
 
-
 In that case the *right_ramp_hit* shot event will only award the points when
 that multiball mode is running. When it stops, that scoring configuration is
 removed. (You can also configure certain events to be "blocked" from propagating
 down to lower-priority modes. More on that in a bit.)
-
-
 
 Machine-wide versus mode-specific folders and configurations
 ------------------------------------------------------------
@@ -109,8 +100,6 @@ especially useful in situations where more than one person is working on a
 particular game. You can think of each mode's folder as a mini self-contained
 MPF environment, as each mode will have its own files and configuration. This
 also makes it easier to keep track of which modes use which files.
-
-
 
 When to use modes
 -----------------
@@ -257,5 +246,8 @@ sections and options to your machine. Click on each for details:
 
 .. toctree::
 
-   Attract </modes/attract>
-   Game </modes/game>
+   Creating your own modes <custom_modes>
+   Attract <attract>
+   Game <game>
+   High score <high_score>
+   Tilt <tilt>

@@ -75,19 +75,17 @@ options).
 
 Here are a list of valid MPF commands:
 
-* ``mpf core`` (Starts the core MPF game engine)
+* ``mpf`` (Same as *mpf game* below)
+* ``mpf game`` (Starts the core MPF game engine)
 * ``mpf md`` (Stars the MPF Media Controller)
 * ``mpf both`` (Starts both the core game engine and the media controller)
 * ``mpf migrate`` (Runs the migration tool to migrate your config and show files
   to the current version of MPF.)
 
-Note that if you just run ``mpf`` by itself, that's the same thing as running
-``mpf core``.
-
 .. toctree::
 
    mpf <mpf>
-   mpf core <core>
+   mpf game <game>
    mpf mc <mc>
    mpf both <both>
    mpf migrate <migrate>
@@ -196,4 +194,6 @@ separate log file will be created by the MPF game engine and the media
 controller. Their formats are the same with the example of "mpf" in
 the game engine log file and "mc" in the media controller log file.
 
-`-h` : Displays the command-line option help message. (Basically it just describes everything here.) `--version:` Prints the version of MPF, the config file version required, and the version of BCP this build of MPF is using. Then it quits. So you use it like this: *python mpf.py --version.*
+`-h` : Displays the command-line option help message. (Basically it just describes everything here.)
+
+`--version:` Prints the version of MPF, the config file version required, and the version of BCP this build of MPF is using. Then it quits. So you use it like this: *python mpf.py --version.*

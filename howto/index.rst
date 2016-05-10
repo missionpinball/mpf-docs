@@ -14,5 +14,9 @@ List of How to Guides
 .. toctree::
    :maxdepth: 1
 
-   /howto/migrate_from_21_to_30
-   /howto/opp
+   Controller hardware <controller_hardware/index>
+   Displays <display/index>
+   Pinball hardware <hardware/index>
+   Setup & Installation <installation/index>
+   Shows <shows/index>
+   Sounds & Audio <sounds/index>

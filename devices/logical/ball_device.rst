@@ -1,7 +1,7 @@
 Ball device
 ===========
 
-* MPF device*
+*MPF device*
 
 A *ball device* is any device in a pinball machine which is able to
 hold (i.e. "capture") a ball and then release it. (Either

@@ -19,4 +19,16 @@ Logical devices in MPF include:
 .. toctree::
    :maxdepth: 1
 
-   ball_device
+   Autofire coils <autofire_coil>
+   Ball devices <ball_device>
+   Diverters <diverter>
+   Driver-enabled devices <driver_enabled>
+   Drop targets <drop_target>
+   Drop target banks <drop_target_bank>
+   Flippers <flipper>
+   Playfields <playfield>
+   Playfield transfers <playfield_transfer>
+   Score reels <score_reel>
+   Score reel groups <score_reel_group>
+   Shots <shot>
+   Shot groups <shot_group>

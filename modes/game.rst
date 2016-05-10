@@ -1,16 +1,20 @@
-Game (built-in mode)
-====================
+Game (mode)
+===========
 
-MPF's built-in *game* mode is responsible for actually running a game in
+MPF includes a built-in mode called *game* which is responsible for actually running a game in
 MPF. It starts when a game is started from the attract mode, and it
 stays running all the way through the entire game, finally stopping
-again when the attract mode starts again. The code and configuration
+again when the game ends and the attract mode starts again.
+
+The code and configuration
 for the built-in game mode lives in the ``mpf/modes/game`` folder. It's
 automatically added to the list of modes in the ``modes:`` section of
 your machine-wide config based on settings in the ``mpfconfig.yaml``
 baseline configuration file. The game mode runs at priority 20. It
 starts when the *game_start* event is posted, and it stops when the
-*game_ended* event is posted. The game mode is responsible for many
+*game_ended* event is posted.
+
+The game mode is responsible for many
 things, including:
 
 
@@ -32,4 +36,4 @@ It's almost never necessary to override or change the behavior of the
 game mode. Typically anything you want to do to affect the game is
 done in additional modes you create. (And all the configuration for
 scoring, game modes, shots, etc. is done in a "base" game mode that
-runs per player as their turn starts.)
+runs per player as their turn starts.) See the tutorial for details.
