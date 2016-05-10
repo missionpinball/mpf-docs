@@ -19,6 +19,20 @@ Optional settings
 
 The following sections are optional in the ``sounds:`` section of your config. (If you don't include them, the default will be used).
 
+events_when_played:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
 file:
 ~~~~~
 Single value, type: ``string``. Default: ``None``

@@ -1,5 +1,5 @@
-bcp_player:
-===========
+modes:
+======
 
 *Config file section*
 
@@ -8,7 +8,7 @@ bcp_player:
 
 .. overview
 
-The ``bcp_player:`` section of your config is where you...
+The ``modes:`` section of your config is where you...
 
 .. todo::
    Add description.

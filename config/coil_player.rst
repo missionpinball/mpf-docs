@@ -28,13 +28,6 @@ Single value, type: ``string`` (case-insensitive). Default: ``pulse``
 .. todo::
    Add description.
 
-ms:
-~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
-
-.. todo::
-   Add description.
-
 power:
 ~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
@@ -44,4 +37,5 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 
 .. note:: The ``coil_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+
 

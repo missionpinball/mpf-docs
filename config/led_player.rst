@@ -38,3 +38,4 @@ Single value, type: ``time string`` (:doc:`Instructions </config/instructions/li
 
 .. note:: The ``led_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 
+

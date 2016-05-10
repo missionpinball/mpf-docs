@@ -26,16 +26,9 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 .. todo::
    Add description.
 
-color_adjust:
-~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``1, 1, 1``
-
-.. todo::
-   Add description.
-
 fps:
 ~~~~
-Single value, type: ``integer``. Default: ``0``
+Single value, type: ``integer``. Default: ``30``
 
 .. todo::
    Add description.

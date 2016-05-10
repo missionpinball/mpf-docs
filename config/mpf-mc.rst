@@ -1,5 +1,5 @@
-bcp_player:
-===========
+mpf-mc:
+=======
 
 *Config file section*
 
@@ -8,7 +8,7 @@ bcp_player:
 
 .. overview
 
-The ``bcp_player:`` section of your config is where you...
+The ``mpf-mc:`` section of your config is where you...
 
 .. todo::
    Add description.

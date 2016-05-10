@@ -21,7 +21,7 @@ The following sections are optional in the ``coil_overwrites:`` section of your 
 
 hold_power:
 ~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int(0,8). Default: ``None``
 
 .. todo::
    Add description.
@@ -35,7 +35,7 @@ Single value, type: ``time string`` (:doc:`Instructions </config/instructions/li
 
 pulse_power:
 ~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int(0,8). Default: ``None``
 
 .. todo::
    Add description.

@@ -14,26 +14,35 @@ The ``assets:`` section of your config is where you...
    Add description.
 
 
-shows:
-------
-
-The ``shows:`` section contains the following nested sub-settings
-
-.. note:: The ``shows:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 sounds:
 -------
 
 The ``sounds:`` section contains the following nested sub-settings
 
-.. note:: The ``sounds:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
-images:
+videos:
 -------
 
-The ``images:`` section contains the following nested sub-settings
+The ``videos:`` section contains the following nested sub-settings
 
-.. note:: The ``images:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``videos:`` section of your config. (If you don't include them, the default will be used).
+
+height:
+^^^^^^^
+Single value, type: ``number`` (can be integer or floating point). Default: ``None``
+
+.. todo::
+   Add description.
+
+width:
+^^^^^^
+Single value, type: ``number`` (can be integer or floating point). Default: ``None``
+
+.. todo::
+   Add description.
+
 
 common:
 -------
@@ -67,29 +76,14 @@ Single value, type: ``integer``. Default: ``0``
    Add description.
 
 
-videos:
+shows:
+------
+
+The ``shows:`` section contains the following nested sub-settings
+
+images:
 -------
 
-The ``videos:`` section contains the following nested sub-settings
-
-Optional settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are optional in the ``videos:`` section of your config. (If you don't include them, the default will be used).
-
-height:
-^^^^^^^
-Single value, type: ``number`` (can be integer or floating point). Default: ``None``
-
-.. todo::
-   Add description.
-
-width:
-^^^^^^
-Single value, type: ``number`` (can be integer or floating point). Default: ``None``
-
-.. todo::
-   Add description.
-
+The ``images:`` section contains the following nested sub-settings
 
 

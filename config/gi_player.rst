@@ -31,3 +31,4 @@ Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
 
 .. note:: The ``gi_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 
+

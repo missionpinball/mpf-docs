@@ -9,6 +9,7 @@ your machine-wide config, a mode-specific config, or both.
    :maxdepth: 1
 
    accelerometers: <accelerometers>
+   animations: <animations>
    assets: <assets>
    auditor: <auditor>
    autofire_coils: <autofire_coils>
@@ -21,6 +22,7 @@ your machine-wide config, a mode-specific config, or both.
    coil_player: <coil_player>
    coils: <coils>
    color_correction_profile: <color_correction_profile>
+   config: <config>
    credits: <credits>
    displays: <displays>
    diverters: <diverters>
@@ -28,11 +30,13 @@ your machine-wide config, a mode-specific config, or both.
    drop_target_banks: <drop_target_banks>
    drop_targets: <drop_targets>
    event_player: <event_player>
+   extra_balls: <extra_balls>
    fadecandy: <fadecandy>
    fast: <fast>
    fast_coil_overwrites: <fast_coil_overwrites>
    fast_coils: <fast_coils>
    fast_switches: <fast_switches>
+   file_shows: <file_shows>
    flasher_player: <flasher_player>
    flashers: <flashers>
    flippers: <flippers>
@@ -41,16 +45,28 @@ your machine-wide config, a mode-specific config, or both.
    gis: <gis>
    hardware: <hardware>
    high_score: <high_score>
+   image_pools: <image_pools>
    images: <images>
+   info_lights: <info_lights>
+   keyboard: <keyboard>
+   kivy_config: <kivy_config>
    led_player: <led_player>
    led_settings: <led_settings>
    leds: <leds>
    light_player: <light_player>
    logic_block: <logic_block>
+   logic_blocks: <logic_blocks>
    machine: <machine>
+   matrix_light_settings: <matrix_light_settings>
    matrix_lights: <matrix_lights>
    mode: <mode>
+   modes: <modes>
+   mpf: <mpf>
+   mpf-mc: <mpf-mc>
    multiballs: <multiballs>
+   open_pixel_control: <open_pixel_control>
+   opp: <opp>
+   opp_coils: <opp_coils>
    osc: <osc>
    p3_roc: <p3_roc>
    p_roc: <p_roc>
@@ -60,31 +76,42 @@ your machine-wide config, a mode-specific config, or both.
    physical_rgb_dmd: <physical_rgb_dmd>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
+   plugins: <plugins>
    random_event_player: <random_event_player>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
+   scoring: <scoring>
+   scriptlets: <scriptlets>
+   servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
    servos: <servos>
    shot_groups: <shot_groups>
    shot_profiles: <shot_profiles>
    shots: <shots>
    show_player: <show_player>
+   show_pools: <show_pools>
+   shows: <shows>
    slide_player: <slide_player>
    slides: <slides>
    smartmatrix: <smartmatrix>
    snux: <snux>
    sound_player: <sound_player>
+   sound_pools: <sound_pools>
    sound_system: <sound_system>
    sounds: <sounds>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>
    system11: <system11>
+   text_strings: <text_strings>
    text_styles: <text_styles>
    tilt: <tilt>
    timers: <timers>
    trigger_player: <trigger_player>
+   video_pools: <video_pools>
    videos: <videos>
+   virtual_platform_start_active_switches: <virtual_platform_start_active_switches>
    widget_player: <widget_player>
    widget_styles: <widget_styles>
+   widgets: <widgets>
    window: <window>

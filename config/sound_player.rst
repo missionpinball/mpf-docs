@@ -49,13 +49,6 @@ Single value, type: ``integer``. Default: ``None``
 .. todo::
    Add description.
 
-track:
-~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-.. todo::
-   Add description.
-
 volume:
 ~~~~~~~
 Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0. Default: ``None``
@@ -65,4 +58,5 @@ Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0. De
 
 
 .. note:: The ``sound_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+
 

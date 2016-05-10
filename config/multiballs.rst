@@ -48,14 +48,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``ball_ending``
+One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
 .. todo::
    Add description.
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``ball_started``
+One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
 .. todo::
    Add description.

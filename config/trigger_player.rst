@@ -16,5 +16,3 @@ The ``trigger_player:`` section of your config is where you...
    Add description.
 
 
-.. note:: The ``trigger_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-

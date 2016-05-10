@@ -28,20 +28,11 @@ Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
 .. todo::
    Add description.
 
-fade_ms:
-~~~~~~~~
+fade:
+~~~~~
 Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
 
 .. todo::
    Add description.
 
-force:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-.. todo::
-   Add description.
-
-
-.. note:: The ``light_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

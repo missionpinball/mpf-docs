@@ -21,7 +21,7 @@ The following sections are required in the ``score_reel_groups:`` section of you
 
 reels:
 ~~~~~~
-List of one (or more) values, each is a type: ``string``. 
+List of one (or more) values, each is a type: string name of a ``score_reels:`` device. 
 
 .. todo::
    Add description.
@@ -34,13 +34,20 @@ The following sections are optional in the ``score_reel_groups:`` section of you
 
 chimes:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: string name of a ``coils:`` device. Default: ``None``
 
 .. todo::
    Add description.
 
 config:
 ~~~~~~~
+Single value, type: ``string``. Default: ``lazy``
+
+.. todo::
+   Add description.
+
+confirm:
+~~~~~~~~
 Single value, type: ``string``. Default: ``lazy``
 
 .. todo::

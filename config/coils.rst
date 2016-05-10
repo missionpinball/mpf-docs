@@ -62,7 +62,7 @@ One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``
 
 hold_power:
 ~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int(0,8). Default: ``None``
 
 .. todo::
    Add description.
@@ -90,14 +90,14 @@ One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``
 
 pulse_ms:
 ~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
 
 .. todo::
    Add description.
 
 pulse_power:
 ~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int(0,8). Default: ``None``
 
 .. todo::
    Add description.

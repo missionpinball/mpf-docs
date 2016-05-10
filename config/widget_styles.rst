@@ -6,6 +6,8 @@ widget_styles:
 .. include:: _machine_config_yes.rst
 .. include:: _mode_config_yes.rst
 
+.. note:: This section can also be used in a show file in the ``widgets:`` section of a step.
+
 .. overview
 
 The ``widget_styles:`` section of your config is where you...
@@ -28,4 +30,5 @@ Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*)
 
 
 .. note:: The ``widget_styles:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+
 

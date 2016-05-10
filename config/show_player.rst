@@ -70,6 +70,13 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 .. todo::
    Add description.
 
+show_tokens:
+~~~~~~~~~~~~
+One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+
+.. todo::
+   Add description.
+
 speed:
 ~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1``
@@ -93,4 +100,5 @@ Single value, type: ``integer``. Default: ``0``
 
 
 .. note:: The ``show_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+
 

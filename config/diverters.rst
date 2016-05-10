@@ -4,7 +4,7 @@ diverters:
 *Config file section*
 
 .. include:: _machine_config_yes.rst
-.. include:: _mode_config_yes.rst
+.. include:: _mode_config_no.rst
 
 .. overview
 

@@ -45,6 +45,7 @@ above.
 
 Then each entry has the following required and optional settings:
 
+
 Required settings
 -----------------
 
@@ -61,7 +62,9 @@ stop firing based on a switch change.)
 
 switch:
 ~~~~~~~
-Single value, type: string name of a ``switches:`` device.
+Single value, type: string name of a ``switches:`` device. 
+
+
 
 
 Optional settings

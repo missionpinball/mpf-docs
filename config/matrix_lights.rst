@@ -39,6 +39,13 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 .. todo::
    Add description.
 
+fade_ms:
+~~~~~~~~
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+
+.. todo::
+   Add description.
+
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``

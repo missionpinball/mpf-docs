@@ -84,3 +84,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. note:: The ``gis:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 
+

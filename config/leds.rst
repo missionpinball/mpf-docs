@@ -55,7 +55,7 @@ Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*)
 
 fade_ms:
 ~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
 
 .. todo::
    Add description.
@@ -98,6 +98,13 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+.. todo::
+   Add description.
+
+type:
+~~~~~
+Single value, type: ``string`` (case-insensitive). Default: ``rgb``
 
 .. todo::
    Add description.

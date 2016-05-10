@@ -353,3 +353,4 @@ do not enter a time, or you enter a value of 0, then there is no
 timeout (i.e. the player could literally take multiple minutes between
 switch activations and the shot would count.)
 
+

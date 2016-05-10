@@ -1,4 +1,4 @@
-bcp_player:
+scriptlets:
 ===========
 
 *Config file section*
@@ -8,7 +8,7 @@ bcp_player:
 
 .. overview
 
-The ``bcp_player:`` section of your config is where you...
+The ``scriptlets:`` section of your config is where you...
 
 .. todo::
    Add description.

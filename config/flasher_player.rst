@@ -31,3 +31,4 @@ Single value, type: ``integer``. Default: ``None``
 
 .. note:: The ``flasher_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 
+

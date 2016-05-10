@@ -17,6 +17,7 @@ If you want to show a virtual DMD in an on-screen window, you configure that as 
 Note that there are no *height* and *width* settings here. The pixel size of your DMD is determined by the size of the
 ``source:`` display which drives the content for this DMD.
 
+
 Optional settings
 -----------------
 
@@ -24,14 +25,14 @@ The following sections are optional in the ``physical_dmd:`` section of your con
 
 brightness:
 ~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
+Single value, type: ``number`` (will be converted to floating point). Default: ``0.5``
 
 A brightness multiplier for the DMD. Default is 1.0 which is full brightness, but if you want to dim the DMD, you can
 set this to some value lower than 1.0. (e.g. a value of 0.9 will be 90% brightness, etc.)
 
 fps:
 ~~~~
-Single value, type: ``integer``. Default: ``0``
+Single value, type: ``integer``. Default: ``30``
 
 How many frames per second this DMD will be updated. The default of 0 means it will run at the same rate as the MPF Hz.
 A value of 30 should be fine and smooth. Some people claim that higher values look better, but as far as we can tell,
@@ -63,3 +64,5 @@ Single value, type: ``string``. Default: ``dmd``
 The name of the display (from the ``displays:`` section of your machine config) that is the source for this physical
 DMD. Whatever's on the source display will be displayed on the DMD. If you don't specify a source, MPF will
 automatically use a source display called "dmd".
+
+

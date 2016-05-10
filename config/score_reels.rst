@@ -19,13 +19,6 @@ Optional settings
 
 The following sections are optional in the ``score_reels:`` section of your config. (If you don't include them, the default will be used).
 
-coil_dec:
-~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. Default: ``None``
-
-.. todo::
-   Add description.
-
 coil_inc:
 ~~~~~~~~~
 Single value, type: string name of a ``coils:`` device. Default: ``None``

@@ -53,6 +53,13 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Specifies that this display is the default, meaning it's the display that's used if you show a slide without specifying
 a target for that slide. If you only have one display, it will be the default automatically.
 
+fps:
+~~~~
+Single value, type: ``integer``. Default: ``0``
+
+.. todo::
+   Add description.
+
 height:
 ~~~~~~~
 Single value, type: ``integer``. Default: ``600``

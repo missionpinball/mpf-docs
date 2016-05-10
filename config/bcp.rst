@@ -24,13 +24,6 @@ Optional settings
 
 The following sections are optional in the ``connections:`` section of your config. (If you don't include them, the default will be used).
 
-connection_attempts:
-^^^^^^^^^^^^^^^^^^^^
-Single value, type: ``integer``. Default: ``-1``
-
-.. todo::
-   Add description.
-
 host:
 ^^^^^
 Single value, type: ``string``. Default: ``None``
@@ -41,13 +34,6 @@ Single value, type: ``string``. Default: ``None``
 port:
 ^^^^^
 Single value, type: ``integer``. Default: ``5050``
-
-.. todo::
-   Add description.
-
-require_connection:
-^^^^^^^^^^^^^^^^^^^
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
    Add description.
