@@ -16,7 +16,21 @@ how MPF uses events.
    (drop_target_bank_name)_up <drop_target_bank_name_up>
    (drop_target_name)_down <drop_target_name_down>
    (drop_target_name)_up <drop_target_name_up>
+   (playfield)_active <playfield_active>
+   (playfield)_ball_count_change <playfield_ball_count_change>
+   (shot)_(profile)_(state)_hit <shot_profile_state_hit>
+   (shot)_(profile)_hit <shot_profile_hit>
+   (shot)_hit <shot_hit>
+   (shot_group)_(profile)_(state)_complete <shot_group_profile_state_complete>
+   (shot_group)_(profile)_(state)_hit <shot_group_profile_state_hit>
+   (shot_group)_(profile)_complete <shot_group_profile_complete>
+   (shot_group)_(profile)_hit <shot_group_profile_hit>
+   (shot_group)_complete <shot_group_complete>
+   (shot_group)_hit <shot_group_hit>
    asset_loading_complete <asset_loading_complete>
+   ball_drain <ball_drain>
+   ball_ended <ball_ended>
+   ball_ending <ball_ending>
    ball_lock_(name)_balls_released <ball_lock_name_balls_released>
    ball_lock_(name)_full <ball_lock_name_full>
    ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
@@ -29,47 +43,88 @@ how MPF uses events.
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
+   ball_started <ball_started>
+   ball_startin <ball_startin>
    balldevice_(balls)_ball_missing. <balldevice_balls_ball_missing.>
+   balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
    balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
    balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
+   balldevice_(name)_ball_enter <balldevice_name_ball_enter>
    balldevice_(name)_ball_left <balldevice_name_ball_left>
    balldevice_(name)_ball_lost <balldevice_name_ball_lost>
    balldevice_(name)_eject_broken <balldevice_name_eject_broken>
    balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
    balldevice_ball_missing <balldevice_ball_missing>
+   balldevice_balls_available <balldevice_balls_available>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
+   balls_in_play <balls_in_play>
+   bcp_get_(name) <bcp_get_name>
    clear <clear>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
+   counter_(name)_hit <counter_name_hit>
+   credits_added <credits_added>
    displays_initialized <displays_initialized>
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
    diverter_(name)_enabling <diverter_name_enabling>
+   enabling_credit_play <enabling_credit_play>
+   enabling_free_play <enabling_free_play>
    event_(mode_name)_started <event_mode_name_started>
    event_(mode_name)_stopped <event_mode_name_stopped>
+   game_ended <game_ended>
+   game_ending <game_ending>
+   game_start <game_start>
+   game_started <game_started>
+   game_starting <game_starting>
    init_phase_1 <init_phase_1>
    init_phase_2 <init_phase_2>
    init_phase_3 <init_phase_3>
    init_phase_4 <init_phase_4>
    init_phase_5 <init_phase_5>
    loading_assets <loading_assets>
+   logicblock_(name)_complete <logicblock_name_complete>
    machine_reset_phase_1 <machine_reset_phase_1>
    machine_reset_phase_2 <machine_reset_phase_2>
    machine_reset_phase_3 <machine_reset_phase_3>
    machine_var_(name) <machine_var_name>
+   max_credits_reached <max_credits_reached>
    mc_ready <mc_ready>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
+   mode_(mode_name)_starting <mode_mode_name_starting>
+   multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
    multiball_(name)_shoot_again <multiball_name_shoot_again>
    multiball_(name)_started <multiball_name_started>
+   multiplayer_game <multiplayer_game>
+   not_enough_credits <not_enough_credits>
    player_(var_name) <player_var_name>
+   player_add_request <player_add_request>
    player_add_success <player_add_success>
+   player_turn_start <player_turn_start>
+   player_turn_stop <player_turn_stop>
+   reel_(name)_advance <reel_name_advance>
+   reel_(name)_hw_value <reel_name_hw_value>
+   reel_(name)_pulse_done <reel_name_pulse_done>
+   reel_(name)_ready <reel_name_ready>
+   request_to_start_game <request_to_start_game>
    reset_complete <reset_complete>
+   scorereel_(name)_resync <scorereel_name_resync>
+   scorereelgroup_(name)_resync <scorereelgroup_name_resync>
+   scorereelgroup_(name)_rollover <scorereelgroup_name_rollover>
+   scorereelgroup_(name)_valid <scorereelgroup_name_valid>
    shutdown <shutdown>
+   single_player_ball_started <single_player_ball_started>
+   slam_tilt <slam_tilt>
+   sw_(playfield)_active <sw_playfield_active>
    sw_(tag_name) <sw_tag_name>
    text_input_(key)_abort <text_input_key_abort>
    text_input_(key)_complete <text_input_key_complete>
+   tilt <tilt>
+   tilt_clear <tilt_clear>
+   tilt_warning <tilt_warning>
+   tilt_warning_(number) <tilt_warning_number>
    timer_(name)_complete <timer_name_complete>
    timer_(name)_paused <timer_name_paused>
    timer_(name)_started <timer_name_started>
@@ -77,3 +132,4 @@ how MPF uses events.
    timer_(name)_tick <timer_name_tick>
    timer_(name)_time_added <timer_name_time_added>
    timer_(name)_time_subtracted <timer_name_time_subtracted>
+   unexpected_ball_on_(playfield) <unexpected_ball_on_playfield>
