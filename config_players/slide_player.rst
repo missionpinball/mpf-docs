@@ -1,7 +1,7 @@
 Slide player
 ============
 
-The *slide player* is a :doc:`config_player </config_players/index>` in the MPF
+The *slide player* is a :doc:`config player </config_players/index>` in the MPF
 media controller that is used to play slide content, including showing slides,
 hiding slides, and removing slides. (This player is part of the MPF media controller and only available if you're using
 MPF-MC for your media controller.)
