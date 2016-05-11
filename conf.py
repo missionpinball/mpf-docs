@@ -129,6 +129,7 @@ html_theme_options = {
     'navbar_sidebarrel': False,
     'navbar_pagenav': False,
     'source_link_position': False,
+    'navbar_fixed_top': False,
 }
 
 html_add_permalinks = ''
