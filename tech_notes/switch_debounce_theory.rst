@@ -1,5 +1,5 @@
-Platform differences, and the effects on switch debounce timing
-===============================================================
+Switch debounce theory
+======================
 
 There's a lot of confusion around how "debounce" works in pinball machines and
 in MPF, mainly because different hardware platforms do things in very different

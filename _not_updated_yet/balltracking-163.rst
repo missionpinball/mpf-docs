@@ -22,8 +22,8 @@ tracking balls.
 
 
 
-'Playfield' balls versus'balls in play'
----------------------------------------
+'Playfield' balls versus 'balls in play'
+----------------------------------------
 
 One important concept for ball tracking to understand is that there's
 a difference between "playfield" balls and "balls in play."

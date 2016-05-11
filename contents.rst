@@ -13,7 +13,6 @@ MPF Documentation
    How to guides / "cookbook" </howto/index>
    Feature list </features/index>
    Compatible hardware </hardware/index>
-
    Core modules </core/index>
    Devices </devices/index>
    Modes </modes/index>
@@ -25,6 +24,7 @@ MPF Documentation
    Writing custome code </code/index>
    Events reference </events/index>
    Config file reference </config/index>
+   Glossary </glossary/index>
    Contributing </contribute/index>
    About </about/index>
    Download docs </download>
