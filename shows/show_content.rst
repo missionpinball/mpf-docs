@@ -1,7 +1,7 @@
 What can you put in shows?
 ==========================
 
-In the `:doc:<show_format>`_ page, we showed how *time* values work in shows and included some simple examples using
+In the :doc:`<show_format>`_ page, we showed how *time* values work in shows and included some simple examples using
 *LEDs*. However in MPF, you can put almost anything in shows, including:
 
 * LEDs

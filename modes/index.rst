@@ -249,5 +249,6 @@ sections and options to your machine. Click on each for details:
    Creating your own modes <custom_modes>
    Attract <attract>
    Game <game>
+   Credits <credits>
    High score <high_score>
    Tilt <tilt>

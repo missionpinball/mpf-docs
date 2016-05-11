@@ -21,7 +21,7 @@ Abstract devices in MPF include:
    :maxdepth: 1
 
    Ball locks <ball_lock>
-   Ball saves <ball_saves>
+   Ball saves <ball_save>
    Extra balls <extra_ball>
    Multiballs <multiball>
 

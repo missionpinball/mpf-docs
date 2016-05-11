@@ -12,6 +12,7 @@ Basically you add a ``shows:`` section to a config, create sub-sections based on
 show items to the config. For example:
 
 ::
+
    shows:
       flash_red:
          - time: 0
