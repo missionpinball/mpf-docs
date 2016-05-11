@@ -18,7 +18,7 @@ to *loop*, meaning this should could be used to flash *led1* on and off.)
    - time: +1
      leds:
        led1: off
-   - time: + 1
+   - time: +1
 
 There are `lots of different actions you can configure in a show step </config_players/index>`_ (LEDs, lights,
 sounds, coils, display slides, etc.), but for now we'll just use this very simple show as an example.

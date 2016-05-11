@@ -12,7 +12,7 @@ Even if you don't feel comfortable actually changing or editing docs, you can
 still tell us about an error in the documentation or suggest new
 documentation that we should add. To do this:
 
-#. Go to the ``"Issues" page of the mpf-docs repository on GitHub <https://github.com/missionpinball/mpf-docs/issues>``.
+#. Go to the `"Issues" page of the mpf-docs repository on GitHub <https://github.com/missionpinball/mpf-docs/issues>`_.
 #. Create a GitHub account if you don't have one, and/or login.
 #. Click the "New Issue" button and describe what you'd like us to fix or add!
 
@@ -32,7 +32,7 @@ To do that:
 #. Make your change, and click the "Propose file change". This will create a
    pull request. Type a name describing your change, and click "Create pull
    request".
-#.  Details and screen shots of this entire process are ``here <https://help.github.com/articles/editing-files-in-another-user-s-repository/>``.
+#.  Details and screen shots of this entire process are `here <https://help.github.com/articles/editing-files-in-another-user-s-repository/>`_.
 
 To clone the mpf-docs repo locally to make bigger changes
 ---------------------------------------------------------
@@ -40,7 +40,7 @@ To clone the mpf-docs repo locally to make bigger changes
 If you want to make bigger changes to the docs, or if you want to download the
 mpf-docs repo so you can work on it offline, do the following:
 
-#. Clone the ``mpf-docs repo <https://github.com/missionpinball/mpf-docs/>``
+#. Clone the `mpf-docs repo <https://github.com/missionpinball/mpf-docs/>`_
    from GitHub.
 #. Switch to the branch corresponding to the version of the docs you want to
    work with.

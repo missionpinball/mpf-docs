@@ -1,7 +1,7 @@
 What can you put in shows?
 ==========================
 
-In the :doc:`<show_format>`_ page, we showed how *time* values work in shows and included some simple examples using
+In the :doc:`show_format` page, we showed how *time* values work in shows and included some simple examples using
 *LEDs*. However in MPF, you can put almost anything in shows, including:
 
 * LEDs
@@ -24,7 +24,7 @@ You can show slides on your display or DMD, or remove existing slides. You can p
 that trigger other shows or other things to happen. You can start and stop sounds and music.
 The list goes on and on...
 
-Technically-speaking, the list above is actually a list of things that MPF calls `config players </config_players/index>`_.
+Technically-speaking, the list above is actually a list of things that MPF calls :doc:`config players </config_players/index>`.
 
 *Config players* in MPF have nothing to with the actual human players of your machine, rather, they are things that
 "play" configurations.
@@ -37,6 +37,6 @@ That naming convention is the same for all the config players. You play sounds v
 config file or the ``sounds:`` section of a show. Slides are played via the ``slide_player:`` section of a config file
 or the ``slides:`` section of a show, etc.
 
-All of the individual config players are documented in the `config players </config_players/index>`_ section of the
+All of the individual config players are documented in the :doc:`config players </config_players/index>` section of the
 documentation. You can read details about each config player there, as well as specific instructions for how to include
 that kind of player in a show.
