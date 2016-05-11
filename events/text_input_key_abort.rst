@@ -7,8 +7,8 @@ This event is posted by a *text_input* display widget when the
 entering process was aborted.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 text
 ~~~~

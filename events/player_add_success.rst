@@ -6,8 +6,8 @@ player_add_success
 A new player was just added to this game
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 num
 ~~~

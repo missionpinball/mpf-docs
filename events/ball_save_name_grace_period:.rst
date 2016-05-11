@@ -7,7 +7,7 @@ The ball save called (name) has just entered its grace period
 time.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

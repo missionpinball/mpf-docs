@@ -6,7 +6,7 @@ ball_save_(name)_disabled:
 The ball save called (name) has just been disabled.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

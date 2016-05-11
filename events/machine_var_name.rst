@@ -8,8 +8,8 @@ Posted when a machine variable is added or changes value.
 maintained machine-wide instead of per-player or per-game.)
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 change
 ~~~~~~

@@ -13,7 +13,7 @@ Note that you can change the format of these events in your
 machine config file, but *sw_(tag_name)* is the default.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

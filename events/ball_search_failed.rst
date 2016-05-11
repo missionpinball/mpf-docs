@@ -8,7 +8,7 @@ ball and has given up. This event will be posted immediately after
 the *ball_search_stopped* event.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

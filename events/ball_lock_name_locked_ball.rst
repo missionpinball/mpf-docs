@@ -6,8 +6,8 @@ ball_lock_(name)_locked_ball
 The ball lock device (name) has just locked additional ball(s).
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 balls_locked
 ~~~~~~~~~~~~

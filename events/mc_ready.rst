@@ -13,7 +13,7 @@ could in turn be used to show asset loading status, boot progress,
 etc.)
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

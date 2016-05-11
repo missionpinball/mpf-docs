@@ -39,6 +39,7 @@ how MPF uses events.
    balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
    balldevice_ball_missing <balldevice_ball_missing>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
+   clear <clear>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
    displays_initialized <displays_initialized>

@@ -6,8 +6,8 @@ ball_save_(name)_saving_ball:
 The ball save called (name) has just saved one (or more) balls.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 balls
 ~~~~~

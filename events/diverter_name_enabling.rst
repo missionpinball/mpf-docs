@@ -9,8 +9,8 @@ physically activate until one of those switches is hit. Otherwise
 this diverter will activate immediately.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 auto
 ~~~~

@@ -8,8 +8,8 @@ never made it to the target when this device attempted to eject
 it.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 target
 ~~~~~~

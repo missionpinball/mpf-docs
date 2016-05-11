@@ -6,8 +6,8 @@ balldevice_(name)_ball_left
 A ball (or balls) just left the device (name).
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 balls
 ~~~~~

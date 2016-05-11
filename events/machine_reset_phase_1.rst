@@ -10,7 +10,7 @@ posted), and they're also posted subsequently when the machine is reset
 (after existing the service mode, for example).
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

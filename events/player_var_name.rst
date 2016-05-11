@@ -22,8 +22,8 @@ if multiple player variables change at the same time, multiple
 events will be posted, one for each change.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 change
 ~~~~~~

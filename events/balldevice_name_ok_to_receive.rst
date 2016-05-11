@@ -8,8 +8,8 @@ balls). This event is posted after a device that was full has
 successfully ejected and is now able to receive balls.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 balls
 ~~~~~

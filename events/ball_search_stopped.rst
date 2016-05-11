@@ -9,7 +9,7 @@ or gave up. (If the ball search failed to find the ball, it will
 also post the *ball_search_failed* event.)
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

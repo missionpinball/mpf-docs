@@ -7,8 +7,8 @@ This event is posted by a *text_input* display widget when the
 entered text is finalized.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 text
 ~~~~

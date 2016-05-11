@@ -7,7 +7,7 @@ The device (name) failed to eject a ball and the number of
 retries has been met, so it will not try to eject further.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

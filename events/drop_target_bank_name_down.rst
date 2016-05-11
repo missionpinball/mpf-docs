@@ -8,7 +8,7 @@ Every drop target in the drop target bank called
 only posted once, when all the drop targets are down.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

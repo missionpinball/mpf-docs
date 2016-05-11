@@ -13,8 +13,8 @@ player variable called *ramps*, the event posted would be
 *mode_base_ramps_score*.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 change
 ~~~~~~

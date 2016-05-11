@@ -9,8 +9,8 @@ Note that once all the assets are loaded, all the values below are
 reset to zero.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 loaded
 ~~~~~~

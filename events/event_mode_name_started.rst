@@ -8,7 +8,7 @@ with the actual name of the mode, so the actual event posted is
 something like *mode_attract_started*, *mode_base_started*, etc.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

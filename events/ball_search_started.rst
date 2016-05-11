@@ -6,7 +6,7 @@ ball_search_started
 The ball search process has been begun.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

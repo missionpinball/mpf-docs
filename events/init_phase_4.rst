@@ -6,7 +6,7 @@ init_phase_4
 Posted during the initial boot up of MPF.
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 *None*

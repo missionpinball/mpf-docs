@@ -7,8 +7,8 @@ A ball device has just captured a ball from the device called
 (device)
 
 
-Keyword arguments:
-------------------
+Keyword arguments
+-----------------
 
 balls
 ~~~~~
