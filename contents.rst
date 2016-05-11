@@ -4,6 +4,7 @@ MPF Documentation
 .. toctree::
    :maxdepth: 1
    :titlesonly:
+   :includehidden:
 
    Start here </start/index>
    Installing MPF </installation/index>

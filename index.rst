@@ -28,13 +28,17 @@ Documentation Migration Status
 working as fast as we can, but there are 206,937 total words in the MPF
 documentation, so this process may take awhile. :)
 
-:doc:`Getting Started with MPF </intro/index>`
+:doc:`Getting Started with MPF </start/index>`
 -------------------------------------------------
 Start here.
 
 :doc:`Installation & Setup </installation/index>`
 -------------------------------------------------
 Getting MPF up and running on your computer.
+
+:doc:`Running MPF </running/index>`
+-----------------------------------
+How to actually launch the MPF software
 
 :doc:`Tutorial </tutorial/index>`
 ---------------------------------
@@ -54,29 +58,20 @@ Reference for every option in the MPF config and show YAML files.
 -----------------------------------------------
 Or view the complete `version history </version_history/index>`_.
 
-Community & Support
--------------------
-Have a question or problem? Visit
-`our support forum <https://missionpinball.com/forum>`_
+`Community & Support <https://missionpinball.com/community>`_
+-------------------------------------------------------------
+Follow us, get involved, get help.
 
-`API Reference <http://api.missionpinball.com>`_
-------------------------------------------------
+`API Reference & Developer's Guide <http://api.missionpinball.com>`_
+--------------------------------------------------------------------
 If you're a programmer or want to extend what's possible with MPF's config
-files, the API / Developer's Reference is at
-`api.missionpinball.com <http://api.missionpinball.com>`_
-
-FAQs
-----
-Common questions (and answers) about MPF.
+files, the API / Developer's Reference is at api.missionpinball.com.
 
 :doc:`/contribute/index`
 ------------------------
 Wanna help? We'd love it! (Even if you can't write code, you can help with the
 documentation.)
 
-:doc:`License & copyright </about/license>`
+:doc:`License & Copyright </about/license>`
 -------------------------------------------
-The MPF code is licensed via the MIT license. The documentation is licensed
-via Creative Commons Attribution 4.0 International (CC BY 4.0). Both of these
-licenses mean you can essentially do whatever you want with them, so go nuts and
-make pinball!
+It's liberal. Go nuts!

@@ -1,2 +1,0 @@
-mpf migrate (MPF command)
-=========================
