@@ -110,6 +110,13 @@ Single value, type: ``string``. Default: ``%``
 .. todo::
    Add description.
 
+reset_events:
+~~~~~~~~~~~~~
+One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3``
+
+.. todo::
+   Add description.
+
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
