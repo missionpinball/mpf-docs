@@ -61,10 +61,13 @@ how MPF uses events.
    balls_in_play <balls_in_play>
    bcp_get_(name) <bcp_get_name>
    clear <clear>
+   client_connected <client_connected>
+   client_disconnected <client_disconnected>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
    counter_(name)_hit <counter_name_hit>
    credits_added <credits_added>
+   display_(name)_initialized <display_name_initialized>
    displays_initialized <displays_initialized>
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
@@ -91,6 +94,9 @@ how MPF uses events.
    machine_var_(name) <machine_var_name>
    max_credits_reached <max_credits_reached>
    mc_ready <mc_ready>
+   mc_reset_phase_1 <mc_reset_phase_1>
+   mc_reset_phase_2 <mc_reset_phase_2>
+   mc_reset_phase_3 <mc_reset_phase_3>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
    mode_(mode_name)_starting <mode_mode_name_starting>
    multi_player_ball_started <multi_player_ball_started>
@@ -119,6 +125,8 @@ how MPF uses events.
    slam_tilt <slam_tilt>
    sw_(playfield)_active <sw_playfield_active>
    sw_(tag_name) <sw_tag_name>
+   switch_(name)_active <switch_name_active>
+   switch_(name)_inactive <switch_name_inactive>
    text_input_(key)_abort <text_input_key_abort>
    text_input_(key)_complete <text_input_key_complete>
    tilt <tilt>
