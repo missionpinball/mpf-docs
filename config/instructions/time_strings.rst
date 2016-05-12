@@ -37,8 +37,9 @@ To enter a time duration in seconds, simply add an “ms” or “msec” after 
 (This can be uppercase or lowercase, and you can put a space in between your number and
 the letters if you want.)
 
-Note that if you do not enter and letters, then MPF will read in the time duration as
-milliseconds.
+Note that if you do not enter and letters, then MPF will read in the time duration in
+whatever the default scale is for that particular setting. (The instructions for each
+setting should say whether the default is seconds or ms.
 
 Some examples:
 
@@ -53,7 +54,8 @@ Some examples:
    ball_count_delay: 500
 
 It makes no difference whether you enter your time durations as seconds or milliseconds,
-as MPF will convert everything to milliseconds when it reads in your configuration files.
+as MPF will convert everything to milliseconds (since that's the default for *ball_count_delay*
+when it reads in your configuration files.
 
 Entering a time duration in minutes, hours, or days
 ---------------------------------------------------

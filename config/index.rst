@@ -8,6 +8,7 @@ your machine-wide config, a mode-specific config, or both.
 .. toctree ::
    :maxdepth: 1
 
+   Instructions: <instructions/index>
    accelerometers: <accelerometers>
    animations: <animations>
    assets: <assets>

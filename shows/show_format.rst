@@ -64,8 +64,8 @@ The ``time:`` setting in each step represents the time when that step *starts*. 
 step will always be ``time: 0``
 
 If you just enter a number for the *time*, that number represents seconds.
-However, you can enter the time in standard MPF time format, which could be *ms*,
-*secs*, etc. The following are all valid *time* entries:
+However, you can enter the time in :doc:`standard MPF time format </config/instructions/time_strings`,
+which could be *ms*, *secs*, etc. The following are all valid *time* entries:
 
 * ``time: 1`` (1 second)
 * ``time: 1.0`` (1 second)
@@ -77,7 +77,8 @@ If you do not enter a ``time:`` setting for a step, MPF automatically uses ``tim
 When shows are played, it's possible to specify a *speed* setting which is a
 multiplier for how fast the show is played. The default is ``1.0`` which would
 use the time values entered here, but keep in mind that it's possible to play a
-show back at any speed. You can even change the speed of a running show.
+show back at any speed. You can even change the speed of a running show while it's
+in progress.
 
 .. tip:: The precision of shows is limited to clock speed that MPF runs at. By
    default, MPF runs at 60fps, which means that each "tick" of MPF is about
@@ -110,13 +111,13 @@ millisecond values. For example:
 
 ::
 
-  - time: 0  # plays right away, at 0 seconds
+  - time: 0   # plays right away, at 0 seconds
     ...
   - time: +1  # plays 1 sec after the previous, 1 sec after show start
     ...
   - time: +1  # plays 1 sec after the previous, 2 secs after show start
     ...
-  - time: 4  # plays 4 secs after show start, 2 secs after the previous
+  - time: 4   # plays 4 secs after show start, 2 secs after the previous
     ...
   - time: +1  # plays 1 sec after the previous, 5 secs after show start
     ...
@@ -130,5 +131,4 @@ Since the time values of shows control the timing of when a step starts, you
 need to add a final step with no actions to the end of your show which controls
 the duration of the final step.
 
-If you don't do this, then your final step will appear to be skipped since the
-show will repeat or end end as soon as the last step is played.
+If you don't do this, MPF will automatically add an empty final step with a time of 1 second.
