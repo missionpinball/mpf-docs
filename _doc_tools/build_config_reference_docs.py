@@ -45,6 +45,7 @@ your machine-wide config, a mode-specific config, or both.
 .. toctree ::
    :maxdepth: 1
 
+   Instructions: <instructions/index>
 '''
         self._load_existing_rsts()
         self.existing_rsts.sort()
@@ -397,10 +398,13 @@ your machine-wide config, a mode-specific config, or both.
         elif stype == 'bool' or stype == 'boolean' or stype == 'bool_int':
             ftype = '``boolean`` (Yes/No or True/False)'
 
-        elif stype in ('ms', 'secs'):
-            ftype = '``time string`` (:doc:`Instructions ' \
-                      '</config/instructions/lists>` for entering time ' \
-                      'strings)'
+        elif stype == 'secs':
+            ftype = '``time string (secs)`` (:doc:`Instructions for entering '\
+                    'time strings) </config/instructions/time_strings>` '
+
+        elif stype == 'ms':
+            ftype = '``time string (ms)`` (:doc:`Instructions for entering '\
+                    'time strings) </config/instructions/time_strings>` '
 
         elif stype == 'list':
             ftype = '``list`` (:doc:`Instructions ' \

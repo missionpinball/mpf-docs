@@ -78,6 +78,7 @@ your machine-wide config, a mode-specific config, or both.
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
    plugins: <plugins>
+   pololu_maestro: <pololu_maestro>
    random_event_player: <random_event_player>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>

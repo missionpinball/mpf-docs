@@ -2,7 +2,7 @@ How to Migrate from MPF 0.21 to MPF 0.30
 ========================================
 
 This How To guide walks you through updating your machine configs and
-code from MPF 0.21 (released in Dec, 2015) to MPF 0.30.
+code from MPF 0.21.x (released in Dec 2015) to MPF 0.30.
 
 .. note:: We skipped a few versions since so much changed from 0.21, which is why
    MPF is now 0.30. Also note that 0.30 is pronounced "thirty", not
@@ -10,73 +10,21 @@ code from MPF 0.21 (released in Dec, 2015) to MPF 0.30.
    versioning, which means version number order is different than
    mathematical order. Details `here <http://semver.org>`_.)
 
-
-This guide was last updated on
-March 16, 2016. At this point MPF 0.30 is not actually released. So
-this documentation currently applies to the pre-release "dev" version.
-Feel free to use it to start playing with MPF 0.30 today, but know
-that not everything is done yet for MPF 0.30, so some things do not
-work yet. This document is written to work with the following versions
-of MPF:
-
-
-+ MPF core engine `0.30.0.dev700` <-- yeah, there have been 700(!)
-  commits since MPF 0.21.
-+ MPF Media Controller `0.30.0.dev270`
-
-
-You can view the latest version of MPF by running `mpf --version` from
-a command prompt. (If this command gives you an error, that means
-you're not on MPF 0.30.)
-
-
-
-What's still missing in MPF 0.30.0.dev700
------------------------------------------
-
-This guide has been written for a pre-release version of MPF 0.30.
-There are currently several things missing and things that we still
-need to finish for MPF 0.30. Here's a list of what does not work
-currently that we are planning on finishing for the final release of
-MPF 0.30:
-
-
-+ Shows don't automatically stop when modes end
-+ Slide and widget expiration time
-+ Show stopping needs to be tested to ensure that lights and LEDs are
-  properly restored
-+ Priorities of things launched from shows (LEDs, lights, sounds,
-  slides, etc.) and modes are not set yet.
-+ The "move out" transition doesn't work
-+ Physical DMD and physical RGB DMD's are not there yet. (You can
-  still display virtual versions of them in on-screen windows, it's just
-  that connecting to physical ones isn't done yet.)
-+ Entered_chars and character_picker display widgets aren't written.
-  (This also means that high score entry modes will crash since they
-  need them.)
-+ Fonts have to be installed in your system in order to work. (Before
-  we release we'll fix it so they can also be in a *fonts* folder in
-  your machine folder.)
-+ The settings for cropping the tops and bottoms of fonts are not
-  written yet, so vertical placement of fonts will not be exactly right
-  at the moment.
-
-
 Please read this entire guide as a lot has changed. Here are the steps
 to migrate to 0.30:
 
 
 
-(1) Review the Changes in MPF 0.30
-----------------------------------
+1. Review the Changes in MPF 0.30
+---------------------------------
 
 We've posted a release notes guide with a list of changes to MPF
 0.30. Before you start your migration to MPF 0.30, you should read
 that guide to see what's new.
 
 
-2 Install Python 3 & MPF
-~~~~~~~~~~~~~~~~~~~~~~~~
+2. Install Python 3 & MPF
+-------------------------
 
 We have a guide :doc:`here </installation/index>`.
 
