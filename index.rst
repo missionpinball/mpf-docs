@@ -28,12 +28,12 @@ Documentation Migration Status
 working as fast as we can, but there are 206,937 total words in the MPF
 documentation, so this process may take awhile. :)
 
-:doc:`Getting Started with MPF </start/index>`
--------------------------------------------------
+:doc:`First Steps with MPF </start/index>`
+------------------------------------------
 Start here.
 
-:doc:`Installation & Setup </install/index>`
--------------------------------------------------
+:doc:`Installing MPF </install/index>`
+--------------------------------------
 Getting MPF up and running on your computer.
 
 :doc:`Running MPF </running/index>`
@@ -50,22 +50,18 @@ a base mode, scoring, and playing.
 Step-by-step guides that show you how to do different things in MPF once you
 finish the tutorial.
 
-:doc:`Config File Reference </config/index>`
-----------------------------------------------------------
-Reference for every option in the MPF config and show YAML files.
-
-:doc:`What's new in MPF 0.30? </features/0.30>`
------------------------------------------------
-Or view the complete `version history </version_history/index>`_.
-
-`Community & Support <https://missionpinball.com/community>`_
--------------------------------------------------------------
-Follow us, get involved, get help.
+:doc:`FAQ </faq/index>`
+-----------------------
+Answers to common questions about MPF & custom pinball machines
 
 `API Reference & Developer's Guide <http://api.missionpinball.com>`_
 --------------------------------------------------------------------
 If you're a programmer or want to extend what's possible with MPF's config
 files, the API / Developer's Reference is at api.missionpinball.com.
+
+`Community & Support <https://missionpinball.com/community>`_
+-------------------------------------------------------------
+Follow us, get involved, get help.
 
 :doc:`/contribute/index`
 ------------------------
@@ -74,4 +70,4 @@ documentation.)
 
 :doc:`License & Copyright </about/license>`
 -------------------------------------------
-It's liberal. Go nuts!
+It's liberal and free. Go nuts!

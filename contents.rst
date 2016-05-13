@@ -1,5 +1,5 @@
-MPF Documentation
-=================
+MPF Documentation Contents
+==========================
 
 .. toctree::
    :maxdepth: 1
@@ -7,7 +7,7 @@ MPF Documentation
    :includehidden:
 
    Start here </start/index>
-   Installing MPF </install/index>
+   Installation </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to guides / "cookbook" </howto/index>
@@ -24,6 +24,7 @@ MPF Documentation
    Writing custome code </code/index>
    Events reference </events/index>
    Config file reference </config/index>
+   FAQ </faq/index>
    Glossary </glossary/index>
    Contributing </contribute/index>
    About </about/index>
