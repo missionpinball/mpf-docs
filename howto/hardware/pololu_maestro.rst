@@ -4,6 +4,8 @@ How to configure a Pololu Maestro servo controller
 MPF supports servos connected to Pololu Maestro servo controllers. Each Maestro
 can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 
+.. image:: /_static/images/pololu_maestro.jpg
+
 1. Install the Pololu Maestro drivers
 -------------------------------------
 
@@ -96,7 +98,6 @@ The ``number:`` of the servo is simply which channel on the Maestro board each
 servo is connected to. These numbers start with 0, so a Micro Maestro 6 supports
 six servos via numbers 0-5, the Mini Maestro 12 supports twelve servos numbered
 0-11, etc.
-
 
 All servo positioning in MPF is controlled via a floating point value from 0.0 to 1.0.
 In other words, if you tell a servo to go to position 0.0, that will be one end
