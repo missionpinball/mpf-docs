@@ -224,7 +224,7 @@ widgets in a named widget (essentially meaning that your named widget is really 
        font_size: 100
 
 You play, show, or hide this "widget" in the same way as every other example in this guide, except in this case, playing
-*widget3* will actually show add all three widgets to the slide. (Again you can play with z-order / layering, and
+*widget3* will actually add all three widgets to the slide. (Again you can play with z-order / layering, and
 remember that each widget (even in a multi-widget group) can have its own z-order settings.
 
 Putting it all together, these are the basics of using named widgets in MPF. The important takeaways are:
