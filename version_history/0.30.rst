@@ -14,7 +14,8 @@ version.
 Note that this document merely lists the big new features and changes to MPF 0.30. All of
 these changes will be incorporated into the general MPF documentation as we get
 that documentation updated. If you have an existing machine project on MPF
-0.21, refer to our MPF 0.21 to MPF 0.30 :doc:`migration guide </howto/migrate_from_21_to_30>`
+0.21, refer to our MPF 0.21 to MPF 0.30
+:doc:`migration guide </howto/installation/migrate_from_21_to_30>`
 for details on how to migrate your machine
 code and configs to MPF 0.30. Here's an overview of the changes to MPF in
 v0.30. Not every change is listed here, but these are the big ones:

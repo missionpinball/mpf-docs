@@ -1,25 +1,24 @@
 Version history
 ===============
-Here's the history of the various release versions and changes of the Mission Pinball Framework. (Patch releases and bug
-fixes are not included in this list.)
+Here's the history of the various release versions and changes of the Mission
+Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 0.30
 ~~~~
 
 Release Date: TBD
 
-
 * Python 3 required
 * Mac OS X support
 * The Media Controller is now a separate package from MPF
 * The MPF-MC has been completely rewritten from scratch (based on Kivy, SDL2,
-  and Gstreamer)
+  OpenGL, and Gstreamer)
 * GPU is used for graphics
 * Brand-new audio interface specifically written for pinball audio, which
   includes advanced feature like ducking, attack, attenuation, etc.
 * Proper Python package installers, and inclusion in PyPI so install can be done
   via *pip*.
-* System-wide *mpf* launcher utility with pluggable commands
+* System-wide *mpf* launcher utility with plugable commands
 * New MPF clock module replaces the old timing and timers
 * All shows are driven by MPF
 * Show content is "played" by the standard config_players
@@ -34,7 +33,7 @@ Release Date: TBD
 * Servo support
 * Text string support
 
-
+See the full list and details of what's new in MPF 0.30 :doc:`here <0.30>`.
 
 0.21
 ~~~~

@@ -11,7 +11,6 @@ MPF Documentation Contents
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to guides / "cookbook" </howto/index>
-   Feature list </features/index>
    Compatible hardware </hardware/index>
    Core modules </core/index>
    Devices </devices/index>
