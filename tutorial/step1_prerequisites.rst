@@ -6,7 +6,7 @@ you have everything you need to get started.
 
 Notice that each step in the tutorial is broken into several sub-steps.
 
-#. You don't need a physical pinball machine yet
+1. You don't need a physical pinball machine yet
 ------------------------------------------------
 
 First, you do *not* need to have physical hardware to go through this
@@ -24,7 +24,7 @@ machine's DMD or LCD.
 Still, it's enough to get started. We'll show you how to map keyboard keys on your computer so
 you can "play" your machine to test it out.
 
-#. Read the overview of MPF
+2. Read the overview of MPF
 ---------------------------
 
 You certainly don't have to read through hundreds of pages of documentation to
@@ -37,7 +37,7 @@ Here are the docs that we suggest you read before we proceed.
 #. :doc:`/intro/index`
 #. :doc:`/intro/how_mpf_talks_to_hardware`
 
-#. Install MPF
+3. Install MPF
 --------------
 
 We have separate documentation that walks you through downloading and installing
@@ -45,9 +45,9 @@ MPF, as well as running our *Demo Man* example game. So if you haven't done so
 already, get MPF installed and make sure you can run *Demo Man*, and then come
 back here to start creating your own machine!
 
-You can do that in the :doc:`/installation/index` section of the documentation.
+You can do that in the :doc:`/install/index` section of the documentation.
 
-#. Let's go!
+4. Let's go!
 ------------
 
 If you're reading this tutorial online, note that there are "Previous" and
