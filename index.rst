@@ -6,16 +6,15 @@ Mission Pinball Framework |version| documentation
 Welcome! This is the documentation for the Mission Pinball Framework (MPF)
 |release|, last updated |today|.
 
-.. note:: This is the new documentation site for MPF documentation, starting
-   with MPF v0.30. Everything on *docs.missionpinball.com* has been updated
-   and applies to MPF 0.30. Documentation for prior versions of MPF is still
-   available at *missionpinball.com/docs*.
-
 This documentation is available for :doc:`download </download>` in many popular
 formats.
 
-Documentation Migration Status
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Documentation Migration Status**
+
+This is the new documentation site for MPF documentation, starting
+with MPF v0.30. Everything on *docs.missionpinball.com* has been updated
+and applies to MPF 0.30. Documentation for prior versions of MPF is still
+available at `missionpinball.com/docs <https://missionpinball.com/docs`_.
 
 .. raw:: html
 
@@ -26,7 +25,12 @@ Documentation Migration Status
 
 67 of 342 documents have been updated for 0.30 and added to this site. We're
 working as fast as we can, but there are 206,937 total words in the MPF
-documentation, so this process may take awhile. :)
+documentation, so this process may take awhile. We're hoping to have it complete
+by June, 2016.
+
+MPF has a lot of documentation. Here are some of the big parts you can explore
+now. Or view the tree menu on the left (or the "All Docs" in the top menu bar if
+you're on a mobile device).
 
 :doc:`First Steps with MPF </start/index>`
 ------------------------------------------
