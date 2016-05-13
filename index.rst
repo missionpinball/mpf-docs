@@ -14,7 +14,7 @@ formats.
 This is the new documentation site for MPF documentation, starting
 with MPF v0.30. Everything on *docs.missionpinball.com* has been updated
 and applies to MPF 0.30. Documentation for prior versions of MPF is still
-available at `missionpinball.com/docs <https://missionpinball.com/docs`_.
+available at `missionpinball.com/docs <https://missionpinball.com/docs>`_.
 
 .. raw:: html
 
