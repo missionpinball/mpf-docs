@@ -1,33 +1,25 @@
 MPF Tutorial
 ============
 
-So... you want to write your own software for a pinball machine? Awesome!
-Hopefully you're a little crazy, because it's a lot of work. But seriously,
-this is awesome, and with MPF you can get a basic game up and running pretty
-quickly.
+Let's learn by example!
 
-If you're not a computure programmer, that's fine. We'll step through everything
-exactly. If you run into any problems, feel free to post a question to our
-`support forum <https://missionpinball.com/forum/f/mpf-users/>`.
+This tutorial will walk you through using MPF to create a basic pinball machine config. Since MPF is software-only,
+you don't actually need to have physical pinball machine hardware to complete the tutorial. You can create a "virtual"
+pinball machine for now and then hook up a real machine later.
 
-The only other thing to keep in mind is that MPF itself is still in development.
-The first number in the MPF version is a zero :) Just let us know if you run
-into any problems.
+The tutorial includes:
 
-Here's how this tutorial process works:
+* Configuring switches, coils, flippers, sling shots, and your trough.
+* Starting and playing a complete game with multiple players.
+* Setting up attract mode light and display shows.
+* Basic scoring and defining shots and lights.
+* Using the display to show what's happening and the score.
+* Setting up a "base" game mode.
 
-#. Follow all the steps in the tutorial, in order. (Each step builds
-   on the previous one, and every machine needs the things from every
-   step.) This will give you a basic, playable game, complete with multi-
-   player support, an attract mode, lights, shots, points, and a basic
-   game mode.
-#. When you're done with the tutorial, browse our :doc:`How To guides </howto/index>`.
-   (These are like the "cookbook" or "recipe" approach.) The How To
-   guides can be followed in whatever order you want, and you don't have
-   to do all of them for your machine.
-
-The key is that you need to complete every step in the tutorial in order, and
-after that you can do whatever else you want from the How To guides in any order.
+The idea is that everyone should follow the tutorial, and complete every step, in order. (The tutorial steps all build
+off the previous steps.) Once that's done, you can then move on to the How To / "Cookbook" documentation which shows you
+how to do all sorts of other things. The How To guides can be followed in any order (though they all assume you've
+completed the tutorial).
 
 Happy pinballing!
 
@@ -37,4 +29,4 @@ Tutorial Steps
 .. toctree::
    :maxdepth: 1
 
-   1. Prerequisites </tutorial/step1_prerequisites>
+   1. Prerequisites </tutorial/1_prerequisites>

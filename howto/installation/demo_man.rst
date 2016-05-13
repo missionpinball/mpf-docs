@@ -1,35 +1,24 @@
+How to run "Demo Man", the MPF example game
+===========================================
 
-Once you understand what you'll need for MPF, youcan move on to
-actually downloading, installing, and getting MPF running. At this
-point itreally doesn't matter what type of computer you use for this.
-Most people do all their initial development work on a Mac or Windows
-laptop(which they connect via USB to their pinball machine for
-testing), and then when they get closer to actually finishing their
-project they switch over to a small Linux-based single board computer
-(like a Raspberry Pi 2 or BeagleBone Black) or a small Windows system
-to run their final code. The good news is that all the Python files
-and configuration files you build are 100% identical regardless of the
-computing platform (and, frankly, regardless of whether you use a
-P-ROC or FAST controller), so you can safely do all your development
-on whatever computer you're reading this document from and then easily
-transfer it to your final computer later.
+Once you have MPF installed, you can run an example game to see how
+MPF works and to verify that everything is installed correctly.
 
+1. Download the MPF examples
+----------------------------
 
+There are several sample games and other things in a software repository
+called "mpf-examples" on GitHub. This repo doesn't have an installer,
+rather, you pretty much just download it and start using the examples
+it contains.
 
-(A) Install Python, MPF, and related components
------------------------------------------------
+So to do that, download the ZIP file from `here <https://github.com/missionpinball/mpf-examples/archive/master.zip>`_.
+(If you're familiar with git, you can just clone the repo. It's at `github.com/missionpinball/mpf-examples <https://github.com/missionpinball/mpf-examples>`_.)
 
-We have a `dedicated page about installing MPF`_ that you can follow
-to get everything installed. If you're using Windows or a Debian-based
-Linux (Ubuntu, etc.), then we have installers you can download and use
-which will automatically install everything in under 5
-minutes—including the P-ROC, P3-ROC, or FAST Pinball drivers! Even if
-you want to manually install MPF and all its related components, it
-should only take you about 10 minutes. Note that this tutorial is
-based on MPF 0.21. See `this how to guide`_ for details on how to
-check what version of MPF you have.
-
-
+Unzip the examples folder to any location you want. It doesn't have
+to be in the same folder as MPF. (In fact when you installed MPF, it
+was installed to some system folder that you probably can't even find.
+So for these example files, just port them somewhere easy.
 
 (B) Run *Demo Man*, a sample game that comes with MPF
 -----------------------------------------------------
@@ -69,7 +58,7 @@ Man* like this:
 
 ::
 
-    
+
     mpf demo_man -v
 
 
@@ -110,7 +99,7 @@ window, launch the media controller for *Demo Man*, like this:
 
 ::
 
-    
+
     python mc.py demo_man -v
 
 
@@ -125,7 +114,7 @@ for *Demo Man*, like this:
 
 ::
 
-    
+
     python mpf.py demo_man -v
 
 
@@ -214,16 +203,4 @@ Mac they'll open with an app called Console which is a log file
 viewer. If you're just reading this documentation without following
 along and you'd like to see log files, here are direct links to the
 two files mentioned above:
-
-
-+ `MPF core engine`_ (1.5MB .log file)
-+ `MPF media player`_ (1MB .log file)
-
-
-.. _MPF core engine: https://missionpinball.com/wp-content/uploads/2014/09/2015-11-29-18-51-25-mpf-DESKTOP-FBOHND6.log
-.. _MPF media player: https://missionpinball.com/wp-content/uploads/2014/09/2015-11-29-18-51-25-mc-DESKTOP-FBOHND6.log
-.. _track our progress: https://missionpinball.com/blog/category/building-demo-man/
-.. _this how to guide: https://missionpinball.com/docs/howto/mpf-version/
-.. _dedicated page about installing MPF: https://missionpinball.com/docs/installing-mpf/
-
 

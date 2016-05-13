@@ -2,9 +2,7 @@ Tutorial step 1: Prerequisites
 ==============================
 
 Before we dig into building your own machine's configuration, let's make sure
-you have everything you need to get started.
-
-Notice that each step in the tutorial is broken into several sub-steps.
+you have everything you need to get started:
 
 1. You don't need a physical pinball machine yet
 ------------------------------------------------
@@ -34,8 +32,8 @@ we'll be using as we go through the tutorial.
 
 Here are the docs that we suggest you read before we proceed.
 
-#. :doc:`/intro/index`
-#. :doc:`/intro/how_mpf_talks_to_hardware`
+#. :doc:`/start/overview`
+#. :doc:`/start/hardware_interface`
 
 3. Install MPF
 --------------
@@ -53,5 +51,5 @@ You can do that in the :doc:`/install/index` section of the documentation.
 If you're reading this tutorial online, note that there are "Previous" and
 "Next" navigation buttons at the bottom of each page. You should be able to just
 click those to follow along. (And if you'd like to download a copy of this
-documentation to read offline, check the :doc:`Download offline documentation </download>`
-for links to this entire documentation set in multiple downloadable formats.)
+documentation to read offline, check the :doc:`/download`
+page links to this entire documentation set in multiple downloadable formats.)

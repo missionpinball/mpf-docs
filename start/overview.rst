@@ -9,7 +9,7 @@ of the low-level stuff, you still need to figure out your game logic, modes,
 game flow, scoring, light shows, displays, animations, sounds, bonus, etc.
 
 We assume that if you're on this page, you know what MPF is. If not, check out
- our overview of the `MPF Project <https://missionpinball.com/mpf/>`_.
+our overview of the `MPF Project <https://missionpinball.com/mpf/>`_.
 
 You'll use MPF to configure and control everything in your machine, including:
 

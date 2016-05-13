@@ -1,15 +1,14 @@
 MPF Installation
 ================
 
-Installing MPF is fairly straightforward.
+Installing MPF is fairly straightforward. It can be used on Windows, Mac OS X, or Linux, on both Intel x86 and ARM
+processors, and in 64-bit and 32-bit systems.
 
-OS Platforms supported
-----------------------
+Full step-by-step install guides
+--------------------------------
 
-MPF works on several different platforms, on both Intel x86 and ARM processors,
-and in 64-bit and 32-bit systems.
-
-To actually get MPF installed on your system, refer to the appropriate installation guide:
+We've created step-by-step installation guides which walk you through the entire process. Select the OS you're using
+from the list below:
 
 .. toctree::
    :maxdepth: 1
@@ -18,17 +17,15 @@ To actually get MPF installed on your system, refer to the appropriate installat
    Mac OS X <mac>
    Linux <linux>
 
+Quick install guide
+-------------------
 
-Hardware drivers
-----------------
+If you're already Python-savvy and know what you're doing, here's the quick-and-dirty on MPF installation:
 
-If you plan to use MPF to control physical hardware (which is probably everyone), then you'll also need
-to install the drivers for your particular pinball controller. Refer to the section for your hardware
-for details:
++ For Windows, MPF requires Python 3.4 (3.5 does not work). x86 or x64 is ok. Install "mpf-mc" via pip. That's it.
++ For Mac, we have an MPF.app package which includes the Python 3.5 binaries and all the other libraries MPF needs. Just
+  use that. (See the Mac OS X link above.)
++ For Linux, we have a Debian installer. See the Linux link above for details.
 
-.. toctree::
-   :maxdepth: 1
-
-   FAST Pinball <hardware_drivers/fast>
-   Open Pinball Project <hardware_drivers/opp>
-   P-ROC / P3-ROC <hardware_drivers/p_roc>
+In all cases you'll need to install the USB drivers for your controller hardware separate from MPF. See the controller
+hardware section of the How To guides for details.

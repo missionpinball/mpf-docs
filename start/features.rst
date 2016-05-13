@@ -18,10 +18,6 @@ Major Features & Concepts
   goes out of business, all your effort is not lost as you can easily move
   everything to a new hardware platform with a simple config file change.
 
-Full feature list in MPF |version|
-----------------------------------
-
-
 Hardware support
 ~~~~~~~~~~~~~~~~
 
@@ -92,11 +88,13 @@ Displays
 + RGB LED DMDs
 + Display "slides" with priorities, transitions in and out
 + Display "widgets" (things you put on displays), including:
+
     + Text (with fonts, styles, colors, dynamic text based on game state, etc.)
     + Images & animated images
     + Videos
     + Shapes
     + "Picture-in-picture" style sub-displays
+
 + Any property of any widget can be animated (opacity, size, position, etc.)
 
 Sounds & Audio
@@ -140,5 +138,5 @@ Other stuff
 And the best part: Everything mentioned on this page can be done via the text-
 based configuration files. If you don't want to be a "coder," you don't have to
 be. (Though the plugin, scriptlet, mode
-coding, and `API documentation`_ mean that if you want to use MPF for
+coding, and `API documentation <http://api.missionpinball.com>`_ mean that if you want to use MPF for
 your groundwork and code your game in "real" Python, that's fine too.

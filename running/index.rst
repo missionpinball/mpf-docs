@@ -1,13 +1,6 @@
 How to start MPF and run your game
 ==================================
 
-.. note:: This page is a reference for how to start MPF and all the
-   various command-line options. If you're brand-new to MPF and running
-   it for the first time, we recommend that you follow our :doc:`step-by-step
-   getting started tutorial </tutorial/index>`. The first few steps will walk you through
-   downloading and installing MPF and getting our sample *Demo Man*
-   machine up and running.)
-
 MPF is a console-based application which you
 run from the command line. There are actually two separate processes
 that you need to run for MPF: The *MPF game engine* and the

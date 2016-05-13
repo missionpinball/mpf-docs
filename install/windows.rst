@@ -9,8 +9,8 @@ Here are the steps:
 1. Install Python 3.4
 ---------------------
 
-On Windows platforms, MPF requires Python 3.4, which you can download and
-install from the Python website.
+On Windows platforms, MPF requires Python 3.4, (Python 3.5 will not work) which you can download and
+install from the Python website. (Keep reading for links)
 
 There are two versions of Python, a 32-bit version and a 64-bit version, and you
 should pick the one that matches the version of Windows you're using.
@@ -67,7 +67,7 @@ Python 2 on it. If you don't want to do this, just uninstall Python 2 first.
 Now that Python is installed, it's time to install MPF! (If you just
 installed Python now, remember to log out and log in again so the path setting
 can be updated). To actually install MPF, just open a command prompt (right-
-click on the Windows menu icon and select "Command Prompt" and type the
+click on the Windows menu icon and select "Command Prompt") and type the
 following, then press <Enter>:
 
 ::

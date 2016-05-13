@@ -59,8 +59,8 @@ There are many advantages to DSLs, including:
   provide migration tools to upgrade them, so we can make major changes to MPF
   under the hood without you having to re-write anything in your game.
 
-Config files in MPF: Use as much or as little as you want
----------------------------------------------------------
+Config files in MPF: use as much (or as little) as you want
+-----------------------------------------------------------
 
 Even though we just laid out the reasons we like "programming" your game via
 config files instead of "real" code, there's one important thing to know about
@@ -105,7 +105,7 @@ the config files!)
 I already know Python. Why learn obscure config files?
 ------------------------------------------------------
 
-Again,the software that runs pinball machines is complex. The complete MPF
+Again, the software that runs pinball machines is complex. The complete MPF
 codebase is over 15,000 lines of code, with thousands of lines of code to do
 things that *seem* simple on the surface, like managing ball devices and
 tracking where all the balls are at all times.
@@ -113,13 +113,13 @@ tracking where all the balls are at all times.
 MPF's config files provide a friendly interface to all that complexity. So yes,
 it's true that you have to spend a few hours learning about the ``ball_devices:``
 section of the MPF config files in order to learn how to use them effectively.
-But what's the alternative? You want to learn everything about how ball tracking
-works in a pinball machine and then write all that from scratch yourself? That
-will take a lot longer than it will to learn about how to configure ball
+But the alternative is learning everything about how ball tracking
+works in a pinball machine and then writing all that from scratch yourself. That
+would take a lot longer than it would to learn about how to configure ball
 tracking in MPF. And besides, we already did that! :)
 
-Config files are limiting
--------------------------
+Aren't config files limiting?
+-----------------------------
 
 Even though we've tried to envision many different scenarios and many
 different types of pinball machines as we built MPF, it's true that MPF does
@@ -140,8 +140,8 @@ are already part of MPF. Unless you want to write all of those from scratch,
 using MPF lets you get a head start on many of the things that you need in your
 machine that you don't want to write yourself.
 
-Coding is fun! MPF deprives people of that
-------------------------------------------
+Coding is fun! Doesn't using config files deprive me of that?
+-------------------------------------------------------------
 
 Some people have said, "I like to code. I don't *want* to just build my machine
 quickly." Certainly we appreciate that, because we like to code too!
