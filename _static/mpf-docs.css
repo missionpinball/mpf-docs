@@ -17,13 +17,11 @@
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
   }
-  .row-offcanvas-right
-  .sidebar-offcanvas {
+  .row-offcanvas-right, .sidebar-offcanvas {
     right: -41.6%;
   }
 
-  .row-offcanvas-left
-  .sidebar-offcanvas {
+  .row-offcanvas-left, .sidebar-offcanvas {
     left: -41.6%;
   }
   .row-offcanvas-right.active {
