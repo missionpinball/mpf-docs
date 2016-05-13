@@ -21,7 +21,7 @@ These were all created with configuration files and without manual programming.
 
 Here's a traditional DMD with a single text widget:
 
-.. image:: /_static/images/display_mono_dmd.jpg
+.. image:: display_mono_dmd.jpg
 
 
 Here's an on-screen display window made up of an image widget (the background),
@@ -30,19 +30,19 @@ and a text widget (the "Judge Dredd" words in the lower right corner). The image
 on the DMD is an image widget which has been targeted to DMD instead of the
 window.
 
-.. image:: /_static/images/display_window.jpg
+.. image:: display_window.jpg
 
 
 Here's a "color" DMD on an LCD monitor. (It's a DMD widget surrounded by a blue
 rectangle widget:
 
-.. image:: /_static/images/display_color_dmd.jpg
+.. image:: display_color_dmd.jpg
 
 
 Here's a full-color RGB DMD LED matrix. (So it's like a color DMD, but a matrix of
 2.5mm RGB LEDs rather than an LCD):
 
-.. image:: /_static/images/display_rgb_dmd.jpg
+.. image:: display_rgb_dmd.jpg
 
 
 Before we go into the details of all the various display components, let's start
