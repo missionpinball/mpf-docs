@@ -7,7 +7,7 @@ MPF Documentation
    :includehidden:
 
    Start here </start/index>
-   Installing MPF </installation/index>
+   Installing MPF </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to guides / "cookbook" </howto/index>

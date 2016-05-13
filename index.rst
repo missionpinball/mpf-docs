@@ -32,7 +32,7 @@ documentation, so this process may take awhile. :)
 -------------------------------------------------
 Start here.
 
-:doc:`Installation & Setup </installation/index>`
+:doc:`Installation & Setup </install/index>`
 -------------------------------------------------
 Getting MPF up and running on your computer.
 

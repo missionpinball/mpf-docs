@@ -26,7 +26,7 @@ that guide to see what's new.
 2. Install Python 3 & MPF
 -------------------------
 
-We have a guide :doc:`here </installation/index>`.
+We have a guide :doc:`here </install/index>`.
 
 
 (2C) Install the fonts
