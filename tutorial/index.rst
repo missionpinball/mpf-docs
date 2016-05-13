@@ -29,4 +29,5 @@ Tutorial Steps
 .. toctree::
    :maxdepth: 1
 
-   1. Prerequisites </tutorial/1_prerequisites>
+   1. Prerequisites <1_prerequisites>
+   2. Creating your machine folder <2_creating_a_new_machine>

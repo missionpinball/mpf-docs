@@ -43,7 +43,8 @@ MPF, as well as running our *Demo Man* example game. So if you haven't done so
 already, get MPF installed and make sure you can run *Demo Man*, and then come
 back here to start creating your own machine!
 
-You can do that in the :doc:`/install/index` section of the documentation.
+#. :doc:`/install/index`
+#. :doc:`/howto/installation/demo_man`
 
 4. Let's go!
 ------------
