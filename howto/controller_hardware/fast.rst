@@ -1,20 +1,40 @@
 How to configure FAST Pinball hardware for MPF
 ==============================================
 
-This how to guide explains how to setup your MPF configuration files
+This guide explains how to setup your MPF configuration files
 to interface with a FAST Pinball controller. It applies to all three
-of their models—the Core, Nano, and WPC controllers.
+of their models—-the Core, Nano, and WPC controllers.
 
 .. todo::
    This page needs to be updated for MPF 0.30 with the latest FAST
    changes
 
+1. Install the FAST USB driver
+------------------------------
 
-1. Configuring the Hardware platform for FAST
----------------------------------------------
+FAST Pinball controllers use a USB chip from FTDI, so you need to download and install the FTDI driver. It's pretty
+simple. Go to this `this page <http://www.ftdichip.com/Drivers/VCP.htm>`_ and scroll down to the VCP Drivers section and
+download the Windows driver. The easiest one to use is the "setup executable" in the Comments section in the right-most
+column.
 
-To use MPF with a FAST, you need to configure your platform as *fast*,
-like this:
+Once this is done, when you plug in and power on your FAST controller, you should see some kind of notification that new
+hardware has been detected. What exactly you see will depend on which FAST controller you’re using and what OS you have.
+For example, here’s what happens when you plug a FAST WPC controller into Windows 10 for the first time (after you’ve
+installed the FTDI driver):
+
+.. image:: fast-ftdi-driver.png
+
+(This is just a progress bar which shows Windows configuring the drivers. You don’t have to click anything to get it
+started, and it should only take 5-10 seconds. It will only happen the first time you plug in the hardware.)
+
+Then if you go into your device manager, you should see four new COM ports appear. These are “virtual” COM ports that
+your computer talks to via USB, and these are the ports that MPF uses to communicate with your FAST pinball controller.
+These ports will disappear when you power off or unplug your FAST controller.
+
+2. Configure your hardware platform for FAST
+--------------------------------------------
+
+To use MPF with a FAST, you need to configure your platform as ``fast`` in your machine-wide config file, like this:
 
 ::
 
@@ -24,12 +44,11 @@ like this:
 
 
 You also need to configure the `driverboards:` entry for what kind of
-driver boards you’re controlling: ``wpc`` for Williams WPC, or ``fast``
-for FAST I/O boards like the 3208, 1616, or 0804.
+driver boards you’re controlling: ``wpc`` for Williams WPC with the FAST WPC controller, or ``fast``
+for FAST I/O boards like the 3208, 1616, or 0804 with the Core or Nano controllers.
 
 
-
-2. Configuring the FAST-specific hardware settings
+3. Configuring the FAST-specific hardware settings
 --------------------------------------------------
 
 When you use FAST hardware with MPF, you also need to add a `fast: section </config/fast>`_

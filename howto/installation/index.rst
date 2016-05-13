@@ -5,4 +5,4 @@ Installation & setup How To guides
    :titlesonly:
    :maxdepth: 1
 
-   migrate_from_21_to_30
+   Migrating from MPF 0.21 to 0.30 <migrate_from_21_to_30>

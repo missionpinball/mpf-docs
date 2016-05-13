@@ -5,5 +5,7 @@ Pinball controller hardware How To guides
    :titlesonly:
    :maxdepth: 1
 
-   fast
-   opp
+   Configuring FAST Pinball hardware <fast>
+   Configuring OPP hardware <opp>
+   Configuring Pololu servo controllers <pololu_maestro>
+   Installing P-ROC/P3-ROC on Mac OS X

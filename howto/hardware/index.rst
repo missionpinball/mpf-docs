@@ -5,6 +5,5 @@ Pinball hardware How To guides
    :titlesonly:
    :maxdepth: 1
 
-   auto_manual_plunger
-   mechanical_plunger
-   pololu_maestro
+   Auto/manual combo plungers<auto_manual_plunger>
+   Manual plungers<mechanical_plunger>

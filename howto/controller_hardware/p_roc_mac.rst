@@ -1,25 +1,14 @@
-Installing P-ROC / P3-ROC drivers
-=================================
+How to install P-ROC / P3-ROC drivers on Mac OS X
+=================================================
 
-Windows
--------
+Installing the P-ROC drivers (libpinproc and pypinproc) on the Mac is a manual process that requires a few prerequisites
+and some supporting software. We chose to use the `homebrew <http://brew.sh>`_ package manager to help us with the
+install, which is similar to the apt-get package manager in Linux. The following instructions will help you get homebrew
+installed, along with everything else.
 
-Built-in to MPF. Nothing for you to do.
+These instructions assume you have already installed MPF.app. If you haven't, you will need to
+`go back and do that first </install/mac>`_, since it has to be installed before you can build the P-ROC drivers.
 
-Linux
------
-
-We're working on this. Stand by.
-
-Mac OS X
---------
-
-Installing the P-ROC drivers (libpinproc and pypinproc) on the Mac is a manual process that requires a few prerequisites and some supporting software. We chose to use the "`homebrew <http://brew.sh>`_" package manager to help us with the install, which is similar to the apt-get package manager in Linux. The following instructions will help you get homebrew installed, along with everything else.
-
-These instructions assume you have already installed MPF.app. If you haven't, you will need to `go back and do that first </installation/mac>`_, since it has to be installed before you can build the P-ROC drivers.
-
-Installation Steps
-``````````````````
 1. Install Brew
 ~~~~~~~~~~~~~~~
 
@@ -57,7 +46,8 @@ After Xcode installs, press Return and enter your admin password in the terminal
 
 5. Install yaml-cpp
 ~~~~~~~~~~~~~~~~~~~
-While there is a yaml-cpp package in brew, it's too new to use here. Adding to the fuss is that the version we need is no longer available, so we included it on the osx-proc-support package that you downloaded earlier. 
+While there is a yaml-cpp package in brew, it's too new to use here. Adding to the fuss is that the version we need is
+no longer available, so we included it on the osx-proc-support package that you downloaded earlier.
 
 We have to compile it from scratch:
 ::
