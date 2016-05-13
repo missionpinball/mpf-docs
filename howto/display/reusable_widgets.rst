@@ -3,8 +3,9 @@ How to create reusable widgets
 
 This guide explains how you can create reusable "named" widgets that you can use again and again on multiple display
 slides. This saves you from having to copy-and-paste the same widget (or sets of widgets) into multiple slide
-configurations, and it makes it easy to update and fine-tune your widget config since you only have to change it in one
-place.
+configurations, it makes it easy to update and fine-tune your widget config since you only have to change it in one
+place, and it lets you add individual widgets to the display that will show up regardless of what slide is currently
+showing.
 
 1. Understanding widgets
 ------------------------
@@ -29,7 +30,7 @@ and when you define a slide, you can specify what widgets are on that slide, lik
               image: background1
 
 In the example above, the slide called *my_slide* has three widgets--two text widgets and a backgroun image. (Remember
-that the "z order" or "layer" of widgets is top-to-bottom, so the *HELLO!* wiget is on top, then *YAY PINBALL* is next,
+that the "z order" or "layer" of widgets is top-to-bottom, so the *HELLO!* widget is on top, then *YAY PINBALL* is next,
 and they're both on top of the *background1* image.
 
 These three widgets are permanently attached to the slide called *my_slide*. There's no way to reuse them on any other
