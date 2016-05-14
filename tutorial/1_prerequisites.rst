@@ -4,6 +4,7 @@ Tutorial step 1: Prerequisites
 Before we dig into building your own machine's configuration, let's make sure
 you have everything you need to get started:
 
+
 1. You don't need a physical pinball machine yet
 ------------------------------------------------
 
@@ -22,6 +23,7 @@ machine's DMD or LCD.
 Still, it's enough to get started. We'll show you how to map keyboard keys on your computer so
 you can "play" your machine to test it out.
 
+
 2. Read the overview of MPF
 ---------------------------
 
@@ -35,8 +37,9 @@ Here are the docs that we suggest you read before we proceed.
 #. :doc:`/start/overview`
 #. :doc:`/start/hardware_interface`
 
-3. Install MPF
---------------
+
+3. Install MPF |version|
+------------------------
 
 We have separate documentation that walks you through downloading and installing
 MPF, as well as running our *Demo Man* example game. So if you haven't done so
@@ -45,6 +48,17 @@ back here to start creating your own machine!
 
 #. :doc:`/install/index`
 #. :doc:`/howto/installation/demo_man`
+
+If you do have MPF installed, let's make sure it's the right version. Open a
+command prompt and run:
+
+::
+
+   mpf --version
+
+This tutorial is written for MPF |version|, so make sure that's what you have,
+and follow the installation links above if not.
+
 
 4. Let's go!
 ------------

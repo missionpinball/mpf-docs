@@ -84,16 +84,21 @@
 
 /* Make h2 <em> not italics */
 h2 em {
-  font-style: normal;
+    font-style: normal;
+}
+
+h2, .h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 /* General text */
 body ul ol {
-  color: #666;
+    color: #666;
 }
 
 body {
-  color: #666;
+    color: #666;
 }
 
 code {

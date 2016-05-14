@@ -1,27 +1,11 @@
 Tutorial step 2: Creating your machine folder
 =============================================
 
-Okay, so MPF is installed and you're able to run *Demo Man*. Great!
+Okay, so MPF |version| is installed and you're able to run *Demo Man*. Great!
 Now it's time to create the folders and files for your own game.
 
 
-
-1. Make sure you're running the right version of MPF
-----------------------------------------------------
-
-This tutorial is written for MPF version |version|. So before we go any
-further, let's make sure you have that version of MPF.
-
-To do this, open a command prompt and run:
-
-::
-
-   mpf --version
-
-Make sure it prints out v|version|.x.
-
-
-2. Understand the "machine folder" concept
+1. Understand the "machine folder" concept
 ------------------------------------------
 
 In MPF, we use the term *machine folder* to describe the folder that contains all the
@@ -35,8 +19,8 @@ Note that we call these "machine" folders and not "game" folders because in MPF,
 actual game-in-progress running on a machine. So you're really creating a pinball machine
 config, not a pinball game config.
 
-3. Create your some folders
----------------------------
+2. Create your machine folders
+------------------------------
 
 Okay, so let's get started with your own game's machine folder. The
 first step is to create an empty folder somewhere. (Anywhere you want.)
@@ -60,7 +44,7 @@ machine folder, like this:
    C:\pinball\your_machine\config\
 
 
-4. Create your machine config file
+3. Create your machine config file
 ----------------------------------
 
 Now let's actually create your machine config file. To do that, create a file called ``config.yaml`` in your */config*
@@ -76,7 +60,7 @@ Note that if you're on Windows and you just right-click and select *New > Text D
 make sure that Windows Explorer is configured to show file extensions
 so you actually create a file called ``config.yaml`` and not ``config.yaml.txt``. (That's in the "View" menu of Explorer.)
 
-5. Add #config_version=4 to the top of your config file
+4. Add #config_version=4 to the top of your config file
 -------------------------------------------------------
 
 The first thing you need to do when you create any new config file for MPF is to add an entry on the very top line that
@@ -104,7 +88,7 @@ Adding versioning to YAML files also means it’s easy us to migrate config file
 The current version of the config files is 4 which is what’s used with MPF 0.30 and newer, so that’s what we’re adding
 here.
 
-6. Run your game!
+5. Run your game!
 -----------------
 
 Believe it your not, it's time to run your game! Simply open a console window and change to your machine
@@ -112,7 +96,7 @@ folder, and run ``mpf -b``, like this:
 
 ::
 
-   C:\pinball\your_machine> mpf -b
+   C:\pinball\your_machine>mpf -b
 
 (The ``-b`` option tells MPF not to try to connect to a media controller for display and sound since we haven't set that
 up yet.)
@@ -183,7 +167,7 @@ If you get a crash with a message about a "Config file version mismatch", like t
 This means you don't have ``#config_version=4`` in the top line of your config file. (Make sure you include the hash
 mark as part of that.)
 
-If you get an error that says ``Could not find machine folder: 'None', that means that you ran MPF from the
+If you get an error that says ``Could not find machine folder: 'None'``, that means that you ran MPF from the
 wrong folder. For example:
 
 ::
