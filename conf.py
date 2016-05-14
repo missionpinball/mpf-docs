@@ -97,7 +97,7 @@ exclude_patterns = ['_build', '_not_updated_yet']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'none'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
