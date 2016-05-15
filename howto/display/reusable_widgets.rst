@@ -124,8 +124,8 @@ can even mix-and-match formats, like this:
             slide: my_slide
       some_other_event: another_widget
 
-Adding a widget to a specific display
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding a widget to a specific display target
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rather than specifying a particular slide to add your widget to, you can target a display, and the widget will be added
 to whatever slide is currently being shown:
@@ -161,19 +161,26 @@ even if the slide transitions to another one. For example:
 The above example will show the TILT WARNING text in the parent frame of the default display, and it will remain there
 even if the default display switches slides.
 
-Expiring widgets
-~~~~~~~~~~~~~~~~
+Overriding named widget settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also specify expire times in the widget player (just like in the slide player). For example, if you use a
+When you create your named widget, it contains a bunch of settings that are used to add it to a slide. (That's sort of
+the whole point.)
+
+However sometimes it's useful to be able to override or add additional settings at play time. You can do this in the
+``widget_settings:`` section of the ``widget_player:`` in a config file or the ``widgets:`` section of a show step.
+
+For example, if you use a
 widget for the tilt warning like in the previous example, you'd probably want that widget to be removed after a few
 seconds, which you could do like this:
 
 ::
 
    widget_player:
-      tilt_warning:         # event
-         tilt_warning:      # widget name
-            expire: 2s
+      tilt_warning:             # event
+         tilt_warning:          # widget name
+            widget_settings     # additional settings to be added / updated
+              expire: 2s
 
 (Technically speaking, if you were going to show a tilt warning widget, you'd probably also want to play a sound and
 maybe flash all the lights on the playfield, so in your real game you're probably actually create a show to do this
@@ -182,6 +189,8 @@ of the show, but you get the idea.)
 
 You can also set the expiration time of a widget when you define the widget in the ``widgets:`` section of the config.
 See the config file reference for details.
+
+You can add/update any setting for the widget (color, text, position, animations, widget_styles, z (layer), etc.)
 
 Removing widgets
 ~~~~~~~~~~~~~~~~
@@ -237,3 +246,22 @@ Putting it all together, these are the basics of using named widgets in MPF. The
 + When "playing" a widget, you can target a display or a slide.
 + Once a widget is "played" and added to a slide, it becomes just another widget on that slide. The fact that it was
   put there by the widget player doesn't matter.
+
+Adding multiple named widgets in one event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also add multiple named widgets from a single event. This is nice if you want to add widgets to
+multiple displays or slides at the same time. For example:
+
+::
+
+   widget_player:
+      some_event:
+         widget1:
+            target: dmd
+         widget2:
+            target: lcd
+
+Note that if you do this, the structure of YAML requires that you have at least
+one setting under each widget name, so you can just add a ``target:`` or ``action: add``
+if you don't want to change or set anything else in the widget.
