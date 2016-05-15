@@ -7,3 +7,4 @@ Display How To guides
 
    Creating reusable "named" widgets <reusable_widgets>
    Animating widgets <animate_widgets>
+   Positioning widgets <widget_positioning>
