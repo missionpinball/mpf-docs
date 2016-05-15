@@ -91,17 +91,201 @@ For example, to make the text grow and shrink while also fading on and off:
             - type: text
               text: MY TEXT
               color: red
+              font_size: 50
               animations:
-                entrance:                  # animation trigger event
-                  - property: opacity      # name of the widget property we're animating
-                    value: 1               # target value of that property for this step
-                    duration: .5s          # duration
+                entrance:
+                  - property: opacity
+                    value: 1
+                    duration: .5s
+                  - property: font_size
+                    value: 100
+                    timing: with_previous      # makes this step run at the same time as the previous one
+                    duration: .5s              # specify a duration for each step, even when with_previous
                   - priority: opacity
                     value: 0
                     duration: .5s
                     repeat: true
+                  - property: font_size
+                    value: 50
+                    duration: .5s
 
+Notice that the animation in the example above has 4 steps, but steps #2 and #4 have the setting ``timing: with_previous``.
+You can chain together as many ``with_previous`` steps as you want. (The default setting for one step to run after the
+previous one is ``timing: after_previous``, but since that's the default you don't need to explicitly add it.
 
+Also note that all 4 steps above specify ``duration: .5s``. However you can make each step a different amount of time.
+In fact you can even make multiple ``with_previous`` steps different durations (though the animation won't move on to
+the next ``after_previous`` step until all the simultaneous steps are complete).
 
-The example above is a widget that's part of a slide, but you can add animations to widgets anywhere a widget is defined
-(in the slide properites, in a show step, as part of a :doc:`named widget <reusable_widgets>`, etc.)
+By the way, the example above is a widget that's part of a slide, but remember you can add animations to widgets
+anywhere a widget is defined (in the slide properites, in a show step, as part of a
+:doc:`named widget <reusable_widgets>`, as part of a ``widget_settings:`` override section in the ``widget_player:``,
+etc.)
+
+3. Multi-step animations with different trigger events
+------------------------------------------------------
+
+So far all of the animation examples have been triggered on the ``entrance`` event which means they start animating as
+soon as the widget is added to the slide (or as soon as the slide is created if the widget is part of the slide
+definition).
+
+However the real power of animations is that you can create steps in the animation that are played based on any MPF
+event. To do that, just enter mulitple events in the ``animations:`` section of a widget. For example:
+
+::
+
+   slides:
+      slide1:
+         widgets:
+            - type: text
+              text: I'M GOING TO MOVE
+              x: 50
+              y: 50
+         animations:
+            move_up:
+               property: y      # if there's just one animation step, we don't need the hyphen
+               value: 100
+            move_down:
+               property: y
+               value: 0
+            move_right:
+               property: x
+               value: 100
+            move_left:
+               property: x
+               value: 0
+            move_home:
+             - property: x
+               value: 50
+             - property: y
+               value: 50
+               timing: with_previous
+
+In the above example, we have five different animation events configured. These are just regular MPF events which you
+can use from logic blocks, shots, switch events, etc. When the event ``move_up`` is posted, this widget will move to the
+top of the display (``x: 100``), when the ``move_left`` event is posted, it will move to the left of the screen, etc.
+
+If ``move_home`` is posted, there are two steps in the animation which both run together to move the widget back to its
+initial position.
+
+Again, you can use any combination of properties and any number of steps for each event.
+
+4. Looping and repeating animations
+-----------------------------------
+
+So far, every animation sequence we've looked at will just run through once and then stop. However, you can add
+``repeat: true`` to the last step of an animation, and that will cause that animation to loop back to the begining and
+keep repeating.
+
+Of course you can mix-and-match repeating animations with one time animations. For example:
+
+::
+
+   slides:
+      slide1:
+         widgets:
+          - type: text
+            text: BOO!
+            y: -50
+            font_size: 90
+          animations:
+            entrance:
+               property: y
+               value: 50
+               duration: 500ms
+            pulse_boo:
+             - property: font_size
+               value: 100
+               duration: 250ms
+             - property: font_size
+               value: 90
+               duration: 250ms
+               repeat: true
+            bye_boo:
+             - property: y
+               value: 100
+             - property: x
+               value: 150
+               timing: with_previous
+
+In the example above, when the slide is shown (or when the widget is added if this config was in your ``widgets:``
+section and you added it via a ``widget_player:`` entry), the widget will fly into the slide from the bottom (since the
+initial y value is -50, it will start off the screen). Then when the ``pulse_boo`` event is posted, the two-step
+animation which makes the font size bigger and smaller will starting playing and repeat forever. Finally when ``bye_boo``
+is posted, the widget will fly off the screen to the upper right.
+
+5. Inserting a "pause"
+----------------------
+
+Sometimes you might want to add a timed "pause" to an animation, where one step animates, then it pauses, then another
+step animates.
+
+The easiest way to do that is just to add a step where the property value in the step is the same as whatever value that
+property is currently at. So you still have the step in the animation, it just isn't doing anything since the widget's
+property is already there. For example:
+
+::
+
+   slides:
+      slide1:
+         widgets:
+            - type: image
+              image: flying_toaster
+              y: -50
+         animations:
+            entrance:
+             - property: y
+               value: 50
+               duration: 1s
+             - property: y
+               value: 50
+               duration: 2s
+             - property: y
+               value: 200
+
+The the example above, the ``flying_toaster`` image will move in from the bottom of the screen (to ``y:50``) in 1 second,
+then pause for 2 seconds (since ``y: 50`` again), then move out of the top of the screen in 1 second.
+
+6. Easing
+---------
+
+You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
+current value to the target value over time. The default is ``linear`` which just does a constant motion (no
+acceleration/decceleration) over time. Refer to the
+`Kivy Animation Transition documentation <https://kivy.org/docs/api-kivy.animation.html#kivy.animation.AnimationTransition>`_
+for a list of options as well as graphs that show how the easing formulas are applied over time.
+
+7. Named animations
+-------------------
+
+Much like :doc:`named widgets <reusable_widgets>`, you can also create pre-defined animations that you can easily
+apply to any widget. You do this by adding those animations to the ``animations:`` section of your config, like this:
+
+::
+
+animations:
+  fade_in:
+    property: opacity
+    value: 1
+    duration: 1s
+  fade_out:
+    property: opacity
+    value: 0
+    duration: 1s
+
+Now you can use these animations, by name, in any widget or widget_player config where you would ordinarily define your
+own animations.
+
+For example, to configure a widget to fade in:
+
+::
+
+   widgets:
+      hello_widget:
+         - type: text
+           text: HELLO
+           animations:
+             entrance:
+               named_animation: fade_in
+
+Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out:

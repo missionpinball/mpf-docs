@@ -6,3 +6,4 @@ Display How To guides
    :maxdepth: 1
 
    Creating reusable "named" widgets <reusable_widgets>
+   Animating widgets <animate_widgets>
