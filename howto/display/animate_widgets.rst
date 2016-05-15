@@ -85,6 +85,8 @@ as the step before it. This means you can animate multiple properties at once.
 
 For example, to make the text grow and shrink while also fading on and off:
 
+::
+
    slides:
       slide_1:
          widgets:

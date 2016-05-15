@@ -150,7 +150,7 @@ configure for a widget:
 * ``adjust_top``
 * ``adjust_right``
 * ``adjust_left``
-* ''ajust_bottom``
+* ``ajust_bottom``
 
 All of these settings are optional. (They all default to ``0``.)
 
