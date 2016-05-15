@@ -22,19 +22,30 @@ Windows is to open a command prompt and run (note this is case-sensitive):
 
     echo %PROCESSOR_ARCHITECTURE%
 
-If it prints "x86", that's 32-bit. If it prints "x64", that's 64-bit. Then
-download the version you need. (Note that the final digit in the Python version
-number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.)
+If it prints ``x86``, that's 32-bit. If it prints ``x64`` or ``AMD64``, that's 64-bit.
+
+Here's an example of running this on a 64-bit Windows 10 machine:
+
+.. image:: check_windows_processor_architecture.png
+
+
+Then go to the Python website download the version you need. (Note that the final digit in the Python version
+number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.) Or use the direct-download links here:
 
 + `Download <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_ the Python 3.4.4. x86 / 32-bit MSI installer.
 + `Download <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_ the Python 3.4.4 x64 / 64-bit MSI installer.
+
+.. image:: download_python_win.jpg
 
 Installing Python 3 is pretty straightforward. It's a normal Windows installer.
 
 The only thing you should change from the defaults is on the "Customize Python
 3.4.4" screen, we like to select the option "Add python.exe to Path". That way
 you can run ``python`` from any folder, rather than having to specify the full
-path to it.
+path to it. (Also make sure the "pip" option is selected, but that should be
+selected by default.)
+
+.. image:: python_win_pip_path.jpg
 
 Note that you have to log out and then log back in for the path to be updated
 once you install Python. If you don't, then you'll get an error about Python not
