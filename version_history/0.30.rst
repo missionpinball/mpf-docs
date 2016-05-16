@@ -88,7 +88,7 @@ with Pygame, including:
   CPU.)
 + Pygame only supports video if it’s encoded into MPEG-1 format with
   very obscure settings which does not lead to high quality videos. (And
-  Pygame on the Mac doesn’t support video at all!)
+  Pygame on the Mac doesn't support video at all!)
 + Pygame cannot precisely control where the graphical window pops up
   on the screen, which is a problem for machines that have an LCD in the
   backbox that is partially obscured.
@@ -313,7 +313,7 @@ those options were exposed to light scripts. So in MPF 0.30, we
 completely removed the concept of light scripts and instead added a
 placeholder "token" concept to shows. For example, in MPF 0.30,
 anything that's in parenthesis in a show file will now be replaced (in
-realtime) with key/value pairs that are passed to that show when it
+real time) with key/value pairs that are passed to that show when it
 starts. For example, you could have a show file like this:
 
 ::

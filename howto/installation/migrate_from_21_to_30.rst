@@ -48,7 +48,7 @@ One of the changes we made in MPF 0.30 is we removed all the example
 machine code from the MPF package. We figured there was no need to
 include all the examples in every single MPF installation. In this
 case, however, we want the examples, so download a zip file containing
-the lastest mpf-examples from `here`_. (Note that if you have git, you
+the latest mpf-examples from `here`_. (Note that if you have git, you
 can simply clone the `mpf-examples repository`_ so they'll always be
 up-to-date. Just make sure you get the master/dev to match which
 branch of MPF you're using. If you have no idea what "git" means,

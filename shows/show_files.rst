@@ -1,7 +1,7 @@
 Creating standalone show files
 ==============================
 
-You can create a subfolder called *shows* in your machinew config folder or
+You can create a subfolder called *shows* in your machine config folder or
 within a  mode config folder. Then inside that folder, you can create separate
 files, where each file is its own show. The files need to have a ``.yaml``
 extension, and the name of the file before the extension is the name of the show

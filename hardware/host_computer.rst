@@ -1,7 +1,7 @@
 Choosing a computer to run MPF
 ==============================
 
-In addition to picking apinball controller platform you also need to
+In addition to picking a pinball controller platform you also need to
 decide what type of host computer you'll use. (By "host computer,"
 we're talking about the computer that will run MPF which will talk to
 the pinball controller via USB.) There are lots of host computer
@@ -100,13 +100,8 @@ Do you have anything you can use now?
 
 The best host computer is the one that you already have. :) Seriously,
 if you have something laying around, just start using it. You can
-always change it out later. BTWwe've received a few questions from
-people wanting to use Mac Minis. As we've mentioned elsewhere, it's
-really hard to get MPF running on a Mac, so if you have a Mac Mini
-then by all means use it, but just install Windows or Linux on it
-instead of Mac OS X. There's nothing you get from OS X that you don't
-have with other platforms in terms of MPF. (Except for the headaches.
-You get headaches with OS X with MPF.)
+always change it out later. BTW, we've received a few questions from
+people wanting to use Mac Minis.
 
 
 

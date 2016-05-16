@@ -62,7 +62,7 @@ of the show above using a token instead of a hard-coded LED name:
      leds:
        (led): off
 
-Notice the second show is identical to the first, except every refernece
+Notice the second show is identical to the first, except every reference
 to ``led_01`` has been replaced with ``(led)``.
 
 When MPF plays a show, it looks for words in the show contained in

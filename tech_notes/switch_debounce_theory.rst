@@ -6,7 +6,7 @@ Switch debounce theory
 There's a lot of confusion around how "debounce" works in pinball machines and
 in MPF, mainly because different hardware platforms do things in very different
 ways. So this tech note will explain the different ways that debounce works,
-how MPF deals with it, and the technical backstories.
+how MPF deals with it, and the technical back stories.
 
 Understanding debounce
 ----------------------
@@ -16,7 +16,7 @@ mechanical things, computers are fast, and your pinball software wants to make
 sure a switch is actually in a new state before acting on a switch.
 
 Pinball controllers set debounce in different ways. For example, some platforms
-(P-ROC, P3-ROC) say "a switch must be in a new state for 2 consective reads"
+(P-ROC, P3-ROC) say "a switch must be in a new state for 2 consecutive reads"
 to be considered debounced, while other platforms (FAST) focus on time-based
 durations rather than number of reads, saying, "a switch must be in a new state
 for X milliseconds before it's considered debounced."
@@ -108,7 +108,7 @@ Not Debounced  1ms                   7ms
 Matrix versus direct switches
 -----------------------------
 
-These longer loop times between switch reads are a necessity when switch matrixes
+These longer loop times between switch reads are a necessity when switch matrices
 are used. After all, you can only step through the matrix so fast before running
 into FCC issues.
 

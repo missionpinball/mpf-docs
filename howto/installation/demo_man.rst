@@ -81,7 +81,7 @@ desktop should look something like the image below. (Click the image
 to see it full size.) Also, later in this tutorial we'll show you how
 to customize this graphical pop-up window to show whatever you want,
 including text, images, backgrounds, different color dots, change the
-size of the DMD, etc. ` `_ (Note that this screenshot is from an older
+size of the DMD, etc. ` `_ (Note that this screen shot is from an older
 version of MPF so the exact command line you run is different than
 what's in the pictures, but the pictures show the gist of what's going
 on.)
@@ -134,7 +134,7 @@ have the "S" key mapped to start, so if you click in the graphical
 window with the DMD in it (to give it focus) and push the "S" key,
 then you should see the DMD attract mode stoop and it change to a
 score screen showing a score of *00* and *BALL 1 FREE PLAY*, like
-this: ` `_ If your speakers are on you should alsohear a music loop
+this: ` `_ If your speakers are on you should also hear a music loop
 playing. (Depending on your system, you might not hear the music when
 the DMD window doesn't have focus.) At this point you can "play" the
 game via your keyboard. Hit the "L" key to launch the ball into play.

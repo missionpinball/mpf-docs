@@ -50,7 +50,7 @@ Very similar to the P-ROC, except the P3-ROC only works with Multimorphic
 driver boards (described below) and is designed to work with new machines
 rather than existing ones like the P-ROC.
 
-The P3-ROC does not have support for a mono DMD (though with MPF you can creat a
+The P3-ROC does not have support for a mono DMD (though with MPF you can create a
 virtual DMD on an LCD screen, use an LCD display outright (this is what The Big
 Lewbowski does), or you can combine it with an RGB LED DMD controller for full
 color RGB LED matrix displays.

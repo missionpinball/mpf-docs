@@ -34,7 +34,7 @@ also adds the following features:
   run Linux and MPF.
 * Audio system with audio out, since the Beaglebone Black does not have on-board
   audio.
-* Lithium Ion battery to keep the realtime clock set on the Beaglebone.
+* Lithium Ion battery to keep the real-time clock set on the Beaglebone.
 * Safe shutdown circuitry to properly power down the Beaglebone when power to
   the pinball is cut.
 

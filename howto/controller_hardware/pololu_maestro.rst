@@ -135,7 +135,7 @@ wider than the range of motion your servo has when it's installed in your machin
 
 For example, you might find that a values of 3000 and 9000 give your servo a
 full 180-degree range of motion, but when installed in your machine, you might
-find that the servo should only ever move between 10 degees and 80 degrees.
+find that the servo should only ever move between 10 degrees and 80 degrees.
 
 In that case you'd specify ``servo_min: 3330`` and ``servo_max: 5640`` (since
 you don't want to accidentally move the servo further than it's limit and
@@ -163,7 +163,7 @@ reference for details.
 
 The Pololu Maestro servo controllers can accept speed and acceleration settings
 which specify how fast the servo moves to the new position, and how (or whether)
-it accelerates and deccelerates when starting and stopping.
+it accelerates and decelerates when starting and stopping.
 
 These settings have not been implemented in MPF. (They're not hard, we just
 haven't done it.) So if you need them, contact us and we'll add them.)

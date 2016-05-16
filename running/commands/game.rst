@@ -109,7 +109,7 @@ Note that on due to the way the command prompt console
 works on Windows, enabling verbose logging on Windows will
 significantly affect MPF (in a bad way). Windows computers can run MPF
 no problem, but because of their weird console slowness we recommend
-that you do notuse the `-V` command line option from a Windows
+that you do not use the `-V` command line option from a Windows
 computer.
 
 -x (lowercase)

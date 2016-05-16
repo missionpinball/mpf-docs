@@ -96,7 +96,7 @@ together. The major components of the MPF Media Controller's display system are:
   property of the widget over time. (Opacity, size, position, etc.) You can tie
   animations to specific events.
 + You arrange all of your widgets on a *Slide*. A slide is the
-  same size of the display, so arranging various wigets on a
+  same size of the display, so arranging various widgets on a
   slide is how you arrange them on the display. Every display has an
   "active" slide which is the slide that's currently being shown. It can
   also have one or more inactive slides that are waiting in the
@@ -119,8 +119,8 @@ has a "size" (length & width), a "position" on the slide (x, y coordinates), a
 "layer" which controls how it overlaps with other elements, alpha
 transparencies, and animation effects (blink, sparkle, move, etc).
 
-And even though your entire PowerPoint presentation ismade of of lots of slides,
-only one slide is active on your "display" at a time. Then when you changeto
+And even though your entire PowerPoint presentation is made of of lots of slides,
+only one slide is active on your "display" at a time. Then when you change to
 another slide, you can have nice animated "transitions" from one slide to the
 next. So if the MPF display system seems kind of complex, just think of it like
 a giant PowerPoint presentation and it should all hopefully make sense. Now

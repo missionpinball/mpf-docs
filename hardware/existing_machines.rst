@@ -1,4 +1,4 @@
-Controlling an existing maching with MPF
+Controlling an existing machine with MPF
 ========================================
 
 If you want to use the MPF to write software for a real pinball machine, you
@@ -23,19 +23,19 @@ If you want to use MPF to write your own custom game code for an *existing*
 Williams or Stern pinball machine, you replace the originalCPU board in the
 machine with a modern pinball controller board (called a *hardware controller*)
 such as a P-ROC or FAST Controller. (More on those in a bit.) That hardware
-controller interfaces with the existing machine'sdriver boards tocontrol the
+controller interfaces with the existing machine'sdriver boards to control the
 coils, lights, and DMD, and it provides a "bridge" (via USB) to a host
-computerrunning Python and the Mission Pinball Framework.
+computer running Python and the Mission Pinball Framework.
 
-============================       =====            ====
+=====+=======================       =====            ====
 Machine Type                       P-ROC            FAST
-============================       =====            ====
-Willams / Bally / Midway WPC       X                X
-Willams / Bally System 11          X                X
+======+======================       =====            ====
+Williams / Bally / Midway WPC       X                X
+Williams / Bally System 11          X                X
 Data East                          X                X
 Stern S.A.M.                       X
 Stern Whitestar                    X
-============================       =====            ====
+=======+=====================       =====            ====
 
 Notes:
 

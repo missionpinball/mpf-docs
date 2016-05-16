@@ -46,7 +46,7 @@ Pinball device support
 + Flashers
 + Flippers
 + Pop bumpers / slingshots
-+ Drop targs and drop target banks
++ Drop targets and drop target banks
 + Diverters
 + All forms of troughs (modern, System 11, early WPC, early '80s, etc.)
 + Ball devices (scoops, VUKs, saucers, locks, etc.)

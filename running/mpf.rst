@@ -1,5 +1,5 @@
-MPF command-line utilty
-=======================
+MPF command-line utility
+========================
 
 When you install MPF, it registers an executable called ``mpf`` and puts it in your system path. Everything you do
 with MPF will use this tool from the command line.

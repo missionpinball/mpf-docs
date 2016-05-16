@@ -31,7 +31,7 @@ FAST Pinball
 * All FAST controllers, including Core, Nano, and WPC
 * All FAST I/O boards, including 0804, 1616, 3208
 * FAST servo controller daughter board
-* FAST auxilery boards, including the power filter board and smart fuse block
+* FAST auxiliary boards, including the power filter board and smart fuse block
 * Plasma & LED mono DMDs (Core & WPC controllers)
 
 Multimorphic (P-ROC / P3-ROC)

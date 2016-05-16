@@ -80,7 +80,7 @@ a particular YAML file uses. That way when MPF loads the config, it can make sur
 match up with what MPF is expecting.
 
 That said, not every new version of MPF has changes to the YAML file, so that’s why the YAML file config_version and the
-MPF version aren’t the same.
+MPF version aren't the same.
 
 Adding versioning to YAML files also means it’s easy us to migrate config files from older versions to newer versions.
 (We have a config migration tool that does this, so when we change MPF, you don't have to change your configs.)
@@ -175,7 +175,7 @@ wrong folder. For example:
    C:\pinball\your_machine\config>mpf
    Error. Could not find machine folder: 'None'.
 
-This happens because the command prompt is in the chiild "config" folder, rather than the base machine folder. So ``cd ..``
+This happens because the command prompt is in the child "config" folder, rather than the base machine folder. So ``cd ..``
 up one level and try again.
 
 ::
