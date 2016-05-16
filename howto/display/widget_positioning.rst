@@ -7,7 +7,7 @@ Probably the most important thing to know about putting widgets on slides is how
 ----------------------------------------
 
 At the most basic level, every display slide has a resolution (always conveyed in the order width, then height), and
-widgets have a position on slide (horizontal, then veritcal).
+widgets have a position on slide (horizontal, then vertical).
 
 * The dimensions of the slide are always described *width* (x), then *height* (y). (So a 128x32 display is 128 pixels
   wide and 32 pixels tall.)
@@ -15,7 +15,7 @@ widgets have a position on slide (horizontal, then veritcal).
 * Since the ``(0, 0)`` position is the actual location of the lower-left corner pixel, the upper-right pixel is actually
   one less than the width and height of your slide. (e.g. a display that's 128 pixels wide has x positions 0 through
   127.
-* A widget's position is always described *horizontal* (x), then *veritcal (y). So a widget at position ``(10, 20)`` is
+* A widget's position is always described *horizontal* (x), then *vertical* (y). So a widget at position ``(10, 20)`` is
   10 pixels in from the left edge and 20 pixels up from the bottom.
 
 Here's a simple example that illustrates this:
@@ -39,10 +39,10 @@ animated the widget's size you'd have to recalculate it... it would be a mess!
 Fortunately MPF does all this math for you.
 
 When you configure a widget in MPF, you can config its "anchor" point (both ``anchor_x`` for the horizontal anchor and
-``anchor_y`` for the veritcal anchor.)
+``anchor_y`` for the vertical anchor.)
 
 A widget's anchor setting tells MPF what point on the widget is used to position it on the slide. Here are some
-examples which show how various anchor settings are applied to different widgets. The red bullseye target represents the
+examples which show how various anchor settings are applied to different widgets. The red bulls-eye target represents the
 point that's used by MPF to position that widget with each type of anchor settings.
 
 .. image:: widget_anchors.png
@@ -54,12 +54,12 @@ Now that you know how the coordinates and anchors work, let's look at some examp
 
 .. image:: widget_positioning_with_anchors_1.png
 
-In the diagram above, you can see how the bullseye anchor target is the actual point of the widget that is positioned
+In the diagram above, you can see how the bulls-eye anchor target is the actual point of the widget that is positioned
 with each widget's ``x:`` and ``y:`` settings.
 
 You'll also notice that widgets can be fully or partially be positioned outside the boundaries of a slide. (This is
 useful if you want to animate a widget "entering" the slide from off screen--you'd position the widget so it's outside
-the bounds of the visiable window and then animate it moving on.) Also note that positioning can be negative. Negative
+the bounds of the visible window and then animate it moving on.) Also note that positioning can be negative. Negative
 x values are off the left edge of the slide, and negative y values are off the bottom.
 
 As you look at this example, you can probably start to see that different anchors make sense for different types of
@@ -89,7 +89,7 @@ First, for ``x:`` values, you can use:
 * ``x: center`` - Positions the anchor of the widget in the horizontal center
 * ``x: right`` - Positions the anchor on the right edge
 
-You can also use percentage values. The percentages are automatically caculated based on the width of the slide. So if
+You can also use percentage values. The percentages are automatically calculated based on the width of the slide. So if
 you set ``x:50%`` and your slide is 800 pixels wide, the x value will be 400. (``x: 50%`` is the same as ``x: center``.)
 
 For ``y:`` values, you can use:
@@ -102,15 +102,15 @@ Again, you can also use percentages.
 
 What's really cool is you can *also* combine relative words with pixels and percentages. Some examples:
 
-* ``x: center+10`` - Positions the x achnor of the widget 10 pixels to the right of the center position.
+* ``x: center+10`` - Positions the x anchor of the widget 10 pixels to the right of the center position.
 * ``x: center-10`` - Positions the anchor 10 pixels to the left of the center.
 * ``y: top-10%`` - Positions the y anchor 10% below the top edge of the slide.
 
 5. Try to use relative & percent positioning for everything
 -----------------------------------------------------------
 
-If you can manage to use relatvie (top/bottom/left/middle/etc.) and percentage values for everything, then your display
-system will be completely resolution indepedent!
+If you can manage to use relative (top/bottom/left/middle/etc.) and percentage values for everything, then your display
+system will be completely resolution independent!
 
 Remember we said that the logical size of a display in MPF can be scaled up to any size physical display. So if you
 build your configs for a 1024x768 display, and then a few years down the line, you install a 1600x1200 monitor, you can
@@ -135,7 +135,7 @@ case letters that hang down below the baseline, but most pinball machines only u
 to align the baseline of your font because there is random space under it:
 
 Consider the following example where you want to align the bottom of the text with the bottom of the circle. The black
-areas represent the visable pixels, and the gray area is the actual widget bounding box. Even though this font is small
+areas represent the visible pixels, and the gray area is the actual widget bounding box. Even though this font is small
 (only 5 pixels tall, uses for small text on a DMD), it still has two blank rows of pixels below every letter. This means
 that if you set the ``anchor_y: bottom`` on both your text and the circle, they will not actually be aligned:
 
@@ -144,17 +144,17 @@ that if you set the ``anchor_y: bottom`` on both your text and the circle, they 
 What's even worst is that this font only has 1 extra row on top, so if you want to center-align it with another widget
 you won't get the actual center of the visible text.
 
-Forunately MPF has a way to deal with this in the form of anchor ajustments. There are four adjustment values you can
+Fortunately MPF has a way to deal with this in the form of anchor adjustments. There are four adjustment values you can
 configure for a widget:
 
 * ``adjust_top``
 * ``adjust_right``
 * ``adjust_left``
-* ``ajust_bottom``
+* ``adjust_bottom``
 
 All of these settings are optional. (They all default to ``0``.)
 
-You might think it's weird that there are top, right, left, and bottom ajustments. Why not just have simple x and y
+You might think it's weird that there are top, right, left, and bottom adjustments. Why not just have simple x and y
 adjustments? The reason is because having four is easiest when you're actually laying out your slides. For example, you
 might have a widget (like our text widget) with different amount of extra space on the top versus the bottom. So letting
 you specify an offset for the top and a separate offset for the bottom means that you can anchor and position that

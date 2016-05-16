@@ -2,11 +2,11 @@ How to animate display widgets
 ==============================
 
 One of the features of MPF is that you can animate display widgets. Animating a widget means that you can change a
-widget's properties over time. You can pretty much change any numeric property, includine size, position, opacity, etc.
+widget's properties over time. You can pretty much change any numeric property, including size, position, opacity, etc.
 
 When animating widgets, you specify multiple properties to change at the same time, or a sequence of changes one after
 the other (or both). You can also specify the duration of each step, the "easing" formula that affects the curve
-(acceleration/decceleration) of the change, and whether the animation is a one-time thing or a repeating loop.
+(acceleration/deceleration) of the change, and whether the animation is a one-time thing or a repeating loop.
 
 You can also configure animations to start playing as soon as the widget is created, or tie steps (or series of steps)
 to MPF events, meaning a widget might be static, then the event "move_widget" is posted and it moves, then the event
@@ -120,7 +120,7 @@ In fact you can even make multiple ``with_previous`` steps different durations (
 the next ``after_previous`` step until all the simultaneous steps are complete).
 
 By the way, the example above is a widget that's part of a slide, but remember you can add animations to widgets
-anywhere a widget is defined (in the slide properites, in a show step, as part of a
+anywhere a widget is defined (in the slide properties, in a show step, as part of a
 :doc:`named widget <reusable_widgets>`, as part of a ``widget_settings:`` override section in the ``widget_player:``,
 etc.)
 
@@ -132,7 +132,7 @@ soon as the widget is added to the slide (or as soon as the slide is created if 
 definition).
 
 However the real power of animations is that you can create steps in the animation that are played based on any MPF
-event. To do that, just enter mulitple events in the ``animations:`` section of a widget. For example:
+event. To do that, just enter multiple events in the ``animations:`` section of a widget. For example:
 
 ::
 
@@ -176,7 +176,7 @@ Again, you can use any combination of properties and any number of steps for eac
 -----------------------------------
 
 So far, every animation sequence we've looked at will just run through once and then stop. However, you can add
-``repeat: true`` to the last step of an animation, and that will cause that animation to loop back to the begining and
+``repeat: true`` to the last step of an animation, and that will cause that animation to loop back to the beginning and
 keep repeating.
 
 Of course you can mix-and-match repeating animations with one time animations. For example:
@@ -253,7 +253,7 @@ then pause for 2 seconds (since ``y: 50`` again), then move out of the top of th
 
 You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
 current value to the target value over time. The default is ``linear`` which just does a constant motion (no
-acceleration/decceleration) over time. Refer to the
+acceleration/deceleration) over time. Refer to the
 `Kivy Animation Transition documentation <https://kivy.org/docs/api-kivy.animation.html#kivy.animation.AnimationTransition>`_
 for a list of options as well as graphs that show how the easing formulas are applied over time.
 
@@ -265,15 +265,15 @@ apply to any widget. You do this by adding those animations to the ``animations:
 
 ::
 
-animations:
-  fade_in:
-    property: opacity
-    value: 1
-    duration: 1s
-  fade_out:
-    property: opacity
-    value: 0
-    duration: 1s
+   animations:
+     fade_in:
+       property: opacity
+       value: 1
+       duration: 1s
+     fade_out:
+       property: opacity
+       value: 0
+       duration: 1s
 
 Now you can use these animations, by name, in any widget or widget_player config where you would ordinarily define your
 own animations.

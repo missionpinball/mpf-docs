@@ -29,7 +29,7 @@ and when you define a slide, you can specify what widgets are on that slide, lik
             - type: image
               image: background1
 
-In the example above, the slide called *my_slide* has three widgets--two text widgets and a backgroun image. (Remember
+In the example above, the slide called *my_slide* has three widgets--two text widgets and a background image. (Remember
 that the "z order" or "layer" of widgets is top-to-bottom, so the *HELLO!* widget is on top, then *YAY PINBALL* is next,
 and they're both on top of the *background1* image.
 
