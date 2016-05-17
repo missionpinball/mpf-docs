@@ -1,144 +1,123 @@
+Tutorial step 3: Get flipping!
+==============================
 
 There's something exciting about seeing the first flips of your own
 pinball machine (whether it's a machine you built from scratch or an
-existing machine you're writing custom code for), so in this stepwe're
-going to focus on getting your machine flipping as fast as possible.
-To do that,you have to add some entries to your config file to tell
+existing machine you're writing custom code for), so in this step we're
+going to focus on getting your flippers working.
+
+To do that, you have to add some entries to your config file to tell
 MPF about some coils and switches, then you have to group them
-together into some flipper devices. So go ahead and open your newly-
-created `config.yaml`file in the `/your_machine/config` folder. This
-file should be totally blank. You can edit it in whatever text editor
-you want. `Atom`_ or `Sublime`_ are nice free ones that understand the
-formatting required for YAML files. `PyCharm`_ is a fully featured
-Python IDE & debugger which is what we use to develop MPF. (And thanks
-to `JetBrains`_, the makers of PyCharm who make their Professional
-version available for free developers of Open Source projects with
-it.)
+together to MPF that they should act like flipper devices. So go ahead
+and open the ``config.yaml`` file in the ``/your_machine/config`` folder
+that you created in the previous step.
 
 
-
-(A) Add *#config_version=3* to the top of your config file
-----------------------------------------------------------
-
-The first thing you need todo when you create any new configfile for
-MPF is to add an entry on the very top line that tells MPF
-what"version" of the MPF config spec you're using for the file
-you'recreating.
-
-
-::
-
-    
-    #config_version=3
-
-
-The reason we do this is because one of the challenges we had with all
-the frequent updates to MPF is that sometimes new versions of MPF
-change certain settings in the config files. So we need a way to track
-which set of config file settings a particular YAML file uses. That
-way when MPF loads the config, it can make sure the actual contents of
-the config file match up with what MPF is expecting. That said, not
-every new version of MPF has changes to the YAML file, so that's why
-the YAML file *config_version* and the MPF version aren't the same.
-Adding versioning to YAML files also means it's easy for people to see
-what they have to change in their existing YAML files. For example, if
-a future version requires YAML files with config_version 4 and your
-files are config_version 3, we can simply create a page explaining
-what needs to change between version 3 and 4. (We also have a `config
-file migration tool`_ you can use to automatically update your config
-files if we change it in the future.) The current version of the
-config files is 3 which is what's used with MPF 0.20.0 and newer, so
-that's what we're adding here.
-
-
-
-(B) Add your flipper buttons
+1. Add your flipper switches
 ----------------------------
 
-On the next line after `#config_version=3`, write ` switches: ` (note
-the colon). Then on the next line, type four spaces (these must be
-spaces, not a tab), and write ` s_left_flipper: `. Then on the next
-line, type eight spaces and add ` number: `. Repeat that again for `
-s_right_flipper: `. So now your `config.yaml` file should look like
-this:
+The ``switches:`` section of your machine config file is where you list
+all the switches in your machine and map physical switch numbers to
+more friendly switch names. (This is what makes it possible to interact
+with switch names like "left_flipper" and "right_inlane" versus "switch 27"
+and "switch 19".)
 
+So on the line after the ``#config_version=4`` entry from the previous
+tutorial step, write ``switches:`` (note
+the colon). Then on the next line, type four spaces (these must be
+spaces, not a tab), and write ``s_left_flipper:``. Then on the next
+line, type eight spaces and add ``number:``. Repeat that again for
+``s_right_flipper:``.
+
+So now your ``config.yaml`` file should look like this:
 
 ::
 
-    
+    #config_version=4
+
     switches:
         s_left_flipper:
             number:
         s_right_flipper:
             number:
 
-
-In case you're wondering why we preface each switch name with `s_`,
+In case you're wondering why we preface each switch name with ``s_``,
 that's a little trick we learned that makes things easier as you get
 deeper into your configuration. We do this because most text editors
-and IDEs have "autocomplete" functions where it will popup a list to
+and IDEs have "autocomplete" functions where it will pop up a list to
 autocomplete values as you type. So if you preface all your switches
-with `s_` (and your coils with `c_`, your lights with `l_`, etc.),
-then as soon as you type s_ into your YAML file you should get a popup
+with ``s_`` (and your coils with ``c_``, your lights with ``l_``, etc.),
+then as soon as you type "s_" into your YAML file you should get a popup
 list with all your switches which you can use to select the right one.
 These saves lots of headaches later caused by not entering the name
-exactly right somewhere. :) If you use Sublime as your editor, it just
+exactly right somewhere. :)
+
+If you use Sublime as your editor, it just
 does this automatically. Other editors might require plugins. (For
 example, you can add this functionality to Atom with a free package
-called `autocomplete-plus`.) Also, note that the settings in MPF
-config files are case-insensitive. This is a change we made with MPF
-0.17 because lots of people were running into issues with things not
-working because they didn't enter the name of a setting exactly right.
-(For example they'd type the section name as `switches:` instead of
-`Switches:`. So what happens internally is MPF converts everything to
+called "autocomplete-plus".)
+
+Also, note that most things in MPF config files are case-insensitive.
+So what happens internally is MPF converts everything to
 lowercase. (Well, not everything. Certain things like labels and text
 strings and stuff will be in whatever case you enter them as. But in
-general stuff is case insensitive.) The reason we mention this is
-because you can * not * have two things configured with the same name
-that only vary based on case sensitivity. For example, the switch
-names `s_lane_trEk` and `s_lane_treK` are not allowed since they'd
-both be converted internally to `s_lane_trek`. Anyway, let's look at
-afew notes about YAML (which is the format of the file we're creating
-here): First, you cannot use tabs to indent in YAML . (It is
-`literally not allowed`_.) Most text editors can be configured to
-automatically insert spaces when you push the tab key, or you can just
-hit the space bar a bunch of times. The exact number of spaces you use
-doesn't strictly matter (most people use groups of two or four), but
-what is absolutely important is that all items at the same "level"
-must be indented with the same number of spaces. In other words
-`s_left_flipper:` and `s_right_flipper:` need to have the same number
-of spaces in front of them. In a practical sense this shouldn't be a
-problem, because again most text editors let you use the tab key to
-automatically insert space characters. Next you have to enter the
-hardware numbers for your two switches. (This is what tells MPF which
-hardware switch numbers map to these switch names you're creating.) If
-you have a physical pinball controller attached, you need to enter the
-numbers that correspond to your flipper button switches on your
-hardware. *Note that you must have no space between "number" and the
-colon, and you must have a space between the colon and your switch
-number.* The exact format will depend on whether you're using a FAST,
-P-ROC, or P3-ROC pinball controller and whether these are matrix or
-direct switches. Refer to the ` `switches:` section of
-ourConfiguration File Reference`_for the details of exactly what
-number you need to use for these. (By the way there are many more
-settings and options for switches, but for now we just need the
-numbers.) If you don't have physical hardware rightnow, then you can
-just make up whatever numbers you want. Keepit simple, like 0 and 1.
-So your file now should look something like this:
+general stuff is case insensitive.)
 
+The reason we mention this is
+because you can *not* have two things configured with the same name
+that only vary based on case sensitivity. For example, the switch
+names ``s_lane_trEk`` and ``s_lane_treK`` are not allowed since they'd
+both be converted internally to ``s_lane_trek``.
+
+Speaking of formatting files, let's look at a few important things
+to know about YAML files (which is the format of the file we're creating
+here):
+
+* You you cannot use tabs to indent in YAML . (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
+  Most text editors can be configured to automatically insert spaces when you push the tab key, or you can just
+  hit the space bar a bunch of times.
+* The exact number of spaces you use for the indents doesn't matter (most people use
+  groups of two or four), but what is absolutely important is that all items at the same "level" must be indented
+  with the same number of spaces. In other words ``s_left_flipper:`` and ``s_right_flipper:`` need to have the
+  same number of spaces in front of them. In a practical sense this shouldn't be a problem, because again most
+  text editors let you use the tab key to automatically insert space characters.
+* You cannot have a space between the setting name and the colon. GOOD: ``switches:``. BAD: ``switches :``
+* Must must have a space after the colon and the setting value. GOOD: ``balls: 3``. BAD: ``balls:3``
+
+This all might seem kind of annoying, but that's just the way it is with YAML files. When we started building
+MPF, we weighed the pros and cons of lots of different config file formats (XML, INI, JSON, TOML, text, Python,
+etc.), and YAML was the best trade-off in terms of having the features we needed while being the easiest to use.
+
+By the way, at some point we'll create GUI tools you can use to build your configs instead of having to hand-edit
+YAML files, but that's probably a few years away, so in the meantime, get used to YAML. :)
+
+2. Enter the hardware numbers for your switches
+-----------------------------------------------
+
+The ``config.yaml`` file you have so far is completely valid. However, you'll notice that the ``number:`` setting
+for each switch is blank. If you are not using MPF with a physical pinball machine yet, you can keep these
+numbers blank. But if you want to control a real pinball machine, you need to enter values for each switch's
+``number:`` setting.
+
+The exact number you enter for each switch is dictated by which switch input on your pinball controller each
+switch is connected to. Also, different types of pinball controllers use different number formats. (For example,
+the P3-ROC with SW-16 switch boards uses a combination of board number and switch number. FAST Pinball controllers
+with FAST I/O boards use sequential switch numbers. Controllers retrofitted into WPC machines use the letter "S" or "D"
+(for matrix switches or direct switches) followed by the switch number from the table in the machine's operator's
+manual.
+
+.. todo:: link to hw-specific docs
 
 ::
 
-    
     switches:
         s_left_flipper:
             number: 0
         s_right_flipper:
             number: 1
 
-
 Make sure (now and forever) that you've formatted the YAML file
-properly, like this: ` `_
+properly, like this:
 
 
 
@@ -161,15 +140,15 @@ should look like this:
 
 ::
 
-    
+
     coils:
-        c_flipper_left_main: 
+        c_flipper_left_main:
             number: 0
-        c_flipper_left_hold: 
+        c_flipper_left_hold:
             number: 1
-        c_flipper_right_main: 
+        c_flipper_right_main:
             number: 2
-        c_flipper_right_hold: 
+        c_flipper_right_hold:
             number: 3
 
 
@@ -221,7 +200,7 @@ would create based on the switches and coils we've defined so far:
 
 ::
 
-    
+
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -274,13 +253,13 @@ yourconfig file would look like if you're using single wound coils .
 
 ::
 
-    
+
     coils:  #P-ROC / P3-ROC only
-        c_flipper_left_main: 
+        c_flipper_left_main:
             number: 0
             pulse_ms: 20
             hold_power: 2
-        c_flipper_right_main: 
+        c_flipper_right_main:
             number: 2
             pulse_ms: 20
             hold_power: 2
@@ -289,13 +268,13 @@ yourconfig file would look like if you're using single wound coils .
 
 ::
 
-    
-    flippers: 
-        left_flipper: 
+
+    flippers:
+        left_flipper:
             main_coil: c_flipper_left_main
             activation_switch: s_left_flipper
-        right_flipper: 
-            main_coil: c_flipper_right_main 
+        right_flipper:
+            main_coil: c_flipper_right_main
             activation_switch: s_right_flipper
 
 
@@ -320,7 +299,7 @@ command prompt, switch to your MPF projectfolder, and run this:
 
 ::
 
-    
+
     python mpf.py your_machine -v -b
 
 
@@ -338,7 +317,7 @@ actually running.
 
 ::
 
-    
+
     C:\pinball\mpf>python mpf.py c:\pinball\your_machine -v -b
     INFO : Machine : Mission Pinball Framework v0.21.0
     INFO : Machine : Machine config file #1: C:\pinball\your_machine\config\step4
@@ -362,7 +341,7 @@ your actual loop rate somewhere in that neighborhood, like this:
 
 ::
 
-    
+
     INFO : Machine : Target MPF loop rate: 30 Hz
     INFO : Machine : Actual MPF loop rate: 30.0 Hz
     INFO : Machine : Hardware loop rate: 63.98 Hz
@@ -423,7 +402,7 @@ file:
 
 ::
 
-    
+
     enable_events: machine_reset_phase_3
 
 
@@ -436,7 +415,7 @@ should look like this:
 
 ::
 
-    
+
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -491,7 +470,7 @@ machine, you add the entry ` driverboards: sternSAM `. So the
 
 ::
 
-    
+
     hardware:
         platform: p_roc
         driverboards: pdb
@@ -502,8 +481,8 @@ Or like this:
 
 ::
 
-    
-    hardware: 
+
+    hardware:
         platform: p_roc
         driverboards: wpc
 
@@ -513,7 +492,7 @@ Or like this:
 
 ::
 
-    
+
     hardware:
         platform: p_roc
         driverboards: sternSAM
@@ -544,7 +523,7 @@ of your config file will either look like this:
 
 ::
 
-    
+
     hardware:
         platform: fast
         driverboards: fast
@@ -555,7 +534,7 @@ Or like this:
 
 ::
 
-    
+
     hardware:
         platform: fast
         driverboards: wpc
@@ -568,7 +547,7 @@ called `fast:` which will look like this:
 
 ::
 
-    
+
     fast:
         ports: com3, com4, com5
 
@@ -588,7 +567,7 @@ using a FAST controller, you'll end up adding both `hardware:` and
 
 ::
 
-    
+
     hardware:
         platform: fast
         driverboards: wpc
@@ -626,29 +605,29 @@ existing *Demolition Man* machine.)
 
 ::
 
-    
+
     #config_version=3
-    
+
     hardware:
         platform: fast
         driverboards: wpc
-    
+
     switches:
         s_left_flipper:
             number: SF4
         s_right_flipper:
             number: SF6
-    
+
     coils:
-        c_flipper_left_main: 
+        c_flipper_left_main:
             number: FLLM
-        c_flipper_left_hold: 
+        c_flipper_left_hold:
             number: FLLH
-        c_flipper_right_main: 
+        c_flipper_right_main:
             number: FLRM
-        c_flipper_right_hold: 
+        c_flipper_right_hold:
             number: FLRH
-    
+
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -677,7 +656,7 @@ flip your flippers! Run your game with the following command:
 
 ::
 
-    
+
     python mpf.py your_machine -v -b
 
 
@@ -686,7 +665,7 @@ Watch the console log for the following entry:
 
 ::
 
-    
+
     INFO : Mode Controller : +=========== ACTIVE MODES ============+
     INFO : Mode Controller : | attract : 10                        |
     INFO : Mode Controller : +-------------------------------------+
@@ -704,7 +683,7 @@ active to inactive.
 
 ::
 
-    
+
     INFO : SwitchController : <<<<< switch: s_left_flipper, State:1 >>>>>
     INFO : SwitchController : <<<<< switch: s_left_flipper, State:0 >>>>>
     INFO : SwitchController : <<<<< switch: s_right_flipper, State:1 >>>>>
@@ -796,13 +775,7 @@ If you're still running into trouble, feel free to post to our `MPF
 users forum`_. We'll incorporate your issues into this tutorial to
 make it easier for everyone in the future!
 
-.. _our documentation on flipper devices: https://missionpinball.com/docs/mpf-core-architecture/devices/logical-devices/flipper/
-.. _devices: https://missionpinball.com/docs/mpf-core-architecture/devices/
-.. _Sublime: http://www.sublimetext.com/
-.. _switches: https://missionpinball.com/docs/configuration-file-reference/switches/
-.. _config file migration tool: https://missionpinball.com/docs/tools/config-file-migrator/
-.. _coils: https://missionpinball.com/docs/configuration-file-reference/coils/
-.. _literally not allowed: http://www.yaml.org/faq.html
+
 .. _MPF users forum: https://missionpinball.com/forum/f/mpf-users/
 .. _Atom: https://atom.io/
 .. _JetBrains: https://www.jetbrains.com/
