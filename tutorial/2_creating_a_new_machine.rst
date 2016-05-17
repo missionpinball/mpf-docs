@@ -108,18 +108,9 @@ You should get results that look something like this:
    C:\pinball\your_machine>mpf -b
    INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
    INFO : Machine : Machine path: C:\pinball\your_machine
-   INFO : Machine : Loading config from original files
-   INFO : Machine : Machine config file #1: C:\pinball\your_machine\config\config
-   INFO : Machine : Config file cache created: C:\Users\BRIANM~1\AppData\Local\Temp\235c13dee169bec54dce4d06c2665fe9config
+   INFO : Machine : Loading cached config: C:\Users\BRIANM~1\AppData\Local\Temp\235c13dee169bec54dce4d06c2665fe9config
    INFO : Machine : Starting clock at 30.0Hz
-   INFO : Machine : Loading core modules...
-   INFO : DeviceManager : Loading devices...
-   INFO : Machine : Loading plugins...
-   INFO : SwitchController : Dumping current active switches
    INFO : Mode.attract : Mode Starting. Priority: 10
-   INFO : Mode Controller : +=========== ACTIVE MODES ============+
-   INFO : Mode Controller : | attract : 10                        |
-   INFO : Mode Controller : +-------------------------------------+
 
 You might notice that it seems like the command is hung because you didn't get the command line back. Actually what's
 happening is MPF is running! Your machine is live and sitting in the attract mode!!
