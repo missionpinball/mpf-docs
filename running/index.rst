@@ -96,6 +96,7 @@ There are several command-like options you can use when you run MPF. To use them
 of the MPF command you're running, like:
 
 ::
+
    mpf -x -v
 
    mpf mc -xvV
