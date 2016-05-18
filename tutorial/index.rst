@@ -31,3 +31,4 @@ Tutorial Steps
 
    1. Prerequisites <1_prerequisites>
    2. Creating your machine folder <2_creating_a_new_machine>
+   3. Get flipping! <get_flipping>

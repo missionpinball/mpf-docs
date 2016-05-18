@@ -119,6 +119,8 @@ manual.
 Make sure (now and forever) that you've formatted the YAML file
 properly, like this:
 
+NOTE: This is as far as I have for the docs. Everything below here is still
+for MPF 0.21 that I have not converted yet. So stop here. :)
 
 
 (C) Add your flipper coils
