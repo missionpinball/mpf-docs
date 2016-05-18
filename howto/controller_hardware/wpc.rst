@@ -45,6 +45,8 @@ If you're using a FAST WPC controller, it will look like this:
 
 And if you're using a P-ROC:
 
+::
+
    hardware:
       platform: p_roc
       driverboards: wpc
@@ -66,7 +68,7 @@ format depends on the type of switch:
 Matrix switches
 ~~~~~~~~~~~~~~~
 
-Matrix switches start with the letter "S", followed by the switch number. For example:
+Matrix switches start with the letter ``S``, followed by the switch number. For example:
 
 ::
 
@@ -80,7 +82,7 @@ Note that the "S" is not case-sensitive.
 
 Switch numbers in WPC machines correspond to the column and row, so switch "11"
 is column 1, row 1, switch "26" is column 2, row 2, etc. This means that there
-are no ``0``s or ``9``s in a standard 8x8 switch matrix.
+are no 0s or 9s in a standard 8x8 switch matrix.
 
 Also, some WPC-95 machines have a 9th column in the switch matrix (meaning they'll
 have switch numbers 91-98). In this case, just enter those switch numbers like
@@ -229,7 +231,7 @@ An example in your config might be:
 
 5. Configuring lights (lamps)
 -----------------------------
-Lights are configured with the letter "L" followed by the lamp number from the
+Lights are configured with the letter ``L`` followed by the lamp number from the
 manual:
 
 ::
@@ -271,9 +273,9 @@ GI strings are configured with ``G`` followed by the number, like this:
 -----------------------
 
 Since flashers in WPC machines are technically drivers (coils), they are also
-configured with the letter "C" followed by their number. However, you add them
+configured with the letter ``C`` followed by their number. However, you add them
 to the ``flashers:`` section of your config, not the ``coils:`` section. This
-is done so MPF knows to treat them like flahers which are just pulsed, rather
+is done so MPF knows to treat them like flashers which are just pulsed, rather
 than coils which can be enabled and have other coil-light things that don't
 apply to flashers.
 
