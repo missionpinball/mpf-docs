@@ -65,7 +65,7 @@ Since you don't have physical hardware attached, you can use the
 keyboard to simulate machine switch changes.
 
 
-The *Demo Man*configuration files
+The *Demo Man* configuration files
 have the "S" key mapped to start, so if you click in the graphical
 window with the DMD in it (to give it focus) and push the ``S`` key,
 then you should see the DMD attract mode stop and it change to a
