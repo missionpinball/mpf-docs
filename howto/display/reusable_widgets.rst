@@ -179,7 +179,7 @@ seconds, which you could do like this:
    widget_player:
       tilt_warning:             # event
          tilt_warning:          # widget name
-            widget_settings     # additional settings to be added / updated
+            widget_settings:    # additional settings to be added / updated
               expire: 2s
 
 (Technically speaking, if you were going to show a tilt warning widget, you'd probably also want to play a sound and
