@@ -113,7 +113,28 @@ When the installation is done, you'll probably see a yellow warning saying that
 you do not have the latest version of *pip*, and telling you that you should
 upgrade it. You can do that if you want. Or not. Doesn't really matter to MPF.
 
-3. Test your installation
+3. Install the video codec pack
+-------------------------------
+
+The MPF media player uses a project called Gstreamer to play video. Gstreamer is
+an open source project, and it only comes with codecs that can play other open
+source and free video formats. (Pretty much all those weird ones you've never
+heard of.)
+
+So the next step is to install a codec pack that will let MPF play just about
+any kind of video (H.264, MPG, etc.)
+
+You can also install this via pip, like this:
+
+::
+
+   python -m pip install kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple/
+
+Just copy-and-paste that entire line into the command line and press enter. It
+will download the codec pack (from the kivy.org URL) which is about 90 MB and
+install them.
+
+4. Test your installation
 -------------------------
 
 Once MPF is installed, you can run some automated tests to make sure that
