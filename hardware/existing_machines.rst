@@ -22,22 +22,27 @@ Crazy! And awesome!)
 If you want to use MPF to write your own custom game code for an *existing*
 Williams or Stern pinball machine, you replace the originalCPU board in the
 machine with a modern pinball controller board (called a *hardware controller*)
-such as a P-ROC or FAST Controller. (More on those in a bit.) That hardware
+such as a P-ROC or FAST Controller. That hardware
 controller interfaces with the existing machine'sdriver boards to control the
 coils, lights, and DMD, and it provides a "bridge" (via USB) to a host
 computer running Python and the Mission Pinball Framework.
 
-=====+=======================       =====            ====
-Machine Type                       P-ROC            FAST
-======+======================       =====            ====
+=============================       =====            ====
+Machine Type                        P-ROC            FAST
+=============================       =====            ====
 Williams / Bally / Midway WPC       X                X
 Williams / Bally System 11          X                X
-Data East                          X                X
-Stern S.A.M.                       X
-Stern Whitestar                    X
-=======+=====================       =====            ====
+Data East                           X                X
+Stern S.A.M.                        X
+Stern Whitestar                     X
+=======+======================      =====            ====
+
+See the :doc:`/howto/installation/wpc` guide for details for WPC machines. We'll
+publish guides for the other types of machines soon.
 
 Notes:
 
-* "WPC" includes WPC-S and WPC-95
+* "WPC" includes WPC-S and WPC-95, and machines made under the brands of
+  Williams, Bally, and Midway. (A complete WPC game list is
+  `here <http://www.pinwiki.com/wiki/index.php?title=Williams_WPC#Game_List>`_.)
 * System 11 and Data East machines require the "Snux" replacement driver board.

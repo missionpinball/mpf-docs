@@ -51,6 +51,10 @@ Snux System 11 driver board
 Open Pinball Project Gen2 controllers
 -------------------------------------
 
+Pololu Maestro servo controllers
+--------------------------------
+* Support up to 24 servos per board (:doc:`How To </howto/controller_hardware/pololu_maestro>`)
+
 Fadecandy RGB LEDs
 ------------------
 * 512 RGB LEDs per Fadecandy

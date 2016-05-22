@@ -105,6 +105,23 @@ At this point you should have a fully working copy of MPF. Congrats!
 Next we'd recommend following our :doc:`step-by-step tutorial </tutorial/index>`
 which will show you how to start building your own game in MPF!
 
+Running MPF
+-----------
+
+Starting with MPF 0.30, you run MPF by running the "mpf" command directly. (e
+.g. you do not have to run "python" from the command prompt). For example, to
+launch both the MPF game engine and the media controller, you simply run:
+
+::
+
+   mpf both
+
+In other words, you only have to use those ``kivy`` commands above for testing
+MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
+
+See the :doc:`running/index` for details and command-line options.
+
+
 Keeping MPF up-to-date
 ----------------------
 

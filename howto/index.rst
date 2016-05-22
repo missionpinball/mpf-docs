@@ -12,11 +12,11 @@ List of How to Guides
 ---------------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   Controller hardware <controller_hardware/index>
-   Displays <display/index>
-   Pinball devices <devices/index>
    Setup & Installation <installation/index>
+   Controller hardware <controller_hardware/index>
+   Pinball devices <devices/index>
+   Displays & Graphics <display/index>
+   Sounds & Audio <audio/index>
    Shows <shows/index>
-   Sounds & Audio <sounds/index>

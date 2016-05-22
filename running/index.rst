@@ -30,10 +30,11 @@ To run an MPF game, you have to start both the media controller and
 the MPF game engine. You can do both of these via the command line, either
 as two separate commands in two separate windows or as one combined command.
 
-Starting the MPF media controller
----------------------------------
+Using the "both" command to run the game engine and media controller together
+-----------------------------------------------------------------------------
 
-To run MPF, first start the media controller.
+You can start both the MPF game engine and the media controller at the same time
+with a single command.
 
 Since this is done from the command line, you'll need to open a command line
 window. On Windows, you can right-click on the Start Button (or whatever it's
@@ -54,6 +55,19 @@ Then run:
 
 ::
 
+   mpf both <enter>
+
+The ``mpf both`` command is what we use and probably what you'll use 99% of the time.
+
+
+Starting the MPF media controller
+---------------------------------
+
+Alternately you can choose to run just the media controller by itself (still
+from within your machine folder) like this:
+
+::
+
     mpf mc <enter>
 
 
@@ -62,32 +76,16 @@ You should see a popup window and a bunch of stuff scroll by in the console.
 Starting the MPF game engine
 ----------------------------
 
-Since the MPF game engine is a separate process from the media controller, you need
-to start it separately.
-
-Open a second console window, change to your machine folder, and run:
+You can run the MPF game engine by itself by running:
 
 ::
 
-    mpf <enter>
+    mpf game <enter>
 
-Running both at the same time
------------------------------
-
-Opening two console windows and running two commands to start MPF is kind of annoying. So we also
-have a command which starts both of them at the same time:
-
-::
-
-   mpf both <enter>
-
-This will launch both processes at the same time in the same window. The only real downside to this
-is that their console logs will be mixed together, so sometimes it will be confusing to understand
-which messages came from which parts. (Though really that might not matter. I mean who's looking at
-the console in detail anyway?) The good news is that the log files are still separate (in your machine's
-``/logs`` folder.
-
-The ``mpf both`` command is what we use and probably what you'll use 99% of the time.
+Note that if you do not have a media controller running, the game engine won't
+start fully because it will get stuck trying to connect to the media controller.
+To avoid this if you just want to run the game engine by itself, add the ``-b``
+command line option. (Details below)
 
 Specifying command-line options
 -------------------------------
@@ -97,7 +95,7 @@ of the MPF command you're running, like:
 
 ::
 
-   mpf -x -v
+   mpf game -x -v
 
    mpf mc -xvV
 
@@ -105,8 +103,8 @@ of the MPF command you're running, like:
 
 The full list of available commands is covered in the documentation for each command (discussed below).
 
-Understanding what's happening
-------------------------------
+Understanding how this works
+----------------------------
 
 Starting in MPF 0.30, when you install MPF, the command ``mpf`` is registered with your system. You can
 open a command prompt and run "mpf", by itself, from anywhere.

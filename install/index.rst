@@ -29,3 +29,17 @@ If you're already Python-savvy and know what you're doing, here's the quick-and-
 
 In all cases you'll need to install the USB drivers for your controller hardware separate from MPF. See the controller
 hardware section of the How To guides for details.
+
+Running MPF
+-----------
+
+Starting with MPF 0.30, you run MPF by running the "mpf" command directly from
+within your machine folder. (e.g. you do not have to run "python" from the command prompt). For example, to
+launch both the MPF game engine and the media controller, you simply run:
+
+::
+
+   C:\your_machine>mpf both
+
+This is the same command on all platforms. See the :doc:`/running/index` for
+details and command-line options.

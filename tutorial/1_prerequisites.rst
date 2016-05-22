@@ -50,7 +50,8 @@ back here to start creating your own machine!
 #. :doc:`/howto/installation/demo_man`
 
 If you do have MPF installed, let's make sure it's the right version. Open a
-command prompt and run:
+command prompt and run the following command. If this gives you an error, it
+means MPF is not installed, or you have an older version.
 
 ::
 
