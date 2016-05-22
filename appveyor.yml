@@ -14,6 +14,8 @@ test_script:
 
 after_test:
   - "make html"
+  - "cd _build/html"
+  - "rd _sources /q /s"
 
 artifacts:
   - path: _build/html
