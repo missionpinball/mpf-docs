@@ -14,6 +14,40 @@ The ``logic_blocks:`` section of your config is where you...
    Add description.
 
 
+accrual:
+--------
+
+The ``accrual:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``accrual:`` section of your config:
+
+events:
+^^^^^^^
+List of one (or more) values, each is a type: ``string``. 
+
+.. todo::
+   Add description.
+
+
+sequence:
+---------
+
+The ``sequence:`` section contains the following nested sub-settings
+
+Required settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are required in the ``sequence:`` section of your config:
+
+List of one (or more) values, each is a type: ``string``. 
+
+.. todo::
+   Add description.
+
+
 counter:
 --------
 
@@ -23,13 +57,6 @@ Required settings
 ~~~~~~~~~~~~~~~~~
 
 The following sections are required in the ``counter:`` section of your config:
-
-count_complete_value:
-^^^^^^^^^^^^^^^^^^^^^
-Single value, type: ``integer``. 
-
-.. todo::
-   Add description.
 
 count_events:
 ^^^^^^^^^^^^^
@@ -43,6 +70,13 @@ Optional settings
 ~~~~~~~~~~~~~~~~~
 
 The following sections are optional in the ``counter:`` section of your config. (If you don't include them, the default will be used).
+
+count_complete_value:
+^^^^^^^^^^^^^^^^^^^^^
+Single value, type: ``integer``. Default: ``None``
+
+.. todo::
+   Add description.
 
 count_interval:
 ^^^^^^^^^^^^^^^
@@ -67,7 +101,7 @@ Single value, type: ``string``. Default: ``None``
 
 multiple_hit_window:
 ^^^^^^^^^^^^^^^^^^^^
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.
@@ -154,15 +188,15 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
    Add description.
 
 
-accrual:
---------
+sequence:
+---------
 
-The ``accrual:`` section contains the following nested sub-settings
+The ``sequence:`` section contains the following nested sub-settings
 
 Required settings
 ~~~~~~~~~~~~~~~~~
 
-The following sections are required in the ``accrual:`` section of your config:
+The following sections are required in the ``sequence:`` section of your config:
 
 events:
 ^^^^^^^
@@ -182,8 +216,6 @@ Required settings
 
 The following sections are required in the ``sequence:`` section of your config:
 
-events:
-^^^^^^^
 List of one (or more) values, each is a type: ``string``. 
 
 .. todo::

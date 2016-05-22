@@ -34,7 +34,7 @@ The following sections are optional in the ``high_score:`` section of your confi
 
 award_slide_display_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``4s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``4s``
 
 .. todo::
    Add description.

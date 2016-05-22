@@ -112,7 +112,7 @@ Single value, type: ``string``. Default: ``default``
 
 title:
 ~~~~~~
-Single value, type: ``string``. Default: ``Mission Pinball Framework v0.30.0.dev1465``
+Single value, type: ``string``. Default: ``Mission Pinball Framework v0.30.0.dev1568``
 
 .. todo::
    Add description.

@@ -33,3 +33,25 @@ port:
 Single value, type: ``string``. 
 
 The name of the serial port.
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``pololu_maestro:`` section of your config. (If you don't include them, the default will be used).
+
+servo_max:
+~~~~~~~~~~
+Single value, type: ``integer``. Default: ``9000``
+
+.. todo::
+   Add description.
+
+servo_min:
+~~~~~~~~~~
+Single value, type: ``integer``. Default: ``3000``
+
+.. todo::
+   Add description.
+
+

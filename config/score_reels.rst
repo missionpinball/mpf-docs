@@ -42,7 +42,7 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 hw_confirm_time:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``300``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300``
 
 .. todo::
    Add description.
@@ -70,7 +70,7 @@ Single value, type: ``integer``. Default: ``0``
 
 repeat_pulse_time:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``200``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``200``
 
 .. todo::
    Add description.

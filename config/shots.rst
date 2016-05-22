@@ -342,7 +342,7 @@ to access groups of devices by tag name.
 
 time:
 ~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 This is the time limit the switches in the ``switch_sequence:`` section have to
 be activated in, from

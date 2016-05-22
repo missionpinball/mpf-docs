@@ -21,7 +21,7 @@ The following sections are optional in the ``tilt:`` section of your config. (If
 
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``300ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300ms``
 
 .. todo::
    Add description.
@@ -35,7 +35,7 @@ List of one (or more) values, each is a type: ``string``. Default: ``ball_ending
 
 settle_time:
 ~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``5s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
 
 .. todo::
    Add description.

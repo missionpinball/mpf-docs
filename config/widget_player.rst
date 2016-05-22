@@ -28,13 +28,6 @@ Single value, type: one of the following options: add, remove. Default: ``add``
 .. todo::
    Add description.
 
-expire:
-~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
-
-.. todo::
-   Add description.
-
 key:
 ~~~~
 Single value, type: ``string``. Default: ``None``
@@ -52,13 +45,6 @@ Single value, type: ``string``. Default: ``None``
 target:
 ~~~~~~~
 Single value, type: ``string``. Default: ``None``
-
-.. todo::
-   Add description.
-
-z:
-~~
-Single value, type: ``integer``. Default: ``0``
 
 .. todo::
    Add description.

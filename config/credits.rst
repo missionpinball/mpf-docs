@@ -21,7 +21,7 @@ The following sections are optional in the ``credits:`` section of your config. 
 
 credit_expiration_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.
@@ -35,7 +35,7 @@ Single value, type: ``string``. Default: ``CREDITS``
 
 fractional_credit_expiration_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.
@@ -63,7 +63,7 @@ Single value, type: ``integer``. Default: ``0``
 
 persist_credits_while_off_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1h``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1h``
 
 .. todo::
    Add description.
@@ -71,31 +71,6 @@ Single value, type: ``time string`` (:doc:`Instructions </config/instructions/li
 service_credits_switch:
 ~~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
-
-.. todo::
-   Add description.
-
-
-pricing_tiers:
---------------
-
-The ``pricing_tiers:`` section contains the following nested sub-settings
-
-Optional settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are optional in the ``pricing_tiers:`` section of your config. (If you don't include them, the default will be used).
-
-credits:
-^^^^^^^^
-Single value, type: ``integer``. Default: ``1``
-
-.. todo::
-   Add description.
-
-price:
-^^^^^^
-Single value, type: ``number`` (will be converted to floating point). Default: ``.50``
 
 .. todo::
    Add description.
@@ -128,6 +103,31 @@ Single value, type: ``string``. Default: ``money``
 value:
 ^^^^^^
 Single value, type: ``number`` (will be converted to floating point). Default: ``0.25``
+
+.. todo::
+   Add description.
+
+
+pricing_tiers:
+--------------
+
+The ``pricing_tiers:`` section contains the following nested sub-settings
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+The following sections are optional in the ``pricing_tiers:`` section of your config. (If you don't include them, the default will be used).
+
+credits:
+^^^^^^^^
+Single value, type: ``integer``. Default: ``1``
+
+.. todo::
+   Add description.
+
+price:
+^^^^^^
+Single value, type: ``number`` (will be converted to floating point). Default: ``.50``
 
 .. todo::
    Add description.

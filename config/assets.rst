@@ -14,10 +14,10 @@ The ``assets:`` section of your config is where you...
    Add description.
 
 
-sounds:
--------
+shows:
+------
 
-The ``sounds:`` section contains the following nested sub-settings
+The ``shows:`` section contains the following nested sub-settings
 
 videos:
 -------
@@ -76,10 +76,10 @@ Single value, type: ``integer``. Default: ``0``
    Add description.
 
 
-shows:
-------
+sounds:
+-------
 
-The ``shows:`` section contains the following nested sub-settings
+The ``sounds:`` section contains the following nested sub-settings
 
 images:
 -------

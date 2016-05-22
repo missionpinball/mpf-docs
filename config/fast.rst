@@ -21,28 +21,28 @@ The following sections are required in the ``fast:`` section of your config:
 
 default_normal_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
 
 .. todo::
    Add description.
 
 default_normal_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
 
 .. todo::
    Add description.
 
 default_quick_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
 
 .. todo::
    Add description.
 
 default_quick_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
 
 .. todo::
    Add description.
@@ -83,14 +83,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 hardware_led_fade_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.
 
 watchdog:
 ~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1000``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1000``
 
 .. todo::
    Add description.

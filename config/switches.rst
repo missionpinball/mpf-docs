@@ -62,7 +62,7 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 ignore_window_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.

@@ -21,7 +21,7 @@ The following sections are optional in the ``p3_roc:`` section of your config. (
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``100ms``
 
 .. todo::
    Add description.
@@ -35,7 +35,7 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 watchdog_time:
 ~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
 .. todo::
    Add description.

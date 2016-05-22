@@ -39,6 +39,7 @@ and *servo2*:
 
 Then for each servo in your ``servos:`` section, the following settings apply:
 
+
 Required settings
 -----------------
 
@@ -125,7 +126,6 @@ the servo to reset on the start of each ball, you can override that like this:
 
   reset_events: None
 
-
 reset_position:
 ~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``0.5``
@@ -160,3 +160,5 @@ tags:
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Tags work like tags for any device. Nothing special here.
+
+

@@ -28,7 +28,7 @@ Single value, type: ``string``. Default: ``new_ball``
 
 ball_search_interval:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``250ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``250ms``
 
 .. todo::
    Add description.
@@ -56,14 +56,14 @@ Single value, type: ``integer``. Default: ``4``
 
 ball_search_timeout:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``20s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``20s``
 
 .. todo::
    Add description.
 
 ball_search_wait_after_iteration:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``10s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``10s``
 
 .. todo::
    Add description.

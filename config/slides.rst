@@ -19,6 +19,13 @@ Optional settings
 
 The following sections are optional in the ``slides:`` section of your config. (If you don't include them, the default will be used).
 
+background_color:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``000000ff``
+
+.. todo::
+   Add description.
+
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -28,7 +35,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 expire:
 ~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+
+.. todo::
+   Add description.
+
+opacity:
+~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 .. todo::
    Add description.

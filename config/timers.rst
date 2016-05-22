@@ -56,7 +56,7 @@ Single value, type: ``integer``. Default: ``None``
 
 max_value:
 ~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.
@@ -84,7 +84,7 @@ Single value, type: ``integer``. Default: ``0``
 
 tick_interval:
 ~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
 .. todo::
    Add description.

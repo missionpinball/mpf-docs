@@ -90,7 +90,7 @@ One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``
 
 pulse_ms:
 ~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.

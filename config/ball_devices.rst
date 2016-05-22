@@ -42,7 +42,7 @@ Single value, type: string name of a ``playfields:`` device. Default: ``playfiel
 
 ball_missing_timeouts:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.
@@ -112,14 +112,14 @@ Single value, type: string name of a ``coils:`` device. Default: ``None``
 
 eject_coil_jam_pulse:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.
 
 eject_coil_retry_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.
@@ -140,14 +140,14 @@ List of one (or more) values, each is a type: string name of a ``ball_devices:``
 
 eject_timeouts:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``None``
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
    Add description.
 
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``500ms``
 
 .. todo::
    Add description.
@@ -168,14 +168,14 @@ Single value, type: string name of a ``switches:`` device. Default: ``None``
 
 entrance_switch_full_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
    Add description.
 
 exit_count_delay:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``500ms``
 
 .. todo::
    Add description.
@@ -189,7 +189,7 @@ Single value, type: string name of a ``coils:`` device. Default: ``None``
 
 hold_coil_release_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/lists>` for entering time strings). Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
 .. todo::
    Add description.

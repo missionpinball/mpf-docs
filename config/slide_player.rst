@@ -175,7 +175,7 @@ You can also specify a transition for the removal, like this:
 
 expire:
 ~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions </config/instructions/time_strings>` for entering time strings). Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 Specifies that this slide should automatically be removed after the time has passed.
 When it's removed, whichever slide is the next-highest priority will be shown.
@@ -194,6 +194,13 @@ Forces this slide to be shown, even if it's not the highest priority. Note that 
 add or remove a slide and the priority list is recalculated, whichever slide is the
 highest priority will be shown. This ``force:`` option is sort of a one-time thing.
 Really you should use priorities to control which slides are shown.
+
+persist:
+~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
 
 priority:
 ~~~~~~~~~
@@ -242,33 +249,4 @@ give it a name, and that name is added to the list of valid targets.
 So really the ``target:`` here is either the name of a display, or the name of a slide_frmae
 where you want this slide to be displayed.
 
-transition:
-~~~~~~~~~~~
-Single value which is the name of a transition, or a list of sub-settings with more
-settings to control the transition.
 
-If you specify a transition here, it will be applied when this action takes place (either
-showing the slide or removing the slide, depending on the ``action:`` setting.
-
-See the transitions documentation for details on all the transitions and options.
-
-transition_out:
-~~~~~~~~~~~~~~~
-Single value which is the name of a transition, or a list of sub-settings with more
-settings to control the transition, which will be used when this slide is removed.
-
-The ``transition_out:`` setting actually attaches the transition out settings to the
-slide itself, so they will be remembered and applied later on when this slide is
-actually removed.
-
-See the transitions documentation for details on all the transitions and options.
-
-widgets:
-~~~~~~~~
-A list of one or more widgets (and settings) which will be added to this slide.
-
-Note that if you include a ``widgets:`` section here, MPF will actually create a new
-slide with the slide name specified, overwriting any existing slide with the same name
-if one already exists.
-
-See the widgets documentation for details on all the widgets and options.
