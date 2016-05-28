@@ -19,6 +19,13 @@ Optional settings
 
 The following sections are optional in the ``p_roc:`` section of your config. (If you don't include them, the default will be used).
 
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
+
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``integer``. Default: ``None``

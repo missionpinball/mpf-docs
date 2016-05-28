@@ -33,13 +33,6 @@ Single value, type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
-fps:
-~~~~
-Single value, type: ``number`` (can be integer or floating point). Default: ``None``
-
-.. todo::
-   Add description.
-
 load:
 ~~~~~
 Single value, type: ``string``. Default: ``None``

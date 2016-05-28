@@ -47,7 +47,7 @@ The following sections are required in the ``servos:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``integer``. 
+Single value, type: ``string``. 
 
 The number (or channel) of this servo. See the platform documentation or the
 how to guies for your specific servo for details of how this number works, since
