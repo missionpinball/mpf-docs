@@ -30,6 +30,7 @@ your machine-wide config, a mode-specific config, or both.
    driver_enabled: <driver_enabled>
    drop_target_banks: <drop_target_banks>
    drop_targets: <drop_targets>
+   dual_wound_coils: <dual_wound_coils>
    event_player: <event_player>
    extra_balls: <extra_balls>
    fadecandy: <fadecandy>
@@ -61,7 +62,9 @@ your machine-wide config, a mode-specific config, or both.
    matrix_light_settings: <matrix_light_settings>
    matrix_lights: <matrix_lights>
    mode: <mode>
+   mode_settings: <mode_settings>
    modes: <modes>
+   motors: <motors>
    mpf: <mpf>
    mpf-mc: <mpf-mc>
    multiballs: <multiballs>
