@@ -1,5 +1,5 @@
 ball_starting
-============+
+=============
 
 *MPF Event*
 

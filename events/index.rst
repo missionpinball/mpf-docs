@@ -44,7 +44,7 @@ how MPF uses events.
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
    ball_started <ball_started>
-   ball_startin <ball_startin>
+   ball_starting <ball_starting>
    balldevice_(balls)_ball_missing. <balldevice_balls_ball_missing.>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
@@ -99,6 +99,7 @@ how MPF uses events.
    mc_reset_phase_3 <mc_reset_phase_3>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
    mode_(mode_name)_starting <mode_mode_name_starting>
+   motor_(motor)_reached_(position) <motor_motor_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
    multiball_(name)_shoot_again <multiball_name_shoot_again>
