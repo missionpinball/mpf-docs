@@ -80,7 +80,7 @@ load:
 Single value, type: one of the following options: preload, on_demand. Default: ``on_demand``
 
 This controls the timing of when the sound assets in the sound pool will be loaded into memory
-(see the documentation on (:doc:`Managing Assets) </assets/index>` . for an explanation of what
+(see the documentation on (:doc:`Managing Assets </assets/index>` . for an explanation of what
 loading is.) Options for ``load:`` are:
 
 + ``preload`` (The asset is loaded when MPF boots and stays in memory as long as MPF is running.).
