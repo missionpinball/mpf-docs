@@ -1,5 +1,5 @@
 How to enter gain values in config files
-=========================================
+========================================
 
 The sound-related items in your config files contain various volume settings that may be specified
 as a gain value.  MPF gives you the flexibility to specify gain values as simple numeric values
