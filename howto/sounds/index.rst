@@ -1,0 +1,10 @@
+Sounds & Audio How To guides
+============================
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Setting up sound for your machine <basic_setup>
+   Playing a sound with variations when a slingshot is hit <slingshots>
+

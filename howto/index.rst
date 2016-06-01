@@ -18,5 +18,5 @@ List of How to Guides
    Controller hardware <controller_hardware/index>
    Pinball devices <devices/index>
    Displays & Graphics <display/index>
-   Sounds & Audio <audio/index>
+   Sounds & Audio <sounds/index>
    Shows <shows/index>

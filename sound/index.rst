@@ -22,10 +22,11 @@ You can think of the audio system in MPF as a sound mixing board that you contro
 settings and events.  It is divided into tracks (similar to channels on a mixer), each of which has
 its own properties such as name, volume and the number of sounds that may be played simultaneously.
 You can create up to 8 tracks in your sound system, although typically most machines will use 3
-tracks ("voice", "sfx", and "music"). Sounds are played on specific tracks and then the tracks are
-mixed together to form the final mix. The sounds themselves are objects that include many
-properties that control how they will be played such as what track they play on, volume, looping,
-priority, how long to wait in the playback queue before being discarded,
+tracks ("voice", "sfx", and "music"). Each track has its own queue that will hold pending sounds
+when the track is too busy to play any additional sounds. Sounds are played on specific tracks and
+then the tracks are mixed together to form the final mix. The sounds themselves are objects that
+include many properties that control how they will be played such as what track they play on,
+volume, looping, priority, how long to wait in the playback queue before being discarded,
 :doc:`ducking </sound/ducking>`, etc.
 
 Sounds can be grouped together into a logical grouping called a sound pool.  Sounds pools allow you
@@ -40,6 +41,10 @@ section of your machine configuration file.  You add settings for individual sou
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
 Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
 
+There are several available :doc:`"How To" guides </howto/sounds/index>` available that go through
+the process of performing common sound and audio tasks step-by-step.
+
 .. toctree::
 
    Ducking </sound/ducking>
+
