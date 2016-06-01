@@ -23,7 +23,7 @@ The following sections are optional in the ``widget_player:`` section of your co
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: add, remove. Default: ``add``
+Single value, type: one of the following options: add, remove, update. Default: ``add``
 
 .. todo::
    Add description.

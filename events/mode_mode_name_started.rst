@@ -1,5 +1,5 @@
-event_(mode_name)_started
-=========================
+mode_(mode_name)_started
+========================
 
 *MPF Event*
 

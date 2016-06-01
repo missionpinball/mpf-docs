@@ -65,7 +65,6 @@ how MPF uses events.
    client_disconnected <client_disconnected>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
-   counter_(name)_hit <counter_name_hit>
    credits_added <credits_added>
    display_(name)_initialized <display_name_initialized>
    displays_initialized <displays_initialized>
@@ -74,8 +73,6 @@ how MPF uses events.
    diverter_(name)_enabling <diverter_name_enabling>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
-   event_(mode_name)_started <event_mode_name_started>
-   event_(mode_name)_stopped <event_mode_name_stopped>
    game_ended <game_ended>
    game_ending <game_ending>
    game_start <game_start>
@@ -88,6 +85,7 @@ how MPF uses events.
    init_phase_5 <init_phase_5>
    loading_assets <loading_assets>
    logicblock_(name)_complete <logicblock_name_complete>
+   logicblock_(name)_hit <logicblock_name_hit>
    machine_reset_phase_1 <machine_reset_phase_1>
    machine_reset_phase_2 <machine_reset_phase_2>
    machine_reset_phase_3 <machine_reset_phase_3>
@@ -98,7 +96,9 @@ how MPF uses events.
    mc_reset_phase_2 <mc_reset_phase_2>
    mc_reset_phase_3 <mc_reset_phase_3>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
+   mode_(mode_name)_started <mode_mode_name_started>
    mode_(mode_name)_starting <mode_mode_name_starting>
+   mode_(mode_name)_stopped <mode_mode_name_stopped>
    motor_(motor)_reached_(position) <motor_motor_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
