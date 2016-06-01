@@ -16,8 +16,8 @@ you need bundled up into a single application package which you can just drag an
 
 .. note::
 
-   MPF cannot run in an OS X virtual machine (like in VMware Fusion or Parallels). Please direct
-   complaints to Cupertino.
+   MPF cannot run in an virtual machine (like in VMware Fusion or Parallels) if the guest OS is OS X.
+   (Though running MPF in a Windows or Linux VM on OS X is fine.) Please direct complaints to Cupertino.
 
 Download a zip of the latest MPF app for OS X from `here <https://missionpinball.com/Mission%20Pinball%20Framework.dmg>`_.
 The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That
@@ -29,7 +29,7 @@ Once you've downloaded the file, here are the steps to install MPF on OS X:
 1. Open the DMG and copy MPF to your Applications folder
 --------------------------------------------------------
 
-Just double-click the .dmg file to mount and open it. You'll see a window that looks like this:
+Double-click the .dmg file to mount and open it. You'll see a window that looks like this:
 
 .. image:: MPFMacInstaller.jpg
 
@@ -46,7 +46,7 @@ When you run the script, you'll be prompted for your password. After you enter i
 
 This command does a few things:
 
-First, it registers a system-wide shortcut called ``mpf`` with your system, so that whwen your in your pinball
+First, it registers a system-wide shortcut called ``mpf`` with your system, so that when you're in your pinball
 machine folder you can type ``mpf`` and it will be able to find the MPF launch command inside the MPF app.
 
 Second it registers a command ``kivy`` which is a link to the copy of Python that's included inside
@@ -125,7 +125,10 @@ See the :doc:`running/index` for details and command-line options.
 Keeping MPF up-to-date
 ----------------------
 
-Whenever we update MPF, you'll also have to update the MPF Mac app. Rather than have you re-download and replace the MPF Mac app every time, the easiest approach is to run a command which will just update the copy of MPF that's inside the MPF app. To do this, open a Terminal window and run the following:
+Whenever we update MPF, you'll also have to update the MPF Mac app. Rather than
+have you re-download and replace the MPF Mac app every time, the easiest approach
+is to run a command which will just update the copy of MPF that's inside the MPF app.
+To do this, open a Terminal window and run the following:
 
 ::
 
@@ -135,4 +138,7 @@ Whenever we update MPF, you'll also have to update the MPF Mac app. Rather than 
 Shout out to Kivy!
 ------------------
 
-MPF uses a multimedia framework called *Kivy* to display graphics and sounds. The MPF Mac app is based on the Kivy Mac app package, which the team from Kivy has made available for Kivy users (like MPF) to use to package their own apps. So this amazingly simple MPF Mac package we have is available thanks to the awesome people at Kivy. Thanks!
+MPF uses a multimedia framework called *Kivy* to display graphics and sounds. The MPF Mac
+app is based on the Kivy Mac app package, which the team from Kivy has made available for
+Kivy users (like MPF) to use to package their own apps. So this amazingly simple MPF Mac
+package we have is available thanks to the awesome people at Kivy. Thanks!
