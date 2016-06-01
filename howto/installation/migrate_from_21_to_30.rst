@@ -14,7 +14,6 @@ Please read this entire guide as a lot has changed. Here are the steps
 to migrate to 0.30:
 
 
-
 1. Review the Changes in MPF 0.30
 ---------------------------------
 
@@ -29,8 +28,8 @@ that guide to see what's new.
 We have a guide :doc:`here </install/index>`.
 
 
-(2C) Install the fonts
-~~~~~~~~~~~~~~~~~~~~~~
+2A. Install the fonts
+~~~~~~~~~~~~~~~~~~~~~
 
 The current preview build of MPF does not support using fonts from the
 MPF *fonts* folder. So if your machine used any of the built-in MPF
@@ -40,74 +39,14 @@ in the `old MPF 0.21 (master) repository`_, in the
 install it.
 
 
+2B. Run the demo_man test
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(2D) Download the mpf-examples so you can run the demo_man test
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-One of the changes we made in MPF 0.30 is we removed all the example
-machine code from the MPF package. We figured there was no need to
-include all the examples in every single MPF installation. In this
-case, however, we want the examples, so download a zip file containing
-the latest mpf-examples from `here`_. (Note that if you have git, you
-can simply clone the `mpf-examples repository`_ so they'll always be
-up-to-date. Just make sure you get the master/dev to match which
-branch of MPF you're using. If you have no idea what "git" means,
-that's fine, just ignore that. :) You can download the mpf-examples
-zip file and expand it to wherever you want. Once you have it
-expanded, open two command prompt windows to the *demo_man* folder in
-mpf-examples, for example:
+We have a How To guide for this: :doc:`<demo_man>`
 
 
-::
-
-
-    c:\mpf-examples\demo_man\
-
-
-Then from within the first one, run:
-
-
-::
-
-
-    mpf mc
-
-
-And from within the second one, run:
-
-
-::
-
-
-    mpf
-
-
-If you see the *demo_man* window with a DMD in it pop up, you're good
-to go. You can play around with this if you want. Click on the popup
-window so it has focus, and then the `S` key starts a game and adds
-players, the `X` key is a slingshot which will give points, and the
-`1` key will drain the ball. It will probably crash when the game ends
-since we don't have the *character_picker* and *entered_chars* display
-widgets done that the high score entry mode needs. Now skip to Step
-(4) below
-
-
-
-(3) Installation for Mac OS X
+3. Migrate your machine files
 -----------------------------
-
-We don't have a procedure ready yet for the Mac. Actually we have the
-MPF package for Mac done (it's precompiled and everything), but at the
-moment we've having issues getting Kivy installed for Mac in a
-repeatable way. (See `here`_ and `here`_.) Ultimately we're planning
-to create a proper Mac MPF.app in a DMG file, so we'll just proceed
-with that. Until then, sorry Mac users. (Which, btw, is 2 out of the 4
-core MPF devs. :(
-
-
-
-(4) Migrate your machine files
-------------------------------
 
 One of the big changes in MPF 0.30 is that MPF is installed into the
 central Python site-packages folder. With old versions of MPF, you
@@ -121,9 +60,8 @@ machine folder to some location that's not part of the old MPF
 installation. Then you can delete the old MPF folder.
 
 
-
-(4A) Migrate your machine's config and show files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3A. Migrate your machine's config and show files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now open a console window (Command Prompt on Windows, or Terminal on
 Mac) and switch to your machine's root folder. You want to be in the
@@ -165,8 +103,8 @@ days.
 
 
 
-(4B) Update any custom mode code or scriptlets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3B. Update any custom mode code or scriptlets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have any custom Python code as part of your machine (either in
 mode code or in scriptlets), you'll need to migrate that code too. The
@@ -204,8 +142,8 @@ https://www.youtube.com/watch?v=GrRnYFGslL8
 
 
 
-(5) Run your game and see what happens!
----------------------------------------
+4. Run your game and see what happens!
+--------------------------------------
 
 Now you're ready to run your game. To do this (for now), open two
 command windows. Then from within your machine folder (the same folder
@@ -235,12 +173,12 @@ faster for us to do it rather than explain what to do. :)
 
 
 
-(6) Next Steps
---------------
+5. Next Steps
+-------------
 
 At this point you can feel free to start editing your config files and
 playing with MPF 0.30. We understand that with no documentation yet
-(apart from what's in the `release notes`_), there's probably not much
+(apart from what's in the release notes), there's probably not much
 you can do. And again, if you have problems, post to the forum. We
 want to make this process as painless as possible, and will help you
 get everything converted over. The good news is the config file and
@@ -248,12 +186,3 @@ show file formats are finalized for MPF 0.30, so even though not
 everything works yet, you can start working with your config and show
 files now with the confidence that they won't change between now and
 the final release.
-
-.. _here: https://github.com/missionpinball/mpf-examples/archive/dev.zip
-.. _Python Package Index: https://pypi.python.org/pypi
-.. _old MPF 0.21 (master) repository: https://github.com/missionpinball/mpf
-.. _mpf-examples repository: https://github.com/missionpinball/mpf-examples
-.. _here: https://groups.google.com/forum/#!topic/kivy-users/YAZ64mNt9Kg
-.. _release notes: https://missionpinball.com/docs/mpf-0-30-release-notes/
-.. _here: https://groups.google.com/forum/#!topic/kivy-users/5H5tSJAX1bs
-.. _here: http://semver.org/

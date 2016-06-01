@@ -22,7 +22,7 @@ MPF Documentation Contents
    Config players </config_players/index>
    Tech notes </tech_notes/index>
    BCP protocol </bcp/index>
-   Writing custome code </code/index>
+   Writing custom code </code/index>
    Events reference </events/index>
    Config file reference </config/index>
    FAQ </faq/index>
