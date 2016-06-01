@@ -3,7 +3,7 @@ Ducking
 
 *Ducking* is an audio effect that lowers the level of one audio signal based upon the level of
 another audio signal (one sound "ducks" out of the way of another).  It is used to allow particular
-sounds to be heard more clearly when there is other audio happening at the same time. In the context
+sounds to be heard more clearly when there is other audio playing at the same time. In the context
 of a pinball machine, a common use of ducking is to lower the volume of the background music while
 an important callout is played (such as "Extra Ball!") and then return the volume when the callout
 is finished. When done professionally, you should not really be able to notice that the music
@@ -36,4 +36,5 @@ behavior of the voice clip:
   of samples.).
 
 Ducking settings are specified for each desired sound in the :doc:`sounds: </config/sounds>`
-section of the configuration files.
+section of the configuration files.  It often takes some trial and error to get the ducking
+parameters set just right for each sound.
