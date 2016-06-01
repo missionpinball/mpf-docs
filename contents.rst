@@ -16,7 +16,7 @@ MPF Documentation Contents
    Devices </devices/index>
    Modes </modes/index>
    Displays & DMDs </displays/index>
-   Sounds & Audio </sounds/index>
+   Sounds & Audio </sound/index>
    Shows </shows/index>
    Assets </assets/index>
    Config players </config_players/index>
