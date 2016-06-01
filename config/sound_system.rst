@@ -9,7 +9,8 @@ sound_system:
 .. overview
 
 The ``sound_system:`` section of your machine config controls the general settings for the
-machine's sound system.
+machine's sound system. (This section is part of the MPF media controller and only available
+if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound configuration.
 

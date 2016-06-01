@@ -15,7 +15,8 @@ Creating a sounds pool allows you to reference a group of sound variations as if
 sound. A sound pool name may be used anywhere a sound asset name may appear. Pools can be used for
 random differences in a sound (such as slight variations of a slingshot sound) or for an ordered
 sequence of sounds that will repeat.  Another common use for sound pools is to play a random
-callout from a defined list when triggered.
+callout from a defined list when triggered. (Sound pools are part of the MPF media controller and
+only available if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound_pool configuration.
 
