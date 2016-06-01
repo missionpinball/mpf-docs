@@ -39,3 +39,7 @@ section of your machine configuration file.  You add settings for individual sou
 :doc:`sounds: </config/sounds>` section and you can configure sounds to automatically play when
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
 Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
+
+.. toctree::
+
+   Ducking </sound/ducking>
