@@ -11,11 +11,6 @@ how MPF uses events.
 .. toctree ::
    :maxdepth: 1
 
-   (drop_target_bank_name)_down <drop_target_bank_name_down>
-   (drop_target_bank_name)_mixed <drop_target_bank_name_mixed>
-   (drop_target_bank_name)_up <drop_target_bank_name_up>
-   (drop_target_name)_down <drop_target_name_down>
-   (drop_target_name)_up <drop_target_name_up>
    (playfield)_active <playfield_active>
    (playfield)_ball_count_change <playfield_ball_count_change>
    (shot)_(profile)_(state)_hit <shot_profile_state_hit>
@@ -71,6 +66,11 @@ how MPF uses events.
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
    diverter_(name)_enabling <diverter_name_enabling>
+   drop_target_(name)_down <drop_target_name_down>
+   drop_target_(name)_up <drop_target_name_up>
+   drop_target_bank_(name)_down <drop_target_bank_name_down>
+   drop_target_bank_(name)_mixed <drop_target_bank_name_mixed>
+   drop_target_bank_(name)_up <drop_target_bank_name_up>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
    game_ended <game_ended>
@@ -115,9 +115,9 @@ how MPF uses events.
    reel_(name)_hw_value <reel_name_hw_value>
    reel_(name)_pulse_done <reel_name_pulse_done>
    reel_(name)_ready <reel_name_ready>
+   reel_(name)_resync <reel_name_resync>
    request_to_start_game <request_to_start_game>
    reset_complete <reset_complete>
-   scorereel_(name)_resync <scorereel_name_resync>
    scorereelgroup_(name)_resync <scorereelgroup_name_resync>
    scorereelgroup_(name)_rollover <scorereelgroup_name_rollover>
    scorereelgroup_(name)_valid <scorereelgroup_name_valid>

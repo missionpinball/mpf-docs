@@ -1,5 +1,5 @@
-scorereel_(name)_resync
-=======================
+reel_(name)_resync
+==================
 
 *MPF Event*
 
