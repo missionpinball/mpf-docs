@@ -65,9 +65,12 @@ Pinball logic
 + Tilt
 + Credits / coin play
 + Audits
++ Bonus
++ High score
 + Full per-player variable and settings support. Save/restore anything
   on a per-player bases (shots, objectives, goals collected, targets
   hit, etc.)
++ Player achievements
 + Ball tracking / automatic ball routing
 + Shots & shot groups (with full per-player state management (e.g. lit, unlit,
   flashing, etc.)
@@ -89,11 +92,11 @@ Displays
 + Display "slides" with priorities, transitions in and out
 + Display "widgets" (things you put on displays), including:
 
-    + Text (with fonts, styles, colors, dynamic text based on game state, etc.)
-    + Images & animated images
-    + Videos
-    + Shapes
-    + "Picture-in-picture" style sub-displays
+    - Text (with fonts, styles, colors, dynamic text based on game state, etc.)
+    - Images & animated images
+    - Videos
+    - Shapes
+    - "Picture-in-picture" style sub-displays
 
 + Any property of any widget can be animated (opacity, size, position, etc.)
 
