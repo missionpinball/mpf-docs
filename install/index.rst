@@ -26,7 +26,7 @@ Guide here: :doc:`<drivers/index>`
 .. toctree::
    :hidden: true
 
-   drivers/index
+   <drivers/index>
 
 Quick install guide
 -------------------
