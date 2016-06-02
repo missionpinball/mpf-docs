@@ -22,6 +22,7 @@ how MPF uses events.
    (shot_group)_(profile)_hit <shot_group_profile_hit>
    (shot_group)_complete <shot_group_complete>
    (shot_group)_hit <shot_group_hit>
+   achievement_(name)_state_(state) <achievement_name_state_state>
    asset_loading_complete <asset_loading_complete>
    ball_drain <ball_drain>
    ball_ended <ball_ended>
@@ -96,10 +97,10 @@ how MPF uses events.
    mc_reset_phase_2 <mc_reset_phase_2>
    mc_reset_phase_3 <mc_reset_phase_3>
    mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
-   mode_(mode_name)_started <mode_mode_name_started>
-   mode_(mode_name)_starting <mode_mode_name_starting>
-   mode_(mode_name)_stopped <mode_mode_name_stopped>
-   motor_(motor)_reached_(position) <motor_motor_reached_position>
+   mode_(name)_started <mode_name_started>
+   mode_(name)_starting <mode_name_starting>
+   mode_(name)_stopped <mode_name_stopped>
+   motor_(name)_reached_(position) <motor_name_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
    multiball_(name)_shoot_again <multiball_name_shoot_again>

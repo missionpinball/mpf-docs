@@ -3,7 +3,8 @@ player_(var_name)
 
 *MPF Event*
 
-Posted when a player variable is added or changes value.
+Posted when simpler types of player variables are added or
+change value.
 
 The actual event has (var_name) replaced with the name of the
 player variable that changed. Some examples:
@@ -17,6 +18,11 @@ in the documentation, if you see something that says it's stored in
 a player variable, that means you'll get this event when that
 player variable is created or is changed.
 
+Note that this event is only posted for simpler types of player
+variables, including player variables that are integers, floating
+point numbers, or strings. More complex player variables (lists,
+dicts, etc.) do not get this event posted.
+
 This event is posted for a single player variable changing, meaning
 if multiple player variables change at the same time, multiple
 events will be posted, one for each change.
@@ -29,8 +35,8 @@ change
 ~~~~~~
 If the player variable just changed, this will be the
 amount of the change. If it's not possible to determine a numeric
-change (for example, if this player variable is a list), then this
-*change* value will be set to the boolean *True*.
+change (for example, if this player variable is a string), then
+this *change* value will be set to the boolean *True*.
 
 player_num
 ~~~~~~~~~~

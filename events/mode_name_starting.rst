@@ -1,9 +1,9 @@
-mode_(mode_name)_starting
-=========================
+mode_(name)_starting
+====================
 
 *MPF Event*
 
-The mode called "mode_name" is starting.
+The mode called "name" is starting.
 
 This is a queue event. The mode will not fully start until the queue is
 cleared.
