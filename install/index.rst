@@ -17,6 +17,17 @@ from the list below:
    Mac OS X <mac>
    Linux <linux>
 
+
+Hardware drivers
+----------------
+
+Guide here: :doc:`<drivers>`
+
+.. toctree::
+   :hidden: true
+
+   drivers/index
+
 Quick install guide
 -------------------
 

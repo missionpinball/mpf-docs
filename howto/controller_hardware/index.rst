@@ -8,5 +8,4 @@ Pinball controller hardware How To guides
    Configuring FAST Pinball hardware <fast>
    Configuring OPP hardware <opp>
    Configuring Pololu servo controllers <pololu_maestro>
-   Installing P-ROC/P3-ROC on Mac OS X <p_roc_mac>
    Using MPF with an existing Williams WPC machine <wpc>
