@@ -10,6 +10,7 @@ your machine-wide config, a mode-specific config, or both.
 
    Instructions: <instructions/index>
    accelerometers: <accelerometers>
+   achievements: <achievements>
    animations: <animations>
    assets: <assets>
    auditor: <auditor>
@@ -27,7 +28,6 @@ your machine-wide config, a mode-specific config, or both.
    credits: <credits>
    displays: <displays>
    diverters: <diverters>
-   driver_enabled: <driver_enabled>
    drop_target_banks: <drop_target_banks>
    drop_targets: <drop_targets>
    dual_wound_coils: <dual_wound_coils>
