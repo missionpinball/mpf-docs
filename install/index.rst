@@ -21,7 +21,7 @@ from the list below:
 Hardware drivers
 ----------------
 
-Guide here: :doc:`<drivers>`
+Guide here: :doc:`<drivers/index>`
 
 .. toctree::
    :hidden: true
