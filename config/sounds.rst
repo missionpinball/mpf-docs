@@ -42,7 +42,8 @@ Here's an example:
 Optional settings
 -----------------
 
-The following sections are optional in the ``sounds:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``sounds:`` section of your config. (If you don't include
+them, the default will be used).
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
@@ -80,7 +81,7 @@ loops:
 ~~~~~~
 Single value, type: ``integer``. Default: ``0``
 
-An integer value that controls the looping behvaior of this sound.  A value of 0 indicates the
+An integer value that controls the looping behavior of this sound.  A value of 0 indicates the
 sound will not loop when reaching the end (also known as a "one-shot").  A value of -1
 indicates the sound should loop infinitely until it is stopped.  A value greater than 0
 specifies the number of times the sound should loop back to the beginning while playing. Note
@@ -89,7 +90,8 @@ should play again after the first time through.
 
 max_queue_time:
 ~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>`).
+Default: ``None``
 
 Specifies the maximum time this sound can be queued before it's played. If the time between when
 this sound is requested and when MPF can actually play it is longer than this queue time, then
@@ -120,7 +122,8 @@ This is the name of the track this sound will play on. (You configure tracks and
 
 volume:
 ~~~~~~~
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>` . (-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 The volume of this sound.  This value is factored into the track and overall MPF volumes. It's used
 to "balance" your sounds if you have one particular sound that's too loud or too quiet. As with all
@@ -132,7 +135,7 @@ ducking:
 --------
 
 The ``ducking:`` section controls :doc:`ducking </sounds/ducking>` for the sound.  It contains the
-following nested sub-settings
+following nested sub-settings:
 
 Required settings
 ~~~~~~~~~~~~~~~~~
@@ -150,7 +153,8 @@ commonly contains the name of the track that music is played on.
 Optional settings
 ~~~~~~~~~~~~~~~~~
 
-The following sections are optional in the ``ducking:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``ducking:`` section of your config. (If you don't
+include them, the default will be used).
 
 attack:
 ^^^^^^^
@@ -162,7 +166,8 @@ or a number of samples.
 
 attenuation:
 ^^^^^^^^^^^^
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`. -inf, db, or float between 0.0 and 1.0. Default: ``1.0``
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+-inf, db, or float between 0.0 and 1.0. Default: ``1.0``
 
 The attenuation (gain) to apply to the target track while ducking.  ``attenuation:`` controls how
 quiet to make the target track while the sound is playing.
@@ -190,5 +195,3 @@ The point relative to the end of the sound at which to start the returning the a
 normal (release stage). A value of 0.5 seconds means to begin to release the ducking 0.5 seconds
 prior to the end of the sound. This value may be specified as a
 :doc:`time string </config/instructions/time_strings>` or a number of samples.
-
-

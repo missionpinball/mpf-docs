@@ -64,11 +64,12 @@ sounds:
 The ``sounds:`` section contains an indented list of existing sound assets (one per line) that will
 be contained in the sound pool.  Optionally, a number may be appended to the sound asset name
 delimited by a pipe (``|``) character.  This optional number controls the relative weighting for
-random item selection, or the number of times to repeat the sound before moving to the next sound
-in the pool with a sequence pool.  In the example above, the `slingshot:` random sound pool
-contains relative weighting values.  The weights sum to 10 for the three sounds so the
-`slingshot_01` sound has a probability of being randomly selected of 5 out of 10 (50%),
-`slingshot_02` 3/10 (30%), and `slingshot_03` 2/10 (20%).
+random item selection, or the number of times to play the sound before moving to the next sound
+in the pool with a sequence pool. If no weight value is provided, a default value of ``1`` will be
+applied. In the example above, the `slingshot:` random sound pool contains relative weighting
+values.  The weights sum to 10 for the three sounds so the `slingshot_01` sound has a probability
+of being randomly selected of 5 out of 10 (50%), `slingshot_02` 3/10 (30%), and `slingshot_03`
+2/10 (20%).
 
 Optional settings
 -----------------
@@ -81,37 +82,38 @@ load:
 Single value, type: one of the following options: preload, on_demand. Default: ``on_demand``
 
 This controls the timing of when the sound assets in the sound pool will be loaded into memory
-(see the documentation on (:doc:`Managing Assets </assets/index>` . for an explanation of what
-loading is.) Options for ``load:`` are:
+(see the documentation on (:doc:`Managing Assets </assets/index>` for an explanation of what
+loading is). Options for ``load:`` are:
 
-+ ``preload`` (The asset is loaded when MPF boots and stays in memory as long as MPF is running.).
-+ ``on_demand`` (The asset is loaded "on demand" when it's first called for. (At this point,
-  assets loaded on demand stay in memory forever, but at some point we'll change that so they get
-  unloaded on demand too.).
++ ``preload`` - The asset is loaded when MPF boots and stays in memory as long as MPF is running.
++ ``on_demand`` - The asset is loaded "on demand" when it's first called for. At this point,
+  assets loaded on demand stay in memory forever, but at some point we'll change that so they can
+  be unloaded on demand too.
 
 type:
 ~~~~~
-Single value, type: one of the following options: sequence, random, random_force_next, random_force_all. Default: ``sequence``
+Single value, type: one of the following options: sequence, random, random_force_next,
+random_force_all. Default: ``sequence``
 
 The ``type:`` of sound pool dictates how the next sound in the pool will be selected when the sound
 pool is referenced for playback. Options for ``type:`` are:
 
-+ ``sequence`` (Sounds are selected in the order in which they appear in the ``sounds:`` section of
-  the sound pool. An optional number/weight appended after each sound controls how many times
-  the sound will repeat before the next one in the list is selected.  The sequence of sounds will
-  repeat once all sounds have been played.).
-+ ``random`` (Sounds are randomly selected from the list of sounds in the ``sounds:`` section of
++ ``sequence`` - Sounds are selected in the order in which they appear in the ``sounds:`` section.
+  An optional number/weight appended after each sound controls how many times the sound will be
+  played before the next one in the list is selected.  The sequence of sounds will repeat once all
+  sounds have been played.
++ ``random`` - Sounds are randomly selected from the list of sounds in the ``sounds:`` section of
   the sound pool. The probability of selecting each sound in the list can be controlled by an
   optional numeric weight value appended after each sound.  This weight value is relative to all
-  other sounds in the list.).
-+ ``random_force_next`` (Sounds are randomly selected from the list of sounds in the ``sounds:``
+  other sounds in the list.
++ ``random_force_next`` - Sounds are randomly selected from the list of sounds in the ``sounds:``
   section of the sound pool. This sound pool type ensures that the next sound selected will not
   be the same as the previously selected sound (no back-to-back repeats of a single sound). The
   probability of selecting each sound in the list can be controlled by an optional numeric weight
-  value appended after each sound.  This weight value is relative to all other sounds in the list.).
-+ ``random_force_all`` (Sounds are randomly selected from the list of sounds in the ``sounds:``
+  value appended after each sound.  This weight value is relative to all other sounds in the list.
++ ``random_force_all`` - Sounds are randomly selected from the list of sounds in the ``sounds:``
   section of the sound pool. This sound pool type ensures that all sounds in the list will be
   played once before any sound will be repeated. The probability of selecting each sound in the
   list can be controlled by an optional numeric weight value appended after each sound.  This
-  weight value is relative to all other sounds in the list.).
+  weight value is relative to all other sounds in the list.
 

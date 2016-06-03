@@ -39,7 +39,10 @@ Optional settings
 -----------------
 
 The following sections are optional in the ``sound_system:`` section of your config. (If you don't
-include them, the default will be used).
+include them, the default will be used).  If you omit the ``sound_system:`` section completely,
+the sound configuration will contain nothing but the default values, which includes a single audio
+track named ``default``.  It is recommended that you at least specify the ``tracks:`` section in
+your machine.
 
 buffer:
 ~~~~~~~
@@ -81,7 +84,8 @@ files to match.)
 
 master_volume:
 ~~~~~~~~~~~~~~
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>` . (-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 The overall volume of the MPF sound system. As with all volume parameters in MPF, this item can be represented
 as a number between 0.0 and 1.0 (1.0 is max volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as
@@ -119,13 +123,15 @@ gibberish. A sound effects track, on the other hand, can probably have a few sou
 Note that MPF gives you detailed control over what happens if a new sound wants to play when the max
 simultaneous sounds are already playing on that track. Should the new sound break in and stop an
 existing sound? Should it wait until the existing sound is done? How long should it wait? You can
-control all this.
+control all this on a per sound basis (see the :doc:`sounds: </config/sounds>` documentation for
+more information).
 
 volume:
 ```````
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>` . (-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
-This is the volume offset for this track, as either a value between 0.0 and 1.0 or a decibel value
-between -inf and 0.0 db. Note that each track's volume will be combined with the overall system
-volume. So if your MPF master volume is set to 0.8 (80%) and you have a track set to 0.5 (50%),
-sounds on that track will play at 40% overall volume (50% of 80%).
+This is the volume setting for this track (how loud will it be), as either a value between 0.0 and
+1.0 or a decibel value between -inf and 0.0 db. Note that each track's volume will be combined
+with the overall system volume. So if your MPF master volume is set to 0.8 (80%) and you have a
+track set to 0.5 (50%), sounds on that track will play at 40% overall volume (50% of 80%).

@@ -43,10 +43,10 @@ Example:
 ---------------------------------------
 
 The next step is to configure your sound asset folders.  First you will need to create a folder
-named ``sounds`` directly under your machine folder.  The easiest way to organize your sound files
-is to create sub-folders for each track in the ``sounds`` folder (``music``, ``sfx``, and
-``voice``).  If you are going to be using a lot of sounds you can create as many sub-folders
-beneath each track folder as you like.  It can help you stay organized and be able to locate your
+named ``sounds`` directly under your machine folder.  The recommended way to organize your sound
+files is to create sub-folders for each track in the ``sounds`` folder (``music``, ``sfx``, and
+``voice``). If you are going to be using a lot of sounds you can create as many sub-folders
+beneath each track folder as you like. It can help you stay organized and be able to locate your
 sounds.
 
 File system directory structure example:
@@ -106,17 +106,17 @@ voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx
 Now when you start your machine you will have some sounds available (assuming you placed some
 supported sound files in your folder during the last step) and they will all have some very basic
 default settings.  It is very likely that you won't be happy with the default settings for all of
-your sounds so let's create some more specific settings for some of them.
+your sounds so let's create some more tailored settings for a few of them.
 
 Renaming some sounds
 ~~~~~~~~~~~~~~~~~~~~
 
-Your sounds now all have names based on their file names without the extensions and by default that
-is how they must be referenced in your config files.  Perhaps some of your file names are either a
-bit cryptic or contain additional text that you'd like to shorten.  One option is to simply rename
-any files you'd like in the operating system.  Another option is to setup some configuration
-options in your config files to reference the sound file by a different name which is what we will
-do next.
+Your sounds now all have names based on their file names (without the extensions), and by default
+that is how they must be referenced in your config files.  Perhaps some of your file names are
+either a bit cryptic or contain additional text that you'd like to shorten.  One option is to
+simply rename any files you'd like in the operating system.  Another option is to setup some
+configuration options in your config files to reference the sound file by a different name which
+is what we will do next.
 
 I downloaded a triangle sound from `www.freesound.org <http://www.freesound.org/>`_ that has an
 obnoxious filename: ``22783__franciscopadilla__80-mute-triangle.wav``.  I would rather just refer
@@ -133,7 +133,8 @@ text:
 
 
 That simple configuration change will allow the sound as to be referred to as ``triangle`` wherever
-you refer to that sound in other configuration locations.
+you refer to that sound in other configuration locations. *Note*: be sure to include the complete
+file name, including the extension when using the ``file:`` setting.
 
 Setting the volume of a sound
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,18 +158,21 @@ master volume.  Volume can either be entered as a number between 0.0 and 1.0 or 
 information).  You will probably have to spend some time adjusting the volumes of many sounds in
 your machine to get everything to sound just the way you want it.
 
+*Note*: If you hear distortion in your sounds when they are played back in a mix, be sure to try
+ lowering the volume as you may be experiencing clipping.
+
 Other sound settings
 ~~~~~~~~~~~~~~~~~~~~
 
 There are many other settings you may wish to change for some sounds in your machine.
 
 + How do you cause your sound to loop 3 times every time it is played?  Add ``loops: 3`` to the
-  config section for your sound.
+  config section for your sound. Loop your sound indefinitely? Add ``loops: -1``.
 + How do you adjust the which sounds can preempt other sounds and how long a sound may wait to be
   played before it is discarded?  Use the ``priority:`` and ``max_queue_time:`` settings.
 + How do you send events to MPF when a sound begins or finished playing?  Use the
   ``events_when_played:`` and ``events_when_stopped:`` settings.
-+ What about ducking? Just what is it anyway?  Read about :doc:`Ducking </sound/ducking>` in the
++ What about ducking? Just what is it anyway?  Learn about :doc:`Ducking </sound/ducking>` in the
   documentation.
 
 The documentation for the :doc:`sounds: </config/sounds>` configuration section contains further
@@ -219,8 +223,8 @@ the machine configuration file, a mode configuration file, or even in a show ste
 them).  To keep things simple here, let's configure the sound player in the machine configuration
 file.
 
-The scenario in this example will be we want our song from the previous example (``song_01``) to
-play infinitely when the *attract* mode starts and stop when the *attract* mode stops.  Create the
+The scenario in this example is we want our song from the previous example (``song_01``) to play
+infinitely when the *attract* mode starts and stop when the *attract* mode stops.  Create the
 following entries in the ``sound_player:`` section of the machine config file:
 
 ::
@@ -242,6 +246,12 @@ and ``mode_attract_stopped`` is a standard MPF event that is sent whenever a mod
 is stopped.  For more information, see the :doc:`sound_player: </config_players/sound_player>`
 documentation.
 
+Finished
+--------
+
+Congratulations!  You have completed your the basic sound system setup and should have some simple
+audio playing in your machine.
+
 References
 ----------
 
@@ -250,5 +260,5 @@ References
 + :doc:`sound_system: </config/sound_system>`
 + :doc:`sounds: </config/sounds>`
 + :doc:`sound_player: </config_players/sound_player>`
-+ :doc:`Instructions for entering gain values) </config/instructions/gain_values>`
++ :doc:`Instructions for entering gain values </config/instructions/gain_values>`
 
