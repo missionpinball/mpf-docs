@@ -6,5 +6,5 @@ Sounds & Audio How To guides
    :maxdepth: 1
 
    Setting up sound for your machine <basic_setup>
-   Playing a sound with variations when a slingshot is hit <slingshots>
+   Playing a sound with variations <variations>
 
