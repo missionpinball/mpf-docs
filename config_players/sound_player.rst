@@ -65,12 +65,15 @@ Single value, type: one of the following options: play, stop. Default: ``play``
 The ``action:`` setting controls what action will be performed on the specified sound. Options for
 ``action:`` are:
 
-+ ``play`` (The specified sound will be played.  Any optional parameter values will override the
-  sound's settings.).
-+ ``stop`` (All currently playing and queued instances of the specified sound will stopped/canceled.
++ ``play`` - The specified sound will be played.  Any optional parameter values will override the
+  sound's settings.
++ ``stop`` - All currently playing and queued instances of the specified sound will stopped/canceled.
   Any optional parameter values will be ignored as the stop action takes no parameters.  There is
   currently no way to stop specific instances of a particular sound while leaving others playing,
-  but that is on the list to be implemented in a future version).
+  but that is on the list to be implemented in a future version.
++ ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
+  sound (the sound will continue to play to the end of the current loop). In addition, any queued
+  instances of the sound awaiting playback will be removed/canceled.
 
 Other available optional settings:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
