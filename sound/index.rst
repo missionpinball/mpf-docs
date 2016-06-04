@@ -19,7 +19,7 @@ being hit is posted.) You can also add sounds to your show files so they play in
 and display effects.
 
 You can think of the audio system in MPF as a sound mixing board that you control via configuration
-settings and events.  It is divided into tracks (similar to channels on a mixer), each of which has
+settings and events. It is divided into tracks (similar to channels on a mixer), each of which has
 its own properties such as name, volume and the number of sounds that may be played simultaneously.
 You can create up to 8 tracks in your sound system, although typically most machines will use 3
 tracks ("voice", "sfx", and "music"). Each track has its own queue that will hold pending sounds
@@ -29,14 +29,14 @@ include many properties that control how they will be played such as what track 
 volume, looping, priority, how long to wait in the playback queue before being discarded,
 :doc:`ducking </sound/ducking>`, etc.
 
-Sounds can be grouped together into a logical grouping called a sound pool.  Sounds pools allow you
+Sounds can be grouped together into a logical grouping called a sound pool. Sounds pools allow you
 to reference a group of sound variations as if it were a single sound. A sound pool name may be used
 anywhere a sound asset name may appear. Pools can be used for random differences in a sound (such
 as slight variations of a slingshot sound) or for an ordered sequence of sounds that will repeat.
 Another common use for sound pools is to play a random callout from a defined list when triggered.
 
 You configure your sound system (including tracks) in the :doc:`sound_system: </config/sound_system>`
-section of your machine configuration file.  You add settings for individual sound files in the
+section of your machine configuration file. You add settings for individual sound files in the
 :doc:`sounds: </config/sounds>` section and you can configure sounds to automatically play when
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
 Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
@@ -44,6 +44,7 @@ Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` secti
 There are several available :doc:`"How To" guides </howto/sounds/index>` available that go through
 the process of performing common sound and audio tasks step-by-step.
 
+Sound & Audio Table of Contents
 .. toctree::
 
    Ducking </sound/ducking>

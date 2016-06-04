@@ -119,10 +119,10 @@ configuration options in your config files to reference the sound file by a diff
 is what we will do next.
 
 I downloaded a triangle sound from `www.freesound.org <http://www.freesound.org/>`_ that has an
-obnoxious filename: ``22783__franciscopadilla__80-mute-triangle.wav``.  I would rather just refer
+undesirable filename: ``22783__franciscopadilla__80-mute-triangle.wav``.  I would rather just refer
 to it in my config files as ``triangle`` and not ``22783__franciscopadilla__80-mute-triangle``
 (which is what it will be by default).  In my ``sounds:`` section of my machine configuration file
-(see `sounds: </config/sounds>` in the documentation for more details) I can put the following
+(see :doc:`sounds: </config/sounds>` in the documentation for more details) I can put the following
 text:
 
 ::
@@ -167,12 +167,12 @@ Other sound settings
 There are many other settings you may wish to change for some sounds in your machine.
 
 + How do you cause your sound to loop 3 times every time it is played?  Add ``loops: 3`` to the
-  config section for your sound. Loop your sound indefinitely? Add ``loops: -1``.
+  config section for your sound. How do you loop a sound indefinitely? Add ``loops: -1``.
 + How do you adjust the which sounds can preempt other sounds and how long a sound may wait to be
   played before it is discarded?  Use the ``priority:`` and ``max_queue_time:`` settings.
 + How do you send events to MPF when a sound begins or finished playing?  Use the
   ``events_when_played:`` and ``events_when_stopped:`` settings.
-+ What about ducking? Just what is it anyway?  Learn about :doc:`Ducking </sound/ducking>` in the
++ What about ducking? Just what is it anyway?  Learn about :doc:`ducking </sound/ducking>` in the
   documentation.
 
 The documentation for the :doc:`sounds: </config/sounds>` configuration section contains further
