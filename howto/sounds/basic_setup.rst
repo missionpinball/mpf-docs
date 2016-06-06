@@ -158,8 +158,8 @@ master volume.  Volume can either be entered as a number between 0.0 and 1.0 or 
 information).  You will probably have to spend some time adjusting the volumes of many sounds in
 your machine to get everything to sound just the way you want it.
 
-*Note*: If you hear distortion in your sounds when they are played back in a mix, be sure to try
- lowering the volume as you may be experiencing clipping.
+*Note:* If you hear distortion in your sounds when they are played back in a mix, be sure to try
+lowering the volume as you may be experiencing clipping.
 
 Other sound settings
 ~~~~~~~~~~~~~~~~~~~~

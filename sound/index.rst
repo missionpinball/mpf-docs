@@ -45,6 +45,8 @@ There are several available :doc:`"How To" guides </howto/sounds/index>` availab
 the process of performing common sound and audio tasks step-by-step.
 
 Sound & Audio Table of Contents
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. toctree::
 
    Ducking </sound/ducking>
