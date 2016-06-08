@@ -16,7 +16,9 @@ There are two versions of Python, a 32-bit version and a 64-bit version, and you
 should pick the one that matches the version of Windows you're using.
 
 The easiest way to tell whether you have 32-bit or 64-bit
-Windows is to open a command prompt and run (note this is case-sensitive):
+Windows is to open a command prompt and run (note this is case-sensitive). If
+you don't know how to open a command prompt, scan ahead for the instructions
+later in this step.
 
 ::
 
@@ -51,6 +53,24 @@ Note that you have to log out and then log back in for the path to be updated
 once you install Python. If you don't, then you'll get an error about Python not
 being found when you try to install MPF.
 
+Now open a command prompt and make sure you can run Python. To open a command
+prompt, right-click on the Windows button and select "Command Prompt" from the
+menu:
+
+.. image:: windows_command_prompt.jpg
+
+That will pop up a window where you can type commands. Then run the following
+command:
+
+::
+
+    python --version
+
+That should print which version of Python is installed, like this:
+
+.. image:: windows_python_from_command_prompt.jpg
+
+
 Note for running Python 2 and Python 3 side-by-side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,27 +92,43 @@ For example, wherever you see ``python`` in the docs, you would actually type
 Again, you only need this if you installed Python 3 on a system that already has
 Python 2 on it. If you don't want to do this, just uninstall Python 2 first.
 
-2. Install MPF
+2. Upgrade pip
 --------------
 
-Now that Python is installed, it's time to install MPF! (If you just
-installed Python now, remember to log out and log in again so the path setting
-can be updated). To actually install MPF, just open a command prompt (right-
-click on the Windows menu icon and select "Command Prompt") and type the
-following, then press <Enter>:
+Python includes a utility called "pip" which is the name of the Python Package
+Manager. This program is used to install Python packages and applications from
+the web. (Kind of like an app store for Python apps.)
+
+So the next step is to update the "pip" program itself to make sure you have the
+latest one. It's not really important to know exactly what this means right now,
+just run it. (If you just installed Python now, remember to log out and log in
+again so the path setting can be updated).
+
+Also if you have both Python 2 and Python 3 installed, remember to type
+``pip3`` instead of ``pip``.
+
+::
+
+    pip install pip --upgrade
+
+
+
+3. Install MPF
+--------------
+
+Now that Python is installed and pip is up-to-date, it's time to install MPF!
+To actually install MPF, run the following command from the command prompt:
 
 ::
 
     pip install mpf-mc
 
-(If you have both Python 2 and Python 3 installed, remember to type ``pip3``
-instead of ``pip``.)
 
-*pip* is the name of the Python Package Manager. This command is telling pip to
-install a package called "mpf-mc", which is the *Mission Pinball Framework -
-Media Controller* package. When you run this, pip will connect to the internet
-to the `Python Package Index <http:/pypi.python.org>`_  (called "PyPI") which is
-sort of like an App Store for Python apps.
+*pip* is the name of the Python Package Manager that we discussed in Step 2.
+This command is telling pip to install a package called "mpf-mc", which is the
+*Mission Pinball Framework - Media Controller* package. When you run this,
+pip will connect to the internet and the
+`Python Package Index <http://pypi.python.org>`_  (the Python app store).
 
 We have MPF registered with PyPI, and every time we update MPF, the copy of MPF
 in PyPI is updated too.
@@ -113,7 +149,7 @@ When the installation is done, you'll probably see a yellow warning saying that
 you do not have the latest version of *pip*, and telling you that you should
 upgrade it. You can do that if you want. Or not. Doesn't really matter to MPF.
 
-3. Install the video codec pack
+4. Install the video codec pack
 -------------------------------
 
 The MPF media player uses a project called Gstreamer to play video. Gstreamer is
@@ -134,7 +170,7 @@ Just copy-and-paste that entire line into the command line and press enter. It
 will download the codec pack (from the kivy.org URL) which is about 90 MB and
 install them.
 
-4. Test your installation
+5. Test your installation
 -------------------------
 
 Once MPF is installed, you can run some automated tests to make sure that
@@ -193,9 +229,10 @@ which will show you how to start building your own game in MPF!
 Running MPF
 -----------
 
-Starting with MPF 0.30, you run MPF by running the "mpf" command directly. (e
-.g. you do not have to run "python" from the command prompt). For example, to
-launch both the MPF game engine and the media controller, you simply run:
+Starting with MPF 0.30, you run MPF by running the "mpf" command directly from
+within your machine folder. (e.g. you do not have to run "python" from the
+command prompt). For example, to launch both the MPF game engine and the media
+controller, you simply run:
 
 ::
 
@@ -204,7 +241,7 @@ launch both the MPF game engine and the media controller, you simply run:
 In other words, you only have to use those ``python`` commands above for testing
 MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
 
-See the :doc:`/running/index` for details and command-line options.
+See the section :doc:`/running/index` for details and command-line options.
 
 
 Keeping MPF up-to-date
