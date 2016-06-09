@@ -12,7 +12,7 @@ proceeding with this guide.
 The first step in the process of setting up sound for your machine is to setup the
 ``sound_system:`` section of your machine configuration file (see
 :doc:`sound_system: </config/sound_system>` for more detailed information).  Generally you can
-simply use the default values for the settings in the section.  However, you need to define the
+just use the default values for the settings in the section.  However, you do need to define the
 tracks the sound system will use.  Tracks can be thought of as channels on an audio mixer with
 their own volume and other settings.  The example below shows a typical pinball machine sound
 setup with three tracks: *music*, *voice*, and *sfx*.  The ``simultaneous_sounds:`` setting controls
