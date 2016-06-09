@@ -84,7 +84,7 @@ files to match.)
 
 master_volume:
 ~~~~~~~~~~~~~~
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
 -inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 The overall volume of the MPF sound system. As with all volume parameters in MPF, this item can be represented
@@ -114,7 +114,7 @@ the default will be used).
 
 simultaneous_sounds:
 ````````````````````
-Single value, type: ``integer``. Default: ``8``
+Single value, type: ``integer`` (between ``1`` and ``32``). Default: ``8``
 
 This sets the maximum number of simultaneous sounds that can be played on this track. The example
 config file above shows the *music* and *voice* tracks with a max of 1 simultaneous sound playing,
@@ -128,7 +128,7 @@ more information).
 
 volume:
 ```````
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
 -inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 This is the volume setting for this track (how loud will it be), as either a value between 0.0 and
