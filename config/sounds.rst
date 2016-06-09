@@ -60,6 +60,15 @@ A list of one or more names of events that MPF will post when this sound stops p
 in the MPF config list format. These events are posted exactly as they’re entered.  These events can
 be useful to trigger some action when a callout has finished playing.
 
+events_when_looping:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this sound loops back to the
+beginning while playing. Enter the list in the MPF config list format. These events are posted
+exactly as they’re entered.  These events can be useful to trigger some action when a callout has
+finished playing.
+
 file:
 ~~~~~
 Single value, type: ``string``. Default: ``None``
