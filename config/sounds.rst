@@ -98,7 +98,7 @@ should play again after the first time through.
 
 max_queue_time:
 ~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``None``
 
 Specifies the maximum time this sound can be queued before it's played. If the time between when
@@ -130,7 +130,7 @@ This is the name of the track this sound will play on. (You configure tracks and
 
 volume:
 ~~~~~~~
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
 -inf, db, or float between 0.0 and 1.0. Default: ``0.5``
 
 The volume of this sound.  This value is factored into the track and overall MPF volumes. It's used
@@ -174,7 +174,7 @@ or a number of samples.
 
 attenuation:
 ^^^^^^^^^^^^
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values) </config/instructions/gain_values>`)
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
 -inf, db, or float between 0.0 and 1.0. Default: ``1.0``
 
 The attenuation (gain) to apply to the target track while ducking.  ``attenuation:`` controls how
