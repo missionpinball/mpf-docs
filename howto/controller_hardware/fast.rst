@@ -125,19 +125,17 @@ Full details of the port options as well as the other options
 available here are in the ` `fast:` section`_ of the configuration
 file reference. Note that if you're using Windows and you have COM
 port numbers greater than 9, you may have to enter the port names like
-this: `\\.\COM10, \` `\.\COM11, \` `\.\COM12`, etc. (It's a Windows
+this: ``\\.\COM10, \\.\COM11, \\.\COM12``, etc. (It's a Windows
 thing. Google it for details.) That said, it seems that Windows 10 can
-just use the port names like normal: `com10, com11, com12`, so try
+just use the port names like normal: ``com10, com11, com12``, so try
 that first and then try the alternate format if it doesn't work.
 
 
-
-3. Configuring Switches
+4. Configuring Switches
 -----------------------
 
-For switches, you can use most of the settings as outlined in the `
-`switches:``_ section of the config file reference. There are only a
-few things that are FAST-specific:
+For switches, you can use most of the settings as outlined in the :doc:`switches: <config/switches>`
+section of the config file reference. There are only a few things that are FAST-specific:
 
 
 
@@ -153,7 +151,7 @@ either integers or hex, whichever is easiest for you. Some people like
 hex because that's what the serial terminal shows when you hit
 switches manually. Other people like integers because they're normal
 humans. (You can specify whether your numbers will be in hex or
-integer format in the ` `fast: config_number_format:` section`_ of
+integer format in the ``fast: config_number_format:`` section of
 your config file.)
 
 
@@ -195,7 +193,7 @@ fine-tune them. For example:
             debounce_open: 12
             debounce_close: 6
 
-4. Configuring coils & drivers
+5. Configuring coils & drivers
 ------------------------------
 
 Coil and driver numbering with FAST I/O boards is similar to switch
@@ -312,7 +310,7 @@ yet. If you need it, contact us and we'll get it added.
 
 
 
-4. Configuring LEDs
+6. Configuring LEDs
 -------------------
 
 Each FAST Pinball Controllers has a built-in 4-channel RGB LED
@@ -321,7 +319,7 @@ controller uses serially-controlled LEDs (where each LED element has a
 little serial protocol decoder chip in it), allowing you to drive
 dozens of LEDs from a single data wire. These LEDs are generally known
 as "WS2812" (or similar). You can buy them from many different
-companies, and they're what's sold as the "`NeoPixel`_" brand of
+companies, and they're what's sold as the "NeoPixel" brand of
 products from Adafruit. (They have all different shapes and sizes.)
 There are two ways you can configure RGB LEDs for your FAST
 controller: by channel & output number, or directly with the FAST
@@ -331,7 +329,7 @@ channel and output, like this:
 
 ::
 
-
+leds:
     l_led0:
         number: 0-0
     l_right_ramp:
@@ -347,7 +345,7 @@ integers, even if the rest of your FAST settings are in hex.
 
 
 
-6. Configuring matrix lamps
+7. Configuring matrix lamps
 ---------------------------
 
 The FAST WPC controller controls the lamp matrix of WPC machines. This
@@ -358,7 +356,7 @@ manual, so there's nothing FAST-specific you have to do.
 
 
 
-7. Configuring a DMD
+8. Configuring a DMD
 --------------------
 
 The FAST WPC and Core controllers can control traditional mono-color
