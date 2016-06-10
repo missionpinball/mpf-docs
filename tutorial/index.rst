@@ -32,3 +32,4 @@ Tutorial Steps
    1. Prerequisites <1_prerequisites>
    2. Creating your machine folder <2_creating_a_new_machine>
    3. Get flipping! <3_get_flipping>
+   4. Adjusting your flipper power <4_adjust_flipper_power>

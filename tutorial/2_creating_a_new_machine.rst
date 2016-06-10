@@ -115,8 +115,8 @@ You should get results that look something like this:
 You might notice that it seems like the command is hung because you didn't get the command line back. Actually what's
 happening is MPF is running! Your machine is live and sitting in the attract mode!!
 
-At this point since we are running a completely blank config, the only way to stop MPF is to hit ``CTRL+C`` (or ``CMD+C``
-on the Mac). When you do that, you should see a few more lines appear, like this:
+At this point since we are running a completely blank config, the only way to stop MPF is to hit ``CTRL+C`. When you do
+that, you should see a few more lines appear, like this:
 
 ::
 

@@ -2,7 +2,7 @@ Tutorial step 1: Prerequisites
 ==============================
 
 Before we dig into building your own machine's configuration, let's make sure
-you have everything you need to get started:
+you have everything you need to get started.
 
 
 1. You don't need a physical pinball machine yet
