@@ -389,11 +389,11 @@ YAML files are:
 (F)Enabling your flippers
 -------------------------
 
-Just running MPF with your game's config fileisn't enough to get your
+Just running MPF with your game's config file isn't enough to get your
 flippers working. By default, they are only turned on when a ball
 starts, and they automatically turn off when a ball ends. But the
 basic config file doesn't have a start button or your ball trough or
-plunger lange configured, so you can't actually start a game yet. So
+plunger lane configured, so you can't actually start a game yet. So
 in order to get your flippers working, we need to add a configuration
 into each flipper's entry in your config file that tells MPF that we
 just want to enable your flippers right away, without an actual game.
