@@ -430,8 +430,7 @@ coils, then you won't have the ``hold_coil:`` entries here.
 
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
-have a physical machine yet then you can skip directly to Step 4 - Adjusting
-your flipper power.
+have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adjust_flipper_power'.
 
 
 7. Configure MPF to use your physical pinball controller
