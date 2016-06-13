@@ -92,6 +92,7 @@ etc.), and YAML was the best trade-off in terms of having the features we needed
 By the way, at some point we'll create GUI tools you can use to build your configs instead of having to hand-edit
 YAML files, but that's probably a few years away, so in the meantime, get used to YAML. :)
 
+
 2. Enter the hardware numbers for your switches
 -----------------------------------------------
 
@@ -142,9 +143,7 @@ other stuff that's important that you probably never thought about.
 If you have dual-wound coils, your ``coils:`` section of the documentation
 should look like this:
 
-
 ::
-
 
     coils:
         c_flipper_left_main:
@@ -157,7 +156,6 @@ should look like this:
         c_flipper_right_hold:
             number: 3
             allow_enable: yes
-
 
 Again, note each coil name is indented four spaces, and each "number"
 listed under them is indented eight spaces, there's no space before
@@ -178,6 +176,7 @@ starting a fire.
 So in the case if your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
 to act as a flipper, that coil need to be allowed to be enabled (held on).
 
+
 4. Add your flipper "devices"
 -----------------------------
 
@@ -189,7 +188,6 @@ flipper device which links together one switch and one (or two) coils
 to become a "flipper". MPF supports dozens of different types of
 :doc:`/devices/index`, which, broadly-speaking, and be broken down into two
 classes:
-
 
 + There are low level physical devices which you actually connect
   to your pinball controller. These are coils, switches, matrix lights,
@@ -248,7 +246,6 @@ want to use a single winding), make sure you've read our
 works. If you'd like to use single-wound flipper coils, you need to do
 two things in your config file:
 
-
 + First, you can remove the ``hold_coil:`` entries from your two
   flippers since you don't have hold coils.
 + Second, you need to add a ``hold_power:`` entry to each of your two
@@ -257,7 +254,7 @@ two things in your config file:
   that coil when its being held on.
 
 Here's an example of what the ``coils:`` and ``flippers:`` sections of
-your config file would look like if you're using single wound coils .
+your config file would look like if you're using single wound coils.
 (The ``switches:`` section would be the same in both cases):
 
 ::
@@ -291,6 +288,7 @@ correct setting or not. We can fine-tune that later. (And again,
 *hold_power* is only used with single-wound coils. Dual-wound coils
 fire both windows at full power all the time, since the hold winding is
 designed to be energized at full power.)
+
 
 5. Try running MPF to make sure your config file is ok
 ------------------------------------------------------
@@ -383,6 +381,7 @@ Again, recapping the rules of YAML:
 + Make sure you *do* have a space *after* each colon.
 + Make sure you have the ``#config_version=4`` as the first line in your file.
 
+
 6. Enabling your flippers
 -------------------------
 
@@ -403,7 +402,6 @@ We're almost there! Simply adding flipper devices to your config file gives MPF 
 flippers work, however, in real pinball machines, the flippers don't work in attract mode. So to get them working "for
 real", we need to get a game setup.
 
-
 However, setting up a game requires a start button and balls and all sorts of other things. So we're going to take a
 shortcut for now just to enable the flippers in a quick-and-dirty way. Later on in the tutorial we'll remove the shortcut
 and configure the flippers for real.
@@ -416,7 +414,7 @@ The shortcut we'll take is to add the following config line to each of your flip
 
 We'll cover exactly what this means later on. (Basically it's telling
 each of your flippers that they should enable themselves when MPF is booting up, rather then them waiting for a
-ball to start.) So now the ``flippers``: section of your config file should look like this: (If you have single-wound
+ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
 coils, then you won't have the ``hold_coil:`` entries here.
 
 
