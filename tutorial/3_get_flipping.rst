@@ -238,8 +238,7 @@ its strong initial pulse, and then it will flip the current on & off
 really fast (really fast, like hundreds of times per second) to keep
 the flipper in the 'up' position without overheating it.
 
-If you have
-single-wound flipper coils (or if you have traditional dual-wound
+If you have single-wound flipper coils (or if you have traditional dual-wound
 coils but you don't want to waste two drivers per flipper and you just
 want to use a single winding), make sure you've read our
 :doc:`/tech_note/flipper_theory` tech note for all the details about how that
@@ -279,7 +278,6 @@ your config file would look like if you're using single wound coils.
             main_coil: c_flipper_right_main
             activation_switch: s_right_flipper
 
-
 Note that we used a values of 2 for the *hold_power*. The *hold_power*
 setting is a whole number from 0-8 which represent a percentage of
 power that's applied when that coil is held on. (0 = 0%, 4=50%,
@@ -317,7 +315,6 @@ you setup in your config file is ok.
    INFO : Machine : Config file cache created: C:\Windows\temp\6454c58ed3dcbe5687dd7b0c0b112e00config
    INFO : Machine : Starting clock at 30.0Hz
    INFO : Mode.attract : Mode Starting. Priority: 10
-
 
 At this point you can stop it by making sure your console window has
 focus and then hitting ``CTRL+C``.
@@ -417,7 +414,6 @@ each of your flippers that they should enable themselves when MPF is booting up,
 ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
 coils, then you won't have the ``hold_coil:`` entries here.
 
-
 ::
 
     flippers:
@@ -432,10 +428,10 @@ coils, then you won't have the ``hold_coil:`` entries here.
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
-have a physical machine yet then you can skip directly to Step 4.
+have a physical machine yet then you can skip directly to Step 4 - Adjusting
+your flipper power.
 
 
 7. Configure MPF to use your physical pinball controller
@@ -520,9 +516,7 @@ will affect your coil and switch numbers). But here's the general
 idea. (This is the exact file we use with a FAST WPC controller plugged into an
 existing *Demolition Man* machine.)
 
-
 ::
-
 
     #config_version=4
 
@@ -560,7 +554,6 @@ existing *Demolition Man* machine.)
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-
 Note that the individual sections of the config file can be in any
 order. We put the ``hardware:`` section at the top, but that's just our
 personal taste. It really makes no difference.
@@ -572,12 +565,9 @@ personal taste. It really makes no difference.
 At this point you're ready to run your game, and you should be able to
 flip your flippers! Run your game with the following command:
 
-
 ::
 
-
     C:\your_machine\mpf -b
-
 
 Watch the console log for the entry about the attract mode starting.
 Once you see that then you should be able to hit your flipper buttons
@@ -610,7 +600,6 @@ What if it doesn't work?
 If your game doesn't flip while you're running this config, there are a
 few things it could be: If the game software runs but you don't have
 any flipping, check the following:
-
 
 + Make sure you're *not* using the ``-x`` command line option, since
   that tells MPF to run in software-only mode meaning it won't talk to
@@ -648,13 +637,13 @@ If MPF crashes or gives an error:
   those ports via a terminal emulator, make sure you've disconnected from
   the port in that software before running MPF.
 
-If a flipper gets stuck on :
+If a flipper gets stuck on:
 
 + Really this shouldn't happen. :) But it did on our machine just now
   and we really really confused. :) It turns out it was our flipper
   button which was stuck in the "on" position. The *Judge Dredd*
   machine we were using at the time had those aftermarket magnetic
-  sensor buttons with the little magnets on the button flags, and one of
+  sensor buttons with the little magnets on the button flags, one of
   them came unglued and slipped out of alignment, making the switch
   stuck in the "on" position.
 
