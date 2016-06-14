@@ -1,7 +1,6 @@
 Tutorial step 4: Adjust your flipper power
 ==========================================
 
-
 We casually mentioned in the previous step that MPF uses a very low
 default power setting for coils--mainly because we don't want to risk blowing
 apart some 40-year-old coil mechanism with a power setting that's too high. (Ask us
@@ -12,6 +11,7 @@ look at how you can adjust and fine-tune the power of your flipper
 coils. The good news is that everything you learn here will 100% apply
 to all the other coils in your machine (slingshots, pop bumpers, ball
 ejects, the knocker, drop target resets, etc.)
+
 
 1. Adjust coil pulse times
 --------------------------
@@ -72,8 +72,7 @@ like this:
             pulse_ms: 20
         c_flipper_right_hold:
             number: 03
-            allow_enable: yes
-
+            allow_enable: true
 
 Notice that we only added ``pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their

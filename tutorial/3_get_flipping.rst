@@ -92,6 +92,7 @@ etc.), and YAML was the best trade-off in terms of having the features we needed
 By the way, at some point we'll create GUI tools you can use to build your configs instead of having to hand-edit
 YAML files, but that's probably a few years away, so in the meantime, get used to YAML. :)
 
+
 2. Enter the hardware numbers for your switches
 -----------------------------------------------
 
@@ -142,9 +143,7 @@ other stuff that's important that you probably never thought about.
 If you have dual-wound coils, your ``coils:`` section of the documentation
 should look like this:
 
-
 ::
-
 
     coils:
         c_flipper_left_main:
@@ -157,7 +156,6 @@ should look like this:
         c_flipper_right_hold:
             number: 3
             allow_enable: yes
-
 
 Again, note each coil name is indented four spaces, and each "number"
 listed under them is indented eight spaces, there's no space before
@@ -178,6 +176,7 @@ starting a fire.
 So in the case if your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
 to act as a flipper, that coil need to be allowed to be enabled (held on).
 
+
 4. Add your flipper "devices"
 -----------------------------
 
@@ -189,7 +188,6 @@ flipper device which links together one switch and one (or two) coils
 to become a "flipper". MPF supports dozens of different types of
 :doc:`/devices/index`, which, broadly-speaking, and be broken down into two
 classes:
-
 
 + There are low level physical devices which you actually connect
   to your pinball controller. These are coils, switches, matrix lights,
@@ -240,14 +238,12 @@ its strong initial pulse, and then it will flip the current on & off
 really fast (really fast, like hundreds of times per second) to keep
 the flipper in the 'up' position without overheating it.
 
-If you have
-single-wound flipper coils (or if you have traditional dual-wound
+If you have single-wound flipper coils (or if you have traditional dual-wound
 coils but you don't want to waste two drivers per flipper and you just
 want to use a single winding), make sure you've read our
 :doc:`/tech_note/flipper_theory` tech note for all the details about how that
 works. If you'd like to use single-wound flipper coils, you need to do
 two things in your config file:
-
 
 + First, you can remove the ``hold_coil:`` entries from your two
   flippers since you don't have hold coils.
@@ -257,7 +253,7 @@ two things in your config file:
   that coil when its being held on.
 
 Here's an example of what the ``coils:`` and ``flippers:`` sections of
-your config file would look like if you're using single wound coils .
+your config file would look like if you're using single wound coils.
 (The ``switches:`` section would be the same in both cases):
 
 ::
@@ -282,7 +278,6 @@ your config file would look like if you're using single wound coils .
             main_coil: c_flipper_right_main
             activation_switch: s_right_flipper
 
-
 Note that we used a values of 2 for the *hold_power*. The *hold_power*
 setting is a whole number from 0-8 which represent a percentage of
 power that's applied when that coil is held on. (0 = 0%, 4=50%,
@@ -291,6 +286,7 @@ correct setting or not. We can fine-tune that later. (And again,
 *hold_power* is only used with single-wound coils. Dual-wound coils
 fire both windows at full power all the time, since the hold winding is
 designed to be energized at full power.)
+
 
 5. Try running MPF to make sure your config file is ok
 ------------------------------------------------------
@@ -319,7 +315,6 @@ you setup in your config file is ok.
    INFO : Machine : Config file cache created: C:\Windows\temp\6454c58ed3dcbe5687dd7b0c0b112e00config
    INFO : Machine : Starting clock at 30.0Hz
    INFO : Mode.attract : Mode Starting. Priority: 10
-
 
 At this point you can stop it by making sure your console window has
 focus and then hitting ``CTRL+C``.
@@ -383,8 +378,21 @@ Again, recapping the rules of YAML:
 + Make sure you *do* have a space *after* each colon.
 + Make sure you have the ``#config_version=4`` as the first line in your file.
 
+
 6. Enabling your flippers
 -------------------------
+
+Just running MPF with your game's config file isn't enough to get your
+flippers working. By default, they are only turned on when a ball
+starts, and they automatically turn off when a ball ends. But the
+basic config file doesn't have a start button or your ball trough or
+plunger lane configured, so you can't actually start a game yet. So
+in order to get your flippers working, we need to add a configuration
+into each flipper's entry in your config file that tells MPF that we
+just want to enable your flippers right away, without an actual game.
+(This is just a temporary setting that we'll remove later.) To do
+this, add the following entry to each of your flippers in your config
+file:
 
 If you're following this tutorial with a physical pinball machine attached, you're probably excited to get flipping.
 We're almost there! Simply adding flipper devices to your config file gives MPF the information it needs to make your
@@ -403,9 +411,8 @@ The shortcut we'll take is to add the following config line to each of your flip
 
 We'll cover exactly what this means later on. (Basically it's telling
 each of your flippers that they should enable themselves when MPF is booting up, rather then them waiting for a
-ball to start.) So now the ``flippers``: section of your config file should look like this: (If you have single-wound
+ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
 coils, then you won't have the ``hold_coil:`` entries here.
-
 
 ::
 
@@ -421,10 +428,9 @@ coils, then you won't have the ``hold_coil:`` entries here.
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
-have a physical machine yet then you can skip directly to Step 4.
+have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adjust_flipper_power'.
 
 
 7. Configure MPF to use your physical pinball controller
@@ -509,9 +515,7 @@ will affect your coil and switch numbers). But here's the general
 idea. (This is the exact file we use with a FAST WPC controller plugged into an
 existing *Demolition Man* machine.)
 
-
 ::
-
 
     #config_version=4
 
@@ -549,7 +553,6 @@ existing *Demolition Man* machine.)
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-
 Note that the individual sections of the config file can be in any
 order. We put the ``hardware:`` section at the top, but that's just our
 personal taste. It really makes no difference.
@@ -561,12 +564,9 @@ personal taste. It really makes no difference.
 At this point you're ready to run your game, and you should be able to
 flip your flippers! Run your game with the following command:
 
-
 ::
 
-
     C:\your_machine\mpf -b
-
 
 Watch the console log for the entry about the attract mode starting.
 Once you see that then you should be able to hit your flipper buttons
@@ -599,7 +599,6 @@ What if it doesn't work?
 If your game doesn't flip while you're running this config, there are a
 few things it could be: If the game software runs but you don't have
 any flipping, check the following:
-
 
 + Make sure you're *not* using the ``-x`` command line option, since
   that tells MPF to run in software-only mode meaning it won't talk to
@@ -637,13 +636,13 @@ If MPF crashes or gives an error:
   those ports via a terminal emulator, make sure you've disconnected from
   the port in that software before running MPF.
 
-If a flipper gets stuck on :
+If a flipper gets stuck on:
 
 + Really this shouldn't happen. :) But it did on our machine just now
   and we really really confused. :) It turns out it was our flipper
   button which was stuck in the "on" position. The *Judge Dredd*
   machine we were using at the time had those aftermarket magnetic
-  sensor buttons with the little magnets on the button flags, and one of
+  sensor buttons with the little magnets on the button flags, one of
   them came unglued and slipped out of alignment, making the switch
   stuck in the "on" position.
 
