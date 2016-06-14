@@ -4,6 +4,28 @@ Sound & Audio Tips & Tricks
 This page contains a collection of miscellaneous tips and tricks when working with the sound &
 audio features in MPF.
 
+Review ``max_queue_time`` Settings for Long Sounds/Music
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``max_queue_time`` settings for sounds can lead to some unexpected behavior, especially for
+longer sounds (like music).  This setting specifies the maximum time a sound can be queued before
+it's played. On a track that supports only a single sound at a time (like a typical music track),
+playing a sound with a priority that is less than or equal to the currently playing sound will
+have to wait until the current sound is finished (it will be added to the queue).  That may be
+acceptable to you, but you may also be surprised when you hear the sound a minute or two later.
+
+It is suggested you review all your ``max_queue_time`` settings to make sure they make sense for
+the sound and situation in which they will be played.  The default setting of ``None`` means the
+sound will eventually be played, no matter how long the wait in the queue is.  A value of ``0``
+specifies the sound will be immediately discarded if the track is already busy playing its
+maximum number of sounds.  A value of ``2 secs`` specifies the sound will wait in the queue for
+2 seconds to be played before being discarded. Sound effects for things like slingshots and pop
+bumpers probably don't make much sense if they are played more than 250 milliseconds after they
+are hit so setting ``max_queue_time`` to a value between ``0`` and ``250 ms`` is recommended.
+On the other hand, an extra ball callout is probably fine to play a few seconds after the ball
+is earned. Go through your sounds and consider how to set this setting for each one.
+
+For more information, see the :doc:`sounds </config/sounds>` documentation.
 
 Synchronizing Sound With an LED Show
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
