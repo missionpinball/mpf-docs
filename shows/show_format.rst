@@ -125,10 +125,84 @@ millisecond values. For example:
 Note that since shows use YAML formatting, you can use the hash sign (``#``) to
 add comments which MPF ignores.
 
+Setting step duration
+---------------------
+
+Instead of specifying the "time" when a step starts, you can also specify the "duration" of how long a step lasts (which
+is essentially specifying when a step ends). The difference is subtle, but each is useful in different situations.
+
+For example, the following to shows are identical:
+
+::
+
+   - time: 0
+     leds:
+       led1: red
+   - time: +1
+     leds:
+       led1: off
+   - time: +1
+
+::
+
+   - duration: 1
+     leds:
+       led1: red
+   - duration: 1
+     leds:
+       led1: off
+
+You can also mix and match "time" and "duration" settings in the same show (and even in the same step). The only thing
+you can't do is have a "time" setting in a step that follows a step with "duration" (since those two values would
+essentially mean the same thing and it would be confusing).
+
 Setting the duration of the final step
 --------------------------------------
-Since the time values of shows control the timing of when a step starts, you
-need to add a final step with no actions to the end of your show which controls
-the duration of the final step.
+Most people find it easiest to just use either "time" or "duration" consistently throughout a show. The only practical
+difference you need to think about is how the final step works.
 
-If you don't do this, MPF will automatically add an empty final step with a time of 1 second.
+For example, with "time"-based steps, you're specifying the time when a step starts. So when does a step stop? When the
+next one starts. But what about your last step in the show? How long should it run for? If you just use time-based
+steps, you'd still want to specify a "duration" for the final step, like this:
+
+::
+
+   - time: 0
+     leds:
+       led1: red
+   - time: +1
+     leds:
+       led1: green
+   - time: +1
+     duration: 1
+     leds:
+       led1: blue
+
+"Holding" the final step
+------------------------
+
+You can set a ``duration: -1`` for an "infinite" duration of a step. (Think of this like a hold or pause.) This is most
+useful in shows that you want to run and then hold something in their final state. For example, maybe you want a show
+that runs once (no loop) and flashes a light which then stays on. You could do that like this:
+
+::
+
+   - time: 0
+     leds:
+       led1: red
+   - time: +250ms
+     leds:
+       led1: off
+   - time: +250ms
+     leds:
+       led1: red
+   - time: +250ms
+     leds:
+       led1: off
+   - time: +250ms
+     leds:
+       led1: red
+     duration: -1
+
+In this example, the LED would stay on (red) until that show was manually stopped or until the mode was stopped (if the
+``show_player:`` entry was in a mode config file).
