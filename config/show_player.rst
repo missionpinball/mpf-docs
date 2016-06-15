@@ -28,13 +28,6 @@ Single value, type: one of the following options: play, stop, pause, resume, adv
 .. todo::
    Add description.
 
-hold:
-~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
-
-.. todo::
-   Add description.
-
 key:
 ~~~~
 Single value, type: ``string``. Default: ``None``

@@ -33,13 +33,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
 .. todo::
    Add description.
 
-hold:
-~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
-
-.. todo::
-   Add description.
-
 loop:
 ~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -116,13 +109,6 @@ The following sections are optional in the ``states:`` section of your config. (
 action:
 ^^^^^^^
 Single value, type: one of the following options: play, stop, pause, resume, advance, update. Default: ``play``
-
-.. todo::
-   Add description.
-
-hold:
-^^^^^
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 .. todo::
    Add description.
