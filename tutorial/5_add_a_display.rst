@@ -317,6 +317,8 @@ we'll make that slide play on a different event.
 
 So in your ``slides:`` section, add another slide called ``attract_started``, like this:
 
+::
+
    slides:
      welcome_slide:
        widgets:
@@ -491,7 +493,7 @@ What if it doesn't work?
 
 If you can't get it to work, there are a few things to look at.
 
-If you get some kind of "KeyError" ``like KeyError: 'welcome_slde'``, that means that it's looking
+If you get some kind of "KeyError" like ``KeyError: 'welcome_slde'``, that means that it's looking
 for something it didn't find. Most likely this is the slide player looking for a slide that doesn't
 exist, so make sure the slide's entry in the ``slides:`` section matches the slide's name in the
 ``slide_player:`` section.
