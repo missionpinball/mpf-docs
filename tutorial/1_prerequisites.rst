@@ -1,7 +1,7 @@
 Tutorial step 1: Prerequisites
 ==============================
 
-Before we dig into building your own machine's configuration, let's make sure
+Before we dig into building your own machine's, let's make sure
 you have everything you need to get started.
 
 

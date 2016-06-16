@@ -418,75 +418,18 @@ flip over to the *attract_started* slide. Here's a screen shot:
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step5.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point,
+it’s available in the "tutorials" folder of the mpf-examples
+package that you should have downloaded in Step 1 of this tutorial.
+
+There are config files for each step, so the config for Step 5 should
+be at ``/mpf-examples/tutorial/config/step5.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 ::
 
-   C:\pinball\mpf-examples\tutorial>mpf both -c step5
-
-If you don't have access to the examples, here's the complete ``config.yaml``:
-
-::
-
-   #config_version=4
-
-   displays:
-     window:
-       width: 800
-       height: 600
-
-   slides:
-     welcome_slide:
-       widgets:
-         - type: text
-           text: PINBALL!
-           font_size: 50
-           color: red
-         - type: rectangle
-           width: 240
-           height: 60
-     attract_started:
-       widgets:
-         - text: ATTRACT MODE
-           type: text
-
-   slide_player:
-     mc_ready: welcome_slide
-     mode_attract_started: attract_started
-
-   switches:
-       s_left_flipper:
-           number: SF4
-       s_right_flipper:
-           number: SF2
-
-   coils:
-       c_flipper_left_main:
-           number: FLLM
-           pulse_ms: 25
-       c_flipper_left_hold:
-           number: FLLH
-       c_flipper_right_main:
-           number: FLRM
-           pulse_ms: 25
-       c_flipper_right_hold:
-           number: FLRH
-
-   flippers:
-       left_flipper:
-           main_coil: c_flipper_left_main
-           hold_coil: c_flipper_left_hold
-           activation_switch: s_left_flipper
-           enable_events: machine_reset_phase_3
-       right_flipper:
-           main_coil: c_flipper_right_main
-           hold_coil: c_flipper_right_hold
-           activation_switch: s_right_flipper
-           enable_events: machine_reset_phase_3
-
+   C:\mpf-examples\tutorial>mpf -c step5
 
 What if it doesn't work?
 ------------------------

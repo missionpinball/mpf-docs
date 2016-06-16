@@ -649,3 +649,34 @@ If a flipper gets stuck on:
 If you're still running into trouble, feel free to post to the mpf-users
 Google group. We'll incorporate your issues into this tutorial to
 make it easier for everyone in the future!
+
+Check out the complete config.yaml file so far
+----------------------------------------------
+
+If you want to see a complete ``config.yaml`` file up to this point, there's a "tutorial"
+machine in the mpf-examples repo that you downloaded in Step 1. (This is the same
+repo that contains the Demo Man game that you ran in Step 1.)
+
+The tutorial files are in the ``tutorial`` folder. If you just run MPF by itself
+from the tutorial game folder, you'll get an error:
+
+::
+
+   C:\mpf-examples\tutorial>mpf
+   OSError: Could not find file Z:\git\mpf-examples\tutorial\config\config
+
+This is because if you look in the ``tutorial\config`` folder, you see that there
+are lots of config files in there with names like ``step3.yaml``, ``step4.yaml``,
+etc., but there is not a file called ``config.yaml``. Since MPF looks for ``config.yaml``
+by default, it can't start because it can't find it.
+
+However, you can use the ``-c`` command line option to specify the name of the config
+file that MPF should load instead of ``config.yaml``. So if you want to run the
+example game from the tutorial associated with Step 3, it would just be this:
+
+::
+
+   C:\mpf-examples\tutorial>mpf -c step3
+
+That's telling MPF to start, using the file ``C:\mpf-examples\tutorial\config\step3.yaml``
+as its config file.

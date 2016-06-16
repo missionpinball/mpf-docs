@@ -126,3 +126,9 @@ package that you should have downloaded in Step 1 of this tutorial.
 
 There are config files for each step, so the config for Step 4 should
 be at ``/mpf-examples/tutorial/config/step4.yaml``.
+
+You can run this file directly by switching to that folder and then running the following command:
+
+::
+
+   C:\mpf-examples\tutorial>mpf -c step4
