@@ -34,3 +34,4 @@ Tutorial Steps
    3. Get flipping! <3_get_flipping>
    4. Adjusting your flipper power <4_adjust_flipper_power>
    5. Add a display <5_add_a_display>
+   6. Add keyboard control <6_keyboard>
