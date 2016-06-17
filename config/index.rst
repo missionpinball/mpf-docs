@@ -19,7 +19,6 @@ your machine-wide config, a mode-specific config, or both.
    ball_locks: <ball_locks>
    ball_saves: <ball_saves>
    bcp: <bcp>
-   bcp_player: <bcp_player>
    coil_overwrites: <coil_overwrites>
    coil_player: <coil_player>
    coils: <coils>
