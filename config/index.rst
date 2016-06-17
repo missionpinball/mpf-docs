@@ -108,7 +108,6 @@ your machine-wide config, a mode-specific config, or both.
    switches: <switches>
    system11: <system11>
    text_strings: <text_strings>
-   text_styles: <text_styles>
    tilt: <tilt>
    timers: <timers>
    trigger_player: <trigger_player>
