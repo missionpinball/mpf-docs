@@ -79,6 +79,7 @@ how MPF uses events.
    game_start <game_start>
    game_started <game_started>
    game_starting <game_starting>
+   init_done <init_done>
    init_phase_1 <init_phase_1>
    init_phase_2 <init_phase_2>
    init_phase_3 <init_phase_3>
