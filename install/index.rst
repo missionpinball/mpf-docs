@@ -16,6 +16,7 @@ from the list below:
    Windows <windows>
    Mac OS X <mac>
    Linux <linux>
+   Raspberry Pi <raspberry>
 
 
 Hardware drivers
