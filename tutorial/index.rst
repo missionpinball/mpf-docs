@@ -37,3 +37,4 @@ Tutorial Steps
    6. Add keyboard control <6_keyboard>
    7. Add your trough <7_trough>
    8. Add your plunger lane <8_plunger>
+   9. Add the start button <9_start_button>
