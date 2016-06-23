@@ -35,7 +35,7 @@ Williams / Bally System 11          X                X
 Data East                           X                X
 Stern S.A.M.                        X
 Stern Whitestar                     X
-=======+======================      =====            ====
+==============================      =====            ====
 
 See the :doc:`/howto/installation/wpc` guide for details for WPC machines. We'll
 publish guides for the other types of machines soon.
