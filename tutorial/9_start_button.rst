@@ -36,7 +36,7 @@ want act as the start button. So now your start switch in your
 ::
 
         s_start:
-            number: 10
+            number: 11
             tags: start
 
 3. Add keyboard entries for your start switch
@@ -109,3 +109,15 @@ loose on the playfield.
 At this point we're really, really close!
 There are a few more quick things we want to do, then run some checks.
 But then we're ready to play a real game!
+
+Check out the complete config.yaml file so far
+----------------------------------------------
+
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
+folder with the name ``step9.yaml``.
+
+You can run this file directly by switching to that folder and then running the following command:
+
+::
+
+   C:\mpf-examples\tutorial>mpf both -c step9

@@ -38,3 +38,8 @@ Tutorial Steps
    7. Add your trough <7_trough>
    8. Add your plunger lane <8_plunger>
    9. Add the start button <9_start_button>
+   10. Run a real game! <10_run_a_game>
+   11. Add the rest of your coils & switches <11_add_coils_switches>
+   12. Add the rest of your ball devices <12_add_ball_devices>
+   13. Add slingshots, pop bumpers, and other "autofire" devices <13_add_autofires>
+   14. Add your first mode <14_add_a_mode>

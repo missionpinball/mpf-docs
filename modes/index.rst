@@ -126,8 +126,6 @@ You'll create lots and lots of them for all sorts of things. (Basically anything
 you want which temporarily changes switches, rules, scoring, or any type of
 device behavior will be a mode in MPF.)
 
-
-
 Adding your modes to your machine configuration
 -----------------------------------------------
 
@@ -136,9 +134,7 @@ your machine configuration file and then create an entry for each mode (by
 listing the folder), like this: (It's important to have the dash in front of
 each line.)
 
-
 ::
-
 
     modes:
       - skillshot
@@ -149,14 +145,11 @@ each line.)
       - skillshot
       - watch_tower
 
-
 The reason for this is that you might have some modes in your *modes* folder
 that you're working on that aren't complete yet, or you might want to build
 different sets of configuration files that use different modes. So you have to
 list all the modes that you want to use in your machine config file for MPF to
 read in those modes.
-
-
 
 Working with mode-specific config files
 ---------------------------------------
@@ -180,11 +173,10 @@ file editor, and it's really confusing if all the tabs are named *config.yaml*!
 So we made it so each mode's config file is based on the mode name instead. In
 each mode's config file, you can add an entry called ``mode:`` which holds
 settings for the mode itself. Typically this is just a list of MPF events that
-will cause the mode to start and stop, as well asthe priority the mode runs at,
+will cause the mode to start and stop, as well as the priority the mode runs at,
 the name of the mode, and whether the mode has any custom Python code that goes
 with it. (Full details of this are in the ``mode:`` section of the configuration
 file reference.)
-
 
 Starting and stopping modes
 ---------------------------

@@ -24,7 +24,8 @@ later in this step.
 
     echo %PROCESSOR_ARCHITECTURE%
 
-If it prints ``x86``, that's 32-bit. If it prints ``x64`` or ``AMD64``, that's 64-bit.
+If it prints ``x86``, that's 32-bit. If it prints ``x64`` or ``AMD64``, that's 64-bit. (Note that it might print "AMD64"
+even if you have an Intel processor.)
 
 Here's an example of running this on a 64-bit Windows 10 machine:
 
