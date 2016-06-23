@@ -11,26 +11,24 @@ to interface with an Open Pinball Project (OPP) pinball controller.
 To use MPF with OPP, you need to configure your platform as *opp*,
 like this:
 
-
 ::
-
 
     hardware:
         platform: opp
         driverboards: gen2
 
 
-You also need to configure the `driverboards:` entry for what kind of
+You also need to configure the ``driverboards:`` entry for what kind of
 driver boards you’re controlling: right now, only *gen2* is supported.
 
 
 2. Configure the OPP-specific hardware settings
 -----------------------------------------------
 
-When you use OPP hardware with MPF, you also need to add an ` `opp:`
-section`_ to your machine-wide config which contains some OPP-
+When you use OPP hardware with MPF, you also need to add an ``opp:``
+section to your machine-wide config which contains some OPP-
 specific hardware settings. MPF's default config file
-(`mpfconfig.yaml`) contains enough default settings to get you up and
+(*mpfconfig.yaml*) contains enough default settings to get you up and
 running. The only thing you absolutely have to configure is your
 ports.
 
@@ -45,7 +43,7 @@ OPP controller, you will see a new port appear. The exact
 names and numbers of these ports will vary depending on your computer
 and what else you've plugged in in the past.
 
-Note:  USB to serial converters add latency when communicating between
+Note: USB to serial converters add latency when communicating between
 the host computer, and the target device.  It probably will not matter,
 but if given the choice between a "real" serial port, and a USB-serial
 port converter, the "real" serial port will have less latency.  The
@@ -64,20 +62,20 @@ such as *COM7* appear, you'd set your config like this:
         ports: COM7
 
 Full details of the port options as well as the other options
-available here are in the ` `opp:` section`_ of the configuration
+available here are in the ``opp:`` section of the configuration
 file reference. Note that if you're using Windows and you have COM
 port numbers greater than 9, you may have to enter the port names like
-this: `\\.\COM10, \` `\.\COM11, \` `\.\COM12`, etc. (It's a Windows
+this: ``\\.\COM10`` ``\\.\COM11`` ``\\.\COM12``, etc. (It's a Windows
 thing. Google it for details.) That said, it seems that Windows 10 can
-just use the port names like normal: `com10, com11, com12`, so try
+just use the port names like normal: ``com10, com11, com12``, so try
 that first and then try the alternate format if it doesn't work.
 
 
 3. Configuring Switches
 -----------------------
 
-For switches, you can use most of the settings as outlined in the `
-`switches:``_ section of the config file reference. There are only a
+For switches, you can use most of the settings as outlined in the
+``switches:`` section of the config file reference. There are only a
 few things that are OPP-specific:
 
 Number:
@@ -91,9 +89,7 @@ numbers 24 to 31. The switch is numbered using the position of the
 OPP card (starting at 0), then a '-', and finally the switch number
 on the card.
 
-
-+ Enter them as a combination of board-switch, like `0-12`.
-
+Enter them as a combination of board-switch, like ``0-12``.
 
 ::
 

@@ -50,6 +50,7 @@ Snux System 11 driver board
 
 Open Pinball Project Gen2 controllers
 -------------------------------------
+* Supports many combinations of wing boards for drivers, switches, & incandescent lights (:doc:`How To </howto/controller_hardware/opp>`
 
 Pololu Maestro servo controllers
 --------------------------------
