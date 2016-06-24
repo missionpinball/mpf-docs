@@ -45,3 +45,4 @@ Tutorial Steps
    14. Add your first mode <14_add_a_mode>
    15. Add scoring <15_scoring>
    16. Add an attract mode display show <16_attract_mode_show>
+   17. Add lights (or LEDs) <17_add_lights_leds>
