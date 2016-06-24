@@ -71,7 +71,9 @@ without the ``-x`` command line option. (If you don't have a physical
 machine and you want to simulate a game using the keyboard keys,
 skip to Step 4 below.)
 
-C:\pinball\your_machine>mpf both -v
+::
+
+  C:\pinball\your_machine>mpf both -v
 
 Make sure you have at least one ball in the trough and then run your
 game. The display should display "ATTRACT MODE." Hit the start button.

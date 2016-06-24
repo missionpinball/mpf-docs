@@ -41,7 +41,7 @@ Tutorial Steps
    10. Run a real game! <10_run_a_game>
    11. Add the rest of your coils & switches <11_add_coils_switches>
    12. Add the rest of your ball devices <12_add_ball_devices>
-   13. Add slingshots, pop bumpers, and other "autofire" devices <13_add_autofires>
+   13. Add "autofire" devices <13_add_autofires>
    14. Add your first mode <14_add_a_mode>
    15. Add scoring <15_scoring>
    16. Add an attract mode display show <16_attract_mode_show>

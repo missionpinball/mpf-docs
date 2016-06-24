@@ -137,24 +137,24 @@ again. Add the potato text entry, like this:
 
 ::
 
-slide_player:
-  mode_base_started:
-    widgets:
-      - type: text
-        text: (score)
-        number_grouping: true
-        min_digits: 2
-      - type: text
-        text: PLAYER (number)
-        y: bottom
-        x: left
-      - type: text
-        text: BALL (ball)
-        y: bottom
-        x: right
-      - type: text
-        text: "POTATO VALUE: (potato)"
-        y: 40%
+   slide_player:
+     mode_base_started:
+       widgets:
+         - type: text
+           text: (score)
+           number_grouping: true
+           min_digits: 2
+         - type: text
+           text: PLAYER (number)
+           y: bottom
+           x: left
+         - type: text
+           text: BALL (ball)
+           y: bottom
+           x: right
+         - type: text
+           text: "POTATO VALUE: (potato)"
+           y: 40%
 
 Notice that we put ``text: "POTATO VALUE: (potato)"`` in quotes. That's because we actually want to show the colon as part
 of the text that's displayed on the screen. However colons are important in YAML files. So if we made our entry

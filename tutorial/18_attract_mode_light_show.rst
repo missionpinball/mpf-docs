@@ -111,7 +111,7 @@ every step.)
 
 This new show file is just like your existing display show, except this
 one contains settings for lights or LEDs. So to get it to play, add it to
-the ``show_player`` section of your attract mode config file.
+the ``show_player:`` section of your attract mode config file.
 
 To do this, move the existing display show to the next line (and indented
 under the event which triggers it). Then add a colon to the end of it, and add
@@ -121,19 +121,19 @@ OLD:
 
 ::
 
-#config_version=4
-show_player:
-  mode_attract_started: attract_display_loop
+   #config_version=4
+   show_player:
+     mode_attract_started: attract_display_loop
 
 NEW:
 
 ::
 
-#config_version=4
-show_player:
-  mode_attract_started:
-    attract_display_loop:
-    attract_light_show:
+   #config_version=4
+   show_player:
+     mode_attract_started:
+       attract_display_loop:
+       attract_light_show:
 
 Save your machine config
 file, save your light show file, and run your game. You should see
