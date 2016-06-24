@@ -44,3 +44,4 @@ Tutorial Steps
    13. Add slingshots, pop bumpers, and other "autofire" devices <13_add_autofires>
    14. Add your first mode <14_add_a_mode>
    15. Add scoring <15_scoring>
+   16. Add an attract mode display show <16_attract_mode_show>
