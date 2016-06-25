@@ -1,15 +1,10 @@
-An overview of how you use MPF to power a custom pinball machine
-================================================================
+MPF overview (what it does and how it works)
+============================================
 
-So, you want to write your own software to control a pinball machine. Awesome!
-MPF (Mission Pinball Framework) will try to make that as easy as possible, but
-it's going to be a lot of
-work. "Pinball is hard", as many have said, and even though MPF handles a lot
-of the low-level stuff, you still need to figure out your game logic, modes,
-game flow, scoring, light shows, displays, animations, sounds, bonus, etc.
-
-We assume that if you're on this page, you know what MPF is. If not, check out
-our overview of the `MPF Project <https://missionpinball.com/mpf/>`_.
+The Mission Pinball Framework (which we call "MPF") is free and open source
+software that you run on a computer (Windows, Mac, Linux, Raspberry Pi, etc.)
+to control a real, physical pinball machine. (More info one what MPF is
+`here <https://missionpinball.com/mpf/>`_.)
 
 You'll use MPF to configure and control everything in your machine, including:
 
