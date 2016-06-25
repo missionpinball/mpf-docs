@@ -106,6 +106,10 @@ words, you only have to enter the new values for the lights that
 change each step-—you don't have to enter all the lights from scratch
 every step.)
 
+Again, notice that for the color of the LEDs, you can specify a color either
+in the form of a string name or a 6-digit hex color codes. If you go with
+names, you can use `any of these colors<https://en.wikipedia.org/wiki/Web_colors#X11_color_names>`_.
+
 3. Configure your show to play
 ------------------------------
 

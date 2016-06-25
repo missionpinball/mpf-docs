@@ -144,14 +144,21 @@ again. Add the potato text entry, like this:
            text: (score)
            number_grouping: true
            min_digits: 2
+           font_size: 100
          - type: text
            text: PLAYER (number)
-           y: bottom
-           x: left
+           y: 10
+           x: 10
+           font_size: 50
+           anchor_x: left
+           anchor_y: bottom
          - type: text
            text: BALL (ball)
-           y: bottom
-           x: right
+           y: 10
+           x: right-10
+           anchor_x: right
+           anchor_y: bottom
+           font_size: 50
          - type: text
            text: "POTATO VALUE: (potato)"
            y: 40%

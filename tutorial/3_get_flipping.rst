@@ -502,6 +502,17 @@ P3-ROC with P-ROC driver & switch boards:
 
 See? They're all different.
 
+7a. Understand the "virtual" hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you just added a ``platform:`` setting to your config file which specifies a physical hardware platform, now every
+time you run MPF with that config, it will try to connect to the physical hardware. But what happens if you want to use
+MPF without your physical pinball hardware attached? In that case, you can run MPF with either the ``-x`` or ``-X``
+command line options. (Lowercase "x" is the "virtual" platform, and uppercase "X" is the "smart virtual" platform.)
+
+We'll talk more about those later. The point is that if you have configured your machine for physical hardware and then
+you want to run MPF without the physical hardware, you need to add either ``-x`` or ``-X`` to your ``mpf`` command when
+you run it.
 
 8. One last check before powering up
 ------------------------------------
@@ -600,8 +611,8 @@ If your game doesn't flip while you're running this config, there are a
 few things it could be: If the game software runs but you don't have
 any flipping, check the following:
 
-+ Make sure you're *not* using the ``-x`` command line option, since
-  that tells MPF to run in software-only mode meaning it won't talk to
++ Make sure you're *not* using the ``-x`` or ``-X`` command line options, since
+  those tells MPF to run in with the "virtual" hardware (e.g. software-only) mode meaning it won't talk to
   your actual physical hardware.
 + Verify that your switch and coil numbers are set properly. Remember
   the values of "0" and "1" and stuff that we used here are just for the

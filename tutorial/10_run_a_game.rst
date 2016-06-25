@@ -67,7 +67,7 @@ identical since you might have single-wound flipper coils.)
 -------------------------------------------
 
 If you have a physical machine attached, go ahead and run your game
-without the ``-x`` command line option. (If you don't have a physical
+without the ``-x`` or ``-X`` command line options. (If you don't have a physical
 machine and you want to simulate a game using the keyboard keys,
 skip to Step 4 below.)
 
@@ -132,7 +132,8 @@ do it:
 #. After you get bored of this, push the "1" key to activate a trough
    ball switch. At this point MPF will think a ball drained and you
    should see the display switch to Ball 2 and the trough switch should
-   open and the plunger lane switch should close.
+   open and the plunger lane switch should close as the "smart virtual"
+   platform ejects a ball from the trough to the plunger.
 #. Repeat until you're bored.
 #. After Ball 3 is over you can push "S" again to start another game.
 #. Congrats! You just played your first virtual pinball game. Yeah,
@@ -204,8 +205,3 @@ Man*, you'll have some differences in your config file, including:
   ball is in it, meaning it won't be configured as a ball device.
 + Your trough might be a Williams System 11 or early Williams WPC
   style which would be configured as two separate ball devices.
-
-
-
-
-

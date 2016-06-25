@@ -109,10 +109,17 @@ this mode will automatically start when the MPF event
 whenever a ball starts.) You can also enter a list of *stop_events* to
 control how the mode ends, though if you don't enter one here then the
 mode will automatically stop when the ball ends, so you don't have to
-specify a stop event now. The ``priority: 100`` means that everything
+specify a stop event now.
+
+The ``priority: 100`` means that everything
 this mode does will have a base priority of 100. We'll create future
 modes at higher priorities so they can take over the display, control
-lights, filter and block scoring, etc.
+lights, filter and block scoring, etc. (You read the :doc:`documentation about modes </modes/index>`,
+right?)
+
+Also, when you create your own modes, keep them between 100 and 1,000,000. MPF
+has some built-in modes above and below those values that should stay at the
+top and bottom of the priority stack.
 
 4. Add your mode to your machine-wide config file
 -------------------------------------------------
@@ -180,7 +187,7 @@ like on the console and/or the log file:
 ------------------------------------------
 
 We already mentioned that there are lots of different things you could
-add to your base mode. For now, let's configure the DMDso that it
+add to your base mode. For now, let's configure the display so that it
 shows the player's score. To do this, go back to your base mode's
 config file ( ``<your_machine>/modes/base/config/base.yaml``) and add a
 section called ``slide_player:``. Then add the following subsections so
@@ -200,14 +207,21 @@ your complete ``base.yaml`` looks like this:
            text: (score)
            number_grouping: true
            min_digits: 2
+           font_size: 100
          - type: text
            text: PLAYER (number)
-           y: bottom
-           x: left
+           y: 10
+           x: 10
+           font_size: 50
+           anchor_x: left
+           anchor_y: bottom
          - type: text
            text: BALL (ball)
-           y: bottom
-           x: right
+           y: 10
+           x: right-10
+           anchor_x: right
+           anchor_y: bottom
+           font_size: 50
 
 We briefly touched on the ``slide_player:`` functionality earlier in
 this tutorial and how you can configure it to show certain slides when
@@ -234,14 +248,23 @@ happened, so if you set a slide to play within that mode then it will
 never play because it doesn't start watching for that event until
 after it happened. (Hopefully that makes sense?)
 
-Anyway, if you look
-at the ``slide_player:`` entries under ``mode_base_started:``, you'll see
-that it shows the player's score, the player number, and the ball
-number. Note that those entries have words in parentheses.
+Anyway, if you look at the ``slide_player:`` settings, you'll see
+that the slide that is shown when the event ``mode_base_started`` is posted
+contains three text widget. One that shows the score, one the shows the
+player and one that shows the current ball number. Note that the ``text:`` entries
+for those have have some words in parentheses.
 Words in parentheses signs are variables that are replaced in real
 time when they're updated. In this case these are "player variables"
 because they are values that belong to the current player. (We'll dig
 into this more later.)
+
+Also note that there are some additional positioning settings, like ``x:``, ``y:``,
+``anchor_x:``, and ``anchor_y:``. You can read about these in our :doc:`/howto/display/widget_positioning` guide.
+
+Finally, note that the text widget showing the score has settings for ``number_grouping:`` and ``min_digits:``.
+You can read about what those do in the documentation for the text display widget.
+
+.. todo:: Add link to text widget docs once those are written.
 
 6. Remove the old slide_player: ball_started entry
 --------------------------------------------------

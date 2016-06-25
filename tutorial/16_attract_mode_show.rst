@@ -176,9 +176,8 @@ but shows that are started from modes automatically stop when that mode stops. (
 of mode-based configs!) So in this case, the ``attract_display_loop`` will automatically
 stop when the attract mode stops (which it does when a game starts).
 
-
-4. Remove the ATTRACT MODE slide_player: entry from your machine-wide config
-----------------------------------------------------------------------------
+4. Remove the "ATTRACT MODE" slide_player: entry from your machine-wide config
+------------------------------------------------------------------------------
 
 One last thing you should do here while you're at it is go back into
 the machine-wide config ``<your_machine>/config/config.yaml`` and remove the

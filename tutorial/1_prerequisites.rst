@@ -1,16 +1,15 @@
 Tutorial step 1: Prerequisites
 ==============================
 
-Before we dig into building your own machine's, let's make sure
-you have everything you need to get started.
-
+The first step to using MPF is to understand some basics about how it works and to actually
+get MPF installed on your computer. So that's what these next few steps will do.
 
 1. You don't need a physical pinball machine yet
 ------------------------------------------------
 
 First, you do *not* need to have physical hardware to go through this
 tutorial. You can complete the entire thing via MPF's "virtual" hardware
-platform which lets you run MPF on your computer with no hardware attached.
+platform which lets you run MPF on your computer with no actual hardware attached.
 
 We should point out that MPF's virtual platform is *not* pinball emulation software. There is no
 3D-rendered playfield, and it's not like Future Pinball or Visual Pinball or anything.
@@ -22,7 +21,6 @@ machine's DMD or LCD.
 
 Still, it's enough to get started. We'll show you how to map keyboard keys on your computer so
 you can "play" your machine to test it out.
-
 
 2. Read the overview of MPF
 ---------------------------
