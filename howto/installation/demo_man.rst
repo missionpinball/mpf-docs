@@ -9,19 +9,19 @@ MPF works and to verify that everything is installed correctly.
 
 There are several sample games and other things in a software repository
 called "mpf-examples" on GitHub. This repo doesn't have an installer,
-rather, you pretty much just download it and start using the examples
-it contains.
+rather, you just download it and start using the examples it contains.
 
-The example machines in mpf-examples match the branch names of MPF.
-In other words, if you're on the "master" branch of MPF, you need to
-run the examples from the "master" branch of mpf-examples. (And "dev"
-for "dev", etc.)
+Each software repository in GitHub has several "branches". (Think of these
+kind of like versions.) The mpf-examples repository has branches that
+match the version of MPF. For example, the 0.21 branch of the mpf-examples
+repository has examples for MPF 0.21, the 0.30 branch has examples for
+MPF 0.30, etc.
 
-So to do that, download the ZIP file from `master <https://github.com/missionpinball/mpf-examples/archive/master.zip>`_
-or `dev <https://github.com/missionpinball/mpf-examples/archive/dev.zip>`_ branch zip from from the mpf-examples repo.
-(If you're familiar with git, you can just clone the repo. It's at `github.com/missionpinball/mpf-examples <https://github.com/missionpinball/mpf-examples>`_.)
+Since the documentation you're reading here is about MPF 0.30, download
+a zip file of the 0.30 branch of MPF examples here:
+`here <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
 
-Unzip the examples folder to any location you want. It doesn't have
+Unzip the file to any location you want. It doesn't have
 to be in the same folder as MPF. (In fact when you installed MPF, it
 was installed to some system folder that you probably can't even find.
 So for these example files, just put them somewhere easy.)
@@ -64,7 +64,6 @@ If you don't see the DMD window pop up, make sure it isn't hiding behind another
 Since you don't have physical hardware attached, you can use the
 keyboard to simulate machine switch changes.
 
-
 The *Demo Man* configuration files
 have the "S" key mapped to start, so if you click in the graphical
 window with the DMD in it (to give it focus) and push the ``S`` key,
@@ -94,7 +93,6 @@ You can quit the game by making sure the *Demo Man* popup
 window is in focus and hitting the *Esc* key.
 
 To summarize the instructions for "playing" a game from the paragraphs above:
-
 
 #. Launch both the MPF core engine and the media controller and make
    sure you see the the popup graphical
