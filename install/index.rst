@@ -23,11 +23,11 @@ Hardware drivers
 ----------------
 
 Once you have MPF installed, you will need to install the drivers for the particular pinball controller you're using.
-Select the appropriate guide from our :doc:`</install/drivers/index>` list:
+Select the appropriate guide from our :doc:`/install/drivers/index` list:
 
 .. toctree::
 
-   </install/drivers/index>
+   /install/drivers/index
 
 Quick install guide
 -------------------

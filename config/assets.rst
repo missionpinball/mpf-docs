@@ -8,82 +8,60 @@ assets:
 
 .. overview
 
-The ``assets:`` section of your config is where you...
+The ``assets:`` section of your machine config file lets you
+configure the default settings for different types of assets based on
+what folder those assets are in. Any settings you specify here are
+just the defaults, though, and you can still override the defaults for
+an individual asset by adding an entry for it to your machine or mode
+config file.
 
-.. todo::
-   Add description.
+Let's take a look at an example:
 
+::
 
-shows:
-------
+   assets:
+       images:
+           default:
+               load: preload
+           preload:
+               load: preload
+           on_demand:
+               load: on_demand
+           potato:
+               some_key: some_value
+               something_else: whatever
 
-The ``shows:`` section contains the following nested sub-settings
+The above machine config contains the asset settings for *image* assets. Notice
+there are 4 entries under ``images:``: ``default``, ``preload``, ``on_demand``,
+and ``potato``. Those names represent subfolders that could contain image
+assets.
 
-videos:
--------
+Then under each of those, there are one or more key/value pairs. These key/value
+pairs are applied to assets located in the subfolders above.
 
-The ``videos:`` section contains the following nested sub-settings
+The ``default`` entry is special, as it applies to the root folder as well as
+any assets that are in folders that are not specified here.
 
-Optional settings
-~~~~~~~~~~~~~~~~~
+Consider the following files & folders in a machine folder with the ``assets:`` section
+from above:
 
-The following sections are optional in the ``videos:`` section of your config. (If you don't include them, the default will be used).
+.. image:: images/image_asset_folder_structure.png
 
-height:
-^^^^^^^
-Single value, type: ``number`` (can be integer or floating point). Default: ``None``
+In this case, ``/your_machine/images/hello.jpg`` would have the ``default:`` settings
+applied, ``/your_machine/images/preload/special.jpg`` would have the ``load: preload``
+key/value pair applied to it, etc.
 
-.. todo::
-   Add description.
+The ``assets:`` section of the config file doesn't really car what the key/value pairs are. They're
+just the defaults for the assets in those folders, and if they're not valid settings then MPF will
+give you an error. (Note that different types of assets have different settings options and
+different keys & values that are correct.)
 
-width:
-^^^^^^
-Single value, type: ``number`` (can be integer or floating point). Default: ``None``
+Currently MPF supports four kinds of assets. Click on each to go to that asset type's description
+in the config file reference which will explain what settings and be used and what the options are.
 
-.. todo::
-   Add description.
+Asset types include:
 
-
-common:
--------
-
-The ``common:`` section contains the following nested sub-settings
-
-Optional settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are optional in the ``common:`` section of your config. (If you don't include them, the default will be used).
-
-file:
-^^^^^
-Single value, type: ``string``. Default: ``None``
-
-.. todo::
-   Add description.
-
-load:
-^^^^^
-Single value, type: ``string``. Default: ``preload``
-
-.. todo::
-   Add description.
-
-priority:
-^^^^^^^^^
-Single value, type: ``integer``. Default: ``0``
-
-.. todo::
-   Add description.
-
-
-sounds:
--------
-
-The ``sounds:`` section contains the following nested sub-settings
-
-images:
--------
-
-The ``images:`` section contains the following nested sub-settings
-
-
++ :doc:`/config/file_shows`
++ :doc:`/config/videos`
++ :doc:`/config/sounds`
++ :doc:`/config/videos`
