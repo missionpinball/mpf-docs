@@ -8,23 +8,38 @@ accelerometers:
 
 .. overview
 
-The ``accelerometers:`` section of your config is where you...
+The ``accelerometers:`` section of your config is where you configure accelerometers, including
+how many G forces trigger different events.
 
-.. todo::
-   Add description.
+Like other hardware devices, you create a sub-entry for each accelerometer, then under there you
+configure additional settings. For example:
+
+::
+
+    accelerometers:
+       test_accelerometer:
+           number: 1
+           level_x: 0
+           level_y: 0
+           level_z: 1
+           hit_limits:
+               0.5: event_hit1
+               1.5: event_hit2
+           level_limits:
+               2: event_level1
+               5: event_level2
 
 
 Required settings
 -----------------
 
-The following sections are required in the ``accelerometers:`` section of your config:
+The following sections are required for each accelerometer:
 
 number:
 ~~~~~~~
 Single value, type: ``string``. 
 
-.. todo::
-   Add description.
+The platform-specific hardware number of this accelerometer.
 
 
 Optional settings
@@ -36,8 +51,7 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Enables additional debug logging for this device.
 
 hit_limits:
 ~~~~~~~~~~~
@@ -50,8 +64,7 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   Add description.
+Friendly name for this device.
 
 level_limits:
 ~~~~~~~~~~~~~
@@ -85,14 +98,13 @@ platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Name of the platform this accelerometer is connected to. The default value of None means the
+default hardware platform will be used.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Note there are no "special" tags for accelerometers.
 
 
