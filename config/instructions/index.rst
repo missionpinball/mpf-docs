@@ -5,3 +5,5 @@ Config file instructions
 
    gain_values
    time_strings
+   case_insensitivity
+   device_control_events

@@ -1,3 +1,7 @@
+Auditor
+=======
+
+*Plugin*
 
 The Mission Pinball Framework contains an auditor that can be used to
 create audit logs of switch events, game events, shots made, and
@@ -5,10 +9,8 @@ player variables. The exact behavior of what is (and isn't) included
 in the audit log is controlled in the Auditor section of your machine
 configuration files. Here's a sample audit file:
 
-
 ::
 
-    
     Events:
      ball_search_begin: 0
      ball_started: 1
@@ -116,12 +118,7 @@ configuration files. Here's a sample audit file:
      troughJam: 76
      up: 0
 
-
 Note that in the 'Player' section, the auditor will track the average,
 the Top 10, and the total numbers of each item. You can configure all
-this (including how many of each item it records) in the ``Auditor:`
-section of the configuration file`_.
-
-.. _`Auditor:` section of the configuration file: https://missionpinball.com/docs/configuration-file-reference/auditor/
-
-
+this (including how many of each item it records) in the ``auditor:``
+section of the configuration file`.
