@@ -8,30 +8,42 @@ ball_locks:
 
 .. overview
 
-The ``ball_locks:`` section of your config is where you...
+The ``ball_locks:`` section of your config lets you setup logical
+ball locks which can be used to physically or virtually lock balls.
+This section can be used in your machine-wide config files. This
+section can be used in mode-specific config files. Here’s an example:
 
-.. todo::
-   Add description.
+::
 
+    ball_locks:
+        bunker:
+            balls_to_lock: 3
+            lock_devices: bd_bunker
 
 Required settings
 -----------------
 
 The following sections are required in the ``ball_locks:`` section of your config:
 
+<name>:
+~~~~~~~
+
+The logical name of this ball lock device.
+
 balls_to_lock:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. 
 
-.. todo::
-   Add description.
+The number of balls this ball lock should hold. If one of the
+associated lock devices receives a ball and this logical ball lock is
+full, then the ball device will just release the ball again.
 
 lock_devices:
 ~~~~~~~~~~~~~
 List of one (or more) values, each is a type: string name of a ``ball_devices:`` device. 
 
-.. todo::
-   Add description.
+A list of one (or more) ball devices that will collect balls which
+will count towards this lock.
 
 
 Optional settings
@@ -43,22 +55,21 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Enables debug logging.
 
 disable_events:
 ~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
-.. todo::
-   Add description.
+:doc:`Device control event list </config/instructions/device_control_events>`
+which contains events that cause this device to disable.
 
 enable_events:
 ~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
-.. todo::
-   Add description.
+:doc:`Device control event list </config/instructions/device_control_events>`
+which contains events that cause this device to enable.
 
 label:
 ~~~~~~
@@ -71,35 +82,36 @@ release_one_events:
 ~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
-.. todo::
-   Add description.
+:doc:`Device control event list </config/instructions/device_control_events>`
+which contains events that cause this device to release a single ball.
 
 request_new_balls_to_pf:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-.. todo::
-   Add description.
+Boolean which controls whether this logical ball lock will
+automatically add another ball into play after it locks a ball.
+Default is *True*.
 
 reset_events:
 ~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting, ball_ending``
 
-.. todo::
-   Add description.
+:doc:`Device control event list </config/instructions/device_control_events>`
+which contains events that cause this device to reset its count.
 
 source_playfield:
 ~~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
 
-.. todo::
-   Add description.
+The name of the playfield that feeds balls to this lock. If you only
+have one playfield (which is most games), you can leave this setting
+out. Default is the playfield called *playfield*.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+A list of one or more tags that apply to this device.
 
 

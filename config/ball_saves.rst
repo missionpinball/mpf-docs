@@ -8,11 +8,29 @@ ball_saves:
 
 .. overview
 
-The ``ball_saves:`` section of your config is where you...
+The ``ball_saves:`` section of your config is where you create `ball save devices`.
+Here's an example:
 
-.. todo::
-   Add description.
+::
 
+    ball_saves:
+      default:
+        active_time: 10s
+        hurry_up_time: 2s
+        grace_period: 2s
+        enable_events: mode_base_started
+        timer_start_events: balldevice_plunger_lane_ball_eject_success
+        auto_launch: yes
+        balls_to_save: 1
+        debug: yes
+
+<name>:
+~~~~~~~
+
+The name of this ball save device. (This is "default" in the config
+snippet above.) The name is used in the events that are posted from
+this ball save. (The complete list of events posted by ball saves is
+included in the events reference.)
 
 Optional settings
 -----------------
@@ -23,22 +41,24 @@ active_time:
 ~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. todo::
-   Add description.
+How long the ball save is active (in `MPF time string format`_) once
+it starts counting down. This includes the *hurry_up_time,* but does
+not include the *grace_period* time. Leave this setting out (or set it
+to 0) for unlimited time. Default is *0*.
 
 auto_launch:
 ~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-.. todo::
-   Add description.
+True/False which controls whether the ball save should auto launch the
+saved ball or wait for the player to launch it.
 
 balls_to_save:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
-.. todo::
-   Add description.
+How many balls this ball saver should save before disabling itself.
+Set it to -1 for unlimited.
 
 debug:
 ~~~~~~
@@ -65,15 +85,17 @@ grace_period:
 ~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. todo::
-   Add description.
+The “secret” time (in `MPF time string format`_) the ball save is
+still active. This is added onto the *active_time*. Default is *0*.
 
 hurry_up_time:
 ~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. todo::
-   Add description.
+The time before the ball save ends (in `MPF time string format`_) that
+will cause the *ball_save_<name>_hurry_up* event to be posted. Use
+this to change the script for the light or trigger other effect.
+Default is *0*.
 
 label:
 ~~~~~~
@@ -100,7 +122,7 @@ timer_start_events:
 ~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
 
-.. todo::
-   Add description.
+An optional event (or list of events) in `MPF control event format`_
+which starts this ball saver's countdown timer. Default is *None*.
 
 
