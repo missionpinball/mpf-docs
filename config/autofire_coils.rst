@@ -17,7 +17,6 @@ Here’s an example:
 
 ::
 
-
     autofire_coils:
         left_sling:
             coil: c_left_sling
@@ -63,8 +62,6 @@ stop firing based on a switch change.)
 switch:
 ~~~~~~~
 Single value, type: string name of a ``switches:`` device. 
-
-
 
 
 Optional settings

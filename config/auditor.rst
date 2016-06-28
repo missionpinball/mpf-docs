@@ -18,7 +18,6 @@ in the folder for each machine. (Check out the documentation on the Auditor to s
 
 ::
 
-
     auditor:
         save_events:
             ball_ended
