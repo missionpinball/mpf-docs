@@ -62,6 +62,6 @@ in the config file reference which will explain what settings and be used and wh
 Asset types include:
 
 + :doc:`/config/file_shows`
-+ :doc:`/config/videos`
++ :doc:`/config/images`
 + :doc:`/config/sounds`
 + :doc:`/config/videos`
