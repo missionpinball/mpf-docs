@@ -45,7 +45,6 @@ List of one (or more) values, each is a type: string name of a ``ball_devices:``
 A list of one (or more) ball devices that will collect balls which
 will count towards this lock.
 
-
 Optional settings
 -----------------
 
@@ -55,21 +54,26 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-Enables debug logging.
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to disable.
+Event(s) which disable this ball lock.
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to enable.
+Event(s) which enable this ball lock.
 
 label:
 ~~~~~~
@@ -80,10 +84,12 @@ Single value, type: ``string``. Default: ``%``
 
 release_one_events:
 ~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to release a single ball.
+Event(s) which cause this ball lock to release a single ball.
 
 request_new_balls_to_pf:
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,14 +97,17 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 Boolean which controls whether this logical ball lock will
 automatically add another ball into play after it locks a ball.
-Default is *True*.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting, ball_ending``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to reset its count.
+Event(s) which cause this ball lock to reset its locked ball count.
+
+.. todo:: more detail needed
 
 source_playfield:
 ~~~~~~~~~~~~~~~~~
@@ -112,6 +121,6 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-A list of one or more tags that apply to this device.
+Special / reserved tags for ball locks: *None*
 
-
+See the :doc:`documentation on tags </config/instructions/tags>` for details.

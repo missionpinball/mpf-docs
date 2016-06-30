@@ -101,7 +101,10 @@ assumes it came from this *captures_from* device. Default is
 
 confirm_eject_event:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
 This is the name of the event that will be used to confirm a
 successful ball eject if you have *confirm_eject_type: event*. Default
@@ -109,7 +112,10 @@ is *None*.
 
 confirm_eject_switch:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``switches:`` device. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
 This is the name of the switch activation that will be used to confirm
 a successful ball eject if you have *confirm_eject_type: switch*.
@@ -159,14 +165,17 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-Enables debug logging.
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
 
 eject_all_events:
 ~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to eject all its balls.
+Causes this device to eject all its balls.
 
 eject_coil:
 ~~~~~~~~~~~
@@ -199,10 +208,12 @@ will not change the pulse time after 3 attempts.
 
 eject_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to eject one ball.
+Causes this device to eject one ball.
 
 eject_targets:
 ~~~~~~~~~~~~~~
@@ -211,12 +222,15 @@ List of one (or more) values, each is a type: string name of a ``ball_devices:``
 A list of one or more ball devices and/or the word "playfield" which
 is used to specify all the ball devices this device can directly eject
 a ball to. This is a very important concept and can be somewhat
-confusing, so bear with us as we try to explain it. Every time a ball
+confusing, so bear with us as we try to explain it.
+
+Every time a ball
 device ejects a ball, MPF needs to "confirm" that the ball was
 successfully ejected. There are several different methods which can be
 used to confirm the eject, and you configure which method you want to
-use for each ball device via the *confirm_eject_type:* setting. In
-many cases, it's possible that a single ball device can actually eject
+use for each ball device via the *confirm_eject_type:* setting.
+
+In many cases, it's possible that a single ball device can actually eject
 a ball into one of several different targets. For example, in *Star
 Trek: The Next Generation*, the main plunger catapult fires the ball
 into the top of the playfield where there is a controlled drop target
@@ -234,11 +248,15 @@ the *eject_targets:* setting looks like this:
     eject_targets: playfield, bd_leftVUK, bd_leftCannonVUK, bd_rightCannonVUK
 
 In other words, the *eject_targets:* list is a list of *all possible
-ball devices* that this device can eject a ball to. Notice that the
+ball devices* that this device can eject a ball to.
+
+Notice that the
 word *playfield* is also in that list, because if that drop target is
 up, then the ball ejected from the catapult ends up on the playfield,
 so *playfield* is a valid target too. (In MPF, the playfield is also a
-ball device.) At this point you might be wondering what the point of
+ball device.)
+
+At this point you might be wondering what the point of
 this is? The reason you specify all these target devices is because
 MPF's ball controller and ball device code work hand-in-hand with
 MPF's diverter code to automatically "route" balls to ball devices
@@ -251,23 +269,27 @@ the catapult posts an event which says "I'm ejecting a ball with a
 target destination of the *bd_leftVUK*"), and all the diverters
 (including that top drop target) will see that and automatically
 position themselves accordingly so the ball gets to where it needs to
-go. Note that you only want to include devices in this list that are
+go.
+
+Note that you only want to include devices in this list that are
 directly accessible as targets for balls ejecting from this device. In
 other words your machine will probably have lots of ball locks and
 other devices that the player can hit via flippers and balls from the
 playfield. Those devices should not be on this list, because
 technically balls enter them from the playfield, not from the
-catapult. The order of your *eject_targets:* list doesn't really
+catapult.
+
+The order of your *eject_targets:* list doesn't really
 matter except for the first entry. If a ball device is ever asked to
 eject a ball but a target is not specified, then the first entry on
 this list will be used as the target. (In practice this shouldn't
-really ever happen.) The default is *playfield*.
+really ever happen.)
 
 eject_timeouts:
 ~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
-This is an optional list of one or more `MPF time strings`_ that
+This is an optional list of one or more MPF time strings that
 specify how long the device should wait for an ejected ball to be
 confirmed before it assumes the eject failed. The order you enter them
 here matches up with the order of your *eject_targets*. For example,
@@ -288,7 +310,7 @@ entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``500ms``
 
-This is the time delay (in `MPF time string format)`_ that this ball
+This is the time delay (in MPF time string format) that this ball
 device will wait before counting the balls after any of the
 *ball_switches* changes state. This delay exists because there's often
 a "settling time" when a ball first enters a device where the balls
@@ -297,7 +319,10 @@ is *500ms*.
 
 entrance_events:
 ~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
 .. todo::
    Add description.
@@ -326,9 +351,7 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 This is the time delay that the device will wait before counting the
 balls after any after it attempts to eject a ball if the device is
-configured to verify the eject via a count of the switches. You can
-enter values here in seconds or milliseconds.See the full explanation
-of the time duration formats `here`_. Default is *500ms*.
+configured to verify the eject via a count of the switches.
 
 hold_coil:
 ~~~~~~~~~~
@@ -343,16 +366,18 @@ hold_coil_release_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
-This is the time (in `MPF time string format)`_ that devices with
+This is the time (in MPF time string format) that devices with
 *hold_coils* will hold their coil open to release a ball. Default is
 *1 second*.
 
 hold_events:
 ~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to enable its hold coil.
+Cause this device to enable its hold coil.
 
 hold_switches:
 ~~~~~~~~~~~~~~
@@ -370,15 +395,15 @@ the trough that can detect if a ball fell back into the trough from
 the plunger lane. (The extra switch is needed because when the trough
 ejects the ball, the remaining balls in the trough will all roll down,
 so if the ejected ball falls back in, it ends up sitting "on top" of
-the existing balls, so a normal trough ball switch won't see it.) This
-switch is known by different names by different manufacturers, having
+the existing balls, so a normal trough ball switch won't see it.)
+
+This switch is known by different names by different manufacturers, having
 variously been called *trough jam*, *ball up* switch, or *ball
 stacked* switch. If your ball device has a switch that can detect
 jams, enter that switch name here. The ball device code in the MPF has
 a jam switch handler which watches what happens to that switch. For
 example, if there's an eject in progress and the jam switch becomes
 active, it assumes the ball fell back in and will try the eject again.
-Default is *None*.
 
 label:
 ~~~~~~
@@ -425,19 +450,20 @@ Single value, type: ``string``. Default: ``None``
 
 request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
 
-:doc:`Device control event list </config/instructions/device_control_events>`
-which contains events that cause this device to request a ball to be sent to
-it.
+Cause this device to request a ball to be sent to it.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-A list of one or more tags that apply to this device. Tags allow you
-to access groups of devices by tag name. MPF also uses tags for ball
-devices for special purposes, including:
+See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+Special-purpose tags for ball devices include:
 
 + ``home`` - Specifies that any balls here are "home" and that the game
   can start. When MPF boots up, any balls that are in devices not tagged
