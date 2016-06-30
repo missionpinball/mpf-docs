@@ -17,7 +17,6 @@ Here's an example section:
 
 ::
 
-
     coils:
         flipper_right_main:
             number: A0-B0-0
@@ -93,8 +92,8 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -143,51 +142,62 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   Add description.
+A descriptive name for this device which will show up in the service menu
+and reports.
 
 platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+The hardware platform this device is connected to. A value of ``None`` means
+it uses the default platform. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
 
 pulse_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
+
+Event(s) that pulse this coil (at its default pulse_ms and power settings).
+
+pulse_ms:
+~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
 that will be used most of the time. Default is *10ms*, which is
 extremely weak, but set low for safety purposes.
 
-pulse_ms:
-~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
-
-.. todo::
-   Add description.
-
 pulse_power:
 ~~~~~~~~~~~~
-Single value, type: int(0,8). Default: ``None``
+Single value, type: int(``0``-``8``). Default: ``None``
 
-.. todo::
-   Add description.
+The power factor which controls how much power is applied during the initial
+pulse phase of the coil's activation. (Note that not all hardware platforms
+support variable pulse power.) See the section on *hold_power:* above for
+details.
 
 recycle:
 ~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Controls whether this coil should add a small delay before it's allowed to
+be fired again. (This is used on things like pop bumpers and slingshots to
+prevent "machine gunning.")
+
+This is a boolean setting because it's implemented differently depending on
+the hardware platform used. See the documentation for your specific hardware
+platform if you'd like more control than what's available with the straight
+on/off settings.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Special / reserved tags for coils: *None*
 
-
+See the :doc:`documentation on tags </config/instructions/tags>` for details.
