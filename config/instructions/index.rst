@@ -7,3 +7,5 @@ Config file instructions
    time_strings
    case_insensitivity
    device_control_events
+   tags
+   debug
