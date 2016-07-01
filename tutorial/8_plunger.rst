@@ -39,7 +39,7 @@ steps you need to configure that.
 
 That said, what if your plunger lane
 doesn't have a switch in it which is activated when a ball is sitting
-at the plunger? (This is common is single ball machines, like EMs and
+at the plunger? (This is common in single ball machines, like EMs and
 older solid state machines.) In this case you can't follow this step
 in the tutorial since you don't have the switch. Instead check our
 guide "How to configure plunger lanes that don't have plunger
