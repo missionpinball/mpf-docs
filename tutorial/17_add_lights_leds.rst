@@ -60,7 +60,7 @@ you if:
   FAST controller.
 + You're using any type of "Neopixel" RGB LED (FadeCandy, etc.)
 
-Another way to tell which kind of lights you're is if your lights or
+Another way to tell which kind of lights you're using is if your lights or
 LEDs have mini bayonet or mini wedge bases, they're *Matrix Lights*, and
 everything else is *LEDs*. Here's a diagram that might help:
 
