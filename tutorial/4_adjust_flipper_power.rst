@@ -77,7 +77,7 @@ like this:
 Notice that we only added ``pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their
 pulse times are. Now play your game and see how it feels. Then keep on
-adjusting the ``pulse_ms:`` values up or down until they your flippers
+adjusting the ``pulse_ms:`` values up or down until your flippers
 feel right. In the future we'll create a coil test tool that makes it
 easy to dial-in your settings without having to manually change the
 config file and re-run your game, but we don't have that yet. You
@@ -94,8 +94,8 @@ these pulse settings to operators via the service menu.
 
 If you're using single-wound flipper coils, you should also take a
 look at the ``hold_power:`` values. (Again, to be clear, you only have
-to do this if your flippers have a single winding. If you have dual-
-wound coils then the hold winding is designed to be held on for long
+to do this if your flippers have a single winding. If you have dual-wound
+coils then the hold winding is designed to be held on for long
 periods of time so you can safely keep it on full strength solid and
 you can skip to the next step.)
 
