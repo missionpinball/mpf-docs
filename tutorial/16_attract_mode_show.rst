@@ -159,7 +159,7 @@ back to the config file for the attract mode (
     #config_version=4
 
     show_player:
-      mode_attract_started: mode_attract_started
+      mode_attract_started: attract_display_loop
 
 Note that we don't need a ``mode:`` section here because those settings
 are already configured in the default attract mode settings folder
