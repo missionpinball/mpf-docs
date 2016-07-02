@@ -135,7 +135,7 @@ you'll only have one coil for each flipper (which we'll configure to
 pulse-width modulation for the holds).
 
 If you have no idea what we're
-talking about, read the our :doc:`/tech_note/flipper_theory` tech note
+talking about, read our :doc:`/tech_note/flipper_theory` tech note
 for an introduction to flipper concepts, dual-wound versus single-
 wound, holding techniques, end-of-stroke switches, and a bunch of
 other stuff that's important that you probably never thought about.
@@ -410,7 +410,7 @@ The shortcut we'll take is to add the following config line to each of your flip
     enable_events: machine_reset_phase_3
 
 We'll cover exactly what this means later on. (Basically it's telling
-each of your flippers that they should enable themselves when MPF is booting up, rather then them waiting for a
+each of your flippers that they should enable themselves when MPF is booting up, rather than them waiting for a
 ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
 coils, then you won't have the ``hold_coil:`` entries here.
 
@@ -430,7 +430,7 @@ coils, then you won't have the ``hold_coil:`` entries here.
 
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
-have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adjust_flipper_power'.
+have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adjust_flipper_power`.
 
 
 7. Configure MPF to use your physical pinball controller
