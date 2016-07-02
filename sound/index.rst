@@ -6,7 +6,8 @@ SDL2 and SDL_Mixer libraries.  This custom library allows the MPF development te
 features optimized for pinball machines.  The first release provides basic sound loading and
 playback capabilities along with some great new features like :doc:`ducking </sound/ducking>`
 and :doc:`sound pools </sound/sound_pools>`. (Sound support is part of the MPF media controller
-and only available if you're using MPF-MC for your media controller.)
+and only available if you're using MPF-MC for your media controller.) For a complete list of
+features, read the :doc:`Features </sound/features>` topic.
 
 The basic concept with audio in MPF is that you collect all your audio files (.wav or .ogg files
 are currently supported) and put them in the `/sounds` folder in your machine folder. Then in your
@@ -50,4 +51,6 @@ Sound & Audio Table of Contents
 .. toctree::
 
    Ducking </sound/ducking>
+   Technical Overview </sound/technical>
+
 
