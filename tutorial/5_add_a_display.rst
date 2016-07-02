@@ -114,7 +114,7 @@ fit on whatever physical display is there later.
 For now, though, you don't have to worry about any of that. Just create a display called "window" at 800x600 to get
 through the tutorial, and then we'll show you how to change it via the How To guides later.
 
-Also, if you're machine is going to use a physical DMD (whether mono or color), or if you want to have the "dot look"
+Also, if your machine is going to use a physical DMD (whether mono or color), or if you want to have the "dot look"
 of an on-screen DMD on an LCD screen, for now just follow along the tutorial as is, and then you can read the How To
 guides afterwards to configure your displays. (Everything we do in the tutorial will transfer over no prob.)
 
