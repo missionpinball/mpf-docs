@@ -21,14 +21,14 @@ different modes that do different things.
 Configuring ball saves
 ----------------------
 
-See the `ball_saves: </config/ball_saves>`_ of the config file reference.
+See the :doc:`/config/ball_saves` of the config file reference.
 
 
 Events posted by ball save devices
 ----------------------------------
 
 The ball saves post several events when they are enabled or disabled, when they
-save a ball, and as their timers count down. See the `:doc:</events>`_ for details.
+save a ball, and as their timers count down. See the :doc:`/events/index` for details.
 (Look for event names that start with "ball_save".)
 
 

@@ -10,13 +10,13 @@ automatically start and stop multiballs.
 Configuring multiballs
 ----------------------
 
-See the `multiballs: </config/multiballs>`_ section of the configuration file reference.
+See the :doc:`/config/multiballs` section of the configuration file reference.
 
 Events posted by multiball devices
 ----------------------------------
 
 Multiball devices post several events when they are enabled or disabled, and when
-they start and stop. See the `:doc:</events>`_ for details.
+they start and stop. See the :doc:`/events/index` for details.
 (Look for event names that start with "multiball".)
 
 

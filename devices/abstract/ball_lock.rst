@@ -20,12 +20,12 @@ per mode.
 Configuring ball locks
 ----------------------
 
-See the `ball_locks: </config/ball_locks>`_ section of the config file reference.
+See the :doc:`/config/ball_locks` section of the config file reference.
 
 
 Events posted by ball lock devices
 ----------------------------------
 
 The ball locks post several events when they lock or release balls and when they're
-full. See the `:doc:</events`>_ for details. (Look for event names that start with
+full. See the :doc:`/events/index` for details. (Look for event names that start with
 "ball_lock".)
