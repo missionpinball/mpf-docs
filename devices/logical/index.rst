@@ -24,8 +24,8 @@ Logical devices in MPF include:
    Diverters <diverter>
    Driver-enabled devices <driver_enabled>
    Drop targets <drop_target>
-   Drop target banks <drop_target_bank>
-   Flippers <flipper>
+   Drop target banks <drop_target_bank>Flippers <flipper>
+   Dual-would coils <dual_wound_coils>
    Playfields <playfield>
    Playfield transfers <playfield_transfer>
    Score reels <score_reel>
