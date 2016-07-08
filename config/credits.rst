@@ -196,6 +196,16 @@ as you want. The first one dictates how much a regular game costs and
 is required. If you don’t want any price breaks, then just add the
 first one.
 
+Here's an example:
+
+::
+
+      pricing_tiers:
+        - price: .50
+          credits: 1
+        - price: 2
+          credits: 5
+
 Optional settings
 ~~~~~~~~~~~~~~~~~
 
@@ -205,15 +215,13 @@ credits:
 ^^^^^^^^
 Single value, type: ``integer``. Default: ``1``
 
-.. todo::
-   Add description.
+The total number of credits that will be added based on this price tier
 
 price:
 ^^^^^^
 Single value, type: ``number`` (will be converted to floating point). Default: ``.50``
 
-.. todo::
-   Add description.
+The numeric currency value for this pricing tier.
 
 
 

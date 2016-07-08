@@ -30,20 +30,23 @@ you can (optionally) specify a path, like this:
         - config\machine.yaml
         - config/my_game/machine.yaml
 
-The framework will attempt to convert relative and absolute paths
+MPF will attempt to convert relative and absolute paths
 based on your OS, and it can deal with slashes in either direction.
-The framework will then open those files one-by-one and merge in their
+
+MPF will then open those files one-by-one and merge their
 settings into the master configuration dictionary. The settings are
 merged together in the order the files are listed, so if multiple
 files specify the same configuration option then whichever one comes
 later in the list will overwrite any options that have already been
-specified. You can also have ``config:`` sections in other files, meaning
+specified.
+
+You can also have ``config:`` sections in other config files, meaning
 that one config file can call another which will call another, etc.
-Any time the framework encounters a new config file, it will add it to
+
+Whenever MPF encounters a new config file, it will add it to
 the end of the list. And since files are processed in order, if there
 are any conflicting settings then the last file on the list will
 "win." Also note that the framework will attempt to load the file from
-the current working directory. If that fails then it will try the last
+the current working directory (containing the config file that ``config:``
+entry is from. If that fails then it will try the last
 known good directory that worked for a config file.
-
-

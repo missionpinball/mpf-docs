@@ -103,8 +103,8 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
 
 knockdown_coil:
 ~~~~~~~~~~~~~~~
@@ -125,8 +125,8 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   Add description.
+A descriptive name for this device which will show up in the service menu
+and reports.
 
 reset_coil:
 ~~~~~~~~~~~
@@ -158,7 +158,7 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
 
+Special / reserved tags for drop targets: *None*
 
+See the :doc:`documentation on tags </config/instructions/tags>` for details.
