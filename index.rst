@@ -20,13 +20,12 @@ available at `missionpinball.com/docs <https://missionpinball.com/docs>`_.
 
  <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="67"
-  aria-valuemin="0" aria-valuemax="342" style="width:32%"></div>
+  aria-valuemin="0" aria-valuemax="342" style="width:39%"></div>
  </div>
 
-110 of 342 documents have been updated for 0.30 and added to this site. We're
+134 of 342 documents have been updated for 0.30 and added to this site. We're
 working as fast as we can, but there are 206,937 total words in the MPF
-documentation, so this process may take awhile. We're hoping to have it complete
-by the end of June, 2016.
+documentation, so this process may take awhile.
 
 MPF has a lot of documentation. Here are some of the big parts you can explore
 now. Or view the tree menu on the left (or the "All Docs" in the top menu bar if

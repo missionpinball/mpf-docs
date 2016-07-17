@@ -61,9 +61,9 @@ Now we are ready to install mpf and its dependencies!
 
 ::
 
-    sudo pip3 install mpf-mc --pre 
+    sudo pip3 install mpf-mc
 	
-as long as mpf 0.30 is in development you need the --pre switch and take care to use pip3 and not pip!
+Take care to use pip3 and not pip!
 
 	
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
