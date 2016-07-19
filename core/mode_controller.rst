@@ -1,7 +1,11 @@
+Mode controller
+===============
 
-The mode controller is responsible for starting, running, and stopping
+The *mode controller* is responsible for starting, running, and stopping
 modes in an MPF machine. It lives in the
-*mpf/system/mode_controller.py* module. In traditional pinball
+``mpf/core/mode_controller.py`` module.
+
+In traditional pinball
 machines, you might think of a "mode" as a "game mode." (e.g. the
 missions in *Star Trek*, the mansion modes in *Addams Family*, the
 cities in *Road Show*, etc.) In MPF, the in-game modes are "modes"

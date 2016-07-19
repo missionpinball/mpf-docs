@@ -1,8 +1,6 @@
 Data manager
 ============
 
-*MPF Module*
-
 The MPF Data Manager is used to load and save data to files on disk.
 it lives in the *mpf/core/data_manager.py* module.
 

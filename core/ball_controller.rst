@@ -1,4 +1,4 @@
-Ball controller
+Ball Controller
 ===============
 
 The Ball Controller is responsible for knowing where all the balls in the
