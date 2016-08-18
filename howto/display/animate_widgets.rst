@@ -44,7 +44,7 @@ specific animation steps and settings. For example:
                   - property: opacity      # name of the widget property we're animating
                     value: 1               # target value of that property for this step
                     duration: .5s          # duration for this step (how long it takes to get there)
-                  - priority: opacity      # second step in the animation (starts with a hyphen)
+                  - property: opacity      # second step in the animation (starts with a hyphen)
                     value: 0
                     duration: .5s
                     repeat: true           # added to the final step, tells this animation to repeat (loop)
@@ -103,7 +103,7 @@ For example, to make the text grow and shrink while also fading on and off:
                     value: 100
                     timing: with_previous      # makes this step run at the same time as the previous one
                     duration: .5s              # specify a duration for each step, even when with_previous
-                  - priority: opacity
+                  - property: opacity
                     value: 0
                     duration: .5s
                     repeat: true
