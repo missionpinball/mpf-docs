@@ -79,8 +79,11 @@ here's are details about each platform:
 .. toctree::
    :maxdepth: 1
 
-   fast
-   multimorphic
-   configuring_fast_hardware
-   configuring_opp_hardware
-   pololu_maestro
+   FAST Pinball (overview) <fast>
+   FAST Pinball (configuration) <configuring_fast_hardware>
+   Multimorphic P-ROC/P3-ROC <multimorphic>
+   Open Pinball Project (OPP) <configuring_opp_hardware>
+   Pololu Maestro Servo Controllers <pololu_maestro>
+
+
+
