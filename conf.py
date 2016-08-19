@@ -119,26 +119,28 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-html_theme_options = {
+if bootstrap:
+    html_theme = 'bootstrap'
+    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-    'navbar_title': "MPF Documentation",
-    'navbar_site_name': "All Docs",
-    'navbar_pagenav_name': "This Page",
-    'globaltoc_depth': -1,
-    'bootswatch_theme': "cosmo",
-    'navbar_sidebarrel': False,
-    'navbar_pagenav': False,
-    'source_link_position': False,
-    'navbar_fixed_top': False,
-}
+    # Theme options are theme-specific and customize the look and feel of a theme
+    # further.  For a list of options available for each theme, see the
+    # documentation.
+    html_theme_options = {
 
-html_add_permalinks = ''
+        'navbar_title': "MPF Documentation",
+        'navbar_site_name': "All Docs",
+        'navbar_pagenav_name': "This Page",
+        'globaltoc_depth': -1,
+        'bootswatch_theme': "cosmo",
+        'navbar_sidebarrel': False,
+        'navbar_pagenav': False,
+        'source_link_position': False,
+        'navbar_fixed_top': False,
+    }
+
+    html_add_permalinks = ''
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
