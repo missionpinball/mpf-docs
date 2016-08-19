@@ -15,7 +15,13 @@
 
 import sys
 import os
-import sphinx_bootstrap_theme
+
+try:
+    import sphinx_bootstrap_theme
+    bootstrap = True
+
+except ImportError:
+    bootstrap = False
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
