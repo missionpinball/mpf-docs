@@ -54,7 +54,7 @@ verbose):
 You should see a bunch of stuff scroll by and a pop up window which
 shows the Demo Man DMD, like this:
 
-.. image:: demo_man.jpg
+.. image:: images/demo_man.jpg
 
 If you don't see the DMD window pop up, make sure it isn't hiding behind another window.
 

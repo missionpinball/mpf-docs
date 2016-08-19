@@ -31,7 +31,7 @@ Once you've downloaded the file, here are the steps to install MPF on OS X:
 
 Double-click the .dmg file to mount and open it. You'll see a window that looks like this:
 
-.. image:: MPFMacInstaller.jpg
+.. image:: images/MPFMacInstaller.jpg
 
 Then drag and drop MPF.app file to your *Applications* folder.
 

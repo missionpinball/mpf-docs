@@ -1,5 +1,5 @@
-Multimorphic (P-ROC & P3-ROC)
-=============================
+Multimorphic (P-ROC & P3-ROC) Hardware Overview
+===============================================
 
 The P-ROC and P3-ROC are pinball hardware controllers created by Gerry
 Stellenberg of Austin, Texas-based `Multimorphic <http://www.multimorphic.com/>`_.

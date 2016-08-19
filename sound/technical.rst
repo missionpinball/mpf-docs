@@ -6,7 +6,7 @@ support common pinball sound requirements.  It is written on top of the SDL2 and
 libraries that are installed with Kivy which is required to run the MPF MC software (no additional
 installs necessary for the audio library).
 
-.. image:: technical_overview.png
+.. image:: images/technical_overview.png
 
 The SDL2 library (`https://www.libsdl.org/ <https://www.libsdl.org/>`_) is responsible for all
 low-level communications with the system audio hardware. The user selects the basic audio

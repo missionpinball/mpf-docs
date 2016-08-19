@@ -89,7 +89,7 @@ depending on whose manual you're reading.
 
 Here's a side-view diagram of a modern style trough:
 
-.. image:: modern_trough.jpg
+.. image:: images/modern_trough.jpg
 
 The diagram above does not show the ball switches, but you get the idea.
 
@@ -104,7 +104,7 @@ kicked the ball into the plunger lane.) This style of trough is actually
 configured as two separate ball devices in MPF, and they look something like
 this:
 
-.. image:: system11_style_trough.rst
+.. image:: images/system_11_style_trough.jpg
 
 
 If you have a older style outhole + trough combination that looks something like the
@@ -120,7 +120,7 @@ Older single-ball machines (almost all EMs and most early solid state
 machines) typically just have one switch and one coil and eject the ball from
 the drain hole directly to the plunger lane, like this:
 
-.. image:: em_style_trough.jpg
+.. image:: images/em_style_trough.jpg
 
 You can actually configure older single ball, single coil troughs just like
 modern troughs--it's just that there's only one switch and one

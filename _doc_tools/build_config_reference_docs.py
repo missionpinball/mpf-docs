@@ -300,7 +300,6 @@ your machine-wide config, a mode-specific config, or both.
         return final_text
 
     def tokenize_existing_rst(self, filename):
-
         with open(filename, 'r') as f:
             doc = f.read()
 
@@ -349,6 +348,9 @@ your machine-wide config, a mode-specific config, or both.
                 body = doc[doc.index(start):doc.index(end)].replace(start, '').strip('\n')
             except TypeError:
                 body = doc[doc.index(start):].replace(start, '').strip('\n')
+            except ValueError:
+                print("Could not process {}. Skipping...".format(filename))
+                body = ''
 
             # strip out the old spec string so the latest replaces it
             if level:

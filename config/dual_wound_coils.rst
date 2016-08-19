@@ -58,14 +58,14 @@ other MPF devices do not have explicit support for dual-wound coils.
 
 hold_coil:
 ~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 The name of the hold coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
 
 main_coil:
 ~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 The name of the main (power) coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
@@ -96,7 +96,7 @@ coil winding.
 
 .. todo::
 
-Verify whether this has been implemented?
+   Verify whether this has been implemented?
 
 label:
 ~~~~~~

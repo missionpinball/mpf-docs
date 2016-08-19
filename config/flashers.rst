@@ -66,14 +66,14 @@ The following sections are required in the ``flashers:`` section of your config:
 <FlasherName>:
 ~~~~~~~~~~~~~~
 
-Each subsection of *flashers:*is the name of the flasher as you’d like
+Each subsection of ``flashers:`` is the name of the flasher as you’d like
 to refer to it in your game code. This can really be anything you
 want, but it’s obviously best to pick something that makes sense.
 
 
 number:
 ~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 This is the number for the flasher which specifies which driver output
 the flasher is physically connected to. The exact format used here will

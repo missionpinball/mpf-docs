@@ -34,7 +34,7 @@ We have a guide :doc:`here </install/index>`.
 The current preview build of MPF does not support using fonts from the
 MPF *fonts* folder. So if your machine used any of the built-in MPF
 fonts, you need to install them to your system now. You can find them
-in the `old MPF 0.21 (master) repository`_, in the
+in the `old MPF 0.21 (master) repository <https://github.com/missionpinball/mpf/tree/0.21>`_, in the
 *mpf/media_controller/fonts* folder. Just double-click each one to
 install it.
 

@@ -193,7 +193,7 @@ Man*, you'll have some differences in your config file, including:
 + If you're using FAST or OPP hardware, you'll have a ``fast:`` or
   ``opp:`` section in your config.
 + Your ``number:`` settings for all your switches and coils will be your
-  actual hardware numbers and not the numbers for *Demolition Man*from
+  actual hardware numbers and not the numbers for *Demolition Man* from
   this file.
 + Your flippers might be configured for single-wound coils instead of
   dual-wound (main + hold) like in this file.

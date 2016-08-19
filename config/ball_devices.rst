@@ -56,7 +56,7 @@ ball_missing_timeouts:
 ~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
-A list of timeouts (in `MPF time string format`_) that correspond to
+A list of timeouts that correspond to
 how much time after a ball goes missing passes before MPF assumes that
 ball went into this device's target device. This is a list, so you can
 enter multiple values to match the multiple entries in your
@@ -79,14 +79,14 @@ A list of switch names that are active when a ball is in the device.
 It's assumed there is a one-to-one *ball switch* to *ball* ratio, so
 if you have three switches then MPF assumes that device can hold three
 balls. (Note that if your device can hold more balls than it has
-switches for, like the gumball machine in *Twilight Zone*, then you
-can use the *ball_capacity:*setting to specify how many balls it can
+switches for, like the gumball machine in *Twilight Zone* , then you
+can use the *ball_capacity:* setting to specify how many balls it can
 hold.) MPF uses these switches to count how many balls a device has at
 any time by counting how many of them are active. Note that "active
 switch" means "there is a ball here." So if you have a trough with
 opto switches which "invert" their state, then you will have to
 configure those switches with the "NC" (normally closed) type in the
-*`switches:`_* section of your config file. Default is *None*.
+``switches:`` section of your config file. Default is *None* .
 (Meaning this device tracks the number of balls it has virtually based
 on *entrance_switch* activations.)
 
@@ -154,7 +154,7 @@ confirming the eject include:
   playfield. Otherwise if you're trying to eject a ball when you already
   have one in play, you wouldn't know if the newly-ejected ball hit that
   switch or if an existing live ball hit it. This can be any switch you
-  want, specified via the *confirm_eject_switch:*setting.
+  want, specified via the *confirm_eject_switch:* setting.
 + ``fake`` - This is a setting that's used by other devices (such as
   the ball lock) when they do not want to use eject confirmation because
   they have another way of confirming the eject. It's not an option that

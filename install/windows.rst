@@ -29,16 +29,16 @@ even if you have an Intel processor.)
 
 Here's an example of running this on a 64-bit Windows 10 machine:
 
-.. image:: check_windows_processor_architecture.png
+.. image:: images/check_windows_processor_architecture.png
 
 
 Then go to the Python website download the version you need. (Note that the final digit in the Python version
 number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.) Or use the direct-download links here:
 
-+ `Download <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_ the Python 3.4.4. x86 / 32-bit MSI installer.
-+ `Download <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_ the Python 3.4.4 x64 / 64-bit MSI installer.
++ `Download the Python 3.4.4. x86 / 32-bit MSI installer <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
++ `Download the Python 3.4.4 x64 / 64-bit MSI installer<https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
 
-.. image:: download_python_win.jpg
+.. image:: images/download_python_win.jpg
 
 Installing Python 3 is pretty straightforward. It's a normal Windows installer.
 
@@ -48,7 +48,7 @@ you can run ``python`` from any folder, rather than having to specify the full
 path to it. (Also make sure the "pip" option is selected, but that should be
 selected by default.)
 
-.. image:: python_win_pip_path.jpg
+.. image:: images/python_win_pip_path.jpg
 
 Note that you have to log out and then log back in for the path to be updated
 once you install Python. If you don't, then you'll get an error about Python not
@@ -58,7 +58,7 @@ Now open a command prompt and make sure you can run Python. To open a command
 prompt, right-click on the Windows button and select "Command Prompt" from the
 menu:
 
-.. image:: windows_command_prompt.jpg
+.. image:: images/windows_command_prompt.jpg
 
 That will pop up a window where you can type commands. Then run the following
 command:
@@ -69,7 +69,7 @@ command:
 
 That should print which version of Python is installed, like this:
 
-.. image:: windows_python_from_command_prompt.jpg
+.. image:: images/windows_python_from_command_prompt.jpg
 
 
 Note for running Python 2 and Python 3 side-by-side

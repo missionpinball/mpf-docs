@@ -8,15 +8,11 @@ where you have a very basic running game, and then you can pick-and-
 choose the specific How To guides you'd like to do next. The How To
 guides are self-contained and can be done in any order.
 
-List of How to Guides
----------------------
+Note: We used to put all the How To guides here in this "how to" section of
+the documentation, however, that was confusing because it meant the how to
+guides for a particular part of MPF were not in the same place as the rest of
+the documentation for that area.
 
-.. toctree::
-   :maxdepth: 2
-
-   Setup & Installation <installation/index>
-   Controller hardware <controller_hardware/index>
-   Pinball devices <devices/index>
-   Displays & Graphics <display/index>
-   Sounds & Audio <sounds/index>
-   Shows <shows/index>
+So we moved the How To guides into their respective sections. For example, the
+How To guides for sounds and audio are now incorporated into the "Sounds &
+Audio" section of the documentation.

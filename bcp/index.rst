@@ -148,7 +148,6 @@ The following BCP commands have been defined (and implemented) in MPF:
    mode_start <mode_start>
    mode_stop <mode_stop>
    player_added <player_added>
-   player_score
    player_turn_start
    player_variable
    reset

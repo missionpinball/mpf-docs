@@ -1,12 +1,12 @@
-Version history
-===============
+MPF Version History
+===================
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 0.30
 ~~~~
 
-Release Date: TBD
+July 15, 2016
 
 * Python 3 required
 * Mac OS X support
@@ -79,8 +79,6 @@ Dec 1, 2015
 * Improved text display element.
 * Improved event manager and event dispatch queue
 * Moved all utility functions to their own class.
-
-
 
 
 0.20

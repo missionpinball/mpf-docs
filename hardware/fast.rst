@@ -1,5 +1,5 @@
-Fast Pinball
-============
+Fast Pinball Hardware Overview
+==============================
 
 The `FAST Pinball <http://fastpinball.com>`_ controllers are created by Aaron Davis and Dave
 Beecher from Seattle. FAST has three different controller models: the *FAST WPC Controller*,

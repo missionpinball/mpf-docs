@@ -77,12 +77,12 @@ drop target which is used throughout your machine.
 
 switch:
 ~~~~~~~
-Single value, type: string name of a ``switches:`` device. 
+Single value, type: string name of a ``switches:`` device.
 
 The name of the switch that's activated when this drop target is down.
 (Note that active switch = target down, so if your drop target uses
 opto switches which are reversed, then you need to configure this
-switch with *type: NC*in the *switches:*section of your config file.)
+switch with *type: NC* in the *switches:* section of your config file.)
 MPF will automatically update the state of the drop target whenever
 the switch changes state.
 

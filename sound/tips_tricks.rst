@@ -45,7 +45,7 @@ are a few suggestions:
   are many good editors available on every platform that support inserting markers.  Here is a
   screenshot of the process in the editor I use:
 
-  .. image:: sound_editor_markers.png
+  .. image:: images/sound_editor_markers.png
 
   This feature is also available in `Audacity <http://www.audacityteam.org>`_ (free open-source
   cross-platform sound editing software) and many video editing packages.

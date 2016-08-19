@@ -68,8 +68,7 @@ to know.
 The MPF-MC has been completely rewritten from scratch
 -----------------------------------------------------
 The new MPF-MC component has been completely rewritten from scratch
-for MPF 0.30. The reasons for this are covered `here`_, but the main
-reason is the fact that the MPF-MC for v0.30 uses a multimedia library
+for MPF 0.30. The main reason is the fact that the MPF-MC for v0.30 uses a multimedia library
 called "Kivy" instead of Pygame. We had many problems and limitations
 with Pygame, including:
 

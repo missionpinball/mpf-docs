@@ -36,7 +36,7 @@ and inside that folder, create a new file called
 
 Your new machine folder structure should look like this:
 
-.. image:: attract_mode_folders.png
+.. image:: images/attract_mode_folders.png
 
 2. Edit your show yaml file
 ---------------------------

@@ -13,7 +13,7 @@ By default ducking is not enabled for any sounds in MPF. Ducking settings can be
 for each sound asset in the machine. To best illustrate ducking and its parameters, here is a
 diagram:
 
-.. image:: ducking.png
+.. image:: images/ducking.png
 
 The voice clip in the top track of the diagram illustrates a callout that we wish to add ducking
 settings to.  The bottom track is playing music.  The following parameters control the ducking

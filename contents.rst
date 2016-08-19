@@ -7,19 +7,22 @@ MPF Documentation Contents
    :includehidden:
 
    Start here </start/index>
+   Version history </version_history/index>
+   Compatible hardware </hardware/index>
+   Compatible pinball machines </machines/index>
    Installation </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to guides / "cookbook" </howto/index>
-   Compatible hardware </hardware/index>
    Core modules </core/index>
    Devices </devices/index>
-   Modes </modes/index>
-   Displays & DMDs </displays/index>
+   Game Modes </modes/index>
+   Displays, DMDs, & Graphics </displays/index>
    Sounds & Audio </sound/index>
    Shows </shows/index>
    Assets </assets/index>
    Config players </config_players/index>
+   Plugins </plugins/index>
    Tech notes </tech_notes/index>
    BCP protocol </bcp/index>
    Writing custom code </code/index>

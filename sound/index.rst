@@ -42,15 +42,15 @@ section of your machine configuration file. You add settings for individual soun
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
 Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
 
-There are several available :doc:`"How To" guides </howto/sounds/index>` available that go through
-the process of performing common sound and audio tasks step-by-step.
-
 Sound & Audio Table of Contents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
 
-   Ducking </sound/ducking>
    Technical Overview </sound/technical>
+   Ducking </sound/ducking>
+   How to set up sound </sound/basic_setup>
+   Tips & tricks </sound/tips_tricks>
+   Playing a sound with variations </sound/variations>
 
 

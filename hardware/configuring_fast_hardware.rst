@@ -22,7 +22,7 @@ hardware has been detected. What exactly you see will depend on which FAST contr
 For example, here’s what happens when you plug a FAST WPC controller into Windows 10 for the first time (after you’ve
 installed the FTDI driver):
 
-.. image:: fast-ftdi-driver.png
+.. image:: images/fast-ftdi-driver.png
 
 (This is just a progress bar which shows Windows configuring the drivers. You don’t have to click anything to get it
 started, and it should only take 5-10 seconds. It will only happen the first time you plug in the hardware.)
@@ -326,24 +326,20 @@ controller: by channel & output number, or directly with the FAST
 hardware number. It's more straightforward to configure them by
 channel and output, like this:
 
-
 ::
 
-leds:
-    l_led0:
-        number: 0-0
-    l_right_ramp:
-        number: 2-28
-
+   leds:
+       l_led0:
+           number: 0-0
+       l_right_ramp:
+           number: 2-28
 
 In the example above, RGB LED *l_led0* is LED #0 on channel 0, and
-*l_right_ramp*is LED #28 on channel 2. Note both the channel and LED
+*l_right_ramp* is LED #28 on channel 2. Note both the channel and LED
 numbers start with 0, so your channel options for a FAST controller
 are 0-3, and your LED number options are 0-63. Also note that when you
 enter your FAST LED numbers with a dash like this, the values are
 integers, even if the rest of your FAST settings are in hex.
-
-
 
 7. Configuring matrix lamps
 ---------------------------
@@ -353,8 +349,6 @@ means you have to configure those lights in the matrix_lights: section
 of your machine configuration file. Like the other WPC-related
 settings, you can enter the numbers right out of your operators
 manual, so there's nothing FAST-specific you have to do.
-
-
 
 8. Configuring a DMD
 --------------------

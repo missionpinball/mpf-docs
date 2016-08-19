@@ -74,7 +74,7 @@ base game mode:
 At this point your machine's folder & file structure should look like
 this:
 
-.. image:: machine_folder_structure.png
+.. image:: images/machine_folder_structure.png
 
 3. Add your base game mode's settings to its config file
 --------------------------------------------------------

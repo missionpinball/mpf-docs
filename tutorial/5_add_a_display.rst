@@ -30,7 +30,7 @@ Protocol").
 
 Here's a diagram that shows what each piece does:
 
-.. image:: mpf_game_engine_mc.png
+.. image:: images/mpf_game_engine_mc.png
 
 Note that you typically run the MPF game engine and the media controller together on the same computer.
 
@@ -52,7 +52,7 @@ command, like this:
 When you do this, you should see an 800 x 600 popup window that's completely black with the title
 "Mission Pinball Framework". Here's an example from Mac OS X:
 
-.. image:: blank_mpf_mc_window.png
+.. image:: images/blank_mpf_mc_window.png
 
 You can close this window (and exit the MPF MC) by hitting the ``Esc`` key. (If this doesn't
 work, click your mouse in the popup window to give it focus and try again.)
@@ -238,7 +238,7 @@ soon as it can.
 
 To verify, run ``mpf mc`` again, and hopefully you see something like this:
 
-.. image:: mc_pinball_1.png
+.. image:: images/mc_pinball_1.png
 
 Cool! We have text! Of course it's kind of small, and white, but it confirms that everything is working. (So again,
 what's actually happening here is you have a display called "window", which is showing a slide called "welcome_slide",
@@ -259,7 +259,7 @@ font size and the color, like this:
 
 Now when you run ``mpf mc`` again, you should see this:
 
-.. image:: mc_pinball_2.png
+.. image:: images/mc_pinball_2.png
 
 Colors in the MPF-MC can be specified by name (like "red") or by hex value ("ff0000"). Note that if you
 specify a color by hex value, do NOT put a ``#`` in it, since YAML files use those for comments which
@@ -295,7 +295,7 @@ it will be white.
 
 Now when you run ``mpf mc``, you should see this:
 
-.. image:: mc_pinball_3.png
+.. image:: images/mc_pinball_3.png
 
 Note that the word "PINBALL!" is "on top" of the white rectangle. That's because the order of the
 widgets on the display matches the order they're entered into the config file. So in this example,
@@ -379,7 +379,7 @@ So this time, just run ``mpf``, like this:
 When you run MPF, after some stuff scrolls by, you should see the *attract_started* slide replace
 the *welcome_slide*, like this:
 
-.. image:: 5_mode_attract_started.png
+.. image:: images/5_mode_attract_started.png
 
 So now MPF is running, it's talking to the MC, and you have the world's most boring attract mode!
 
@@ -413,7 +413,7 @@ When you do this, you should see the graphical window pop up (most likely showin
 a quick moment), then when the MPF game engine is up and running, you should see the graphical window
 flip over to the *attract_started* slide. Here's a screen shot:
 
-.. image:: 5_mpf_both.jpg
+.. image:: images/5_mpf_both.jpg
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
