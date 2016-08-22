@@ -7,31 +7,46 @@ Mission Pinball Framework |version| documentation
    :caption: User Documentation
 
    Getting Started </start/index>
-   Compatible hardware </hardware/index>
-   Compatible pinball machines </machines/index>
+   Compatible Hardware </hardware/index>
+   Compatible Pinball Machines </machines/index>
    Installation </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
-   How to guides / "cookbook" </howto/index>
-   Core modules </core/index>
+   How to Guides / "Cookbook" </howto/index>
    Devices </devices/index>
+   Game Logic </game_logic/index>
    Game Modes </modes/index>
    Displays, DMDs, & Graphics </displays/index>
    Sounds & Audio </sound/index>
    Shows </shows/index>
    Assets </assets/index>
-   Config players </config_players/index>
+   Config Players </config_players/index>
    Plugins </plugins/index>
-   Tech notes </tech_notes/index>
-   BCP protocol </bcp/index>
-   Writing custom code </code/index>
-   Events reference </events/index>
-   Config file reference </config/index>
+   Tech Notes </tech_notes/index>
+
+   :caption: MPF Architecture
+
+   Core Modules </core/index>
+
+   :caption: Developer Documentation
+
+   Extending MPF with Custom Code </code/index>
+   BCP Protocol </bcp/index>
+   API Reference </api>
+
+   :caption: Reference Material
+
+   Events Reference </events/index>
+   Config File Reference </config/index>
+
+   :caption: About MPF
+
+   About MPF </about/index>
+   License </about/license>
    FAQ </faq/index>
    Glossary </glossary/index>
    Contributing to MPF </contribute/index>
-   About MPF </about/index>
-   MPF Version history </version_history/index>
+   MPF Version History </version_history/index>
 
 Welcome! This is the documentation for the Mission Pinball Framework (MPF)
 |release|, last updated |today|.
