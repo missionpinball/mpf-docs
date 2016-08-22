@@ -3,7 +3,7 @@ MPF Sound & Audio
 
 .. toctree::
    :hidden:
-   
+
    Technical Overview </sound/technical>
    Ducking </sound/ducking>
    How to set up sound </sound/basic_setup>

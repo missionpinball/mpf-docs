@@ -3,8 +3,10 @@ MPF Tutorial
 
 Let's learn by example!
 
-This tutorial will walk you through using MPF to create a basic pinball machine config. Since MPF is software-only,
-you don't actually need to have physical pinball machine hardware to complete the tutorial. You can create a "virtual"
+This tutorial will walk you through using MPF to create a basic pinball machine
+config. Since MPF is just software that supports lots of different physucal
+hardware, you don't actually need to have physical pinball machine hardware to
+complete the tutorial. You can create a "virtual"
 pinball machine for now and then hook up a real machine later.
 
 The tutorial includes:
