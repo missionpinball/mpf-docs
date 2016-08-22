@@ -1,6 +1,0 @@
-Plugins
-=======
-
-.. toctree::
-
-   auditor

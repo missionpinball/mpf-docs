@@ -1,8 +1,6 @@
 Auditor
 =======
 
-*Plugin*
-
 The Mission Pinball Framework contains an auditor that can be used to
 create audit logs of switch events, game events, shots made, and
 player variables. The exact behavior of what is (and isn't) included

@@ -2,7 +2,6 @@ Mission Pinball Framework |version| documentation
 =================================================
 
 .. toctree::
-   :maxdepth: 2
    :hidden:
    :caption: User Documentation
 
@@ -21,24 +20,32 @@ Mission Pinball Framework |version| documentation
    Shows </shows/index>
    Assets </assets/index>
    Config Players </config_players/index>
-   Plugins </plugins/index>
+   Machine Management </machine_management/index>
    Tech Notes </tech_notes/index>
 
+.. toctree::
+   :hidden:
    :caption: MPF Architecture
 
    Core Modules </core/index>
 
+.. toctree::
+   :hidden:
    :caption: Developer Documentation
 
    Extending MPF with Custom Code </code/index>
    BCP Protocol </bcp/index>
    API Reference </api>
 
+.. toctree::
+   :hidden:
    :caption: Reference Material
 
    Events Reference </events/index>
    Config File Reference </config/index>
 
+.. toctree::
+   :hidden:
    :caption: About MPF
 
    About MPF </about/index>
