@@ -45,7 +45,7 @@ already, get MPF installed and make sure you can run *Demo Man*, and then come
 back here to start creating your own machine!
 
 #. :doc:`/install/index`
-#. :doc:`/howto/installation/demo_man`
+#. :doc:`/install/demo_man`
 
 If you do have MPF installed, let's make sure it's the right version. Open a
 command prompt and run the following command. If this gives you an error, it
@@ -65,5 +65,6 @@ and follow the installation links above if not.
 If you're reading this tutorial online, note that there are "Previous" and
 "Next" navigation buttons at the bottom of each page. You should be able to just
 click those to follow along. (And if you'd like to download a copy of this
-documentation to read offline, check the :doc:`/download`
-page links to this entire documentation set in multiple downloadable formats.)
+documentation to read offline, click the "Read the Docs" link at the bottom
+of the menu bar on the left for links to PDF, HTML, and Epub versions of this
+documentation.

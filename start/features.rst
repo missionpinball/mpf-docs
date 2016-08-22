@@ -19,7 +19,7 @@ Major Features & Concepts
   everything to a new hardware platform with a simple config file change.
 
 Hardware support
-~~~~~~~~~~~~~~~~
+----------------
 
 + Multimorphic P-ROC & P3-ROC pinball controllers, with either PD-8x8, PD-16,
   PD-LED, and SW-16 driver and accessory boards or installation in existing WPC,
@@ -36,7 +36,7 @@ Hardware support
 + SmartMatrix RGB LED DMD controllers
 
 Pinball device support
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 + Switches (normally open, normally closed, mechanical or opto, with
   configurable debounce settings)
@@ -57,7 +57,7 @@ Pinball device support
 + EM score reels
 
 Pinball logic
-~~~~~~~~~~~~~
+-------------
 
 + Ball locks
 + Multiball
@@ -85,8 +85,8 @@ Pinball logic
   events, with mode integration for blocking and blending
 + Timers (start / stop / pause / count down / count up)
 
-Displays
-~~~~~~~~
+Displays, DMDs, & Graphics
+--------------------------
 
 + On-screen LCD displays, either high-def or with a "dot" look
 + Physical mono-color DMDs
@@ -103,7 +103,7 @@ Displays
 + Any property of any widget can be animated (opacity, size, position, etc.)
 
 Sounds & Audio
-~~~~~~~~~~~~~~
+--------------
 
 + Multi-track sound system with automatic volume and ducking (e.g. voice,
   sfx, and background music tracks)
@@ -116,7 +116,7 @@ Sounds & Audio
   random, rotation patterns, etc.
 
 Shows
-~~~~~
+-----
 
 + A show controller which runs coordinated shows of LEDs, lights, coils,
   flashers, sounds, slides, videos, animations, etc.
@@ -125,7 +125,7 @@ Shows
 + Change the playback speed of shows (even while they're playing)
 
 Other stuff
-~~~~~~~~~~~
+-----------
 
 + A data manager which reads and writes data from disk, including
   audits, earnings, machine variables, high scores, etc.

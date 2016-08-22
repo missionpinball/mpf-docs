@@ -21,16 +21,13 @@ off the previous steps.) Once that's done, you can then move on to the How To / 
 how to do all sorts of other things. The How To guides can be followed in any order (though they all assume you've
 completed the tutorial).
 
-Happy pinballing!
-
-Tutorial Steps
---------------
+Now let's get started...
 
 .. toctree::
    :maxdepth: 1
 
    1. Prerequisites <1_prerequisites>
-   2. Creating your machine folder <2_creating_a_new_machine>
+   2. Create your machine folder <2_creating_a_new_machine>
    3. Get flipping! <3_get_flipping>
    4. Adjusting your flipper power <4_adjust_flipper_power>
    5. Add a display <5_add_a_display>

@@ -1,5 +1,5 @@
-Tutorial step 2: Creating your machine folder
-=============================================
+Tutorial step 2: Create your machine folder
+===========================================
 
 Okay, so MPF |version| is installed and you're able to run *Demo Man*. Great!
 Now it's time to create the folders and files for your own game.

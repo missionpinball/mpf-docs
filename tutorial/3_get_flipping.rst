@@ -111,9 +111,9 @@ manual.
 We have documentation for the various hardware platforms MPF supports which explain how numbering works on each
 platform:
 
-* :doc:`/howto/controller_hardware/fast`
-* :doc:`/howto/controller_hardware/p_roc`
-* :doc:`/howto/controller_hardware/opp`
+* :doc:`/hardware/configuring_fast_hardware`
+* :doc:`/hardware/multimorphic`
+* :doc:`/hardware/configuring_opp_hardware`
 
 ::
 

@@ -1,6 +1,15 @@
 MPF Sound & Audio
 =================
 
+.. toctree::
+   :hidden:
+   
+   Technical Overview </sound/technical>
+   Ducking </sound/ducking>
+   How to set up sound </sound/basic_setup>
+   Tips & tricks </sound/tips_tricks>
+   Playing a sound with variations </sound/variations>
+
 As of MPF 0.30, audio and sound support is provided by a brand-new custom audio library built on
 SDL2 and SDL_Mixer libraries.  This custom library allows the MPF development team to create audio
 features optimized for pinball machines.  The first release provides basic sound loading and
@@ -41,16 +50,4 @@ section of your machine configuration file. You add settings for individual soun
 :doc:`sounds: </config/sounds>` section and you can configure sounds to automatically play when
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
 Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
-
-Sound & Audio Table of Contents
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. toctree::
-
-   Technical Overview </sound/technical>
-   Ducking </sound/ducking>
-   How to set up sound </sound/basic_setup>
-   Tips & tricks </sound/tips_tricks>
-   Playing a sound with variations </sound/variations>
-
 

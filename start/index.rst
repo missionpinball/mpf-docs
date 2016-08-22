@@ -7,8 +7,8 @@ to the right place!
 .. toctree::
    :titlesonly:
 
-   How MPF works <overview>
+   How MPF works / Overview <overview>
    MPF features <features>
    Interfacing with physical pinball machines <hardware_interface>
-   Understanding the config files <config_files>
+   Understanding MPF config files <config_files>
    Config files versus coding <dsl_vs_programming>

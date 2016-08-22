@@ -1,6 +1,14 @@
 Displays & DMDs
 ===============
 
+.. toctree::
+   :hidden:
+
+   Widgets </displays/widgets/index>
+   Creating reusable "named" widgets <reusable_widgets>
+   Animating widgets <animate_widgets>
+   Positioning widgets <widget_positioning>
+
 Pretty much every pinball machine has some type of display, whether it's
 1980s-style 7-segment numeric displays, an early '90s- style alphanumeric
 display, a mono or color dot matrix display (DMD), or a modern LCD (which itself
@@ -23,7 +31,8 @@ Here's a traditional DMD with a single text widget:
 
 .. image:: images/display_mono_dmd.jpg
 
-Here's an on-screen display window made up of an image widget (the background),
+Next we have an on-screen display window made up of an image widget (the
+background),
 a virtual DMD widget, a rectangle widget (the thin white box around the DMD),
 and a text widget (the "Judge Dredd" words in the lower right corner). The image
 on the DMD is an image widget which has been targeted to DMD instead of the
@@ -33,7 +42,7 @@ window.
 
 
 Here's a "color" DMD on an LCD monitor. (It's a DMD widget surrounded by a blue
-rectangle widget:
+rectangle widget):
 
 .. image:: images/display_color_dmd.jpg
 
@@ -124,10 +133,3 @@ next. So if the MPF display system seems kind of complex, just think of it like
 a giant PowerPoint presentation and it should all hopefully make sense. Now
 let's start digging into some of the details of each of the parts of the display
 system.
-
-.. toctree::
-
-   Widgets </displays/widgets/index>
-   Creating reusable "named" widgets <reusable_widgets>
-   Animating widgets <animate_widgets>
-   Positioning widgets <widget_positioning>

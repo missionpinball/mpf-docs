@@ -2,7 +2,7 @@ Mission Pinball Framework |version| documentation
 =================================================
 
 Welcome! This is the documentation for the Mission Pinball Framework (MPF)
-|release|, last updated |today|.
+v|release|, last updated |today|.
 
 .. toctree::
    :maxdepth: 2
