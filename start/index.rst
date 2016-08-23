@@ -8,7 +8,7 @@ to the right place!
    :titlesonly:
 
    How MPF works / Overview <overview>
-   MPF features <features>
-   Interfacing with physical pinball machines <hardware_interface>
+   features
+   hardware_interface
    Understanding MPF config files <config_files>
    Config files versus coding <dsl_vs_programming>
