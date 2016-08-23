@@ -8,6 +8,8 @@ Game Logic
 
    Ball Locks <ball_lock>
    Ball Saves <ball_save>
+   Ball Search <ball_search>
+   Ball Tracking <ball_tracking>
    Extra Balls <extra_ball>
    Multiballs <multiball>
    Game Modes <modes/index>
@@ -25,4 +27,4 @@ Game Logic
    Scoring <scoring>
    Tilt <tilt>
    Coins & Credits <credits>
-   Ball Tracking <ball_tracking>
+

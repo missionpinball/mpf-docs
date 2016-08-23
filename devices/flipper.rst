@@ -1,10 +1,10 @@
 Flipper
 =======
 
-*MPF Device*
-
 .. toctree::
    :titlesonly:
 
    flipper_theory
    flipper_power
+   flipper_multiple
+   flipper_novelty

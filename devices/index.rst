@@ -27,6 +27,7 @@ Devices
    Score Reels <score_reel>
    Servos <servo>
    Slingshot <slingshot>
+   Spinners <spinner>
    Switches <switch>
    Stand-up Targets <target>
    Trough / Ball Drain <trough>

@@ -23,7 +23,7 @@ July 15, 2016
 * All shows are driven by MPF
 * Show content is "played" by the standard config_players
 * Playlists become shows
-* Tocks: are gone, shows now operate on real-world time
+* "Tocks" are gone, shows now operate on real-world time
 * Light scripts are gone, replaced by placeholder "tokens" in shows
 * Named colors
 * Hardware accelerated LED fades
@@ -32,6 +32,7 @@ July 15, 2016
 * Accelerometer-based tilts
 * Servo support
 * Text string support
+* Player achievements
 
 See the full list and details of what's new in MPF 0.30 :doc:`here <0.30>`.
 
