@@ -115,11 +115,11 @@ options).
 
 Here's a list of valid MPF commands. Click on any one of them for full details and command-line options.
 
-* `mpf <mpf>`_ (Starts the MPF game engine and other commands)
-* `mpf game <commands/game>`_ (Starts the MPF game engine)
-* `mpf mc <commands/mc>`_ (Starts the MPF Media Controller)
-* `mpf both <commands/both>`_ (Starts both the MPF game engine and media controller at the same time)
-* `mpf migrate <commands/migrate>`_ (Migrates older config and show files to the current version)
+* :doc:`mpf <mpf>` (Starts the MPF game engine and other commands)
+* :doc:`mpf game <commands/game>` (Starts the MPF game engine)
+* :doc:`mpf mc <commands/mc>` (Starts the MPF Media Controller)
+* :doc:`mpf both <commands/both>` (Starts both the MPF game engine and media controller at the same time)
+* :doc:`mpf migrate <commands/migrate>` (Migrates older config and show files to the current version)
 
 .. toctree::
    :hidden:
