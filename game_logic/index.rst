@@ -10,7 +10,7 @@ Game Logic
    Ball Saves <ball_save>
    Extra Balls <extra_ball>
    Multiballs <multiball>
-   Game Modes </modes/index>
+   Game Modes <modes/index>
    Logic Blocks <logic_blocks>
    Timers <timer>
    Shot <shot>
