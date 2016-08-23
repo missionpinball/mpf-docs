@@ -7,6 +7,8 @@ to know exactly what's going on under
 the hood. This diagram shows the high level flow. Read on to see the
 details of each step.
 
+.. image:: images/mpf_system_flow.png
+
 .. toctree::
    :titlesonly:
 
