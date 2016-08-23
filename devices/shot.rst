@@ -1,4 +1,0 @@
-Shot
-====
-
-*MPF Device*

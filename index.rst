@@ -28,6 +28,7 @@ Mission Pinball Framework |version| documentation
    :caption: MPF Architecture
 
    Core Modules </core/index>
+   Flowcharts </flowcharts/index>
 
 .. toctree::
    :hidden:
@@ -35,7 +36,7 @@ Mission Pinball Framework |version| documentation
 
    Extending MPF with Custom Code </code/index>
    BCP Protocol </bcp/index>
-   API Reference </api>
+   API Reference </api/index>
 
 .. toctree::
    :hidden:
@@ -48,7 +49,7 @@ Mission Pinball Framework |version| documentation
    :hidden:
    :caption: About MPF
 
-   About MPF </about/index>
+   Documentation Authors </about/authors>
    License </about/license>
    FAQ </faq/index>
    Glossary </glossary/index>

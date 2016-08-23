@@ -27,5 +27,5 @@ Events posted by ball lock devices
 ----------------------------------
 
 The ball locks post several events when they lock or release balls and when they're
-full. See the :doc:`/events/index` for details. (Look for event names that start with
+full. See the :doc:`/events/event_reference` for details. (Look for event names that start with
 "ball_lock".)

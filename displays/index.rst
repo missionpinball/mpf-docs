@@ -2,16 +2,14 @@ Displays & DMDs
 ===============
 
 .. toctree::
-   :hidden:
 
-   Widgets </displays/widgets/index>
-   Creating reusable "named" widgets <reusable_widgets>
-   Animating widgets <animate_widgets>
-   Positioning widgets <widget_positioning>
+   Understanding Displays <display/index>
+   Slides <slide/index>
+   Working with Widgets <widgets/index>
 
-Pretty much every pinball machine has some type of display, whether it's
-1980s-style 7-segment numeric displays, an early '90s- style alphanumeric
-display, a mono or color dot matrix display (DMD), or a modern LCD (which itself
+Every electronic pinball machine has some type of display, whether it's
+1980s-style 7-segment numeric displays, an early '90s-style alphanumeric
+display, a mono dot matrix display (DMD), a full color "RGB" DMD, or a modern LCD (which itself
 can either be a small LCD, like a "color DMD", or a huge one like what Jersey
 Jack has in the backbox of The Wizard of Oz and The Hobbit).
 
@@ -113,8 +111,7 @@ together. The major components of the MPF Media Controller's display system are:
   transitions (push, fade, move_in, etc.), and it's really easy to
   write your own transitions if you'd like to make custom ones.
 
-All these concepts come from PowerPoint. :)
--------------------------------------------
+.. rubric:: All these concepts come from PowerPoint. :)
 
 The original creators of MPF have day jobs that require them to spend a lot of
 time with PowerPoint! If you've ever used PowerPoint, you should notice that we

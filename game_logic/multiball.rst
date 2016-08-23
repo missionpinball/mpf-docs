@@ -16,7 +16,7 @@ Events posted by multiball devices
 ----------------------------------
 
 Multiball devices post several events when they are enabled or disabled, and when
-they start and stop. See the :doc:`/events/index` for details.
+they start and stop. See the :doc:`/events/evnet_reference` for details.
 (Look for event names that start with "multiball".)
 
 

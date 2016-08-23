@@ -1,6 +1,14 @@
 Display widgets
 ===============
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+
+   Creating reusable "named" widgets <reusable_widgets>
+   Animating widgets <animate_widgets>
+   Positioning widgets <widget_positioning>
+
 Display widgets are where the real action takes place in MPF-MC's display system.
 They're what you (as a game programmer) interact with most often. They're the
 "stuff" that shows up on a display. (Well, technically, they're the stuff that
@@ -27,3 +35,4 @@ something that we don't include out-of-the-box. (We also have plans for more
 types of display elements, including ones to render segmented displays to the on
 screen window and ones that show the current status of lights, switches, and
 coils.)
+

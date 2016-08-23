@@ -11,3 +11,4 @@ will help you design and implement your machine in the best way possible.
 
    Flipper theory <flipper_theory>
    Switch debounce theory <switch_debounce_theory>
+   Ball Tracking <ball_tracking>

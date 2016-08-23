@@ -9,3 +9,6 @@ Config file instructions
    device_control_events
    tags
    debug
+   express_config
+   lists
+   yaml

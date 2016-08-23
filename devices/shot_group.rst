@@ -1,4 +1,0 @@
-Shot group
-==========
-
-*MPF Device*

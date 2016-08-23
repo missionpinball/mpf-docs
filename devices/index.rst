@@ -5,26 +5,31 @@ Devices
    :hidden:
 
    Accelerometers <accelerometer>
-   Autofire coils <autofire_coil>
-   Ball devices <ball_device>
+   Autofire Coils <autofire_coil>
+   Ball Devices <ball_device>
    Diverters <diverter>
    Drivers (Coils / Solenoids) <driver>
-   Drop targets <drop_target>
-   Drop target banks <drop_target_bank>
-   Dual-would coils <dual_wound_coils>
+   Drop Targets <drop_target>
+   Dual-Wound Ccils <dual_wound_coils>
    Flashers <flasher>
    Flippers <flipper>
    GI (general illumination) <gi>
+   Kickback Lanes <kickback>
    Lights <light>
    LEDs <led>
+   Loops / Orbits / Ramps <loop>
+   Magnets <magnet>
    Playfields <playfield>
    Playfield transfers <playfield_transfer>
-   Score reels <score_reel>
-   Score reel groups <score_reel_group>
+   Plungers <plunger>
+   Pop Bumpers <pop_bumper>
+   Rollover Switches <rollover>
+   Score Reels <score_reel>
    Servos <servo>
-   Shots <shot>
-   Shot groups <shot_group>
+   Slingshot <slingshot>
    Switches <switch>
+   Stand-up Targets <target>
+   Trough / Ball Drain <trough>
 
 
 A *Device* is a "thing" in a pinball machine. (How's that for an explanation!)

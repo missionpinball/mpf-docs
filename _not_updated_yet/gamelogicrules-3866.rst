@@ -1,5 +1,5 @@
 
-In MPF, there's no single"feature" that's used to create game logic
+In MPF, there's no single "feature" that's used to create game logic
 and rules, rather, it's a combination of many different parts of MPF,
 including:
 

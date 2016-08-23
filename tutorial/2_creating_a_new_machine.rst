@@ -116,7 +116,7 @@ You might notice that it seems like the command is hung because you didn't get t
 happening is MPF is running! Your machine is live and sitting in the attract mode!!
 
 At this point since we are running a completely blank config, the only way to
- stop MPF is to hit ``CTRL+C`` . When you do
+stop MPF is to hit :kbd:`CTRL+C` . When you do
 that, you should see a few more lines appear, like this:
 
 ::
