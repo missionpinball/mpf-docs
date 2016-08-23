@@ -7,3 +7,4 @@ Flipper
    :titlesonly:
 
    flipper_theory
+   flipper_power
