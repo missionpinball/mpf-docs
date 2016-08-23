@@ -1,7 +1,5 @@
-Switch debounce theory
+Switch Debounce Theory
 ======================
-
-*MPF Tech Note*
 
 There's a lot of confusion around how "debounce" works in pinball machines and
 in MPF, mainly because different hardware platforms do things in very different

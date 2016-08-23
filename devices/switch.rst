@@ -46,3 +46,8 @@ Tutorial for step-by-step switch setup
 --------------------------------------
 
 The step-by-step tutorial covers switch setup in *Step 4: Get flipping*.
+
+.. toctree::
+   :titlesonly:
+
+   switch_debounce_theory

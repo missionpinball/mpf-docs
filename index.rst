@@ -21,7 +21,6 @@ Mission Pinball Framework |version| documentation
    Assets </assets/index>
    Config Players </config_players/index>
    Machine Management </machine_management/index>
-   Tech Notes </tech_notes/index>
 
 .. toctree::
    :hidden:

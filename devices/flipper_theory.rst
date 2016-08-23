@@ -1,7 +1,5 @@
-Flipper theory
+Flipper Theory
 ==============
-
-*MPF Tech Note*
 
 Flippers are pretty important to pinball machines (obviously) and
 there are a lot of different types and different ways they can be
