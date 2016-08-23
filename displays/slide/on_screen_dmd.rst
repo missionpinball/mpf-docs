@@ -1,6 +1,10 @@
 How to configure an "on screen" DMD
 ===================================
 
+.. note::
+
+   This page has not been updated for MPF 0.30 yet
+
 (C) Adda DMD
 ------------
 
