@@ -13,8 +13,7 @@ Game Logic
    Game Modes <modes/index>
    Logic Blocks <logic_blocks>
    Timers <timer>
-   Shot <shot>
-   Shot Group <shot_group>
+   Shots <shot>
    Using events for game logic <events>
    Skill shot <skillshot>
    Bonus <bonus>
