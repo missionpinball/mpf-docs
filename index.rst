@@ -42,7 +42,7 @@ Mission Pinball Framework |version| documentation
    :hidden:
    :caption: Reference Material
 
-   Events Reference </events/index>
+   Events Reference </events/event_reference>
    Config File Reference </config/index>
 
 .. toctree::

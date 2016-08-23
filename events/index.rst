@@ -3,6 +3,7 @@ MPF Events
 
 .. toctree::
    :titlesonly:
+   :maxdepth: 1
 
    event_reference
    event_types
