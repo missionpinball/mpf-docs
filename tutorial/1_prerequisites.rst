@@ -25,38 +25,34 @@ you can "play" your machine to test it out.
 2. Read the overview of MPF
 ---------------------------
 
-You certainly don't have to read through hundreds of pages of documentation to
-start this tutorial. However, we want to point out a few specific docs that you
-should read first which will help you understand some core concepts of MPF that
-we'll be using as we go through the tutorial.
-
-Here are the docs that we suggest you read before we proceed.
-
-#. :doc:`/start/overview`
-#. :doc:`/start/hardware_interface`
+You certainly don't have to read through all the documentation to
+start this tutorial. However, the documentation is arranged in the order you should
+read it, so if you haven't read the documentation leading up to this point, please
+do that now. (If you're reading this online, start with the ":doc:`/start/index`" entry
+on the left. If you're reading a PDF, please turn to Page 1. :)
 
 
-3. Install MPF |version|
-------------------------
+3. Check your MPF version
+-------------------------
 
-We have separate documentation that walks you through downloading and installing
-MPF, as well as running our *Demo Man* example game. So if you haven't done so
-already, get MPF installed and make sure you can run *Demo Man*, and then come
-back here to start creating your own machine!
+This tutorial is written for MPF version |version|, so let's make sure the version
+of MPF you have installed matches that.
 
-#. :doc:`/install/index`
-#. :doc:`/install/demo_man`
-
-If you do have MPF installed, let's make sure it's the right version. Open a
-command prompt and run the following command. If this gives you an error, it
-means MPF is not installed, or you have an older version.
+To do this, open a command prompt and run the following command:
 
 ::
 
    mpf --version
 
-This tutorial is written for MPF |version|, so make sure that's what you have,
-and follow the installation links above if not.
+That command should print something like ``MPF v0.30.1``. Note that the version is three numbers, ``x.y.z``.
+The last number (the "z") is the patch number and doesn't matter for the documentation. In other words,
+the documentation for 0.30 is valid for 0.30.0 or 0.30.1 or 0.30.212.
+
+If this command gives you an error, then go back to the :doc:`/install/index` section to make sure
+MPF is installed. If it prints a version number lower than |version|, then install the latest version of
+MPF. And if it shows that you have a newer version of MPF (based on the first two numbers), then go to
+`docs.missionpinball.org <http://docs.missionpinball.org>`_ to get the version of this documentation that matches the version of MPF
+you have.
 
 
 4. Let's go!

@@ -1,3 +1,10 @@
+Plunger lanes with no ball switch
+=================================
+
+Modern pinball machines have a switch in the plunger lane that tells
+the software that a ball is sitting in the plunger lane waiting to
+be plunged.
+
 
 This document describes how you configure MPF to work with plunger
 lanes when the plunger lane has no switch which is active when a ball
@@ -31,7 +38,7 @@ you need to add the *ball_add_live* tag to your trough, like this:
 
 ::
 
-    
+
     ball_devices:
         trough:
             tags: drain, home, trough, ball_add_live
@@ -49,8 +56,8 @@ trough`_ with separate drain and trough devices, you'd simply add the
 
 ::
 
-    
-    ball_devices:    
+
+    ball_devices:
         drain:
             ball_switches: drain
             eject_switch: drain

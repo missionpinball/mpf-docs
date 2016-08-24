@@ -1,21 +1,19 @@
 Tutorial step 8: Add your plunger lane
 ======================================
 
-The previous step was really long since we had to go through all the
-basics of what ball devices are and how they're configured. In this
-step we're going to create a second ball device—-your *plunger lane*
+In this step we're going to create a second ball device—your *plunger lane*
 (or *shooter lane* or *ball launcher* or *catapult* or whatever you
 want to call it). We'll just call it the *plunger lane* in this
 tutorial, but again, feel free to call it whatever makes you happy.
 
-At this point you might be thinking, "Wha?? Why is this a thing?" Remember that
+At this point you might be thinking, "What?? Why is this a thing?" Remember that
 MPF attempts to keep track of where balls are at all times. So even if you have
-a mechanically-operating spring-loaded plunger, MPF wants to know that a ball
-it ejected from the trough has successfully made it out and landed in the
+a mechanically-operated spring-loaded plunger, MPF wants to know that a ball
+ejected from the trough has successfully made it out and landed in the
 plunger lane, and it wants to know when a ball has left the plunger lane and
 is heading for the playfield.
 
-Remember that in MPF, a ball device is anything in a pinball machine that can
+Again, in MPF, a ball device is anything in a pinball machine that can
 hold a ball, so the plunger lane is no exception. The exact settings
 you use for the plunger lane will vary depending on the type of plunger
 you have. Options include:
@@ -31,10 +29,9 @@ you have. Options include:
 
 Regardless of the type of plunger, all modern machines have one thing
 in common: there's a switch in the plunger lane/catapult/whatever
-which is active when a ball is sitting in the plunger waiting to be
+which is active when a ball is sitting in it waiting to be
 fired. So in this step of the tutorial, we'll first get the plunger ball device
-set up, and then if
-you have a coil-powered plunger we'll walk through the additional
+set up, and then if you have a coil-powered plunger we'll walk through the additional
 steps you need to configure that.
 
 That said, what if your plunger lane
@@ -42,8 +39,8 @@ doesn't have a switch in it which is activated when a ball is sitting
 at the plunger? (This is common in single ball machines, like EMs and
 older solid state machines.) In this case you can't follow this step
 in the tutorial since you don't have the switch. Instead check our
-guide "How to configure plunger lanes that don't have plunger
-switches". Then come back and continue with the next step of the tutorial.
+guide :doc:`/devices/plunger_no_switch`. Then come back and continue
+with the next step of the tutorial.
 
 1. Add your plunger lane switch
 -------------------------------

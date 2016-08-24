@@ -4,7 +4,7 @@ Tutorial step 4: Adjust your flipper power
 We casually mentioned in the previous step that MPF uses a very low
 default power setting for coils--mainly because we don't want to risk blowing
 apart some 40-year-old coil mechanism with a power setting that's too high. (Ask us
-how we know this!)
+how we know this! :)
 
 So at this step in the tutorial, we're going to
 look at how you can adjust and fine-tune the power of your flipper

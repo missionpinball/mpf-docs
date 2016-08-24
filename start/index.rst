@@ -10,5 +10,6 @@ to the right place!
    How MPF works / Overview <overview>
    features
    hardware_interface
+   media_controller
    Understanding MPF config files <config_files>
    Config files versus coding <dsl_vs_programming>

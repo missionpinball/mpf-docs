@@ -44,3 +44,58 @@ Ball devices know where they
 fit in the "chain" (so they know which devices feed them and which
 devices they feed), and they work with the ball controller to help MPF
 know where all the balls are at any given time.
+
+
+
+
+
+
+
+
+
+
+
+1. Understand what a "ball device" is
+-------------------------------------
+
+The first step to setting up your ball devices is that you have to
+understand what a ball device is. :) Back in Step 3 we showed you how to add
+your flipper *devices* and we briefly
+outlined what devices are. We also said there are low level,
+*physical* devices (switches, coils, lights, LEDs, etc.) and
+higher-level *logical* devices that intelligently group together the
+lower-level physical devices.
+
+A *ball device* quite literally anything in a pinball machine that
+holds a pinball (even for a moment), including your trough, the
+plunger lane, playfield locks, VUKs, the gumball machines in *Twilight
+Zone*, a kickout hole, etc. (Actually behind the scenes the playfield
+is a ball device too, because when a ball is rolling around on it,
+it's "in" the playfield device.)
+
+Your machine will most likely have
+lots of ball devices. Turning around and looking at the *Judge Dredd*
+machine behind me, I count eight(!) ball devices: the trough, the
+right plunger lane, the left plunger lane, the Sniper VUK, the Hall of
+Justice VUK, the Deadworld orbit thingy, the crane, and the playfield.
+
+MPF keeps track of how many balls are in each ball device at all
+times, and it assumes that any balls *not* in ball devices are either
+in transit from one device to another, or they're stuck somewhere.
+Most ball devices have a one-to-one ratio of ball switches to ball
+capacity, so MPF can simply count how many switches are active to see
+how many balls each device has at any given time. (Not all ball
+devices have ball switches for every ball—-the gumball machine in
+*Twilight Zone* is a good example of this—-but we'll get to that
+later.)
+
+Ball devices support all sorts of settings and commands. They
+can create events when balls enter or exit, (which you can use to do things in
+your config files,
+like how we set up the ``slide_player:`` to show certain slides when
+certain events happened).  You can also configure counting
+delays to account for balls bouncing around before they settle, you
+can specify how devices confirm that balls have successfully ejected,
+as well as dozens of other options that allow MPF to support every
+known type of device in every pinball machine ever created.
+(Seriously.)

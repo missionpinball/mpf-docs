@@ -1,17 +1,13 @@
 Tutorial step 3: Get flipping!
 ==============================
 
-There's something exciting about seeing the first flips of your own
-pinball machine (whether it's a machine you built from scratch or an
-existing machine you're writing custom code for), so in this step we're
-going to focus on getting your flippers working.
+There's something exciting about seeing the first flips from your
+own code, so in this step we're going to focus on getting your flippers working.
 
 To do that, you have to add some entries to your config file to tell
 MPF about some coils and switches, then you have to group them
 together to tell MPF that they should act like flipper devices. So go ahead
-and open the ``config.yaml`` file in the ``/your_machine/config`` folder
-that you created in the previous step.
-
+and open that ``/config/config.yaml`` file that you created in the previous step.
 
 1. Add your flipper switches
 ----------------------------
@@ -57,11 +53,20 @@ does this automatically. Other editors might require plugins. (For
 example, you can add this functionality to Atom with a free package
 called "autocomplete-plus".)
 
-Also, note that most things in MPF config files are case-insensitive.
-So what happens internally is MPF converts everything to
-lowercase. (Well, not everything. Certain things like labels and text
-strings and stuff will be in whatever case you enter them as. But in
-general stuff is case insensitive.)
+When naming your switches (and most devices in MPF), your name can't start
+with a number and it should only be a combination of letters, numbers, and
+underscores.
+
+Also, the names you enter here are the internal names that you'll use for these switches
+in your game code and configuration file. When it comes time to create
+"friendly" names for these switches which you'll expose via the
+service menu, you can create plain-English labels with spaces and
+capitalization everything. But that comes later.
+
+Finally, note that most things in MPF config files are case-insensitive,
+and MPF converts most things to lowercase. (Not everything, though.
+Certain things like labels and text strings will be in whatever case
+you enter them as. But in general stuff is case insensitive.)
 
 The reason we mention this is
 because you can *not* have two things configured with the same name
@@ -73,7 +78,7 @@ Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
 here):
 
-* You you cannot use tabs to indent in YAML . (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
+* You you cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
   Most text editors can be configured to automatically insert spaces when you push the tab key, or you can just
   hit the space bar a bunch of times.
 * The exact number of spaces you use for the indents doesn't matter (most people use
@@ -82,8 +87,8 @@ here):
   same number of spaces in front of them. In a practical sense this shouldn't be a problem, because again most
   text editors let you use the tab key to automatically insert space characters.
 * You cannot have a space between the setting name and the colon. GOOD: ``switches:``. BAD: ``switches :``
-* Must must have a space after the colon and the setting value. GOOD: ``balls: 3``. BAD: ``balls:3``
-* Anything after a hash sign ``#`` is ignored, so you can use this to add comments and notes to yourself.
+* You must must have a space after the colon and the setting value. GOOD: ``balls: 3``. BAD: ``balls:3``
+* Anything on a line following a hash sign ``#`` is ignored, so you can use this to add comments and notes to yourself.
 
 This all might seem kind of annoying, but that's just the way it is with YAML files. When we started building
 MPF, we weighed the pros and cons of lots of different config file formats (XML, INI, JSON, TOML, text, Python,
@@ -111,9 +116,9 @@ manual.
 We have documentation for the various hardware platforms MPF supports which explain how numbering works on each
 platform:
 
-* :doc:`/hardware/configuring_fast_hardware`
-* :doc:`/hardware/multimorphic`
-* :doc:`/hardware/configuring_opp_hardware`
+* :doc:`FAST Pinball </hardware/configuring_fast_hardware>`
+* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic>`
+* :doc:`Open Pinball Project (OPP) </hardware/configuring_opp_hardware>`
 
 ::
 
@@ -134,14 +139,15 @@ coils for each flipper. If you're using single-wound coils, then
 you'll only have one coil for each flipper (which we'll configure to
 pulse-width modulation for the holds).
 
-If you have no idea what we're
-talking about, read our :doc:`/tech_note/flipper_theory` tech note
+If you have no idea what we're talking about, read our :doc:`/devices/flipper_theory` page
 for an introduction to flipper concepts, dual-wound versus single-
 wound, holding techniques, end-of-stroke switches, and a bunch of
 other stuff that's important that you probably never thought about.
 
-If you have dual-wound coils, your ``coils:`` section of the documentation
-should look like this:
+Here's an example of how you'd enter your coils for a machine with two
+dual-wound coils. If you have single-wound coils, or you have more than
+two flippers, refer to the :doc:`/devices/flipper` documentation for
+examples of how to configure them.
 
 ::
 
@@ -149,7 +155,7 @@ should look like this:
         c_flipper_left_main:
             number: 0  # again, these numbers will probably be different for you
         c_flipper_left_hold:
-            number: 1  # check your platform-specific How To guide for the actual numbers
+            number: 1  # check your platform-specific documentation for the actual numbers
             allow_enable: true
         c_flipper_right_main:
             number: 2
@@ -186,26 +192,12 @@ thinking, "Wait, but didn't I just configure the coils and switches?"
 Yes, you did, but now you have to tell MPF that you want to create a
 flipper device which links together one switch and one (or two) coils
 to become a "flipper". MPF supports dozens of different types of
-:doc:`/devices/index`, which, broadly-speaking, and be broken down into two
-classes:
+:doc:`/devices/index`, some of which (like flippers), are created
+by combining other devices.
 
-+ There are low level physical devices which you actually connect
-  to your pinball controller. These are coils, switches, matrix lights,
-  RGB LEDs, flashers, motors, and servos.
-+ There are higher-level logical devices which are familiar pinball
-  devices, like flippers, pop bumpers, troughs, drop targets, shots,
-  etc. All these higher-level devices are logical groupings of the lower
-  level devices: a flipper is *this* switch plus *that* coil, a drop
-  target is *this* switch and *that* knockdown coil and *this* reset
-  coil, etc.
-+ There are abstract devices, which are things you add into your pinball
-  game that are more abstract concepts, like ball locks, ball saves, multiballs,
-  extra balls, etc.
-
-So getting back to the flippers, you create your logical flipper
-devices by adding a ``flippers:`` section to your config file, and then
-specifying the switch and coil(s) for each flipper. Here's what you
-would create based on the switches and coils we've defined so far:
+You create your flipper devices by adding a ``flippers:`` section to
+your config file, and then specifying the switch and coil(s) for each flipper.
+Here's what you would create based on the switches and coils we've defined so far:
 
 ::
 
@@ -218,74 +210,6 @@ would create based on the switches and coils we've defined so far:
             main_coil: c_flipper_right_main
             hold_coil: c_flipper_right_hold
             activation_switch: s_right_flipper
-
-
-What if your flippers coils only have one winding?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The example above uses dual-wound flipper coils where
-MPF literally sees each flipper coil as two separate coils (with two
-separate names and two separate drivers). When you push the flipper
-button, MPF energizes both coils initially, but cuts the power to the
-main coil after a few milliseconds so only the lower power hold coil
-remains active. This prevents the flipper coil from burning up.
-
-As an alternative, some flippers just use normal (single winding) coils and
-then the hardware controller controls the flow of electricity through
-it to prevent it from burning up. In that case the hardware will send
-an initial constant pulse for a few milliseconds to give the flipper
-its strong initial pulse, and then it will flip the current on & off
-really fast (really fast, like hundreds of times per second) to keep
-the flipper in the 'up' position without overheating it.
-
-If you have single-wound flipper coils (or if you have traditional dual-wound
-coils but you don't want to waste two drivers per flipper and you just
-want to use a single winding), make sure you've read our
-:doc:`/tech_note/flipper_theory` tech note for all the details about how that
-works. If you'd like to use single-wound flipper coils, you need to do
-two things in your config file:
-
-+ First, you can remove the ``hold_coil:`` entries from your two
-  flippers since you don't have hold coils.
-+ Second, you need to add a ``hold_power:`` entry to each of your two
-  coils in the ``coils:`` section of your config file. This is how you
-  tell MPF what timing it should use to quickly pulse the current to
-  that coil when its being held on.
-
-Here's an example of what the ``coils:`` and ``flippers:`` sections of
-your config file would look like if you're using single wound coils.
-(The ``switches:`` section would be the same in both cases):
-
-::
-
-    # single-wound flipper coil example
-
-    coils:
-        c_flipper_left_main:
-            number: 0
-            pulse_ms: 20
-            hold_power: 2
-        c_flipper_right_main:
-            number: 2
-            pulse_ms: 20
-            hold_power: 2
-
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            activation_switch: s_right_flipper
-
-Note that we used a values of 2 for the *hold_power*. The *hold_power*
-setting is a whole number from 0-8 which represent a percentage of
-power that's applied when that coil is held on. (0 = 0%, 4=50%,
-8=100%, etc.) At this point we have no idea if ``hold_power: 2`` is the
-correct setting or not. We can fine-tune that later. (And again,
-*hold_power* is only used with single-wound coils. Dual-wound coils
-fire both windows at full power all the time, since the hold winding is
-designed to be energized at full power.)
 
 
 5. Try running MPF to make sure your config file is ok
@@ -385,7 +309,7 @@ Again, recapping the rules of YAML:
 Just running MPF with your game's config file isn't enough to get your
 flippers working. By default, they are only turned on when a ball
 starts, and they automatically turn off when a ball ends. But the
-basic config file doesn't have a start button or your ball trough or
+simple config file we just created doesn't have a start button or your ball trough or
 plunger lane configured, so you can't actually start a game yet. So
 in order to get your flippers working, we need to add a configuration
 into each flipper's entry in your config file that tells MPF that we
@@ -394,17 +318,6 @@ just want to enable your flippers right away, without an actual game.
 this, add the following entry to each of your flippers in your config
 file:
 
-If you're following this tutorial with a physical pinball machine attached, you're probably excited to get flipping.
-We're almost there! Simply adding flipper devices to your config file gives MPF the information it needs to make your
-flippers work, however, in real pinball machines, the flippers don't work in attract mode. So to get them working "for
-real", we need to get a game setup.
-
-However, setting up a game requires a start button and balls and all sorts of other things. So we're going to take a
-shortcut for now just to enable the flippers in a quick-and-dirty way. Later on in the tutorial we'll remove the shortcut
-and configure the flippers for real.
-
-The shortcut we'll take is to add the following config line to each of your flipper devices:
-
 ::
 
     enable_events: machine_reset_phase_3
@@ -412,7 +325,7 @@ The shortcut we'll take is to add the following config line to each of your flip
 We'll cover exactly what this means later on. (Basically it's telling
 each of your flippers that they should enable themselves when MPF is booting up, rather than them waiting for a
 ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
-coils, then you won't have the ``hold_coil:`` entries here.
+coils, then you won't have the ``hold_coil:`` entries here.)
 
 ::
 
@@ -432,7 +345,6 @@ At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
 have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adjust_flipper_power`.
 
-
 7. Configure MPF to use your physical pinball controller
 --------------------------------------------------------
 
@@ -444,18 +356,16 @@ talk to your hardware. To configure MPF to use a hardware pinball
 controller, you need to add a ``hardware:`` section to your config file,
 and then you add settings for ``platform:`` and ``driverboards:``.
 
-Remember back in Step 2 that we provided links to the documentation for
+Remember earlier in this step, we provided links to the documentation for
 each platform. Here they are again:
 
-* :doc:`/howto/controller_hardware/fast`
-* :doc:`/howto/controller_hardware/p_roc`
-* :doc:`/howto/controller_hardware/opp`
+* :doc:`FAST Pinball </hardware/configuring_fast_hardware>`
+* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic>`
+* :doc:`Open Pinball Project (OPP) </hardware/configuring_opp_hardware>`
 
-You really need to look at those docs for the specifics since the options and
-numbers for your particular hardware. The good news is that 99% of the MPF
-config files are identical regardless of the hardware you're using. But since
-each hardware platform has its own scheme for connecting to and specifying
-device numbers, they will all be a bit different.
+You only need look at those docs for the specifics parts of the config that
+vary depending on your hardware. The good news is that 99.9% of the MPF
+config files are identical regardless of the hardware you're using.
 
 Here are some various examples of different types of hardware configs. Please
 understand that these are just some examples! Do not copy them for your own
@@ -567,7 +477,6 @@ existing *Demolition Man* machine.)
 Note that the individual sections of the config file can be in any
 order. We put the ``hardware:`` section at the top, but that's just our
 personal taste. It really makes no difference.
-
 
 9. Running your game and flipping!
 ----------------------------------

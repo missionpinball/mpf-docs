@@ -139,7 +139,7 @@ it on your computer. What's cool about *pip* packages is that a package can also
 include a list of other packages that it requires to run, and *pip* will see
 this and automatically install the other packages that are needed too.
 
-In fact, the *mpf-mc* package is actually just the MPF Media Controller--the MPF
+In fact, the *mpf-mc* package is actually just the :doc:`MPF Media Controller </start/media_controller>`--the MPF
 core engine is in a separate package called *mpf*. But since *mpf-mc* includes
 *mpf* in its list of requirements, installing *mpf-mc* automatically installs
 the *mpf* core engine too. (And it installs a bunch of other things MPF needs,

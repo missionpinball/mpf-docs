@@ -74,19 +74,20 @@ should look like this:
 So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_ or `Sublime <https://www.sublimetext.com/>`_)
 and then add that to the top of the file and save it.
 
-The reason we do this is because one of the challenges we had with all the frequent updates to MPF is that sometimes new
-versions of MPF change certain settings in the config files. So we need a way to track which set of config file settings
-a particular YAML file uses. That way when MPF loads the config, it can make sure the actual contents of the config file
-match up with what MPF is expecting.
+Be sure to enter this exactly as it's shown here, with no spaces around the equal sign.
 
-That said, not every new version of MPF has changes to the YAML file, so that’s why the YAML file config_version and the
-MPF version aren't the same.
+This line tells MPF which version of the config spec you have. That way if a future version of MPF
+requires changes to a config file, it can automatically recognize older files and update them.
 
-Adding versioning to YAML files also means it’s easy us to migrate config files from older versions to newer versions.
-(We have a config migration tool that does this, so when we change MPF, you don't have to change your configs.)
-
-The current version of the config files is 4 which is what’s used with MPF 0.30 and newer, so that’s what we’re adding
+The current version of the config files is ``4`` which is what’s used with MPF 0.30 and newer, so that’s what we’re adding
 here.
+
+At this point, your environment should look like this:
+
+.. image:: images/machine_config_folder.png
+
+Note the folder structure, the location of the ``config.yaml`` file, and the ``#config_version=4`` as the only
+contents of that file.
 
 5. Run your game!
 -----------------
@@ -98,8 +99,8 @@ folder, and run ``mpf -b``, like this:
 
    C:\pinball\your_machine>mpf -b
 
-(The ``-b`` option tells MPF not to try to connect to a media controller for display and sound since we haven't set that
-up yet.)
+Again, enter it as shown, with a space between ``mpf`` and ``-b``. (The ``-b`` option tells MPF not to try to connect
+to a media controller for display and sound since we haven't set that up yet.)
 
 You should get results that look something like this:
 
@@ -126,8 +127,8 @@ that, you should see a few more lines appear, like this:
 
    C:\pinball\your_machine>
 
-At this point you're all set! You're all set. Move on to the next step. However if you got something else on your
-display or some kind of error or crash, read on below...
+At this point you're all set! If your machine is working like this, go ahead and move on to the next step.
+However if you got something else on your display or some kind of error or crash, read on below...
 
 What if it didn't work?
 -----------------------
