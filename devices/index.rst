@@ -8,9 +8,9 @@ Devices
    Autofire Coils <autofire_coil>
    Ball Devices <ball_device>
    Diverters <diverter>
-   Drivers (Coils / Solenoids) <driver>
+   Coils (Solenoids) <coil>
    Drop Targets <drop_target>
-   Dual-Wound Ccils <dual_wound_coils>
+   Dual-Wound Coils <dual_wound_coils>
    Flashers <flasher>
    Flippers <flipper>
    GI (general illumination) <gi>
