@@ -30,6 +30,13 @@ Select the appropriate guide from our :doc:`/install/drivers/index` list:
 
    /install/drivers/index
 
+Choosing a host computer
+------------------------
+
+.. toctree::
+
+   host_computer
+
 Quick install guide
 -------------------
 
@@ -43,7 +50,5 @@ If you're already Python-savvy and know what you're doing, here's the quick-and-
 In all cases you'll need to install the USB drivers for your controller hardware separate from MPF. See the controller
 hardware section of the How To guides for details.
 
-.. toctree::
-   :hidden:
-   host_computer
+
 
