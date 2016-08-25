@@ -1,14 +1,11 @@
 Diverter
 ========
 
-*MPF Device*
+In MPF, a diverter (sometimes spelled "divertor") is anything that alters
+the path of the ball based on the state it's in, including:
 
-The Mission Pinball Framework includes specific device drivers to
-handle diverters. We consider a diverter to be anything that alters
-the path of the ball when it's enabled, including:
-
-+ A traditional diverter which is a metal flap at the end of a rod
-  (typically used on ramps).
++ A traditional diverter which is a metal flap at the end of a rod,
+  typically used on ramps to "divert" the ball one way or the other.
 + A coil-controlled post that pops up (or down) to let the ball either
   pass over it or bounce back in some other direction. (This is
   sometimes called an "up/down" post.)
@@ -17,7 +14,11 @@ the path of the ball when it's enabled, including:
   when active which allows the ball to travel through it in both
   directions.
 + A "trap door" pop-up which captures the ball when it's up but lets
-  the ball roll over it to another shot when it's down.
+  the ball roll over it to another shot when it's down. (Like the trap
+  door / basement in Theatre of Magic.)
++ A single drop target that blocks the entrance to a shot when it's up,
+  such as in the back of the saucer in Attack from Mars or the ones that
+  block the ramps in Ghostbusters.
 + Something else completely custom, such as the Ringmaster in Cirqus
   Voltaire. (When it's up the ball can hit it and drop down under the
   playfield, and when it's down the ball rolls over it and hits standup
@@ -32,9 +33,10 @@ shot to them goes towards one place, and when they're active, a ball is
 
 Most diverters are held in their "on"
 position as long as their driver coil enabled, and then when they're
-disabled they return back to their off position. (That said, some are
-different. The Ringmaster has a motor which raises and lowers it, so
-nothing is "active" to hold it on.)
+disabled they return back to their off position. That said, some are
+different. The Ringmaster has a motor which raises and lowers it, and drop
+targets have coils that are just pulsed to raise/lower them, so this is not
+a hard and fast rule.
 
 So based on all that, let's look
 at how the MPF actually handles diverters. At the most basic level,
@@ -61,6 +63,6 @@ events), and they include intelligence to know which target devices a
 diverter will send a ball to when it's enabled or disabled.
 
 
-Diverters are configured in the `diverters: </config/diverters>`_ section of your
-config files. You can see the full details of options (and how
+Diverters are configured in the :doc:`diverters: </config/diverters>`
+section of your config files. You can see the full details of options (and how
 you configure them) there.

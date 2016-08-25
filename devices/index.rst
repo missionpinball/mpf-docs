@@ -1,8 +1,21 @@
 Devices
 =======
 
+A *Device* is a "thing" in a pinball machine. (How's that for an explanation!)
+
+In MPF, devices can be individual physical things (switches, LEDs, coils), or
+they can be logical groupings of physical devices (Switch X plus Coil Y =
+Flipper 1, etc.)
+
+Devices can be configured in either machine-wide or mode-specific config files.
+Every device has a name, and there configuration options for each device which
+control exactly how it behaves (or how its behavior changes depending on
+what's going on in your game).
+
+Devices in MPF include:
+
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    Accelerometers <accelerometer>
    Autofire Coils <autofire_coil>
@@ -31,15 +44,3 @@ Devices
    Switches <switch>
    Stand-up Targets <target>
    Trough / Ball Drain <trough>
-
-
-A *Device* is a "thing" in a pinball machine. (How's that for an explanation!)
-
-In MPF, devices can be physical (switches, LEDs, coils), they can be logical
-groupings of physical devices (this switch plus that coil equals a flipper
-device).
-
-In MPF, you configure devices in either your machine-wide or mode-specific config files.
-Every device has a name, and there configuration options for each device which control
-exactly how it behaves (or how its behavior changes depending on what's going on in
-your game.
