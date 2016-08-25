@@ -1,0 +1,2 @@
+Slide Frame Widget
+==================

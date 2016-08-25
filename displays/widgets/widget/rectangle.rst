@@ -1,0 +1,2 @@
+Rectangle Widget
+================
