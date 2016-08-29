@@ -88,10 +88,10 @@ a base mode, scoring, and playing.
 -----------------------
 Answers to common questions about MPF & custom pinball machines
 
-`API Reference & Developer's Guide <mpf.readthedocs.org/projects/mpf-api>`_
----------------------------------------------------------------------------
+`API Reference & Developer's Guide <http://mpf.readthedocs.org/projects/mpf-api>`_
+----------------------------------------------------------------------------------
 If you're a programmer or want to extend what's possible with MPF's config
-files, the API / Developer's Reference is at api.missionpinball.com.
+files, the API / Developer's Reference is at mpf.readthedocs.org/projects/mpf-api.
 
 `Support Forum <https://groups.google.com/forum/#!forum/mpf-users>`_
 --------------------------------------------------------------------
