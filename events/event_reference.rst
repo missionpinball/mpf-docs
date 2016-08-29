@@ -5,7 +5,7 @@ Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
 
-See the :doc:`Event Manager overview </core/events>` for more information on
+See the :doc:`Event Manager Overview </core/events>` for more information on
 how MPF uses events.
 
 .. toctree ::
@@ -55,7 +55,6 @@ how MPF uses events.
    balldevice_balls_available <balldevice_balls_available>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
    balls_in_play <balls_in_play>
-   bcp_get_(name) <bcp_get_name>
    clear <clear>
    client_connected <client_connected>
    client_disconnected <client_disconnected>
@@ -63,6 +62,7 @@ how MPF uses events.
    collecting_balls_complete <collecting_balls_complete>
    credits_added <credits_added>
    display_(name)_initialized <display_name_initialized>
+   display_(name)_ready <display_name_ready>
    displays_initialized <displays_initialized>
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
@@ -115,7 +115,6 @@ how MPF uses events.
    player_turn_stop <player_turn_stop>
    reel_(name)_advance <reel_name_advance>
    reel_(name)_hw_value <reel_name_hw_value>
-   reel_(name)_pulse_done <reel_name_pulse_done>
    reel_(name)_ready <reel_name_ready>
    reel_(name)_resync <reel_name_resync>
    request_to_start_game <request_to_start_game>
@@ -126,6 +125,9 @@ how MPF uses events.
    shutdown <shutdown>
    single_player_ball_started <single_player_ball_started>
    slam_tilt <slam_tilt>
+   slide_(name)_active <slide_name_active>
+   slide_(name)_created <slide_name_created>
+   slide_(name)_removed <slide_name_removed>
    sw_(playfield)_active <sw_playfield_active>
    sw_(tag_name) <sw_tag_name>
    switch_(name)_active <switch_name_active>

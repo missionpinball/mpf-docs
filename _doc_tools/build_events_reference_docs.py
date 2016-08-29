@@ -37,7 +37,7 @@ Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
 
-See the :doc:`Event Manager overview </core/events>` for more information on
+See the :doc:`Event Manager Overview </core/events>` for more information on
 how MPF uses events.
 
 .. toctree ::
@@ -50,7 +50,7 @@ how MPF uses events.
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
+        with open(os.path.join(rst_path, 'event_reference.rst'), 'w') as f:
             f.write(index)
 
     def create_file(self, event, rst):
@@ -161,7 +161,7 @@ if __name__ == '__main__':
     # delete existing files
     for path, _, files in os.walk(rst_path):
         for file in files:
-            if file != 'index.rst':
+            if file not in ['index.rst', 'event_types.rst']:
                 os.remove(os.path.join(path, file))
 
     # walk through the folders to scan
