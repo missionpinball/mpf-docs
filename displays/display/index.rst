@@ -20,8 +20,7 @@ height and width of 800x600:
          height: 600
 
 
-In this example, the display is called "window". You can name your display
-whatever you want. For example, here's a display called "potato" which is
+You can name your display whatever you want. For example, here's a display called "potato" which is
 100x100:
 
 ::
@@ -46,7 +45,7 @@ is 640x480:
          width: 640
          height: 480
 
-Note that the lcd display above also has an setting ``default: true``. As you
+The "lcd" display above also has a setting ``default: true``. As you
 can imagine, when you have more than one display, then when you are setting up
 content to be shown on the display, you have to specify which display you want
 it to show up on. Picking one display to be your default is the display that's
@@ -54,7 +53,7 @@ used for content where you don't explicitly set which display you're using.
 
 .. note::
    Full details and options for these displays are available in the
-   :doc: `displays: section </config/displays>` of the config file reference.
+   :doc:`displays: section </config/displays>` of the config file reference.
 
 .. rubric:: These "displays" are logical, not physical!
 
