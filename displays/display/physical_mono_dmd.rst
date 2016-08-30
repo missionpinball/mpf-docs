@@ -1,7 +1,7 @@
 Using a traditional (single color) physical DMD
 ===============================================
 
-This guide will show you how to use an traditional, physical DMD with MPF, like
+This guide will show you how to use a traditional, physical DMD with MPF, like
 this:
 
 .. image::  /displays/images/display_mono_dmd.jpg
