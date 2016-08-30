@@ -8,7 +8,7 @@ assets:
 
 .. overview
 
-The ``assets:`` section of your machine config file lets you
+The ``assets:`` section of a config file lets you
 configure the default settings for different types of assets based on
 what folder those assets are in. Any settings you specify here are
 just the defaults, though, and you can still override the defaults for
@@ -31,7 +31,7 @@ Let's take a look at an example:
                some_key: some_value
                something_else: whatever
 
-The above machine config contains the asset settings for *image* assets. Notice
+The above config contains the asset settings for *image* assets. Notice
 there are 4 entries under ``images:``: ``default``, ``preload``, ``on_demand``,
 and ``potato``. Those names represent subfolders that could contain image
 assets.
