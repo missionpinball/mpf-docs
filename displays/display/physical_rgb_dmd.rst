@@ -63,7 +63,6 @@ this:
       - type: color_dmd
         width: 512
         height: 128
-        dark_color: 220000
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top
@@ -405,7 +404,6 @@ makes it look like a DMD:
       - type: color_dmd
         width: 512
         height: 128
-        dark_color: 220000
 
 Again, there are lots of options here. Note that we're adding a ``height:`` and
 ``width:`` of 512x128. This is the on-screen pixel size of the DMD as it will
@@ -414,11 +412,6 @@ display for the DMD (which is 128x32), meaning that each pixel of the original
 DMD will be rendered on screen as 4 pixels by 4 pixels. This is big enough
 to get the circular "dot look" filter to look good, and being an even multiple
 means that we won't have any weird moire patterns.
-
-The dark color is a light gray which will be the color of the pixels that are
-off. This means that we'll be able to see
-the "off" pixels in our on screen DMD, but if you don't want that, then just
-pick a dark color that's the same as your background color.
 
 There are other options listed in the
 :doc:`Color DMD widget </displays/widgets/widget/color_dmd>` documentation to control

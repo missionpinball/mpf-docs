@@ -47,7 +47,6 @@ this:
         width: 512
         height: 128
         pixel_color: ff5500
-        dark_color: 220000
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top
@@ -201,7 +200,6 @@ makes it look like a DMD:
         width: 512
         height: 128
         pixel_color: ff5500
-        dark_color: 220000
 
 Again, there are lots of options here. Note that we're adding a ``height:`` and
 ``width:`` of 512x128. This is the on-screen pixel size of the DMD as it will
@@ -215,11 +213,6 @@ For the on screen DMD, we *are* able to select the pixel color, because this
 is how the DMD will be drawn on the computer screen, and MPF has no idea what
 color the actual DMD is. So you can pick any color you want here. We chose
 ``ff5500`` which is a classic DMD orange color.
-
-The dark color is a light gray which will be the color of the pixels that are
-off. This means that we'll be able to see
-the "off" pixels in our on screen DMD, but if you don't want that, then just
-pick a dark color that's the same as your background color.
 
 There are other options listed in the
 :doc:`DMD widget </displays/widgets/widget/dmd>` documentation to control
