@@ -1,20 +1,28 @@
-Display Concepts
-================
+Working with Displays
+=====================
 
-.. toctree::
-   :hidden:
+The first step to setting up a display in MPF is to use the ``displays:``
+section of your machine-wide config to create a list of displays.
+
+Note that the Tutorial includes a walk-through of setting up your first
+display. So if you just want to get it up and running quickly, check out the
+:doc:`tutorial </tutorial/index>` instead and then come back here for the
+nitty-gritty details later.
+
+Here's a very simple example that creates a display called "window" with a
+height and width of 800x600:
+
+::
+
+   displays:
+      window:
+         width: 800
+         height: 600
 
 
-
-   physical_mono_dmd
-   physical_rgb_dmd
-   lcd
-   adding_dot_look_to_lcd
-   alpha_numeric
-
-
-Anyway, in this example, the display is called "window". You can name your display whatever you want. For example,
-here's a display called "potato" which is 100x100:
+In this example, the display is called "window". You can name your display
+whatever you want. For example, here's a display called "potato" which is
+100x100:
 
 ::
 
@@ -23,18 +31,59 @@ here's a display called "potato" which is 100x100:
          width: 100
          height: 100
 
-Even though you can name your displays whatever you want, some names are magic and have special properties. For example,
-when the on-screen window is created, it will "attach" itself (to show content from) one of the displays you have
-defined here in the ``displays:`` section of your machine config. So to us, it's just more convenient to name the
-display in a way that describes where it will actually be shown.
+You can add multiple displays to your config. Here's an example with a display
+called "lcd" which is 1366x768, and a second display called "playfield" which
+is 640x480:
 
-One final note about displays that you specify in your ``displays:`` section. The size (height and width) of your
-displays here are independent from the actual physical displays (windows and DMDs). For example, the size of the
-on-screen window is specified in the ``window:`` section of the machine config (which is 800x600 by default). So if you
-change the size of your display here (perhaps to 320x240), then the on-screen window will still be 800x600, and the
-content of the display canvas will be 320x240 (but scaled up to the 800x600 window). This means that MPF is
-"resolution independent", in that you can build your game for a certain display size and then scale it up or down to
+::
+
+   displays:
+      lcd:
+         width: 1366
+         height: 768
+         default: true
+      playfield:
+         width: 640
+         height: 480
+
+Note that the lcd display above also has an setting ``default: true``. As you
+can imagine, when you have more than one display, then when you are setting up
+content to be shown on the display, you have to specify which display you want
+it to show up on. Picking one display to be your default is the display that's
+used for content where you don't explicitly set which display you're using.
+
+.. note::
+   Full details and options for these displays are available in the
+   :doc: `displays: section </config/displays>` of the config file reference.
+
+.. rubric:: These "displays" are logical, not physical!
+
+One concept that's somewhat confusing for new users is that the displays you set
+up here are not yet tied to physical displays in your pinball machine. You can
+think of these as "logical" displays which you can use in your config files and
+game code. But when it comes to using a physical display, you have to "link"
+the physical display hardware to one of these logical displays.
+
+One final note about the displays you specify in your ``displays:`` section:
+The size (height and width) of your displays here are independent from the
+actual physical displays (windows and DMDs). For example, the size of the
+on-screen window is specified in the ``window:`` section of the machine config
+(which is 800x600 by default). So if you change the size of your display here
+(perhaps to 320x240), then the on-screen window will still be 800x600, and the
+content of the display canvas will be 320x240 (but scaled up to the 800x600
+window). This means that MPF is "resolution independent", in that you can build
+your game for a certain display size and then scale it up or down to
 fit on whatever physical display is there later.
 
-For now, though, you don't have to worry about any of that. Just create a display called "window" at 800x600 to get
-through the tutorial, and then we'll show you how to change it via the How To guides later.
+Let's walk through some examples of how you can actually configure various
+displays. You don't have to read through all of these—just pick whichever
+display type you want to use in your machine.
+
+.. toctree::
+   :maxdepth: 1
+
+   lcd
+   physical_mono_dmd
+   physical_rgb_dmd
+   adding_dot_look_to_lcd
+   alpha_numeric
