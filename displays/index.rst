@@ -48,6 +48,7 @@ directly into our :doc:`step-by-step tutorial </tutorial/index>` which covers
 how to get your display running.)
 
 .. toctree::
+   :maxdepth: 2
 
    Concepts & Architecture </displays/architecture>
    Displays <display/index>

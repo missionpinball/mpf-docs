@@ -49,7 +49,6 @@ this:
         pixel_color: ff5500
         dark_color: 220000
       - type: text
-        style: tall title
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top
         y: top-3
@@ -189,7 +188,7 @@ call this slide whatever you want.
       window_slide_1:
 
 Next we have to add some widgets to that slide. (Refer to the
-:doc:`documentation on widgets </displays/widgets/index> if your not familiar
+:doc:`documentation on widgets </displays/widgets/index>` if you're not familiar
 with widgets yet.)
 
 The first widget will be a :doc:`DMD widget </displays/widgets/widget/dmd>`
