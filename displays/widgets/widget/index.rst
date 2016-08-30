@@ -5,13 +5,15 @@ Types of Widgets
    :titlesonly:
 
    bezier
+   color_dmd
    dmd
    ellipse
    image
    line
-   point
+   points
    quad
    rectangle
+   slide_frame
    text
    text_input
    triangle
