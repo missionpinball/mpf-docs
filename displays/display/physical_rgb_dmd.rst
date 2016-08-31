@@ -356,10 +356,23 @@ run the SmartMatrix communication code in a separate thread:
         use_separate_thread: no
 
 The port is just whatever serial port appears when you plug in
-the Teensy.
+the Teensy. (See the note in Section 8a for details of how to find the
+port on Linux or Mac.)
 
-8a. Mac port help
-~~~~~~~~~~~~~~~~~
+The correct setting for the thread will depend on the
+specifics of your hardware and what size display you're running. For
+example, on one test system (MPF running in a Windows VM on a MacBook),
+it didn't matter what the thread was set to—it was the same either way.
+For the user who used the 128x64 display, he had to set
+``use_separate_thread: no`` to get good performance. So basically try it
+with both settings and see which one works better.
+
+.. note::
+   The separate thread option will most likely be removed in MPF 0.31 as
+   we're moving to a different IO model that won't need it.
+
+8a. Finding the port on Linux or Mac
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To list the ports numbers that devices are using, open up the terminal window
 and type the following command: ``ls /dev/tty.*``  The output of this command
@@ -376,18 +389,6 @@ The smartmatrix config will look something like this:
     smartmatrix:
         port: /dev/tty.usbmodem1448891
         use_separate_thread: no
-
-The correct setting for the thread will depend on the
-specifics of your hardware and what size display you're running. For
-example, on one test system (MPF running in a Windows VM on a MacBook),
-it didn't matter what the thread was set to—it was the same either way.
-For the user who used the 128x64 display, he had to set
-``use_separate_thread: no`` to get good performance. So basically try it
-with both settings and see which one works better.
-
-.. note::
-   The separate thread option will most likely be removed in MPF 0.31 as
-   we're moving to a different IO model that won't need it.
 
 9. Configure a window slide to show the on screen DMD
 -----------------------------------------------------
