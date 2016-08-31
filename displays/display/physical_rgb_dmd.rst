@@ -551,7 +551,7 @@ then set your platform: section like this:
 
     hardware:
         platform: virtual
-        dmd: smartmatrix
+        rgb_dmd: smartmatrix
 
 
 Then run MPF but *do not use -x*, and it should work.
