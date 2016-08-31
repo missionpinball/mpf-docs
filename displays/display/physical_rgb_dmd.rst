@@ -359,15 +359,17 @@ The port is just whatever serial port appears when you plug in
 the Teensy.
 
 8a. Mac port help
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
-To list the ports numbers that devices are using, open up the terminal window 
-and type the following command: "ls /dev/tty.*"  The output of this command will look 
-something like this:
+To list the ports numbers that devices are using, open up the terminal window
+and type the following command: ``ls /dev/tty.*``  The output of this command
+will look something like this:
 
-/dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+::
 
-My smartmatrix config will look like this:
+   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+
+The smartmatrix config will look something like this:
 
 ::
 
