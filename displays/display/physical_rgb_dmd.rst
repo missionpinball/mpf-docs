@@ -358,6 +358,23 @@ run the SmartMatrix communication code in a separate thread:
 The port is just whatever serial port appears when you plug in
 the Teensy.
 
+8a. Mac port help
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To list the ports numbers that devices are using, open up the terminal window 
+and type the following command: "ls /dev/tty.*"  The output of this command will look 
+something like this:
+
+/dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+
+My smartmatrix config will look like this:
+
+::
+
+    smartmatrix:
+        port: /dev/tty.usbmodem1448891
+        use_separate_thread: no
+
 The correct setting for the thread will depend on the
 specifics of your hardware and what size display you're running. For
 example, on one test system (MPF running in a Windows VM on a MacBook),
