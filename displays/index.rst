@@ -24,8 +24,8 @@ Here's a traditional single-color / mono DMD:
 .. image:: images/display_mono_dmd.jpg
 
 Here's an on-screen window (or what many people called an "LCD" display. In this
-case, it's showing on single color DMD virtually, along with other on-screen
-content.
+case, it's showing on single color DMD virtually with no "dot" filter applied,
+along with other on-screen content:
 
 .. image:: images/display_window.jpg
 
@@ -35,6 +35,9 @@ content, with a "dot look" filter to make it look like dots.
 
 .. image:: images/display_color_dmd.jpg
 
+Here's a full-size window with the dot filter applied:
+
+.. image:: images/dot_look_full_screen.png
 
 Here's a full-color RGB DMD LED matrix. (So it's like a color DMD, but a matrix of
 2.5mm RGB LEDs rather than an LCD):
