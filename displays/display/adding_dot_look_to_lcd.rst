@@ -49,7 +49,7 @@ The final sections of the machine config to make this happen are here:
         dmd_slide:
           target: dmd
 
-Let's step through this step-by-step
+Let's step through this step-by-step.
 
 1. Create your displays
 -----------------------
@@ -61,9 +61,21 @@ To understand how this works, you have to understand the concepts of MPF
 What's actually happening under the hood is that you set up two MPF displays.
 The first is the "window", which is the display that represents your on-screen
 window. This should be set to the size of the screen window at the native
-resolution of the monitor or LCD where it's being shown. In the example above,
-this is 800x600, but on your actual machine, it will probably be something like
-1024x768, 1280x1024, 1600x1200, etc.
+resolution of the monitor or LCD where it's being shown.
+
+::
+
+    displays:
+      window:
+        width: 800
+        height: 600
+      dmd:
+        width: 120
+        height: 90
+        default: yes
+
+In the example above, this is 800x600, but on your actual machine, it will
+probably be something like 1024x768, 1280x1024, 1600x1200, etc.
 
 The second MPF display represents the virtual DMD itself, and you set that to
 the number of pixels (or dots) you want to be drawn in your window. In the
