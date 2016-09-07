@@ -253,9 +253,8 @@ then pause for 2 seconds (since ``y: 50`` again), then move out of the top of th
 
 You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
 current value to the target value over time. The default is ``linear`` which just does a constant motion (no
-acceleration/deceleration) over time. Refer to the
-`Kivy Animation Transition documentation <https://kivy.org/docs/api-kivy.animation.html#kivy.animation.AnimationTransition>`_
-for a list of options as well as graphs that show how the easing formulas are applied over time.
+acceleration/deceleration) over time. Refer to the :doc:`/displays/easing`
+for details on how this works and descriptions of all the options.
 
 7. Named animations
 -------------------
