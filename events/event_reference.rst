@@ -30,12 +30,12 @@ how MPF uses events.
    ball_lock_(name)_balls_released <ball_lock_name_balls_released>
    ball_lock_(name)_full <ball_lock_name_full>
    ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
-   ball_save_(name)_disabled: <ball_save_name_disabled:>
-   ball_save_(name)_enabled: <ball_save_name_enabled:>
-   ball_save_(name)_grace_period: <ball_save_name_grace_period:>
-   ball_save_(name)_hurry_up: <ball_save_name_hurry_up:>
-   ball_save_(name)_saving_ball: <ball_save_name_saving_ball:>
-   ball_save_(name)_timer_start: <ball_save_name_timer_start:>
+   ball_save_(name)_disabled: <ball_save_name_disabled>
+   ball_save_(name)_enabled: <ball_save_name_enabled>
+   ball_save_(name)_grace_period: <ball_save_name_grace_period>
+   ball_save_(name)_hurry_up: <ball_save_name_hurry_up>
+   ball_save_(name)_saving_ball: <ball_save_name_saving_ball>
+   ball_save_(name)_timer_start: <ball_save_name_timer_start>
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
