@@ -9,7 +9,7 @@ deceleration of motions associated with
 An easing function is a formula that calculates a progress value based on an
 input value.
 
-Let's look at a simple (but not realistic) example of animating a widget so it
+Let's look at a simple (but not realistic) example of animating a widget that
 moves 10 pixels in 10 seconds. With no easing function applied, it would
 have moved 1 pixel after 1 second, 2 pixels after 2 seconds, etc.
 
