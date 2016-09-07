@@ -5,11 +5,13 @@ When MPF switches the current slide on a display with another slide, you can
 set a transition effect that controls what this slide transition looks like.
 You can use these transitions with the slide_player and within shows. You can
 set transitions as a property of the new slide that comes in, or as a property
-of the outgoing transition when the current slide is removed.
+of the outgoing transition when the current slide is removed. You can also
+control the duration (speed) of the transition.
 
-Here are animated GIFs which show all the various transition options. Note that
-you can control the duration (speed) of the transition to make them move faster
-or slower than the examples here.
+Here's a list of all the types of transitions that MPF supports. Note that if
+you're reading the PDF or Epub version of this documentation, if you visit the
+documentation website (docs.missionpinball.org) then this page contains
+animated GIFs which show each of these transitions in action.
 
 none
 ----
