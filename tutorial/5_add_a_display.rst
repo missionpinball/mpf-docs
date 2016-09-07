@@ -94,7 +94,8 @@ Since the folks who originally started MPF spend a lot of time giving presentati
 terminology are pulled from presentation software like Microsoft PowerPoint or Apple Keynote. So if you're
 familiar with those, you should be familiar with the display concepts in the MPF MC.
 
-First is the concept of :doc:`slides </displays/slide/index>`. Just like a PowerPoint presentation, an MPF display
+First is the concept of :doc:`slides </displays/slides/index>`. Just like a
+PowerPoint presentation, an MPF display
 is essentially a window frame that shows slides. Many slides can exist, but only one is shown at a time, and that
 slide takes up the entire display. (Just like how a PowerPoint slide takes up the whole display when you're playing the
 slide show.)
@@ -118,7 +119,7 @@ In order to show some text, we first have to create a slide, add a text widget t
 active slide on the display.
 
 So first let's create the slide. There are several ways to do this, so we're just going to show you one way
-here and then you can read the full documentation on :doc:`slides </displays/slide/index>` later.
+here and then you can read the full documentation on :doc:`slide </displays/slides/index>` later.
 
 In MPF, all slides have names. You can define slides in the ``slides:`` section of the config. So let's create a
 slide called "welcome_slide", like this:
