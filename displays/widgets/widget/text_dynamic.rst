@@ -1,2 +1,2 @@
-Text Substitution Strings
+Dynamically Updating Text
 =========================
