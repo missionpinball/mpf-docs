@@ -40,7 +40,7 @@ specific animation steps and settings. For example:
               text: MY TEXT
               color: red
               animations:
-                show_slide:                  # animation trigger event
+                show_slide:                # animation trigger event
                   - property: opacity      # name of the widget property we're animating
                     value: 1               # target value of that property for this step
                     duration: .5s          # duration for this step (how long it takes to get there)
@@ -50,9 +50,9 @@ specific animation steps and settings. For example:
                     repeat: true           # added to the final step, tells this animation to repeat (loop)
 
 In the example above, an ``animations:`` setting has been added to the widget. Then under there, you add
-the name of the event you want to use to trigger this animation to start. In this case a special event
-called ``show_slide:`` was used, which is a fake event name that makes this animation start immediately once
-the slide is shown.
+the name of the event you want to use to trigger this animation to start.
+In this case, we use a special event called ``show_slide:`` which means these
+animations are triggered when the slide is shown on a display.
 
 Next, notice that under the event, there are two steps (each beginning with a hyphen and a space).
 
@@ -75,7 +75,101 @@ various shape widgets you can animate the ``height:`` and ``width:``, etc.
 Pretty much the only thing you can't animate at this point is rotation (since MPF doesn't currently
 support widget rotation. That's a future feature we'll have to add).
 
-2. Animating multiple properties at once
+2. Animation trigger events
+---------------------------
+
+The animation trigger event (which is the ``show_slide:`` entry in the example
+from the previous step is the name of the MPF event you want to use to start
+the animation.
+
+These are regular :doc:`MPF events </events/index>` and can be anything—a shot
+being made, a switch hit, etc. (See the :doc:`/events/events_reference` for a
+full list of events.
+
+In most cases, however, you'll probably want to trigger an animation to start
+playing when the slide is created, so in addition to being able to use any MPF
+event, there are also a few special events (sometimes called "magic events")
+that have special meaning here:
+
+add_to_slide:
+~~~~~~~~~~~~~
+This event is triggered when a widget is added to a slide. This is useful when
+you're using the :doc:`widget_player </config_players/widget_player>` to add
+to new widget to an existing slide, and you want an animation to be applied to
+that widget as soon as it's added.
+
+remove_from_slide:
+~~~~~~~~~~~~~~~~~~
+This event is triggered when a widget is is removed from a slide.
+
+pre_show_slide:
+~~~~~~~~~~~~~~~
+This event is triggered when the slide this widget is part of is about
+to be shown. This doesn't necessarily get called when the slide is created or
+when the ``slide_player:`` event happens, because if the slide is not the
+highest priority slide, then the slide will be created but not shown. So this
+event happens right before the slide is shown.
+
+If there's an entrance transition, this method is called BEFORE the transition
+starts. In other words, it means the animation will be playing as the slide
+transition is happening.
+
+show_slide:
+~~~~~~~~~~~
+This event is triggered when the slide this widget is part of has been shown and
+is the current slide on the display.
+This doesn't necessarily get called when the slide is created or
+when the ``slide_player:`` event happens, because if the slide is not the
+highest priority slide, then the slide will be created but not shown. So this
+event happens right before the slide is shown.
+
+If there's an entrance transition, this method is called AFTER the transition
+starts. In other words, it means the animation will NOT be playing as the slide
+transition is happening.
+
+pre_slide_leave:
+~~~~~~~~~~~~~~~~
+This event is triggered by the current slide that's being shown on a display is
+about to be replaced by another slide.
+
+If there's an exit transition, this method is called BEFORE the transition
+starts. In other words, it means the animation will be playing as the slide
+transition is happening.
+
+slide_leave:
+~~~~~~~~~~~~
+This event is triggered by the current slide that's being shown on a display is
+has been replaced by another slide.
+
+If there's an exit transition, this method is called AFTER the transition
+starts. In other words, it means the animation will be NOT playing as the slide
+transition is happening.
+
+You might wonder what this is for, since what's the point of an animation if
+the slide is not showing? This is useful if you want to pause or reset an
+animation when the slide is not active. Then you can resume or restart the
+animation with the "pre_show_slide" or "show_slide" event when the slide is
+shown again.
+
+slide_play:
+~~~~~~~~~~~
+This event is triggered when the slide this widget is part of is played
+as part of a ``slide_player:`` "play" command, either via a standalone slide
+player config or as a show step).
+
+Other slide-related MPF events
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to the seven special-purpose animation trigger events listed above,
+there are three standard MPF events which are posted when slides are created,
+when they become active, and when they're removed. See the events reference
+for details on when these three events are posted.
+
+* :doc:`slide_(slide_name)_created </events/slide_name_created>`
+* :doc:`slide_(slide_name)_active </events/slide_name_active>`
+* :doc:`slide_(slide_name)_removed </events/slide_name_removed>`
+
+3. Animating multiple properties at once
 ----------------------------------------
 
 The example animation above includes two steps (one to set the opacity to 1 and the next to set it to 0).
@@ -124,14 +218,16 @@ anywhere a widget is defined (in the slide properties, in a show step, as part o
 :doc:`named widget <reusable_widgets>`, as part of a ``widget_settings:`` override section in the ``widget_player:``,
 etc.)
 
-3. Multi-step animations with different trigger events
+4. Multi-step animations with different trigger events
 ------------------------------------------------------
 
-So far all of the animation examples have been triggered on the ``show_slide`` event which means they start animating as
-soon as the slide is shown.
+So far all of the animation examples have been triggered on the ``show_slide``
+event (which means they start animating as soon as the slide is shown).
 
-However the real power of animations is that you can create steps in the animation that are played based on any MPF
-event. To do that, just enter multiple events in the ``animations:`` section of a widget. For example:
+You can create multiple event entries in the animation that cause different
+animations to take place when different events occur. You can mix and match
+these as much as you want, including mixing the "special" animation
+trigger events with regular MPF events.
 
 ::
 
@@ -171,12 +267,12 @@ initial position.
 
 Again, you can use any combination of properties and any number of steps for each event.
 
-4. Looping and repeating animations
+5. Looping and repeating animations
 -----------------------------------
 
 So far, every animation sequence we've looked at will just run through once and then stop. However, you can add
-``repeat: true`` to the last step of an animation, and that will cause that animation to loop back to the beginning and
-keep repeating.
+``repeat: true`` (or ``repeat: yes``) to the last step of an animation, and that
+will cause that animation to loop back to the beginning and keep repeating.
 
 Of course you can mix-and-match repeating animations with one time animations. For example:
 
@@ -215,7 +311,7 @@ initial y value is -50, it will start off the screen). Then when the ``pulse_boo
 animation which makes the font size bigger and smaller will starting playing and repeat forever. Finally when ``bye_boo``
 is posted, the widget will fly off the screen to the upper right.
 
-5. Inserting a "pause"
+6. Inserting a "pause"
 ----------------------
 
 Sometimes you might want to add a timed "pause" to an animation, where one step animates, then it pauses, then another
@@ -247,7 +343,7 @@ property is already there. For example:
 The the example above, the ``flying_toaster`` image will move in from the bottom of the screen (to ``y:50``) in 1 second,
 then pause for 2 seconds (since ``y: 50`` again), then move out of the top of the screen in 1 second.
 
-6. Easing
+7. Easing
 ---------
 
 You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
@@ -255,8 +351,8 @@ current value to the target value over time. The default is ``linear`` which jus
 acceleration/deceleration) over time. Refer to the
 :doc:`/displays/widgets/easing` for details on how this works and descriptions of all the options.
 
-7. Named animations
--------------------
+8. Creating reusable "named" animations
+---------------------------------------
 
 Much like :doc:`named widgets <reusable_widgets>`, you can also create pre-defined animations that you can easily
 apply to any widget. You do this by adding those animations to the ``animations:`` section of your config, like this:
@@ -288,4 +384,17 @@ For example, to configure a widget to fade in:
              show_slide:
                named_animation: fade_in
 
-Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out:
+Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out
+when the event "timer_hurry_up_complete" is posted, you can do it like this:
+
+::
+
+   widgets:
+      hello_widget:
+         - type: text
+           text: HELLO
+           animations:
+             show_slide:
+               named_animation: fade_in
+             timer_hurry_up_complete:
+               named_animation: fade_out
