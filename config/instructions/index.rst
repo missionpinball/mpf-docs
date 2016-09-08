@@ -7,6 +7,7 @@ Config file instructions
    time_strings
    case_insensitivity
    device_control_events
+   colors
    tags
    debug
    express_config
