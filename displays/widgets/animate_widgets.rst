@@ -40,7 +40,7 @@ specific animation steps and settings. For example:
               text: MY TEXT
               color: red
               animations:
-                entrance:                  # animation trigger event
+                show_slide:                  # animation trigger event
                   - property: opacity      # name of the widget property we're animating
                     value: 1               # target value of that property for this step
                     duration: .5s          # duration for this step (how long it takes to get there)
@@ -51,8 +51,8 @@ specific animation steps and settings. For example:
 
 In the example above, an ``animations:`` setting has been added to the widget. Then under there, you add
 the name of the event you want to use to trigger this animation to start. In this case a special event
-called ``entrance:`` was used, which is a fake event name that makes this animation start immediately once
-the widget is created.
+called ``show_slide:`` was used, which is a fake event name that makes this animation start immediately once
+the slide is shown.
 
 Next, notice that under the event, there are two steps (each beginning with a hyphen and a space).
 
@@ -95,7 +95,7 @@ For example, to make the text grow and shrink while also fading on and off:
               color: red
               font_size: 50
               animations:
-                entrance:
+                show_slide:
                   - property: opacity
                     value: 1
                     duration: .5s
@@ -127,9 +127,8 @@ etc.)
 3. Multi-step animations with different trigger events
 ------------------------------------------------------
 
-So far all of the animation examples have been triggered on the ``entrance`` event which means they start animating as
-soon as the widget is added to the slide (or as soon as the slide is created if the widget is part of the slide
-definition).
+So far all of the animation examples have been triggered on the ``show_slide`` event which means they start animating as
+soon as the slide is shown.
 
 However the real power of animations is that you can create steps in the animation that are played based on any MPF
 event. To do that, just enter multiple events in the ``animations:`` section of a widget. For example:
@@ -191,7 +190,7 @@ Of course you can mix-and-match repeating animations with one time animations. F
             y: -50
             font_size: 90
           animations:
-            entrance:
+            show_slide:
                property: y
                value: 50
                duration: 500ms
@@ -235,7 +234,7 @@ property is already there. For example:
               image: flying_toaster
               y: -50
          animations:
-            entrance:
+            show_slide:
              - property: y
                value: 50
                duration: 1s
@@ -286,7 +285,7 @@ For example, to configure a widget to fade in:
          - type: text
            text: HELLO
            animations:
-             entrance:
+             show_slide:
                named_animation: fade_in
 
 Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out:

@@ -43,6 +43,19 @@ red line doesn't change too much. Then towards the middle, the red line changes
 more as the transition speeds up, and then at the end (towards the upper right),
 the line changes more slowly.
 
+If you're reading this documentation online, here's an animated GIF which shows
+five different easing functions applied to animate text moving left and right.
+Don't worry about the function names. We'll cover those in a bit.
+
+.. image:: /displays/images/easing.gif
+
+Note that the move to the left and the move to the right are two separate
+animations, meaning the a single movement left or right is showing the same
+easing function used in both directions.
+
+If you're curious about the MPF config used to create this animated GIF, we've
+posted it :doc:`here <easing_config>`.
+
 You can also imagine how an easing formula would look if you wanted something
 to start slow, but then speed up without slowing down again. (This might be
 useful if you want a widget to move off screen since it will have a gentle start
@@ -77,11 +90,10 @@ Remember when you're animating a widget, you can animate ANY numerical property.
 So this can include the x/y position on the display, but it can also include
 the size, scale, and/or the opacity (transparency).
 
-So if you use an easing function like this to change the opacity of a widget
-over time, rather than slowly fading on and off, it will almost be like the
-widget is flickering:
+Here's an animated GIF showing the same five easing functions applied to
+each text widget's opacity property (cycling them between 1 and 0):
 
-.. image:: /displays/images/anim_in_out_bounce.png
+.. image:: /displays/images/easing_opacity.gif
 
 Refer to the :doc:`slide transition </displays/slides/transitions>` and
 :doc:`widget animation </displays/widgets/animate_widgets>` documentation for
@@ -97,43 +109,43 @@ Easing "start" functions
 The following functions apply an easing formula at the beginning of the time and
 then accelerate to the end:
 
-in_back
+``easing: in_back``
 
 .. image:: /displays/images/anim_in_back.png
 
-in_bounce
+``easing: in_bounce``
 
 .. image:: /displays/images/anim_in_bounce.png
 
-in_circ
+``easing: in_circ``
 
 .. image:: /displays/images/anim_in_circ.png
 
-in_cubic
+``easing: in_cubic``
 
 .. image:: /displays/images/anim_in_cubic.png
 
-in_elastic
+``easing: in_elastic``
 
 .. image:: /displays/images/anim_in_elastic.png
 
-in_expo
+``easing: in_expo``
 
 .. image:: /displays/images/anim_in_expo.png
 
-in_quad
+``easing: in_quad``
 
 .. image:: /displays/images/anim_in_quad.png
 
-in_quart
+``easing: in_quart``
 
 .. image:: /displays/images/anim_in_quart.png
 
-in_quint
+``easing: in_quint``
 
 .. image:: /displays/images/anim_in_quint.png
 
-in_sine
+``easing: in_sine``
 
 .. image:: /displays/images/anim_in_sine.png
 
@@ -145,43 +157,43 @@ The following functions apply an easing formula at the end of the time,
 meaning they start fast and then slow down towards the end:
 
 
-out_back
+``easing: out_back``
 
 .. image:: /displays/images/anim_out_back.png
 
-out_bounce
+``easing: out_bounce``
 
 .. image:: /displays/images/anim_out_bounce.png
 
-out_circ
+``easing: out_circ``
 
 .. image:: /displays/images/anim_out_circ.png
 
-out_cubic
+``easing: out_cubic``
 
 .. image:: /displays/images/anim_out_cubic.png
 
-out_elastic
+``easing: out_elastic``
 
 .. image:: /displays/images/anim_out_elastic.png
 
-out_expo
+``easing: out_expo``
 
 .. image:: /displays/images/anim_out_expo.png
 
-out_quad
+``easing: out_quad``
 
 .. image:: /displays/images/anim_out_quad.png
 
-out_quart
+``easing: out_quart``
 
 .. image:: /displays/images/anim_out_quart.png
 
-out_quint
+``easing: out_quint``
 
 .. image:: /displays/images/anim_out_quint.png
 
-out_sine
+``easing: out_sine``
 
 .. image:: /displays/images/anim_out_sine.png
 
@@ -194,43 +206,43 @@ the time, meaning they start slow, accelerate in the middle, and then slow down
 again at the end.
 
 
-in_out_back
+``easing: in_out_back``
 
 .. image:: /displays/images/anim_in_out_back.png
 
-in_out_bounce
+``easing: in_out_bounce``
 
 .. image:: /displays/images/anim_in_out_bounce.png
 
-in_out_circ
+``easing: in_out_circ``
 
 .. image:: /displays/images/anim_in_out_circ.png
 
-in_out_cubic
+``easing: in_out_cubic``
 
 .. image:: /displays/images/anim_in_out_cubic.png
 
-in_out_elastic
+``easing: in_out_elastic``
 
 .. image:: /displays/images/anim_in_out_elastic.png
 
-in_out_expo
+``easing: in_out_expo``
 
 .. image:: /displays/images/anim_in_out_expo.png
 
-in_out_quad
+``easing: in_out_quad``
 
 .. image:: /displays/images/anim_in_out_quad.png
 
-in_out_quart
+``easing: in_out_quart``
 
 .. image:: /displays/images/anim_in_out_quart.png
 
-in_out_quint
+``easing: in_out_quint``
 
 .. image:: /displays/images/anim_in_out_quint.png
 
-in_out_sine
+``easing: in_out_sine``
 
 .. image:: /displays/images/anim_in_out_sine.png
 

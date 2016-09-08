@@ -7,7 +7,7 @@ Display widgets
 
    Creating reusable "named" widgets <reusable_widgets>
    Animating widgets <animate_widgets>
-   Configuring animation easing <easing>
+   Animation "easing" <easing>
    Positioning widgets <widget_positioning>
 
 Display widgets are where the real action takes place in MPF-MC's display system.
