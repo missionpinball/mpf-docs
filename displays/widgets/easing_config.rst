@@ -151,7 +151,7 @@ And here's the example where we animate the opacity:
           y: 70%
           font_size: 35
           animations:
-            entrance:
+            show_slide:
             - property: opacity
               value: 1
               duration: 1s
@@ -166,7 +166,7 @@ And here's the example where we animate the opacity:
           y: 50%
           font_size: 35
           animations:
-            entrance:
+            show_slide:
             - property: opacity
               value: 1
               duration: 1s
@@ -181,7 +181,7 @@ And here's the example where we animate the opacity:
           y: 30%
           font_size: 35
           animations:
-            entrance:
+            show_slide:
             - property: opacity
               value: 1
               duration: 1s
@@ -196,7 +196,7 @@ And here's the example where we animate the opacity:
           y: 10%
           font_size: 35
           animations:
-            entrance:
+            show_slide:
             - property: opacity
               value: 1
               duration: 1s
