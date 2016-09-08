@@ -253,8 +253,8 @@ then pause for 2 seconds (since ``y: 50`` again), then move out of the top of th
 
 You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
 current value to the target value over time. The default is ``linear`` which just does a constant motion (no
-acceleration/deceleration) over time. Refer to the :doc:`/displays/easing`
-for details on how this works and descriptions of all the options.
+acceleration/deceleration) over time. Refer to the
+:doc:`/displays/widgets/easing` for details on how this works and descriptions of all the options.
 
 7. Named animations
 -------------------

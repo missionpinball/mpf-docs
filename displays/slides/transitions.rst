@@ -33,7 +33,7 @@ moves in)
 Options for the push transition:
 
 * duration: MPF :doc:`time string </config/instructions/time_strings>` Default is 1 second.
-* easing: See the :doc:`easing instructions </displays/easing>` for details.
+* easing: See the :doc:`easing instructions </displays/widgets/easing>` for details.
 * direction: ``left``, ``right``, ``up`` or ``down``.
 
 move_in
@@ -47,7 +47,8 @@ outgoing slide. The outgoing slide is not animated.
 Options for the move_in transition:
 
 * duration: MPF :doc:`time string </config/instructions/time_strings>` Default is 1 second.
-* easing: See the :doc:`easing instructions </displays/easing>` for details.
+* easing: See the :doc:`easing instructions </displays/widgets/easing>` for
+details.
 * direction: ``left``, ``right``, ``top`` or ``bottom``.
 
 move_out
