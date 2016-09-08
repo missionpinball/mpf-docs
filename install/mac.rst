@@ -46,10 +46,15 @@ When you run the script, you'll be prompted for your password. After you enter i
 
 This command does a few things:
 
-First, it registers a system-wide shortcut called ``mpf`` with your system, so that when you're in your pinball
+First, it connects to the internet and downloads / updates MPF to the latest
+version.
+
+Second, it registers a system-wide shortcut called ``mpf`` with your system, so
+that when you're in your pinball
 machine folder you can type ``mpf`` and it will be able to find the MPF launch command inside the MPF app.
 
-Second it registers a command ``kivy`` which is a link to the copy of Python that's included inside
+Finally, it registers a command ``kivy`` which is a link to the copy of Python
+that's included inside
 the MPF app package, which is actually based on a media framework called Kivy. (You'll need this if
 you want to update anything inside the MPF app without having to re-download the whole thing again.)
 

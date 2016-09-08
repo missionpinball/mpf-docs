@@ -146,6 +146,12 @@ the *mpf* core engine too. (And it installs a bunch of other things MPF needs,
 like libraries to communicate with pinball hardware, graphics and sound
 libraries, etc.)
 
+.. note::
+
+  The "patch" versions in MPF and the MPF-MC won't necessarily match. In other
+  words, it's entirely possible that you might get (for example) MPF v0.30.4
+  and MPF-MC v0.30.12. All that matters is that the first two numbers match.
+
 When the installation is done, you'll probably see a yellow warning saying that
 you do not have the latest version of *pip*, and telling you that you should
 upgrade it. You can do that if you want. Or not. Doesn't really matter to MPF.
