@@ -69,11 +69,11 @@ section in the machine configuration file (I named the sound variations *triangl
 
 We now have 4 variations of the same basic triangle sound.  It's time to put them all into a single
 sound pool object so we can treat them as a single sound.  To do so, we need to add a
-``sound_pool:`` section to our machine configuration file as follows:
+``sound_pools:`` section to our machine configuration file as follows:
 
 ::
 
-   sound_pool:
+   sound_pools:
       triangle:
          type: random
          sounds:
@@ -91,12 +91,12 @@ simple as modifying the list of sounds in the sound pool.
 This is great, but let's adjust the sound pool settings a bit to fine tune its behavior.  We
 really want the main sound (``triangle_01``) to be played more often than the other sounds. How
 can we make that happen? It's very easy to do. We can add weights to each sound in the pool that
-specify the probability of each sound being selected.  Let's look at our ``sound_pool:`` section
+specify the probability of each sound being selected.  Let's look at our ``sound_pools:`` section
 again:
 
 ::
 
-   sound_pool:
+   sound_pools:
       triangle:
          type: random
          sounds:
