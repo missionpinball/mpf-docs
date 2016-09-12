@@ -255,9 +255,9 @@ latex_elements = {
 #'figure_align': 'htbp',
 'figure_align':'H',
 
-'fontpkg':'\\usepackage{bookman}',
-
 # Examples of font packages: www.icl.utk.edu/~mgates3/docs/latex-fonts.pdf
+# None of them look good, so we'll just comment out to use the default
+# 'fontpkg':'\\usepackage{bookman}',
 
 }
 
