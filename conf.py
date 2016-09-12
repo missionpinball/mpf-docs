@@ -255,7 +255,7 @@ latex_elements = {
 #'figure_align': 'htbp',
 'figure_align':'H',
 
-'fontpkg':'helvet',
+'fontpkg':'\\usepackage{helvet}',
 
 }
 
