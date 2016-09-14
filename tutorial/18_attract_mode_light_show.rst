@@ -118,8 +118,8 @@ one contains settings for lights or LEDs. So to get it to play, add it to
 the ``show_player:`` section of your attract mode config file.
 
 To do this, move the existing display show to the next line (and indented
-under the event which triggers it). Then add a colon to the end of it, and add
-the new show below it.
+under the event which triggers it). Then add a colon to the end of it, add the
+word "play", then on the line below it, add the new show below it.
 
 OLD:
 
@@ -136,12 +136,19 @@ NEW:
    #config_version=4
    show_player:
      mode_attract_started:
-       attract_display_loop:
-       attract_light_show:
+       attract_display_loop: play
+       attract_light_show: play
+
+So what's happening here? Why did we have to add the word "play" all of the sudden? This
+is just because now that we want to play two shows from one event, we have to put them
+each on their own line. When a show is on the same line as the event, the "play" is
+assumed, but now that we moved the show to its own line, we have to specify what action
+we want to take place.
+
 
 Save your machine config
 file, save your light show file, and run your game. You should see
-your light show start to play once the attract mode starts up.
+your light show and the display show start playing once the attract mode starts up.
 
 4. Configure more light shows to all run at once
 ------------------------------------------------
