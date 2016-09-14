@@ -349,7 +349,7 @@ events will be generated:
 * my_first_shot_my_first_profile_unlit_hit (shot + profile + state + "hit")
 
 When you hit that same shot a second time, the following three events will
-be generated: (The first two are the same since they're based on shot name
+be generated: The first two are the same since they're based on shot name
 and profile name, but the last one is different because the shot's state is
 different.
 
@@ -357,4 +357,79 @@ different.
 * my_first_shot_my_first_profile_hit (shot + profile + "hit")
 * my_first_shot_my_first_profile_flashing_hit (shot + profile + state + "hit")
 
+Hitting that shot again will generate the following three events:
+
+* my_first_shot_hit (shot + "hit")
+* my_first_shot_my_first_profile_hit (shot + profile + "hit")
+* my_first_shot_my_first_profile_lit_hit (shot + profile + state + "hit")
+
+And so on...
+
+
+Now let's look at how we can give the player a different number of points when
+they hit that shot depending on what state the shot's in.
+
+Here's the existing scoring section from the base mode config:
+
+::
+
+   # base.yaml (config file for base mode)
+
+   scoring:
+       my_first_shot_hit:
+           score: 100
+       s_flipper_lower_left_active:
+           score: 1000
+           potato: 1
+       s_flipper_lower_right_active:
+           potato: -2
+
+Again, the player gets 100 points each time that shot is made regardless of what
+state it's in since the scoring event is the generic shot hit event which does
+not include details of what state the shot is in.
+
+Now let's change the scoring section to this:
+
+::
+
+   # base.yaml (config file for base mode)
+
+   scoring:
+       my_first_shot_my_first_profile_unlit_hit:
+           score: 100
+       my_first_shot_my_first_profile_flashing_hit:
+           score: 1000
+       s_flipper_lower_left_active:
+           score: 1000
+           potato: 1
+       s_flipper_lower_right_active:
+           potato: -2
+
+We changed the name of the event for the first scoring entry from
+"my_first_shot_hit" to "my_first_shot_my_first_profile_unlit_hit". This means
+those 100 points will only be added if that shot is hit while it has the
+"my_first_profile" applied AND while that profile is in the state "unlit".
+
+The next entry, for 500 points, will only be called when that shot is hit with
+"my_first_profile" applied while it's in the state "flashing".
+
+Save your config and run your game. If you hit the switch for the shot, you
+should get 100 points and the light should start flashing. Hit it again, and you
+should get 500 points and the light should turn on steady. Hit it a third time,
+and you should get no points, but the light will also turn off since the
+profile is set to loop and it will go back to the first (unlit) state.
+
+
+
 (not done writing yet...)
+
+Next steps to write
+
+* Change scoring to base the event on the profile & state
+* Add a second mode and redefine the profile for that mode
+* Show that scoring will score both
+* Disable the shots in the lower mode
+* Show tokens
+* Shot groups
+* advancing shots
+* shot reset events
