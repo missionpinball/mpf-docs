@@ -36,7 +36,8 @@ Then go to the Python website download the version you need. (Note that the fina
 number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.) Or use the direct-download links here:
 
 + `Download the Python 3.4.4. x86 / 32-bit MSI installer <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
-+ `Download the Python 3.4.4 x64 / 64-bit MSI installer<https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
++ `Download the Python 3.4.4 x64 / 64-bit MSI installer <https://www.python
+.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
 
 .. image:: images/download_python_win.jpg
 
