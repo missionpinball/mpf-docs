@@ -1,18 +1,18 @@
 How to Guides ("Cookbook" Recipes)
 ==================================
 
-We've created a bunch of "How To" guides to walk you through adding
-very specific things to your game. Our intention is that you'll first
-follow the :doc:`step-by-step tutorial </tutorial/index>` (in order) to get to the point
-where you have a very basic running game, and then you can pick-and-
-choose the specific How To guides you'd like to do next. The How To
-guides are self-contained and can be done in any order.
+Older versions of the MPF documentation include a "How To" or "Cookbook /
+Recipes" section of the documentation that gave step-by-step examples of how to
+do different things with MPF.
 
-Note: We used to put all the How To guides here in this "how to" section of
-the documentation, however, that was confusing because it meant the how to
-guides for a particular part of MPF were not in the same place as the rest of
-the documentation for that area.
+The problem was the organization was confusing, because the How To guide were
+not located in the same section as the regular documentation for each different
+part of MPF.
 
-So we moved the How To guides into their respective sections. For example, the
-How To guides for sounds and audio are now incorporated into the "Sounds &
-Audio" section of the documentation.
+In other words, if you wanted to know how to animate a widget, were you supposed
+to look in the "Widgets" part of the documentation, or in the How To guides?
+
+So now we're consolidated the documentation so that all the how to guides in
+the main sections of the documentation. For example, the guide which explains
+how to do widget animations is in the "Displays, DMDs & Graphics" section, then
+the "Widgets" section under there.
