@@ -15,7 +15,8 @@ Broadly speaking, a shot is anything the player shoots at during a
 game. It could be a standup target, a lane, a ramp, a loop, a drop
 target, a pop bumper, a toy, etc.
 
-You can read the :doc:`full shots documentation </shots/index>` for details, but the short version
+You can read the :doc:`full shots documentation </game_logic/shot>` for
+details, but the short version
 is that in MPF, you define switches (or a sequence of switches) as a "shot". Then
 whenever that shot is made, MPF posts events which you can use to trigger scores,
 achievements, shows, etc.
@@ -425,7 +426,6 @@ profile is set to loop and it will go back to the first (unlit) state.
 
 Next steps to write
 
-* Change scoring to base the event on the profile & state
 * Add a second mode and redefine the profile for that mode
 * Show that scoring will score both
 * Disable the shots in the lower mode
