@@ -372,7 +372,8 @@ apply to any widget. You do this by adding those animations to the ``animations:
 Now you can use these animations, by name, in any widget or widget_player config where you would ordinarily define your
 own animations.
 
-For example, to configure a widget to fade in:
+For example, to configure a widget to fade in (assuming the widget was
+initially created with ``opacity: 0``:
 
 ::
 
@@ -381,8 +382,7 @@ For example, to configure a widget to fade in:
          - type: text
            text: HELLO
            animations:
-             show_slide:
-               named_animation: fade_in
+             show_slide: fade_in
 
 Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out
 when the event "timer_hurry_up_complete" is posted, you can do it like this:
@@ -394,7 +394,48 @@ when the event "timer_hurry_up_complete" is posted, you can do it like this:
          - type: text
            text: HELLO
            animations:
-             show_slide:
-               named_animation: fade_in
-             timer_hurry_up_complete:
-               named_animation: fade_out
+             show_slide: fade_in
+             timer_hurry_up_complete: fade_out
+
+9. Chaining multiple named animations together
+----------------------------------------------
+
+When working with named animations, you can chain together multiple named
+animations for a single event by specifying them as a list, like this:
+
+::
+
+   widgets:
+      hello_widget:
+         - type: text
+           text: HELLO
+      animations:
+        some_event: anim1, anim2, anim3
+
+Any animation with ``timing: with_previous`` in the first step will run with
+the previous one, meaning you can create lots of little effects and
+sub-animations and then combine them in reusable ways throughout your config.
+
+You can even use the same animation over and over in a sequence to repeat
+something a certain number of times. For example:
+
+::
+
+  animations:
+      pulse:
+          - property: opacity
+            value: 0
+            duration: 100ms
+          - property: opacity
+            value: 1
+            duration: 100ms
+            timing: after_previous
+
+  widgets:
+      widget1:
+          ...
+          animations:
+              flash_3x: pulse, pulse, pulse
+
+In the example above, when the MPF event "flash_3x" is posted, it will cause
+widget1 to pulse three times.
