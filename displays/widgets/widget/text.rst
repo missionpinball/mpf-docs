@@ -118,7 +118,8 @@ insert the commas. In other words, if your text is "YOU SCORED 12345 POINTS",
 then it will convert it into "YOU SCORED 12,345 POINTS" even though the text is
 a mix-and-match of letters and numbers.
 
-The default setting is ``True``.
+The default setting is ``False``. (Note that prior to MPF 0.30, the default
+setting was ``True``.
 
 .. todo::
 
@@ -140,7 +141,7 @@ points.
 So for most machines, you'd add ``min_digits: 2`` to your text widgets which
 show the player's score.
 
-The default setting is ``1``.
+The default setting is ``0``.
 
 halign
 ~~~~~~
