@@ -48,4 +48,5 @@ widgets.
    Animating widgets <animate_widgets>
    Animation "easing" <easing>
    Widget Styles <styles>
+   Fonts <fonts>
    Creating reusable "named" widgets <reusable_widgets>

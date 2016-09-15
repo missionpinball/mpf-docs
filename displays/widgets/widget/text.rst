@@ -61,8 +61,16 @@ Link to dynamic text and text strings
 
 font_name:
 ~~~~~~~~~~
+The name of the font you want to use.
 
-Link to fonts doc
+There's a lot that goes into fonts, so we have a whole section on
+:doc:`fonts </displays/widgets/fonts>` which you should read.
+
+Usually fonts are controlled via
+:doc:`widget styles </displays/widgets/styles>`. Also, if you're using
+a DMD or color DMD (or other pixel-style display), we have some
+:doc:`built in DMD fonts </displays/widgets/dmd_fonts>` that you
+can use which are pre-configured for DMDs.
 
 font_size:
 ~~~~~~~~~~
@@ -113,4 +121,5 @@ The default setting is ``middle``.
 
    text_dynamic
    text_fonts
+   text_dmd_fonts
    text_strings
