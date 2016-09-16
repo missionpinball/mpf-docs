@@ -150,6 +150,20 @@ limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. O
 + ``skip`` - Do not steal/stop any currently running instances of the sound. Simply skip playback
   of the newly requested instance.
 
+mode_end_action:
+~~~~~~~~~~~~~~~~
+Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
+
+The ``mode_end_action:`` setting determines what action to take when the mode that initiates the
+playback of the sound ends. Options for ``mode_end_action:`` are:
+
++ ``stop`` - All currently playing and queued instances of the specified sound started by the mode
+  will be stopped/canceled. If the ``fade_out`` parameter has a non-zero value, the sound will fade
+  out over the specified number of seconds.
++ ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
+  sound started by the mode (the sound will continue to play to the end of the current loop). In
+  addition, any queued instances of the sound awaiting playback will be removed/canceled.
+
 track:
 ~~~~~~
 Single value, type: ``string``. Default: ``None``

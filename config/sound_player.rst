@@ -53,6 +53,7 @@ documentation for details about each setting.
 + ``events_when_played:``
 + ``events_when_stopped:``
 + ``events_when_looping:``
++ ``mode_end_action:``
 
 Express configuration
 ---------------------
