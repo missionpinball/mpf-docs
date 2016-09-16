@@ -366,7 +366,6 @@ Hitting that shot again will generate the following three events:
 
 And so on...
 
-
 Now let's look at how we can give the player a different number of points when
 they hit that shot depending on what state the shot's in.
 
@@ -411,24 +410,246 @@ We changed the name of the event for the first scoring entry from
 those 100 points will only be added if that shot is hit while it has the
 "my_first_profile" applied AND while that profile is in the state "unlit".
 
-The next entry, for 500 points, will only be called when that shot is hit with
+The next entry, for 1000 points, will only be called when that shot is hit with
 "my_first_profile" applied while it's in the state "flashing".
 
 Save your config and run your game. If you hit the switch for the shot, you
 should get 100 points and the light should start flashing. Hit it again, and you
-should get 500 points and the light should turn on steady. Hit it a third time,
+should get 1000 points and the light should turn on steady. Hit it a third time,
 and you should get no points, but the light will also turn off since the
 profile is set to loop and it will go back to the first (unlit) state.
 
+In other words, hitting the ``Q`` key (or the actual switch if you have a real
+machine) should result in the following sequence of total score (one for each
+hit): 100, 1100, 1100, 1200, 2200, 2200, 2300, 3300, 3300...
 
+4. Add a second mode and score the shot from there
+--------------------------------------------------
+
+One of the most powerful features of shot profiles is that shots can have
+multiple profiles defined at the same time, (with each active mode having
+the ability to apply its own profile).
+
+To illustrate this, we're going to create a new mode, called "mode2". So
+go ahead and create a ``mode2`` folder in your ``modes`` folder, then add
+the ``config`` folder into that folder, and then create the ``mode2.yaml``
+mode configuration file for that mode.
+
+Open up the ``mode2.yaml`` file and add the following lines. (We'll explain
+them step-by-step next.)
+
+::
+
+   #config_version=4
+   # mode2 config file
+
+   mode:
+       start_events: mode2_start
+       stop_events: mode2_stop
+       priority: 200
+
+   widgets:
+       mode2_start_banner:
+         type: text
+         text: MODE 2 STARTED
+         font_size: 50
+         color: lime
+         y: 80%
+         expire: 1s
+
+   widget_player:
+       mode_mode2_started: mode2_start_banner
+
+   scoring:
+       my_first_shot_hit:
+          score: 1
+
+Remember that you also have to go back into your machine-wide config file to add the new
+``- mode2`` entry to your ``modes:`` section. While we're in there, let's also add
+``keyboard:`` entries for some events we can use to stop and start the mode.
+
+Here are changes you'll make to the machine-wide config file:
+
+::
+
+   # from the machine-wide config.yaml file
+
+   modes:
+    - base
+    - mode2
+
+   ...
+
+   keyboard:  # existing keyboard entries not shown.
+      n:
+        event: mode2_start
+      m:
+        event: mode2_stop
+
+Now save your files and run your machine. Then press the following keys:
+
+* ``S`` - starts the game
+* ``Q`` - hits your shot, score jumps to 100
+* ``Q`` - hits your shot, score jumps to 1100
+* ``N`` - starts mode2. You should see a 1-second green message showing this
+* ``Q`` - hits your shot, score jumps to 1101
+* ``Q`` - hits your shot, score jumps to 1202
+
+You can press ``M`` to stop mode2 (though there is no on-screen message) and then
+continue to hit ``Q`` and notice the score jumps through the [+100, +1000, 0] cycle
+over and over.
+
+You can press ``N`` again to start mode2 and notice that every time you press ``Q``,
+you the score increases +1 (in addition to the [+100, +1000, 0] from the base mode.
+
+Press ``M`` to stop mode2 again and notice that the +1 scoring stops.
+
+So what's happening here?
+
+First, notice that in the ``mode2.yaml`` file, we configured the following
+scoring entry:
+
+::
+
+   scoring:
+       my_first_shot_hit:
+          score: 1
+
+Notice that that scoring entry is just based on "my_first_shot" being hit. It
+does not contain any of the profile or state information in it, which means that
+it will always score the +1 regardless of the state of that shot.
+
+Of course even while mode2 is running, the base mode is also running. That means
+that when both modes are running, mode2 is always scoring +1 per hit, and the
+base mode is cycling through the [+100, +1000, 0] scoring depending on what
+state the shot is in.
+
+When you stop mode2 (with the ``M`` key), that removes the scoring from mode2,
+but since the base mode is still running, you still get the scoring from there.
+
+5. Configure a new shot profile in mode2
+----------------------------------------
+
+In the previous step, we added a new mode and accessed the shot from within
+that mode, but that new mode still used the same shot profile as the base
+mode.
+
+However, it's also possible to create a brand-new shot profile in a mode
+that will be applied to the shot when that mode is active.
+
+This is useful if you want to "override" a shot profile from a lower mode
+based on a higher priority mode. For example, maybe you have a stand-up
+target in your base mode that you're using for some basic scoring. But then
+in a jackpot mode, you want that target to flash a light instead of just
+the regular on/off behavior from the base mode. You would do this by
+applying a different shot profile in the jackpot mode.
+
+To illustrate this, open up your ``mode2.yaml`` file and:
+
+#. Updated the ``scoring:`` section from the example below
+#. Add the ``shots:`` section from below
+#. Add the ``shot_profiles:`` section from below
+
+::
+
+   # snippet from mode2.yaml
+
+   ...
+
+   scoring:
+       my_first_shot_mode2_flashing_hit:
+         score: 10000
+       my_first_shot_mode2_lit_hit:
+         score: 100
+
+   shots:
+     my_first_shot:
+       profile: mode2
+
+   shot_profiles:
+     mode2:
+        states:
+           - name: flashing
+             show: flash
+             speed: 5
+           - name: lit
+             show: on
+        loop: no
+        block: yes
+
+Save your files and run your game again, pressing the following keys:
+
+* ``S`` - starts the game
+* ``Q`` - hits your shot, score jumps to 100,
+* ``Q`` - hits your shot, score jumps to 1100
+* ``N`` - starts mode2. You should see a 1-second green message showing this
+* ``Q`` - hits your shot, score jumps to 11,100
+* ``Q`` - hits your shot, score jumps to 11,200
+* ``Q`` - hits your shot, score jumps to 11,300
+* ``M`` - stops mode2
+* ``Q`` - hits your shot, no score change
+* ``Q`` - hits your shot, score jumps to 11,400
+* ``Q`` - hits your shot, score jumps to 12,400
+
+Let's deconstruct the changes to the ``mode2.yaml`` config file too see what's
+going on.
+
+First, notice that we added a ``shots:`` section and then added "my_first_shot"
+to it, like this:
+
+::
+
+   shots:
+     my_first_shot:
+       profile: mode2
+
+However, unlike the "my_first_shot" entry in the machine-wide config, in the mode
+config we did NOT redefine the ``switch:`` or ``show_tokens:`` entries. Instead,
+we just added the ``profile:`` setting and told it to use a profile called ``mode2``.
+
+So what this means is that we're not creating a new shot or changing the configuration
+of the shot, rather, we're just saying that when mode2 is active, we want to apply
+a different shot profile to the shot. (Remember that settings from mode configuration
+files are only active when that mode is active.)
+
+Next, take a look at the ``shot_profiles:`` section:
+
+::
+
+   shot_profiles:
+     mode2:
+        states:
+           - name: flashing
+             show: flash
+             speed: 5
+           - name: lit
+             show: on
+        loop: no
+        block: yes
+
+In this case, we defined a profile called ``mode2`` which has two states: "flashing" and "lit". (These
+state names could be whatever you want, "incomplete" and "complete" or whatever.) Note also that we added
+``speed: 5`` to the flashing step. That setting will be applied to the "flash" show when it's played, and
+you can use any of the :doc:`/config/show_player` settings there. In this case that will play the show
+at 5x speed, so we'll see a fasting flashing.
+
+Also note that we added ``block: yes`` to this profile. That means that when this profile is active, any
+shot profiles from lower priority modes will be disabled. Since mode2 runs at priority 200, the profile
+"my_first_profile" which we assigned in the machine-wide config will be blocked. (Machine-wide config
+items run at priority 0.)
+
+And, since the scoring events in the base mode are based on the shot being hit with the "my_first_profile"
+applied, this is why when mode2 is running, we don't get the scoring events from the base mode. Those
+events are not posted because my_first_profile is not active because the higher priority profile attached
+to the shot in mode2 is blocking it.
+
+If you were to remove the ``block: yes`` from the mode2 profile in the mode2 config, then when you hit the
+shot while mode2 was active then you would get the scoring from both the base mode and mode2 mode applied.
 
 (not done writing yet...)
 
 Next steps to write
 
-* Add a second mode and redefine the profile for that mode
-* Show that scoring will score both
-* Disable the shots in the lower mode
 * Show tokens
 * Shot groups
 * advancing shots
