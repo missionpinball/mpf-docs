@@ -3,6 +3,11 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.31
+~~~~
+
+Estimated Sept 20, 2016
+
 0.30
 ~~~~
 
