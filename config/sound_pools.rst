@@ -117,3 +117,37 @@ pool is referenced for playback. Options for ``type:`` are:
   list can be controlled by an optional numeric weight value appended after each sound.  This
   weight value is relative to all other sounds in the list.
 
+simultaneous_limit:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``None``
+
+The numeric value indicating the maximum number of instances of this sound pool that may be
+played at the same time (up to the limit of the track).  Once the maximum number of instances has
+been reached, the ``stealing_method`` setting determines the how additional requests to play
+the sound pool will be managed.  This setting is useful for sounds that can be triggered in rapid
+succession (such as spinners and pop bumpers).  Setting a limit will ensure a reasonable number
+of instances will be played simultaneously and not overwhelm the audio mix.  The default value of
+``None`` indicates no limits will be placed on the number of instances of the sound pool that may be
+played at once up to the limit of the track.
+
+.. note::
+
+  The sounds contained in a sound pool can also have their own ``simultaneous_limit``
+  setting which can lead to some unexpected behavior when interacting with the
+  ``simultaneous_limit`` setting in the sound pool.
+
+stealing_method:
+~~~~~~~~~~~~~~~~
+Single value, type: one of the following options: oldest, newest, skip. Default: ``oldest``
+
+The ``stealing_method:`` of a sound pool determines the behavior of additional requests to play the
+sound pool once the number of simultaneous instances of the sound has reached its
+``simultaneous_limit`` limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``.
+Options for ``stealing_method:`` are:
+
++ ``oldest`` - Steal/stop the oldest playing instance of the sound and replace it with a new
+  instance (essentially restarts the oldest playing instance).
++ ``newest`` - Steal/stop the newest playing instance of the sound and replace it with a new
+  instance (essentially restarts the newest playing instance).
++ ``skip`` - Do not steal/stop any currently running instances of the sound. Simply skip playback
+  of the newly requested instance.

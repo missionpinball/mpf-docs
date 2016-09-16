@@ -96,21 +96,6 @@ specifies the number of times the sound should loop back to the beginning while 
 that this value is not the total number of times the sound is played, but the number of times it
 should play again after the first time through.
 
-max_queue_time:
-~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``None``
-
-Specifies the maximum time this sound can be queued before it's played. If the time between when
-this sound is requested and when MPF can actually play it is longer than this queue time, then
-the request is discarded and the sound doesn't play. This only comes into play if this sound is
-requested but the track it's playing on is at its ``max_simultaneous`` limit. Then if this sound
-doesn't have a high enough priority to kill any of the existing sounds, it will be queued to play
-later. Some sounds (like voice callouts) might be ok to queue, but other sounds (like sound effects
-for when you hit a pop bumper or slingshot) might only make sense if they're played right away, so
-in those cases you might want to use a short (or no) queue time. The default setting is "None" which
-means this sound will have no queue limit and will always play eventually.
-
 priority:
 ~~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
@@ -120,6 +105,50 @@ values will preempt other sounds with lower priorities that are playing when a t
 the maximum number of simultaneous sounds it is configured to play.  If the track is busy and the
 priorities of all sounds currently playing greater than or equal to this sound, the sound will be
 queued for playback and will have to wait to be played.
+
+max_queue_time:
+~~~~~~~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``None``
+
+Specifies the maximum time this sound can be queued before it's played. If the time between when
+this sound is requested and when MPF can actually play it is longer than this queue time, then
+the request is discarded and the sound doesn't play. This only comes into play if this sound is
+requested but the track it's playing on is at its ``simultaneous_sounds`` limit. Then if this sound
+doesn't have a high enough priority to kill any of the existing sounds, it will be queued to play
+later. Some sounds (like voice callouts) might be ok to queue, but other sounds (like sound effects
+for when you hit a pop bumper or slingshot) might only make sense if they're played right away, so
+in those cases you might want to use a short (or no) queue time. The default setting is "None" which
+means this sound will have no queue limit and will always play eventually.
+
+simultaneous_limit:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``None``
+
+The numeric value indicating the maximum number of instances of this sound that may be played
+at the same time (up to the limit of the track).  Once the maximum number of instances has
+been reached, the ``stealing_method`` setting determines the how additional requests to play
+the sound will be managed.  This setting is useful for sounds that can be triggered in rapid
+succession (such as spinners and pop bumpers).  Setting a limit will ensure a reasonable number
+of instances will be played simultaneously and not overwhelm the audio mix.  The default value of
+``None`` indicates no limits will be placed on the number of instances of the sound that may be
+played at once up to the limit of the track.
+
+stealing_method:
+~~~~~~~~~~~~~~~~
+Single value, type: one of the following options: oldest, newest, skip. Default: ``oldest``
+
+The ``stealing_method:`` of a sound determines the behavior of additional requests to play the
+sound once the number of simultaneous instances of the sound has reached its ``simultaneous_limit``
+limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. Options for
+``stealing_method:`` are:
+
++ ``oldest`` - Steal/stop the oldest playing instance of the sound and replace it with a new
+  instance (essentially restarts the oldest playing instance).
++ ``newest`` - Steal/stop the newest playing instance of the sound and replace it with a new
+  instance (essentially restarts the newest playing instance).
++ ``skip`` - Do not steal/stop any currently running instances of the sound. Simply skip playback
+  of the newly requested instance.
 
 track:
 ~~~~~~
@@ -139,6 +168,31 @@ volume parameters in MPF, this item can be represented as a number between 0.0 a
 volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as a decibel string from -inf to
 0.0 db (ex: ``-3.0 db``).
 
+fade_in:
+~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
+
+The number of seconds over which to fade in the sound when it is played.
+
+fade_out:
+~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
+
+The number of seconds over which to fade out the sound when it is stopped. This value is not
+applied when the sound stops on its own by reaching the end of the sound (will likely be added
+in a future version).  At the moment it only comes into play when the sound is actively stopped
+by an event.
+
+start_at:
+~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
+
+The position in the sound file (in seconds) to start playback of the sound when it is played. When
+the sound is looped it will loop back to the beginning of the sound file.
+
 ducking:
 --------
 
@@ -152,11 +206,10 @@ The following sections are required in the ``ducking:`` section of your config:
 
 target:
 ^^^^^^^
-Single value, type: ``string``. 
+List of one (or more) values, each is a type: ``string``.
 
-The track name to apply the ducking to when the sound is played.  Currently, only one target track
-is supported, but there are plans to support multiple target tracks in a future version. This most
-commonly contains the name of the track that music is played on.
+The list of track names to apply the ducking to when the sound is played. This most commonly
+contains the name of the track that music is played on.
 
 Optional settings
 ~~~~~~~~~~~~~~~~~
@@ -166,11 +219,10 @@ include them, the default will be used).
 
 attack:
 ^^^^^^^
-Single value, type: ``string``. Default: ``10ms``
+Single value, type: ``time string (secs)``. Default: ``10ms``
 
 The duration of the period over which the ducking starts until it reaches its maximum attenuation
-(attack stage).  This value may be specified as a :doc:`time string </config/instructions/time_strings>`
-or a number of samples.
+(attack stage).  This value is specified as a :doc:`time string </config/instructions/time_strings>`.
 
 attenuation:
 ^^^^^^^^^^^^
@@ -182,24 +234,62 @@ quiet to make the target track while the sound is playing.
 
 delay:
 ^^^^^^
-Single value, type: ``string``. Default: ``0``
+Single value, type: ``time string (secs)``. Default: ``0``
 
-The duration to delay after the sound starts playing before ducking starts. This value may be
-specified as a :doc:`time string </config/instructions/time_strings>` or a number of samples.
+The duration to delay after the sound starts playing before ducking starts. This value is specified
+as a :doc:`time string </config/instructions/time_strings>`.
 
 release:
 ^^^^^^^^
-Single value, type: ``string``. Default: ``10ms``
+Single value, type: ``time string (secs)``. Default: ``10ms``
 
 The duration of the period over which the ducking goes from its maximum attenuation until the
-ducking ends (release stage). This value may be specified as a
-:doc:`time string </config/instructions/time_strings>` or a number of samples.
+ducking ends (release stage). This value is specified as a :doc:`time string </config/instructions/time_strings>`.
 
 release_point:
 ^^^^^^^^^^^^^^
-Single value, type: ``string``. Default: ``0``
+Single value, type: ``time string (secs)``. Default: ``0``
 
 The point relative to the end of the sound at which to start the returning the attenuation back to
 normal (release stage). A value of 0.5 seconds means to begin to release the ducking 0.5 seconds
-prior to the end of the sound. This value may be specified as a
-:doc:`time string </config/instructions/time_strings>` or a number of samples.
+prior to the end of the sound. This value is specified as a :doc:`time string </config/instructions/time_strings>`.
+
+markers:
+--------
+
+The ``markers:`` section establishes a list of markers and their associated events at specific
+times in the sound.  When a marker is reached during playback, the associated events will be
+posted.  Markers are useful for synchronizing various actions with specific points in a sound.
+A typical use might be to send an 'almost_finished_playing' event a short time before a sound
+finishes playback or establish various checkpoints in a sound that could be used to restart
+a sound at that point on the user's next turn (using mode code).
+
+Here's a simple example utilizing markers:
+
+::
+
+    sounds:
+        long_sound_1:
+            volume: 0.8
+            markers:
+                - time: 2.534 sec
+                  events: send_this_event, also_this_event
+                - time: 6.712 sec
+                  events: almost_finished_playing
+
+
+The ``markers:`` section contains the following settings:
+
+time:
+^^^^^
+Single value, type: ``time string (secs)``.
+
+The marker time (in seconds) relative to the beginning of the sound file.
+
+events:
+^^^^^^^
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this marker is reached during sound
+playback. Enter the list in the MPF config list format. These events are posted exactly as they’re
+entered.

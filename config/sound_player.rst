@@ -43,10 +43,16 @@ Several other settings may be used in the sound player to override settings spec
 ``sounds:`` section of config files.  Please refer to the :doc:`sounds: </config/sounds>`
 documentation for details about each setting.
 
-+ ``priority:``
 + ``loops:``
-+ ``volume:``
++ ``priority:``
 + ``max_queue_time:``
++ ``volume:``
++ ``fade_in:``
++ ``fade_out:``
++ ``start_at:``
++ ``events_when_played:``
++ ``events_when_stopped:``
++ ``events_when_looping:``
 
 Express configuration
 ---------------------
