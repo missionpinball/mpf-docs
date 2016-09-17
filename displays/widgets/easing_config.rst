@@ -22,7 +22,7 @@ config, but it wouldn't be hard to add them.
 
 Basically this file just creates a single display with a single slide with five
 text widgets, sets up the animations for them, and then has a slide_player
-entry to show that slide on the *mc_ready* event which is posted by the media
+entry to show that slide on the *init_done* event which is posted by the media
 controller once it's ready to show slides. (That's why we don't need the MPF
 core engine to run this example.)
 
@@ -114,7 +114,7 @@ core engine to run this example.)
               repeat: yes
 
     slide_player:
-      mc_ready: slide1
+      init_done: slide1
 
 And here's the example where we animate the opacity:
 
@@ -208,4 +208,4 @@ And here's the example where we animate the opacity:
               repeat: yes
 
     slide_player:
-      mc_ready: slide1
+      init_done: slide1

@@ -59,7 +59,7 @@ this:
         color: 444444
 
     slide_player:
-      mc_ready:
+      init_done:
         window_slide_1:
           target: window
 
@@ -251,12 +251,12 @@ So that's what we're doing here:
 ::
 
     slide_player:
-      mc_ready:
+      init_done:
         window_slide_1:
           target: window
 
 If you don't have a slide_player: entry in your machine-wide config, go ahead
-and add it now. Then create an entry for the :doc:`/config/mc_ready` event.
+and add it now. Then create an entry for the :doc:`/config/init_done` event.
 This is the event that the media controller posts when it's ready to be used,
 so it's a good event for our use case.
 
