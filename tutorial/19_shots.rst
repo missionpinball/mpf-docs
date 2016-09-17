@@ -15,7 +15,7 @@ Broadly speaking, a shot is anything the player shoots at during a
 game. It could be a standup target, a lane, a ramp, a loop, a drop
 target, a pop bumper, a toy, etc.
 
-You can read the :doc:`full shots documentation </game_logic/shot>` for
+You can read the :doc:`full shots documentation </game_logic/shots/index>` for
 details, but the short version
 is that in MPF, you define switches (or a sequence of switches) as a "shot". Then
 whenever that shot is made, MPF posts events which you can use to trigger scores,

@@ -4,7 +4,7 @@ Game Logic
 
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    Ball Locks <ball_lock>
    Ball Saves <ball_save>
@@ -15,7 +15,7 @@ Game Logic
    Game Modes <modes/index>
    Logic Blocks <logic_blocks/index>
    Timers <timer>
-   Shots <shot>
+   Shots <shots/index>
    Using events for game logic <events>
    Skill shot <skillshot>
    Bonus <bonus>
