@@ -1,16 +1,17 @@
+Sequence Logic Blocks
+=====================
 
-Sequences are a type of Logic Block where you can trigger a new event
-based on a series of one or more other events.They are a key part of
-implementing `game logic`_ in MPF. Sequences are almost identical to
-`Accrual Logic Blocks`_, the only difference being that the steps in
+Sequences are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
+where you can trigger a new event
+based on a series of one or more other events. Sequences
+are almost identical to :doc:`/game_logic/logic_blocks/accruals`, the
+only difference being that the steps in
 an Accrual Logic Block can be completed in any order, and the steps in
 a Sequence Logic Block must be completed in the specific order they're
 listed.
 
-
 ::
 
-    
     logic_blocks:
         sequences:
             light_special:
@@ -19,29 +20,6 @@ listed.
                     - balldevice_right_popper_ball_enter
                     - sw_leftStandup, sw_rightStandup
                 events_when_complete: start_multiball
-                enable_events: ball_started
-                disable_events: ball_ended
-                reset_events: ball_ended
-
-
-Some settings for Sequence Logic Blocks apply to all logic blocks, so
-you can `read about them there`_, including:
-
-
-+ The “name” of the counter (e.g. “tilt” or “super_jets” in the
-  examples above)
-+ enable_events
-+ disable_events
-+ reset_events
-+ events_when_complete
-+ restart_on_complete
-+ disable_on_complete
-+ reset_each_ball
-
-
-These other settings are specific to the Sequencelogic blocks:
-
-
 
 events:
 ~~~~~~~
@@ -63,7 +41,6 @@ to fire first, then a ball has to enter the right popper, then the
 player has to hit either the right or left standup
 
 
-
 player_variable:
 ~~~~~~~~~~~~~~~~
 
@@ -71,10 +48,4 @@ This lets you specify the name of the player variable that will hold
 the progress for this logic block. If you don’t specify a name, the
 player variable used will be called `<sequence_name>_status`.
 
-.. _Accrual Logic Blocks: /docs/configuration-file-reference/accruals/
-.. _game logic: https://missionpinball.com/docs/game-logic-rules/
-.. _our note about how to enter lists of lists: /docs/configuration-file-reference/adding-lists-and-lists-of-lists-to-config-files/
-.. _built-in events: https://missionpinball.com/docs/system-components/events/built-in-events/
-.. _read about them there: https://missionpinball.com/docs/configuration-file-reference/logicblocks/%20
-
-
+.. include:: common

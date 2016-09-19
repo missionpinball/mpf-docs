@@ -43,7 +43,7 @@ The final sections of the machine config to make this happen are here:
           anchor_y: top
 
     slide_player:
-      mc_ready:
+      init_done:
         window_slide:
           target: window
         dmd_slide:
@@ -168,13 +168,13 @@ two colored rectangles.
 
 Finally, we need to create a slide_player entry which will cause the two slides
 we just created to be shown. In this example, we're using the
-:doc:`mc_ready event </events/mc_ready>` since that's the event that's posted
-by the media controller as soon as it's ready to display a slide.
+:doc:`init_done event </events/init_done>` since that's the event that's posted
+by the media controller once it's been initialized and ready to go.
 
 ::
 
     slide_player:
-      mc_ready:
+      init_done:
         window_slide:
           target: window
         dmd_slide:

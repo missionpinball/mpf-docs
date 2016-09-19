@@ -13,7 +13,7 @@ Game Logic
    Extra Balls <extra_ball>
    Multiballs <multiball>
    Game Modes <modes/index>
-   Logic Blocks <logic_blocks>
+   Logic Blocks <logic_blocks/index>
    Timers <timer>
    Shots <shot>
    Using events for game logic <events>

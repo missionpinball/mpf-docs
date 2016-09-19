@@ -204,7 +204,7 @@ OLD machine-wide config (partial):
            type: text
 
    slide_player:
-      mc_ready: welcome_slide
+      init_done: welcome_slide
       mode_attract_started: attract_started
 
 NEW machine-wide config:
@@ -223,7 +223,7 @@ NEW machine-wide config:
            height: 60
 
    slide_player:
-      mc_ready: welcome_slide
+      init_done: welcome_slide
 
 The reason we remove this is because it's not necessary now that we have our new
 attract mode display show running.

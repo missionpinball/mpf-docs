@@ -1,13 +1,17 @@
 Accrual Logic Blocks
 ====================
 
-Accruals are a type of Logic Block where you can trigger a new event
-based on a series of one or more other events. They are a key part of
-implementing game logic in MPF. This section can be used in your
-machine-wide config files. This section can be used in your mode-
-specific config files. Here are the Logic Blocks that we use for our
-Big Shot pinball machine:
+Accruals are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
+where you can trigger a new event based on a series of one or more other events.
 
+Accruals are almost identical to :doc:`/game_logic/logic_blocks/sequences`, the
+only difference being that the steps in an Accrual Logic Block can be completed
+in any order, and the steps in a Sequence Logic Block must be completed in the
+specific order they're listed.
+
+
+Here are the Logic Blocks that we use for our
+Big Shot pinball machine:
 
 ::
 
@@ -61,26 +65,6 @@ Big Shot pinball machine:
                 disable_events: ball_ended
                 reset_events: ball_ended
 
-
-Some settings for Accrual Logic Blocks apply to all logic blocks, so
-you can `read about them there`_, including:
-
-
-+ The “name” of the counter (e.g. “tilt” or “super_jets” in the
-  examples above)
-+ enable_events
-+ disable_events
-+ reset_events
-+ events_when_complete
-+ restart_on_complete
-+ disable_on_complete
-+ reset_each_ball
-
-
-These other settings are specific to the Accrual logic blocks:
-
-
-
 events:
 ~~~~~~~
 
@@ -116,7 +100,7 @@ This lets you specify the name of the player variable that will hold
 the progress for this logic block. If you don’t specify a name, the
 player variable used will be called `<accrual_name>_status`.
 
-
+.. include:: common
 
 Real world examples of Accrual Logic Blocks
 -------------------------------------------
@@ -125,9 +109,7 @@ Let's go through the Big Shot example from the beginning of this
 section to look at how Accrual Logic Blocks are implemented in the
 real world.
 
-
 ::
-
     
             light_special:
                 events:
@@ -137,7 +119,6 @@ real world.
                 enable_events: ball_started, collect_special
                 disable_events: ball_ended, lighting_special
                 reset_events: ball_ended, lighting_special
-
 
 As you can probably guess from the name, the light_special Logic Block
 is responsible for lighting the special target in Big Shot. The
@@ -253,3 +234,4 @@ create these Logic Blocks.) At this point you should be able to look
 at the other threeAccrual Logic Blocks from Big Shot (
 *lighteightball*, *unlighteightball*, and *opendiverter*) and
 understand what they're doing and why we used them.
+
