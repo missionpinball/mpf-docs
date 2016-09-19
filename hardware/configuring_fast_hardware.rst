@@ -6,7 +6,7 @@ to interface with a FAST Pinball controller. It applies to all three
 of their models—-the Core, Nano, and WPC controllers.
 
 .. todo::
-   This page needs to be updated for MPF 0.30 with the latest FAST
+   This page needs to be updated for MPF 0.31 with the latest FAST
    changes
 
 1. Install the FAST USB driver

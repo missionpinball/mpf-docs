@@ -44,9 +44,9 @@ To do this, open a command prompt and run the following command:
 
    mpf --version
 
-That command should print something like ``MPF v0.30.1``. Note that the version is three numbers, ``x.y.z``.
+That command should print something like ``MPF v0.31.0``. Note that the version is three numbers, ``x.y.z``.
 The last number (the "z") is the patch number and doesn't matter for the documentation. In other words,
-the documentation for 0.30 is valid for 0.30.0 or 0.30.1 or 0.30.212.
+the documentation for 0.31 is valid for 0.31.0 or 0.31.1 or 0.31.212.
 
 If this command gives you an error, then go back to the :doc:`/install/index` section to make sure
 MPF is installed. If it prints a version number lower than |version|, then install the latest version of

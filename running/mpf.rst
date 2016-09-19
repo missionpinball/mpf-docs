@@ -21,7 +21,7 @@ Prints the version of MPF and exits:
 ::
 
    $ mpf --version
-   MPF v0.30.0
+   MPF v0.31.0
 
 <command>
 ~~~~~~~~~

@@ -233,11 +233,10 @@ you setup in your config file is ok.
 ::
 
    C:\pinball\your_machine>mpf -b
-   INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
+   INFO : Machine : Mission Pinball Framework Core Engine v0.31.0
    INFO : Machine : Loading config from original files
    INFO : Machine : Machine config file #1: C:\your_machine\config\config
    INFO : Machine : Config file cache created: C:\Windows\temp\6454c58ed3dcbe5687dd7b0c0b112e00config
-   INFO : Machine : Starting clock at 30.0Hz
    INFO : Mode.attract : Mode Starting. Priority: 10
 
 At this point you can stop it by making sure your console window has

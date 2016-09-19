@@ -6,7 +6,7 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 0.31
 ~~~~
 
-Estimated Sept 20, 2016
+Sept 19, 2016
 
 * Audio library improvements (sound fading, markers, start position, instance limiting,
   ducking improvements)
