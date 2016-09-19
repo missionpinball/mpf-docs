@@ -23,7 +23,7 @@ like this:
 ::
 
     slide_player:
-     mc_ready: welcome_slide
+     init_done: welcome_slide
      mode_attract_started: attract_started
      ball_started:
          widgets:

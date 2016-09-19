@@ -180,10 +180,10 @@ To see this in action, add the following section to your machine config:
 ::
 
    slide_player:
-      mc_ready: welcome_slide
+      init_done: welcome_slide
 
-What this is doing is saying, "When the event called *mc_ready* happens, play the slide called *welcome_slide*." The
-*mc_ready* is an event that's posted by MPF-MC at the earliest possible point when it is ready after it initially starts
+What this is doing is saying, "When the event called *init_done* happens, play the slide called *welcome_slide*." The
+*init_done* is an event that's posted by MPF-MC at the earliest possible point when it is ready after it initially starts
 up (literally it's saying "the MC is ready"). So what we're doing here is telling MPF-MC to show our welcome slide as
 soon as it can. (Check out the :doc:`events </events/index>` documentation for details on what events are.)
 
@@ -196,7 +196,7 @@ what's actually happening here is:
 
 * You have a display called "window",
 * which is showing a slide called "welcome_slide",
-* because the slide_player was configured to show that slide when the mc_ready event happened, and
+* because the slide_player was configured to show that slide when the "init_done" event happened, and
 * that slide has a single widget,
 * which is a text widget with its text set to "PINBALL!".
 
@@ -309,7 +309,7 @@ Anyway, add the ``mode_attract_started`` to your ``slide_player:`` like this:
 ::
 
    slide_player:
-     mc_ready: welcome_slide
+     init_done: welcome_slide
      mode_attract_started: attract_started
 
 Again, this is saying you want the slide called "attract_started" to play when the event called
