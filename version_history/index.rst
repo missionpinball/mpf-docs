@@ -8,6 +8,11 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 Estimated Sept 20, 2016
 
+* Audio library improvements (sound fading, markers, start position, instance limiting,
+  ducking improvements)
+
+See the full list and details of what's new in MPF 0.31 :doc:`here <0.31>`.
+
 0.30
 ~~~~
 
