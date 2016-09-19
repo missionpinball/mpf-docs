@@ -30,6 +30,14 @@ Select the appropriate guide from our :doc:`/install/drivers/index` list:
 
    /install/drivers/index
 
+Keeping MPF up-to-date
+----------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   Updating MPF <upgrading>
+
 Choosing a host computer
 ------------------------
 

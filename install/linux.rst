@@ -20,3 +20,8 @@ launch both the MPF game engine and the media controller, you simply run:
 
 This is the same command on all platforms. See the :doc:`running/index` for
 details and command-line options.
+
+Keeping MPF up-to-date
+----------------------
+
+See :doc:`upgrading`.
