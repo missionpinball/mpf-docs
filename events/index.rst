@@ -133,7 +133,7 @@ last registered handler has returned after handling the event.
 
 Boolean Events
 ~~~~~~~~~~~~~~
-Boolean events are used when the you want get some feedback from all
+Boolean events are used when you want to get some feedback from all
 of the handlers that have registered for that event. When you post a
 boolean event, if any of the registered handlers return `False` then
 the event manager will stop processing the event. (i.e. the remaining
@@ -143,7 +143,7 @@ callback if one of the handlers returns False. For example, you might
 have an event called *request_to_start_game* that's a boolean event.
 When that event is posted (perhaps because the player pushed the start
 button during the attract mode), the event manager will receive that
-event and contact all the registers handlers one-by-one. You'd
+event and contact all the registered handlers one-by-one. You'd
 typically post that event with a callback of something like
 `self.result_of_start_game_request`. Then if any registered handler
 returns False, the event manager will call the callback and pass the
@@ -154,20 +154,20 @@ start a game if it's called without the False value. What types of
 handlers might you register for an event called
 *request_to_start_game*? There could be many. The ball controller
 might want to make sure all the balls are in their home position. The
-tilt module might want to make sure the plumb bob tilt isto be settled
+tilt module might want to make sure the plumb bob tilt is settled
 and not swinging. If the game is not set to free play, the credits
-module has to make sure there's least one credit in the game. Any one
+module has to make sure there's at least one credit in the game. Any one
 of these modules can deny a game start by registering itself as a
 handler for the *request_to_start_game* event and then returning False
 if it doesn't want to allow the start. This, by the way, is a great
 example of the power and flexibility of using events for this kind of
-thing instead of manually hard coding each of these modulesinto the
+thing instead of manually hard coding each of these modules into the
 game code. If the game is set to free play, then the credits module
 does not load, so it's not part of the process of watching for a
 request to start a game. This means your game starting code doesn't
 have to know anything about a credits module or whether or not it's
 active. The game starting code just posts the event and will start the
-game as long asno one denies it. (Once the game start request is
+game as long as no one denies it. (Once the game start request is
 approved, then a second event is posted which actually starts the
 game. That's the one that the credits module will register for to
 actually decrement a credit from the machine.) This extensibility is
