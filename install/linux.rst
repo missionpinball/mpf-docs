@@ -1,11 +1,19 @@
 Installing MPF on Linux
 =======================
-While this procedure is being refined, here are the basic steps for installing MPF .30 on Debian flavors of Linux.
+While this procedure is being refined, here are the basic steps for installing MPF .30 and up on Debian flavors of Linux.
 
-Download the MPF Debian Installer from https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
+Download the MPF Debian Installer from https://github.com/missionpinball/mpf-debian-installer/archive/master.zip
 
-Unzip, and from a terminal run ./install from the folder you unzipped the files to. Consult the
-README for more information. We'll update this page soon with more information.
+Unzip, and from a terminal run ./install from the folder you unzipped the files to. You'll be asked to choose what
+platform you're running (FAST or P-ROC), and it will install the prerequisites you need based on your selection. If
+you're unsure which platform you'll use, select P-ROC and you'll get everything you need to run either.
+
+When it's complete, you'll be ready to install MPF. The easiest way to do that is to run the following command from
+a Terminal window:
+
+::
+
+   pip3 install mpf-mc
 
 Running MPF
 -----------
@@ -20,3 +28,15 @@ launch both the MPF game engine and the media controller, you simply run:
 
 This is the same command on all platforms. See the :doc:`running/index` for
 details and command-line options.
+
+Keeping MPF up-to-date
+----------------------
+Since MPF is a work-in-progress, you can use the pip command to update your MPF installation.
+
+To to this, run the following:
+
+::
+
+   pip3 install mpf-mc --upgrade
+
+See :doc:`upgrading`.
