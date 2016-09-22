@@ -126,18 +126,10 @@ MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
 
 See the :doc:`running/index` for details and command-line options.
 
-
 Keeping MPF up-to-date
 ----------------------
 
-Whenever we update MPF, you'll also have to update the MPF Mac app. Rather than
-have you re-download and replace the MPF Mac app every time, the easiest approach
-is to run a command which will just update the copy of MPF that's inside the MPF app.
-To do this, open a Terminal window and run the following:
-
-::
-
-    kivy -m pip install mpf-mc --upgrade
+See :doc:`upgrading`.
 
 
 Shout out to Kivy!
