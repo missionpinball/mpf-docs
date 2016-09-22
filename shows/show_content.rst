@@ -26,7 +26,7 @@ The list goes on and on...
 
 Technically-speaking, the list above is actually a list of things that MPF calls :doc:`config players </config_players/index>`.
 
-*Config players* in MPF have nothing to with the actual human players of your machine, rather, they are things that
+*Config players* in MPF have nothing to do with the actual human players of your machine, rather, they are things that
 "play" configurations.
 
 Config players are used in the ``*_player:`` section of your config files *and* as steps in shows. For example, the
