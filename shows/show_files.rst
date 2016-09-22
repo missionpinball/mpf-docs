@@ -39,7 +39,7 @@ show config formats. However there's one important change.
 Since this is a standalone show file, we need to tell MPF what "version" of the
 show format this file is. MPF |version| uses ``show_version=4``. If we ever
 change something in the show format, then we'll increment the version. (Don't
-worry though, we have and automated migration tool that converts shows to the
+worry though, we have an automated migration tool that converts shows to the
 new formats. That's actually part of the reason we include the show_version in
 the show files)
 
@@ -49,7 +49,7 @@ type of file.
 
 Beyond that, the show file follows the show format covered elsewhere in this
 documentation. You can nest show files into subfolders under the ``/shows``
-folder if you want to, and in can put ``/shows`` folders in both your machine-wide
+folder if you want to, and you can put ``/shows`` folders in both your machine-wide
 and mode-specific folders. (The ``/shows`` folder should be in the root of your
 machine config or the root of a mode folder. It does *not* go inside the
 ``/config`` folder.)
