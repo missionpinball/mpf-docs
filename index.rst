@@ -97,7 +97,7 @@ files, the API / Developer's Reference is at mpf.readthedocs.org/projects/mpf-ap
 --------------------------------------------------------------------
 We have an active user support forum on Google Groups.
 
-`Community & Social Media <https://missionpinball.com/community>`_
+`Community & Social Media <http://missionpinball.org/about.html>`_
 ------------------------------------------------------------------
 Follow us, get involved, get help.
 

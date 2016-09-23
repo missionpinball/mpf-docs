@@ -64,5 +64,3 @@ ourselves when writing MPF.
    :maxdepth: 1
    :titlesonly:
 
-   API / programmer's reference <http://api.missionpinball.com>
-
