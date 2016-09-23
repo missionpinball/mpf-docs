@@ -45,6 +45,8 @@ widgets.
 
    Types of widgets <widget/index>
    Positioning widgets <widget_positioning>
+   Layering overlapping widgets (z-order) <layers>
+   Hovering widgets "above" slides <parent_frames>
    Animating widgets <animate_widgets>
    Animation "easing" <easing>
    Widget Styles <styles>
