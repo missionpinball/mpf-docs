@@ -3,6 +3,25 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.32 (current version in development, not yet stable)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Improved smart virtual platform
+* Improved support for System 11 and Gottlieb style troughs (including using
+  the ball drain as a ball storage location to get one additional ball
+  capacity with no hardware changes).
+* Check that duplicate sections don't exist in config files
+* Check that event handlers are properly formatted before they're registered
+* Added conditional events (handlers that only fire if certain conditions are
+  met)
+* Fixed a widget ordering bug
+* Fixed the DMD and Color DMD
+* Added multiball lost event
+* Allow devices to have inline config specs
+* Fixed a bug in flipper enable/disable
+* Added shots with events
+* Better OPP platform parsing
+
+
 0.31
 ~~~~
 
