@@ -5,6 +5,7 @@ Shot
 
    shot_group
    shot_profiles
+   blocking
 
 
 
