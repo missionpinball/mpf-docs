@@ -19,7 +19,7 @@ you need bundled up into a single application package which you can just drag an
    MPF cannot run in an virtual machine (like in VMware Fusion or Parallels) if the guest OS is OS X.
    (Though running MPF in a Windows or Linux VM on OS X is fine.) Please direct complaints to Cupertino.
 
-Download a zip of the latest MPF app for OS X from `here <https://missionpinball.com/Mission%20Pinball%20Framework.dmg>`_.
+Download a zip of the latest MPF app for OS X from `here <https://dl.dropboxusercontent.com/u/51030/Mission%20Pinball%20Framework.dmg>`_.
 The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That
 seems crazy huge, right? Remember though that it has *everything* in it, including
 Python and all the multimedia and video playback libraries, audio libraries, etc.)
