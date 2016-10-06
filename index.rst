@@ -61,7 +61,7 @@ Welcome! This is the documentation for the Mission Pinball Framework (MPF)
 MPF is free & open source software you can use to run a real pinball machine,
 whether it's a new "home brew" machine you built yourself or whether you want
 to rewrite the rules for an existing commercial pinball machine. Read more
-about MPF at `missionpinball.com <http://missionpinball.com/mpf>`_.
+about MPF at `missionpinball.org <http://missionpinball.org>`_.
 
 MPF has a lot of documentation. Here are some of the big parts you can explore
 now. Or view the tree menu on the left (or the "hamburger" menu in the top menu
