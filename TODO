@@ -1,7 +1,3 @@
-/game_logic/ball_tracking.rst:7: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/game_logic/ball_tracking.rst:9: WARNING: Inline emphasis start-string without end-string.
-/game_logic/ball_tracking.rst:15: WARNING: Inline emphasis start-string without end-string.
-/game_logic/ball_tracking.rst:28: WARNING: Inline emphasis start-string without end-string.
 /game_logic/logic_blocks/accruals.rst:120: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /game_logic/logic_blocks/accruals.rst:120: WARNING: Inline emphasis start-string without end-string.
 /game_logic/logic_blocks/accruals.rst:120: WARNING: Inline emphasis start-string without end-string.
@@ -10,15 +6,10 @@
 /game_logic/shot.rst:11: ERROR: Content block expected for the "todo" directive; none found.
 /game_logic/shot_group.rst:4: ERROR: Content block expected for the "todo" directive; none found.
 /game_logic/shot_profiles.rst:4: ERROR: Content block expected for the "todo" directive; none found.
-/install/windows.rst:39: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/install/windows.rst:40: WARNING: Bullet list ends without a blank line; unexpected unindent.
-/mechs/plungers/no_switch.rst:9: ERROR: Unknown target name: "_ in modern machines, we configure the plunger lane as a `ball device".
 /mechs/rollovers/index.rst:4: ERROR: Content block expected for the "todo" directive; none found.
 /mechs/spinners/index.rst:4: ERROR: Content block expected for the "todo" directive; none found.
 /mechs/targets/index.rst:4: ERROR: Content block expected for the "todo" directive; none found.
 /tutorial/3_get_flipping.rst:40: ERROR: Unknown target name: "s".
-looking for now-outdated files... none found
-pickling environment... done
 checking consistency... /config/_machine_config_no.rst:: WARNING: document isn't included in any toctree
 /config/_machine_config_yes.rst:: WARNING: document isn't included in any toctree
 /config/_mode_config_no.rst:: WARNING: document isn't included in any toctree
@@ -29,47 +20,6 @@ checking consistency... /config/_machine_config_no.rst:: WARNING: document isn't
 /install/demo_man.rst:: WARNING: document isn't included in any toctree
 /version_history/0.30.rst:: WARNING: document isn't included in any toctree
 /version_history/0.31.rst:: WARNING: document isn't included in any toctree
-done
-preparing documents... done
-writing output... [100%] version_history/index                                                                                                                        
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/external_show_stop' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/get' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/goodbye' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/hello' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/json' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/machine_variable' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/mode_start' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/mode_stop' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_added' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_turn_start' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_variable' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/reset' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/reset_complete' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/set' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/shot' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/switch' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/terminate' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/timer' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/trigger' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/external_show_stop' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/get' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/goodbye' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/hello' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/json' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/machine_variable' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/mode_start' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/mode_stop' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_added' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_turn_start' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/player_variable' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/reset' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/reset_complete' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/set' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/shot' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/switch' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/terminate' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/timer' that doesn't have a title: no link will be generated
-/bcp/index.rst:134: WARNING: toctree contains reference to document 'bcp/trigger' that doesn't have a title: no link will be generated
 /config/ball_devices.rst:11: WARNING: unknown document: /mechs/logical/ball_device
 /config/sounds.rst:213: WARNING: unknown document: /sounds/ducking
 displays/widgets/widget/common.rst:124: WARNING: unknown document: /config/instructions/color
