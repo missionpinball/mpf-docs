@@ -1,18 +1,16 @@
-Devices
-=======
+Pinball Mechanisms
+==================
 
-A *Device* is a "thing" in a pinball machine. (How's that for an explanation!)
+MPF supports all the various pinball hardware mechanisms you'd expect. Some of
+these are basic (switches, LEDs, coils), and others are built up by combining
+multiple simpler mechs (Switch X plus Coil Y = Flipper 1, etc.)
 
-In MPF, devices can be individual physical things (switches, LEDs, coils), or
-they can be logical groupings of physical devices (Switch X plus Coil Y =
-Flipper 1, etc.)
-
-Devices can be configured in either machine-wide or mode-specific config files.
-Every device has a name, and there configuration options for each device which
+Pinball mechs can be configured in either machine-wide or mode-specific config files.
+Each one has a name, and there are configuration options for each which
 control exactly how it behaves (or how its behavior changes depending on
 what's going on in your game).
 
-Devices in MPF include:
+Pinball Mechs in MPF include:
 
 .. toctree::
    :maxdepth: 1
