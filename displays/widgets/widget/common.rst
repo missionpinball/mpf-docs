@@ -122,7 +122,7 @@ an image or video widget, it will have the effect of "tinting" the widget with
 the color you specified.
 
 You can enter this as a hex color string or a color name. See the
-:doc:`color instructions </config/instructions/color>` for details.
+:doc:`color instructions </config/instructions/colors>` for details.
 
 If you're entering hex strings, you can enter either 6 or 8 characters. The
 first six characters are RGB values (``00``-``ff`` each), and the final is the

@@ -11,10 +11,15 @@ lanes when the plunger lane has no switch which is active when a ball
 is sitting at the plunger. (This is common is older single-ball
 machines, including many EM and early solid state machines.)If you're
 just landing on this page randomly, you might also want to check out
-our `tutorial on how to configure a trough`_, as it provides some more
+our tutorial on how to configure a trough, as it provides some more
 background information about many of the things we reference here.
-Here's an example of what we're talking about: ` `_ In modern
-machines, we configure the plunger lane as a `ball device`_. This is
+Here's an example of what we're talking about:
+
+.. todo::
+   add image & verify the text in this page
+
+
+In modern machines, we configure the plunger lane as a ball device. This is
 possible since there's a switch in the plunger lane, so when that
 switch is active then the machine knows there's a ball "in" the
 plunger ball device, and when that switch is inactive then the machine
@@ -35,9 +40,7 @@ MPF that it should add a live ball into play from this device.) So in
 this situation since your plunger lane isn't actually a ball device,
 you need to add the *ball_add_live* tag to your trough, like this:
 
-
 ::
-
 
     ball_devices:
         trough:
@@ -49,13 +52,11 @@ you need to add the *ball_add_live* tag to your trough, like this:
 
 
 Then when MPF needs to add a live ball into play, it will eject a ball
-from the trough and you're all set! If you have a `classic 1980s-style
-trough`_ with separate drain and trough devices, you'd simply add the
+from the trough and you're all set! If you have a classic 1980s-style
+trough with separate drain and trough devices, you'd simply add the
 *ball_add_live* tag to the second device in the chain, like this:
 
-
 ::
-
 
     ball_devices:
         drain:
@@ -74,10 +75,3 @@ trough`_ with separate drain and trough devices, you'd simply add the
             confirm_eject_type: target
             eject_targets: plunger_lane
             tags: home, trough, ball_add_live
-
-
-.. _tutorial on how to configure a trough: https://missionpinball.com/docs/tutorial/create-your-trough/
-.. _classic 1980s-style trough: https://missionpinball.com/docs/howto/configure-1980s-style-trough/
-.. _ball device: https://missionpinball.com/docs/mpf-core-architecture/mechs/logical-mechs/ball-device/
-
-

@@ -153,7 +153,6 @@ The following BCP commands have been defined (and implemented) in MPF:
    reset
    reset_complete
    set
-   shot
    switch
    terminate
    timer
