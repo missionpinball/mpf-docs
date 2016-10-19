@@ -99,7 +99,7 @@ July 15, 2016
   includes advanced feature like ducking, attack, attenuation, etc.
 * Proper Python package installers, and inclusion in PyPI so install can be done
   via *pip*.
-* System-wide *mpf* launcher utility with plugable commands
+* System-wide *mpf* launcher utility with pluggable commands
 * New MPF clock module replaces the old timing and timers
 * All shows are driven by MPF
 * Show content is "played" by the standard config_players

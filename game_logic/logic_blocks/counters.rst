@@ -59,7 +59,7 @@ Default is ``None``.
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
 
-This is an :doc:`MPF time value string <config/instructions/time_strings>`
+This is an :doc:`MPF time value string </config/instructions/time_strings>`
 that will be used to group
 together multiple *count_events*as if they were one single event. So
 if you have ``multiple_hit_window: 500ms`` and you get three hit
@@ -105,4 +105,4 @@ more than zero.
 
 Default is ``0``.
 
-.. include:: common
+.. include:: common.rst

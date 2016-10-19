@@ -22,7 +22,6 @@ your machine-wide config, a mode-specific config, or both.
    coil_overwrites: <coil_overwrites>
    coil_player: <coil_player>
    coils: <coils>
-   color_correction_profile: <color_correction_profile>
    config: <config>
    credits: <credits>
    displays: <displays>
@@ -116,5 +115,4 @@ your machine-wide config, a mode-specific config, or both.
    virtual_platform_start_active_switches: <virtual_platform_start_active_switches>
    widget_player: <widget_player>
    widget_styles: <widget_styles>
-   widgets: <widgets>
    window: <window>

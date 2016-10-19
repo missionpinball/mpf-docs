@@ -4,8 +4,8 @@ MPF Installation
 Installing MPF is fairly straightforward. It can be used on Windows, Mac OS X, or Linux, on both Intel x86 and ARM
 processors, and in 64-bit and 32-bit systems.
 
-Full step-by-step install guides
---------------------------------
+Installing MPF for the first time
+---------------------------------
 
 We've created step-by-step installation guides which walk you through the entire process. Select the OS you're using
 from the list below:
@@ -18,9 +18,17 @@ from the list below:
    Linux <linux>
    Raspberry Pi <raspberry>
 
+Migrating from previous versions of MPF
+---------------------------------------
 
-Hardware drivers
-----------------
+.. toctree::
+   :maxdepth: 1
+
+   migrating
+
+
+Controller drivers
+------------------
 
 Once you have MPF installed, you will need to install the drivers for the particular pinball controller you're using.
 Select the appropriate guide from our :doc:`/install/drivers/index` list:

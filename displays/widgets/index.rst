@@ -50,3 +50,6 @@ widgets.
    Widget Styles <styles>
    Fonts <fonts>
    Creating reusable "named" widgets <reusable_widgets>
+   Expiring Widgets <expire>
+   Widget keys <keys>
+   Widget layers <layers>

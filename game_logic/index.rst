@@ -17,7 +17,7 @@ Game Logic
    Timers <timer>
    Shots <shot>
    Using events for game logic <events>
-   Skill shot <skillshot>
+   Skill shot <skill_shot>
    Bonus <bonus>
    Video Mode <video_mode>
    Achievements <achievements>

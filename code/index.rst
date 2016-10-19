@@ -65,4 +65,5 @@ ourselves when writing MPF.
    :titlesonly:
 
    API / programmer's reference <http://api.missionpinball.com>
+   best_practices
 

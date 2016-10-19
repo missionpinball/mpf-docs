@@ -134,20 +134,22 @@ The following BCP commands have been defined (and implemented) in MPF:
 .. toctree::
    :maxdepth: 1
 
-   ball_end <ball_end>
-   ball_start <ball_start>
-   config <config>
-   dmd_frame <dmd_frame>
-   error <error>
-   external_show_frame <external_show_frame>
-   external_show_start <external_show_start>
-   external_show_stop <external_show_stop>
-   get <get>
-   goodbye <goodbye>
-   hello <hello>
-   mode_start <mode_start>
-   mode_stop <mode_stop>
-   player_added <player_added>
+   ball_end
+   ball_start
+   config
+   dmd_frame
+   error
+   external_show_frame
+   external_show_start
+   external_show_stop
+   get
+   goodbye
+   hello
+   json
+   machine_variable
+   mode_start
+   mode_stop
+   player_added
    player_turn_start
    player_variable
    reset
@@ -155,6 +157,7 @@ The following BCP commands have been defined (and implemented) in MPF:
    set
    shot
    switch
+   terminate
    timer
    trigger
 

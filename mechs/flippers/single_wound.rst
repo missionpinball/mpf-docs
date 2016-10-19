@@ -19,7 +19,7 @@ the flipper in the 'up' position without overheating it.
 If you have single-wound flipper coils (or if you have traditional dual-wound
 coils but you don't want to waste two drivers per flipper and you just
 want to use a single winding), make sure you've read our
-:doc:`/tech_note/flipper_theory` tech note for all the details about how that
+:doc:`theory` tech note for all the details about how that
 works. If you'd like to use single-wound flipper coils, you need to do
 two things in your config file:
 

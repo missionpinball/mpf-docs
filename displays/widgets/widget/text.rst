@@ -179,6 +179,4 @@ The default setting is ``middle``.
    :titlesonly:
 
    text_dynamic
-   text_fonts
-   text_dmd_fonts
    text_strings

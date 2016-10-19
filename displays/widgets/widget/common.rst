@@ -64,7 +64,7 @@ You can use decimal values between 0 and 1 for partial transparency.
 * Completely opaque (e.g. normal): ``1``
 * 50% transparent: ``0.5``
 
-The default value is ``1`.
+The default value is ``1``.
 
 Note that some widget types allow you to set values greater than 1, which will
 have the effect of making the "glow" of the widget brighter. This isn't a great

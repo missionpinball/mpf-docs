@@ -26,17 +26,17 @@ events:
 
 This is where you configure the actual events that make up the "steps"
 of your SequenceLogic Block. The real power of SequenceLogic Blocks is
-that you can enter more than one eventsfor each step, and *only one*
+that you can enter more than one events for each step, and *only one*
 of the of the events of that step has to happen for that step to be
 complete. You can enter anything you want for your events, whether
-it's one of MPF's `built-in events`_ or a made-up event that another
+it's one of MPF's built-in events or a made-up event that another
 Logic Block posts when it completes. (This is how you chain multiple
 Logic Blocks together to form complex logic.) The steps of a
-SequenceLogic Block mustbe completed in order. (If you want a Logic
-Block where the steps can becompleted in any order, that's what the
-AccrualLogic Blocks are for.) Read `our note about how to enter lists
-of lists`_ into the config files to make sure you get the
-configuration right. In the example above, the `shot_target`event has
+SequenceLogic Block must be completed in order. (If you want a Logic
+Block where the steps can be completed in any order, that's what the
+AccrualLogic Blocks are for.) Read our note about how to enter lists
+of lists into the config files to make sure you get the
+configuration right. In the example above, the *shot_target* event has
 to fire first, then a ball has to enter the right popper, then the
 player has to hit either the right or left standup
 
@@ -46,6 +46,6 @@ player_variable:
 
 This lets you specify the name of the player variable that will hold
 the progress for this logic block. If you don’t specify a name, the
-player variable used will be called `<sequence_name>_status`.
+player variable used will be called *<sequence_name>_status*.
 
-.. include:: common
+.. include:: common.rst

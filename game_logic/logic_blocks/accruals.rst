@@ -15,7 +15,6 @@ Big Shot pinball machine:
 
 ::
 
-    
     logic_blocks:
         accruals:
             light_special:
@@ -72,9 +71,9 @@ This is where you configure the actual events that make up the "steps"
 of your Accrual Logic Block. "Accrual" is another work for "sum" or
 "total", and Accrual Logic Blocks fire their completion event after
 each (and every) step has been completed. The real power of Accrual
-Logic Blocks is that you can enter more than one eventsfor each step,
+Logic Blocks is that you can enter more than one events for each step,
 and *only one* of the of the events of that step has to happen for
-that step to be complete. Another way to look at it is that theres an
+that step to be complete. Another way to look at it is that there's an
 *AND* between all the steps. For the Accrual to complete, you need
 Step 1 *AND* Step 2 *AND* Step 3. But since you can enter more than
 one event for each step, you could think of those like *OR*s. So you
@@ -87,20 +86,18 @@ posts when it completes. (This is how you chain multiple Logic Blocks
 together to form complex logic.) The steps of an Accrual Logic Block
 can be completed in any order. (In fact, that's the whole point. If
 you want a Logic Block where the steps have to be completed in order,
-that's what the Sequence Logic Blocks are for.) Read `our note about
-how to enter lists of lists`_ into the config files to make sure you
+that's what the Sequence Logic Blocks are for.) Read
+our note about how to enter lists of lists into the config files to make sure you
 get the configuration right.
-
-
 
 player_variable:
 ~~~~~~~~~~~~~~~~
 
 This lets you specify the name of the player variable that will hold
 the progress for this logic block. If you don’t specify a name, the
-player variable used will be called `<accrual_name>_status`.
+player variable used will be called *<accrual_name>_status*.
 
-.. include:: common
+.. include:: common.rst
 
 Real world examples of Accrual Logic Blocks
 -------------------------------------------
@@ -110,15 +107,15 @@ section to look at how Accrual Logic Blocks are implemented in the
 real world.
 
 ::
-    
-            light_special:
-                events:
-                    - sw_eightball,
-                    - drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete
-                events_when_complete: lighting_special, action_target_specialRight_light
-                enable_events: ball_started, collect_special
-                disable_events: ball_ended, lighting_special
-                reset_events: ball_ended, lighting_special
+
+   light_special:
+       events:
+           - sw_eightball,
+           - drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete
+       events_when_complete: lighting_special, action_target_specialRight_light
+       enable_events: ball_started, collect_special
+       disable_events: ball_ended, lighting_special
+       reset_events: ball_ended, lighting_special
 
 As you can probably guess from the name, the light_special Logic Block
 is responsible for lighting the special target in Big Shot. The
@@ -168,19 +165,16 @@ enabled again after the player collected the special. Now lets look at
 how we configured our *collect_special*Accrual which picks up where
 this *lighting_special*leaves off:
 
-
 ::
 
-    
-            collect_special:
-                events:
-                    - target_specialLeft_lit_hit, target_specialRight_lit_hit
-                events_when_complete:
-                    collect_special
-                enable_events: lighting_special
-                disable_events: ball_ended, collect_special
-                reset_events: ball_ended, collect_special
-
+   collect_special:
+       events:
+           - target_specialLeft_lit_hit, target_specialRight_lit_hit
+       events_when_complete:
+           collect_special
+       enable_events: lighting_special
+       disable_events: ball_ended, collect_special
+       reset_events: ball_ended, collect_special
 
 First, notice that *collect_special*is enabled when the event
 *lighting_special*is posted. *lighting_special*is the event (which we
@@ -234,4 +228,3 @@ create these Logic Blocks.) At this point you should be able to look
 at the other threeAccrual Logic Blocks from Big Shot (
 *lighteightball*, *unlighteightball*, and *opendiverter*) and
 understand what they're doing and why we used them.
-

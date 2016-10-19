@@ -15,30 +15,29 @@ Pinball Mechs in MPF include:
 .. toctree::
    :maxdepth: 1
 
-   Accelerometers <accelerometer>
-   Autofire Coils <autofire_coil>
-   Ball Devices <ball_device>
-   Diverters <diverter>
-   Coils (Solenoids) <coil>
-   Drop Targets <drop_target>
-   Dual-Wound Coils <dual_wound_coils>
-   Flashers <flasher>
-   Flippers <flipper>
-   GI (general illumination) <gi>
-   Kickback Lanes <kickback>
-   Lights <light>
-   LEDs <led>
-   Loops / Orbits / Ramps <loop>
-   Magnets <magnet>
-   Playfields <playfield>
-   Playfield transfers <playfield_transfer>
-   Plungers <plunger>
-   Pop Bumpers <pop_bumper>
-   Rollover Switches <rollover>
-   Score Reels <score_reel>
-   Servos <servo>
-   Slingshot <slingshot>
-   Spinners <spinner>
-   Switches <switch>
-   Stand-up Targets <target>
-   Trough / Ball Drain <trough>
+   Accelerometers <accelerometers/index>
+   Autofire Coils <autofire_coils/index>
+   Ball Devices <ball_devices/index>
+   Coils (Solenoids) <coils/index>
+   Diverters <diverters/index>
+   Drop Targets <drop_targets/index>
+   Dual-Wound Coils <dual_wound_coils/index>
+   Flashers <flashers/index>
+   Flippers <flippers/index>
+   GI (general illumination) <gis/index>
+   Kickback Lanes <kickbacks/index>
+   Lights <lights/index>
+   LEDs <leds/index>
+   Loops / Orbits / Ramps <loops/index>
+   Magnets <magnets/index>
+   Playfields <playfields/index>
+   Plungers <plungers/index>
+   Pop Bumpers <pop_bumpers/index>
+   Rollover Switches <rollovers/index>
+   Score Reels <score_reels/index>
+   Servos <servos/index>
+   Slingshot <slingshots/index>
+   Spinners <spinners/index>
+   Switches <switches/index>
+   Stand-up Targets <targets/index>
+   Trough / Ball Drain <troughs/index>

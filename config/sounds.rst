@@ -295,13 +295,13 @@ Here's a simple example utilizing markers:
 The ``markers:`` section contains the following settings:
 
 time:
-^^^^^
+~~~~~
 Single value, type: ``time string (secs)``.
 
 The marker time (in seconds) relative to the beginning of the sound file.
 
 events:
-^^^^^^^
+~~~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 A list of one or more names of events that MPF will post when this marker is reached during sound

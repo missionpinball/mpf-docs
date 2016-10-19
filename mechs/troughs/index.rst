@@ -4,7 +4,7 @@ Ball Trough
 This is a type of ball device
 
 2. Understand the  "trough" ball devices
------------------------------------------
+----------------------------------------
 
 In modern pinball machines, the trough is the ball device that holds
 balls after they've drained off the playfield. The act of a ball
@@ -38,7 +38,7 @@ depending on whose manual you're reading.
 
 Here's a side-view diagram of a modern style trough:
 
-.. image:: images/modern_trough.jpg
+.. image:: /mechs/images/modern_trough.jpg
 
 The diagram above does not show the ball switches, but you get the idea.
 
@@ -53,7 +53,7 @@ kicked the ball into the plunger lane.) This style of trough is actually
 configured as two separate ball devices in MPF, and they look something like
 this:
 
-.. image:: images/system_11_style_trough.jpg
+.. image:: /mechs/images/system_11_style_trough.jpg
 
 
 If you have a older style outhole + trough combination that looks something like the
@@ -69,13 +69,11 @@ Older single-ball machines (almost all EMs and most early solid state
 machines) typically just have one switch and one coil and eject the ball from
 the drain hole directly to the plunger lane, like this:
 
-.. image:: images/em_style_trough.jpg
+.. image:: /mechs/images/em_style_trough.jpg
 
 You can actually configure older single ball, single coil troughs just like
 modern troughs--it's just that there's only one switch and one
 coil, but everything in Steps 3 and 4 below still apply.
-
-
 
 Finally, if you don't have a
 trough jam switch that's fine, just enter your other switches.

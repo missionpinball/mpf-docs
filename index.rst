@@ -3,28 +3,28 @@ Mission Pinball Framework |version| documentation
 
 .. toctree::
    :hidden:
-   :caption: User Documentation
+   :caption: The Basics
 
    Getting Started </start/index>
-   Compatible Hardware </hardware/index>
    Compatible Pinball Machines </machines/index>
-   Installation </install/index>
+   Installing MPF </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
-   Pinball Mechs </mechs/index>
-   Game Logic </game_logic/index>
-   Game Modes </modes/index>
-   Displays, DMDs, & Graphics </displays/index>
-   Sounds & Audio </sound/index>
-   Shows </shows/index>
-   Assets </assets/index>
-   Config Players </config_players/index>
-   Machine Management </machine_management/index>
 
 .. toctree::
    :hidden:
-   :caption: MPF Architecture
+   :caption: User Documentation
 
+   Control Systems </hardware/index>
+   Pinball Mechs </mechs/index>
+   Game Logic </game_logic/index>
+   Displays </displays/index>
+   Sound</sound/index>
+   Shows </shows/index>
+   Assets </assets/index>
+   Events </events/index>
+   Config Players </config_players/index>
+   Machine Management </machine_management/index>
    Core Modules </core/index>
    Flowcharts </flowcharts/index>
 
@@ -42,13 +42,13 @@ Mission Pinball Framework |version| documentation
 
    Events Reference </events/event_reference>
    Config File Reference </config/index>
+   Examples </examples/index>
 
 .. toctree::
    :hidden:
    :caption: About MPF
 
-   Documentation Authors </about/authors>
-   License </about/license>
+   About this Documentation </about/index>
    FAQ </faq/index>
    Glossary </glossary/index>
    Contributing to MPF </contribute/index>
@@ -60,7 +60,7 @@ Welcome! This is the documentation for the Mission Pinball Framework (MPF)
 MPF is free & open source software you can use to run a real pinball machine,
 whether it's a new "home brew" machine you built yourself or whether you want
 to rewrite the rules for an existing commercial pinball machine. Read more
-about MPF at `missionpinball.com <http://missionpinball.com/mpf>`_.
+about MPF at `missionpinball.org <http://missionpinball.org>`_.
 
 MPF has a lot of documentation. Here are some of the big parts you can explore
 now. Or view the tree menu on the left (or the "hamburger" menu in the top menu
@@ -87,6 +87,7 @@ a base mode, scoring, and playing.
 -----------------------
 Answers to common questions about MPF & custom pinball machines
 
+
 `API Reference & Developer's Guide <http://mpf.readthedocs.org/projects/mpf-api>`_
 ----------------------------------------------------------------------------------
 If you're a programmer or want to extend what's possible with MPF's config
@@ -95,10 +96,6 @@ files, the API / Developer's Reference is at mpf.readthedocs.org/projects/mpf-ap
 `Support Forum <https://groups.google.com/forum/#!forum/mpf-users>`_
 --------------------------------------------------------------------
 We have an active user support forum on Google Groups.
-
-`Community & Social Media <https://missionpinball.com/community>`_
-------------------------------------------------------------------
-Follow us, get involved, get help.
 
 :doc:`/contribute/index`
 ------------------------

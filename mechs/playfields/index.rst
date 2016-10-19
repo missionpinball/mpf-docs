@@ -1,7 +1,7 @@
 Playfield
 =========
 
-Believe it or not, the playfield in MPF is technically a :doc:`ball device <ball_device>`.
+Believe it or not, the playfield in MPF is technically a :doc:`ball device </mechs/ball_devices/index>`.
 This is needed since MPF wants to know where all the balls are at all
 times, so it needs to know which balls are "in" the playfield device.
 
@@ -16,3 +16,6 @@ machine then you can configure additional playfield devices.
 
 Playfields are configured in the :doc:`playfields: section </config/playfields>` of the
 configuration file.
+
+.. toctree::
+   playfield_transfer

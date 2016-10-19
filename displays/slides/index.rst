@@ -53,7 +53,6 @@ to do with the active and current slides of another display.
 .. image:: /displays/images/slides_with_multiple_displays.png
 
 
-
 .. toctree::
 
    Creating Slides <creating_slides>
@@ -62,3 +61,4 @@ to do with the active and current slides of another display.
    multiplayer_display
    picture_in_picture
    split_screen
+   display_targets
