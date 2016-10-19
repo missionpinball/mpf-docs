@@ -260,7 +260,7 @@ We have a bit more to finish in this step, including:
 
 .. _Logic Blocks section of our Game Logic documentation: https://missionpinball.com/docs/game-logic-rules/
 .. _ section: https://missionpinball.com/docs/configuration-file-reference/autofire-coils/
-.. _more info: https://missionpinball.com/docs/devices/autofire-coil/
+.. _more info: https://missionpinball.com/docs/mechs/autofire-coil/
 .. _LogicBlocks section: https://missionpinball.com/docs/configuration-file-reference/logicblocks/
 
 

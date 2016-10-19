@@ -48,7 +48,7 @@ is tracking where all the balls are at all times. Whether a live ball
 is actually in play or not is the responsibility of the game logic—not
 the ball controller.
 
-.. _Ball Devices: https://missionpinball.com/docs/devices/ball-device/
-.. _diverters: https://missionpinball.com/docs/devices/diverter/
+.. _Ball Devices: https://missionpinball.com/docs/mechs/ball-device/
+.. _diverters: https://missionpinball.com/docs/mechs/diverter/
 
 

@@ -69,6 +69,6 @@ Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
-.. _playfield transfer devices: https://missionpinball.com/docs/mpf-core-architecture/devices/logical-devices/playfield-transfer/
+.. _playfield transfer devices: https://missionpinball.com/docs/mpf-core-architecture/mechs/logical-mechs/playfield-transfer/
 
 

@@ -64,8 +64,8 @@ can apply them to certain lights based on MPF events with the
 exist in your machine-wide config file or a mode-specific config
 file.)
 
-.. _RGB LEDs: https://missionpinball.com/docs/devices/rgb-led/
-.. _Matrix Lights: https://missionpinball.com/docs/devices/matrix-light/
+.. _RGB LEDs: https://missionpinball.com/docs/mechs/rgb-led/
+.. _Matrix Lights: https://missionpinball.com/docs/mechs/matrix-light/
 .. _show format: https://missionpinball.com/docs/shows/creating-shows/
 
 

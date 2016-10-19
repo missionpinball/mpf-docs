@@ -149,8 +149,8 @@ Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
-.. _multiball devices: https://missionpinball.com/docs/mpf-core-architecture/devices/abstract-devices/multiball/
-.. _ball lock devices: https://missionpinball.com/docs/mpf-core-architecture/devices/abstract-devices/ball-lock/
+.. _multiball devices: https://missionpinball.com/docs/mpf-core-architecture/mechs/abstract-mechs/multiball/
+.. _ball lock devices: https://missionpinball.com/docs/mpf-core-architecture/mechs/abstract-mechs/ball-lock/
 .. _device control event documentation: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/configuring-device-control-events/
 
 

@@ -214,7 +214,7 @@ to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
 .. _FadeCandy (also can be used with Multimorphic or FAST hardware): https://missionpinball.com/docs/howto/how-to-use-fadecandy-for-leds/
-.. _RGB LEDs: https://missionpinball.com/docs/mpf-core-architecture/devices/low-level-devices/rgb-led/
+.. _RGB LEDs: https://missionpinball.com/docs/mpf-core-architecture/mechs/low-level-mechs/rgb-led/
 .. _Matrix Lights: https://missionpinball.com/docs/configuration-file-reference/matrixlights/
 .. _FAST Pinball Controllers: https://missionpinball.com/docs/howto/how-to-use-a-fast-pinball-controller-with-mpf/
 .. _PD-LED boards (used with a Multimorphic P-ROC or P3-ROC): https://missionpinball.com/docs/howto/how-to-use-a-p3-roc-with-mpf/

@@ -39,7 +39,7 @@ doesn't have a switch in it which is activated when a ball is sitting
 at the plunger? (This is common in single ball machines, like EMs and
 older solid state machines.) In this case you can't follow this step
 in the tutorial since you don't have the switch. Instead check our
-guide :doc:`/devices/plunger_no_switch`. Then come back and continue
+guide :doc:`/mechs/plunger_no_switch`. Then come back and continue
 with the next step of the tutorial.
 
 1. Add your plunger lane switch

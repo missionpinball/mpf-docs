@@ -258,8 +258,8 @@ problems with this shot. Default is *False*.
 
 .. _pulse ms: /docs/configuration-file-reference/coils/
 .. _switch's settings in the machine configuration files: /docs/configuration-file-reference/switches/
-.. _Score Reel Group section: /docs/configuration-file-reference/devices/score-reel-groups/
-.. _Score Reel device section: https://missionpinball.com/docs/mpf-core-architecture/devices/logical-devices/score-reel/
+.. _Score Reel Group section: /docs/configuration-file-reference/mechs/score-reel-groups/
+.. _Score Reel device section: https://missionpinball.com/docs/mpf-core-architecture/mechs/logical-mechs/score-reel/
 .. _here: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/entering-time-duration-values/
 
 

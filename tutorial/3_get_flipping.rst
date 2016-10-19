@@ -139,14 +139,14 @@ coils for each flipper. If you're using single-wound coils, then
 you'll only have one coil for each flipper (which we'll configure to
 pulse-width modulation for the holds).
 
-If you have no idea what we're talking about, read our :doc:`/devices/flipper_theory` page
+If you have no idea what we're talking about, read our :doc:`/mechs/flipper_theory` page
 for an introduction to flipper concepts, dual-wound versus single-
 wound, holding techniques, end-of-stroke switches, and a bunch of
 other stuff that's important that you probably never thought about.
 
 Here's an example of how you'd enter your coils for a machine with two
 dual-wound coils. If you have single-wound coils, or you have more than
-two flippers, refer to the :doc:`/devices/flipper` documentation for
+two flippers, refer to the :doc:`/mechs/flipper` documentation for
 examples of how to configure them.
 
 ::
@@ -192,7 +192,7 @@ thinking, "Wait, but didn't I just configure the coils and switches?"
 Yes, you did, but now you have to tell MPF that you want to create a
 flipper device which links together one switch and one (or two) coils
 to become a "flipper". MPF supports dozens of different types of
-:doc:`/devices/index`, some of which (like flippers), are created
+:doc:`/mechs/index`, some of which (like flippers), are created
 by combining other devices.
 
 You create your flipper devices by adding a ``flippers:`` section to

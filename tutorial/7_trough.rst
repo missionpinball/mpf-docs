@@ -6,7 +6,7 @@ have a "working" pinball machine since you can't start or play games.
 All you can do is flip. So the next two steps in this tutorial, we're going to
 get your first two *ball devices* set up—your trough and plunger lane.
 (A ball device is anything in MPF that holds a ball. More info is
-:doc:`here </devices/ball_device>`.
+:doc:`here </mechs/ball_device>`.
 That will give MPF a basic understanding of where your balls are and
 allow it to start moving through the game, player, and ball cycles.
 
@@ -20,7 +20,7 @@ a time into the plunger lane.
 If you have a different kind of trough, like an old "above the playfield"
 System 11 or early WPC trough, or an older single ball trough, then you
 can still follow along here while also consulting the
-:doc:`trough </devices/trough>` documentation for the specifics of how
+:doc:`trough </mechs/trough>` documentation for the specifics of how
 to identify and configure your kind of trough.
 
 The first step is to add your trough's switches to the ``switches:``

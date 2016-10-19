@@ -137,7 +137,7 @@ Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
-.. _Score Reel Groups device section: https://missionpinball.com/docs/mpf-core-architecture/devices/logical-devices/score-reel-group/
+.. _Score Reel Groups device section: https://missionpinball.com/docs/mpf-core-architecture/mechs/logical-mechs/score-reel-group/
 .. _score reels (based on the names you gave them): https://missionpinball.com/docs/configuration-file-reference/score-reels/
 .. _See our note: /docs/configuration-file-reference/adding-lists-and-lists-of-lists-to-config-files/
 .. _Coils section of the machine configuration file: /docs/configuration-file-reference/coils/

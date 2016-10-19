@@ -17,7 +17,7 @@ the `Score Reel Groups section of the machine configuration file
 reference`_.
 
 .. _Score Reel Groups section of the machine configuration file reference: /docs/configuration-file-reference/score-reel-groups/
-.. _Score Reel devices: https://missionpinball.com/docs/devices/score-reel/
+.. _Score Reel devices: https://missionpinball.com/docs/mechs/score-reel/
 .. _this blog post that we wrote: /blog/2014/08/em-style-score-reels/
 
 

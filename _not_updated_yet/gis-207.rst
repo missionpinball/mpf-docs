@@ -96,7 +96,7 @@ Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
-.. _GI (general illumination): https://missionpinball.com/docs/mpf-core-architecture/devices/low-level-devices/gi-string/
+.. _GI (general illumination): https://missionpinball.com/docs/mpf-core-architecture/mechs/low-level-mechs/gi-string/
 .. _device control event documentation: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/configuring-device-control-events/
 
 

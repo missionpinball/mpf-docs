@@ -20,7 +20,7 @@ unit can roll over from 9 to 0, while a credit reel cannot.) More
 details about score reels are available in the `Score Reel section of
 our machine configuration file reference`_.
 
-.. _Score Reel Group: /docs/devices/score-reel-group/
+.. _Score Reel Group: /docs/mechs/score-reel-group/
 .. _here: /blog/category/big-shot-em-conversion/
 .. _Score Reel section of our machine configuration file reference: /docs/configuration-file-reference/score-reels/
 

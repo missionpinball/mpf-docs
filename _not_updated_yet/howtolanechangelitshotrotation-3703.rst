@@ -334,6 +334,6 @@ options you can play with.
 .. _shot group: https://missionpinball.com/docs/configuration-file-reference/shot_groups/
 .. _here: https://missionpinball.com/docs/tutorial/create-an-attract-mode-light-show/
 .. _Base mode config file: https://missionpinball.com/docs/tutorial/add-your-first-game-mode/
-.. _shots: https://missionpinball.com/docs/mpf-core-architecture/devices/shot/
+.. _shots: https://missionpinball.com/docs/mpf-core-architecture/mechs/shot/
 
 

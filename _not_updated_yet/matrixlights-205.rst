@@ -131,7 +131,7 @@ to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot. Default is *False*.
 
 .. _P-ROC with a lamp matrix connected to a PD-8x8: https://missionpinball.com/docs/howto/how-to-use-a-p-roc-with-mpf/
-.. _lights connected to a lamp matrix: https://missionpinball.com/docs/mpf-core-architecture/devices/low-level-devices/matrix-light/
+.. _lights connected to a lamp matrix: https://missionpinball.com/docs/mpf-core-architecture/mechs/low-level-mechs/matrix-light/
 .. _P3-ROC with a lamp matrix connected to a PD-8x8: https://missionpinball.com/docs/howto/how-to-use-a-p3-roc-with-mpf/
 .. _device control event documentation: https://missionpinball.com/docs/configuration-file-reference/important-config-file-concepts/configuring-device-control-events/
 

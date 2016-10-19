@@ -14,6 +14,6 @@ they candriven, pulsed, flashed, and added to shows via the lighting
 commands in the Hardware Show Controller module.
 
 .. _ section of your machine configuration file: /docs/configuration-file-reference/matrixlights/
-.. _here: https://missionpinball.com/docs/mpf-core-architecture/devices/low-level-devices/rgb-led/
+.. _here: https://missionpinball.com/docs/mpf-core-architecture/mechs/low-level-mechs/rgb-led/
 
 

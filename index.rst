@@ -12,7 +12,7 @@ Mission Pinball Framework |version| documentation
    Running MPF </running/index>
    Tutorial </tutorial/index>
    How to Guides / "Cookbook" </howto/index>
-   Devices </devices/index>
+   Devices </mechs/index>
    Game Logic </game_logic/index>
    Game Modes </modes/index>
    Displays, DMDs, & Graphics </displays/index>

@@ -674,7 +674,7 @@ expected.
 .. _Here's the thread: http://www.pinballcontrollers.com/forum/index.php?topic=683.50
 .. _Pinside: https://pinside.com/pinball/community/pinsiders/snux
 .. _ section: https://missionpinball.com/docs/configuration-file-reference/driver_enabled/
-.. _driver-enabled device: https://missionpinball.com/docs/mpf-core-architecture/devices/low-level-devices/driver-enabled-device/
+.. _driver-enabled device: https://missionpinball.com/docs/mpf-core-architecture/mechs/low-level-mechs/driver-enabled-device/
 .. _here's the original thread: http://www.pinballcontrollers.com/forum/index.php?topic=543.0
 .. _how to setup a System 11 1980s-style trough: https://missionpinball.com/docs/howto/configure-1980s-style-trough/
 .. _PinballControllers.com: http://www.pinballcontrollers.com/forum/index.php?action=profile;u=444

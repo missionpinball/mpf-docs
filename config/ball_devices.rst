@@ -8,7 +8,7 @@ ball_devices:
 
 .. overview
 
-The ``ball_devices:`` section of your config is where you configure your :doc:`ball devices </devices/logical/ball_device>`.
+The ``ball_devices:`` section of your config is where you configure your :doc:`ball devices </mechs/logical/ball_device>`.
 
 
 Optional settings

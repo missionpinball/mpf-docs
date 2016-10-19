@@ -78,6 +78,6 @@ trough`_ with separate drain and trough devices, you'd simply add the
 
 .. _tutorial on how to configure a trough: https://missionpinball.com/docs/tutorial/create-your-trough/
 .. _classic 1980s-style trough: https://missionpinball.com/docs/howto/configure-1980s-style-trough/
-.. _ball device: https://missionpinball.com/docs/mpf-core-architecture/devices/logical-devices/ball-device/
+.. _ball device: https://missionpinball.com/docs/mpf-core-architecture/mechs/logical-mechs/ball-device/
 
 
