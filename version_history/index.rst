@@ -3,13 +3,84 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.32 (current version in development)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Estimated mid-November, 2016
+
+* Improved smart virtual platform
+* Improved support for System 11 and Gottlieb style troughs (including using
+  the ball drain as a ball storage location to get one additional ball
+  capacity with no hardware changes).
+* Check that duplicate sections don't exist in config files
+* Check that event handlers are properly formatted before they're registered
+* Added conditional events (handlers that only fire if certain conditions are
+  met)
+* Fixed the physical DMD and physical Color DMD
+* Added multiball lost event
+* Allow devices to have inline config specs
+* Added shots with events
+* Better OPP platform parsing
+* Added achievement groups
+* Fixed & Improved the high score mode
+* Improved service mode
+* Added options for "random" events (force next, force all, save per-player, etc.)
+* Added Events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
+* Added option to force all assets to load on boot for testing purposes
+* Improved scoring
+* Added relay events and relay queues
+* Use color "on" for LED default colors
+* Refactored ball devices to use asyncio, to have specific ejectors and ball counters
+* Allow multiple config player entries to fire from the same event
+* Allow the same slide to be used on multiple displays
+* Ensure that events created by the MC are sent to MPF
+* Lots of bug fixes...
+
+
 0.31
 ~~~~
 
-Estimated Sept 20, 2016
+Sept 19, 2016
+
+MPF
+---
+
+* MPF is now "tickless", meaning everything runs faster, but with less overhead
+* Improved flow control for FAST hardware serial communication
+* Improved BCP communications
+* Improved serial communications for all devices which use serial
+* Additional options for ball saves
+* Removed many threads which makes everything simpler and faster under the hood
+* Improved "virtual" and "smart virtual" platforms
+* Prevent broken data files from crashing MPF
+* Added a basic service mode (this is just a start, much more to come)
+* Detect balls that jump between playfields
+* Prevent duplicate rules being written to P-ROC and P3-ROC controllers
+* Allow mode config files to be broken into multiple files
+* Allow multiple multiball modes to run at once and add options for how it tracks them
+* Allow ball locks to wait for a ball to drain before releasing their locked balls
+* Added the ability to use matrix lamps/LEDs at individual channels for RGB LEDs
+* Re-added high score mode (Which was in 0.21 and removed in 0.30)
+* OPP platform improvements
+* Improved error messages for config file errors
+* Improved the way the "mpf both" command works on all platforms
+* Added ability to step backwards in shows
+* Refactored and improved show player
+* Added ball search for servos
+* Added default colors to RGB LEDs
+* Added support for nested shows
+* Added the "LED Group" device (am easily-configured strip of LEDs which can be strobed, pulsed, etc.)
+* Many bug fixes...
+
+MPF-MC
+------
 
 * Audio library improvements (sound fading, markers, start position, instance limiting,
   ducking improvements)
+* Allow widget events based on when slides are shown, hidden, etc.
+* Improved error if you try to target a widget to an invalid slide
+* Added default DMD fonts
+* Many bug fixes...
 
 See the full list and details of what's new in MPF 0.31 :doc:`here <0.31>`.
 
