@@ -11,8 +11,7 @@ Mission Pinball Framework |version| documentation
    Installation </install/index>
    Running MPF </running/index>
    Tutorial </tutorial/index>
-   How to Guides / "Cookbook" </howto/index>
-   Devices </mechs/index>
+   Pinball Mechs </mechs/index>
    Game Logic </game_logic/index>
    Game Modes </modes/index>
    Displays, DMDs, & Graphics </displays/index>
