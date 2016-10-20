@@ -12,6 +12,10 @@ available, meaning you can trigger "boot" slides from this event (which
 could in turn be used to show asset loading status, boot progress,
 etc.)
 
+If you want to show slides that require images or video loaded from
+disk, use the event "init_done" instead which is posted once all the
+assets set to "preload" have been loaded.
+
 
 Keyword arguments
 -----------------

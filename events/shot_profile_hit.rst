@@ -6,7 +6,7 @@
 The shot called (shot) was just hit with the profile (profile)
 active.
 
-Note that there are three events posted when a shot is hit, each
+Note that there are four events posted when a shot is hit, each
 with variants of the shot name, profile, and current state,
 allowing you to key in on the specific granularity you need.
 

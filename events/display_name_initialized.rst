@@ -4,7 +4,8 @@ display_(name)_initialized
 *MPF Event*
 
 The display called (name) has been initialized. This event is
-posted in the MPF-MC only, not in MPF.
+generated in the MC, so it won't be sent to MPF if the MC is started up
+and ready first.
 
 This event is part of the MPF-MC boot process and is not particularly
 useful for game developers. If you want to show a "boot" slide as

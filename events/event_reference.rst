@@ -15,6 +15,7 @@ how MPF uses events.
    (playfield)_ball_count_change <playfield_ball_count_change>
    (shot)_(profile)_(state)_hit <shot_profile_state_hit>
    (shot)_(profile)_hit <shot_profile_hit>
+   (shot)_(state)_hit <shot_state_hit>
    (shot)_hit <shot_hit>
    (shot_group)_(profile)_(state)_complete <shot_group_profile_state_complete>
    (shot_group)_(profile)_(state)_hit <shot_group_profile_state_hit>
@@ -30,12 +31,12 @@ how MPF uses events.
    ball_lock_(name)_balls_released <ball_lock_name_balls_released>
    ball_lock_(name)_full <ball_lock_name_full>
    ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
-   ball_save_(name)_disabled: <ball_save_name_disabled>
-   ball_save_(name)_enabled: <ball_save_name_enabled>
-   ball_save_(name)_grace_period: <ball_save_name_grace_period>
-   ball_save_(name)_hurry_up: <ball_save_name_hurry_up>
-   ball_save_(name)_saving_ball: <ball_save_name_saving_ball>
-   ball_save_(name)_timer_start: <ball_save_name_timer_start>
+   ball_save_(name)_disabled: <ball_save_name_disabled:>
+   ball_save_(name)_enabled: <ball_save_name_enabled:>
+   ball_save_(name)_grace_period: <ball_save_name_grace_period:>
+   ball_save_(name)_hurry_up: <ball_save_name_hurry_up:>
+   ball_save_(name)_saving_ball: <ball_save_name_saving_ball:>
+   ball_save_(name)_timer_start: <ball_save_name_timer_start:>
    ball_search_failed <ball_search_failed>
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
@@ -50,11 +51,13 @@ how MPF uses events.
    balldevice_(name)_ball_left <balldevice_name_ball_left>
    balldevice_(name)_ball_lost <balldevice_name_ball_lost>
    balldevice_(name)_eject_broken <balldevice_name_eject_broken>
+   balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
    balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
    balldevice_ball_missing <balldevice_ball_missing>
    balldevice_balls_available <balldevice_balls_available>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
    balls_in_play <balls_in_play>
+   cancel_ball_search <cancel_ball_search>
    clear <clear>
    client_connected <client_connected>
    client_disconnected <client_disconnected>
@@ -88,6 +91,7 @@ how MPF uses events.
    loading_assets <loading_assets>
    logicblock_(name)_complete <logicblock_name_complete>
    logicblock_(name)_hit <logicblock_name_hit>
+   logicblock_(name)_updated <logicblock_name_updated>
    machine_reset_phase_1 <machine_reset_phase_1>
    machine_reset_phase_2 <machine_reset_phase_2>
    machine_reset_phase_3 <machine_reset_phase_3>
@@ -97,14 +101,15 @@ how MPF uses events.
    mc_reset_phase_1 <mc_reset_phase_1>
    mc_reset_phase_2 <mc_reset_phase_2>
    mc_reset_phase_3 <mc_reset_phase_3>
-   mode_(mode_name)_(var_name)_score <mode_mode_name_var_name_score>
    mode_(name)_started <mode_name_started>
    mode_(name)_starting <mode_name_starting>
    mode_(name)_stopped <mode_name_stopped>
    motor_(name)_reached_(position) <motor_name_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
+   multiball_(name)_lost_ball <multiball_name_lost_ball>
    multiball_(name)_shoot_again <multiball_name_shoot_again>
+   multiball_(name)_shoot_again_ended <multiball_name_shoot_again_ended>
    multiball_(name)_started <multiball_name_started>
    multiplayer_game <multiplayer_game>
    not_enough_credits <not_enough_credits>
