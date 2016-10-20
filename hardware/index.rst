@@ -1,19 +1,17 @@
-MPF compatible hardware
-=======================
+MPF compatible control systems / electronic boards
+==================================================
 
-One of the primary goals of MPF is to be hardware-independent. In other words, we
-want MPF to work with any hardware pinball controller out there. We achieve
-hardware independence by abstracting all the hardware calls to MPF's platform
-interface modules, and then the platform modules talk to the actual hardware
-platform you're using.
+MPF controls a pinball machine by interfacing to a modern pinball control system.
+(See :doc:`/start/hardware_interface` for details.) MPF itself is hardware-independent,
+meaning that MPF (and the configs and code you build) can work with lots of
+different kinds of control systems.
 
-This also means that a game programmer, you have the flexibility to change your
-hardware platform at any time without having to change any game code. You could
+Not only does this give you a choice of what type of pinball control hardware
+you want to use, it also means that you have the flexibility to change your
+hardware at any time without having to change any game code. You could
 even release a game code update that works on multiple platforms—-all with the
 same code!
 
-If you're using your custom code in an existing Williams WPC game, you can
-literally switch platforms by changing a single line in a config file.
 `Here's a demo video <https://www.youtube.com/watch?v=_Zw_cHw2CXY>`_ of us
 switching out a P-ROC controller for a FAST controller in 3 minutes and
 running the same game code on both.
@@ -22,8 +20,8 @@ Note that it's possible to mix-and-match multiple hardware platforms in a single
 MPF machine config. (For example, you can combine the SmartMatrix RGB DMD with
 a FAST Core controller, or a FadeCandy LED controller with a P-ROC, etc.)
 
-MPF currently supports the following hardware devices. We are always adding
-more, so if there's some device that you'd like to use that we don't support,
+MPF currently supports the following hardware control systems. We are always adding
+more, so if there's a hardware device that you'd like to use that we don't support,
 let us know. (Or better yet, write your own interface to it and submit a pull
 request to the MPF codebase!)
 
@@ -34,6 +32,7 @@ FAST Pinball
 * FAST servo controller daughter board
 * FAST auxiliary boards, including the power filter board and smart fuse block
 * Plasma & LED mono DMDs (Core & WPC controllers)
+* FAST RGB LED-based DMD
 
 Multimorphic (P-ROC / P3-ROC)
 -----------------------------
@@ -43,15 +42,17 @@ Multimorphic (P-ROC / P3-ROC)
 * Plasma & LED mono DMDs (P-ROC)
 * Accelerometer-based tilt (P3-ROC)
 
+
+Open Pinball Project (OPP) controllers
+--------------------------------------
+* Gen 2 OPP hardware, with many combinations of wing boards for drivers, switches, & incandescent
+  lights (:doc:`How To <configuring_opp_hardware>`)
+
 Snux System 11 driver board
 ---------------------------
 * Supported in combination with the P-ROC or FAST WPC controller
 * Supported for System 11, 11A, 11B, 11C
 * Should work in Data East machines too, though it's never been tried
-
-Open Pinball Project Gen2 controllers
--------------------------------------
-* Supports many combinations of wing boards for drivers, switches, & incandescent lights (:doc:`How To <configuring_opp_hardware>`)
 
 Pololu Maestro servo controllers
 --------------------------------
@@ -84,6 +85,3 @@ here's are details about each platform:
    Multimorphic P-ROC/P3-ROC <multimorphic>
    Open Pinball Project (OPP) <configuring_opp_hardware>
    Pololu Maestro Servo Controllers <pololu_maestro>
-
-
-
