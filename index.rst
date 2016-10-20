@@ -5,7 +5,7 @@ Mission Pinball Framework |version| documentation
    :hidden:
    :caption: The Basics
 
-   Getting Started </start/index>
+   Start Here </start/index>
    Compatible Pinball Machines </machines/index>
    Installing MPF </install/index>
    Running MPF </running/index>
@@ -15,7 +15,7 @@ Mission Pinball Framework |version| documentation
    :hidden:
    :caption: User Documentation
 
-   Control Systems </hardware/index>
+   Control Systems / Electronics </hardware/index>
    Pinball Mechs </mechs/index>
    Game Logic </game_logic/index>
    Displays </displays/index>
@@ -25,7 +25,7 @@ Mission Pinball Framework |version| documentation
    Events </events/index>
    Config Players </config_players/index>
    Machine Management </machine_management/index>
-   Core Modules </core/index>
+   MPF Components & Modules </core/index>
    Flowcharts </flowcharts/index>
 
 .. toctree::
