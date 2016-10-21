@@ -1,5 +1,5 @@
-Event reference
-===============
+Events reference
+================
 
 Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't

@@ -12,14 +12,14 @@ Major Features & Concepts
   config files that make it easy to get powerful and complex pinball
   features running in your game. They're also easy for non-programmers to use.
 + Advanced programmers and customization can be done via the API. (The
-  API is fully documented at `api.missionpinball.com <http://api.missionpinball.com>`_
+  API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
 + You can easily switch between hardware platforms, so if sometime down the road
   you want to switch hardware or the company whose hardware you're using
   goes out of business, all your effort is not lost as you can easily move
   everything to a new hardware platform with a simple config file change.
 
-Hardware support
-----------------
+Compatible control systems / electronics
+----------------------------------------
 
 + Multimorphic P-ROC & P3-ROC pinball controllers, with either PD-8x8, PD-16,
   PD-LED, and SW-16 driver and accessory boards or installation in existing WPC,
@@ -35,8 +35,8 @@ Hardware support
 + Pololu Maestro servo controllers.
 + SmartMatrix RGB LED DMD controllers
 
-Pinball device support
-----------------------
+Pinball mechanism support
+-------------------------
 
 + Switches (normally open, normally closed, mechanical or opto, with
   configurable debounce settings)
@@ -143,5 +143,5 @@ Other stuff
 And the best part: Everything mentioned on this page can be done via the text-
 based configuration files. If you don't want to be a "coder," you don't have to
 be. (Though the plugin, scriptlet, mode
-coding, and `API documentation <http://api.missionpinball.com>`_ mean that if you want to use MPF for
+coding, and `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_ mean that if you want to use MPF for
 your groundwork and code your game in "real" Python, that's fine too.

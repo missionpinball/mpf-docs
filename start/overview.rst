@@ -4,7 +4,7 @@ MPF overview (what it does and how it works)
 The Mission Pinball Framework (which we call "MPF") is free and open source
 software that you run on a computer (Windows, Mac, Linux, Raspberry Pi, etc.)
 to control a real, physical pinball machine. (More info one what MPF is
-`here <https://missionpinball.com/mpf/>`_.)
+`here <https://missionpinball.org>`_.)
 
 You'll use MPF to configure and control everything in your machine, including:
 
@@ -23,7 +23,7 @@ You'll use MPF to configure and control everything in your machine, including:
   now.
 
 We designed MPF to be hardware-independent. (A list of all the hardware
-MPF currently supports is :doc:`here</hardware/index>`, and we're always adding
+MPF currently supports is :doc:`here </hardware/index>`, and we're always adding
 more.) This means that it doesn't matter whether you use a P-ROC, a FAST Pinball
 controller, Open Pinball Project hardware, etc. You can also use all sorts of
 little USB devices to do different things (FadeCandy for LEDs, servo
