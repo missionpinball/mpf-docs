@@ -6,7 +6,7 @@ other platforms. For OS X, we have a pre-built MPF.app application package which
 you need, including Python and all the graphics and audio libraries. So you just download this
 app, copy it to your *Applications* folder, register it with your system, and you're all set!
 
-MPF works on Max OS X 10.9 and newer (Mavericks, Yosemite, and El Capitan).
+MPF works on Max OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
 
 The reason went with the single MPF bundle which has everything built in is because Mac OS X has Python
 2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
@@ -19,7 +19,7 @@ you need bundled up into a single application package which you can just drag an
    MPF cannot run in an virtual machine (like in VMware Fusion or Parallels) if the guest OS is OS X.
    (Though running MPF in a Windows or Linux VM on OS X is fine.) Please direct complaints to Cupertino.
 
-Download a zip of the latest MPF app for OS X from `here <https://missionpinball.com/Mission%20Pinball%20Framework.dmg>`_.
+Download a zip of the latest MPF app for OS X from `here <https://dl.dropboxusercontent.com/u/51030/Mission%20Pinball%20Framework.dmg>`_.
 The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That
 seems crazy huge, right? Remember though that it has *everything* in it, including
 Python and all the multimedia and video playback libraries, audio libraries, etc.)

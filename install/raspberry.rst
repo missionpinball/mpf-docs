@@ -1,5 +1,5 @@
-HowTo install mpf and mpf-mc on a Raspberry Pi running in a framebuffer
-=======================================================================
+Installing MPF on a Raspberry Pi running in a framebuffer
+=========================================================
 
 One first word:
 Don't try to install mpf on a Raspberry Pi B+ or Raspberry zero, it just won't work or will be very slow.
