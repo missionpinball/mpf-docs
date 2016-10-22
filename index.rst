@@ -7,8 +7,8 @@ First Steps
 -----------
 If you're brand-new to MPF, start here.
 
-* :doc:`/install/index` Download and install MPF
-* :doc:`/tutorial/index` Go through the tutorial
+* :doc:`/install/index`: Download and install MPF
+* :doc:`/tutorial/index`: Step-by-step beginner's guide
 
 Hooking up your machine
 -----------------------
@@ -18,13 +18,13 @@ Hooking up your machine
 
 Understanding MPF
 -----------------
-* :doc:`/mechs/index` (switches, coils, lights, troughs, etc.)
-* :doc:`/game_logic/index` Game Logic (modes, scoring, multiballs, etc.)
-* :doc:`/displays/index` Displays & Graphics (DMDs, LCDs, slides, widgets, animations, text, etc.)
-* :doc:`/sound/index` Sounds & Audio
-* :doc:`/shows/index` Shows (Sequences of lights, sounds, slides, etc.)
-* :doc:`/assets/index` Assets (Videos, images, sound files)
-* :doc:`/events/index` Events
+* :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
+* :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
+* :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
+* :doc:`/sound/index`: sound tracks, music, volume, sound effects
+* :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
+* :doc:`/assets/index`: videos, images, animations, sound files
+* :doc:`/events/index`: generating events, triggering actions on events
 
 Reference Material
 ------------------
