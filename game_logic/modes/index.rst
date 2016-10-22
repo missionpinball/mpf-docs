@@ -4,6 +4,19 @@ Modes
 Game modes are a big part of pinball programming and a big part of MPF, so it's
 worth taking an in-depth look at what they are and how they work.
 
+.. rubric:: Related How To Guides:
+
++-------------------------------------------------------------------------------+
+| :doc:`Creating your first game mode </tutorial/14_add_a_mode>`                |
++-------------------------------------------------------------------------------+
+
+.. rubric:: Related config file sections:
+
+============================= ===================================================
+:doc:`mode: </config/mode>`   Settings for a particular mode
+:doc:`modes: </config/modes>` Machine-wide config section which lists all modes
+============================= ===================================================
+
 As a pinball player, you're probably familiar with the concept of "modes." Most
 modern machines have lots of different modes, and typically you complete various
 modes throughout a game on your way to the wizard mode. Many machines have
