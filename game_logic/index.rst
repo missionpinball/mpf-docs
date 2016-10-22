@@ -12,7 +12,7 @@ Game Logic
    Ball Tracking <ball_tracking>
    Extra Balls <extra_ball>
    Multiballs <multiball>
-   Game Modes <modes/index>
+   Modes <modes/index>
    Logic Blocks <logic_blocks/index>
    Timers <timer>
    Shots <shot>
