@@ -1,6 +1,23 @@
 MPF compatible control systems / electronic boards
 ==================================================
 
+
+
+
+
+
+
+
+
+The most important thing to understand is that the P-ROC, FAST, or OPP hardware
+controllers *do not actually run your Python-based code*, rather, they
+act as the interface between your physical pinball machine and a host computer
+running MPF (though they are configured to respond to some
+time-critical events themselves, such as directly firing coils based on switches
+like the flippers, slingshots, and pop bumpers).
+
+
+
 MPF controls a pinball machine by interfacing to a modern pinball control system.
 (See :doc:`/start/hardware_interface` for details.) MPF itself is hardware-independent,
 meaning that MPF (and the configs and code you build) can work with lots of
@@ -80,8 +97,12 @@ here's are details about each platform:
 .. toctree::
    :maxdepth: 1
 
-   FAST Pinball (overview) <fast>
-   FAST Pinball (configuration) <configuring_fast_hardware>
-   Multimorphic P-ROC/P3-ROC <multimorphic>
-   Open Pinball Project (OPP) <configuring_opp_hardware>
-   Pololu Maestro Servo Controllers <pololu_maestro>
+   fast/index
+   p_roc/index
+   p3_roc/index
+   opp/index
+   fadecandy/index
+   i2c_servo/index
+   pololu_servo/index
+   smartmatrix/index
+   eli_dmd/index
