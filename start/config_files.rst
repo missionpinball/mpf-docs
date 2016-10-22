@@ -1,5 +1,5 @@
-MPF config files
-================
+Understanding MPF config files
+==============================
 
 MPF uses text-based config files to control the bulk of your game logic. In a
 sense, your MPF "code" is actually these config files.

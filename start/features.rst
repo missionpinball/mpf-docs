@@ -1,5 +1,5 @@
-MPF features
-============
+MPF complete feature list
+=========================
 
 Even though MPF is a work-in-progress that's not yet complete, the core dev team
 has been working on it for over two years, with over 5,000 hours of combined
@@ -11,6 +11,9 @@ Major Features & Concepts
 + The vast majority of "programming" your game can be done with text-based
   config files that make it easy to get powerful and complex pinball
   features running in your game. They're also easy for non-programmers to use.
++ MPF is "event-driven" meaning that everything that happens in a pinball machine
+  generates an event, and you can use those events to trigger actions (scoring,
+  lights, starting a mode, etc.)
 + Advanced programmers and customization can be done via the API. (The
   API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
 + You can easily switch between hardware platforms, so if sometime down the road
@@ -35,6 +38,9 @@ Compatible control systems / electronics
 + Pololu Maestro servo controllers.
 + SmartMatrix RGB LED DMD controllers
 
+See the :doc:`Control Systems / Electronics</hardware/index>` documentation
+for full details.
+
 Pinball mechanism support
 -------------------------
 
@@ -43,6 +49,7 @@ Pinball mechanism support
 + Coils / drivers (pulse, enable, disable, pwm)
 + Matrix-based lights
 + LED RGB-based lights
++ Accelerometers
 + GI (general illumination)
 + Flashers
 + Flippers
@@ -55,9 +62,15 @@ Pinball mechanism support
 + Driver-enabled devices (like flippers and pop bumpers in System 11 machines)
 + Mechanical and coil-fired plungers and ball launchers
 + EM score reels
++ Kickbacks
++ Magnets
++ Rollover switches
++ Servos
 
-Pinball logic
--------------
+See the :doc:`Pinball Mechs</mechs/index>` documentation for full details.
+
+Game logic
+----------
 
 + Ball locks
 + Multiball
@@ -72,7 +85,7 @@ Pinball logic
 + Full per-player variable and settings support. Save/restore anything
   on a per-player bases (shots, objectives, goals collected, targets
   hit, etc.)
-+ Player achievements
++ Player achievements & achievement groups (groups of modes to start which progress towards wizard mode, etc.)
 + Ball tracking / automatic ball routing
 + Shots & shot groups (with full per-player state management (e.g. lit, unlit,
   flashing, etc.)
@@ -84,6 +97,10 @@ Pinball logic
 + Score controller to assign points (or other progress) per-player for different
   events, with mode integration for blocking and blending
 + Timers (start / stop / pause / count down / count up)
++ Video modes
+
+See the :doc:`Game Logic</game_logic/index>` documentation for full details.
+
 
 Displays, DMDs, & Graphics
 --------------------------
@@ -102,6 +119,9 @@ Displays, DMDs, & Graphics
 
 + Any property of any widget can be animated (opacity, size, position, etc.)
 
+See the :doc:`Displays</displays/index>` documentation for full details.
+
+
 Sounds & Audio
 --------------
 
@@ -115,6 +135,9 @@ Sounds & Audio
   effect and cycle through them, with controls for whether they random, weighed
   random, rotation patterns, etc.
 
+See the :doc:`Sounds</sound/index>` documentation for full details.
+
+
 Shows
 -----
 
@@ -123,6 +146,9 @@ Shows
 + Start/stop/pause/resume shows
 + Dynamic shows which change based on what's happening in the game.
 + Change the playback speed of shows (even while they're playing)
+
+See the :doc:`Shows</shows/index>` documentation for full details.
+
 
 Other stuff
 -----------

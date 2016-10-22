@@ -1,29 +1,25 @@
 How MPF talks to physical pinball machines
 ==========================================
 
-MPF is written in the Python computer language runs on a computer. That
-computer is connected to your pinball machine controller (P-ROC, FAST, OPP,
-etc.) via a USB cable.
+Since MPF is ultimately about controlling real pinball machines, it's important
+to understand how you "install" MPF onto a pinball machine.
 
-So if you write your pinball machine's software using MPF, you need a computer connected
-to your pinball machine the entire time the pinball machine is on. In a sense,
-MPF running on this "host computer" is the brain of the pinball machine.
+MPF is software that runs on a computer. This computer can be Windows, Mac, or Linux,
+and it can be a laptop, a desktop, a motherboard in your pinball machine, or a small
+system like a Raspberry Pi.
 
-This doesn't mean that you have to have your laptop connected to your pinball
-machine just to play a game. Most people use a laptop while they're developing
-their MPF game, and then when their game is done, they permanently install
-a small cheap computer inside their machine. (This could be something as small
-as $35 Raspberry Pi 3, or maybe a $150 small form factor Intel Atom
-motherboard. The exact requirements for the computer that runs MPF depend on
-what you want to do in your game.)
+(Most people develop their game on their laptop, and then when they're done, transfer
+it to a smaller computer permanently installed in their pinball machine.)
 
-This diagram shows how this looks and what does what:
+The computer running MPF is connected to a modern pinball control system via USB.
+That pinball control system acts as the "bridge" between the computer running MPF
+and the physical pinball machine. (In other words, it receives switch notifications
+from the pinball machine and sends them to MPF, and it sends LED, light, and coil
+instructions from MPF to the physical pinball machine.)
 
-.. image:: /_static/images/how-mpf-runs-a-pinball-machine.png
+This diagram shows how it all fits together:
 
-The most important thing to understand is that the P-ROC, FAST, or OPP hardware
-controllers *do not actually run your Python-based code*, rather, they
-act as the interface between your physical pinball machine and a host computer
-running MPF (though they are configured to respond to some
-time-critical events themselves, such as directly firing coils based on switches
-like the flippers, slingshots, and pop bumpers).
+.. image:: images/computer-controller-machine.jpg
+
+See the :doc:`/hardware/index` page for more details on the various control systems
+that MPF supports.
