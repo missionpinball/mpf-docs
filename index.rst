@@ -1,14 +1,62 @@
 Mission Pinball Framework |version| documentation
 =================================================
 
+Everything you need to know about the Mission Pinball Framework.
+
+First Steps
+-----------
+If you're brand-new to MPF, start here.
+
+* :doc:`/install/index` Download and install MPF
+* :doc:`/tutorial/index` Go through the tutorial
+
+Hooking up your machine
+-----------------------
+* Pick a pinball control system
+* Get the right drivers installed
+* Build the minimum config to get flipping!
+
+Understanding MPF
+-----------------
+* :doc:`/mechs/index` (switches, coils, lights, troughs, etc.)
+* :doc:`/game_logic/index` Game Logic (modes, scoring, multiballs, etc.)
+* :doc:`/displays/index` Displays & Graphics (DMDs, LCDs, slides, widgets, animations, text, etc.)
+* :doc:`/sound/index` Sounds & Audio
+* :doc:`/shows/index` Shows (Sequences of lights, sounds, slides, etc.)
+* :doc:`/assets/index` Assets (Videos, images, sound files)
+* :doc:`/events/index` Events
+
+Reference Material
+------------------
+* :doc:`/events/event_reference`
+* :doc:`/config/index`
+* Example machines you can learn from
+
+Getting Help
+------------
+* `Support Forum (Google Group) <https://groups.google.com/forum/#!forum/mpf-users>`_
+
+Click on the menu items on the left (or the menu icon if you're on a mobile device) to
+learn more. There are over 500 pages of documentation to help you get started!
+
 .. toctree::
    :hidden:
-   :caption: The Basics
+   :caption: Overview
 
    Start Here </start/index>
    Compatible Pinball Machines </machines/index>
+
+.. toctree::
+   :hidden:
+   :caption: Installation
+
    Installing MPF </install/index>
    Running MPF </running/index>
+
+.. toctree::
+   :hidden:
+   :caption: Learning
+
    Tutorial </tutorial/index>
 
 .. toctree::
@@ -53,55 +101,3 @@ Mission Pinball Framework |version| documentation
    Glossary </glossary/index>
    Contributing to MPF </contribute/index>
    MPF Version History </version_history/index>
-
-Welcome! This is the documentation for the Mission Pinball Framework (MPF)
-|release|, last updated |today|.
-
-MPF is free & open source software you can use to run a real pinball machine,
-whether it's a new "home brew" machine you built yourself or whether you want
-to rewrite the rules for an existing commercial pinball machine. Read more
-about MPF at `missionpinball.org <http://missionpinball.org>`_.
-
-MPF has a lot of documentation. Here are some of the big parts you can explore
-now. Or view the tree menu on the left (or the "hamburger" menu in the top menu
-bar if you're on a mobile device).
-
-:doc:`First Steps with MPF </start/index>`
-------------------------------------------
-Start here.
-
-:doc:`Installing MPF </install/index>`
---------------------------------------
-Getting MPF up and running on your computer.
-
-:doc:`Running MPF </running/index>`
------------------------------------
-How to actually launch the MPF software
-
-:doc:`Tutorial </tutorial/index>`
----------------------------------
-Walks you through building a new game, getting flipping, setting the display,
-a base mode, scoring, and playing.
-
-:doc:`FAQ </faq/index>`
------------------------
-Answers to common questions about MPF & custom pinball machines
-
-
-`API Reference & Developer's Guide <http://mpf.readthedocs.org/projects/mpf-api>`_
-----------------------------------------------------------------------------------
-If you're a programmer or want to extend what's possible with MPF's config
-files, the API / Developer's Reference is at mpf.readthedocs.org/projects/mpf-api.
-
-`Support Forum <https://groups.google.com/forum/#!forum/mpf-users>`_
---------------------------------------------------------------------
-We have an active user support forum on Google Groups.
-
-:doc:`/contribute/index`
-------------------------
-Wanna help? We'd love it! (Even if you can't write code, you can help with the
-documentation.)
-
-:doc:`License & Copyright </about/license>`
--------------------------------------------
-It's liberal and free. Go nuts!
