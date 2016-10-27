@@ -1,12 +1,14 @@
 Game Logic
 ==========
 
-
+Most (or potentially all?) of your game logic can be configured in the MPF
+config files. Each section here contains the description, how to guides, links
+to tutorials, event listings, and configuration
 
 .. toctree::
    :hidden:
 
-   Ball Locks <ball_lock>
+   Ball Locks <ball_locks/index>
    Ball Saves <ball_save>
    Ball Search <ball_search>
    Ball Tracking <ball_tracking>

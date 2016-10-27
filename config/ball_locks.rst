@@ -8,10 +8,10 @@ ball_locks:
 
 .. overview
 
-The ``ball_locks:`` section of your config lets you setup logical
-ball locks which can be used to physically or virtually lock balls.
-This section can be used in your machine-wide config files. This
-section can be used in mode-specific config files. Here’s an example:
+The ``ball_locks:`` section of your config is used to list and configure
+:doc:`logical ball locks </game_logic/ball_locks/index>`.
+
+Here's an example
 
 ::
 
@@ -20,19 +20,18 @@ section can be used in mode-specific config files. Here’s an example:
             balls_to_lock: 3
             lock_devices: bd_bunker
 
+Each sub-entry under the ``ball_locks:`` section is the name of the logical ball
+lock ("bunker") in the example above. Then each named ball lock has the
+following settings:
+
 Required settings
 -----------------
 
 The following sections are required in the ``ball_locks:`` section of your config:
 
-<name>:
-~~~~~~~
-
-The logical name of this ball lock device.
-
 balls_to_lock:
 ~~~~~~~~~~~~~~
-Single value, type: ``integer``. 
+Single value, type: ``integer``.
 
 The number of balls this ball lock should hold. If one of the
 associated lock devices receives a ball and this logical ball lock is
@@ -40,7 +39,7 @@ full, then the ball device will just release the ball again.
 
 lock_devices:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``ball_devices:`` device. 
+List of one (or more) values, each is a type: string name of a ``ball_devices:`` device.
 
 A list of one (or more) ball devices that will collect balls which
 will count towards this lock.
@@ -79,8 +78,17 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   Add description.
+A descriptive label.
+
+release_one_if_full_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
+
+Event(s) which cause this ball lock to release a single ball only if the ball
+lock contains the number of balls that matches its ``balls_to_lock:`` setting.
 
 release_one_events:
 ~~~~~~~~~~~~~~~~~~~
