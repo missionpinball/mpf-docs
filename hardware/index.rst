@@ -19,7 +19,7 @@ like the flippers, slingshots, and pop bumpers).
 
 
 MPF controls a pinball machine by interfacing to a modern pinball control system.
-(See :doc:`/start/hardware_interface` for details.) MPF itself is hardware-independent,
+(See :doc:`/start/index` for details.) MPF itself is hardware-independent,
 meaning that MPF (and the configs and code you build) can work with lots of
 different kinds of control systems.
 

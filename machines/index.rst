@@ -1,7 +1,7 @@
 Compatible Pinball Machines
 ---------------------------
 
-If you haven't done so already, be sure to read the :doc:`/start/hardware_interface` page
+If you haven't done so already, be sure to read the :doc:`/start/index` page
 to understand how MPF talks to physical pinball machines.
 
 There are three options when it comes to using MPF with a pinball machine:

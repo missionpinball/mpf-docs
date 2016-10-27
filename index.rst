@@ -7,6 +7,7 @@ First Steps
 -----------
 If you're brand-new to MPF, start here.
 
+* :doc:`MPF Overview </start/index>`: What MPF is and how it works
 * :doc:`/install/index`: Download and install MPF
 * :doc:`/tutorial/index`: Step-by-step beginner's guide
 
@@ -38,6 +39,14 @@ Getting Help
 
 Click on the menu items on the left (or the menu icon if you're on a mobile device) to
 learn more. There are over 500 pages of documentation to help you get started!
+
+Follow Us
+---------
+
+* `Twitter @missionpinball <https://twitter.com/missionpinball>`_
+* `YouTube <https://www.youtube.com/missionpinball>`_
+* `Flickr <https://www.flickr.com/photos/missionpinball>`_
+* `GitHub <https://github.com/missionpinball>`_
 
 .. toctree::
    :hidden:
