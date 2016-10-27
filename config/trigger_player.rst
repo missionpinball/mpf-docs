@@ -3,8 +3,8 @@ trigger_player:
 
 *Config file section*
 
-.. include:: _machine_config_yes.rst
-.. include:: _mode_config_yes.rst
+* Valid in machine config files: **YES**
+* Valid in mode config files: **YES**
 
 .. note:: This section can also be used in a show file in the ``triggers:`` section of a step.
 

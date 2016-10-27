@@ -3,8 +3,8 @@ show_pools:
 
 *Config file section*
 
-.. include:: _machine_config_yes.rst
-.. include:: _mode_config_yes.rst
+* Valid in machine config files: **YES**
+* Valid in mode config files: **YES**
 
 .. overview
 

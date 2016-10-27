@@ -3,10 +3,8 @@ achievements:
 
 *Config file section*
 
-.. include:: _machine_config_no.rst
-.. include:: _mode_config_yes.rst
-
-.. overview
+* Valid in machine config files: **NO**
+* Valid in mode config files: **YES**
 
 The ``achievements:`` section of your config is where you configure player-based "achievement"
 tracking, which are like progress items that are tracked per player and can automatically

@@ -136,14 +136,14 @@ your machine-wide config, a mode-specific config, or both.
         final_text += '\n\n*Config file section*\n\n'
 
         if 'machine' in spec['valid_in']:
-            final_text += '.. include:: _machine_config_yes.rst\n'
+            final_text += '* Valid in machine config files: **YES**\n'
         else:
-            final_text += '.. include:: _machine_config_no.rst\n'
+            final_text += '* Valid in machine config files: **NO**\n'
 
         if 'mode' in spec['valid_in']:
-            final_text += '.. include:: _mode_config_yes.rst\n\n'
+            final_text += '* Valid in mode config files: **YES**\n\n'
         else:
-            final_text += '.. include:: _mode_config_no.rst\n\n'
+            final_text += '* Valid in mode config files: **NO**\n\n'
 
         if 'show' in spec['valid_in']:
             final_text += '.. note:: This section can also be used in a show '

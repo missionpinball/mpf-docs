@@ -3,8 +3,8 @@ extra_balls:
 
 *Config file section*
 
-.. include:: _machine_config_no.rst
-.. include:: _mode_config_yes.rst
+* Valid in machine config files: **NO**
+* Valid in mode config files: **YES**
 
 .. overview
 

@@ -3,8 +3,8 @@ accelerometers:
 
 *Config file section*
 
-.. include:: _machine_config_yes.rst
-.. include:: _mode_config_no.rst
+* Valid in machine config files: **YES**
+* Valid in mode config files: **NO**
 
 .. overview
 
@@ -30,22 +30,8 @@ configure additional settings. For example:
                5: event_level2
 
 
-Required settings
------------------
-
-The following sections are required for each accelerometer:
-
-number:
-~~~~~~~
-Single value, type: ``string``. 
-
-The platform-specific hardware number of this accelerometer.
-
-
-Optional settings
------------------
-
-The following sections are optional in the ``accelerometers:`` section of your config. (If you don't include them, the default will be used).
+Settings:
+---------
 
 debug:
 ~~~~~~
@@ -94,11 +80,17 @@ Single value, type: ``integer``. Default: ``1``
 .. todo::
    Add description.
 
+number:
+~~~~~~~
+Single value, type: ``string``.
+
+The platform-specific hardware number of this accelerometer.
+
 platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-Name of the platform this accelerometer is connected to. The default value of None means the
+Name of the platform this accelerometer is connected to. The default value of ``None`` means the
 default hardware platform will be used.
 
 tags:
@@ -106,5 +98,3 @@ tags:
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Note there are no "special" tags for accelerometers.
-
-

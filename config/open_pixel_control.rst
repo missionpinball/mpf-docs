@@ -3,8 +3,8 @@ open_pixel_control:
 
 *Config file section*
 
-.. include:: _machine_config_yes.rst
-.. include:: _mode_config_no.rst
+* Valid in machine config files: **YES**
+* Valid in mode config files: **NO**
 
 .. overview
 
