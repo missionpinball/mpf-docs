@@ -45,7 +45,7 @@ Follow Us
 
 * `Twitter @missionpinball <https://twitter.com/missionpinball>`_
 * `YouTube <https://www.youtube.com/missionpinball>`_
-* `Flickr <https://www.flickr.com/photos/missionpinball>`_
+* `Flickr <https://www.flickr.com/groups/missionpinball>`_
 * `GitHub <https://github.com/missionpinball>`_
 
 .. toctree::
