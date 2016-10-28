@@ -13,7 +13,7 @@ a Terminal window:
 
 ::
 
-   pip3 install mpf-mc
+   sudo pip3 install mpf-mc
 
 Running MPF
 -----------
@@ -37,6 +37,6 @@ To to this, run the following:
 
 ::
 
-   pip3 install mpf-mc --upgrade
+   sudo pip3 install mpf-mc --upgrade
 
 See :doc:`upgrading`.
