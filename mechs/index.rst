@@ -15,10 +15,19 @@ Pinball Mechs in MPF include:
 .. toctree::
    :maxdepth: 1
 
-   Accelerometers <accelerometers/index>
    Autofire Coils <autofire_coils/index>
    Ball Devices <ball_devices/index>
    Coils (Solenoids) <coils/index>
+
+The following sections are not yet complete:
+
+.. toctree::
+   :maxdepth: 1
+
+   Accelerometers <accelerometers/index>
+
+
+
    Diverters <diverters/index>
    Drop Targets <drop_targets/index>
    Dual-Wound Coils <dual_wound_coils/index>
