@@ -20,7 +20,7 @@ each flipper button—-one that's activated via the half-press, and the
 second via the full press.)
 
 Also note that flippers are kind of complex and there are a lot of options.
-Read the :doc:`/tech_notes/flipper_theory` tech note for details. (You
+Read the :doc:`/mechs/flippers/index` tech note for details. (You
 should definitely read that first before digging into the configuration
 options here.)
 
@@ -72,13 +72,13 @@ above, the flipper sub-entries are named *lower_left*,
 
 activation_switch:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``switches:`` device. 
+Single value, type: string name of a ``switches:`` device.
 
 The switch that controls this flipper. (i.e. the flipper button)
 
 main_coil:
 ~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 The name of the main flipper coil. For flippers that only have single-
 wound coils, this is where you specify that coil. In that case you

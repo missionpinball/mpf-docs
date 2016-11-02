@@ -1,52 +1,91 @@
-Configuring flippers with single-wound coils
-============================================
+How to configure single-wound flippers
+======================================
 
-The example above uses dual-wound flipper coils where
-MPF literally sees each flipper coil as two separate coils (with two
-separate names and two separate drivers). When you push the flipper
-button, MPF energizes both coils initially, but cuts the power to the
-main coil after a few milliseconds so only the lower power hold coil
-remains active. This prevents the flipper coil from burning up.
+This guide shows you how to configure single-wound flippers in MPF. (If you
+don't know what "single-wound" flippers are, or whether you have them, check out
+:doc:`dual_vs_single_wound`.
 
-As an alternative, some flippers just use normal (single winding) coils and
-then the hardware controller controls the flow of electricity through
-it to prevent it from burning up. In that case the hardware will send
-an initial constant pulse for a few milliseconds to give the flipper
-its strong initial pulse, and then it will flip the current on & off
-really fast (really fast, like hundreds of times per second) to keep
-the flipper in the 'up' position without overheating it.
+1. Add your flipper buttons
+----------------------------
 
-If you have single-wound flipper coils (or if you have traditional dual-wound
-coils but you don't want to waste two drivers per flipper and you just
-want to use a single winding), make sure you've read our
-:doc:`theory` tech note for all the details about how that
-works. If you'd like to use single-wound flipper coils, you need to do
-two things in your config file:
+First, make sure you have entries in your machine config for your flipper
+buttons.
 
-+ First, you can remove the ``hold_coil:`` entries from your two
-  flippers since you don't have hold coils.
-+ Second, you need to add a ``hold_power:`` entry to each of your two
-  coils in the ``coils:`` section of your config file. This is how you
-  tell MPF what timing it should use to quickly pulse the current to
-  that coil when its being held on.
-
-Here's an example of what the ``coils:`` and ``flippers:`` sections of
-your config file would look like if you're using single wound coils.
-(The ``switches:`` section would be the same in both cases):
+Here's an example ``config.yaml`` with two switches added:
 
 ::
 
-    # single-wound flipper coil example
+    #config_version=4
+
+    switches:
+        s_left_flipper:
+            number: 1
+        s_right_flipper:
+            number: 2
+
+Note that we configured this switches with numbers ``1`` and ``2``, but you
+should use the actual switch numbers for your control system that the flipper
+buttons are connected to. (See :doc:`/hardware/numbers` for instructions for
+each type of control system.)
+
+You can pick whatever names you want for your switches. We chose
+``s_left_flipper`` and ``s_right_flipper``.
+
+2. Add your flipper coils
+-------------------------
+
+Next you need to add entries for your flipper coils to your machine-wide
+config. These will be added to a section called ``coils:``.
+
+::
 
     coils:
-        c_flipper_left_main:
+        c_flipper_left:
             number: 0
-            pulse_ms: 20
-            hold_power: 2
-        c_flipper_right_main:
-            number: 2
-            pulse_ms: 20
-            hold_power: 2
+            allow_enable: true
+            hold_power: 1
+        c_flipper_right:
+            number: 1
+            allow_enable: true
+            hold_power: 1
+
+Again, the ``number:`` entries in your config will vary depending on your actual
+hardware, and again, you can pick whatever names you want for your coils.
+
+Also note that the coils have ``allow_enable: true`` entries added.
+(In MPF config files, values of "yes" and "true" are the same.) The purpose of
+the ``allow_enable: true`` setting is that as a safety precaution, MPF does not
+allow you to enable (that is, to hold a coil in its "on" position) unless you
+specifically add ``allow_enable: true`` to that coil's config.
+
+Since flippers need to be held on (as long as the flipper button is active),
+you need ``allow_enable: true`` in the coil config for them.
+
+Finally, notice that there's a ``hold_power: 1`` setting for each coil. That
+is the power value (from 0-8) which controls how much power is applied to the
+flipper when it's held on. A value of 1 is 1/8th power, (12.5%), a value of 2
+is 2/8 which is 1/4 which is 25%, a value of 3 is 37.5%, 4 is 50%, etc.
+
+We just start with the lowest setting for now and you can increase it later if
+it's not enough.
+
+3. Add your flipper entries
+---------------------------
+
+At this point you have your coils and switches defined, but you can't
+flip yet because you don't have any flippers defined. Now you might be
+thinking, "Wait, but didn't I just configure the coils and switches?"
+Yes, you did, but now you have to tell MPF that you want to create a
+flipper mechanism which links together the switch and the coils
+to become a "flipper".
+
+You create your flipper mechanisms by adding a ``flippers:`` section to
+your machine config, and then specifying the switch and coils for each
+flipper that you defined in Steps 1 and 2.
+
+Here's what you would create based on the switches and coils we've defined so far:
+
+::
 
     flippers:
         left_flipper:
@@ -56,11 +95,100 @@ your config file would look like if you're using single wound coils.
             main_coil: c_flipper_right_main
             activation_switch: s_right_flipper
 
-Note that we used a values of 2 for the *hold_power*. The *hold_power*
-setting is a whole number from 0-8 which represent a percentage of
-power that's applied when that coil is held on. (0 = 0%, 4=50%,
-8=100%, etc.) At this point we have no idea if ``hold_power: 2`` is the
-correct setting or not. We can fine-tune that later. (And again,
-*hold_power* is only used with single-wound coils. Dual-wound coils
-fire both windows at full power all the time, since the hold winding is
-designed to be energized at full power.)
+4. Enabling your flippers
+-------------------------
+
+By default, MPF only enables flippers when a game is in progress. So if this
+is a first-time config and you haven't configured your ball devices and start
+button and everything, you can't actually start a game yet, which means you
+can't test your flippers.
+
+Fortunately we can get around that by configuring your flippers to just
+automatically enable themselves when MPF starts. To do
+this, add the following entry to each of your flippers in your config
+file:
+
+::
+
+    enable_events: machine_reset_phase_3
+
+So now the ``flippers:`` section of your config file should look like this:
+
+::
+
+    flippers:
+        left_flipper:
+            main_coil: c_flipper_left_main
+            hold_coil: c_flipper_left_hold
+            activation_switch: s_left_flipper
+            enable_events: machine_reset_phase_3
+        right_flipper:
+            main_coil: c_flipper_right_main
+            hold_coil: c_flipper_right_hold
+            activation_switch: s_right_flipper
+            enable_events: machine_reset_phase_3
+
+5. You're almost there!
+-----------------------
+
+At this point your flipper configuration is technically complete, though there
+are three other important things you may have to do first:
+
+If you're using physical hardware, you may need an additional section in your
+machine config for your control system. (For example, FAST Pinball and Open
+Pinball Project controllers require a one-time port configuration, etc.) See the
+:doc:`control system documentation </hardware/index>` for details.
+
+Second, as a safety precaution, MPF uses very low (10ms) default pulse times
+for coils. (Again this is a safety precaution to make sure you don't
+accidentally destroy a valuable pinball mech.) However in most cases, 10ms will
+not be enough power to physically move the flippers when you hit the button.
+(You might hear them click or buzz without actually seeing them move.)
+
+So check out the :doc:`power` documentation to see how to adjust the power of
+your flippers.
+
+Third, remember that the ``hold_power: 1`` is just a default setting which you
+might have to change. Also, certain control systems allow for more fine-grained
+control than the generic 1-8 values, so check the control system documentation
+for your control system for details.
+
+Here's the complete config
+--------------------------
+
+Here's the complete machine config file (or sections of the machine config file)
+we created in this How To guide:
+
+.. start_test_config  # used for automated config file documentation testing
+
+::
+
+    #config_version=4
+
+    switches:
+        s_left_flipper:
+            number: 1
+        s_right_flipper:
+            number: 2
+
+    coils:
+        c_flipper_left:
+            number: 0
+            allow_enable: true
+            hold_power: 1
+        c_flipper_right:
+            number: 1
+            allow_enable: true
+            hold_power: 1
+
+    flippers:
+        left_flipper:
+            main_coil: c_flipper_left_main
+            activation_switch: s_left_flipper
+            enable_events: machine_reset_phase_3
+        right_flipper:
+            main_coil: c_flipper_right_main
+            activation_switch: s_right_flipper
+            enable_events: machine_reset_phase_3
+
+.. end_test_config

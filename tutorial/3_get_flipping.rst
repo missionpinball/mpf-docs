@@ -139,7 +139,8 @@ coils for each flipper. If you're using single-wound coils, then
 you'll only have one coil for each flipper (which we'll configure to
 pulse-width modulation for the holds).
 
-If you have no idea what we're talking about, read our :doc:`/mechs/flipper_theory` page
+If you have no idea what we're talking about, read our
+:doc:`/mechs/flippers/index` documentation
 for an introduction to flipper concepts, dual-wound versus single-
 wound, holding techniques, end-of-stroke switches, and a bunch of
 other stuff that's important that you probably never thought about.

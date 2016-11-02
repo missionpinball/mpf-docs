@@ -21,6 +21,7 @@ Pinball Mechs in MPF include:
    Diverters <diverters/index>
    Dual-Wound Coils <dual_wound_coils/index>
    Flashers <flashers/index>
+   Flippers <flippers/index>
 
 The following sections are not yet complete:
 
@@ -34,7 +35,7 @@ The following sections are not yet complete:
 
    Drop Targets <drop_targets/index>
 
-   Flippers <flippers/index>
+
    GI (general illumination) <gis/index>
    Kickback Lanes <kickbacks/index>
    Lights <lights/index>
