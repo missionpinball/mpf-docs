@@ -27,8 +27,8 @@ Configuring ball locks
 
 See the :doc:`/config/ball_locks` section of the config file reference.
 
-Events posted by ball lock devices
-----------------------------------
+Events posted by ball locks
+---------------------------
 
 There are several events posted by ball locks: (click each for details from the
 event reference guide)

@@ -112,8 +112,8 @@ See the :doc:`/config/ball_devices` section of the config file reference.
 Events posted by ball devices
 -----------------------------
 
-There are several events posted by ball locks: (click each for details from the
-event reference guide)
+There are several events posted by ball devices: (click each for details from
+the event reference guide)
 
 * :doc:`/events/balldevice_balls_ball_missing`
 * :doc:`/events/balldevice_name_ball_eject_attempt`

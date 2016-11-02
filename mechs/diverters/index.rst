@@ -68,7 +68,6 @@ also include support for automatic enabling and disabling (based on
 events), and they include intelligence to know which target devices a
 diverter will send a ball to when it's enabled or disabled.
 
-
 Configuring diverters
 ---------------------
 

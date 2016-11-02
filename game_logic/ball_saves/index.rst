@@ -24,8 +24,8 @@ Configuring ball saves
 See the :doc:`/config/ball_saves` of the config file reference.
 
 
-Events posted by ball save devices
-----------------------------------
+Events posted by ball saves
+---------------------------
 
 The ball saves post several events when they are enabled or disabled, when they
 save a ball, and as their timers count down. See the :doc:`/events/event_reference` for details.
