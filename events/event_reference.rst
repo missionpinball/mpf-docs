@@ -1,5 +1,5 @@
-Events reference
-================
+Event reference
+===============
 
 Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
@@ -42,7 +42,7 @@ how MPF uses events.
    ball_search_stopped <ball_search_stopped>
    ball_started <ball_started>
    ball_starting <ball_starting>
-   balldevice_(balls)_ball_missing. <balldevice_balls_ball_missing>
+   balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
    balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
@@ -67,6 +67,7 @@ how MPF uses events.
    display_(name)_initialized <display_name_initialized>
    display_(name)_ready <display_name_ready>
    displays_initialized <displays_initialized>
+   diverter_(name)_activating <diverter_name_activating>
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
    diverter_(name)_enabling <diverter_name_enabling>
