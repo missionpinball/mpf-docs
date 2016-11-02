@@ -11,6 +11,7 @@ your machine-wide config, a mode-specific config, or both.
    Instructions <instructions/index>
    accelerometers: <accelerometers>
    achievements: <achievements>
+   achievement_groups: <achievement_groups>
    animations: <animations>
    assets: <assets>
    auditor: <auditor>

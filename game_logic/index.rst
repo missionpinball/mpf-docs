@@ -6,9 +6,16 @@ config files. Each section here contains the description, how to guides, links
 to tutorials, event listings, and configuration
 
 .. toctree::
-   :hidden:
+   :titlesonly:
 
+   Achievements <achievements/index>
    Ball Locks <ball_locks/index>
+
+.. note:: Documentation for the items below is not yet complete
+
+.. toctree::
+   :titlesonly:
+
    Ball Saves <ball_saves/index>
    Ball Search <ball_search/index>
    Ball Tracking <ball_tracking/index>
@@ -22,7 +29,6 @@ to tutorials, event listings, and configuration
    Skill shot <skill_shot/index>
    Bonus <end_of_ball_bonus/index>
    Video Mode <video_modes/index>
-   Achievements <achievements/index>
    High Scores <high_scores/index>
    Player Management <players/index>
    Scoring <scoring/index>
