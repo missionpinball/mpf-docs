@@ -1,5 +1,5 @@
-Diverter
-========
+Diverters
+=========
 
 In MPF, a diverter (sometimes spelled "divertor") is anything that alters
 the path of the ball based on the state it's in, including:
@@ -30,6 +30,12 @@ from the perspective of pinball software, yeah, trap doors and the
 Ringmaster *are* diverters because when then are not active, a ball
 shot to them goes towards one place, and when they're active, a ball is
 "diverted" to go somewhere else.
+
+.. note::
+
+    MPF's diverters are integrated with :doc:`/mechs/ball_devices/index` and MPF's
+    ball management and routing system so they can be used to ensure that MPF is
+    able to move balls to where they need to be.
 
 Most diverters are held in their "on"
 position as long as their driver coil enabled, and then when they're
@@ -63,6 +69,19 @@ events), and they include intelligence to know which target devices a
 diverter will send a ball to when it's enabled or disabled.
 
 
-Diverters are configured in the :doc:`diverters: </config/diverters>`
-section of your config files. You can see the full details of options (and how
-you configure them) there.
+Configuring diverters
+---------------------
+
+See the :doc:`/config/diverters` section of the config file reference.
+
+Events posted by diverters
+--------------------------
+
+There are several events posted by diverters: (click each for details from the
+event reference guide)
+
+* :doc:`/events/diverter_name_activating`
+* :doc:`/events/diverter_name_deactivating`
+* :doc:`/events/diverter_name_disabling`
+* :doc:`/events/diverter_name_enabling`
+

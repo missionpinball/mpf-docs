@@ -18,6 +18,7 @@ Pinball Mechs in MPF include:
    Autofire Coils <autofire_coils/index>
    Ball Devices <ball_devices/index>
    Coils (Solenoids) <coils/index>
+   Diverters <diverters/index>
 
 The following sections are not yet complete:
 
@@ -28,7 +29,7 @@ The following sections are not yet complete:
 
 
 
-   Diverters <diverters/index>
+
    Drop Targets <drop_targets/index>
    Dual-Wound Coils <dual_wound_coils/index>
    Flashers <flashers/index>
