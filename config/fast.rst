@@ -3,8 +3,11 @@ fast:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -31,7 +34,7 @@ The following sections are required in the ``fast:`` section of your config:
 
 default_normal_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: normal`` when they close.
@@ -45,7 +48,7 @@ it for any switch in that switch's config.
 
 default_normal_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: normal`` when they open.
@@ -60,7 +63,7 @@ it for any switch in that switch's config.
 
 default_quick_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: quick`` when they close.
@@ -75,7 +78,7 @@ it for any switch in that switch's config.
 
 default_quick_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . 
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: quick`` when they open.
@@ -90,7 +93,7 @@ it for any switch in that switch's config.
 
 ports:
 ~~~~~~
-List of one (or more) values, each is a type: ``string``. 
+List of one (or more) values, each is a type: ``string``.
 
 A comma-separated list of the serial port names your FAST controller uses.
 

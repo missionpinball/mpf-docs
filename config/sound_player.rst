@@ -3,8 +3,11 @@ sound_player:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **YES**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``sounds:`` section of a step.
 

@@ -3,8 +3,11 @@ motors:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,21 +24,21 @@ The following sections are required in the ``motors:`` section of your config:
 
 motor_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 .. todo::
    Add description.
 
 position_switches:
 ~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``machine(switches)``. 
+One or more sub-entries, each in the format of type: ``str``:``machine(switches)``.
 
 .. todo::
    Add description.
 
 reset_position:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.

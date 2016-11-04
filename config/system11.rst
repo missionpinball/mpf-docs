@@ -3,8 +3,11 @@ system11:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,7 +24,7 @@ The following sections are required in the ``system11:`` section of your config:
 
 ac_relay_driver:
 ~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 .. todo::
    Add description.

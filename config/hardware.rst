@@ -3,8 +3,11 @@ hardware:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,28 +24,28 @@ The following sections are required in the ``hardware:`` section of your config:
 
 accelerometers:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.
 
 driverboards:
 ~~~~~~~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.
 
 i2c:
 ~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.
 
 servo_controllers:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.

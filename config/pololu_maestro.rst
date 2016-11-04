@@ -3,8 +3,11 @@ pololu_maestro:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -30,7 +33,7 @@ The following sections are required in the ``pololu_maestro:`` section of your c
 
 port:
 ~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 The name of the serial port.
 

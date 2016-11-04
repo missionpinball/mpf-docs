@@ -3,8 +3,11 @@ switches:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -58,7 +61,7 @@ The following sections are required in the ``switches:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 The number is the physical switch input number. The exact format if
 this will vary depending on what type of pinball controller you're

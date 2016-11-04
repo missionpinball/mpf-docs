@@ -3,8 +3,11 @@ autofire_coils:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -60,7 +63,7 @@ are indented under them).
 
 coil:
 ~~~~~
-Single value, type: string name of a ``coils:`` device. 
+Single value, type: string name of a ``coils:`` device.
 
 The name of the coil you want to fire. (Actually, perhaps we should
 phrase it as the name of the coil you want to change the state on,
@@ -69,7 +72,7 @@ stop firing based on a switch change.)
 
 switch:
 ~~~~~~~
-Single value, type: string name of a ``switches:`` device. 
+Single value, type: string name of a ``switches:`` device.
 
 
 Optional settings

@@ -3,8 +3,11 @@ servos:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -47,7 +50,7 @@ The following sections are required in the ``servos:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 The number (or channel) of this servo. See the platform documentation or the
 how to guies for your specific servo for details of how this number works, since

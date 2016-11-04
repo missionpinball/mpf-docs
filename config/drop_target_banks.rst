@@ -3,8 +3,11 @@ drop_target_banks:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **YES**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -47,7 +50,7 @@ the drop target as in your game code. ("judge", in this example.)
 
 drop_targets:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``drop_targets:`` device. 
+List of one (or more) values, each is a type: string name of a ``drop_targets:`` device.
 
 A list of the names of the individual drop targets (from the names you
 chose in the *drop_targets:* section of your config file) that are

@@ -3,8 +3,11 @@ logic_block:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **YES**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``logics:`` section of a step.
 
@@ -28,7 +31,7 @@ The following sections are required in the ``accrual:`` section of your config:
 
 events:
 ^^^^^^^
-List of one (or more) values, each is a type: ``string``. 
+List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
@@ -120,14 +123,14 @@ The following sections are required in the ``counter:`` section of your config:
 
 count_complete_value:
 ^^^^^^^^^^^^^^^^^^^^^
-Single value, type: ``integer``. 
+Single value, type: ``integer``.
 
 .. todo::
    Add description.
 
 count_events:
 ^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``. 
+List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
@@ -186,7 +189,7 @@ The following sections are required in the ``sequence:`` section of your config:
 
 events:
 ^^^^^^^
-List of one (or more) values, each is a type: ``string``. 
+List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.

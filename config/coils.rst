@@ -3,8 +3,11 @@ coils:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -55,7 +58,7 @@ but it's obviously best to pick something that makes sense.
 
 number:
 ~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 This is the number of the coil which specifies which driver output the
 coil is physically connected to. The exact format used here will

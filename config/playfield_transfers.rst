@@ -3,8 +3,11 @@ playfield_transfers:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,21 +24,21 @@ The following sections are required in the ``playfield_transfers:`` section of y
 
 ball_switch:
 ~~~~~~~~~~~~
-Single value, type: string name of a ``switches:`` device. 
+Single value, type: string name of a ``switches:`` device.
 
 .. todo::
    Add description.
 
 captures_from:
 ~~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device. 
+Single value, type: string name of a ``ball_devices:`` device.
 
 .. todo::
    Add description.
 
 eject_target:
 ~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device. 
+Single value, type: string name of a ``ball_devices:`` device.
 
 .. todo::
    Add description.

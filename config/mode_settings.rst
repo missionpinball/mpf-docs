@@ -3,8 +3,11 @@ mode_settings:
 
 *Config file section*
 
-* Valid in machine config files: **NO**
-* Valid in mode config files: **YES**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 

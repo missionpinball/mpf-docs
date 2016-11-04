@@ -3,8 +3,11 @@ score_reel_groups:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,7 +24,7 @@ The following sections are required in the ``score_reel_groups:`` section of you
 
 reels:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a ``score_reels:`` device. 
+List of one (or more) values, each is a type: string name of a ``score_reels:`` device.
 
 .. todo::
    Add description.

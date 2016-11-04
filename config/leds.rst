@@ -3,8 +3,11 @@ leds:
 
 *Config file section*
 
-* Valid in machine config files: **YES**
-* Valid in mode config files: **NO**
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
 
 .. overview
 
@@ -21,7 +24,7 @@ The following sections are required in the ``leds:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``. 
+Single value, type: ``string``.
 
 .. todo::
    Add description.
