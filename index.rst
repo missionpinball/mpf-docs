@@ -16,6 +16,7 @@ Hooking up your machine
 * Pick a pinball control system
 * Get the right drivers installed
 * Build the minimum config to get flipping!
+* :doc:`/finalization/index`
 
 Understanding MPF
 -----------------
