@@ -5,7 +5,7 @@ Game modes are a big part of pinball programming and a big part of MPF, so it's
 worth taking an in-depth look at what they are and how they work.
 
 +---------------------------------------------------------------------------+
-| Related Config File sections                                              |
+| Related Config File Sections                                              |
 +===========================================================================+
 | :doc:`/config/mode`                                                       |
 +---------------------------------------------------------------------------+
