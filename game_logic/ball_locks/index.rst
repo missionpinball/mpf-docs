@@ -2,9 +2,21 @@ Ball Locks
 ==========
 
 MPF's *ball locks* are used to hold a ball that has entered a
-:doc:`/mechs/ball_devices/index while something else happens.
+:doc:`/mechs/ball_devices/index` while something else happens.
 
-Example use cases include:
+.. rubric:: Related How To Guides:
+
++------------------------------------------------------------------------------+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
+
+.. rubric:: Related config file sections:
+
++------------------------------------------------------------------------------+
+| :doc:`ball_locks: </config/ball_locks>`                                      |
++------------------------------------------------------------------------------+
+
+Example use cases for ball locks include:
 
 * Lock a ball for multiball (and then launch a new ball from the trough)
 * Temporarily hold (lock) a ball while you play some kind of award show, then
@@ -21,11 +33,6 @@ balls in a contained physical ball device doesn't match.
 
 You can have lots of different ball locks in your game, typically configured
 per mode.
-
-Configuring ball locks
-----------------------
-
-See the :doc:`/config/ball_locks` section of the config file reference.
 
 Events posted by ball locks
 ---------------------------

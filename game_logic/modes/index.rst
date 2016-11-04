@@ -6,16 +6,16 @@ worth taking an in-depth look at what they are and how they work.
 
 .. rubric:: Related How To Guides:
 
-+-------------------------------------------------------------------------------+
-| :doc:`Creating your first game mode </tutorial/14_add_a_mode>`                |
-+-------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+| :doc:`Creating your first game mode </tutorial/14_add_a_mode>`               |
++------------------------------------------------------------------------------+
 
 .. rubric:: Related config file sections:
 
-============================= ===================================================
-:doc:`mode: </config/mode>`   Settings for a particular mode
+============================= ==================================================
+:doc:`mode: </config/mode>`   Mode config which holds settings for a that mode
 :doc:`modes: </config/modes>` Machine-wide config section which lists all modes
-============================= ===================================================
+============================= ==================================================
 
 As a pinball player, you're probably familiar with the concept of "modes." Most
 modern machines have lots of different modes, and typically you complete various
