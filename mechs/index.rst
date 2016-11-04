@@ -23,21 +23,15 @@ Pinball Mechs in MPF include:
    Flashers <flashers/index>
    Flippers <flippers/index>
    GI (general illumination) <gis/index>
+   Troughs / Ball Drains <troughs/index>
 
-The following sections are not yet complete:
+The following mechs are done in MPF, but the documentation is not done yet:
 
 .. toctree::
    :maxdepth: 1
 
    Accelerometers <accelerometers/index>
-
-
-
-
    Drop Targets <drop_targets/index>
-
-
-
    Kickback Lanes <kickbacks/index>
    Lights <lights/index>
    LEDs <leds/index>
@@ -54,4 +48,4 @@ The following sections are not yet complete:
    Stepper Motors <steppers/index>
    Switches <switches/index>
    Stand-up Targets <targets/index>
-   Troughs / Ball Drains <troughs/index>
+

@@ -51,6 +51,7 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: Overview
+   :titlesonly:
 
    Start Here </start/index>
    Compatible Pinball Machines </machines/index>
@@ -58,6 +59,7 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: Installation
+   :titlesonly:
 
    Installing MPF </install/index>
    Running MPF </running/index>
@@ -65,12 +67,14 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: Learning
+   :titlesonly:
 
    Tutorial </tutorial/index>
 
 .. toctree::
    :hidden:
    :caption: User Documentation
+   :titlesonly:
 
    Control Systems / Electronics </hardware/index>
    Pinball Mechs </mechs/index>
@@ -88,6 +92,7 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: Developer Documentation
+   :titlesonly:
 
    Extending MPF with Custom Code </code/index>
    BCP Protocol </bcp/index>
@@ -96,6 +101,7 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: Reference Material
+   :titlesonly:
 
    Events Reference </events/event_reference>
    Config File Reference </config/index>
@@ -104,6 +110,7 @@ Follow Us
 .. toctree::
    :hidden:
    :caption: About MPF
+   :titlesonly:
 
    About this Documentation </about/index>
    FAQ </faq/index>

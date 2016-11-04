@@ -21,7 +21,8 @@ together.
 
 The major components of the MPF Media Controller's display system are:
 
-.. rubric:: Displays
+Displays
+--------
 
 Every "target" display is setup in MPF as a display. For example, if you have
 a DMD, that is your display. If you have an LCD with a graphical window, then
@@ -34,7 +35,8 @@ another display (kind of like picture-in-picture). For example, you could use
 this to have a dot-effect window inside of a high def window on an LCD in the
 backbox.
 
-.. rubric:: Slides
+Slides
+------
 
 Every display has a list of "slides", (which are the same height and width of
 the display). One slide is "active" at a time, meaning it's the slide that's
@@ -46,7 +48,8 @@ things like sliding in, pushing, fading, flipping, etc.)
 
 You'll probably end up with hundreds of slides.
 
-.. rubric:: Widgets
+Widgets
+-------
 
 Widgets are the "things" you actually put on slides. There are lots of
 different types of widgets, including text, images, videos, shapes, etc.
@@ -69,7 +72,8 @@ You can even configure the "curve" of the formula that's used to animate
 widgets, so you can have them smoothly accelerate and decelerate, or slow down
 as they're animating, or pop into place, etc.
 
-.. rubric:: All these concepts come from PowerPoint. :)
+All these concepts come from PowerPoint. :)
+-------------------------------------------
 
 The original creators of MPF have day jobs that require them to spend a lot of
 time with PowerPoint! If you've ever used PowerPoint, you should notice that we

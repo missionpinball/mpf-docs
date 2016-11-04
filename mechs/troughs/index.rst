@@ -18,7 +18,7 @@ here:
 Here are the options:
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    Modern trough with opto sensors <modern_opto>
    Modern trough with mechanical switches <modern_mechanical>

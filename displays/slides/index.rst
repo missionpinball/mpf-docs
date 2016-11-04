@@ -14,7 +14,8 @@ cross-fade, move in, push out, etc.)
 
 .. image:: /displays/images/how_slides_work.png
 
-.. rubric:: Slide Priorities
+Slide Priorities
+----------------
 
 Every slide in MPF has a priority, which is simply a numeric value. Bigger
 numbers equal higher priority.
@@ -43,7 +44,8 @@ to have slides). You can also tweak the priorities of slides (higher or lower)
 to make sure the slide you want to show is the one that's showing at any given
 time. We'll dig into that later in the documentation.
 
-.. rubric:: Slides with Multiple Displays
+Slides with Multiple Displays
+-----------------------------
 
 When MPF is used with :doc:`multiple displays </displays/display/index>`, each
 display maintains its own stack of active slides. The priorities of the slides
@@ -54,6 +56,7 @@ to do with the active and current slides of another display.
 
 
 .. toctree::
+   :titlesonly:
 
    Creating Slides <creating_slides>
    Showing Slides <showing_slides>
