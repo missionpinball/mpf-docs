@@ -6,7 +6,7 @@ other platforms. For OS X, we have a pre-built MPF.app application package which
 you need, including Python and all the graphics and audio libraries. So you just download this
 app, copy it to your *Applications* folder, register it with your system, and you're all set!
 
-MPF works on Max OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
+MPF works on Mac OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
 
 The reason went with the single MPF bundle which has everything built in is because Mac OS X has Python
 2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
