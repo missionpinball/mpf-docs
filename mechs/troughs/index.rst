@@ -1,79 +1,105 @@
-Ball Trough
-===========
+Ball Troughs / Drain Devices
+============================
 
-This is a type of ball device
+Every pinball machine will have some kind of ball trough / drain device. This
+is the place where the balls go when they drain from the playfield before
+they're ejected into the plunger lane.
 
-2. Understand the  "trough" ball devices
-----------------------------------------
+In many cases, this device (or series of devices) holds multiple balls and is
+the location where unused balls are stored.
 
-In modern pinball machines, the trough is the ball device that holds
-balls after they've drained off the playfield. The act of a ball
-entering a trough device usually triggers a *ball drain* event, and
-when the game wants to launch a ball into play, it usually ejects a ball from
-the trough (typically into another ball device like the plunger lane
-or some sort of launch catapult). So when we're building the MPF
-config for a new machine, the first ball device we create is the
-trough.
+There are several different designs for troughs and drains that have been used
+over the past 70 years, and (as far as we know), MPF supports all of them.
+So regardless of what's in your machine, we're talking about whatever is under
+here:
 
-That said, we should probably talk about what exactly a trough is.
-A modern Stern- or Williams-style trough usually holds between 4 and 6
-balls. The trough sits underneath the playfield so that a ball
-entering it is gravity-fed and rolls down to the end of the line.
-There's a switch (either a physical leaf switch or an opto switch) for
-each ball position which lets the machine know how many balls are in
-the it, and there's a solenoid (coil) at the end that pulses to kick a
-ball out of the trough and into the shooter lane.
+.. image:: /mechs/images/trough_drain.jpg
 
-Most modern troughs
-also have a switch in the upper position near the exit that's used to
-detect if a ball falls back into the trough from the "exit"
-side—something that tends to happen if your eject coil pulse is too
-strong or too weak. (Too weak means the ball falls back in because it
-didn't have enough oomph to make it out, and too strong means the ball
-flies out too fast, bounces off the right edge rail of the plunger
-lane, and lands back in the trough after the other balls have rolled
-down into their new positions.) In MPF we refer to this as a "jam"
-switch though it's also called a "ball stacked" or "up ball" switch
-depending on whose manual you're reading.
+Here are the options:
 
-Here's a side-view diagram of a modern style trough:
+.. toctree::
+   :maxdepth: 1
 
-.. image:: /mechs/images/modern_trough.jpg
+   Modern trough with opto sensors <modern_opto>
+   Modern trough with mechanical switches <modern_mechanical>
+   Older style with two coils and switches for each ball <two_coil_multiple_switches>
+   Older style with two coils and only one ball switch <two_coil_one_switch>
+   Classic single ball, single coil <classic_single_ball>
 
-The diagram above does not show the ball switches, but you get the idea.
+Since there are so many different options, you need to first identify which
+type of trough or ball drain system your machine has. So look at the following
+pictures to match up what you have, and then follow the specific links to see
+how to configure MPF to use it in your machine.
 
-If this trough diagram does not look like your trough...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option 1: Modern trough with opto sensors
+-----------------------------------------
 
-Of course not all troughs are the same. In older machines (most 1980s
-machines, Williams System 11, and early WPC machines), the trough was
-entirely above the playfield, and there were two solenoids instead of one.
-(The first coil kicked the ball out of the drain hole, and a second coil
-kicked the ball into the plunger lane.) This style of trough is actually
-configured as two separate ball devices in MPF, and they look something like
-this:
+Modern-style troughs (which have been used since about 1993 or so) are mostly
+located underneath the playfield and hold the balls at an incline so they roll
+down to the end. There is a single coil which fires to eject a ball up and out
+where it's directed to the plunger lane.
 
-.. image:: /mechs/images/system_11_style_trough.jpg
+The advantage of modern troughs are (1) the balls entering are gravity-fed,
+meaning they only need one coil, and (2) they can hold a lot of balls. (Most
+hold 4-6 balls but you can buy ones that hold up to 8.)
 
+If you have a modern-style trough with a circuit board on each side, that means
+your trough uses opto sensors to detect the presence of a ball. One of those
+circuit boards contains infrared LEDs which are always on which shoot invisible
+beams across the ball paths, and the board has sensors that detect if a light
+beam is broken, meaning a ball is sitting there blocking the path.
 
-If you have a older style outhole + trough combination that looks something like the
-diagram above, you can see how to configure it via this "How To" guide
-for 1980s-style troughs.
+If you have a modern trough with opto sensors, read the :doc:`modern_opto`
+guide to continue.
 
-.. todo::
+Option 2: Modern trough with mechanical switches
+------------------------------------------------
 
-    Need to migrate this guide to the new documentation
+If you have a modern-style trough with mechanical switches instead of opto
+boards, then read the :doc:`modern_mechanical` guide to continue.
 
+Option 3: Older style with two coils and switches for each ball
+---------------------------------------------------------------
 
-Older single-ball machines (almost all EMs and most early solid state
-machines) typically just have one switch and one coil and eject the ball from
-the drain hole directly to the plunger lane, like this:
+Many machines from the 1980s and early 1990s have a ball trough system that
+consists of two separate coils and which sits entirely on top of the playfield
+underneath the apron.
 
-.. image:: /mechs/images/em_style_trough.jpg
+In this case, when a ball drains, a coil in the drain area fires to shoot the
+ball up over a hump where it's stored. Then a second coil near the plunger lane
+is used to eject a single ball at a time into the plunger lane.
 
-You can actually configure older single ball, single coil troughs just like
-modern troughs--it's just that there's only one switch and one
-coil, but everything in Steps 3 and 4 below still apply.
+Some of these types of devices have multiple switches on the side that stores
+the ball, with one switch for each ball. That allows the machine to know
+exactly how many balls are there because each ball is sitting on a switch.
 
-Finally, if you don't have a
-trough jam switch that's fine, just enter your other switches.
+If you have this kind of trough system, read the
+:doc:`two_coil_multiple_switches` guide to continue.
+
+Option 4: Older style with two coils and only one ball switch
+-------------------------------------------------------------
+
+If you have a system that is similar to Option 3 above, but instead of one
+switch for each ball, you only have one switch total on the right side, then
+read the :doc:`two_coil_one_switch` guide to continue.
+
+Option 5: Classic single ball, single coil
+------------------------------------------
+
+Older single-ball machines have a trough system that is on top of the playfield
+under the apron, but they only have a single coil near the ball drain position.
+The ball is stored in teh drain area, and when it needs to be ejected, a coil
+fires it from the drain all the way into the plunger lane in a single action.
+
+If you have a system like this, read the :doc:`classic_single_ball` guide to
+continue.
+
+Option 6: Something we haven't seen yet
+---------------------------------------
+
+If you're using MPF with a machine that has some kind of trough or drain system
+that we haven't covered here, we would like to know about it so we can write a
+how to guide and/or add support for it in MPF.
+
+If that's your case, please `post a message to the MPF Users Google Group
+<https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
