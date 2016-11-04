@@ -8,6 +8,10 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 Estimated mid-November, 2016
 
+.. rubric:: MPF
+
+* Improved achievements and added achievement groups
+* Added relay events and relay queues
 * Improved smart virtual platform
 * Improved support for System 11 and Gottlieb style troughs (including using
   the ball drain as a ball storage location to get one additional ball
@@ -16,34 +20,44 @@ Estimated mid-November, 2016
 * Check that event handlers are properly formatted before they're registered
 * Added conditional events (handlers that only fire if certain conditions are
   met)
+* You can set default values for player variables
 * Fixed the physical DMD and physical Color DMD
 * Added multiball lost event
 * Allow devices to have inline config specs
 * Added shots with events
 * Better OPP platform parsing
-* Added achievement groups
-* Fixed & Improved the high score mode
+* Fixed & improved the high score mode
 * Improved service mode
 * Added options for "random" events (force next, force all, save per-player, etc.)
-* Added Events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
+* Added events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
 * Added option to force all assets to load on boot for testing purposes
 * Improved scoring
-* Added relay events and relay queues
 * Use color "on" for LED default colors
 * Refactored ball devices to use asyncio, to have specific ejectors and ball counters
 * Allow multiple config player entries to fire from the same event
-* Allow the same slide to be used on multiple displays
 * Ensure that events created by the MC are sent to MPF
-* Lots of bug fixes...
+* Lots of little bug fixes...
 
+.. rubric:: MPF-MC
+
+* Fixed the widget z-order layering bug (this has been backported to 0.31).
+  Widget orders are now higher value z: settings are on top of lower value ones.
+* Negative z: values are no longer used to target parent slide frames. Instead,
+  ``target: (name)`` is used.
+* Cleaned up debug logging so BCP frames are not included in it by default
+* Events that are natively posted in the MC are now sent to MPF
+* Fixed a bug to ensure that the slide_active event is only posted once per frame
+* Fixed a bug that prevented slide frames from being animated
+* Fixed a few crashes
+* Fixed a bug where videos were not stopping
+* Allow the same slide to be used on multiple displays
 
 0.31
 ~~~~
 
 Sept 19, 2016
 
-MPF
----
+.. rubric:: MPF
 
 * MPF is now "tickless", meaning everything runs faster, but with less overhead
 * Improved flow control for FAST hardware serial communication
@@ -72,8 +86,7 @@ MPF
 * Added the "LED Group" device (am easily-configured strip of LEDs which can be strobed, pulsed, etc.)
 * Many bug fixes...
 
-MPF-MC
-------
+.. rubric:: MPF-MC
 
 * Audio library improvements (sound fading, markers, start position, instance limiting,
   ducking improvements)
@@ -81,8 +94,6 @@ MPF-MC
 * Improved error if you try to target a widget to an invalid slide
 * Added default DMD fonts
 * Many bug fixes...
-
-See the full list and details of what's new in MPF 0.31 :doc:`here <0.31>`.
 
 0.30
 ~~~~
@@ -115,13 +126,10 @@ July 15, 2016
 * Text string support
 * Player achievements
 
-See the full list and details of what's new in MPF 0.30 :doc:`here <0.30>`.
-
 0.21
 ~~~~
 
 Dec 1, 2015
-
 
 * SmartMatrix "real" RGB LED Color DMD support.
 * System 11 support.
