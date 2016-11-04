@@ -40,7 +40,6 @@
    Events </events/index>
    Config Players </config_players/index>
    Machine Management </machine_management/index>
-   MPF Components & Modules </core/index>
    Flowcharts </flowcharts/index>
 
 .. toctree::

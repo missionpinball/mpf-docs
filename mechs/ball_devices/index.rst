@@ -24,8 +24,7 @@ that holds the ball when it drains and the playfield.
 Ball devices are probably the most important element of MPF (because no one
 likes it when a machine gets confused about where the balls are) and
 something we've spent a lot of time on. They work hand-in-hand with MPF's
-:doc:`/core/ball_controller` to keep track of where all the balls are at any
-given time.
+Ball Controller to keep track of where all the balls are at any given time.
 
 In MPF, ball devices are implemented as
 `finite state machines <https://en.wikipedia.org/wiki/Finite-state_machine>`_.

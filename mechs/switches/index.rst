@@ -40,6 +40,7 @@ attached to automatically fired coils like slingshots and pop bumpers.
    :caption: Switch Concepts
 
    debounce
+   switch_controller
 
 .. toctree::
    :titlesonly:

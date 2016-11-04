@@ -1,4 +1,4 @@
-Switch controller
+Switch Controller
 =================
 
 The *Switch Controller* is responsible for receiving all hardware switch state
@@ -8,9 +8,6 @@ the game that actually receives notification of the physical switches-—it's th
 only thing that "talks to" the switch hardware. Everything else in the game just
 waits for the switch controller to tell it that a switch action happened, rather
 than all different parts of the game all talking to hardware.
-
-MPF's switch controller is based on the *SwitchController* class located in the
-``/mpf/core/switch_controller.py`` module.
 
 Why do we force everything to talk to the switch controller instead of letting
 individual modules talk to the switches directly? Lots of reasons:
