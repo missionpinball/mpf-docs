@@ -154,7 +154,7 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-.. start_test_config  # used for automated config file documentation testing
+.. begin_mpfdoctest:config/config.yaml
 
 ::
 
@@ -190,4 +190,4 @@ we created in this How To guide:
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-.. end_test_config
+.. end_mpfdoctest
