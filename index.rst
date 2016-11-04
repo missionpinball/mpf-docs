@@ -1,3 +1,80 @@
+.. toctree::
+   :hidden:
+   :caption: Overview
+   :titlesonly:
+   :numbered: 0
+
+   Start Here </start/index>
+   Compatible Pinball Machines </machines/index>
+
+.. toctree::
+   :hidden:
+   :caption: Installation
+   :titlesonly:
+   :numbered: 0
+
+   Installing MPF </install/index>
+   Running MPF </running/index>
+
+.. toctree::
+   :hidden:
+   :caption: Learning
+   :titlesonly:
+   :numbered: 0
+
+   Tutorial </tutorial/index>
+
+.. toctree::
+   :hidden:
+   :caption: User Documentation
+   :titlesonly:
+   :numbered: 0
+
+   Control Systems / Electronics </hardware/index>
+   Pinball Mechs </mechs/index>
+   Game Logic </game_logic/index>
+   Displays </displays/index>
+   Sound</sound/index>
+   Shows </shows/index>
+   Assets </assets/index>
+   Events </events/index>
+   Config Players </config_players/index>
+   Machine Management </machine_management/index>
+   MPF Components & Modules </core/index>
+   Flowcharts </flowcharts/index>
+
+.. toctree::
+   :hidden:
+   :caption: Developer Documentation
+   :titlesonly:
+   :numbered: 0
+
+   Extending MPF with Custom Code </code/index>
+   BCP Protocol </bcp/index>
+   API Reference </api/index>
+
+.. toctree::
+   :hidden:
+   :caption: Reference Material
+   :titlesonly:
+   :numbered: 0
+
+   Events Reference </events/event_reference>
+   Config File Reference </config/index>
+   Examples </examples/index>
+
+.. toctree::
+   :hidden:
+   :caption: About MPF
+   :titlesonly:
+   :numbered: 0
+
+   About this Documentation </about/index>
+   FAQ </faq/index>
+   Glossary </glossary/index>
+   Contributing to MPF </contribute/index>
+   MPF Version History </version_history/index>
+
 Mission Pinball Framework |version| documentation
 =================================================
 
@@ -48,73 +125,3 @@ Follow Us
 * `YouTube <https://www.youtube.com/missionpinball>`_
 * `Flickr <https://www.flickr.com/groups/missionpinball>`_
 * `GitHub <https://github.com/missionpinball>`_
-
-.. toctree::
-   :hidden:
-   :caption: Overview
-   :titlesonly:
-
-   Start Here </start/index>
-   Compatible Pinball Machines </machines/index>
-
-.. toctree::
-   :hidden:
-   :caption: Installation
-   :titlesonly:
-
-   Installing MPF </install/index>
-   Running MPF </running/index>
-
-.. toctree::
-   :hidden:
-   :caption: Learning
-   :titlesonly:
-
-   Tutorial </tutorial/index>
-
-.. toctree::
-   :hidden:
-   :caption: User Documentation
-   :titlesonly:
-
-   Control Systems / Electronics </hardware/index>
-   Pinball Mechs </mechs/index>
-   Game Logic </game_logic/index>
-   Displays </displays/index>
-   Sound</sound/index>
-   Shows </shows/index>
-   Assets </assets/index>
-   Events </events/index>
-   Config Players </config_players/index>
-   Machine Management </machine_management/index>
-   MPF Components & Modules </core/index>
-   Flowcharts </flowcharts/index>
-
-.. toctree::
-   :hidden:
-   :caption: Developer Documentation
-   :titlesonly:
-
-   Extending MPF with Custom Code </code/index>
-   BCP Protocol </bcp/index>
-   API Reference </api/index>
-
-.. toctree::
-   :hidden:
-   :caption: Reference Material
-   :titlesonly:
-
-   Events Reference </events/event_reference>
-   Config File Reference </config/index>
-   Examples </examples/index>
-
-.. toctree::
-   :hidden:
-   :caption: About MPF
-   :titlesonly:
-
-   About this Documentation </about/index>
-   FAQ </faq/index>
-   Glossary </glossary/index>
-   Contributing to MPF </contribute/index>
-   MPF Version History </version_history/index>
