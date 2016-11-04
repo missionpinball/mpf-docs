@@ -56,7 +56,7 @@ API Documentation
 -----------------
 
 We have documented the API for MPF and MPF-MC. That documentation
-lives at `api.missionpinball.com <http://api.missionpinball.com>`_, and it's the reference we use
+lives at `api.missionpinball.org <http://api.missionpinball.org>`_, and it's the reference we use
 ourselves when writing MPF.
 
 
@@ -64,6 +64,6 @@ ourselves when writing MPF.
    :maxdepth: 1
    :titlesonly:
 
-   API / programmer's reference <http://api.missionpinball.com>
+   API / programmer's reference <http://api.missionpinball.org>
    best_practices
 
