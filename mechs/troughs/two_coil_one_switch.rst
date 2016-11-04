@@ -15,7 +15,8 @@ only momentarily activate the trough switch as the ball rolls by, unless the
 trough is full, in which case the last ball that goes into it sits on the
 switch.
 
-The following diagram shows the type of layout this guide is for:
+The following diagram shows the type of layout this guide is for: (This is a
+side view)
 
 .. image:: /mechs/images/two_coils_one_switch.png
 
@@ -47,7 +48,7 @@ use *s_drain* and *s_trough_entry*, though you can call them whatever you want.
 ----------------
 
 Next, create the entries in your ``coils:`` section for the drain eject
-coil and the trough release coil. Again, the names doen't matter. We'll call
+coil and the trough release coil. Again, the names don't matter. We'll call
 them *c_drain_eject* and *c_trough_release* and enter them like this:
 
 ::

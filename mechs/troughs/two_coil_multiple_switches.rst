@@ -9,7 +9,8 @@ This guide is written for the types of devices that have one switch per
 ball. If your configuration only has a single switch (like Gottlieb System 3
 machines), then use :doc:`this guide <two_coil_one_switch>` instead.
 
-The following diagram shows the type of layout this guide is for:
+The following diagram shows the type of layout this guide is for: (This is a
+side view)
 
 .. image:: /mechs/images/two_coils_multiple_switches.png
 
@@ -50,7 +51,7 @@ call them *s_ball_trough_1* or *trough_ball_1* or *s_mr_potatohead*.
 ----------------
 
 Next, create the entries in your ``coils:`` section for the drain eject
-coil and the trough release coil. Again, the names doen't matter. We'll call
+coil and the trough release coil. Again, the names don't matter. We'll call
 them *c_drain_eject* and *c_trough_release* and enter them like this:
 
 ::

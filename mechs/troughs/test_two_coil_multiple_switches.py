@@ -5,7 +5,7 @@ class TestTwoCoilMultipleSwitches(MpfDocsTestCase):
 
     rst_target = 'mechs/troughs/two_coil_multiple_switches'
 
-    def test_modern_mechanical(self):
+    def test_two_coil_multiple_switches(self):
         self.assertIn('bd_trough', self.machine.ball_devices)
         self.assertIn('bd_drain', self.machine.ball_devices)
 
