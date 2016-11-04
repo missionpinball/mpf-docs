@@ -1,4 +1,2 @@
-Light
-=====
-
-*MPF Device*
+Lights
+======

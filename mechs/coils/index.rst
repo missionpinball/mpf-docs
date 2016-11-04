@@ -15,6 +15,11 @@ enabling, or disabling them. You can do this via the :doc:`coil_player:`
 section of a config file or via the ``coils:`` section of a
 :doc:`show </shows/index>`.
 
+Config File Reference
+---------------------
+
+* :doc:`/config/coils`
+
 Step-by-step tutorial for coils
 -------------------------------
 

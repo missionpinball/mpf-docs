@@ -10,10 +10,10 @@ since modern LED-based machines typically use regular LED devices (or combinatio
 of them) as flashers. (So basically a "flasher" in MPF is any single-color
 light that's connected to a driver output rather than a light output.
 
-Configuring flashers
---------------------
+Config File Reference
+---------------------
 
-See the :doc:`/config/flashers` section of the config file reference.
+* :doc:`/config/flashers`
 
 Events posted by flashers
 -------------------------

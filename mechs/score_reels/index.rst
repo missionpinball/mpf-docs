@@ -1,5 +1,5 @@
-Score reel
-==========
+Score Reels
+===========
 
 *MPF Device*
 

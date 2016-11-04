@@ -1,5 +1,5 @@
-Playfield
-=========
+Playfields
+==========
 
 Believe it or not, the playfield in MPF is technically a :doc:`ball device </mechs/ball_devices/index>`.
 This is needed since MPF wants to know where all the balls are at all

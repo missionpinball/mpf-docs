@@ -15,10 +15,10 @@ have a dual-wound coil config where you can specify the settings for a
 particular dual-wound coil (and give it a new name), and then you can use that
 dual-wound coil anywhere in MPF that a coil is configured.
 
-Configuring dual-wound coils
-----------------------------
+Config File Reference
+---------------------
 
-See the :doc:`/config/dual_wound_coils` section of the config file reference.
+* :doc:`/config/dual_wound_coils`
 
 Events posted by dual-wound coils
 ---------------------------------

@@ -1,4 +1,4 @@
-Servo
-=====
+Servos
+======
 
 *MPF Device*

@@ -1,2 +1,4 @@
-Configuring opto switches
-=========================
+How to configure opto switches
+==============================
+
+todo

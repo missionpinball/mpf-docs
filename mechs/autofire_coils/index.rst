@@ -78,7 +78,6 @@ individual rules on the same set of switches and coils to do what
 might seem like simple things. For example, think about what rules
 you'd need for a dual-wound (power and hold windings) flipper coil:
 
-
 + When the flipper button becomesactive, enablethe power coil.
 + When the flipper button becomesactive, enable the hold coil.
 + When the EOS switch becomesactive, disable the power coil.
@@ -99,8 +98,6 @@ just to get your flippers set up!
 
 Fortunately MPF makes this easy and hides the complexity from you. :)
 
-
-
 How MPF interacts with autofire rules
 -------------------------------------
 
@@ -115,12 +112,10 @@ with new actions. For example, if your player tilts the machine, then
 you need to disable the flippers. To do so you would overwrite the
 above six rules with the following:
 
-
 + When the flipper button becomes active, do nothing.
 + When the flipper button becomes inactive, do nothing.
 + When the EOS switch becomes active, do nothing.
 + When the EOS switch becomes inactive, do nothing.
-
 
 And just like that, your flippers are disabled! You can also see how
 you can use these autofire rules to do all sorts of fun things, like
@@ -188,3 +183,8 @@ you'll see that the framework uses all these rules behind the scenes.)
 You can also configure autofire coils manually for simpler things like
 pop bumpers and slingshots. See the `autofire_coils: section of the
 configuration file reference </config/autofire_coils>`_ for details.
+
+Config File Reference
+---------------------
+
+* :doc:`/config/autofire_coils`

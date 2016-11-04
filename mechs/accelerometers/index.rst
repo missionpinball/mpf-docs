@@ -1,4 +1,9 @@
 Accelerometer
 =============
 
-*MPF device*
+todo
+
+Config File Reference
+---------------------
+
+* :doc:`/config/accelerometers`

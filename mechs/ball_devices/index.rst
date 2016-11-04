@@ -104,10 +104,10 @@ Ball devices are covered in a few places in the tutorial:
 * :doc:`/tutorial/7_trough`
 * :doc:`/tutorial/8_plunger`
 
-Configuring ball devices
-------------------------
+Config File Reference
+---------------------
 
-See the :doc:`/config/ball_devices` section of the config file reference.
+* :doc:`/config/ball_devices`
 
 Events posted by ball devices
 -----------------------------
