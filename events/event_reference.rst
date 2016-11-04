@@ -105,6 +105,7 @@ how MPF uses events.
    mode_(name)_started <mode_name_started>
    mode_(name)_starting <mode_name_starting>
    mode_(name)_stopped <mode_name_stopped>
+   mode_(name)_stopping <mode_name_stopping>
    motor_(name)_reached_(position) <motor_name_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_(name)_ended <multiball_name_ended>
