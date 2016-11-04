@@ -1,7 +1,5 @@
-Switch
-======
-
-*MPF device*
+Switches
+========
 
 MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
@@ -29,26 +27,34 @@ Most switches in pinball machines are debounced except for the ones that you
 absolutely want to fire instantly, like flipper switches and the switches
 attached to automatically fired coils like slingshots and pop bumpers.
 
-MPF Events posted by switches
------------------------------
-Event Type Description sw\_*tagname* Standard When a switch moves from
-the "inactive" to "active" state, the Switch Controller will post one
-event for each tag the switch is configured for. The event name starts
-with "sw\_" followed by the tag name.
+.. toctree::
+   :titlesonly:
+   :caption: Switch Concepts
 
-Configuring your switches
--------------------------
-
-Switches are configured in the ``switches:`` section of the machine
-configuration file.
-
-Tutorial for step-by-step switch setup
---------------------------------------
-
-The step-by-step tutorial covers switch setup in *Step 4: Get flipping*.
+   debounce
 
 .. toctree::
    :titlesonly:
+   :caption: Switch How To Guides
 
-   debounce
    optos
+
+
+Config File Reference
+---------------------
+
+* :doc:`/config/switches`
+
+Events posted by switches
+-------------------------
+
+There are several events posted by switches: (click each for details from the
+event reference guide)
+
+* :doc:`/events/switch_name_active`
+* :doc:`/events/switch_name_inactive`
+* :doc:`/events/sw_tag_name`
+
+
+
+
