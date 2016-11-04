@@ -1,6 +1,12 @@
 Achievements
 ============
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_locks`                                                    |
++------------------------------------------------------------------------------+
+
 MPF uses "achievements" to track major goals that a player must achieve
 throughout the progression of a game. Achievements typically have an associated
 light or LED on the playfield (though not always), and they're tracked
@@ -45,16 +51,17 @@ useful for tracking when all the achievements in the group have been complete
 lit achievements (e.g. every slingshot hit changes the achievement that's
 flashing, but it only rotates through incomplete achievements.)
 
-Configuring achievements
-------------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-See the :doc:`/config/achievements` and :doc:`/config/achievement_groups` of
-the config file reference.
-
-
-Events posted by achievements
------------------------------
-
-* :doc:`/events/achievement_name_state_state`
-* Plus any custom events as defined in the achievement's configuration in your
-  config files.
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/achievement_name_state_state`                                  |
++------------------------------------------------------------------------------+
+| Plus any custom events as defined in the achievement's configuration in your |
+| config files.                                                                |
++------------------------------------------------------------------------------+

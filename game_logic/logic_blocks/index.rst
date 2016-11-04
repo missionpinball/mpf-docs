@@ -6,6 +6,8 @@ Logic Blocks
 
 
 .. toctree::
+   :titlesonly:
+
    accruals
    counters
    sequences

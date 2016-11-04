@@ -1,20 +1,14 @@
 Ball Locks
 ==========
 
++------------------------------------------------------------------------------+
+| Related Config File sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_locks`                                                    |
++------------------------------------------------------------------------------+
+
 MPF's *ball locks* are used to hold a ball that has entered a
 :doc:`/mechs/ball_devices/index` while something else happens.
-
-.. rubric:: Related How To Guides:
-
-+------------------------------------------------------------------------------+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
-
-.. rubric:: Related config file sections:
-
-+------------------------------------------------------------------------------+
-| :doc:`ball_locks: </config/ball_locks>`                                      |
-+------------------------------------------------------------------------------+
 
 Example use cases for ball locks include:
 
@@ -34,12 +28,18 @@ balls in a contained physical ball device doesn't match.
 You can have lots of different ball locks in your game, typically configured
 per mode.
 
-Events posted by ball locks
----------------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-There are several events posted by ball locks: (click each for details from the
-event reference guide)
-
-* :doc:`/events/ball_lock_name_balls_released`
-* :doc:`/events/ball_lock_name_full`
-* :doc:`/events/ball_lock_name_locked_ball`
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/ball_lock_name_balls_released`                                 |
++------------------------------------------------------------------------------+
+| :doc:`/events/ball_lock_name_full`                                           |
++------------------------------------------------------------------------------+
+| :doc:`/events/ball_lock_name_locked_ball`                                    |
++------------------------------------------------------------------------------+

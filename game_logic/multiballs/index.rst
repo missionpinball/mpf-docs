@@ -1,24 +1,39 @@
-Multiball
-=========
+Multiballs
+==========
 
-*MPF Device*
++------------------------------------------------------------------------------+
+| Related Config File sections                                                 |
++==============================================================================+
+| :doc:`/config/multiballs`                                                    |
++------------------------------------------------------------------------------+
 
-MPF includes a *multiball* abstract device which can be used to
-automatically start and stop multiballs.
+MPF includes a *multiball* feature which can be used to automatically start and
+stop multiballs.
 
+Each multiball in MPF has a separate name. There are several diffrent types of
+multiballs (run until a single ball is left, timed multiballs, etc.) Multiballs
+can also be configured with multiball saves so that (for example) any balls
+lost in the first 15 seconds of a multiball are automatically re-launched back
+into play.
 
-Configuring multiballs
-----------------------
+MPF also supports stacking of multiple multiballs at the same time.
 
-See the :doc:`/config/multiballs` section of the configuration file reference.
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-Events posted by multiball devices
-----------------------------------
-
-Multiball devices post several events when they are enabled or disabled, and when
-they start and stop. See the :doc:`/events/event_reference` for details.
-(Look for event names that start with "multiball".)
-
-
-
-
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/multiball_name_ended`                                          |
++------------------------------------------------------------------------------+
+| :doc:`/events/multiball_name_lost_ball`                                      |
++------------------------------------------------------------------------------+
+| :doc:`/events/multiball_name_shoot_again`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/events/multiball_name_shoot_again_ended`                              |
++------------------------------------------------------------------------------+
+| :doc:`/events/multiball_name_started`                                        |
++------------------------------------------------------------------------------+

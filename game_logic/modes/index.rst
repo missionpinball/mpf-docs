@@ -4,18 +4,13 @@ Modes
 Game modes are a big part of pinball programming and a big part of MPF, so it's
 worth taking an in-depth look at what they are and how they work.
 
-.. rubric:: Related How To Guides:
-
-+------------------------------------------------------------------------------+
-| :doc:`Creating your first game mode </tutorial/14_add_a_mode>`               |
-+------------------------------------------------------------------------------+
-
-.. rubric:: Related config file sections:
-
-============================= ==================================================
-:doc:`mode: </config/mode>`   Mode config which holds settings for a that mode
-:doc:`modes: </config/modes>` Machine-wide config section which lists all modes
-============================= ==================================================
++---------------------------------------------------------------------------+
+| Related Config File sections                                              |
++===========================================================================+
+| :doc:`/config/mode`                                                       |
++---------------------------------------------------------------------------+
+| :doc:`/config/modes`                                                      |
++---------------------------------------------------------------------------+
 
 As a pinball player, you're probably familiar with the concept of "modes." Most
 modern machines have lots of different modes, and typically you complete various
@@ -257,3 +252,23 @@ sections and options to your machine. Click on each for details:
    Credits <credits>
    High score <high_score>
    Tilt <tilt>
+
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`Creating your first game mode </tutorial/14_add_a_mode>`               |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/mode_name_started`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/events/mode_name_starting`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/mode_name_stopped`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/events/mode_name_stopping`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/clear`                                                         |
++------------------------------------------------------------------------------+
