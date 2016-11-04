@@ -1,5 +1,13 @@
-Coil (Solenoid)
-===============
+Coils (Solenoids)
+=================
+
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/coils`                                                         |
++------------------------------------------------------------------------------+
+| :doc:`/config/coil_player`                                                   |
++------------------------------------------------------------------------------+
 
 In MPF, you typically list all the coils in your machine in the
 :doc:`coils: section </config/coils>` of your machine configuration file, along
@@ -15,13 +23,14 @@ enabling, or disabling them. You can do this via the :doc:`coil_player:`
 section of a config file or via the ``coils:`` section of a
 :doc:`show </shows/index>`.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/tutorial/3_get_flipping`                                              |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/coils`
-
-Step-by-step tutorial for coils
--------------------------------
-
-The step-by-step tutorial covers coils in
-:doc:`Step 3. Get flipping! </tutorial/3_get_flipping>`
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None                                                                         |
++------------------------------------------------------------------------------+

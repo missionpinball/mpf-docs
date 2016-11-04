@@ -1,4 +1,4 @@
 Stand Up Targets
 ================
 
-.. todo::
+TODO

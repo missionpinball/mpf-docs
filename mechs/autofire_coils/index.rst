@@ -1,7 +1,11 @@
-Autofire coil
-=============
+Autofire Coils
+==============
 
-*MPF device*
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/autofire_coils`                                                |
++------------------------------------------------------------------------------+
 
 An autofire coil in MPF is used for "instant response" type devices
 (like pop bumpers and slingshots) where you want a switch activation
@@ -78,16 +82,16 @@ individual rules on the same set of switches and coils to do what
 might seem like simple things. For example, think about what rules
 you'd need for a dual-wound (power and hold windings) flipper coil:
 
-+ When the flipper button becomesactive, enablethe power coil.
-+ When the flipper button becomesactive, enable the hold coil.
-+ When the EOS switch becomesactive, disable the power coil.
-+ When the flipper button becomesinactive, disable the hold coil.
++ When the flipper button becomes active, enable the power coil.
++ When the flipper button becomes active, enable the hold coil.
++ When the EOS switch becomes active, disable the power coil.
++ When the flipper button becomes inactive, disable the hold coil.
 + When the flipper button becomes inactive, disable the power coil.
   (We need this one to "cancel" the flip action if the player releases
   the flipper button before the flipper hits the EOS switch at the top
   of its stroke.)
-+ If the flipper button is active *and* the EOS switch becomesinactive,
-  enablethe power coil. (This causes the flipper to go back to the "up"
++ If the flipper button is active *and* the EOS switch becomes inactive,
+  enable the power coil. (This causes the flipper to go back to the "up"
   position if for some reason it comes down when the player is holding
   the flipper button.)
 
@@ -184,7 +188,15 @@ You can also configure autofire coils manually for simpler things like
 pop bumpers and slingshots. See the `autofire_coils: section of the
 configuration file reference </config/autofire_coils>`_ for details.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/tutorial/13_add_autofires`                                            |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/autofire_coils`
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None (the autofire coils can be configured to enable or disable based on     |
+| other events)                                                                |
++------------------------------------------------------------------------------+

@@ -1,6 +1,12 @@
 Diverters
 =========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/diverters`                                                     |
++------------------------------------------------------------------------------+
+
 In MPF, a diverter (sometimes spelled "divertor") is anything that alters
 the path of the ball based on the state it's in, including:
 
@@ -68,19 +74,20 @@ also include support for automatic enabling and disabling (based on
 events), and they include intelligence to know which target devices a
 diverter will send a ball to when it's enabled or disabled.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/diverters`
-
-Events posted by diverters
---------------------------
-
-There are several events posted by diverters: (click each for details from the
-event reference guide)
-
-* :doc:`/events/diverter_name_activating`
-* :doc:`/events/diverter_name_deactivating`
-* :doc:`/events/diverter_name_disabling`
-* :doc:`/events/diverter_name_enabling`
-
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/diverter_name_activating`                                      |
++------------------------------------------------------------------------------+
+| :doc:`/events/diverter_name_deactivating`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/events/diverter_name_disabling`                                       |
++------------------------------------------------------------------------------+
+| :doc:`/events/diverter_name_enabling`                                        |
++------------------------------------------------------------------------------+

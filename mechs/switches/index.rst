@@ -1,6 +1,14 @@
 Switches
 ========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/switches`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/switch_overwrites`                                             |
++------------------------------------------------------------------------------+
+
 MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
@@ -39,22 +47,18 @@ attached to automatically fired coils like slingshots and pop bumpers.
 
    optos
 
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/tutorial/3_get_flipping`                                              |
++------------------------------------------------------------------------------+
 
-Config File Reference
----------------------
-
-* :doc:`/config/switches`
-
-Events posted by switches
--------------------------
-
-There are several events posted by switches: (click each for details from the
-event reference guide)
-
-* :doc:`/events/switch_name_active`
-* :doc:`/events/switch_name_inactive`
-* :doc:`/events/sw_tag_name`
-
-
-
-
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/switch_name_active`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/switch_name_inactive`                                          |
++------------------------------------------------------------------------------+
+| :doc:`/events/sw_tag_name`                                                   |
++------------------------------------------------------------------------------+

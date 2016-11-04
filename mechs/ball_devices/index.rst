@@ -1,6 +1,12 @@
 Ball Devices
 ============
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+
 A *ball device* is any physical thing in a pinball machine which is able to
 hold (i.e. "capture") a ball and then release it. (Either
 automatically or based on some action by the player.) Examples of ball
@@ -96,36 +102,50 @@ as well as dozens of other options that allow MPF to support every
 known type of device in every pinball machine ever created.
 (Seriously.)
 
-Tutorial for ball devices
--------------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/mechs/troughs/modern_opto`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/mechs/troughs/modern_mechanical`                                      |
++------------------------------------------------------------------------------+
+| :doc:`/mechs/troughs/two_coil_multiple_switches`                             |
++------------------------------------------------------------------------------+
+| :doc:`/mechs/troughs/two_coil_one_switch`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/mechs/troughs/classic_single_ball`                                    |
++------------------------------------------------------------------------------+
 
-Ball devices are covered in a few places in the tutorial:
-
-* :doc:`/tutorial/7_trough`
-* :doc:`/tutorial/8_plunger`
-
-Config File Reference
----------------------
-
-* :doc:`/config/ball_devices`
-
-Events posted by ball devices
------------------------------
-
-There are several events posted by ball devices: (click each for details from
-the event reference guide)
-
-* :doc:`/events/balldevice_balls_ball_missing`
-* :doc:`/events/balldevice_name_ball_eject_attempt`
-* :doc:`/events/balldevice_name_ball_eject_failed`
-* :doc:`/events/balldevice_name_ball_eject_permanent_failure`
-* :doc:`/events/balldevice_name_ball_eject_success`
-* :doc:`/events/balldevice_name_ball_enter`
-* :doc:`/events/balldevice_name_ball_left`
-* :doc:`/events/balldevice_name_ball_lost`
-* :doc:`/events/balldevice_name_eject_broken`
-* :doc:`/events/balldevice_name_ejecting_ball`
-* :doc:`/events/balldevice_name_ok_to_receive`
-* :doc:`/events/balldevice_ball_missing`
-* :doc:`/events/balldevice_balls_available`
-* :doc:`/events/balldevice_captured_from_device`
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/balldevice_balls_ball_missing`                                 |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_eject_attempt`                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_eject_failed`                             |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_eject_permanent_failure`                  |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_eject_success`                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_enter`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_left`                                     |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ball_lost`                                     |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_eject_broken`                                  |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ejecting_ball`                                 |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_name_ok_to_receive`                                 |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_ball_missing`                                       |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_balls_ball_missing`                                 |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_balls_available`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/events/balldevice_captured_from_device`                               |
++------------------------------------------------------------------------------+

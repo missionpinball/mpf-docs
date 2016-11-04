@@ -1,4 +1,4 @@
 Spinners
 ========
 
-.. todo::
+TODO

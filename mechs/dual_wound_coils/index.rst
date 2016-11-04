@@ -1,6 +1,12 @@
 Dual-wound Coils
 ================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/dual_wound_coils`                                              |
++------------------------------------------------------------------------------+
+
 A *dual-wound coil* is a coil (solenoid) with two windings--one "strong"
 power (or "main") winding for moving the coil, and a second weaker / lower-power
 winding for "holding" the coil in the active position.
@@ -15,12 +21,14 @@ have a dual-wound coil config where you can specify the settings for a
 particular dual-wound coil (and give it a new name), and then you can use that
 dual-wound coil anywhere in MPF that a coil is configured.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/dual_wound_coils`
-
-Events posted by dual-wound coils
----------------------------------
-
-None
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None                                                                         |
++------------------------------------------------------------------------------+

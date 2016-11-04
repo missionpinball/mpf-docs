@@ -1,6 +1,12 @@
 Flippers
 ========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/flippers`                                                      |
++------------------------------------------------------------------------------+
+
 Flippers are probably the first thing you think of when you think about building
 your own pinball machine. In fact when most people get their own hardware and
 start drilling holes in a piece of plywood, the first visible thing they do is
@@ -45,12 +51,8 @@ The following guides are placeholders only and not written yet:
    inverted_flippers
    delayed_flippers
 
-Config File Reference
----------------------
-
-* :doc:`/config/flippers`
-
-Events posted by flippers
--------------------------
-
-None
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None                                                                         |
++------------------------------------------------------------------------------+

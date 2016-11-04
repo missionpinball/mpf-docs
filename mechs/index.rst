@@ -37,6 +37,7 @@ The following mechs are done in MPF, but the documentation is not done yet:
    LEDs <leds/index>
    Loops / Orbits / Ramps <loops/index>
    Magnets <magnets/index>
+   Motors <motors/index>
    Playfields <playfields/index>
    Plungers / Launch Devices <plungers/index>
    Pop Bumpers <pop_bumpers/index>

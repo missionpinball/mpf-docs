@@ -1,6 +1,14 @@
 Flashers
 ========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/flashers`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/flasher_player`                                                |
++------------------------------------------------------------------------------+
+
 MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors instead
 of low-power lighting circuitry.
@@ -10,12 +18,14 @@ since modern LED-based machines typically use regular LED devices (or combinatio
 of them) as flashers. (So basically a "flasher" in MPF is any single-color
 light that's connected to a driver output rather than a light output.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/flashers`
-
-Events posted by flashers
--------------------------
-
-None
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None                                                                         |
++------------------------------------------------------------------------------+

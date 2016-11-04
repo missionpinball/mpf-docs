@@ -1,6 +1,14 @@
 GI (general illumination)
 =========================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/gis`                                                           |
++------------------------------------------------------------------------------+
+| :doc:`/config/gi_player`                                                     |
++------------------------------------------------------------------------------+
+
 MPF includes support for GI (general illumination) light strings which are
 common in existing Williams and Stern machines. You can specify GI
 strings which you can then enable, disable, or (if the hardware supports it)
@@ -24,12 +32,14 @@ MPF hides all this complexity from you. You just define your GI strings in
 your machine configuration file and then you can enable, disable, and
 dim the dimmable ones as you wish.
 
-Config File Reference
----------------------
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
 
-* :doc:`/config/gis`
-
-Events posted by GIs
---------------------
-
-None
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| None                                                                         |
++------------------------------------------------------------------------------+
