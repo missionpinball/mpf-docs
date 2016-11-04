@@ -43,9 +43,8 @@ each type of control system.)
 
 It makes no difference which switch is which (in terms of whether
 Switch 1 is on the left side or the right side). Also the actual switch
-names don't really matter. We use *s_trough1* through *s_trough6*
-plus *s_trough_jam*, though you can call them *s_ball_trough_1* or
-*trough_ball_1* or *s_mr_potatohead*.
+names don't really matter. We use *s_trough1* through *s_trough3* though you can
+call them *s_ball_trough_1* or *trough_ball_1* or *s_mr_potatohead*.
 
 2. Add the coils
 ----------------
@@ -127,7 +126,6 @@ configuration settings for your drain ball device.
 
 Your drain device configuration should look now look like this:
 
-
 ::
 
     ball_devices:
@@ -162,7 +160,6 @@ The configuration is pretty straightforward:
 Your trough device configuration should look now look like this:
 
 ::
-
 
         bd_trough:
             ball_switches: s_trough1, s_trough2, s_trough3

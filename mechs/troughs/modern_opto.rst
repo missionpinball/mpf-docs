@@ -61,8 +61,6 @@ plus *s_trough_jam*, though you can call them *s_ball_trough_1* or
    (If you have it though you definitely want to use it because it makes MPF
    smarter about how it handles balls that get stacked.)
 
-   If you don't have a "jam" switch, then just don't enter it.
-
 2. Add your trough eject coil
 -----------------------------
 
@@ -206,7 +204,7 @@ like this:
 You can also configure an eject pulse time (in ms) that will be used when the
 trough wants to eject a ball but the jam switch is active. You'll have to play
 with your actual trough to see what this time should be. In most cases it's
-actually *less* time than the regular eject pulse time, becuase in most cases,
+actually *less* time than the regular eject pulse time, because in most cases,
 the regular pulse time will kick out two balls (the jammed ball and the one
 below it).
 
