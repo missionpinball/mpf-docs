@@ -1,5 +1,5 @@
-ball_save_(name)_hurry_up:
-==========================
+ball_save_(name)_hurry_up
+=========================
 
 *MPF Event*
 

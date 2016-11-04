@@ -1,5 +1,5 @@
-ball_save_(name)_timer_start:
-=============================
+ball_save_(name)_timer_start
+============================
 
 *MPF Event*
 

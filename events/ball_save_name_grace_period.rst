@@ -1,5 +1,5 @@
-ball_save_(name)_grace_period:
-==============================
+ball_save_(name)_grace_period
+=============================
 
 *MPF Event*
 
