@@ -37,10 +37,9 @@ Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
 
-See the :doc:`Event Manager Overview </core/events>` for more information on
-how MPF uses events.
+See the :doc:`/events/index>` guide for more information on how MPF uses events.
 
-.. toctree ::
+.. toctree::
    :maxdepth: 1
 
 '''
