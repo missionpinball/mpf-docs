@@ -1,4 +1,4 @@
-How to enable "no hold flippers" (novelty mode)
+How to enable "delayed flippers" (novelty mode)
 ===============================================
 
 TODO

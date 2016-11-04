@@ -1,4 +1,4 @@
-How To adjust flipper power
+How to adjust flipper power
 ===========================
 
 One of the advantages of using a modern control system is that you can fine-tune
