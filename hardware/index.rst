@@ -77,12 +77,6 @@ type of hardware.
 * :doc:`RGB.DMD RGB LED display controller <eli_dmd/index>`
    * Supports a "real" color DMD made up of RGB LED matrix
 
-Detailed hardware support information
--------------------------------------
-
-Now that we've done a rundown of the various types of hardware that's supported,
-here's are details about each platform:
-
 .. toctree::
    :maxdepth: 1
    :hidden:
