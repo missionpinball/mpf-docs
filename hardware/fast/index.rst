@@ -1,9 +1,15 @@
-How to configure FAST Pinball hardware for MPF
-==============================================
+How to configure FAST Pinball
+=============================
 
-This guide explains how to setup your MPF configuration files
-to interface with a FAST Pinball controller. It applies to all three
-of their models—-the Core, Nano, and WPC controllers.
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/fast`                                                          |
++------------------------------------------------------------------------------+
+
+This guide explains how to configure MPF to work with a FAST Pinball
+controller. It applies to all three of their models—the Core, Nano, and WPC
+controllers.
 
 .. todo::
    This page needs to be updated for MPF 0.30 with the latest FAST
@@ -22,7 +28,7 @@ hardware has been detected. What exactly you see will depend on which FAST contr
 For example, here’s what happens when you plug a FAST WPC controller into Windows 10 for the first time (after you’ve
 installed the FTDI driver):
 
-.. image:: images/fast-ftdi-driver.png
+.. image:: /hardware/images/fast-ftdi-driver.png
 
 (This is just a progress bar which shows Windows configuring the drivers. You don’t have to click anything to get it
 started, and it should only take 5-10 seconds. It will only happen the first time you plug in the hardware.)

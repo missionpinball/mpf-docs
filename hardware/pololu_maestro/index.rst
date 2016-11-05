@@ -1,5 +1,5 @@
-How to configure a Pololu Maestro servo controller
-==================================================
+Pololu Maestro Servo Controller
+===============================
 
 MPF supports servos connected to Pololu Maestro servo controllers. Each Maestro
 can control multiple servos, with models that control 6, 12, 18, or 24 servos.

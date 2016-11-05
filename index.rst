@@ -30,7 +30,7 @@
    :titlesonly:
    :numbered: 0
 
-   Control Systems / Electronics </hardware/index>
+   Control Systems / Hardware </hardware/index>
    Pinball Mechs </mechs/index>
    Game Logic </game_logic/index>
    Displays </displays/index>
