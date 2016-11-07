@@ -96,6 +96,8 @@ See the :doc:`/events/index>` guide for more information on how MPF uses events.
    machine_reset_phase_2 <machine_reset_phase_2>
    machine_reset_phase_3 <machine_reset_phase_3>
    machine_var_(name) <machine_var_name>
+   master_volume_decrease <master_volume_decrease>
+   master_volume_increase <master_volume_increase>
    max_credits_reached <max_credits_reached>
    mc_ready <mc_ready>
    mc_reset_phase_1 <mc_reset_phase_1>
