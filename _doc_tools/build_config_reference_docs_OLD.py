@@ -456,4 +456,6 @@ your machine-wide config, a mode-specific config, or both.
 
 
 if __name__ == '__main__':
-    ConfigDocParser()
+    # ConfigDocParser()
+    pass # disabling because this doesn't work anymore but I might want to use
+    # it in the future
