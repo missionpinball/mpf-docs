@@ -9,7 +9,7 @@ different kinds of control systems and hardware devices.
 Not only does this give you a choice of what type of pinball control hardware
 you want to use, it also means that you have the flexibility to change your
 hardware at any time without having to change any game code. You could
-even release a game code update that works on multiple platforms—-all with the
+even release a game code update that works on multiple platforms—all with the
 same code!
 
 `Here's a demo video <https://www.youtube.com/watch?v=_Zw_cHw2CXY>`_ of us
@@ -38,10 +38,10 @@ Click on the links below for details about how to configure MPF to use each
 type of hardware.
 
 * :doc:`FAST Pinball <fast/index>`
-   * All FAST controllers, including Core, Nano, and WPC
-   * All FAST I/O boards, including 0804, 1616, 3208
-   * FAST servo controller daughter board
-   * FAST auxiliary boards, including the power filter board and smart fuse block
+   * Core Controller, Nano Controller, WPC Controller
+   * 0804, 1616, 3208 I/O Boards
+   * Servo controller daughter board
+   * Power Filter Driver Board coin-door interconnect
    * Plasma & LED mono DMDs (Core & WPC controllers)
    * FAST RGB LED-based DMD
 
@@ -53,8 +53,8 @@ type of hardware.
    * Accelerometer-based tilt (P3-ROC)
 
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
-   * Gen 2 OPP hardware, with many combinations of wing boards for drivers, switches, & incandescent
-     lights
+   * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
+     switches, & incandescent lights
 
 * :doc:`Snux System 11 driver board <snux/index>`
    * Supported in combination with the P-ROC or FAST WPC controller
@@ -83,7 +83,7 @@ type of hardware.
 
    FAST Pinball <fast/index>
    multimorphic/index
-   opp/index
+   Open Pinball Project (OPP) <opp/index>
    snux/index
    fadecandy/index
    i2c_servo/index
