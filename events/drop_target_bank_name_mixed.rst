@@ -8,7 +8,6 @@ The drop targets in the drop target bank
 not all down or not all up. This event is posted every time a member
 drop target changes but the overall bank is not not complete.
 
-
 Keyword arguments
 -----------------
 

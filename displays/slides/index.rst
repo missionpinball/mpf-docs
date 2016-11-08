@@ -54,7 +54,6 @@ to do with the active and current slides of another display.
 
 .. image:: /displays/images/slides_with_multiple_displays.png
 
-
 .. toctree::
    :titlesonly:
 

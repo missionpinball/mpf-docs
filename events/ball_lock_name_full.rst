@@ -5,7 +5,6 @@ ball_lock_(name)_full
 
 The ball lock device (name) is now full.
 
-
 Keyword arguments
 -----------------
 

@@ -7,7 +7,6 @@ The ball device called "name" is attempting to eject a ball (or
 balls). This is a queue event. The eject will not actually be attempted
 until the queue is cleared.
 
-
 Keyword arguments
 -----------------
 

@@ -16,7 +16,6 @@ theshots in your machine. A *shot* is a switch (or a series of
 switches that have to be hit in order). Shots can be things like standup
 targets, rollover lanes, drop targets, ramps, loops, orbits, etc.
 
-
 Each shot can have a *shot profile* applied to it which defines what
 happens when its hit. For example the shot profile might specify that the shot starts unlit,
 then when it's hit it becomes complete. Or a shot profile might
@@ -44,7 +43,6 @@ modes.
 Here's a sample *shots:* section from a config file:
 
 ::
-
 
     shots:
         lane_l:
@@ -89,7 +87,6 @@ machine. Remember that everything with at least one switch and a
 loops... You will have lots of shots in your game.
 
 Each shot in your ``shots:`` section can have the following config options set:
-
 
 Optional settings
 -----------------
@@ -142,9 +139,7 @@ switch_sequence, then the time must pass before a new sequence will
 start to be tracked. Enter this switch with a time value (in seconds
 or ms), like this:
 
-
 ::
-
 
     shots:
       mode_start:
@@ -154,7 +149,6 @@ or ms), like this:
       rear_entry_mode_start:
         switch_sequence: rear_entry, mode_start
         time: 1.5s
-
 
 The example above illustrates a typical use for this where you have a
 single switch which you can hit from the front, and then also a rear
@@ -201,7 +195,6 @@ profile:
 Single value, type: ``string``. Default: ``None``
 
 The name of the *shot profile* that will be applied to this shot.
-
 
 + If you're editing a machine-wide config file , then the profile name
   specified here will be the default profile for that shot any time a
@@ -355,5 +348,4 @@ just enter a number then the system assumes you mean seconds. If you
 do not enter a time, or you enter a value of 0, then there is no
 timeout (i.e. the player could literally take multiple minutes between
 switch activations and the shot would count.)
-
 

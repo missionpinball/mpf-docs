@@ -42,7 +42,6 @@ and *servo2*:
 
 Then for each servo in your ``servos:`` section, the following settings apply:
 
-
 Required settings
 -----------------
 
@@ -55,7 +54,6 @@ Single value, type: ``string``.
 The number (or channel) of this servo. See the platform documentation or the
 how to guies for your specific servo for details of how this number works, since
 every platform is different.
-
 
 Optional settings
 -----------------
@@ -163,5 +161,4 @@ tags:
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Tags work like tags for any device. Nothing special here.
-
 

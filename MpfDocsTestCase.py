@@ -7,7 +7,6 @@ import uuid
 
 from mpf.tests.MpfTestCase import MpfTestCase
 
-
 class MpfDocsTestCase(MpfTestCase):
 
     """Allows unittests to extract configs from .rst files in mpf-docs and
@@ -105,5 +104,4 @@ class MpfDocsTestCase(MpfTestCase):
 
                     else:
                         config += line
-
 

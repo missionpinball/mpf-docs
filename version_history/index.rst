@@ -170,12 +170,10 @@ Dec 1, 2015
 * Improved event manager and event dispatch queue
 * Moved all utility functions to their own class.
 
-
 0.20
 ~~~~
 
 Sept 14, 2015
-
 
 * The *targets* and *shots* modules have been combined into a single
   module called *shots*.
@@ -260,14 +258,10 @@ Sept 14, 2015
 * Exposed wait queue events to mode configs, allowing code-less
   creation of modes that can hook into game flow (bonus, etc.)
 
-
-
-
 0.19
 ~~~~
 
 August 6, 2015
-
 
 * Completely rewritten target and drop target device module,
   including:
@@ -310,14 +304,10 @@ August 6, 2015
 * Added light and LED reset on machine mode start
 * Added default machine and mode delay managers
 
-
-
-
 0.18
 ~~~~
 
 June 2, 2015
-
 
 * FadeCandy and Open Pixel Control (OPC) support. This means you can
   use a FadeCandy or other OPC devices to control the LEDs in your
@@ -355,14 +345,10 @@ June 2, 2015
   loaded
 * Updated how the game controller tracks balls in play
 
-
-
-
 0.17
 ~~~~
 
 May 4, 2015
-
 
 * Broke MPF into two pieces: The MPF core engine and the MPF media
   player
@@ -378,14 +364,10 @@ May 4, 2015
 * General performance improvements. (Running MPF on my machine used to
   take about 50% CPU. Now it’s down to 15%.)
 
-
-
-
 0.16
 ~~~~
 
 April 9, 2015
-
 
 * Added slide "expire" time settings to the Slide Player.
 * Added *Demo Man* as the sample game code.
@@ -396,14 +378,10 @@ April 9, 2015
 * Change light script "time" to "tocks"
 * Created a centralized config processing module
 
-
-
-
 0.15
 ~~~~
 
 March 9, 2015
-
 
 * Added support for game modes.
 * Converted several existing modules to be mode-specific, including:
@@ -448,14 +426,10 @@ March 9, 2015
 * Modified the switch controller so events from undefined switches
   simply log a warning rather than raises an exception and halting MPF.
 
-
-
-
 0.14
 ~~~~
 
 February 9, 2015
-
 
 * Completely rewritten ball controller.
 * Completely rewritten ball device code.
@@ -479,14 +453,10 @@ February 9, 2015
   specific thing.)
 * Virtual Platform: default NC switch states fixed
 
-
-
-
 0.13
 ~~~~
 
 January 16, 2015
-
 
 * Major update to the sound system, including:
 
@@ -521,14 +491,10 @@ January 16, 2015
   utility so it can set the initial switches properly.
 * Ball Devices: fixed a typo on the cancel ball request event
 
-
-
-
 0.12
 ~~~~
 
 December 31, 2014
-
 
 * Added full display and DMD support, with support for physical DMDs,
   on screen virtual DMDs, color DMDs, and high res LCD displays.
@@ -564,14 +530,10 @@ December 31, 2014
 * Added many more events
 * Modified displays so they can each have independent refresh rates
 
-
-
-
 0.11
 ~~~~
 
 December 1, 2014
-
 
 * Created a Display Controller module which is responsible for
   handling all interactions with all types of displays, including DMD,
@@ -615,14 +577,10 @@ December 1, 2014
 * Virtual platform interface: Updated it so that it works when
   hardware DMDs are specified in the config files
 
-
-
-
 0.10
 ~~~~
 
 October 25, 2014
-
 
 * Added enable_events, disable_events, and reset_events to devices.
 * Removed the First Flips plug-in. (Since the thing above replaces it)
@@ -645,14 +603,10 @@ October 25, 2014
 * Info Lights: Forced game_over light to off when game starts
 * LEDs: Added force parameter to the off() method
 
-
-
-
 0.9
 ~~~
 
 October 7, 2014
-
 
 * Added a “Logic Blocks” plug-in which lets game programmers build
   flowchart-like game logic with the config files. No Python programming
@@ -747,14 +701,10 @@ October 7, 2014
   “target”)
 * Moved auditor, scoring, and shots out of system and into plugins
 
-
-
-
 0.8
 ~~~
 
 September 15, 2015
-
 
 * Platform support for FAST Pinball hardware
 * RGB LED support, including settings colors and fades
@@ -789,14 +739,10 @@ September 15, 2015
 * Reworked the EM score reel update process to simplify and streamline
   it
 
-
-
-
 0.7
 ~~~
 
 September 4, 2014
-
 
 * Support for lights and light shows.
 * An on-screen display of game metrics like score, player, and ball
@@ -823,14 +769,10 @@ September 4, 2014
 * Reorganized the machine files into machine-specific subfolders
 * Created an int_to_pwm() static method in Timing
 
-
-
-
 0.6
 ~~~
 
 August 19, 2014
-
 
 * Addition of a Shot Controller, allowing you to configure and group
   switches which become shots in the machine. (Read more about the
@@ -856,14 +798,10 @@ August 19, 2014
 * Created a queue for adding new tasks so our set won’t change while
   iterating
 
-
-
-
 0.5
 ~~~
 
 August 5, 2014
-
 
 * Created a single device parent class that’s used for all devices.
 * Rewrote and cleaned up devices. Now coils, switches, and lights are
@@ -913,14 +851,10 @@ August 5, 2014
 * Cleaned up the eject confirmation and valid playfield functionality
 * Added a remove_switch_handler method to the switch controller
 
-
-
-
 0.4
 ~~~
 
 July 25, 2014
-
 
 * MAJOR rewrite of how the hardware platform modules interact with the
   framework’s hardware module and how hardware is configured in general.
@@ -938,14 +872,10 @@ July 25, 2014
 * Made it so many things, like ball search, autofires, etc. would not
   crash the machine if they weren’t there.
 
-
-
-
 0.3
 ~~~
 
 July 16, 2014
-
 
 * Changed the way config files are loaded by making Config a normal
   section of any config file instead of using a special initial
@@ -954,27 +884,19 @@ July 16, 2014
 * Created a virtualhardware platform for virtual / software only
   testing that does not require P-ROC or FAST drivers.
 
-
-
-
 0.2
 ~~~
 
 July 11, 2014
 
-
 * Added docstring documentation
 * Added /sphinx folder and got the sphinx html docs included
 * Created the first version of the documentation
-
-
-
 
 0.1
 ~~~
 
 June 27, 2014
-
 
 * Command line parameters to select real or fake (simulated)
   controller hardware.

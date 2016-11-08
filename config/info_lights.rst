@@ -16,4 +16,3 @@ The ``info_lights:`` section of your config is where you...
 .. todo::
    Add description.
 
-

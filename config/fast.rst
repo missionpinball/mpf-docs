@@ -26,7 +26,6 @@ if you have FAST hardware.
         default_debounce_close: 10ms
         default_debounce_open: 30ms
 
-
 Required settings
 -----------------
 
@@ -60,7 +59,6 @@ enter it here unless you want to override that.
 Also, keep in mind that this setting is only a default. You can override
 it for any switch in that switch's config.
 
-
 default_quick_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
@@ -74,7 +72,6 @@ enter it here unless you want to override that.
 
 Also, keep in mind that this setting is only a default. You can override
 it for any switch in that switch's config.
-
 
 default_quick_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,13 +87,11 @@ enter it here unless you want to override that.
 Also, keep in mind that this setting is only a default. You can override
 it for any switch in that switch's config.
 
-
 ports:
 ~~~~~~
 List of one (or more) values, each is a type: ``string``.
 
 A comma-separated list of the serial port names your FAST controller uses.
-
 
 Optional settings
 -----------------
@@ -166,5 +161,4 @@ max time a driver could be stuck "on" if MPF crashes.) The default is
 1 second which is probably fine for almost everyone, and you don't
 have to include this section in your config if you want to use the
 default.
-
 

@@ -138,12 +138,10 @@ section). Any of the examples above apply, you just don't include the event name
            duration: 1s
            direction: up
 
-
 Here's a list of all the valid settings for individual slides in the ``slide_player:``
 section of your config file or the ``slides:`` section of a show. Note that all of these
 are optional. Any that you do not include will be automatically added with the default
 values applied.
-
 
 Optional settings
 -----------------
@@ -251,5 +249,4 @@ give it a name, and that name is added to the list of valid targets.
 
 So really the ``target:`` here is either the name of a display, or the name of a slide_frmae
 where you want this slide to be displayed.
-
 

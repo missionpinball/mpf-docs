@@ -5,7 +5,6 @@ reel_(name)_ready
 
 The score real (name) is ready to be pulsed again.
 
-
 Keyword arguments
 -----------------
 

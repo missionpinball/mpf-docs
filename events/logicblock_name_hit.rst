@@ -10,7 +10,6 @@ but this can be changed in a logic block's "events_when_hit:"
 setting, so this might not be the actual event that's posted for
 all logic blocks in your machine.
 
-
 Keyword arguments
 -----------------
 

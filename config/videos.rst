@@ -99,11 +99,9 @@ Single value, type: ``number``. Default: ``None``
 
 The height of this video, in pixels.
 
-
 width:
 ~~~~~~
 Single value, type: ``number``. Default: ``None``
 
 The width of this video, in pixels.
-
 

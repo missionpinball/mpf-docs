@@ -3,7 +3,6 @@ Mode Stop Sequence
 
 Here's what happens behind-the-scenes when a mode stops.
 
-
 #. An event listed in the mode's ``stop_events:`` setting is posted.
 #. This is handled by the mode's ``stop()`` method.
 
@@ -32,7 +31,4 @@ Here's what happens behind-the-scenes when a mode stops.
        included in the call to ``mode_stop()``.
 
 #. If a *callback* was saved in Step 2, it's called now.
-
-
-
 

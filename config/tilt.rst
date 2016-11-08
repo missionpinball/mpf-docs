@@ -16,7 +16,6 @@ The ``tilt:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -98,5 +97,4 @@ Single value, type: ``integer``. Default: ``3``
 
 .. todo::
    Add description.
-
 

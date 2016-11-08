@@ -6,7 +6,6 @@ balldevice_(name)_ball_eject_success
 One or more balls has successfully ejected from the device
 (name).
 
-
 Keyword arguments
 -----------------
 

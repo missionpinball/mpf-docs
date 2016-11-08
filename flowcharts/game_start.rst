@@ -4,7 +4,6 @@ Game Start Sequence
 This sequence document starts with the attract mode running and ends
 with the running.
 
-
 #. The player pushes a button tagged with "start". The time is noted.
 #. The player releases that button. (This is important because in MPF
    it's possible to do different things based on a so-called "long press"
@@ -42,9 +41,7 @@ with the running.
 #. The game mode posts the event *game_started* .
 #. The game mode calls its ``player_turn_start()`` method.
 
-
 At this point we have a running game!
-
 
 How the "request_to_start_game" event works
 -------------------------------------------
@@ -61,7 +58,6 @@ if anything "kills" that event, that will cause whatever module that
 posted it to *not* proceed. This can be a bit confusing, so let's go
 through this in plain English:
 
-
 #. When a player pushes and releases the start button, the attract
    mode says, "Hey! I'd like to start a game now. Does anyone have a
    problem with that?
@@ -71,7 +67,6 @@ through this in plain English:
    follow up event to kick off the game start process."
 #. But if any component denies the start, then the attract mode will
    do nothing, and the game doesn't start.
-
 
 So what types of components might register to watch for and/or
 interrupt the game start request? Lots of them.

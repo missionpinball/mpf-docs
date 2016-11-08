@@ -97,7 +97,6 @@ etc.), and YAML was the best trade-off in terms of having the features we needed
 By the way, at some point we'll create GUI tools you can use to build your configs instead of having to hand-edit
 YAML files, but that's probably a few years away, so in the meantime, get used to YAML. :)
 
-
 2. Enter the hardware numbers for your switches
 -----------------------------------------------
 
@@ -127,7 +126,6 @@ platform:
             number: 0  # this can be blank if you don't have physical hw yet
         s_right_flipper:
             number: 1  # if you do have physical hw, most likely your number will be different
-
 
 3. Add your flipper coils
 -------------------------
@@ -183,7 +181,6 @@ starting a fire.
 So in the case if your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
 to act as a flipper, that coil need to be allowed to be enabled (held on).
 
-
 4. Add your flipper "devices"
 -----------------------------
 
@@ -211,7 +208,6 @@ Here's what you would create based on the switches and coils we've defined so fa
             main_coil: c_flipper_right_main
             hold_coil: c_flipper_right_hold
             activation_switch: s_right_flipper
-
 
 5. Try running MPF to make sure your config file is ok
 ------------------------------------------------------
@@ -243,7 +239,6 @@ you setup in your config file is ok.
 
 At this point you can stop it by making sure your console window has
 focus and then hitting ``CTRL+C``.
-
 
 What if it didn't work?
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -302,7 +297,6 @@ Again, recapping the rules of YAML:
 + Make sure you *do not* have a space *before* each colon.
 + Make sure you *do* have a space *after* each colon.
 + Make sure you have the ``#config_version=4`` as the first line in your file.
-
 
 6. Enabling your flippers
 -------------------------
@@ -512,7 +506,6 @@ companion video is showing *Judge Dredd*, and it's based on an older
 version of MPF, but the basic concepts are the same.)
 
 https://www.youtube.com/watch?v=SkxZxkHHmXw
-
 
 What if it doesn't work?
 ------------------------

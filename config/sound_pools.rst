@@ -25,7 +25,6 @@ Here's an example of a typical sound_pool configuration.
 
 ::
 
-
     sound_pools:
        drain_callout:
           type: random_force_all
@@ -48,8 +47,6 @@ Here's an example of a typical sound_pool configuration.
              target_completion_01
              target_completion_02
              target_completion_03
-
-
 
 To create a sound pool, add a sub entry to the  ``sound_pools:`` section of your config which will
 be the name of that sound pool. The name must be unique among all sound pools *and* sound assets.

@@ -321,7 +321,6 @@ Single value, type: one of the following options: hold, pulse. Default: ``hold``
 Specifies how the *activation_coil* should be activated. You have two
 options here:
 
-
 + ``pulse`` - MPF will pulse the coil to activate the diverter.
 + ``hold`` - MPF should hold the diverter coil in a constant state of
   "on" when the diverter is active. Note that if the coil is configured
@@ -330,5 +329,4 @@ options here:
   continuous enable to hold the coil. (In this case you would need to
   add *allow_enable: true* to that coil's configuration in the *coils:*
   section of your machine configuration file.)
-
 

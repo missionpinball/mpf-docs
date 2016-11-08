@@ -20,7 +20,6 @@ Why would you want to use the "pulse
 timing" method versus the "EOS switch" method for the flipper power
 stroke? There are a few reasons:
 
-
 + You can control the "strength" of the flippers in software, rather
   than with hardware. This means you can fine tuning the flipper feel
   for your game without having to swap coils or adjust voltages.
@@ -30,7 +29,6 @@ stroke? There are a few reasons:
 + Your software can change the strength as part of a game feature.
   (For example, Wizard of Oz has a "weak flippers" mode which makes the
   shots harder.)
-
 
 Having said this, there's still a reason you might want to use the EOS
 switches today—-the EOS switch can be used to detect if a fast-moving
@@ -133,7 +131,6 @@ flipper power, and certainly this is a much more modern approach than
 physically swapping out flipper coils to increase or decrease power.
 Then again, if you're old school and want to fire that flipper with
 full power until that EOS switch is activated, fine, go for it.
-
 
 Design Decision 3: Will you use EOS switches to notify the game that a ball has "broken through" the hold?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

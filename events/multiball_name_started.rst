@@ -5,7 +5,6 @@ multiball_(name)_started
 
 The multiball called (name) has just started.
 
-
 Keyword arguments
 -----------------
 

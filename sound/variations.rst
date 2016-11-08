@@ -42,7 +42,6 @@ rename the file to *triangle_01.wav* and omit the *file:* setting):
          file: 13147__looppool__triangle1.wav
          volume: 0.7
 
-
 Now add a few variations of the sound. I used my favorite sound editor to slightly adjust the
 pitch and frequency content of the triangle sound file, creating three variations. You can also
 just find some other similar sounds on the internet. After you have your variations, place them in
@@ -63,7 +62,6 @@ section in the machine configuration file (I named the sound variations *triangl
       triangle_04:
          volume: 0.7
 
-
 3. Configure the sound pool
 ---------------------------
 
@@ -81,7 +79,6 @@ sound pool object so we can treat them as a single sound.  To do so, we need to 
             triangle_02
             triangle_03
             triangle_04
-
 
 We now have a sound pool asset called ``triangle`` that acts just like a sound asset, except that
 each time ``triangle`` is played, one of the 4 sound variations contained in the sound pool will
@@ -104,7 +101,6 @@ again:
             triangle_02|2
             triangle_03|2
             triangle_04|1
-
 
 Notice we've added a pipe character (``|``) to the end of each sound followed by a numeric value.
 These values assign a relative weight to each sound that will be used in the random selection

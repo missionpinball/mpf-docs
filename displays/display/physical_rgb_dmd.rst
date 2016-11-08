@@ -79,7 +79,6 @@ this:
         window_slide_1:
           target: window
 
-
 Here's a hookup diagram which shows how all the components you need fit together:
 
 .. image:: /displays/images/smartmatrix_architecture.png
@@ -162,7 +161,6 @@ that basically just connects the Teensy's GPIO pins to the 16-pin
 ribbon cable that drives the displays.
 
 .. image:: /displays/images/smartmatrix_shield.jpg
-
 
 The Teensy mounts onto the
 SmartMatrix shield, creating a single unit which accepts data via USB
@@ -531,11 +529,6 @@ be the default.
 
    We need more explanation of how to run with no window here.
 
-
-
-
-
-
 Troubleshooting
 ---------------
 
@@ -552,6 +545,5 @@ then set your platform: section like this:
     hardware:
         platform: virtual
         rgb_dmd: smartmatrix
-
 
 Then run MPF but *do not use -x*, and it should work.

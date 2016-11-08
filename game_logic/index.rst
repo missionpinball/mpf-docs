@@ -30,8 +30,6 @@ to tutorials, event listings, and configuration
 
    Video Mode <video_modes/index>
 
-
    Scoring <scoring/index>
    Tilt <tilt/index>
-
 

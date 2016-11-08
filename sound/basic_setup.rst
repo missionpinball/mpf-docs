@@ -37,8 +37,6 @@ Example:
               simultaneous_sounds: 8
               volume: 0.4
 
-
-
 2. Configuring your sound asset folders
 ---------------------------------------
 
@@ -131,7 +129,6 @@ text:
         triangle:
             file: 22783__franciscopadilla__80-mute-triangle.wav
 
-
 That simple configuration change will allow the sound as to be referred to as ``triangle`` wherever
 you refer to that sound in other configuration locations. *Note*: be sure to include the complete
 file name, including the extension when using the ``file:`` setting.
@@ -150,7 +147,6 @@ set the volume of the *triangle* sound in our config file:
         triangle:
             file: 22783__franciscopadilla__80-mute-triangle.wav
             volume: 0.85
-
 
 ``volume:`` controls the volume of the sound and works in conjunction with the track volume and the
 master volume.  Volume can either be entered as a number between 0.0 and 1.0 or as a decibel level
@@ -212,7 +208,6 @@ Example ``sounds:`` configuration demonstrating most common settings:
             volume: 1.0
             priority: 100
 
-
 5. Hooking up an MPF event to play a sound
 ------------------------------------------
 
@@ -237,7 +232,6 @@ following entries in the ``sound_player:`` section of the machine config file:
         mode_attract_stopped:
             song_01:
                 action: stop
-
 
 That's it.  The ``song_01`` sound will be played on the music track whenever *attract* mode is
 started and will stop whenever *attract* mode is stopped.  The ``mode_attract_started``

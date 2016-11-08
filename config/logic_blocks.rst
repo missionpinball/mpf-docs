@@ -16,7 +16,6 @@ The ``logic_blocks:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 accrual:
 --------
 
@@ -34,7 +33,6 @@ List of one (or more) values, each is a type: ``string``.
 .. todo::
    Add description.
 
-
 sequence:
 ---------
 
@@ -49,7 +47,6 @@ List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
-
 
 counter:
 --------
@@ -67,7 +64,6 @@ List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
-
 
 Optional settings
 ~~~~~~~~~~~~~~~~~
@@ -115,7 +111,6 @@ Single value, type: ``integer``. Default: ``0``
 
 .. todo::
    Add description.
-
 
 common:
 -------
@@ -190,7 +185,6 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
-
 sequence:
 ---------
 
@@ -208,7 +202,6 @@ List of one (or more) values, each is a type: ``string``.
 .. todo::
    Add description.
 
-
 sequence:
 ---------
 
@@ -223,6 +216,4 @@ List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
-
-
 

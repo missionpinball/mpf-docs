@@ -105,5 +105,3 @@ a config. You also have the option to define new slides directly in each of
 these sections. See the :doc:`creating_slides` section of the documentation
 for instructions on how to do that.
 
-
-

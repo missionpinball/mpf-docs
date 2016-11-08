@@ -38,10 +38,9 @@ Now reboot, login and type:
 
 ::
 
-    sudo apt-get update 
-	
-to update the debian repositories links.
+    sudo apt-get update
 
+to update the debian repositories links.
 
 The standard /tmp "folder" is too small on pipaos, just type:
 
@@ -62,10 +61,9 @@ Now we are ready to install mpf and its dependencies!
 ::
 
     sudo pip3 install mpf-mc
-	
+
 Take care to use pip3 and not pip!
 
-	
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
 Sometimes it looks like it hangs, but it does not. It will take up to half an hour, at least on a Raspberry 1 (which you should not use). Compiling is really slow on the Raspi.
 
@@ -77,16 +75,15 @@ If you need to copy your folders from an usb-stick you have to manually mount it
 
 ::
 
-    sudo mount /dev/sda1 /mnt 
-	
+    sudo mount /dev/sda1 /mnt
+
 This works in 90% otherwise your stick is not sda1, just look inside the /dev folder to find out which device you have to mount or type
 
 ::
 
     lsblk
-	
-to list your block devices.
 
+to list your block devices.
 
 Now you find the contents of your stick in /mnt.
 
@@ -105,8 +102,7 @@ To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have 
 
   kivy_config:
     graphics:
-	  fbo: force-hardware 
-
+	  fbo: force-hardware
 
 More or less important last steps:
 ----------------------------------
@@ -129,7 +125,6 @@ Now you have to disable the console itself:
 
   sudo mc
 
-
 to start Midnight Commander as root (normally you should not do this, but this time you have to.)
 
 Now go to /boot and press F4 over cmdline.txt.
@@ -138,7 +133,7 @@ Remove these entries:
 
 console=ttyAMA0,115200 kgdboc=ttyAMA0, 115200
 
-and save the file. 
+and save the file.
 
 You have the possibility to connect RS 232 devices directly to the raspi but take care, the voltage levels are 3.3V on the raspi gpio.
 Further instructions here:
@@ -156,7 +151,6 @@ edit this file as root and insert this line:
 
 Inside this file you can change some settings that initialize on boot, its like a bios which the raspberry does not have.
 
-
 Video Playback:
 ---------------
 If you need video capability in your mpf-mc you need to install one player that kivy will use to play your videos:
@@ -170,14 +164,13 @@ You can try videoplayback with
 ::
 
   omxplayer your_video.mp4
-  
+
 To test the video playback capability under kivy into the framebuffer just run this command:
 
 ::
 
   python3 -m kivy.uix.videoplayer /usr/local/lib/python3.4/dist-packages/mpfmc/tests/machine_files/video/videos/mpf_video_small_test.mp4
-  
-  
+
 Troubleshooting:
 ----------------
 
@@ -218,12 +211,11 @@ See whats going on on your pinball:
 ::
 
   sudo dispman_vncserver
-  
+
 This starts a vncserver on your raspi and you can log in remotely from a RealVNCViewer
 https://www.realvnc.com/download/viewer/
 
 Kivypie IP address, port 5900. It is not 100% reliable but fairly usable. Thanks to Peter Hanzel.
-
 
 Start mpf and mpf-mc
 --------------------
@@ -238,10 +230,10 @@ in your machine_folder.
 
 Press (STRG+ALT F2) to change to the second terminal tty2.
 
-Login and start mpf-mc inside your machine folder with 
+Login and start mpf-mc inside your machine folder with
 
 ::
 
   mpf mc
-  
+
 Enjoy!

@@ -40,7 +40,6 @@ configuration right. In the example above, the *shot_target* event has
 to fire first, then a ball has to enter the right popper, then the
 player has to hit either the right or left standup
 
-
 player_variable:
 ~~~~~~~~~~~~~~~~
 

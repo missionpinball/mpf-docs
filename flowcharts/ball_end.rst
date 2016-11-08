@@ -4,7 +4,6 @@ Ball End Sequence
 This sequence starts with a ball live and in play and ends when the
 ball drains and the ball is over.
 
-
 #. The ball enters a ball device device tagged with drain.
 #. The ball controller's ``_ball_drained_handler()`` method responds to
    the ball having entered a device tagged with ``drain``.
@@ -34,9 +33,4 @@ ball drains and the ball is over.
 
 #. Otherwise the game mode's ``player_rotate()`` method is called.
 #. The game mode's ``player_turn_start()`` method is called.
-
-
-
-
-
 

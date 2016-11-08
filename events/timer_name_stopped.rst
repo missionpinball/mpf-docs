@@ -8,7 +8,6 @@ The timer named (name) has stopped.
 This event is posted any time the timer stops, whether it stops because
 it ended or because it was stopped early by some other event.
 
-
 Keyword arguments
 -----------------
 

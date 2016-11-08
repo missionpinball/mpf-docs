@@ -32,7 +32,6 @@ In MPF, ball devices are implemented as
 Each ball device is responsible for managing its own state, which can
 be:
 
-
 + idle
 + missing_balls
 + waiting_for_ball

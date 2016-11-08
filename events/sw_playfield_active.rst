@@ -6,7 +6,6 @@ sw_(playfield)_active
 The playfield called (playfield) was active, though a ball
 was just removed from it.
 
-
 Keyword arguments
 -----------------
 

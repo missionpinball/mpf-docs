@@ -16,7 +16,6 @@ The ``playfields:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -98,5 +97,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 

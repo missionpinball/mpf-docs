@@ -36,7 +36,6 @@ And then later you refer to it via your code as
 
     self.machine.coils['flipperLeftMain']
 
-
 That will still work because the device collection object that holds
 the list of coils will convert the incoming request to lowercase. All
 that said, there's one "gotcha" with this. The case insensitivity

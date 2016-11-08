@@ -16,7 +16,6 @@ The ``high_score:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -28,7 +27,6 @@ One or more sub-entries, each in the format of type: ``str``:``list``.
 
 .. todo::
    Add description.
-
 
 Optional settings
 -----------------
@@ -62,5 +60,4 @@ Single value, type: ``string``. Default: ``right_flipper``
 
 .. todo::
    Add description.
-
 

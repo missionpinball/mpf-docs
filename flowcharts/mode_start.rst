@@ -3,7 +3,6 @@ Mode Start Sequence
 
 Here's what happens when a mode starts:
 
-
 #. One of the events in the mode's ``start_events:`` is posted.
 #. The mode's ``start()`` method responds since it's registered as a
    handler for those events.
@@ -41,7 +40,4 @@ Here's what happens when a mode starts:
 
 #. If a start *callback* was passed with the event that started the
    mode, it's called now.
-
-
-
 

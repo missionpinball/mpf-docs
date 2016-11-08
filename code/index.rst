@@ -38,7 +38,6 @@ complexity of MPF, meaning you can get your custom code integrated
 with just some basic Python knowledge. There are two easy ways to add
 custom Python code to your game project:
 
-
 + Sciptlets , which are "machine-wide" chunks of code that are always
   active.
 + Mode-specific code, which allows you to write custom Python code
@@ -58,7 +57,6 @@ API Documentation
 We have documented the API for MPF and MPF-MC. That documentation
 lives at `api.missionpinball.org <http://api.missionpinball.org>`_, and it's the reference we use
 ourselves when writing MPF.
-
 
 .. toctree::
    :maxdepth: 1

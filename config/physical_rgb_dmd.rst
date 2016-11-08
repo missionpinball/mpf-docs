@@ -16,7 +16,6 @@ The ``physical_rgb_dmd:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -49,5 +48,4 @@ Single value, type: ``string``. Default: ``dmd``
 
 .. todo::
    Add description.
-
 

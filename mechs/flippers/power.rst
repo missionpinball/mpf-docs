@@ -106,7 +106,6 @@ realize it's too hard to make a ramp shot and you have to increase the
 power a bit. Later on when you have a real game, you can even expose
 these pulse settings to operators via the service menu.
 
-
 Adjusting single-wound coil "hold" strength
 -------------------------------------------
 

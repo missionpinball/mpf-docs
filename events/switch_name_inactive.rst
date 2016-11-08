@@ -9,7 +9,6 @@ menu navigation. Note that this is not posted for every switch all
 the time, rather, only for switches that have been configured to
 send events to BCP.
 
-
 Keyword arguments
 -----------------
 

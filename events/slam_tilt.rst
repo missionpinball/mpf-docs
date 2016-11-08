@@ -5,7 +5,6 @@ slam_tilt
 
 A slam tilt has just occurred.
 
-
 Keyword arguments
 -----------------
 

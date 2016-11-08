@@ -25,7 +25,6 @@ of the on-screen window which is created by MPF-MC.
         exit_on_escape: True
         source_display: window
 
-
 Optional settings
 -----------------
 
@@ -145,5 +144,4 @@ width:
 Single value, type: ``integer``. Default: ``800``
 
 The initial width of the popup window, specified in pixels.
-
 

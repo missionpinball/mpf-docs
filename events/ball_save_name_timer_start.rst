@@ -5,7 +5,6 @@ ball_save_(name)_timer_start
 
 The ball save called (name) has just start its countdown timer.
 
-
 Keyword arguments
 -----------------
 

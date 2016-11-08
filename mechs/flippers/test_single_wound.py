@@ -1,6 +1,5 @@
 from MpfDocsTestCase import MpfDocsTestCase
 
-
 class TestSingleWound(MpfDocsTestCase):
 
     rst_target = 'mechs/flippers/single_wound'

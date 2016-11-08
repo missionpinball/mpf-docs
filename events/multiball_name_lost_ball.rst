@@ -5,7 +5,6 @@ multiball_(name)_lost_ball
 
 The multiball called (name) has lost a ball after ball save expired.
 
-
 Keyword arguments
 -----------------
 

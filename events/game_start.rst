@@ -6,7 +6,6 @@ game_start
 A game is starting. (Do not use this event to start a game.
 Instead, use the *request_to_start_game* event.
 
-
 Keyword arguments
 -----------------
 

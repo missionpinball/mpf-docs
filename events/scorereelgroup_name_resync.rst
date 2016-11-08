@@ -6,7 +6,6 @@ scorereelgroup_(name)_resync
 The score reel group (name) is not valid and will be
 resyncing.
 
-
 Keyword arguments
 -----------------
 

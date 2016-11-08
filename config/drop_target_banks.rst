@@ -62,7 +62,6 @@ second three, and one for all six. Then you could track separate up
 and down events for a subset of three or for all six getting knocked
 down.
 
-
 Optional settings
 -----------------
 
@@ -112,6 +111,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 Special / reserved tags for drop target banks: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
-
-
 

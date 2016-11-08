@@ -3,8 +3,6 @@ How to install P-ROC / P3-ROC drivers on Windows (64-bit)
 
 This guide explains how to install the USB drivers for the P-ROC or P3-ROC on 64-bit Windows (x64).
 
-
-
 1. Download and install the FTDI drivers
 ----------------------------------------
 

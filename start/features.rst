@@ -101,7 +101,6 @@ Game logic
 
 See the :doc:`Game Logic</game_logic/index>` documentation for full details.
 
-
 Displays, DMDs, & Graphics
 --------------------------
 
@@ -121,7 +120,6 @@ Displays, DMDs, & Graphics
 
 See the :doc:`Displays</displays/index>` documentation for full details.
 
-
 Sounds & Audio
 --------------
 
@@ -137,7 +135,6 @@ Sounds & Audio
 
 See the :doc:`Sounds</sound/index>` documentation for full details.
 
-
 Shows
 -----
 
@@ -148,7 +145,6 @@ Shows
 + Change the playback speed of shows (even while they're playing)
 
 See the :doc:`Shows</shows/index>` documentation for full details.
-
 
 Other stuff
 -----------
@@ -164,7 +160,6 @@ Other stuff
 + A mode "code" interface which lets you add custom Python code to game modes.
 + A switch "player" which lets you play back timed sequences of
   switches for automated testing and simulation.
-
 
 And the best part: Everything mentioned on this page can be done via the text-
 based configuration files. If you don't want to be a "coder," you don't have to

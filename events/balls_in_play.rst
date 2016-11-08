@@ -11,7 +11,6 @@ as the number of balls loose on the playfield. For example, if the
 player shoots a lock and is watching a cut scene, there is still
 one ball in play even though there are no balls on the playfield.
 
-
 Keyword arguments
 -----------------
 

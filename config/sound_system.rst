@@ -19,7 +19,6 @@ Here's an example of a typical sound configuration.
 
 ::
 
-
     sound_system:
         buffer: 1024
         channels: 1
@@ -36,7 +35,6 @@ Here's an example of a typical sound configuration.
            sfx:
               simultaneous_sounds: 8
               volume: 0.4
-
 
 Optional settings
 -----------------
@@ -107,7 +105,6 @@ is that you play all your music clips on the music track, voice callouts on the 
 the sound effects on the sfx track. To create a track, add a sub entry to the `tracks:` section
 which will be the name of that track. (So again, `music:`, `voice:` and `sfx:` in the example.
 Then create one or more of the following settings for each track:
-
 
 Optional settings
 ~~~~~~~~~~~~~~~~~

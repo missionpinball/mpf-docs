@@ -87,11 +87,9 @@ Protocol Format
 + An unrecognized command results in an error response with the
   message “unknown command”
 
-
 In all commands referenced below, the `\n` terminator is implicit. Some
 characters in parameters such as spaces would really be encoded as %20
 in operation, but are left unencoded here for clarity.
-
 
 Initial Handshake
 -----------------
@@ -110,16 +108,12 @@ speak. The media controller may reply with one of two responses:
 
     hello?version=1.0
 
-
 ...indicating that it can speak the protocol version named, and
 reporting the version it speaks, or
 
-
 ::
 
-
     error?message=unknown protocol version
-
 
 ...indicating that it cannot. How the pin controller handles this
 situation is implementation-dependent.
@@ -201,7 +195,6 @@ Credits
 -------
 
 The Backbox Control Protocol is being developed by:
-
 
 + Quinn Capen
 + Kevin Kelm (responsible for the initial concept and first draft of the specification)

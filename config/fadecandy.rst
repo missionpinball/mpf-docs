@@ -16,7 +16,6 @@ The ``fadecandy:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -63,5 +62,4 @@ List of one (or more) values, each is a type: ``number`` (will be converted to f
 
 .. todo::
    Add description.
-
 

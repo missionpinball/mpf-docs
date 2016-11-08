@@ -9,7 +9,6 @@ this is now a multiplayer game.
 This event is typically used to switch the score display from the
 single player layout to the multiplayer layout.
 
-
 Keyword arguments
 -----------------
 

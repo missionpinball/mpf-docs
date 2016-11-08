@@ -16,4 +16,3 @@ The ``text_strings:`` section of your config is where you...
 .. todo::
    Add description.
 
-

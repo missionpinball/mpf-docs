@@ -14,7 +14,6 @@ led_settings:
 The ``led_settings:`` section of your config is where you configure settings
 for RGB LEDs in your machine.
 
-
 Optional settings
 -----------------
 
@@ -98,5 +97,4 @@ LEDs that don't have fade_ms settings configured. If you configure an
 individual LED's *fade_ms*, it will override this setting.
 
 .. todo:: Verify platforms this works on.
-
 

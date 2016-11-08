@@ -7,7 +7,6 @@ A ball has been lost from the device (name), meaning the ball
 never made it to the target when this device attempted to eject
 it.
 
-
 Keyword arguments
 -----------------
 

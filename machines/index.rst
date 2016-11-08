@@ -14,7 +14,6 @@ There are three options when it comes to using MPF with a pinball machine:
   replace all the artwork to transform it into something else. (And you rewrite
   all the rules for your new theme.)
 
-
 Here are more details on each option. The "rewrite the rules" and "retheme" options
 above are combined below into the "controlling an existing machine" section:
 

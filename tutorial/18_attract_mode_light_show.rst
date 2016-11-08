@@ -145,7 +145,6 @@ each on their own line. When a show is on the same line as the event, the "play"
 assumed, but now that we moved the show to its own line, we have to specify what action
 we want to take place.
 
-
 Save your machine config
 file, save your light show file, and run your game. You should see
 your light show and the display show start playing once the attract mode starts up.

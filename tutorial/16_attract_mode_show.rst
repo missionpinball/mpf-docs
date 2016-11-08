@@ -57,7 +57,6 @@ that mode's ``/shows`` folder since it keeps everything from one mode together.
 Here's a complete sample ``attract_display_loop.yaml``
 file you can use as a starting point:
 
-
 ::
 
    #show_version=4

@@ -16,7 +16,6 @@ The ``osc:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -56,5 +55,4 @@ Single value, type: ``integer``. Default: ``9000``
 
 .. todo::
    Add description.
-
 

@@ -18,7 +18,6 @@ The ``show_player:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -94,7 +93,5 @@ Single value, type: ``integer``. Default: ``0``
 .. todo::
    Add description.
 
-
 .. note:: The ``show_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 

@@ -5,7 +5,6 @@ master_volume_increase
 
 Increase the master volume of the audio system.
 
-
 Keyword arguments
 -----------------
 

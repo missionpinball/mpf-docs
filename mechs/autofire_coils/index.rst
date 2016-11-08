@@ -43,7 +43,6 @@ For example, imagine what happens when a ball hits a slingshot:
 #. That command is queued on the USB bus and transmitted.
 #. The hardware controller fires the slingshot coil.
 
-
 Wow! That's a lot of steps just to fire a coil when a switch is hit!
 Unfortunately the entire process of all this going from the hardware
 to the computer to the game code to the hardware to the coil takes
@@ -94,7 +93,6 @@ you'd need for a dual-wound (power and hold windings) flipper coil:
   enable the power coil. (This causes the flipper to go back to the "up"
   position if for some reason it comes down when the player is holding
   the flipper button.)
-
 
 Now look at that above list. That's six rules just for one flipper! If
 you have four flippers in your game, you'll have 24 autofire rules
@@ -164,7 +162,6 @@ can all be handled in your game code because in those cases you don't
 care about the extra 1/100th of a second delay. You only need autofire
 rules for things you want to happen instantly, which is usually only
 pop bumpers, slingshots, and flippers.
-
 
 How MPF handles autofire rules
 ------------------------------

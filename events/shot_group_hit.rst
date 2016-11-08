@@ -14,7 +14,6 @@ time (typically each associated with a mode), so a single hit to this
 shot might result in this event being posted multiple times with
 different (profile) values.
 
-
 Keyword arguments
 -----------------
 

@@ -5,7 +5,6 @@ The *sound player* is a :doc:`config player </config_players/index>` that's used
 sounds. (This player is part of the MPF media controller and only available if you're using MPF-MC
 for your media controller.)
 
-
 Usage in config files
 ---------------------
 
@@ -16,7 +15,6 @@ sub-headings below that.
 Example:
 
 ::
-
 
     sound_player:
         play_sound_slingshot: slingshot_01
@@ -30,7 +28,6 @@ Example:
             extra_ball:
                 action: stop
 
-
 Usage in shows
 --------------
 
@@ -39,7 +36,6 @@ In shows, the sound player is used via the ``sounds:`` section of a step.
 Example:
 
 ::
-
 
     shows:
         my_show_with_sound:
@@ -54,7 +50,6 @@ Example:
                 sounds:
                     explosion:
                         volume: 0.8
-
 
 Optional settings
 -----------------

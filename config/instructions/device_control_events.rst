@@ -26,7 +26,6 @@ you can add the following line to the configuration for your flipper:
 
     enable_events: ball_started
 
-
 If you have multiple events
 ---------------------------
 
@@ -58,7 +57,6 @@ each one on its own line started with a dash and a space, like this:
         - ball_ending
         - tilt
         - slam_tilt
-
 
 It makes no difference to MPF, rather this is just a personal
 preference for how you want your config files to look.

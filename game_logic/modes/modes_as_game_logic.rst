@@ -51,4 +51,3 @@ start the managers_choice_multiball mode anytime multiball play is going on, and
 they’ll each only do their award if the base managers_choice_lit is running and
 the shot is made.
 
-

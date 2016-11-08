@@ -54,7 +54,6 @@ This is the numeric value that this mode will run at. (Note that this
 cannot be changed once the mode is running.) This priority affects two
 things:
 
-
 + The priority order of the modes which affects the order shots and
   other "blockable" events are processed.
 + The default priority that other things from this mode run at
@@ -103,7 +102,6 @@ enter the name of the event that represents when you want to start the
 mode. This could be the event from a shot being made, the resultant
 event from a logic block being completed, etc.
 
-
 start_priority:
 ~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
@@ -121,7 +119,6 @@ here.)
 
 Note that the ``start_priority:`` setting only matters when you have multiple
 modes that are set to start on the same event.
-
 
 stop_events:
 ~~~~~~~~~~~~

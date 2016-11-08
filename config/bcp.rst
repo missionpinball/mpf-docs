@@ -64,14 +64,12 @@ This section contains a list of MPF events that get mapped to BCP
 commands. You shouldn't have to change this. This is what MPF uses
 internally to map MPF events to the BCP command specification.
 
-
 + `<event_name>:` The name of the MPF event you're creating a mapping
   for.
 + `command:` The name of the BCP command that will be sent when the
   MPF event is posted.
 + `params:` A list of parameters that will be passed via BCP along
   with this BCP command.
-
 
 player_variables:
 -----------------
@@ -81,22 +79,17 @@ variables will be broadcast via BCP to the media controller. (MPF will
 send these any time there's a change.) You can either list out the
 individual names of the players variables you want to send, like this:
 
-
 ::
-
 
         player_variables:
             ball
             extra_balls
 
-
 Or you can use the entry `__all__` (that's two underscores, the
 letters "all", then two more underscores) to send every change of
 every player variable to the media controller. Here's an example:
 
-
 ::
-
 
         player_variables:
             __all__

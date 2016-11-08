@@ -40,7 +40,6 @@ in the folder for each machine. (Check out the documentation on the Auditor to s
             score
         num_player_top_records: 10
 
-
 Optional settings
 -----------------
 
@@ -90,5 +89,4 @@ save_events:
 List of one (or more) values, each is a type: ``string``. Default: ``ball_ended``
 
 A list of events that trigger the auditor to save its audits to disk.
-
 

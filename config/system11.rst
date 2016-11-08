@@ -16,7 +16,6 @@ The ``system11:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -29,7 +28,6 @@ Single value, type: string name of a ``coils:`` device.
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -41,5 +39,4 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 .. todo::
    Add description.
-
 

@@ -5,7 +5,6 @@ scorereelgroup_(name)_valid
 
 The score reall group (name) is valid.
 
-
 Keyword arguments
 -----------------
 

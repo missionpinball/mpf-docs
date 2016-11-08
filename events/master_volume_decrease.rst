@@ -5,7 +5,6 @@ master_volume_decrease
 
 Decrease the master volume of the audio system.
 
-
 Keyword arguments
 -----------------
 

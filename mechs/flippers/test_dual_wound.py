@@ -1,6 +1,5 @@
 from MpfDocsTestCase import MpfDocsTestCase
 
-
 class TestDualWound(MpfDocsTestCase):
 
     rst_target = 'mechs/flippers/dual_wound'

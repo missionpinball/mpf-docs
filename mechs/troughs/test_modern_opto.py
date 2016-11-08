@@ -1,6 +1,5 @@
 from MpfDocsTestCase import MpfDocsTestCase
 
-
 class TestModernOpto(MpfDocsTestCase):
 
     rst_target = 'mechs/troughs/modern_opto'

@@ -6,7 +6,6 @@ timer_(name)_tick
 The timer named (name) has just counted down (or up,
 depending on its settings).
 
-
 Keyword arguments
 -----------------
 

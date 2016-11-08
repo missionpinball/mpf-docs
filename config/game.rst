@@ -19,7 +19,6 @@ to the game play.
         balls_per_game: 3
         max_players: 4
 
-
 Optional settings
 -----------------
 
@@ -76,6 +75,4 @@ it's possible that starting a game is not allowed. For example, if the
 machine is set to require credits and there are not enough credits available.)
 
 This is the name of the tag in the ``tags:`` section of one of your switches.
-
-
 

@@ -41,7 +41,6 @@ Here's an example section:
             hold_power: 3
             tags: ball_search
 
-
 The options are as follows:
 
 Required settings
@@ -65,7 +64,6 @@ coil is physically connected to. The exact format used here will
 depend on whether you're using a P-ROC or FAST controller, and what
 type of driver board you're using. See the platform-specific how to
 guides for details.
-
 
 Optional settings
 -----------------
@@ -125,7 +123,6 @@ This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an integer value from 0-8
 which controls the relative power:
 
-
 + 0: 0% power (e.g. "off")
 + 1: 12.5%
 + 2: 25%
@@ -135,7 +132,6 @@ which controls the relative power:
 + 6: 75%
 + 7: 87.5%
 + 8: 100% (see the "allow_enable" section below)
-
 
 Different hardware platforms implement the hold power in different
 ways, so this 0-8 *hold_power* setting provides a generic interface

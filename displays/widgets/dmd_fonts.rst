@@ -51,7 +51,6 @@ dmd_med is 7 pixels tall.
 
 .. image:: /displays/images/dmd_med.png
 
-
 style: dmd_small
 ----------------
 

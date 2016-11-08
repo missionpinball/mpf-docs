@@ -66,7 +66,6 @@ So in the case if your flippers, the hold coil of a flipper needs to have
 ``allow_enable: true`` since in order for it to act as a flipper, that coil
 needs to be allowed to be enabled (held on).
 
-
 3. Add your flipper entries
 ---------------------------
 

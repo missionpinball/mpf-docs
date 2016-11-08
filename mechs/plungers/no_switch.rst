@@ -5,7 +5,6 @@ Modern pinball machines have a switch in the plunger lane that tells
 the software that a ball is sitting in the plunger lane waiting to
 be plunged.
 
-
 This document describes how you configure MPF to work with plunger
 lanes when the plunger lane has no switch which is active when a ball
 is sitting at the plunger. (This is common is older single-ball
@@ -17,7 +16,6 @@ Here's an example of what we're talking about:
 
 .. todo::
    add image & verify the text in this page
-
 
 In modern machines, we configure the plunger lane as a ball device. This is
 possible since there's a switch in the plunger lane, so when that
@@ -49,7 +47,6 @@ you need to add the *ball_add_live* tag to your trough, like this:
             eject_coil: trough_eject
             entrance_delay_count: 0.3s
             exit_delay_count: 0.3s
-
 
 Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set! If you have a classic 1980s-style

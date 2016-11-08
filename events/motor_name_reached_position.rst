@@ -6,7 +6,6 @@ motor_(name)_reached_(position)
 A motor device called (name) reached position (position)
 (device)
 
-
 Keyword arguments
 -----------------
 

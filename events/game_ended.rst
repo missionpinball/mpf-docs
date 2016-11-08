@@ -5,7 +5,6 @@ game_ended
 
 The game has ended.
 
-
 Keyword arguments
 -----------------
 

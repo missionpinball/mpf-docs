@@ -6,7 +6,6 @@ game_starting
 A game is in the process of starting. This is a queue event, and
 the game won't actually start until the queue is cleared.
 
-
 Keyword arguments
 -----------------
 

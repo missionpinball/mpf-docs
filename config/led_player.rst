@@ -18,7 +18,6 @@ The ``led_player:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -38,7 +37,5 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 .. todo::
    Add description.
 
-
 .. note:: The ``led_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 

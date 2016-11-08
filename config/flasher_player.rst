@@ -18,7 +18,6 @@ The ``flasher_player:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -31,7 +30,5 @@ Single value, type: ``integer``. Default: ``None``
 .. todo::
    Add description.
 
-
 .. note:: The ``flasher_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 

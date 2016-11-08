@@ -67,12 +67,8 @@ partitions and to disable wear leveling.
 Single-board versus "real" computers?
 -------------------------------------
 
-
-
 Picking an OS
 -------------
-
-
 
 The checklist
 -------------
@@ -80,8 +76,6 @@ The checklist
 Now that you've read about all the background information that goes
 into picking a host computer, let's break it down into the questions
 you need to answer to pick the one that makes sense for you.
-
-
 
 What OS are you familiar with?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,8 +89,6 @@ computer, but meh, that 100 bucks will be worth it in terms of future
 pain avoided. And besides, pinball machines cost thousands of dollars
 to build. What's another 100 bucks to make your life easier?
 
-
-
 Do you have anything you can use now?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -105,17 +97,11 @@ if you have something laying around, just start using it. You can
 always change it out later. BTW, we've received a few questions from
 people wanting to use Mac Minis.
 
-
-
 Is this a one-off machine, or are you taking something into production?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 What are your graphics and display requirements?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 The Bottom Line
 ---------------

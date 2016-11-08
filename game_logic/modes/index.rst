@@ -40,7 +40,6 @@ To add a mode to your MPF machine configuration, you create a folder called
 *modes* in your machine's folder. Then inside there, you create subfolders for
 each mode in your machine, like this.
 
-
 .. todo:
    Add image
 
@@ -60,7 +59,6 @@ everything that mode needs, and everything in a mode's folder only applies to
 that specific mode. For example, in a mode's config file, you can add several
 types of configuration entries (as detailed in the configuration file
 reference), that only apply when that mode is active, including:
-
 
 + shows
 + slides
@@ -195,7 +193,6 @@ mode's start events list, and you wouldn't specific a stop event. If you want a
 mode to automatically stop when a timer expires, you'd add the name of the event
 that's posted when the timer ends to the mode's stop events list.
 
-
 Mode priorities
 ---------------
 
@@ -227,7 +224,6 @@ this on a setting-by-setting basis, because there are plenty of times where you
 might actually want the lower-priority shows to play even when a higher priority
 mode is running.)
 
-
 .. note:: In MPF prior to v0.20, there was the concept of "machine" modes and
    "game" modes. Starting with MPF v0.20, those have been combined, and
    they're just called *modes*. MPF comes with its own built-in modes
@@ -235,7 +231,6 @@ mode is running.)
    example, MPF includes modes for *attract* (priority 10) and *game*
    (priority 20) which are responsible for the fundamentals of running
    the attract and game modes.
-
 
 Built-in Modes
 --------------

@@ -13,7 +13,6 @@ ball_devices:
 
 The ``ball_devices:`` section of your config is where you configure your :doc:`ball devices </mechs/logical/ball_device>`.
 
-
 Optional settings
 -----------------
 
@@ -134,7 +133,6 @@ ways that eject verification can take place, and this option allows
 you to specify which verification method you want. Note that many of
 these options require further configuration settings. Options for
 confirming the eject include:
-
 
 + ``target`` (default) - This device will confirm the eject via a ball
   successfully entering the "target" device it was ejecting the ball to.
@@ -489,5 +487,4 @@ Single value, type: string name of a ``ball_devices:`` device. Default: ``None``
 
 .. todo::
    Add description.
-
 

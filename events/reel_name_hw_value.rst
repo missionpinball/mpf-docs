@@ -5,7 +5,6 @@ reel_(name)_hw_value
 
 The score reel (name) has checked its hardware switches.
 
-
 Keyword arguments
 -----------------
 

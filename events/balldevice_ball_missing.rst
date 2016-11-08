@@ -5,7 +5,6 @@ balldevice_ball_missing
 
 A ball is missing from a device.
 
-
 Keyword arguments
 -----------------
 

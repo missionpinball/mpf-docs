@@ -213,7 +213,6 @@ Everything discussed here are just regular widget settings. So you can use them 
             y: top-10%
             adjust_bottom: 2
 
-
 You can use them in :doc:`named widgets <reusable_widgets>`:
 
 ::

@@ -25,7 +25,6 @@ specific the first (lower numbered) port here. For example:
 Note that there are a few other settings you need to configure in other areas
 to use a Pololu Maestro servo controller. See the How To guide for details.
 
-
 Required settings
 -----------------
 
@@ -36,7 +35,6 @@ port:
 Single value, type: ``string``.
 
 The name of the serial port.
-
 
 Optional settings
 -----------------
@@ -56,5 +54,4 @@ Single value, type: ``integer``. Default: ``3000``
 
 .. todo::
    Add description.
-
 

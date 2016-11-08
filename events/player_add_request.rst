@@ -7,7 +7,6 @@ Posted to request that an additional player be added to this
 game. Any registered handler can deny the player add request by
 returning *False* to this event.
 
-
 Keyword arguments
 -----------------
 

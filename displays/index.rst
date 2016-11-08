@@ -29,7 +29,6 @@ along with other on-screen content:
 
 .. image:: images/display_window.jpg
 
-
 Here's a "color" DMD on an LCD monitor. It's showing a 128x32 window of color
 content, with a "dot look" filter to make it look like dots.
 

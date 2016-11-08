@@ -5,7 +5,6 @@ Keeping track of where all the balls are at any given time is a big
 part of a pinball. There are four components that make up MPF's ball
 tracking and management system:
 
-
 + The Ball Controller, which is a core MPF module that manages everything.
 + Individual :doc:`/mechs/ball_devices/index` (troughs, locks, etc.) which track how
   many balls they're currently holding, request new balls, eject balls, etc.

@@ -17,7 +17,6 @@ starts when the *game_start* event is posted, and it stops when the
 The game mode is responsible for many
 things, including:
 
-
 + Tracking the number of balls in play. (Remember the number of balls
   in play is not necessarily the same as the number of live balls on the
   playfield that the ball controller tracks.)
@@ -30,7 +29,6 @@ things, including:
 + Handling ball drains and ending the current player's turn
 + Rotating the players and starting the next player's turn
 + Processing extra balls and handling shoot again
-
 
 It's almost never necessary to override or change the behavior of the
 game mode. Typically anything you want to do to affect the game is

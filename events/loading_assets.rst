@@ -8,7 +8,6 @@ Posted when the number of assets waiting to be loaded changes.
 Note that once all the assets are loaded, all the values below are
 reset to zero.
 
-
 Keyword arguments
 -----------------
 

@@ -10,7 +10,6 @@ starts before a client is connected.
 This is useful for triggering a slide notifying of the
 disconnect.
 
-
 Keyword arguments
 -----------------
 

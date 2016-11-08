@@ -4,7 +4,6 @@ How to configure Open Pinball Project (OPP) hardware for MPF
 This how to guide explains how to set up your MPF configuration files
 to interface with an Open Pinball Project (OPP) pinball controller.
 
-
 1. Configure the Hardware platform for OPP
 ------------------------------------------
 
@@ -17,10 +16,8 @@ like this:
         platform: opp
         driverboards: gen2
 
-
 You also need to configure the ``driverboards:`` entry for what kind of
 driver boards you’re controlling: right now, only *gen2* is supported.
-
 
 2. Configure the OPP-specific hardware settings
 -----------------------------------------------
@@ -31,7 +28,6 @@ specific hardware settings. MPF's default config file
 (*mpfconfig.yaml*) contains enough default settings to get you up and
 running. The only thing you absolutely have to configure is your
 ports.
-
 
 Understanding OPP hardware ports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,7 +65,6 @@ this: ``\\.\COM10`` ``\\.\COM11`` ``\\.\COM12``, etc. (It's a Windows
 thing. Google it for details.) That said, it seems that Windows 10 can
 just use the port names like normal: ``com10, com11, com12``, so try
 that first and then try the alternate format if it doesn't work.
-
 
 3. Configuring Switches
 -----------------------
@@ -124,7 +119,6 @@ numbers 12 to 15. The coil is numbered using the position of the
 OPP card (starting at 0), then a '-', and finally the coil number
 on the card.
 
-
 ::
 
     coils:
@@ -135,15 +129,12 @@ The above example configures a coil output as the first OPP card, and
 the third wing board, first output.  On the microprocessor card, the
 output is marked as 3.4 (wing port 3, position 4).
 
-
-
 Pulse time
 ~~~~~~~~~~
 
 The OPP hardware also has the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time. For
 example, consider the following configuration:
-
 
 ::
 
@@ -154,7 +145,6 @@ example, consider the following configuration:
 
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
-
 
 Hold Power
 ~~~~~~~~~~
@@ -167,14 +157,13 @@ hold_power to 2 and OPP will use 4ms/16ms = 25%.
 
 Because of firmware limitations in OPP hold_power 8 will translate to 15ms/16ms
 = 93.75% on. Same happens when allow_enable is set to true and no hold_power is
-provided. There is currently no way to permanently enable a hold coil in OPP. 
+provided. There is currently no way to permanently enable a hold coil in OPP.
 
 By using the MPF hold_power parameter you can only use 8 out of 16 possible
 steps. Therefore, you can also use the OPP specific parameter hold_power16
 which can range from 0 to 15.
 
 ::
-
 
     coils:
       some_coil:
@@ -184,8 +173,6 @@ which can range from 0 to 15.
 
 This will configure OPP card 0, solenoid wing 0, last solenoid to
 have an initial pulse of 32 ms, and then be held on at 50% power.
-
-
 
 5. Configuring lights with an incandescent board
 ------------------------------------------------
@@ -199,7 +186,6 @@ position 3 contains bulbs 24 to 31. The bulb is numbered using
 the position of the OPP card (starting at 0), then a '-', and
 finally the bulb number on the card.
 
-
 ::
 
     matrix_lights:
@@ -209,8 +195,6 @@ finally the bulb number on the card.
 The above example configures a bulb on the second OPP card, and
 the third wing board, first bulb  On the microprocessor card, the
 input is marked as 2.0 (wing port 2, position 0).
-
-
 
 6. Configuring individually addressable LED strips
 --------------------------------------------------

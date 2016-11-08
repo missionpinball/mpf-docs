@@ -10,7 +10,6 @@ There are several ways you can define and create slides:
 * Dynamically in the ``slide_player:`` section of your config.
 * Dynamically in a show config or show file.
 
-
 Let's look at each of these options.
 
 Defining slides in the slides: section of a config file

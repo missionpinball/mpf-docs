@@ -43,7 +43,6 @@ without specifying a target.
 
 Each display in your ``displays:`` section can have the following settings:
 
-
 Optional settings
 -----------------
 
@@ -75,5 +74,4 @@ width:
 Single value, type: ``integer``. Default: ``800``
 
 The width of the display, in pixels.
-
 

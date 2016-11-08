@@ -16,7 +16,6 @@ The ``opp:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -28,7 +27,6 @@ List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
-
 
 Optional settings
 -----------------
@@ -48,5 +46,4 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
    Add description.
-
 

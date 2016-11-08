@@ -67,7 +67,6 @@ To load a machine folder from some other location, such as ``/home/brian/pinball
 
    $ mpf game -c /home/brian/pinball/demo_man/config/config.yaml
 
-
 -C (uppercase)
 ~~~~~~~~~~~~~~
 
@@ -88,7 +87,6 @@ Specifies the name and path of the log file.
 
 The default stores the log file in the ``/logs`` folder in your machine folder,
 with a file name of ``<year>-<month>-<day>-<hour>-<min>-<sec>-mpf-<hostname>.log``.
-
 
 Note that log files are standard log file formats that can be read and parsed
 with log file utilities. (The "Console" app is built-in to OS X, for example.)

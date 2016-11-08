@@ -5,7 +5,6 @@ reset_complete
 
 The machine reset process is complete
 
-
 Keyword arguments
 -----------------
 

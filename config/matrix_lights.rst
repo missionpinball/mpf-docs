@@ -16,7 +16,6 @@ The ``matrix_lights:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -28,7 +27,6 @@ Single value, type: ``string``.
 
 .. todo::
    Add description.
-
 
 Optional settings
 -----------------
@@ -104,5 +102,4 @@ Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
-
 

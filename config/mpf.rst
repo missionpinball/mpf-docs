@@ -16,7 +16,6 @@ The ``mpf:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -84,5 +83,4 @@ Single value, type: ``string``. Default: ``sw_%``
 
 .. todo::
    Add description.
-
 

@@ -31,7 +31,6 @@ read it, so if you haven't read the documentation leading up to this point, plea
 do that now. (If you're reading this online, start with the ":doc:`/start/index`" entry
 on the left. If you're reading a PDF, please turn to Page 1. :)
 
-
 3. Check your MPF version
 -------------------------
 
@@ -53,7 +52,6 @@ MPF is installed. If it prints a version number lower than |version|, then insta
 MPF. And if it shows that you have a newer version of MPF (based on the first two numbers), then go to
 `docs.missionpinball.org <http://docs.missionpinball.org>`_ to get the version of this documentation that matches the version of MPF
 you have.
-
 
 4. Let's go!
 ------------

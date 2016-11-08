@@ -97,7 +97,6 @@ becoming inactive. Go ahead and play around with this, and notice that
 you can push and hold the two keys in different orders and
 combinations.
 
-
 3. Why can't you "flip" your physical machine with the keyboard?
 ----------------------------------------------------------------
 
@@ -166,7 +165,6 @@ What if it doesn't work?
 If you don't see your switch events in the console when you press your
 keys, there are a few things you can try to troubleshoot:
 
-
 + Double-check to make sure you actually saved your updated config
   file. :)
 + Make sure no modifier keys (shift, control, etc.) are being pressed
@@ -191,5 +189,4 @@ You can run this file directly by switching to that folder and then running the 
 ::
 
    C:\mpf-examples\tutorial>mpf both -c step6
-
 

@@ -107,7 +107,6 @@ List of one or more events (with optional delay timings), in the
 Default: ``ball_ending`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-
 Disables this flipper (meaning pushing the flipper button doesn't active
 the flipper).
 

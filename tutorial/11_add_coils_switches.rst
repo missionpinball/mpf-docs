@@ -56,5 +56,3 @@ Note that starting with this step, the actual coil, switch, and ball_device name
 with what we have in the tutorial. This shows you that there are lots of different options when it
 comes to naming things.
 
-
-

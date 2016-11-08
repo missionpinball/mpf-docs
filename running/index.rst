@@ -30,7 +30,6 @@ folder. This is the folder that contains your machine's ``config``, ``modes``,
    in the ``/machine_files`` folder inside the MPF package. That is changed now,
    and you can put your machine folder(s) wherever you want.
 
-
 Then run:
 
 ::
@@ -38,7 +37,6 @@ Then run:
    mpf both <enter>
 
 The ``mpf both`` command is what we use and probably what you'll use 99% of the time.
-
 
 Starting the MPF media controller
 ---------------------------------
@@ -49,7 +47,6 @@ from within your machine folder) like this:
 ::
 
     mpf mc <enter>
-
 
 You should see a popup window and a bunch of stuff scroll by in the console.
 

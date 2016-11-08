@@ -5,7 +5,6 @@ balldevice_(name)_ball_eject_failed
 
 A ball (or balls) has failed to eject from the device (name).
 
-
 Keyword arguments
 -----------------
 

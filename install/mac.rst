@@ -87,7 +87,6 @@ now let's test the media controller. To do this, run the following command:
 
   kivy -m unittest discover mpfmc
 
-
 When you run these tests, you should see a graphical window pop up on the
 screen, and many of the tests will put graphics and words in that window. Also,
 some of the tests include audio, so if your speakers are on you should hear some
@@ -126,7 +125,6 @@ MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
 
 See the :doc:`running/index` for details and command-line options.
 
-
 Keeping MPF up-to-date
 ----------------------
 
@@ -138,7 +136,6 @@ To do this, open a Terminal window and run the following:
 ::
 
     kivy -m pip install mpf-mc --upgrade
-
 
 Shout out to Kivy!
 ------------------

@@ -38,7 +38,6 @@ machine-wide config file, like this:
         platform: fast
         driverboards: fast
 
-
 You also need to configure the `driverboards:` entry for what kind of
 driver boards you’re controlling.
 

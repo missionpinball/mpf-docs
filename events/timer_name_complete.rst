@@ -8,7 +8,6 @@ The timer named (name) has completed.
 Note that this timer may reset and start again after this event is
 posted, depending on its settings.
 
-
 Keyword arguments
 -----------------
 

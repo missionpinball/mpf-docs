@@ -71,7 +71,6 @@ this:
 
 .. image:: /displays/images/anim_out_quad.png
 
-
 The important thing to remember with these easing formulas is that the red line
 does NOT represent the path the moving objects take, rather, it represents how
 the progress of the change happens over time.
@@ -149,13 +148,11 @@ then accelerate to the end:
 
 .. image:: /displays/images/anim_in_sine.png
 
-
 Easing "end" functions
 ----------------------
 
 The following functions apply an easing formula at the end of the time,
 meaning they start fast and then slow down towards the end:
-
 
 ``easing: out_back``
 
@@ -197,14 +194,12 @@ meaning they start fast and then slow down towards the end:
 
 .. image:: /displays/images/anim_out_sine.png
 
-
 Easing both "start" and "end" functions
 ---------------------------------------
 
 The following functions apply the easing to both the beginning and the end of
 the time, meaning they start slow, accelerate in the middle, and then slow down
 again at the end.
-
 
 ``easing: in_out_back``
 
@@ -246,10 +241,8 @@ again at the end.
 
 .. image:: /displays/images/anim_in_out_sine.png
 
-
 We'd like to give a shout out and thanks to the creators of the Kivy multimedia
 library (which is what the MPC MC uses) for
 `creating the graphs <https://kivy.org/docs/api-kivy.animation.html>`_ we
 used in our easing documentation.
-
 

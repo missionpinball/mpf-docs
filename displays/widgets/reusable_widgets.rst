@@ -62,7 +62,6 @@ The only "catch" is that the list of widget names is global across MPF. So even 
 the machine-wide or the mode config files, named widgets are processed when MPF starts up, so don't use the same name
 twice since whichever one loads second will overwrite the first one.
 
-
 3. Using your named widget
 --------------------------
 

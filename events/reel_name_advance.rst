@@ -5,7 +5,6 @@ reel_(name)_advance
 
 The score reel (name) is advancing.
 
-
 Keyword arguments
 -----------------
 

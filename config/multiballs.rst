@@ -16,7 +16,6 @@ The ``multiballs:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -27,7 +26,6 @@ ball_count:
 Single value, type: ``integer``.
 
 The number of balls this multiball should eject (and maintain during shoot again period). Note: It may eject more balls when using locks but only ball_count balls will be maintained during shoot again.
-
 
 Optional settings
 -----------------
@@ -109,5 +107,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 

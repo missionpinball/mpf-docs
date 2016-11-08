@@ -77,7 +77,6 @@ When this dual-wound coils is enabled, this coil will be pulsed for the
 number of milliseconds specified in the original coil's ``pulse_ms:``
 setting.
 
-
 Optional settings
 -----------------
 
@@ -111,7 +110,6 @@ and reports.
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
-
 
 Special / reserved tags for dual-wound coils: *None*
 

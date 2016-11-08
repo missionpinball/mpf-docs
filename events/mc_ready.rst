@@ -16,7 +16,6 @@ If you want to show slides that require images or video loaded from
 disk, use the event "init_done" instead which is posted once all the
 assets set to "preload" have been loaded.
 
-
 Keyword arguments
 -----------------
 

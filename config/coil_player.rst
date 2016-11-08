@@ -48,7 +48,6 @@ Example coil player from a show:
      coils:
        coil1: pulse
 
-
 Optional settings
 -----------------
 

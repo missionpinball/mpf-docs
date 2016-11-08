@@ -5,7 +5,6 @@ timer_(name)_time_added
 
 The timer named (name) has just had time added to it.
 
-
 Keyword arguments
 -----------------
 

@@ -16,7 +16,6 @@ The ``shot_profiles:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -85,7 +84,6 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
-
 states:
 -------
 
@@ -102,7 +100,6 @@ Single value, type: ``string``.
 
 .. todo::
    Add description.
-
 
 Optional settings
 ~~~~~~~~~~~~~~~~~
@@ -186,8 +183,5 @@ Single value, type: ``integer``. Default: ``0``
 .. todo::
    Add description.
 
-
 .. note:: The ``states:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
-
 

@@ -16,7 +16,6 @@ The ``slides:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -57,7 +56,5 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
-
 .. note:: The ``slides:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 

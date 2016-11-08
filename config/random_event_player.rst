@@ -18,7 +18,6 @@ The ``random_event_player:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -30,5 +29,4 @@ List of one (or more) values, each is a type: ``string``.
 
 .. todo::
    Add description.
-
 

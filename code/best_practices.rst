@@ -4,7 +4,6 @@ MPF Coding Best Practices
 These will be fleshed out. For now this is just a list so we remember
 what to write about.
 
-
 + For events, try to move on quickly. If anything is long-running then
   use a callback and come back later.
 + Don't mix direct calls and events.
@@ -15,7 +14,4 @@ what to write about.
   call it via a callback.
 + Don't make the valid playfield counttoo high, since it's disruptive
   for a ball to be plunged and to score without a valid playfield.
-
-
-
 

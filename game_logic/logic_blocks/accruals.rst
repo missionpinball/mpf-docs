@@ -9,7 +9,6 @@ only difference being that the steps in an Accrual Logic Block can be completed
 in any order, and the steps in a Sequence Logic Block must be completed in the
 specific order they're listed.
 
-
 Here are the Logic Blocks that we use for our
 Big Shot pinball machine:
 
@@ -25,7 +24,7 @@ Big Shot pinball machine:
                 enable_events: ball_started, collect_special
                 disable_events: ball_ended, lighting_special
                 reset_events: ball_ended, lighting_special
-    
+
             collect_special:
                 events:
                     - target_specialLeft_lit_hit, target_specialRight_lit_hit
@@ -34,7 +33,7 @@ Big Shot pinball machine:
                 enable_events: lighting_special
                 disable_events: ball_ended, collect_special
                 reset_events: ball_ended, collect_special
-    
+
             lighteightball:
                 events:
                     - sw_eightball
@@ -44,7 +43,7 @@ Big Shot pinball machine:
                 enable_events: ball_started
                 disable_events: ball_ended
                 reset_events: ball_ended
-    
+
             unlighteightball:
                 events:
                     - collect_special
@@ -54,7 +53,7 @@ Big Shot pinball machine:
                 enable_events: ball_started
                 disable_events: ball_ended
                 reset_events: ball_ended
-    
+
             openDiverter:
                 events:
                     - balldevice_eightballhole_ball_enter

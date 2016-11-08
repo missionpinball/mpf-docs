@@ -21,7 +21,6 @@ Here's an example:
 
 ::
 
-
     sounds:
         extra_ball:
             file: extra_ball_12753.wav
@@ -40,7 +39,6 @@ Here's an example:
         slingshot_01:
             volume: 0.5
             max_queue_time: 0
-
 
 Optional settings
 -----------------
@@ -293,7 +291,6 @@ Here's a simple example utilizing markers:
                   events: send_this_event, also_this_event
                 - time: 6.712 sec
                   events: almost_finished_playing
-
 
 The ``markers:`` section contains the following settings:
 

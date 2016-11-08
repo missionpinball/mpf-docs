@@ -18,7 +18,6 @@ hold a ball, so the plunger lane is no exception. The exact settings
 you use for the plunger lane will vary depending on the type of plunger
 you have. Options include:
 
-
 + A mechanical plunger (where the player pulls on the spring knob to launch
   the ball).
 + A coil-powered ball launcher where the player hits a "launch" button
@@ -205,7 +204,6 @@ like this:
             eject_timeouts: 3s
             tags: ball_add_live
 
-
 3. Configure your human-power spring plunger
 --------------------------------------------
 
@@ -215,7 +213,6 @@ plunger, then you need to add another configuration option which is
 
 Add this option any time the player can manually eject a ball, even if your
 pluger also has a coil-powered eject.
-
 
 The reason you need to add this is that MPF likes to
 know what's going on with all the balls at all times. If you have a
@@ -242,7 +239,6 @@ then go ahead and add *mechanical_eject: true* here.
 
 If you have a coil-fired ball launcher or plunger, you can configure
 that now too. To do this:
-
 
 4a. Add the coil to your coils: configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -301,7 +297,6 @@ would add the following to the switches: section of your config:
             number: 09
             tags: launch
 
-
 Note that if you have a plunger lane with both a spring-powered
 plunger and a coil-fired eject, it's possible that you don't actually
 have a launch button. (Many Stern games are like this.) In those cases
@@ -340,7 +335,6 @@ device config will look something like this:
             tags: ball_add_live
             eject_coil: c_plunger_eject
             player_controlled_eject_event: sw_launch
-
 
 If you have a dual spring/coil fired plunger, you'll also have the
 ``mechanical_eject: true`` setting in there.
@@ -468,7 +462,6 @@ Note that the launch button switch is not a toggle switch, and also
 notice that we add an uppercase letter "L". The case of letters for
 keys doesn't matter, but since a lowercase L and the number 1 look
 similar, we decided to add "L" in uppercase.
-
 
 At this point we're
 really close to being able to play a game! Next is to create a start

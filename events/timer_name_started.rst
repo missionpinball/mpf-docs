@@ -5,7 +5,6 @@ timer_(name)_started
 
 The timer named (name) has just started.
 
-
 Keyword arguments
 -----------------
 

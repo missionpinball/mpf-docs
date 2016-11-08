@@ -16,7 +16,6 @@ The ``p_roc_coils:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -35,5 +34,4 @@ Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.
-
 

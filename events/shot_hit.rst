@@ -9,7 +9,6 @@ Note that there are four events posted when a shot is hit, each
 with variants of the shot name, profile, and current state,
 allowing you to key in on the specific granularity you need.
 
-
 Keyword arguments
 -----------------
 

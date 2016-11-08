@@ -48,7 +48,6 @@ The following sections are required in the ``extra_balls:`` section of your conf
 Each subsection of ``extra_balls:`` is a name entry for a particular
 extra ball award.
 
-
 Optional settings
 -----------------
 
@@ -89,10 +88,7 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-
 Special / reserved tags for extra balls: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
-
-
 

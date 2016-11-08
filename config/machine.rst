@@ -16,7 +16,6 @@ The ``machine:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -35,5 +34,4 @@ Single value, type: ``integer``. Default: ``1``
 
 .. todo::
    Add description.
-
 

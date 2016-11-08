@@ -9,7 +9,6 @@ How to configure LEDs (FAST Pinball)
 | :doc:`/config/fast`                                                          |
 +------------------------------------------------------------------------------+
 
-
 Each FAST Pinball Controller has a built-in 4-channel RGB LED
 controller which can drive up to 64 RGB LEDs per channel. This
 controller uses serially-controlled LEDs (where each LED element has a

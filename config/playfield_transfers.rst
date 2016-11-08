@@ -16,7 +16,6 @@ The ``playfield_transfers:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -43,7 +42,6 @@ Single value, type: string name of a ``ball_devices:`` device.
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -69,5 +67,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 

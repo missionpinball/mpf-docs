@@ -43,7 +43,6 @@ mode behaves. Here’s an example config:
       free_play_string: FREE PLAY
       credits_string: CREDITS
 
-
 Optional settings
 -----------------
 
@@ -174,7 +173,6 @@ are no currency symbols here or anything. A value of .25 could be 0.25
 dollars or 0.25 Euros or 0.25 Francs—it really doesn't matter. The key
 is that it’s 0.25 of whatever monetary system you have.
 
-
 pricing_tiers:
 --------------
 
@@ -225,6 +223,4 @@ price:
 Single value, type: ``number`` (will be converted to floating point). Default: ``.50``
 
 The numeric currency value for this pricing tier.
-
-
 

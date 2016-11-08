@@ -90,7 +90,6 @@ like this:
             pulse_power: 4
             hold_power: 2
 
-
 In this case, if MPF enables this coil, the coil will be fired at 50%
 power for 30ms, then drop down to 25% power for the remainder of the
 time that it's on.

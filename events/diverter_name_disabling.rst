@@ -8,7 +8,6 @@ diverter has ``activation_switches:`` configured, it will not
 physically deactivate now, instead deactivating based on switch
 hits and timing. Otherwise this diverter will deactivate immediately.
 
-
 Keyword arguments
 -----------------
 

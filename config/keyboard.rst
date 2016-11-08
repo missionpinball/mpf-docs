@@ -16,4 +16,3 @@ The ``keyboard:`` section of your config is where you...
 .. todo::
    Add description.
 
-

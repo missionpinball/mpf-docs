@@ -17,7 +17,6 @@ switches. Here’s an example section:
 
 ::
 
-
     switches:
         flipper_lwr_eos:
             number: SF1
@@ -48,11 +47,9 @@ switches. Here’s an example section:
             events_when_activated: ball_in
             events_when_deactivated: ball_out
 
-
 Each subsection of ``switches:`` is a switch name, which is how you
 refer to the switch in your game code. Then there are several
 parameters for each switch:
-
 
 Required settings
 -----------------
@@ -68,7 +65,6 @@ this will vary depending on what type of pinball controller you're
 using and how the switch is connected. You can refer the the how to
 guides for each hardware platform for details. There is no standard format--it
 really depends on your hardware platform.
-
 
 Optional settings
 -----------------
@@ -144,7 +140,6 @@ it will post the event ``sw_hello``. If you have a switch tagged with
 "hello" and "yo", then every time that switch is activated it will
 post the events ``sw_hello`` and ``sw_yo``. MPF also makes use of several
 tags on its own, including:
-
 
 + ``playfield_active`` - This tag should be used for all switches on the
   playfield that indicate a ball is loose on the playfield. This tag is

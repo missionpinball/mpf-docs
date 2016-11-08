@@ -5,7 +5,6 @@ This sequence shows everything that happens when a new ball starts in MPF.
 There are actually a few different ways we can end up here: If this the first
 ball of the first player in a new game:
 
-
 #. After the game mode posts the *game_started* event, it will call
    its ``player_turn_start()`` method.
 #. The ``player_turn_start()`` method does a few things:
@@ -67,9 +66,5 @@ ball of the first player in a new game:
     #. If the machine is configured with a player_controller_eject_tag,
        that tag is passed as the trigger event that will launch the ball.
 
-
-
 The ball is now in play.
-
-
 

@@ -6,7 +6,6 @@
 The playfield with the name "playfield" has changed the number
 of balls that are live.
 
-
 Keyword arguments
 -----------------
 

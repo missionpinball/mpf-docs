@@ -5,7 +5,6 @@ ball_ended
 
 The ball has ended.
 
-
 Keyword arguments
 -----------------
 

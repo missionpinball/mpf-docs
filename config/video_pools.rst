@@ -16,4 +16,3 @@ The ``video_pools:`` section of your config is where you...
 .. todo::
    Add description.
 
-

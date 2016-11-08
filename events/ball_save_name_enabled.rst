@@ -5,7 +5,6 @@ ball_save_(name)_enabled
 
 The ball save called (name) has just been enabled.
 
-
 Keyword arguments
 -----------------
 

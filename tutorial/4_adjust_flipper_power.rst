@@ -12,7 +12,6 @@ coils. The good news is that everything you learn here will 100% apply
 to all the other coils in your machine (slingshots, pop bumpers, ball
 ejects, the knocker, drop target resets, etc.)
 
-
 1. Adjust coil pulse times
 --------------------------
 
@@ -88,7 +87,6 @@ realize it's too hard to make a ramp shot and you have to increase the
 power a bit. Later on when you have a real game, you can even expose
 these pulse settings to operators via the service menu.
 
-
 2. Adjusting coil "hold" strength
 ---------------------------------
 
@@ -115,7 +113,6 @@ section of the config file reference.) They're not too important
 now, but we wanted to at least look at the power settings to make sure
 you don't get too far into this tutorial with a risk of burning them
 up.
-
 
 3. Check out the complete config.yaml file so far
 -------------------------------------------------

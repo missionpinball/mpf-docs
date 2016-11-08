@@ -19,7 +19,6 @@ means the MPF MC will post more *loading_assets* and then
 a final *asset_loading_complete* event a second time for the
 MPF-based assets.
 
-
 Keyword arguments
 -----------------
 

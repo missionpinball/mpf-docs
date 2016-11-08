@@ -68,7 +68,6 @@ Event Handler will call the next event in the queue. The event queue can hold
 multiple events, and they will be called one-by-one in the order they were
 posted.
 
-
 Handler Priorities
 ------------------
 
@@ -129,7 +128,6 @@ calls each of the registered handlers one-by-one. If you have
 specified a callback, like ``events.post('your_event_name',
 callback=self.some_function)``, that callback will be called after the
 last registered handler has returned after handling the event.
-
 
 Boolean Events
 ~~~~~~~~~~~~~~
@@ -214,50 +212,36 @@ an example of all this in action. (This should probably move to the
 Advanced Programming section of this documentation.) Add a handler for
 your event as normal:
 
-
 ::
 
-
     self.machine.events.add_handler('ball_starting', self.block)
-
 
 In the handler method, give it a parameter named “queue”. Also save
 queue so you can access it later. Do whatever you need to do then call
 queue.wait(). Your handler will be called immediately.
 
-
 ::
-
 
     def block(self, queue):
         self.queue = queue
         ...
         self.queue.wait()
 
-
 Then in your code that clears the wait:
-
 
 ::
 
-
     self.queue.clear()
-
 
 Note if none of the registered event handlers call queue.wait(), then
 the callback will be called immediately. If you want to kill a queue
 event (i.e. without just waiting forever), then in your registered
 handler, do two things:
 
-
 ::
-
 
     queue.kill()  # Clears the queue and does not call the callback
     return False  # Causes future (lower priority) handlers not to be called
-
-
-
 
 Relay events
 ~~~~~~~~~~~~
@@ -273,27 +257,19 @@ event gets back to the original caller, it has new data. Note a
 handler must return a dictionary that will later be packed via \**. So
 a handler would do:
 
-
 ::
-
 
     return {‘balls’: 1}
 
-
 to have the next handler be called like:
-
 
 ::
 
-
     handler(balls=1)
-
 
 Relay events tend to work well with callbacks since you aren’t
 guaranteed they’ll fire right away.To use a relay event, add
 ev_type=’relay’ to your event post.
-
-
 
 Best practices for using events
 -------------------------------
@@ -304,8 +280,6 @@ long to return. If there's something that a handler needs to do that
 takes a long time, it should set up a task, a timer, or register to do
 work based on the "timer_tick" event. In other words, your handlers
 should return quickly.
-
-
 
 FAQs on events
 --------------
@@ -374,7 +348,6 @@ quickly and then return.
  event manager must send to all 5 or when it can terminate early. In
  other words, if handler #2 returns a False for a boolean event, then
  handler #3,#4 and #5 never see the event? Correct?
-
 
 Correct.
 

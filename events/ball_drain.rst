@@ -8,7 +8,6 @@ have entered a ball device tagged with "drain".)
 
 This is a relay event.
 
-
 Keyword arguments
 -----------------
 

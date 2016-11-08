@@ -22,7 +22,6 @@ Here's an example from a Williams *Road Show* machine:
 
 ::
 
-
     flashers:
         f_little_flipper:
             number: c37
@@ -60,7 +59,6 @@ Here's an example from a Williams *Road Show* machine:
             label: Playfield insert in the pop bumpers
             tags: white
 
-
 Required settings
 -----------------
 
@@ -72,7 +70,6 @@ The following sections are required in the ``flashers:`` section of your config:
 Each subsection of ``flashers:`` is the name of the flasher as you’d like
 to refer to it in your game code. This can really be anything you
 want, but it’s obviously best to pick something that makes sense.
-
 
 number:
 ~~~~~~~
@@ -89,8 +86,6 @@ for details.
 
 The *Road Show* example file above is for WPC driver boards, which is why the
 flasher numbers are in the *Cxx* format.)
-
-
 
 Optional settings
 -----------------
@@ -207,5 +202,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 

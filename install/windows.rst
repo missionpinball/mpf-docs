@@ -39,7 +39,6 @@ Here's an example of running this on a 64-bit Windows 10 machine:
 
 .. image:: images/check_windows_processor_architecture.png
 
-
 Then go to the Python website download the version you need. (Note that the final digit in the Python version
 number is the "patch" number, so 3.4.4 is the latest version of Python 3.4.) Or use the direct-download links here:
 
@@ -77,7 +76,6 @@ that means you also have Python version 2 installed. (This is ok. You can have P
 and Python 3 installed at the same time.) However, if this is your case, you need to
 use a different command to start Python 3. See the :doc:`2_and_3` page for details.
 
-
 2. Upgrade pip
 --------------
 
@@ -104,7 +102,6 @@ To do this, run the following command from the command prompt:
 ::
 
     pip install mpf-mc
-
 
 *pip* is the name of the Python Package Manager that we discussed in Step 2.
 This command is telling pip to install a package called "mpf-mc", which is the

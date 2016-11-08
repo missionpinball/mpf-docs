@@ -89,7 +89,6 @@ switch with *type: NC* in the *switches:* section of your config file.)
 MPF will automatically update the state of the drop target whenever
 the switch changes state.
 
-
 Optional settings
 -----------------
 
@@ -160,7 +159,6 @@ Default is *ball_starting, machine_reset_phase_3*.
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
-
 
 Special / reserved tags for drop targets: *None*
 

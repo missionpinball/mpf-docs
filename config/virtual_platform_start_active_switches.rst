@@ -16,4 +16,3 @@ The ``virtual_platform_start_active_switches:`` section of your config is where 
 .. todo::
    Add description.
 
-

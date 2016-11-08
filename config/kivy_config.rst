@@ -16,4 +16,3 @@ The ``kivy_config:`` section of your config is where you...
 .. todo::
    Add description.
 
-

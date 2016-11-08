@@ -18,7 +18,6 @@ The ``widget_styles:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -31,7 +30,5 @@ Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*)
 .. todo::
    Add description.
 
-
 .. note:: The ``widget_styles:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
 

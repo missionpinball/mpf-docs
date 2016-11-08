@@ -16,7 +16,6 @@ The ``timers:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -91,5 +90,4 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 .. todo::
    Add description.
-
 

@@ -19,7 +19,6 @@ height and width of 800x600:
          width: 800
          height: 600
 
-
 You can name your display whatever you want. For example, here's a display called "potato" which is
 100x100:
 

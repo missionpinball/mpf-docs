@@ -179,7 +179,6 @@ alternate eject pulse times when a ball is in the jam position, as well as
 how the eject pulse time changes when the eject fails (to automatically ramp
 up the power), but again you can worry about that later.
 
-
 3c. Add some tags to tell MPF about this device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -232,7 +231,6 @@ entry should look something like this:
 
             tags: trough, home, drain
 
-
 3d. Enable debugging so you can see cool stuff in the log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -258,7 +256,6 @@ something like this:
             eject_coil: c_trough_eject
             tags: trough, home, drain
             debug: yes
-
 
 4. Fire up your game and test
 -----------------------------
@@ -383,7 +380,6 @@ older version of MPF, but the gist is the same.)
     2015-11-29 22:01:15,414 : DEBUG : Events : =========================================
     2015-11-29 22:01:15,414 : DEBUG : Events : ^^^^ Processing event 'playfield_ball_count_change'. Type: None, Callback: None, Args: {'balls': -1, 'change': -1}
     2015-11-29 22:01:15,415 : DEBUG : Events : vvvv Finished event 'playfield_ball_count_change'. Type: None. Callback: None. Args: {'balls': -1, 'change': -1}
-
 
 5. Add keyboard entries for your trough switches
 ------------------------------------------------

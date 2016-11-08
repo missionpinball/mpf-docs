@@ -1,6 +1,5 @@
 from MpfDocsTestCase import MpfDocsTestCase
 
-
 class TestClassicSingleBall(MpfDocsTestCase):
 
     rst_target = 'mechs/troughs/classic_single_ball'

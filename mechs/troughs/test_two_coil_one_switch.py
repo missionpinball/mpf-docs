@@ -1,6 +1,5 @@
 from MpfDocsTestCase import MpfDocsTestCase
 
-
 class TestTwoCoilOneSwitch(MpfDocsTestCase):
 
     rst_target = 'mechs/troughs/two_coil_one_switch'

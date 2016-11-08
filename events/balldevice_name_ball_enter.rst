@@ -10,7 +10,6 @@ Note that this is a relay event based on the "unclaimed_balls" arg. Any
 unclaimed balls in the relay will be processed as new balls entering
 this device.
 
-
 Keyword arguments
 -----------------
 

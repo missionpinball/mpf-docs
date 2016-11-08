@@ -4,7 +4,6 @@ Tutorial step 2: Create your machine folder
 Okay, so MPF |version| is installed and you're able to run *Demo Man*. Great!
 Now it's time to create the folders and files for your own game.
 
-
 1. Understand the "machine folder" concept
 ------------------------------------------
 
@@ -43,7 +42,6 @@ machine folder, like this:
 
    C:\pinball\your_machine\config\
 
-
 3. Create your machine config file
 ----------------------------------
 
@@ -54,7 +52,6 @@ the config and settings for your machine. This file should be here:
 ::
 
    C:\pinball\your_machine\config\config.yaml
-
 
 Note that if you're on Windows and you just right-click and select *New > Text Document*,
 make sure that Windows Explorer is configured to show file extensions

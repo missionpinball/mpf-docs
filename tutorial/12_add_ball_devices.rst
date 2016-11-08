@@ -77,7 +77,6 @@ config file:
         mechanical_eject: true
         eject_timeouts: 500ms
 
-
 Remember that if you need to adjust the eject coil pulse time, you do
 that in the coil's property in the ``coils:`` section of your config
 file, not in the ball device configuration.

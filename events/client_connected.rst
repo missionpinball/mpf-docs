@@ -6,7 +6,6 @@ client_connected
 Posted on the MPF-MC only when a BCP client has
 connected.
 
-
 Keyword arguments
 -----------------
 

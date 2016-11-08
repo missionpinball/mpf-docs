@@ -16,7 +16,6 @@ The ``switch_player:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -28,5 +27,4 @@ Single value, type: ``string``. Default: ``machine_reset_phase_3``
 
 .. todo::
    Add description.
-
 

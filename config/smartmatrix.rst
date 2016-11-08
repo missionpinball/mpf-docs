@@ -16,7 +16,6 @@ The ``smartmatrix:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -29,7 +28,6 @@ Single value, type: ``string``.
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -41,5 +39,4 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
 
 .. todo::
    Add description.
-
 

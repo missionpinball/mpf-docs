@@ -5,7 +5,6 @@ game_started
 
 A new game has started.
 
-
 Keyword arguments
 -----------------
 

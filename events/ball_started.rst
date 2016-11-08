@@ -5,7 +5,6 @@ ball_started
 
 A new ball has started.
 
-
 Keyword arguments
 -----------------
 

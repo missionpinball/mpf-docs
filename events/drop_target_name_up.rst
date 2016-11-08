@@ -5,7 +5,6 @@ drop_target_(name)_up
 
 The drop target (name) has just changed to the "up" state.
 
-
 Keyword arguments
 -----------------
 

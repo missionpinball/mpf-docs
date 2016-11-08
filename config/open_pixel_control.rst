@@ -16,7 +16,6 @@ The ``open_pixel_control:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Optional settings
 -----------------
 
@@ -63,5 +62,4 @@ Single value, type: ``string``. Default: ``7890``
 
 .. todo::
    Add description.
-
 

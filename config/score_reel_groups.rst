@@ -16,7 +16,6 @@ The ``score_reel_groups:`` section of your config is where you...
 .. todo::
    Add description.
 
-
 Required settings
 -----------------
 
@@ -28,7 +27,6 @@ List of one (or more) values, each is a type: string name of a ``score_reels:`` 
 
 .. todo::
    Add description.
-
 
 Optional settings
 -----------------
@@ -104,5 +102,4 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
 

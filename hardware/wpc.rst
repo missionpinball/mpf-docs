@@ -130,7 +130,6 @@ That said, some machines needed a few extra switches for other things, and if
 they don't have four flippers, it's possible that the extra Fliptronics
 switches are used for other things.
 
-
 You would use Fliptronics switches in your config like this:
 
 ::
@@ -146,8 +145,6 @@ You would use Fliptronics switches in your config like this:
      s_flipper_lower_left:
        number: sf4
        tags: player, left_flipper
-
-
 
 4. Configuring coils & drivers
 ------------------------------

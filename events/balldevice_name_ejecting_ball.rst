@@ -5,7 +5,6 @@ balldevice_(name)_ejecting_ball
 
 The ball device called "name" is ejecting a ball right now.
 
-
 Keyword arguments
 -----------------
 

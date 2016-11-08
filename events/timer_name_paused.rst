@@ -5,7 +5,6 @@ timer_(name)_paused
 
 The timer named (name) has paused.
 
-
 Keyword arguments
 -----------------
 

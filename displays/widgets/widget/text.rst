@@ -169,10 +169,7 @@ chosen.
 
 The default setting is ``middle``.
 
-
 .. include:: common.rst
-
-
 
 .. toctree::
    :hidden:
