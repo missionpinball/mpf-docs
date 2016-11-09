@@ -34,9 +34,6 @@ that you don't see on this list, please
 `post a message to the MPF Users Google Group
 <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
 
-Click on the links below for details about how to configure MPF to use each
-type of hardware.
-
 * :doc:`FAST Pinball <fast/index>`
    * Core Controller, Nano Controller, WPC Controller
    * 0804, 1616, 3208 I/O Boards
@@ -77,9 +74,15 @@ type of hardware.
 * :doc:`RGB.DMD RGB LED display controller <eli_dmd/index>`
    * Supports a "real" color DMD made up of RGB LED matrix
 
+Configuration Guides
+--------------------
+
+We have configuration guides which show you how to setup and use different
+types of pinball mechanisms with the various control systems and hardware that
+MPF supports:
+
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+   :maxdepth: 2
 
    FAST Pinball <fast/index>
    multimorphic/index
