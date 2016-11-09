@@ -358,6 +358,12 @@ In the previous step, you used two separate console windows to launch ``mpf mc``
 That's nice for learning purposes, but kind of annoying for everyday use. Fortunately there's a command
 called ``mpf both`` which launches both the game engine and the MC together.
 
+.. note::
+
+   Unfortunately the "mpf both" command only works on Windows and Linux. It crashes
+   on the Mac. (We don't know why.) So if you're using a Mac, for now just continue
+   to run ``mpf`` and ``mpf mc`` separately.
+
 Use it just like the others:
 
 ::

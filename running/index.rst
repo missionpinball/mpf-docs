@@ -38,6 +38,12 @@ Then run:
 
 The ``mpf both`` command is what we use and probably what you'll use 99% of the time.
 
+.. note::
+
+   The ``mpf both`` command currently crashes on the Mac. We don't know why.
+   You can still use MPF on a Mac, but you'll have to launch MPF and the MPF
+   MC manually.
+
 Starting the MPF media controller
 ---------------------------------
 
