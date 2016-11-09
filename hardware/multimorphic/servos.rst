@@ -12,6 +12,10 @@ this port to control an I2C-based servo. (You can't plug the servo directly
 into the P3-ROC, rather, you can buy an I2C-based servo controller and plug it
 into the P3-ROC.)
 
+You need to connect SDA, SCL and ground. You may not need the 3.3V from the
+P3-ROC as your controller might be a different voltage (which you can then
+get directly from your power supply), but again that depends on the board.
+
 See the :doc:`/hardware/i2c_servo/index` documentation for details on how to
 configure this.
 
@@ -33,4 +37,6 @@ config it similar to this:
            number: 3
 
 The address and number of your servo and servo controller can be found in the
-documentation of your controller.
+documentation of your controller and are most likely configurable. You can also
+connect multiple I2C servo controllers to the P3-ROC by configuring them with
+unique I2C addresses.

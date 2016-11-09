@@ -33,6 +33,11 @@ the following on a PD-16 driver board:
 * y : Bank address (0 for A, 1 for B)
 * z : Output number (0-7)
 
+.. note::
+
+   The output number is the logical number, *not* the pin number. For example, Output 0 is on Pin 1, and there is a key
+   pin at 2 or 3. Check the manual for the exact mapping.
+
 For example:
 
 ::
