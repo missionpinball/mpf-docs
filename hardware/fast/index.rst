@@ -13,6 +13,7 @@ update speeds, etc.)
    Installing hardware drivers & configuring COM ports <config>
    Switches <switches>
    Coils/Drivers/Magnets/Motors <drivers>
+   Flippers, Slingshots, Pop Bumpers, and other "quick response" devices <hw_rules>
    LEDs <leds>
    Matrix Lights <lights>
    Traditional (single color) DMDs <dmd>

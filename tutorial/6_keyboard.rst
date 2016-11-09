@@ -107,57 +107,11 @@ the flipper switch events in your console log, and if you reach over
 and hit the physical buttons on your machine, the flippers will work.
 So what gives?!?
 
-To understand why this happens you have to understand
-how the MPF handles "quick response" switches which are used for
-things like flippers, slingshots, and pop bumpers. As you can imagine,
-those types of devices require near-instant response. When you hit a
-flipper button, you want that flipper to fire *instantly*.
+This happens because MPF uses "hardware rules" to program quick-response
+mechanisms (like flippers), meaning the flippers are activated by the
+control system rather than MPF software.
 
-So for these types of devices, MPF actually writes a out a configuration rule to the
-physical pinball controller that tells it "Hey, if you see this
-switch, fire this coil." (This happens on all platforms, including FAST, P-ROC, and
-OPP.) That keeps the entire switch read / coil fire cycle within the pinball
-controller itself, and the pinball controller can respond by firing
-that coil with sub-millisecond level response times.
-
-Compare that to
-the alternative where the player would push a button on the pinball
-machine, the pinball controller would receive it, then it would have
-to be sent via USB to the host computer, then the host computer would
-have to process it and figure out that a coil needed to be fired, then
-it would have to send that coil firing command back across the USB bus
-to the pinball controller, and then finally the pinball controller
-could fire that coil. Even though computers are really fast, that
-whole process would still take a few milliseconds which would be
-horrible in a pinball scenario.
-
-To deal with this,the pinball
-controllers allow rules to be written to their hardware where we can
-set up which coils we'd like to be fired (and with which settings) when
-switches change state. So part of what the thousands of lines of code
-of MPF do behind the scenes is when you set up your flippers in the
-``flippers:`` section of your config file, it actually writes those
-rules out to the hardware controller so the hardware controller can
-handle them. These rules are dynamic and updated often.
-
-For example
-they're deactivated when a game is not in progress, when it tilts, and
-(optionally) between balls, and you can change them to do all sorts of
-novelty things like inverted flippers, no hold flippers, weak
-flippers, etc.
-
-By the way, even when you write hardware rules to your
-pinball controller, the MPF software still receives notification when
-those switches change state. After all, you might want to play a sound
-effect or update a score even if the hardware controller fired the
-actual coil, and in the case of flipper buttons you need to know when
-they're activated for lane changes and to cancel video modes and stuff.
-
-In this case you still have one physical switch in your machine and
-one switch configured in your config files—-it's just that if you have
-a hardware rule configured for a switch then when that switch changes
-state, the pinball controller fires the associated coil *in addition*
-to sending the switch state change to MPF as usual.
+Read the :doc:`/hardware/hw_rules` guide for details.
 
 What if it doesn't work?
 ------------------------
