@@ -31,8 +31,8 @@ the P-ROC or P3-ROC.
 .. toctree::
    :titlesonly:
 
-   Switches (P-ROC) <switches_p3_roc>
-   Switches (P3-ROC) <switches_p_roc>
+   Switches (P-ROC) <switches_p_roc>
+   Switches (P3-ROC) <switches_p3_roc>
    Coils/Drivers/Magnets/Motors (P-ROC & P3-ROC) <drivers>
    LEDs (P-ROC & P3-ROC)<leds>
    Matrix Lights (P-ROC & P3-ROC)<lights>
