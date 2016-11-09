@@ -37,5 +37,7 @@ the P-ROC or P3-ROC.
    LEDs (P-ROC & P3-ROC)<leds>
    Matrix Lights (P-ROC & P3-ROC)<lights>
    Traditional single-color DMD (P-ROC) <dmd>
+   RGB DMD (P-ROC & P3-ROC) <rgb_dmd>
+   Alpha-numeric displays (P-ROC) <alpha_numeric>
    Accelerometer (P3-ROC) <accelerometer>
    Servos (P3-ROC) <servos>

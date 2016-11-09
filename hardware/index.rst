@@ -85,7 +85,7 @@ MPF supports:
    :maxdepth: 2
 
    FAST Pinball <fast/index>
-   multimorphic/index
+   P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    snux/index
    fadecandy/index
