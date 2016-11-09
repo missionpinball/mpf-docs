@@ -190,6 +190,15 @@ At this point you should have a fully working copy of MPF. Congrats!
 Next we'd recommend following our :doc:`step-by-step tutorial </tutorial/index>`
 which will show you how to start building your own game in MPF!
 
+6. Install whatever drivers your hardware controller needs
+----------------------------------------------------------
+
+If you're using MPF with a physical machine, then there will be some specific
+steps you'll need to take to get the drivers installed and configured for
+whatever control system you've chosen. See the :doc:`control systems </hardware/index>`
+documentation for details. (You don't have to worry about that now if you just
+want to play with MPF first.)
+
 Running MPF
 -----------
 
