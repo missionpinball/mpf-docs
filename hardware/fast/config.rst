@@ -1,6 +1,14 @@
 How to use install drivers & configure COM ports (FAST Pinball)
 ===============================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/fast`                                                          |
++------------------------------------------------------------------------------+
+
 This guide explains how to configure MPF to work with a FAST Pinball
 controller. It applies to all three of their models—the Core, Nano, and WPC
 controllers.
@@ -148,3 +156,23 @@ thing. Google it for details.)
 There are more settings in the :doc:`/config/fast` section of the machine
 config that we have not covered here, but the ports are the bare minimum you
 need to get up and running.
+
+5. Configure your watch dog timeout
+-----------------------------------
+
+FAST Pinball controllers have the ability to use a :term:`watch dog` timer.
+This is enabled by default with a timeout of 1 second. If you would like to
+disable this, or you'd like to change the timeout, you can do so in the
+``fast:``section of your machine-wide config.
+
+::
+
+   fast:
+      ports: com3, com4, com5  # or whatever your ports are
+      watchdog: 1000
+
+The ``watchdog:`` setting is the timeout in milliseconds. Use 0 to disable it.
+
+Note that at this time, FAST Pinball controllers only use the watch dog for
+the NET processor (which controls stuff on the IO boards, like coils). The
+watch dog is not used for the DMD or LEDs.

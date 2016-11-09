@@ -1,12 +1,6 @@
 How to configure MPF for FAST Pinball hardware
 ==============================================
 
-+------------------------------------------------------------------------------+
-| Related Config File Sections                                                 |
-+==============================================================================+
-| :doc:`/config/fast`                                                          |
-+------------------------------------------------------------------------------+
-
 Here's a list of all the How To guides which explain how to use MPF with FAST
 Pinball hardware. These guides include the numbering format (how you map
 specific entries in your config files to board and connector locations) as well
@@ -21,6 +15,6 @@ update speeds, etc.)
    Coils/Drivers/Magnets/Motors <drivers>
    LEDs <leds>
    Matrix Lights <lights>
-   Tranditional (single color) DMDs <dmd>
+   Traditional (single color) DMDs <dmd>
    RGB DMDs <rgb_dmd>
    Servos <servos>
