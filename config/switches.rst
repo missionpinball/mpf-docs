@@ -60,11 +60,17 @@ number:
 ~~~~~~~
 Single value, type: ``string``.
 
-The number is the physical switch input number. The exact format if
-this will vary depending on what type of pinball controller you're
-using and how the switch is connected. You can refer the the how to
-guides for each hardware platform for details. There is no standard format--it
-really depends on your hardware platform.
+This is the number of the switch which specifies which switch input the
+switch is physically connected to. The exact format used here will
+depend on which control system you're using and how the switch is connected.
+
+Click the correct link for the specifics:
+
+* :doc:`FAST Pinball </hardware/fast/switches>`
+* :doc:`P-ROC </hardware/multimorphic/switches_p_roc>`
+* :doc:`P-ROC </hardware/p3_roc/switches_p3_roc>`
+* :doc:`OPP </hardware/opp/switches>`
+* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines>`
 
 Optional settings
 -----------------

@@ -25,8 +25,17 @@ number:
 ~~~~~~~
 Single value, type: ``string``.
 
-.. todo::
-   Add description.
+This is the number of the coil which specifies which driver output the
+coil is physically connected to. The exact format used here will
+depend on which control system you're using and how the coil is connected.
+
+Click the correct link for the specifics:
+
+* :doc:`FAST Pinball </hardware/fast/leds>`
+* :doc:`P-ROC/P3-ROC</hardware/multimorphic/leds>`
+* :doc:`OPP </hardware/opp/leds>`
+* :doc:`FadeCandy </hardware/fadecandy/leds>`
+* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines>`
 
 Optional settings
 -----------------

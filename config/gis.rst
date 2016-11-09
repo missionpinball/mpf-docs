@@ -25,8 +25,12 @@ number:
 ~~~~~~~
 Single value, type: ``string``.
 
-.. todo::
-   Add description.
+This is the number of the GI string which specifies which output the
+GI is physically connected to. The exact format used here will
+depend on which control system you're using.
+
+See the :doc:`existing machines </hardware/existing_machines>` documentation for
+details.
 
 Optional settings
 -----------------

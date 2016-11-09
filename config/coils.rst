@@ -61,9 +61,14 @@ Single value, type: ``string``.
 
 This is the number of the coil which specifies which driver output the
 coil is physically connected to. The exact format used here will
-depend on whether you're using a P-ROC or FAST controller, and what
-type of driver board you're using. See the platform-specific how to
-guides for details.
+depend on which control system you're using and how the coil is connected.
+
+Click the correct link for the specifics:
+
+* :doc:`FAST Pinball </hardware/fast/drivers>`
+* :doc:`P-ROC/P3-ROC</hardware/multimorphic/drivers>`
+* :doc:`OPP </hardware/opp/drivers>`
+* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines>`
 
 Optional settings
 -----------------
