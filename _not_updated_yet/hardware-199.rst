@@ -8,7 +8,7 @@ sample:
 
 ::
 
-    
+
     hardware:
       platform: p_roc
       driverboards: wpc
@@ -61,60 +61,7 @@ hardware vendor.
 
 
 
-Optional"per device" platform overrides
----------------------------------------
 
-In MPF it's possible to mix-and-match your hardware platforms. For
-example, you could use a P-ROC for your coils and switches while using
-a FadeCandy for your LEDs. (Or, if you wanted to be crazy, you could
-use a FAST controller for your switches and a P-ROC for your coils and
-lamps.) You can specify a hardware platform on a device class level
-(e.g. all switches are P-ROC, all LEDs are openpixel) or on a device-
-by-device basis (some LEDs are from the FAST controller, others are
-from the FadeCandy). To specify that a certain class of devices should
-use a platform other than the default platform, add an entry for that
-type of device and the platform you want to use to the hardware:
-section of your config. For example, if you want to use a P-ROC for
-most things but a FadeCandy for your LEDs, you would specify it like
-this:
-
-
-::
-
-    
-    hardware:
-        platform: p_roc
-        driverboards: pdb
-        leds: fadecandy
-
-
-You can specify the following types of hardware in this way:
-
-
-+ coils
-+ switches
-+ matrixlights
-+ leds
-+ dmd
-+ gis
-+ flashers
-
-
-Further, if you want to override the platform on an individual device
-basis, you can add a platform: setting to the device itself. For
-example, here are two LEDs, the first using the default hardware
-platform, and the second using a FadeCandy:
-
-
-::
-
-    
-    leds:
-        led00:
-            number: 00
-        led01:
-            number: 00
-            platform: fadecandy
 
 
 .. _blog post on getting MPF running with a Stern S.A.M. machine: https://missionpinball.com/blog/2015/04/mpf-working-on-a-stern-sam-machine/

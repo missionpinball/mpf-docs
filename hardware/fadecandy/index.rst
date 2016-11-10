@@ -96,16 +96,14 @@ the FadeCandy package that are kind of cool.
 
 Next you need to configure your LEDs in MPF to use the ``fadecandy`` platform.
 By default, all types of devices are assumed to be using the same platform that
-you have set in the :doc:`/config/hardware` of your machine config file. (So if
+you have set in the :doc:`/config/hardware` of your machine config file. So if
 your platform is set to ``fast``, MPF assumes your LEDs are connected to a FAST
 controller, and if your platform is set to ``p_roc`` or ``p3_roc``, MPF assumes
 your LEDs are connected to a PD-LED board.
 
-To configure MPF to use FadeCandy LEDs, there are two ways you can do this. The
-first method is used if every LED you have will be connected to a FadeCandy. In
-this case you can add an entry to the ``hardware:`` section of your machine
-config to tell it to override the default platform for your LEDs and to instead
-use the ``fadecandy`` platform, like this:
+To configure MPF to use FadeCandy LEDs, you can add an entry to the
+``hardware:`` section of your machine config to tell it to override the default
+platform for your LEDs and to instead use the ``fadecandy`` platform, like this:
 
 ::
 
@@ -114,35 +112,9 @@ use the ``fadecandy`` platform, like this:
         driverboards: pdb
         leds: fadecandy
 
-Or, if you'd like to mix-and-match LEDs from your base platform and the
-FadeCandy platform, you can add a ``platform:`` entry to an actual LED
-configuration entry to override the default. So assuming that you do not have
-the ``leds: fadecandy`` entry in the ``hardware:`` section of your machine
-config, you could set up LEDs like this:
-
-
-::
-
-    hardware:
-        platform: fast
-        driverboards: fast
-
-    leds:
-        l_some_led:
-            number: 0-0
-        l_some_other_led:
-            number: 0-0
-            platform: fadecandy
-
-In the above example, *l_some_led* will be run from your base platform
-(FAST, in the example), and *l_some_other_led* will be a FadeCandy.
-
-Notice that both of these LEDs are number "0-0". That's ok, because the first
-one is LED 0-0 from your base platform and the second is LED 0-0 from your
-FadeCandy. (If you have mostly FadeCandy LEDs and only a few on your base
-platform, you could flip that and add the ``leds: fadecandy`` to your
-``hardware:`` section and then only override the specific ones on the base
-platform with ``platform: fast`` or whatever your base platform is.)
+See the :doc:`/hardware/platform` guide for more information about setting
+device-specific default platforms versus overriding the platform for individual
+devices.
 
 6. Understanding FadeCandy LED numbering
 ----------------------------------------
