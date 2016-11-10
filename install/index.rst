@@ -20,7 +20,7 @@ entire process. Select the OS you're using from the list below:
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
-   MPF with a physical machine, check out the :doc:`/hardware/index` for
+   MPF with a physical machine, check out the :doc:`/hardware/index` guide for
    details about how to get the drivers and configuration set for the
    specific hardware controller platform you've chosen.
 
