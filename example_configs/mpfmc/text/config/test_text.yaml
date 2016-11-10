@@ -1,0 +1,190 @@
+#config_version=4
+
+modes:
+  - mode1
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  static_text:
+    - type: text
+      text: TEST
+    - type: text
+      text: STATIC TEXT
+      y: 200
+  text_from_event_param1:
+    - type: text
+      text: (param1)
+    - type: text
+      text: TEXT FROM EVENT PARAMETER
+      y: 200
+      color: red
+  text_from_event_param2:
+    - type: text
+      text: HI (param1)
+    - type: text
+      text: MIX STATIC AND DYNAMIC FROM EVENT
+      y: 200
+      color: orange
+  text_from_event_param3:
+    - type: text
+      text: MIX (param1) MATCH
+    - type: text
+      text: MIX STATIC SURROUNDING DYNAMIC
+      y: 200
+      color: yellow
+  text_from_event_param4:
+    - type: text
+      text: NO(param1)
+    - type: text
+      text: MIX WITH NO SPACE
+      y: 200
+      color: green
+  text_from_event_param5:
+    - type: text
+      text: NUMBER (param1)
+    - type: text
+      text: DYNAMIC INTEGER
+      y: 200
+      color: lightblue
+  text_from_event_param6:
+    - type: text
+      text: (param1)
+    - type: text
+      text: PURELY DYNAMIC NO MIX
+      y: 200
+      color: blue
+  text_from_event_param7:
+    - type: text
+      text: 1)
+    - type: text
+      text: PARENTHESIS IN STRING
+      y: 200
+      color: pink
+  text_from_event_param8:
+    - type: text
+      text: ((param1))
+    - type: text
+      text: COMBINE PARENTHESIS AND DYNAMIC
+      y: 200
+      color: purple
+
+  text_with_player_var1:
+    - type: text
+      text: (test_var)
+      font_size: 100
+    - type: text
+      text: TESTING WIDGET AUTO UPDATE
+      y: 90
+      color: pink
+    - type: text
+      text: FROM PLAYER VAR
+      y: 70
+      color: pink
+  text_with_player_var2:
+    - type: text
+      text: (player|test_var)
+    - type: text
+      text: DEFAULT PLAYER
+      y: 200
+      color: red
+  text_with_player_var3:
+    - type: text
+      text: (player1|test_var)
+    - type: text
+      text: NAMED PLAYER
+      y: 200
+      color: blue
+  text_with_player_var4:
+    - type: text
+      text: (player2|test_var)
+    - type: text
+      text: NAMED PLAYER THAT DOESN'T EXIST
+      y: 200
+      color: brown
+  text_with_player_var_and_event:
+    - type: text
+      text: (player_var) (test_param)
+    - type: text
+      text: MIX EVENT PARAM AND PLAYER VAR
+      y: 200
+      color: orange
+
+  text_string1:
+    - type: text
+      text: $greeting
+    - type: text
+      text: TEST text_string
+      y: 200
+      color: green
+  text_string2:
+    - type: text
+      text: $greeting $name
+    - type: text
+      text: TEST 2 text_strings
+      y: 200
+      color: purple
+  text_string3:
+    - type: text
+      text: $money
+    - type: text
+      text: TEST text_string without dollar sign
+      y: 200
+      color: red
+  text_string4:
+    - type: text
+      text: $$dollar
+    - type: text
+      text: TEST text_string with dollar sign
+      y: 200
+
+  number_grouping:
+    - type: text
+      text: 0
+      min_digits: 2
+      number_grouping: yes
+    - type: text
+      text: TEST NUMBER GROUPING & DOUBLE ZEROS
+      y: 200
+
+  mpfmc_font:
+    - type: text
+      text: MPF-MC FONT TEST
+      font_name: pixelmix
+
+  machine_font:
+    - type: text
+      text: TEST FONT FROM MACHINE FOLDER
+      font_name: big_noodle_titling
+
+slide_player:
+  static_text: static_text
+  text_from_event_param1: text_from_event_param1
+  text_from_event_param2: text_from_event_param2
+  text_from_event_param3: text_from_event_param3
+  text_from_event_param4: text_from_event_param4
+  text_from_event_param5: text_from_event_param5
+  text_from_event_param6: text_from_event_param6
+  text_from_event_param7: text_from_event_param7
+  text_from_event_param8: text_from_event_param8
+  text_with_player_var1: text_with_player_var1
+  text_with_player_var2: text_with_player_var2
+  text_with_player_var3: text_with_player_var3
+  text_with_player_var4: text_with_player_var4
+  text_with_player_var_and_event: text_with_player_var_and_event
+  number_grouping: number_grouping
+  text_string1: text_string1
+  text_string2: text_string2
+  text_string3: text_string3
+  text_string4: text_string4
+  mpfmc_font: mpfmc_font
+  machine_font: machine_font
+
+text_strings:
+  greeting: HELLO
+  ball: (ball)
+  name: PLAYER
+  dollar: 100

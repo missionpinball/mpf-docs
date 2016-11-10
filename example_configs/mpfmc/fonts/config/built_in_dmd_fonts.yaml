@@ -1,0 +1,65 @@
+#config_version=4
+
+displays:
+  window:
+    width: 800
+    height: 600
+  dmd:
+    width: 128
+    height: 32
+    default: yes
+
+slides:
+  window:
+    - type: dmd
+      width: 640
+      height: 160
+    - type: text
+      text: DMD FONT & POSITIONING TEST
+      font_size: 50
+      y: 410
+    - type: rectangle
+      width: 642
+      height: 162
+      color: gray
+  dmd_small:
+    - type: text
+      style: dmd_small
+      text: DMD_SMALL
+      anchor_y: top
+      y: top
+    - type: text
+      style: dmd_small
+      text: DMD_SMALL
+      anchor_y: bottom
+      y: bottom
+  dmd_med:
+    - type: text
+      style: dmd_med
+      text: DMD_MED
+      anchor_y: top
+      y: top
+    - type: text
+      style: dmd_med
+      text: DMD_MED
+      anchor_y: bottom
+      y: bottom
+  dmd_big:
+    - type: text
+      style: dmd_big
+      text: DMD_BIG
+      anchor_y: top
+      y: top
+    - type: text
+      style: dmd_big
+      text: DMD_BIG
+      anchor_y: bottom
+      y: bottom
+
+slide_player:
+  window_slide:
+    window:
+      target: window
+  dmd_small: dmd_small
+  dmd_med: dmd_med
+  dmd_big: dmd_big

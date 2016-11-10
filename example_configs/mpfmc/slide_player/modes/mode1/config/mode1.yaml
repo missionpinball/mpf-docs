@@ -1,0 +1,22 @@
+# config_version=4
+
+mode:
+  priority: 500
+
+slides:
+  mode1_slide:
+    type: text
+    text: MODE 1 SLIDE 1
+    color: 00ff00
+    font_size: 100
+  mode1_slide_2:
+    type: text
+    text: MODE 1 SLIDE 2
+    color: 00ffff
+    font_size: 150
+
+slide_player:
+  show_mode1_slide: mode1_slide
+  show_mode1_slide_2:
+    mode1_slide_2:
+      priority: -350

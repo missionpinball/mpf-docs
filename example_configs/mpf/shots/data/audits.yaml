@@ -1,0 +1,13 @@
+events:
+  game_ended: 0
+  game_started: 78
+player:
+  score:
+    average: 0
+    top: []
+    total: 0
+switches:
+  switch_1: 0
+  switch_2: 0
+  switch_3: 0
+  switch_4: 0

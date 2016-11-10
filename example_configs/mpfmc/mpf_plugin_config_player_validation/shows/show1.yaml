@@ -1,0 +1,69 @@
+# show_version=4
+- time: 0
+  slides:
+    slide1:  # device
+      type: text  # device_settings
+      text: TEST 1
+      color: ff0000
+      font_size: 100
+- time: 1
+  slides:
+    slide_7:  # device
+      - type: text  # device_settings
+        text: TEXT FROM SLIDE_PLAYER LIST
+        color: red
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: purple
+        font_size: 15
+        y: 33%
+- time: 2
+  slides:
+    slide_8:  # device
+      widgets:  # device_settings
+      - type: text
+        text: TEXT FROM SLIDE_PLAYER WIDGET LIST
+        color: green
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: lime
+        font_size: 15
+        y: 33%
+      target: display1
+      transition: move_in
+- time: 3
+  slides: slide2
+- time: 4
+  slides:
+    slide_9:
+      widgets:  # device_settings
+      - type: text
+        text: TEXT FROM SLIDE_PLAYER WIDGET LIST
+        color: green
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: lime
+        font_size: 15
+        y: 33%
+      target: display1
+      transition: move_in
+    slide_10:
+      widgets:  # device_settings
+      - type: text
+        text: TEXT FROM SLIDE_PLAYER WIDGET LIST
+        color: green
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: lime
+        font_size: 15
+        y: 33%
+      target: dmd
+      transition: move_in

@@ -1,0 +1,5 @@
+#config_version=4
+displays:
+  window:
+    width: 401
+    height: 301

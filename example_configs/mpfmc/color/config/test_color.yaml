@@ -1,0 +1,23 @@
+#config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  slide1:
+    - type: text
+      text: RED
+      color: red
+      y: 75
+    - type: text
+      text: 0000FF80
+      color: 0000ff80
+    - type: text
+      text: 00FF00
+      color: 00ff00
+
+
+slide_player:
+  slide1: slide1

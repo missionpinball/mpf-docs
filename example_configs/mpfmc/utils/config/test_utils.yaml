@@ -1,0 +1,16 @@
+#config_version=4
+
+slides:
+  slide1:
+    - type: text
+      text: widget1
+      z: 100
+    - type: text
+      text: widget2
+      z: 50
+    - type: text
+      text: widget3
+
+slide_player:
+  show_slide1:
+    slide: slide1

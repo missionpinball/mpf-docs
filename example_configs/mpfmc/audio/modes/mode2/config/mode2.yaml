@@ -1,0 +1,18 @@
+# config_version=4
+
+mode:
+  priority: 500
+
+sounds:
+    boing_mode2:
+        file: 140867__juskiddink__boing.wav
+        events_when_played: boing_sound_played
+
+sound_player:
+    play_sound_boing_in_mode2: boing_mode2
+    play_sound_music_fade_at_mode_end:
+        263774_music:
+            volume: 0.8
+            mode_end_action: stop
+            fade_out: 1s
+

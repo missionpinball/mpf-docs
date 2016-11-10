@@ -1,0 +1,7 @@
+player1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
+    value: 1200
+player2_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
+    value: 0
+00

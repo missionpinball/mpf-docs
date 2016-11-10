@@ -1,0 +1,31 @@
+#config_version=4
+
+modes:
+    - attract
+    - game
+    - service
+
+coils:
+    c_test:
+        number: 1
+        label: First coil
+    c_test2:
+        number: 2
+        label: Second coil
+
+switches:
+    s_door_open:
+        number:
+        tags: service_door_open, power_off
+    s_service_enter:
+        number:
+        tags: service_enter
+    s_service_esc:
+        number:
+        tags: service_esc
+    s_service_up:
+        number:
+        tags: service_up
+    s_service_down:
+        number:
+        tags: service_down

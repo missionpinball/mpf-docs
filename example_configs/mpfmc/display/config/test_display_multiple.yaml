@@ -1,0 +1,9 @@
+#config_version=4
+displays:
+  window:
+    width: 401
+    height: 301
+  display2:
+    width: 402
+    height: 302
+    default: true

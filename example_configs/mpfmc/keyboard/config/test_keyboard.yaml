@@ -1,0 +1,36 @@
+#config_version=4
+keyboard:
+  a:
+    switch: switch_a
+  b:
+    switch: switch_b
+    toggle: true
+  c:
+    switch: switch_c
+    invert: true
+  d:
+    event: event_d
+  e:
+    event: event_e
+    params:
+      foo: bar
+      mission: pinball
+  f:
+    mc_event: event_f
+  g:
+    mc_event: event_g
+    params:
+      foo: bar
+      mission: pinball
+  shift-a:
+    switch: shift_a
+  shift+b:
+    switch: shift_b
+  shift-ctrl-c:
+    switch: shift_ctrl_c
+  1:
+    switch: switch_1
+  .:
+    switch: switch_period
+  /:
+    switch: switch_slash

@@ -1,0 +1,15 @@
+#config_version=4
+
+mode:
+  priority: 100
+
+
+slide_player:
+  mode_mode1_started:
+    mode1_slide1:
+      widgets:
+      - type: video
+        video: mpf_video_small_test
+      - type: text
+        text: Video from Mode
+        y: bottom+20%

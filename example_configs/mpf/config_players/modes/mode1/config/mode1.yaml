@@ -1,0 +1,11 @@
+#config_version=4
+
+mode:
+  priority: 100
+  game_mode: False
+
+banana_player:
+  event5: express
+
+show_player:
+  event6: mode1_show

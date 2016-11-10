@@ -1,0 +1,13 @@
+events:
+  game_ended: 1
+  game_started: 141
+player:
+  score:
+    average: 0.0
+    top:
+    - 0
+    total: 1
+switches:
+  s_ball_switch1: 1
+  s_ball_switch2: 0
+  s_start: 0

@@ -1,0 +1,118 @@
+#config_version=4
+sound_system:
+  buffer: 2048
+  frequency: 44100
+  channels: 2
+  master_volume: 0.9
+  tracks:
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+    sfx:
+      volume: 0.4
+      simultaneous_sounds: 8
+      preload: yes
+    voice:
+      volume: 0.6
+      simultaneous_sounds: 1
+      preload: yes
+
+modes:
+ - mode1
+ - mode2
+
+assets:
+    sounds:
+        default:
+            load: preload
+        voice:
+            load: preload
+            track: voice
+        sfx:
+            load: preload
+            track: sfx
+        music:
+            load: on_demand
+            track: music
+
+sounds:
+    264828_text:
+        events_when_played: text_sound_played
+        events_when_looping: text_sound_looping
+        events_when_stopped: text_sound_stopped
+        loops: 7
+        simultaneous_limit: 3
+        stealing_method: skip
+    104457_moron_test:
+        events_when_played: moron_test_played
+        events_when_stopped: moron_test_stopped
+        volume: 0.6
+        ducking:
+            target: music
+            delay: 0
+            attack: 1.0sec
+            attenuation: -18db
+            release_point: 3sec
+            release: 2.25sec
+        markers:
+            - time: 2.5sec
+              events: moron_marker
+            - time: 3.5sec
+              name: verse_1
+              events: moron_next_marker, last_marker
+    210871_synthping:
+        simultaneous_limit: 3
+        stealing_method: oldest
+        events_when_played: synthping_played
+    198361_sfx-028:
+        simultaneous_limit: 3
+        stealing_method: newest
+
+sound_pools:
+    drum_group:
+        load: preload
+        type: sequence
+        simultaneous_limit: 3
+        stealing_method: skip
+        sounds:
+            4832__zajo__drum07
+            84480__zgump__drum-fx-4
+            100184__menegass__rick-drum-bd-hard
+
+sound_player:
+    play_sound_synthping: 210871_synthping
+    play_sound_text:
+        264828_text:
+            loops: -1
+            priority: 100
+    stop_sound_looping_text:
+        264828_text:
+            action: stop_looping
+    play_sound_moron_test: 104457_moron_test
+    stop_sound_moron_test:
+        104457_moron_test:
+            action: stop
+    play_sound_test:
+        113690_test:
+            volume: 0.25
+    play_sound_music:
+        263774_music:
+            volume: 0.5
+    stop_sound_music:
+        263774_music:
+            action: stop
+    play_sound_drum_group: drum_group
+    play_sound_text_default_params: 264828_text
+    play_sound_text_param_set_1:
+        264828_text:
+            volume: 0.67
+            loops: 2
+            priority: 1000
+            start_at: 0.05s
+            fade_in: 0.25s
+            fade_out: 0.1s
+            max_queue_time: 0.15s
+            events_when_played: text_sound_played_param_set_1
+            events_when_stopped: text_sound_stopped_param_set_1
+            events_when_looping: text_sound_looping_param_set_1
+

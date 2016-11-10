@@ -1,0 +1,20 @@
+#config_version=4
+
+# No sound_system section, default settings should be used
+
+modes:
+ - mode1
+
+assets:
+    sounds:
+        default:
+            load: preload
+        voice:
+            load: preload
+            track: default
+        sfx:
+            load: on_demand
+            track: default
+        music:
+            load: on_demand
+            track: default

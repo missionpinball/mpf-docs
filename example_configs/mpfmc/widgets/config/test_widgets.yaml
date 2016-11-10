@@ -1,0 +1,359 @@
+#config_version=4
+
+modes:
+- mode1
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+
+widgets:
+  widget1:
+    type: text
+    text: widget1
+    color: ffff00
+    font_size: 100
+  widget2:
+  - type: text
+    text: widget2
+    y: 50
+    color: ff0000
+    font_size: 100
+  widget3:
+  - type: text
+    text: widget3.1
+    color: ff0000
+    font_size: 100
+  - type: text
+    text: widget3.2
+    color: 00ff66
+    font_size: 100
+  - type: text
+    text: widget3.3
+    color: ff00ff
+    font_size: 100
+  widget4:
+  - type: text
+    text: widget4.1
+    y: 300
+    z: 1
+    color: ff0000
+    font_size: 100
+  - type: text
+    text: widget4.2
+    z: 1000
+    y: 250
+    color: ffff00
+    font_size: 100
+  - type: text
+    text: widget4.3
+    y: 200
+    color: 00ff00
+    font_size: 100
+  - type: text
+    text: widget4.4
+    z: 1
+    y: 150
+    color: 00ffff
+    font_size: 100
+  - type: text
+    text: widget4.5
+    z: 1000
+    y: 100
+    color: 0000ff
+    font_size: 100
+  - type: text
+    text: widget4.6
+    color: ff00ff
+    font_size: 100
+    y: 50
+  - type: text
+    text: widget4.7
+    y: 0
+    color: 888888
+    font_size: 100
+  widget5:
+    type: text
+    text: widget5
+    z: 200
+    y: 150
+    font_size: 100
+  widget6:
+    type: text
+    text: widget6
+    z: 100
+    color: 774303
+    font_size: 100
+  widget7:
+    type: text
+    text: EXPIRES 1S
+    color: orange
+    font_size: 100
+    expire: 1s
+  widget8:
+    type: text
+    text: WIDGET 8
+    color: orange
+    font_size: 100
+  box11:
+     - type: text
+       text: box11
+  box12:
+     - type: text
+       text: box12
+  box13:
+     - type: text
+       text: box13
+  box14:
+     - type: text
+       text: box14
+  widget9:
+     - type: text
+       text: named_widget9
+       key: widget9_key
+  widget10:
+    type: text
+    text: (text)
+
+widget_player:
+  add_widget1_to_current: widget1
+  add_widget2_to_current: widget2
+  add_widget2_to_slide1:
+    widget2:
+      slide: slide1
+  add_widget6:
+    widget6:
+      target: default
+  remove_widget1_by_key:
+    widget1:
+      action: remove
+      key: widget1
+  remove_widget1:
+    widget1:
+      action: remove
+  add_widget7: widget7
+  add_widget8_expire:
+      widget8:
+        widget_settings:
+          expire: 1s
+  add_widget8_expire_parent:
+      widget8:
+        widget_settings:
+          expire: 1s
+        target: default
+  add_widget8_custom_settings:
+      widget8:
+        widget_settings:
+          color: red
+          font_size: 70
+  add_widget8_opacity_50:
+      widget8:
+        widget_settings:
+          opacity: .5
+          text: 50% OPACITY
+          font_size: 50
+      widget1:
+        action: add
+  event_a:
+    widget1:
+      action: update
+      widget_settings:
+        text: A
+        color: red
+  event_s:
+    widget1:
+      action: update
+      widget_settings:
+        text: S
+        color: lime
+  event_d:
+    widget1:
+      action: update
+      widget_settings:
+        text: D
+        color: blue
+  widget_4up:
+    box14:
+      widget_settings:
+        x: 25
+        expire: 6s
+    box13:
+      widget_settings:
+        x: 105
+        expire: 6s
+    box12:
+      widget_settings:
+        x: 185
+        expire: 6s
+    box11:
+      widget_settings:
+        x: 265
+        expire: 6s
+  widget_4up_red:
+    box14:
+      widget_settings:
+        color: red
+    box13:
+      widget_settings:
+        color: red
+    box12:
+      widget_settings:
+        color: red
+    box11:
+      widget_settings:
+        color: red
+  widget_to_parent:
+    box11:
+      target: default
+      widget_settings:
+        z: 1
+    box12:
+      widget_settings:
+        z: 2
+        color: red
+        y: middle+2
+  show_christmas_slide_full:
+    widget2:
+      widget_settings:
+        expire: 5s
+      slide: slide1
+      key: xmas_intro_keyname
+  remove_christmas_full:
+    widget2:
+      action: remove
+      key: xmas_intro_keyname
+  show_widget9:
+    widget9:
+      key: wigdet9_wp_key
+  show_widget10:
+    widget10:
+      action: add
+
+slide_player:
+  show_slide_1:
+    slide_1:
+    - type: text
+      text: WIDGET WITH KEY
+      key: widget1
+      color: red
+      y: 33%
+    - type: text
+      text: WIDGET NO KEY
+      color: red
+      y: 66%
+  show_slide_1_with_expire:
+    slide_1:
+    - type: text
+      text: WIDGET EXPIRE 1s
+      expire: 1s
+      color: red
+      y: 33%
+    - type: text
+      text: WIDGET NO EXPIRE
+      color: red
+      y: 66%
+  show_slide_2:
+    slide_2:
+    - type: text
+      text: TEST UPDATING EXISTING WIDGET SETTINGS
+      y: bottom
+      anchor_y: bottom
+  show_slide_3:
+    slide_3:
+      widgets:
+      - type: text
+        text: WIDGET REPLACEMENT
+        y: 25%
+  show_slide_with_widgets:
+    slide_1:
+      - type: text
+        text: widget4.1
+        y: 300
+        z: 1
+        color: ff0000
+        font_size: 100
+      - type: text
+        text: widget4.2
+        z: 1000
+        y: 250
+        color: ffff00
+        font_size: 100
+      - type: text
+        text: widget4.3
+        y: 200
+        color: 00ff00
+        font_size: 100
+      - type: text
+        text: widget4.4
+        z: 1
+        y: 150
+        color: 00ffff
+        font_size: 100
+      - type: text
+        text: widget4.5
+        z: 1000
+        y: 100
+        color: 0000ff
+        font_size: 100
+      - type: text
+        text: widget4.6
+        color: ff00ff
+        font_size: 100
+        y: 50
+      - type: text
+        text: widget4.7
+        y: 0
+        color: 888888
+        font_size: 100
+  show_slide_with_lots_of_widgets: slide_with_lots_of_widgets
+  show_new_slide:
+    new_slide2:
+      widgets:
+      - type: text
+        text: NEW SLIDE
+        y: 0
+        anchor_y: bottom
+
+slides:
+    slide_with_lots_of_widgets:
+      - type: text
+        text: widget4.1
+        y: 300
+        z: 1
+        color: ff0000
+        font_size: 100
+      - type: text
+        text: widget4.2
+        z: 1000
+        y: 250
+        color: ffff00
+        font_size: 100
+      - type: text
+        text: widget4.3
+        y: 200
+        color: 00ff00
+        font_size: 100
+      - type: text
+        text: widget4.4
+        z: 1
+        y: 150
+        color: 00ffff
+        font_size: 100
+      - type: text
+        text: widget4.5
+        z: 1000
+        y: 100
+        color: 0000ff
+        font_size: 100
+      - type: text
+        text: widget4.6
+        color: ff00ff
+        font_size: 100
+        y: 50
+      - type: text
+        text: widget4.7
+        y: 0
+        color: 888888
+        font_size: 100

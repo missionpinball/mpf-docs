@@ -1,0 +1,2 @@
+All sounds used in these tests were downloaded from www.freesound.org and are licensed under the
+Create Commons 0 License (http://creativecommons.org/publicdomain/zero/1.0/).

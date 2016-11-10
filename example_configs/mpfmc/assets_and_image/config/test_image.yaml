@@ -1,0 +1,63 @@
+#config_version=4
+
+modes:
+  - mode1
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  image_test:
+    - type: image
+      image: image1
+      x: 50
+    - type: image
+      image: image2
+      x: 80
+    - type: image
+      image: image3
+      x: 110
+    - type: image
+      image: image4
+      x: 140
+    - type: image
+      image: image5
+      x: 170
+    - type: image
+      image: image6
+      x: 200
+    - type: image
+      image: image7
+      x: 230
+    - type: image
+      image: image8
+      x: 260
+    - type: image
+      image: image9
+      x: 290
+    - type: image
+      image: image10
+      x: 320
+    - type: image
+      image: image11
+      x: 350
+    - type: image
+      image: image12
+      x: 380
+
+slide_player:
+  show_slide1: image_test
+
+assets:
+    images:
+        default:
+            load: preload
+        preload:
+            load: preload
+            test_key: test_value
+        on_demand:
+            load: on_demand
+        mode_start:
+            load: mode_start

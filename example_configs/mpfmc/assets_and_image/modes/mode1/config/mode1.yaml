@@ -1,0 +1,9 @@
+#config_version=4
+
+mode:
+  priority: 300
+
+images:
+  image6:
+    file: image6.png
+    load: mode_start

@@ -1,0 +1,4 @@
+# config_version=4
+
+show_player:
+  event1: show1

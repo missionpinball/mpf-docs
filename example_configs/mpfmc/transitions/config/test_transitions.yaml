@@ -1,0 +1,147 @@
+# config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  slide1:
+    - type: text
+      text: TRANSITION TEST
+      y: 33%
+      color: ff0000
+      font_size: 50
+    - type: text
+      text: ========== SLIDE 1 ===========
+      y: 66%
+      color: ff0000
+      font_size: 50
+    - type: rectangle
+      width: 400
+      height: 300
+      color: 330000
+
+  slide2:
+    - type: text
+      text: TRANSITION TEST
+      color: 00ff00
+      font_size: 50
+      y: 33%
+    - type: text
+      text: ---------- SLIDE 2 -----------
+      color: 00ff00
+      font_size: 50
+      y: 66%
+    - type: rectangle
+      width: 400
+      height: 300
+      color: 003300
+
+slide_player:
+  show_slide1: slide1
+  show_slide2:
+    slide2:
+      transition:
+        type: push
+        easing: out_bounce
+        duration: 2s
+        direction: right
+  push_left:
+    slide2:
+      transition:
+        type: push
+        direction: left
+  push_right:
+    slide2:
+      transition:
+        type: push
+        direction: right
+  push_up:
+    slide2:
+      transition:
+        type: push
+        direction: up
+  push_down:
+    slide2:
+      transition:
+        type: push
+        direction: down
+  move_in_left:
+    slide2:
+      transition:
+        type: move_in
+        direction: left
+  move_in_right:
+    slide2:
+      transition:
+        type: move_in
+        direction: right
+  move_in_top:
+    slide2:
+      transition:
+        type: move_in
+        direction: top
+  move_in_bottom:
+    slide2:
+      transition:
+        type: move_in
+        direction: bottom
+  move_out_left:
+    slide2:
+      transition:
+        type: move_out
+        direction: left
+  move_out_right:
+    slide2:
+      transition:
+        type: move_out
+        direction: right
+  move_out_top:
+    slide2:
+      transition:
+        type: move_out
+        direction: top
+  move_out_bottom:
+    slide2:
+      transition:
+        type: move_out
+        direction: bottom
+  wipe:
+    slide2:
+      transition:
+        type: wipe
+  swap:
+    slide2:
+      transition:
+        type: swap
+  fade:
+    slide2:
+      transition:
+        type: fade
+  fade_back:
+    slide2:
+      transition:
+        type: fade_back
+  rise_in:
+    slide2:
+      transition:
+        type: rise_in
+#  no_transition_1:
+#    slide2
+#    transition: None
+#  no_transition_2:
+#    slide2
+#    transition: false
+#  no_transition_3:
+#    slide2
+#    transition:
+#      type: none
+
+  show_slide1_with_push:
+    slide1:
+      transition:
+        type: push
+        direction: right
+  show_slide2_no_transition: slide2
+

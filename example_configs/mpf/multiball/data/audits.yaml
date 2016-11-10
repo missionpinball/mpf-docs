@@ -1,0 +1,30 @@
+events:
+  game_ended: 67
+  game_started: 85
+player:
+  score:
+    average: 0.0
+    top:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    total: 67
+switches:
+  s_ball_switch1: 249
+  s_ball_switch2: 165
+  s_ball_switch3: 81
+  s_ball_switch4: 1
+  s_ball_switch5: 0
+  s_ball_switch6: 0
+  s_ball_switch_launcher: 496
+  s_lock1: 0
+  s_lock2: 0
+  s_start: 0
+tart: 0

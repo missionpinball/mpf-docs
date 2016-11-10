@@ -1,0 +1,80 @@
+#config_version=4
+
+coils:
+    eject_coil1:
+        number:
+    eject_coil2:
+        number:
+    eject_coil3:
+        number:
+    eject_coil4:
+        number:
+    eject_coil5:
+        number:
+    eject_coil6:
+        number:
+
+
+switches:
+    s_ball_switch1:
+        number:
+    s_ball_switch2:
+        number:
+    s_ball_switch_launcher:
+        number:
+    s_ball_switch_launcher2:
+        number:
+    s_ball_switch_target:
+        number:
+    s_playfield:
+        number:
+        tags: playfield_active
+    s_launch:
+        number:
+        tags: launch
+    s_vuk:
+        number:
+
+
+
+ball_devices:
+    test_trough:
+        eject_coil: eject_coil1
+        ball_switches: s_ball_switch1, s_ball_switch2
+        debug: true
+        confirm_eject_type: target
+        eject_targets: test_launcher
+        eject_timeouts: 3s
+        tags: trough, drain, home
+    test_launcher:
+        eject_coil: eject_coil2
+        ball_switches: s_ball_switch_launcher
+        debug: true
+        eject_timeouts: 6s, 10s
+        eject_targets: playfield, test_target
+        mechanical_eject: true
+        confirm_eject_type: target
+        tags: ball_add_live
+    test_target:
+        eject_coil: eject_coil3
+        ball_switches: s_ball_switch_target
+        debug: true
+        eject_timeouts: 6s
+        confirm_eject_type: target
+    test_launcher_manual_on_unexpected:
+        eject_coil: eject_coil4
+        ball_switches: s_ball_switch_launcher2
+        debug: true
+        eject_timeouts: 6s
+        eject_targets: playfield
+        mechanical_eject: true
+        auto_fire_on_unexpected_ball: false
+        confirm_eject_type: target
+    test_vuk:
+        eject_coil: eject_coil5
+        ball_switches: s_vuk
+        debug: true
+        eject_timeouts: 3s
+        eject_targets: test_launcher
+        auto_fire_on_unexpected_ball: false
+        confirm_eject_type: target

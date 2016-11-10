@@ -1,0 +1,126 @@
+#config_version=4
+
+displays:
+  default:
+    width: 800
+    height: 600
+  dmd:
+    width: 128
+    height: 32
+
+slides:
+  slide1:
+    - type: color_dmd
+      width: 640
+      height: 160
+#      color: ffcccc
+#      source_display: dmd
+#      shades: 4
+#      gain: 2
+    - type: text
+      text: COLOR DMD TEST
+      y: 200
+    - type: rectangle
+      width: 642
+      height: 162
+      color: gray
+  dmd_slide:
+    - type: text
+      text: DMD TEXT
+      anchor_x: center
+      x: 128
+      animations:
+        show_slide:
+          - property: x
+            value: 10%
+            duration: .25s
+          - property: x
+            value: 35%
+            repeat: true
+            duration: 250ms
+    - type: rectangle
+      width: 8
+      height: 32
+      color: red
+      x: 4
+    - type: rectangle
+      width: 8
+      height: 32
+      color: orange
+      x: 12
+    - type: rectangle
+      width: 8
+      height: 32
+      color: yellow
+      x: 20
+    - type: rectangle
+      width: 8
+      height: 32
+      color: green
+      x: 28
+    - type: rectangle
+      width: 8
+      height: 32
+      color: blue
+      x: 36
+    - type: rectangle
+      width: 8
+      height: 32
+      color: purple
+      x: 44
+    - type: rectangle
+      width: 8
+      height: 32
+      color: pink
+      x: 52
+    - type: rectangle
+      width: 8
+      height: 32
+      color: dddddd
+      x: 60
+    - type: rectangle
+      width: 8
+      height: 32
+      color: bbbbbb
+      x: 68
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 888888
+      x: 76
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 666666
+      x: 84
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 444444
+      x: 92
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 333333
+      x: 100
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 222222
+      x: 108
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 111111
+      x: 116
+    - type: rectangle
+      width: 8
+      height: 32
+      color: 000000
+      x: 124
+
+slide_player:
+  slide1: slide1
+  dmd_slide:
+    dmd_slide:
+      target: dmd

@@ -1,0 +1,216 @@
+#config_version=4
+modes:
+ - mode1
+
+displays:
+  display1:
+    height: 400
+    width: 300
+  display2:
+    height: 400
+    width: 300
+
+slides:
+  machine_slide_1:
+    - type: text
+      text: TEST SLIDE PLAYER - SLIDE 1
+      color: ff0000
+      font_size: 100
+    - type: rectangle
+      width: 400
+      height: 300
+      color: blue
+  machine_slide_2:
+    - type: text
+      text: TEST SLIDE PLAYER - SLIDE 2
+      color: ffaa00
+      font_size: 100
+    - type: rectangle
+      width: 400
+      height: 300
+      color: purple
+  machine_slide_3:
+    - type: text
+      text: TEST SLIDE PLAYER - SLIDE 3
+      color: 00ff00
+      font_size: 100
+    - type: rectangle
+      width: 400
+      height: 300
+      color: yellow
+  machine_slide_4:
+    - type: text
+      text: TEST SLIDE PLAYER - SLIDE 4
+      color: 0000ff
+      font_size: 100
+    - type: rectangle
+      width: 400
+      height: 300
+      color: pink
+  machine_slide_5:
+    - type: text
+      text: TEST SLIDE PLAYER - SLIDE 5
+      color: ff00ff
+      font_size: 100
+    - type: rectangle
+      width: 400
+      height: 300
+      color: green
+  machine_slide_6:
+    - type: text
+      text: BASE SLIDE
+    - type: rectangle
+      width: 400
+      height: 300
+      color: blue
+  machine_slide_7:
+    widgets:
+      - type: text
+        text: EXPIRE 1s
+        color: red
+      - type: rectangle
+        width: 400
+        height: 300
+        color: yellow
+    expire: 1s
+  machine_slide_8:
+    widgets:
+    - type: text
+      text: EXPIRE 1s
+      color: purple
+      y: 66%
+    - type: text
+      text: WITH TRANSITION OUT
+      color: purple
+      y: 33%
+    - type: rectangle
+      width: 400
+      height: 300
+      color: orange
+    expire: 1s
+    transition_out: wipe
+  machine_slide_9:
+    widgets:
+    - type: text
+      text: TRANSITION IN
+    - type: rectangle
+      width: 400
+      height: 300
+      color: lime
+    transition: move_in
+  machine_slide_10:
+    widgets:
+    - type: text
+      text: WIDGET 1
+      animations:
+        flash_widget_1:
+        - property: opacity
+          value: 1
+          duration: .25s
+        - property: opacity
+          value: 0
+          duration: .25s
+          repeat: yes
+
+slide_player:
+  show_slide_1: machine_slide_1
+  show_slide_2:
+    machine_slide_2:
+      target: display1
+  show_slide_3:
+    machine_slide_3:
+      target: display2
+  show_slide_4: machine_slide_4
+  show_slide_5: machine_slide_5
+  show_slide_4_p200:
+    machine_slide_4:
+      priority: 200
+  show_slide_1_force:
+    machine_slide_1:
+      force: true
+  add_slide_5_dont_show:
+    slide1:
+      show: false
+  anon_slide_dict:
+    slide_6:
+      type: text
+      text: TEXT FROM SLIDE_PLAYER DICT
+      color: ff00ff
+      font_size: 15
+  anon_slide_list:
+    slide_7:
+      - type: text
+        text: TEXT FROM SLIDE_PLAYER LIST
+        color: red
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: purple
+        font_size: 15
+        y: 33%
+  anon_slide_widgets:
+    slide_8:
+      widgets:
+      - type: text
+        text: TEXT FROM SLIDE_PLAYER WIDGET LIST
+        color: green
+        font_size: 15
+        y: 66%
+      - type: text
+        text: WIDGET 2
+        color: lime
+        font_size: 15
+        y: 33%
+      target: display1
+      transition: move_in
+  base_slide_no_expire: machine_slide_6
+  new_slide_expire:
+    machine_slide_1:
+      expire: 1s
+  show_slide_7: machine_slide_7
+  show_slide_8: machine_slide_8
+  show_slide_9: machine_slide_9
+  show_slide_5_with_transition:
+    machine_slide_5:
+      transition: fade
+  show_slide_9_with_transition:
+    machine_slide_9:
+      transition: fade
+  slide_2_dont_show:
+    machine_slide_2:
+      show: no
+  remove_slide_4:
+    machine_slide_4:
+      action: remove
+  remove_slide_4_with_transition:
+    machine_slide_4:
+      action: remove
+      transition: wipe
+  remove_slide_8:
+    machine_slide_8:
+      action: remove
+  remove_slide_8_fade:
+    machine_slide_8:
+      action: remove
+      transition: fade
+  slide1_expire_1s:
+    machine_slide_1:
+      expire: 1s
+  slide2_expire_1s:
+    machine_slide_2:
+      expire: 1s
+  show_slide_with_animations:
+    my_slide:
+      widgets:
+      - type: text
+        text: WIDGET 1
+        animations:
+          flash_widget_2:
+          - property: opacity
+            value: 1
+            duration: .25s
+          - property: opacity
+            value: 0
+            duration: .25s
+            repeat: yes

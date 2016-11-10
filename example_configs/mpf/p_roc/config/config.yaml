@@ -1,0 +1,61 @@
+#config_version=4
+
+hardware:
+    driverboards: pdb
+    platform: p_roc
+
+P_ROC:
+  dmd_timing_cycles: 1, 2, 3, 4
+
+switches:
+    s_test_000:
+        number: 0
+    s_test_001:
+        number: 1
+    s_test:
+        number: 23
+    s_test_no_debounce:
+        number: 24
+        debounce: quick
+    s_slingshot_test:
+        number: 40
+    s_direct:
+        number: SD01
+    s_matrix:
+        number: 2/3
+
+
+coils:
+    c_test:
+        number: A1-B1-2
+        pulse_ms: 23
+
+    c_test_allow_enable:
+        number: A1-B1-3
+        pulse_ms: 23
+        allow_enable: true
+    c_slingshot_test:
+        number: A0-B1-0
+    c_test2:  # unused. just to configure bank 0
+        number: A0-B0-0
+    c_direct:
+        number: C01
+    c_pwm_on_off:
+        number: A1-B1-4
+        pwm_on_ms: 2
+        pwm_off_ms: 5
+
+autofire_coils:
+    ac_slingshot_test:
+        coil: c_slingshot_test
+        switch: s_slingshot_test
+
+matrix_lights:
+  test_pdb_light:
+    number: C-A2-B0-0:R-A2-B1-0
+  test_direct_light:
+    number: L01
+
+gis:
+  test_gi:
+    number: A2-B0-3

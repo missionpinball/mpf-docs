@@ -1,0 +1,114 @@
+#config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+modes:
+  - mode1
+
+slides:
+  video_test:
+    - type: video
+      video: mpf_video_small_test
+    - type: text
+      text: Video Test
+      y: bottom+20%
+    - type: text
+      text: ""
+      y: bottom+10%
+  video_test2:
+    - type: video
+      video: mpf_video_small_test
+      control_events:
+        - event: play1
+          action: play
+        - event: stop1
+          action: stop
+        - event: pause1
+          action: pause
+        - event: seek1
+          action: seek
+          value: .5
+        - event: position1
+          action: position
+          value: 4
+        - event: mute
+          action: volume
+          value: 0
+    - type: text
+      text: Video Control Events Test
+      y: bottom+20%
+    - type: text
+      text: ""
+      y: bottom+10%
+  video_test3:
+    - type: video
+      video: mpf_video_small_test
+      control_events:
+        - event: pre_show_slide
+          action: seek
+          value: .5
+  video_test4:
+    - type: video
+      video: mpf_video_small_test
+      control_events:
+        - event: show_slide
+          action: seek
+          value: .5
+  video_test5:
+    - type: video
+      video: mpf_video_small_test
+      control_events:
+        - event: pre_slide_leave
+          action: seek
+          value: .5
+  video_test6:
+    - type: video
+      video: mpf_video_small_test
+      control_events:
+        - event: slide_leave
+          action: seek
+          value: .5
+  video_test7:
+    - type: video
+      video: mpf_video_small_test
+      auto_play: true
+      end_behavior: loop
+      volume: .2
+      control_events:
+        - event: seek1
+          action: seek
+          value: .9
+  video_test8:
+    - type: video
+      video: mpf_video_small_test
+      auto_play: false
+      end_behavior: stop
+      volume: 0.8
+      control_events:
+        - event: play1
+          action: play
+        - event: seek1
+          action: seek
+          value: .9
+  video_test9:
+    - type: text
+      text: Machine slide, no video
+
+slide_player:
+  show_slide1: video_test
+  show_slide2: video_test2
+  show_slide3: video_test3
+  show_slide4: video_test4
+  show_slide5: video_test5
+  show_slide6: video_test6
+  show_slide7: video_test7
+  show_slide8: video_test8
+  show_slide9: video_test9
+
+videos:
+  mpf_video_small_test:
+    width: 100
+    height: 70

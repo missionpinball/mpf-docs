@@ -1,0 +1,37 @@
+art: 0
+events:
+  game_ended: 3
+  game_started: 73
+player:
+  score:
+    average: 0.0
+    top:
+    - 0
+    - 0
+    - 0
+    total: 3
+switches:
+  outhole: 65
+  playfield: 65
+  plunger: 65
+  s_ball_switch1: 5
+  s_ball_switch2: 0
+  s_ball_switch_launcher: 8
+  s_ball_switch_lock1: 3
+  s_ball_switch_lock2: 0
+  s_ball_switch_lock3: 0
+  s_ball_switch_target1: 0
+  s_ball_switch_target2_1: 0
+  s_ball_switch_target2_2: 0
+  s_ball_switch_target3: 0
+  s_ball_switch_target3_2: 0
+  s_diverter: 0
+  s_playfield: 1
+  s_playfield_active: 6
+  s_start: 0
+  start: 0
+  trough1: 0
+  trough2: 0
+  trough3: 0
+  trough_entry: 0
+ugh3: 0

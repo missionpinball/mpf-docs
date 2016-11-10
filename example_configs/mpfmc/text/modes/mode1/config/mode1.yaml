@@ -1,0 +1,15 @@
+#config_version=4
+
+mode:
+  priority: 100
+
+text_strings:
+  greeting: HELLO FROM MODE 1
+
+slides:
+  text_string1_mode1:
+    - type: text
+      text: $greeting
+
+slide_player:
+  text_string1_mode1: text_string1_mode1

@@ -1,0 +1,32 @@
+#config_version=4
+sound_system:
+  buffer: 1000 # Not a power or two as required
+  tracks:
+    voice:
+      volume: 0.6
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 0.4
+      simultaneous_sounds: 8
+      preload: yes
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+
+modes:
+ - mode1
+
+assets:
+    sounds:
+        default:
+            load: preload
+        voice:
+            load: preload
+            track: voice
+        sfx:
+            load: on_demand
+            track: sfx
+        music:
+            load: on_demand
+            track: music

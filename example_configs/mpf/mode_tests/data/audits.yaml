@@ -1,0 +1,20 @@
+es: {}
+events:
+  game_ended: 8
+  game_started: 44
+hes: {}
+player:
+  score:
+    average: 0.0
+    top:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    total: 8
+switches: {}
+hes: {}

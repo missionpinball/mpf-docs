@@ -1,0 +1,38 @@
+#config_version=4
+
+matrix_lights:
+    light_01:
+        number: 0
+        label: Test 0
+    light_02:
+        number: 1
+        label: Test 1
+
+gis:
+    gi_01:
+        number: 1
+    gi_02:
+        number: 2
+
+coils:
+    coil_01:
+        number: 1
+        pulse_ms: 30
+    coil_02:
+        number: 2
+        pulse_ms: 60
+    coil_03:
+        number: 3
+
+flashers:
+    flasher_01:
+        number: 1
+        label: Test flasher
+        flash_ms: 40
+    flasher_02:
+        number: 2
+        label: Test flasher 2
+        flash_ms: 100
+    flasher_03:
+        number: 3
+

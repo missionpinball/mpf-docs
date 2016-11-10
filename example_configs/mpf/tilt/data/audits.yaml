@@ -1,0 +1,17 @@
+events:
+  game_ended: 0
+  game_started: 133
+player:
+  score:
+    average: 0
+    top: []
+    total: 0
+switches:
+  s_ball_switch1: 132
+  s_ball_switch2: 0
+  s_ball_switch_launcher: 198
+  s_flipper: 0
+  s_slam_tilt: 0
+  s_start: 0
+  s_tilt: 67
+  s_tilt_warning: 325

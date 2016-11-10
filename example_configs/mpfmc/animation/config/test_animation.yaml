@@ -1,0 +1,259 @@
+#config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  slide1:
+    type: text
+    text: text
+    x: 0
+    animations:
+      show_slide:
+        - property: x  # x, y, height, width, opacity, rotation?
+          value: 101
+          duration: 1s
+          repeat: -1
+        - property: x  # x, y, height, width, opacity, rotation?
+          value: 100
+          duration: 1s
+          timing: with_previous  # or after prev
+          repeat: True
+    reset_animations_events: pre_show_slide
+
+  slide2:
+    type: text
+    text: ANIMATION TEST
+    color: ff00ff
+    font_size: 100
+    y: 300
+    x: 400
+    animations:
+      entrance2:
+        property: x, y
+        value: 0, 0
+        duration: 1s
+        timing: with_previous  # or after prev
+        repeat: True
+
+  slide3:
+    type: text
+    text: text3
+    color: green
+    opacity: 0
+    animations:
+      entrance3: fade_in, multi
+
+  slide4:
+    type: text
+    text: text4
+    animations:
+      entrance4: fade_in, multi
+      some_event4: multi
+
+  slide5:
+    type: text
+    text: text5
+    animations:
+      entrance5: fade_in, multi
+      event5:
+        property: x # x, y, height, width, opacity, rotation?
+        value: 98
+        duration: 1s
+        timing: with_previous  # or after prev
+        repeat: True
+
+  slide6:
+    type: text
+    text: text6
+
+  slide7:
+    type: text
+    text: TEST ANIMATION ON show_slide
+    x: 0
+    color: ffaa00
+    font_size: 50
+    animations:
+      show_slide:
+        property: x
+        value: 400
+        duration: 500ms
+
+  slide8:
+    type: text
+    text: TEST ANIMATION FROM OFF SCREEN
+    y: 75%
+
+  base_slide:
+    background_color: blue
+    widgets:
+      type: text
+      text: WIDGET ANIMATION TESTS
+
+  slide9:
+    type: text
+    text: ANIMATION pre_show_slide
+    x: 0
+    color: ffaa00
+    font_size: 50
+    animations:
+      pre_show_slide:
+        property: x
+        value: 400
+        duration: 500ms
+
+  slide10:
+    type: text
+    text: ANIMATION show_slide
+    x: 0
+    color: ffaa00
+    font_size: 50
+    animations:
+      show_slide:
+        property: x
+        value: 400
+        duration: 500ms
+
+  slide11:
+    type: text
+    text: ANIMATION pre_slide_leave
+    color: ffaa00
+    font_size: 50
+    animations:
+      pre_slide_leave:
+        property: x
+        value: -400
+        duration: 500ms
+
+  slide12:
+    type: text
+    text: ANIMATION slide_leave
+    color: ffaa00
+    font_size: 50
+    animations:
+      slide_leave:
+        property: x
+        value: 0
+        duration: 500ms
+
+  slide13:
+    type: text
+    text: RESET POSITION pre_show_slide
+    x: 0
+    animations:
+      show_slide:
+        - property: x
+          value: 100
+          duration: 1s
+    reset_animations_events: pre_show_slide
+
+  slide14:
+    type: text
+    text: RESET POSITION slide_play
+    x: 0
+    animations:
+      show_slide:
+        - property: x
+          value: 100
+          duration: 1s
+    reset_animations_events: slide_play
+
+  slide15:
+    type: text
+    text: RESET POSITION standard event
+    x: 0
+    animations:
+      show_slide:
+        - property: x
+          value: 100
+          duration: 1s
+    reset_animations_events: event1
+
+slide_player:
+  show_slide1: slide1
+  show_slide7: slide7
+  show_slide2: slide2
+  show_slide3: slide3
+  show_slide8: slide8
+  show_slide9:
+    slide9:
+      transition:
+        type: fade
+        duration: 1s
+  show_slide10:
+    slide10:
+      transition:
+        type: fade
+        duration: 1s
+  show_slide11: slide11
+  show_slide12: slide12
+  show_base_slide: base_slide
+  show_base_slide_with_transition:
+    base_slide:
+      transition:
+        type: fade
+        duration: 1s
+  show_slide13: slide13
+  show_slide14: slide14
+  show_slide15: slide15
+
+widgets:
+  widget1:
+     type: text
+     text: WIDGET 1
+     color: red
+     x: -100
+     animations:
+       move_on_slide:
+        - property: x
+          value: 100
+          duration: 500ms
+          timing: after_previous
+       move_off_slide:
+        - property: x
+          value: -100
+          duration: 500ms
+          timing: after_previous
+     expire: 2s
+
+  widget2:
+    type: text
+    text: widget2
+    color: red
+    opacity: 0
+    animations:
+      animate_widget2: fade_in, multi
+      pulse_widget2: pulse, pulse, pulse, pulse
+
+widget_player:
+  show_widget1: widget1
+  show_widget2: widget2
+
+animations:
+  fade_in:
+    property: opacity
+    value: 1
+    duration: 1s
+    timing: with_previous
+    repeat: True
+
+  multi:
+  - property: y
+    value: 0
+    duration: 1s
+  - property: x
+    value: 0%
+    duration: 100ms
+    timing: after_previous
+    repeat: False
+
+  pulse:
+  - property: opacity
+    value: 0
+    duration: 100ms
+  - property: opacity
+    value: 1
+    duration: 100ms
+    timing: after_previous

@@ -1,0 +1,105 @@
+#config_version=4
+
+game:
+    balls_per_game: 1
+
+coils:
+    eject_coil1:
+        number:
+    eject_coil2:
+        number:
+    eject_coil3:
+        number:
+
+switches:
+    s_start:
+        number:
+        tags: start
+    s_ball_switch1:
+        number:
+    s_ball_switch2:
+        number:
+    s_ball_switch3:
+        number:
+    s_ball_switch4:
+        number:
+    s_ball_switch5:
+        number:
+    s_ball_switch6:
+        number:
+    s_lock1:
+        number:
+    s_lock2:
+        number:
+    s_ball_switch_launcher:
+        number:
+
+ball_devices:
+    bd_trough:
+        eject_coil: eject_coil1
+        ball_switches: s_ball_switch1, s_ball_switch2, s_ball_switch3, s_ball_switch4, s_ball_switch5, s_ball_switch6
+        confirm_eject_type: target
+        eject_targets: bd_launcher
+        tags: trough, drain, home
+    bd_launcher:
+        eject_coil: eject_coil2
+        ball_switches: s_ball_switch_launcher
+        confirm_eject_type: target
+        eject_timeouts: 2s
+        tags: ball_add_live
+    bd_lock:
+        eject_coil: eject_coil3
+        ball_switches: s_lock1, s_lock2
+        eject_timeouts: 2s
+
+modes:
+    - mode1
+    - mode2
+
+multiballs:
+    mb1:
+        ball_count: 1
+        ball_count_type: add
+        shoot_again: 30s
+        enable_events: mb1_enable
+        disable_events: mb1_disable
+        start_events: mb1_start
+        stop_events: mb1_stop
+    mb2:
+        ball_count: 2
+        ball_count_type: add
+        shoot_again: -1
+        enable_events: mb2_enable
+        disable_events: mb2_disable
+        start_events: mb2_start
+        stop_events: mb2_stop
+    mb3:
+        ball_count: 1
+        ball_count_type: add
+        shoot_again: 0
+        enable_events: mb3_enable
+        disable_events: mb3_disable
+        start_events: mb3_start
+        stop_events: mb3_stop
+    mb6:
+        ball_count: 2
+        ball_count_type: add
+        shoot_again: 0
+        start_events: mb6_start
+        ball_locks: lock_mb6
+    mb10:
+        ball_count: 3
+        ball_count_type: total
+        shoot_again: 20s
+        start_events: mb10_start
+    mb11:
+        ball_count: 2
+        ball_count_type: total
+        shoot_again: 20s
+        start_events: mb11_start
+        ball_locks: lock_mb6
+
+ball_locks:
+    lock_mb6:
+        lock_devices: bd_lock
+        balls_to_lock: 2

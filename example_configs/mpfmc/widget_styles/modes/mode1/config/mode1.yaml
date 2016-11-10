@@ -1,0 +1,21 @@
+#config_version=4
+
+mode:
+  priority: 100
+
+widget_styles:
+  text_default:
+    font_size: 50
+
+slides:
+  slide2:
+    - type: text
+      text: MODE1 DEFAULT STYLE
+      y: 75
+    - type: text
+      style: big
+      text: BIG FROM BASE
+      y: 225
+
+slide_player:
+  slide2: slide2

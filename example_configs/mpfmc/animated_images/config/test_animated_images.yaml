@@ -1,0 +1,40 @@
+#config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  slide1:
+    - type: image
+      image: ball
+      y: 250
+      fps: 30
+    - image: busy-stick-figures-animated
+      type: image
+      y: 100
+#      auto_play: no
+      x: 250
+    - type: text
+      text: ZIP FILE OF PNGs
+      y: 260
+    - type: text
+      text: ANIMATED GIF
+      x: 10
+      y: 100
+      anchor_x: left
+    - type: text
+      text: (ALSO TESTING STOPPING
+      x: 10
+      y: 80
+      font_size: 10
+      anchor_x: left
+    - type: text
+      text: SKIPPING, & STARTING)
+      font_size: 10
+      x: 14
+      y: 68
+      anchor_x: left
+slide_player:
+  slide1: slide1

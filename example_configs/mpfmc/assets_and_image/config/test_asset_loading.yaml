@@ -1,0 +1,65 @@
+#config_version=4
+
+modes:
+  - mode1
+
+assets:
+    images:
+        default:
+            load: preload
+        preload:
+            load: preload
+            test_key: test_value
+        on_demand:
+            load: on_demand
+        mode_start:
+            load: mode_start
+
+images:
+  image_12_new_name:
+    file: image12.png
+    test_key: test_value_override12
+  image_13_new_name:
+    file: image13.png
+  image3:
+    test_key: test_value_override3
+
+image_pools:
+  group1:
+    load: preload
+    images:
+      image1
+      image2
+      image3
+    type: random
+  group2:
+    load: preload
+    images:
+      image1
+      image2
+      image3|2
+    type: random
+  group3:
+    images:
+      image1
+      image2
+      image3
+    type: sequence
+  group4:
+    images:
+      image1|4
+      image2|2
+      image3
+    type: sequence
+  group5:
+    images:
+      image1|1
+      image2|5
+      image3|1
+    type: random_force_next
+  group6:
+    images:
+      image1
+      image2
+      image3
+    type: random_force_all

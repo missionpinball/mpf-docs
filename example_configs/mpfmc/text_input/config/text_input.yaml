@@ -1,0 +1,39 @@
+#config_version=4
+
+displays:
+  default:
+    width: 400
+    height: 300
+
+slides:
+  slide1:
+  - type: text
+    text: TEXT HIGH SCORE ENTRY
+    color: red
+    y: top-5
+    anchor_y: top
+  - type: text_input
+    initial_char: C
+    key: key1
+    style: score_entry
+    animations:
+      show_slide:
+      - property: opacity
+        value: 1
+        duration: .25s
+      - property: opacity
+        value: 0
+        duration: .25s
+        repeat: yes
+  - type: text
+    text: ""
+    key: key1
+    style: score_entry
+
+widget_styles:
+  score_entry:
+    font_size: 50
+
+slide_player:
+  slide1: slide1
+
