@@ -79,6 +79,16 @@ Mission Pinball Framework |version| documentation
 
 Everything you need to know about the Mission Pinball Framework.
 
+.. important::
+
+   There are multiple versions of these docs which correspond to
+   different versions of MPF. You're currently viewing the version for
+   MPF |version|. If this is not the version of MPF you're using, click
+   the "Read The Docs" link in the lower-left corner to pick a different
+   version of the docs.
+
+   More on MPF versions is :doc:`here <versions>`.
+
 First Steps
 -----------
 If you're brand-new to MPF, start here.
