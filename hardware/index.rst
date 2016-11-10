@@ -88,7 +88,7 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    snux/index
-   fadecandy/index
+   FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
    pololu_maestro/index
    SmartMatrix RGB DMD <smartmatrix/index>
