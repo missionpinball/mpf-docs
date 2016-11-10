@@ -6,9 +6,9 @@ MPF is a console-based application which you run from the command line.
 The quick version
 -----------------
 
-#. Open a command prompt.
+#. Open a command prompt
 #. Switch to your machine folder
-#. Run ``mpf both``
+#. Run ``mpf both`` (Windows and Linux only. For Mac, run ``mpf`` and ``mpf mc``)
 
 Starting the MPF game engine and media controller together
 ----------------------------------------------------------
@@ -28,7 +28,9 @@ folder. This is the folder that contains your machine's ``config``, ``modes``,
 
 .. note:: Prior to MPF 0.30, we recommended that you put your machine's folder
    in the ``/machine_files`` folder inside the MPF package. That is changed now,
-   and you can put your machine folder(s) wherever you want.
+   and you can put your machine folder(s) wherever you want. In fact now that
+   MPF has a "real" installer, the MPF package folder is hidden deep inside
+   your system.
 
 Then run:
 
