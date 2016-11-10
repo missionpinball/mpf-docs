@@ -153,40 +153,7 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-.. begin_mpfdoctest:config/config.yaml
-
-::
-
-    #config_version=4
-
-    switches:
-        s_left_flipper:
-            number: 1
-        s_right_flipper:
-            number: 2
-
-    coils:
-        c_flipper_left_main:
-            number: 0
-        c_flipper_left_hold:
-            number: 1
-            allow_enable: true
-        c_flipper_right_main:
-            number: 2
-        c_flipper_right_hold:
-            number: 3
-            allow_enable: true
-
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
-
-.. end_mpfdoctest
+.. literalinclude:: /example_configs/mpf/flippers/config/hold_no_eos.yaml
+   :caption: `/config/config.yaml </example_configs/mpf/flippers/config/hold_no_eos.yaml>`_
+   :language: yaml
+   :emphasize-lines: 4-5,9,11,15,18,21,24
