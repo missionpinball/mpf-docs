@@ -153,7 +153,7 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-.. literalinclude:: /example_configs/mpf/flippers/config/hold_no_eos.yaml
-   :caption: `/config/config.yaml </example_configs/mpf/flippers/config/hold_no_eos.yaml>`_
+.. literalinclude:: /examples/mpf/flippers/config/hold_no_eos.yaml
+   :caption: `/config/config.yaml </_static/examples/mpf/flippers/config/hold_no_eos.yaml>`_
    :language: yaml
    :emphasize-lines: 4-5,9,11,15,18,21,24
