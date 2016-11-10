@@ -99,7 +99,7 @@ If you're brand-new to MPF, start here.
 
 Hooking up your machine
 -----------------------
-* Pick a pinball control system
+* :doc:`Pick a pinball control system </hardware/index>`
 * Get the right drivers installed
 * Build the minimum config to get flipping!
 * :doc:`/finalization/index`

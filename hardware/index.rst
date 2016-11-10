@@ -37,6 +37,12 @@ that you don't see on this list, please
 `post a message to the MPF Users Google Group
 <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
 
+Primary control systems
+~~~~~~~~~~~~~~~~~~~~~~~
+
+You'll need to pick one of these three as the main interface between MPF and
+your pinball machine.
+
 * :doc:`FAST Pinball <fast/index>`
    * Core Controller, Nano Controller, WPC Controller
    * 0804, 1616, 3208 I/O Boards
@@ -55,6 +61,12 @@ that you don't see on this list, please
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
      switches, & incandescent lights
+
+Additional supported hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following hardware devices can be combined with primary control sytstems
+to provide additional functionality.
 
 * :doc:`Snux System 11 driver board <snux/index>`
    * Supported in combination with the P-ROC or FAST WPC controller
