@@ -84,7 +84,7 @@ Everything you need to know about the Mission Pinball Framework.
    There are multiple versions of these docs which correspond to
    different versions of MPF. You're currently viewing the version for
    MPF |version|. If this is not the version of MPF you're using, click
-   the "Read The Docs" link in the lower-left corner to pick a different
+   the "Read the Docs" link in the lower-left corner to pick a different
    version of the docs.
 
    More on MPF versions is :doc:`here <versions>`.
@@ -120,12 +120,15 @@ Reference Material
 * :doc:`/config/index`
 * Example machines you can learn from
 
+Download the docs
+-----------------
+
+You can download this documentation to read offline in PDF, HTML, and Epub formats.
+Click the "Read the Docs" link in the lower left corner.
+
 Getting Help
 ------------
 * `Support Forum (Google Group) <https://groups.google.com/forum/#!forum/mpf-users>`_
-
-Click on the menu items on the left (or the menu icon if you're on a mobile device) to
-learn more. There are over 500 pages of documentation to help you get started!
 
 Follow Us
 ---------
@@ -134,3 +137,10 @@ Follow Us
 * `YouTube <https://www.youtube.com/missionpinball>`_
 * `Flickr <https://www.flickr.com/groups/missionpinball>`_
 * `GitHub <https://github.com/missionpinball>`_
+
+Let's go!
+---------
+
+You can access the full table of contents of MPF documentation via the expandable menu
+on the left (or the hamburger menu icon if you're on a mobile device). There are over
+700 pages of printed documentation to help you build your pinball machine!
