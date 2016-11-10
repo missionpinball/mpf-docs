@@ -1,6 +1,12 @@
 Using an RGB full-color LED DMD
 ===============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/displays`                                                      |
++------------------------------------------------------------------------------+
+
 MPF supports RGB full-color LED DMDs. There are several hardware options you
 can use for this:
 
@@ -24,8 +30,8 @@ the contents of the DMD, like this (with a blank DMD):
 
 .. image:: /displays/images/on_screen_basic_dmd_window.png
 
-If you want to use a physical RGB DMD without the on-screen equivalent, we'll show
-you how to do that at the end.
+If you want to use a physical RGB DMD without the on-screen equivalent, we'll
+show you how to do that at the end of this guide.
 
 If you want to only have an on-screen DMD without the physical one, like if
 you want to replace the DMD with an LCD screen but still have it look like a
@@ -54,19 +60,7 @@ is because of Eli. All we did is take everything he showed us and
 write it down. (Well, that and we also created the interface for MPF,
 but that was the easy part.) So thanks Eli!
 
-2. Configure your RGB DMD Hardware
-----------------------------------
-
-The first step to using an RGB DMD with MPF is to add the DMD to your machine-wide
-config file. The exact steps to do that vary depending on which DMD control
-platform you've chosen, so click on the one you have from the list below and
-follow the instructions there to get everything set up.
-
-* :doc:`SmartMatrix </hardware/smartmatrix/index>`
-* :doc:`RGB.DMD </hardware/eli_dmd/index>`
-* :doc:`FAST Pinball RGB DMD </hardware/fast/rgb_dmd>`
-
-3. Add your displays to your MPF config
+2. Add your displays to your MPF config
 ---------------------------------------
 
 Next, add the DMD display to your list of displays in your machine-wide config
@@ -83,12 +77,12 @@ file:
         height: 32
         default: true
 
-The example abvoe contains two displays. The first is named "window" and
+The example above contains two displays. The first is named "window" and
 has a size of 600x200. This will be the display that shows up on the computer
 screen. (Again, if you just want the DMD without an on-screen window, we'll
 show you how to do that later, but for now it's probably easiest to create a
 screen window so you can see what's happening with the display if you're working
-on your game without a physical machine attached.
+on your game without a physical machine attached.)
 
 The second display, which we're calling "dmd", will be the display that provides
 the content for the physical RGB DMD. This display is 128x32, which is the pixel
@@ -99,7 +93,7 @@ Notice that we set ``default: true`` for the DMD display. This is because as
 we're creating display content in our game, we want it (by default) to show up
 in the DMD (since that will be the primary display in our game).
 
-4. Add your window configuration
+3. Add your window configuration
 --------------------------------
 
 The ``window:`` section of the machine-wide config holds the settings for the
@@ -125,7 +119,7 @@ setting to this section. That's because we have a logical display called
 "window", and when you have that, the on-screen window will automatically use
 that display as its source.
 
-5. Configure a window slide to show the on screen DMD
+4. Configure a window slide to show the on screen DMD
 -----------------------------------------------------
 
 Now we have a working on-screen window and a working physical RGB DMD. But if
@@ -195,7 +189,7 @@ to give it a nice border.
         height: 130
         color: 444444
 
-6. Configure the slide to show when MPF starts
+5. Configure the slide to show when MPF starts
 ----------------------------------------------
 
 Now we have a nice slide with the virtual DMD on it, but if you run MPF, you
@@ -229,7 +223,7 @@ because we haven't set up any slide_player entries to add content to it, but
 that's something you can do by following the tutorial or looking at the guides
 for the slides and widgets here.
 
-7. What if you don't want the on-screen window?
+6. What if you don't want the on-screen window?
 -----------------------------------------------
 
 There might be some scenarios where you just want the physical DMD with no
@@ -243,48 +237,17 @@ In this case, you wouldn't need the ``default: true`` entry for the dmd in the
 ``displays:`` section because you only have one display, so it will automatically
 be the default.
 
-A complete config you can test
-------------------------------
+7. Configure your RGB DMD Hardware
+----------------------------------
 
-Here's an example machine-wide config file which just contains the parts that
-are relevant to the configuration we outlined here for the RGB DMD.
+At this point you have two displays configured, and you have default content
+showing up in both of them. The final step is to add the configuration for your
+physical RGB DMD so that MPF can talk to your hardware.
 
-Note that this is incomplete. For example, you'll need to include the settings
-outlined in the How To guide that your specific RGB DMD hardware needs.
+The exact steps to do that vary depending on which DMD hardware platform you've
+chosen, so click on the one you have from the list below and follow the final
+instructions there to get everything set up.
 
-::
-
-    displays:
-      window:
-        width: 600
-        height: 200
-      dmd:
-        width: 128
-        height: 32
-        default: true
-
-    window:
-      width: 600
-      height: 200
-      title: Mission Pinball Framework
-
-    slides:
-      window_slide_1:
-      - type: color_dmd
-        width: 512
-        height: 128
-      - type: text
-        text: MISSION PINBALL FRAMEWORK
-        anchor_y: top
-        y: top-3
-        font_size: 30
-        color: white
-      - type: rectangle
-        width: 514
-        height: 130
-        color: 444444
-
-    slide_player:
-      init_done:
-        window_slide_1:
-          target: window
+* :doc:`SmartMatrix </hardware/smartmatrix/index>`
+* :doc:`RGB.DMD </hardware/eli_dmd/index>`
+* :doc:`FAST Pinball RGB DMD </hardware/fast/rgb_dmd>`

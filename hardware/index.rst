@@ -91,5 +91,5 @@ MPF supports:
    fadecandy/index
    i2c_servo/index
    pololu_maestro/index
-   smartmatrix/index
+   SmartMatrix RGB DMD <smartmatrix/index>
    eli_dmd/index

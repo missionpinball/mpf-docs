@@ -1,6 +1,16 @@
 How to configure a "SmartMatrix" RGB LED DMD
 ============================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/physical_rgb_dmds`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/config/smartmatrix`                                                   |
++------------------------------------------------------------------------------+
+
 This guide explains how to connect a SmartMatrix RGB LED DMD to a
 pinball machine running MPF.
 
@@ -171,53 +181,30 @@ Here's a quick overview of how to install this code onto the Teensy. Full instru
 + Push the button on the Teensy to put it into programming mode
 + Compile & load the code onto the Teensy from the Arduino IDE
 
+3. Configure your SmartMatrix hardware settings
+-----------------------------------------------
 
-3. Configure the physical RGB DMD
----------------------------------
+Once you have your hardware all set, you need to add a ``smartmatrix:`` section
+to your machine-wide config and which tells MPF how to talk to RGB DMDs that
+use the SmartMatrix platform.
 
-Next, we'll make the entry that tells MPF that it should use the physical RGB DMD.
+The main thing you have to figure out is the port that the Teensy uses. On
+Windows, you can just open Device Manager and see which port appears when you
+plug in the Teensy.
 
-First, create an entry like this:
-
-::
-
-    physical_rgb_dmd:
-      brightness: .5
-
-There are several settings which can be set here (see the
-:doc:`/config/physical_rgb_dmd` section of the config file reference for the full list).
-
-The main thing we want here is to set the brightness, which is a multiplier from 0.0 to 1.0
-that's applied to every pixel that's sent to the DMD. In other words, the example of
-``brightness: .5`` means that each pixel will be shown at 50% brightness.
-
-.. note::
-
-   If you set the brightness multiplier in the sketch code .INO file you loaded onto
-   the Teensy, then that will multiple the brightness after MPF sends it. In other words,
-   if you set .5 in the config file and .5 in the sketch, then the final brightness will be 25%.
-
-4. Configure your RGB DMD platform to use the SmartMatrix
----------------------------------------------------------
-
-Next you need to make a platform setting that tells MPF that it should
-use the *smartmatrix* platform interface for your DMD rather than
-using the existing default platform you have set (P-ROC, FAST, OPP, etc.). To do
-this, go to your *hardware:* section and add ``rgb_dmd: smartmatrix``. For
-example:
+On Mac or Linux, open up the terminal window and type the following command:
+``ls /dev/tty.*``  The output of this command will look something like this:
 
 ::
 
-    hardware:
-        platform: fast
-        driverboards: fast
-        rgb_dmd: smartmatrix
+   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
 
-5. Configure your SmartMatrix settings
---------------------------------------
+The port will be the one that has "usbmodem" in the name. (But the actual
+number might be different on your system.) You can run this command with the
+Teensy unplugged, then plug it in, then run the command again, and see which
+port appears.
 
-Finally, add a ``smartmatrix:`` section to your machine-wide config and
-then add the three settings below:
+So on Windows, you'll end up with something like:
 
 ::
 
@@ -226,62 +213,112 @@ then add the three settings below:
         baud: 2500000
         old_cookie: true
 
-The port is just whatever serial port appears when you plug in
-the Teensy. (See the note in Section 8a for details of how to find the
-port on Linux or Mac.)
-
-Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
-example above. These are the settings that are needed for the SmartMatrix.
-
-5a. Finding the port on Linux or Mac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To list the ports numbers that devices are using, open up the terminal window
-and type the following command: ``ls /dev/tty.*``  The output of this command
-will look something like this:
-
-::
-
-   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
-
-The smartmatrix config will look something like this:
+And on Mac or Linux, it will look something like:
 
 ::
 
     smartmatrix:
         port: /dev/tty.usbmodem1448891
-        use_separate_thread: no
+        baud: 2500000
+        old_cookie: true
+
+
+Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
+example above. These are the settings that are needed for the SmartMatrix.
+
+3. Add a physical RGB DMD device entry
+--------------------------------------
+
+Once you have your SmartMatrix hardware platform set, you need to create the
+actual device entry for the RGB DMD and map it back to the SmartMatrix
+platform.
+
+You do this in the ``physical_rgb_dmds:`` section of the machine config. This
+section is like the other common sections (switches, coils, etc.) where you
+enter the name(s) of your device(s), and then under each one, you enter its
+settings.
+
+(And yes, in case you're wondering, it's possible to have more than one
+physical DMD.)
+
+To do this, create a section in your machine-wide config called
+``physical_rgb_dmds:``, and then pick a name for the DMD, like this:
+
+::
+
+    physical_rgb_dmds:
+      my_dmd:
+         platform: smartmatrix
+         brightness: .17
+
+There are several settings you can enter here. (See the :doc:`/config/physical_rgb_dmds`
+for details.) The only one you need to have is ``platform: smartmatrix`` which
+tells MPF that this RGB DMD should use the SmartMatrix hardware interface you
+configured in the previous step. (Otherwise if you don't specify a platform, it
+will use the default platform which probably doesn't support RGB DMDs. See the
+:doc:`/hardware/platform` guide for details.)
+
+You'll probably also want to configure the brightness, which is a multiplier
+from 0.0 to 1.0 that's applied to every pixel that's sent to the DMD.
+In other words, the example of ``brightness: .17`` means that each pixel will
+be shown at 17% brightness. (These things are crazy bright!)
+
+.. note::
+
+   If you set the brightness multiplier in the sketch code .INO file you loaded
+   onto the Teensy, then that will multiply the brightness after MPF sends
+   it. In other words, if you set .5 in the config file and .5 in the sketch,
+   then the final brightness will be 25%. You might want to set the absolute
+   max brightness in the .INO file once and then fine-tune it via the config
+   file later.
+
+4. Set a source display
+-----------------------
+
+Now that you have everything configured, the last step is to make sure the DMD
+knows what content to show. In MPF, you do this by mapping a physical DMD to
+an :doc:`MPF display </displays/display/index>`.
+
+By default, the DMD will look for a display (in your :doc:`/config/displays`
+section called "dmd". However you can override this and configure the DMD to
+use whatever logical display you want by setting a ``source_display:``
+setting. (Just make sure that the width and height of your source display match
+the physical pixel dimensions of the DMD or else it will be weird.)
 
 A final config you can test
 ---------------------------
 
-At this point that's all you need for the SmartMatrix DMD to work.
+At this point you're all set, and whatever slides and widgets are shown on the
+DMD's source display in MPF-MC should be shown on the physical RGB DMD.
 
-We've created a complete example machine config (well, at least with the
-sections you can add to your machine config) which you can use to verify that
-you have everything hooked up and configured properly.
+That said, all these options can be kind of confusing, so we created a quick
+example config you can use to make sure you have yours set right. (You can
+actually just save this config to ``config.yaml`` in a blank machine folder
+and run it to see it in action which will verify that you've got everything
+working properly.)
 
-Be sure to change the ``smartmatrix:port:`` setting in this example config to
-match whatever port your Teensy is connected to.
+.. note::
+
+   Be sure to change the ``smartmatrix:port:`` setting in this example config
+   to match whatever port your Teensy is connected to.
 
 To run this sample config, you can either run ``mpf both`` or (if you're on a
-Mac), ``mpf`` and ``mpf mc``.
+Mac, ``mpf`` and ``mpf mc``).
 
 When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
 connect to the Teensy.
 
+Note that the :doc:`/displays/display/physical_rgb_dmd` guide has more details
+on the window and slide settings used in this machine config.
+
 ::
 
-    hardware:
-        platform: virtual
-        rgb_dmd: smartmatrix
-
     displays:
-      window:
+      window:  # on screen window
         width: 600
         height: 200
-      dmd:
+      dmd:  # source display for the DMD
         width: 128
         height: 32
         default: true
@@ -291,16 +328,19 @@ connect to the Teensy.
       height: 200
       title: Mission Pinball Framework
 
-    physical_rgb_dmd:
-      brightness: .5
-
-    smart_matrix:
+    smartmatrix:
       port: com5  # this will most likely be a different port for you
-      use_separate_thread: no
+      baud: 2500000
+      old_cookie: true
+
+    physical_rgb_dmds:
+      my_dmd:
+         brightness: .2
+         platform: smartmatrix
 
     slides:
-      window_slide_1:
-      - type: color_dmd
+      window_slide_1:  # slide we'll show in the on-screen window
+      - type: color_dmd  # this widget shows the DMD content in this slide too
         width: 512
         height: 128
       - type: text
@@ -313,8 +353,15 @@ connect to the Teensy.
         width: 514
         height: 130
         color: 444444
+      dmd_slide_1:  # slide we'll show on the physical DMD
+      - type: text
+        text: IT WORKS!
+        font_size: 30
+        color: red
 
     slide_player:
       init_done:
         window_slide_1:
           target: window
+        dmd_slide_1:
+          target: dmd
