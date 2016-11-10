@@ -93,8 +93,8 @@ you have any switch which a row that's 8-15.
 Choosing direct versus matrix switches
 --------------------------------------
 
-The only different between direct and matrix switches is in how they're wired.
-(Matrix switches use less wire, but require diodes on the switches and are
+The only difference between direct and matrix switches is in how they're wired.
+Matrix switches use less wire, but require diodes on the switches and are
 harder to troubleshoot. Direct switches are easier to wire, but they require
 more wire and you're limited to 24 (or 32) of them.
 
