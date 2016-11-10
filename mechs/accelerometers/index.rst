@@ -19,5 +19,5 @@ TODO
 | Related Events                                                               |
 +==============================================================================+
 | Varies based on the configured (you can configure events to be emitted when  |
-| certain G-force thresholds are exceeded).                                   |
+| certain G-force thresholds are exceeded).                                    |
 +------------------------------------------------------------------------------+
