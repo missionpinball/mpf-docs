@@ -29,7 +29,7 @@ The “A” and “B” capital letters are required. (A means Address, B means 
 The lowercase x, y, and z letters should be replaced with numbers to represent
 the following on a PD-16 driver board:
 
-* x : Board address (0-7)
+* x : Board address (0-31)
 * y : Bank address (0 for A, 1 for B)
 * z : Output number (0-7)
 
