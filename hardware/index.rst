@@ -18,7 +18,10 @@ running the same game code on both.
 
 It's possible to mix-and-match multiple types of hardware in a single
 MPF machine config. For example, you could combine the SmartMatrix RGB DMD with
-a FAST Core controller, or a FadeCandy LED controller with a P-ROC, etc.)
+a FAST Core controller, or a FadeCandy LED controller with a P-ROC, etc. (You
+can even mix-and-match platforms within the same type of device, meaning you
+could have some LEDs attached to a FAST Pinball controller and others attached
+to a FadeCandy. See the :doc:`platform` guide for details.)
 
 MPF currently supports the following hardware control systems. We are always adding
 more, so if there's a hardware device that you'd like to use that we don't support,
