@@ -61,7 +61,7 @@
    Events Reference </events/event_reference>
    Config File Reference </config/index>
    Example Config Files </examples/index>
-   Example Machines </example_machines/index>`
+   Example Machines </example_machines/index>
 
 .. toctree::
    :hidden:
