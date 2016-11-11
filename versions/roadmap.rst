@@ -67,7 +67,7 @@ Player “Log in” for notification of high scores being beat
 We love the idea of players being able to “log in” to a machine, most likely by “tapping
 in” to the machine with their Bluetooth or NFC-enabled smart phone. (This idea is not new
 of course. Pyprocgame creator Adam Preble `blogged about this in 2014 <http://adampreble.net/blog/2014/02/ibeacon-at-the-arcade/>`_,
-and Dutch Pinball's Bride of Pin*Bot 2.0 and Big Lebowski have "Player Profiles" features.
+and Dutch Pinball's Bride of Pin*Bot 2.0 and Big Lebowski have "Player Profiles" features.)
 
 Regardless of how it’s implemented, we love the idea of a particular player being able to
 login to a machine, since there are several cool things this could enable, including:
@@ -97,9 +97,13 @@ Mobile phone companion apps
 We’ve already `demonstrated a feature <https://www.youtube.com/watch?v=0HouBZHx2uQ>`_ of
 the Mission Pinball Framework where we use an iPhone app as a “second screen” for a pinball
 machine. We can imagine players being able to customize their iOS app to show whatever
-data they want—score, ball, shots lit, strategies, etc.—which they can then set on the
+data they want—score, ball, shots lit, etc.—which they can then set on the
 glass near the flippers. The machine could also send all DMD information and animations
 to that device and the player wouldn't have to take their eyes off the flipper area.
+
+The mobile app could have a "helper" mode where it knows exactly what's going on in the game
+and can tell you want to shoot for—kind of like if you had a world-class player
+standing over your shoulder and telling you want to do.
 
 The mobile app could also let you know when it's your turn (in case you walked away from
 the machine), or when a certain machine you're waiting in line for is free. (Maybe you
