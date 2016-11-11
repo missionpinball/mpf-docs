@@ -60,7 +60,8 @@
 
    Events Reference </events/event_reference>
    Config File Reference </config/index>
-   Examples </examples/index>
+   Example Config Files </examples/index>
+   Example Machines </example_machines/index>`
 
 .. toctree::
    :hidden:
@@ -118,7 +119,8 @@ Reference Material
 ------------------
 * :doc:`/events/event_reference`
 * :doc:`/config/index`
-* Example machines you can learn from
+* :doc:`/examples/index`
+* :doc:`Example machines you can learn from </example_machines/index>`
 
 Download the docs
 -----------------

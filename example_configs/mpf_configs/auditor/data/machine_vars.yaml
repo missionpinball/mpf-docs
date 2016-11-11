@@ -1,4 +1,0 @@
-{}
-yer1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
-  dictitems:
-    value: 0
