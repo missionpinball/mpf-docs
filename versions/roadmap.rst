@@ -278,30 +278,17 @@ PS4 and 60″ tv at home. But most people don’t have pinball machines at home.
 though there are pinball apps for every device out there (which we LOVE, by the way), it
 just doesn't compare to actually banging a metal ball around with some mechanical levers.
 
-Oh btw, we’re doing all of this in the Mission Pinball Framework!
-
-Maybe it goes without saying, but we consider everything in this article to be our “to do”
-list for the Mission Pinball Framework. We didn't even start writing the framework until
-June of this year. We’ve made fantastic progress building something that’s easy to use,
-highly configurable, and (of course), 100% open source and completely free.
-
-We envision that we’ll get the core framework done by the end of the year, with everything
-on our “traditional pinball machine” list done sometime next year. After that we’ll be
-working hard building the internet connectivity, the apps, the web portals, and everything
-else we talked about here.
+Maybe it goes without saying, but we consider everything on this page to be our “to do”
+list for the Mission Pinball Framework.
 
 The best part is that the Mission Pinball Framework is highly modular, so if you think
 some (or all) of these ideas are stupid, that’s fine with us! You can pick-and-choose the
-parts of the framework that you like and throw out the rest.
-
-If you haven’t looked at the Mission Pinball Framework yet, take a look at our
-documentation, or download it and follow our step-by-step tutorial which can get your
-machine up and flipping on our framework in no time!
+parts of MPF that you like and throw out the rest.
 
 Finally, we understand that a lot (ok, everything) we talked about here only applies to
 new pinball machines moving forward. But what about the hundreds of thousands of existing
 machines which are already in the world based on 20-year old technology? We have some
-ideas for them too… stay tuned! (Or ask us about them at the Expo this weekend.)
+ideas for them too... stay tuned!
 
 Happy pinballing!
 
