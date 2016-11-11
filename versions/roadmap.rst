@@ -1,13 +1,14 @@
 MPF Road Map, Vision & Future
 =============================
 
-If you sum up our vision, we’d say that we like “traditional” pinball. We love mid-90s
-Williams games and the new Stern stuff, and we’re excited about new games which have a
-traditional format (like Predator, The Big Lebowski, Wrath of Olympus, etc.). A lot of
-people have been talking about all these cool things like Pinball 2000, LCD screens for
-backglasses, and even the `entire playfield being replaced by an LCD <http://www.multimorphic.com/index.php/p3-pinball-platform>`_!
-We think these are really, really awesome, but quite honestly we’re most excited about
-playing traditional pinball machines.
+To set the stage for our vision for the future of MPF, we'd like to start by
+saying that we love "traditional" pinball where you hit knock a physical ball
+into real targets.
+
+While there's lots of talk about alternate concepts like Pinball 2000 and
+the Multimorphic P^3 (which replaces the bottom
+`2/3rds of the playfield with an LCD <http://www.multimorphic.com/index.php/p3-pinball-platform>`_),
+our vision is focused on traditional-style pinball machines.
 
 That said, we believe there is quite a bit of room for innovation even within the boundaries
 of classic pinball. For example:
@@ -268,6 +269,16 @@ until the player sets the machine down again.
 You could even have a machine that can apply scoring multipliers based on the angle. (And
 maybe even have a machine where you can set the angle and scoring on your own?) Imagine
 "My high score on Ghostbusters is 200M at 6.5 degrees, but only 25M at 7 degrees."
+
+More ideas from Jon Norris
+--------------------------
+
+Since we first wrote down our vision, someone let us know that pinball
+designer Jon Norris wrote about a bunch of ideas for innovation in classic
+pinball too. You can see his ideas at `norrispinball.com <http://www.norrispinball.com>`_.
+(Some are in the blog and some are in the "Re-Inventing" section of his site.)
+
+Lots of cool stuff there too!
 
 The future is bright!
 ---------------------
