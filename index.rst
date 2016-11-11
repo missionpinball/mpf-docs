@@ -74,7 +74,7 @@
    FAQ </faq/index>
    Glossary </glossary/index>
    Contributing to MPF </contribute/index>
-   MPF Version History </version_history/index>
+   MPF Version History </versions/history>
 
 Mission Pinball Framework |version| documentation
 =================================================
@@ -89,7 +89,7 @@ Everything you need to know about the Mission Pinball Framework.
    the "Read the Docs" link in the lower-left corner to pick a different
    version of the docs.
 
-   More on MPF versions is :doc:`here <versions>`.
+   More on MPF versions is :doc:`here </versions/understanding>`.
 
 First Steps
 -----------

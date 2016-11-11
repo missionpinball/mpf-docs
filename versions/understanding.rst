@@ -4,7 +4,7 @@ Understanding MPF versions
 MPF is a work-in-progress and under constant development. The core developers spend about 40 hours a week working on
 MPF with multiple fixes and enhancements made every day.
 
-We release a new version of MPF about every 8 weeks. (See the full release history :doc:`here </version_history/index>`).
+We release a new version of MPF about every 8 weeks. (See the full release history :doc:`here <history>`).
 
 We are also constantly adding and improving documentation which is available via docs.missionpinball.org. When you
 visit the docs website, you can see the version of MPF in the URL, like this:
