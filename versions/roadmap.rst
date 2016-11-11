@@ -53,7 +53,7 @@ Dynamic Pricing
 Another cool thing about an internet-connected pinball machine is that operator settings
 can be centrally “pushed” to the machine. If a bar is rented out for a private party, the
 bar tender ought to be able to fire up an app on his or her smart phone to instantly set
-all the machines to free play. (Or maybe there’s an automatic schedule. “Wednesday night
+all the machines to free play. Or maybe there’s an automatic schedule. “Wednesday night
 is free pinball,” or “All pinball is free from 4-7pm.” The operator ought to be able to
 set up a schedule and the machines should be able to change their pricing automatically
 based on the time of day.
@@ -67,8 +67,7 @@ Player “Log in” for notification of high scores being beat
 We love the idea of players being able to “log in” to a machine, most likely by “tapping
 in” to the machine with their Bluetooth or NFC-enabled smart phone. (This idea is not new
 of course. Pyprocgame creator Adam Preble `blogged about this in 2014 <http://adampreble.net/blog/2014/02/ibeacon-at-the-arcade/>`_,
-and Dutch Pinball showed off a “Player Profiles” feature in Bride of Pin*Bot 2.0 at the
-Chicago Expo in 2013.)
+and Dutch Pinball's Bride of Pin*Bot 2.0 and Big Lebowski have "Player Profiles" features.
 
 Regardless of how it’s implemented, we love the idea of a particular player being able to
 login to a machine, since there are several cool things this could enable, including:
@@ -88,8 +87,12 @@ login to a machine, since there are several cool things this could enable, inclu
   save their to their profile which they can have applied to whatever machine they walk
   up to.
 
-Mobile Device Companion Screens
--------------------------------
+All of this could be done on a per-player basis, with the machine taking on a different
+look and feel as each player steps up. Players could even set their color preferences with
+RGB LEDs in the apron lighting to indicate which player is up.
+
+Mobile phone companion apps
+---------------------------
 
 We’ve already `demonstrated a feature <https://www.youtube.com/watch?v=0HouBZHx2uQ>`_ of
 the Mission Pinball Framework where we use an iPhone app as a “second screen” for a pinball
@@ -97,8 +100,54 @@ machine. We can imagine players being able to customize their iOS app to show wh
 data they want—score, ball, shots lit, strategies, etc.—which they can then set on the
 glass near the flippers. The machine could also send all DMD information and animations
 to that device and the player wouldn't have to take their eyes off the flipper area.
-Heck, the game could even stream its audio to the mobile device so the player could
-listen with headphones—all without requiring expensive retrofit kits for the machines.
+
+The mobile app could also let you know when it's your turn (in case you walked away from
+the machine), or when a certain machine you're waiting in line for is free. (Maybe you
+even pay for and "reserve" your place in line from your phone?)
+
+It could also let you see all sorts of statistics for your game when while another
+player is playing (balls locks, goals remaining, etc.).
+
+You'd also be able to collect very detailed metrics and analytics about your games. (Average
+time to hit a hurry-up, average ball time, number of shots, etc.) That could also be
+shared in a web-based dashboard and player ranking system.
+
+Mobile phone audio integration
+------------------------------
+
+One of the things that stinks about playing pinball in a loud bar is that you can't hear
+the machines. Some machines have headphone jacks, but that's a separate piece of hardware.
+
+What if you could pair your phone to the machine, and then the machine could stream its
+audio to your phone which you could listen to via headphones? You could even allow
+multiple people standing around to connect their audio to the same machine?
+
+Another option is if you pair your phone with a machine, you could play a playlist from
+your phone instead of the machine's music. The pinball machine could still add the
+voice call outs and sound effects, but just with your music. (This could be done via
+headphones or even through the pinball machine's speakers.)
+
+The machine could even have a mobile app which lists all the various music queues
+(waiting to plunge, base mode background, wizard mode background, etc.) and you could
+map those to individual tracks from your phone. Then whenever you walk up to a machine,
+you get your own custom music! (This could integrate with a cloud-based music service
+like Spotify or Apple Music and be configurable via the web so you get your own music
+any time you play that machine.)
+
+Mobile phone "waiting player" actions
+-------------------------------------
+
+Traditional multi-player pinball machines alternate between players, with the non-playing
+players just watching the current player that's up. The games themselves are very much
+about the "player versus the machine" more so than the "player versus player."
+
+But what if the waiting player could use their phone to mess with the current player
+who's up? Maybe they have buttons that could temporarily shut off the flippers, or pop
+up drop targets which block shots, or release extra balls into play, or turn off all the
+lights...
+
+These could be things that are granted to each player (you get one of each per game), or
+they could be earned by players for accomplishing certain achievements during the game.
 
 Social media integration
 ------------------------
@@ -178,6 +227,21 @@ update software, push out configuration settings, and manage all aspects of the 
 Leaning down behind a coin door to configure things is almost laughable for a new machine
 in today’s world!
 
+Advanced tournament options
+---------------------------
+
+One of the problems with tournaments today is that if a machine malfunctions, it can break
+the current game in progress which isn't really fair to the current players.
+
+What if the machine could maintain a sort of "transaction log" of everything that happened,
+so if a machine malfunctions, the tournament operator could hit a button to pause the
+machine, reset the ball or fix the problem, roll back the errant entries, and resume the
+game?
+
+You'd also be able to integrate the actual machine scores and players with the
+tournament system. Super Selfie Leagues could automatically post scores and notify players
+when their scores have been beat or when they move down on the leaderboard.
+
 The future is bright!
 ---------------------
 
@@ -214,14 +278,15 @@ ideas for them too… stay tuned! (Or ask us about them at the Expo this weekend
 
 Happy pinballing!
 
-Late 2016 Note
---------------
+Late 2016 Update
+----------------
 
-Note: We originally wrote this vision in 2014. In late 2016, Jersey Jack Pinball announced
-`Dialed In! <http://www.jerseyjackpinball.com/games/#dice>`_, a machine that has many of
-the features we wrote about in our vision. At Expo, someone asked us if we were upset that
-Jersey Jack "ripped us off". Our answer is quite the opposite. We're thrilled! We love these
-ideas and love that they're making their way into pinball.
+We originally wrote this vision when we started MPF back in 2014 (though it's been updated
+since then). In late 2016, Jersey Jack Pinball announced `Dialed In! <http://www.jerseyjackpinball.com/games/#dice>`_,
+a machine that has some of the features we wrote about in our vision. At Expo, someone asked
+us if we were upset that Jersey Jack "ripped us off". Our answer is quite the opposite.
+We're thrilled! We love these ideas and love that they're making their way into pinball.
+(And frankly we hope that Stern and everyone else does these too.)
 
 Everything about Mission Pinball is open and available for sharing, use, and ripping off.
 Take our ideas. Take our code. Copy our docs. We love it all!

@@ -163,9 +163,9 @@ Other stuff
 
 And the best part: Everything mentioned on this page can be done via the text-
 based configuration files. If you don't want to be a "coder," you don't have to
-be. (Though the plugin, scriptlet, mode
-coding, and `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_ mean that if you want to use MPF for
-your groundwork and code your game in "real" Python, that's fine too.
+be. (Though the plugin, scriptlet, mode coding, and `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
+mean that if you want to use MPF for your groundwork and code your game in "real"
+Python, that's fine too.)
 
 By the way, if you'd like to see what we have in store for the
 future, check out our :doc:`/versions/roadmap`.
