@@ -131,7 +131,7 @@ your phone instead of the machine's music. The pinball machine could still add t
 voice call outs and sound effects, but just with your music. (This could be done via
 headphones or even through the pinball machine's speakers.)
 
-The machine could even have a mobile app which lists all the various music queues
+The machine could even have a mobile app which lists all the various music cues
 (waiting to plunge, base mode background, wizard mode background, etc.) and you could
 map those to individual tracks from your phone. Then whenever you walk up to a machine,
 you get your own custom music! (This could integrate with a cloud-based music service
@@ -245,6 +245,29 @@ game?
 You'd also be able to integrate the actual machine scores and players with the
 tournament system. Super Selfie Leagues could automatically post scores and notify players
 when their scores have been beat or when they move down on the leaderboard.
+
+Accelerometer integration
+-------------------------
+
+Modern machines with accelerometers can use them to track g-forces as well as to know
+the precise angle (in 3 axes) of the machine.
+
+This means that the machine could notify the operator if the machine was not level. And
+when you were leveling the machine, it should show you that level on the display, or even
+read it out with text-to-speech as you were underneath the machine adjusting the legs.
+
+The machine could also record the playfield angle for high scores (especially those posted
+online, maybe along with tilt sensitivity and outlane settings) to start to get a more
+universal baseline to high scores. (Though it still wouldn't be perfect due to wear,
+playfield wax, etc.)
+
+The machine would also know if someone was lifting up the front of the machine (even
+slightly), which could make for some funny callouts. Maybe the points start draining
+until the player sets the machine down again.
+
+You could even have a machine that can apply scoring multipliers based on the angle. (And
+maybe even have a machine where you can set the angle and scoring on your own?) Imagine
+"My high score on Ghostbusters is 200M at 6.5 degrees, but only 25M at 7 degrees."
 
 The future is bright!
 ---------------------
