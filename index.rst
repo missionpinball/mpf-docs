@@ -74,7 +74,7 @@
    FAQ </faq/index>
    Glossary </glossary/index>
    Contributing to MPF </contribute/index>
-   MPF Version History </versions/history>
+   MPF Versions </versions/index>
 
 Mission Pinball Framework |version| documentation
 =================================================
