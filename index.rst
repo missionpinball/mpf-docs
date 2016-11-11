@@ -31,15 +31,16 @@
    :numbered: 0
 
    Control Systems / Hardware </hardware/index>
-   Pinball Mechs </mechs/index>
+   Pinball Mechanisms </mechs/index>
    Game Logic </game_logic/index>
-   Displays </displays/index>
+   Displays & Graphics</displays/index>
    Sound</sound/index>
    Shows </shows/index>
    Assets </assets/index>
    Events </events/index>
    Config Players </config_players/index>
    Machine Management </machine_management/index>
+   Finalizing Your Machine </finalization/index>
    Flowcharts </flowcharts/index>
 
 .. toctree::
@@ -101,9 +102,8 @@ If you're brand-new to MPF, start here.
 Hooking up your machine
 -----------------------
 * :doc:`Pick a pinball control system </hardware/index>`
-* Get the right drivers installed
-* Build the minimum config to get flipping!
-* :doc:`/finalization/index`
+* Get your control system configured (:doc:`FAST </hardware/fast/index>`, :doc:`P-ROC/P3-ROC </hardware/multimorphic/index>`, :doc:`OPP </hardware/opp/index>`)
+* :doc:`Build the minimum config to get flipping! </mechs/flippers/index>`
 
 Understanding MPF
 -----------------
@@ -113,7 +113,7 @@ Understanding MPF
 * :doc:`/sound/index`: sound tracks, music, volume, sound effects
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
-* :doc:`/events/index`: generating events, triggering actions on events
+* :doc:`Events </events/index>`: generating events, triggering actions on events
 
 Reference Material
 ------------------

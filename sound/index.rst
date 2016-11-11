@@ -1,5 +1,5 @@
-MPF Sound & Audio
-=================
+Sounds, Music & Audio
+=====================
 
 .. toctree::
    :hidden:
