@@ -35,7 +35,7 @@ MPF:
 * Star Trek: The Next Generation:
     * Missions (Time Rift, Asteroid Threat, Rescue, Q's Challenge, etc.)
 * Red & Ted's Road Show:
-    * The cities on the Map (each city is an anchievement)
+    * The cities on the Map (each city is an achievement)
     * The wheel (Lunch Time, Flying Rocks, Big Blast, Special, etc.)
 
 You can have as many achievements as you want in your machine, and you can
