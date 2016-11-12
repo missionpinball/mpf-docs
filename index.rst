@@ -89,7 +89,7 @@ Everything you need to know about the Mission Pinball Framework.
    the "Read the Docs" link in the lower-left corner to pick a different
    version of the docs.
 
-   More on MPF versions is :doc:`here </versions/understanding>`.
+   More on MPF doc versions is :doc:`here </versions/docs>`.
 
 First Steps
 -----------
