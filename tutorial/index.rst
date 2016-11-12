@@ -19,9 +19,9 @@ The tutorial includes:
 * Setting up a "base" game mode.
 
 The idea is that everyone should follow the tutorial, and complete every step, in order. (The tutorial steps all build
-off the previous steps.) Once that's done, you can then move on to the How To / "Cookbook" documentation which shows you
-how to do all sorts of other things. The How To guides can be followed in any order (though they all assume you've
-completed the tutorial).
+off the previous steps.) Once that's done, you can then move browse through the rest of the documentation
+to read specific "How To" guides for everything else you need. (These are in the Control Systems / Hardware,
+Pinball Mechanisms, Game Logic, Displays & Graphics, Sound, and Shows sections.)
 
 Now let's get started...
 
