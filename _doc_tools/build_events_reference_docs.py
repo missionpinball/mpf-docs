@@ -4,6 +4,7 @@ import re
 
 paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
 rst_path = '../events'
+dont_delete_files = ['index.rst', 'event_types.rst', 'deeper_dive.rst']
 
 
 class EventDocParser(object):
@@ -160,7 +161,7 @@ if __name__ == '__main__':
     # delete existing files
     for path, _, files in os.walk(rst_path):
         for file in files:
-            if file not in ['index.rst', 'event_types.rst']:
+            if file not in dont_delete_files:
                 os.remove(os.path.join(path, file))
 
     # walk through the folders to scan

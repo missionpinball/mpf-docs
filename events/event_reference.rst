@@ -1,9 +1,18 @@
-Event reference
+Event Reference
 ===============
 
 Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
+
+Every event in MPF is just a string of text. You'll see that almost every
+event that is posted has a slight variation of the event text, typically
+incorporating something about which mechanism or logic device posted the event.
+
+For example, the event called :doc:`switch_(name)_active <switch_name_active>`
+will replace the "(name)" part of the event text with the actual switch name.
+So the when a switch called ``s_left_slingshot`` is activated, it will posted
+an event called *switch_s_left_slingshot_active*.
 
 See the :doc:`/events/index>` guide for more information on how MPF uses events.
 
