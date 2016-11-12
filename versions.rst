@@ -16,29 +16,19 @@ visit the docs website, you can see the version of MPF in the URL, like this:
 The problem with this is that since the version changes so often, that means that links to certain pages will be
 quickly out-of-date since the version number is embedded in the URL.
 
-To combat this, we have a special version link called **stable** which always points to the latest released (e.g.
-"stable") version of MPF.
+To combat this, we have a special version link called **latest** which always points to the latest version of MPF.
 
-For example, if the current release of MPF is **0.31**, that means the "stable" URLs point to 0.31. In other words, the
-following two URLs would point to the same page:
+For example, if the latest version of MPF is **0.31**, that means the "latest" URLs point to 0.31.
 
-::
-
-   docs.missionpinball.org/en/stable
-   docs.missionpinball.org/en/0.31
-
-All of the daily changes that we make to MPF get added to the "dev" version of MPF, which is essentially the codename
-for the next version.
-
-You can access other versions (including prior versions, the current stable version, and the next dev version) of the
-documentation by clicking on the "Read The Docs" menu in the lower left corner of any page in the documentation website.
+You can access other versions of the documentation by clicking on the "Read The Docs" menu in the lower left corner of
+any page in the documentation website.
 
 If you view the MPF project on GitHub, you'll notice that there are branches which follow the same naming scheme.
+(The "latest" version of the docs points to the "dev" branch in GitHub.)
 
-Sometimes we find bugs that are major enough that we fix them in the current (stable) version of MPF (instead of just
-adding them to the dev version to be released in the future. When we do that, we increment the "patch" number of MPF.
-For example, when 0.31 is released, it's actually released as version 0.31.0. Then if we fix a bug, we increment the
-version to 0.31.1, etc.
+Sometimes we find bugs that are major enough that we fix them in the current older versions of MPF (instead of just
+adding them to the latest version. When we do that, we increment the "patch" number of MPF. For example, when 0.31 is
+released, it's actually released as version 0.31.0. Then if we fix a bug, we increment the version to 0.31.1, etc.
 
 We do not maintain separate versions of the documentation for the patch levels. In other words, the documentation for
 MPF 0.31 applies to 0.31.0 or 0.31.1 or 0.31.9.
