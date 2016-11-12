@@ -192,7 +192,10 @@ menus and trouble reports.
 
 profile:
 ~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+
+.. versionchanged:: 0.32
+
+Single value, type: ``string``. Default: ``profile``
 
 The name of the *shot profile* that will be applied to this shot.
 
@@ -349,3 +352,9 @@ do not enter a time, or you enter a value of 0, then there is no
 timeout (i.e. the player could literally take multiple minutes between
 switch activations and the shot would count.)
 
+sequence:
+~~~~~~~~~
+
+.. versionadded:: 0.31
+
+TODO

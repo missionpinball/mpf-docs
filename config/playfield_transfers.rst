@@ -21,13 +21,6 @@ Required settings
 
 The following sections are required in the ``playfield_transfers:`` section of your config:
 
-ball_switch:
-~~~~~~~~~~~~
-Single value, type: string name of a ``switches:`` device.
-
-.. todo::
-   Add description.
-
 captures_from:
 ~~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device.
@@ -46,6 +39,16 @@ Optional settings
 -----------------
 
 The following sections are optional in the ``playfield_transfers:`` section of your config. (If you don't include them, the default will be used).
+
+ball_switch:
+~~~~~~~~~~~~
+
+.. versionchanged:: 0.32
+
+Single value, type: string name of a ``switches:`` device. Default: ``None``
+
+.. todo::
+   Add description.
 
 debug:
 ~~~~~~
@@ -68,3 +71,9 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
+transfer_events:
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+TODO

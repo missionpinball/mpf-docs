@@ -3,10 +3,10 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
-0.32 (current version in development)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0.32
+~~~~
 
-Estimated mid-November, 2016
+Currently in dev, estimated release date November 18, 2016.
 
 .. rubric:: MPF
 
@@ -31,7 +31,8 @@ Estimated mid-November, 2016
 * Added options for "random" events (force next, force all, save per-player, etc.)
 * Added events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
 * Added option to force all assets to load on boot for testing purposes
-* Improved scoring
+* Added scoring options (add, replace, block)
+* Set starting values for player variables
 * Use color "on" for LED default colors
 * Refactored ball devices to use asyncio, to have specific ejectors and ball counters
 * Allow multiple config player entries to fire from the same event

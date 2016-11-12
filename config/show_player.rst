@@ -25,7 +25,9 @@ The following sections are optional in the ``show_player:`` section of your conf
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: play, stop, pause, resume, advance, update. Default: ``play``
+Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
+
+.. versionchanged:: 0.31 (Added "step_back" state)
 
 .. todo::
    Add description.
@@ -88,7 +90,10 @@ Single value, type: ``integer``. Default: ``1``
 
 sync_ms:
 ~~~~~~~~
-Single value, type: ``integer``. Default: ``0``
+
+.. versionchanged:: 0.32
+
+Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.

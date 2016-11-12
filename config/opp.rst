@@ -47,3 +47,9 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 .. todo::
    Add description.
 
+chains:
+~~~~~~~
+
+.. versionadded:: 0.31
+
+TODO

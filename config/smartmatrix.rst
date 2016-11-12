@@ -28,6 +28,13 @@ Single value, type: ``string``.
 .. todo::
    Add description.
 
+baud:
+~~~~~
+
+.. versionadded:: 0.32
+
+TODO
+
 Optional settings
 -----------------
 
@@ -35,8 +42,13 @@ The following sections are optional in the ``smartmatrix:`` section of your conf
 
 use_separate_thread:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
 
-.. todo::
-   Add description.
+.. deprecated:: 0.32
+
+old_cookie:
+~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+TODO
 

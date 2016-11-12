@@ -163,3 +163,10 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 Special / reserved tags for drop targets: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+playfield:
+~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+TODO

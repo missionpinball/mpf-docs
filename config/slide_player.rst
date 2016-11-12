@@ -235,6 +235,13 @@ Note that if you add or remove a slide and the priority list is recalculated, wh
 highest priority will be shown. This ``show:`` option is sort of a one-time thing.
 Really you should use priorities to control which slides are shown.
 
+slide:
+~~~~~~
+
+.. versionadded:: 0.32
+
+TODO
+
 target:
 ~~~~~~~
 Single value, type: ``string``. Default: ``None``

@@ -119,7 +119,7 @@ then it will convert it into "YOU SCORED 12,345 POINTS" even though the text is
 a mix-and-match of letters and numbers.
 
 The default setting is ``False``. (Note that prior to MPF 0.30, the default
-setting was ``True``.
+setting was ``True``.)
 
 .. todo::
 
@@ -128,8 +128,8 @@ setting was ``True``.
    you, post a message to the forum and we'll bump up the priority on our to-do
    list.
 
-min_digits
-~~~~~~~~~~
+min_digits:
+~~~~~~~~~~~
 
 Configures the minimum number of digits for the text to be displayed. This
 setting adds zeros to the left for digits that are shorter than the setting.
@@ -143,8 +143,8 @@ show the player's score.
 
 The default setting is ``0``.
 
-halign
-~~~~~~
+halign:
+~~~~~~~
 
 Specifies the horizontal alignment of the text within the bounding box. Note
 that this setting *is not used* to align a widget on the screen. (See the
@@ -156,8 +156,8 @@ chosen.
 
 The default setting is ``center``.
 
-valign
-~~~~~~
+valign:
+~~~~~~~
 
 Specifies the vertical alignment of the text within the bounding box. Note that
 this setting *is not used* to align a widget on the screen. (See the

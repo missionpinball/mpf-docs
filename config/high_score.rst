@@ -4,10 +4,12 @@ high_score:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
+
+.. versionchanged:: 0.31 (No longer valid in machine configs, just mode configs)
 
 .. overview
 
@@ -42,22 +44,12 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 select_tag:
 ~~~~~~~~~~~
-Single value, type: ``string``. Default: ``start``
-
-.. todo::
-   Add description.
+.. deprecated:: 0.31
 
 shift_left_tag:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``left_flipper``
-
-.. todo::
-   Add description.
+.. deprecated:: 0.31
 
 shift_right_tag:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``right_flipper``
-
-.. todo::
-   Add description.
-
+.. deprecated:: 0.31

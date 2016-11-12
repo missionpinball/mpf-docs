@@ -1,5 +1,5 @@
-physical_dmd:
-=============
+physical_dmds:
+==============
 
 *Config file section*
 
@@ -8,6 +8,8 @@ physical_dmd:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
+
+.. versionchanged:: 0.31
 
 .. overview
 
@@ -67,3 +69,9 @@ The name of the display (from the ``displays:`` section of your machine config) 
 DMD. Whatever's on the source display will be displayed on the DMD. If you don't specify a source, MPF will
 automatically use a source display called "dmd".
 
+platform:
+~~~~~~~~~
+
+.. versionadded:: 0.31
+
+TODO

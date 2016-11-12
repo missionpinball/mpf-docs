@@ -79,7 +79,9 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
+
+.. versionchanged:: 0.31
 
 .. todo::
    Add description.

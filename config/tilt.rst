@@ -30,7 +30,10 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 reset_warnings_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``ball_ending``
+
+.. versionchanged:: 0.31
+
+List of one (or more) values, each is a type: ``string``. Default: ``ball_will_end``
 
 .. todo::
    Add description.

@@ -53,6 +53,8 @@ your machine-wide config, a mode-specific config, or both.
    kivy_config: <kivy_config>
    led_player: <led_player>
    led_settings: <led_settings>
+   led_stripes: <led_stripes>
+   led_rings: <led_rings>
    leds: <leds>
    light_player: <light_player>
    logic_block: <logic_block>
@@ -77,10 +79,13 @@ your machine-wide config, a mode-specific config, or both.
    p_roc_coils: <p_roc_coils>
    physical_dmd: <physical_dmd>
    physical_rgb_dmd: <physical_rgb_dmd>
+   player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
    plugins: <plugins>
    pololu_maestro: <pololu_maestro>
+   queue_event_player: <queue_event_player>
+   queue_relay_player: <queue_relay_player>
    random_event_player: <random_event_player>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
@@ -89,6 +94,7 @@ your machine-wide config, a mode-specific config, or both.
    servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
    servos: <servos>
+   settings: <settings>
    shot_groups: <shot_groups>
    shot_profiles: <shot_profiles>
    shots: <shots>

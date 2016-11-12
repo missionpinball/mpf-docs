@@ -7,6 +7,8 @@ Achievements
 | :doc:`/config/ball_locks`                                                    |
 +------------------------------------------------------------------------------+
 
+.. versionchanged:: 0.32
+
 MPF uses "achievements" to track major goals that a player must achieve
 throughout the progression of a game. Achievements typically have an associated
 light or LED on the playfield (though not always), and they're tracked

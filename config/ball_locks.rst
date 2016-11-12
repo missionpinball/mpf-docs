@@ -85,6 +85,9 @@ A descriptive label.
 
 release_one_if_full_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
@@ -111,9 +114,12 @@ automatically add another ball into play after it locks a ball.
 
 reset_events:
 ~~~~~~~~~~~~~
+
+.. versionchanged:: 0.32
+
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
 Event(s) which cause this ball lock to reset its locked ball count.

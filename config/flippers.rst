@@ -102,9 +102,12 @@ for details.
 
 disable_events:
 ~~~~~~~~~~~~~~~
+
+.. versionchanged:: 0.32
+
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
-Default: ``ball_ending`` (Note that if you add an entry here, it will replace the default. So if you
+Default: ``ball_will_end, service_mode_entered`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
 Disables this flipper (meaning pushing the flipper button doesn't active
@@ -183,3 +186,10 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether an EOS switch is used to disable the main winding or to switch
 to lower-power pwm mode.
+
+power_setting_name:
+~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+TODO

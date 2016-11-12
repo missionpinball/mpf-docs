@@ -162,3 +162,29 @@ max time a driver could be stuck "on" if MPF crashes.) The default is
 have to include this section in your config if you want to use the
 default.
 
+net_buffer:
+~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|int|10
+
+TODO
+
+rgb_buffer:
+~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|int|3
+
+TODO
+
+dmd_buffer:
+~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|int|3
+
+TODO

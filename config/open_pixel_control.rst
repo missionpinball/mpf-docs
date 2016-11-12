@@ -58,7 +58,7 @@ Single value, type: one of the following options: int, hex. Default: ``int``
 
 port:
 ~~~~~
-Single value, type: ``string``. Default: ``7890``
+Single value, type: ``int``. Default: ``7890``
 
 .. todo::
    Add description.

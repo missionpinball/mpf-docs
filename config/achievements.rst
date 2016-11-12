@@ -3,6 +3,8 @@ achievements:
 
 *Config file section*
 
+.. versionchanged:: 0.32
+
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
@@ -173,6 +175,9 @@ in the ``events_when_enabled:`` setting.
 
 select_events:
 ~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -277,6 +282,9 @@ is enabled.
 
 events_when_selected:
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 A single event, or a list of events, that will be posted when this
@@ -324,7 +332,10 @@ Single value, type: ``string``. Default: ``None``
 Name of the show that will be started when this achievement has been enabled.
 
 show_when_selected:
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
 Single value, type: ``string``. Default: ``None``
 
 Name of the show that will be started when this achievement has been selected.

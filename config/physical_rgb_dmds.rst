@@ -1,5 +1,5 @@
-physical_rgb_dmd:
-=================
+physical_rgb_dmds:
+==================
 
 *Config file section*
 
@@ -8,6 +8,8 @@ physical_rgb_dmd:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
+
+.. versionchanged:: 0.31
 
 .. overview
 
@@ -48,4 +50,11 @@ Single value, type: ``string``. Default: ``dmd``
 
 .. todo::
    Add description.
+
+platform:
+~~~~~~~~~
+
+.. versionadded:: 0.31
+
+TODO
 

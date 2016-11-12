@@ -190,3 +190,10 @@ This is useful for things like bonus modes where you want the mode to
 finish before the game flow moves on with the next player's turn, or modes
 like match or high score entry where you want those to finish before the
 attract mode starts again.
+
+game_mode:
+~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+TODO

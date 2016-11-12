@@ -3,6 +3,8 @@ achievement_groups:
 
 *Config file section*
 
+.. versionadded:: 0.32
+
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+

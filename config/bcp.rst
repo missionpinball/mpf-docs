@@ -57,6 +57,13 @@ Single value, type: ``integer``. Default: ``5050``
 .. todo::
    Add description.
 
+type:
+~~~~~
+
+.. versionadded:: 0.31
+
+TODO
+
 event_map:
 ----------
 
@@ -93,3 +100,24 @@ every player variable to the media controller. Here's an example:
 
         player_variables:
             __all__
+
+required:
+---------
+
+.. versionadded:: 0.32
+
+TODO
+
+exit_on_close:
+--------------
+
+.. versionadded:: 0.32
+
+TODO
+
+debug:
+~~~~~~
+
+.. versionadded:: 0.31
+
+TODO

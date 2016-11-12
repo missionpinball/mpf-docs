@@ -108,17 +108,16 @@ The following sections are optional in the ``states:`` section of your config. (
 
 action:
 ^^^^^^^
-Single value, type: one of the following options: play, stop, pause, resume, advance, update. Default: ``play``
+Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
+
+.. versionchanged:: 0.31 (Added "step_back" state)
 
 .. todo::
    Add description.
 
 key:
 ^^^^
-Single value, type: ``string``. Default: ``None``
-
-.. todo::
-   Add description.
+.. deprecated:: 0.31
 
 loops:
 ^^^^^^
@@ -143,10 +142,7 @@ Single value, type: ``integer``. Default: ``0``
 
 reset:
 ^^^^^^
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
-
-.. todo::
-   Add description.
+.. deprecated:: 0.31
 
 show:
 ^^^^^
@@ -178,7 +174,10 @@ Single value, type: ``integer``. Default: ``1``
 
 sync_ms:
 ^^^^^^^^
-Single value, type: ``integer``. Default: ``0``
+
+.. versionchanged:: 0.32
+
+Single value, type: ``integer``. Default: ``None``
 
 .. todo::
    Add description.

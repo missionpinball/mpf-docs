@@ -72,9 +72,12 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 disable_events:
 ~~~~~~~~~~~~~~~
+
+.. versionchanged:: 0.32
+
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
-Default: ``ball_ending`` (Note that if you add an entry here, it will replace the default. So if you
+Default: ``ball_will_end, service_mode_entered`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
 Event(s) which disable this ball save, meaning a drained ball will no longer
@@ -131,3 +134,21 @@ One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``
 
 An optional event (or list of events) in MPF control event format
 which starts this ball saver's countdown timer.
+
+eject_delay:
+~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|ms|0
+
+TODO
+
+only_last_ball:
+~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|bool|False
+
+TODO

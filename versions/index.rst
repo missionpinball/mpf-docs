@@ -5,5 +5,6 @@ MPF Versions
    :titlesonly:
 
    understanding
+   docs
    history
    roadmap

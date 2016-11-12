@@ -84,3 +84,9 @@ Single value, type: ``string``. Default: ``sw_%``
 .. todo::
    Add description.
 
+default_show_sync_ms:
+~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+TODO

@@ -115,7 +115,11 @@ for multiple servos.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``ball_starting``
+
+.. versionchanged:: 0.32
+
+One or more sub-entries, each in the format of type: ``str``:``ms``.
+Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered``
 
 A list of events, or a list of events with delays, that cause the servo to
 move to its reset position (discussed below).
@@ -162,3 +166,29 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Tags work like tags for any device. Nothing special here.
 
+ball_search_min:
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|float|0.0
+
+TODO
+
+ball_search_max:
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|float|1.0
+
+TODO
+
+ball_search_wait:
+~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|ms|5s
+
+TODO

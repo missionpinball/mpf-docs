@@ -108,3 +108,11 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 .. todo::
    Add description.
 
+ball_count_type:
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.31
+
+single|enum(add,total)|total
+
+TODO
