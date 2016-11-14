@@ -54,7 +54,7 @@ And make sure it looks good. Mine says::
    LC_TELEPHONE=en_US.UTF-8
    LC_MEASUREMENT=en_US.UTF-8
    LC_IDENTIFICATION=en_US.UTF-8
-   LC_ALL=```
+   LC_ALL=
 
 It took a few tries for this to stick for me, so do it again, including reboot, if your results here are wrong.
 
