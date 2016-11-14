@@ -88,8 +88,9 @@ Everything you need to know about the Mission Pinball Framework.
    different versions of MPF. You're currently viewing the version for
    MPF |version|. If this is not the version of MPF you're using, that's
    ok, since we note when specific features and versions were added. However,
-   you can view older versions of the docs that correspond to older versions
-   of MPF if you want.
+   you can view other versions of the docs that correspond to specific versions
+   of MPF by clicking the "Read the Docs" link in the lower left corner of the
+   page.
 
    More on MPF doc versions is :doc:`here </versions/docs>`.
 
