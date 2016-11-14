@@ -1,5 +1,5 @@
-Pine64 with Ubuntu
-==================
+Installing MPF on a Pine64 with Ubuntu
+======================================
 
 Hardware Notes
 --------------

@@ -17,6 +17,7 @@ entire process. Select the OS you're using from the list below:
    Mac OS X <mac>
    Linux <linux>
    Raspberry Pi <raspberry>
+   Pine64 <pin64>
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
