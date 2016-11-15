@@ -292,7 +292,6 @@ markers:
 
 .. versionadded:: 0.31
 
-
 The ``markers:`` section establishes a list of markers and their associated events at specific
 times in the sound.  When a marker is reached during playback, the associated events will be
 posted.  Markers are useful for synchronizing various actions with specific points in a sound.
