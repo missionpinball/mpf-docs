@@ -17,8 +17,8 @@ But also these:
 
    Bezier Curve <bezier/index>
    Color DMD <color_dmd/index>
-   DMD <dmd>
    Ellipse <ellipse>
+   DMD <dmd/index>
    Line <line>
    Points <points>
    Quad <quad>
