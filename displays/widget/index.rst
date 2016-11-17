@@ -15,7 +15,7 @@ But also these:
 .. toctree::
    :titlesonly:
 
-   Bezier <bezier>
+   Bezier Curve <bezier/index>
    Color DMD <color_dmd>
    DMD <dmd>
    Ellipse <ellipse>
