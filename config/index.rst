@@ -77,8 +77,10 @@ your machine-wide config, a mode-specific config, or both.
    p_roc: <p_roc>
    p_roc_coil_overwrites: <p_roc_coil_overwrites>
    p_roc_coils: <p_roc_coils>
-   physical_dmd: <physical_dmd>
-   physical_rgb_dmd: <physical_rgb_dmd>
+   physical_dmd: (Deprecated) <physical_dmd>
+   physical_dmds: <physical_dmds>
+   physical_rgb_dmd: (Deprecated) <physical_rgb_dmd>
+   physical_rgb_dmds: <physical_rgb_dmds>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
