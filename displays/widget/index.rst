@@ -7,7 +7,7 @@ Most popular
    :titlesonly:
 
    Text <text/index>
-   Image <image>
+   Image <image/index>
    Video <video>
 
 But also these:
