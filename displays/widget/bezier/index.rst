@@ -18,7 +18,7 @@ Settings
    close:
    precision:
 
-.. note:: Text widgets also have "common" widget settings for position, opacity,
+.. note:: Bezier widgets also have "common" widget settings for position, opacity,
    animations, style, etc. Those are not listed here, but are instead covered in
    :doc:`common widget settings </displays/widgets/common_settings>` page.
 

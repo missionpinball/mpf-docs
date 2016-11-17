@@ -16,7 +16,7 @@ But also these:
    :titlesonly:
 
    Bezier Curve <bezier/index>
-   Color DMD <color_dmd>
+   Color DMD <color_dmd/index>
    DMD <dmd>
    Ellipse <ellipse>
    Line <line>
