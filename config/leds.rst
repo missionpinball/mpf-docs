@@ -116,7 +116,7 @@ type:
 ~~~~~
 Single value, type: ``string`` (case-insensitive). Default: ``rgb``
 
-This describes the channel order of this LED. Can be 1 to many channels (if supported by hardware). Valid channels: r (red), g (green), b (blue), w (white=minimum of red, gree and blue), + (always on), - (always off).
+This describes the channel order of this LED. Can be 1 to many channels (if supported by hardware). Valid channels: r (red), g (green), b (blue), w (white=minimum of red, green and blue), + (always on), - (always off).
 
 When using serial LEDs (e.g. with FAST or Fadecandy), use `rgb` for WS2812 and `grb` for WS2811 LEDs.
 
