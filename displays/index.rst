@@ -55,4 +55,5 @@ how to get your display running.)
    Concepts & Architecture </displays/architecture>
    Displays <display/index>
    Slides <slides/index>
-   Widgets <widgets/index>
+   Widgets (Concepts) <widgets/index>
+   Widgets (Types) <widget/index>

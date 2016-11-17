@@ -1,3 +1,33 @@
+Common Settings that Apply to All Widget Types
+==============================================
+
+The following settings are "common" settings that apply to all :doc:`types of widgets </displays/widget/index>`:
+
+::
+
+   type:
+   x:
+   y:
+   anchor_x:
+   anchor_y:
+   opacity:
+   z:
+   animations:
+   reset_animations_events:
+   color:
+   style:
+   adjust_top:
+   adjust_bottom:
+   adjust_left:
+   adjust_right:
+   expire:
+   key:
+
+type:
+~~~~~
+Specifies the type of widget, such as ``type: text`` or ``type: image``. This setting
+is required (since MPF needs to know what kind of widget it is).
+
 x:
 ~~
 
@@ -112,6 +142,10 @@ A list of events which are used to reset the widget to its original settings and
 stop all running animations. See the
 :doc:`widget animation documentation </displays/widgets/animate_widgets>` for
 details.
+
+Note that this seems like a grammatical error, since it's "animations events", but
+it's correct in this case because this setting is for a list of events that resets
+the widget animations (since animations themselves are a list of separate animations).
 
 color:
 ~~~~~~

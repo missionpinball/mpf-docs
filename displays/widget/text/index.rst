@@ -1,7 +1,7 @@
 Text Widget
 ===========
 
-The text widget is used to show text on a slide. Pretty straightforward.
+The text widget is used to show text on a :doc:`slide </displays/slides/index>`.
 
 .. image:: /displays/images/text_widget1.jpg
 
@@ -17,42 +17,37 @@ powerful functionality:
 * You can configure fonts and font styles to be automatically applied to text,
   and you can override them on a widget-by-widget basis.
 
-Text widget settings
---------------------
+Settings
+--------
+
+Here are a list of the settings you can use for text widgets:
 
 ::
 
-        type: text
-        text:
-        font_size:
-        font_name:
-        bold:
-        italic:
-        number_grouping:
-        min_digits:
-        halign:
-        valign:
-        x:
-        y:
-        anchor_x:
-        anchor_y:
-        opacity:
-        z:
-        animations:
-        reset_animations_events:
-        color:
-        style:
-        adjust_top:
-        adjust_bottom:
-        adjust_left:
-        adjust_right:
-        expire:
-        key:
+   type: text
+   text:
+   font_size:
+   font_name:
+   bold:
+   italic:
+   number_grouping:
+   min_digits:
+   halign:
+   valign:
+
+.. note:: Text widgets also have "common" widget settings for position, opacity,
+   animations, style, etc. Those are not listed here, but are instead covered in
+   :doc:`common widget settings </displays/widgets/common_settings>` page.
+
+Also remember that all widget settings can be controlled via
+:doc:`widget styles </displays/widgets/styles>`, rather than
+you having to set every setting on every widget.
 
 type: text
 ~~~~~~~~~~
 
-A text widget
+Tells MPF that this is a text widget. This setting is required when using text
+widgets.
 
 text:
 ~~~~~
@@ -63,12 +58,20 @@ Link to dynamic text and text strings
 
 font_name:
 ~~~~~~~~~~
-The name of the font you want to use. This is the name only, without the
+The name of the font you want to use. This is the name only, without the file
 extension. For example:
 
-GOOD: ``font_name: arial``
+Correct:
 
-BAD: ``font_name: arial.ttf``
+::
+
+   font_name: arial
+
+Wrong:
+
+::
+
+   font_name: arial.ttf
 
 There's a lot that goes into fonts, so we have a whole section on
 :doc:`fonts </displays/widgets/fonts>` which you should read.
@@ -169,11 +172,15 @@ chosen.
 
 The default setting is ``middle``.
 
-.. include:: common.rst
-
 .. toctree::
    :hidden:
    :titlesonly:
 
    text_dynamic
    text_strings
+
+Examples
+--------
+
+The example config files section of the documentation contains
+:doc:`examples of text widgets </examples/text/index>`.

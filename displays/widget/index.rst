@@ -1,12 +1,12 @@
-Types of Widgets
-================
+List of Widget Types
+====================
 
 Most popular
 
 .. toctree::
    :titlesonly:
 
-   Text <text>
+   Text <text/index>
    Image <image>
    Video <video>
 
