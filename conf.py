@@ -111,6 +111,8 @@ exclude_patterns = ['_build', '_not_updated_yet']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'none'
 
+highlight_language = 'yaml'
+
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
