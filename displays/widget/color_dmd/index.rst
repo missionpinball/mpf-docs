@@ -1,7 +1,7 @@
 Color DMD Widget
 ================
 
-The Color DMD widget is used to render an :doc:`display </displays/display/index>` on a
+The Color DMD widget is used to render a :doc:`display </displays/display/index>` on a
 :doc:`slide </displays/slides/index>` and to apply options that make it look like a DMD (dot filters, etc.).
 
 This is how you get a "Color DMD" look on your LCD display. (The :doc:`/displays/adding_dot_look_to_lcd`
@@ -112,14 +112,18 @@ This is the color of the pixels when they're "off" (black). Default is ``221100`
 shades:
 ~~~~~~~
 
-This is the number of shades each color channel will be reduced to. The default is ``8``
-which means that the color DMD widget will use 8 bits per red, green, and blue channel
-which is full 24-bit 16.7m colors. However if you set this to a lower number, like 2 or 3,
-you can get an older school limited palette look.
+This is the number of shades each color channel will be reduced to. The default is ``0``
+which disables it and uses the full 256 shades per color channel, meaning the color DMD
+widget will use have 256 shades each of red, green, and
+blue. (In other words, the default is standard 24-bit color for a total of 16.7m colors.)
 
 Note that this setting can produce weird results depending on your source content. If
 you want an old school look, you might have better luck creating your videos and
 graphics with fewer colors and then not setting the shades option here.
+
+Also note if you want to use full color (no shade reduction), it's better to set this
+to ``0`` and not ``256`` since 0 will disable this processing which will be less
+overhead.
 
 dot_filter:
 ~~~~~~~~~~~
@@ -143,7 +147,7 @@ blur:
 ~~~~~
 
 This is the radius of the "glow" of the pixels (when using ``dot_filter: true``). This
-is expressed as a decimal relative to the size of the pixels. The deault is ``0.1``
+is expressed as a decimal relative to the size of the pixels. The default is ``0.1``
 which means there's a 10% glow radius.
 
 This will be in addition to the ``pixel_size:``, so the defaults...
