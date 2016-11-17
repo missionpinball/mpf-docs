@@ -10,3 +10,5 @@ auditor, remote monitoring and trouble reporting, etc.)
    :hidden:
 
    auditor
+   service_mode
+   operator_settings
