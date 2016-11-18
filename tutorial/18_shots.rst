@@ -1,4 +1,4 @@
-Tutorial step 19: Add your first shot
+Tutorial step 18: Add your first shot
 =====================================
 
 At this point you have a machine you can turn on, lights flash, the
@@ -15,7 +15,7 @@ Broadly speaking, a shot is anything the player shoots at during a
 game. It could be a standup target, a lane, a ramp, a loop, a drop
 target, a pop bumper, a toy, etc.
 
-You can read the :doc:`full shots documentation </game_logic/shot>` for
+You can read the :doc:`full shots documentation </game_logic/shots/index>` for
 details, but the short version
 is that in MPF, you define switches (or a sequence of switches) as a "shot". Then
 whenever that shot is made, MPF posts events which you can use to trigger scores,
@@ -654,3 +654,16 @@ Next steps to write
 * Shot groups
 * advancing shots
 * shot reset events
+
+Check out the complete config.yaml file so far
+----------------------------------------------
+
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_18``
+folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
+
+::
+
+   C:\mpf-examples\tutorial_step_18>mpf both
+
+Even if you have real hardware, it's probably worth running the MPF Monitor which will show you the events as they're
+posted that correspond to the shot being hit and it changing profiles.

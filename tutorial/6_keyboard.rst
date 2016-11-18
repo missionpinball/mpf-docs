@@ -24,17 +24,26 @@ and then in there you add entries for each keyboard key and what type
 of action in MPF you want to map them to. (Switches, in this case.)
 
 Here's an example where we map the left flipper button to the ``Z`` key
-and the right flipper button to the ``/`` key:
+and the right flipper button to the ``?`` key:
 
 ::
 
     keyboard:
         z:
             switch: s_left_flipper
-        /:
+        "?":
             switch: s_right_flipper
 
-Again make sure that you have proper YAML formatting. The "z" and "/"
+Note that the question mark is in quotes since it's a non-standard
+character, and if you don't put it in quotes, it will confuse the
+YAML parser.
+
+Also it's weird that the key is the question mark, because if you push
+that key normally it types a slash. (The question mark is the shift
+option for that key.) So if you set a key mapping and it doesn't work,
+try the other character on the key.)
+
+Again make sure that you have proper YAML formatting. The ``z:`` and ``"?:"``
 entries should indented the same number of spaces, and the "switch"
 words should be indented further. Also make sure you have a space to
 the right of the colon after ``switch:``. At first you might think it's

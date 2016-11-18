@@ -233,14 +233,12 @@ this tutorial and how you can configure it to show certain slides when
 various MPF events happen.
 
 Every time a mode starts in MPF, an event called :doc:`/events/mode_name_started`
-is posted.
-
-So in this case, we set our slide
+is posted. So in this case, we set our slide
 player entry to play when it sees the event ``mode_base_started`` which
 means it will play that slide as soon as the base mode starts. (And
 since you configured your base mode to start based on the
-*ball_starting* event, this means this text will print whenever you
-start a ball.)
+*ball_starting* event, this means this slide will be created and
+shown whenever a new ball is started.)
 
 You may be wondering why we don't set that slide to
 play on the *ball_starting* event? The key to remember with game modes
@@ -258,18 +256,18 @@ that the slide that is shown when the event ``mode_base_started`` is posted
 contains three text widget. One that shows the score, one the shows the
 player and one that shows the current ball number. Note that the ``text:`` entries
 for those have have some words in parentheses.
+
 Words in parentheses signs are variables that are replaced in real
 time when they're updated. In this case these are "player variables"
-because they are values that belong to the current player. (We'll dig
-into this more later.)
+because they are values that belong to the current player. More on
+using dynamic text (that is, text that automatically updated itself
+as underlying values change), is :doc:`here </displays/widget/text/text_dynamic>`.
 
 Also note that there are some additional positioning settings, like ``x:``, ``y:``,
-``anchor_x:``, and ``anchor_y:``. You can read about these in our :doc:`/howto/display/widget_positioning` guide.
+``anchor_x:``, and ``anchor_y:``. You can read about these in our :doc:`/displays/widgets/widget_positioning` guide.
 
 Finally, note that the text widget showing the score has settings for ``number_grouping:`` and ``min_digits:``.
-You can read about what those do in the documentation for the text display widget.
-
-.. todo:: Add link to text widget docs once those are written.
+You can read about what those do in the :doc:`documentation for the text display widget </displays/widget/text/index>`.
 
 6. Remove the old slide_player: ball_started entry
 --------------------------------------------------
@@ -282,7 +280,7 @@ entry for ball_started:. So now the slide_player: in your machine-wide
 ::
 
    slide_player:
-      mc_ready: welcome_slide
+      init_done: welcome_slide
       mode_attract_started: attract_started
 
 What if it didn't work?
@@ -293,10 +291,10 @@ What if it didn't work?
   so you won't see the mode until a game starts. (If you're not able to
   start a game, check the troubleshooting tips in the previous step.)
 + If you get some kind of crash or error, specifically any errors that
-  mention anything about"config" or "path," double-check that you put
-  all the files in the proper locations back in Step (B). (A common
-  mistake is to put `base.yaml` in the `base` folder rather than the
-  `base/config` folder.)
+  mention anything about "config" or "path," double-check that you put
+  all the files in the proper locations back in Step 2. (A common
+  mistake is to put `base.yaml` in the `/modes/base` folder rather than the
+  `/modes/base/config` folder.)
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
@@ -307,7 +305,7 @@ folder with the name ``config.yaml``.
 Note that this is a different folder than the previous steps. Since we now have subfolders in the machine folder, steps
 14+ now each have their own folder in the ``mpf-examples`` folder. So switch out of the ``mpf-examples/tutorial``
 folder and to the ``mpf-examples/tutorial_step_14`` folder, then run ``mpf both``. (You don't need the ``-c`` option
-since we're back to using ``config.yaml`` instead of a custom config file name.
+since we're back to using ``config.yaml`` instead of a custom config file name.)
 
 ::
 

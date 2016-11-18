@@ -45,5 +45,4 @@ Now let's get started...
    15. Add scoring <15_scoring>
    16. Add an attract mode display show <16_attract_mode_show>
    17. Add lights (or LEDs) <17_add_lights_leds>
-   18. Create an attract mode light show <18_attract_mode_light_show>
-   19. Add your first shot <19_shots>
+   18. Add your first shot <18_shots>

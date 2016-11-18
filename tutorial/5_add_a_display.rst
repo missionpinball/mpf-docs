@@ -300,7 +300,7 @@ So next, go to the ``slide_player:`` section of your config and add an entry for
 ``mode_attract_started``. (This is the event that is posted whenever a mode starts, in the form of
 *mode_<mode_name>_started*.)
 
-By the way, if you're wondering how we know what events to use, there's an :doc:`/events/evnet_reference` in the
+By the way, if you're wondering how we know what events to use, there's an :doc:`/events/event_reference` in the
 documentation which has a list of all the events in MPF as well as descriptions of when
 they're posted. You can use any of these as triggers for your slides via the ``slide_player:``.
 
@@ -349,8 +349,8 @@ Since the *attract_started* slide only has one widget, and since all we did with
 specify text (but not size, color, position, font, etc.), we just get the default text properties
 which are small, arial, and white.
 
-7. Launching the MPF game engine and MPF MC at the same time
-------------------------------------------------------------
+7. Launching the MPF game engine and MPF MC at the same time (Windows / Linux only)
+-----------------------------------------------------------------------------------
 
 In the previous step, you used two separate console windows to launch ``mpf mc`` and ``mpf`` separately.
 (If you do this, by the way, you can launch either one first and it will wait for the other one.)
@@ -371,7 +371,7 @@ Use it just like the others:
     C:\pinball\your_machine>mpf both
 
 When you do this, you should see the graphical window pop up (most likely showing the *welcome_slide* for
-a quick moment), then when the MPF game engine is up and running, you should see the graphical window
+a quick flash), then when the MPF game engine is up and running, you should see the graphical window
 flip over to the *attract_started* slide. Here's a screen shot:
 
 .. image:: images/5_mpf_both.jpg
