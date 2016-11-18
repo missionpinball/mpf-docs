@@ -13,7 +13,10 @@ A Plunger is a type of ball device. MPF supports mechanical (traditional
 TODO
 
 .. toctree::
-   no_switch
+   mechanical_with_switch
+   mechanical_no_switch
+   coil_fired
+   combo_coiL_mechanical
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
