@@ -188,9 +188,14 @@ like on the console and/or the log file:
 
 We already mentioned that there are lots of different things you could
 add to your base mode. For now, let's configure the display so that it
-shows the player's score. To do this, go back to your base mode's
-config file ( ``<your_machine>/modes/base/config/base.yaml``) and add a
-section called ``slide_player:``. Then add the following subsections so
+shows the player's score, as well as which player is up and what ball
+it is, like this:
+
+.. image:: images/basic_score_screen.jpg
+
+
+To do this, go back to your base mode's config file (``<your_machine>/modes/base/config/base.yaml``)
+and add a section called ``slide_player:``. Then add the following subsections so
 your complete ``base.yaml`` looks like this:
 
 ::
@@ -227,8 +232,8 @@ We briefly touched on the ``slide_player:`` functionality earlier in
 this tutorial and how you can configure it to show certain slides when
 various MPF events happen.
 
-Every time a mode starts in MPF, an event called *mode_<mode name>_started*
-is posted. (There's also a *mode_<mode_name>_stopped* posted when an mode stops.)
+Every time a mode starts in MPF, an event called :doc:`/events/mode_name_started`
+is posted.
 
 So in this case, we set our slide
 player entry to play when it sees the event ``mode_base_started`` which

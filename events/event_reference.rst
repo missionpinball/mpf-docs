@@ -14,7 +14,8 @@ will replace the "(name)" part of the event text with the actual switch name.
 So the when a switch called ``s_left_slingshot`` is activated, it will posted
 an event called *switch_s_left_slingshot_active*.
 
-See the :doc:`/events/index>` guide for more information on how MPF uses events.
+See the :doc:`/events/index>` guide for more information on how MPF uses
+events.
 
 .. toctree::
    :maxdepth: 1
@@ -50,6 +51,7 @@ See the :doc:`/events/index>` guide for more information on how MPF uses events.
    ball_search_stopped <ball_search_stopped>
    ball_started <ball_started>
    ball_starting <ball_starting>
+   ball_will_end <ball_will_end>
    balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
@@ -130,6 +132,7 @@ See the :doc:`/events/index>` guide for more information on how MPF uses events.
    player_add_success <player_add_success>
    player_turn_start <player_turn_start>
    player_turn_stop <player_turn_stop>
+   playfield_transfer_(playfield_transfer)_ball_transferred <playfield_transfer_playfield_transfer_ball_transferred>
    reel_(name)_advance <reel_name_advance>
    reel_(name)_hw_value <reel_name_hw_value>
    reel_(name)_ready <reel_name_ready>

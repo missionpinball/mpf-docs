@@ -31,14 +31,24 @@ class EventDocParser(object):
 
     def write_index(self):
 
-        index = '''Event reference
+        index = '''Event Reference
 ===============
 
 Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
 
-See the :doc:`/events/index>` guide for more information on how MPF uses events.
+Every event in MPF is just a string of text. You'll see that almost every
+event that is posted has a slight variation of the event text, typically
+incorporating something about which mechanism or logic device posted the event.
+
+For example, the event called :doc:`switch_(name)_active <switch_name_active>`
+will replace the "(name)" part of the event text with the actual switch name.
+So the when a switch called ``s_left_slingshot`` is activated, it will posted
+an event called *switch_s_left_slingshot_active*.
+
+See the :doc:`/events/index>` guide for more information on how MPF uses
+events.
 
 .. toctree::
    :maxdepth: 1
@@ -123,7 +133,7 @@ See the :doc:`/events/index>` guide for more information on how MPF uses events.
         rst_output += '*MPF Event*\n\n'
 
         # add the description
-        rst_output += final_dict['desc'] + '\n\n\n'
+        rst_output += final_dict['desc'] + '\n\n'
 
         # add the keyword arguments section
 
