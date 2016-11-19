@@ -93,7 +93,7 @@ At the bottom of the file add the following::
 
  export PATH=~/.local/bin:$PATH
 
-Hit "control + x" to save and "y" then return to save the file as the same name.
+Hit "control + x" to save and "y" then "return" to save the file as the same name.
 
 Now start a fresh terminal so that this new PATH is included in your current environment. Then:
 
