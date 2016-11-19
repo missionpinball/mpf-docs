@@ -77,6 +77,7 @@ disable_events:
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``ball_will_end, service_mode_entered`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
@@ -87,6 +88,7 @@ enable_events:
 ~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
@@ -130,10 +132,14 @@ See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 timer_start_events:
 ~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-An optional event (or list of events) in MPF control event format
-which starts this ball saver's countdown timer.
+Default: ``None``
+
+Events in this list, when posted, start this ball saver's countdown timer.
 
 eject_delay:
 ~~~~~~~~~~~~

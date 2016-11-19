@@ -47,7 +47,14 @@ The following sections are optional in the ``common:`` section of your config. (
 
 disable_events:
 ^^^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
 
 .. todo::
    Add description.
@@ -61,7 +68,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 enable_events:
 ^^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
 
 .. todo::
    Add description.
@@ -89,7 +103,14 @@ Single value, type: ``string``. Default: ``None``
 
 reset_events:
 ^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
 
 .. todo::
    Add description.
@@ -103,7 +124,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 restart_events:
 ^^^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
 
 .. todo::
    Add description.
@@ -127,7 +155,14 @@ Single value, type: ``integer``.
 
 count_events:
 ^^^^^^^^^^^^^
-List of one (or more) values, each is a type: ``string``.
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
 
 .. todo::
    Add description.

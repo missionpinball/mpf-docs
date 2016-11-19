@@ -129,9 +129,14 @@ The following sections are optional in the ``diverters:`` section of your config
 
 activate_events:
 ~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Causes this diverter to activate.
+Default: ``None``
+
+Events in this list, when posted, cause this diverter to activate.
 
 activation_coil:
 ~~~~~~~~~~~~~~~~
@@ -163,9 +168,14 @@ active until it's disabled or you manually deactivate it.
 
 deactivate_events:
 ~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Causes this diverter to deactivate.
+Default: ``None``
+
+Events in this list, when posted, cause this diverter to deactivate.
 
 deactivation_coil:
 ~~~~~~~~~~~~~~~~~~
@@ -209,9 +219,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Disables this diverter. Typically it's *ball_ending* (which is posted
+Default: ``None``
+
+Events in this list, when posted, disable this diverter. Typically it's *ball_ending* (which is posted
 when a ball is in the process of ending), meaning this diverter will
 not be enabled when the next ball is started. You might also set a
 disable event to occur based on the event posted from a mode ending.
@@ -226,9 +241,14 @@ based on one of your *disable_events* being posted.
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Enables this diverter. (Remember that enabling a diverter is not the
+Default: ``None``
+
+Events in this list, when posted, enable this diverter. (Remember that enabling a diverter is not the
 same as activating it.)
 
 feeder_devices:
@@ -259,7 +279,12 @@ Single value, type: ``string``. Default: ``%``
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``machine_reset_phase_3``
 
 .. todo::
    Add description.

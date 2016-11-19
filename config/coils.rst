@@ -105,6 +105,7 @@ disable_events:
 ~~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
@@ -114,10 +115,11 @@ enable_events:
 ~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-Enabled (hold on) this coil. This requires that *allow_enable* is true
+Enables (holds on) this coil. This requires that *allow_enable* is true
 or that a *hold_power* setting is configured.
 
 hold_power:
@@ -168,6 +170,7 @@ pulse_events:
 ~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 

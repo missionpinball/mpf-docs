@@ -23,8 +23,14 @@ The following sections are optional in the ``shot_groups:`` section of your conf
 
 advance_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
@@ -37,29 +43,53 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
 disable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
 enable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
@@ -79,8 +109,14 @@ Single value, type: ``string``. Default: ``None``
 
 remove_active_profile_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
@@ -93,22 +129,40 @@ One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``
 
 rotate_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
 rotate_left_events:
 ~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 
 rotate_right_events:
 ~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
+Default: ``None``
+
+Events in this list, when posted,
 .. todo::
    Add description.
 

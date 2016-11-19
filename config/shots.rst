@@ -95,9 +95,14 @@ The following sections are optional in the ``shots:`` section of your config. (I
 
 advance_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will cause this shot to be advanced
+Default: ``None``
+
+Events in this list, when posted, cause this shot to be advanced
 to its next state in the active shot profile. If the shot is on the
 last state, then it will roll over if the shot profile is configured
 to loop, otherwise it will do nothing. *Advance_events* are similar to
@@ -159,25 +164,40 @@ would trigger a hit event for the front shot too.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will disable this shot. If a shot is
+Default: ``None``
+
+Events in this list, when posted, disable this shot. If a shot is
 disabled, then hits to it have no effect. (e.g. The shot will remain
 in whatever state it's in.)
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will enable this shot. If a shot is
+Default: ``None``
+
+Events in this list, when posted, enable this shot. If a shot is
 not enabled, then hits to it have no effect. (e.g. The shot will
 remain in whatever state it's in.)
 
 hit_events:
 ~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will cause this shot to be "hit".
+Default: ``None``
+
+Events in this list, when posted, cause this shot to be "hit".
 This is effectively the same thing as if the ball activated the switch
 associated with this shot, (or that the entire switch sequence has
 been completed), except it comes in via an event instead of from a
@@ -218,17 +238,27 @@ play though.
 
 remove_active_profile_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will cause the active shot profile
+Default: ``None``
+
+Events in this list, when posted, cause the active shot profile
 to be removed, and the next-highest priority profile to be applied.
 Default is *None*.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of one or more events that will reset this shot. Resetting a
+Default: ``None``
+
+Events in this list, when posted, reset this shot. Resetting a
 shot means that it jumps back to the first state in whatever *shot
 profile* is active at that time.
 

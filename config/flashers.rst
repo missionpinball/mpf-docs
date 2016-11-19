@@ -101,9 +101,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 flash_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-List of events that causes this flasher to flash using its default *flash_ms:* time.
+Default: ``None``
+
+Events in this list, when posted, cause this flasher to flash using its default *flash_ms:* time.
 
 flash_ms:
 ~~~~~~~~~

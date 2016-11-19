@@ -55,11 +55,14 @@ The following sections are optional in the ``extra_balls:`` section of your conf
 
 award_events:
 ~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
 Default: ``None``
 
-Event(s) that will award this extra ball to the current player.
+Events in this list, when posted, award this extra ball to the current player.
 
 debug:
 ~~~~~~
@@ -77,11 +80,14 @@ and reports.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
 Default: ``None``
 
-Event(s) that reset this extra ball, meaning it can be awarded to a player again even
+Events in this list, when posted, reset this extra ball, meaning it can be awarded to a player again even
 if it has previously been awarded.
 
 tags:

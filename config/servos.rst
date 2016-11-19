@@ -118,7 +118,15 @@ reset_events:
 
 .. versionchanged:: 0.32
 
-One or more sub-entries, each in the format of type: ``str``:``ms``.
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
+
 Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered``
 
 A list of events, or a list of events with delays, that cause the servo to
@@ -129,7 +137,7 @@ the servo to reset on the start of each ball, you can override that like this:
 
 ::
 
-  reset_events: None
+  reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
 
 reset_position:
 ~~~~~~~~~~~~~~~

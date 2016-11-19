@@ -70,7 +70,13 @@ Single value, type: ``string``. Default: ``%``
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting``
+
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``machine_reset_phase_3, ball_starting``
 
 .. todo::
    Add description.

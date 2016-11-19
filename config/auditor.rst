@@ -86,7 +86,11 @@ entries and the current average.
 
 save_events:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``ball_ended``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-A list of events that trigger the auditor to save its audits to disk.
+Default: ``ball_ended``
 
+Events in this list, when posted, trigger the auditor to save its audits to disk.
