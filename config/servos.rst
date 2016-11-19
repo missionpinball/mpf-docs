@@ -78,12 +78,12 @@ platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-The platform interface that this servo is attached to. Note that you can add
-a ``servo_controllers:`` section to the ``hardware:`` section of your machine
-config that's used as the default platform for servos, so you only need to add
-the ``platform:`` section here if you have a servo that's not connected to your
-default servo platform. (In other words, you only need this here if you have
-multiple different servo platforms at the same time in your machine.)
+Name of the platform this servo is connected to. The default value of ``None`` means the
+default hardware platform will be used. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.
 
 positions:
 ~~~~~~~~~~

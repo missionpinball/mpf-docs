@@ -93,7 +93,11 @@ platform:
 Single value, type: ``string``. Default: ``None``
 
 Name of the platform this accelerometer is connected to. The default value of ``None`` means the
-default hardware platform will be used.
+default hardware platform will be used. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.
 
 tags:
 ~~~~~

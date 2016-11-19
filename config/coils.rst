@@ -161,10 +161,12 @@ platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-The hardware platform this device is connected to. A value of ``None`` means
-it uses the default platform. You only need to change this if you have
+Name of the platform this coil is connected to. The default value of ``None`` means the
+default hardware platform will be used. You only need to change this if you have
 multiple different hardware platforms in use and this coil is not connected
 to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.
 
 pulse_events:
 ~~~~~~~~~~~~~
