@@ -3,20 +3,19 @@ Mission Pinball Framework Documentation (mpf-docs)
 
 <img align="right" height="146" src="_static/images/mpf-logo-200.png"/>
 
-This repo is the documentation for the Mission Pinball Framework. This
-is new with MPF 0.30. Prior versions of the documentation were managed
-within the WordPress that runs MissionPinball.com.
+This repo is the documentation for the [Mission Pinball Framework](http://missionpinball.org).
 
-Since this is new with MPF 0.30, we have to convert all the docs from
-HTML to ReStructured Text format. We used an automated tool to do that
-in bulk. Those raw docs are in the _not_updated_yet folder. We're going
-to go through them one-by-one, update them to MPF 0.30, and then add
-them to the MPF proper location here.
+These docs are hosted by Read the Docs at <http://docs.missionpinball.org>.
+You can also download PDF, HTML, and Epub versions. You can also clone
+the repo and build them yourself with Sphinx.
 
-This will probably take months. :)
+The "latest" branch of these docs corresponds to the latest branch of
+MPF, (typically "dev"), though you can use the latest docs for any
+recent version of MPF. (We note which features have been added, changed,
+and removed as needed.)
 
-In the meantime, you can know that anything you see on the
-docs.missionpinball.org site has been updated and applies to MPF 0.30.
+There are also version-specific branches of mpf-docs for all released
+versions of MPF.
 
-If you want to help with the conversion, feel free! Just fork the repo,
-make a change, and submit a pull request.
+These docs are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+MPF and all code licensed [MIT](https://opensource.org/licenses/MIT).
