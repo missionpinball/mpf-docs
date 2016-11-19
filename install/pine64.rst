@@ -5,13 +5,9 @@ Hardware Notes
 --------------
 
 * Spring for the fastest MicroSD card you can (Samsung Evo cards are reportedly the fastest), at least 16GB.
-<<<<<<< HEAD
 * The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
 * If you find that your pine64 does not boot it maybe due to using a HDMI->DVI cable, try HDMI to HDMI first.
-=======
-* The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of
-those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
->>>>>>> ed23c2d9749fb433482bf554be7e99da227fce00
+
 
 System Notes
 ------------
@@ -108,7 +104,7 @@ Download the MPF Debian Installer from https://github.com/missionpinball/mpf-deb
 
 (This is for MPF versions 0.30 and newer)
 
-<<<<<<< HEAD
+
 To unzip the file navigate in your terminal to the location of the downloaded files.
 
 Unzip the file::
@@ -120,10 +116,6 @@ If this does not run you may need to install unzip::
 ''$ sudo apt-get install unzip''
 
 After unzip, run ./mpf-debian-installer-0.30/install from the folder you unzipped the files to. Consult the README for more information.::
-=======
-Unzip, and from a terminal run ``./install`` from the folder you unzipped the files to. Consult the README for more
-information.::
->>>>>>> ed23c2d9749fb433482bf554be7e99da227fce00
 
  $ pip3 install mpf-mc
 
