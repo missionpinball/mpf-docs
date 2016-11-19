@@ -96,7 +96,17 @@ Download the MPF Debian Installer from https://github.com/missionpinball/mpf-deb
 
 (This is for MPF versions 0.30 and newer)
 
-Unzip, and from a terminal run ./install from the folder you unzipped the files to. Consult the README for more information.::
+To unzip the file navigate in your terminal to the location of the downloaded files.
+
+Unzip the file::
+
+''$ unzip v0.30.zip .''
+
+If this does not run you may need to install unzip::
+
+''$ sudo apt-get install unzip''
+
+After unzip, run ./mpf-debian-installer-0.30/install from the folder you unzipped the files to. Consult the README for more information.::
 
  $ pip3 install mpf-mc
 
