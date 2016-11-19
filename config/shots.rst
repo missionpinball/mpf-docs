@@ -300,7 +300,7 @@ For example, imagine if you wanted to create a shot to flash an LED between red 
 Assuming the "flash" profile (as defined in the ``profile: flash`` in the above shot) was configured for the state
 that show was in, when the shot entered that state, it would replace the ``(leds):`` section of the show with ``led1``.
 
-More information about :doc:`show tokens </shows/replacement_tokens>`
+More information about :doc:`show tokens </shows/tokens>`
 
 switch:
 ~~~~~~~

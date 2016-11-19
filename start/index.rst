@@ -48,5 +48,6 @@ Read on to understand other important concepts about MPF:
    :titlesonly:
 
    features
+   media_controller
    config_files
    dsl_vs_programming

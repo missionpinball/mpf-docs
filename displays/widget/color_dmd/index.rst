@@ -4,7 +4,7 @@ Color DMD Widget
 The Color DMD widget is used to render a :doc:`display </displays/display/index>` on a
 :doc:`slide </displays/slides/index>` and to apply options that make it look like a DMD (dot filters, etc.).
 
-This is how you get a "Color DMD" look on your LCD display. (The :doc:`/displays/adding_dot_look_to_lcd`
+This is how you get a "Color DMD" look on your LCD display. (The :doc:`/displays/display/adding_dot_look_to_lcd`
 guide walks you through that.)
 
 Note that the Color DMD Widget really is unrelated to whether you have a
@@ -35,7 +35,7 @@ type: color_dmd
 
 .. note:: Color DMD widgets also have "common" widget settings for position, opacity,
    animations, style, etc. Those are not listed here, but are instead covered in
-   :doc:`common widget settings </displays/widgets/common_settings>` page.
+   :doc:`common widget settings </displays/widget/common_settings>` page.
 
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
@@ -176,4 +176,4 @@ Examples
 The example config files section of the documentation contains
 :doc:`examples of color DMD widgets </examples/dmd/index>`.
 
-More examples are in the :doc:`/displays/adding_dot_look_to_lcd` guide.
+More examples are in the :doc:`/displays/display/adding_dot_look_to_lcd` guide.

@@ -4,6 +4,8 @@ Config file instructions
 .. toctree::
 
    config_version
+   machine_config
+   mode_config
    gain_values
    time_strings
    case_insensitivity

@@ -117,3 +117,15 @@ MPF supports:
    pololu_maestro/index
    SmartMatrix RGB DMD <smartmatrix/index>
    eli_dmd/index
+   existing_machines/index
+
+Other
+-----
+
+TODO
+
+.. toctree::
+
+   hw_rules
+   numbers
+   platform

@@ -43,3 +43,11 @@ Migrating from previous versions of MPF
    :maxdepth: 1
 
    migrating
+
+Installing & Running the "Demo Man" example game
+------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   demo_man

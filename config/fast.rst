@@ -13,8 +13,8 @@ fast:
 
 configure hardware options that are specific to the FAST Pinball
 Controller. Note that we have a how to guide which includes
-:doc:`all the FAST-specific settings </howto/controller_hardware/fast>` throughout your entire config file, so be sure to read that
-if you have FAST hardware.
+:doc:`all the FAST-specific settings </hardware/fast/index>` throughout your entire config file,
+so be sure to read that if you have FAST hardware.
 
 ::
 

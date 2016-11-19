@@ -1,18 +1,23 @@
-Drop Targets
-============
+Targets
+=======
+
+.. toctree::
+   :titlesonly:
+
+   drop_targets/index
+   kicking_targets/index
+   stationary_targets/index
+   vari_targets/index
+
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/targets/drop_targets`                                          |
+| :doc:`/config/drop_targets`                                                  |
 +------------------------------------------------------------------------------+
-| :doc:`/config/targets/drop_target_bank`                                     |
+| :doc:`/config/drop_target_banks`                                             |
 +------------------------------------------------------------------------------+
-| :doc:`/config/targets/stationary_targets`                                    |
-+------------------------------------------------------------------------------+
-| :doc:`/config/targets/kicking_targets`                                       |
-+------------------------------------------------------------------------------+
-| :doc:`/config/targets/vari_targets`                                          |
+| TODO add the rest                                                            |
 +------------------------------------------------------------------------------+
 
 There are many types of targets on a pinball playfield some of which are described here. In the Mission Pinball

@@ -1,3 +1,5 @@
+:orphan:
+
 Config file for the easing GIF
 ==============================
 

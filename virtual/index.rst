@@ -1,3 +1,5 @@
+:orphan:
+
 Using MPF without physical hardware
 ===================================
 

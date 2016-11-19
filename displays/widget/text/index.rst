@@ -37,7 +37,7 @@ Here are a list of the settings you can use for text widgets:
 
 .. note:: Text widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
-   :doc:`common widget settings </displays/widgets/common_settings>` page.
+   :doc:`common widget settings </displays/widget/common_settings>` page.
 
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than

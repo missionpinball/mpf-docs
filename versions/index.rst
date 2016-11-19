@@ -6,5 +6,6 @@ MPF Versions
 
    understanding
    docs
+   0.32
    history
    roadmap

@@ -105,6 +105,7 @@ your machine-wide config, a mode-specific config, or both.
    shows: <shows>
    slide_player: <slide_player>
    slides: <slides>
+   smart_virtual: <smart_virtual>
    smartmatrix: <smartmatrix>
    snux: <snux>
    sound_player: <sound_player>

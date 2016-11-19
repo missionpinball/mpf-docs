@@ -181,7 +181,7 @@ Fliptronics coils
 You'll also see a section in the solenoid table in your ooperator's manual with "Flipper
 Circuits", like this:
 
-.. image:: images/flipper_circuits.jpg
+.. image:: /hardware/images/flipper_circuits.jpg
 
 That section shows the 8 driver outputs that are connected to the Fliptronics
 board (if your machine has one).

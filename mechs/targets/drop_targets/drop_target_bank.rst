@@ -1,8 +1,4 @@
-Drop target bank
+Drop Target Bank
 ================
 
-*MPF Device*
-
-.. toctree::
-
-   drop_target_bank
+TODO

@@ -36,7 +36,7 @@ Note that the ``some_event: coil_1`` is entered in a different way than the ``so
 The first one has a simple key/value pair, whereas the second has a complete nested sub-configuration.
 
 The first example shows the "express" config, while the second shows the
-full config. (What's an "express config?" Details :doc:`here </config/instructions/express_config.rst>`.
+full config. (What's an "express config?" Details :doc:`here </config/instructions/express_config>`.
 
 The coil player's express config is the "pulse" action.
 

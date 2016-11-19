@@ -34,7 +34,7 @@ Click the correct link for the specifics:
 * :doc:`FAST Pinball </hardware/fast/lights>`
 * :doc:`P-ROC </hardware/multimorphic/lights>`
 * :doc:`OPP </hardware/opp/lights>`
-* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines>`
+* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
 
 Optional settings
 -----------------

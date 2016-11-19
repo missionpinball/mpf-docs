@@ -31,7 +31,10 @@ The following mechs are done in MPF, but the documentation is not done yet:
    :maxdepth: 1
 
    Accelerometers <accelerometers/index>
-   Drop Targets <drop_targets/index>
+   Drop Targets <targets/drop_targets/index>
+   Kicking Targets <targets/kicking_targets/index>
+   Stationary Targets <targets/stationary_targets/index>
+   Vari Targets <targets/vari_targets/index>
    Kickback Lanes <kickbacks/index>
    Lights <lights/index>
    LEDs <leds/index>

@@ -9,6 +9,6 @@ auditor, remote monitoring and trouble reporting, etc.)
 .. toctree::
    :hidden:
 
-   auditor
-   service_mode
-   operator_settings
+   auditor/index
+   service_mode/index
+   operator_settings/index

@@ -68,12 +68,13 @@ Click the correct link for the specifics:
 * :doc:`FAST Pinball </hardware/fast/drivers>`
 * :doc:`P-ROC/P3-ROC</hardware/multimorphic/drivers>`
 * :doc:`OPP </hardware/opp/drivers>`
-* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines>`
+* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
 
 Optional settings
 -----------------
 
-The following sections are optional in the ``coils:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``coils:`` section of your config. (If
+you don't include them, the default will be used).
 
 allow_enable:
 ~~~~~~~~~~~~~

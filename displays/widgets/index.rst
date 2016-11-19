@@ -43,7 +43,7 @@ widgets.
 .. toctree::
    :maxdepth: 2
 
-   Types of widgets <widget/index>
+   Types of widgets </displays/widget/index>
    Positioning widgets <widget_positioning>
    Animating widgets <animate_widgets>
    Animation "easing" <easing>

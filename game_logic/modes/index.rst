@@ -232,6 +232,13 @@ mode is running.)
    (priority 20) which are responsible for the fundamentals of running
    the attract and game modes.
 
+Using modes as game logic
+-------------------------
+
+.. toctree::
+
+   modes_as_game_logic
+
 Built-in Modes
 --------------
 

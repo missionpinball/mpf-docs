@@ -16,7 +16,7 @@ TODO
    mechanical_with_switch
    mechanical_no_switch
    coil_fired
-   combo_coiL_mechanical
+   combo_coil_mechanical
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |

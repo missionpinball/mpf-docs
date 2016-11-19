@@ -21,4 +21,4 @@ above are combined below into the "controlling an existing machine" section:
    :maxdepth: 1
 
    homebrew
-   retheme
+   existing

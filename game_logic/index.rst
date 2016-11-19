@@ -24,8 +24,7 @@ to tutorials, event listings, and configuration
    Modes <modes/index>
    Player Variables <players/index>
    Timers <timers/index>
-   Shots <shot/index>
-   Using events for game logic <events/index>
+   Shots <shots/index>
    Skill shot <skill_shot/index>
 
    Video Mode <video_modes/index>

@@ -26,6 +26,10 @@ MPF also uses player variables to keep track of all the other game logic
 elements that are tracked on a per-player basis, like achievement status,
 logic block states, extra balls, bonus, etc.
 
+.. toctree::
+
+   player_variables
+
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+

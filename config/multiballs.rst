@@ -116,6 +116,7 @@ on how to enter settings here.
 Default: ``None``
 
 Events in this list, when posted,
+
 .. todo::
    Add description.
 
@@ -129,6 +130,7 @@ on how to enter settings here.
 Default: ``None``
 
 Events in this list, when posted,
+
 .. todo::
    Add description.
 

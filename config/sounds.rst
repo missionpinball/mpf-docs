@@ -229,7 +229,7 @@ the sound is looped it will loop back to the beginning of the sound file.
 ducking:
 --------
 
-The ``ducking:`` section controls :doc:`ducking </sounds/ducking>` for the sound.  It contains the
+The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.  It contains the
 following nested sub-settings:
 
 Required settings

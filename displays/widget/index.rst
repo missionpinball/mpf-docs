@@ -26,3 +26,4 @@ But also these:
    Slide Frame <slide_frame>
    Text Input <text_input>
    Triangle <triangle>
+   Common Settings (all widgets) <common_settings>
