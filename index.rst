@@ -80,7 +80,7 @@
 Mission Pinball Framework |version| documentation
 =================================================
 
-Everything you need to know about the Mission Pinball Framework.
+Everything you need to know about the `Mission Pinball Framework <http://missionpinball.org>`_.
 
 .. important::
 
