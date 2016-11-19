@@ -190,7 +190,7 @@ display.
 ---------------------------------------
 
 Finally, remember to check the documentation for the
-:doc:`color_dmd widget </displays/widget/color_dmd>` for a full list of
+:doc:`color_dmd widget </displays/widget/color_dmd/index>` for a full list of
 the options you can use to fine-tune how the DMD looks in the window. For
 example, you can configure the pixel size, the glow radius, the color of the
 space between the pixels, gain, tint, etc.
@@ -213,5 +213,5 @@ You can also use the various :doc:`window: </config/window>` options (such as
 full screen) to properly align the content of the display with the visible area.
 
 Finally, even though this example was using the color_dmd widget, you could
-replace it with the :doc:`dmd widget </displays/widget/dmd>` for a
+replace it with the :doc:`dmd widget </displays/widget/dmd/index>` for a
 single color look instead of full color.

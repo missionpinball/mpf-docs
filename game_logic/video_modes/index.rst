@@ -1,4 +1,4 @@
 Video Modes
 ===========
 
-.. todo::
+TODO

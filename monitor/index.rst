@@ -34,12 +34,14 @@ Features
   window.
 * You can add a photo of your playfield and then drag-and-drop LEDs, lights,
   and switches from the device tree onto the playfield.
+
       * LEDs (circle icons) show their color in real time.
       * Lights (circle icons) show their brightness in real time between black
         and white.
       * Switches (square icons) show their state (green = active, black =
         inactive).
       * More device types will become "draggable" in the future.
+
 * Left-click on a switch to "tap" it (activate & release). Right-click on a
   switch to "toggle" it (change its state and hold it).
 * Devices added to the playfield image are saved & restored when you restart

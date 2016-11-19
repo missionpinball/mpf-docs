@@ -37,12 +37,12 @@ So now your ``config.yaml`` file should look like this:
         s_right_flipper:
             number:
 
-In case you're wondering why we preface each switch name with ``s_``,
+In case you're wondering why we preface each switch name with *s_*,
 that's a little trick we learned that makes things easier as you get
 deeper into your configuration. We do this because most text editors
 and IDEs have "autocomplete" functions where it will pop up a list to
 autocomplete values as you type. So if you preface all your switches
-with ``s_`` (and your coils with ``c_``, your lights with ``l_``, etc.),
+with *s_* (and your coils with *c_*, your lights with *l_*, etc.),
 then as soon as you type "s_" into your YAML file you should get a popup
 list with all your switches which you can use to select the right one.
 These saves lots of headaches later caused by not entering the name
@@ -112,12 +112,8 @@ with FAST I/O boards use sequential switch numbers. Controllers retrofitted into
 (for matrix switches or direct switches) followed by the switch number from the table in the machine's operator's
 manual.
 
-We have documentation for the various hardware platforms MPF supports which explain how numbering works on each
-platform:
-
-* :doc:`FAST Pinball </hardware/configuring_fast_hardware>`
-* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic>`
-* :doc:`Open Pinball Project (OPP) </hardware/configuring_opp_hardware>`
+The :doc:`/hardware/numbers` guide explains how hardware numbering works on each of the various hardware platforms MPF
+supports.
 
 ::
 
@@ -145,7 +141,7 @@ other stuff that's important that you probably never thought about.
 
 Here's an example of how you'd enter your coils for a machine with two
 dual-wound coils. If you have single-wound coils, or you have more than
-two flippers, refer to the :doc:`/mechs/flipper` documentation for
+two flippers, refer to the :doc:`/mechs/flippers/index` documentation for
 examples of how to configure them.
 
 ::
@@ -354,9 +350,9 @@ and then you add settings for ``platform:`` and ``driverboards:``.
 Remember earlier in this step, we provided links to the documentation for
 each platform. Here they are again:
 
-* :doc:`FAST Pinball </hardware/configuring_fast_hardware>`
-* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic>`
-* :doc:`Open Pinball Project (OPP) </hardware/configuring_opp_hardware>`
+* :doc:`FAST Pinball </hardware/fast/index>`
+* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic/index>`
+* :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
 
 You only need look at those docs for the specifics parts of the config that
 vary depending on your hardware. The good news is that 99.9% of the MPF

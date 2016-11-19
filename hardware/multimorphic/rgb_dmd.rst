@@ -8,8 +8,6 @@ How to configure an RGB DMD (P-ROC/P3_ROC)
 +------------------------------------------------------------------------------+
 | :doc:`/config/smartmatrix`                                                   |
 +------------------------------------------------------------------------------+
-| :doc:`/config/eli_dmd`                                                       |
-+------------------------------------------------------------------------------+
 
 Neither the P-ROC nor the P3-ROC has direct support for RGB DMDs. However you
 can still use an RGB DMD with a P-ROC/P3-ROC by using one of the standalone

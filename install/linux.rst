@@ -11,4 +11,4 @@ README for more information.
 Running MPF
 -----------
 
-See the :doc:`running/index` for details and command-line options.
+See the :doc:`/running/index` for details and command-line options.

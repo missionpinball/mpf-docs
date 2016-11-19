@@ -64,7 +64,7 @@ The ``time:`` setting in each step represents the time when that step *starts*. 
 step will always be ``time: 0``
 
 If you just enter a number for the *time*, that number represents seconds.
-However, you can enter the time in :doc:`standard MPF time format </config/instructions/time_strings`,
+However, you can enter the time in :doc:`standard MPF time format </config/instructions/time_strings>`,
 which could be *ms*, *secs*, etc. The following are all valid *time* entries:
 
 * ``time: 1`` (1 second)

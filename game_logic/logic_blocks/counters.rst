@@ -61,7 +61,7 @@ multiple_hit_window:
 
 This is an :doc:`MPF time value string </config/instructions/time_strings>`
 that will be used to group
-together multiple *count_events*as if they were one single event. So
+together multiple *count_events* as if they were one single event. So
 if you have ``multiple_hit_window: 500ms`` and you get three hit
 events 100ms apart, they will all count as one hit.
 

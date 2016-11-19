@@ -13,7 +13,7 @@ Here's what happens behind-the-scenes when a mode stops.
 #. Switch handlers registered by that mode are removed.
 #. Timers set in that mode are stopped and removed.
 #. Delays set in that mode are cleared.
-#. An queue event is posted: * mode_<mode_name>_stopping *.
+#. An queue event is posted: *mode_<mode_name>_stopping*.
 #. Once that queue is clear, the mode's ``_stopped()`` method is called.
 #. Any mode *stop_methods* registered for that mode are called one-by-
    one. (mode stop_methods are based on anything that gets returned from

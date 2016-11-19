@@ -206,4 +206,4 @@ Examples
 The example config files section of the documentation contains
 :doc:`examples of DMD widgets </examples/dmd/index>`.
 
-More examples are in the :doc:`/displays/adding_dot_look_to_lcd` guide.
+More examples are in the :doc:`/displays/display/adding_dot_look_to_lcd` guide.

@@ -19,7 +19,7 @@ other devices once they've been defined (flippers, autofires, ball devices,
 diverters, etc.)
 
 That said, it is possible to perform actions on coils directly, such as pulsing,
-enabling, or disabling them. You can do this via the :doc:`coil_player:`
+enabling, or disabling them. You can do this via the :doc:`/config/coil_player`
 section of a config file or via the ``coils:`` section of a
 :doc:`show </shows/index>`.
 

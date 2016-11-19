@@ -8,4 +8,4 @@ Types of skill shots:
    * Super skill shot
    * How to create a lane-change skill shot
 
-.. todo::
+TODO

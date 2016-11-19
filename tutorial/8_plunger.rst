@@ -94,7 +94,7 @@ then you'll have separate log files from MPF and the MC).
 Search (or filter) the log for the name of your trough or drain device, and
 you should see all sorts of interesting things. Here's a small snippet:
 
-.. code-block:: log
+.. code-block:: console
 
    2016-11-18 03:54:06,103 : DEBUG : ball_device.bd_trough : Counting balls by checking switches
    2016-11-18 03:54:06,103 : DEBUG : ball_device.bd_trough : Confirmed active switch: s_trough1

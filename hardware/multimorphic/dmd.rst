@@ -15,11 +15,11 @@ like this:
 
 .. image::  /hardware/images/display_mono_dmd.jpg
 
-  .. note::
+.. note::
 
    If you want to drive an RGB LED DMD and you're using a P-ROC, you can do that
    by adding a :doc:`SmartMatrix </hardware/smartmatrix/index>` or
-   :doc:`RGB.DMD </hardware/eli_dmd>` board which you would then use in place of
+   :doc:`RGB.DMD </hardware/eli_dmd/index>` board which you would then use in place of
    the P-ROC's 14-pin DMD connector.
 
 1. Connect your hardware
@@ -109,13 +109,13 @@ that make up the image.
 
 For details on this, you can search the `P-ROC forums <http://www.pinballcontrollers.com/forum>`_
 for "high_cycles" to find a few threads where people are talking about these
-settings. Then you can set them in the ``p_roc: dmd_timing_cycles: section of
+settings. Then you can set them in the ``p_roc: dmd_timing_cycles:`` section of
 your machine-wide config, like this:
 
 ::
 
-p_roc:
-   dmd_timing_cycles: 90, 190, 50, 377
+   p_roc:
+      dmd_timing_cycles: 90, 190, 50, 377
 
 Note that we do not have specific recommendations for values here and based on
 our experience, we haven't found a need to change this. However, if you do have

@@ -13,7 +13,7 @@ used with incandescent light bulbs, (#44, #555, etc.).
 However, in more recent years various manufacturers have released LED
 "replacement" bulbs that fit the old-style sockets but that are actually
 LEDs. If your machine uses a lamp matrix, then you will add your lights
-(whether they're LEDs or incandescent) as :doc:`lights </mech/lights/index>`
+(whether they're LEDs or incandescent) as :doc:`lights </mechs/lights/index>`
 via the :doc:`/config/matrix_lights` section of your machine config. You'll
 do this even if you have LED bulbs in your lamp matrix.
 

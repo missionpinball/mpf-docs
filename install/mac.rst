@@ -132,7 +132,7 @@ launch both the MPF game engine and the media controller, you simply run:
 In other words, you only have to use those ``kivy`` commands above for testing
 MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
 
-See the :doc:`running/index` for details and command-line options.
+See the :doc:`/running/index` for details and command-line options.
 
 Keeping MPF up-to-date
 ----------------------

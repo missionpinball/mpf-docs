@@ -6,7 +6,7 @@ Hardware Notes
 
 * Spring for the fastest MicroSD card you can (Samsung Evo cards are reportedly the fastest), at least 16GB.
 * The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of
-those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
+  those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
 
 System Notes
 ------------

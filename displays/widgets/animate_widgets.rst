@@ -83,8 +83,8 @@ from the previous step is the name of the MPF event you want to use to start
 the animation.
 
 These are regular :doc:`MPF events </events/index>` and can be anything—a shot
-being made, a switch hit, etc. (See the :doc:`/events/events_reference` for a
-full list of events.
+being made, a switch hit, etc. (See the :doc:`/events/event_reference` for a
+full list of events.)
 
 In most cases, however, you'll probably want to trigger an animation to start
 playing when the slide is created, so in addition to being able to use any MPF

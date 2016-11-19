@@ -14,12 +14,12 @@ Since the release of MPF 0.30, audio and sound support has been provided by a br
 audio library built on SDL2 and SDL_Mixer libraries.  This custom library allows the MPF
 development team to create audio features optimized for pinball machines.  The first release
 provides basic sound loading and playback capabilities along with some great new features like
-:doc:`ducking </sound/ducking>` and :doc:`sound pools </sound/sound_pools>`. (Sound support is
+:doc:`ducking </sound/ducking>` and :doc:`sound pools </sound/variations>`. (Sound support is
 part of the MPF media controller and only available if you're using MPF-MC for your media
 controller).
 
 The basic concept with audio in MPF is that you collect all your audio files (.wav or .ogg files
-are currently supported) and put them in the `/sounds` folder in your machine folder. Then in your
+are currently supported) and put them in the ``/sounds`` folder in your machine folder. Then in your
 config file you create entries for each sound which map a friendly name to the actual file on disk.
 You can also set a bunch of defaults for each sound, such as volume, start time, etc. Then when you
 want to play a sound in a game, you can refer to it by the friendly name from your configuration

@@ -23,7 +23,7 @@ VCP Drivers section and download the driver for your OS. If you're using Windows
 we think it's easier to use the "setup executable" they link to in the comments.
 
 Once this is done, when you plug in and power on your FAST controller, you
-should see some kind of notification that new hardware has `been detected. What
+should see some kind of notification that new hardware has been detected. What
 exactly you see will depend on which FAST controller you’re using and what OS
 you have. For example, here’s what happens when you plug a FAST WPC controller
 into Windows 10 for the first time (after you’ve installed the FTDI driver):
@@ -163,7 +163,7 @@ need to get up and running.
 FAST Pinball controllers have the ability to use a :term:`watch dog` timer.
 This is enabled by default with a timeout of 1 second. If you would like to
 disable this, or you'd like to change the timeout, you can do so in the
-``fast:``section of your machine-wide config.
+``fast:`` section of your machine-wide config.
 
 ::
 

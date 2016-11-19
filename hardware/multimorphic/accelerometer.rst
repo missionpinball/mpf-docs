@@ -24,5 +24,5 @@ The name (which is "p3_roc_accelerometer" in the example above) doesn't really
 matter, but it has to be ``number: 1``.
 
 Other than that, use it like you would any accelerometer in MPF, by following
-the docs and guides in the :doc:`/mechs/accelerometer/index` section of the
+the docs and guides in the :doc:`/mechs/accelerometers/index` section of the
 documentation.

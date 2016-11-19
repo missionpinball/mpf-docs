@@ -22,10 +22,10 @@ with the running.
 
 #. The attract mode's ``result_of_start_request`` is the callback for
    the request event. If the result is True, this process continues.
-#. The attract mode posts an event * game_start *.
+#. The attract mode posts an event *game_start*.
 #. The game mode is registered as a handler for the *game_start*
    event, so it starts.
-#. The game mode posts a queue event called * game_starting *.
+#. The game mode posts a queue event called *game_starting*.
 
     #. The score reels reset themselves
     #. The auditor enables itself

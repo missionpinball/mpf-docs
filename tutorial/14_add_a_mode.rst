@@ -43,7 +43,7 @@ modes.)
 -------------------------------------
 
 The first step to setting up a game mode is to understand how game
-modes work in MPF. So read :doc:`that documentation now </modes/index>` to get an
+modes work in MPF. So read :doc:`that documentation now </game_logic/modes/index>` to get an
 overview, and then come back here for the step-by-step walk-through of
 doing your first mode.
 
@@ -114,7 +114,7 @@ specify a stop event now.
 The ``priority: 100`` means that everything
 this mode does will have a base priority of 100. We'll create future
 modes at higher priorities so they can take over the display, control
-lights, filter and block scoring, etc. (You read the :doc:`documentation about modes </modes/index>`,
+lights, filter and block scoring, etc. (You read the :doc:`documentation about modes </game_logic/modes/index>`,
 right?)
 
 Also, when you create your own modes, keep them between 100 and 1,000,000. MPF

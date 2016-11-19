@@ -4,7 +4,7 @@ FAQ: General
 Why does this project exist?
 ----------------------------
 
-The Mission Pinball Framework was officially started in 2014 by Brian Madden and Gabe Knuth. Both of
+The Mission Pinball Framework was started in 2014 by Brian Madden and Gabe Knuth. Both of
 them had dreamed of building their own pinball machines for years, and in 2013, they discovered the
 P-ROC and the wonderful community of home brew pinball builders and hackers.
 
@@ -42,7 +42,7 @@ Bowling, Mission Coffee, Mission Ice Cream... So we thought "Mission Pinball" ha
 What pinball hardware does MPF work with?
 -----------------------------------------
 
-The complete hardware compatibility list is :doc:`here </hardware/index`.
+The complete hardware compatibility list is :doc:`here </hardware/index>`.
 
 Who's behind this?
 ------------------

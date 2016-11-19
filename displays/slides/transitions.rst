@@ -48,7 +48,7 @@ Options for the move_in transition:
 
 * duration: MPF :doc:`time string </config/instructions/time_strings>` Default is 1 second.
 * easing: See the :doc:`easing instructions </displays/widgets/easing>` for
-details.
+  details.
 * direction: ``left``, ``right``, ``top`` or ``bottom``.
 
 move_out

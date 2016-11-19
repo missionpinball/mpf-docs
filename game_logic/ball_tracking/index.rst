@@ -8,7 +8,7 @@ tracking and management system:
 + The Ball Controller, which is a core MPF module that manages everything.
 + Individual :doc:`/mechs/ball_devices/index` (troughs, locks, etc.) which track how
   many balls they're currently holding, request new balls, eject balls, etc.
-+ The :doc:`/mechs/playfield/index` device which is a special type of ball device that
++ The :doc:`/mechs/playfields/index` device which is a special type of ball device that
   tracks how many balls are loose on the playfield at any given time.
 + Individual :doc:`/mechs/diverters/index` which are integral in routing balls to
   devices that request them.

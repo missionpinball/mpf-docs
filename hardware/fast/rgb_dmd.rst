@@ -6,8 +6,6 @@ How to configure an RGB DMD (FAST Pinball)
 +==============================================================================+
 | :doc:`/config/physical_rgb_dmds`                                             |
 +------------------------------------------------------------------------------+
-| :doc:`/config/eli_dmd`                                                       |
-+------------------------------------------------------------------------------+
 
 If you would like to drive the RGB LED DMD via a FAST sonboard, follow the
 instructions for the :doc:`/hardware/eli_dmd/index`.

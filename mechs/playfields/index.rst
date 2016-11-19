@@ -15,7 +15,7 @@ times, so it needs to know which balls are "in" the playfield device.
 
 The playfield is also responsible for tracking balls that
 "disappeared" from it without going into other devices—-a process which
-kicks off the :doc:`ball search </game_logic/ball_search>`.
+kicks off the :doc:`ball search </game_logic/ball_search/index>`.
 The default playfield ball device (called
 *playfield*) is created automatically based on settings in the
 ``mpfconfig.yaml`` default configuration file. Most machines only have

@@ -70,17 +70,17 @@ pretty high level gist:
        player entries
 
 #. The machine controller's ``reset()`` method is called.
-#. Reset posts the event * machine_reset_phase_1 *.
+#. Reset posts the event *machine_reset_phase_1*.
 
     #. Ball devices initialize their switches
     #. BCP sends the reset command to any attached media controllers
 
-#. Reset posts the event * machine_reset_phase_2 *.
+#. Reset posts the event *machine_reset_phase_2*.
 
     #. The ball controller updates its count of known balls
     #. Ball devices configure their eject targets
 
-#. Reset posts the event * machine_reset_phase_3 *.
+#. Reset posts the event *machine_reset_phase_3*.
 
     #. Ball locks are reset
     #. Drop targets are reset
