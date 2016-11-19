@@ -173,6 +173,7 @@ eject_all_events:
 ~~~~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
@@ -211,6 +212,7 @@ eject_events:
 ~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
@@ -322,11 +324,11 @@ entrance_events:
 ~~~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-.. todo::
-   Add description.
+These events tell this ball device that a ball has entered (been added to) the device.
 
 entrance_switch:
 ~~~~~~~~~~~~~~~~
@@ -375,10 +377,11 @@ hold_events:
 ~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-Cause this device to enable its hold coil.
+These events cause this device to enable its hold coil.
 
 hold_switches:
 ~~~~~~~~~~~~~~
@@ -453,10 +456,11 @@ request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
+
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-Cause this device to request a ball to be sent to it.
+These events cause this device to request a ball to be sent to it.
 
 tags:
 ~~~~~

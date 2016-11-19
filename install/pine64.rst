@@ -5,18 +5,26 @@ Hardware Notes
 --------------
 
 * Spring for the fastest MicroSD card you can (Samsung Evo cards are reportedly the fastest), at least 16GB.
+<<<<<<< HEAD
 * The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
 * If you find that your pine64 does not boot it maybe due to using a HDMI->DVI cable, try HDMI to HDMI first.
+=======
+* The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of
+those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
+>>>>>>> ed23c2d9749fb433482bf554be7e99da227fce00
 
 System Notes
 ------------
 
-There are a bunch of things that arrive broken with the current Ubuntu installer for Pine64 (as of this writing on November 13, 2016). Some of them will prevent MPF from installing, and a few are just annoying.
+There are a bunch of things that arrive broken with the current Ubuntu installer for Pine64 (as of this writing in
+November 2016). Some of them will prevent MPF from installing, and a few are just annoying.
 
 Instructions
 ------------
 
-After installing the OS following the instructions on the Pine64 Wiki (http://wiki.pine64.org/index.php/Main_Page), expanding the volume to the full size of the SD card, and getting connected to the Internet, follow these steps. Don't try to update the installed system before following this.
+After installing the OS following the instructions on the Pine64 Wiki (http://wiki.pine64.org/index.php/Main_Page),
+expanding the volume to the full size of the SD card, and getting connected to the Internet, follow these steps.
+Don't try to update the installed system before following this.
 
 Locale
 ------
@@ -35,7 +43,9 @@ Assuming you want US English, substitute your preferred language if not::
      en_US.UTF-8... up-to-date
    Generation complete.
 
-That command will open a text-based dialog, I recommend that you don’t choose “ALL” and only select the one or a few languages you want (generating them all takes a long time). Then reboot, then do the above reconfigure step AGAIN, then reboot, then run::
+That command will open a text-based dialog, I recommend that you don’t choose “ALL” and only select the one or a few
+languages you want (generating them all takes a long time). Then reboot, then do the above reconfigure step AGAIN, then
+reboot, then run::
 
     $ locale
 
@@ -68,9 +78,11 @@ This arrives broken, too. Oddly, running the Mate Welcome as root and clicking a
 
 When it comes up, click on the "Subscribe to updates" button, then quit it.
 
-Now go to System -> Administration -> Software Boutique. Click on the wrench, then do each repair option (after clicking one, wait for it to say it has finished).
+Now go to System -> Administration -> Software Boutique. Click on the wrench, then do each repair option (after clicking
+one, wait for it to say it has finished).
 
-Now go to System -> Administration -> Software Updater and get everything up to date. You will need to reboot again after that.
+Now go to System -> Administration -> Software Updater and get everything up to date. You will need to reboot again
+after that.
 
 Install Missing pip3
 --------------------
@@ -96,6 +108,7 @@ Download the MPF Debian Installer from https://github.com/missionpinball/mpf-deb
 
 (This is for MPF versions 0.30 and newer)
 
+<<<<<<< HEAD
 To unzip the file navigate in your terminal to the location of the downloaded files.
 
 Unzip the file::
@@ -107,10 +120,14 @@ If this does not run you may need to install unzip::
 ''$ sudo apt-get install unzip''
 
 After unzip, run ./mpf-debian-installer-0.30/install from the folder you unzipped the files to. Consult the README for more information.::
+=======
+Unzip, and from a terminal run ``./install`` from the folder you unzipped the files to. Consult the README for more
+information.::
+>>>>>>> ed23c2d9749fb433482bf554be7e99da227fce00
 
  $ pip3 install mpf-mc
 
 Running MPF
 -----------
 
-See the :doc:`running/index` for details and command-line options.
+See the :doc:`/running/index` page for details and command-line options.

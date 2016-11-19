@@ -33,10 +33,15 @@ reset_warnings_events:
 
 .. versionchanged:: 0.31
 
-List of one (or more) values, each is a type: ``string``. Default: ``ball_will_end``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-.. todo::
-   Add description.
+Default: ``ball_will_end``
+
+These events, when posted, will cause the ``warnings_to_tilt:`` to be reset
+to zero.
 
 settle_time:
 ~~~~~~~~~~~~
@@ -54,17 +59,28 @@ Single value, type: ``string``. Default: ``slam_tilt``
 
 tilt_events:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-.. todo::
-   Add description.
+Default: ``None``
+
+Events in this list, when posted, cause a :doc:`/events/tilt` to occur
+which will end the current ball in progress with no end of ball bonus.
 
 tilt_slam_tilt_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-.. todo::
-   Add description.
+Default: ``None``
+
+Events in this list, when posted, cause a :doc:`/events/slam_tilt` event to
+be posted. The slam tilt typically ends the current game and also clears all
+credits from the machine.
 
 tilt_switch_tag:
 ~~~~~~~~~~~~~~~~
@@ -75,10 +91,16 @@ Single value, type: ``string``. Default: ``tilt``
 
 tilt_warning_events:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-.. todo::
-   Add description.
+Default: ``None``
+
+Events in this list, when posted, cause a tilt warning to occur. They will post the
+:doc:`/events/tilt_warning` event, and if the ``warnings_to_tilt:`` limit is hit, will
+also cause the :doc:`/events/tilt` event.
 
 tilt_warning_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~~~

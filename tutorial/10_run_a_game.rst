@@ -10,8 +10,8 @@ once the game is over.
 --------------------------------------------------------
 
 We know that at this point, you just want to run your game. The
-problem is if we run it now, the display will continue to show "PRESS
-START" throughout the entire game since we haven't configured it for
+problem is if we run it now, the display will continue to show "ATTRACT
+MODE" throughout the entire game since we haven't configured it for
 anything else. So let's make a quick addition to the ``slide_player:``
 section of your config so it will show the player and ball number when
 a game is in progress. (Later in this tutorial we'll revisit this and
@@ -49,7 +49,7 @@ first ball ends, and that's it. They won't enable again for Ball 2.
 To make this change, simply remove the ``enable_events: machine_reset_phase_3`` line
 from each of your two flipper sections of your config file. So now
 your ```flippers:`` section should look like this: (It might not be 100%
-identical since you might have single-wound flipper coils.)
+identical since you might have single-wound flipper coils and/or EOS switches.)
 
 ::
 
@@ -78,11 +78,11 @@ skip to Step 4 below.)
 Make sure you have at least one ball in the trough and then run your
 game. The display should display "ATTRACT MODE." Hit the start button.
 A ball should be kicked out of the trough and into the plunger lane,
-and the DMD should change to "PLAYER 1 BALL 1." If you have a coil-
+and the display should change to "PLAYER 1 BALL 1." If you have a coil-
 fired plunger, you should be able to hit the launch button and the
 coil should fire. If you have a manual plunger, you should be able to
 plunge and flip. If you hit the start button a second time during Ball
-1, a second player should be added. (The DMD won't show this since we
+1, a second player should be added. (The display won't show this since we
 haven't configured it to show a message, but you can see this in the
 logs and when the ball drains then it should go to Player 2 Ball 1
 instead of Player 1 Ball 2.)
@@ -114,45 +114,36 @@ A few caveats to this early bare-bones game:
 
 If you've been adding keyboard switch map entries to your config file
 as you've been going through this tutorial, you can actually "play" a
-complete game on your computer keyboard. Before you do this Doing so
-it somewhat complex, but it is technically possible. Here's how you'd
-do it:
+complete game on your computer keyboard. Here's how you do it:
 
-#. Run ``mpf both -v`` and wait until you see the "ATTRACT MODE" message
-   on the display, push the "S" key to start a game. At this point MPF
-   will eject a ball from the trough to the plunger
+#. Launch the MPF game engine and the MC. Note that in order for this
+   to work, we want to use the "smart virtual" platform. This will be
+   the default, but make sure you do not have ``platform: virtual`` in
+   your config. (If you do have a platform entry in your config, make
+   sure it's ``platform: smart_virtual``.) If you have a different
+   platform setting for your physical hardware, you can still run without
+   the hardware connected by using the ``-X`` (uppercase *X*) command
+   line option to specify the smart virtual platform interface.
+#. Push the "S" key to start a game. At this point MPF will eject a ball
+   from the trough to the plunger
 #. If you have a coil-fired plunger, push the "L" key (or whatever key
-   you mapped to your launch button) to launch the ball. You should see
-   the plunger lane switch deactivate based on the coil firing thanks to
-   the smart virtual platform.
+   you mapped to your launch button) to launch the ball.
 #. If you do not have a coil-fired plunger, push the "P" key (or
    whatever key you mapped to your plunger lane switch) to un-toggle that
    switch which simulates the ball leaving the plunger lane.
-#. Now you can "flip" with the "Z" and "/" keys.
+#. Now you can "flip" with the "Z" and "?" keys.
 #. After you get bored of this, push the "1" key to activate a trough
    ball switch. At this point MPF will think a ball drained and you
    should see the display switch to Ball 2 and the trough switch should
    open and the plunger lane switch should close as the "smart virtual"
    platform ejects a ball from the trough to the plunger.
 #. Repeat until you're bored.
-#. After Ball 3 is over you can push "S" again to start another game.
+#. After Ball 3 is over the display will change back to the "ATTRACT MODE"
+   text and you can push "S" again to start another game.
 #. Congrats! You just played your first virtual pinball game. Yeah,
-   it's boring right now and kind of hard to understand, but it worked!
-   (Later we'll show you how to write automated scripts to "play" the
-   game for you. :)
+   it's boring, but you did it!
 
-5. Look at your log files
--------------------------
-
-Assuming everything went correctly, now let's look at the log files to
-see what actually happened. Remember that you'll actually have two log
-files—-one from the MPF core and one from the media controller. These
-will be the two newest files in the ``/logs`` folder which will be
-automatically added to your machine folder. Just take a look through them
-to start to get a feel for
-everything that MPF is doing behind the scenes.
-
-6. What if your game won't start?
+5. What if your game won't start?
 ---------------------------------
 
 If your game doesn't start or doesn't work, hopefully we've given you
@@ -188,20 +179,4 @@ You can run this file directly by switching to that folder and then running the 
    C:\mpf-examples\tutorial>mpf both -c step10
 
 Remember though that unless you're following this tutorial with an actual *Demolition
-Man*, you'll have some differences in your config file, including:
-
-+ If you're using FAST or OPP hardware, you'll have a ``fast:`` or
-  ``opp:`` section in your config.
-+ Your ``number:`` settings for all your switches and coils will be your
-  actual hardware numbers and not the numbers for *Demolition Man* from
-  this file.
-+ Your flippers might be configured for single-wound coils instead of
-  dual-wound (main + hold) like in this file.
-+ Your trough might have fewer switches.
-+ Your plunger lane might not have a coil-fired eject, which also
-  means you might not have a launch button or
-  ``player_controlled_eject_tag``.
-+ Your plunger lane might not have a switch which is activated when a
-  ball is in it, meaning it won't be configured as a ball device.
-+ Your trough might be a Williams System 11 or early Williams WPC
-  style which would be configured as two separate ball devices.
+Man*, you'll have some differences in your config file.

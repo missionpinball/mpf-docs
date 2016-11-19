@@ -1,13 +1,13 @@
-Types of Widgets
-================
+List of Widget Types
+====================
 
 Most popular
 
 .. toctree::
    :titlesonly:
 
-   Text <text>
-   Image <image>
+   Text <text/index>
+   Image <image/index>
    Video <video>
 
 But also these:
@@ -15,10 +15,10 @@ But also these:
 .. toctree::
    :titlesonly:
 
-   Bezier <bezier>
-   Color DMD <color_dmd>
-   DMD <dmd>
-   Ellipse <ellipse>
+   Bezier Curve <bezier/index>
+   Color DMD <color_dmd/index>
+   DMD <dmd/index>
+   Ellipse <ellipse/index>
    Line <line>
    Points <points>
    Quad <quad>

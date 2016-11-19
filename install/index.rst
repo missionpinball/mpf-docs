@@ -17,7 +17,7 @@ entire process. Select the OS you're using from the list below:
    Mac OS X <mac>
    Linux <linux>
    Raspberry Pi <raspberry>
-   Pine64 <pin64>
+   Pine64 <pine64>
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
@@ -34,7 +34,7 @@ with switches, lights, and LEDs, and to see the status of various devices. You
 can even add a picture of your playfield and drag-and-drop the MPF mechanisms
 onto it which makes it possible to "play" your machine via a simulation.
 
-Details in the MPF Monitor are :doc:`here </monitor/index>`
+Details in the MPF Monitor are :doc:`here </monitor/index>`.
 
 Migrating from previous versions of MPF
 ---------------------------------------

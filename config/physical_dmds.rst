@@ -13,9 +13,9 @@ physical_dmds:
 
 .. overview
 
-The ``physical_dmd:`` section of your config is where you configure the settings for a physical DMD (dot matrix
+The ``physical_dmds:`` section of your config is where you configure the settings for a physical DMD (dot matrix
 display). You only need this section if you have a physical monochrome DMD connected to a 14-pin header on a hardware
-controller. If you have an RGB DMD, configure that in the ``physical_rgb_dmd:`` section.
+controller. If you have an RGB DMD, configure that in the ``physical_rgb_dmds:`` section.
 
 If you want to show a virtual DMD in an on-screen window, you configure that as a DMD widget, not here.
 
@@ -25,7 +25,7 @@ Note that there are no *height* and *width* settings here. The pixel size of you
 Optional settings
 -----------------
 
-The following sections are optional in the ``physical_dmd:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``physical_dmds:`` section of your config. (If you don't include them, the default will be used).
 
 brightness:
 ~~~~~~~~~~~
@@ -40,14 +40,14 @@ Single value, type: ``integer``. Default: ``30``
 
 How many frames per second this DMD will be updated. The default of 0 means it will run at the same rate as the MPF Hz.
 A value of 30 should be fine and smooth. Some people claim that higher values look better, but as far as we can tell,
-that just makes your CPU work harder. But feel free to expirement.
+that just makes your CPU work harder. But feel free to experiment.
 
 luminosity:
 ~~~~~~~~~~~
 List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``.299, .587, .114``
 
 A list of three values (from 0.0 to 1.0) that represent the percentage of red, green, and blue that will be used to
-produce the monocrhome colors from the source display. All three of these values should add up to 1.0.
+produce the monochrome colors from the source display. All three of these values should add up to 1.0.
 
 only_send_changes:
 ~~~~~~~~~~~~~~~~~~
@@ -74,4 +74,11 @@ platform:
 
 .. versionadded:: 0.31
 
-TODO
+Single value, type: ``string``. Default: ``None``
+
+Name of the platform this DMD is connected to. The default value of ``None`` means the
+default hardware platform will be used. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.

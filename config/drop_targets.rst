@@ -118,9 +118,14 @@ you'll notice that only the *D* target has a knockdown coil.
 
 knockdown_events:
 ~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Pulses this drop target's knockdown coil. (If this drop target doesn't
+Default: ``None``
+
+Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
 
 label:
@@ -148,7 +153,12 @@ reset.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``ball_starting, machine_reset_phase_3``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``ball_starting, machine_reset_phase_3``
 
 Resets this drop target. If this drop target is not part of a drop
 target bank, then resetting this target will pulse its reset coil. If

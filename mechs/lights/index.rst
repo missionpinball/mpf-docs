@@ -13,6 +13,9 @@ Lights
 
 TODO
 
+Note that LEDs plugged into lamp matrices are configured here as lights, not
+in the ``leds:`` section. See :doc:`/mechs/leds/lights_versus_leds` for details.
+
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+

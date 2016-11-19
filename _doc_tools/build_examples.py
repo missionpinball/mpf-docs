@@ -107,9 +107,9 @@ class ExampleBuilder(object):
             target_file_with_path = os.path.join(target, os.path.split(source)[1])
 
             # check if the target file exists:
-            if os.path.isfile(target_file_with_path):
-                print("WARNING: Duplicate file found:", target_file_with_path)
-                continue
+            # if os.path.isfile(target_file_with_path):
+            #     print("WARNING: Duplicate file found:", target_file_with_path)
+            #     continue
 
             print("<NEW> {} -> {}".format(source, target_file_with_path))
             shutil.copy(source, target)
@@ -147,6 +147,8 @@ class ExampleBuilder(object):
 
     def create_examples_sections(self):
         for dir in os.listdir(local_config_path):
+            if dir.startswith('.'):
+                continue
             self.examples_sections[dir] = dict()
             self.examples_sections[dir]['config'] = list()
             self.examples_sections[dir]['modes'] = list()
@@ -158,13 +160,14 @@ class ExampleBuilder(object):
             if files:
                 folders = rel_path.lstrip('/').split('/')
                 section = folders[0]
-                folder = folders[1]
+                if len(folders) > 1:
+                    folder = folders[1]
 
-                if (section in self.examples_sections and
-                        folder in self.examples_sections[section]):
-                    for file in files:
-                        self.examples_sections[section][folder].append(
-                            os.path.join(rel_path, file))
+                    if (section in self.examples_sections and
+                            folder in self.examples_sections[section]):
+                        for file in files:
+                            self.examples_sections[section][folder].append(
+                                os.path.join(rel_path, file))
 
         # import pprint
         # pprint.pprint(self.examples_sections)

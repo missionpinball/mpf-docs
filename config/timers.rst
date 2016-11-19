@@ -25,12 +25,13 @@ bcp:
 ~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
+
+TODO Is this needed? If a slide_player, etc. uses one of these events, then they'll automatically be sent to the MC?
 
 control_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: sub-configurating containing control_events settings. Default: ``None``
+List of one (or more) values, each is a type: sub-configuration containing control_events settings. Default: ``None``
 
 .. todo::
    Add description.

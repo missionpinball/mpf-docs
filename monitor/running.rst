@@ -45,3 +45,22 @@ running off to the side and still see your MPF display window as well as the
 terminal windows, like this:
 
 .. image:: images/mpf-monitor-desktop.jpg
+
+Running with "virtual" hardware
+-------------------------------
+
+You can use the MPF Monitor with or without a physical machine attached.
+
+If you have a physical machine connected, be careful when toggling switches,
+since it can really confuse things if a ball is sitting on a switch in
+your machine and then you use the Monitor to tell MPF that the ball isn't
+really there. :)
+
+Still though it's nice to be able to "peek inside" the inner workings of
+MPF even when it's connected to a physical machine, and the Monitor is
+great for that.
+
+You can also use MPF Monitor with no hardware attached using one of
+MPF's :doc:`virtual platforms </virtual/index>`. Specifically the
+:doc:`smart virtual platform </virtual/smart_virtual>` works great if you're
+using MPF without physical hardware.

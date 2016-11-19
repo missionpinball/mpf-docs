@@ -84,12 +84,14 @@ which maintains a list of the modes to be restarted.
 
 start_events:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-The name of an MPF event (or a list of multiple events) that, when
-posted, cause this mode to start. If you add more
-than one event here, then any one of the events will cause the mode to
-start.
+Default: ``None``
+
+Events in this list, when posted, cause this mode to start.
 
 If the mode is already running when one of the start events is
 posted, that's ok. (i.e. It won't start over or break.)
@@ -122,9 +124,14 @@ modes that are set to start on the same event.
 
 stop_events:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
 
-Like ``start_events:``, except ``stop_events:`` cause the mode to stop which
+Default: ``None``
+
+Events in this list, when posted, cause the mode to stop which
 will remove itself from the list of active modes. All of the things
 you configured in this mode's config file will be unloaded. (i.e.
 slides and shows won't play, scoring and shot events are removed,
