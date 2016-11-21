@@ -5,8 +5,9 @@ Hardware Notes
 --------------
 
 * Spring for the fastest MicroSD card you can (Samsung Evo cards are reportedly the fastest), at least 16GB.
-* The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of
-  those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
+* The Pine64’s video seems to only support 1080p and 4K resolutions, so make sure your display can do one or both of those at a proper 16:9 aspect ratio or else everything will be scaled and squished and it looks awful.
+* If you find that your pine64 does not boot it maybe due to using a HDMI->DVI cable, try HDMI to HDMI first.
+
 
 System Notes
 ------------
@@ -84,12 +85,17 @@ Install Missing pip3
 
 ``$ apt-get install python3-pip``
 
-The path where ``pip`` puts executables is not in the system default path, so edit ``~/.bashrc`` to add::
+The path where ``pip`` puts executables is not in the system default path, so edit ``~/.bashrc`` to add the following path::
+
+``$ sudo nano ~/.bashrc``
+
+At the bottom of the file add the following::
 
  export PATH=~/.local/bin:$PATH
 
+Hit "control + x" to save and "y" then "return" to save the file as the same name.
 
-Start a fresh terminal so that this new PATH is included in your current environment. Then:
+Now start a fresh terminal so that this new PATH is included in your current environment. Then:
 
 Install MPF
 -----------
@@ -98,8 +104,18 @@ Download the MPF Debian Installer from https://github.com/missionpinball/mpf-deb
 
 (This is for MPF versions 0.30 and newer)
 
-Unzip, and from a terminal run ``./install`` from the folder you unzipped the files to. Consult the README for more
-information.::
+
+To unzip the file navigate in your terminal to the location of the downloaded files.
+
+Unzip the file::
+
+''$ unzip v0.30.zip .''
+
+If this does not run you may need to install unzip::
+
+''$ sudo apt-get install unzip''
+
+After unzip, run ./mpf-debian-installer-0.30/install from the folder you unzipped the files to. Consult the README for more information.::
 
  $ pip3 install mpf-mc
 
