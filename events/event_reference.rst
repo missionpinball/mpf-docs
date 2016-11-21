@@ -107,6 +107,12 @@ events.
    machine_reset_phase_2 <machine_reset_phase_2>
    machine_reset_phase_3 <machine_reset_phase_3>
    machine_var_(name) <machine_var_name>
+   magnet_(name)_flinged_ball <magnet_name_flinged_ball>
+   magnet_(name)_flinging_ball <magnet_name_flinging_ball>
+   magnet_(name)_grabbed_ball <magnet_name_grabbed_ball>
+   magnet_(name)_grabbing_ball <magnet_name_grabbing_ball>
+   magnet_(name)_released_ball <magnet_name_released_ball>
+   magnet_(name)_releasing_ball <magnet_name_releasing_ball>
    master_volume_decrease <master_volume_decrease>
    master_volume_increase <master_volume_increase>
    max_credits_reached <max_credits_reached>

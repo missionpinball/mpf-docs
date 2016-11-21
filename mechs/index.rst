@@ -23,6 +23,7 @@ Pinball Mechs in MPF include:
    Flashers <flashers/index>
    Flippers <flippers/index>
    GI (general illumination) <gis/index>
+   Magnets <magnets/index>
    Troughs / Ball Drains <troughs/index>
 
 The following mechs are done in MPF, but the documentation is not done yet:
@@ -39,7 +40,6 @@ The following mechs are done in MPF, but the documentation is not done yet:
    Lights <lights/index>
    LEDs <leds/index>
    Loops / Orbits / Ramps <loops/index>
-   Magnets <magnets/index>
    Motors <motors/index>
    Playfields <playfields/index>
    Plungers / Launch Devices <plungers/index>

@@ -63,6 +63,7 @@ and/or show configs.
    led </examples/led/index>
    led_player </examples/led_player/index>
    logic_blocks </examples/logic_blocks/index>
+   magnet </examples/magnet/index>
    migrator </examples/migrator/index>
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
