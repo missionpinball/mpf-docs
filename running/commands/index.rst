@@ -9,3 +9,4 @@ MPF commands
    mpf game <game>
    mpf mc <mc>
    mpf migrate <migrate>
+   mpf monitor <monitor>
