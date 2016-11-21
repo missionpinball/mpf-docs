@@ -139,8 +139,7 @@ actually just save this config to ``config.yaml`` in a blank machine folder
 and run it to see it in action which will verify that you've got everything
 working properly.)
 
-To run this sample config, you can either run ``mpf both`` or (if you're on a
-Mac, ``mpf`` and ``mpf mc``).
+To run this sample config, you can either run ``mpf both``.
 
 When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to

@@ -302,8 +302,7 @@ working properly.)
    Be sure to change the ``smartmatrix:port:`` setting in this example config
    to match whatever port your Teensy is connected to.
 
-To run this sample config, you can either run ``mpf both`` or (if you're on a
-Mac, ``mpf`` and ``mpf mc``).
+To run this sample config, you can either run ``mpf both``.
 
 When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
