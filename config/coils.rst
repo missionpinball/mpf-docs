@@ -12,7 +12,7 @@ coils:
 .. overview
 
 The ``coils:`` section of your config is used to map coil
-(solenoid) names to driver board outputs. We can also set the
+(solenoid) names to driver board outputs. You can also set the
 default pulse times, set tags, and specify power levels for coils that
 get held on. This section *can* be used in your machine-wide config
 files. This section *cannot* be used in mode-specific config files.

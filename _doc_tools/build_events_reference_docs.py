@@ -47,7 +47,7 @@ will replace the "(name)" part of the event text with the actual switch name.
 So the when a switch called ``s_left_slingshot`` is activated, it will posted
 an event called *switch_s_left_slingshot_active*.
 
-See the :doc:`/events/index>` guide for more information on how MPF uses
+See the :doc:`/events/index` guide for more information on how MPF uses
 events.
 
 .. toctree::
