@@ -6,8 +6,8 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python 3.4
----------------------
+1. Install Python 3.4 (not Python 3.5)
+--------------------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
@@ -15,6 +15,11 @@ install it again if you update MPF later.
 
 On Windows platforms, MPF requires Python 3.4, (Python 3.5 and newer will not work). You
 can download and install from the Python website. (Keep reading for links)
+
+.. warning::
+
+   To be very clear, on Windows, MPF requires Python 3.4. It will not run on
+   Python 3.5+.
 
 There are two versions of Python, a 32-bit version and a 64-bit version, and you
 should pick the one that matches the version of Windows you're using.
@@ -129,7 +134,7 @@ This is also installed via pip, like this:
 
 ::
 
-   python -m pip install kivy.deps.gstreamer --extra-index-url https://mpf.kantert.net/simple/
+   pip install kivy.deps.gstreamer --extra-index-url https://mpf.kantert.net/simple/
 
 Just copy-and-paste that entire line into the command line and press enter. It
 will download the codec pack which is about 90 MB and install them.
@@ -148,15 +153,32 @@ following command and then press <enter>:
 When you do this, you should see a bunch of dots on the screen (one for each
 test that's run), and then when it's done, you should see a message showing
 how many tests were run and that they were successful. The whole process should
-only take 15-30 seconds or so.
+take less a minute or so.
+
+(If you see any messages about some tests taking more than 0.5s, that's ok.)
+
+The important thing is that when the tests are done, you should have a message
+like this:
+
+::
+
+   Ran 501 tests in 62.121s
+
+   OK
+
+   C:\>
+
+Note that the number of tests is changing all the time, so it probably won't
+be exactly 501. And also the time they took to run will be different depending
+on how fast your computer is.
 
 These tests are the actual tests that the developers of MPF use to test MPF
 itself. We wrote all these tests to make sure that updates and changes we add
 to MPF don't break things. :) So if these tests pass, you know your MPF
 installation is solid.
 
-Remember though that MPF is actually two separate parts, the MPF core engine and
-the MPF media controller. The command you run just tested the core engine, so
+Remember though that MPF is actually two separate parts, the MPF game engine and
+the MPF media controller. The command you run just tested the game engine, so
 now let's test the media controller. To do this, run the following command
 (basically the same thing as last time but with an "mc" added to the end, like
 this):
@@ -173,22 +195,26 @@ screen, and many of the tests will put graphics and words in that window. Also,
 some of the tests include audio, so if your speakers are on you should hear some
 sounds at some point.
 
-These tests take longer, maybe a minute or more, but when they're done, that
+These tests take longer, but when they're done, that
 graphical window should close, and you'll see all the dots in your command
 window and a note that all the tests were successful.
 
-Note: Many of the media controller tests are used to test internal workings of
-the media controller itself, so there will be lots of time when the pop up
-window is blank. That's fine.
+Notes about the mpfmc tests:
 
-Also, the animation and transition tests include testing functionality to stop,
-restart, pause, and skip frames. So if things look "jerky" in the tests, don't
-worry, that doesn't mean your computer is slow, it's just how the tests work! :)
+ * These tests create a window on the screen and then just re-use the same
+   window for all tests (to save time). So don't worry if it looks like the
+   window content is scaled weird or doesn't fill the entire window.
+
+ * Many of these tests are used to test internal workings of
+   the media controller itself, so there will be lots of time when the pop up
+   window is blank.
+
+ * The animation and transition tests include testing functionality to stop,
+   restart, pause, and skip frames. So if things look "jerky" in the tests,
+   don't worry, that doesn't mean your computer is slow, it's just how the
+   tests work! :)
 
 At this point you should have a fully working copy of MPF. Congrats!
-
-Next we'd recommend following our :doc:`step-by-step tutorial </tutorial/index>`
-which will show you how to start building your own game in MPF!
 
 6. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
@@ -219,3 +245,10 @@ To to this, run the following:
 This will cause *pip* to contact PyPI to see if there's a newer version of the
 MPF MC (and any of its requirements, like MPF). If newer versions are found, it
 will download and install them.
+
+Next steps!
+-----------
+
+Now that MPF is installed, you can follow our
+:doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
+building your own game in MPF!
