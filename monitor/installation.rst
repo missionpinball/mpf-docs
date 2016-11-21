@@ -2,49 +2,77 @@ Installing the MPF Monitor
 ==========================
 
 Here's how you install the MPF Monitor. These instructions are a bit rough
-since MPF Monitor is an early prototype. We'll eventually clean these up and
-make a proper installer.
+since MPF Monitor is an early prototype.
 
-For non-Git users
------------------
+Windows
+-------
 
-If you don't know what "git" is, or you're not using git, follow these
-instructions:
+1. Install PyQt5 from here: https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5.1/
+   Just choose all the defaults and you should be ok.
+2. Open a command prompt and run: (You can run this from any folder)
 
+::
 
-1. If you have Windows, first install this:
-   https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5.1/ (Mac and Linux
-   will install it automatically when mpf-monitor is installed.)
-2. Download the MPF monitor from here: https://github.com/missionpinball/mpf-monitor
-   (Click the green "Clone or download" button, then "Download ZIP.)
-3. Unzip the file to whatever location you want.
-4. Open a command prompt / terminal window, change to the new folder where you
-   unzipped the file, and run one of the following commands (the trailing dot
-   is part of the command):
+   pip install mpf-monitor
 
-    * If you run MPF by running ``mpf``, then run ``pip install .``
-    * If you run MPF by running ``python3 -m mpf`` then run
-      ``python3 -m pip install .``
-    * If you run MPF by running ``kivy -m mpf`` then run
-      ``kivy -m pip install .``
+.. note::
 
-For git users
--------------
+   If you originally ran "pip" in a different way, perhaps with ``pip3`` or
+   ``python3 -m pip``, then do that again here instead of the plain "pip".
 
-1. If you have Windows, first install this:
-   https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5.1/ (Mac and Linux
-   will install it automatically when mpf-monitor is installed.
-2. Clone the MPF monitor repo from here: https://github.com/missionpinball/mpf-monitor
-3. Run one of the following commands from the repo folder on your computer.
-   (The trailing dot is part of the command):
+To update MPF Monitor to the latest version at any time, run:
 
-    * If you run MPF by running ``mpf``, then run ``pip install -e .``
-    * If you run MPF by running ``python3 -m mpf`` then run
-      ``python3 -m pip install -e .``
-    * If you run MPF by running ``kivy -m mpf`` then run
-      ``kivy -m pip install -e .``
+::
 
-4. The ``-e`` option means that this package is installed in "editable" mode,
-   meaning that you can pull/sync the mpf-monitor repo to update your
-   mpf-monitor installation. This is useful in MPF monitor's early stages as it
-   will change often.
+   pip install mpf-monitor --upgrade
+
+Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
+numbers of the Monitor and MPF are not the same. (For example, the same version
+of MPF Monitor can work across several versions of MPF.)
+
+Mac
+---
+
+Note that these instructions assume you're using the MPF app package as
+detailed in the :doc:`/install/mac` guide.
+
+Open a terminal window and run the following command: (You can run this from
+any folder)
+
+::
+
+   kivy -m pip install mpf-monitor
+
+To update MPF Monitor to the latest version at any time, run:
+
+::
+
+   kivy -m pip install mpf-monitor --upgrade
+
+Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
+numbers of the Monitor and MPF are not the same. (For example, the same version
+of MPF Monitor can work across several versions of MPF.)
+
+Linux
+-----
+
+Note that these instructions assume you're running Python 3.5. If you're
+running Python 3.4, you'll need to first manually download and install
+`PyQt5 <https://sourceforge.net/projects/pyqt/files/PyQt5>`_. You could also
+potentially run ``apt-get install python3-pyqt5``.
+
+Install mpf-monitor via pip:
+
+::
+
+   pip install mpf-monitor
+
+To update MPF Monitor to the latest version at any time, run:
+
+::
+
+   pip install mpf-monitor --upgrade
+
+Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
+numbers of the Monitor and MPF are not the same. (For example, the same version
+of MPF Monitor can work across several versions of MPF.)
