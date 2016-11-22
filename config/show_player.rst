@@ -32,6 +32,15 @@ Single value, type: one of the following options: play, stop, pause, resume, adv
 .. todo::
    Add description.
 
+block_queue:
+~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. versionadded:: 0.32
+
+.. todo::
+   Add description.
+
 key:
 ~~~~
 Single value, type: ``string``. Default: ``None``
