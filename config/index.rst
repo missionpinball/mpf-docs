@@ -50,6 +50,7 @@ your machine-wide config, a mode-specific config, or both.
    images: <images>
    info_lights: <info_lights>
    keyboard: <keyboard>
+   kickbacks: <kickbacks>
    kivy_config: <kivy_config>
    led_player: <led_player>
    led_settings: <led_settings>

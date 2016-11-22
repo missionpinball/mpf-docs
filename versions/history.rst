@@ -85,6 +85,9 @@ Sept 19, 2016
 * Added default colors to RGB LEDs
 * Added support for nested shows
 * Added the "LED Group" device (am easily-configured strip of LEDs which can be strobed, pulsed, etc.)
+* Added kickback mechanisms
+* Added magnets
+* Added blocking show queues
 * Many bug fixes...
 
 .. rubric:: MPF-MC

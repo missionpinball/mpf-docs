@@ -99,6 +99,7 @@ events.
    init_phase_3 <init_phase_3>
    init_phase_4 <init_phase_4>
    init_phase_5 <init_phase_5>
+   kickback_(name)_fired <kickback_name_fired>
    loading_assets <loading_assets>
    logicblock_(name)_complete <logicblock_name_complete>
    logicblock_(name)_hit <logicblock_name_hit>

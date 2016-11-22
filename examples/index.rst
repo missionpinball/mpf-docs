@@ -60,6 +60,7 @@ and/or show configs.
    high_score </examples/high_score/index>
    info_lights </examples/info_lights/index>
    keyboard </examples/keyboard/index>
+   kickback </examples/kickback/index>
    led </examples/led/index>
    led_player </examples/led_player/index>
    logic_blocks </examples/logic_blocks/index>
