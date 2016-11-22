@@ -5,12 +5,20 @@ This guide will show you how to configure MPF to use an older-style drain
 and trough combination that uses two coils (one to eject the ball from the
 drain hole and a second to release a ball into the plunger lane).
 
-This guide is written for the types of devices that have one switch per
-ball. If your configuration only has a single switch (like Gottlieb System 3
-machines), then use :doc:`this guide <two_coil_one_switch>` instead.
+This guide is written for the types of systems where the trough side (after
+the "hump") has multiple switches—one for each ball that's sitting there.
 
-The following diagram shows the type of layout this guide is for: (This is a
-side view)
+Here's an example of a Williams System 11 trough that uses this system, from
+a Pin*Bot machine:
+
+.. image:: /mechs/images/two_coil_multiple_switches_trough_photo.jpg
+
+If your machine's trough system is like this but you only have one switch
+on the trough side (like Gottlieb System 3 machines), then use
+:doc:`this guide <two_coil_one_switch>` instead.
+
+The following diagram shows how the layout that this guide is written for
+works: (This is a side view)
 
 .. image:: /mechs/images/two_coils_multiple_switches.png
 

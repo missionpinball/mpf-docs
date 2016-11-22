@@ -45,6 +45,10 @@ located underneath the playfield and hold the balls at an incline so they roll
 down to the end. There is a single coil which fires to eject a ball up and out
 where it's directed to the plunger lane.
 
+.. todo::
+
+   We need to add a photo of this type of trough.
+
 The advantage of modern troughs are (1) the balls entering are gravity-fed,
 meaning they only need one coil, and (2) they can hold a lot of balls. (Most
 hold 4-6 balls but you can buy ones that hold up to 8.)
@@ -61,6 +65,13 @@ guide to continue.
 Option 2: Modern trough with mechanical switches
 ------------------------------------------------
 
+Some modern-style troughs use mechanical switches to detect the balls rather
+than infrared opto boards. (Other than that, they're the same as the opto-based
+troughs.) Here's a photo of a modern trough with mechanical switches from a
+Stern Star Trek Premium machine:
+
+.. image:: /mechs/images/modern_mechanical_trough_photo.jpg
+
 If you have a modern-style trough with mechanical switches instead of opto
 boards, then read the :doc:`modern_mechanical` guide to continue.
 
@@ -68,16 +79,20 @@ Option 3: Older style with two coils and switches for each ball
 ---------------------------------------------------------------
 
 Many machines from the 1980s and early 1990s have a ball trough system that
-consists of two separate coils and which sits entirely on top of the playfield
-underneath the apron.
+consists of two separate coils and where the balls stay "on top" of the
+playfield (under the apron).
 
-In this case, when a ball drains, a coil in the drain area fires to shoot the
-ball up over a hump where it's stored. Then a second coil near the plunger lane
-is used to eject a single ball at a time into the plunger lane.
+In this case, when a ball drains, a coil in the drain area pulses to eject the
+ball up over a hump where the balls are stored. Then a second coil near the plunger
+lane is used to eject a single ball at a time into the plunger lane.
 
-Some of these types of devices have multiple switches on the side that stores
-the ball, with one switch for each ball. That allows the machine to know
-exactly how many balls are there because each ball is sitting on a switch.
+Some of these types "two coil" systems have multiple switches on the side that
+stores the balls, with there being one switch for each ball. That lets the machine
+know exactly how many balls are sitting there because each ball is sitting on a switch.
+
+Here's a photo of this type of trough system from a Pin*Bot machine:
+
+.. image:: /mechs/images/two_coil_multiple_switches_trough_photo.jpg
 
 If you have this kind of trough system, read the
 :doc:`two_coil_multiple_switches` guide to continue.
@@ -85,17 +100,40 @@ If you have this kind of trough system, read the
 Option 4: Older style with two coils and only one ball switch
 -------------------------------------------------------------
 
-If you have a system that is similar to Option 3 above, but instead of one
-switch for each ball, you only have one switch total on the right side, then
-read the :doc:`two_coil_one_switch` guide to continue.
+Another option is similar to Option 3 above, except there's only one switch
+on the trough side instead of separate switches for each ball. In these
+types of trough systems, the behavior of that switch changes depending on
+how many balls are in the trough.
+
+If there are fewer than the max number of balls in the trough, when the
+drain coil pulses to eject the ball from the drain into the trough, the
+ball will roll over that trough switch, meaning it's activated momentarily
+and then deactivated again.
+
+However, if the ball ejecting into the trough will be the final ball that
+will fill the trough, then that ball will rest on that trough switch, meaning
+that switch is solid active as long as the trough is full.
+
+Here's a photo from a Gottlieb System 3 machine (Brooks 'n Dunn) which shows
+what this type of system looks like:
+
+.. image:: /mechs/images/two_coil_one_switch_trough_photo.jpg
+
+If your machine has a system similar to this, then read the
+:doc:`two_coil_one_switch` guide to continue.
 
 Option 5: Classic single ball, single coil
 ------------------------------------------
 
 Older single-ball machines have a trough system that is on top of the playfield
 under the apron, but they only have a single coil near the ball drain position.
-The ball is stored in teh drain area, and when it needs to be ejected, a coil
-fires it from the drain all the way into the plunger lane in a single action.
+The ball is stored in the drain area, and when it needs to be ejected, a coil
+pulses to eject it from the drain all the way into the plunger lane in a single
+action.
+
+Here's an example from Gottlieb Big Shot:
+
+.. image:: /mechs/images/classic_single_ball_trough_photo.jpg
 
 If you have a system like this, read the :doc:`classic_single_ball` guide to
 continue.
@@ -107,7 +145,17 @@ If you're using MPF with a machine that has some kind of trough or drain system
 that we haven't covered here, we would like to know about it so we can write a
 how to guide and/or add support for it in MPF.
 
-If that's your case, please `post a message to the MPF Users Google Group
+As far as we know, however, these 5 options should cover everything. For example,
+you might have a machine that you think is different, but when you really look
+at it, it's just a weird form of one of these 5 options. (Bally Fathom is a great
+example of this. It's like a classic single-ball trough where there is a drain
+that ejects a ball all the way into the plunger lane, but there are two additional
+switches in the apron wall where balls rest before they land in the drain device.
+That style of drain and trough is actually configured using Option 2, the modern
+trough with mechanical switches.)
+
+If you have something weird that you can't figure out, we're happy to help! Just
+post a photo of it to `MPF Users Google Group
 <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
 
 +------------------------------------------------------------------------------+

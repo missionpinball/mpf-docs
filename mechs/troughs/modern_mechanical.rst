@@ -5,10 +5,26 @@ This guide will show you how to configure MPF to use a modern-style trough
 which uses mechanical leaf switches. If you have a modern trough that uses
 opto boards, use :doc:`this guide <modern_opto>` instead.
 
-The following diagram shows how the modern trough works: (This is a
-side view)
+Here's an example from a Stern Star Trek Premium machine:
+
+.. image:: /mechs/images/modern_mechanical_trough_photo.jpg
+
+The following diagram shows how the ball flow and eject coil work in
+a modern trough. (This is a side view)
 
 .. image:: /mechs/images/modern_trough.jpg
+
+And this diagram shows how the switches are typically arranged in a
+modern trough with mechanical switches:
+
+.. image:: /mechs/images/trough_mechanical_switch_diagram.jpg
+
+.. note::
+
+   Not all modern troughs have the "jam" switch, and depending on how
+   many balls were designed to go in your machine, it's possible that
+   not all the ball switches are populated. (Though you can add more
+   to increase the number of balls in your machine!)
 
 1. Add your trough switches
 ---------------------------

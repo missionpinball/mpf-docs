@@ -6,17 +6,21 @@ and trough combination that uses two coils (one to eject the ball from the
 drain hole and a second to release a ball into the plunger lane).
 
 This guide is written for the types of devices that have only have one switch
-on the trough side. (This was used in Gottlieb System 3 troughs, for example).
-If your configuration has multiple switches in the trough (one for
+on the trough side, like this example of a Gottlieb System 3 machine (Brooks 'n
+Dunn):
+
+.. image:: /mechs/images/two_coil_one_switch_trough_photo.jpg
+
+If your trough system  has multiple switches in the trough (one for
 each ball), then use :doc:`this guide <two_coil_multiple_switches>` instead.
 
-In these types of troughs, a ball ejected from the drain into the trough will
-only momentarily activate the trough switch as the ball rolls by, unless the
-trough is full, in which case the last ball that goes into it sits on the
-switch.
+In the types of troughs this guide is for, a ball ejected from the drain over
+the hump into the trough will only momentarily activate the trough switch as
+the ball rolls by, unless the trough is full, in which case the last ball that
+goes into it sits on the switch.
 
-The following diagram shows the type of layout this guide is for: (This is a
-side view)
+The following diagram shows a more clear view of the type of trough system this
+guide is for: (This is a side view)
 
 .. image:: /mechs/images/two_coils_one_switch.png
 

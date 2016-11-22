@@ -3,12 +3,24 @@ How to configure a modern trough with opto switches
 
 This guide will show you how to configure MPF to use a modern-style trough
 with opto boards. (If you have a modern-style trough which uses mechanical
-leaf switches, use :doc:`this guide <modern_mechanical>` instead.
+leaf switches, use :doc:`this guide <modern_mechanical>` instead.)
 
-The following diagram shows how the modern trough works: (This is a
-side view)
+.. todo::
+
+   We need to add a photo of this type of trough.
+
+The following diagram shows how the ball flow and eject coil work in
+a modern trough. (This is a side view)
 
 .. image:: /mechs/images/modern_trough.jpg
+
+And this diagram shows how the "opto boards" are typically located. Note that
+one of the opto boards is a "transmit" board that contains infrared LEDs which
+are always on, and the other side is the "receive" board which contains photo
+transistors which are activated when the IR beam is hitting them (i.e. when there
+is no ball blocking the path) and inactive when a ball is present and in the way.
+
+.. image:: /mechs/images/trough_opto_diagram.jpg
 
 1. Add your trough switches
 ---------------------------

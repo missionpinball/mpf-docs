@@ -3,10 +3,14 @@ How to configure a classic single-ball trough
 
 This guide will show you how to configure MPF to use an older-style single
 ball drain. This is the type of configuration that most (all?) single-ball
-machines use.
+machines use, from EM machines of the 1950s through electronic single ball
+machines of the early 1980s.
 
-The following diagram shows the type of layout this guide is for: (This is a
-side view)
+Here's an example from a Gottlieb Big Shot (1974 EM):
+
+.. image:: /mechs/images/classic_single_ball_trough_photo.jpg
+
+And here's a diagram which shows this a bit more clearly: (This is a side view)
 
 .. image:: /mechs/images/classic_single_ball.png
 
