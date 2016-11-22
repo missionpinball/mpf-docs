@@ -97,6 +97,14 @@ machines which huge banks of drop targets), you can add a
 coils. In this case, MPF will pulse all the coils at the same time to
 reset the bank of drop targets.
 
+reset_on_complete:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``None``
+
+.. versionadded:: 0.32
+
+TODO
+
 reset_events:
 ~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
