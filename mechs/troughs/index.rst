@@ -60,6 +60,7 @@ beams across the ball paths, and the board has sensors that detect if a light
 beam is broken, meaning a ball is sitting there blocking the path.
 
 Common parts include:
+
 * Williams: A-16809
 * Mantis Trough
 
@@ -80,6 +81,7 @@ If you have a modern-style trough with mechanical switches instead of opto
 boards, then read the :doc:`modern_mechanical` guide to continue.
 
 Common parts include:
+
 * Stern: 500-6318-24 (trough assembly), 535-8393-00 (center drain ball guide), 535-7329-01 (entry/exit scoop)
 * Pinballlife/Spooky: PBL-100-0015-00 (4 balls) or PBL-100-0016-00 (8 balls), PBL-100-0002-00 (drain guide + enter exit scoop)
 
