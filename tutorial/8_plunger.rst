@@ -33,8 +33,9 @@ each type for MPF.
 2. Revisit your trough/drain device
 -----------------------------------
 
-Once you have your plunger device set up, be sure to go back to your trough
-or ball drain device and add the new plunger lane as a target, like this:
+Even though this is mentioned in the how-to guides, once you have your plunger
+device set up, be sure to go back to your trough or ball drain device and add
+the new plunger lane as an eject target, like this:
 
 ::
 
