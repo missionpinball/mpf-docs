@@ -9,8 +9,6 @@ ball_devices:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. overview
-
 The ``ball_devices:`` section of your config is where you configure your :doc:`ball devices </mechs/ball_devices/index>`.
 
 Optional settings

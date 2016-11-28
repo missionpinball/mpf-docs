@@ -26,7 +26,7 @@ is no ball blocking the path) and inactive when a ball is present and in the way
 ---------------------------
 
 The first step is to add your trough's switches to the ``switches:``
-section of your config file. Create an entry in your ``switches:`` section for
+section of your machine config file. Create an entry in the ``switches:`` section for
 each switch in your trough, like this: (This example has six switches plus the
 jam switch. Yours may have more or less.)
 
@@ -294,8 +294,6 @@ the trough, it's just the one.
 Here's the complete config
 --------------------------
 
-.. begin_mpfdoctest:config/config.yaml
-
 ::
 
     #config_version=4
@@ -349,8 +347,6 @@ Here's the complete config
         s_trough4
         s_trough5
         s_trough6
-
-.. end_mpfdoctest
 
 What if it doesn't work?
 ------------------------
