@@ -1,4 +1,4 @@
 Mechanical (spring) plungers
 ============================
 
-TODO
+.. image:: /mechs/images/plunger_with_switch.jpg

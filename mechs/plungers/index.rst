@@ -18,7 +18,7 @@ Here are the options:
    mechanical_with_switch
    mechanical_no_switch
    coil_fired
-   combo_coil_mechanical
+   auto_manual
 
 
 Since there are so many different options, you need to first identify which

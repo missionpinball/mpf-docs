@@ -8,67 +8,84 @@ be plunged.
 This document describes how you configure MPF to work with plunger
 lanes when the plunger lane has no switch which is active when a ball
 is sitting at the plunger. (This is common is older single-ball
-machines, including many EM and early solid state machines.)If you're
-just landing on this page randomly, you might also want to check out
-our tutorial on how to configure a trough, as it provides some more
-background information about many of the things we reference here.
-Here's an example of what we're talking about:
+machines, including many EM and early solid state machines.)
 
-.. todo::
-   add image & verify the text in this page
+Here's an example from a Gottlieb Big Shot
 
-In modern machines, we configure the plunger lane as a ball device. This is
-possible since there's a switch in the plunger lane, so when that
-switch is active then the machine knows there's a ball "in" the
-plunger ball device, and when that switch is inactive then the machine
-knows the plunger ball device does not contain a ball. Simple. But
-what happens if your plunger lane doesn't have a switch which is
-activated when the ball is sitting at the plunger? How does it know
-there's a ball there? The solution is simple: In machines like this,
-the plunger lane is *not* a ball device. Instead the plunger lane area
-is considered part playfield, so a ball in the plunger lane that's not
-sitting on a switch is just like any other area of the playfield where
-the ball might be rolling around while it's not on a switch. So if you
-have this type of plunger lane, then you would *not* have a "plunger"
-ball device configured in your *ball_devices:* section. There's one
-other change you have to make to get this all to work. In modern
-machine where your plunger is set up as a ball device, that's the
-device that has the *ball_add_live* tag. (This is the tag that tells
-MPF that it should add a live ball into play from this device.) So in
-this situation since your plunger lane isn't actually a ball device,
-you need to add the *ball_add_live* tag to your trough, like this:
+.. image:: /mechs/images/plunger_no_switch.jpg
 
-::
+.. literalinclude:: /example_configs/ball_device/config/test_ball_device_no_plunger_switch.yaml
+   :language: yaml
 
-    ball_devices:
-        trough:
-            tags: drain, home, trough, ball_add_live
-            ball_switches: drain
-            eject_coil: trough_eject
-            entrance_delay_count: 0.3s
-            exit_delay_count: 0.3s
+1. Configure your trough / ball drain
+-------------------------------------
+
+MPF's plunger lanes work hand-in-hand with the trough / ball drain
+devices. So if you haven't configured that yet, go back and
+:doc:`do that now </mechs/troughs/index>`, then come back here and
+configure your plunger.
+
+2. Understand that your plunger is *not* a ball device
+------------------------------------------------------
+
+Most pinball machines have a switch in the plunger lane which is used
+to tell MPF that there's a ball in the plunger waiting to be plunged.
+
+However, this How To guide is for plunger lanes with no ball switch. (If
+your plunger lane has a ball switch, then follow the
+:doc:`mechanical_with_switch` guide instead.)
+
+In machines where the plunger lane does not have a ball switch, that means
+that MPF has no idea whether a ball is in the plunger lane. That's totally
+fine, and MPF can support that no problem. However, in this case,
+*you do not configure your plunger lane as a ball device*!
+
+Instead the plunger lane area is considered part playfield, so a ball in the
+plunger lane that's not sitting on a switch is just like any other area of the
+playfield where the ball might be rolling around while it's not on a switch.
+
+3. Add a ball_add_live tag to your trough
+-----------------------------------------
+
+In machines where the plunger lane is a ball device, we add a tag called
+``ball_add_live`` to the plunger ball device. The "ball_add_live" tag
+is used to tell MPF that this is the device which is used (by default) to
+add a live ball into play.
+
+But since your plunger lane with no switch is not a ball device, that means
+we have to go back to the trough ball device and add the ``ball_add_live``
+tag to it. (Your trough device will already have the ``trough`` tag applied
+to it, and depending on how your machine is laid it, it might also have the
+``ball_drain`` tag applied.)
+
+So add ``ball_add_live`` to your trough now.
 
 Then when MPF needs to add a live ball into play, it will eject a ball
-from the trough and you're all set! If you have a classic 1980s-style
-trough with separate drain and trough devices, you'd simply add the
-*ball_add_live* tag to the second device in the chain, like this:
+from the trough and you're all set!
 
-::
+4. What happens if MPF starts with a ball in the plunger?
+---------------------------------------------------------
 
-    ball_devices:
-        drain:
-            ball_switches: drain
-            eject_switch: drain
-            eject_coil: drain_eject
-            entrance_count_delay: 300ms
-            confirm_eject_type: target
-            eject_targets: trough
-            tags: drain
-        trough:
-            ball_switches: trough1, trough2, trough3
-            eject_switch: trough1
-            eject_coil: trough_eject
-            entrance_count_delay: 300ms
-            confirm_eject_type: target
-            eject_targets: plunger_lane
-            tags: home, trough, ball_add_live
+One of the downsides to not having a switch in the plunger lane is that MPF
+has no way of knowing if there's a ball in there. Throughout the ordinary
+course of operation, this is fine, because MPF "knows" that the trough ejected
+a ball, and it "knows" when the ball is on the playfield, so if the trough has
+ejected a ball and that ball hasn't yet entered the playfield, MPF can
+"assume" that ball is in the plunger lane.
+
+However, what happens if MPF boots up from scratch and there's a ball in the
+plunger lane? In that case, the ball is not activating any switches, so MPF
+really has no idea if the ball is in the plunger line (which is fine) or if
+the ball is stuck somewhere on the playfield (which is not fine).
+
+TODO: This does not work yet and will be fixed soon.
+
+5. Configuring the ball save timer
+----------------------------------
+
+Be sure to set your ball save start event based on a tag from your switches
+tagged with ``playfield_active`` rather than *ball_starting* or your trough eject
+confirmation, since you don't want the timer to start running when the ball is
+sitting in the plunger lane.
+
+See the :doc:`/game_logic/ball_saves/index` documentation for details.
