@@ -1,0 +1,17 @@
+# Travis is only used to test the Sphinx build and is configured to fail on
+# bad links and references. The actual docs are published on RTD which has its
+# own webhook and is not related to anything that travis does.
+
+language: python
+
+python:
+  - "2.7"
+
+install:
+  - "pip install Sphinx"
+
+script:
+  - "sphinx-build -nW -b html -d _build/doctrees . _build/html"
+
+# -n   Run in nit-picky mode, warn about all missing references.
+# -W   Turn warnings into errors.
