@@ -152,12 +152,15 @@ post the events ``sw_hello`` and ``sw_yo``. MPF also makes use of several
 tags on its own, including:
 
 + ``playfield_active`` - This tag should be used for all switches on the
-  playfield that indicate a ball is loose on the playfield. This tag is
-  used to validate the playfield as well as to reset the ball search
-  timer. (i.e. as long as switches with the playfield_active tag are
-  being activated, the ball search timer won't start.)
-+ ``start`` - Used to tell the game that the player has hit the start
-  button.
+  playfield that indicate a ball is loose on the playfield. This tag is used
+  by the playfield to know that balls are on it. Note that if you have more
+  than one playfield, the tag name is (playfield_name)_active, so if you have
+  a playfield called "upper playfield", you'd tag the switches on that
+  playfield with "upper_playfield_active".
++ ``start`` - Let's MPF know that this switch is used to start a game. (Note
+  that in MPF, the game start process is kicked off when this switch is
+  released, not pressed, which allows the "time held down" to be sent to MPF
+  to perform alternate game start actions.)
 
 type:
 ~~~~~
