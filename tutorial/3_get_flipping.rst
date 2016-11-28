@@ -37,13 +37,13 @@ So now your ``config.yaml`` file should look like this:
         s_right_flipper:
             number:
 
-In case you're wondering why we preface each switch name with *s_*,
+In case you're wondering why we preface each switch name with "s\_",
 that's a little trick we learned that makes things easier as you get
 deeper into your configuration. We do this because most text editors
 and IDEs have "autocomplete" functions where it will pop up a list to
 autocomplete values as you type. So if you preface all your switches
-with *s_* (and your coils with *c_*, your lights with *l_*, etc.),
-then as soon as you type "s_" into your YAML file you should get a popup
+with "s\_" (and your coils with "c\_", your lights with "l\_", etc.),
+then as soon as you type "s\_" into your YAML file you should get a popup
 list with all your switches which you can use to select the right one.
 These saves lots of headaches later caused by not entering the name
 exactly right somewhere. :)

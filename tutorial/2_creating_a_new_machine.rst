@@ -28,7 +28,7 @@ You can name this folder whatever you want too.
 Let's use the name "your_machine", and we'll assume you're on Windows,
 so you might put it in your ``C:\pinball`` folder, like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine
 
@@ -38,7 +38,7 @@ Next create a subfolder in your new machine folder called ``/config``. This is w
 configuration files will live. This folder should be inside your
 machine folder, like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine\config\
 
@@ -49,7 +49,7 @@ Now let's actually create your machine config file. To do that, create a file ca
 folder. This will be your main config file which will ultimately be hundreds of lines long and which will contain all
 the config and settings for your machine. This file should be here:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine\config\config.yaml
 
@@ -92,7 +92,7 @@ contents of that file.
 Believe it your not, it's time to run your game! Simply open a console window and change to your machine
 folder, and run ``mpf -b``, like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine>mpf -b
 
@@ -101,7 +101,7 @@ to a media controller for display and sound since we haven't set that up yet.)
 
 You should get results that look something like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine>mpf -b
    INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
@@ -117,7 +117,7 @@ At this point since we are running a completely blank config, the only way to
 stop MPF is to hit :kbd:`CTRL+C` . When you do
 that, you should see a few more lines appear, like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    INFO : Machine : Actual MPF loop rate: 32.04 Hz
    INFO : root : MPF run loop ended.
@@ -135,7 +135,7 @@ this, depending on the error.
 
 If you get a crash with a message about a "Config file version mismatch", like this:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    Traceback (most recent call last):
      File "z:\git\mpf\mpf\commands\game.py", line 130, in __init__
@@ -160,7 +160,7 @@ mark as part of that.)
 If you get an error that says ``Could not find machine folder: 'None'``, that means that you ran MPF from the
 wrong folder. For example:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine\config>mpf
    Error. Could not find machine folder: 'None'.
@@ -168,7 +168,7 @@ wrong folder. For example:
 This happens because the command prompt is in the child "config" folder, rather than the base machine folder. So ``cd ..``
 up one level and try again.
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\>mpf
    Error. Could not find machine folder: 'None'.
@@ -180,7 +180,7 @@ machine folder.
 
 It's possible you might also get an error about "mpf" not being recognized. For example, on Windows:
 
-.. code-block:: doscom
+.. code-block:: doscon
 
    C:\pinball\your_machine>mpf
    'mpf' is not recognized as an internal or external command,

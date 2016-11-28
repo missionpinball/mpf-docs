@@ -9,7 +9,7 @@ Kickbacks
 
 .. versionadded:: 0.32
 
-A kickback mechanism is a type of :doc:`autofire coil </mechs/autofire_coils>`
+A kickback mechanism is a type of :doc:`autofire coil </mechs/autofire_coils/index>`
 that kicks the ball back into play, typically located in an outlane.
 
 +------------------------------------------------------------------------------+

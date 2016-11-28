@@ -13,7 +13,7 @@ kickbacks:
 
 The ``kickbacks:`` section of your machine config is used to define
 :doc:`kickback mechanisms </mechs/kickbacks/index>` which are a type of
-:doc:`autofire coil </mechs/autofire_coils>`
+:doc:`autofire coil </mechs/autofire_coils/index>`
 that kicks the ball back into play, typically located in an outlane.
 
 Example:

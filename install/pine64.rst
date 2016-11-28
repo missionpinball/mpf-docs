@@ -86,9 +86,11 @@ Fix the Software Boutique
 -------------------------
 
 This arrives broken, too. Oddly, running the Mate Welcome as root and clicking
-a button partly fixes it.::
+a button partly fixes it.
 
-    $ sudo ubuntu-mate-welcome
+.. code-block:: bash
+
+   $ sudo ubuntu-mate-welcome
 
 When it comes up, click on the "Subscribe to updates" button, then quit it.
 
@@ -103,16 +105,22 @@ after that.
 Install Missing pip3
 --------------------
 
-``$ apt-get install python3-pip``
+.. code-block:: bash
+
+   $ apt-get install python3-pip
 
 The path where ``pip`` puts executables is not in the system default path, so
-edit ``~/.bashrc`` to add the following path::
+edit ``~/.bashrc`` to add the following path:
 
-``$ sudo nano ~/.bashrc``
+.. code-block:: bash
 
-At the bottom of the file add the following::
+  $ sudo nano ~/.bashrc
 
- export PATH=~/.local/bin:$PATH
+At the bottom of the file add the following:
+
+.. code-block:: none
+
+   export PATH=~/.local/bin:$PATH
 
 Hit "control + x" to save and "y" then "return" to save the file as the same
 name.
@@ -131,18 +139,24 @@ https://github.com/missionpinball/mpf-debian-installer/archive/v0.30.zip
 To unzip the file navigate in your terminal to the location of the downloaded
 files.
 
-Unzip the file::
+Unzip the file:
 
-''$ unzip v0.30.zip .''
+.. code-block:: bash
 
-If this does not run you may need to install unzip::
+   $ unzip v0.30.zip .
 
-''$ sudo apt-get install unzip''
+If this does not run you may need to install unzip:
+
+.. code-block:: bash
+
+   $ sudo apt-get install unzip
 
 After unzip, run ./mpf-debian-installer-0.30/install from the folder you
-unzipped the files to. Consult the README for more information.::
+unzipped the files to. Consult the README for more information.
 
- $ pip3 install mpf-mc
+.. code-block:: bash
+
+   $ pip3 install mpf-mc
 
 Running MPF
 -----------

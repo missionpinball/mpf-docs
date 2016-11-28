@@ -72,7 +72,7 @@ Trek Premium:
 
 .. image:: /mechs/images/auto_manual_plunger.jpg
 
-If you have this type of auto/manual combo plunger, follow the :doc:`combo_coil_mechanical`
+If you have this type of auto/manual combo plunger, follow the :doc:`auto_manual`
 guide to configure it in MPF.
 
 Option 4: Coil-fired plunger (no mechanical spring option)
