@@ -49,7 +49,7 @@ the other switch settings as needed.
 ---------------
 
 Next, create an entry in your ``coils:`` section of your machine config file
-for your trough's eject coil. Again, the name doesn't matter. We'll call this
+for your plunger's eject coil. Again, the name doesn't matter. We'll call this
 *c_plunger* and enter it like this:
 
 ::
@@ -67,7 +67,6 @@ which will override the default pulse time of 10ms. It's hard to say
 at this point what value you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
 finish getting everything set up.
-
 
 3. Add your plunger / launcher ball device
 ------------------------------------------
@@ -162,11 +161,6 @@ specifically enable the ability for that event to eject a ball. In other words, 
 don't have to worry about the player hitting that switch to launch extra balls into
 play, and it's fine if that event is posted in other places in your game.
 
-5. Understanding playfield ejects
----------------------------------
-
-We look for a switch tagged with playfield_active
-
 5. Configure the eject confirmation, target & timeouts
 ------------------------------------------------------
 
@@ -174,7 +168,7 @@ Next you need to configure some settings that will let your plunger know whether
 ball launch events were successful.
 
 The first setting is called ``eject_targets:``. (You may remember this from when
-you :doc:`configured your trough or drain device </mechs/troughs/index>`. This
+you :doc:`configured your trough or drain device </mechs/troughs/index>`.) This
 setting is a list of one (or more, if there's a diverter) ball devices that your
 plunger lane ejects into.
 
@@ -188,7 +182,7 @@ a subway or something) other than the playfield, then you'd configure that here.
 Next up is the ``confirm_eject_type:`` which is how MPF knows that a ball really
 made it out of the plunger and won't fall back in.
 
-In many cases, the default setting of "target" is fine (because that means that MPF
+In most cases, the default setting of "target" is fine (because that means that MPF
 just watches for the target device (from above) to get a ball, and when it does, it
 assumes the eject from this device was successful.
 
@@ -203,16 +197,58 @@ caveats:
 
 What this means is that this switch is pretty limited and almost never used.
 
-confirm_eject_type: target
-eject_targets: some_device
+Finally, you need to configure the ``eject_timeouts:`` which is a time setting
+for how long MPF will wait to confirm the eject. If a ball re-enters that
+device before the timeout happens, then MPF assumes the eject failed and will
+try it again.
 
-eject_timeouts:
+For the ``eject_timeouts:``, you want to figure out what the MAXIMUM time is
+that a ball could be ejected from the plunger but still not make it all the
+way out and then fall back into the plunger. You'll have to play with this
+setting in your machine, but in most machines it's probably around 3s.
+
+Here are some examples of these settings in action.
+
+First, for a typical coil-fired plunger lane / catapult that ejects the ball
+directly to the playfield: (This is probably 99% of all cases)
+
+::
+
+    ball_devices:
+        bd_plunger:
+            ...
+            eject_timeouts: 3s
+
+Next, for a coil-fired plunger that has a switch at the exit of the plunger
+lane that is only hit if the ball has made it out of the plunger and cannot
+be hit by a random ball on the playfield:
+
+::
+
+    ball_devices:
+        bd_plunger:
+            ...
+            confirm_eject_type: switch
+            confirm_eject_switch: s_plunger_lane_exit
+            eject_timeouts: 3s
+
+Next, if your plunger lane ejects into another ball device (a cannon, in this
+case):
+
+::
+
+    ball_devices:
+        bd_plunger:
+            ...
+            eject_targets: bd_cannon
+            eject_timeouts: 2s
 
 6. Set your trough/drain device eject_targets
 ---------------------------------------------
 
-Once you have your plunger device set up, be sure to go back to your trough
-or ball drain device and add the new plunger lane as a target, like this:
+Once you have your plunger device set up, you need to go back to your trough
+or ball drain device and add the new plunger to your trough's ``eject_targets:``,
+like this:
 
 ::
 
@@ -234,5 +270,63 @@ this to the second device (the one that feeds the plunger).
 7. Add the ball_add_live_tag
 ----------------------------
 
-8. Configure player-controlled ejects
--------------------------------------
+Next you need to add a tag to your plunger lane ball device called ``ball_add_live``
+which is used to tell MPF that this ball device is used to add a new ball
+into play.
+
+To do that, add the tags section to your new plunger ball device, like this:
+
+::
+
+   ball_devices:
+      bd_plunger:
+         ...
+         tags: ball_add_live
+
+8. Tag your playfield switches
+------------------------------
+
+Since the plunger lane ejects balls to the playfield, it's important that you
+have your playfield switches tagged properly since that's how MPF knows that
+a ball is loose on the playfield.
+
+See the :doc:`/mechs/playfields/ball_tracking` documentation for details.
+
+Complete config example
+-----------------------
+
+Here's a complete machine config with a "standard" coil-fired plunger that
+ejects the ball directly to the playfield. Note that this config does not
+include the switches and coils for the trough.
+
+This config is what probably 99% of machines with coil-fired plungers will use:
+
+::
+
+   switches:
+      s_plunger_lane:
+         number: 2-6
+      s_launch_button:
+         number: 1-5
+
+    coils:
+        c_plunger:
+            number: 2-1
+            pulse_ms: 20
+
+    ball_devices:
+
+        bd_trough:
+            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
+            eject_coil: c_trough_eject
+            tags: trough, home, drain
+            jam_switch: s_trough_jam
+            eject_coil_jam_pulse: 15ms
+            eject_targets: bd_plunger
+
+        bd_plunger:
+            ball_switches: s_plunger_lane
+            eject_coil: c_plunger
+            player_controlled_eject_event: s_launch_button_active
+            eject_timeouts: 3s
+            tags: ball_add_live
