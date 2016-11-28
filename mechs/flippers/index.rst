@@ -19,14 +19,17 @@ options for how flippers are fine tuned.
 MPF also has support for various "novelty" flipper modes (no-hold flippers,
 reversed flipper buttons, weak flippers, etc.)
 
-We recommend you read the two sections in "Flipper Concepts" before you start
-configuring the flippers in your machine.
+We recommend you read the :doc:`/mechs/dual_wound_coils/dual_vs_single_wound`
+guide to understand the difference between "dual wound" and "single wound"
+coils, as flippers in pinball machines can be either type.
+
+You should also probably read the EOS Switches guide if your machine has flipper
+EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
 .. toctree::
    :titlesonly:
    :caption: Flipper Concepts
 
-   dual_vs_single_wound
    eos_switches
 
 .. toctree::
@@ -35,7 +38,6 @@ configuring the flippers in your machine.
 
    dual_wound
    single_wound
-   power
 
 The following guides are placeholders only and not written yet:
 

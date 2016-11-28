@@ -21,6 +21,11 @@ have a dual-wound coil config where you can specify the settings for a
 particular dual-wound coil (and give it a new name), and then you can use that
 dual-wound coil anywhere in MPF that a coil is configured.
 
+.. toctree::
+   :titlesonly:
+
+   dual_vs_single_wound
+
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+

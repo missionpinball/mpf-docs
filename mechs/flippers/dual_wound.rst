@@ -1,12 +1,18 @@
 How to configure dual-wound flippers
 ====================================
 
-This guide shows you how to configure dual-wound flippers in MPF. (If you don't
-know what "dual-wound" flippers are, or whether you have them, check out
-:doc:`dual_vs_single_wound`.
+This guide shows you how to configure dual-wound flippers in MPF. If you don't
+know what "dual-wound" flippers are, or whether you have them, take a look at
+the coil that your flipper uses. If it has three wires (or three tabs to
+connect three wires), then it's a dual-wound coil and this guide is for you.
+
+If it has two wires (or two tabs), then read the :doc:`single_wound` guide.
+
+Read more about "dual wound" versus "single wound" coils in the
+:doc:`/mechs/dual_wound_coils/dual_vs_single_wound` guide.
 
 1. Add your flipper buttons
-----------------------------
+---------------------------
 
 First, make sure you have entries in your machine config for your flipper
 buttons.
@@ -127,8 +133,8 @@ So now the ``flippers:`` section of your config file should look like this:
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
 
-5. You're almost there!
------------------------
+5. Configure your control system hardware
+-----------------------------------------
 
 At this point your flipper configuration is technically complete, though there
 are two other important things you may have to do first:
@@ -138,13 +144,17 @@ machine config for your control system. (For example, FAST Pinball and Open
 Pinball Project controllers require a one-time port configuration, etc.) See the
 :doc:`control system documentation </hardware/index>` for details.
 
-Second, as a safety precaution, MPF uses very low (10ms) default pulse times
-for coils. (Again this is a safety precaution to make sure you don't
-accidentally destroy a valuable pinball mech.) However in most cases, 10ms will
-not be enough power to physically move the flippers when you hit the button.
-(You might hear them click or buzz without actually seeing them move.)
+6. Adjust your flipper power
+----------------------------
 
-So check out the :doc:`power` documentation to see how to adjust the power of
+As a safety precaution, MPF uses very low (10ms) default pulse times for coils.
+In most cases, 10ms will not be enough power to physically move the flippers
+when you hit the button. (You might hear them click or buzz without actually
+seeing them move.)
+
+So check out the documentation in the coils section for instructions on how to
+adjust the :doc:`pulse power </mechs/coils/pulse_power>` and the
+:doc:`hold power </mechs/coils/hold_power>` for the coils you're using for
 your flippers.
 
 Here's the complete config
