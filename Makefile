@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 
-SPHINXOPTS    = "-n -W"
+SPHINXOPTS    = -n -W
 # Defaults used in MPF
 # -n runs in "nitpicky" mode to check all link references
 # -W converts warnings into errors so we enforce valid links and references
