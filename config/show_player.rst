@@ -109,8 +109,8 @@ Single value, type: ``integer``. Default: ``None``
 
 .. note:: The ``show_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 
-Events posted by achievements
------------------------------
+Events posted by shows
+----------------------
 
 You can configure shows to post certain events when things happen. These are
 useful (for example), to eject a ball when a show ends.
