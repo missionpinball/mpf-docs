@@ -6,7 +6,7 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 0.32
 ~~~~
 
-Currently in dev, estimated release date November 18, 2016.
+Currently in dev, estimated release date December, 2016.
 
 .. rubric:: MPF
 
@@ -37,6 +37,7 @@ Currently in dev, estimated release date November 18, 2016.
 * Refactored ball devices to use asyncio, to have specific ejectors and ball counters
 * Allow multiple config player entries to fire from the same event
 * Ensure that events created by the MC are sent to MPF
+* Added machine vars for P-ROC and FAST hardware revisions
 * Lots of little bug fixes...
 
 .. rubric:: MPF-MC

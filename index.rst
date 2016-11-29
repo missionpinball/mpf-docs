@@ -62,6 +62,7 @@
 
    Events Reference </events/event_reference>
    Config File Reference </config/index>
+   Machine Variable Reference </machine_vars/index>
    Example Config Files </examples/index>
    Example Machines </example_machines/index>
 
