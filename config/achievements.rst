@@ -275,7 +275,8 @@ listed below are in additional to that event.
 
 events_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this achievement
 is enabled.
@@ -285,32 +286,37 @@ events_when_selected:
 
 .. versionadded:: 0.32
 
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this
 achievement is selected.
 
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this achievement is started.
 
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this achievement is complete.
 
 events_when_disabled:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this achievement is disabled.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+:doc:`List </config/instructions/lists>` of one (or more) names of events.
+Default: ``None``.
 
 A single event, or a list of events, that will be posted when this achievement is stopped.
 
