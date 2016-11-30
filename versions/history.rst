@@ -10,19 +10,22 @@ Currently in dev, estimated release date December, 2016.
 
 .. rubric:: MPF
 
-* Improved achievements and added achievement groups
+* Improved :doc:`achievements </game_logic/achievements/index>` and added
+  :doc:`achievement groups </game_logic/achievements/achievement_groups>`.
 * Added relay events and relay queues
-* Improved smart virtual platform
-* Improved support for System 11 and Gottlieb style troughs (including using
-  the ball drain as a ball storage location to get one additional ball
-  capacity with no hardware changes).
-* Check that duplicate sections don't exist in config files
+* Improved :doc:`smart virtual platform </virtual/smart_virtual>`
+* Improved support for :doc:`System 11 </mechs/troughs/two_coil_multiple_switches>`
+  and :doc:`Gottlieb System 3 style </mechs/troughs/two_coil_one_switch>`
+  troughs (including using the ball drain as a ball storage location to get one
+  additional ball capacity with no hardware changes).
+* Verify that duplicate sections don't exist in config files
 * Check that event handlers are properly formatted before they're registered
 * Added conditional events (handlers that only fire if certain conditions are
   met)
-* You can set default values for player variables
-* Fixed the physical DMD and physical Color DMD
-* Added multiball lost event
+* You can :doc:`set default values for player variables </config/player_vars>`
+* Fixed the :doc:`physical mono DMD </displays/display/physical_mono_dmd>` and
+  :doc:`physical RGB (color) DMD </displays/display/physical_rgb_dmd>`
+* Added :doc:`multiball lost event </events/multiball_name_lost_ball>`
 * Allow devices to have inline config specs
 * Added shots with events
 * Better OPP platform parsing
@@ -31,13 +34,14 @@ Currently in dev, estimated release date December, 2016.
 * Added options for "random" events (force next, force all, save per-player, etc.)
 * Added events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
 * Added option to force all assets to load on boot for testing purposes
-* Added scoring options (add, replace, block)
+* Added :doc:`scoring </config/scoring>` options (add, replace, block)
 * Set starting values for player variables
 * Use color "on" for LED default colors
 * Refactored ball devices to use asyncio, to have specific ejectors and ball counters
 * Allow multiple config player entries to fire from the same event
 * Ensure that events created by the MC are sent to MPF
 * Added machine vars for P-ROC and FAST hardware revisions
+* Added :doc:`combo switches </game_logic/combo_switches/index>` (for "flipper cancel", two-button skill shots, etc.)
 * Lots of little bug fixes...
 
 .. rubric:: MPF-MC
