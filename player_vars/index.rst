@@ -16,6 +16,7 @@ That said, here's a list of the "built in" player variables and how they work:
 .. toctree::
    :maxdepth: 1
 
+   index <_index>
    ball <ball>
    (logic_block)_count <logic_block_count>
    (logic_block)_state <logic_block_state>

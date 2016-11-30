@@ -50,18 +50,23 @@ That said, here's a list of the "built in" player variables and how they work:
    :maxdepth: 1
 
 '''
-
-        self.file_list.sort()
+        # sort based on the file name, rather than the event name, since that
+        # has the special chars stripped.
+        self.file_list.sort(key=lambda x: x[1])
 
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(rst_path, 'index.rst'),
-                  'w') as f:
+        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
             f.write(index)
 
     def create_file(self, player_var, rst):
         filename = player_var.replace('(', '').replace(')', '') + '.rst'
+
+        # kind of a hack, but we have a player var called "index" and also
+        # "index.rst is the index.html", so we have to avoid the conflict
+        if filename == 'index.rst':
+            filename = '_index.rst'
 
         with open(os.path.join(rst_path, filename), 'w') as f:
             f.write(rst)
