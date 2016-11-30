@@ -5,7 +5,7 @@ MPF Events
    :titlesonly:
    :maxdepth: 1
 
-   deeper_dive
+   overview/deeper_dive
    event_reference
 
 The concept of *events* is one of the most important concepts in MPF. MPF is an
