@@ -20,19 +20,6 @@ events.
 .. toctree::
    :maxdepth: 1
 
-   (combo_switch)_(state) <combo_switch_state>
-   (playfield)_active <playfield_active>
-   (playfield)_ball_count_change <playfield_ball_count_change>
-   (shot)_(profile)_(state)_hit <shot_profile_state_hit>
-   (shot)_(profile)_hit <shot_profile_hit>
-   (shot)_(state)_hit <shot_state_hit>
-   (shot)_hit <shot_hit>
-   (shot_group)_(profile)_(state)_complete <shot_group_profile_state_complete>
-   (shot_group)_(profile)_(state)_hit <shot_group_profile_state_hit>
-   (shot_group)_(profile)_complete <shot_group_profile_complete>
-   (shot_group)_(profile)_hit <shot_group_profile_hit>
-   (shot_group)_complete <shot_group_complete>
-   (shot_group)_hit <shot_group_hit>
    achievement_(name)_state_(state) <achievement_name_state_state>
    asset_loading_complete <asset_loading_complete>
    ball_drain <ball_drain>
@@ -53,7 +40,10 @@ events.
    ball_started <ball_started>
    ball_starting <ball_starting>
    ball_will_end <ball_will_end>
+   balldevice_ball_missing <balldevice_ball_missing>
+   balldevice_balls_available <balldevice_balls_available>
    balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
+   balldevice_captured_from_(device) <balldevice_captured_from_device>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
    balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
@@ -64,9 +54,6 @@ events.
    balldevice_(name)_eject_broken <balldevice_name_eject_broken>
    balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
    balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
-   balldevice_ball_missing <balldevice_ball_missing>
-   balldevice_balls_available <balldevice_balls_available>
-   balldevice_captured_from_(device) <balldevice_captured_from_device>
    balls_in_play <balls_in_play>
    cancel_ball_search <cancel_ball_search>
    clear <clear>
@@ -74,6 +61,7 @@ events.
    client_disconnected <client_disconnected>
    collecting_balls <collecting_balls>
    collecting_balls_complete <collecting_balls_complete>
+   (combo_switch)_(state) <combo_switch_state>
    credits_added <credits_added>
    display_(name)_initialized <display_name_initialized>
    display_(name)_ready <display_name_ready>
@@ -82,11 +70,11 @@ events.
    diverter_(name)_deactivating <diverter_name_deactivating>
    diverter_(name)_disabling <diverter_name_disabling>
    diverter_(name)_enabling <diverter_name_enabling>
-   drop_target_(name)_down <drop_target_name_down>
-   drop_target_(name)_up <drop_target_name_up>
    drop_target_bank_(name)_down <drop_target_bank_name_down>
    drop_target_bank_(name)_mixed <drop_target_bank_name_mixed>
    drop_target_bank_(name)_up <drop_target_bank_name_up>
+   drop_target_(name)_down <drop_target_name_down>
+   drop_target_(name)_up <drop_target_name_up>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
    flipper_cancel <flipper_cancel>
@@ -136,11 +124,13 @@ events.
    multiball_(name)_started <multiball_name_started>
    multiplayer_game <multiplayer_game>
    not_enough_credits <not_enough_credits>
-   player_(var_name) <player_var_name>
    player_add_request <player_add_request>
    player_add_success <player_add_success>
    player_turn_start <player_turn_start>
    player_turn_stop <player_turn_stop>
+   player_(var_name) <player_var_name>
+   (playfield)_active <playfield_active>
+   (playfield)_ball_count_change <playfield_ball_count_change>
    playfield_transfer_(playfield_transfer)_ball_transferred <playfield_transfer_playfield_transfer_ball_transferred>
    reel_(name)_advance <reel_name_advance>
    reel_(name)_hw_value <reel_name_hw_value>
@@ -151,6 +141,16 @@ events.
    scorereelgroup_(name)_resync <scorereelgroup_name_resync>
    scorereelgroup_(name)_rollover <scorereelgroup_name_rollover>
    scorereelgroup_(name)_valid <scorereelgroup_name_valid>
+   (shot_group)_complete <shot_group_complete>
+   (shot_group)_hit <shot_group_hit>
+   (shot_group)_(profile)_complete <shot_group_profile_complete>
+   (shot_group)_(profile)_hit <shot_group_profile_hit>
+   (shot_group)_(profile)_(state)_complete <shot_group_profile_state_complete>
+   (shot_group)_(profile)_(state)_hit <shot_group_profile_state_hit>
+   (shot)_hit <shot_hit>
+   (shot)_(profile)_hit <shot_profile_hit>
+   (shot)_(profile)_(state)_hit <shot_profile_state_hit>
+   (shot)_(state)_hit <shot_state_hit>
    shutdown <shutdown>
    single_player_ball_started <single_player_ball_started>
    slam_tilt <slam_tilt>

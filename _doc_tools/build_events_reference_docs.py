@@ -4,7 +4,7 @@ import re
 
 paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
 rst_path = '../events'
-dont_delete_files = ['index.rst', 'event_types.rst', 'deeper_dive.rst']
+dont_delete_files = ['index.rst', 'event_types.rst']
 
 
 class EventDocParser(object):
@@ -54,8 +54,9 @@ events.
    :maxdepth: 1
 
 '''
-
-        self.file_list.sort()
+        # sort based on the file name, rather than the event name, since that
+        # has the special chars stripped.
+        self.file_list.sort(key=lambda x: x[1])
 
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
@@ -171,7 +172,8 @@ if __name__ == '__main__':
     # delete existing files
     for path, _, files in os.walk(rst_path):
         for file in files:
-            if file not in dont_delete_files:
+            # only delete files in the rst_path, not subfolders
+            if path == rst_path and file not in dont_delete_files:
                 os.remove(os.path.join(path, file))
 
     # walk through the folders to scan
