@@ -20,6 +20,7 @@ events.
 .. toctree::
    :maxdepth: 1
 
+   (combo_switch)_(state) <combo_switch_state>
    (playfield)_active <playfield_active>
    (playfield)_ball_count_change <playfield_ball_count_change>
    (shot)_(profile)_(state)_hit <shot_profile_state_hit>
@@ -88,6 +89,7 @@ events.
    drop_target_bank_(name)_up <drop_target_bank_name_up>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
+   flipper_cancel <flipper_cancel>
    game_ended <game_ended>
    game_ending <game_ending>
    game_start <game_start>

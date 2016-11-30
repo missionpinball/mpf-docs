@@ -40,6 +40,7 @@ and/or show configs.
    carousel </examples/carousel/index>
    coil_player </examples/coil_player/index>
    color </examples/color/index>
+   combo_switches </examples/combo_switches/index>
    config_interface </examples/config_interface/index>
    config_players </examples/config_players/index>
    credits </examples/credits/index>

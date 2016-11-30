@@ -17,6 +17,7 @@ to tutorials, event listings, and configuration
    Ball Tracking <ball_tracking/index>
    Bonus <end_of_ball_bonus/index>
    Coins & Credits <credits/index>
+   Combo Switches <combo_switches/index>
    Extra Balls <extra_balls/index>
    High Scores <high_scores/index>
    Logic Blocks <logic_blocks/index>

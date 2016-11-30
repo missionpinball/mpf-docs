@@ -26,16 +26,27 @@ Here's an example ``config.yaml`` with two switches added:
     switches:
         s_left_flipper:
             number: 1
+            tags: left_flipper
         s_right_flipper:
             number: 2
+            tags: right_flipper
+
+You can pick whatever names you want for your switches. We chose
+``s_left_flipper`` and ``s_right_flipper``.
 
 Note that we configured this switches with numbers ``1`` and ``2``, but you
 should use the actual switch numbers for your control system that the flipper
 buttons are connected to. (See :doc:`/hardware/numbers` for instructions for
 each type of control system.)
 
-You can pick whatever names you want for your switches. We chose
-``s_left_flipper`` and ``s_right_flipper``.
+We also added tags called ``left_flipper`` and ``right_flipper``.
+These are optional, but recommended. The reason is that MPF includes
+a :doc:`combo switch </game_logic/combo_switches/index>` feature which
+posts events when player switches are held in combination. If you add
+these tags to your flipper switches, an event called *flipper_cancel*
+will be posted when the player hits both flipper buttons at the same time
+which you can use to cancel shows and other things you want the player to
+be able to skip.
 
 2. Add your flipper coils
 -------------------------

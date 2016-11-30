@@ -34,8 +34,10 @@ So now your ``config.yaml`` file should look like this:
     switches:
         s_left_flipper:
             number:
+            tags: left_flipper
         s_right_flipper:
             number:
+            tags: right_flipper
 
 In case you're wondering why we preface each switch name with "s\_",
 that's a little trick we learned that makes things easier as you get
@@ -52,6 +54,15 @@ If you use Sublime as your editor, it just
 does this automatically. Other editors might require plugins. (For
 example, you can add this functionality to Atom with a free package
 called "autocomplete-plus".)
+
+Notice that we added tags called ``left_flipper`` and ``right_flipper``.
+These are optional, but recommended. The reason is that MPF includes
+a :doc:`combo switch </game_logic/combo_switches/index>` feature which
+posts events when player switches are held in combination. If you add
+these tags to your flipper switches, an event called *flipper_cancel*
+will be posted when the player hits both flipper buttons at the same time
+which you can use to cancel shows and other things you want the player to
+be able to skip.
 
 When naming your switches (and most devices in MPF), your name can't start
 with a number and it should only be a combination of letters, numbers, and

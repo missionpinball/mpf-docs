@@ -23,6 +23,7 @@ your machine-wide config, a mode-specific config, or both.
    coil_overwrites: <coil_overwrites>
    coil_player: <coil_player>
    coils: <coils>
+   combo_switches: <combo_switches>
    config: <config>
    credits: <credits>
    displays: <displays>
