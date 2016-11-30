@@ -18,9 +18,6 @@ configs:
 .. toctree::
    :maxdepth: 1
 
-   (high_score_category)(position)_label <high_score_categoryposition_label>
-   (high_score_category)(position)_name <high_score_categoryposition_name>
-   (high_score_category)(position)_value <high_score_categoryposition_value>
    credit_units <credit_units>
    credits_numerator <credits_numerator>
    credits_string <credits_string>
@@ -29,6 +26,9 @@ configs:
    credits_whole_num <credits_whole_num>
    fast_(x)_firmware <fast_x_firmware>
    fast_(x)_model <fast_x_model>
+   (high_score_category)(position)_label <high_score_categoryposition_label>
+   (high_score_category)(position)_name <high_score_categoryposition_name>
+   (high_score_category)(position)_value <high_score_categoryposition_value>
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
    player(x)_score <playerx_score>

@@ -53,7 +53,9 @@ configs:
 
 '''
 
-        self.file_list.sort()
+        # sort based on the file name, rather than the event name, since that
+        # has the special chars stripped.
+        self.file_list.sort(key=lambda x: x[1])
 
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
