@@ -5,7 +5,4 @@ game_ended
 
 The game has ended.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

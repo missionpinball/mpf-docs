@@ -19,7 +19,4 @@ exist on the MPF side of things.
 Also note that if you're using a media controller other than the MPF-MC
 (such as the Unity 3D backbox controller), then this event won't exist.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

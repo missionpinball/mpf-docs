@@ -9,7 +9,10 @@ the game won't actually start until the queue is cleared.
 Keyword arguments
 -----------------
 
-game
-~~~~
-A reference to the game mode object.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``game``
+  A reference to the game mode object.
 

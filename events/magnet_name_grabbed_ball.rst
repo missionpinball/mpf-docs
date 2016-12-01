@@ -9,7 +9,4 @@ successfully grabbed a ball or not, so this even is saying that it
 things it did.
 to).
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

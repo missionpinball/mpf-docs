@@ -6,7 +6,4 @@ mc_reset_phase_1
 Posted on the MPF-MC only (e.g. not in MPF). This event is used
 internally as part of the MPF-MC reset process.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

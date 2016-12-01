@@ -5,7 +5,4 @@ reel_(name)_resync
 
 The score reel (name) is not valid and will be resyncing.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

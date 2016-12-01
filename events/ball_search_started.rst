@@ -5,7 +5,4 @@ ball_search_started
 
 The ball search process has been begun.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

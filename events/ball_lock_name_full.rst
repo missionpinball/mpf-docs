@@ -8,7 +8,10 @@ The ball lock device (name) is now full.
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The number of balls currently locked in this device.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``balls``
+  The number of balls currently locked in this device.
 

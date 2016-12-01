@@ -5,7 +5,4 @@ balldevice_balls_available
 
 A device has balls available to be ejected.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

@@ -5,7 +5,4 @@ game_started
 
 A new game has started.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

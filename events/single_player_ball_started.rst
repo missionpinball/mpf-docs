@@ -5,7 +5,4 @@ single_player_ball_started
 
 A new ball has started, and this is a single player game.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

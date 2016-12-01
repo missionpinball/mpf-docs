@@ -5,7 +5,4 @@ balldevice_(name)_eject_broken
 
 The ball device called (name) is broken and cannot eject balls.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

@@ -8,21 +8,21 @@ A ball (or balls) has failed to eject from the device (name).
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The number of balls that failed to eject.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-num_attempts
-~~~~~~~~~~~~
-How many attemps have been made to eject this ball
+``balls``
+  The number of balls that failed to eject.
+
+``num_attempts``
+  How many attemps have been made to eject this ball
 (or balls).
 
-retry
-~~~~~
-Boolean as to whether this eject will be retried.
+``retry``
+  Boolean as to whether this eject will be retried.
 
-target
-~~~~~~
-The target device that was supposed to receive the ejected
+``target``
+  The target device that was supposed to receive the ejected
 balls.
 

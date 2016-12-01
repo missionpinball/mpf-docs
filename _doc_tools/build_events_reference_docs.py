@@ -153,15 +153,18 @@ an event called *switch_s_left_slingshot_active*.
         # add the description
         rst_output += final_dict['desc'] + '\n\n'
 
-        # add the keyword arguments section
-
-        rst_output += 'Keyword arguments\n'
-        rst_output += '-----------------\n\n'
-
         if 'args' in final_dict:
+
+            rst_output += 'Keyword arguments\n'
+            rst_output += '-----------------\n'
+
+            rst_output += '''
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)\n\n'''
             rst_output += self.parse_args(final_dict['args'])
         else:
-            rst_output += '*None*\n'
+            rst_output += '*This event does not have any keyword arguments*\n'
 
         return final_dict['event'], rst_output
 
@@ -177,9 +180,8 @@ an event called *switch_s_left_slingshot_active*.
         args_dict = self.string_to_args_dict(args_string, args)
 
         for k, v in sorted(args_dict.items()):
-            output += k + '\n'
-            output += ('~' * len(k)) + '\n'
-            output += v + '\n\n'
+            output += '``' + k + '``\n'
+            output += '  ' + v + '\n\n'
 
         return output
 

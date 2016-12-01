@@ -8,23 +8,22 @@ The ball device called "name" is ejecting a ball right now.
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The number of balls that are to be ejected.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-mechanical_eject
-~~~~~~~~~~~~~~~~
-Boolean as to whether this is a mechanical eject.
+``balls``
+  The number of balls that are to be ejected.
 
-num_attempts
-~~~~~~~~~~~~
-How many eject attempts have been tried so far.
+``mechanical_eject``
+  Boolean as to whether this is a mechanical eject.
 
-source
-~~~~~~
-The source device that will be ejecting the balls.
+``num_attempts``
+  How many eject attempts have been tried so far.
 
-taget
-~~~~~
-The target ball device that will receive these balls.
+``source``
+  The source device that will be ejecting the balls.
+
+``taget``
+  The target ball device that will receive these balls.
 

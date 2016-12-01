@@ -5,7 +5,4 @@ master_volume_increase
 
 Increase the master volume of the audio system.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

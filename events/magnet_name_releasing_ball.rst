@@ -5,7 +5,4 @@ magnet_(name)_releasing_ball
 
 The magnet called (name) is in the process of releasing a ball.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

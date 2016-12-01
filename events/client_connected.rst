@@ -9,11 +9,13 @@ connected.
 Keyword arguments
 -----------------
 
-address
-~~~~~~~
-The IP address of the client that connected.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-port
-~~~~
-The port the client connected on.
+``address``
+  The IP address of the client that connected.
+
+``port``
+  The port the client connected on.
 

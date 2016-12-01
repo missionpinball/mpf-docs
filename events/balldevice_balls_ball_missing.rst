@@ -6,7 +6,4 @@ balldevice_(balls)_ball_missing
 The number of (balls) is missing. Note this event is
 posted in addition to the generic *balldevice_ball_missing* event.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

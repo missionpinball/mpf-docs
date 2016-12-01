@@ -9,7 +9,4 @@ something like *mode_attract_started*, *mode_base_started*, etc.
 
 This is posted after the "mode_(name)_starting" event.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

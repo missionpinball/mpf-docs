@@ -19,11 +19,13 @@ different (profile) values.
 Keyword arguments
 -----------------
 
-profile
-~~~~~~~
-The name of the profile that was active when hit.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-state
-~~~~~
-The name of the state the profile was in when it was hit
+``profile``
+  The name of the profile that was active when hit.
+
+``state``
+  The name of the state the profile was in when it was hit
 

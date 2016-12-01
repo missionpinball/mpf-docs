@@ -11,9 +11,12 @@ this diverter will activate immediately.
 Keyword arguments
 -----------------
 
-auto
-~~~~
-Boolean which indicates whether this diverter enabled itself
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``auto``
+  Boolean which indicates whether this diverter enabled itself
 automatically for the purpose of routing balls to their proper
 location(s).
 

@@ -25,7 +25,4 @@ least the ``release_time:`` but the other switch is still active.
 
 Both switches are inactive.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

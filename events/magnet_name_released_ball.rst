@@ -5,7 +5,4 @@ magnet_(name)_released_ball
 
 The magnet called (name) has just released a ball.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

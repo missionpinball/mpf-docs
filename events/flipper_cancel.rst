@@ -12,7 +12,4 @@ and ``right_flipper`` to your right flipper.
 
 See :doc:`/config/combo_switches` for details.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

@@ -6,7 +6,4 @@ ball_will_end
 The ball is about to end. This event is posted just before
 :doc:`ball_ending`.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

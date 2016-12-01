@@ -5,7 +5,4 @@ kickback_(name)_fired
 
 Kickback fired a ball.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

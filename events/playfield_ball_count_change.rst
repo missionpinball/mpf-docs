@@ -9,11 +9,13 @@ of balls that are live.
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The current number of balls on the playfield.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-change
-~~~~~~
-The change in balls from the last count.
+``balls``
+  The current number of balls on the playfield.
+
+``change``
+  The change in balls from the last count.
 

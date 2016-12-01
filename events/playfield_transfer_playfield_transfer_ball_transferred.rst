@@ -9,11 +9,13 @@ playfield (target).
 Keyword arguments
 -----------------
 
-source
-~~~~~~
-The source playfield.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-target
-~~~~~~
-The target playfield.
+``source``
+  The source playfield.
+
+``target``
+  The target playfield.
 

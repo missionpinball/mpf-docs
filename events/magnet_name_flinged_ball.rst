@@ -5,7 +5,4 @@ magnet_(name)_flinged_ball
 
 The magnet called (name) has just flinged a ball.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

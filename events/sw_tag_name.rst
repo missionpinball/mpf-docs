@@ -12,7 +12,4 @@ have a switch with ``tags: start, hello``, then the events
 Note that you can change the format of these events in your
 machine config file, but *sw_(tag_name)* is the default.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

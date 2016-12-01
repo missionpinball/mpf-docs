@@ -11,7 +11,4 @@ Posting this event is the only way to start a game in MPF, since many
 systems have to "approve" the start. (Are the balls in the right
 places, are there enough credits, etc.)
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

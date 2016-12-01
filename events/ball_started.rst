@@ -8,11 +8,13 @@ A new ball has started.
 Keyword arguments
 -----------------
 
-ball
-~~~~
-The ball number.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-player
-~~~~~~
-The player number.
+``ball``
+  The ball number.
+
+``player``
+  The player number.
 

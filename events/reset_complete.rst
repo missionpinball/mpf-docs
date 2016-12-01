@@ -5,7 +5,4 @@ reset_complete
 
 The machine reset process is complete
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

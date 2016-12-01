@@ -11,9 +11,12 @@ hits and timing. Otherwise this diverter will deactivate immediately.
 Keyword arguments
 -----------------
 
-auto
-~~~~
-Boolean which indicates whether this diverter disabled itself
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``auto``
+  Boolean which indicates whether this diverter disabled itself
 automatically for the purpose of routing balls to their proper
 location(s).
 

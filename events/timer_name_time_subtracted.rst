@@ -8,17 +8,18 @@ The timer named (name) just had some ticks removed.
 Keyword arguments
 -----------------
 
-ticks
-~~~~~
-The new current tick number this timer is at.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-ticks_remaining
-~~~~~~~~~~~~~~~
-The new number of ticks in this timer remaining.
+``ticks``
+  The new current tick number this timer is at.
 
-time_subtracted
-~~~~~~~~~~~~~~~
-How many ticks were just subtracted from this
+``ticks_remaining``
+  The new number of ticks in this timer remaining.
+
+``time_subtracted``
+  How many ticks were just subtracted from this
 timer. (This number will be positive, indicating the ticks
 subtracted.)
 

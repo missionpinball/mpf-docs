@@ -8,7 +8,4 @@ actually end until the queue is cleared.
 
 This event is posted just after :doc:`ball_will_end`
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

@@ -10,7 +10,10 @@ successfully ejected and is now able to receive balls.
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The number of balls this device can now receive.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``balls``
+  The number of balls this device can now receive.
 

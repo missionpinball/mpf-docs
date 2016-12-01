@@ -11,12 +11,14 @@ This is a relay event.
 Keyword arguments
 -----------------
 
-balls
-~~~~~
-The number of balls that have just drained. Any balls remaining
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``balls``
+  The number of balls that have just drained. Any balls remaining
 after the relay will be processed as newly-drained balls.
 
-device
-~~~~~~
-The ball device object that received the ball(s)
+``device``
+  The ball device object that received the ball(s)
 

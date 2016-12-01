@@ -11,7 +11,4 @@ This event is part of the MPF-MC boot process and is not particularly
 useful for game developers. If you want to show a "boot" slide as
 early as possible, use the *mc_ready* event.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

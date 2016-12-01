@@ -5,7 +5,4 @@ magnet_(name)_grabbing_ball
 
 The magnet called (name) is attempting to grab a ball.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

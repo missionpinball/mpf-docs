@@ -10,11 +10,13 @@ shoots again, this event is not posted a second time.
 Keyword arguments
 -----------------
 
-number
-~~~~~~
-The player number
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-player
-~~~~~~
-The player object whose turn is starting.
+``number``
+  The player number
+
+``player``
+  The player object whose turn is starting.
 

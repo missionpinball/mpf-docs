@@ -5,7 +5,4 @@ multiball_(name)_ended
 
 The multiball called (name) has just ended.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

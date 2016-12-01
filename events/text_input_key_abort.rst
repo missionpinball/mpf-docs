@@ -9,7 +9,10 @@ entering process was aborted.
 Keyword arguments
 -----------------
 
-text
-~~~~
-A string of the characters that were entered so far.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
+
+``text``
+  A string of the characters that were entered so far.
 

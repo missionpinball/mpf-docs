@@ -6,7 +6,4 @@ max_credits_reached
 Credits have just been added to the machine, but the
 configured maximum number of credits has been reached.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*

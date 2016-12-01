@@ -8,12 +8,14 @@ The ball lock device (name) has just locked additional ball(s).
 Keyword arguments
 -----------------
 
-balls_locked
-~~~~~~~~~~~~
-The number of new balls just locked.
+(See the :doc:`/events/overview/conditional` guide for details for how to
+create entries in your config file that only respond to certain combinations of
+the arguments below.)
 
-total_balls_locked
-~~~~~~~~~~~~~~~~~~
-The current total number of balls this device
+``balls_locked``
+  The number of new balls just locked.
+
+``total_balls_locked``
+  The current total number of balls this device
 has locked.
 

@@ -6,7 +6,4 @@ credits_added
 Credits (or partial credits) have just been added to the
 machine.
 
-Keyword arguments
------------------
-
-*None*
+*This event does not have any keyword arguments*
