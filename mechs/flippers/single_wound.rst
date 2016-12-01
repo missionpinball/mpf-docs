@@ -175,8 +175,6 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-.. begin_mpfdoctest:config/config.yaml
-
 ::
 
     #config_version=4
@@ -208,5 +206,3 @@ we created in this How To guide:
             main_coil: c_flipper_right
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
-
-.. end_mpfdoctest

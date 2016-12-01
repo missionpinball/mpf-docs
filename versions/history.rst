@@ -54,9 +54,9 @@ Currently in dev, estimated release date December, 2016.
 * Events that are natively posted in the MC are now sent to MPF
 * Fixed a bug to ensure that the slide_active event is only posted once per frame
 * Fixed a bug that prevented slide frames from being animated
-* Fixed a few crashes
 * Fixed a bug where videos were not stopping
 * Allow the same slide to be used on multiple displays
+* Lots of little bug fixes...
 
 0.31
 ~~~~
