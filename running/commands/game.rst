@@ -9,8 +9,8 @@ There are several command-line options you can use when running MPF. Note that
 single commands that take no options can be combined, so ``mpf game -vVa`` is the
 same as ``mpf game -v -V -a``.
 
--a
-~~
+-a (lowercase)
+~~~~~~~~~~~~~~
 
 Forces MPF to reload the config from the actual YAML config files, rather than
 from cache.
@@ -20,8 +20,8 @@ if the original files haven't changed since the last time MPF was run, it loads
 them from cache instead. Cached files are stored in the ``__mpfcache__`` folder
 in your machine folder.
 
--A
-~~
+-A (uppercase)
+~~~~~~~~~~~~~~
 
 Do not cache the config files.
 
@@ -79,6 +79,16 @@ etc. If for some reason you want to override this file, you can do so with the `
 ~~
 
 Displays the command line help and exits. (Pretty much what's on this page.)
+
+-f
+~~
+
+.. versionadded:: 0.32
+
+Forces MPF to load all assets at start (rather than the default behavior where
+some assets can be loaded only when modes start or based on other events).
+This is useful during development to ensure that all assets are valid and
+loadable.
 
 -l (lowercase "L")
 ~~~~~~~~~~~~~~~~~~
