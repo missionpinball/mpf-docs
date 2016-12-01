@@ -1,5 +1,5 @@
-Event Parameters
-================
+Conditional Events
+==================
 
 So far we've talked about how events are just strings of text, for example:
 
