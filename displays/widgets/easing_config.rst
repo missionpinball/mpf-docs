@@ -11,6 +11,11 @@ property and move them left and right:
 
 .. image::  /displays/images/easing.gif
 
+.. note::
+
+   If you're viewing the PDF version of these docs, you won't see the GIFs since
+   they're animated. You can view the docs online to see them.
+
 In order to run this example, you do not need to run the MPF core engine, just
 the MC. So name this file config.yaml and put it in a config folder, and then
 run:

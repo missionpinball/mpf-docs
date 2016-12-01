@@ -1,4 +1,4 @@
-MPF overview
+MPF Overview
 ============
 
 The Mission Pinball Framework (which we call "MPF") is free and open source
@@ -45,7 +45,7 @@ The MPF software is used to configure and control everything in your machine, in
 Read on to understand other important concepts about MPF:
 
 .. toctree::
-   :titlesonly:
+   :maxdepth: 1
 
    features
    media_controller

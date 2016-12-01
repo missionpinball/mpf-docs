@@ -43,11 +43,17 @@ red line doesn't change too much. Then towards the middle, the red line changes
 more as the transition speeds up, and then at the end (towards the upper right),
 the line changes more slowly.
 
-If you're reading this documentation online, here's an animated GIF which shows
-five different easing functions applied to animate text moving left and right.
+Here's an animated GIF which shows five different easing functions applied to
+animate text moving left and right.
+
 Don't worry about the function names. We'll cover those in a bit.
 
 .. image:: /displays/images/easing.gif
+
+.. note::
+
+   If you're viewing the PDF version of these docs, you won't see the GIFs since
+   they're animated. You can view the docs online to see them.
 
 Note that the move to the left and the move to the right are two separate
 animations, meaning the a single movement left or right is showing the same
