@@ -300,7 +300,7 @@ So next, go to the ``slide_player:`` section of your config and add an entry for
 ``mode_attract_started``. (This is the event that is posted whenever a mode starts, in the form of
 *mode_<mode_name>_started*.)
 
-By the way, if you're wondering how we know what events to use, there's an :doc:`/events/event_reference` in the
+By the way, if you're wondering how we know what events to use, there's an :doc:`event reference </events/index>` in the
 documentation which has a list of all the events in MPF as well as descriptions of when
 they're posted. You can use any of these as triggers for your slides via the ``slide_player:``.
 

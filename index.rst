@@ -37,7 +37,6 @@
    Sound</sound/index>
    Shows </shows/index>
    Assets </assets/index>
-   Events </events/index>
    Config Players </config_players/index>
    Machine Management </machine_management/index>
    MPF Monitor (GUI tool) </monitor/index>
@@ -60,10 +59,10 @@
    :titlesonly:
    :numbered: 0
 
-   Events Reference </events/event_reference>
-   Config File Reference </config/index>
-   Player Variable Reference </player_vars/index>
-   Machine Variable Reference </machine_vars/index>
+   Events</events/index>
+   Config Files</config/index>
+   Player Variables</player_vars/index>
+   Machine Variables</machine_vars/index>
    Example Config Files </examples/index>
    Example Machines </example_machines/index>
 
@@ -122,9 +121,11 @@ Understanding MPF
 
 Reference Material
 ------------------
-* :doc:`/events/event_reference`
+* :doc:`/events/index`
 * :doc:`/config/index`
 * :doc:`/examples/index`
+* :doc:`/player_vars/index`
+* :doc:`/machine_vars/index`
 * :doc:`Example machines you can learn from </example_machines/index>`
 
 Download the docs

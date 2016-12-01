@@ -1,59 +1,3 @@
-A deeper dive on Events
-=======================
-
-This guide explains some more "behind the scenes" things about how events
-work in MPF. Frankly you don't really have to read this unless you're curious.
-
-
-The Event Queue
----------------
-
-The Event Manager only processes one event at a time. So when it gets an event
-to post, it will call the handlers that have registered for notification of that
-event one-by-one. If one of those handlers wants to post another event of its
-own, that's fine. But when it posts the event since the Event Manager is busy,
-it will add the new event to an event queue. Then after the first event is done
-(meaning after all the event handlers have been called for the first event), the
-Event Handler will call the next event in the queue. The event queue can hold
-multiple events, and they will be called one-by-one in the order they were
-posted.
-
-Handler Priorities
-------------------
-
-When you have some code you want to register to be a handler for an event, you
-can optionally specify a priority. (Priority is just an integer value.) The
-default priority for events is 1. If you want a guarantee that a certain event
-handler will fire last, then register that handler with a priority that's lower
-than any other handler for that event. And if you want to guarantee that a
-handler fires first, register it with a higher priority. (In this case, "higher"
-and "lower" are literal. A handler with a priority of 500 will be called before
-a handler of 100.)
-
-The actual integer values of the priorities are arbitrary. They're called
-one-by-one, one after the other, in order from highest to lowest. Whether your
-priorities are 3, 2, and 1, or 1000, 100 and 0, or 1000, 999, 998, and 1 makes
-no difference.
-
-MPF automatically registers event handlers from modes with the priority of that
-mode, meaning high-priority modes get access to an event before lower-priority
-modes. (This is useful since it gives higher-priority modes a chance to "block"
-events from lower-priority modes.)
-
-Event callbacks
----------------
-
-When you post an event, you have the option to pass a *callback* as a parameter.
-A callback is a function or method that you want to be called once the event is
-done processing. (i.e. it's called once all the handlers that have registered
-for that event have been called. If no handlers are registered, the callback is
-called immediately.) One "gotcha" with callbacks is they're called after the
-event is done processing. If the event manager is busy (because another event is
-in progress), then the callback won't actually be called until the actual event
-is processed, which might not be immediate. In most cases you combine callbacks
-with special types of events. So to understand how this all works, we need to
-look at the different types of events you can call.
-
 Types of events
 ---------------
 
@@ -129,6 +73,13 @@ process without having to hack any of the core Mission Pinball
 Framework code. Note: you can see an example of the
 *request_to_start_game* boolean event in action in our MPF Game Start
 Sequence documentation.
+
+If any handler returns False, that event is not sent to the remaining
+handlers. (The order the handlers are called can be set by specifying a priority
+when a handler is registered.) If a boolean event has a callback and one of the
+handlers returns False, the callback is still called with a special parameter
+``ev_result=False``. This lets you take some action (if you want) on that event
+failing.
 
 Queue Events
 ~~~~~~~~~~~~
@@ -220,92 +171,3 @@ to have the next handler be called like:
 Relay events tend to work well with callbacks since you aren’t
 guaranteed they’ll fire right away.To use a relay event, add
 ev_type=’relay’ to your event post.
-
-Best practices for using events
--------------------------------
-
-When a handler responds to an event, the "flow" of the code goes into
-that handler. This means that you do *not* want a handler to take too
-long to return. If there's something that a handler needs to do that
-takes a long time, it should set up a task, a timer, or register to do
-work based on the "timer_tick" event. In other words, your handlers
-should return quickly.
-
-FAQs on events
---------------
-
-We've received several questions from users about events, so we're
-sharing a list of questions that have been asked as well as our
-answers:
-
- The documentation states, "One 'gotcha' with callbacks is
- they're called after the event is done processing. If the event manager
- is busy (because another event is in progress), then the callback
- won't actually be called until the actual event is processed, which
- might not be immediate." Does this mean that the callback is
- called after the event has been sent to all registered handlers or until
- the current handler is complete?
-
-The callback is called after all the handlers for that event have been called.
-When an event is posted, if there's another current event in progress (meaning
-that the new event was actually posted by a handler from some prior event), then
-the new event is added to the queue. (The queue is essentially a list of events
-that still need to be called). So all the handlers for the current in-progress
-event are called, then the callback is called (if a callback was specified).
-Then when that callback is done, that event is "done" and theEvent Manager checks
-the queue list to see if another event should be posted. Technically speaking
-only the Event Manager can post an event. All the other code bits that post
-events are really saying, "Hey event manager, can you please post this event?"
-And the event manager is like, "yeah yeah, I'll do it when I'm not busy."
-
-You can see this in action with verbose logging enabled where the event manager
-receives an event at one point, but the actual "post" of that event might not
-happen until hundreds of lines later.
-
- How do boolean results factor into this? This stops the event
- from being sent to the remaining handlers?
-
-Correct. If any handler returns False, that event is not sent to the remaining
-handlers. (The order the handlers are called can be set by specifying a priority
-when a handler is registered.) If a boolean event has a callback and one of the
-handlers returns False, the callback is still called with a special parameter
-``ev_result=False``. This lets you take some action (if you want) on that event
-failing.
-
- How does the event caller know when all handlers have completed
- processing?
-
-When you call any method in Python, when that method gets to the end
-of its code, it will "return" to whatever called it. (Even if that
-method calls another method, that second method will get to the end of
-its code and return back to the point that called it in the first
-method, then the first method will finish and return to whatever
-called it, etc.) The Event Handler is essentially just a mapping of
-event names to handler methods and priorities, so when it sees an
-event called "foo", it will see there are three registered handlers,
-so it will call the first one, and when that one returns it calls the
-second one, and when that one returns it calls the third one, and when
-that one returns the event method is over and then it returns and the
-game loop continues. If you add an infinite loop (or just any loop
-that takes a long time) into one of your handlers, then MPF will get
-"stuck" there. So it's up to each handler to do what it needs to do
-quickly and then return.
-
- The event manager is a big queue. First In, First Out. For example, we
- have 5 handlers for the event "foo". "foo" will be sent to all 5 before
- discarding the event and popping the event off the queue in order to
- send out the next event. But what I am trying to figureout is when the
- event manager must send to all 5 or when it can terminate early. In
- other words, if handler #2 returns a False for a boolean event, then
- handler #3,#4 and #5 never see the event? Correct?
-
-Correct.
-
- Now if it's not a boolean event, is there anything that can
- also stop/suppress the event from being seen by all the handlers? Or is
- it sent to all '5' regardless of the handlers results?
-
-Correct, if it is *not* a boolean event, then the event is sent to all
-5 handlers regardless of the results. Nothing can stop it. If you
-don't want this behavior, then post a boolean event instead of a
-regular event.

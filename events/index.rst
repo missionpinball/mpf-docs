@@ -1,134 +1,194 @@
-MPF Events
-==========
+Events
+======
+
+The concept of *events* is one of the most important concepts in MPF. MPF is an
+event-driven framework, and just about everything is either posting and event
+or responding to an event that was posted.
+
+There are several important concepts about events in MPF that you should
+understand:
 
 .. toctree::
    :titlesonly:
    :maxdepth: 1
 
-   overview/deeper_dive
-   event_reference
+   overview/index
+   overview/parameters
+   overview/multiple_things_from_one_event
+   overview/priorities
+   overview/event_types
 
-The concept of *events* is one of the most important concepts in MPF. MPF is an
-event-driven framework, which means that some things post events, and other
-things can see that a certain event was posted and they can act on it.
+Event Reference
+---------------
 
-Understanding how Events work in MPF
-------------------------------------
+Here's a list of all the "built in" events that are included in MPF and the
+MPF MC. Of course your own machine could include custom events that aren't
+on the list here.
 
-It's easiest to understand the concept of events by going through some examples.
+Every event in MPF is just a string of text. You'll see that in many cases,
+the actual event that's posted has a slight variation of the event text, typically
+incorporating something about which mechanism or logic device posted the event.
 
-For example, you might have a ``scoring:`` entry in your config which watches
-for an event called *target1_hit*, and when it sees it, it adds 1000 points
-to the player's score.
+For example, the event called :doc:`switch_(name)_active <switch_name_active>`
+will replace the "(name)" part of the event text with the actual switch name.
+So the when a switch called ``s_left_slingshot`` is activated, it will posted
+an event called *switch_s_left_slingshot_active*.
 
-In this case, the scoring system would "register a handler" for the
-*target1_hit* event, essentially telling the Event Manager, "If you see an
-event called *target1_hit*, let me know."
+.. toctree::
+   :maxdepth: 1
 
-Then later on, the switch for target 1 gets activated, and the Shot Controller
-posts the event called *target1_hit*. The Event Manager says, "Hey, I remember
-the scoring system wanted to know about that, so it tells the scoring system
-that *target1_hit* was just posted and the scoring system can wake up and deal
-with it (adding the points, in this case).
-
-Here are some fun facts about MPF events:
-
-* There are lots and lots of events in MPF. Sometimes they come really fast—a
-  dozen or more in a few milliseconds.
-* Not every event will have a handler registered. The event is still posted,
-  but no one cares.
-* Multiple handlers can be registered for the same event. (And they'll all be
-  called, one-by-one, based on the priority they asked for when they
-  registered.)
-* Event handlers are constantly added and removed throughout the lifecycle of
-  a game.
-* Event names are not case sensitive. (They're technically all converted to
-  lowercase internally.)
-
-Things that post (create) events
---------------------------------
-
-In MPF, many things create events. (We could also say they "post events" or
-that they "emit events".)
-
-Just to pick some random examples of things that post events:
-
-* A switch is hit
-* A player variable changes
-* A timer expires
-* A mode stops or starts
-* A new slide is shown on the display
-* etc.
-
-We actually have a giant list of all the events that are posted by everything
-in MPF. This is called the :doc:`event_reference`. (It's also linked from the
-"Reference" section in the menu on the left of every page in the docs website
-since it's so important.)
-
-As you read through the rest of the documentation for various aspects of MPF,
-you'll see settings for things like ``events_when_X:`` with the "X" being
-some state.
-
-For example, logic blocks have a setting called ``events_when_hit:`` where you
-can enter the name of an event. (In that case the name can be whatever you
-want, like ``events_when_hit: mpf_is_awesome``, and then when that logic block
-is hit, it will post the event *mpf_is_awesome*, and any other components that
-are registered for that event will see it and take their respective action.
-
-The point is that not every event in your machine will be in the Event
-Reference list since there are lots of places where you can create your own
-event names.
-
-Things that take action on (use) events
----------------------------------------
-
-The flipside of things that create/post/emit events is things that consume, use,
-and/or take action on certain events. These are the things that look for
-certain event names, and then when they see them, they take action.
-
-Some random examples:
-
-* The game mode will look for ball_drain events which it will handle by ending
-  the current player's ball.
-* The scoring system might look for a shot hit event to add points to the
-  player's score.
-* A jackpot mode might look for a ramp made event to play a show which will
-  flash some lights and show a jackpot slide.
-* A mode might look for the event which comes from shooting a ball into a ball
-  lock to start a multiball mode.
-* etc.
-
-As you'll see as you read through the MPF documentation, there are two main
-ways (plus a lot of little ways) to make things happen when certain events
-are posted:
-
-In the various "config" players (slide_player, led_player, show_player, etc.),
-you create entries based on event names.
-
-For example, in a config file:
-
-::
-
-   slide_player:
-      mpf_is_awesome: my_slide
-
-The above config will show the slide called "my_slide" on the display when the
-event *mpf_is_awesome* is posted. Of course this could be any event, including
-one from the Events Reference list or a custom event like we discussed above.
-
-Also, a lot of things in MPF have ``X_events:`` settings, which are where you
-can event event names that cause that action to happen. For example, you may
-have a drop target configured like this:
-
-::
-
-   drop_targets:
-      my_drop_target:
-         switch: s_drop_target_1
-         reset_coil: c_drop_target_reset
-         reset_events: mpf_is_awesome
-
-In this case, when the event *mpf_is_awesome* is posted, that will cause that
-drop target to reset. Again, this is just one random example of the literally
-hundreds of things that can take action on events, and these events could be
-from the master events list or your own custom events.
+   achievement_(name)_state_(state) <achievement_name_state_state>
+   asset_loading_complete <asset_loading_complete>
+   ball_drain <ball_drain>
+   ball_ended <ball_ended>
+   ball_ending <ball_ending>
+   ball_lock_(name)_balls_released <ball_lock_name_balls_released>
+   ball_lock_(name)_full <ball_lock_name_full>
+   ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
+   ball_save_(name)_disabled <ball_save_name_disabled>
+   ball_save_(name)_enabled <ball_save_name_enabled>
+   ball_save_(name)_grace_period <ball_save_name_grace_period>
+   ball_save_(name)_hurry_up <ball_save_name_hurry_up>
+   ball_save_(name)_saving_ball <ball_save_name_saving_ball>
+   ball_save_(name)_timer_start <ball_save_name_timer_start>
+   ball_search_failed <ball_search_failed>
+   ball_search_started <ball_search_started>
+   ball_search_stopped <ball_search_stopped>
+   ball_started <ball_started>
+   ball_starting <ball_starting>
+   ball_will_end <ball_will_end>
+   balldevice_ball_missing <balldevice_ball_missing>
+   balldevice_balls_available <balldevice_balls_available>
+   balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
+   balldevice_captured_from_(device) <balldevice_captured_from_device>
+   balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
+   balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
+   balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
+   balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
+   balldevice_(name)_ball_enter <balldevice_name_ball_enter>
+   balldevice_(name)_ball_left <balldevice_name_ball_left>
+   balldevice_(name)_ball_lost <balldevice_name_ball_lost>
+   balldevice_(name)_eject_broken <balldevice_name_eject_broken>
+   balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
+   balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
+   balls_in_play <balls_in_play>
+   cancel_ball_search <cancel_ball_search>
+   clear <clear>
+   client_connected <client_connected>
+   client_disconnected <client_disconnected>
+   collecting_balls <collecting_balls>
+   collecting_balls_complete <collecting_balls_complete>
+   (combo_switch)_(state) <combo_switch_state>
+   credits_added <credits_added>
+   display_(name)_initialized <display_name_initialized>
+   display_(name)_ready <display_name_ready>
+   displays_initialized <displays_initialized>
+   diverter_(name)_activating <diverter_name_activating>
+   diverter_(name)_deactivating <diverter_name_deactivating>
+   diverter_(name)_disabling <diverter_name_disabling>
+   diverter_(name)_enabling <diverter_name_enabling>
+   drop_target_bank_(name)_down <drop_target_bank_name_down>
+   drop_target_bank_(name)_mixed <drop_target_bank_name_mixed>
+   drop_target_bank_(name)_up <drop_target_bank_name_up>
+   drop_target_(name)_down <drop_target_name_down>
+   drop_target_(name)_up <drop_target_name_up>
+   enabling_credit_play <enabling_credit_play>
+   enabling_free_play <enabling_free_play>
+   flipper_cancel <flipper_cancel>
+   game_ended <game_ended>
+   game_ending <game_ending>
+   game_start <game_start>
+   game_started <game_started>
+   game_starting <game_starting>
+   init_done <init_done>
+   init_phase_1 <init_phase_1>
+   init_phase_2 <init_phase_2>
+   init_phase_3 <init_phase_3>
+   init_phase_4 <init_phase_4>
+   init_phase_5 <init_phase_5>
+   kickback_(name)_fired <kickback_name_fired>
+   loading_assets <loading_assets>
+   logicblock_(name)_complete <logicblock_name_complete>
+   logicblock_(name)_hit <logicblock_name_hit>
+   logicblock_(name)_updated <logicblock_name_updated>
+   machine_reset_phase_1 <machine_reset_phase_1>
+   machine_reset_phase_2 <machine_reset_phase_2>
+   machine_reset_phase_3 <machine_reset_phase_3>
+   machine_var_(name) <machine_var_name>
+   magnet_(name)_flinged_ball <magnet_name_flinged_ball>
+   magnet_(name)_flinging_ball <magnet_name_flinging_ball>
+   magnet_(name)_grabbed_ball <magnet_name_grabbed_ball>
+   magnet_(name)_grabbing_ball <magnet_name_grabbing_ball>
+   magnet_(name)_released_ball <magnet_name_released_ball>
+   magnet_(name)_releasing_ball <magnet_name_releasing_ball>
+   master_volume_decrease <master_volume_decrease>
+   master_volume_increase <master_volume_increase>
+   max_credits_reached <max_credits_reached>
+   mc_ready <mc_ready>
+   mc_reset_phase_1 <mc_reset_phase_1>
+   mc_reset_phase_2 <mc_reset_phase_2>
+   mc_reset_phase_3 <mc_reset_phase_3>
+   mode_(name)_started <mode_name_started>
+   mode_(name)_starting <mode_name_starting>
+   mode_(name)_stopped <mode_name_stopped>
+   mode_(name)_stopping <mode_name_stopping>
+   motor_(name)_reached_(position) <motor_name_reached_position>
+   multi_player_ball_started <multi_player_ball_started>
+   multiball_(name)_ended <multiball_name_ended>
+   multiball_(name)_lost_ball <multiball_name_lost_ball>
+   multiball_(name)_shoot_again <multiball_name_shoot_again>
+   multiball_(name)_shoot_again_ended <multiball_name_shoot_again_ended>
+   multiball_(name)_started <multiball_name_started>
+   multiplayer_game <multiplayer_game>
+   not_enough_credits <not_enough_credits>
+   player_add_request <player_add_request>
+   player_add_success <player_add_success>
+   player_turn_start <player_turn_start>
+   player_turn_stop <player_turn_stop>
+   player_(var_name) <player_var_name>
+   (playfield)_active <playfield_active>
+   (playfield)_ball_count_change <playfield_ball_count_change>
+   playfield_transfer_(playfield_transfer)_ball_transferred <playfield_transfer_playfield_transfer_ball_transferred>
+   reel_(name)_advance <reel_name_advance>
+   reel_(name)_hw_value <reel_name_hw_value>
+   reel_(name)_ready <reel_name_ready>
+   reel_(name)_resync <reel_name_resync>
+   request_to_start_game <request_to_start_game>
+   reset_complete <reset_complete>
+   scorereelgroup_(name)_resync <scorereelgroup_name_resync>
+   scorereelgroup_(name)_rollover <scorereelgroup_name_rollover>
+   scorereelgroup_(name)_valid <scorereelgroup_name_valid>
+   (shot_group)_complete <shot_group_complete>
+   (shot_group)_hit <shot_group_hit>
+   (shot_group)_(profile)_complete <shot_group_profile_complete>
+   (shot_group)_(profile)_hit <shot_group_profile_hit>
+   (shot_group)_(profile)_(state)_complete <shot_group_profile_state_complete>
+   (shot_group)_(profile)_(state)_hit <shot_group_profile_state_hit>
+   (shot)_hit <shot_hit>
+   (shot)_(profile)_hit <shot_profile_hit>
+   (shot)_(profile)_(state)_hit <shot_profile_state_hit>
+   (shot)_(state)_hit <shot_state_hit>
+   shutdown <shutdown>
+   single_player_ball_started <single_player_ball_started>
+   slam_tilt <slam_tilt>
+   slide_(name)_active <slide_name_active>
+   slide_(name)_created <slide_name_created>
+   slide_(name)_removed <slide_name_removed>
+   sw_(playfield)_active <sw_playfield_active>
+   sw_(tag_name) <sw_tag_name>
+   switch_(name)_active <switch_name_active>
+   switch_(name)_inactive <switch_name_inactive>
+   text_input_(key)_abort <text_input_key_abort>
+   text_input_(key)_complete <text_input_key_complete>
+   tilt <tilt>
+   tilt_clear <tilt_clear>
+   tilt_warning <tilt_warning>
+   tilt_warning_(number) <tilt_warning_number>
+   timer_(name)_complete <timer_name_complete>
+   timer_(name)_paused <timer_name_paused>
+   timer_(name)_started <timer_name_started>
+   timer_(name)_stopped <timer_name_stopped>
+   timer_(name)_tick <timer_name_tick>
+   timer_(name)_time_added <timer_name_time_added>
+   timer_(name)_time_subtracted <timer_name_time_subtracted>
+   unexpected_ball_on_(playfield) <unexpected_ball_on_playfield>

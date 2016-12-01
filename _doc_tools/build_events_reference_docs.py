@@ -31,24 +31,41 @@ class EventDocParser(object):
 
     def write_index(self):
 
-        index = '''Event Reference
-===============
+        index = '''Events
+======
+
+The concept of *events* is one of the most important concepts in MPF. MPF is an
+event-driven framework, and just about everything is either posting and event
+or responding to an event that was posted.
+
+There are several important concepts about events in MPF that you should
+understand:
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   overview/index
+   overview/conditional_events
+   overview/multiple_things_from_one_event
+   overview/priorities
+   overview/event_types
+
+Event Reference
+---------------
 
 Here's a list of all the "built in" events that are included in MPF and the
 MPF MC. Of course your own machine could include custom events that aren't
 on the list here.
 
-Every event in MPF is just a string of text. You'll see that almost every
-event that is posted has a slight variation of the event text, typically
+Every event in MPF is just a string of text. You'll see that in many cases,
+the actual event that's posted has a slight variation of the event text, typically
 incorporating something about which mechanism or logic device posted the event.
 
 For example, the event called :doc:`switch_(name)_active <switch_name_active>`
 will replace the "(name)" part of the event text with the actual switch name.
 So the when a switch called ``s_left_slingshot`` is activated, it will posted
 an event called *switch_s_left_slingshot_active*.
-
-See the :doc:`/events/index` guide for more information on how MPF uses
-events.
 
 .. toctree::
    :maxdepth: 1
