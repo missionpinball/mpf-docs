@@ -285,7 +285,7 @@ The future is bright!
 
 One of the things we love most about pinball is that it’s a real, physical thing.
 Traditional arcade games have lost much of their earnings power because everyone has a
-PS4 and 60″ tv at home. But most people don’t have pinball machines at home. And even
+PS4 and 60" tv at home. But most people don’t have pinball machines at home. And even
 though there are pinball apps for every device out there (which we LOVE, by the way), it
 just doesn't compare to actually banging a metal ball around with some mechanical levers.
 

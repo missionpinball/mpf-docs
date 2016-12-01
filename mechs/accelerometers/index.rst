@@ -9,7 +9,7 @@ Accelerometers
 
 An accelerometer is a device that measures proper acceleration; proper acceleration is not the same as coordinate
 acceleration (rate of change of velocity). For example, an accelerometer at rest on the surface of the Earth will
-measure an acceleration due to Earth's gravity, straight upwards (by definition) of g ≈ 9.81 m/s2. By contrast,
+measure an acceleration due to Earth's gravity, straight upwards (by definition) of g ~= 9.81 m/s2. By contrast,
 accelerometers in free fall (falling toward the center of the Earth at a rate of about 9.81 m/s2) will measure zero.
 
 Accelerometers in pinball could be used to measure a machine's TILT, replacing the tilt bob, to measure vibration, or

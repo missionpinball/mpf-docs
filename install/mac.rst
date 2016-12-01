@@ -8,7 +8,7 @@ app, copy it to your *Applications* folder, register it with your system, and yo
 
 MPF works on Mac OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
 
-The reason went with the single MPF bundle which has everything built in is because Mac OS X has Python
+The reason went with the single MPF bundle which includes Python in is the because the Mac OS has Python
 2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
 deal with side-by-side Python installations which can get hairy. Plus MPF requires several graphics and
 sound libraries which are sort of a pain to get installed, so really it's easier to just get everything
