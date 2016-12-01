@@ -18,8 +18,7 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``host``
-  The hostname or IP address that the socket is listening
-on.
+  The hostname or IP address that the socket is listening on.
 
 ``port``
   The port that the socket is listening on.

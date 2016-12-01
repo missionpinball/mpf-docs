@@ -17,6 +17,5 @@ the arguments below.)
   The new tick number this timer is at.
 
 ``ticks_remaining``
-  The new number of ticks in this timer
-remaining.
+  The new number of ticks in this timer remaining.
 

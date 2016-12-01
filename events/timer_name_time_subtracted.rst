@@ -19,7 +19,5 @@ the arguments below.)
   The new number of ticks in this timer remaining.
 
 ``time_subtracted``
-  How many ticks were just subtracted from this
-timer. (This number will be positive, indicating the ticks
-subtracted.)
+  How many ticks were just subtracted from this timer. (This number will be positive, indicating the ticks subtracted.)
 

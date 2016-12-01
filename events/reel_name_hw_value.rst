@@ -13,6 +13,5 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``value``
-  The physical confirmed value of the real. (Will be -999
-if the reel is not at a position with a switch.
+  The physical confirmed value of the real. (Will be -999 if the reel is not at a position with a switch.
 

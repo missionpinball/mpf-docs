@@ -180,6 +180,10 @@ the arguments below.)\n\n'''
         args_dict = self.string_to_args_dict(args_string, args)
 
         for k, v in sorted(args_dict.items()):
+
+            v = v.replace('\n', ' ')
+            v = re.sub(' +', ' ', v)
+
             output += '``' + k + '``\n'
             output += '  ' + v + '\n\n'
 

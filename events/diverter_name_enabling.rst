@@ -16,7 +16,5 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``auto``
-  Boolean which indicates whether this diverter enabled itself
-automatically for the purpose of routing balls to their proper
-location(s).
+  Boolean which indicates whether this diverter enabled itself automatically for the purpose of routing balls to their proper location(s).
 

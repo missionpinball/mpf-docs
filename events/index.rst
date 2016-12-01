@@ -13,7 +13,7 @@ understand:
    :maxdepth: 1
 
    overview/index
-   overview/parameters
+   overview/conditional
    overview/multiple_things_from_one_event
    overview/priorities
    overview/event_types

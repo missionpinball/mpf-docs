@@ -15,6 +15,5 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``target``
-  The target device which was expecting to receive a ball
-from this device.
+  The target device which was expecting to receive a ball from this device.
 

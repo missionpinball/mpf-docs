@@ -35,19 +35,13 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``change``
-  If the player variable just changed, this will be the
-amount of the change. If it's not possible to determine a numeric
-change (for example, if this player variable is a string), then
-this *change* value will be set to the boolean *True*.
+  If the player variable just changed, this will be the amount of the change. If it's not possible to determine a numeric change (for example, if this player variable is a string), then this *change* value will be set to the boolean *True*.
 
 ``player_num``
-  The player number this variable just changed for,
-starting with 1. (e.g. Player 1 will have *player_num=1*, Player 4
-will have *player_num=4*, etc.)
+  The player number this variable just changed for, starting with 1. (e.g. Player 1 will have *player_num=1*, Player 4 will have *player_num=4*, etc.)
 
 ``prev_value``
-  The previous value of this player variable, e.g. what
-it was before the current value.
+  The previous value of this player variable, e.g. what it was before the current value.
 
 ``value``
   The new value of this player variable.

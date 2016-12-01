@@ -16,8 +16,7 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``balls``
-  The number of balls that have just drained. Any balls remaining
-after the relay will be processed as newly-drained balls.
+  The number of balls that have just drained. Any balls remaining after the relay will be processed as newly-drained balls.
 
 ``device``
   The ball device object that received the ball(s)

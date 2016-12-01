@@ -16,6 +16,5 @@ the arguments below.)
   The number of new balls just locked.
 
 ``total_balls_locked``
-  The current total number of balls this device
-has locked.
+  The current total number of balls this device has locked.
 

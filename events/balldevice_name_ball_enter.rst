@@ -18,8 +18,7 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``device``
-  A reference to the ball device object that is posting this
-event.
+  A reference to the ball device object that is posting this event.
 
 ``unclaimed_balls``
   The number of balls that have not yet been claimed.

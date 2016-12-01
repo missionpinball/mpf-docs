@@ -16,8 +16,7 @@ the arguments below.)
   The number of balls that just left
 
 ``num_attempts``
-  The current count of how many eject attempts have
-been made.
+  The current count of how many eject attempts have been made.
 
 ``target``
   The device the ball is heading to.

@@ -17,6 +17,5 @@ the arguments below.)
   The number of balls that have successfully ejected.
 
 ``target``
-  The target device that has received (or will be receiving)
-the ejected ball(s).
+  The target device that has received (or will be receiving) the ejected ball(s).
 
