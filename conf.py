@@ -250,7 +250,10 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': r'''
+\renewcommand\thesection{\hspace*{-0.5em}}
+\renewcommand\thesubsection{\hspace*{-0.5em}}
+''',
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
