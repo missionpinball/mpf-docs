@@ -39,5 +39,6 @@ them, with explanations of how to use them in config files and in shows.
    show_player
    slide_player
    sound_player
+   track_player
    trigger_player
    widget_player
