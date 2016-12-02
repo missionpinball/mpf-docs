@@ -91,6 +91,10 @@ Everything you need to know about the `Mission Pinball Framework <http://mission
    You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
 
+**Note about MPF versions:** The latest released version of MPF is |release|, but the documentation you're reading now
+is valid for MPF versions |version|. See the :doc:`MPF software & documentation versions </versions/understanding>`
+page for details.
+
 How the documentation is organized
 ----------------------------------
 
