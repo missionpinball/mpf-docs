@@ -61,6 +61,10 @@ Dec 1, 2016
 * Fixed a bug that prevented slide frames from being animated
 * Fixed a bug where videos were not stopping
 * Allow the same slide to be used on multiple displays
+* Switch to GStreamer instead of SDL_Mixer for loading and streaming sounds. (SDL2 still used for all sound output.)
+* Sound file streaming now supported (streamed from disk instead of preloaded into memory)
+* New "track_player" config controls sounds at the track-level (fade, volume, play, pause, stop, etc.)
+* Custom loading & unloading events at the individual sound level.
 * Lots of little bug fixes...
 
 0.31
