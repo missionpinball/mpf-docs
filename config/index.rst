@@ -122,6 +122,7 @@ your machine-wide config, a mode-specific config, or both.
    text_strings: <text_strings>
    tilt: <tilt>
    timers: <timers>
+   track_player: <track_player>
    trigger_player: <trigger_player>
    video_pools: <video_pools>
    videos: <videos>

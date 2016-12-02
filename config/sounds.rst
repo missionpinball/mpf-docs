@@ -69,6 +69,14 @@ A list of one or more names of events that MPF will post when this sound loops b
 beginning while playing. Enter the list in the MPF config list format. These events are posted
 exactly as they’re entered.
 
+streaming:
+~~~~~~~~~~
+Boolean (True/False or Yes/No). Default: ``False``
+
+.. versionadded:: 0.32
+
+If true, this sound is streamed from disk rather than completely loaded into memory.
+
 file:
 ~~~~~
 Single value, type: ``string``. Default: ``None``

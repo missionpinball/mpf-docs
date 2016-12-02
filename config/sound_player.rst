@@ -38,6 +38,10 @@ The ``action:`` setting controls what action will be performed on the specified 
 + ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
   sound (the sound will continue to play to the end of the current loop). In addition, any queued
   instances of the sound awaiting playback will be removed/canceled.
++ ``load`` - Loads the specified sound or sound pool from its source file to prepare it to be played.
+  The request is ignored if the sound is already loaded.
++ ``unload`` - Unloads the specified sound or sound pool from memory or streaming.  All instances of the sound
+  or sound pool will be immediately stopped. The request is ignored if the sound is not currently loaded.
 
 Other available optional settings:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
