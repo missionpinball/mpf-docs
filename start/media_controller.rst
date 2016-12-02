@@ -1,30 +1,30 @@
 The MPF "Media Controller"
 --------------------------
 
-One of the most important things to understand about the architecture
-of MPF is that the core MPF game engine is completely separate from
-the process that controls graphics and audio. We call the thing that
-handles graphics and audio a "media controller." The game engine and
-media controller talk to each other via something called "BCP"
-(which is a protocol we created for this purpose which stands for
-"Backbox Control Protocol").
+All modern pinball machines use graphics and sound. MPF's architecture
+is build so that the core "game" engine is completely separate from
+the "media" engine.
+
+The "game" engine is the MPF software itself, and the "media" engine
+is something called the MPF Media Controller (which we often
+abbreviate as "MPF-MC").
+
+When you run MPF, these two components are two separate processes that
+talk to each other via something called the "Backbox Control Protocol".
+
+The details and inner workings of this are not really important, (and
+frankly they're mostly hidden from you).
+
+But as you start to learn about MPF, just keep in mind that the part
+of MPF that runs your game and controls the hardware is separate
+from the part that shows the graphics and plays the sounds.
 
 Here's a diagram that shows what each piece does:
 
-.. image:: images/mpf_game_engine_mc.png
+.. image:: /mc/images/mpf_game_engine_mc.png
 
-Why are the MPF game engine and media controller two separate processes?
-Two reasons:
-
-First, having two processes means that each one can run on a separate core
-in a multi-core host computer. This makes efficient use of hardware
-since the trend is to have multiple cores. If the game engine and
-media controller were combined, then your quad-core Raspberry Pi 3
-would have all the MPF stuff running on one core while the other three
-cores were wasted doing nothing.
-
-Second, having two processes means you can replace our MPF
-media controller with something else if you want different features.
-For example, there is a group of people building an open source Unity
-3D-based media controller which can be used for very advanced 3D
-display graphics.
+More details about MPF's media controller architecture, as well as
+guides which show you how to run them on separate computers, or even
+to replace MPF's Media Controller with one based on Unity 3D or something
+you write yourself, are available in the :doc:`/mc/index` section of
+the documentation.

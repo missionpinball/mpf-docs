@@ -33,6 +33,7 @@
    Control Systems / Hardware </hardware/index>
    Pinball Mechanisms </mechs/index>
    Game Logic </game_logic/index>
+   Media Controllers & MPF-MC </mc/index>
    Displays & Graphics</displays/index>
    Sound</sound/index>
    Shows </shows/index>
@@ -128,6 +129,7 @@ Topic guides
 * :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
 * :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
 * :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
+* :doc:`/mc/index`: The MPF Media Controller (MPF-MC), the Unity 3D Backbox Server, creating your own MC
 * :doc:`/sound/index`: sound tracks, music, volume, sound effects
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
