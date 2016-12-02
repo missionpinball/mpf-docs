@@ -7,49 +7,39 @@ MPF works and to verify that everything is installed correctly.
 1. Download the MPF examples
 ----------------------------
 
-There are several sample games and other things in a software repository
-called "mpf-examples" on GitHub. This repo doesn't have an installer,
-rather, you just download it and start using the examples it contains.
-
-Each software repository in GitHub has several "branches". (Think of these
-kind of like versions.) The mpf-examples repository has branches that
-match the version of MPF. For example, the 0.21 branch of the mpf-examples
-repository has examples for MPF 0.21, the 0.30 branch has examples for
-MPF 0.30, etc.
-
-Since the documentation you're reading here is about MPF 0.31, download
-a zip file of the 0.31 branch of MPF examples here:
-`here <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
-
-Unzip the file to any location you want. It doesn't have
-to be in the same folder as MPF. (In fact when you installed MPF, it
-was installed to some system folder that you probably can't even find.
-So for these example files, just put them somewhere easy.)
+There are several sample game configs (along with some templates and
+stuff) which you can download. Instructions are in the
+:doc:`/example_machines/index` page. Follow them to download and
+unzip the mpf-examples repo.
 
 2. Run *Demo Man*, a sample game that comes with MPF
 ----------------------------------------------------
 
 One of the development machines we have for MPF is a 1994 Williams
-*Demolition Man*, and we've included example game configuration files
-for a game we call *Demo Man* (which runs on a Williams *Demolition
-Man* machine) in the MPF examples package. So at this point you can run
-*Demo Man* (using the software-only "smart virtual" platform* with no
-physical pinball hardware attached since you probably don't have a
-*Demolition Man* machine) just to make sure that everything is up and
-running properly. To do this, open a command prompt and switch to the
-folder where you unzipped the mpf-examples ZIP file, then change to
-the ``demo_man`` folder and run ``mpf both -x -v``.
+*Demolition Man*, and it's included in the *mpf-examples* repo
+you downloaded in Step 1.
 
-(The "mpf both" command launches both the MPF game engine and
-media controller at the same time, and the "-x" command line option
+So at this point you can run *Demo Man* (which is what we call
+it—get it??) with the software-only "smart virtual" platform mode with no
+physical pinball hardware attached just to make sure that everything is up and
+running properly.
+
+To do this, open a command prompt and switch to the
+folder where you unzipped the mpf-examples ZIP file, then change to
+the ``demo_man`` folder and run ``mpf both -X -v``.
+
+(Note that's an uppercase "X" and a lowercase "v".)
+
+The ``mpf both`` command launches both the MPF game engine and
+media controller at the same time, the ``-X`` command line option
 tells MPF to *not* try to connect to the physical hardware since you
 most likely don't have a Demolition Man machine connected to your
-computer right now, and the "-v" option sets the logging level to
-verbose):
+computer right now, and the ``-v`` option sets the logging level to
+verbose:
 
 ::
 
-   C:\mpf-examples\demo_man>mpf both -x -v
+   C:\mpf-examples\demo_man>mpf both -X -v
 
 You should see a bunch of stuff scroll by and a pop up window which
 shows the Demo Man DMD, like this:

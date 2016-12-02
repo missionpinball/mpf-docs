@@ -141,6 +141,7 @@ Reference guides
 * :doc:`/examples/index`: Huge list of example config files you can learn from.
 * :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
 * :doc:`/machine_vars/index`: Lists all the standard machine variables.
+* :doc:`Example Machines </example_machines/index>`: List of several example machine projects.
 
 Developer guides
 ----------------
