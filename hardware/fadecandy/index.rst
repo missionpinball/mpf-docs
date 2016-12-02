@@ -144,7 +144,7 @@ Consider the following config:
          number: 0  # first LED on connector 0
       l_led1:
          number: 1  # second LED on connector 0
-      l_led0:
+      l_led2:
          number: 128  # first LED on connector 2
 
 6a. Numbering with more than one FadeCandy board
@@ -160,7 +160,7 @@ If you have more than one FadeCandy board, you can specify the board number
          number: 0  # first LED on connector 0 of the first board
       l_led1:
          number: 0-1  # second LED on connector 0 of the first board
-      l_led0:
+      l_led2:
          number: 1-128  # first LED on connector 2 of the second board
 
 (If you only have one FadeCandy board, MPF automatically adds the ``0-``

@@ -85,8 +85,8 @@ The full list of available commands is covered in the documentation for each com
 Understanding how this works
 ----------------------------
 
-Starting in MPF 0.30, when you install MPF, the command ``mpf`` is registered with your system. You can
-open a command prompt and run "mpf", by itself, from anywhere.
+When you install MPF, the command ``mpf`` is registered with your system. Then you can
+open a command prompt and run "mpf" from any folder.
 
 There are several sub-commands you can specify when you run MPF. You specify a
 sub-command by running ``mpf <command>``. (Some mpf commands take additional

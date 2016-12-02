@@ -17,8 +17,8 @@ from cache.
 
 MPF contains a caching mechanism that caches YAML config files, and
 if the original files haven't changed since the last time MPF was run, it loads
-them from cache instead. Cached files are stored in the ``__mpfcache__`` folder
-in your machine folder.
+them from cache instead. Cached files are stored in your machine's temp folder
+which varies depending on your system.
 
 -A (uppercase)
 ~~~~~~~~~~~~~~

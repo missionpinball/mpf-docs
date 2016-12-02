@@ -62,7 +62,7 @@ your pinball machine.
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
      switches, & incandescent lights
 
-* :doc:`"Virtual" controllers </virtual/index>`
+* :doc:`Virtual (software-only) controllers </virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
      it's not connected to physical hardware. (This is good for working on
      your game when you're not around your machine, or if you don't have

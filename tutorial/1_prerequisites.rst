@@ -47,6 +47,13 @@ That command should print something like ``MPF v0.30.1``. Note that the version 
 The last number (the "z") is the patch number and doesn't have any functional changes. (In other words, MPF
 0.30.0 and 0.30.2 have the same functions and features.)
 
+.. tip::
+
+   We highly recommend that you use the latest version of MPF, especially if you're starting out and
+   don't have config files to migrate. To find out which version of MPF is the latest, visit the
+   `MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>` and look at the banner
+   welcome message at the top of the page.
+
 If this command gives you an error, then go back to the :doc:`/install/index` section to make sure
 MPF is installed. If it prints a version number lower than |version|, then install the latest version of
 MPF. And if it shows that you have a newer version of MPF (based on the first two numbers), then go to
@@ -61,4 +68,4 @@ If you're reading this tutorial online, note that there are "Previous" and
 click those to follow along. (And if you'd like to download a copy of this
 documentation to read offline, click the "Read the Docs" link at the bottom
 of the menu bar on the left for links to PDF, HTML, and Epub versions of this
-documentation.
+documentation.)

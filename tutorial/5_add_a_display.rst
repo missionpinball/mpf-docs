@@ -349,8 +349,8 @@ Since the *attract_started* slide only has one widget, and since all we did with
 specify text (but not size, color, position, font, etc.), we just get the default text properties
 which are small, arial, and white.
 
-7. Launching the MPF game engine and MPF MC at the same time (Windows / Linux only)
------------------------------------------------------------------------------------
+7. Launching the MPF game engine and MPF MC at the same time
+------------------------------------------------------------
 
 In the previous step, you used two separate console windows to launch ``mpf mc`` and ``mpf`` separately.
 (If you do this, by the way, you can launch either one first and it will wait for the other one.)
@@ -360,9 +360,7 @@ called ``mpf both`` which launches both the game engine and the MC together.
 
 .. note::
 
-   Unfortunately the "mpf both" command only works on Windows and Linux. It crashes
-   on the Mac. (We don't know why.) So if you're using a Mac, for now just continue
-   to run ``mpf`` and ``mpf mc`` separately.
+   If you're using a Mac, you need to use MPF 0.32 or newer for ``mpf both`` to work.
 
 Use it just like the others:
 
