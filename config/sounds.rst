@@ -25,6 +25,7 @@ Here's an example:
         extra_ball:
             file: extra_ball_12753.wav
             events_when_stopped: extra_ball_callout_finished
+            streaming: False
             track: voice
             volume: -4.5 db
             priority: 50
@@ -122,6 +123,19 @@ for when you hit a pop bumper or slingshot) might only make sense if they're pla
 in those cases you might want to use a short (or no) queue time. The default setting is "None" which
 means this sound will have no queue limit and will always play eventually.
 
+streaming:
+~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Indicates whether or not the sound sound will be streamed (rather than stored in memory).
+Streaming sounds are limited to a single instance of the sound playing at a time.  Multiple
+different streaming sounds may be played simultaneously, just not more than a single
+instance of a particular sound. When ``streaming`` is set to ``False``, the ``simultaneous_limit``
+setting is ignored and a value of 1 is used.
+
 simultaneous_limit:
 ~~~~~~~~~~~~~~~~~~~
 
@@ -136,7 +150,8 @@ the sound will be managed.  This setting is useful for sounds that can be trigge
 succession (such as spinners and pop bumpers).  Setting a limit will ensure a reasonable number
 of instances will be played simultaneously and not overwhelm the audio mix.  The default value of
 ``None`` indicates no limits will be placed on the number of instances of the sound that may be
-played at once up to the limit of the track.
+played at once up to the limit of the track.  The value of this setting is ignored when the
+``streaming`` setting has a value of ``False``.
 
 stealing_method:
 ~~~~~~~~~~~~~~~~

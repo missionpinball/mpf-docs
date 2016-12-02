@@ -49,5 +49,7 @@ You configure your sound system (including tracks) in the :doc:`sound_system: </
 section of your machine configuration file. You add settings for individual sound files in the
 :doc:`sounds: </config/sounds>` section and you can configure sounds to automatically play when
 selected MPF events are posted in the :doc:`sound_player: </config_players/sound_player>` section.
-Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.
+Sound pools are specified in the :doc:`sound_pools: </config/sound_pools>` section.  Tracks can be
+controlled when selected MPF events are posted in the
+:doc:`track_player: </config_players/track_player>` section.
 

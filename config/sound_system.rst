@@ -135,3 +135,36 @@ This is the volume setting for this track (how loud will it be), as either a val
 1.0 or a decibel value between -inf and 0.0 db. Note that each track's volume will be combined
 with the overall system volume. So if your MPF master volume is set to 0.8 (80%) and you have a
 track set to 0.5 (50%), sounds on that track will play at 40% overall volume (50% of 80%).
+
+events_when_played:
+```````````````````
+
+.. versionadded:: 0.32
+
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is played or resumed after
+being stopped/paused. Enter the list in the MPF config list format. These events are posted
+exactly as they’re entered.
+
+events_when_stopped:
+````````````````````
+
+.. versionadded:: 0.32
+
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is stopped. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_paused:
+```````````````````
+
+.. versionadded:: 0.32
+
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is paused. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+

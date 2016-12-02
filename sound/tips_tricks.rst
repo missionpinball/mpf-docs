@@ -59,3 +59,33 @@ are a few suggestions:
 For more information on creating shows for your LED, see the :doc:`Shows </shows/index>`
 documentation
 
+Pausing Background Music While a Video is Playing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32
+
+With the addition of the new :doc:`track_player </config/track_player>` config player in 0.32, it
+is now possible to control audio tracks using MPF events. One common use of this new functionality
+is to pause your music track while you play a video and resume the music when the video is
+finished playing.
+
+The basic concept is to add an event to the video that is triggered when the video is played and
+one when the video is stopped.  Those events are then added to the ``track_player`` section of
+your config file:
+
+::
+
+    track_player:
+        my_video_is_playing:
+            music:
+                action: pause
+                fade: 1 sec
+        my_video_has_stopped:
+            music:
+                action: play
+                fade: 1 sec
+
+That's all there is to it.  Now whenever the ``my_video_is_playing`` MPF event is posted, the
+music track will be paused.  It will be resumed when the ``my_video_has_stopped`` MPF event
+is posted.
+

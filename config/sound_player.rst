@@ -38,6 +38,11 @@ The ``action:`` setting controls what action will be performed on the specified 
 + ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
   sound (the sound will continue to play to the end of the current loop). In addition, any queued
   instances of the sound awaiting playback will be removed/canceled.
++ ``load`` - Loads the specified sound or sound pool from its source file into memory to prepare it
+  to be played.  The request is ignored if the sound is already loaded.
++ ``unload`` - Unloads the specified sound or sound pool from memory.  All instances of the sound
+  or sound pool will be immediately stopped. The request is ignored if the sound is not currently
+  loaded.
 
 Other available optional settings:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,4 +72,15 @@ configuration" and for the sound player it is simply the name of the sound asset
 both configuration files and show steps.  In the config file example above,
 ``play_sound_slingshot: slingshot_01`` is an example using the express configuration (sound name
 only).
+
+Sound behavior upon mode (or show) stop
+---------------------------------------
+
+When the mode or show stops that contains a ``sound_player``, all sounds started in that mode or
+show will continue to play and stop automatically when they reach their end. Sounds that are
+looping will have their looping stopped so the sound will no longer continue to loop and will stop
+when they reach their end. Sounds that are pending playback and are queued will be canceled
+(removed from the queue) and will not be played. If you need a sound to be stopped immediately
+when a mode or show ends, you will need to add an entry in the ``sound_player`` to trigger a stop
+action based on the mode or show stop event.
 

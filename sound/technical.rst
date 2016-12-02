@@ -2,7 +2,7 @@ MPF Sound & Audio Technical Overview
 ====================================
 
 The MPF MC Audio Interface is a custom audio Python extension library with features designed to
-support common pinball sound requirements.  It is written on top of the SDL2 and SDL_Mixer
+support common pinball sound requirements.  It is written on top of the SDL2 and GStreamer
 libraries that are installed with Kivy which is required to run the MPF MC software (no additional
 installs necessary for the audio library).
 
@@ -20,12 +20,12 @@ library through its mutex-related functions. The audio library also uses the SDL
 conversion functions to convert between various low-level audio formats to communicate with the
 system sound hardware.
 
-SDL_Mixer (`https://www.libsdl.org/projects/SDL_mixer/ <https://www.libsdl.org/projects/SDL_mixer/>`_)
-is an add-on library for SDL2 that provides basic audio mixing, sound loading and playback, and
-sound streaming capabilities.  The MPF MC audio interface does not use the mixing features of
-SDL_Mixer. Instead, it mainly utilizes the sound file loading functions and streaming format
-functions of the library.  The MPF MC audio library interfaces with SDL_Mixer as a custom music
-player and outputs its sound through the SDL_Mixer music channel.
+GStreamer (`https://gstreamer.freedesktop.org/ <https://gstreamer.freedesktop.org/>`_) is an open
+source, cross-platform pipeline-based multimedia framework that links together a wide variety of
+media-handling components (including simple audio playback, audio and video playback, recording,
+streaming and editing) to complete complex workflows. The MPF MC audio interface uses GStreamer
+for all its sound file loading functions and real-time audio streaming. All audio is fed into SDL2
+for final output.
 
 The audio interface is divided into tracks, which are analogous to channels on an audio mixer.
 Each track can play up to 32 sounds simultaneously (the limit for each track is configurable) and
@@ -50,7 +50,7 @@ superset of the Python language that additionally supports calling C functions a
 an ideal choice for wrapping external C libraries and using them in a Python application.
 
 Sounds are MPF assets and are created by the MPF asset loader.  The actual sound loading code is
-contained in the audio library and is performed by SDL_Mixer.  A Python container object wraps
+contained in the audio library and is performed by GStreamer.  A Python container object wraps
 the C object returned by the loading process.  This wrapper allows the sound data to be managed
 by a Python object.  The audio library extracts the C object when necessary and passes it to the
 audio thread where it can be used to generate audio.
