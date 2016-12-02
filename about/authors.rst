@@ -9,5 +9,4 @@ This MPF documentation was written by:
 * Isaac Csandl (isaac.csandl@me.com)
 * Jeremy Edwards (pinman2020@gmail.com)
 
-Want to help with the docs? See our :doc:`contributor's guide </contribute/documentation>`,
-make your changes, and then see your name on this list!
+Want to help with the docs? See our :doc:`contributing` page for details. It's easy!

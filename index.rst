@@ -26,7 +26,7 @@
 
 .. toctree::
    :hidden:
-   :caption: User Documentation
+   :caption: Topic Guides
    :titlesonly:
    :numbered: 0
 
@@ -45,17 +45,7 @@
 
 .. toctree::
    :hidden:
-   :caption: Developer Documentation
-   :titlesonly:
-   :numbered: 0
-
-   Extending MPF with Custom Code </code/index>
-   BCP Protocol </bcp/index>
-   API Reference </api/index>
-
-.. toctree::
-   :hidden:
-   :caption: Reference Material
+   :caption: Reference Guides
    :titlesonly:
    :numbered: 0
 
@@ -68,6 +58,19 @@
 
 .. toctree::
    :hidden:
+   :caption: Developer Guides
+   :titlesonly:
+   :numbered: 0
+
+   /developer/index
+   /developer/custom_code
+   /bcp/index
+   /developer/api
+   /developer/contributing
+   /developer/hardware
+
+.. toctree::
+   :hidden:
    :caption: About MPF
    :titlesonly:
    :numbered: 0
@@ -75,58 +78,70 @@
    About this Documentation </about/index>
    FAQ </faq/index>
    Glossary </glossary/index>
-   Contributing to MPF </contribute/index>
+   Contributing to MPF docs</about/contributing>
    MPF Versions </versions/index>
 
-Mission Pinball Framework |version| documentation
-=================================================
+Mission Pinball Framework documentation
+=======================================
 
-Everything you need to know about the `Mission Pinball Framework <http://missionpinball.org>`_.
+Everything you need to know about the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF).
 
-.. important::
+.. tip::
 
-   There are multiple versions of these docs which correspond to
-   different versions of MPF. You're currently viewing the version for
-   MPF |version|. If this is not the version of MPF you're using, that's
-   ok, since we note when specific features and versions were added. However,
-   you can view other versions of the docs that correspond to specific versions
-   of MPF by clicking the "Read the Docs" link in the lower left corner of the
-   page.
+   You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
+   lower left corner for the links.
 
-   More on MPF doc versions is :doc:`here </versions/docs>`.
+How the documentation is organized
+----------------------------------
 
-First Steps
+* :doc:`Overview </start/index>` explains what MPF is, how it works, and what types of pinball machines
+  and control systems you can use.
+* :doc:`Installation </install/index>` guides walk you through downloading and installing MPF and getting
+  one of the example machines working. (You don't need your own physical machine to do this.)
+* :doc:`Tutorials </tutorial/index>` take you through a series of steps to create your own machine
+  configuration in MPF from scratch. Start here if you're new to MPF. (Also see the `First Steps`_ below.)
+* `Topic guides`_ discuss key topics and concepts at a fairly high level and contain useful background
+  information about all the different parts of MPF, including how it interacts with pinball mechanisms,
+  game logic, displays, sound, and the various physical hardware control systems.
+* `Reference Guides`_ contain technical reference listings of all the settings for the MPF config files,
+  event names, common player and machine variables, and example projects you can learn from.
+* `Developer guides`_ have technical information for software developers who want to write their own code
+  for their machines or who want to help contribute to the MPF project itself.
+
+First steps
 -----------
 If you're brand-new to MPF, start here.
 
-* :doc:`MPF Overview </start/index>`: What MPF is and how it works
-* :doc:`/install/index`: Download and install MPF
-* :doc:`/tutorial/index`: Step-by-step beginner's guide
+* :doc:`MPF Overview </start/index>`: What MPF is and how it works.
+* :doc:`/install/index`: Download and install MPF.
+* :doc:`/tutorial/index`: Step-by-step beginner's guide.
+* :doc:`Pick your hardware platform </hardware/index>`. You can start the tutorial without a physical machine, but at
+  some point you'll need to buy some hardware, since MPF is for real-life physical pinball machines!
 
-Hooking up your machine
------------------------
-* :doc:`Pick a pinball control system </hardware/index>`
-* Get your control system configured (:doc:`FAST </hardware/fast/index>`, :doc:`P-ROC/P3-ROC </hardware/multimorphic/index>`, :doc:`OPP </hardware/opp/index>`)
-* :doc:`Build the minimum config to get flipping! </mechs/flippers/index>`
-
-Understanding MPF
------------------
+Topic guides
+------------
+* :doc:`/hardware/index`: hardware control systems such as the P-ROC, FAST Pinball, and Open Pinball Project hardware.
 * :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
 * :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
 * :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
 * :doc:`/sound/index`: sound tracks, music, volume, sound effects
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
-* :doc:`Events </events/index>`: generating events, triggering actions on events
 
-Reference Material
-------------------
-* :doc:`/events/index`
-* :doc:`/config/index`
-* :doc:`/examples/index`
-* :doc:`/player_vars/index`
-* :doc:`/machine_vars/index`
-* :doc:`Example machines you can learn from </example_machines/index>`
+Reference guides
+----------------
+* :doc:`/events/index`: All the standard events MPF has, and how to use them.
+* :doc:`/config/index`: Lists every config setting and all the options.
+* :doc:`/examples/index`: Huge list of example config files you can learn from.
+* :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
+* :doc:`/machine_vars/index`: Lists all the standard machine variables.
+
+Developer guides
+----------------
+* :doc:`/developer/custom_code`
+* :doc:`/developer/api`
+* :doc:`/developer/contributing`
+
 
 Download the docs
 -----------------
@@ -138,8 +153,8 @@ Getting Help
 ------------
 * `Support Forum (Google Group) <https://groups.google.com/forum/#!forum/mpf-users>`_
 
-Follow Us
----------
+The MPF open source project
+---------------------------
 
 * `Twitter @missionpinball <https://twitter.com/missionpinball>`_
 * `YouTube <https://www.youtube.com/missionpinball>`_
