@@ -3,10 +3,15 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.33
+~~~~
+
+Currently in Dev, plan for first quarter 2017
+
 0.32
 ~~~~
 
-Currently in dev, estimated release date December, 2016.
+Dec 1, 2016
 
 .. rubric:: MPF
 

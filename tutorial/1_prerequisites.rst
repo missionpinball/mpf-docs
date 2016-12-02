@@ -34,8 +34,8 @@ on the left. If you're reading a PDF, please turn to Page 1. :)
 3. Check your MPF version
 -------------------------
 
-This tutorial is written for MPF version |version|, so let's make sure the version
-of MPF you have installed matches that.
+This tutorial is written for MPF versions |version|, but if you're just starting out you should run the
+latest version. So let's see which version of MPF you have installed.
 
 To do this, open a command prompt and run the following command:
 
@@ -44,8 +44,8 @@ To do this, open a command prompt and run the following command:
    mpf --version
 
 That command should print something like ``MPF v0.30.1``. Note that the version is three numbers, ``x.y.z``.
-The last number (the "z") is the patch number and doesn't matter for the documentation. In other words,
-the documentation for 0.30 is valid for 0.30.0 or 0.30.1 or 0.30.212.
+The last number (the "z") is the patch number and doesn't have any functional changes. (In other words, MPF
+0.30.0 and 0.30.2 have the same functions and features.)
 
 If this command gives you an error, then go back to the :doc:`/install/index` section to make sure
 MPF is installed. If it prints a version number lower than |version|, then install the latest version of
