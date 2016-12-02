@@ -33,6 +33,7 @@
    Control Systems / Hardware </hardware/index>
    Pinball Mechanisms </mechs/index>
    Game Logic </game_logic/index>
+   Media Controllers & MPF-MC </mc/index>
    Displays & Graphics</displays/index>
    Sound</sound/index>
    Shows </shows/index>
@@ -128,6 +129,7 @@ Topic guides
 * :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
 * :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
 * :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
+* :doc:`/mc/index`: The MPF Media Controller (MPF-MC), the Unity 3D Backbox Server, creating your own MC
 * :doc:`/sound/index`: sound tracks, music, volume, sound effects
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
@@ -146,19 +148,20 @@ Developer guides
 * :doc:`/developer/api`
 * :doc:`/developer/contributing`
 
-
-Download the docs
------------------
-
-You can download this documentation to read offline in PDF, HTML, and Epub formats.
-Click the "Read the Docs" link in the lower left corner.
-
 Getting Help
 ------------
 * `Support Forum (Google Group) <https://groups.google.com/forum/#!forum/mpf-users>`_
 
 The MPF open source project
 ---------------------------
+
+* :doc:`/about/index`
+* :doc:`/about/authors`
+* :doc:`/about/contributing`
+* :doc:`/about/license`
+
+Follow us
+---------
 
 * `Twitter @missionpinball <https://twitter.com/missionpinball>`_
 * `YouTube <https://www.youtube.com/missionpinball>`_
