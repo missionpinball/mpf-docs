@@ -27,7 +27,7 @@ Dec 1, 2016
 * Check that event handlers are properly formatted before they're registered
 * Added conditional events (handlers that only fire if certain conditions are
   met)
-* You can :doc:`set default values for player variables </config/player_vars>`
+* You can :doc:`set starting values for player variables </config/player_vars>`
 * Fixed the :doc:`physical mono DMD </displays/display/physical_mono_dmd>` and
   :doc:`physical RGB (color) DMD </displays/display/physical_rgb_dmd>`
 * Added :doc:`multiball lost event </events/multiball_name_lost_ball>`
@@ -38,11 +38,9 @@ Dec 1, 2016
 * Improved service mode
 * Added options for "random" events (force next, force all, save per-player, etc.)
 * Added events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
-* Added option to force all assets to load on boot for testing purposes
+* Added ``-f`` command line option to force all assets to load on boot for testing purposes
 * Added :doc:`scoring </config/scoring>` options (add, replace, block)
-* Set starting values for player variables
 * Use color "on" for LED default colors
-* Refactored ball devices to use asyncio, to have specific ejectors and ball counters
 * Allow multiple config player entries to fire from the same event
 * Ensure that events created by the MC are sent to MPF
 * Added machine vars for P-ROC and FAST hardware revisions
@@ -62,7 +60,7 @@ Dec 1, 2016
 * Fixed a bug where videos were not stopping
 * Allow the same slide to be used on multiple displays
 * Switch to GStreamer instead of SDL_Mixer for loading and streaming sounds. (SDL2 still used for all sound output.)
-* Sound file streaming now supported (streamed from disk instead of preloaded into memory)
+* Sound file streaming is now supported from any track (streamed from disk instead of preloaded into memory)
 * New "track_player" config controls sounds at the track-level (fade, volume, play, pause, stop, etc.)
 * Custom loading & unloading events at the individual sound level.
 * Lots of little bug fixes...

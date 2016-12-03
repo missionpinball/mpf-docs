@@ -13,3 +13,19 @@ Running MPF
 -----------
 
 See the :doc:`/running/index` for details and command-line options.
+
+Keeping MPF up-to-date
+----------------------
+
+Since MPF is a work-in-progress, you can use the *pip* command to update your
+MPF installation.
+
+To to this, run the following:
+
+::
+
+  pip install mpf-mc --upgrade
+
+This will cause *pip* to contact PyPI to see if there's a newer version of the
+MPF MC (and any of its requirements, like MPF). If newer versions are found, it
+will download and install them.
