@@ -239,22 +239,6 @@ Using modes as game logic
 
    modes_as_game_logic
 
-Built-in Modes
---------------
-
-MPF includes several "built-in" modes which are ready to use in your game. Some
-of them are used automatically, and some require that you add some config
-sections and options to your machine. Click on each for details:
-
-.. toctree::
-
-   Creating your own modes <custom_modes>
-   Attract <attract>
-   Game <game>
-   Credits <credits>
-   High score <high_score>
-   Tilt <tilt>
-
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
@@ -274,3 +258,21 @@ sections and options to your machine. Click on each for details:
 +------------------------------------------------------------------------------+
 | :doc:`/events/clear`                                                         |
 +------------------------------------------------------------------------------+
+
+Built-in Modes
+--------------
+
+MPF includes several "built-in" modes which are ready to use in your game. Some
+of them are used automatically, and some require that you add some config
+sections and options to your machine. Click on each for details:
+
+.. toctree::
+
+   Creating your own modes <custom_modes>
+   Attract <attract>
+   Game <game>
+   Credits <credits>
+   High score <high_score>
+   Tilt <tilt>
+
+

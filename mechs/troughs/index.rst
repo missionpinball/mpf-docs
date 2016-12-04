@@ -23,14 +23,11 @@ here:
 
 Here are the options:
 
-.. toctree::
-   :titlesonly:
-
-   Modern trough with opto sensors <modern_opto>
-   Modern trough with mechanical switches <modern_mechanical>
-   Older style with two coils and switches for each ball <two_coil_multiple_switches>
-   Older style with two coils and only one ball switch <two_coil_one_switch>
-   Classic single ball, single coil <classic_single_ball>
+* :doc:`Modern trough with opto sensors <modern_opto>`
+* :doc:`Modern trough with mechanical switches <modern_mechanical>`
+* :doc:`Older style with two coils and switches for each ball <two_coil_multiple_switches>`
+* :doc:`Older style with two coils and only one ball switch <two_coil_one_switch>`
+* :doc:`Classic single ball, single coil <classic_single_ball>`
 
 Since there are so many different options, you need to first identify which
 type of trough or ball drain system your machine has. So look at the following
@@ -209,3 +206,13 @@ post a photo of it to `MPF Users Google Group
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_captured_from_device`                               |
 +------------------------------------------------------------------------------+
+
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   modern_opto
+   modern_mechanical
+   two_coil_multiple_switches
+   two_coil_one_switch
+   classic_single_ball

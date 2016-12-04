@@ -25,15 +25,6 @@ machine then you can configure additional playfield devices.
 Playfields are configured in the :doc:`playfields: section </config/playfields>`
 of the configuration file.
 
-Other playfield concepts
-========================
-
-.. toctree::
-
-   ball_tracking
-   playfield_balls_vs_balls_in_play
-   playfield_transfer
-
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
@@ -53,3 +44,12 @@ Other playfield concepts
 +------------------------------------------------------------------------------+
 | :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
 +------------------------------------------------------------------------------+
+
+Other playfield concepts
+========================
+
+.. toctree::
+
+   ball_tracking
+   playfield_balls_vs_balls_in_play
+   playfield_transfer

@@ -15,34 +15,27 @@ Pinball Mechs in MPF include:
 .. toctree::
    :maxdepth: 1
 
+   Accelerometers <accelerometers/index>
    Autofire Coils <autofire_coils/index>
    Ball Devices <ball_devices/index>
    Coils (Solenoids) <coils/index>
    Diverters <diverters/index>
+   Drop Targets <targets/drop_targets/index>
    Dual-Wound Coils <dual_wound_coils/index>
    Flashers <flashers/index>
    Flippers <flippers/index>
    GI (general illumination) <gis/index>
    Kickback Lanes <kickbacks/index>
-   Magnets <magnets/index>
-   Plungers / Launch Devices <plungers/index>
-   Troughs / Ball Drains <troughs/index>
-
-The following mechs are done in MPF, but the documentation is not done yet:
-
-.. toctree::
-   :maxdepth: 1
-
-   Accelerometers <accelerometers/index>
-   Drop Targets <targets/drop_targets/index>
    Kicking Targets <targets/kicking_targets/index>
    Stationary Targets <targets/stationary_targets/index>
    Vari Targets <targets/vari_targets/index>
    Lights <lights/index>
    LEDs <leds/index>
    Loops / Orbits / Ramps <loops/index>
+   Magnets <magnets/index>
    Motors <motors/index>
    Playfields <playfields/index>
+   Plungers / Launch Devices <plungers/index>
    Pop Bumpers <pop_bumpers/index>
    Rollover Switches <rollovers/index>
    Score Reels <score_reels/index>
@@ -52,4 +45,5 @@ The following mechs are done in MPF, but the documentation is not done yet:
    Stepper Motors <steppers/index>
    Switches <switches/index>
    Stand-up Targets <targets/index>
+   Troughs / Ball Drains <troughs/index>
 

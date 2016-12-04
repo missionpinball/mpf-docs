@@ -53,10 +53,6 @@ useful for tracking when all the achievements in the group have been complete
 lit achievements (e.g. every slingshot hit changes the achievement that's
 flashing, but it only rotates through incomplete achievements.)
 
-.. toctree::
-
-   achievement_groups
-
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
@@ -71,3 +67,7 @@ flashing, but it only rotates through incomplete achievements.)
 | Plus any custom events as defined in the achievement's configuration in your |
 | config files.                                                                |
 +------------------------------------------------------------------------------+
+
+.. toctree::
+
+   achievement_groups

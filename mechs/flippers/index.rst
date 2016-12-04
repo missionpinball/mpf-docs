@@ -26,6 +26,12 @@ coils, as flippers in pinball machines can be either type.
 You should also probably read the EOS Switches guide if your machine has flipper
 EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| TODO                                                                         |
++------------------------------------------------------------------------------+
+
 .. toctree::
    :titlesonly:
    :caption: Flipper Concepts
@@ -38,12 +44,6 @@ EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
    dual_wound
    single_wound
-
-The following guides are placeholders only and not written yet:
-
-.. toctree::
-   :titlesonly:
-
    multiple
    enabling_secondary_flippers
    disabled_flippers
@@ -53,8 +53,4 @@ The following guides are placeholders only and not written yet:
    inverted_flippers
    delayed_flippers
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| None                                                                         |
-+------------------------------------------------------------------------------+
+

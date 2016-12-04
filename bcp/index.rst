@@ -40,6 +40,10 @@ project. MPF uses BCP to communicate between the MPF pinball controller and
 the MPF media controller, though BCP is intended to be an open protocol that
 could connect *any* pinball controller to *any* media controller.
 
+We'd like to give a shout-out to Kevin Kelm who was responsible for the initial
+concept of BCP and first draft of the specification. As such, he's the guy who
+picked the ports (5050 and 5051).
+
 Protocol Format
 ---------------
 
@@ -151,53 +155,3 @@ The following BCP commands have been defined (and implemented) in MPF:
    terminate
    timer
    trigger
-
-BCP Command Flow (Reference Order)
-----------------------------------
-
-If you want to get an idea of the order events are sent in (and the
-exact types of events), the easiest way to do that is to run MPF's
-sample game Demo Man with verbose logging enabled. Then open the MPF
-log file (not the MC one) and filter it based on "bcpclient" and
-you'll see all the BCP commands that are sent from MPF's BCP client.
-Demo Man includes a config file called "autorun" which uses the switch
-player plugin to automatically play through a game, so you can run
-that to generate a full log file that includes lots of different thing
-happening, like this:
-
-::
-
-    mpf demo_man -v -c autorun
-
-Here's the high-level order the BCP commands will be sent from MPF.
-This process starts with MPF boot and then follows through a game
-starting. The `...` sections are where stuff has been left out, but
-you get the idea. Note that in many cases (such as this one), the game
-mode actually begins before the attract mode ends. These two events
-were sent 7ms apart, so it's quick, but just FYI to be ready for the
-game to start whenever the attract mode is running.
-
-::
-
-    hello?version=1.0
-    reset
-    mode_start?priority=10&name=attract
-    ...
-    mode_start?priority=20&name=game
-    mode_stop?name=attract
-    player_added?number=1
-    player_turn_start?player=1
-    ball_start?player=1&ball=1
-    ...
-    ball_end
-
-Credits
--------
-
-The Backbox Control Protocol is being developed by:
-
-+ Quinn Capen
-+ Kevin Kelm (responsible for the initial concept and first draft of the specification)
-+ Gabe Knuth
-+ Brian Madden
-+ Mike ORourke

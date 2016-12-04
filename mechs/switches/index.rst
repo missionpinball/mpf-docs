@@ -35,19 +35,6 @@ Most switches in pinball machines are debounced except for the ones that you
 absolutely want to fire instantly, like flipper switches and the switches
 attached to automatically fired coils like slingshots and pop bumpers.
 
-.. toctree::
-   :titlesonly:
-   :caption: Switch Concepts
-
-   debounce
-   switch_controller
-
-.. toctree::
-   :titlesonly:
-   :caption: Switch How To Guides
-
-   optos
-
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
@@ -63,3 +50,16 @@ attached to automatically fired coils like slingshots and pop bumpers.
 +------------------------------------------------------------------------------+
 | :doc:`/events/sw_tag_name`                                                   |
 +------------------------------------------------------------------------------+
+
+.. toctree::
+   :titlesonly:
+   :caption: Switch Concepts
+
+   debounce
+   switch_controller
+
+.. toctree::
+   :titlesonly:
+   :caption: Switch How To Guides
+
+   optos

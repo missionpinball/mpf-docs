@@ -12,14 +12,10 @@ A Plunger is a type of ball device. MPF supports mechanical (traditional
 
 Here are the options:
 
-.. toctree::
-   :titlesonly:
-
-   mechanical_with_switch
-   mechanical_no_switch
-   coil_fired
-   auto_manual
-
+* :doc:`mechanical_with_switch`
+* :doc:`mechanical_no_switch`
+* :doc:`coil_fired`
+* :doc:`auto_manual`
 
 Since there are so many different options, you need to first identify which
 type of plunger or ball launch system your machine has. So look at the following
@@ -138,3 +134,12 @@ guide to configure it in MPF.
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_captured_from_device`                               |
 +------------------------------------------------------------------------------+
+
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   mechanical_with_switch
+   mechanical_no_switch
+   coil_fired
+   auto_manual

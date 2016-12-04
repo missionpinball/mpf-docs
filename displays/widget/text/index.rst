@@ -172,15 +172,15 @@ chosen.
 
 The default setting is ``middle``.
 
+Examples
+--------
+
+The example config files section of the documentation contains
+:doc:`examples of text widgets </examples/text/index>`.
+
 .. toctree::
    :hidden:
    :titlesonly:
 
    text_dynamic
    text_strings
-
-Examples
---------
-
-The example config files section of the documentation contains
-:doc:`examples of text widgets </examples/text/index>`.

@@ -51,6 +51,7 @@ it to show up on. Picking one display to be your default is the display that's
 used for content where you don't explicitly set which display you're using.
 
 .. note::
+
    Full details and options for these displays are available in the
    :doc:`displays: section </config/displays>` of the config file reference.
 
