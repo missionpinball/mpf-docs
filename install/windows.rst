@@ -96,7 +96,28 @@ just run it.
 
     pip install pip --upgrade
 
-This command will upgrade pip to the latest version.
+This command will upgrade pip to the latest version which should be 9 or newer.
+
+Note that if you're running the command prompt *without* admin rights, you might get
+some red text and a permissions error, but that's ok. You can run the following command
+to show the version of pip (and the packages you have installed) like this:
+
+::
+
+   pip list
+
+That will print out something like this:
+
+.. code-block:: doscon
+
+   C:\Users\BRIAN MADDEN>pip list
+   pip (9.0.1)
+   setuptools (18.2)
+
+   C:\Users\BRIAN MADDEN>
+
+Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
+this), and not the 7.x version that came with Python 3.4.4.
 
 3. Install MPF
 --------------
@@ -108,7 +129,6 @@ To do this, run the following command from the command prompt:
 
     pip install mpf-mc
 
-*pip* is the name of the Python Package Manager that we discussed in Step 2.
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
 pip will connect to the internet and download MPF from the Python app store
@@ -117,15 +137,15 @@ and install it onto your computer.
 Pip packages can include dependencies, which means that when you run this
 command, you'll see a bunch of packages get downloaded and installed.
 
-In this case, the ``mpf-mc`` package (which is MPF's media controller) will
-also download and install the MPF core package, as well as various other
-packages that MPF needs to run.
+In this case, the ``mpf-mc`` package will also download and install the MPF
+game engine package, as well as various other packages that MPF needs to run.
 
 4. Install the video codec pack
 -------------------------------
 
 MPF uses an open source project called Gstreamer to play video. By default, Gstreamer
-only comes with codecs that can play open source and free video formats.
+only comes with codecs that can play open source and free video formats which are somewhat
+obscure and things you probably never heard of.
 
 So the next step is to install a codec pack that will let MPF play just about
 any kind of video (H.264, MPG, etc.)
@@ -137,7 +157,9 @@ This is also installed via pip, like this:
    pip install kivy.deps.gstreamer --extra-index-url https://mpf.kantert.net/simple/
 
 Just copy-and-paste that entire line into the command line and press enter. It
-will download the codec pack which is about 90 MB and install them.
+will download the codec pack which is 93mb and install it.
+
+The URL is from one of the MPF developers (Jan Kantert, thanks!), who is hosting this file for us.
 
 5. Test your installation
 -------------------------

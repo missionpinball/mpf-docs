@@ -8,6 +8,13 @@ app, copy it to your *Applications* folder, register it with your system, and yo
 
 MPF works on Mac OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
 
+.. note::
+
+   There's a chance the MPF 0.32+ packages won't work on OS X 10.9 (Mavericks) and 10.10 (Yosemite). If
+   you have one of these versions and the installation fails,
+   `post a message in the mpf-users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_
+   and we'll figure it out. We don't have an older OS to test. :)
+
 The reason went with the single MPF bundle which includes Python in is the because the Mac OS has Python
 2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
 deal with side-by-side Python installations which can get hairy. Plus MPF requires several graphics and
@@ -38,25 +45,22 @@ Then drag and drop MPF.app file to your *Applications* folder.
 2. Update MPF and link it with OS X
 -----------------------------------
 
-The final step is to run a command which will update MPF and make it available from anywhere on
-your system. We've created a script to do this for you, so all you have to do is double click on the
-RunMeOnce.command file. You may be told that you can't open this file due to security restrictions. If you do, go to the Security & Privacy pane in System Preferences and choose "Allow apps downloaded from anywhere." You can turn this off agian after you run the script (or it will turn off automatically after 30 days).
+Double click on the RunMeOnce.command file. You may be told that you can't open this file due to security restrictions.
+If you do, go to the Security & Privacy pane in System Preferences and choose "Allow apps downloaded from anywhere." You
+can turn this off again after you run the script (or it will turn off automatically after 30 days).
 
-When you run the script, you'll be prompted for your password. After you enter it, you'll be ready to go in just a few seconds!
+When you run the script, you'll be prompted for your password. After you enter it, you'll be ready to go in just a few
+seconds!
 
 This command does a few things:
 
-First, it connects to the internet and downloads / updates MPF to the latest
-version.
-
-Second, it registers a system-wide shortcut called ``mpf`` with your system, so
-that when you're in your pinball
-machine folder you can type ``mpf`` and it will be able to find the MPF launch command inside the MPF app.
-
-Finally, it registers a command ``kivy`` which is a link to the copy of Python
-that's included inside
-the MPF app package, which is actually based on a media framework called Kivy. (You'll need this if
-you want to update anything inside the MPF app without having to re-download the whole thing again.)
+* Connects to the internet and downloads / updates MPF and MPF-MC to the latest versions.
+* Registers a system-wide shortcut called ``mpf`` so when you're in your pinball machine folder you can type ``mpf`` and
+  it will be able to find the MPF launch command inside the MPF app.
+* Registers registers a system-wide shortcut called ``kivy`` which is a link to the copy of Python that's included
+  inside the MPF app package, (which is based on the `Kivy Python media library <https://kivy.org>`_ (You'll use this
+  command in the future to update MPF and MPF-MC in your MPF.app package without having to re-download the whole thing
+  again.)
 
 3. Test your installation
 -------------------------
@@ -149,7 +153,7 @@ To do this, open a Terminal window and run the following:
 Shout out to Kivy!
 ------------------
 
-MPF uses a multimedia framework called *Kivy* to display graphics and sounds. The MPF Mac
-app is based on the Kivy Mac app package, which the team from Kivy has made available for
-Kivy users (like MPF) to use to package their own apps. So this amazingly simple MPF Mac
-package we have is available thanks to the awesome people at Kivy. Thanks!
+MPF uses an open source multimedia framework called `Kivy <https://kivy.org`_ to display graphics and sounds.
+The MPF Mac app is based on the Kivy Mac app package, which the team from Kivy has made available for
+Kivy users (like us!) to use to package their own apps. So this amazingly simple MPF Mac
+package we have is available thanks to the awesome people at Kivy.
