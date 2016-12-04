@@ -134,6 +134,40 @@ Events in this list, when posted,
 .. todo::
    Add description.
 
+add_a_ball_events:
+~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
+
+.. todo::
+   Add description.
+
+start_or_add_a_ball_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted,
+
+.. todo::
+   Add description.
+
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``

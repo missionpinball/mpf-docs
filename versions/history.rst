@@ -11,6 +11,7 @@ Currently in Dev, plan for first quarter 2017
 MPF
 
 * Added a drop target "keep up" feature
+* Added additional multiball events
 
 0.32
 ~~~~
