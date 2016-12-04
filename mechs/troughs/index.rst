@@ -1,5 +1,5 @@
-Ball Troughs / Drain Devices
-============================
+Troughs / Ball Drains
+=====================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
