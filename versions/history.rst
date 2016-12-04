@@ -8,6 +8,10 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 Currently in Dev, plan for first quarter 2017
 
+MPF
+
+* Added a drop target "keep up" feature
+
 0.32
 ~~~~
 

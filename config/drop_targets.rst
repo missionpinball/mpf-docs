@@ -128,6 +128,42 @@ Default: ``None``
 Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
 
+enable_keep_up_events:
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted, will send enable the drop target's reset coil which
+means that balls that hit it do not cause the drop target to fall since the reset
+coil is being held on. Not that this will require either ``allow_enable: true`` in the coil's
+configuration or a ``hold_power:`` of less than 8 (full power).
+
+Also note that many drop target coils are not designed to be held on at full power, so you'll
+most likely want to use a hold power of less than 8. Start low and only use the minimum power
+you need to keep the drop target up.
+
+disable_keep_up_events:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
+disabling the "keep up".
+
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
