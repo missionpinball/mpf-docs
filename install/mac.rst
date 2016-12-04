@@ -153,7 +153,7 @@ To do this, open a Terminal window and run the following:
 Shout out to Kivy!
 ------------------
 
-MPF uses an open source multimedia framework called `Kivy <https://kivy.org`_ to display graphics and sounds.
+MPF uses an open source multimedia framework called `Kivy <https://kivy.org>`_ to display graphics and sounds.
 The MPF Mac app is based on the Kivy Mac app package, which the team from Kivy has made available for
 Kivy users (like us!) to use to package their own apps. So this amazingly simple MPF Mac
 package we have is available thanks to the awesome people at Kivy.
