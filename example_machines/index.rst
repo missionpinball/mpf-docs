@@ -24,11 +24,11 @@ So for these example files, just put them somewhere easy.)
 
 Download the version that matches your version of MPF:
 
-* 0.21.x <https://github.com/missionpinball/mpf-examples/archive/0.21.zip>`_.
-* 0.30.x <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
-* 0.31.x <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
-* 0.32.x <https://github.com/missionpinball/mpf-examples/archive/0.32.x.zip>`_.
-* dev <https://github.com/missionpinball/mpf-examples/archive/dev.zip>`_.
+* `0.21.x <https://github.com/missionpinball/mpf-examples/archive/0.21.zip>`_.
+* `0.30.x <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
+* `0.31.x <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
+* `0.32.x <https://github.com/missionpinball/mpf-examples/archive/0.32.x.zip>`_.
+* `dev <https://github.com/missionpinball/mpf-examples/archive/dev.zip>`_.
 
 ``aztec``
 
