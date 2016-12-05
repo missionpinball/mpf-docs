@@ -10,8 +10,12 @@ Currently in Dev, plan for first quarter 2017
 
 MPF
 
+* Refactored ball devices to allow for different types of ball counters & be more robust for
+  unexpected ball situations and different types of eject failures
+* Added "async" events (Events that wait for all handlers to finish before continuing)
 * Added a drop target "keep up" feature
 * Added additional multiball events
+* Made achievements and achievement groups smarter and more robust (also backported to 0.32)
 
 0.32
 ~~~~

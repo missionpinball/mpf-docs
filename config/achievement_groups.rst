@@ -62,6 +62,44 @@ Note that you can configure ``show_tokens:`` at the group level (here) or the
 individual achievement level. That's done for convenience, and in practical use,
 you'd just configure the show tokens in one place.
 
+auto_select:
+~~~~~~~~~~~~
+
+.. versionadded:: 0.32.3
+
+Boolean (yes/no or true/false) setting. Default is ``False``.
+
+If True, this achievement group will automatically ensure that one of its member
+achievements is always selected. The selected achievement will be chosen at random
+from all the achievements in the "enabled" states (and the "stopped" states if
+``restart_after_stop_possible:`` is set to True).
+
+disable_while_achievement_started:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32.3
+
+Boolean (yes/no or true/false) setting. Default is ``True``.
+
+If True, this achievement will automatically disable itself when any of its
+member achievements are in the "started" states. This is the default behavior
+because an achievement group is typically used to select an achievement to run,
+and while an achievement is running, you usually want to disable the selection
+process for the next achievement.
+
+enable_while_no_achievement_started:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.32.3
+
+Boolean (yes/no or true/false) setting. Default is ``True``.
+
+If True, this achievement will automatically enable itself when none of its
+member achievements are in the "started" states. This is the default behavior
+because an achievement group is typically used to select an achievement to run,
+so when none are running, you want to enable the group so that the next
+achievement can be selected.
+
 Control Events
 --------------
 
@@ -227,8 +265,14 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 A single event, or a list of events, that will be posted when this achievement
 group is enabled.
 
-events_when_all_complete:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+events_when_all_completed:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionchanged:: 0.32.3
+
+Prior to MPF 0.32.3, this event was called "events_when_all_complete". This
+was a mistake since the completed state is called "completed", not "complete"
+
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 A single event, or a list of events, that will be posted when all the
