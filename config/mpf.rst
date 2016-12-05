@@ -49,7 +49,7 @@ default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
 
-   For all platforms which non-tickless platforms we poll this often.
+   For all platforms non-tickless platforms we poll this often.
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,6 +79,8 @@ default_show_sync_ms:
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 0.32
+
    Default sync_mc for all shows when not specified otherwise.
+
 
 TODO
