@@ -25,68 +25,60 @@ allow_invalid_config_sections:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
 
-.. todo::
-   Add description.
+   MPF will not raise a fatal error when on invalid section when you set this to true. This might be useful when you are developing a new feature and do not want to constantly update config_spec (the file which describes allowed sections).
 
 auto_create_switch_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-.. todo::
-   Add description.
+   MPF will post switch_event_active and switch_event_inactive (see below) when this is enabled.
 
 default_flash_ms:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``50``
 
-.. todo::
-   Add description.
+   Default flash_ms for all flashers when not overwritten.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``10``
 
-.. todo::
-   Add description.
+   Default pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
 
-hz:
-~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``30.0``
+default_platform_hz:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
 
-.. todo::
-   Add description.
+   For all platforms which non-tickless platforms we poll this often.
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
 
-.. todo::
-   Add description.
+   If set to true MPF will persist machine_vars to disk in a background writer.
 
 switch_event_active:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``%_active``
 
-.. todo::
-   Add description.
+   If auto_create_switch_events is set to true this event will be posted after a switch turned active.
 
 switch_event_inactive:
 ~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``%_inactive``
 
-.. todo::
-   Add description.
+   If auto_create_switch_events is set to true this event will be posted after a switch turned inactive.
 
 switch_tag_event:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``sw_%``
 
-.. todo::
-   Add description.
+   This event will be posted for all tags after a switch turned active.
 
 default_show_sync_ms:
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 0.32
+   Default sync_mc for all shows when not specified otherwise.
 
 TODO
