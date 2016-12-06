@@ -42,6 +42,9 @@ an event called *switch_s_left_slingshot_active*.
    ball_drain <ball_drain>
    ball_ended <ball_ended>
    ball_ending <ball_ending>
+   ball_hold_(name)_balls_released <ball_hold_name_balls_released>
+   ball_hold_(name)_full <ball_hold_name_full>
+   ball_hold_(name)_held_ball <ball_hold_name_held_ball>
    ball_lock_(name)_balls_released <ball_lock_name_balls_released>
    ball_lock_(name)_full <ball_lock_name_full>
    ball_lock_(name)_locked_ball <ball_lock_name_locked_ball>
@@ -65,11 +68,7 @@ an event called *switch_s_left_slingshot_active*.
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
    balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
    balldevice_(name)_ball_enter <balldevice_name_ball_enter>
-   balldevice_(name)_ball_left <balldevice_name_ball_left>
-   balldevice_(name)_ball_lost <balldevice_name_ball_lost>
-   balldevice_(name)_eject_broken <balldevice_name_eject_broken>
    balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
-   balldevice_(name)_ok_to_receive <balldevice_name_ok_to_receive>
    balls_in_play <balls_in_play>
    cancel_ball_search <cancel_ball_search>
    clear <clear>
