@@ -32,6 +32,7 @@ and/or show configs.
    autofire </examples/autofire/index>
    ball_controller </examples/ball_controller/index>
    ball_device </examples/ball_device/index>
+   ball_holds </examples/ball_holds/index>
    ball_lock </examples/ball_lock/index>
    ball_save </examples/ball_save/index>
    ball_search </examples/ball_search/index>
@@ -70,7 +71,9 @@ and/or show configs.
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
    motor </examples/motor/index>
+   mpf_configs </examples/mpf_configs/index>
    mpf_plugin_config_player_validation </examples/mpf_plugin_config_player_validation/index>
+   mpfmc_configs </examples/mpfmc_configs/index>
    mpftestcase </examples/mpftestcase/index>
    multiball </examples/multiball/index>
    null </examples/null/index>

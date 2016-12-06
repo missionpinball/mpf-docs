@@ -8,6 +8,9 @@ sound_system:
     music:
       volume: 0.5
       simultaneous_sounds: 1
+      events_when_stopped: music_track_stopped
+      events_when_played: music_track_played, keep_going
+      events_when_paused: music_track_paused
     sfx:
       volume: 0.4
       simultaneous_sounds: 8
@@ -44,6 +47,7 @@ sounds:
         simultaneous_limit: 3
         stealing_method: skip
     104457_moron_test:
+        streaming: False
         events_when_played: moron_test_played
         events_when_stopped: moron_test_stopped
         volume: 0.6
@@ -67,6 +71,8 @@ sounds:
     198361_sfx-028:
         simultaneous_limit: 3
         stealing_method: newest
+    263774_music:
+        streaming: False
 
 sound_pools:
     drum_group:
@@ -80,6 +86,12 @@ sound_pools:
             100184__menegass__rick-drum-bd-hard
 
 sound_player:
+    load_music:
+        263774_music:
+            action: load
+    unload_music:
+        263774_music:
+            action: unload
     play_sound_synthping: 210871_synthping
     play_sound_text:
         264828_text:
@@ -116,3 +128,39 @@ sound_player:
             events_when_stopped: text_sound_stopped_param_set_1
             events_when_looping: text_sound_looping_param_set_1
 
+track_player:
+    stop_all_tracks:
+        __all__:
+            action: stop
+            fade: 1.5 sec
+    stop_music_track:
+        music:
+            action: stop
+            fade: 1.5 sec
+    play_music_track:
+        music:
+            action: play
+            fade: 1.5 sec
+    pause_music_track:
+        music:
+             action: pause
+    resume_music_track:
+        music:
+             action: play
+    set_music_track_volume_loud:
+        music:
+             action: set_volume
+             volume: 0.95
+             fade: 0.5 sec
+    set_music_track_volume_quiet:
+        music:
+             action: set_volume
+             volume: 0.3
+             fade: 0.5 sec
+    stop_all_sounds_on_music_track:
+        music:
+             action: stop_all_sounds
+             fade: 0.5 sec
+    stop_all_sounds:
+        __all__:
+             action: stop_all_sounds
