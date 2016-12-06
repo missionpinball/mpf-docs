@@ -20,7 +20,7 @@ version 31, and patch number 8.
 
 .. note::
 
-   Version numbers in MPF are numbers separated by dots which are *not( mathematical decimals. In other words,
+   Version numbers in MPF are numbers separated by dots which are *not* mathematical decimals. In other words,
    MPF 0.30 is "zero point thirty", which is not the same as "0.3" which is "zero point three". Also, 0.30 is
    27 versions newer than 0.3.
 
