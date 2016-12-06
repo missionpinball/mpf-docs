@@ -46,7 +46,7 @@ understand:
    :maxdepth: 1
 
    overview/index
-   overview/conditional_events
+   overview/conditional
    overview/multiple_things_from_one_event
    overview/priorities
    overview/event_types
