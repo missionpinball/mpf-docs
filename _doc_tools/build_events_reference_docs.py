@@ -25,6 +25,9 @@ class EventDocParser(object):
                     'event:')):
                 event, rst = self.parse_string(x)
 
+                if event:
+                    event = event.strip('.')
+
                 if rst:
                     filename = self.create_file(event, rst)
                     self.file_list.append((event, filename))

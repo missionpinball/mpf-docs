@@ -62,7 +62,7 @@ an event called *switch_s_left_slingshot_active*.
    ball_will_end <ball_will_end>
    balldevice_ball_missing <balldevice_ball_missing>
    balldevice_balls_available <balldevice_balls_available>
-   balldevice_(balls)_ball_missing. <balldevice_balls_ball_missing.>
+   balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
    balldevice_captured_from_(device) <balldevice_captured_from_device>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
