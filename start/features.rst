@@ -72,6 +72,7 @@ See the :doc:`Pinball Mechs</mechs/index>` documentation for full details.
 Game logic
 ----------
 
++ Modes and a mode stack (start / stop / restart / stacked modes)
 + Ball locks
 + Multiball
 + Ball saves
@@ -90,7 +91,6 @@ Game logic
 + Shots & shot groups (with full per-player state management (e.g. lit, unlit,
   flashing, etc.)
 + Shot rotation (lane change, etc.)
-+ Modes and a mode stack (start / stop / restart / stacked modes)
 + Attract mode
 + Logic blocks, which let you build complex pinball game logic out of reusable
   components via the config files
@@ -98,6 +98,7 @@ Game logic
   events, with mode integration for blocking and blending
 + Timers (start / stop / pause / count down / count up)
 + Video modes
++ Switch combinations (flipper cancel, hold flipper button to start super skill shot, etc.)
 
 See the :doc:`Game Logic</game_logic/index>` documentation for full details.
 
@@ -146,26 +147,46 @@ Shows
 
 See the :doc:`Shows</shows/index>` documentation for full details.
 
-Other stuff
------------
+Machine Management
+------------------
 
-+ A data manager which reads and writes data from disk, including
++ Service mode / operator menus
++ Operator-configurable "settings" which you can use to expose any setting
+  anywhere in MPF to game operators.
++ A data manager which handles reading and writing data from disk, including
   audits, earnings, machine variables, high scores, etc.
+
+Tools
+-----
+
++ The :doc:`MPF Monitor </monitor/index>` standalone app which is a graphical
+  tool that connects to a live running instance of MPF and shows the status of
+  various devices. You can interact with it by clicking on switches and see your
+  game in action on your computer.
++ A switch player which lets you build automatically scripts to "replay" switches
+  for testing your game.
++ A complete set of test functions which you can use to write your own automated
+  tests for your machine.
 + A keyboard interface which lets you simulate switch actions with
   your computer keyboard. (Great for testing!)
++ Detailed logging, config file checking, and helpful error messages to help you
+  troubleshoot issues.
+
+Developer-friendly
+------------------
+
++ Fully open-source and well-documented code.
 + A plugin architecture which allows you to write your own plugins to
   extend baseline functionality.
-+ A "scriptlet" interface lets you add Python code snippets to extend
-  the functionality you can get with the configuration files.
++ Modular design that lets you write your own hardware interfaces.
++ A "scriptlet" interface which can be used to easily add Python code snippets
+  to a game to extend the functionality you can get with the configuration files.
 + A mode "code" interface which lets you add custom Python code to game modes.
-+ A switch "player" which lets you play back timed sequences of
-  switches for automated testing and simulation.
 
-And the best part: Everything mentioned on this page can be done via the text-
-based configuration files. If you don't want to be a "coder," you don't have to
-be. (Though the plugin, scriptlet, mode coding, and `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
-mean that if you want to use MPF for your groundwork and code your game in "real"
-Python, that's fine too.)
+And the best part: Everything mentioned on this page (except for the developer
+stuff) can be done via the text-based configuration files. If you don't want to be
+a "coder," you don't have to be. (Though if you are a coder, we'd love to
+have you help us write MPF!
 
 By the way, if you'd like to see what we have in store for the
 future, check out our :doc:`/versions/roadmap`.
