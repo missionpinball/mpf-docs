@@ -16,6 +16,8 @@ MPF
 * Added a drop target "keep up" feature
 * Added additional multiball events
 * Made achievements and achievement groups smarter and more robust (also backported to 0.32)
+* Added more functions for people building games to use to write tests
+* Added ball hold device
 
 0.32
 ~~~~

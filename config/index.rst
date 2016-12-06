@@ -17,6 +17,7 @@ your machine-wide config, a mode-specific config, or both.
    auditor: <auditor>
    autofire_coils: <autofire_coils>
    ball_devices: <ball_devices>
+   ball_holds: <ball_holds>
    ball_locks: <ball_locks>
    ball_saves: <ball_saves>
    bcp: <bcp>

@@ -11,6 +11,7 @@ to tutorials, event listings, and configuration
    :titlesonly:
 
    Achievements <achievements/index>
+   Ball Holds <ball_holds/index>
    Ball Locks <ball_locks/index>
    Ball Saves <ball_saves/index>
    Ball Search <ball_search/index>

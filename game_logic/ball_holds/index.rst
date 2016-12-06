@@ -1,31 +1,24 @@
-Ball Locks
+Ball Holds
 ==========
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/ball_locks`                                                    |
+| :doc:`/config/ball_holds`                                                    |
 +------------------------------------------------------------------------------+
 
-MPF's *ball locks* are used to hold a ball that has entered a
-:doc:`/mechs/ball_devices/index` towards multiball.
+MPF's *ball holds* are used to temporarily hold a ball that has entered a
+:doc:`/mechs/ball_devices/index` while something else happens.
 
-.. note::
+The most common use cases are to hold a ball while you play a show, or while
+a video mode is going on. Ball holds do not affect the balls in play count, and
+if all other balls drain while a ball hold is in progress, the players ball does
+not end.
 
-   If you just want to temporarily hold a ball while something else is happening
-   (like during a video mode or while some award show is playing), use MPF's
-   ``ball_holds:`` section, not a ball lock.
+Ball holds are *not* used to lock balls for multiball. (See the ``ball_locks:``
+device for that.
 
-Ball locks are "logical" (not physical), so different ball locks can exist in
-different modes that hold balls in the same device (depending on what mode is
-running).
-
-Ball lock devices track the number of balls "locked" on a per-player basis, so
-even if one player empties out a physical ball device, the ball lock for another
-player will know how many balls that player had locked, even if the number of
-balls in a contained physical ball device doesn't match.
-
-You can have lots of different ball locks in your game, typically configured
+You can have lots of different ball holds in your game, typically configured
 per mode.
 
 +------------------------------------------------------------------------------+
@@ -37,9 +30,9 @@ per mode.
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
 +==============================================================================+
-| :doc:`/events/ball_lock_name_balls_released`                                 |
+| :doc:`/events/ball_hold_name_balls_released`                                 |
 +------------------------------------------------------------------------------+
-| :doc:`/events/ball_lock_name_full`                                           |
+| :doc:`/events/ball_hold_name_full`                                           |
 +------------------------------------------------------------------------------+
-| :doc:`/events/ball_lock_name_locked_ball`                                    |
+| :doc:`/events/ball_hold_name_held_ball`                                      |
 +------------------------------------------------------------------------------+
