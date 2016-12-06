@@ -63,7 +63,6 @@ an event called *switch_s_left_slingshot_active*.
    balldevice_captured_from_(device) <balldevice_captured_from_device>
    balldevice_(name)_ball_eject_attempt <balldevice_name_ball_eject_attempt>
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
-   balldevice_(name)_ball_eject_permanent_failure <balldevice_name_ball_eject_permanent_failure>
    balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
    balldevice_(name)_ball_enter <balldevice_name_ball_enter>
    balldevice_(name)_ball_left <balldevice_name_ball_left>
