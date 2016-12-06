@@ -1,22 +1,30 @@
 Understanding MPF version numbering
 ===================================
 
-This page explains how version numbering works in MPF, and how the MPF documentation versions map to the MPF versions.
+This page explains:
 
-MPF is a work-in-progress and under constant development. The core developers spend about 40 hours a week working on
-MPF with multiple fixes and enhancements made every day.
+* How version numbering works in MPF, and
+* Hnd how the MPF documentation versions map to the MPF versions.
 
-We release a new version of MPF about every 2-3 months. (See the full release history :doc:`here <history>`).
+MPF is under constant development. The core developers typically spend a combined 40 hours a week working on
+MPF with multiple fixes and enhancements made every day. (You can see the stream of code "commits" on GitHub,
+`here for MPF <https://github.com/missionpinball/mpf/commits/dev>`_ and
+`here for MPF-MC <https://github.com/missionpinball/mpf-mc/commits/dev>`_. (Actually we work on the docs a lot too,
+check out the latest updates `here <https://github.com/missionpinball/mpf-docs/commits/latest>`_.
 
-MPF versions follow a standard called `semantic versioning <http://semver.org/>`_ which uses a MAJOR.MINOR.PATCH version
-number format. For example, the version number ``0.31.8`` is major version 0, minor version 31, and patch number 8.
+Anyway, we release a new version of MPF every 2-3 months. (See the full release history :doc:`here <history>`).
+
+MPF version numbering follows a standard called `semantic versioning <http://semver.org/>`_ which uses a
+"MAJOR.MINOR.PATCH" version number format. For example, the version number ``0.31.8`` is major version 0, minor
+version 31, and patch number 8.
 
 .. note::
 
-   Version numbers in MPF are numeric, not mathematical decimals. In other words, MPF 0.30 is "zero point thirty",
-   which is not the same as "0.3" which is "zero point three". Also, 0.30 is 27 versions newer than 0.3.
+   Version numbers in MPF are numbers separated by dots which are *not( mathematical decimals. In other words,
+   MPF 0.30 is "zero point thirty", which is not the same as "0.3" which is "zero point three". Also, 0.30 is
+   27 versions newer than 0.3.
 
-All the MAJOR versions of MPF start with "0" because we have not yet released a "1." version.
+All the MAJOR versions of MPF start with "0" because we have not yet released a 1.0 version yet.
 
 MPF features and configuration files can change between MINOR versions. For example, there were significant changes
 between versions 0.21 and 0.30.
@@ -57,4 +65,4 @@ If you look in the URL for a page, you'll see the version(s) of MPF that
 page is for. Note that there's a special version of the docs called "latest"
 which always points to the latest version of the docs. (That way you can
 safely link to a page and know that in the future it will always be the most
-recent version.
+recent version.)
