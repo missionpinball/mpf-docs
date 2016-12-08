@@ -7,10 +7,10 @@ This page explains:
 * Hnd how the MPF documentation versions map to the MPF versions.
 
 MPF is under constant development. The core developers typically spend a combined 40 hours a week working on
-MPF with multiple fixes and enhancements made every day. (You can see the stream of code "commits" on GitHub,
+MPF with multiple fixes and enhancements made every day. You can see the stream of code "commits" on GitHub,
 `here for MPF <https://github.com/missionpinball/mpf/commits/dev>`_ and
 `here for MPF-MC <https://github.com/missionpinball/mpf-mc/commits/dev>`_. (Actually we work on the docs a lot too,
-check out the latest updates `here <https://github.com/missionpinball/mpf-docs/commits/latest>`_.
+check out the latest updates `here <https://github.com/missionpinball/mpf-docs/commits/latest>`_.)
 
 Anyway, we release a new version of MPF every 2-3 months. (See the full release history :doc:`here <history>`).
 
