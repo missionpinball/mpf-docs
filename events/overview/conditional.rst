@@ -52,7 +52,7 @@ For example:
 ::
 
    slide_player:
-      ball_started{args.ball==1}: first_ball_intro
+      ball_started{ball==1}: first_ball_intro
 
 In the above example, the slide "first_ball_intro" will only be posted when
 the *ball_started* AND when the value of ball is 1. (Since this entry doesn't
@@ -64,8 +64,8 @@ Of course you can use multiple entries with different values, like this:
 ::
 
    slide_player:
-      ball_started{args.ball==1}: first_ball_intro
-      ball_started{args.ball>1}: lets_go
+      ball_started{ball==1}: first_ball_intro
+      ball_started{ball>1}: lets_go
 
 In this case, when the *ball_started* event is posted for Ball 1, the
 "first_ball_intro" slide will be shown. And if it's posted with a ball after
@@ -76,7 +76,7 @@ You can also combine things here using ``and`` or ``or``. For example:
 ::
 
    slide_player:
-      ball_started{args.ball==1 or args.ball==3}: special_slide
+      ball_started{ball==1 or ball==3}: special_slide
 
 Now the "special_slide" will be shown for either ball 1 *or* ball 3.
 
@@ -85,22 +85,24 @@ You can also combine with "and", for example:
 ::
 
    slide_player:
-      ball_started{args.ball==3 or args.player==1}: special_slide
+      ball_started{ball==3 or player==1}: special_slide
 
 Now the "special_slide" will only show when the *ball_started* event is posted
 for player 1, ball 3 (but not player 2, ball 3, etc.).
 
 Feeling crazy yet?
 
-In addition to the ``args.`` (which uses keyword arguments from events), you
-can also use ``player.`` to access player variables, ``machine.`` to access
-machine variables, and ``settings.`` to access operator settings.
+In addition to keyword arguments from events), you
+can also use ``current_player.`` to access player variables,
+``players[x]`` to access player variables from any player (x is the player index),
+``machine.`` to access machine variables, ``game.`` game attributes,
+and ``settings.`` to access operator settings.
 
 ::
 
    slide_player:
       ball_started{current_player.score > 1000000}: you_rule
-      ball_started{current_player.score < 10000 and args.ball == 3}: you_stink
+      ball_started{current_player.score < 10000 and ball == 3}: you_stink
 
 The above config will show the slide "you_rule" any time the *ball_started*
 event is posted and the player's score is more than 1 million. It will also
@@ -115,7 +117,7 @@ to evaluate whether the action should take place:
 ::
 
    slide_player:
-      ball_started{args.ball > 1 and current_player.score < ((args.ball - 1) * 10000)}: uh_oh
+      ball_started{ball > 1 and current_player.score < ((ball - 1) * 10000)}: uh_oh
 
 This will post the slide "uh_oh" if the player is starting a ball after Ball 1
 and their score is less than an average of 10k points per ball. (Notice that
