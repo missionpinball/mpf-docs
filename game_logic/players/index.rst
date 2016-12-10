@@ -9,7 +9,7 @@ Player Variables
 
 MPF contains lots of features which make working with players easy.
 
-Each player has "player variables" which are names and values that are stored
+Each player has "player variables" which are key/value pairs that are stored
 separately for each player.
 
 Some simple examples of player variables include things like:
@@ -17,13 +17,17 @@ Some simple examples of player variables include things like:
 * ``number``: The player's number (1, 2, etc.)
 * ``score``: The player's current score
 
-You can create your own player variables which can be called anything you want
-and can store anything you want. So you can use them to track player's progress
-through the game, how many loops they've made, how many pop bumper hits they
-have, etc.
+There's a :doc:`/player_vars/index` which lists the default player variables
+that MPF creates and uses.
 
-MPF also uses player variables to keep track of all the other game logic
-elements that are tracked on a per-player basis, like achievement status,
+You can alos create your own player variables which can be called anything you want
+and can store anything you want. You can use them to track player's progress
+through the game, how many loops they've made, how many pop bumper hits they
+have, etc. See the :doc:`/config/player_vars` documentation for details and
+examples.
+
+MPF also uses player variables to keep track of all the built-in game logic
+elements that are tracked on a per-player basis, including achievement status,
 logic block states, extra balls, bonus, etc.
 
 +------------------------------------------------------------------------------+
@@ -51,7 +55,3 @@ logic block states, extra balls, bonus, etc.
 +------------------------------------------------------------------------------+
 | :doc:`/events/single_player_ball_started`                                    |
 +------------------------------------------------------------------------------+
-
-.. toctree::
-
-   player_variables

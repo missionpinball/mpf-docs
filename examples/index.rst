@@ -83,6 +83,7 @@ and/or show configs.
    p_roc </examples/p_roc/index>
    physical_dmd </examples/physical_dmd/index>
    platform </examples/platform/index>
+   player_vars </examples/player_vars/index>
    playfield </examples/playfield/index>
    playfield_transfer </examples/playfield_transfer/index>
    plugin_config_player </examples/plugin_config_player/index>
