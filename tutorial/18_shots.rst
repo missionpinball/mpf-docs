@@ -11,7 +11,7 @@ putting together your game logic.
 1. What's a shot?
 -----------------
 
-First, take a look at the :doc:`introduction to shots </game_logic/shots/index>`_
+First, take a look at the :doc:`introduction to shots </game_logic/shots/index>`
 documentation to understand what a shot is.
 
 2. Create your first shot
