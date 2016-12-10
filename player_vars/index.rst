@@ -2,7 +2,7 @@ Player Variables Reference
 ==========================
 
 Here's a list of all the different "built in"
-:doc:`player variables </game_logic/players/player_variables>` that MPF uses.
+:doc:`player variables </game_logic/players/index>` that MPF uses.
 
 You can use these in your config files to trigger game logic or to display as
 text on your display.
