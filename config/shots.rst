@@ -356,7 +356,7 @@ switches:
 ~~~~~~~~~
 List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
 
-This setting is the same as the ``switch:`` setting above. You can techincally
+This setting is the same as the ``switch:`` setting above. You can technically
 enter a single switch or a list of switches in either the ``switch:`` setting
 or the ``switches:`` setting, but we include both since it was confusing to
 be able to enter multiple switches for a singlular "switch" setting and vice

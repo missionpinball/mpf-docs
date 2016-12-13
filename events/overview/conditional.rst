@@ -1,6 +1,8 @@
 Conditional Events
 ==================
 
+.. versionadded:: 0.32
+
 So far we've talked about how events are just strings of text, for example:
 
 * ball_started
@@ -129,7 +131,7 @@ can if you want. :)
 
 Things you can use
 ------------------
-* ``arg.``
+
 * ``current_player.``
 * ``players.``
 * ``game.``
