@@ -19,7 +19,7 @@ But also these:
    Color DMD <color_dmd/index>
    DMD <dmd/index>
    Ellipse <ellipse/index>
-   Line <line>
+   Line <line/index>
    Points <points>
    Quad <quad>
    Rectangle <rectangle>
