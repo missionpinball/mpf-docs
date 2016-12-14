@@ -41,6 +41,7 @@
    Config Players </config_players/index>
    Machine Management </machine_management/index>
    MPF Monitor (GUI tool) </monitor/index>
+   Testing Your Machine </testing/index>
    Finalizing Your Machine </finalization/index>
    Flowcharts </flowcharts/index>
 
