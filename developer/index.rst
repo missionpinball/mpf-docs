@@ -11,3 +11,4 @@ TODO
    hardware
    api
    contributing
+   installation
