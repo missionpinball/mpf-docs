@@ -9,11 +9,11 @@ shots:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. overview
-
 The *shots:* section of your config file is where you define
-theshots in your machine. A *shot* is a switch (or a series of
-switches that have to be hit in order). Shots can be things like standup
+the shots in your machine. A *shot* is a switch, a series of
+switches that have to be hit in order, or an event or series of events.
+
+Shots are used for things like standup
 targets, rollover lanes, drop targets, ramps, loops, orbits, etc.
 
 Each shot can have a *shot profile* applied to it which defines what
@@ -27,8 +27,7 @@ can have one behavior in the base mode and then take on another behavior when
 a higher-priority mode is started. The tracking of various states of the
 shot profiles is maintained on a per-mode basis.
 
-You can group
-multiple shots together into *shot groups* for group-level
+You can group multiple shots together into *shot groups* for group-level
 functionality like posting events when all the shots in a group in the
 same state (lit, unlit, complete, etc.) and for rotating the states
 of shots to the left or right based on certain events happening
@@ -387,4 +386,4 @@ sequence:
 
 .. versionadded:: 0.31
 
-TODO
+Like ``switch_sequence:``, except this setting is a list of events, rather than switches.
