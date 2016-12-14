@@ -1,5 +1,5 @@
-Understanding MPF "platform" settings
-=====================================
+Mixing-and-Matching hardware platforms
+======================================
 
 In MPF it's possible to mix-and-match your hardware platforms. For
 example, you could use a P-ROC for your coils and switches while using

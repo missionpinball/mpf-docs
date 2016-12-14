@@ -61,6 +61,6 @@ MPF even when it's connected to a physical machine, and the Monitor is
 great for that.
 
 You can also use MPF Monitor with no hardware attached using one of
-MPF's :doc:`virtual platforms </virtual/index>`. Specifically the
-:doc:`smart virtual platform </virtual/smart_virtual>` works great if you're
-using MPF without physical hardware.
+MPF's :doc:`virtual platforms </hardware/virtual/index>`. Specifically the
+:doc:`smart virtual platform </hardware/virtual/smart_virtual>` works great if
+you're using MPF without physical hardware.

@@ -80,7 +80,7 @@ purposes, but the actual coil firing would have already happened thanks to the
 hardware rule on the pinball controller.
 
 This is all automatic
-=====================
+---------------------
 
 The good news about these hardware rules is that there's nothing you need to
 do to use them. This is just one of the things that MPF does behind the

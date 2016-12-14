@@ -29,7 +29,7 @@ Dec 1, 2016
 * Improved :doc:`achievements </game_logic/achievements/index>` and added
   :doc:`achievement groups </game_logic/achievements/achievement_groups>`.
 * Added relay events and relay queues
-* Improved :doc:`smart virtual platform </virtual/smart_virtual>`
+* Improved :doc:`smart virtual platform </hardware/virtual/smart_virtual>`
 * Improved support for :doc:`System 11 </mechs/troughs/two_coil_multiple_switches>`
   and :doc:`Gottlieb System 3 style </mechs/troughs/two_coil_one_switch>`
   troughs (including using the ball drain as a ball storage location to get one
