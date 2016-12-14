@@ -26,7 +26,7 @@ Here's an example:
                show: "on"
 
 <name>:
-~~~~~~~
+-------
 
 This is the name of the shot profile, which is how you'll refer to it
 elsewhere in your config files when you apply it to shots. The sample
@@ -190,33 +190,22 @@ states:
 
 The ``states:`` section contains the following nested sub-settings
 
-Required settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are required in the ``states:`` section of your config:
-
 Under each shot profile name, a setting called *states:* lets you
 specify various properties for the target in different states. You can
 configure multiple states in the order that you want them to be
 stepped through. (You use a dash, then a space, then a setting to
-indicate that items should be a list. See our reference about `how to
-create list items in config files`_.) The following sections explain
+indicate that items should be a list. The following sections explain
 the settings for each state:
 
 name:
-^^^^^
+~~~~~
 Single value, type: ``string``.
 
 This is the name of the step. In other words, it's what "state" the
 shot is in when this profile step is active.
 
-Optional settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are optional in the ``states:`` section of your config. (If you don't include them, the default will be used).
-
 action:
-^^^^^^^
+~~~~~~~
 Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
 
 .. versionchanged:: 0.31 (Added "step_back" state)
@@ -224,58 +213,58 @@ Single value, type: one of the following options: play, stop, pause, resume, adv
 Specifies which show action is taken for the show on this state in the shot profile.
 
 key:
-^^^^
+~~~~
 .. deprecated:: 0.31
 
 loops:
-^^^^^^
+~~~~~~
 Single value, type: ``integer``. Default: ``-1``
 
 Loops setting from the show player, controls how many times the show loops (``-1`` is unlimited).
 
 manual_advance:
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 If True, the show does not automatically advance to the next step.
 
 priority:
-^^^^^^^^^
+~~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
 
 The priority shift of the show that's played.
 
 reset:
-^^^^^^
+~~~~~~
 .. deprecated:: 0.31
 
 show:
-^^^^^
+~~~~~
 Single value, type: ``string``. Default: ``None``
 
 The name of the show that will be played when a shot with this profile applied is in
 this step (or state).
 
 show_tokens:
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 Show tokens for the show.
 
 speed:
-^^^^^^
+~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1``
 
 Playback speed of the show.
 
 start_step:
-^^^^^^^^^^^
+~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
 The step number the show will start on.
 
 sync_ms:
-^^^^^^^^
+~~~~~~~~
 
 .. versionchanged:: 0.32
 
