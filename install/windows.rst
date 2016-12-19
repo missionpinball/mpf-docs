@@ -154,7 +154,7 @@ This is also installed via pip, like this:
 
 ::
 
-   pip install kivy.deps.gstreamer --extra-index-url https://mpf.kantert.net/simple/
+   pip install kivy.deps.gstreamer==0.1.5 --extra-index-url https://mpf.kantert.net/simple/
 
 Just copy-and-paste that entire line into the command line and press enter. It
 will download the codec pack which is 93mb and install it.
