@@ -18,6 +18,8 @@ MPF
 * Made achievements and achievement groups smarter and more robust (also backported to 0.32)
 * Added more functions for people building games to use to write tests
 * Added ball hold device
+* Added multiball lock device
+* Customize the BCP ports & interfaces used
 
 0.32
 ~~~~
