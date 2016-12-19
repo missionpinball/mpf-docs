@@ -51,10 +51,10 @@
    :titlesonly:
    :numbered: 0
 
-   Events</events/index>
-   Config Files</config/index>
-   Player Variables</player_vars/index>
-   Machine Variables</machine_vars/index>
+   Config File Reference </config/index>
+   Events </events/index>
+   Player Variables </player_vars/index>
+   Machine Variables </machine_vars/index>
    Example Config Files </examples/index>
    Example Machines </example_machines/index>
 
