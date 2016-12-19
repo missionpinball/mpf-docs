@@ -116,6 +116,16 @@ widgets:
   widget10:
     type: text
     text: (text)
+  info_frame:
+    - type: slide_frame
+      width: 210
+      height: 28
+      name: infoframe
+      y: 28
+      x: 0
+      anchor_y: top
+      anchor_x: left
+      z: 1000
 
 widget_player:
   add_widget1_to_current: widget1
@@ -230,6 +240,8 @@ widget_player:
   show_widget10:
     widget10:
       action: add
+  show_info_frame:
+    info_frame: {}
 
 slide_player:
   show_slide_1:

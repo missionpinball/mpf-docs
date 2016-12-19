@@ -25,8 +25,26 @@ it if needed for a specific situation:
            local_display:
                host: localhost
                port: 5050
-               connection_attempts: 5
-               require_connection: no
+               type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+               required: True
+               exit_on_close: True
+
+       servers:
+           url_style:
+               ip: 127.0.0.1
+               port: 5051
+               type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+
+       player_variables:
+         __all__
+
+       machine_variables:
+         __all__
+
+       shots:
+         __all__
+
+       debug: false
 
 connections:
 ------------
@@ -101,10 +119,43 @@ every player variable to the media controller. Here's an example:
         player_variables:
             __all__
 
+servers:
+--------
+
+.. versionadded:: 0.31
+
+todo
+
+ip:
+~~~
+
+.. versionadded:: 0.31
+
+todo
+
+.. versionchanged:: 0.33
+
+Starting in MPF 0.33, you can use ``ip: None`` and MPF will listen for incoming connections
+on all network interfaces.
+
+port:
+~~~~~
+
+.. versionadded:: 0.31
+
+todo
+
+type:
+~~~~~
+
+.. versionadded:: 0.31
+
+todo
+
 required:
 ---------
 
-.. versionadded:: 0.32
+.. versionadded:: 0.31
 
 TODO
 
