@@ -20,7 +20,7 @@ Some simple examples of player variables include things like:
 There's a :doc:`/player_vars/index` which lists the default player variables
 that MPF creates and uses.
 
-You can alos create your own player variables which can be called anything you want
+You can also create your own player variables which can be called anything you want
 and can store anything you want. You can use them to track player's progress
 through the game, how many loops they've made, how many pop bumper hits they
 have, etc. See the :doc:`/config/player_vars` documentation for details and
