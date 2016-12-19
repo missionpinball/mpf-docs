@@ -4,7 +4,7 @@ import re
 
 paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
 rst_path = '../events'
-dont_delete_files = ['index.rst', 'event_types.rst']
+dont_delete_files = []
 
 
 class EventDocParser(object):
@@ -81,7 +81,7 @@ an event called *switch_s_left_slingshot_active*.
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(rst_path, 'event_reference.rst'), 'w') as f:
+        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
             f.write(index)
 
     def create_file(self, event, rst):

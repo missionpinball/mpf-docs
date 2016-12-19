@@ -35,7 +35,7 @@ class MachineVarDocParser(object):
 =================
 
 Machine variables are similar to
-:doc:`player variables </game_logic/players/player_variables>`, except that
+:doc:`player variables </game_logic/players/index>`, except that
 machine variables are machine-wide and persist between games. (In fact,
 machine variables can be configured to be saved to disk so they also persist
 between reboots of MPF.)
