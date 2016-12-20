@@ -56,7 +56,7 @@ But since your plunger lane with no switch is not a ball device, that means
 we have to go back to the trough ball device and add the ``ball_add_live``
 tag to it. (Your trough device will already have the ``trough`` tag applied
 to it, and depending on how your machine is laid it, it might also have the
-``ball_drain`` tag applied.)
+``drain`` tag applied.)
 
 So add ``ball_add_live`` to your trough now.
 
