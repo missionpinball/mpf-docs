@@ -18,6 +18,10 @@ Adding custom code to your game
 Helping us improve MPF
 ----------------------
 
+.. toctree::
+   :maxdepth: 1
+
    contributing
    installation
    hardware
+   unittests
