@@ -44,6 +44,7 @@
    Testing Your Machine </testing/index>
    Finalizing Your Machine </finalization/index>
    Flowcharts </flowcharts/index>
+   Troubleshooting </troubleshooting/index>
 
 .. toctree::
    :hidden:
