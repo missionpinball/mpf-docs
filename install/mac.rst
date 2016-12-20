@@ -62,56 +62,16 @@ This command does a few things:
   command in the future to update MPF and MPF-MC in your MPF.app package without having to re-download the whole thing
   again.)
 
-3. Test your installation
--------------------------
+3. Download & run the "Demo Man" example game
+---------------------------------------------
 
-Once MPF is installed, you can run some automated tests to make sure that
-everything is working. To do this, open a Terminal window, and then type the
-following command and then press <enter>:
+Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
+to download a bundle of MPF examples and run our "Demo Man" example game. To do that, follow
+the instructions in the :doc:`/example_machines/demo_man` guide.
 
-::
-
-  kivy -m unittest discover mpf
-
-When you do this, you should see a bunch of dots on the screen (one for each
-test that's run), and then when it's done, you should see a message showing
-how many tests were run and that they were successful. The whole process should
-only take 15-30 seconds or so.
-
-These tests are the actual tests that the developers of MPF use to test MPF
-itself. We wrote all these tests to make sure that updates and changes we add
-to MPF don't break things. :) So if these tests pass, you know your MPF
-installation is solid.
-
-Remember though that MPF is actually two separate parts, the MPF core engine and
-the MPF media controller. The command you run just tested the core engine, so
-now let's test the media controller. To do this, run the following command:
-
-::
-
-  kivy -m unittest discover mpfmc
-
-When you run these tests, you should see a graphical window pop up on the
-screen, and many of the tests will put graphics and words in that window. Also,
-some of the tests include audio, so if your speakers are on you should hear some
-sounds at some point.
-
-These tests take longer, maybe a minute or more, but when they're done, that
-graphical window should close, and you'll see all the dots in your command
-window and a note that all the tests were successful.
-
-Note: Many of the media controller tests are used to test internal workings of
-the media controller itself, so there will be lots of time when the pop up
-window is blank. That's fine.
-
-Also, the animation and transition tests include testing functionality to stop,
-restart, pause, and skip frames. So if things look "jerky" in the tests, don't
-worry, that doesn't mean your computer is slow, it's just how the tests work! :)
-
-At this point you should have a fully working copy of MPF. Congrats!
-
-Next we'd recommend following our :doc:`step-by-step tutorial </tutorial/index>`
-which will show you how to start building your own game in MPF!
+There's another example project you can also check out if you want called the "MC Demo" (for media controller demo)
+that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
+Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
 
 4. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------

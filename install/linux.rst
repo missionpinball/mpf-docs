@@ -9,6 +9,17 @@ https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
 Unzip it, and from a terminal run ``sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
 or P3-Roc also run ``./install-proc`` (skip for other platforms). Consult the README for more information.
 
+Download & run the "Demo Man" example game
+------------------------------------------
+
+Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
+to download a bundle of MPF examples and run our "Demo Man" example game. To do that, follow
+the instructions in the :doc:`/example_machines/demo_man` guide.
+
+There's another example project you can also check out if you want called the "MC Demo" (for media controller demo)
+that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
+Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
+
 Running MPF
 -----------
 

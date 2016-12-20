@@ -1,45 +1,38 @@
-How to run "Demo Man", the MPF example game
-===========================================
+How to run "Demo Man", an MPF example game
+==========================================
 
-Once you have MPF installed, you can run an example game to see how
-MPF works and to verify that everything is installed correctly.
+One of the development machines we have for MPF is a 1994 Williams
+*Demolition Man*, and we have a simple MPF configuration built for
+it that you can run to see MPF in action.
 
-1. Download the MPF examples
-----------------------------
+Even if you don't have a physical *Demolition Man* machine (which
+we assume you don't), you can run our "Demo Man" config using
+MPF's :doc:`smart virtual </hardware/virtual/smart_virtual>` platform.
 
-There are several sample game configs (along with some templates and
-stuff) which you can download. Instructions are in the
-:doc:`/example_machines/index` page. Follow them to download and
-unzip the mpf-examples repo.
+1. Download the MPF examples bundle
+-----------------------------------
+
+Instructions :doc:`here <mpf-examples>`.
 
 2. Run *Demo Man*, a sample game that comes with MPF
 ----------------------------------------------------
 
-One of the development machines we have for MPF is a 1994 Williams
-*Demolition Man*, and it's included in the *mpf-examples* repo
-you downloaded in Step 1.
-
-So at this point you can run *Demo Man* (which is what we call
-it—get it??) with the software-only "smart virtual" platform mode with no
-physical pinball hardware attached just to make sure that everything is up and
-running properly.
-
-To do this, open a command prompt and switch to the
-folder where you unzipped the mpf-examples ZIP file, then change to
-the ``demo_man`` folder and run ``mpf both -X -v``.
-
-(Note that's an uppercase "X" and a lowercase "v".)
-
-The ``mpf both`` command launches both the MPF game engine and
-media controller at the same time, the ``-X`` command line option
-tells MPF to *not* try to connect to the physical hardware since you
-most likely don't have a Demolition Man machine connected to your
-computer right now, and the ``-v`` option sets the logging level to
-verbose:
+Open a command prompt (like you did when you installed MPF)
+and switch to the folder where you unzipped the mpf-examples ZIP file,
+then change to the ``demo_man`` folder and run:
 
 ::
 
-   C:\mpf-examples\demo_man>mpf both -X -v
+   mpf both -X
+
+(Note that's an uppercase "X")
+
+The ``mpf both`` command launches both the MPF game engine and
+media controller at the same time, the ``-X`` command line option
+tells MPF to use the "Smart Virtual" platform (instead of the P-ROC
+platform that the Demo Man files are configured for) since you
+most likely don't have a Demolition Man machine connected to your
+computer right now.
 
 You should see a bunch of stuff scroll by and a pop up window which
 shows the Demo Man DMD, like this:
@@ -100,25 +93,3 @@ To summarize the instructions for "playing" a game from the paragraphs above:
    left and right flipper buttons to highlight a letter, and the ``S`` key
    (start) selects it.
 #. Press the ``Esc`` key to exit
-
-4. Take a look at the log files to see what just happened!
-----------------------------------------------------------
-
-The MPF core engine and media controller always create log files.
-Since we ran these with the ``-v`` command line option, we'll have
-"verbose" log files to look at.
-
-A new folder called */logs* should have been created in ``demo_man``
-game folder. Inside that folder you
-should see two new log files—-one from the MPF game engine and one from
-the media controller. The files are named with a date & time stamp,
-then either *mpf* or *mc* (for MPF game or media controller), then the
-host name of the machine they were run on.
-
-The files have a .log file extension, but they're just regular text files.
-On Windows if you double-click them, they'll open with Notepad. On a
-Mac they'll open with an app called Console which is a log file
-viewer.
-
-If you scan through that log file, you'll see that MPF does *a lot* in
-the background. :)
