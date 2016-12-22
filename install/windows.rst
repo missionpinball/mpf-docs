@@ -131,37 +131,74 @@ To do this, run the following command from the command prompt:
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
-pip will connect to the internet and download MPF from the Python app store
+pip will connect to the internet and download MPF-MC from the Python app store
 and install it onto your computer.
 
 Pip packages can include dependencies, which means that when you run this
-command, you'll see a bunch of packages get downloaded and installed.
+command, you'll see a bunch (like 10 or so) packages get downloaded and installed. The
+total size of all these will be almost 200mb, and they include multimedia libraries,
+graphics engines, codecs, and a bunch of other components that MPF needs.
 
-In this case, the ``mpf-mc`` package will also download and install the MPF
-game engine package, as well as various other packages that MPF needs to run.
+The MPF MC package will also download and install the MPF game engine package.
 
-4. Install the video codec pack
--------------------------------
+Here's an example of what this looks like from the command prompt. (Note that the exact
+versions and sizes might not be the same as what you have, but this should give you a
+general idea. Also this may take a few minutes to run on your computer.)
 
-MPF uses an open source project called Gstreamer to play video. By default, Gstreamer
-only comes with codecs that can play open source and free video formats which are somewhat
-obscure and things you probably never heard of.
+.. code-block:: doscon
 
-So the next step is to install a codec pack that will let MPF play just about
-any kind of video (H.264, MPG, etc.)
+   C:\Users\BRIAN MADDEN>pip install mpf-mc
+   Collecting mpf-mc
+     Downloading mpf_mc-0.32.11-cp34-none-win_amd64.whl (11.3MB)
+       100% |################################| 11.3MB 58kB/s
+   Collecting kivy==1.9.1 (from mpf-mc)
+     Downloading Kivy-1.9.1-cp34-none-win_amd64.whl (7.6MB)
+       100% |################################| 7.6MB 114kB/s
+   Collecting kivy.deps.sdl2==0.1.17 (from mpf-mc)
+     Downloading kivy.deps.sdl2-0.1.17-cp34-cp34m-win_amd64.whl (2.5MB)
+       100% |################################| 2.5MB 284kB/s
+   Collecting ruamel.yaml<0.11,>=0.10 (from mpf-mc)
+     Downloading ruamel.yaml-0.10.23-py3-none-win_amd64.whl (69kB)
+       100% |################################| 71kB 1.1MB/s
+   Collecting pypiwin32 (from mpf-mc)
+     Downloading pypiwin32-219-cp34-none-win_amd64.whl (8.6MB)
+       100% |################################| 8.6MB 75kB/s
+   Collecting kivy.deps.glew==0.1.9 (from mpf-mc)
+     Downloading kivy.deps.glew-0.1.9-cp34-cp34m-win_amd64.whl (161kB)
+       100% |################################| 163kB 1.3MB/s
+   Collecting kivy.deps.sdl2-dev==0.1.17 (from mpf-mc)
+     Downloading kivy.deps.sdl2_dev-0.1.17-cp34-cp34m-win_amd64.whl (3.5MB)
+       100% |################################| 3.6MB 242kB/s
+   Collecting kivy.deps.gstreamer==0.1.12 (from mpf-mc)
+     Downloading kivy.deps.gstreamer-0.1.12-cp34-cp34m-win_amd64.whl (129.5MB)
+       100% |################################| 129.5MB 6.9kB/s
+   Collecting mpf>=0.32.6 (from mpf-mc)
+     Downloading mpf-0.32.6-cp34-none-any.whl (746kB)
+       100% |################################| 747kB 819kB/s
+   Collecting Kivy-Garden>=0.1.4 (from kivy==1.9.1->mpf-mc)
+     Downloading kivy-garden-0.1.4.tar.gz
+   Collecting ruamel.base>=1.0.0 (from ruamel.yaml<0.11,>=0.10->mpf-mc)
+     Downloading ruamel.base-1.0.0-py3-none-any.whl
+   Collecting pyserial>=3.2.0 (from mpf>=0.32.6->mpf-mc)
+     Downloading pyserial-3.2.1-py2.py3-none-any.whl (189kB)
+       100% |################################| 194kB 1.6MB/s
+   Collecting pyserial-asyncio>=0.2 (from mpf>=0.32.6->mpf-mc)
+     Downloading pyserial_asyncio-0.3-py3-none-any.whl
+   Collecting requests (from Kivy-Garden>=0.1.4->kivy==1.9.1->mpf-mc)
+     Downloading requests-2.12.4-py2.py3-none-any.whl (576kB)
+       100% |################################| 583kB 1.1MB/s
+   Installing collected packages: requests, Kivy-Garden, kivy, kivy.deps.sdl2, ruamel.base,
+   ruamel.yaml, pypiwin32, kivy.deps.glew, kivy.deps.sdl2-dev, kivy.deps.gstreamer, pyserial,
+   pyserial-asyncio, mpf, mpf-mc
+     Running setup.py install for Kivy-Garden ... done
+   Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 kivy.deps.glew-0.1.9 kivy.deps.gstreamer-0.1.12
+   kivy.deps.sdl2-0.1.17 kivy.deps.sdl2-dev-0.1.17 mpf-0.32.6 mpf-mc-0.32.11 pypiwin32-219 pyserial-3.2.1
+   pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
 
-This is also installed via pip, like this:
+   C:\Users\BRIAN MADDEN>
 
-::
 
-   pip install kivy.deps.gstreamer==0.1.5 --extra-index-url https://mpf.kantert.net/simple/
-
-Just copy-and-paste that entire line into the command line and press enter. It
-will download the codec pack which is 93mb and install it.
-
-The URL is from one of the MPF developers (Jan Kantert, thanks!), who is hosting this file for us.
-
-5. Download & run the "Demo Man" example game
+4. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -172,7 +209,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
 
-6. Install whatever drivers your hardware controller needs
+5. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
