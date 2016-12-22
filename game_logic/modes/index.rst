@@ -205,7 +205,7 @@ with each other.
 For example, you can configure scoring events so they "block" lower level modes
 which have score configured for the same event. So you might have a base game
 mode which scores 10k points for a ramp shot, but then in one particular mode
-you might want to make the ramps worth 100l points. To do this you would add the
+you might want to make the ramps worth 100k points. To do this you would add the
 scoring setting for 100k to your special mode, and then you'd run that mode at a
 higher priority than your base game mode and configure the scoring for that
 event to block the scoring from the lower mode. (Otherwise you'd get both
