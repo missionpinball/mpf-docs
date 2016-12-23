@@ -5,7 +5,7 @@ One thing I found is that I tend to use modes as a sort of “super” logic blo
 For example, the Brooks & Dunn rules have a “manager’s choice” shot that leads to a ball
 device. When the shot is lit, one of three things happens depending on what else
 is going on (one for base game mode, another for when multiball is active, and a
-third which is a timed mode). The shot may me lit or unlit in any of those three
+third which is a timed mode). The shot may be lit or unlit in any of those three
 scenarios, and the action I’m talking about should only happen when it’s lit,
 otherwise it just scores some points and kicks out the ball.
 
