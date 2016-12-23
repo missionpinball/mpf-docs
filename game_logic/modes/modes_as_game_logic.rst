@@ -23,7 +23,7 @@ is actually made, I created three more modes:
 •	managers_choice_timed (priority 302)
 •	managers_choice_multiball (priority 303)
 
-Each of these modes looks for the managers_choice lit hit shot event and then
+Each of these modes looks for the "managers_choice_lit" hit (shot) event and then
 will do their award thing. What’s cool is they also each block the shot from the
 lower down modes. This means that these shots can be stacked and running in any
 various combination.
