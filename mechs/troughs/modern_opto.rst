@@ -337,7 +337,7 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger:
-            tags: add_ball_live
+            tags: ball_add_live
             mechanical_eject: true
 
     virtual_platform_start_active_switches:
