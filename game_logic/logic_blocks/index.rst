@@ -48,3 +48,4 @@ world examples from *Attack from Mars* (if we were building that game in MPF):
    accruals
    counters
    sequences
+   integrating_logic_blocks_and_shows
