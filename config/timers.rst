@@ -36,6 +36,20 @@ List of one (or more) values, each is a type: sub-configuration containing contr
 .. todo::
    Add description.
 
+Options:
+
+* add
+* subtract
+* jump
+* start
+* stop
+* reset
+* restart
+* pause
+* set_tick_interval
+* change_tick_interval
+* reset_tick_interval (added in MPF 0.33)
+
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -67,6 +81,15 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 restart_on_complete:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo::
+   Add description.
+
+reset_on_mode_start:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+.. versionadded:: 0.33
 
 .. todo::
    Add description.

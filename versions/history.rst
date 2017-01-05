@@ -4,25 +4,52 @@ Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
 0.33
-~~~~
+----
 
 Currently in Dev, plan for first quarter 2017
 
-MPF
+.. rubric:: MPF
 
+New Features
+
+* "Ball hold" device (Temporarily hold a ball while something else is happening)
+* "Multiball lock" device (Track ball locks towards multiball, including virtual
+  locks, across balls and players)
+* Multiball "add a ball" feature
+* Additional achievements control events
+* BCP ports & interfaces are now configurable
+* Drop target "keep up" feature (PWMs reset coil to "lock" target up)
+* "Async" events (Events that wait for all handlers to finish before continuing)
+* Additional multiball events
+* More functions for people building games to use to write tests
+* Built-in modes with code can have their code overloaded
+* Added score reels to the smart virtual platform
+* Allow machine variables to be set via BCP
+
+Bug fixes & code improvements
+
+* Exiting service mode always put the machine back on free play
+* Fixed a ball lock crash
+* File loader will not try to load temp files
+* Manual plunger in smart virtual platform now works properly
 * Refactored ball devices to allow for different types of ball counters & be more robust for
   unexpected ball situations and different types of eject failures
-* Added "async" events (Events that wait for all handlers to finish before continuing)
-* Added a drop target "keep up" feature
-* Added additional multiball events
 * Made achievements and achievement groups smarter and more robust (also backported to 0.32)
-* Added more functions for people building games to use to write tests
-* Added ball hold device
-* Added multiball lock device
-* Customize the BCP ports & interfaces used
+* Improved log messages for BCP encoding errors
+* "Hz" setting is gone (since MPF is now tickless)
+* Active eject process trackers are canceled on shutdown
+* Randomizer now works with a single element
+* Fixed a bunch of small things that caused crashes
+* Changed default on-screen DMD pixel settings
+
+.. rubric:: MPF-MC
+
+New Features
+
+* Allow placeholders and settings
 
 0.32
-~~~~
+----
 
 Dec 1, 2016
 
@@ -79,7 +106,7 @@ Dec 1, 2016
 * Lots of little bug fixes...
 
 0.31
-~~~~
+----
 
 Sept 19, 2016
 
@@ -125,7 +152,7 @@ Sept 19, 2016
 * Many bug fixes...
 
 0.30
-~~~~
+----
 
 July 15, 2016
 
@@ -156,7 +183,7 @@ July 15, 2016
 * Player achievements
 
 0.21
-~~~~
+----
 
 Dec 1, 2015
 
@@ -200,7 +227,7 @@ Dec 1, 2015
 * Moved all utility functions to their own class.
 
 0.20
-~~~~
+----
 
 Sept 14, 2015
 
@@ -288,7 +315,7 @@ Sept 14, 2015
   creation of modes that can hook into game flow (bonus, etc.)
 
 0.19
-~~~~
+----
 
 August 6, 2015
 
@@ -334,7 +361,7 @@ August 6, 2015
 * Added default machine and mode delay managers
 
 0.18
-~~~~
+----
 
 June 2, 2015
 
@@ -375,7 +402,7 @@ June 2, 2015
 * Updated how the game controller tracks balls in play
 
 0.17
-~~~~
+----
 
 May 4, 2015
 
@@ -394,7 +421,7 @@ May 4, 2015
   take about 50% CPU. Now it’s down to 15%.)
 
 0.16
-~~~~
+----
 
 April 9, 2015
 
@@ -408,7 +435,7 @@ April 9, 2015
 * Created a centralized config processing module
 
 0.15
-~~~~
+----
 
 March 9, 2015
 
@@ -456,7 +483,7 @@ March 9, 2015
   simply log a warning rather than raises an exception and halting MPF.
 
 0.14
-~~~~
+----
 
 February 9, 2015
 
@@ -483,7 +510,7 @@ February 9, 2015
 * Virtual Platform: default NC switch states fixed
 
 0.13
-~~~~
+----
 
 January 16, 2015
 
@@ -521,7 +548,7 @@ January 16, 2015
 * Ball Devices: fixed a typo on the cancel ball request event
 
 0.12
-~~~~
+----
 
 December 31, 2014
 
@@ -560,7 +587,7 @@ December 31, 2014
 * Modified displays so they can each have independent refresh rates
 
 0.11
-~~~~
+----
 
 December 1, 2014
 
@@ -607,7 +634,7 @@ December 1, 2014
   hardware DMDs are specified in the config files
 
 0.10
-~~~~
+----
 
 October 25, 2014
 
@@ -633,7 +660,7 @@ October 25, 2014
 * LEDs: Added force parameter to the off() method
 
 0.9
-~~~
+---
 
 October 7, 2014
 
@@ -731,7 +758,7 @@ October 7, 2014
 * Moved auditor, scoring, and shots out of system and into plugins
 
 0.8
-~~~
+---
 
 September 15, 2015
 
@@ -769,7 +796,7 @@ September 15, 2015
   it
 
 0.7
-~~~
+---
 
 September 4, 2014
 
@@ -799,7 +826,7 @@ September 4, 2014
 * Created an int_to_pwm() static method in Timing
 
 0.6
-~~~
+---
 
 August 19, 2014
 
@@ -828,7 +855,7 @@ August 19, 2014
   iterating
 
 0.5
-~~~
+---
 
 August 5, 2014
 
@@ -881,7 +908,7 @@ August 5, 2014
 * Added a remove_switch_handler method to the switch controller
 
 0.4
-~~~
+---
 
 July 25, 2014
 
@@ -902,7 +929,7 @@ July 25, 2014
   crash the machine if they weren’t there.
 
 0.3
-~~~
+---
 
 July 16, 2014
 
@@ -914,7 +941,7 @@ July 16, 2014
   testing that does not require P-ROC or FAST drivers.
 
 0.2
-~~~
+---
 
 July 11, 2014
 
@@ -923,7 +950,7 @@ July 11, 2014
 * Created the first version of the documentation
 
 0.1
-~~~
+---
 
 June 27, 2014
 
