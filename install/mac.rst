@@ -1,68 +1,257 @@
-Installing MPF on Mac OS X
-==========================
+Installing MPF on Mac
+=====================
 
-Installing MPF on Mac OS X is straightforward, though it's a bit different than how it works on
-other platforms. For OS X, we have a pre-built MPF.app application package which contains everything
-you need, including Python and all the graphics and audio libraries. So you just download this
-app, copy it to your *Applications* folder, register it with your system, and you're all set!
-
-MPF works on Mac OS X 10.9 and newer (Mavericks, Yosemite, El Capitan, and Sierra).
+MPF can be used on Mac OS X 10.9 and newer, including Mavericks, Yosemite,
+El Capitan, and MacOS Sierra.
 
 .. note::
 
-   There's a chance the MPF 0.32+ packages won't work on OS X 10.9 (Mavericks) and 10.10 (Yosemite). If
-   you have one of these versions and the installation fails,
-   `post a message in the mpf-users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_
-   and we'll figure it out. We don't have an older OS to test. :)
+   MPF cannot run in a Mac virtual machine (like in VMware Fusion or Parallels)
+   if the guest OS is Mac, though running MPF in a Windows or Linux VM on a
+   Mac is fine.
 
-The reason went with the single MPF bundle which includes Python in is the because the Mac OS has Python
-2.7 built-in, but MPF requires Python 3, so if you install Python 3 the normal way then you have to
-deal with side-by-side Python installations which can get hairy. Plus MPF requires several graphics and
-sound libraries which are sort of a pain to get installed, so really it's easier to just get everything
-you need bundled up into a single application package which you can just drag and drop and be done.
+The process for running MPF on a Mac has changed as of 2017. Previously we had
+an MPF.app that you downloaded which contained Python and everything you needed.
+
+Unfortunately we kept having problems with that self-contained app approach,
+so we switched to a more conventional method where everything is installed
+natively on the Mac. At this point we do not have an automated installation
+script for the Mac, so you'll have to follow the steps here. If anyone wants
+to volunteer to create a script, we'd love it!
+
+Also at this time, installing all the components you need to run MPF on a Mac
+will require almost 2 GB of disk space. MPF itself it only about 12 MB, but
+there are a lot of supporting things that MPF needs as you'll see here.
+
+Here are the steps to install MPF on a Mac:
+
+1. Download the Mac Multimedia Frameworks
+-----------------------------------------
+
+MPF uses open source multimedia frameworks called GStreamer and SDL2 for its
+graphics, video, and sound features. So next you need to download these
+frameworks and copy them to your Mac's frameworks folder. There are actually
+five different frameworks MPF needs, and downloading them all separately is
+kind of a pain (especially finding the right versions and everyething), so we
+have created a single ZIP file which has everything you need.
+
+Download the zip of the multimedia frameworks `here <https://www.dropbox.com/s/ohrs8tn0yh2y7oe/mpf_mac_frameworks.zip?dl=1>`_.
+The zipped download is 170 MB, and the unzipped size is 529 MB.
+
+Unzip it, and copy (or drag and drop) the five things in the zip file's
+``Frameworks`` folder to your own Mac's ``/Libraries/Frameworks`` folder.
+
+Depending on your Mac's settings, you might not see the ``/Libraries/Frameworks``
+folder in Finder. If this is the case, use the *Go -> Go to Folder...* menu,
+and then type "/Libraries/Frameworks" and hit enter.
+
+The following three images illustrate the steps:
+
+.. image:: images/mac_finder_go_to_folder.jpg
+
+.. image:: images/mac_finder_go_to_folder2.jpg
+
+Note that you will need to authenticate (which just means you have to enter
+your password) in order to be able to copy those frameworks into your Mac's
+frameworks folder. The authentication message will automatically pop up when
+you drag and drop the files:
+
+.. image:: images/mac_copy_frameworks.jpg
+
+When you're done, your Mac's ``/Libraries/Frameworks`` folder should have
+the five new frameworks (plus whatever random ones you already had), which
+should look something like this:
+
+.. image:: images/mac_frameworks_copied.jpg
+
+2. Install the Mac developer tools
+----------------------------------
+
+Next you have to install something called the "Command Line Developer Tools"
+which is a package of software development tools created by Apple which MPF
+relies on to get installed.
+
+To do this, you need to use the "Terminal" app (which is essentially a
+command prompt window for the Mac).
+
+The easiest way to launch the Terminal app is to use Spotlight (press the
+CMD + Spacebar) and then just type "Terminal", like this:
+
+.. image:: images/mac_spotlight_terminal.jpg
+
+Next, type the following command into the prompt in the terminal and press
+Enter:
+
+::
+
+   xcode-select --install
+
+That should pop up a box which gives you the option to install the command
+line tools, like this:
+
+.. image:: images/mac_install_command_line_tools.jpg
+
+Click the "Install" button here to get just the command line tools. The
+"Get XCode" button installs more than you need.
+
+The download will be about 150 MB, and the total install will be just over
+1 GB.
+
+If you already have the command line tools installed, that's fine. You'll get
+some kind of error saying they're already installed and you can move on.
+
+3. Install Python 3.5 (not Python 3.6)
+--------------------------------------
+
+MPF is written in a computer language called "Python". This means you have to install Python
+first before you can use MPF. Luckily this is just a one-time install, and you don't have to
+install it again if you update MPF later.
+
+On Mac platforms, MPF requires Python 3.4 or 3.5. (There is a Python 3.6, but
+that's untested with MPF.) So we recommend that you install Python 3.5.
+
+You can download Python 3.5 directly via `this link <https://www.python.org/ftp/python/3.5.2/python-3.5.2-macosx10.6.pkg>`_.
+(Note that the final digit in the Python version number is the "patch" number,
+so 3.5.2 is the latest version of Python 3.5.)
+
+.. image:: images/mac_install_python_1.jpg
+
+Installing Python is pretty straightforward. It's a standard Mac installation
+package. You can click next, next, next, agree to the license, enter your
+password, and you're all set.
 
 .. note::
 
-   MPF cannot run in an virtual machine (like in VMware Fusion or Parallels) if the guest OS is OS X.
-   (Though running MPF in a Windows or Linux VM on OS X is fine.) Please direct complaints to Cupertino.
+   Macs have an older version of Python built in, but it's Python 2.x, and MPF
+   requires Python 3, so that's why you have to install Python now. The new
+   Python 3 that you install here will happily live alongside the Python 2.x
+   that your Mac already has.
 
-Download a zip of the latest MPF app for OS X from `here <https://dl.dropboxusercontent.com/u/51030/Mission%20Pinball%20Framework.dmg>`_.
-The DMG file is 175 MB, and once it's installed it will consume 450 MB. (That
-seems crazy huge, right? Remember though that it has *everything* in it, including
-Python and all the multimedia and video playback libraries, audio libraries, etc.)
+You can check to make sure Python 3.5 installed correctly from the Terminal
+window. To do that, run the command:
 
-Once you've downloaded the file, here are the steps to install MPF on OS X:
+::
 
-1. Open the DMG and copy MPF to your Applications folder
---------------------------------------------------------
+   python3 --version
 
-Double-click the .dmg file to mount and open it. You'll see a window that looks like this:
+You should see it print something like "Python 3.5.2". Note that you have
+to run the command "Python3", not "Python", since the regular python command
+without the "3" on the end points to the Python 2.x that's built into your
+Mac. Here's a screenshot showing running "python" and "python3" and the
+different between the two:
 
-.. image:: images/MPFMacInstaller.jpg
+.. image:: images/mac_python_versions.jpg
 
-Then drag and drop MPF.app file to your *Applications* folder.
+4. Install/upgrade some Python components
+-----------------------------------------
 
-2. Update MPF and link it with OS X
------------------------------------
+Python includes a utility called "pip" which is the name of the Python Package
+Manager. Pip is used to install Python packages and applications from
+the web. (It's kind of like an app store for Python apps.)
 
-Double click on the RunMeOnce.command file. You may be told that you can't open this file due to security restrictions.
-If you do, go to the Security & Privacy pane in System Preferences and choose "Allow apps downloaded from anywhere." You
-can turn this off again after you run the script (or it will turn off automatically after 30 days).
+So the next step is to use pip to install/upgrade some components that we'll
+need to install MPF. (This command will actually update pip itself too.)
 
-When you run the script, you'll be prompted for your password. After you enter it, you'll be ready to go in just a few
-seconds!
+Note that the command you run is "pip3", not "pip", since again we need to
+point to the pip that's associated with the Python 3.5 installation, not the
+built-in 2.x version.
 
-This command does a few things:
+So next run the following command:
 
-* Connects to the internet and downloads / updates MPF and MPF-MC to the latest versions.
-* Registers a system-wide shortcut called ``mpf`` so when you're in your pinball machine folder you can type ``mpf`` and
-  it will be able to find the MPF launch command inside the MPF app.
-* Registers registers a system-wide shortcut called ``kivy`` which is a link to the copy of Python that's included
-  inside the MPF app package, (which is based on the `Kivy Python media library <https://kivy.org>`_ (You'll use this
-  command in the future to update MPF and MPF-MC in your MPF.app package without having to re-download the whole thing
-  again.)
+::
 
-3. Download & run the "Demo Man" example game
+    pip3 install pip setuptools cython==0.24.1 --upgrade
+
+This command will download and install the latest versions of the *pip* and
+*setuptools* packages, as well as version 0.24.1 of a package called *cython*.
+The results will look something like this (though the exact version numbers
+might be different depending on what's the latest whenever you're running this):
+
+.. code-block:: bash
+
+   Collecting pip
+     Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
+       100% |████████████████████████████████| 1.3MB 2.5MB/s
+   Collecting setuptools
+     Downloading setuptools-32.3.1-py2.py3-none-any.whl (479kB)
+       100% |████████████████████████████████| 481kB 4.3MB/s
+   Collecting cython==0.24.1
+     Downloading Cython-0.24.1-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
+       100% |████████████████████████████████| 3.8MB 7.6MB/s
+   Installing collected packages: pip, setuptools, cython
+   Successfully installed cython-0.24.1 pip-9.0.1 setuptools-32.3.1
+
+5. Install Kivy & MPF
+---------------------
+
+Next you can run pip again to install the final two components. The first is
+a Python library called Kivy which is another thing MPF uses for graphics
+and sounds, and the second is the *Mission Pinball Framework - Media Controller*
+package (which itself will install the MPF game engine).
+
+So install those like this:
+
+::
+
+   pip3 install kivy mpf-mc
+
+Your results should look something like this. The Kivy and MPF-MC packages
+each have several other packages they need, which is why more than two
+packages are downloaded and installed here.
+
+.. code-block:: bash
+
+   Brians-Mac:~ brian$ pip3 install kivy mpf-mc
+   Collecting kivy
+     Using cached kivy-1.9.1.tar.gz
+   Collecting mpf-mc
+     Downloading mpf-mc-0.32.11.tar.gz (11.1MB)
+       100% |████████████████████████████████| 11.1MB 115kB/s
+   Collecting Kivy-Garden>=0.1.4 (from kivy)
+     Downloading kivy-garden-0.1.4.tar.gz
+   Collecting ruamel.yaml<0.11,>=0.10 (from mpf-mc)
+     Downloading ruamel.yaml-0.10.23.tar.gz (228kB)
+       100% |████████████████████████████████| 235kB 533kB/s
+   Collecting mpf>=0.32.6 (from mpf-mc)
+     Downloading mpf-0.32.6.tar.gz (556kB)
+       100% |████████████████████████████████| 563kB 1.4MB/s
+   Collecting requests (from Kivy-Garden>=0.1.4->kivy)
+     Downloading requests-2.12.4-py2.py3-none-any.whl (576kB)
+       100% |████████████████████████████████| 583kB 1.3MB/s
+   Collecting ruamel.base>=1.0.0 (from ruamel.yaml<0.11,>=0.10->mpf-mc)
+     Downloading ruamel.base-1.0.0-py3-none-any.whl
+   Collecting pyserial>=3.2.0 (from mpf>=0.32.6->mpf-mc)
+     Downloading pyserial-3.2.1-py2.py3-none-any.whl (189kB)
+       100% |████████████████████████████████| 194kB 4.2MB/s
+   Collecting pyserial-asyncio>=0.2 (from mpf>=0.32.6->mpf-mc)
+     Downloading pyserial_asyncio-0.3-py3-none-any.whl
+   Installing collected packages: requests, Kivy-Garden, kivy, ruamel.base, ruamel.yaml, pyserial, pyserial-asyncio, mpf, mpf-mc
+     Running setup.py install for Kivy-Garden ... done
+     Running setup.py install for kivy ... done
+     Running setup.py install for ruamel.yaml ... done
+     Running setup.py install for mpf ... done
+     Running setup.py install for mpf-mc ... done
+   Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.11 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
+   Brians-Mac:~ brian$
+
+If you want to make sure that MPF was installed, you can run:
+
+::
+
+   mpf --version
+
+This command can be run from anywhere and should produce output something like
+this:
+
+.. code-block:: bash
+
+   Brians-Mac:~ brian$ mpf --version
+   MPF v0.32.6
+
+(Note that the actual version number of your MPF installation will be whatever
+version is the latest.)
+
+6. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -73,7 +262,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
 
-4. Install whatever drivers your hardware controller needs
+7. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
@@ -85,35 +274,27 @@ want to play with MPF first.)
 Running MPF
 -----------
 
-Starting with MPF 0.30, you run MPF by running the "mpf" command directly. (e
-.g. you do not have to run "python" from the command prompt). For example, to
-launch both the MPF game engine and the media controller, you simply run:
-
-::
-
-   mpf both
-
-In other words, you only have to use those ``kivy`` commands above for testing
-MPF and keeping it up to date. You actually run MPF via the ``mpf`` command.
-
-See the :doc:`/running/index` for details and command-line options.
+See the section :doc:`/running/index` for details and command-line options.
 
 Keeping MPF up-to-date
 ----------------------
 
-Whenever we update MPF, you'll also have to update the MPF Mac app. Rather than
-have you re-download and replace the MPF Mac app every time, the easiest approach
-is to run a command which will just update the copy of MPF that's inside the MPF app.
-To do this, open a Terminal window and run the following:
+Since MPF is a work-in-progress, you can use the *pip* command to update your
+MPF installation.
+
+To to this, run the following:
 
 ::
 
-    kivy -m pip install mpf-mc --upgrade
+  pip3 install mpf-mc --upgrade
 
-Shout out to Kivy!
-------------------
+This will cause *pip* to contact PyPI to see if there's a newer version of the
+MPF MC (and any of its requirements, like MPF). If newer versions are found, it
+will download and install them.
 
-MPF uses an open source multimedia framework called `Kivy <https://kivy.org>`_ to display graphics and sounds.
-The MPF Mac app is based on the Kivy Mac app package, which the team from Kivy has made available for
-Kivy users (like us!) to use to package their own apps. So this amazingly simple MPF Mac
-package we have is available thanks to the awesome people at Kivy.
+Next steps!
+-----------
+
+Now that MPF is installed, you can follow our
+:doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
+building your own game in MPF!
