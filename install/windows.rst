@@ -6,8 +6,8 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python 3.4 (not Python 3.5)
---------------------------------------
+1. Install Python 3.4 (not Python 3.5 or 3.6)
+---------------------------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
@@ -197,6 +197,22 @@ general idea. Also this may take a few minutes to run on your computer.)
 
    C:\Users\BRIAN MADDEN>
 
+If you want to make sure that MPF was installed, you can run:
+
+::
+
+   mpf --version
+
+This command can be run from anywhere and should produce output something like
+this:
+
+.. code-block:: doscon
+
+   C:\Users\BRIAN MADDEN> mpf --version
+   MPF v0.32.6
+
+(Note that the actual version number of your MPF installation will be whatever
+version is the latest.)
 
 4. Download & run the "Demo Man" example game
 ---------------------------------------------
