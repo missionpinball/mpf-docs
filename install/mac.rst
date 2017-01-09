@@ -167,17 +167,17 @@ This command will download and install the latest versions of the *pip* and
 The results will look something like this (though the exact version numbers
 might be different depending on what's the latest whenever you're running this):
 
-.. code-block:: bash
+::
 
    Collecting pip
      Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
-       100% |████████████████████████████████| 1.3MB 2.5MB/s
+       100% |################################| 1.3MB 2.5MB/s
    Collecting setuptools
      Downloading setuptools-32.3.1-py2.py3-none-any.whl (479kB)
-       100% |████████████████████████████████| 481kB 4.3MB/s
+       100% |################################| 481kB 4.3MB/s
    Collecting cython==0.24.1
      Downloading Cython-0.24.1-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
-       100% |████████████████████████████████| 3.8MB 7.6MB/s
+       100% |################################| 3.8MB 7.6MB/s
    Installing collected packages: pip, setuptools, cython
    Successfully installed cython-0.24.1 pip-9.0.1 setuptools-32.3.1
 
@@ -199,30 +199,30 @@ Your results should look something like this. The Kivy and MPF-MC packages
 each have several other packages they need, which is why more than two
 packages are downloaded and installed here.
 
-.. code-block:: bash
+::
 
    Brians-Mac:~ brian$ pip3 install kivy mpf-mc
    Collecting kivy
      Using cached kivy-1.9.1.tar.gz
    Collecting mpf-mc
      Downloading mpf-mc-0.32.11.tar.gz (11.1MB)
-       100% |████████████████████████████████| 11.1MB 115kB/s
+       100% |################################| 11.1MB 115kB/s
    Collecting Kivy-Garden>=0.1.4 (from kivy)
      Downloading kivy-garden-0.1.4.tar.gz
    Collecting ruamel.yaml<0.11,>=0.10 (from mpf-mc)
      Downloading ruamel.yaml-0.10.23.tar.gz (228kB)
-       100% |████████████████████████████████| 235kB 533kB/s
+       100% |################################| 235kB 533kB/s
    Collecting mpf>=0.32.6 (from mpf-mc)
      Downloading mpf-0.32.6.tar.gz (556kB)
-       100% |████████████████████████████████| 563kB 1.4MB/s
+       100% |################################| 563kB 1.4MB/s
    Collecting requests (from Kivy-Garden>=0.1.4->kivy)
      Downloading requests-2.12.4-py2.py3-none-any.whl (576kB)
-       100% |████████████████████████████████| 583kB 1.3MB/s
+       100% |################################| 583kB 1.3MB/s
    Collecting ruamel.base>=1.0.0 (from ruamel.yaml<0.11,>=0.10->mpf-mc)
      Downloading ruamel.base-1.0.0-py3-none-any.whl
    Collecting pyserial>=3.2.0 (from mpf>=0.32.6->mpf-mc)
      Downloading pyserial-3.2.1-py2.py3-none-any.whl (189kB)
-       100% |████████████████████████████████| 194kB 4.2MB/s
+       100% |################################| 194kB 4.2MB/s
    Collecting pyserial-asyncio>=0.2 (from mpf>=0.32.6->mpf-mc)
      Downloading pyserial_asyncio-0.3-py3-none-any.whl
    Installing collected packages: requests, Kivy-Garden, kivy, ruamel.base, ruamel.yaml, pyserial, pyserial-asyncio, mpf, mpf-mc
@@ -243,7 +243,7 @@ If you want to make sure that MPF was installed, you can run:
 This command can be run from anywhere and should produce output something like
 this:
 
-.. code-block:: bash
+::
 
    Brians-Mac:~ brian$ mpf --version
    MPF v0.32.6
