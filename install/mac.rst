@@ -181,57 +181,62 @@ might be different depending on what's the latest whenever you're running this):
    Installing collected packages: pip, setuptools, cython
    Successfully installed cython-0.24.1 pip-9.0.1 setuptools-32.3.1
 
-5. Install Kivy & MPF
----------------------
+5. Install MPF
+--------------
 
-Next you can run pip again to install the final two components. The first is
-a Python library called Kivy which is another thing MPF uses for graphics
-and sounds, and the second is the *Mission Pinball Framework - Media Controller*
-package (which itself will install the MPF game engine).
-
-So install those like this:
-
-::
-
-   pip3 install kivy mpf-mc
-
-Your results should look something like this. The Kivy and MPF-MC packages
-each have several other packages they need, which is why more than two
-packages are downloaded and installed here.
+Next you can run pip again to install MPF itself. Technically what you're
+installing is "mpf-mc", which is the
+`Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_
+package, but that package will also install the MPF game engine. Install MPF
+like this:
 
 ::
 
-   Brians-Mac:~ brian$ pip3 install kivy mpf-mc
-   Collecting kivy
-     Using cached kivy-1.9.1.tar.gz
+   pip3 install mpf-mc
+
+Your results should look something like the results below. The MPF install will
+download and install several other packages which what all these other things
+are.
+
+.. note::
+
+   The "kivy" component will take awhile to install. Maybe a minute or two
+   where it looks like it's not doing anything, but it's fine.
+
+::
+
+   Brians-Mac:~ brian$ pip3 install mpf-mc
    Collecting mpf-mc
-     Downloading mpf-mc-0.32.11.tar.gz (11.1MB)
-       100% |################################| 11.1MB 115kB/s
-   Collecting Kivy-Garden>=0.1.4 (from kivy)
-     Downloading kivy-garden-0.1.4.tar.gz
+     Downloading mpf-mc-0.32.12.tar.gz (11.1MB)
+       100% |################################| 11.1MB 29.6MB/s
    Collecting ruamel.yaml<0.11,>=0.10 (from mpf-mc)
      Downloading ruamel.yaml-0.10.23.tar.gz (228kB)
-       100% |################################| 235kB 533kB/s
+       100% |################################| 235kB 9.0MB/s
    Collecting mpf>=0.32.6 (from mpf-mc)
      Downloading mpf-0.32.6.tar.gz (556kB)
-       100% |################################| 563kB 1.4MB/s
-   Collecting requests (from Kivy-Garden>=0.1.4->kivy)
-     Downloading requests-2.12.4-py2.py3-none-any.whl (576kB)
-       100% |################################| 583kB 1.3MB/s
+       100% |################################| 563kB 18.0MB/s
+   Collecting kivy>=1.9.1 (from mpf-mc)
+     Downloading kivy-1.9.1.tar.gz (16.4MB)
+       100% |################################| 16.4MB 7.4MB/s
    Collecting ruamel.base>=1.0.0 (from ruamel.yaml<0.11,>=0.10->mpf-mc)
      Downloading ruamel.base-1.0.0-py3-none-any.whl
    Collecting pyserial>=3.2.0 (from mpf>=0.32.6->mpf-mc)
      Downloading pyserial-3.2.1-py2.py3-none-any.whl (189kB)
-       100% |################################| 194kB 4.2MB/s
+       100% |################################| 194kB 4.1MB/s
    Collecting pyserial-asyncio>=0.2 (from mpf>=0.32.6->mpf-mc)
      Downloading pyserial_asyncio-0.3-py3-none-any.whl
-   Installing collected packages: requests, Kivy-Garden, kivy, ruamel.base, ruamel.yaml, pyserial, pyserial-asyncio, mpf, mpf-mc
-     Running setup.py install for Kivy-Garden ... done
-     Running setup.py install for kivy ... done
+   Collecting Kivy-Garden>=0.1.4 (from kivy>=1.9.1->mpf-mc)
+     Downloading kivy-garden-0.1.4.tar.gz
+   Collecting requests (from Kivy-Garden>=0.1.4->kivy>=1.9.1->mpf-mc)
+     Downloading requests-2.12.4-py2.py3-none-any.whl (576kB)
+       100% |################################| 583kB 4.8MB/s
+   Installing collected packages: ruamel.base, ruamel.yaml, pyserial, pyserial-asyncio, mpf, requests, Kivy-Garden, kivy, mpf-mc
      Running setup.py install for ruamel.yaml ... done
      Running setup.py install for mpf ... done
+     Running setup.py install for Kivy-Garden ... done
+     Running setup.py install for kivy ... done
      Running setup.py install for mpf-mc ... done
-   Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.11 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
+   Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.12 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
    Brians-Mac:~ brian$
 
 If you want to make sure that MPF was installed, you can run:

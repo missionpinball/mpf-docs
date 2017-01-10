@@ -14,7 +14,7 @@ entire process. Select the OS you're using from the list below:
    :maxdepth: 1
 
    Windows <windows>
-   Mac OS X <mac>
+   Mac <mac>
    Linux <linux>
    Raspberry Pi <raspberry>
    Pine64 <pine64>
