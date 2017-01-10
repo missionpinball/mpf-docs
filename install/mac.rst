@@ -10,20 +10,31 @@ El Capitan, and MacOS Sierra.
    if the guest OS is Mac, though running MPF in a Windows or Linux VM on a
    Mac is fine.
 
-The process for running MPF on a Mac has changed as of 2017. Previously we had
-an MPF.app that you downloaded which contained Python and everything you needed.
-
-Unfortunately we kept having problems with that self-contained app approach,
-so we switched to a more conventional method where everything is installed
-natively on the Mac. At this point we do not have an automated installation
-script for the Mac, so you'll have to follow the steps here. If anyone wants
-to volunteer to create a script, we'd love it!
-
 Also at this time, installing all the components you need to run MPF on a Mac
 will require almost 2 GB of disk space. MPF itself it only about 12 MB, but
 there are a lot of supporting things that MPF needs as you'll see here.
 
 Here are the steps to install MPF on a Mac:
+
+Step 0. Install your previous MPF app installation
+--------------------------------------------------
+
+The process for running MPF on a Mac has changed as of Jan 10, 2017.
+Previously we had an MPF.app that you downloaded which contained Python and
+everything you needed.
+
+If you used MPF on a Mac prior to this and you have the MPF.app, you need to
+remove it first. If you have never installed MPF on your Mac before, then
+proceed directly to Step 1 below.
+
+To remove the old MPF Mac installation:
+
+1. Delete the "MPF.app" from your Applications folder.
+2. Delete the "mpf" alias in ``/usr/local/bin``.
+3. Delete the "kivy" alias in ``/usr/local/bin``.
+
+If you don't know how to find your ``/usr/local/bin`` folder, you can use
+the "Go to Folder" technique shown in Step 1.
 
 1. Download the Mac Multimedia Frameworks
 -----------------------------------------
