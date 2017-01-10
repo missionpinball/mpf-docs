@@ -9,7 +9,7 @@ Examples include:
 
 * Hit a target (or shot) X number of times to advance.
 * Hit pop bumpers 75 times to start a Super Jets mode.
-* Counting the now of combos made
+* Counting the number of combos made
 * Keeping track of a bonus multiplier (maybe you use the shot group lane
   completion event to count progress towards the bonus multiplier, but you
   configure the max count to be 6, and then if it's hit again, you award
