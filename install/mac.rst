@@ -39,11 +39,11 @@ Download the zip of the multimedia frameworks `here <https://www.dropbox.com/s/o
 The zipped download is 170 MB, and the unzipped size is 529 MB.
 
 Unzip it, and copy (or drag and drop) the five things in the zip file's
-``Frameworks`` folder to your own Mac's ``/Libraries/Frameworks`` folder.
+``Frameworks`` folder to your own Mac's ``/Library/Frameworks`` folder.
 
-Depending on your Mac's settings, you might not see the ``/Libraries/Frameworks``
+Depending on your Mac's settings, you might not see the ``/Library/Frameworks``
 folder in Finder. If this is the case, use the *Go -> Go to Folder...* menu,
-and then type "/Libraries/Frameworks" and hit enter.
+and then type "/Library/Frameworks" and hit enter.
 
 The following three images illustrate the steps:
 
@@ -58,7 +58,7 @@ you drag and drop the files:
 
 .. image:: images/mac_copy_frameworks.jpg
 
-When you're done, your Mac's ``/Libraries/Frameworks`` folder should have
+When you're done, your Mac's ``/Library/Frameworks`` folder should have
 the five new frameworks (plus whatever random ones you already had), which
 should look something like this:
 
