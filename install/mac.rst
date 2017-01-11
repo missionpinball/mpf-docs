@@ -16,7 +16,7 @@ there are a lot of supporting things that MPF needs as you'll see here.
 
 Here are the steps to install MPF on a Mac:
 
-Step 0. Install your previous MPF app installation
+Step 0. Uninstall your previous MPF app installation
 --------------------------------------------------
 
 The process for running MPF on a Mac has changed as of Jan 10, 2017.
