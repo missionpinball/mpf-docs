@@ -17,7 +17,7 @@ there are a lot of supporting things that MPF needs as you'll see here.
 Here are the steps to install MPF on a Mac:
 
 Step 0. Uninstall your previous MPF app installation
---------------------------------------------------
+----------------------------------------------------
 
 The process for running MPF on a Mac has changed as of Jan 10, 2017.
 Previously we had an MPF.app that you downloaded which contained Python and
@@ -43,7 +43,7 @@ MPF uses open source multimedia frameworks called GStreamer and SDL2 for its
 graphics, video, and sound features. So next you need to download these
 frameworks and copy them to your Mac's frameworks folder. There are actually
 five different frameworks MPF needs, and downloading them all separately is
-kind of a pain (especially finding the right versions and everyething), so we
+kind of a pain (especially finding the right versions and everything), so we
 have created a single ZIP file which has everything you need.
 
 Download the zip of the multimedia frameworks `here <https://www.dropbox.com/s/ohrs8tn0yh2y7oe/mpf_mac_frameworks.zip?dl=1>`_.
