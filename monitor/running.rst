@@ -3,9 +3,9 @@ Running the MPF Monitor
 
 1. Create a subfolder in your MPF machine folder called ``/monitor``
 2. Put an image of your playfield in that folder named ``playfield.jpg``
-3. Run MPF monitor from a command prompt in a new window in the same way you
-   run "mc" or "both", just use the word "monitor" instead. (So ``mpf monitor``
-   or ``kivy -m mpf monitor`` or whatever you use)
+3. Run MPF monitor from a command prompt in a new window via the command
+   ``mpf monitor``. Be sure to run this from your machine folder (the same
+   place where you run ``mpf both``).
 4. Start MPF and MPF-MC. (You can start MPF before or after monitor is started,
    and leave the monitor running while MPF is not.)
 5. MPF Monitor should connect to MPF and populate the devices tree. You can

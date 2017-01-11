@@ -2,7 +2,7 @@ MPF Sound & Audio Technical Overview
 ====================================
 
 The MPF MC Audio Interface is a custom audio Python extension library with features designed to
-support common pinball sound requirements.  It is written on top of the SDL2 and GStreamer
+support common pinball sound requirements. It is written on top of the SDL2 and GStreamer
 libraries that are installed with Kivy which is required to run the MPF MC software (no additional
 installs necessary for the audio library).
 

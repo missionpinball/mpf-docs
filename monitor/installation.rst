@@ -33,21 +33,18 @@ of MPF Monitor can work across several versions of MPF.)
 Mac
 ---
 
-Note that these instructions assume you're using the MPF app package as
-detailed in the :doc:`/install/mac` guide.
-
 Open a terminal window and run the following command: (You can run this from
 any folder)
 
 ::
 
-   kivy -m pip install mpf-monitor
+   pip3 install mpf-monitor
 
 To update MPF Monitor to the latest version at any time, run:
 
 ::
 
-   kivy -m pip install mpf-monitor --upgrade
+   pip3 install mpf-monitor --upgrade
 
 Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
 numbers of the Monitor and MPF are not the same. (For example, the same version

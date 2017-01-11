@@ -130,8 +130,8 @@ that we modified to work with Python 3:
     cd ~/proc
     git clone https://github.com/missionpinball/pypinproc
     cd pypinproc
-    kivy setup.py build
-    sudo kivy setup.py install
+    python3 setup.py build
+    sudo python3 setup.py install
 
 8. Install D2xxHelper
 ~~~~~~~~~~~~~~~~~~~~~
