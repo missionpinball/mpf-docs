@@ -29,7 +29,7 @@ jets:
         counters:
             super_jets:
                 count_events: sw_pop
-                event_when_hit: pop_hit
+                events_when_hit: pop_hit
                 starting_count: 75
                 count_complete_value: 0
                 direction: down
