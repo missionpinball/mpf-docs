@@ -46,8 +46,9 @@ five different frameworks MPF needs, and downloading them all separately is
 kind of a pain (especially finding the right versions and everything), so we
 have created a single ZIP file which has everything you need.
 
-Download the zip of the multimedia frameworks `here <https://www.dropbox.com/s/ohrs8tn0yh2y7oe/mpf_mac_frameworks.zip?dl=1>`_.
-The zipped download is 170 MB, and the unzipped size is 529 MB.
+Download the zip of the multimedia frameworks `here <https://mpf.kantert.net/mpf_mac_frameworks.zip>`_.
+(Thanks to MPF developer Jan Kantert for hosting it!) The zipped download is 170 MB,
+and the unzipped size is 529 MB.
 
 Unzip it, and copy (or drag and drop) the five things in the zip file's
 ``Frameworks`` folder to your own Mac's ``/Library/Frameworks`` folder.
@@ -105,8 +106,7 @@ line tools, like this:
 Click the "Install" button here to get just the command line tools. The
 "Get XCode" button installs more than you need.
 
-The download will be about 150 MB, and the total install will be just over
-1 GB.
+The download will be about 150 MB, and the total install will be about 1.1 GB.
 
 If you already have the command line tools installed, that's fine. You'll get
 some kind of error saying they're already installed and you can move on.
