@@ -107,6 +107,7 @@ and/or show configs.
    switch_player </examples/switch_player/index>
    text </examples/text/index>
    text_input </examples/text_input/index>
+   timers </examples/timers/index>
    tilt </examples/tilt/index>
    transitions </examples/transitions/index>
    utils </examples/utils/index>
