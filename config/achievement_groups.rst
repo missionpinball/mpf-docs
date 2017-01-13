@@ -109,21 +109,24 @@ this group to move to a new state.
 enable_events:
 ~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
+event names and delay times. See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted, cause the achievements in this group to
-switch to their "enabled" states. These events will also cause the
-achievements to play the show defined in their ``show_when_enabled:`` setting
-and to emit (post) events in their ``events_when_enabled:`` settings.
+Events in this list, when posted, will enable this achievement group. This
+will play the ``show_when_enabled:`` and will post evnets in the
+``events_when_enabled:`` settings.
+
+This will also check to see if all the member achievements are complete,
+it will check to see if there are no more enabled achievements, and it will
+update the selected achievement.
 
 disable_events:
 ~~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
+event names and delay times. See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
 
@@ -137,7 +140,7 @@ and to emit (post) events in their ``events_when_disabled:`` settings.
 start_selected_events:
 ~~~~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
+event names and delay times. See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
 
@@ -155,7 +158,7 @@ play their ``show_when_started:`` shows and post their
 select_random_achievement_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
+event names and delay times. See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
 
@@ -166,7 +169,7 @@ achievements and change it to its "selected" state. This is useful when a game
 is starting and you want one of the avaiable achievements to start in a selected
 state. (e.g. pick a random mission to be highlighted.)
 
-The "available" achievements which could be chosed here include achievements
+The "available" achievements which could be chosen here include achievements
 that are one of the following:
 
 * enabled
