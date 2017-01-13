@@ -4,9 +4,9 @@ timers/mode_timers (example config files)
 +------------------------------------------------------------------------------+
 | Related Documentation                                                        |
 +==============================================================================+
-| :doc:`Timer Config /config/timers`                                           |
+| :doc:`Timer Config </config/timers>`                                         |
 +------------------------------------------------------------------------------+
-| :doc:`Timer Device /game_logic/timers/index`                                 |
+| :doc:`Timer Device </game_logic/timers/index>`                               |
 +------------------------------------------------------------------------------+
 
 
