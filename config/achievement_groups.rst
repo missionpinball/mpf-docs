@@ -50,17 +50,16 @@ mode config) that make up this group. The order here defines the order
 individual achievements are rotated in via the ``rotate_right_events:`` and/or
 ``rotate_left_events:`` settings.
 
-show_tokens:
-~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+allow_selection_change_while_disabled:
+--------------------------------------
 
-This is an indented list of key/value pairs for the
-:doc:`show tokens </shows/tokens>` that will be sent to the shows that are
-played when this achievement changes state.
+.. versionadded:: 0.33
 
-Note that you can configure ``show_tokens:`` at the group level (here) or the
-individual achievement level. That's done for convenience, and in practical use,
-you'd just configure the show tokens in one place.
+Boolean (yes/no or true/false) setting. Default is ``False``.
+
+Controls whether the currently selected achievement can be changed when the
+achievement group is disabled. If False/No, then the rotate and select
+random events will have no effect when the group is disabled.
 
 auto_select:
 ~~~~~~~~~~~~
@@ -100,6 +99,18 @@ because an achievement group is typically used to select an achievement to run,
 so when none are running, you want to enable the group so that the next
 achievement can be selected.
 
+show_tokens:
+~~~~~~~~~~~~
+One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+
+This is an indented list of key/value pairs for the
+:doc:`show tokens </shows/tokens>` that will be sent to the shows that are
+played when this achievement changes state.
+
+Note that you can configure ``show_tokens:`` at the group level (here) or the
+individual achievement level. That's done for convenience, and in practical use,
+you'd just configure the show tokens in one place.
+
 Control Events
 --------------
 
@@ -116,12 +127,16 @@ on how to enter settings here.
 Default: ``None``
 
 Events in this list, when posted, will enable this achievement group. This
-will play the ``show_when_enabled:`` and will post evnets in the
+will play the ``show_when_enabled:`` and will post events in the
 ``events_when_enabled:`` settings.
 
 This will also check to see if all the member achievements are complete,
 it will check to see if there are no more enabled achievements, and it will
 update the selected achievement.
+
+Starting the selected achievement only works if the group is enabled. In
+other words, if something has to be "lit" before an achievement can start,
+then that is done via the group's "enable" functionality.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -132,8 +147,8 @@ on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted, cause the achievements in this group to
-switch to their "disabled" states. These events will also cause the
+Events in this list, when posted, disable this achievement group.
+These events will also cause the
 achievements to play the show defined in their ``show_when_disabled:`` setting
 and to emit (post) events in their ``events_when_disabled:`` settings.
 
@@ -149,11 +164,14 @@ Default: ``None``
 Events in this list, when posted, cause any achievements in this group that are
 in the "selected" state to switch to their "started" state. (Typically there
 would only be a single achievement in the group that's "selected" at any time,
-but you could have more than one.
+but you could have more than one.)
+
+These events only work if the achievement group is enabled.
 
 When the individual achievements change from "selected" to "started", they will
 play their ``show_when_started:`` shows and post their
 ``events_when_started:`` events.
+
 
 select_random_achievement_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,8 +184,11 @@ Default: ``None``
 
 Events in this list, when posted, will randomly pick on of the available
 achievements and change it to its "selected" state. This is useful when a game
-is starting and you want one of the avaiable achievements to start in a selected
+is starting and you want one of the available achievements to start in a selected
 state. (e.g. pick a random mission to be highlighted.)
+
+Note that the ``allow_selection_change_while_disabled:`` controls whether
+these events will work when the achievement group is disabled.
 
 The "available" achievements which could be chosen here include achievements
 that are one of the following:
@@ -198,6 +219,9 @@ Default: ``None``
 
 Causes the states of the available achievements in this group to be rotated
 to the right.
+
+Note that the ``allow_selection_change_while_disabled:`` controls whether
+these events will work when the achievement group is disabled.
 
 This is used to "switch" the current selected achievement. For example, many
 games have main achievements you need to complete to get to wizard mode.
