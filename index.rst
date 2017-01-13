@@ -23,6 +23,7 @@
    :numbered: 0
 
    Tutorial </tutorial/index>
+   Cookbook </cookbook/index>
 
 .. toctree::
    :hidden:

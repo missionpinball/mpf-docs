@@ -107,15 +107,14 @@ played when this achievement changes state. (See the settings called
 
 start_enabled:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-Controls whether this achievement will be initially set to the "enabled" state.
-If this setting is false/no, then this achievement will be set to the "disabled"
-state initially.
+.. deprecated:: 0.33
 
-This setting controls the initial state of the achievement when the mode
-containing this achievement is started, as well as the state the achievement
-switches to when its reset.
+This setting has been removed since it was unlike every other device in MPF.
+Achievements now use ``enable_events:`` to indicate initial state. If there are
+no enable events, the achievement will start enabled. If there are enable
+events, the achievement will start disabled since it's presumed that one of the
+start events will be used to enable it later.
 
 restart_after_stop_possible:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
