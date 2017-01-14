@@ -367,7 +367,16 @@ This step takes care of:
 * Hitting any pop bumper will change the currently selected award to another
   random from the awards that are not yet complete.
 
-Step 4. Select the proper award at game start
+Step 4. Light the electric chair
+--------------------------------
+
+* The electric chair is lit for 3 seconds after the right inlane is hit.
+* The electric chair is lit indefinitely after either ramp is hit.
+* The electric chair is lit at the beginning of each ball
+* For awards that start modes, the chair can be relit and another award
+  awarded even while the prior award's mode is running.
+
+Step 5. Select the proper award at game start
 ---------------------------------------------
 
 One of the twists of the Addams Family mansion awards is that when the game
@@ -432,7 +441,7 @@ remaining 10 mansion awards. For this we'll use a counter logic block:
          count_complete_value: 1
          persist_state: true
 
-This is a simple counter that "counts" the *mode_mansion_awards_started"
+This is a simple counter that "counts" the *mode_mansion_awards_started*
 event (which is posted by this mode once it's fully started and done
 initializing). The count complete value is one, meaning that once it sees this
 event once, it's done. We tell it to persist its state so that it remembers
@@ -441,7 +450,7 @@ and when it's done (which is after it sees that event once) it will post the
 event *initialize_mansion*.
 
 (Remember that logic block states are stored on a per-player basis, so
-everything we say happens "once" here is really "once per player".
+everything we say happens "once" here is really "once per player".)
 
 Note also that in the 10 "other" mansion achievements, we have
 *initialize_mansion* listed as one of their enable events. This means that
@@ -452,15 +461,6 @@ At this point you'll have 1 achievement selected (which will be either Hit
 Cousin It or Mamushka), and you'll have the other 11 in the "enabled" state.
 
 Hitting a pop bumper will pick a new random selected achievement.
-
-Step 5. Light the electric chair
---------------------------------
-
-* The electric chair is lit for 3 seconds after the right inlane is hit.
-* The electric chair is lit indefinitely after either ramp is hit.
-* The electric chair is lit at the beginning of each ball
-* For awards that start modes, the chair can be relit and another award
-  awarded even while the prior award's mode is running.
 
 Step 6. Collect the selected award via a shot
 ---------------------------------------------
