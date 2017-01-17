@@ -14,7 +14,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = 'Mission Pinball Framework'
-copyright = '2013-2016, The Mission Pinball Framework Team'
+copyright = '2013-2017, The Mission Pinball Framework Team'
 author = 'The Mission Pinball Framework Team'
 
 version = '0.30-0.33'
