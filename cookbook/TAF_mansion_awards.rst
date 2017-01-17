@@ -1,5 +1,5 @@
-Recipe: The Addams Family Mansion Awards & Tour the Mansion
-===========================================================
+Recipe: The Addams Family Mansion Awards
+========================================
 
 This guide shows you how to build an MPF config for *The Addams Family's*
 Mansion Awards and Tour the Mansion feature. The idea is you can use this as

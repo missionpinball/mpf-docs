@@ -1,4 +1,4 @@
-The MPD Cookbook
+The MPF Cookbook
 ================
 
 The MPF cookbook contains recipes (how to guides) which show you how you would
@@ -9,10 +9,7 @@ know and we'll write a recipe for it!
 
 Here are the recipes that are done:
 
-.. toctree::
-   :maxdepth: 1
-
-   The Addams Family: Mansion Awards and Tour the Mansion <TAF_mansion_awards>
+* :doc:`The Addams Family: Mansion Awards <TAF_mansion_awards>`
 
 And here's what's on our to-do list:
 
@@ -21,3 +18,9 @@ And here's what's on our to-do list:
 + *Attack from Mars:* 5-Way Combo
 + *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
 + *Red & Ted's RoadShow:* City modes
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   The Addams Family: Mansion Awards <TAF_mansion_awards>
