@@ -1,7 +1,7 @@
 How to run the "MC Demo" example
 ================================
 
-The :doc:`MPF Examples <mpf-examples> GitHub repository includes a machine
+The :doc:`MPF Examples <mpf-examples>` GitHub repository includes a machine
 configuration called "MC Demo" which is a demo of many different features of
 the MPF media controller. Here are a few random screen shots of it:
 
