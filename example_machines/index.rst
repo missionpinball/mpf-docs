@@ -4,8 +4,22 @@ Example Machine Projects you can learn from
 The mpf-examples project
 ------------------------
 
+Contains several examples of MPF configs you can run and learn from, including:
+
+* :doc:`Demo Man <demo_man>`
+* :doc:`MC Demo <mc_demo>`
+* :doc:`Cookbook recipes </cookbook/index>`
+* :doc:`Tutorial config files </tutorial/index>`
+
+Full details about the mpf-examples project and how to download it are
+:doc:`here <mpf-examples>`.
+
+
 State Fair Pinball
 ------------------
+
+An upcoming machine we're working on. Details: `<http://statefairpinball.com>`_.
+GitHub repo: `<https://github.com/missionpinball/state_fair>`_
 
 Brooks 'n Dunn
 --------------
