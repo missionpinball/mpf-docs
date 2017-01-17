@@ -111,6 +111,8 @@ How the documentation is organized
 * `Topic guides`_ discuss key topics and concepts at a fairly high level and contain useful background
   information about all the different parts of MPF, including how it interacts with pinball mechanisms,
   game logic, displays, sound, and the various physical hardware control systems.
+* :doc:`The Cookbook </cookbook/index>` shows you how to implement features of real pinball machines
+  using MPF. This is great for the "How do I build something like X?" questions you might have.
 * `Reference Guides`_ contain technical reference listings of all the settings for the MPF config files,
   event names, common player and machine variables, and example projects you can learn from.
 * `Developer guides`_ have technical information for software developers who want to write their own code
