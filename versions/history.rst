@@ -25,6 +25,7 @@ New Features
 * Built-in modes with code can have their code overloaded
 * Added score reels to the smart virtual platform
 * Allow machine variables to be set via BCP
+* Allow setting default high scores
 
 Bug fixes & code improvements
 
@@ -41,6 +42,7 @@ Bug fixes & code improvements
 * Randomizer now works with a single element
 * Fixed a bunch of small things that caused crashes
 * Changed default on-screen DMD pixel settings
+* Removed OSC plug-in since it hasn't worked in over a year and no one uses it
 
 .. rubric:: MPF-MC
 
