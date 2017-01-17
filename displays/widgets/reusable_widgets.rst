@@ -10,7 +10,7 @@ showing.
 1. Understanding widgets
 ------------------------
 
-Before we look at how to create reusable widgets, lets look at how regular widgets work in MPF.
+Before we look at how to create reusable widgets, let's look at how regular widgets work in MPF.
 
 You probably know that you can have a ``slides:`` section of your config (either machine-wide or mode-specific configs),
 and when you define a slide, you can specify what widgets are on that slide, like this:
@@ -126,8 +126,8 @@ can even mix-and-match formats, like this:
 Adding a widget to a specific display target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rather than specifying a particular slide to add your widget to, you can target a display, and the widget will be added
-to whatever slide is currently being shown:
+Rather than specifying a particular slide to add your widget to, you can target a display or slide frame, and the
+widget will be added "on top" of whatever slide is currently being shown:
 
 ::
 
@@ -139,26 +139,7 @@ to whatever slide is currently being shown:
 Remember in MPF, display targets can either be the names of a display (dmd, window, etc.), or they can be the name of
 a slide frame which is a widget on another slide which holds its own slides (sort of like picture-in-picture).
 
-Adding a widget "on top" of slides
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Remember that when specifying the z-order / layer of a widget in MPF, you can use negative values to add widgets to the
-parent frame which displays slides. This lets you use the widget player to show a widget that will always be visible,
-even if the slide transitions to another one. For example:
-
-::
-
-   widgets:
-      tilt_warning:
-        - type: text
-          text: TILT WARNING
-          z: -1
-
-   widget_player:
-      tilt: tilt_warning
-
-The above example will show the TILT WARNING text in the parent frame of the default display, and it will remain there
-even if the default display switches slides.
+More details about this are in the :doc:`layers` guide.
 
 Overriding named widget settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
