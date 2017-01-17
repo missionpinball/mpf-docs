@@ -45,7 +45,7 @@ widgets.
 
    Types of widgets <types>
    Positioning widgets on slides <positioning>
-   Animating widgets <animate_widgets>
+   Animating widgets <animation>
    Animation "easing" <easing>
    Widget styles <styles>
    Opacity & transparency <opacity>

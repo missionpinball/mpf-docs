@@ -132,7 +132,7 @@ animations:
 
 Contains a list of events and the animated widget properties and steps for each
 of those events. See the
-:doc:`widget animation documentation </displays/widgets/animate_widgets>` for
+:doc:`widget animation documentation </displays/widgets/animation>` for
 details.
 
 reset_animations_events:
@@ -140,7 +140,7 @@ reset_animations_events:
 
 A list of events which are used to reset the widget to its original settings and
 stop all running animations. See the
-:doc:`widget animation documentation </displays/widgets/animate_widgets>` for
+:doc:`widget animation documentation </displays/widgets/animation>` for
 details.
 
 Note that this seems like a grammatical error, since it's "animations events", but

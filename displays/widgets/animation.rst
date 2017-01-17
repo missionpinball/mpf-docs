@@ -70,7 +70,7 @@ In this example, there are three settings for the first step:
 The **property** setting is the name of the widget's property that you want to animate. This can be almost any
 numerical property of the widget, including ``x:``, ``y:``, ``opacity``, etc. (Different widget types have
 different types of animatable properties. For example, on text widgets you can animate the ``font_size:``, on
-various shape widgets you can animate the ``height:`` and ``width:``, etc.
+various shape widgets you can animate the ``height:`` and ``width:``, etc.)
 
 Pretty much the only thing you can't animate at this point is rotation (since MPF doesn't currently
 support widget rotation. That's a future feature we'll have to add).

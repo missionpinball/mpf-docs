@@ -4,7 +4,7 @@ Easing Instructions
 MPF has the ability to use "easing" functions to adjust the acceleration and
 deceleration of motions associated with
 :doc:`slide transitions </displays/slides/transitions>` and
-:doc:`widget animations </displays/widgets/animate_widgets>`.
+:doc:`widget animations </displays/widgets/animation>`.
 
 An easing function is a formula that calculates a progress value based on an
 input value.
@@ -101,7 +101,7 @@ each text widget's opacity property (cycling them between 1 and 0):
 .. image:: /displays/images/easing_opacity.gif
 
 Refer to the :doc:`slide transition </displays/slides/transitions>` and
-:doc:`widget animation </displays/widgets/animate_widgets>` documentation for
+:doc:`widget animation </displays/widgets/animation>` documentation for
 details on how to actually apply these easing functions. It's pretty
 straightforward—essentially you just add ``easing: <function_name>`` to the
 animation or transition property, like ``easing: in_out_circ``.
