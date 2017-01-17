@@ -38,6 +38,11 @@ related to the example in the achievements config documentation.)
             l_begin_round
         show_when_enabled: flash
 
+More examples:
+
+* :doc:`/cookbook/TAF_mansion_awards`
+* :doc:`/examples/achievement/index`
+
 General Settings
 ----------------
 

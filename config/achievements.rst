@@ -32,7 +32,6 @@ Here's an example achievements section from Brooks & Dunn:
        show_when_completed: on
        events_when_started: start_world_tour_mode
        restart_after_stop_possible: true
-       start_enabled: True
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: world_tour_success
        enable_events: world_tour_fail, ball_will_end
@@ -45,7 +44,6 @@ Here's an example achievements section from Brooks & Dunn:
        show_when_completed: on
        events_when_started: start_money_bags_mode
        restart_after_stop_possible: true
-       start_enabled: True
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: money_bags_success
        enable_events: money_bags_fail, ball_will_end
@@ -58,7 +56,6 @@ Here's an example achievements section from Brooks & Dunn:
        show_when_completed: on
        events_when_started: start_music_awards_mode
        restart_after_stop_possible: true
-       start_enabled: True
        complete_events: music_awards_success
        events_when_completed: rotate_mission_rotator, light_mission_select
        enable_events: music_awards_fail, ball_will_end
@@ -71,7 +68,6 @@ Here's an example achievements section from Brooks & Dunn:
        show_when_completed: on
        events_when_started: start_jukebox_mode
        restart_after_stop_possible: true
-       start_enabled: True
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: jukebox_success
        enable_events: jukebox_fail, ball_will_end
@@ -84,10 +80,14 @@ Here's an example achievements section from Brooks & Dunn:
        show_when_completed: on
        events_when_started: start_play_poker_mode
        restart_after_stop_possible: true
-       start_enabled: True
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: play_poker_success
        enable_events: play_poker_fail, ball_will_end
+
+More examples:
+
+* :doc:`/cookbook/TAF_mansion_awards`
+* :doc:`/examples/achievement/index`
 
 General Settings
 ----------------
