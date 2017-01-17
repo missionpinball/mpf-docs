@@ -144,7 +144,7 @@ Next we have to add some widgets to that slide. (Refer to the
 :doc:`documentation on widgets </displays/widgets/index>` if you're not familiar
 with widgets yet.)
 
-The first widget will be a :doc:`Color DMD widget </displays/widget/color_dmd/index>`
+The first widget will be a :doc:`Color DMD widget </displays/widgets/color_dmd/index>`
 which is a widget which renders a logical display onto a slide in a way that
 makes it look like a DMD:
 
@@ -163,7 +163,7 @@ to get the circular "dot look" filter to look good, and being an even multiple
 means that we won't have any weird moire patterns.
 
 There are other options listed in the
-:doc:`Color DMD widget </displays/widget/color_dmd/index>` documentation to control
+:doc:`Color DMD widget </displays/widgets/color_dmd/index>` documentation to control
 settings like how big the circles are versus the space in between them, the
 ability to not have the "dot" filter, and the ability to set the "glow" radius
 of each dot, color tint, limiting the color palette, etc.

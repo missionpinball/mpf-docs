@@ -50,10 +50,10 @@ directly into our :doc:`step-by-step tutorial </tutorial/index>` which covers
 how to get your display running.)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Concepts & Architecture </displays/architecture>
    Displays <display/index>
    Slides <slides/index>
-   Widgets (Concepts) <widgets/index>
-   Widgets (Types) <widget/index>
+   Widgets <widgets/index>
+

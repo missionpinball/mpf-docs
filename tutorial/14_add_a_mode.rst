@@ -261,13 +261,13 @@ Words in parentheses signs are variables that are replaced in real
 time when they're updated. In this case these are "player variables"
 because they are values that belong to the current player. More on
 using dynamic text (that is, text that automatically updated itself
-as underlying values change), is :doc:`here </displays/widget/text/text_dynamic>`.
+as underlying values change), is :doc:`here </displays/widgets/text/text_dynamic>`.
 
 Also note that there are some additional positioning settings, like ``x:``, ``y:``,
-``anchor_x:``, and ``anchor_y:``. You can read about these in our :doc:`/displays/widgets/widget_positioning` guide.
+``anchor_x:``, and ``anchor_y:``. You can read about these in our :doc:`/displays/widgets/positioning` guide.
 
 Finally, note that the text widget showing the score has settings for ``number_grouping:`` and ``min_digits:``.
-You can read about what those do in the :doc:`documentation for the text display widget </displays/widget/text/index>`.
+You can read about what those do in the :doc:`documentation for the text display widget </displays/widgets/text/index>`.
 
 6. Remove the old slide_player: ball_started entry
 --------------------------------------------------

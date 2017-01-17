@@ -190,7 +190,7 @@ display.
 ---------------------------------------
 
 Finally, remember to check the documentation for the
-:doc:`color_dmd widget </displays/widget/color_dmd/index>` for a full list of
+:doc:`color_dmd widget </displays/widgets/color_dmd/index>` for a full list of
 the options you can use to fine-tune how the DMD looks in the window. For
 example, you can configure the pixel size, the glow radius, the color of the
 space between the pixels, gain, tint, etc.
@@ -202,7 +202,7 @@ widget to be 640x160, you'll get a display like this:
 .. image:: /displays/images/display_color_dmd2.png
 
 You can also use the
-:doc:`widget sizing and positioning </displays/widgets/widget_positioning>` to
+:doc:`widget sizing and positioning </displays/widgets/positioning>` to
 create a DMD widget that is pre-positioned at a certain spot on the display.
 This is useful if you have a standard size LCD monitor in your backbox but only
 part of it is visible to the player. In that case you could make a color_dmd
@@ -213,5 +213,5 @@ You can also use the various :doc:`window: </config/window>` options (such as
 full screen) to properly align the content of the display with the visible area.
 
 Finally, even though this example was using the color_dmd widget, you could
-replace it with the :doc:`dmd widget </displays/widget/dmd/index>` for a
+replace it with the :doc:`dmd widget </displays/widgets/dmd/index>` for a
 single color look instead of full color.

@@ -1,5 +1,5 @@
-Display widgets
-===============
+Widgets
+=======
 
 If a slide is a blank canvas, then "widgets" are the things you put on that
 blank canvas, like text, images, shapes, videos, etc. Here's an example of a
@@ -41,15 +41,16 @@ animate them, how to use widget styles, and how you can create the reusable
 widgets.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Types of widgets </displays/widget/index>
-   Positioning widgets <widget_positioning>
+   Types of widgets <types>
+   Positioning widgets on slides <positioning>
    Animating widgets <animate_widgets>
    Animation "easing" <easing>
-   Widget Styles <styles>
+   Widget styles <styles>
+   Opacity & transparency <opacity>
    Fonts <fonts>
    Creating reusable "named" widgets <reusable_widgets>
-   Expiring Widgets <expire>
+   Expiring & removing widgets <expire>
    Widget keys <keys>
-   Widget layers <layers>
+   Layers, overlap, & z-order <layers>

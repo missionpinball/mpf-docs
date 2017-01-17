@@ -201,7 +201,7 @@ what's actually happening here is:
 * which is a text widget with its text set to "PINBALL!".
 
 There are lots of settings for each widget type that you can use in your config file. Since this is a text widget, we
-can look at the :doc:`documentation for text widgets </displays/widget/text/index>` to see what options we have.
+can look at the :doc:`documentation for text widgets </displays/widgets/text/index>` to see what options we have.
 
 For example, let's change the font size and the color, by adding ``font_size:`` and ``color:`` lines:
 
@@ -220,7 +220,7 @@ Now when you run ``mpf mc`` again, you should see this:
 .. image:: images/mc_pinball_2.png
 
 By default, the widget is centered in the slide, but you can play with different settings to position it wherever you
-want. (Check out :doc:`/displays/widgets/widget_positioning` for details.)
+want. (Check out :doc:`/displays/widgets/positioning` for details.)
 
 5. Add a second widget
 ----------------------
