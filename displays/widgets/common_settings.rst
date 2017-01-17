@@ -1,7 +1,7 @@
 Common Settings that Apply to All Widget Types
 ==============================================
 
-The following settings are "common" settings that apply to all :doc:`types of widgets </displays/widget/index>`:
+The following settings are "common" settings that apply to all :doc:`types of widgets </displays/widgets/index>`:
 
 ::
 
@@ -41,7 +41,7 @@ in several ways:
 
 The default value is ``center``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
 
 y:
@@ -57,7 +57,7 @@ in several ways:
 
 The default value is ``middle``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
 
 anchor_x:
@@ -69,7 +69,7 @@ widget is used for the horizontal positioning. Valid options are
 
 The default value is ``center``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
 
 anchor_x:
@@ -81,7 +81,7 @@ widget is used for the vertical positioning. Valid options are
 
 The default value is ``center``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
 
 opacity:
@@ -185,7 +185,7 @@ points.
 
 The default value is ``None``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how widget positioning offset adjustments
 work.
 
@@ -198,7 +198,7 @@ bottom points.
 
 The default value is ``None``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how widget positioning offset adjustments
 work.
 
@@ -211,7 +211,7 @@ left points.
 
 The default value is ``None``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how widget positioning offset adjustments
 work.
 
@@ -224,7 +224,7 @@ right points.
 
 The default value is ``None``.
 
-See the :doc:`widget positioning </displays/widgets/widget_positioning>`
+See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how widget positioning offset adjustments
 work.
 

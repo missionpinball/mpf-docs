@@ -9,7 +9,7 @@ You can use the DMD widget to get an old school "DMD look" on your LCD display.
 You can set the color of the dots to be whatever you want. (Default is orange, but you
 can make them red or purple or whatever.)
 
-The DMD widget is almost identical to the :doc:`/displays/widget/color_dmd/index` widget
+The DMD widget is almost identical to the :doc:`/displays/widgets/color_dmd/index` widget
 except the DMD widget has the additional options to do the color reduction.
 
 Note that the DMD Widget really is unrelated to whether you have a
@@ -41,7 +41,7 @@ type: dmd
 
 .. note:: DMD widgets also have "common" widget settings for position, opacity,
    animations, style, etc. Those are not listed here, but are instead covered in
-   :doc:`common widget settings </displays/widget/common_settings>` page.
+   :doc:`common widget settings </displays/widgets/common_settings>` page.
 
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than

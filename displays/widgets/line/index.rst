@@ -3,7 +3,7 @@ Line Widget
 
 The line widget is used to draw a straight line on a
 :doc:`slide </displays/slides/index>`. (Note that if you want to draw a
-curved line, you can use the :doc:`/displays/widget/bezier/index`.)
+curved line, you can use the :doc:`/displays/widgets/bezier/index`.)
 
 Settings
 --------
@@ -21,7 +21,7 @@ Settings
 
 .. note:: Line widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
-   :doc:`common widget settings </displays/widget/common_settings>` page.
+   :doc:`common widget settings </displays/widgets/common_settings>` page.
 
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than

@@ -1,5 +1,5 @@
-List of Widget Types
-====================
+Types of Widgets
+================
 
 Most popular
 
