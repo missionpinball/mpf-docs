@@ -1,4 +1,4 @@
-Config players
+Config Players
 ==============
 
 An important concept to using the YAML-based configuration files is something we call *config players*.
@@ -35,6 +35,8 @@ them, with explanations of how to use them in config files and in shows.
    led_player
    light_player
    plugin_player
+   queue_event_player
+   queue_relay_player
    random_event_player
    show_player
    slide_player

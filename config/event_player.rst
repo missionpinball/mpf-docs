@@ -11,8 +11,6 @@ event_player:
 
 .. note:: This section can also be used in a show file in the ``events:`` section of a step.
 
-.. overview
-
 You can use the ``event_player:`` section of your config files to cause
 additional events to be automatically posted when a specific event is
 posted. The event_player can be thought of as a really simple way to
