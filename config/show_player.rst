@@ -11,26 +11,83 @@ show_player:
 
 .. note:: This section can also be used in a show file in the ``shows:`` section of a step.
 
-.. overview
 
-The ``show_player:`` section of your config is where you...
+The ``show_player:`` section of your config is where you start, stop, pause, (etc.) shows. Here's an example:
 
-.. todo::
-   Add description.
+.. code-block:: yaml
 
-Optional settings
------------------
+   show_player:
+      some_event: your_show_name
+      some_other_event: another_show
 
-The following sections are optional in the ``show_player:`` section of your config. (If you don't include them, the default will be used).
+In the example above, when the event *some_event* is posted, the show called ``your_show_name`` will be played (started).
+When the event *some_other_event* is posted, the show called ``another_show`` will be played.
+
+Notice that the config above has simple key/value pairs in the form of *event: show*. You can list as many of those as
+you want in the show player, and when each event is posted, it will start the show with the same name.
+
+However there are times when you might want to specify additional options for a show. Perhaps you want to change the
+playback speed, or configure how it repeats. In that case, instead of putting the show name on the same line as the
+event, you can put the show name on a new line under the event, and then add additional settings under it, like this:
+
+.. code-block:: yaml
+
+   show_player:
+      some_event:
+         your_show_name:
+            loops: 0
+      some_other_event:
+         another_show:
+            speed: 2
+            sync_ms: 500
+
+In the example above, the show ``your_show_name`` will play when the event *some_event* is posted, but instead of playing
+with the default settings only, it will also play with the setting ``loops: 0`` (meaning it will not loop and just play
+once). Same for the other show above, which will play with a ``speed: 2`` and ``sync_ms: 500``.
+
+You can also mix-and-match formats, like this:
+
+.. code-block:: yaml
+
+   show_player:
+      some_event: your_show_name
+      some_other_event:
+         another_show:
+            speed: 2
+            sync_ms: 500
+
+Settings
+--------
+
+The following settings can be added under a show name. If you don't include them, the default will be used.
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
+Single value of one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
 
 .. versionchanged:: 0.31 (Added "step_back" state)
 
-.. todo::
-   Add description.
+``play``
+   Starts playing the show. This is the default action which will happen if you don't include an ``action:`` setting.
+
+``stop``
+   Stops the show. Removes and "undoes" anything the show did, and posts the show stop events.
+
+``pause``
+   Pauses the show by holding it at the current step. Posts the show pause events.
+
+``resume``
+   Resumes a previously paused show.
+
+``advance``
+   Manually advances a show to the next step. Posts the show advance events.
+
+``step_back``
+   Manually moves the show back to the previous step. Posts the show step_back events.
+
+``update``
+   Not yet implemented. In the future it will be used to change a setting of a running show,
+   like changing the playback speed.
 
 block_queue:
 ~~~~~~~~~~~~
@@ -38,64 +95,93 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. versionadded:: 0.32
 
-.. todo::
-   Add description.
+You can use ``block_queue: yes`` if you want the show to block a queue event until the show is
+done. Note that you can only use this if the event that starts the show is a
+:doc:`queue event </events/overview/event_types>`. Also make sure that you don't have
+``loops: -1``, or a ``duration: -1`` as the final step of the show, since those will mean the show
+will never end, and then the queue event will never be unblocked, and your machine will hang.
 
 key:
 ~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Used to set a unique identifier you can set when playing a show which can then be used later
+to identify a show you want to perform an action on.
 
 loops:
 ~~~~~~
 Single value, type: ``integer``. Default: ``-1``
 
-.. todo::
-   Add description.
+Controls the looping / repeating of the show. The default if you don't include this setting is
+``loops: -1`` means that the show will repeat indefinitely until it's stopped.
+
+If you just want a show to play once and then stop, use ``loops: 0``.
+
+Since this setting is the number of times it loops, the value will be one less than the number
+of times the show will play. (e.g. ``loops: 1`` means the show will loop once which means it will
+play through twice.)
+
+Note that if a show only has one step, *loops* will be set to 0, regardless of the actual loops setting.
 
 manual_advance:
 ~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+If you set this to yes/true, then the show will not auto-advance based on time. Instead you will
+have to manually advance the show step-by-step with additional show_player entries with
+``action: advance`` entries.
 
 priority:
 ~~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
 
-.. todo::
-   Add description.
+Adjusts the priority of the show that's played.
 
-reset:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+By default, shows play at the priority of the mode where the show_player entry is. So this
+setting merely adjusts the show's priority up or down. For example, if you have a mode
+running at priority 300, and a show in a show_player with the setting ``priority: 10``, then that
+show will run at priority 310. Priorities can also be negative.
 
-.. todo::
-   Add description.
+The show's priority affects the priority of everything it does. Sounds, slides, LEDs, etc.
 
 show_tokens:
 ~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   Add description.
+Allows you to specify show token values that will be used to replace the show tokens in the show
+when it's played.
+
+Read what show tokens are :doc:`here </shows/tokens>`.
+
+For example:
+
+.. code-block:: yaml
+
+   show_player:
+      some_event:
+         show1:
+            show_tokens:
+               led: right_inlane
+
+In the example above, the show called "show1" will be played, but the show token called "led" in the
+show will be replaced at runtime with the value "right_inlane".
 
 speed:
 ~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1``
 
-.. todo::
-   Add description.
+Controls the playback speed of the show. The default value of 1 means the show plays back at 1x
+speed. (In other words, it plays at the actual speed each step is configured for. In this case
+you don't actually need to include the setting.)
+
+If you want to play the show at 2x the speed, use ``speed: 2``. If you want to play it at half
+speed, use ``speed: .5``. Etc.
 
 start_step:
 ~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
-.. todo::
-   Add description.
+Which step the show starts on when it's played.
 
 sync_ms:
 ~~~~~~~~
@@ -104,10 +190,10 @@ sync_ms:
 
 Single value, type: ``integer``. Default: ``None``
 
-.. todo::
-   Add description.
+Sets the sync_ms value of this show which will delay the start to a certain millisecond multiple
+to ensure that multiple shows started at different times all play in sync with each other.
 
-.. note:: The ``show_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
+See the :doc:`/shows/sync_mc` documentation for details.
 
 Events posted by shows
 ----------------------

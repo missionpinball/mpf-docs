@@ -27,9 +27,10 @@ Read on for more info on how shows work:
 .. toctree::
    :titlesonly:
 
-   tokens   format
+   format
    content
    file_shows
    config_shows
+   tokens
    playing
    sync_ms
