@@ -33,12 +33,10 @@ Specifies what action will take place when this event is posted.
    The widget or widget group is added to the slide or display target.
 
 ``remove``
-   The widget or widget group is removed from the slide or display target. This requires a
-   ``key:`` value below.
+   The widget or widget group is removed from the slide or display target.
 
 ``update``
-   One or more of the widget or widget group's priorities is updated. This requires a
-   ``key:`` value below.
+   One or more of the widget or widget group's priorities is updated.
 
 key:
 ~~~~

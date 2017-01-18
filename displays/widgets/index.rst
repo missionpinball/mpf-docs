@@ -44,6 +44,7 @@ widgets.
    :maxdepth: 1
 
    Types of widgets <types>
+   Showing widgets on a slide <adding_widgets>
    Positioning widgets on slides <positioning>
    Animating widgets <animation>
    Animation "easing" <easing>
