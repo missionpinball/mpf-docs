@@ -31,3 +31,4 @@ Read on for more info on how shows work:
    content
    file_shows
    config_shows
+   playing
