@@ -27,8 +27,7 @@ Read on for more info on how shows work:
 .. toctree::
    :titlesonly:
 
-   show_format
-   show_content
-   show_files
-   shows_in_configs
-   tokens
+   tokens   format
+   content
+   file_shows
+   config_shows
