@@ -85,7 +85,7 @@ Here's the same example as before, but with ``z:`` values added:
 
 And the results:
 
-.. image:: /displays/images/widget_layers_order.jpg
+.. image:: /displays/images/widget_layers_z.jpg
 
 Note that *widget3.2* is on top since it's ``z:`` is 100, then *widget3.3* is
 next with ``z: 2``, and finally *widget3.1* is on the bottom with ``z: 1``
