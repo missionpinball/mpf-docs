@@ -6,8 +6,8 @@ actually create slides.
 
 There are several ways you can define and create slides:
 
-* In a ``slides:`` section of a config file.
-* Dynamically in the ``slide_player:`` section of your config.
+* In a :doc:`/config/slides` section of a config file.
+* Dynamically in the :doc:`/config/slide_player` section of your config.
 * Dynamically in a show config or show file.
 
 Let's look at each of these options.
@@ -49,7 +49,7 @@ of those sections are used as the names of those slides. In other words, this
 config has a slide called "some_slide", another slide called "some_other_slide",
 etc.
 
-You can list slides in a ``slides:`` section of either your machine-wide or a
+You can list slides in a :doc:`/config/slides` section of either your machine-wide or a
 mode config. The most important thing to know about slide names is that they
 are GLOBAL throughout MPF. That means that MPF has a single master list of all
 the slide names used in the entire game. (So don't use the same slide name
@@ -66,7 +66,7 @@ you're done with it.
 
 .. note::
 
-   The slides defined in the ``slides:`` section are just the configurations
+   The slides defined in the :doc:`/config/slides` section are just the configurations
    that are used to create the slides when they're needed. In other words, no
    memory is used to "hold" the slides, so you can create lots and lots of them
    without worrying about running out of memory.
@@ -75,7 +75,7 @@ At this point, you're just creating the slides. Deciding when to show which
 slide will come later.
 
 Since MPF maintains a single global list of slides, it doesn't technically
-matter whether you define your slides in the ``slides:`` section of your
+matter whether you define your slides in the :doc:`/config/slides` section of your
 machine-wide config or your mode config. Obviously though if you define the
 slides a mode will use in that mode's config file, then that will help you
 keep everything more organized.
@@ -83,7 +83,7 @@ keep everything more organized.
 Dynamically defining slides in a slide_player: section of a config file
 -----------------------------------------------------------------------
 
-The ``slide_player:`` section of a machine-wide or mode config is where you
+The :doc:`/config/slide_player` section of a machine-wide or mode config is where you
 tell MPF to show (or "play") a specific slide when some event occurs. Full
 documentation for the slide_player is in the
 :doc:`showing_slides` section of the documentation.
@@ -102,12 +102,12 @@ In the above example, when the event *some_event* is posted, the slide player
 will respond and show the slide called *my_slide_1* which will include that
 single text widget.
 
-It doesn't really matter whether you pre-define a slide in the ``slides:``
-section of a config versions dynamically defining it in the ``slide_player:``
+It doesn't really matter whether you pre-define a slide in the :doc:`/config/slides`
+section of a config versions dynamically defining it in the :doc:`/config/slide_player`
 section. Really it comes down to personal preference. Some people like to have
-all their slides in one location (all in the ``slides:`` section), whereas
+all their slides in one location (all in the :doc:`/config/slides` section), whereas
 others prefer to have the configuration for the slides closer to where they
-will be used (by defining them in the ``slide_player:`` section). Most people
+will be used (by defining them in the :doc:`/config/slide_player` section). Most people
 end up mixing-and-matching, with some quick-and-dirty one-time use slides in
 the slide_player with other slides you might reuse in the slides: section.
 

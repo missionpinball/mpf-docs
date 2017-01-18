@@ -7,7 +7,7 @@ which slides you show when.
 Using the slide_player
 ----------------------
 
-The most common option is to use the ``slide_player:`` section of a config
+The most common option is to use the :doc:`/config/slide_player` section of a config
 file. This can be in either your machine-wide or in mode-specific config files.
 (Like all mode settings, slides in a mode-based config file will only play
 when that mode is active.)
@@ -76,7 +76,7 @@ Adding slides to a show
 The slide_player is one of MPF's many :doc:`/config_players/index` (so called
 because they use a "config" section to "play" things). Config players can be
 used in a config file (as shown above) and also in a show step. To use the slide
-player in a show, you add a ``slides:`` section to a show step.
+player in a show, you add a :doc:`/config/slides` section to a show step.
 
 For example, if you want a slide called "happy_face" to play in a step in a
 show, you can do it like this (this is a snippet of a single step in a show):
@@ -98,9 +98,9 @@ Again, you can use the sub-entry format to specify additional options:
 Creating new slides in the slide_player
 ---------------------------------------
 
-Both of the options we've show so far (using the ``slide_player:`` section of
-a config file and using the ``slides:`` section of a show) have used existing
-named slides that you would have already defined in the ``slides:`` section of
+Both of the options we've show so far (using the :doc:`/config/slide_player` section of
+a config file and using the :doc:`/config/slides` section of a show) have used existing
+named slides that you would have already defined in the :doc:`/config/slides` section of
 a config. You also have the option to define new slides directly in each of
 these sections. See the :doc:`creating_slides` section of the documentation
 for instructions on how to do that.
