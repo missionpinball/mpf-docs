@@ -30,7 +30,7 @@ varies.
 .. rubric:: Option 1: Slide with a widget
 
 If you want to define a slide that only has a single widget, you can just
-add the :doc:`widget's properties </display/widgets/types>` under the slide
+add the :doc:`widget's properties </displays/widgets/types>` under the slide
 name. In the example below, we're defining two slides, one called
 *my_slide_1* and the other called *my_slide_2*, and they each only have a
 single widget.
