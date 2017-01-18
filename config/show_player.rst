@@ -97,7 +97,29 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 You can use ``block_queue: yes`` if you want the show to block a queue event until the show is
 done. Note that you can only use this if the event that starts the show is a
-:doc:`queue event </events/overview/event_types>`. Also make sure that you don't have
+:doc:`queue event </events/overview/event_types>`.
+
+For example, the mode stopping events are queue events. So take a look at the
+following config:
+
+.. code-block:: yaml
+
+   show_player:
+      mode_my_mode_stopping:
+         show_1:
+            block_queue: yes
+
+In the example above, when the mode called *my_mode* posts its stopping
+event, show_1 will start playing. However because this show is set to block
+the queue event, the mode stopping event will not finish until the show
+finishes. In other words, the mode will not fully stop, and the
+*mode_my_mode_stopped* event will not be posted until the show ends.
+
+If you didn't use the block_queue setting, then the show would start and then
+stop right away since the mode would end and be over (and shows started in modes
+are stopped when those modes end).
+
+If you used this setting, make sure that you don't have
 ``loops: -1``, or a ``duration: -1`` as the final step of the show, since those will mean the show
 will never end, and then the queue event will never be unblocked, and your machine will hang.
 
@@ -130,6 +152,26 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 If you set this to yes/true, then the show will not auto-advance based on time. Instead you will
 have to manually advance the show step-by-step with additional show_player entries with
 ``action: advance`` entries.
+
+This can be useful if you want to have some kind of slow progress based on
+a series of events instead of a show that auto plays.
+
+For example:
+
+.. code-block:: yaml
+
+   show_player:
+      some_event:
+         show_1:
+            manual_advance: yes
+      some_advance_event:
+         show_1:
+            action: advance
+
+In the example above, the event *some_event* will start show_1, but that show
+will stay on its first step since it's set to manually advance. Then each
+time the event *some_advance_event* is posted, show_1 will advance to its
+next step.
 
 priority:
 ~~~~~~~~~
