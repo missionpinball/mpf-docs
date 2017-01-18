@@ -112,6 +112,31 @@ dash in the widgets: section to separate the individual widgets.
 You can mix-and-match the three options for entering widgets as needed within
 the same slides: section of your config.
 
+Creating a blank slide
+----------------------
+
+If you want to create a blank slide (perhaps an empty canvas that you'll
+populate via the widget player later?), then you need to tell the slides:
+section that you have an empty list. In YAML, that's done with a [ and ]
+next to each other (which is confusing because it looks like a rectangle, but
+it's not, like this: ``[]``.
+
+You can use this format to create a blank slide with no options:
+
+.. code-block:: yaml
+
+   slides:
+      my_blank_slide: []
+
+Or you can use it to create a blank slide with options, but no widgets, like this:
+
+.. code-block:: yaml
+
+   slides:
+      my_blank_slide:
+         background_color: red
+         widgets: []
+
 Settings
 --------
 
