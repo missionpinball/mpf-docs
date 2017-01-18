@@ -19,5 +19,5 @@ Option 2. Use the "widget player"
 
 If you want to add a widget (or a groups of widgets) to an existing slide,
 you can use the :doc:`/config/widget_player`. You can define your widgets
-there, or you can use widgets that you've :doc:`pre-defined </reusable_widgets>`.
+there, or you can use widgets that you've :doc:`pre-defined <reusable_widgets>`.
 
