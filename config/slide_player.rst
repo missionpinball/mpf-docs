@@ -9,10 +9,6 @@ slide_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``slides:`` section of a step.
-
-.. overview
-
 The ``slide_player:`` section of your config is where you configure slides to be shown (or
 removed) based on events being posted.
 
@@ -20,45 +16,44 @@ Note that the slide player is a :doc:`config_player </config_players/index>`, so
 mentioned below is valid in the ``slide_player:`` section of a config file *and* in the ``slides:``
 section of a show step.
 
-Generically-speaking, the ``slide_player:`` section of your config file, or the ``slides:``
-section of a show step, looks like this:
+Full instructions on how to use the slide_player are included in the
+:doc:`/displays/slides/showing_slides` guide. The documentation here is for
+reference later.
 
-::
+Generically-speaking, there are two formats you can use for slide_player
+entries: "express" and "full" configs. Express configs will look like this:
 
-   event:
-      slide_name:
-         <settings>
-   event:
-      slide_name:
-         <settings>
-   event:
-      slide_name:
-         <settings>
-
-That said, there are several different ways this config can actually be entered. Hopefully
-having lots of options isn't too confusing! We can remove some if so. :)
-
-First, there's a simple "express" config which is just `event:slide`, on one line, like this:
-
-::
+.. code-block:: yaml
 
    slide_player:
-      some_event: slide_1_awesome
+      event1: slide1
       event2: slide2
-      different_event: slide3
+      event3: slide3
 
-In the config above, when the event *some_event* is posted, *slide_1_awesome* will be shown
-on the default display. When *event2* is posted, *slide2* will be shown, and when
-*different_event* is posted, *slide3* will be shown.
+Full configs will look like this:
 
-This "express" config is down-and-dirty, no options, just show slides.
+.. code-block:: yaml
 
-However you might want to add some additional options for when a slide is displayed. To
-do this, instead of putting the slide name on the same line as the event, you put it
-indented on the next line, followed below by more settings for how that slide is shown.
+   slide_player:
+      event1:
+         slide2:
+            <settings>
+      event2:
+         slide2:
+            <settings>
+      event3:
+         slide3:
+            <settings>
+
+In both cases, these configurations are saying, "When *event1* is posted,
+show *slide1*. When *event2* is posted, show *slide2*. Etc."
+
+This "express" config is down-and-dirty, with no options, to just show slides.
+The full config lets you specify additional options (based on the settings
+detailed below).
 
 For example, the following config will show *slide_1* when *some_event* is posted, but it
-will also override the defaul settings and show the slide on the display target called
+will also override the default settings and show the slide on the display target called
 *display1* and at a priority that's 200 higher than the base priority.
 
 ::
@@ -69,9 +64,12 @@ will also override the defaul settings and show the slide on the display target 
             target: display1
             priority: 200
 
+Showing dynamically-created slides
+----------------------------------
+
 Both of the examples so far assumed that you were using the slide player to show a slide
-that had already been defined with its widgets and everything. However you can also define
-slides right in-line in your slide player.
+that had already been defined in the :doc:`/config/slides` section if your config.
+However you can also define slides right in-line in your slide player.
 
 The following config will show a slide called *slide_1* when the *some_event* is posted,
 but it assumes that *slide_1* does not yet exist, and it contains a list of widgets (one
@@ -143,8 +141,8 @@ section of your config file or the ``slides:`` section of a show. Note that all 
 are optional. Any that you do not include will be automatically added with the default
 values applied.
 
-Optional settings
------------------
+Settings
+--------
 
 The following sections are optional in the ``slide_player:`` section of your config. (If you don't include them, the default will be used).
 
@@ -152,8 +150,22 @@ action:
 ~~~~~~~
 Single value, type: one of the following options: play, remove. Default: ``play``
 
-Specifies what action should be taken. The default is ``play`` which means the slide is
-displayed. You can also use ``action: remove`` to remove a slide.
+``play``
+   Makes the slide active. Note that the actual slide shown on a display will
+   be whichever active slide has the highest priority, so depending on what
+   other slides are active, this action might not technically show the slide.
+
+   Also note that if a transition is specified (either in the slide definition
+   or the ``transition:`` section here, then than transition will be used when
+   showing this slide.
+
+``remove``
+   Removes the slide from the list of active slides. If this slide is the
+   highest priority slide that's currently showing, then the next-highest
+   priority slide will be shown in its place.
+
+   If a ``transition_out:`` setting is used, then that transition will be
+   used here.
 
 For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
@@ -198,10 +210,8 @@ Really you should use priorities to control which slides are shown.
 
 persist:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+.. deprecated:: 0.33
 
 priority:
 ~~~~~~~~~
@@ -227,7 +237,7 @@ show:
 ~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-Speficies whether this slide should be shown. (It will only be shown if it's the highest
+Specifies whether this slide should be shown. (It will only be shown if it's the highest
 priority slide for that display.) If you set ``show: false``, then the slide will be
 created and added to the display's collection of slides, but it won't be shown.
 
@@ -257,3 +267,37 @@ give it a name, and that name is added to the list of valid targets.
 So really the ``target:`` here is either the name of a display, or the name of a slide_frmae
 where you want this slide to be displayed.
 
+transition:
+~~~~~~~~~~~
+
+A sub-configuration of key/value pairs that make up the incoming transition
+that will be used when this slide is shown. See the :doc:`/displays/slides/transitions`
+documentation for details.
+
+Note that you can also configure a transition when the slide is defined
+in the :doc:`/config/slides` section of your config if you want to use the
+same transition every time for a slide and don't want to always have to
+define it here.
+
+If you specify a transition in both places, the transition in the slide_player
+or show will take precedence.
+
+
+transition_out:
+~~~~~~~~~~~~~~~
+
+A sub-configuration of key/value pairs that make up the incoming transition
+that will be used when this slide is removed. See the :doc:`/displays/slides/transitions`
+documentation for details.
+
+Note that you can add a transition out to the slide player when a slide
+is shown, and it will be "attached" to the slide and used when that slide
+is removed (either with the slide player or when a new slide is created with
+a higher priority than it).
+
+Or you can specify a transition out when you remove the slide (with
+``action: remove``).
+
+There can only be one transition between slides, so if an outgoing slide has
+a transition out set, and an incoming slide has a transition set, then the
+incoming transition will take precedence.
