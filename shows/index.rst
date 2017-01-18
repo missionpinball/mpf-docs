@@ -32,3 +32,4 @@ Read on for more info on how shows work:
    file_shows
    config_shows
    playing
+   sync_ms
