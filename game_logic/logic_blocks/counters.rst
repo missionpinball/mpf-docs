@@ -23,7 +23,7 @@ down.
 Here's an example of a counter you could use to track progress towards super
 jets:
 
-::
+.. code-block:: yaml
 
     logic_blocks:
         counters:
@@ -34,6 +34,38 @@ jets:
                 count_complete_value: 0
                 direction: down
                 events_when_complete: super_jets_start
+
+And here's the logic block we use for the :doc:`Addams Family mansion awards </cookbook/TAF_mansion_awards>`
+to make sure the mansions is initialized only once per game:
+
+.. code-block:: yaml
+
+    logic_blocks:
+        counters:
+            initialize_mansion:
+               count_events: mode_chair_lit_started
+               events_when_complete: initialize_mansion
+               count_complete_value: 1
+               persist_state: true
+
+Settings
+--------
+
+The structure of counter logic blocks is like this:
+
+.. code-block:: yaml
+
+   logic_blocks:
+      counters:
+         logic_block_1:
+            <settings>
+         logic_block_2:
+            <settings>
+         logic_block_3:
+            <settings>
+
+Note that the actual name of the logic block doesn't really matter. Mainly
+it's used in the logs.
 
 count_events:
 ~~~~~~~~~~~~~
@@ -104,5 +136,12 @@ with ``direction: down``, you'll want to also set this to something
 more than zero.
 
 Default is ``0``.
+
+player_variable:
+~~~~~~~~~~~~~~~~
+
+This lets you specify the name of the player variable that will hold
+the progress for this logic block. If you don’t specify a name, the
+player variable used will be called *<sequence_name>_count*.
 
 .. include:: common.rst

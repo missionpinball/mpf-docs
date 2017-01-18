@@ -21,6 +21,25 @@ listed.
                     - sw_leftStandup, sw_rightStandup
                 events_when_complete: start_multiball
 
+Settings
+--------
+
+The structure of sequence logic blocks is like this:
+
+.. code-block:: yaml
+
+   logic_blocks:
+      sequences:
+         logic_block_1:
+            <settings>
+         logic_block_2:
+            <settings>
+         logic_block_3:
+            <settings>
+
+Note that the actual name of the logic block doesn't really matter. Mainly
+it's used in the logs.
+
 events:
 ~~~~~~~
 
@@ -45,6 +64,6 @@ player_variable:
 
 This lets you specify the name of the player variable that will hold
 the progress for this logic block. If you don’t specify a name, the
-player variable used will be called *<sequence_name>_status*.
+player variable used will be called *<sequence_name>_step*.
 
 .. include:: common.rst

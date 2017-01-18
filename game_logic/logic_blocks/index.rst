@@ -8,20 +8,17 @@ parts of your game logic.
 
 There are three types of logic blocks in MPF:
 
-:doc:`accruals <accruals>`
+:doc:`counters <counters>`
+   Count the number of times an event happens, and when a certain number is
+   hit, a "complete" event is posted.
 
+:doc:`accruals <accruals>`
    Watch for several different events to occur, and once they all do (no matter
    what order they happen in), a "complete" event is posted.
 
 :doc:`sequences <sequences>`
-
    Watch for several different events that need to occur *in a specific order*,
    and once they do, a "complete" event is posted.
-
-:doc:`counters <counters>`
-
-   Count the number of times an event happens, and when a certain number is
-   hit, a "complete" event is posted.
 
 Logic blocks cna be configured to store their state in player variables,
 meaning that each logic block will remember where it was from ball-to-ball.
@@ -45,7 +42,7 @@ world examples from *Attack from Mars* (if we were building that game in MPF):
    :titlesonly:
    :hidden:
 
-   accruals
-   counters
-   sequences
+   Counters <counters>
+   Accruals <accruals>
+   Sequences <sequences>
    integrating_logic_blocks_and_shows

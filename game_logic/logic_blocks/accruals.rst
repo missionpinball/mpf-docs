@@ -63,6 +63,25 @@ Big Shot pinball machine:
                 disable_events: ball_ended
                 reset_events: ball_ended
 
+Settings
+--------
+
+The structure of accrual logic blocks is like this:
+
+.. code-block:: yaml
+
+   logic_blocks:
+      accruals:
+         logic_block_1:
+            <settings>
+         logic_block_2:
+            <settings>
+         logic_block_3:
+            <settings>
+
+Note that the actual name of the logic block doesn't really matter. Mainly
+it's used in the logs.
+
 events:
 ~~~~~~~
 
