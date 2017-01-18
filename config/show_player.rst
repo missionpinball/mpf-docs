@@ -193,7 +193,7 @@ Single value, type: ``integer``. Default: ``None``
 Sets the sync_ms value of this show which will delay the start to a certain millisecond multiple
 to ensure that multiple shows started at different times all play in sync with each other.
 
-See the :doc:`/shows/sync_mc` documentation for details.
+See the :doc:`/shows/sync_ms` documentation for details.
 
 Events posted by shows
 ----------------------
