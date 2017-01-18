@@ -7,7 +7,7 @@ through that widget. 0% opacity means that the widget is completely
 transparent and would not show up at all. 50% means it's about half-way in
 between, etc.
 
-Here's an example. (This example is from the :doc:`MC Demp </example_machines/mc_demo>`
+Here's an example. (This example is from the :doc:`MC Demo </example_machines/mc_demo>`
 which you can download and run to see it in action.)
 
 .. image:: /displays/images/opacity_example.png
