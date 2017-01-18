@@ -114,7 +114,7 @@ When you use the ``widget_player:``, it will add the widget to the current
 slide on the default display.
 
 If you want to target a specific slide, you can add a ``slide:`` setting
-to your widget player with the nane of the slide.
+to your widget player with the name of the slide.
 
 In both cases, the widget player will add the widget to a slide.
 
@@ -124,11 +124,18 @@ as part of the slide.
 
 Why would you want to do that?
 
+Sometimes it's useful to have a widget which "stays put" even as the underlying
+slides change.
+
 One example is for tilt warnings. When the player gets a tilt warning, you
 might want to show the text "WARNING" for 2 seconds. However if you use the
 regular widget player to add this widget to the current slide, then if that
 slide is replaced by another slide during those 2 seconds, your tilt warning
 will disappear too.
+
+Another example is the scores. Maybe you want those to show along the bottom
+on top of every slide? Or maybe something like the news crawl on the bottom
+of the *Dialed In* display?
 
 So instead of using a ``slide:`` setting with your widget player, you can use
 the ``target:`` setting and enter of name of a display or a slide frame.
