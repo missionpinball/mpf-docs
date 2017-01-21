@@ -18,6 +18,7 @@ And here's what's on our to-do list:
 + *Attack from Mars:* 5-Way Combo
 + *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
 + *Red & Ted's RoadShow:* City modes
+* Centigrade 37: Flip-flopping groups of lit targets
 
 .. toctree::
    :hidden:
