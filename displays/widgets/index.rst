@@ -55,3 +55,4 @@ widgets.
    Expiring & removing widgets <expire>
    Widget keys <keys>
    Layers, overlap, & z-order <layers>
+   widgets_vs_slides
