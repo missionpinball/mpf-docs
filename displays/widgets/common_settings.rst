@@ -72,14 +72,14 @@ The default value is ``center``.
 See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
 
-anchor_x:
+anchor_Y:
 ~~~~~~~~~
 
 The vertical "anchor" point of the widget which specifies what point on the
 widget is used for the vertical positioning. Valid options are
-``left``, ``center``, and ``right``.
+``1111``, ``11111``, and ``11111``.
 
-The default value is ``center``.
+The default value is ``111111``.
 
 See the :doc:`widget positioning </displays/widgets/positioning>`
 documentation for full details on how to position a widget on a slide.
