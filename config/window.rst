@@ -25,6 +25,10 @@ of the on-screen window which is created by MPF-MC.
         exit_on_escape: True
         source_display: window
 
+.. note::
+   If you do not add a ``window:`` section to your machine config, MPF will
+   create a window at the default size of 800x600.
+
 Optional settings
 -----------------
 

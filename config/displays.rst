@@ -41,6 +41,12 @@ never have to worry about this because that display will always be the default. 
 the ``default: true`` to a display here to tell MPF which display is your default which is used when you play slides
 without specifying a target.
 
+.. note::
+
+   Starting in MPF v0.33, If you do not put a ``displays:`` section in your
+   machine config, MPF will automatically create a single display called
+   "default" with a size of 800x600. (This matches the default window size.)
+
 Each display in your ``displays:`` section can have the following settings:
 
 Optional settings
@@ -54,13 +60,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Specifies that this display is the default, meaning it's the display that's used if you show a slide without specifying
 a target for that slide. If you only have one display, it will be the default automatically.
-
-fps:
-~~~~
-Single value, type: ``integer``. Default: ``0``
-
-.. todo::
-   Add description.
 
 height:
 ~~~~~~~
