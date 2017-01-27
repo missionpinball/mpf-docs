@@ -8,7 +8,7 @@ Most popular
 
    Text <text/index>
    Image <image/index>
-   Video <video>
+   Video <video/index>
 
 But also these:
 
