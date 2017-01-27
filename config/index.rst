@@ -130,4 +130,5 @@ your machine-wide config, a mode-specific config, or both.
    virtual_platform_start_active_switches: <virtual_platform_start_active_switches>
    widget_player: <widget_player>
    widget_styles: <widget_styles>
+   widgets: <widgets>
    window: <window>
