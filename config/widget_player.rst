@@ -11,19 +11,95 @@ widget_player:
 | Valid in :doc:`shows </shows/index>`                                       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``widgets:`` section of a step.
+The ``widget_player:`` section of your config is where you configure widgets to be added to,
+removed from, or updated on slides based on based on events being posted.
 
-.. overview
+Note that the widget player is a :doc:`config_player </config_players/index>`, so everything
+mentioned below is valid in the ``widget_player:`` section of a config file *and* in the ``widgets:``
+section of a :doc:`show step </shows/content>`.
 
-The ``widget_player:`` section of your config is where you...
+Full instructions on how to use the slide_player are included in the
+:doc:`/displays/widgets/index` section of the documentation. The stuff here
+in the config reference is for reference later.
 
-.. todo::
-   Add description.
+Generically-speaking, there are two formats you can use for widget_player
+entries: "express" and "full" configs. Express configs will look like this:
 
-Optional settings
------------------
+.. code-block:: yaml
 
-The following sections are optional in the ``widget_player:`` section of your config. (If you don't include them, the default will be used).
+   widget_player:
+      event1: widget1
+      event2: widget2
+      event3: widget3
+
+Full configs will look like this:
+
+.. code-block:: yaml
+
+   widget_player:
+      event1:
+         widget1:
+            <settings>
+      event2:
+         widget2:
+            <settings>
+      event3:
+         widget3:
+            <settings>
+
+In both cases, these configurations are saying, "When *event1* is posted,
+add widget *widget1*. When *event2* is posted, add *widget2*. Etc."
+
+This "express" config is down-and-dirty, with no options, to just add widgets to
+the current slide on the default display.
+The full config lets you specify additional options (based on the settings
+detailed below).
+
+For example, the following config will add *widget_1* when *some_event* is posted, but it
+will also override the default settings and add widget to the slide called *slide_2*, even
+if that's not the current slide that's showing.
+
+.. code-block:: yaml
+
+   widget_player:
+      some_event:
+         widget_1:
+            slide: slide_2
+
+Settings
+--------
+
+The following sections can be added under the the a particular widget's settings ``widget_player:`` section of your config.
+(If you don't include any of them, the default will be used).
+
+So again, the format in a config file would be:
+
+.. code-block:: yaml
+
+   #config_version=4
+
+   widget_player:
+      some_event:
+         name_of_your_widget:
+            <list of settings below go here>
+      some_other_event:
+         name_of_a_different_widget:
+            <list of settings below go here>
+
+And the format in a show file would be:
+
+.. code-block:: yaml
+
+   #show_version=4
+
+   - duration: 1s
+     widgets:
+         name_of_your_widget:
+            <list of settings below go here>
+         name_of_a_different_widget:
+            <list of settings below go here>
+
+Here are the settings you can use:
 
 action:
 ~~~~~~~
@@ -38,7 +114,7 @@ Specifies what action will take place when this event is posted.
    The widget or widget group is removed from the slide or display target.
 
 ``update``
-   One or more of the widget or widget group's priorities is updated.
+   One or more of the widget or widget group's properties is updated.
 
 key:
 ~~~~
@@ -76,3 +152,7 @@ Note that the ``target:`` and ``slide:`` setting are fundamentally not
 compatible with each other. If you used both, the ``target:`` setting will be
 used and the ``slide:`` value will be ignored.
 
+widget_settings:
+~~~~~~~~~~~~~~~~
+
+Used to override and/or update
