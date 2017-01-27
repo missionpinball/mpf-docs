@@ -4,6 +4,31 @@ Bezier Curve Widget
 The bezier widget is used to draw a curved line on a :doc:`slide </displays/slides/index>`.
 (Note that if you want to draw a straight line, you can use the :doc:`/displays/widgets/line/index`.)
 
+Here's an example:
+
+.. code-block:: yaml
+
+   #config_version=4
+
+   slide_player:
+     mc_ready:
+        bezier_example:
+         - type: bezier
+           points: 10, 10, 150, 450, 300, 100, 790, 590
+           color: lime
+           thickness: 5
+           cap: none
+         - type: bezier
+           points: 0, 600, 400, 400, 400, 0
+           color: pink
+           close: true
+           joint: miter
+           thickness: 10
+
+Which results in the following:
+
+.. image:: /displays/images/bezier.png
+
 Settings
 --------
 
@@ -39,9 +64,12 @@ points:
 A list of points which make up the bezier curve, expressed in x/y pairs (so the
 number of items here has to be even).
 
+The first pair is the starting point. The last pair is the ending point.
+Each pair in between is a point the curve will pass through.
+
 For example:
 
-::
+.. code-block:: yaml
 
    points: 10, 10, 200, 50, 300, 200
 
