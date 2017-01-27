@@ -8,6 +8,8 @@ widget_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
+| Valid in :doc:`shows </shows/index>`                                       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``widgets:`` section of a step.
 

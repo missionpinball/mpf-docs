@@ -8,6 +8,8 @@ slide_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
+| Valid in :doc:`shows </shows/index>`                                       | **YES** |
++----------------------------------------------------------------------------+---------+
 
 The ``slide_player:`` section of your config is where you configure slides to be shown (or
 removed) based on events being posted.
@@ -36,7 +38,7 @@ Full configs will look like this:
 
    slide_player:
       event1:
-         slide2:
+         slide1:
             <settings>
       event2:
          slide2:
