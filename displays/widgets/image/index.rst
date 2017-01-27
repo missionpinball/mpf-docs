@@ -10,7 +10,7 @@ Image types that support alpha channels (like PNGs) are supported.
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: image
    image:
@@ -24,7 +24,7 @@ Settings
    auto_play:
    start_frame:
 
-.. note:: Ellipse widgets also have "common" widget settings for position, opacity,
+.. note:: Image widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
    :doc:`common widget settings </displays/widgets/common_settings>` page.
 
