@@ -13,7 +13,7 @@ Here's an example:
 
    slide_player:
      mc_ready:
-        bezier_example:
+        rectangle_example:
          - type: rectangle
            x: 200
            y: 200
