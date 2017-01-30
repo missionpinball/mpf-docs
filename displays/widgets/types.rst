@@ -3,18 +3,32 @@ Types of Widgets
 
 Most popular
 
+* Text
+* Image
+* Video
+
+But also these:
+
+* Bezier Curve
+* Color DMD
+* DMD
+* Ellipse
+* Line
+* Points
+* Quad
+* Rectangle
+* Slide Frame
+* Text Input
+* Triangle
+* Common Settings (all widgets)
+
 .. toctree::
    :titlesonly:
+   :hidden:
 
    Text <text/index>
    Image <image/index>
    Video <video/index>
-
-But also these:
-
-.. toctree::
-   :titlesonly:
-
    Bezier Curve <bezier/index>
    Color DMD <color_dmd/index>
    DMD <dmd/index>
