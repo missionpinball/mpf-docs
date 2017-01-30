@@ -20,10 +20,10 @@ But also these:
    DMD <dmd/index>
    Ellipse <ellipse/index>
    Line <line/index>
-   Text Input <text_input>
    Points <points/index>
    Quad <quad/index>
    Rectangle <rectangle/index>
    Slide Frame <slide_frame/index>
+   Text Input <text_input/index>
    Triangle <triangle/index>
    Common Settings (all widgets) <common_settings>
