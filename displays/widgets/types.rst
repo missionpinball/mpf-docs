@@ -22,8 +22,8 @@ But also these:
    Line <line/index>
    Slide Frame <slide_frame>
    Text Input <text_input>
-   Triangle <triangle>
    Points <points/index>
    Quad <quad/index>
    Rectangle <rectangle/index>
+   Triangle <triangle/index>
    Common Settings (all widgets) <common_settings>
