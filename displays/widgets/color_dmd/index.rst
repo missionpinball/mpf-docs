@@ -15,7 +15,7 @@ on-screen window to see the Color DMD when you're running your machine in virtua
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: color_dmd
    width:
@@ -58,13 +58,11 @@ the window (896 / 128 = 7).
 
 This setting is required.
 
-
 height:
 ~~~~~~~
 
 The height that the color DMD will be drawn on the slide. See the "width:" setting above
 for details.
-
 
 source_display:
 ~~~~~~~~~~~~~~~
@@ -72,7 +70,6 @@ source_display:
 The name of the display (from your ``displays:`` section) that will be the source for
 the content of this color DMD widget. The default is ``dmd``, which means you would need
 to have a display called "dmd" in the ``displays:`` section of your machine config.
-
 
 gain:
 ~~~~~
@@ -107,7 +104,6 @@ dark_color:
 Note: This feature is not currently implemented. TODO
 
 This is the color of the pixels when they're "off" (black). Default is ``221100``.
-
 
 shades:
 ~~~~~~~

@@ -54,7 +54,7 @@ And the result:
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    width:
    height:

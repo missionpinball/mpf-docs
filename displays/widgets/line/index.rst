@@ -40,7 +40,7 @@ And the results:
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: line
    points:

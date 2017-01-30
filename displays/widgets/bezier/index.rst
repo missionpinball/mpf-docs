@@ -32,7 +32,7 @@ Which results in the following:
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: bezier
    points:

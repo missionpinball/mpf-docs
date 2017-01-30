@@ -41,7 +41,7 @@ And the result:
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: slide_frame
    name:

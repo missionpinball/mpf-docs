@@ -20,7 +20,7 @@ on-screen window to see the DMD when you're running your machine in virtual mode
 Settings
 --------
 
-::
+.. code-block:: yaml
 
    type: dmd
    width:

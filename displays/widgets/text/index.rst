@@ -22,7 +22,7 @@ Settings
 
 Here are a list of the settings you can use for text widgets:
 
-::
+.. code-block:: yaml
 
    type: text
    text:
@@ -63,13 +63,13 @@ extension. For example:
 
 Correct:
 
-::
+.. code-block:: yaml
 
    font_name: arial
 
 Wrong:
 
-::
+.. code-block:: yaml
 
    font_name: arial.ttf
 
