@@ -5,6 +5,38 @@ The line widget is used to draw a straight line on a
 :doc:`slide </displays/slides/index>`. (Note that if you want to draw a
 curved line, you can use the :doc:`/displays/widgets/bezier/index`.)
 
+Here's an example:
+
+.. code-block:: yaml
+
+   #config_version=4
+
+   slide_player:
+    mc_ready:
+       line_example:
+        - type: line
+          points: 0, 300, 800, 300
+        - type: line
+          points: 0, 100, 800, 100
+        - type: line
+          points: 400, 95, 400, 0
+          color: red
+          thickness: 5
+          cap: square
+        - type: line
+          points: 100, 500, 150, 550, 200, 450
+          color: lime
+          thickness: 2
+        - type: line
+          points: 500, 150, 600, 350, 650, 200
+          color: blue
+          close: yes
+          thickness: 3
+
+And the results:
+
+.. image:: /displays/images/line.png
+
 Settings
 --------
 
