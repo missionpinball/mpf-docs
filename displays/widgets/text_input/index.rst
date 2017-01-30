@@ -58,7 +58,7 @@ single
 char_list:
 ~~~~~~~~~~
 
-String value, default is ``ABCDEFGHIJKLMNOPQRSTUVWXYZ\_- ``.
+String value, default is ``ABCDEFGHIJKLMNOPQRSTUVWXYZ\_- \``.
 
 A list of all the characters that are available to be chosen by the player
 as they're entering their name or initials. The order they are here is the order
@@ -79,7 +79,7 @@ How many characters can be entered into this text input field.
 initial_char:
 ~~~~~~~~~~~~~
 
-Single character value. Default is ``A`.
+Single character value. Default is ``A``.
 
 The character from your ``char_list:`` that you want to be the initial character
 selected before the player starts entering their name.
