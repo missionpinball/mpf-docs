@@ -8,6 +8,49 @@ It can also be used to draw "wedges" (pie slices) or ellipses with sections miss
 Note that ellipses are always solid. If you want an elliptical outline,
 use the :doc:`/displays/widgets/bezier/index`.
 
+Here's an example:
+
+.. code-block::
+
+   #config_version=4
+
+   slide_player:
+    mc_ready:
+       ellipse_example:
+        - type: ellipse
+          x: 200
+          y: 200
+          width: 200
+          height: 200
+          color: blue
+          angle_start: 0
+          angle_end: 90
+        - type: ellipse
+          x: 400
+          y: 300
+          width: 400
+          height: 200
+          color: yellow
+          segments: 8
+        - type: ellipse
+          x: 600
+          y: 500
+          width: 400
+          height: 300
+          color: red
+          angle_start: 200
+          angle_end: 300
+        - type: ellipse
+          x: 700
+          y: 200
+          width: 90
+          height: 300
+          color: lime
+
+And the result:
+
+.. image:: /displays/images/ellipse.png
+
 Settings
 --------
 
@@ -67,9 +110,3 @@ The angle, between 0-360, where the ellipse will start. The default is ``360``.
 
 Note that a start angle of 0 and an end angle of 360 will create a complete
 solid ellipse.
-
-Examples
---------
-
-The example config files section of the documentation contains
-:doc:`examples of bezier widgets </examples/shapes/index>`.
