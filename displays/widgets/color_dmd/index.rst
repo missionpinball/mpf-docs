@@ -4,6 +4,10 @@ Color DMD Widget
 The Color DMD widget is used to render a :doc:`display </displays/display/index>` on a
 :doc:`slide </displays/slides/index>` and to apply options that make it look like a DMD (dot filters, etc.).
 
+Here's an example:
+
+.. image:: /displays/images/display_color_dmd2.png
+
 This is how you get a "Color DMD" look on your LCD display. (The :doc:`/displays/display/adding_dot_look_to_lcd`
 guide walks you through that.)
 
