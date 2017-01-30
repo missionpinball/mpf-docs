@@ -10,7 +10,7 @@ use the :doc:`/displays/widgets/bezier/index`.
 
 Here's an example:
 
-.. code-block::
+.. code-block:: yaml
 
    #config_version=4
 
