@@ -23,6 +23,7 @@ config file. Here's an example from *Judge Dredd*:
             reset_coils: c_reset_drop_targets
             reset_events:
                 drop_targets_judge_complete: 1s
+            reset_on_complete: 1s
 
 What about drop target banks with lights?
 -----------------------------------------
@@ -99,11 +100,19 @@ reset the bank of drop targets.
 
 reset_on_complete:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Time value. Default: ``None``
 
 .. versionadded:: 0.32
 
-TODO
+By default, when a drop target bank completes, it does not automatically reset.
+If you want it to reset, then use this setting along with a time delay for when you
+want it to reset after it completes.
+
+For example:
+
+.. code-block:: yaml
+
+   reset_on_complete: 500ms
 
 reset_events:
 ~~~~~~~~~~~~~
