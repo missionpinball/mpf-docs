@@ -9,25 +9,17 @@
 
 .. toctree::
    :hidden:
-   :caption: Installation
+   :caption: Installation & First Steps
    :titlesonly:
    :numbered: 0
 
    Installing MPF </install/index>
    Running MPF </running/index>
-
-.. toctree::
-   :hidden:
-   :caption: Learning
-   :titlesonly:
-   :numbered: 0
-
    Tutorial </tutorial/index>
-   Cookbook </cookbook/index>
 
 .. toctree::
    :hidden:
-   :caption: Topic Guides
+   :caption: MPF User Manual
    :titlesonly:
    :numbered: 0
 
@@ -49,20 +41,28 @@
 
 .. toctree::
    :hidden:
-   :caption: Reference Guides
+   :caption: Examples
+   :titlesonly:
+   :numbered: 0
+
+   Example Config Files </examples/index>
+   Example Machines </example_machines/index>
+   Cookbook </cookbook/index>
+
+.. toctree::
+   :hidden:
+   :caption: Reference
    :titlesonly:
    :numbered: 0
 
    Config File Reference </config/index>
-   Events </events/index>
-   Player Variables </player_vars/index>
-   Machine Variables </machine_vars/index>
-   Example Config Files </examples/index>
-   Example Machines </example_machines/index>
+   Events Reference </events/index>
+   Player Variable Reference </player_vars/index>
+   Machine Variable Reference </machine_vars/index>
 
 .. toctree::
    :hidden:
-   :caption: Developer Guides
+   :caption: Software Developer Guides
    :titlesonly:
    :numbered: 0
 
@@ -99,38 +99,19 @@ Everything you need to know about the `Mission Pinball Framework <http://mission
 is valid for MPF versions |version|. See the :doc:`MPF software & documentation versions </versions/understanding>`
 page for details.
 
-How the documentation is organized
-----------------------------------
-
-* :doc:`Overview </start/index>` explains what MPF is, how it works, and what types of pinball machines
-  and control systems you can use.
-* :doc:`Installation </install/index>` guides walk you through downloading and installing MPF and getting
-  one of the example machines working. (You don't need your own physical machine to do this.)
-* :doc:`Tutorials </tutorial/index>` take you through a series of steps to create your own machine
-  configuration in MPF from scratch. Start here if you're new to MPF. (Also see the `First Steps`_ below.)
-* `Topic guides`_ discuss key topics and concepts at a fairly high level and contain useful background
-  information about all the different parts of MPF, including how it interacts with pinball mechanisms,
-  game logic, displays, sound, and the various physical hardware control systems.
-* :doc:`The Cookbook </cookbook/index>` shows you how to implement features of real pinball machines
-  using MPF. This is great for the "How do I build something like X?" questions you might have.
-* `Reference Guides`_ contain technical reference listings of all the settings for the MPF config files,
-  event names, common player and machine variables, and example projects you can learn from.
-* `Developer guides`_ have technical information for software developers who want to write their own code
-  for their machines or who want to help contribute to the MPF project itself.
-
-First steps
------------
-If you're brand-new to MPF, start here.
-
+Overview
+--------
 * :doc:`MPF Overview </start/index>`: What MPF is and how it works.
-* :doc:`/install/index`: Download and install MPF.
-* :doc:`/tutorial/index`: Step-by-step beginner's guide.
-* :doc:`Pick your hardware platform </hardware/index>`. You can start the tutorial without a physical machine, but at
-  some point you'll need to buy some hardware, since MPF is for real-life physical pinball machines!
+* :doc:`Compatible Pinball Machines </machines/index>`: What types of machines work with MPF?
+* :doc:`Supported Hardware </hardware/index>`: What types of pinball control systems work with MPF?
 
-Topic guides
-------------
-* :doc:`/hardware/index`: hardware control systems such as the P-ROC, FAST Pinball, and Open Pinball Project hardware.
+Installation & first steps
+--------------------------
+* :doc:`/install/index`: How to download and install MPF.
+* :doc:`/tutorial/index`: Step-by-step beginner's guide.
+
+MPF User Manual
+---------------
 * :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
 * :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
 * :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
@@ -139,14 +120,19 @@ Topic guides
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
 
+Examples
+--------
+* :doc:`/examples/index`: Huge list of example config files you can learn from.
+* :doc:`Example Machines </example_machines/index>`: List of several example machine projects.
+* :doc:`The Cookbook </cookbook/index>` shows you how to implement features of real pinball machines
+  using MPF. This is great for the "How do I build something like X?" questions you might have.
+
 Reference guides
 ----------------
 * :doc:`/events/index`: All the standard events MPF has, and how to use them.
 * :doc:`/config/index`: Lists every config setting and all the options.
-* :doc:`/examples/index`: Huge list of example config files you can learn from.
 * :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
 * :doc:`/machine_vars/index`: Lists all the standard machine variables.
-* :doc:`Example Machines </example_machines/index>`: List of several example machine projects.
 
 Developer guides
 ----------------
@@ -158,8 +144,8 @@ Getting Help
 ------------
 * `Support Forum (Google Group) <https://groups.google.com/forum/#!forum/mpf-users>`_
 
-The MPF open source project
----------------------------
+About MPF
+---------
 
 * :doc:`/about/index`
 * :doc:`/about/authors`
@@ -179,4 +165,4 @@ Let's go!
 
 You can access the full table of contents of MPF documentation via the expandable menu
 on the left (or the hamburger menu icon if you're on a mobile device). There are over
-900 pages of printed documentation to help you build your pinball machine!
+1000 pages of printed documentation to help you build your pinball machine!
