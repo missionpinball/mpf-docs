@@ -60,7 +60,6 @@ your machine-wide config, a mode-specific config, or both.
    led_rings: <led_rings>
    leds: <leds>
    light_player: <light_player>
-   logic_block: <logic_block>
    logic_blocks: <logic_blocks>
    machine: <machine>
    magnets: <magnets>
