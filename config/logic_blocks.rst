@@ -16,16 +16,8 @@ The ``logic_blocks:`` section of your config is where you configure your logic b
 There are three sub-sections that go under the ``logic_blocks:`` section which each
 correspond to a different type of logic block:
 
-* accruals:
-* counters:
-* sequences:
+* :doc:`accruals: </game_logic/logic_blocks/accruals>`
+* :doc:`counters: </game_logic/logic_blocks/counters>`
+* :doc:`sequences: </game_logic/logic_blocks/sequences>`
 
-Then under each of these sections, you add the specific logic blocks. Logic blocks in
-mode config files are only active while that mode is active, and logic blocks in your
-machine config can be active any time.
-
-Full documentation for logic blocks is in the
-:doc:`logic block documentation </game_logic/logic_blocks/index>` in the
-:doc:`/game_logic/index` section of the documentation. Look there for
-the description of all the settings and what they do, as well as
-examples of logic blocks in use.
+Click each of the links above for details and settings for each type of logic block.

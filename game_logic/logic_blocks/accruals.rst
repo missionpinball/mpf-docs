@@ -1,7 +1,7 @@
 Accrual Logic Blocks
 ====================
 
-Accruals are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
+"Accruals" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events.
 
 Accruals are almost identical to :doc:`/game_logic/logic_blocks/sequences`, the
@@ -69,7 +69,7 @@ The events section of an accrual logic block is where you define the
 events this logic block will watch for in order to make progress towards
 completion.
 
-The real power of accrual logic blocks is that you can enter more than one
+The real power of logic blocks is that you can enter more than one
 event for each step, and *only one* of the of the events of that step has to
 happen for that step to be complete.
 
@@ -77,7 +77,16 @@ Another way to look at it is that there's an *AND* between all the steps.
 For the Accrual to complete, you need Step 1 *AND* Step 2 *AND* Step 3.
 But since you can enter more than one event for each step, you could think of
 those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND* Step 2 (event3)
-*AND* Step 3 (event4 *OR* event5).
+*AND* Step 3 (event4 *OR* event5), like this:
+
+.. code-block:: yaml
+
+   logic_blocks:
+      accruals:
+         events:
+            - event1, event2
+            - event3
+            - event4, event5
 
 It might seem kind of confusing at first, but
 you can build this up bit-by-bit and figure them out as you go along.
@@ -111,7 +120,7 @@ For example:
 In the example above, there are two logic blocks. The first one just has five
 steps that need to complete (in any order since we're dealing with accrual logic
 blocks), and each step only has one event that will mark is as complete. So basically
-any of those five events 1-5 can be posted in any order, adn then *logic_block_1_done*
+any of those five events 1-5 can be posted in any order, and then *logic_block_1_done*
 will be posted.
 
 In the second example, if event 1, 2, or 3 is posted, that will count for step 1, and then
@@ -122,10 +131,9 @@ and that will lead to *logic_block_2_done* being posted.
 
 Note that you can have two logic blocks with the same events at the same time, and
 MPF will track the state of each logic block separately. So in the above config with
-those two logic blocks, if the events were posted:
-
-event2, event3, event4, then event5 were posted, that would complete logic block 2,
-then later if event1 was posted, that would complete logic block 1.
+those two logic blocks, if the events were posted in the order event2, event3, event4,
+then event5, that would complete logic block 2. Then later if event1 was posted, that
+would complete logic block 1.
 
 player_variable:
 ~~~~~~~~~~~~~~~~
@@ -140,5 +148,11 @@ any player variable you want.
 
 Making this change doesn't really affect anything other than the name of the
 variable. It's just for convenience if you prefer a different name.
+
+Note that this player variable stores the state of this logic block in an
+internal list that's not easily accessible for text display purposes on a slide.
+If you want to display status or progress on a slide, you can use a combination
+of the logic block events or an event player along with slide or widget player
+entries to show whatever messages you want.
 
 .. include:: common.rst
