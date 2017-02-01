@@ -106,7 +106,7 @@ supports them in combination with regular keys, like this:
     shift+ctrl+t:
         switch: slam_tilt
 
-You an add ``debug: true`` in the ``keyboard:`` section to get a printout
+Starting in MPF 0.33, you an add ``debug: true`` in the ``keyboard:`` section to get a printout
 on the console of the current key and/or modifiers that are pushed down
 which is helpful in figuring out exactly what the modifier keys are called
 on your system.
