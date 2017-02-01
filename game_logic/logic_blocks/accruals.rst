@@ -131,7 +131,7 @@ player_variable:
 ~~~~~~~~~~~~~~~~
 
 By default, the current "state" (or progress) of accrual logic blocks
-are stored in a :doc:`player variable </players/index>` called *<accrual_name>_status*.
+are stored in a :doc:`player variable </game_logic/players/index>` called *<accrual_name>_status*.
 For example, a logic block called "logic_block_1" would store its state
 in a player variable called *logic_block_1_status*.
 
