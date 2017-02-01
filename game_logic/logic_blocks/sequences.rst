@@ -14,7 +14,7 @@ listed.
 An example might be if you have to hit four shots in a specific order to complete
 a mode, like this example from the World Tour mode of *Brooks 'n Dunn*:
 
-.. code-block::
+.. code-block:: yaml
 
     logic_blocks:
         sequences:

@@ -18,9 +18,7 @@ on, etc.
 
 Here's an example ``info_lights:`` section from a machine configuration file:
 
-
 .. code-block:: yaml
-
 
     info_lights:
         match_00:
