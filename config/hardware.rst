@@ -43,6 +43,7 @@ configuration guide for that platform.)
 + ``p3_roc`` :doc:`Multimorphic P3-ROC </hardware/multimorphic/index>`
 + ``fast`` :doc:`FAST Pinball </hardware/fast/index>` (any controller)
 + ``opp`` :doc:`Open Pinball Project </hardware/opp/index>` open source hardware
++ ``spike`` :doc:`Stern SPIKE / SPIKE 2 </hardware/spike/index>`
 + ``smart_virtual`` :doc:`Virtual (software only) </hardware/virtual/smart_virtual>`
   that simulates switch changes based on coil actions.
 + ``virtual`` :doc:`Virtual software-only </hardware/virtual/index>`, with no

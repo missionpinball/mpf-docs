@@ -14,7 +14,7 @@ IO board's driver outputs) with FAST Pinball hardware, you can follow the guides
 and instructions in the :doc:`/mechs/coils/index` docs.
 
 However there are a few things to know and some additional options you get
-with FAST hardware that is discussed here.
+with FAST hardware that are discussed here.
 
 number:
 -------
@@ -27,7 +27,7 @@ chain, then the dash, then the driver output number. Note that the position
 number starts with zero, so the first IO board in the chain is 0, the second
 is 1, etc.
 
-::
+.. code-block:: yaml
 
    coils:
       my_coil:

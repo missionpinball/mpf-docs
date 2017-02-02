@@ -25,8 +25,8 @@ number:
 ~~~~~~~
 Single value, type: ``string``.
 
-This is the number of the coil which specifies which driver output the
-coil is physically connected to. The exact format used here will
+This is the number of the light which specifies which output the
+light is physically connected to. The exact format used here will
 depend on which control system you're using and how the coil is connected.
 
 Click the correct link for the specifics:
@@ -34,7 +34,8 @@ Click the correct link for the specifics:
 * :doc:`FAST Pinball </hardware/fast/lights>`
 * :doc:`P-ROC </hardware/multimorphic/lights>`
 * :doc:`OPP </hardware/opp/lights>`
-* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
+* :doc:`Stern SPIKE </hardware/spike/leds>`
+* :doc:`Other Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
 
 Optional settings
 -----------------

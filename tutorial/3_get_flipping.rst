@@ -351,8 +351,8 @@ have a physical machine yet then you can skip directly to :doc:`/tutorial/4_adju
 --------------------------------------------------------
 
 If you have a physical pinball machine (or at least a something on your
-workbench) which is hooked up to a FAST, P-ROC, P3-ROC, or OPP controller,
-then you need to add the hardware information to your
+workbench) which is hooked up to a FAST, P-ROC, P3-ROC, OPP, or Stern SPIKE
+controller, then you need to add the hardware information to your
 config file so MPF knows which platform interface to use and how to
 talk to your hardware. To configure MPF to use a hardware pinball
 controller, you need to add a ``hardware:`` section to your config file,
@@ -364,6 +364,7 @@ each platform. Here they are again:
 * :doc:`FAST Pinball </hardware/fast/index>`
 * :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic/index>`
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
+* :doc:`Stern SPIKE </hardware/spike/index>`
 
 You only need look at those docs for the specifics parts of the config that
 vary depending on your hardware. The good news is that 99.9% of the MPF

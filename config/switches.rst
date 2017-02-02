@@ -70,7 +70,8 @@ Click the correct link for the specifics:
 * :doc:`P-ROC </hardware/multimorphic/switches_p_roc>`
 * :doc:`P3-ROC </hardware/multimorphic/switches_p3_roc>`
 * :doc:`OPP </hardware/opp/switches>`
-* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
+* :doc:`Stern SPIKE </hardware/spike/switches>`
+* :doc:`Other Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
 
 Optional settings
 -----------------

@@ -68,7 +68,8 @@ Click the correct link for the specifics:
 * :doc:`FAST Pinball </hardware/fast/drivers>`
 * :doc:`P-ROC/P3-ROC</hardware/multimorphic/drivers>`
 * :doc:`OPP </hardware/opp/drivers>`
-* :doc:`Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
+* :doc:`Stern SPIKE </hardware/spike/drivers>`
+* :doc:`Other Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
 
 Optional settings
 -----------------

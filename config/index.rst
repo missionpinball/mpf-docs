@@ -115,6 +115,7 @@ your machine-wide config, a mode-specific config, or both.
    sound_pools: <sound_pools>
    sound_system: <sound_system>
    sounds: <sounds>
+   spike: <spike>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>

@@ -10,8 +10,8 @@ Most people develop their game on their laptop, and then when they're done, tran
 it to a smaller computer permanently installed in their pinball machine.
 
 The computer running MPF is connected to a :doc:`modern pinball control system </hardware/index>` via USB.
-(MPF supports several different control systems, including FAST Pinball, P-ROC, and
-Open Pinball Project open source hardware.)
+(MPF supports several different control systems, including FAST Pinball, P-ROC,
+Open Pinball Project open source hardware, and Stern SPIKE hardware.)
 
 You put that control system in your pinball machine, which can be a custom (home brew)
 machine or an existing machine you want to reprogram.

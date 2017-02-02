@@ -12,7 +12,7 @@ pretty high level gist:
    root>/mpf/mpfconfig.yaml``
 #. Loads the machine config file you specified in the command line.
    Note that this config file may load other config files.
-#. Sets the default hardware platform. (FAST, P-ROC, virtual, etc.)
+#. Sets the default hardware platform. (FAST, P-ROC, OPP, SPIKE, virtual, etc.)
 #. Loads the system modules. The exact order is specified in
    ``mpfconfig.yaml``. Currently it's:
 
