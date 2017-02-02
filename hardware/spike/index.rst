@@ -107,7 +107,8 @@ DMD
 ~~~
 
 We haven't added support for the red DMDs from SPIKE v1 machines. If
-you want a DMD today, you can add a standalone RGB DMD, or you can
+you want a DMD today, you can add a standalone :doc:`RGB DMD </displays/display/physical_rgb_dmd>`
+which will fit right into the position of the old DMD, or you can
 replace the DMD/speaker panel in your SPIKE machine with an LCD display
 which you can run from the HDMI output of your computer running MPF.
 
@@ -118,9 +119,14 @@ Currently if you want to use sound (which of course you do), the way
 to do it is to use the sound card in the computer running MPF and
 speakers connected there.
 
-Ideally we'll figure out how to use the sound capabilities of the
-SPIKE CPU node so you can use the built-in amp, speakers, & subwoofer
-with no hardware changes required.
+The SPIKE system has sound capabilities, and it would be nice to be
+able to use it along with its existing speakers and amps, but
+the way MPF connects via the debug port does not allow for enough
+bandwidth for us to do sound this way.
+
+This is something that might change in the future, or perhaps we
+can find an easy way to connect the sound output from the computer
+to the SPIKE amp.
 
 Servos
 ~~~~~~
