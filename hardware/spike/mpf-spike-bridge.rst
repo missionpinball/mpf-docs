@@ -20,6 +20,11 @@ put the original in a safe place and then copy the image to a new SD card.
 That way you're always working with a copy and the original SD card is
 never touched.
 
+Note that we do not yet know which cards are best or will be fully
+compatible, so our recommendation is to get a card that's around the
+same size as the current one. Let us know what you find in terms of
+what works and what doesn't!
+
 2. Mount the SD card
 --------------------
 
@@ -55,6 +60,8 @@ to run the original game again.)
 Add mpf-spike-bridge to /bin/bridge and mark it as executable.
 
 Get the bridge from https://gituhub.com/missionpinball/mpf-spike-bridge
+
+Note that we have a precompiled binary in there (as well as the C source code).
 
 6. Unmount the SD card. Put it back in your spike system
 --------------------------------------------------------
