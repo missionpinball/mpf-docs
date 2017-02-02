@@ -62,6 +62,12 @@ your pinball machine.
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
      switches, & incandescent lights
 
+* :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
+   * *New in MPF 0.33*
+   * A computer running MPF can directly connect to a SPIKE machine with
+     a simple "USB to serial" converter which you plug into the SPIKE
+     main board.
+
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
      it's not connected to physical hardware. (This is good for working on
@@ -111,6 +117,7 @@ MPF supports:
    FAST Pinball <fast/index>
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
+   Stern SPIKE / SPIKE 2 <spike/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index

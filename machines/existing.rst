@@ -9,15 +9,16 @@ controller interfaces with the existing machine's driver boards to control the
 coils, lights, and DMD, and it provides a "bridge" (via USB) to a host
 computer running Python and the Mission Pinball Framework.
 
-=============================       =====            ====
-Machine Type                        P-ROC            FAST
-=============================       =====            ====
-Williams / Bally / Midway WPC       X                X
-Williams / Bally System 11          X                X
-Data East                           X                X
-Stern S.A.M.                        X
-Stern Whitestar                     X
-=============================       =====            ====
+============================= ===== ==== ======
+Machine Type                  P-ROC FAST Direct
+============================= ===== ==== ======
+Williams / Bally / Midway WPC X     X
+Williams / Bally System 11    X     X
+Data East                     X     X
+Stern S.A.M.                  X
+Stern Whitestar               X
+Stern SPIKE / SPIKE 2                    X
+============================= ===== ==== ======
 
 Notes:
 
@@ -26,6 +27,8 @@ Notes:
   `here <http://www.pinwiki.com/wiki/index.php?title=Williams_WPC#Game_List>`_.)
 * System 11 and Data East machines require the "Snux" replacement driver board in
   addition to the P-ROC or FAST controller.
+* Since Stern SPIKE systems have a linux-based computer inside them already, MPF
+  can directly connect to and control them via USB. No additional hardware is needed.
 
 If you want to use MPF with an existing machine type that's not on the list above,
 that's still possible, but you'd have to rewire the entire machine and use modern

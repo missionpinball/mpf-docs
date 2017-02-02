@@ -16,6 +16,7 @@ New Features
 * "Multiball lock" device (Track ball locks towards multiball, including virtual
   locks, across balls and players)
 * Multiball "add a ball" feature
+* Added support for Stern SPIKE platform
 * Additional achievements control events
 * BCP ports & interfaces are now configurable
 * Drop target "keep up" feature (PWMs reset coil to "lock" target up)
