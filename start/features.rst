@@ -30,6 +30,7 @@ Compatible control systems / electronics
 + FAST Pinball Core, Nano & WPC controllers, with 3802, 1616, and 0804 I/O
   boards, FAST servo boards, or installation in existing WPC machines.
 + Open Pinball Project (OPP) open source controlled with Gen2 driver boards.
++ Stern SPIKE / SPIKE 2 pinball machines.
 + Mark Sunnucks's "Snux" System 11 driver board for use in System 11 and Data
   East machines, in concert with either a P-ROC or FAST WPC controller.
 + Fadecandy RGB LED controllers.
