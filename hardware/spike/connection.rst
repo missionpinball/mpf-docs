@@ -13,6 +13,7 @@ https://www.amazon.com/HiLetgo-CP2102-Module-Serial-Converter/dp/B00LODGRV8
 https://www.amazon.com/HiLetgo-Ft232rl-Serial-Adapter-Arduino/dp/B00IJXZQ7C
 https://www.adafruit.com/products/3309
 https://www.sparkfun.com/products/12731
+https://www.sparkfun.com/products/13830
 
 Make sure you have a 3.3v adapter (or that your adapter can be set for 3.3v).
 
