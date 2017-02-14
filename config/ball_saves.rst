@@ -94,6 +94,17 @@ also want the default value(s) to apply, add them too.)
 
 Event(s) which enable this ball save.
 
+early_ball_save_events:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
+
+Event(s) which will trigger a ball save to take place before the current ball has drained. A typical example of this might be switch
+activation events from outlane switches which can be used to trigger a ball save as soon as the ball hits the outlane.
+
 grace_period:
 ~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
