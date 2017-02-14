@@ -27,6 +27,9 @@ New Features
 * Added score reels to the smart virtual platform
 * Allow machine variables to be set via BCP
 * Allow setting default high scores
+* Add "early save" events to ball saves
+* Add all monitorable device properties to conditional events
+* Use placeholders in mode timer start & end values
 
 Bug fixes & code improvements
 
@@ -50,6 +53,17 @@ Bug fixes & code improvements
 New Features
 
 * Allow placeholders and settings
+* Added keyboard debugging
+* Added warnings if window size & display size aspect ratios are not the same
+* MPF-MC now checks to make sure the MPF version it's talking to is compatible
+* Change the default display size to 800x600 if a displays: section is not in the config
+* Re-vamped Mac installation procedure. It's now a "real" install and does not use
+  MPF.app anymore.
+* Added a "volume" machine variable
+
+Bug fixes & code improvements
+
+* Sound assets can be loaded while videos are playing
 
 0.32
 ----
