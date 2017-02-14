@@ -4,7 +4,7 @@ Understanding MPF version numbering
 This page explains:
 
 * How version numbering works in MPF, and
-* Hnd how the MPF documentation versions map to the MPF versions.
+* How the MPF documentation versions map to the MPF versions.
 
 MPF is under constant development. The core developers typically spend a combined 40 hours a week working on
 MPF with multiple fixes and enhancements made every day. You can see the stream of code "commits" on GitHub,
