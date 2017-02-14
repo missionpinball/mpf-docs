@@ -53,3 +53,8 @@ shift_left_tag:
 shift_right_tag:
 ~~~~~~~~~~~~~~~~
 .. deprecated:: 0.31
+
+defaults:
+~~~~~~~~~
+
+.. versionadded:: 0.33
