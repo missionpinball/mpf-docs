@@ -10,8 +10,11 @@ can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 -------------------------------------
 
 Just like any hardware device you connect to a computer, you need to install
-the drivers so your computer can see it. When you do this and then plug in
-a Maestro, you should see two serial (COM) ports appear.
+the drivers so your computer can see it. It is easier to do the initial 
+hardware configuration on a Windows PC. Follow the "Getting Started" section of the 
+`Pololu Maestro Servo Controller User's Guide <https://www.pololu.com/docs/0J40/all>`_.
+You will need to set Maestro's serial mode to USB Dual Port on the Serial Settings tab
+of the Maestro Control Center.
 
 2. Configure your hardware platform section
 -------------------------------------------
