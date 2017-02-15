@@ -9,7 +9,11 @@ ball_locks:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. overview
+.. important::
+
+   The "ball_locks config section will be removed after MPF 0.33. It's been
+   replaced with the :doc:`/config/ball_holds` and :doc:`/config/multiball_locks`
+   sections which are available in MPF 0.33 and later.
 
 The ``ball_locks:`` section of your config is used to list and configure
 :doc:`logical ball locks </game_logic/ball_locks/index>`.
