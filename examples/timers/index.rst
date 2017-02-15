@@ -9,13 +9,10 @@ timers/mode_timers (example config files)
 | :doc:`Timer Device </game_logic/timers/index>`                               |
 +------------------------------------------------------------------------------+
 
-
 Machine config examples
 -----------------------
 
 Just make sure your mode is loaded (include it in the modes: list).
-
-
 
 Mode config examples
 --------------------

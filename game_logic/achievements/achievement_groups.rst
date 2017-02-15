@@ -59,7 +59,7 @@ the prefix for achievement groups is ``device.achievement_groups.<name>``.
 *enabled*
    Boolean (true/false) as to whether this achievement group is enabled.
 
-*selected_member
+*selected_member*
    The achievement in the group that is currently in the selected state, or
    *None* if no achievement is selected.
 
