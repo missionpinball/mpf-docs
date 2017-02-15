@@ -27,6 +27,9 @@ single|template_int|
 
 TODO
 
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
+
 block:
 ~~~~~~
 

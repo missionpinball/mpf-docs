@@ -8,6 +8,7 @@ TODO
    config_version
    machine_config
    mode_config
+   placeholders
    gain_values
    time_strings
    case_insensitivity

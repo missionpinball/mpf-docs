@@ -88,6 +88,9 @@ value, it will post its "complete" event and be considered complete.
 
 Default is ``None``.
 
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
+
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -136,6 +139,9 @@ with ``direction: down``, you'll want to also set this to something
 more than zero.
 
 Default is ``0``.
+
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
 
 player_variable:
 ~~~~~~~~~~~~~~~~

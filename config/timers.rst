@@ -206,7 +206,8 @@ up), or when it equals or is lower than this (for timers counting down), the *ti
 posted and the timer is stopped. (If the ``restart_on_complete:`` setting is true, then the timer is also reset
 back to its ``start_value:`` and started again.)
 
-Starting in MPF 0.33, you can use placeholder values here.
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
 
 max_value:
 ~~~~~~~~~~
@@ -243,7 +244,8 @@ Single value, type: ``integer``. Default: ``0``
 
 The initial value of the timer.
 
-Starting in MPF 0.33, you can use placeholder values here.
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
 
 tick_interval:
 ~~~~~~~~~~~~~~

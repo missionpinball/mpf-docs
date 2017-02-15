@@ -225,6 +225,9 @@ Single value, type: ``integer``. Default: ``1``
 
 Which step the show starts on when it's played.
 
+Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+for this setting.
+
 sync_ms:
 ~~~~~~~~
 
