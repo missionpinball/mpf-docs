@@ -15,7 +15,12 @@ Also note that you can pass command line options to both MPF and MPF-MC after th
 
    mpf both -v -V -b
 
-etc. See the ``game`` and ``mc`` command references for a full list of command line options.
+etc. See the :doc:`game` and :doc:`mc` command references for a full list of command line options.
 
 To quit MPF and MPF-MC, either click in the graphical pop up window (so it has focus) and hit ``Esc``, or click in the
 console window and press ``CTRL+C``.
+
+.. note::
+
+   If you use the ``-l`` (lowercase L) option to specify a log file along with ``mpf both``,
+   you need to use ``-l`` to specify the MPF log and ``-L`` to specify the MC log.

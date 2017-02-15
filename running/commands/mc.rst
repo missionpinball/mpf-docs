@@ -83,6 +83,17 @@ with a file name of ``<year>-<month>-<day>-<hour>-<min>-<sec>-mpf-<hostname>.log
 Note that log files are standard log file formats that can be read and parsed
 with log file utilities. (The "Console" app is built-in to OS X, for example.)
 
+-L (uppercase)
+~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+Specifies the name and path of the log file.
+
+Note this is the same as ``-l`` (lowercase L), but it's included so if you use
+:doc:`mpf both <both>` with manually specified log files that you can use ``-l``
+for the MPF log and ``-L`` for the MC log.
+
 -v (lowercase)
 ~~~~~~~~~~~~~~
 
