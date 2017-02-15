@@ -38,10 +38,11 @@ complexity of MPF, meaning you can get your custom code integrated
 with just some basic Python knowledge. There are two easy ways to add
 custom Python code to your game project:
 
-+ Sciptlets , which are "machine-wide" chunks of code that are always
++ Sciptlets, which are "machine-wide" chunks of code that are always
   active.
 + Mode-specific code, which allows you to write custom Python code
   which is only active when a particular game mode is active.
++ Placeholders & conditional events.
 
 As for when to use scriptlets versus mode-specific code, we tend to
 use scriptlets for any custom code that will be used through MPF
