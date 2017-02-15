@@ -7,8 +7,17 @@ Ball Locks
 | :doc:`/config/ball_locks`                                                    |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF's *ball locks* are used to hold a ball that has entered a
 :doc:`/mechs/ball_devices/index` towards multiball.
+
+.. warning::
+
+   Ball locks will be removed from MPF after v0.33. They have been replaced
+   with :doc:`/game_logic/multiballs/multiball_locks`, so if you're setting
+   this up for the first time, you should use them instead.
 
 .. note::
 
@@ -28,18 +37,29 @@ balls in a contained physical ball device doesn't match.
 You can have lots of different ball locks in your game, typically configured
 per mode.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/ball_lock_name_balls_released`                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_lock_name_full`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_lock_name_locked_ball`                                    |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball locks is ``device.ball_locks.<name>``.
+
+*balls_locked*
+   The number of balls locked
+
+*enabled*
+   Boolean (true/false) which shows whether this ball lock is enabled.
+
+*lock_queue*
+   List of pairs of the device & ball counts that are queued to be released.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+* :doc:`/events/ball_lock_name_balls_released`
+* :doc:`/events/ball_lock_name_full`
+* :doc:`/events/ball_lock_name_locked_ball`

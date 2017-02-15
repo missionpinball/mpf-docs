@@ -137,6 +137,7 @@ Things you can use
 * ``game.``
 * ``machine.``
 * ``settings.``
+* ``device.``
 
 Comparisons
 -----------

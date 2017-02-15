@@ -7,6 +7,9 @@ Ball Devices
 | :doc:`/config/ball_devices`                                                  |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 A *ball device* is any physical thing in a pinball machine which is able to
 hold (i.e. "capture") a ball and then release it. (Either
 automatically or based on some action by the player.) Examples of ball
@@ -100,37 +103,40 @@ as well as dozens of other options that allow MPF to support every
 known type of device in every pinball machine ever created.
 (Seriously.)
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/mechs/troughs/modern_opto`                                            |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/troughs/modern_mechanical`                                      |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/troughs/two_coil_multiple_switches`                             |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/troughs/two_coil_one_switch`                                    |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/troughs/classic_single_ball`                                    |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/balldevice_ball_missing`                                       |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_balls_available`                                    |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_balls_ball_missing`                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_captured_from_device`                               |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_attempt`                            |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_failed`                             |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_success`                            |
-+------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ejecting_ball`                                 |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball devices is ``device.ball_devices.<name>``.
 
+*available_balls*
+   Number of balls that are available to be ejected. This differs from
+   *balls* since it's possible that this device could have balls that are
+   being used for some other eject, and thus not available.
+
+*state*
+   What state this device is in.
+
+*balls*
+   How many balls this device is currently holding.
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/troughs/modern_opto`
+* :doc:`/mechs/troughs/modern_mechanical`
+* :doc:`/mechs/troughs/two_coil_multiple_switches`
+* :doc:`/mechs/troughs/two_coil_one_switch`
+* :doc:`/mechs/troughs/classic_single_ball`
+
+Related Events
+--------------
+* :doc:`/events/balldevice_ball_missing`
+* :doc:`/events/balldevice_balls_available`
+* :doc:`/events/balldevice_balls_ball_missing`
+* :doc:`/events/balldevice_captured_from_device`
+* :doc:`/events/balldevice_name_ball_eject_attempt`
+* :doc:`/events/balldevice_name_ball_eject_failed`
+* :doc:`/events/balldevice_name_ball_eject_success`
+* :doc:`/events/balldevice_name_ejecting_ball`

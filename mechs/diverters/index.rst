@@ -7,6 +7,9 @@ Diverters
 | :doc:`/config/diverters`                                                     |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 In MPF, a diverter (sometimes spelled "divertor") is anything that alters
 the path of the ball based on the state it's in, including:
 
@@ -74,20 +77,34 @@ also include support for automatic enabling and disabling (based on
 events), and they include intelligence to know which target devices a
 diverter will send a ball to when it's enabled or disabled.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/diverter_name_activating`                                      |
-+------------------------------------------------------------------------------+
-| :doc:`/events/diverter_name_deactivating`                                    |
-+------------------------------------------------------------------------------+
-| :doc:`/events/diverter_name_disabling`                                       |
-+------------------------------------------------------------------------------+
-| :doc:`/events/diverter_name_enabling`                                        |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for diverters is ``device.diverters.<name>``.
+
+*active*
+   Boolean (true/false) as to whether this diverter is actively on and
+   in the powered state.
+
+*enabled*
+   Boolean (true/false) as to whether this diverter is enabled (meaning
+   it will be activated when a ball approaches it).
+
+*eject_state*
+   Boolean (true/false) which shows whether this diverter will be activating
+   to route a ball eject from an upstream ball device.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+
+* :doc:`/events/diverter_name_activating`
+* :doc:`/events/diverter_name_deactivating`
+* :doc:`/events/diverter_name_disabling`
+* :doc:`/events/diverter_name_enabling`

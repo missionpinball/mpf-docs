@@ -7,6 +7,9 @@ Ball Holds
 | :doc:`/config/ball_holds`                                                    |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF's *ball holds* are used to temporarily hold a ball that has entered a
 :doc:`/mechs/ball_devices/index` while something else happens.
 
@@ -21,18 +24,27 @@ device for that.
 You can have lots of different ball holds in your game, typically configured
 per mode.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/ball_hold_name_balls_released`                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_hold_name_full`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_hold_name_held_ball`                                      |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.ball_holds.<name>``.
+
+*balls_held*
+   The number of balls this ball hold is currently holding
+
+*enabled*
+   Boolean (true/false) which shows whether this ball hold is enabled.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+
+* :doc:`/events/ball_hold_name_balls_released`
+* :doc:`/events/ball_hold_name_full`
+* :doc:`/events/ball_hold_name_held_ball`

@@ -7,6 +7,9 @@ Ball Saves
 | :doc:`/config/ball_saves`                                                    |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF uses *ball saves* to automatically re-serve a ball that has drained. (Essentially
 this means the ball drain doesn't count.)
 
@@ -24,24 +27,36 @@ You can configure ball saves to have various start and
 stop events and timers, and you can configure multiple ones in
 different modes that do different things.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/ball_save_name_disabled`                                       |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_enabled`                                        |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_grace_period`                                   |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_hurry_up`                                       |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_saving_ball`                                    |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_timer_start`                                    |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball saves is ``device.ball_saves.<name>``.
+
+*enabled*
+   Boolean (true/false) which shows whether this ball hold is enabled.
+
+*saves_remaining*
+   How many balls saves are remaining.
+
+*state*
+   String value of the state of this ball save. Values will be one of
+   the following: *enabled*, *disabled*, *hurry_up*, or *grace_period*.
+
+*timer_started*
+   Boolean (true/false) which shows whether the timer is started.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+* :doc:`/events/ball_save_name_disabled`
+* :doc:`/events/ball_save_name_enabled`
+* :doc:`/events/ball_save_name_grace_period`
+* :doc:`/events/ball_save_name_hurry_up`
+* :doc:`/events/ball_save_name_saving_ball`
+* :doc:`/events/ball_save_name_timer_start`

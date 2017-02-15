@@ -7,6 +7,9 @@ Autofire Coils
 | :doc:`/config/autofire_coils`                                                |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 An autofire coil in MPF is used for "instant response" type devices
 (like pop bumpers and slingshots) where you want a switch activation
 to trigger a coil as close to instantaneous as possible.
@@ -185,15 +188,24 @@ You can also configure autofire coils manually for simpler things like
 pop bumpers and slingshots. See the `autofire_coils: section of the
 configuration file reference </config/autofire_coils>`_ for details.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/tutorial/13_add_autofires`                                            |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| None (the autofire coils can be configured to enable or disable based on     |
-| other events)                                                                |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for autofire coils is ``device.autofires.<name>``.
+
+*enabled*
+   Boolean (true/false) which shows whether this autofire coil is enabled.
+
+Related How To guides
+---------------------
+
+* :doc:`/tutorial/13_add_autofires`
+
+Related Events
+--------------
+
+*None*
+   The autofire coils can be configured to enable or disable based on
+   other events)

@@ -9,6 +9,9 @@ Combo Switches ("flipper cancel", etc.)
 
 .. versionadded:: 0.32
 
+.. contents::
+   :local:
+
 MPF contains support for "combo switches" which are special combinations of
 switches that post events when they're hit together.
 
@@ -36,14 +39,23 @@ You can set various timing options for combo switches, including how close
 together the two switches have to be hit to count as a combo, how long they
 have to be held, and how long they have to be released.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/combo_switch_state`                                            |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for combo switches is ``device.combo_switches.<name>``.
+
+*state*
+   String which reflects what state this combo switch is in.
+   Options wil be one of the following: *inactive*, *both* or *one*.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+
+* :doc:`/events/combo_switch_state`

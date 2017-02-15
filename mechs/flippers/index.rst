@@ -7,6 +7,9 @@ Flippers
 | :doc:`/config/flippers`                                                      |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 Flippers are probably the first thing you think of when you think about building
 your own pinball machine. In fact when most people get their own hardware and
 start drilling holes in a piece of plywood, the first visible thing they do is
@@ -26,17 +29,18 @@ coils, as flippers in pinball machines can be either type.
 You should also probably read the EOS Switches guide if your machine has flipper
 EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-.. toctree::
-   :titlesonly:
-   :caption: Flipper Concepts
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for flippers is ``device.flippers.<name>``.
 
-   eos_switches
+*enabled*
+   Boolean (true/false) which shows whether this ball hold is enabled.
+
+Related How To guides
+---------------------
 
 .. toctree::
    :titlesonly:
@@ -52,5 +56,18 @@ EOS switches. (In general EOS switches are not needed for flippers with MPF.)
    weak_flippers
    inverted_flippers
    delayed_flippers
+
+Related Events
+--------------
+
+None
+
+.. toctree::
+   :titlesonly:
+   :caption: Flipper Concepts
+
+   eos_switches
+
+
 
 

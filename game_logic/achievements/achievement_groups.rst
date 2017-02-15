@@ -9,6 +9,9 @@ Achievement Groups
 
 .. versionadded:: 0.32
 
+.. contents::
+   :local:
+
 Achievement groups are used to group together individual achievements.
 
 If you look at the real-world examples we used in the achievements documentation,
@@ -46,15 +49,26 @@ achievements in the group. For example:
 * Post a "start" event for whichever achievement is lit (In *TAF*, you
   shoot the lit electric chair or the swamp to start the flashing achievement.)
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/cookbook/TAF_mansion_awards`                                          |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| Custom events as defined in the achievement's configuration in your config   |
-| files.                                                                       |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for achievement groups is ``device.achievement_groups.<name>``.
+
+*enabled*
+   Boolean (true/false) as to whether this achievement group is enabled.
+
+*selected_member
+   The achievement in the group that is currently in the selected state, or
+   *None* if no achievement is selected.
+
+Related How To guides
+---------------------
+
+* :doc:`/cookbook/TAF_mansion_awards`
+
+Related Events
+--------------
+* Custom events as defined in the achievement's configuration in your config
+  files.

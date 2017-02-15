@@ -9,6 +9,9 @@ Achievements
 
 .. versionchanged:: 0.32
 
+.. contents::
+   :local:
+
 MPF uses "achievements" to track major goals that a player must achieve
 throughout the progression of a game. Achievements typically have an associated
 light or LED on the playfield (though not always), and they're tracked
@@ -53,20 +56,30 @@ useful for tracking when all the achievements in the group have been complete
 lit achievements (e.g. every slingshot hit changes the achievement that's
 flashing, but it only rotates through incomplete achievements.)
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/cookbook/TAF_mansion_awards`                                          |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/achievement_name_state_state`                                  |
-+------------------------------------------------------------------------------+
-| Plus any custom events as defined in the achievement's configuration in your |
-| config files.                                                                |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for achievements is ``device.achievements.<name>``.
+
+*state*
+   The string name of ths state this achievement is in. Options will be one
+   of the following: *disabled*, *enabled*, *started*, *stopped*, *selected*,
+   or *completed*. If this achievement is in a mode that has not been started
+   yet, then its state will be an empty string.
+
+Related How To guides
+---------------------
+
+* :doc:`/cookbook/TAF_mansion_awards`
+
+Related Events
+--------------
+
+* :doc:`/events/achievement_name_state_state`
+* Plus any custom events as defined in the achievement's configuration in your
+  config files.
 
 .. toctree::
 

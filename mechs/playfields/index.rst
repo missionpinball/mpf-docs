@@ -9,6 +9,9 @@ Playfields
 | :doc:`/config/playfield_transfers`                                           |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 Believe it or not, the playfield in MPF is technically a :doc:`ball device </mechs/ball_devices/index>`.
 This is needed since MPF wants to know where all the balls are at all
 times, so it needs to know which balls are "in" the playfield device.
@@ -25,28 +28,35 @@ machine then you can configure additional playfield devices.
 Playfields are configured in the :doc:`playfields: section </config/playfields>`
 of the configuration file.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/sw_playfield_active`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/unexpected_ball_on_playfield`                                  |
-+------------------------------------------------------------------------------+
-| :doc:`/events/playfield_active`                                              |
-+------------------------------------------------------------------------------+
-| :doc:`/events/playfield_ball_count_change`                                   |
-+------------------------------------------------------------------------------+
-| :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for playfields is ``device.playfields.<name>``.
+
+*available_balls*
+   todo
+
+*balls*
+   The number of balls on the playfield.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+
+* :doc:`/events/sw_playfield_active`                                           |
+* :doc:`/events/unexpected_ball_on_playfield`                                  |
+* :doc:`/events/playfield_active`                                              |
+* :doc:`/events/playfield_ball_count_change`                                   |
+* :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
 
 Other playfield concepts
-========================
+------------------------
 
 .. toctree::
 

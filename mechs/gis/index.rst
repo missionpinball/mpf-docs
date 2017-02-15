@@ -9,6 +9,9 @@ GI (general illumination)
 | :doc:`/config/gi_player`                                                     |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF includes support for GI (general illumination) light strings which are
 common in existing Williams and Stern machines. You can specify GI
 strings which you can then enable, disable, or (if the hardware supports it)
@@ -32,14 +35,22 @@ MPF hides all this complexity from you. You just define your GI strings in
 your machine configuration file and then you can enable, disable, and
 dim the dimmable ones as you wish.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| TODO                                                                         |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| None                                                                         |
-+------------------------------------------------------------------------------+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for drop target banks is ``device.drop_target_banks.<name>``.
+
+*brightness*
+   The numeric value of the brightness of this GI string, from 0-255.
+
+Related How To guides
+---------------------
+
+.. todo:: TODO
+
+Related Events
+--------------
+
+None
