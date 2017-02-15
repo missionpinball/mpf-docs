@@ -71,6 +71,7 @@ your machine-wide config, a mode-specific config, or both.
    motors: <motors>
    mpf: <mpf>
    mpf-mc: <mpf-mc>
+   multiball_locks: <multiball_locks>
    multiballs: <multiballs>
    open_pixel_control: <open_pixel_control>
    opp: <opp>

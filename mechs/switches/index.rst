@@ -9,6 +9,9 @@ Switches
 | :doc:`/config/switch_overwrites`                                             |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
@@ -35,31 +38,43 @@ Most switches in pinball machines are debounced except for the ones that you
 absolutely want to fire instantly, like flipper switches and the switches
 attached to automatically fired coils like slingshots and pop bumpers.
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/tutorial/3_get_flipping`                                              |
-+------------------------------------------------------------------------------+
+Switch Concepts
+---------------
+* :doc:`debounce`
+* :doc:`switch_controller`
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/switch_name_active`                                            |
-+------------------------------------------------------------------------------+
-| :doc:`/events/switch_name_inactive`                                          |
-+------------------------------------------------------------------------------+
-| :doc:`/events/sw_tag_name`                                                   |
-+------------------------------------------------------------------------------+
+Monitorable Properties
+----------------------
+
+For :doc:`config placeholders </config/instructions/placeholders>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for switches is ``device.switches.<name>``.
+
+*state*
+   Numeric value which represents the logic state of this switch.
+   0 is inactive, 1 is active.
+
+*recycle_jitter_count*
+   How many times this switch has activated within it's configured
+   ``ignore_window_ms:``. (These activations are ignored.)
+
+Related How To guides
+---------------------
+
+* :doc:`/tutorial/3_get_flipping`
+* :doc:`optos`
+
+Related Events
+--------------
+* :doc:`/events/switch_name_active`
+* :doc:`/events/switch_name_inactive`
+* :doc:`/events/sw_tag_name`
+
 
 .. toctree::
    :titlesonly:
-   :caption: Switch Concepts
+   :hidden:
 
    debounce
    switch_controller
-
-.. toctree::
-   :titlesonly:
-   :caption: Switch How To Guides
-
    optos
