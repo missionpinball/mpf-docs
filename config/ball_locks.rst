@@ -82,7 +82,7 @@ Single value, type: ``string``. Default: ``%``
 .. todo::
    Add description.
 
-release_one_events:
+release_on_events:
 ~~~~~~~~~~~~~~~~~~~
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
