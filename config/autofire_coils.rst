@@ -149,3 +149,21 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 Special / reserved tags for autofire coils: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+ball_search_order:
+~~~~~~~~~~~~~~~~~~
+Numeric value, default is ``100``
+
+.. versionadded:: 0.33
+
+A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
+checked first. Set to ``0`` if you do not want this device to be included in the ball search.
+See the :doc:`/game_logic/ball_search/index` documentation for details.
+
+playfield:
+~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
+change this value if you have more than one playfield and you're managing them separately.

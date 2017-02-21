@@ -66,10 +66,11 @@ targets this device has, MPF use *20 seconds* as the default.
 
 ball_search_order:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``100``
+Single value, type: ``integer``. Default: ``200``
 
-.. todo::
-   Add description.
+A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
+checked first. Set to ``0`` if you do not want this device to be included in the ball search.
+See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 ball_switches:
 ~~~~~~~~~~~~~~

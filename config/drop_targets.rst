@@ -98,8 +98,17 @@ ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``100``
 
-.. todo::
-   Add description.
+A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
+checked first. Set to ``0`` if you do not want this device to be included in the ball search.
+See the :doc:`/game_logic/ball_search/index` documentation for details.
+
+ignore_switch_ms:
+~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
+coils will set switches that could add to the score, start modes, etc. Default is ``500ms``.
 
 debug:
 ~~~~~~
@@ -215,4 +224,5 @@ playfield:
 
 .. versionadded:: 0.32
 
-TODO
+The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
+change this value if you have more than one playfield and you're managing them separately.

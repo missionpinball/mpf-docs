@@ -174,29 +174,37 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Tags work like tags for any device. Nothing special here.
 
+include_in_ball_search:
+~~~~~~~~~~~~~~~~~~~~~~~
+Boolean (True/False or Yes/No). Default is ``True``.
+
+.. versionadded:: 0.33
+
+Controls whether this servo is included in ball search.
+
 ball_search_min:
 ~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
 
 .. versionadded:: 0.31
 
-single|float|0.0
+The value of the initial position that this servo will go to in ball search.
 
-TODO
+First position in ball search
 
 ball_search_max:
 ~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 .. versionadded:: 0.31
 
-single|float|1.0
-
-TODO
+The value of the second position that this servo will go to in ball search.
 
 ball_search_wait:
 ~~~~~~~~~~~~~~~~~
+Time value. Default ``5s``.
 
 .. versionadded:: 0.31
 
-single|ms|5s
-
-TODO
+How long this servo will pause in each position (min and max) before moving to the other position while ball
+search is active.
