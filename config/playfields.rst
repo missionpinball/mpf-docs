@@ -65,10 +65,42 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 ball_search_wait_after_iteration:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``15s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
 
 .. todo::
    Add description.
+
+ball_search_block_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Default: ``flipper_cradle``
+
+.. versionadded:: 0.33
+
+TODO
+
+ball_search_unblock_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default: ``flipper_cradle_release``
+
+.. versionadded:: 0.33
+
+TODO
+
+ball_search_enable_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default: None
+
+.. versionadded:: 0.33
+
+TODO
+
+ball_search_disable_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default: None
+
+.. versionadded:: 0.33
+
+TODO
 
 debug:
 ~~~~~~
@@ -99,4 +131,3 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
    Add description.
-
