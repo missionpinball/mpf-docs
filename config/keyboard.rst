@@ -14,7 +14,7 @@ options for how you map computer keyboard keys to pinball machine
 switches and events. This is useful for testing your game from your
 computer when you're not around your physical machine.
 
-Note that you can also use the :doc:`MPF Monitor </monitor/index>` for this, and since the
+Note that you can also use the :doc:`MPF Monitor </tools/monitor/index>` for this, and since the
 Monitor was released, most people use that instead of the ``keyboard:`` section of
 a config. However the ``keyboard:`` section is still nice for down-and-dirty testing
 and for posting events.

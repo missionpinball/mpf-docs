@@ -160,7 +160,7 @@ Machine Management
 Tools
 -----
 
-+ The :doc:`MPF Monitor </monitor/index>` standalone app which is a graphical
++ The :doc:`MPF Monitor </tools/monitor/index>` standalone app which is a graphical
   tool that connects to a live running instance of MPF and shows the status of
   various devices. You can interact with it by clicking on switches and see your
   game in action on your computer.

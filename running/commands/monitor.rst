@@ -1,4 +1,4 @@
 mpf monitor (command-line utility)
 ==================================
 
-Starts the :doc:`MPF Monitor </monitor/index>`.
+Starts the :doc:`MPF Monitor </tools/monitor/index>`.

@@ -6,7 +6,7 @@ your lights or LEDs configured and make it so they play a show while
 your machine is in attract mode.
 
 If you're following this tutorial with virtual hardware, it's still
-worth doing this step because use can use :doc:`/monitor/index` to
+worth doing this step because use can use :doc:`/tools/monitor/index` to
 see your lights and LEDs in realtime against a picture of your playfield.
 
 1. Understand "lights" versus "LEDs"
@@ -194,7 +194,7 @@ Save your files, and run your game. You should see your light show and the displ
 show start playing once the attract mode starts up.
 
 If you're using the virtual interface without a real pinball machine, this is
-probably a good time to use the :doc:`MPF Monitor </monitor/index>` to see that
+probably a good time to use the :doc:`MPF Monitor </tools/monitor/index>` to see that
 the light show is actually working. (Expand the "light" or "LED" section in the
 devices window to see your lights and watch the colors cycle.
 

@@ -34,7 +34,7 @@ with switches, lights, and LEDs, and to see the status of various devices. You
 can even add a picture of your playfield and drag-and-drop the MPF mechanisms
 onto it which makes it possible to "play" your machine via a simulation.
 
-Details in the MPF Monitor are :doc:`here </monitor/index>`.
+Details in the MPF Monitor are :doc:`here </tools/monitor/index>`.
 
 Migrating from previous versions of MPF
 ---------------------------------------

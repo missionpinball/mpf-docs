@@ -10,7 +10,7 @@ MPF achieves this through "virtual" platform interfaces, of which there are
 two options:
 
 Note that if you want to use MPF without a physical pinball machine, you
-probably also want to use the :doc:`MPF Monitor </monitor/index>` which is
+probably also want to use the :doc:`MPF Monitor </tools/monitor/index>` which is
 a graphical tool that lets you interact with lights, switches, and pinball
 mechs in MPF which works nicely with the smart virtual platform.
 

@@ -73,7 +73,7 @@ your pinball machine.
      it's not connected to physical hardware. (This is good for working on
      your game when you're not around your machine, or if you don't have
      real hardware yet.)
-   * The :doc:`MPF Monitor </monitor/index>` is a graphical tool you can
+   * The :doc:`MPF Monitor </tools/monitor/index>` is a graphical tool you can
      also use to visually interact with MPF which is especially useful if
      you're not using MPF with physical hardware.
 
