@@ -11,6 +11,9 @@ Ball Search
 | :doc:`/config/playfields`                                                    |
 +------------------------------------------------------------------------------+
 
+.. contents::
+   :local:
+
 MPF contains ball search functionality which is used to try to dislodge a stuck
 ball if MPF thinks there's a ball loose on the playfield but it hasn't hit any
 playfield switches in awhile and the player is not holding the flipper button
@@ -35,7 +38,7 @@ even when a machine tilts, ball search is still active until the balls drain, et
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
-| :doc:`configuring_ball_search                                                |
+| :doc:`configuring_ball_search`                                               |
 +------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
