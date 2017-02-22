@@ -62,6 +62,7 @@ your machine-wide config, a mode-specific config, or both.
    leds: <leds>
    light_player: <light_player>
    logic_blocks: <logic_blocks>
+   logging: <logging>
    machine: <machine>
    magnets: <magnets>
    matrix_light_settings: <matrix_light_settings>
