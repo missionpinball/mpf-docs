@@ -17,4 +17,4 @@ here for a specific mode.
 In fact, several of the built-in MPF modes make use of the ``mode_settings:`` section,
 including:
 
-* :doc:`End of Ball Bonus mode <bonus>
+* :doc:`End of Ball Bonus mode <bonus>`
