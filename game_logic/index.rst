@@ -16,7 +16,7 @@ to tutorials, event listings, and configuration
    Ball Saves <ball_saves/index>
    Ball Search <ball_search/index>
    Ball Tracking <ball_tracking/index>
-   Bonus <end_of_ball_bonus/index>
+   Bonus <bonus/index>
    Coins & Credits <credits/index>
    Combo Switches <combo_switches/index>
    Extra Balls <extra_balls/index>
@@ -27,10 +27,8 @@ to tutorials, event listings, and configuration
    Player Variables <players/index>
    Timers <timers/index>
    Shots <shots/index>
-   Skill shot <skill_shot/index>
-
-   Video Mode <video_modes/index>
-
+   Skill Shot <skill_shot/index>
+   Video Modes <video_modes/index>
    Scoring <scoring/index>
    Tilt <tilt/index>
 
