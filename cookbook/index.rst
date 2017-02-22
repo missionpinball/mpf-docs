@@ -19,6 +19,8 @@ And here's what's on our to-do list:
 + *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
 + *Red & Ted's RoadShow:* City modes
 + *Centigrade 37:* Flip-flopping groups of lit targets
++ *Judge Dredd* DeadWorld ball lock and multiball
++ *Demolition Man* Crane elevator & unloader
 
 .. toctree::
    :hidden:
