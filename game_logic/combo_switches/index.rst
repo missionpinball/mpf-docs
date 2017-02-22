@@ -59,3 +59,4 @@ Related Events
 --------------
 
 * :doc:`/events/combo_switch_state`
+* :doc:`/events/flipper_cancel`
