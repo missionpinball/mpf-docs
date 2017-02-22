@@ -71,7 +71,6 @@ and/or show configs.
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
    motor </examples/motor/index>
-   mpf_configs </examples/mpf_configs/index>
    mpf_plugin_config_player_validation </examples/mpf_plugin_config_player_validation/index>
    mpfmc_configs </examples/mpfmc_configs/index>
    mpftestcase </examples/mpftestcase/index>
