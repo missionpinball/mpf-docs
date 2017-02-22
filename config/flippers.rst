@@ -195,3 +195,48 @@ power_setting_name:
 .. versionadded:: 0.31
 
 TODO
+
+include_in_ball_search:
+~~~~~~~~~~~~~~~~~~~~~~~
+Boolean (True/False or Yes/No). Default is ``False``.
+
+.. versionadded:: 0.33
+
+Controls whether this flipper is included in ball search.
+
+Usually flippers aren't included in ball search. However if you have upper flippers,
+it's probably good to include them in the ball search since it's often possible for
+an upper flipper to disable and hold a ball under the flipper. Usually this isn't
+an issue since the player can just flip to release the ball. However if the machine has
+tilted (or the flippers are otherwise disabled), then it's possible for a flipper to
+come down on the ball and get it stuck. So you definitely want to include upper flippers
+in ball search.
+
+BTW, this is something that happened to us in *Wizard of Oz*, so that's how we thought
+to include an option for flippers in ball search. :)
+
+ball_search_order:
+~~~~~~~~~~~~~~~~~~
+Numeric value, default is ``100``
+
+.. versionadded:: 0.33
+
+A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
+checked first. See the :doc:`/game_logic/ball_search/index` documentation for details.
+
+ball_search_hold_time:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
+
+.. versionadded:: 0.33
+
+How long this flipper will be activated for when it is activated during ball search.
+
+
+playfield:
+~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+The name of the playfield that this flipper is on. The default setting is "playfield", so you only have to
+change this value if you have more than one playfield and you're managing them separately.
