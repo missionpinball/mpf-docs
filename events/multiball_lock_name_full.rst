@@ -1,9 +1,9 @@
-ball_save_(name)_saving_ball
-============================
+multiball_lock_(name)_full
+==========================
 
 *MPF Event*
 
-The ball save called (name) has just saved one (or more) balls.
+The multiball lock device (name) is now full.
 
 Keyword arguments
 -----------------
@@ -13,8 +13,5 @@ create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
 ``balls``
-  The number of balls this ball saver is saving.
-
-``early_save``
-  True if this is an early ball save.
+  The number of balls currently locked in this device.
 

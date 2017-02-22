@@ -93,6 +93,8 @@ an event called *switch_s_left_slingshot_active*.
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
    flipper_cancel <flipper_cancel>
+   flipper_cradle <flipper_cradle>
+   flipper_cradle_release <flipper_cradle_release>
    game_ended <game_ended>
    game_ending <game_ending>
    game_start <game_start>
@@ -132,6 +134,8 @@ an event called *switch_s_left_slingshot_active*.
    mode_(name)_stopping <mode_name_stopping>
    motor_(name)_reached_(position) <motor_name_reached_position>
    multi_player_ball_started <multi_player_ball_started>
+   multiball_lock_(name)_full <multiball_lock_name_full>
+   multiball_lock_(name)_locked_ball <multiball_lock_name_locked_ball>
    multiball_(name)_ended <multiball_name_ended>
    multiball_(name)_lost_ball <multiball_name_lost_ball>
    multiball_(name)_shoot_again <multiball_name_shoot_again>
@@ -142,6 +146,8 @@ an event called *switch_s_left_slingshot_active*.
    player_add_request <player_add_request>
    player_add_success <player_add_success>
    player_turn_start <player_turn_start>
+   player_turn_started <player_turn_started>
+   player_turn_starting <player_turn_starting>
    player_turn_stop <player_turn_stop>
    player_(var_name) <player_var_name>
    (playfield)_active <playfield_active>
