@@ -70,6 +70,9 @@ an event called *switch_s_left_slingshot_active*.
    balldevice_(name)_ball_enter <balldevice_name_ball_enter>
    balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
    balls_in_play <balls_in_play>
+   bonus_multiplier <bonus_multiplier>
+   bonus_start <bonus_start>
+   bonus_subtotal <bonus_subtotal>
    cancel_ball_search <cancel_ball_search>
    clear <clear>
    client_connected <client_connected>
