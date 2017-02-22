@@ -25,6 +25,7 @@ to tutorials, event listings, and configuration
    Multiballs <multiballs/index>
    Modes <modes/index>
    Player Variables <players/index>
+   Timed Switches <timed_switches/index>
    Timers <timers/index>
    Shots <shots/index>
    Skill Shot <skill_shot/index>

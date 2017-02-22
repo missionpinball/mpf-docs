@@ -124,6 +124,7 @@ your machine-wide config, a mode-specific config, or both.
    system11: <system11>
    text_strings: <text_strings>
    tilt: <tilt>
+   timed_switches: <timed_switches>
    timers: <timers>
    track_player: <track_player>
    trigger_player: <trigger_player>
