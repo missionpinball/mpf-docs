@@ -29,6 +29,7 @@ But also these:
    Text <text/index>
    Image <image/index>
    Video <video/index>
+   Camera <camera/index>
    Bezier Curve <bezier/index>
    Color DMD <color_dmd/index>
    DMD <dmd/index>
