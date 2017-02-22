@@ -10,7 +10,7 @@ bonus (mode_settings:)
 +----------------------------------------------------------------------------+---------+
 
 This section explains how to use the ``mode_settings:`` section for your machine's
-End of Ball Bonus mode. You should probably read the full :doc:``End of Ball Bonus </game_logic/bonus/index>`
+End of Ball Bonus mode. You should probably read the full :doc:`End of Ball Bonus </game_logic/bonus/index>`
 documentation first, and then just use this for a reference for the settings later.
 
 Note that the "mode_settings:" section is pretty much a generic placeholder that any
