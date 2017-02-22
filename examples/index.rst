@@ -71,6 +71,7 @@ and/or show configs.
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
    motor </examples/motor/index>
+   mpf_configs </examples/mpf_configs/index>
    mpf_plugin_config_player_validation </examples/mpf_plugin_config_player_validation/index>
    mpfmc_configs </examples/mpfmc_configs/index>
    mpftestcase </examples/mpftestcase/index>
@@ -103,12 +104,14 @@ and/or show configs.
    smart_matrix </examples/smart_matrix/index>
    smart_virtual_platform </examples/smart_virtual_platform/index>
    snux </examples/snux/index>
+   spike </examples/spike/index>
    switch_controller </examples/switch_controller/index>
    switch_player </examples/switch_player/index>
    text </examples/text/index>
    text_input </examples/text_input/index>
    timers </examples/timers/index>
    tilt </examples/tilt/index>
+   timed_switches </examples/timed_switches/index>
    transitions </examples/transitions/index>
    utils </examples/utils/index>
    video </examples/video/index>

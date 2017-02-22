@@ -17,6 +17,13 @@ Mode config examples
 Here are some example mode config files that go along with the machine-wide
 config above.
 
+Note that there are multiple mode config examples here. You might not
+necessarily use more than one in your machine.
+
 .. literalinclude:: /example_configs/carousel/modes/carousel/config/carousel.yaml
    :caption: `your_machine_folder/modes/carousel/config/carousel.yaml </_static/carousel/modes/carousel/config/carousel.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/carousel/modes/second_carousel/config/second_carousel.yaml
+   :caption: `your_machine_folder/modes/second_carousel/config/second_carousel.yaml </_static/carousel/modes/second_carousel/config/second_carousel.yaml>`_
    :language: yaml

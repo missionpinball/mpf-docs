@@ -72,3 +72,10 @@ necessarily use more than one in your machine.
    :caption: `your_machine_folder/modes/mode4/config/mode4.yaml </_static/mode_tests/modes/mode4/config/mode4.yaml>`_
    :language: yaml
 
+.. literalinclude:: /example_configs/mode_tests/modes/mode_with_timers/config/mode_with_timers.yaml
+   :caption: `your_machine_folder/modes/mode_with_timers/config/mode_with_timers.yaml </_static/mode_tests/modes/mode_with_timers/config/mode_with_timers.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/mode_tests/modes/mode_with_timers2/config/mode_with_timers2.yaml
+   :caption: `your_machine_folder/modes/mode_with_timers2/config/mode_with_timers2.yaml </_static/mode_tests/modes/mode_with_timers2/config/mode_with_timers2.yaml>`_
+   :language: yaml

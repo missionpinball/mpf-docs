@@ -28,6 +28,10 @@ necessarily use more than one in your machine.
    :caption: `your_machine_folder/modes/mode1/shows/show2.yaml </_static/plugin_config_player/modes/mode1/shows/show2.yaml>`_
    :language: yaml
 
+.. literalinclude:: /example_configs/plugin_config_player/modes/mode1/shows/show3.yaml
+   :caption: `your_machine_folder/modes/mode1/shows/show3.yaml </_static/plugin_config_player/modes/mode1/shows/show3.yaml>`_
+   :language: yaml
+
 Show file examples
 ------------------
 
