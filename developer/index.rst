@@ -12,8 +12,8 @@ Adding custom code to your game
    :maxdepth: 1
 
    custom_code
-   mode_code
-   scriptlets
+   Custom mode code <mode_code>
+   Scriptlets (custom device code) (Scriptlets) <scriptlets>
    api
 
 Helping us improve MPF
