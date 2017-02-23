@@ -12,7 +12,8 @@ Adding custom code to your game
    :maxdepth: 1
 
    custom_code
-   best_practices
+   mode_code
+   scriptlets
    api
 
 Helping us improve MPF
