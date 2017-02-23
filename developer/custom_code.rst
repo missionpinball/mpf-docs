@@ -26,5 +26,5 @@ your game, there are three ways you can do this:
   Python code which is only active when a particular game mode is active.
 + :doc:`Sciptlets <scriptlets>`, which are "machine-wide" chunks of code that
   are always active.
-+ :doc:`Placeholders </config/instructions/placeholder>` &
++ :doc:`Placeholders </config/instructions/placeholders>` &
   :doc:`conditional events </events/overview/conditional>`.
