@@ -27,15 +27,9 @@ Single value, type: ``string``.
 
 This is the number of the light which specifies which output the
 light is physically connected to. The exact format used here will
-depend on which control system you're using and how the coil is connected.
+depend on which control system you're using and how the light is connected.
 
-Click the correct link for the specifics:
-
-* :doc:`FAST Pinball </hardware/fast/lights>`
-* :doc:`P-ROC </hardware/multimorphic/lights>`
-* :doc:`OPP </hardware/opp/lights>`
-* :doc:`Stern SPIKE </hardware/spike/leds>`
-* :doc:`Other Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
+See the :doc:`/hardware/numbers` guide for details.
 
 Optional settings
 -----------------

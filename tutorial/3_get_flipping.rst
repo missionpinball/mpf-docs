@@ -117,14 +117,11 @@ numbers blank. But if you want to control a real pinball machine, you need to en
 ``number:`` setting.
 
 The exact number you enter for each switch is dictated by which switch input on your pinball controller each
-switch is connected to. Also, different types of pinball controllers use different number formats. (For example,
-the P3-ROC with SW-16 switch boards uses a combination of board number and switch number. FAST Pinball controllers
-with FAST I/O boards use sequential switch numbers. Controllers retrofitted into WPC machines use the letter "S" or "D"
-(for matrix switches or direct switches) followed by the switch number from the table in the machine's operator's
-manual.
+switch is connected to. However, different controllers use different number formats.
 
 The :doc:`/hardware/numbers` guide explains how hardware numbering works on each of the various hardware platforms MPF
-supports.
+supports, so check that out now and enter your real numbers, not the made-up
+ones we use below.
 
 ::
 

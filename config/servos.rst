@@ -51,9 +51,11 @@ number:
 ~~~~~~~
 Single value, type: ``string``.
 
-The number (or channel) of this servo. See the platform documentation or the
-how to guies for your specific servo for details of how this number works, since
-every platform is different.
+This is the number of the servo which specifies which driver output the
+servo is physically connected to. The exact format used here will
+depend on which control system you're using and how the servo is connected.
+
+See the :doc:`/hardware/numbers` guide for details.
 
 Optional settings
 -----------------

@@ -64,14 +64,7 @@ This is the number of the switch which specifies which switch input the
 switch is physically connected to. The exact format used here will
 depend on which control system you're using and how the switch is connected.
 
-Click the correct link for the specifics:
-
-* :doc:`FAST Pinball </hardware/fast/switches>`
-* :doc:`P-ROC </hardware/multimorphic/switches_p_roc>`
-* :doc:`P3-ROC </hardware/multimorphic/switches_p3_roc>`
-* :doc:`OPP </hardware/opp/switches>`
-* :doc:`Stern SPIKE </hardware/spike/switches>`
-* :doc:`Other Existing Machines (Williams, Stern, Data East, etc. </hardware/existing_machines/index>`
+See the :doc:`/hardware/numbers` guide for details.
 
 Optional settings
 -----------------
