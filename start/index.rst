@@ -50,4 +50,3 @@ Read on to understand other important concepts about MPF:
    features
    media_controller
    config_files
-   dsl_vs_programming

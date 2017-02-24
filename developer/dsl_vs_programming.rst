@@ -1,5 +1,5 @@
-Config files versus "real" programming. Is MPF the right choice?
-================================================================
+Config files versus "real" programming
+======================================
 
 When we talk about MPF, we really play up the fact that when you use MPF, you
 can do 90%+ of your of your "programming" with MPF's

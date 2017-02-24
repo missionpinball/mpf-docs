@@ -12,6 +12,7 @@ Adding custom code to your game
    :maxdepth: 1
 
    custom_code
+   dsl_vs_programming
    Custom mode code <mode_code>
    Scriptlets (custom device code) (Scriptlets) <scriptlets>
    api
