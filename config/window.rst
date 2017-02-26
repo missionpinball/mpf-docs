@@ -124,7 +124,7 @@ the pop-up window.
 
 title:
 ~~~~~~
-Single value, type: ``string``. Default: ``Mission Pinball Framework v0.30.0``
+Single value, type: ``string``. Default: ``Mission Pinball Framework <current version of MPF>``
 
 The text that's shown in the window title bar (assuming your window is
 not full screen and not borderless).

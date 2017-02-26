@@ -17,9 +17,9 @@ match the version of MPF. For example, the 0.21 branch of the mpf-examples
 repository has examples for MPF 0.21, the 0.30 branch has examples for
 MPF 0.30, etc.
 
-Since the documentation you're reading here is about MPF 0.30, download
-a zip file of the 0.30 branch of MPF examples here:
-`here <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
+Since the documentation you're reading here is about MPF 0.31, download
+a zip file of the 0.31 branch of MPF examples here:
+`here <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
 
 Unzip the file to any location you want. It doesn't have
 to be in the same folder as MPF. (In fact when you installed MPF, it

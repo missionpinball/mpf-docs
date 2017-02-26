@@ -245,3 +245,8 @@ Login and start mpf-mc inside your machine folder with
   mpf mc
   
 Enjoy!
+
+Keeping MPF up-to-date
+----------------------
+
+See :doc:`upgrading`.

@@ -32,7 +32,7 @@ shot to them goes towards one place, and when they're active, a ball is
 "diverted" to go somewhere else.
 
 Most diverters are held in their "on"
-position as long as their driver coil enabled, and then when they're
+position as long as their driver coil is enabled, and then when they're
 disabled they return back to their off position. That said, some are
 different. The Ringmaster has a motor which raises and lowers it, and drop
 targets have coils that are just pulsed to raise/lower them, so this is not
@@ -44,7 +44,7 @@ most diverters are just a coil, so fundamentally we don't really need
 to do anything special to control a diverter. As a game programmer you
 just need to enable a coil. But if you want to program your game code
 to control a diverter, there's a lot of glue you need to fully
-integrate it into your machine, and that's the glue that we've pre-
+integrate into your machine, and that's the glue that we've pre-
 written into our diverter device code.
 
 For example, many diverters
@@ -53,9 +53,9 @@ entire time that they're on. Instead they use the ramp entry switch to
 see when a ball is coming their way, and when one is they quickly
 activate so they can catch the ball in time to divert it. They also
 typically have a timeout where they deactivate themselves if they
-don't actually see a ball get diverted, (like with a weak ramp shot
+don't actually see a ball get diverted (like with a weak ramp shot
 that trips the ramp entry switch but that isn't powerful enough to
-make it all the way up the ramp to the diverter.)
+make it all the way up the ramp to the diverter).
 
 MPF's diverter devices
 also include support for automatic enabling and disabling (based on

@@ -107,10 +107,9 @@ You should get results that look something like this:
 ::
 
    C:\pinball\your_machine>mpf -b
-   INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
+   INFO : Machine : Mission Pinball Framework Core Engine v0.31.0
    INFO : Machine : Machine path: C:\pinball\your_machine
    INFO : Machine : Loading cached config: C:\Users\BRIANM~1\AppData\Local\Temp\235c13dee169bec54dce4d06c2665fe9config
-   INFO : Machine : Starting clock at 30.0Hz
    INFO : Mode.attract : Mode Starting. Priority: 10
 
 You might notice that it seems like the command is hung because you didn't get the command line back. Actually what's
@@ -122,7 +121,7 @@ that, you should see a few more lines appear, like this:
 
 ::
 
-   INFO : Machine : Actual MPF loop rate: 32.04 Hz
+   INFO : Machine : Shutting down...
    INFO : root : MPF run loop ended.
 
    C:\pinball\your_machine>

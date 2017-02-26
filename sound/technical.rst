@@ -24,19 +24,14 @@ SDL_Mixer (`https://www.libsdl.org/projects/SDL_mixer/ <https://www.libsdl.org/p
 is an add-on library for SDL2 that provides basic audio mixing, sound loading and playback, and
 sound streaming capabilities.  The MPF MC audio interface does not use the mixing features of
 SDL_Mixer. Instead, it mainly utilizes the sound file loading functions and streaming format
-functions of the library.  The MPF MC audio library creates a single mixer channel using the
-SDL_Mixer functions and creates a small audio buffer containing silence that is played and
-automatically looped whenever the audio library is enabled.  The MPF MC audio library is installed
-as a custom effect plug-in into the SDL_Mixer channel playing the silence sample.  Playing a
-sample on the track is necessary because the track must be playing in order for the effect
-callback function to be called which is how the audio interface provides its audio output data to
-SDL_Mixer.
+functions of the library.  The MPF MC audio library interfaces with SDL_Mixer as a custom music
+player and outputs its sound through the SDL_Mixer music channel.
 
 The audio interface is divided into tracks, which are analogous to channels on an audio mixer.
 Each track can play up to 32 sounds simultaneously (the limit for each track is configurable) and
-the output for each track is mixed together and fed to the SDL_Mixer track via the effect callback
-function. All of the sound generation and mixing functions are C functions that run in the SDL2
-audio thread.
+the output for each track is mixed together and fed to the SDL_Mixer track via the custom music
+player function. All of the sound generation and mixing functions are C functions that run in
+the SDL2 audio thread.
 
 It is important to understand the threading models of both SDL2 and Python to avoid common
 threading problems. Python supports multiple threads, however it uses a mechanism called the
