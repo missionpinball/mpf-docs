@@ -10,7 +10,7 @@ step we're going to add some scoring.
 -------------------------------------
 
 MPF includes a core module called the *Score Controller* which is
-responsible for for adding (or subtracting) points from a player's
+responsible for adding (or subtracting) points from a player's
 score. Actually, that's not a completely accurate description. We
 should really say that the score controller is responsible for adding
 or subtracting value from any player variable. (A player variable is
