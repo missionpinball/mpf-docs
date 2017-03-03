@@ -50,19 +50,7 @@ The standard /tmp "folder" is too small on pipaos, just type:
 
 to get rid of it. (It will be created automatically if needed and will have the whole space afterwards)
 
-Now install python3 yaml:
-
-::
-
-    sudo apt-get install python3-yaml
-
-Now we are ready to install mpf and its dependencies!
-
-::
-
-    sudo pip3 install mpf-mc
-
-Take care to use pip3 and not pip!
+Now run the :doc:`MPF Linux Debian installer </install/linux>`. It will install MPF, MPF-MC and all dependencies for you.
 
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
 Sometimes it looks like it hangs, but it does not. It will take up to half an hour, at least on a Raspberry 1 (which you should not use). Compiling is really slow on the Raspi.
