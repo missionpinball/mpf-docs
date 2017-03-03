@@ -6,8 +6,8 @@ As part of our automated build process, we build and test MPF and MPF-MC against
 Download the MPF Debian Installer (which is used for all of these) from
 https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
 
-Unzip it, and from a terminal run ``sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
-or P3-Roc also run ``./install-proc`` (skip for other platforms). Consult the README for more information.
+Unzip it, and from a terminal run ``chmod +x install && sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
+or P3-Roc also run ``chmod +x install-proc && ./install-proc`` (skip for other platforms). Consult the README for more information.
 
 Download & run the "Demo Man" example game
 ------------------------------------------
