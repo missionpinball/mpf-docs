@@ -20,7 +20,7 @@ There are three types of logic blocks in MPF:
    Watch for several different events that need to occur *in a specific order*,
    and once they do, a "complete" event is posted.
 
-Logic blocks cna be configured to store their state in player variables,
+Logic blocks can be configured to store their state in player variables,
 meaning that each logic block will remember where it was from ball-to-ball.
 
 Logic blocks can be added to modes, and they can have events to enable, disable,
