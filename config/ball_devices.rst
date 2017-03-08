@@ -203,9 +203,24 @@ eject_coil_retry_pulse:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 The new pulse time, in ms, that the eject coil will use if the eject
-has failed 3 times. This pulse time is used on the 4th pulse up until
-the device stops trying. Default is *None* which means the ball device
-will not change the pulse time after 3 attempts.
+has failed too many times. This pulse time is used up until the device stops trying.
+Default is *None* which means the ball device will not change the pulse time after failed attempts.
+
+Note that the number of times the ball device will attempt the eject before increasing
+the pulse time is controlled in the ``retries_before_increasing_pulse:`` setting.
+
+retries_before_increasing_pulse:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number``. Default: ``4``
+
+.. versionadded:: 0.33
+
+The number of times this ball device will attempt to eject the ball before increasing
+the eject coil pulse time as specified in the ``eject_coil_retry_pulse:`` above.
+
+Note that this number is the attempts that it will increase the pulse, so the default
+setting of 4 means that it will try the original pulse value 3 times and then increase
+it on the 4th.
 
 eject_events:
 ~~~~~~~~~~~~~
