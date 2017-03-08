@@ -17,6 +17,7 @@ New Features
   locks, across balls and players)
 * Multiball "add a ball" feature
 * Added support for Stern SPIKE platform
+* :doc:`Revamped logging </config/logging>`
 * Additional achievements control events
 * BCP ports & interfaces are now configurable
 * Drop target "keep up" feature (PWMs reset coil to "lock" target up)
@@ -30,6 +31,8 @@ New Features
 * Add "early save" events to ball saves
 * Add all monitorable device properties to conditional events
 * Use placeholders in mode timer start & end values
+* More options for bonus (hurry ups, skip slides with 0 value, placeholders for score calculations, etc.)
+* Improved ball search
 
 Bug fixes & code improvements
 
@@ -52,6 +55,7 @@ Bug fixes & code improvements
 
 New Features
 
+* Added a camera widget (live video)
 * Allow placeholders and settings
 * Added keyboard debugging
 * Added warnings if window size & display size aspect ratios are not the same
