@@ -35,25 +35,19 @@ Ball search in MPF is fairly automatic. It's enabled when MPF thinks that balls
 are on the playfield, and disabled when no balls are free. (This means that
 even when a machine tilts, ball search is still active until the balls drain, etc.)
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`configuring_ball_search`                                               |
-+------------------------------------------------------------------------------+
+Related How To guides
+---------------------
+* :doc:`configuring_ball_search`
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/ball_search_failed`                                            |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_search_started`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_search_stopped`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/flipper_cradle`                                                |
-+------------------------------------------------------------------------------+
-| :doc:`/events/flipper_cradle_release`                                        |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+* :doc:`/events/ball_search_failed`
+* :doc:`/events/ball_search_started`
+* :doc:`/events/ball_search_stopped`
+* :doc:`/events/flipper_cradle`
+* :doc:`/events/flipper_cradle_release`
+
 
 .. toctree::
    :hidden:
