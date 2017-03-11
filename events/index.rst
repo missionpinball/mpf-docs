@@ -39,6 +39,8 @@ an event called *switch_s_left_slingshot_active*.
 
    achievement_(name)_state_(state) <achievement_name_state_state>
    asset_loading_complete <asset_loading_complete>
+   award_extra_ball <award_extra_ball>
+   award_lit_extra_ball <award_lit_extra_ball>
    ball_drain <ball_drain>
    ball_ended <ball_ended>
    ball_ending <ball_ending>
@@ -95,6 +97,13 @@ an event called *switch_s_left_slingshot_active*.
    drop_target_(name)_up <drop_target_name_up>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
+   extra_ball_awarded <extra_ball_awarded>
+   extra_ball_disabled_award <extra_ball_disabled_award>
+   extra_ball_lit <extra_ball_lit>
+   extra_ball_lit_awarded <extra_ball_lit_awarded>
+   extra_ball_lit_max_exceeded <extra_ball_lit_max_exceeded>
+   extra_ball_max_exceeded <extra_ball_max_exceeded>
+   extra_ball_unlit <extra_ball_unlit>
    flipper_cancel <flipper_cancel>
    flipper_cradle <flipper_cradle>
    flipper_cradle_release <flipper_cradle_release>
