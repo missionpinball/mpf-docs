@@ -3,7 +3,7 @@ Config files versus "real" programming
 
 When we talk about MPF, we really play up the fact that when you use MPF, you
 can do 90%+ of your of your "programming" with MPF's
-:doc:`YAML configuration files <config_files>`.
+:doc:`YAML configuration files </start/config_files>`.
 
 We've received criticism of that over the past few years, typically falling into
 one of the following categories:
