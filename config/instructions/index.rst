@@ -9,6 +9,7 @@ TODO
    machine_config
    mode_config
    placeholders
+   gamma_correction
    gain_values
    time_strings
    case_insensitivity

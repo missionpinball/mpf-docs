@@ -11,34 +11,70 @@ physical_dmds:
 
 .. versionchanged:: 0.31
 
-.. overview
-
 The ``physical_dmds:`` section of your config is where you configure the settings for a physical DMD (dot matrix
 display). You only need this section if you have a physical monochrome DMD connected to a 14-pin header on a hardware
-controller. If you have an RGB DMD, configure that in the ``physical_rgb_dmds:`` section.
+controller. If you have an RGB DMD, configure that in the :doc:`physical_rgb_dmds` section.
 
 If you want to show a virtual DMD in an on-screen window, you configure that as a DMD widget, not here.
 
 Note that there are no *height* and *width* settings here. The pixel size of your DMD is determined by the size of the
 ``source:`` display which drives the content for this DMD.
 
-Optional settings
------------------
+.. code-block:: yaml
 
-The following sections are optional in the ``physical_dmds:`` section of your config. (If you don't include them, the default will be used).
+displays:
+  dmd:
+    width: 128
+    height: 32
+
+physical_rgb_dmds:
+  smartmatrix:  # name of this DMD which can be whatever you want
+    brightness: .5
+    fps: 25
+    gamma: 2.5
+
+Note that this section is called ``physical_dmds:`` (plural). Just like
+"switches" and "coils" and most everything else in MPF, this is a section that
+contains all your DMDs. Now since this is a DMD, you probably only have one,
+(though MPF can support as many as you want), but it's important to note that
+you add a ``physical_dmds:`` section to your config, then under that you
+add an entry for a specific DMD (which can be whatever you want), and then
+you enter one or more of the following settings:
+
+(If you don't include any of the settings below, the default will be used).
 
 brightness:
 ~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``0.5``
+Single numeric value, Default: ``1.0``
 
 A brightness multiplier for the DMD. Default is 1.0 which is full brightness, but if you want to dim the DMD, you can
 set this to some value lower than 1.0. (e.g. a value of 0.9 will be 90% brightness, etc.)
+
+gamma:
+~~~~~~
+Single numeric value, Default: ``1.0``
+
+.. versionadded:: 0.33
+
+Sets the gamma of the DMD. See :doc:`instructions/gamma_correction` for details.
+
+Note that the default setting of ``1.0`` means that no gamma correction is
+used. Some physical DMDs do their own internal gamma correction, so this setting
+is fine. Others require pre-corrected gamma, so you can set that value here.
+
+You might try a value of 2.2 first and adjust up or down until it looks right.
+
+.. important:: Gamma setting is important!
+
+   We can't stress enough that setting the gamma for your DMD is important for
+   making it look right. So click the link above and make the adjustment. It's
+   a one-time thing.
 
 fps:
 ~~~~
 Single value, type: ``integer``. Default: ``30``
 
-How many frames per second this DMD will be updated. The default of 0 means it will run at the same rate as the MPF Hz.
+How many frames per second this DMD will be updated.
 A value of 30 should be fine and smooth. Some people claim that higher values look better, but as far as we can tell,
 that just makes your CPU work harder. But feel free to experiment.
 
