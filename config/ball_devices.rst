@@ -44,7 +44,7 @@ When a ball is goes missing from a device, this is the name of the
 ball device that will get the ball added to it. (After all, the ball
 didn't just vaporize. It went somewhere.) The default is *playfield*.
 (In other words, if a ball disappears from a device, MPF assumes it's
-on the playfield unless you specific a different device here.) Most
+on the playfield unless you specify a different device here.) Most
 devices have ball switches which means that a ball which disappears
 from a device that only has an exit to another device will be picked
 up by that device. But if you have a device that leads into another
