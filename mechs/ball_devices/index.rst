@@ -52,7 +52,7 @@ the states an arrow is connected to.
 .. image:: /mechs/images/ball_device_fsm_diagram.png
 
 When you configure ball devices in MPF, you configure the list of other
-devices that a ball device an eject to. This allows MPF to have an understanding
+devices that a ball device can eject to. This allows MPF to have an understanding
 of the "chain" of devices and enables it to route balls to where they need to
 go. (:doc:`/mechs/diverters/index` also figure into this chain, meaning MPF
 can ensure that diverters are set properly as it's routing balls around.)
