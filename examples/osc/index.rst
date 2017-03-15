@@ -1,2 +1,0 @@
-osc (example config files)
-==========================

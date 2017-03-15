@@ -1,0 +1,96 @@
+#config_version=4
+displays:
+  default:
+    width: 400
+    height: 300
+
+sound_system:
+  buffer: 2048
+  frequency: 44100
+  channels: 2
+  master_volume: 0.9
+  tracks:
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+    sfx:
+      volume: 0.3
+      simultaneous_sounds: 8
+    voice:
+      volume: 0.6
+      simultaneous_sounds: 1
+
+assets:
+  sounds:
+    default:
+      load: preload
+    voice:
+      load: preload
+      track: voice
+    sfx:
+      load: on_demand
+      track: sfx
+    music:
+      load: on_demand
+      track: music
+  videos:
+      default:
+          load: preload
+      preload:
+          load: preload
+      on_demand:
+          load: on_demand
+      mode_start:
+          load: mode_start
+
+sounds:
+  264828_text:
+    volume: 0.1
+    events_when_played: text_sound_played
+    events_when_looping: text_sound_looping
+    events_when_stopped: text_sound_stopped
+    loops: 6
+    simultaneous_limit: 3
+    stealing_method: skip
+
+  210871_synthping:
+    simultaneous_limit: 3
+    stealing_method: oldest
+    events_when_played: synthping_played
+
+  198361_sfx-028:
+    volume: 0.25
+
+  263774_music:
+    volume: 0.4
+
+  city_loop:
+    file: 223093__qubodup__seamless-city-loop.flac
+    streaming: True
+    volume: 0.15
+    fade_in: 2.0 sec
+
+sound_player:
+  play_sound_text: 264828_text
+  play_sound_synthping: 210871_synthping
+  play_sound_sfx_028: 198361_sfx-028
+  play_city_loop: city_loop
+
+slides:
+  video_test:
+    - type: video
+      video: mpf_video_small_test
+    - type: text
+      text: Sound and Video Test
+      y: bottom+20%
+    - type: text
+      text: ""
+      y: bottom+10%
+
+slide_player:
+  show_slide1: video_test
+
+videos:
+  mpf_video_small_test:
+    width: 100
+    height: 70

@@ -27,3 +27,7 @@ necessarily use more than one in your machine.
 .. literalinclude:: /example_configs/multiball/modes/mode2/config/mode2.yaml
    :caption: `your_machine_folder/modes/mode2/config/mode2.yaml </_static/multiball/modes/mode2/config/mode2.yaml>`_
    :language: yaml
+
+.. literalinclude:: /example_configs/multiball/modes/mode3/config/mode3.yaml
+   :caption: `your_machine_folder/modes/mode3/config/mode3.yaml </_static/multiball/modes/mode3/config/mode3.yaml>`_
+   :language: yaml

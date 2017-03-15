@@ -23,10 +23,6 @@ options. You wouldn't actually use more than one.
    :caption: `your_machine_folder/config/test_missing_mode_section.yaml </_static/mode_tests/config/test_missing_mode_section.yaml>`_
    :language: yaml
 
-.. literalinclude:: /example_configs/mode_tests/config/test_mode_timers.yaml
-   :caption: `your_machine_folder/config/test_mode_timers.yaml </_static/mode_tests/config/test_mode_timers.yaml>`_
-   :language: yaml
-
 .. literalinclude:: /example_configs/mode_tests/config/test_modes.yaml
    :caption: `your_machine_folder/config/test_modes.yaml </_static/mode_tests/config/test_modes.yaml>`_
    :language: yaml
@@ -70,12 +66,4 @@ necessarily use more than one in your machine.
 
 .. literalinclude:: /example_configs/mode_tests/modes/mode4/config/mode4.yaml
    :caption: `your_machine_folder/modes/mode4/config/mode4.yaml </_static/mode_tests/modes/mode4/config/mode4.yaml>`_
-   :language: yaml
-
-.. literalinclude:: /example_configs/mode_tests/modes/mode_with_timers/config/mode_with_timers.yaml
-   :caption: `your_machine_folder/modes/mode_with_timers/config/mode_with_timers.yaml </_static/mode_tests/modes/mode_with_timers/config/mode_with_timers.yaml>`_
-   :language: yaml
-
-.. literalinclude:: /example_configs/mode_tests/modes/mode_with_timers2/config/mode_with_timers2.yaml
-   :caption: `your_machine_folder/modes/mode_with_timers2/config/mode_with_timers2.yaml </_static/mode_tests/modes/mode_with_timers2/config/mode_with_timers2.yaml>`_
    :language: yaml

@@ -159,6 +159,30 @@ slides:
     - type: text
       text: TEST FONT FROM MACHINE FOLDER
       font_name: big_noodle_titling
+  baseline:
+    - type: text
+      text: aaa
+      x: 50
+      y: 100
+      anchor_y: bottom
+    - type: text
+      text: aaa
+      x: 150
+      y: 100
+      anchor_y: baseline
+    - type: text
+      text: yyy
+      x: 250
+      y: 100
+      anchor_y: bottom
+    - type: text
+      text: yyy
+      x: 350
+      y: 100
+      anchor_y: baseline
+    - type: line
+      points: 0, 100, 800, 100
+      color: red
 
 slide_player:
   static_text: static_text
@@ -182,6 +206,7 @@ slide_player:
   text_string4: text_string4
   mpfmc_font: mpfmc_font
   machine_font: machine_font
+  baseline: baseline
 
 text_strings:
   greeting: HELLO

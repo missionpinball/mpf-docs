@@ -15,6 +15,7 @@ widgets:
     text: widget1
     color: ffff00
     font_size: 100
+    y: top-40%
   widget2:
   - type: text
     text: widget2
@@ -158,6 +159,8 @@ widget_player:
         widget_settings:
           color: red
           font_size: 70
+          x: right-10
+          anchor_x: right
   add_widget8_opacity_50:
       widget8:
         widget_settings:

@@ -78,7 +78,6 @@ and/or show configs.
    null </examples/null/index>
    openpixel </examples/openpixel/index>
    opp </examples/opp/index>
-   osc </examples/osc/index>
    p3_roc </examples/p3_roc/index>
    p_roc </examples/p_roc/index>
    physical_dmd </examples/physical_dmd/index>
@@ -108,9 +107,9 @@ and/or show configs.
    switch_player </examples/switch_player/index>
    text </examples/text/index>
    text_input </examples/text_input/index>
-   timers </examples/timers/index>
    tilt </examples/tilt/index>
    timed_switches </examples/timed_switches/index>
+   timer </examples/timer/index>
    transitions </examples/transitions/index>
    utils </examples/utils/index>
    video </examples/video/index>

@@ -223,14 +223,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Controls what should happen when this timer completes. If you have ``restart_on_complete: true``, then
 this timer will reset back to the start_value and start again after it completes.
 
-reset_on_mode_start:
-~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
-
-.. versionadded:: 0.33
-
-Controls whether this timer should reset its value when the mode its in starts.
-
 start_running:
 ~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``

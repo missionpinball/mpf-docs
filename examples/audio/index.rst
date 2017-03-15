@@ -27,6 +27,10 @@ options. You wouldn't actually use more than one.
    :caption: `your_machine_folder/config/test_audio_disabled.yaml </_static/audio/config/test_audio_disabled.yaml>`_
    :language: yaml
 
+.. literalinclude:: /example_configs/audio/config/test_audio_gstreamer.yaml
+   :caption: `your_machine_folder/config/test_audio_gstreamer.yaml </_static/audio/config/test_audio_gstreamer.yaml>`_
+   :language: yaml
+
 Mode config examples
 --------------------
 
