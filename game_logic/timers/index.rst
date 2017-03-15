@@ -25,7 +25,7 @@ Example uses of timers might include:
 * Etc.
 
 The example config files section of the documentation contains
-:doc:`examples of timers in modes </examples/timers/index>`.
+:doc:`examples of timers in modes </examples/timer/index>`.
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
