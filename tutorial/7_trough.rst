@@ -15,7 +15,7 @@ In MPF, a "ball device" is any physical mechanism in your machine that
 holds a ball.
 
 You can read more about ball devices in the :doc:`/mechs/ball_devices/index`
-documentation, which we recommend that you do not to familiarize yourself
+documentation, which we recommend that you do now to familiarize yourself
 with the concepts. (You don't have to understand everything about them
 for now, just skim through that link so you get the basics.)
 
