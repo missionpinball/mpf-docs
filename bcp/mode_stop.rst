@@ -1,5 +1,22 @@
 mode_stop (BCP command)
 =======================
 
-Parameters: name Origin: Pin controller **Response:** None The mode as
-stopped.
+Indicates the mode has stopped.
+
+Origin
+------
+Pin controller
+
+Parameters
+----------
+
+name
+~~~~
+
+Type: ``string``
+
+The mode name.
+
+Response
+--------
+None
