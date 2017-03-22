@@ -43,7 +43,7 @@ that key normally it types a slash. (The question mark is the shift
 option for that key.) So if you set a key mapping and it doesn't work,
 try the other character on the key.)
 
-Again make sure that you have proper YAML formatting. The ``z:`` and ``"?:"``
+Again make sure that you have proper YAML formatting. The ``z:`` and ``"?":``
 entries should indented the same number of spaces, and the "switch"
 words should be indented further. Also make sure you have a space to
 the right of the colon after ``switch:``. At first you might think it's
