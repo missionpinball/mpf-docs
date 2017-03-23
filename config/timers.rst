@@ -93,11 +93,13 @@ Individual timers can use the following options:
 
 bcp:
 ~~~~
+THIS OPTION HAS BEEN REMOVED IN 0.33
+
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
 
-TODO Is this needed? If a slide_player, etc. uses one of these events, then they'll automatically be sent to the MC?
+TODO: Remove from documentation
 
 control_events:
 ~~~~~~~~~~~~~~~

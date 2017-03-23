@@ -60,6 +60,12 @@ Protocol Format
 + Parameters are in the format name=value
 + Parameter names are case-insensitive
 + Parameter values are case-sensitive
++ Simple parameter values are prefixed with a string that indicates
+  their data type: (int:, float:, bool:).  For example, the integer
+  5 would appear in the command string as `int:5`.
++ When a command includes one or more complex value types (list or dict)
+  all parameters are encoded using JSON and the resulting encoded value
+  is assigned to the ``json`` parameter.
 + Parameters are separated by an ampersand
 + Parameter names and their values are escaped using percent encoding
   as necessary; see ``https://en.wikipedia.org/wiki/Percent-encoding``
@@ -132,26 +138,20 @@ The following BCP commands have been defined (and implemented) in MPF:
 
    ball_end
    ball_start
-   config
-   dmd_frame
+   device
    error
-   external_show_frame
-   external_show_start
-   external_show_stop
-   get
    goodbye
    hello
-   json
    machine_variable
    mode_start
    mode_stop
+   monitor_start
+   monitor_stop
    player_added
    player_turn_start
    player_variable
+   register_trigger
+   remove_trigger
    reset
-   reset_complete
-   set
    switch
-   terminate
-   timer
    trigger

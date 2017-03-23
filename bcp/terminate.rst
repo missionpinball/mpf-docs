@@ -1,2 +1,0 @@
-terminate (BCP command)
-=======================
