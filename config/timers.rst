@@ -93,12 +93,13 @@ Individual timers can use the following options:
 
 bcp:
 ~~~~
-.. deprecated::
+THIS OPTION HAS BEEN REMOVED IN 0.33
+
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
 
-TODO: THIS HAS BEEN REMOVED FROM BCP
+TODO: Remove from documentation
 
 control_events:
 ~~~~~~~~~~~~~~~
