@@ -139,7 +139,6 @@ The following BCP commands have been defined (and implemented) in MPF:
    ball_end
    ball_start
    device
-   dmd_frame
    error
    goodbye
    hello
