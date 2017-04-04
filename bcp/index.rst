@@ -61,7 +61,7 @@ Protocol Format
 + Parameter names are case-insensitive
 + Parameter values are case-sensitive
 + Simple parameter values are prefixed with a string that indicates
-  their data type: (int:, float:, bool:).  For example, the integer
+  their data type: (int:, float:, bool:, NoneType:).  For example, the integer
   5 would appear in the command string as `int:5`.
 + When a command includes one or more complex value types (list or dict)
   all parameters are encoded using JSON and the resulting encoded value
@@ -153,5 +153,6 @@ The following BCP commands have been defined (and implemented) in MPF:
    register_trigger
    remove_trigger
    reset
+   reset_complete
    switch
    trigger
