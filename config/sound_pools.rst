@@ -72,8 +72,8 @@ values.  The weights sum to 10 for the three sounds so the `slingshot_01` sound 
 of being randomly selected of 5 out of 10 (50%), `slingshot_02` 3/10 (30%), and `slingshot_03`
 2/10 (20%).
 
-.. note:: If you want to use a sound that has spaces in its name you need to put the name of the
-   sound in quotes:
+.. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
+   in quotes:
    ::
 
        sound_pools:
