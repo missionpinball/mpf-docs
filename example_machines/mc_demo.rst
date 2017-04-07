@@ -27,11 +27,7 @@ in the "mpf-examples" package you downloaded. Then run:
 
 ::
 
-   mpf mc
-
-Note that the MC Demo is an MC configuration only—it does not require or use
-the MPF game engine, so that's why you can run ``mpf mc`` and not ``mpf`` or
-``mpf both``. (You can run ``mpf both`` and that's fine too.)
+   mpf both
 
 When you run the demo, use the left and right arrow keys to step through the
 different slides.
