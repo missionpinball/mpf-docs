@@ -3,10 +3,27 @@ MPF Version History
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.50
+----
+
+Currently in Dev, plan in time for Chicago Pinball Expo October 2017
+
+.. rubric:: MPF
+
+New Features
+
+* TBD
+
+.. rubric:: MPF-MC
+
+New Features
+
+* TBD
+
 0.33
 ----
 
-Currently in Dev, plan for first quarter 2017
+April 10, 2017
 
 .. rubric:: MPF
 
@@ -33,9 +50,33 @@ New Features
 * Use placeholders in mode timer start & end values
 * More options for bonus (hurry ups, skip slides with 0 value, placeholders for score calculations, etc.)
 * Improved ball search
+* OPP - support for firmware 2.0 and dual wound coils
+* MC scriptlets for video modes and code on the MC side
+* Support for conditional events
+* Template variables which are evaluated during runtime and can use
+  placeholders (timers, logic_blocks, tilt, scoring, bonus_mode, and more)
+* Early ball save
+* Advanced bonus_mode
+* TimedSwitch device - built-in event for flipper cradling and releasing
+* Asynchronous logging - This is especially important on windows because
+  logging previously slowed down the game. However, also important in production
+  when under high I/O load or with slow discs.
+* Timers work outside of the game now
+* New "mpf diagnosis" command
+* Scoring to machine variables
+* Scoring for other players
+* Weights in random_event_player
+* Unlimited delay in ball_save to allow video modes or mode selection
+* Added Machine vars for all kinds of versions
+* Drop Target keep up support
+* Multiball add a ball support
+* New multiball_lock device which handles virtual saves for multiplayer game
+* Allow BCP to bind on all IPs
+
 
 Bug fixes & code improvements
 
+* A lot of miscellaneous bug fixes
 * Exiting service mode always put the machine back on free play
 * Fixed a ball lock crash
 * File loader will not try to load temp files
@@ -50,6 +91,19 @@ Bug fixes & code improvements
 * Fixed a bunch of small things that caused crashes
 * Changed default on-screen DMD pixel settings
 * Removed OSC plug-in since it hasn't worked in over a year and no one uses it
+* Better errors on invalid configs
+* Catching a lot more config problems
+* Improved ball search. Drop Target reset no longer resets ball search
+* Better start/stop procedures for modes. no more event races
+* Improved extra ball
+* Better yaml parsing for unescaped strings
+* Performance improvements through better fast paths and offloading of logging
+  from the synchronous path
+* BCP version 1.1 with synchronisation during reset
+* Improved handling of ball devices with entrance_switch
+* Force UTF-8 for configs on windows
+* Better errors when loading assets
+
 
 .. rubric:: MPF-MC
 
@@ -64,10 +118,24 @@ New Features
 * Re-vamped Mac installation procedure. It's now a "real" install and does not use
   MPF.app anymore.
 * Added a "volume" machine variable
+* Added Interactive Media Controller (iMC)
+* Added "anchor_y: baseline" option for text widgets
+* Added gamma setting for physical DMDs
+
 
 Bug fixes & code improvements
 
+* Improved sound asset loading speed (uses SDL_Mixer for loading to memory rather than GStreamer)
 * Sound assets can be loaded while videos are playing
+* Sound assets can be located in sub-folders as many levels deep as desired (not just a single
+  level)
+* Fixed points widget
+* Improvements to automated testing on Travis
+* widget_player positioning fixed
+* Better error messages for malformed slide configs
+* Prevent crash in text widget when empty and back is selected
+* Changes to support BCP 1.1
+
 
 0.32
 ----
