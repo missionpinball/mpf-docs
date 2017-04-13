@@ -368,3 +368,11 @@ show_when_stopped:
 Single value, type: ``string``. Default: ``None``
 
 Name of the show that will be started when this achievement has been stopped.
+
+sync_ms:
+~~~~~~~~
+
+Single value, type: number. Default: ``None``
+
+A sync_ms value used for any shows which are started by this achievement. See the
+:doc:`full sync_ms documentation for details </shows/sync_ms>`.
