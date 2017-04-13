@@ -18,7 +18,7 @@ copyright = '2013-2017, The Mission Pinball Framework Team'
 author = 'The Mission Pinball Framework Team'
 
 version = '0.30-0.33'
-release = '0.32.x'
+release = '0.33.x'
 
 language = None
 
