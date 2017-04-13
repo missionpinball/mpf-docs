@@ -138,6 +138,7 @@ Things you can use
 * ``machine.``
 * ``settings.``
 * ``device.``
+* ``mode.``
 
 Comparisons
 -----------
