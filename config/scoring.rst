@@ -163,3 +163,13 @@ and conditional events to set the current name of the album value, like this:
 
 The above config lets us always have a player var called "album_name" we can use in slides and widgets which matches
 the value of the album, and it's automatically updated whenever the player var "album_value" changes.
+
+player:
+~~~~~~~
+
+.. versionadded:: 0.33
+
+Lets you specify which player (by number) this scoring entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
+effect the score or other player variables of players other than the current player.
+
+If the ``player:`` setting is not used, then this scoring entry will default to the current player.
