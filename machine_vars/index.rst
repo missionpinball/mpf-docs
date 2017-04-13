@@ -29,8 +29,8 @@ configs:
    (high_score_category)(position)_label <high_score_categoryposition_label>
    (high_score_category)(position)_name <high_score_categoryposition_name>
    (high_score_category)(position)_value <high_score_categoryposition_value>
-   mpf_version <mpf_version>
    mpf_extended_version <mpf_extended_version>
+   mpf_version <mpf_version>
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
    platform <platform>
