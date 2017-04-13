@@ -65,6 +65,7 @@ your machine-wide config, a mode-specific config, or both.
    logic_blocks: <logic_blocks>
    logging: <logging>
    machine: <machine>
+   machine_vars: <machine_vars>
    magnets: <magnets>
    matrix_light_settings: <matrix_light_settings>
    matrix_lights: <matrix_lights>
