@@ -158,6 +158,7 @@ Operators
 * ``*`` multiply
 * ``/`` divide
 * ``^`` power (exponent)
+* ``%`` modulus
 * ``^=`` bit xor
 * ``not``
 * ``and``
