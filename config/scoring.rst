@@ -81,7 +81,11 @@ you can pull in values from other player variables, device states, etc. and do m
 action:
 ~~~~~~~
 
+One of the following settings: ``add``, ``set``, ``add_machine``, ``set_machine``. Default is ``add``.
+
 .. versionadded:: 0.32
+
+.. versionchanged:: 0.33
 
 By default, the scoring entries will be added to the existing value of a player variable. If you want to replace
 or reset the value of the player var, you can add ``action: set`` to the entry. However to do this, you have to
@@ -104,6 +108,9 @@ value, it would look like this:
    Resetting a player variable is confusing, because you need to include a ``score:`` entry to specify the value of the
    player variable you're resetting, and you do that via the ``score:`` section even though the player variable might
    be something other than "score". We'll change this in a future version of MPF.
+
+Starting in MPF 0.33, you can also add and set machine variables, by specifying ``action: add_machine`` or
+``action: set_machine``. In these cases the machine variable is specified just like the player variable in the "set" example above.
 
 block:
 ~~~~~~
