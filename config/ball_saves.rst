@@ -169,3 +169,12 @@ only_last_ball:
 single|bool|False
 
 TODO
+
+delayed_eject_events:
+~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+dict|str:ms|None
+
+TODO
