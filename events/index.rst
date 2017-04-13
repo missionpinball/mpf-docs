@@ -137,6 +137,7 @@ an event called *switch_s_left_slingshot_active*.
    master_volume_increase <master_volume_increase>
    max_credits_reached <max_credits_reached>
    mc_ready <mc_ready>
+   mc_reset_complete <mc_reset_complete>
    mc_reset_phase_1 <mc_reset_phase_1>
    mc_reset_phase_2 <mc_reset_phase_2>
    mc_reset_phase_3 <mc_reset_phase_3>
