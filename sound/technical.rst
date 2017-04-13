@@ -50,7 +50,7 @@ application, a Python extension library is the only choice in which to use the G
 SDL_Mixer and SDL2 libraries.  Since the extension library utilizes both Python and C objects,
 the GIL needs to be managed in the audio library along with thread protection to avoid race
 conditions and deadlocks. These design constraints led to the choice of using Cython
-(`http://cython.org/<http://cython.org/>`_) as the language to implement the MPF MC audio library.
+(`http://cython.org/ <http://cython.org/>`_) as the language to implement the MPF MC audio library.
 Cython is a superset of the Python language that additionally supports calling C functions and
 using C types, an ideal choice for wrapping external C libraries and using them in a Python
 application.
