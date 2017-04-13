@@ -82,3 +82,7 @@ Note that there are multiple shows here.
 .. literalinclude:: /example_configs/asset_manager/shows/preload/show4.yaml
    :caption: `your_machine_folder/shows/preload/show4.yaml </_static/asset_manager/shows/preload/show4.yaml>`_
    :language: yaml
+
+.. literalinclude:: /example_configs/asset_manager/shows/preload/subfolder/show4b.yaml
+   :caption: `your_machine_folder/shows/preload/subfolder/show4b.yaml </_static/asset_manager/shows/preload/subfolder/show4b.yaml>`_
+   :language: yaml

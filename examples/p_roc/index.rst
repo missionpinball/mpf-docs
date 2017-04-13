@@ -15,6 +15,10 @@ options. You wouldn't actually use more than one.
    :caption: `your_machine_folder/config/config.yaml </_static/p_roc/config/config.yaml>`_
    :language: yaml
 
+.. literalinclude:: /example_configs/p_roc/config/snux.yaml
+   :caption: `your_machine_folder/config/snux.yaml </_static/p_roc/config/snux.yaml>`_
+   :language: yaml
+
 .. literalinclude:: /example_configs/p_roc/config/wpc.yaml
    :caption: `your_machine_folder/config/wpc.yaml </_static/p_roc/config/wpc.yaml>`_
    :language: yaml

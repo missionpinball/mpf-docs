@@ -18,3 +18,20 @@ options. You wouldn't actually use more than one.
 .. literalinclude:: /example_configs/bcp/config/test_bcp_processor.yaml
    :caption: `your_machine_folder/config/test_bcp_processor.yaml </_static/bcp/config/test_bcp_processor.yaml>`_
    :language: yaml
+
+Mode config examples
+--------------------
+
+Here are some example mode config files that go along with the machine-wide
+config above.
+
+Note that there are multiple mode config examples here. You might not
+necessarily use more than one in your machine.
+
+.. literalinclude:: /example_configs/bcp/modes/mode1/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/mode1.yaml </_static/bcp/modes/mode1/mode1.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/bcp/modes/mode2/mode2.yaml
+   :caption: `your_machine_folder/modes/mode2/mode2.yaml </_static/bcp/modes/mode2/mode2.yaml>`_
+   :language: yaml

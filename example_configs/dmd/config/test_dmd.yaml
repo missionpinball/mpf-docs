@@ -7,9 +7,25 @@ displays:
   dmd:
     width: 128
     height: 32
-
+widgets:
+  right_dmd_widget:
+    type: text
+    text: "Right Widget"
+    x: right
+  left_dmd_widget:
+    type: text
+    text: "Left Widget"
+    x: left
+  top_dmd_widget:
+    type: text
+    text: "Top Widget"
+    y: 100%
+  bottom_dmd_widget:
+    type: text
+    text: "Bottom Widget"
+    y: 0%
 slides:
-  slide1:
+  container_slide:
     - type: dmd
       width: 640
       height: 160
@@ -124,7 +140,21 @@ slides:
       x: 124
 
 slide_player:
-  slide1: slide1
+  container_slide: container_slide
   dmd_slide:
     dmd_slide:
+      target: dmd
+
+widget_player:
+  position_widget_right:
+    right_dmd_widget:
+      target: dmd
+  position_widget_left:
+    left_dmd_widget:
+      target: dmd
+  position_widget_top:
+    top_dmd_widget:
+      target: dmd
+  position_widget_bottom:
+    bottom_dmd_widget:
       target: dmd

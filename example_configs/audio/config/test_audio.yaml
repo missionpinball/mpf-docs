@@ -81,9 +81,9 @@ sound_pools:
         simultaneous_limit: 3
         stealing_method: skip
         sounds:
-            4832__zajo__drum07
-            84480__zgump__drum-fx-4
-            100184__menegass__rick-drum-bd-hard
+            - 4832__zajo__drum07
+            - 84480__zgump__drum-fx-4
+            - 100184__menegass__rick-drum-bd-hard
 
 sound_player:
     load_music:

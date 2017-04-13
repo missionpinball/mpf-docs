@@ -28,38 +28,38 @@ image_pools:
   group1:
     load: preload
     images:
-      image1
-      image2
-      image3
+      - image1
+      - image2
+      - image3
     type: random
   group2:
     load: preload
     images:
-      image1
-      image2
-      image3|2
+      - image1
+      - image2
+      - image3|2
     type: random
   group3:
     images:
-      image1
-      image2
-      image3
+      - image1
+      - image2
+      - image3
     type: sequence
   group4:
     images:
-      image1|4
-      image2|2
-      image3
+      - image1|4
+      - image2|2
+      - image3
     type: sequence
   group5:
     images:
-      image1|1
-      image2|5
-      image3|1
+      - image1|1
+      - image2|5
+      - image3|1
     type: random_force_next
   group6:
     images:
-      image1
-      image2
-      image3
+      - image1
+      - image2
+      - image3
     type: random_force_all
