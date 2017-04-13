@@ -39,12 +39,9 @@ For :doc:`config placeholders </config/instructions/placeholders>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for timed switches is ``device.timed_switches.<name>``.
 
-*activation_count*
-   Number which reflects what state this timed switch is in.
-   You could think of this like ``0`` = no timed switches are active, and ``1`` =
-   1 is active. But if you have multiple switches in your timed switch section and
-   multiple switches are active for more than the time specified, this count would go
-   higher than 1 to reflect the number of switches that are held active.
+*active_switches*
+   List of switches that are currently active past the time that this timed_switches: section is
+   set for.
 
 Related How To guides
 ---------------------
