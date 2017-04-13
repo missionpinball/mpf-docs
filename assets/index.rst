@@ -17,7 +17,7 @@ sound files in ``/sounds/voice`` are played on the voice track.
 
 As of MPF 0.33, assets can be in nested subfolders too. For example:
 
-.. code-block::
+.. code-block:: none
 
    \sounds
    \sounds\fx
