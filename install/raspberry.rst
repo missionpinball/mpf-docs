@@ -82,15 +82,10 @@ To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have 
   window:
     width: 1280
     height: 800
-    title: Your ultimate pinball
-    resizable: false
-    fullscreen: auto
-    borderless: false
-    exit_on_escape: true
 
   kivy_config:
     graphics:
-	  fbo: force-hardware
+      fbo: force-hardware
 
 More or less important last steps:
 ----------------------------------
