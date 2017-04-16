@@ -172,6 +172,13 @@ chosen.
 
 The default setting is ``middle``.
 
+anchor_y: baseline
+~~~~~~~~~~~~~~~~~~
+
+Text widgets have an additional ``baseline`` option in addition to the other baseline
+options detailed in the :doc:`common widget settings </displays/widgets/common_settings>`
+documentation.
+
 Examples
 --------
 

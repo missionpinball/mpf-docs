@@ -176,3 +176,10 @@ valign:
 
 Same as the ``valign:`` setting for the :doc:`/displays/widgets/text/index`. See that
 documentation for usage.
+
+anchor_y: baseline
+~~~~~~~~~~~~~~~~~~
+
+Text input widgets have an additional ``baseline`` option in addition to the other baseline
+options detailed in the :doc:`common widget settings </displays/widgets/common_settings>`
+documentation.
