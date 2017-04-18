@@ -106,10 +106,10 @@ Here's what you would create based on the switches and coils we've defined so fa
 
     flippers:
         left_flipper:
-            main_coil: c_flipper_left_main
+            main_coil: c_flipper_left
             activation_switch: s_left_flipper
         right_flipper:
-            main_coil: c_flipper_right_main
+            main_coil: c_flipper_right
             activation_switch: s_right_flipper
 
 4. Enabling your flippers
@@ -135,15 +135,14 @@ So now the ``flippers:`` section of your config file should look like this:
 
     flippers:
         left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
+            main_coil: c_flipper_left
             activation_switch: s_left_flipper
             enable_events: machine_reset_phase_3
         right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
+            main_coil: c_flipper_right
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
+            
 
 5. Configure your control system hardware
 -----------------------------------------
