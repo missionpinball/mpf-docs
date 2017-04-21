@@ -121,6 +121,7 @@ New Features
 * Added Interactive Media Controller (iMC)
 * Added "anchor_y: baseline" option for text widgets
 * Added gamma setting for physical DMDs
+* Added new relative animation target values
 
 
 Bug fixes & code improvements
