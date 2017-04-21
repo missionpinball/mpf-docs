@@ -75,7 +75,32 @@ various shape widgets you can animate the ``height:`` and ``width:``, etc.)
 Pretty much the only thing you can't animate at this point is rotation (since MPF doesn't currently
 support widget rotation. That's a future feature we'll have to add).
 
-2. Animation trigger events
+2. Relative animation values
+----------------------------
+
+.. versionadded:: 0.33
+
+Sometimes it is desirable to animate a value a relative amount from a widget's current value rather than specifying
+an absolute target value.  This can be done using ``relative: True``.  With the ``relative:`` parameter set to
+``True``, the new target value will set by adding the ``value:`` parameter to the widget's current ``property:``
+value when the animation starts.  When ``relative:`` is set to ``False``, the animation target uses the actual
+``value:`` property value as its destination.
+
+The following example animates a widget 50 pixels in the ``x`` direction over one second from its current location
+and then -50 pixels in the ``y`` direction over another second:
+
+::
+
+                  - property: x
+                    value: 50
+                    relative: True
+                    duration: 1s
+                  - property: y
+                    value: -50
+                    relative: True
+                    duration: 1s
+
+3. Animation trigger events
 ---------------------------
 
 The animation trigger event (which is the ``show_slide:`` entry in the example
@@ -169,7 +194,7 @@ for details on when these three events are posted.
 * :doc:`slide_(slide_name)_active </events/slide_name_active>`
 * :doc:`slide_(slide_name)_removed </events/slide_name_removed>`
 
-3. Animating multiple properties at once
+4. Animating multiple properties at once
 ----------------------------------------
 
 The example animation above includes two steps (one to set the opacity to 1 and the next to set it to 0).
@@ -218,7 +243,17 @@ anywhere a widget is defined (in the slide properties, in a show step, as part o
 :doc:`named widget <reusable_widgets>`, as part of a ``widget_settings:`` override section in the ``widget_player:``,
 etc.)
 
-4. Multi-step animations with different trigger events
+It is also possible to animate multiple properties in a single animation step by using a list in both the ``property:``
+and ``value:`` parameters (there must be the same number of items in both lists).  The following example moves a widget
+diagonally to the coordinate (10, 20) over 5 seconds:
+
+::
+
+                  - property: x, y
+                    value: 10, 20
+                    duration: 5s
+
+5. Multi-step animations with different trigger events
 ------------------------------------------------------
 
 So far all of the animation examples have been triggered on the ``show_slide``
@@ -267,7 +302,7 @@ initial position.
 
 Again, you can use any combination of properties and any number of steps for each event.
 
-5. Looping and repeating animations
+6. Looping and repeating animations
 -----------------------------------
 
 So far, every animation sequence we've looked at will just run through once and then stop. However, you can add
@@ -311,15 +346,16 @@ initial y value is -50, it will start off the screen). Then when the ``pulse_boo
 animation which makes the font size bigger and smaller will starting playing and repeat forever. Finally when ``bye_boo``
 is posted, the widget will fly off the screen to the upper right.
 
-6. Inserting a "pause"
+7. Inserting a "pause"
 ----------------------
 
 Sometimes you might want to add a timed "pause" to an animation, where one step animates, then it pauses, then another
 step animates.
 
 The easiest way to do that is just to add a step where the property value in the step is the same as whatever value that
-property is currently at. So you still have the step in the animation, it just isn't doing anything since the widget's
-property is already there. For example:
+property is currently at. This is easy to do using a relative property value of 0 as shown in the following example.
+So you still have the step in the animation, it just isn't doing anything since the widget's property is already at
+the desired target value. For example:
 
 ::
 
@@ -335,7 +371,8 @@ property is already there. For example:
                value: 50
                duration: 1s
              - property: y
-               value: 50
+               value: 0
+               relative: True
                duration: 2s
              - property: y
                value: 200
@@ -343,7 +380,7 @@ property is already there. For example:
 The the example above, the ``flying_toaster`` image will move in from the bottom of the screen (to ``y:50``) in 1 second,
 then pause for 2 seconds (since ``y: 50`` again), then move out of the top of the screen in 1 second.
 
-7. Easing
+8. Easing
 ---------
 
 You can also set "easing" values for each animation step which controls the formula that's used to interpolate the
@@ -351,7 +388,7 @@ current value to the target value over time. The default is ``linear`` which jus
 acceleration/deceleration) over time. Refer to the
 :doc:`/displays/widgets/easing` for details on how this works and descriptions of all the options.
 
-8. Creating reusable "named" animations
+9. Creating reusable "named" animations
 ---------------------------------------
 
 Much like :doc:`named widgets <reusable_widgets>`, you can also create pre-defined animations that you can easily
@@ -397,8 +434,8 @@ when the event "timer_hurry_up_complete" is posted, you can do it like this:
              show_slide: fade_in
              timer_hurry_up_complete: fade_out
 
-9. Chaining multiple named animations together
-----------------------------------------------
+10. Chaining multiple named animations together
+-----------------------------------------------
 
 When working with named animations, you can chain together multiple named
 animations for a single event by specifying them as a list, like this:
