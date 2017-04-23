@@ -87,7 +87,7 @@ You can also combine with "and", for example:
 ::
 
    slide_player:
-      ball_started{ball==3 or player==1}: special_slide
+      ball_started{ball==3 and player==1}: special_slide
 
 Now the "special_slide" will only show when the *ball_started* event is posted
 for player 1, ball 3 (but not player 2, ball 3, etc.).
