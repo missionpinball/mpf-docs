@@ -14,6 +14,9 @@ Also at this time, installing all the components you need to run MPF on a Mac
 will require almost 2 GB of disk space. MPF itself it only about 12 MB, but
 there are a lot of supporting things that MPF needs as you'll see here.
 
+We have a video which shows this entire installation process in action
+which is available at `https://www.youtube.com/watch?v=lJEfQGffXsA`_
+
 Here are the steps to install MPF on a Mac:
 
 Step 0. Uninstall your previous MPF app installation
@@ -250,7 +253,7 @@ are.
    Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.12 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
    Brians-Mac:~ brian$
 
-If you want to make sure that MPF was installed, you can run:
+If you want to make sure that MPF was installed, quit the Terminal app and restart it, and then run:
 
 ::
 
@@ -262,7 +265,7 @@ this:
 ::
 
    Brians-Mac:~ brian$ mpf --version
-   MPF v0.32.6
+   MPF v0.33.12
 
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
