@@ -127,3 +127,7 @@ epub_publisher = author
 epub_copyright = copyright
 epub_exclude_files = ['search.html']
 epub_tocdepth = 2
+
+
+def setup(app):
+    app.add_stylesheet('mpf.css')
