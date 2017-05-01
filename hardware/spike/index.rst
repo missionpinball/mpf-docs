@@ -7,8 +7,11 @@ If you haven't done so already, be sure to read the :doc:`/start/index` page
 to understand how MPF talks to physical pinball machines in general.
 
 Stern pinball machines from early 2015 (Wrestlemania) onwards use a control
-system called SPIKE (or SPIKE 2 from Batman 66 onwards). You can read all about
-how SPIKE works in the operators manuals for the games, but the important
+system called SPIKE (or SPIKE 2 from Batman 66 onwards). The complete list
+of SPIKE machines is available in IPDB (click here for `SPIKE <http://ipdb.org/search.pl?searchtype=advanced&mpu=61>`_
+and `SPIKE 2 <http://ipdb.org/search.pl?searchtype=advanced&mpu=65>`_ machines).
+
+You can read all about how SPIKE works in the operators manuals for the games, but the important
 thing to know here is that SPIKE machines essentially have a full linux
 computer inside them (the "SPIKE CPU Node") which runs the game code from an SD card.
 
