@@ -20,6 +20,7 @@ that you can download based on your version of MPF:
 * `0.30.x <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
 * `0.31.x <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
 * `0.32.x <https://github.com/missionpinball/mpf-examples/archive/0.32.x.zip>`_.
+* `0.33.x <https://github.com/missionpinball/mpf-examples/archive/0.33.x.zip>`_.
 * `dev <https://github.com/missionpinball/mpf-examples/archive/dev.zip>`_.
 
 Unzip the file to any location you want, and then browse the files to see what's there,
