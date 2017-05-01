@@ -88,20 +88,19 @@
 Mission Pinball Framework documentation
 =======================================
 
-This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF).
+This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), versions |version|.
 
 .. note::
 
    You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
 
-**Note about MPF versions:** The latest released version of MPF is |release|, but the documentation you're reading now
-is valid for MPF versions |version|. See the :doc:`MPF software & documentation versions </versions/understanding>`
-page for details.
+
 
 Overview
 --------
 * :doc:`MPF Overview </start/index>`: What MPF is and how it works.
+* :doc:`MPF Versions </versions/index>`: Understanding MPF versions & features.
 * :doc:`Compatible Pinball Machines </machines/index>`: What types of machines work with MPF?
 * :doc:`Supported Hardware </hardware/index>`: What types of pinball control systems work with MPF?
 
