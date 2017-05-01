@@ -1,5 +1,11 @@
 # sphinx-doc config file
 
+try:
+    import sphinx_rtd_theme
+
+except ImportError:
+    sphinx_rtd_theme = None
+
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig']
 
@@ -27,8 +33,9 @@ todo_include_todos = True
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'sphinx_rtd_theme'
-html_theme_path = ["_themes", ]
+if sphinx_rtd_theme:
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_logo = '_static/images/mpf-logo-tiny.png'
 # html_favicon = None
