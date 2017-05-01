@@ -88,9 +88,9 @@
 Mission Pinball Framework documentation
 =======================================
 
-Everything you need to know about the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF).
+This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF).
 
-.. tip::
+.. note::
 
    You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
