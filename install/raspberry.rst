@@ -1,11 +1,19 @@
-Installing MPF on a Raspberry Pi running in a framebuffer
-=========================================================
+Installing MPF on a Raspberry Pi 3
+==================================
+
+.. warning::
+
+   Raspberry Pi support is experimental at this point. Users have found various issues with audio, and we're not sure
+   whether the RPi has enough power to support MPF. So this document is more like a collection of notes versus a solid
+   guide. We welcome your feedback or experience with other low-cost systems, though at this point if you're getting
+   ready for a "final" computer for your machine, we'd probably recommend building an inexpensive (<$200) Intel-based
+   system for now and running Linux or Windows.
 
 One first word:
 Don't try to install mpf on a Raspberry Pi B+ or Raspberry zero, it just won't work or will be very slow.
-Get yourself at least a Raspberry Pi 2 or 3, they have a quadcore processor running with more than 900MHz.
+Get yourself at least a Raspberry Pi 2 or 3, they have a quad-core processor running with more than 900MHz.
 
-One nice thing we will have afterwards is a lowcost PC which will run fast enough for mpf-mc with audio, video, antialiazing and touchscreen support.
+One nice thing we will have afterwards is a low-cost PC which will run fast enough for mpf-mc with audio, video, antialiazing and touchscreen support.
 
 Let's start:
 
