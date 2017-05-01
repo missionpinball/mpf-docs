@@ -34,8 +34,8 @@ todo_include_todos = True
 # -- Options for HTML output ----------------------------------------------
 
 if sphinx_rtd_theme:
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    html_theme = '_theme'
+    html_theme_path = ['.']
 
 html_logo = '_static/images/mpf-logo-tiny.png'
 # html_favicon = None
