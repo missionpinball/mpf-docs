@@ -85,8 +85,8 @@
    Contributing to MPF docs</about/contributing>
    MPF Versions </versions/index>
 
-Mission Pinball Framework documentation
-=======================================
+Mission Pinball Framework |version| documentation
+=================================================
 
 This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), versions |version|.
 
@@ -94,8 +94,6 @@ This is the documentation for the `Mission Pinball Framework <http://missionpinb
 
    You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
-
-
 
 Overview
 --------
@@ -164,4 +162,4 @@ Let's go!
 
 You can access the full table of contents of MPF documentation via the expandable menu
 on the left (or the hamburger menu icon if you're on a mobile device). There are over
-1000 pages of printed documentation to help you build your pinball machine!
+1100 pages of printed documentation and examples to help you build your pinball machine!
