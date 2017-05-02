@@ -48,7 +48,7 @@ Protocol Format
 ---------------
 
 + Commands are human-readable text in a format similar to URLs, e.g.
-  `command?parameter1=value&parameter2=value`
+  ``command?parameter1=value&parameter2=value``
 + Commands characters are encoded with the utf-8 character encoding.
   This allows ad-hoc text for languages that use characters past ASCII-7
   bit, such as Japanese Kanji.
@@ -62,15 +62,15 @@ Protocol Format
 + Parameter values are case-sensitive
 + Simple parameter values are prefixed with a string that indicates
   their data type: (int:, float:, bool:, NoneType:).  For example, the integer
-  5 would appear in the command string as `int:5`.
+  5 would appear in the command string as ``int:5``.
 + When a command includes one or more complex value types (list or dict)
   all parameters are encoded using JSON and the resulting encoded value
   is assigned to the ``json`` parameter.
 + Parameters are separated by an ampersand
 + Parameter names and their values are escaped using percent encoding
-  as necessary; see ``https://en.wikipedia.org/wiki/Percent-encoding``
-+ Commands are terminated by a line feed character (`\n`). Carriage
-  return characters (`\r`) should be tolerated but are not significant.
+  as necessary; (`details here <https://en.wikipedia.org/wiki/Percent-encoding>`_).
++ Commands are terminated by a line feed character (``\n``). Carriage
+  return characters (``\r``) should be tolerated but are not significant.
 + A blank line (no command) is ignored
 + Commands beginning with a hash character (`#`) are ignored
 + If a command passes unknown parameters, the recipient should ignore
@@ -97,7 +97,7 @@ Protocol Format
 + An unrecognized command results in an error response with the
   message “unknown command”
 
-In all commands referenced below, the `\n` terminator is implicit. Some
+In all commands referenced below, the ``\n`` terminator is implicit. Some
 characters in parameters such as spaces would really be encoded as %20
 in operation, but are left unencoded here for clarity.
 
@@ -136,23 +136,23 @@ The following BCP commands have been defined (and implemented) in MPF:
 .. toctree::
    :maxdepth: 1
 
-   ball_end
-   ball_start
-   device
-   error
-   goodbye
-   hello
-   machine_variable
-   mode_start
-   mode_stop
-   monitor_start
-   monitor_stop
-   player_added
-   player_turn_start
-   player_variable
-   register_trigger
-   remove_trigger
-   reset
-   reset_complete
-   switch
-   trigger
+   ball_end <ball_end>
+   ball_start <ball_start>
+   device <device>
+   error <error>
+   goodbye <goodbye>
+   hello <hello>
+   machine_variable <machine_variable>
+   mode_start <mode_start>
+   mode_stop <mode_stop>
+   monitor_start <monitor_start>
+   monitor_stop <monitor_stop>
+   player_added <player_added>
+   player_turn_start <player_turn_start>
+   player_variable <player_variable>
+   register_trigger <register_trigger>
+   remove_trigger <remove_trigger>
+   reset <reset>
+   reset_complete <reset_complete>
+   switch <switch>
+   trigger <trigger>
