@@ -1,5 +1,5 @@
-BCP protocol & specification
-============================
+BCP Protocol Specification
+==========================
 
 This document describes the Backbox Control Protocol, (or "BCP"), a
 simple, fast protocol for communications between an implementation of
