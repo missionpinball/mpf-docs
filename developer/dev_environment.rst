@@ -1,5 +1,5 @@
-Contributing code to MPF
-========================
+Setting up your dev environment
+===============================
 
 If you want to work on the core MPF or MPF-MC code, you have to install MPF and
 MPF-MC a bit differently than the normal process.

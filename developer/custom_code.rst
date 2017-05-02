@@ -24,7 +24,14 @@ your game, there are three ways you can do this:
 
 + :doc:`Mode-specific code <mode_code>`, which allows you to write custom
   Python code which is only active when a particular game mode is active.
-+ :doc:`Sciptlets <scriptlets>`, which are "machine-wide" chunks of code that
-  are always active.
++ :doc:`Machine-wide code <machine_code>`, useful for dealing with custom hardware, like the crane in *Demolition Man*.
 + :doc:`Placeholders </config/instructions/placeholders>` &
-  :doc:`conditional events </events/overview/conditional>`.
+  :doc:`Conditional events </events/overview/conditional>`, which are done in config files but let you do conditional
+  logic, e.g. post event A if a counter is over 5 or event B if it's less than 5. You will use these a lot.
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Mode-specific code <mode_code>
+   Machine-wide code <machine_code>

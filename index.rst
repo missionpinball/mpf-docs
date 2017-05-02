@@ -67,11 +67,11 @@
    :numbered: 0
 
    /developer/index
+   /developer/dsl_vs_programming
    /developer/custom_code
-   /bcp/index
+   /developer/mpf
    /developer/api
-   /developer/contributing
-   /developer/hardware
+   /bcp/index
 
 .. toctree::
    :hidden:
@@ -134,8 +134,8 @@ Reference guides
 Developer guides
 ----------------
 * :doc:`/developer/custom_code`
+* :doc:`/developer/mpf`
 * :doc:`/developer/api`
-* :doc:`/developer/contributing`
 
 Getting Help
 ------------

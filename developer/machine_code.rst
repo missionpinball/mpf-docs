@@ -1,5 +1,5 @@
-How to program custom devices for your machine (Scriptlets)
-===========================================================
+How to add machine-wide custom code
+===================================
 
 MPF contains a "Scriptlet" concept which lets you add custom code to your
 game.
