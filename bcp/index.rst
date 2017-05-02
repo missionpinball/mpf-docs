@@ -5,6 +5,11 @@ This document describes the Backbox Control Protocol, (or "BCP"), a
 simple, fast protocol for communications between an implementation of
 a pinball game controller and a multimedia controller.
 
+.. note::
+
+   BCP is how the MPF core engine and the MPF media controller communicate.
+   See the :doc:`/mc/index` section of the documentation for details.
+
 BCP transmits semantically relevant information and attempts to isolate
 specific behaviors and identifiers on both sides. i.e., the pin controller is
 responsible for telling the media controller “start multiball mode”. The pin
@@ -35,70 +40,52 @@ implementation being driven.
 Background
 ----------
 
-The BCP protocol was created as part of the Mission Pinball Framework (MPF)
-project. MPF uses BCP to communicate between the MPF pinball controller and
-the MPF media controller, though BCP is intended to be an open protocol that
-could connect *any* pinball controller to *any* media controller.
-
-We'd like to give a shout-out to Kevin Kelm who was responsible for the initial
-concept of BCP and first draft of the specification. As such, he's the guy who
-picked the ports (5050 and 5051).
+While the BCP protocol was created as part of the MPF project, the intention is
+that BCP is an open protocol that could connect *any* pinball controller to *any*
+media controller.
 
 Protocol Format
 ---------------
 
 + Commands are human-readable text in a format similar to URLs, e.g.
   ``command?parameter1=value&parameter2=value``
-+ Commands characters are encoded with the utf-8 character encoding.
++ Command characters are encoded with the utf-8 character encoding.
   This allows ad-hoc text for languages that use characters past ASCII-7
   bit, such as Japanese Kanji.
-+ Commands and parameter names are whitespace-trimmed on both ends by
++ Command and parameter names are whitespace-trimmed on both ends by
   the recipient
 + Commands are case-insensitive
 + Parameters are optional. If present, a question mark separates the
   command from its parameters
-+ Parameters are in the format name=value
++ Parameters are in the format ``name=value``
 + Parameter names are case-insensitive
 + Parameter values are case-sensitive
 + Simple parameter values are prefixed with a string that indicates
-  their data type: (int:, float:, bool:, NoneType:).  For example, the integer
+  their data type: (``int:``, ``float:``, ``bool:``, ``NoneType:``).  For example, the integer
   5 would appear in the command string as ``int:5``.
 + When a command includes one or more complex value types (list or dict)
   all parameters are encoded using JSON and the resulting encoded value
-  is assigned to the ``json`` parameter.
-+ Parameters are separated by an ampersand
+  is assigned to the ``json:`` parameter.
++ Parameters are separated by an ampersand (``&``)
 + Parameter names and their values are escaped using percent encoding
   as necessary; (`details here <https://en.wikipedia.org/wiki/Percent-encoding>`_).
 + Commands are terminated by a line feed character (``\n``). Carriage
   return characters (``\r``) should be tolerated but are not significant.
 + A blank line (no command) is ignored
-+ Commands beginning with a hash character (`#`) are ignored
++ Commands beginning with a hash character (``#``) are ignored
 + If a command passes unknown parameters, the recipient should ignore
   them.
-+ To accommodate Backbox's asynchronous nature, commands may include
-  an optional 'id' parameter. This allows subsequent responses to be
-  tied back to a specific command. Most situations do not warrant this
-  level of tracking, but it may be important in some scenarios, e.g. the
-  pinball controller requesting a ‘wave_your_hands_in_the_air’ show, but
-  no such show exists. The value of an id may be any string up to 32
-  characters. When the id parameter is not present in a command, that
-  command’s value is used for any response id (just the command itself,
-  not the parameters). Any subsequent response from commands such as a
-  show ending or triggers should send the corresponding id back that the
-  show was started with.
 + The pinball controller and the media controller must be resilient to
   network problems; if a connection is lost, it can simply re-open it to
   resume operation. There is no requirement to buffer unsendable
   commands to transmit on reconnection.
-+ The pinball controller is responsible for initiating the connection
-  to the media controller, never the other way around.
 + Once initial handshaking has completed on the first connection,
   subsequent re-connects do not have to handshake again.
 + An unrecognized command results in an error response with the
   message “unknown command”
 
 In all commands referenced below, the ``\n`` terminator is implicit. Some
-characters in parameters such as spaces would really be encoded as %20
+characters in parameters such as spaces would really be encoded as ``%20`` (space)
 in operation, but are left unencoded here for clarity.
 
 Initial Handshake
