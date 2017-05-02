@@ -1,6 +1,10 @@
 Sounds, Music & Audio
 =====================
 
+.. note::
+
+   Everything in this "Displays & Graphics" section is about default the MPF Media Controller
+
 Since the release of MPF 0.30, audio and sound support has been provided by a brand-new custom
 audio library built on SDL2 and SDL_Mixer libraries.  This custom library allows the MPF
 development team to create audio features optimized for pinball machines.  The first release

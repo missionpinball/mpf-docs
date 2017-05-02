@@ -16,6 +16,10 @@ animations, motions, and transitions to your displays and their widgets. And,
 like just everything else in MPF, you can do most of your display configuration
 via the config files.
 
+.. note::
+
+   Everything in this "Displays & Graphics" section is about default the MPF Media Controller
+
 Here are a few photos of the MPF Media Controller's display system in action.
 These were all created with configuration files and without manual programming.
 
