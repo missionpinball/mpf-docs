@@ -23,7 +23,6 @@ configs:
    credits_string <credits_string>
    credits_value <credits_value>
    credits_whole_num <credits_whole_num>
-   credits_whole_num <credits_whole_num>
    fast_(x)_firmware <fast_x_firmware>
    fast_(x)_model <fast_x_model>
    (high_score_category)(position)_label <high_score_categoryposition_label>
