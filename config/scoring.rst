@@ -75,7 +75,7 @@ The above config will add 1000 to the "score" player variable, 1 to the "aliens"
 player variable when the event called *some_event* is posted. Note that you don't even need to include a "score" if you
 just want to add to other player vars.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>` for this setting too, which means
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>` for this setting too, which means
 you can pull in values from other player variables, device states, etc. and do math on them.
 
 action:

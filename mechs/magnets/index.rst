@@ -19,7 +19,7 @@ use to grab and release balls. It also includes the ability to set timings to
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for magnets is ``device.magnets.<name>``.
 

@@ -5,10 +5,28 @@ This section contains details about every possible entry you can use in your
 YAML config files. Each entry also has information about whether it's valid in
 your machine-wide config, a mode-specific config, or both.
 
-.. toctree ::
-   :maxdepth: 1
+
+Instructions
+------------
+
+As you dig into the specific settings for individual config sections, it's important to understand how various
+settings mentioned in the reference are used:
+
+.. toctree::
+   :maxdepth: 2
 
    Instructions <instructions/index>
+
+Index of config sections
+------------------------
+
+Here's a list of every single config section from both MPF and the MPF-MC. Some of these are valid only in machine-wide
+configs, and others only work in mode config files. (And some are valid in both.) The detail page for each setting
+indicated which type of config file it's valid in.
+
+.. toctree::
+   :maxdepth: 1
+
    accelerometers: <accelerometers>
    achievements: <achievements>
    achievement_groups: <achievement_groups>

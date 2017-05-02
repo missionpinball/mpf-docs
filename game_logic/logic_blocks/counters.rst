@@ -88,7 +88,7 @@ value, it will post its "complete" event and be considered complete.
 
 Default is ``None``.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 multiple_hit_window:
@@ -140,7 +140,7 @@ more than zero.
 
 Default is ``0``.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 player_variable:

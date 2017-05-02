@@ -208,7 +208,7 @@ up), or when it equals or is lower than this (for timers counting down), the *ti
 posted and the timer is stopped. (If the ``restart_on_complete:`` setting is true, then the timer is also reset
 back to its ``start_value:`` and started again.)
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 max_value:
@@ -238,7 +238,7 @@ Single value, type: ``integer``. Default: ``0``
 
 The initial value of the timer.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 tick_interval:

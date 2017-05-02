@@ -25,7 +25,7 @@ You can set default fade rates and control strips and rings of LEDs.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for LEDs is ``device.leds.<name>``.
 

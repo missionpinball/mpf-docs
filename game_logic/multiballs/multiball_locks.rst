@@ -41,7 +41,7 @@ up the difference be adding new balls from the ball device tagged with ``ball_ad
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for multiballs is ``device.multiballs.<name>``.
 
@@ -52,7 +52,7 @@ the prefix for multiballs is ``device.multiballs.<name>``.
 
    If you want to track how many balls are locked so far, that's stored in a player
    variable with the name ``<multiball_lock_name>_locked_balls``. So you can monitor
-   that or use the player placeholder if you need to do logic based on it.
+   that or use the player dynamic value if you need to do logic based on it.
 
 Related How To guides
 ---------------------

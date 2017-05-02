@@ -52,7 +52,7 @@ achievements in the group. For example:
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for achievement groups is ``device.achievement_groups.<name>``.
 

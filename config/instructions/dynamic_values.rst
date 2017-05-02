@@ -1,18 +1,18 @@
-Using "placeholders" in config files
-====================================
+Using dynamic runtime values in config files
+============================================
 
-MPF config files can use the concept of "placeholder" values
-which are values that are calculated dynamically when MPF is running
+MPF config files can contain values in the form of links to dynamic
+placeholders which are evaluated live when MPF is running
 rather than being hard-coded into a config file.
 
-Placeholders can come from several sources, including player variables,
+Dynamic values can come from several sources, including player variables,
 machine variables, operator settings, properties of devices, etc. (Read
 on for a full list.)
 
 For example, you might want to have a shot called "jackpot" that scores
 a multiplier which is the number of shots made times 100k points.
 
-Without placeholders, your scoring section would be static, like this:
+Without dynamic values, your scoring section would be static, like this:
 
 .. code-block:: yaml
 
@@ -22,7 +22,7 @@ Without placeholders, your scoring section would be static, like this:
 
 But let's say you have a player variable called "troll_hits" which
 holds the number of trolls hit that you want to multiply by 100,000
-when the shot is made. You can use the "current_player" placeholder
+when the shot is made. You can use the "current_player" dynamic value
 in your scoring config like this:
 
 .. code-block:: yaml
@@ -53,10 +53,10 @@ You would have this instead:
 in your machine config and that you've defined a setting called
 "tilt_warnings").
 
-You can also use placeholders in :doc:`conditional events </events/overview/conditional>`.
+You can also use dynamic values in :doc:`conditional events </events/overview/conditional>`.
 
-Types of placeholders
----------------------
+Types of dynamic values
+-----------------------
 
 current_player
    Used to get a player variable from the current player. The format is
@@ -85,8 +85,8 @@ device
 
    todo
 
-Using if/else logic in placeholders
------------------------------------
+Using if/else logic with dynamic values
+---------------------------------------
 
 .. code-block:: yaml
 

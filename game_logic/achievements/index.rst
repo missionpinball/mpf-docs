@@ -59,7 +59,7 @@ flashing, but it only rotates through incomplete achievements.)
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for achievements is ``device.achievements.<name>``.
 

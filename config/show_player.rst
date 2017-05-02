@@ -225,7 +225,7 @@ Single value, type: ``integer``. Default: ``1``
 
 Which step the show starts on when it's played.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 sync_ms:

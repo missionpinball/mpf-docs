@@ -42,7 +42,7 @@ have to be held, and how long they have to be released.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for combo switches is ``device.combo_switches.<name>``.
 

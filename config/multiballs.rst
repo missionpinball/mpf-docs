@@ -56,7 +56,7 @@ Single value, type: ``integer``.
 The number of balls this multiball should eject (and maintain during shoot again period). Note: It may eject more balls
 when using locks but only ball_count balls will be maintained during shoot again.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 ball_locks:

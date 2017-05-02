@@ -115,7 +115,7 @@ score: (required)
 ~~~~~~~~~~~~~~~~~
 
 How many points this bonus entry is worth. Note that this will be multiplied by the ``player_score_entry:`` (if it's
-present). Also note that you can use :doc:`placeholder values </config/instructions/placeholders>` here if you want to
+present). Also note that you can use :doc:`dynamic values </config/instructions/dynamic_values>` here if you want to
 do advanced math.
 
 player_score_entry:

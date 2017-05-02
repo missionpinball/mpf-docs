@@ -8,7 +8,7 @@ TODO
    config_version
    machine_config
    mode_config
-   placeholders
+   dynamic_values
    gamma_correction
    gain_values
    time_strings

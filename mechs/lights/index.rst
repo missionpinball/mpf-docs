@@ -23,7 +23,7 @@ in the ``leds:`` section. See :doc:`/mechs/leds/lights_versus_leds` for details.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for lights is ``device.lights.<name>``.
 
