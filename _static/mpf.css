@@ -33,13 +33,9 @@
     font-weight: 300;
 }
 
-.wy-menu-vertical li.current a {
-    background: #d6d6d6;
-    color: #595151;
-}
-
 .wy-menu-vertical li.on a, .wy-menu-vertical li.current > a {
     border-bottom: 0;
+    background: yellow;
 }
 
 .wy-menu-vertical li.current a:hover {
