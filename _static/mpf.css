@@ -16,7 +16,7 @@
 }
 
 /* links in sidebar */
-.wy-menu-vertical li ul a {
+.wy-menu-vertical li ul li a {
     padding: 0.2045em 1.618em;
     font-weight: 300;
 }
@@ -30,6 +30,32 @@
     color: #D63E29;
     font-size: 90%;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.wy-menu-vertical li.current a {
+    background: #d6d6d6;
+    color: #595151;
+}
+
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current > a {
+    border-bottom: 0;
+}
+
+.wy-menu-vertical li.current a:hover {
+    background: #c9c9c9;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: yellow;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+    background: #d6d6d6;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:hover {
+    background: #c9c9c9;
 }
 
 h1 h2 h3 h4 h5 {
@@ -118,4 +144,20 @@ div[class^="highlight"] pre {
 
 .btn-neutral {
     background-color: #d2d2d2 !important;
+}
+
+.rst-content .toc-backref {
+    text-decoration: none;
+}
+
+footer {
+    font-size: 90%;
+}
+
+footer p {
+    font-size: 90%;
+}
+
+.wy-breadcrumbs li.wy-breadcrumbs-aside a {
+    text-decoration: none;
 }
