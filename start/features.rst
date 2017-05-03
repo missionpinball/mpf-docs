@@ -2,8 +2,7 @@ MPF complete feature list
 =========================
 
 Even though MPF is a work-in-progress that's not yet complete, the core dev team
-has been working on it for over two years, with over 5,000 hours of combined
-effort.
+has been working on it since 2014, with thousands of hours of combined effort.
 
 Major Features & Concepts
 -------------------------
@@ -15,21 +14,24 @@ Major Features & Concepts
   generates an event, and you can use those events to trigger actions (scoring,
   lights, starting a mode, etc.)
 + Advanced programmers and customization can be done via the API. (The
-  API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
+  API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_.)
 + You can easily switch between hardware platforms, so if sometime down the road
   you want to switch hardware or the company whose hardware you're using
   goes out of business, all your effort is not lost as you can easily move
-  everything to a new hardware platform with a simple config file change.
+  everything to a new hardware platform with a few changed lines in your config file.
 
 Compatible control systems / electronics
 ----------------------------------------
+
+MPF currently interfaces with the following pinball control systems & electronics
+(which in turn control the physical pinball machine hardware):
 
 + Multimorphic P-ROC & P3-ROC pinball controllers, with either PD-8x8, PD-16,
   PD-LED, and SW-16 driver and accessory boards or installation in existing WPC,
   Stern Whitestar, or Stern SAM machines.
 + FAST Pinball Core, Nano & WPC controllers, with 3802, 1616, and 0804 I/O
   boards, FAST servo boards, or installation in existing WPC machines.
-+ Open Pinball Project (OPP) open source controlled with Gen2 driver boards.
++ Open Pinball Project (OPP) open source controllers with Gen2 driver boards.
 + Stern SPIKE / SPIKE 2 pinball machines.
 + Mark Sunnucks's "Snux" System 11 driver board for use in System 11 and Data
   East machines, in concert with either a P-ROC or FAST WPC controller.
@@ -38,6 +40,7 @@ Compatible control systems / electronics
 + I2C servo controllers.
 + Pololu Maestro servo controllers.
 + SmartMatrix RGB LED DMD controllers
++ RGB.DMD RGB LED-based DMD controllers
 
 See the :doc:`Control Systems / Electronics</hardware/index>` documentation
 for full details.
@@ -45,11 +48,13 @@ for full details.
 Pinball mechanism support
 -------------------------
 
+MPF currently supports the following different types of pinball playfield mechanisms:
+
 + Switches (normally open, normally closed, mechanical or opto, with
   configurable debounce settings)
-+ Coils / drivers (pulse, enable, disable, pwm)
-+ Matrix-based lights
-+ LED RGB-based lights
++ Coils / drivers / solenoids (pulse, enable, disable, PWM)
++ Lamp matrix-based incandescent lights & LEDs
++ LEDs (RGB, GRB, RGBA, RGBW, RGBAW)
 + Accelerometers
 + GI (general illumination)
 + Flashers
@@ -57,21 +62,25 @@ Pinball mechanism support
 + Pop bumpers / slingshots
 + Drop targets and drop target banks
 + Diverters
-+ All forms of troughs (modern, System 11, early WPC, early '80s, etc.)
++ All forms of troughs (modern, System 11, early WPC, early '80s, Gottlieb System 3, etc.)
 + Ball devices (scoops, VUKs, saucers, locks, etc.)
 + Multiple playfields and playfield transfers (including head-to-head machines)
 + Driver-enabled devices (like flippers and pop bumpers in System 11 machines)
-+ Mechanical and coil-fired plungers and ball launchers
++ Mechanical and coil-fired plungers, ball launchers, and catapults
 + EM score reels
 + Kickbacks
 + Magnets
 + Rollover switches
 + Servos
++ Stepper motors
++ Traditional motors
 
 See the :doc:`Pinball Mechs</mechs/index>` documentation for full details.
 
 Game logic
 ----------
+
+MPF includes built-in support for all the pinball machine and game logic you need, inculding:
 
 + Modes and a mode stack (start / stop / restart / stacked modes)
 + Ball locks
@@ -100,6 +109,7 @@ Game logic
 + Timers (start / stop / pause / count down / count up)
 + Video modes
 + Switch combinations (flipper cancel, hold flipper button to start super skill shot, etc.)
++ Timed switches (hold the flipper for 2 seconds to show game stats, etc.)
 
 See the :doc:`Game Logic</game_logic/index>` documentation for full details.
 
@@ -156,6 +166,7 @@ Machine Management
   anywhere in MPF to game operators.
 + A data manager which handles reading and writing data from disk, including
   audits, earnings, machine variables, high scores, etc.
++ Power supply management (map drivers to power supplies to make sure not too many things fire at once)
 
 Tools
 -----
@@ -164,6 +175,8 @@ Tools
   tool that connects to a live running instance of MPF and shows the status of
   various devices. You can interact with it by clicking on switches and see your
   game in action on your computer.
++ An "interactive" media controller which lets you interactively build and test
+  display slides, widgets, and animations.
 + A switch player which lets you build automatically scripts to "replay" switches
   for testing your game.
 + A complete set of test functions which you can use to write your own automated
