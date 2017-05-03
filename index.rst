@@ -88,7 +88,8 @@
 Mission Pinball Framework |version| documentation
 =================================================
 
-This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), versions |version|.
+This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), version |version|.
+Click the "Read the Docs" link in the lower left corner for other versions.
 
 .. note::
 
