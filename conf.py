@@ -1,12 +1,8 @@
 # sphinx-doc config file
 
 import time
-
-try:
-    import sphinx_rtd_theme
-
-except ImportError:
-    sphinx_rtd_theme = None
+import git
+import sphinx_rtd_theme
 
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig']
@@ -21,6 +17,10 @@ author = 'The Mission Pinball Framework Team'
 
 version = '0.30-0.33'
 release = '0.33.x'
+
+# dev warning box will be shown in HTML builds for the following GitHub branch
+# names:
+branches_for_dev_warning = ['dev']
 
 language = None
 
@@ -129,6 +129,27 @@ epub_publisher = author
 epub_copyright = copyright
 epub_exclude_files = ['search.html']
 epub_tocdepth = 2
+
+# -- Show warnings for dev branches in HTML docs --------------------------
+
+if git.Repo('.').active_branch.name in branches_for_dev_warning:
+
+    rst_prolog = '''
+    
+    .. only:: html
+    
+       .. warning::
+       
+          **This is the dev documentation for an unreleased version of MPF!**
+    
+          This is the documentation for MPF |version|, which is the "dev" (next)
+          release of MPF that is a work-in-progress. Unless you're specifically
+          looking for this version, you probably want to use the version of
+          documentation called "latest" which is for the latest released version of
+          MPF. That documentation is at
+          `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
+    
+    '''
 
 
 def setup(app):
