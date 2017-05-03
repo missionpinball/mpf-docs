@@ -1,5 +1,7 @@
 # sphinx-doc config file
 
+import time
+
 try:
     import sphinx_rtd_theme
 
@@ -14,7 +16,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = 'Mission Pinball Framework'
-copyright = '2013-2017, The Mission Pinball Framework Team'
+copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
 author = 'The Mission Pinball Framework Team'
 
 version = '0.30-0.33'
