@@ -44,7 +44,7 @@ use the same MAJOR.MINOR versions of both, but the PATCH number might be differe
 might be 0.31.11 while the latest MPF-MC version could be 0.31.8. That's fine.)
 
 You can see which versions are the latest released versions at any time by visiting the
-`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>` where we list the latest versions
+`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_ where we list the latest versions
 in the header of the page.
 
 Documentation Versions
