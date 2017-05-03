@@ -1,5 +1,6 @@
 # sphinx-doc config file
 
+import os
 import time
 import git
 import sphinx_rtd_theme
@@ -132,7 +133,7 @@ epub_tocdepth = 2
 
 # -- Show warnings for dev branches in HTML docs --------------------------
 
-if git.Repo('.').active_branch.name in branches_for_dev_warning:
+if git.Repo(os.path.dirname(__file__)).active_branch.name in branches_for_dev_warning:
 
     rst_prolog = '''
     
