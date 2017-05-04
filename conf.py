@@ -132,30 +132,40 @@ epub_tocdepth = 2
 
 # -- Show warnings for dev branches in HTML docs --------------------------
 
+# If this is running on ReadTheDocs.org, the context dict will be overwritten
+# by theirs which will contain the propoer branch name (since the git command
+# doesn't work there.
+
+context = dict()
+
 try:
-    branch_name = git.Repo().active_branch.name
+    context['github_version'] = git.Repo().active_branch.name
 except TypeError:
-    branch_name = None
-
-if branch_name in branches_for_dev_warning:
-
-    rst_prolog = '''
-    
-    .. only:: html
-    
-       .. warning::
-       
-          **This is the dev documentation for an unreleased version of MPF!**
-    
-          This is the documentation for MPF |version|, which is the "dev" (next)
-          release of MPF that is a work-in-progress. Unless you're specifically
-          looking for this version, you probably want to use the version of
-          documentation called "latest" which is for the latest released version of
-          MPF. That documentation is at
-          `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
-    
-    '''
+    context['github_version'] = None
 
 
 def setup(app):
     app.add_stylesheet('mpf.css')
+
+    # We need to do this in the setup() function since ReadTheDocs will append
+    # the context dict to the end of conf.py which means we don't have the
+    # populated value at the global context yet, so we need to do it here.
+
+    if globals()['context']['github_version'] in branches_for_dev_warning:
+
+        globals()['rst_prolog'] = '''
+        
+        .. only:: html
+        
+           .. warning::
+           
+              **This is the dev documentation for an unreleased version of MPF!**
+        
+              This is the documentation for MPF |version|, which is the "dev" (next)
+              release of MPF that is a work-in-progress. Unless you're specifically
+              looking for this version, you probably want to use the version of
+              documentation called "latest" which is for the latest released version of
+              MPF. That documentation is at
+              `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
+        
+        '''
