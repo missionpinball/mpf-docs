@@ -20,7 +20,7 @@ Make sure you have a 3.3v adapter (or that your adapter can be set for 3.3v).
 .. note::  If you're using a Raspberry Pi, you can use its built-in serial pins
    and don't need a USB-to-serial adapter.
 
-Connect the USB serial adapter to the DBG0 header (CN2) on the SPIKE CPU node.
+Connect the USB serial adapter to the DBGU header (CN2) on the SPIKE CPU node.
 
 Pins are marked GND, RX, TX. You do not need more than these.
 
