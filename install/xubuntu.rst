@@ -1,0 +1,141 @@
+Installing MPF on Xubuntu
+=========================
+
+Xubuntu is a Ubuntu-based linux distribution using the minimalist, yet still feature-packed, XFCE desktop manager.
+The focus of this guide will be for getting MPF up and running directly from power (unattended) for use in a production
+scenario.
+
+1. Create Xubuntu Installation Media
+------------------------------------
+
+You will need:
+
+* 4GB USB Flash Drive or larger
+* Latest ISO from `<https://xubuntu.org/getxubuntu/>`_
+
+Write the ISO on Windows
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use `Universal USB Installer <https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/>`_
+
+Write the ISO on MAC
+^^^^^^^^^^^^^^^^^^^^
+
+For Mac, you can use the built-in command line tools.
+
+* Identify the correct device: ``diskutil list``
+* Unmount the device: ``sudo diskutil unmountDisk /dev/disk[num]``
+   * ``num`` is determined by the number of devices mounted
+   * Actual device name will be something like ``/dev/disk2`` or ``/dev/disk3``
+* Write the ISO with **raw write(rdisk)**: ``sudo dd bs=1m if=/path/to/xubuntu-16.04.iso of=/dev/rdisk[]``
+   * Speed is MUCH faster when specifying with ``/dev/rdisk[num]``` vs ``/dev/disk[num]``
+   * Actual ``dd`` command will be something like ``sudo dd bs=1m if=/path/to/xubuntu-16.04.iso of=/dev/rdisk3``
+
+You should be able to use ``dd`` on Linux as well.
+
+2. Install Xubuntu
+------------------
+
+Boot from the installation media (you may need to change something in your BIOS to enable booting from USB).
+It should be a fairly straight-forward linux installation. When it asks about partioning, choose the 
+"Guided - entire hard disk" option (unless you have a specific reason not to). You will be asked to create a 
+user account. When doing so, it's important that you: **DO NOT ELECT TO ENCRYPT THE HOME FOLDER**. If you encrypt 
+the home folder, the auto login will not work and will have to reinstall to fix.
+
+3. Configure Xubuntu
+--------------------
+
+The system will reboot after installation. Login with your username and password then follow these steps:
+
+* Launch a Terminal emulator
+* Update the sources: ``sudo apt-get update``
+* Upgrade all the things: ``sudo apt-get upgrade``
+* Setup auto-login to the XFCE desktop
+   * Create the file ``/etc/lightdm/lightdm.conf.d/12-autologin.conf`` and edit it to contain:
+
+::
+
+  [Seat:*]
+  autologin-user=your_username
+  autologin-user-timeout=0
+
+* Be sure to change ``your_username`` to the username you created during installation.
+
+* Optional: Reduce the Network Timeout
+   * You should do this if the system will not always be connected to the internet
+   * Edit the file ``/etc/systemd/system/network-online.targets.wants/networking.service``
+   * Find the line ``TimeoutStartSec=5min`` and change to ``TimeoutStartSec=10sec``
+
+4. Install MPF
+--------------
+
+The existing Debian install script works perfectly on Ubuntu. The following commands will install
+the current versions of MPF and MPF-MC as well as each of their dependencies.
+
+::
+
+  cd ~
+  wget https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
+  unzip dev.zip
+  cd mpf-debian-installer-dev
+  sudo -H ./install
+  rm ~/dev.zip && rm -Rf ~/mpf-debian-installer-dev
+
+If you want to make sure that MPF was installed, you can run:
+
+::
+
+   mpf --version
+
+This command can be run from anywhere and should produce output something like
+this:
+
+.. code-block:: doscon
+
+   username@host:~$ mpf --version
+   MPF v0.33.13
+
+(Note that the actual version number of your MPF installation will be whatever
+version is the latest.)
+
+5. Setup your Machine Config
+----------------------------
+
+* Copy your machine config root folder to ``~/`` which is the same as ``/home/your_username/``.
+* Create a new file named ``run.sh`` in ``/home/your_username/your_machine_folder/``
+   * Edit the file to contain:
+
+::
+
+  #!/bin/bash
+  xterm -e "cd /home/your_username/your_machine_folder && mpf both -c config"
+
+* Change ``your_username`` to the username you created during installation.
+* Change ``your_machine_folder`` to the name of your specific machine folder.
+* Change ``config`` part to reflect the name of your top-level config file in ``~/your_machine_folder/config/``.
+
+
+6. Setup your Machine Config to Auto-execute
+--------------------------------------------
+
+When XFCE is executed, it runs all the *Desktop Entries* found within ``~/.config/autostart``.
+We'll create one of our own to run the script we just added to our machine config.
+
+* Create the file ``~/.config/autostart/mpf.desktop`` and edit it to contain:
+
+::
+
+  [Desktop Entry]
+  Version=1.0
+  Name=MPF
+  Comment=Mission Pinball
+  Exec=/home/your_username/your_machine_folder/run.sh
+  Path=/home/your_username/your_machine_folder/
+  Terminal=false
+  Type=Application
+
+* Change ``your_username`` to the username you created during installation.
+* Change ``your_machine_folder`` to the name of your specific machine folder.
+
+That's it. At this point, you should be able to reboot and watch the system auto-login to XFCE and then launch MPF 
+using the script we added to your machine config.
