@@ -15,7 +15,8 @@ entire process. Select the OS you're using from the list below:
 
    Windows <windows>
    Mac <mac>
-   Linux <linux>
+   Debian / Ubuntu Linux <linux>
+   Xubuntu Linux <xubuntu>
    Raspberry Pi <raspberry>
    Pine64 <pine64>
 
