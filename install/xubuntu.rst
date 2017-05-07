@@ -53,7 +53,7 @@ The system will reboot after installation. Login with your username and password
 * Setup auto-login to the XFCE desktop
    * Create the file ``/etc/lightdm/lightdm.conf.d/12-autologin.conf`` and edit it to contain:
 
-::
+.. code-block:: console
 
   [Seat:*]
   autologin-user=your_username
@@ -72,7 +72,7 @@ The system will reboot after installation. Login with your username and password
 The existing Debian install script works perfectly on Ubuntu. The following commands will install
 the current versions of MPF and MPF-MC as well as each of their dependencies.
 
-::
+.. code-block:: console
 
   cd ~
   wget https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
@@ -83,14 +83,14 @@ the current versions of MPF and MPF-MC as well as each of their dependencies.
 
 If you want to make sure that MPF was installed, you can run:
 
-::
+.. code-block:: console
 
    mpf --version
 
 This command can be run from anywhere and should produce output something like
 this:
 
-.. code-block:: doscon
+.. code-block:: console
 
    username@host:~$ mpf --version
    MPF v0.33.13
@@ -105,7 +105,7 @@ version is the latest.)
 * Create a new file named ``run.sh`` in ``/home/your_username/your_machine_folder/``
    * Edit the file to contain:
 
-::
+.. code-block:: console
 
   #!/bin/bash
   xterm -e "cd /home/your_username/your_machine_folder && mpf both -c config"
@@ -123,7 +123,7 @@ We'll create one of our own to run the script we just added to our machine confi
 
 * Create the file ``~/.config/autostart/mpf.desktop`` and edit it to contain:
 
-::
+.. code-block:: console
 
   [Desktop Entry]
   Version=1.0
@@ -137,5 +137,5 @@ We'll create one of our own to run the script we just added to our machine confi
 * Change ``your_username`` to the username you created during installation.
 * Change ``your_machine_folder`` to the name of your specific machine folder.
 
-That's it. At this point, you should be able to reboot and watch the system auto-login to XFCE and then launch MPF 
+That's it. At this point, you should be able to reboot and watch the system auto-login to XFCE and then launch MPF
 using the script we added to your machine config.
