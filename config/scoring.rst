@@ -129,10 +129,19 @@ Note that when you use block, you also have to include the ``score:`` setting in
 
 .. code-block:: yaml
 
-   scoring:
-      ramp_1_hit:
-         score: 5000
-         block: true
+  scoring:
+    ramp_1_hit:
+      score:
+        score: 5000
+        block: true
+
+There is also a shorthand way:
+
+.. code-block:: yaml
+
+  scoring:
+    ramp_1_hit:
+      score: 5000|block
 
 string:
 ~~~~~~~
