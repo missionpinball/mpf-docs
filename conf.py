@@ -35,9 +35,8 @@ todo_include_todos = True
 
 # -- Options for HTML output ----------------------------------------------
 
-if sphinx_rtd_theme:
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # html_logo = None
 html_favicon = '_static/images/icons/favicon.ico'
