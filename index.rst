@@ -46,7 +46,7 @@
    :numbered: 0
 
    Example Config Files </examples/index>
-   Example Machines </example_machines/index>
+   Example Games </example_games/index>
    Cookbook </cookbook/index>
 
 .. toctree::
@@ -121,7 +121,7 @@ MPF User Manual
 Examples
 --------
 * :doc:`/examples/index`: Huge list of example config files you can learn from.
-* :doc:`Example Machines </example_machines/index>`: List of several example machine projects.
+* :doc:`Example Games </example_games/index>`: List of several example machine projects.
 * :doc:`The Cookbook </cookbook/index>` shows you how to implement features of real pinball machines
   using MPF. This is great for the "How do I build something like X?" questions you might have.
 

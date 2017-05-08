@@ -219,11 +219,11 @@ version is the latest.)
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
 to download a bundle of MPF examples and run our "Demo Man" example game. To do that, follow
-the instructions in the :doc:`/example_machines/demo_man` guide.
+the instructions in the :doc:`/example_games/demo_man` guide.
 
 There's another example project you can also check out if you want called the "MC Demo" (for media controller demo)
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
-Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
+Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
 5. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------

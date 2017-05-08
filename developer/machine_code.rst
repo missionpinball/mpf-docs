@@ -16,7 +16,7 @@ Scriptlets, on the other hand, are sort of "machine-level" custom code.
 Scriptlets are nice if you have some kind of custom device type that doesn't
 match up to any of MPF's built in devices. The elevator and claw unloader
 in *Demolition Man* is a good example, and what we'll use here. You can
-find this in the :doc:`Demo Man example </example_machines/demo_man>`.
+find this in the :doc:`Demo Man example </example_games/demo_man>`.
 
 Here's how to create a scriptlet:
 
