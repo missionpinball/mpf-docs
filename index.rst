@@ -62,16 +62,11 @@
 
 .. toctree::
    :hidden:
-   :caption: Software Developer Guides
+   :caption: Developer Documentation
    :titlesonly:
    :numbered: 0
 
-   /developer/index
-   /developer/dsl_vs_programming
-   /developer/custom_code
-   /developer/mpf
-   /developer/api
-   /bcp/index
+   Overview </developer/index>
 
 .. toctree::
    :hidden:
@@ -85,8 +80,8 @@
    Contributing to MPF docs</about/contributing>
    MPF Versions </versions/index>
 
-Mission Pinball Framework |version| documentation
-=================================================
+Mission Pinball Framework Documentation
+=======================================
 
 This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), version |version|.
 Click the "Read the Docs" link in the lower left corner for other versions.
@@ -103,7 +98,7 @@ Overview
 * :doc:`Compatible Pinball Machines </machines/index>`: What types of machines work with MPF?
 * :doc:`Supported Hardware </hardware/index>`: What types of pinball control systems work with MPF?
 
-Installation & first steps
+Installation & First Steps
 --------------------------
 * :doc:`/install/index`: How to download and install MPF.
 * :doc:`/tutorial/index`: Step-by-step beginner's guide.
@@ -125,15 +120,15 @@ Examples
 * :doc:`The Cookbook </cookbook/index>` shows you how to implement features of real pinball machines
   using MPF. This is great for the "How do I build something like X?" questions you might have.
 
-Reference guides
+Reference Guides
 ----------------
 * :doc:`/events/index`: All the standard events MPF has, and how to use them.
 * :doc:`/config/index`: Lists every config setting and all the options.
 * :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
 * :doc:`/machine_vars/index`: Lists all the standard machine variables.
 
-Developer guides
-----------------
+Developer Documentation
+-----------------------
 * :doc:`/developer/custom_code`
 * :doc:`/developer/mpf`
 * :doc:`/developer/api`

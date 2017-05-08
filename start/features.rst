@@ -14,7 +14,7 @@ Major Features & Concepts
   generates an event, and you can use those events to trigger actions (scoring,
   lights, starting a mode, etc.)
 + Advanced programmers and customization can be done via the API. (The
-  API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_.)
+  API is fully documented at `developer.missionpinball.org <http://developer.missionpinball.org/>`_.)
 + You can easily switch between hardware platforms, so if sometime down the road
   you want to switch hardware or the company whose hardware you're using
   goes out of business, all your effort is not lost as you can easily move
