@@ -7,7 +7,8 @@ the process that controls graphics and audio. We call the thing that
 handles graphics and audio a "media controller." The game engine and
 media controller talk to each other via something called "BCP"
 which is a protocol we created for this purpose which stands for
-"Backbox Control Protocol". (More details on BCP are available :doc:`here </bcp/index>`.)
+"Backbox Control Protocol". (More details on BCP are available at the
+`MPF developer site <http://developer.missionpinball.org>`_.)
 
 Here's a diagram that shows what each piece does:
 

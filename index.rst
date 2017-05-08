@@ -129,9 +129,7 @@ Reference Guides
 
 Developer Documentation
 -----------------------
-* :doc:`/developer/custom_code`
-* :doc:`/developer/mpf`
-* :doc:`/developer/api`
+* :doc:`/developer/index`
 
 Getting Help
 ------------

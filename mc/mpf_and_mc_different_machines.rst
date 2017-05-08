@@ -1,7 +1,7 @@
 How to run MPF and the MPF-MC on different computers
 ====================================================
 
-Since the :doc:`BCP protocol </bcp/index>` uses a standard TCP socket connection, you can actually run MPF and the
+Since the BCP protocol uses a standard TCP socket connection, you can actually run MPF and the
 MPF-MC on different computers. (We're not sure what the use case for this is exactly, but it's definitely possible.)
 
 To do it, just install MPF on one computer and MPF-MC on another.

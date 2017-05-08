@@ -31,13 +31,13 @@ Isn't using config files limiting?
 ----------------------------------
 
 Finding the balance between "config files" and "real programming" is an age-old battle. We have a guide
-called :doc:`/developer/dsl_vs_programming` which explains this in more detail, including our perspective on
+called :doc:`/start/dsl_vs_programming` which explains this in more detail, including our perspective on
 it and why we decided to make config files the focus on MPF.
 
 Can I mix "real" code in with MPF config files?
 -----------------------------------------------
 
-Yes! See :doc:`/developer/custom_code` for details and examples.
+Yes! See `developer.missionpinball.org <http://developer.missionpinball.org>`_ for details and examples.
 
 Where does the name come from?
 ------------------------------

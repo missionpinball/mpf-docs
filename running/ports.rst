@@ -5,7 +5,7 @@ How to change the TCP ports MPF uses
    in MPF-MC v0.32.10.
 
 Various MPF components talk to each other via a TCP socket protocol called
-:doc:`BCP </bcp/index>` (which we invented). By default, MPF and MPF-MC each
+BCP (which we invented). By default, MPF and MPF-MC each
 listen for incoming BCP connections on the following two TCP ports:
 
 * ``5050`` MPF-MC
