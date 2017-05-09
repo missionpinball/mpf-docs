@@ -36,7 +36,7 @@ during a multiball?
    playfield switch is hit after the eject. However, this will not work with
    more than one ball on the playfield (e.g. during a multiball). In this case,
    the launcher will wait until its eject timeout passed (
-   :doc:`eject timeouts</config/ball_devices#eject-timeouts>`) which defaults
+   :doc:`eject timeouts </config/ball_devices#eject-timeouts>`) which defaults
    to 10s. Therefore, you need to tune ``eject_timeouts`` of your launcher to
    fix this issue.
 
