@@ -80,8 +80,8 @@
    Contributing to MPF docs</about/contributing>
    MPF Versions </versions/index>
 
-Mission Pinball Framework Documentation
-=======================================
+Mission Pinball Framework |version| Documentation
+=================================================
 
 This is the documentation for the `Mission Pinball Framework <http://missionpinball.org>`_ (MPF), version |version|.
 Click the "Read the Docs" link in the lower left corner for other versions.
