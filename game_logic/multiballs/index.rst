@@ -26,6 +26,21 @@ MPF also supports stacking of multiple multiballs at the same time.
 Balls can be locked for multiball with the related :doc:`multiball_locks` config
 section.
 
+Common Issues
+-------------
+
+Why does MPF wait about 10s when adding balls to the playfield from the trough
+during a multiball?
+   When MPF adds a ball to the playfield the launcher waits until the ball is
+   confirmed to be on the playfield. For the first ball this happens when a
+   playfield switch is hit after the eject. However, this will not work with
+   more than one ball on the playfield (e.g. during a multiball). In this case,
+   the launcher will wait until its eject timeout passed (
+   :doc:`eject timeouts</config/ball_devices#eject-timeouts>`) which defaults
+   to 10s. Therefore, you need to tune ``eject_timeouts`` of your launcher to
+   fix this issue.
+
+
 Monitorable Properties
 ----------------------
 
