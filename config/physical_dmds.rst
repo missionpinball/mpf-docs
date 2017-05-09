@@ -22,16 +22,16 @@ Note that there are no *height* and *width* settings here. The pixel size of you
 
 .. code-block:: yaml
 
-displays:
-  dmd:
-    width: 128
-    height: 32
+ displays:
+   dmd:
+     width: 128
+     height: 32
 
-physical_rgb_dmds:
-  smartmatrix:  # name of this DMD which can be whatever you want
-    brightness: .5
-    fps: 25
-    gamma: 2.5
+ physical_rgb_dmds:
+   smartmatrix:  # name of this DMD which can be whatever you want
+     brightness: .5
+     fps: 25
+     gamma: 2.5
 
 Note that this section is called ``physical_dmds:`` (plural). Just like
 "switches" and "coils" and most everything else in MPF, this is a section that
