@@ -40,6 +40,13 @@ Last line needs to be changed to enable login without a password:
 ::
 
    S0:2345:respawn:/sbin/getty 115200 ttyS0 -n -l /bin/sh
+   
+Furthermore, you might want to add this line to allow USB login
+(e.g. if your board does not have DBGU populated).
+
+::
+
+   USB0:2345:respawn:/sbin/getty 115200 ttyUSB0 -n -l /bin/sh
 
 4. Edit /etc/rc2.d/S95game
 --------------------------
@@ -70,3 +77,9 @@ Now when you power up the pinball machine, instead of running the
 original game code, it will run the spike bridge which will listen
 for commands from the CN2 connector and will send out information
 about the state of the machine via that connector.
+
+If you got a newer version of Spike 1 the CN2/DBGU connector might
+be unpopulated. In this case you can also attach an FTDI USB Serial
+Adapter and connect it to another USB serial adapter. This only works
+with FTDI chips since Spike only supports those. However, on the other
+side any chip will work.
