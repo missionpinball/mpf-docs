@@ -11,12 +11,14 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-project = 'Mission Pinball Framework'
+version = '0.30-0.33'  # all versions these docs cover
+release = '0.33.x'  # latest release
+
+project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
 author = 'The Mission Pinball Framework Team'
 
-version = '0.30-0.33'
-release = '0.33.x'
+
 
 # dev warning box will be shown in HTML builds for the following GitHub branch
 # names:
