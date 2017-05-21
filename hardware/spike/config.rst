@@ -40,6 +40,8 @@ settings:
 Some notes on the settings:
 
 port:
+
+
    Use the port of your USB-serial adapter or of the internal serial
    on the RPi. On Windows, this will have a name like "COM5".
 
@@ -57,3 +59,6 @@ nodes:
    get this from the manual. Here's an example from Wrestlemania Pro:
 
 .. image:: /hardware/images/spike_node_table.png
+
+   Only map the node boards and ignore the extension boards because those
+   are transparent to MPF. Just consider 8 and 8a/8b to be the same node.
