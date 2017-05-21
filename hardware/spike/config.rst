@@ -35,7 +35,7 @@ settings:
       port: /dev/ttyUSB0
       baud: 115200
       debug: False
-      nodes: 0, 1, 8, 9, 10, 116
+      nodes: 0, 1, 8, 9, 10, 11
 
 Some notes on the settings:
 
@@ -58,7 +58,7 @@ nodes:
    This is a list of the node board addresses that your system has. You can
    get this from the manual. Here's an example from Wrestlemania Pro:
 
-.. image:: /hardware/images/spike_node_table.png
+   .. image:: /hardware/images/spike_node_table.png
 
    Only map the node boards and ignore the extension boards because those
    are transparent to MPF. Just consider 8 and 8a/8b to be the same node.
