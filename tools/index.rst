@@ -15,6 +15,15 @@ change in action, click to control switches, and lay out everything on an image 
 The interactive MC lets you create YAML configurations for slides and widgets in realtime and see them
 on a display. This is great for fine tuning and tweaking your slides.
 
+Future Tools
+------------
+
+* GUI config builder
+* Show builder
+* Slide / animation tool
+* Auto machine documentation builder
+* Machine fuzzer
+
 
 .. toctree::
    :titlesonly:
