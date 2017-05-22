@@ -34,10 +34,23 @@ TODO add a photo and more detailed pinout instructions.
 Connect using two USB-Serial Adapters
 -------------------------------------
 
-If you got a newer version of Spike the CN2/DBGU connector might
-be unpopulated. In this case you can also attach an FTDI USB Serial
-Adapter and connect it to another USB serial adapter. This only works
-with FTDI chips since Spike only supports those. However, on the other
-side any chip will work.
+Newer versions of the SPIKE CPU node do not have a connector attached to the CN2/DBGU header.
+(The board is the same, but you see a blank spot instead of the plug-in connector attached.)
 
-First, connect GND between the adapters. Then connect RX to TX and TX to RX.
+In this case, you can solder on your own connector, *or* you can buy two USB serial adapters and
+then use the USB connection on the SPIKE CPU node.
+
+The one you connect to the SPIKE CPU node needs to have an actual FTDI brand chip because the
+FTDI drivers are included in the code on the SPIKE board. The second adapter for your computer
+can be any brand since it's easy to install whatever drivers it needs on your computer. Whatever
+serial port appears on your computer when you plug in this adapter is the port name you'll use
+in your machine config.
+
+These two adapters will have connectors or headers on them that you need to connect together.
+Connect the "RX" (receive) from one to the "TX" (transmit) on the other and vice-versa. Also
+connect the grounds (possible labeled "GND") together. It's probably a good idea to twist the
+wires together to reduce interference, especially if your wires are more than a few inches long.
+
+The following diagram illustrates how everything fits together:
+
+.. image:: /hardware/images/spike_usb_to_usb.jpg
