@@ -24,7 +24,6 @@ Switches
 
 Drivers / Coils
 ---------------
-
 * :doc:`FAST Pinball <fast/drivers>`
 * :doc:`P-ROC / P3-ROC <multimorphic/drivers>`
 * :doc:`Open Pinball Project (OPP) <opp/drivers>`
@@ -46,7 +45,7 @@ Lamp Matrix-based lights
 * :doc:`FAST Pinball (WPC Machine) <existing_machines/wpc>`
 * :doc:`P-ROC / P3-ROC (PD-8x8) <multimorphic/lights>`
 * :doc:`P-ROC (WPC Machine) <existing_machines/wpc>`
-* P-ROC (Stern SAM / Whitestar) (link TODO)
+* :doc:`P-ROC (Stern SAM / Whitestar) <existing_machines/whitestar>`
 * :doc:`Open Pinball Project (OPP) <opp/lights>`
 * :doc:`Snux (System 11) <snux/index>`
 
