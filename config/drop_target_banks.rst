@@ -21,8 +21,6 @@ config file. Here's an example from *Judge Dredd*:
         judge:
             drop_targets: j, u, d, g, e
             reset_coils: c_reset_drop_targets
-            reset_events:
-                drop_targets_judge_complete: 1s
             reset_on_complete: 1s
 
 What about drop target banks with lights?
