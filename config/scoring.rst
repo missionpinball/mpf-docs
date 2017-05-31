@@ -189,3 +189,13 @@ Lets you specify which player (by number) this scoring entry will affect. (Playe
 effect the score or other player variables of players other than the current player.
 
 If the ``player:`` setting is not used, then this scoring entry will default to the current player.
+
+score:
+~~~~~~
+
+todo
+
+float:
+~~~~~~
+
+todo

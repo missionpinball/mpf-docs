@@ -69,8 +69,8 @@ A multiplier value that will be applied to this coil's pulse time (which you can
 make this coil pulse for longer or shorter durations). Note that this power setting
 only applies to pulse actions.
 
-milliseconds:
-~~~~~~~~~~~~~
+pulse_ms:
+~~~~~~~~~
 The number of milliseconds you'd like this coil to pulse for. This setting
-override's the coil's default pulse_ms setting. Note that this setting
+overrides the coil's default pulse_ms setting. Note that this setting
 only affects pulse actions.
