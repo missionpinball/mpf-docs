@@ -24,11 +24,11 @@ media controller were combined, then your quad-core Raspberry Pi 3
 would have all the MPF stuff running on one core while the other three
 cores were wasted doing nothing.
 
-Second, having two processes means you can replace our MPF
+Second, having two processes means you can replace MPF's default
 media controller with something else if you want different features.
-For example, there is a group of people building an open source Unity
-3D-based media controller which can be used for very advanced 3D
-display graphics.
+For example, there is a group of people building an open source
+:doc:`Unity 3D-based media controller <unity_bcp_server>` which can be
+used for very advanced 3D display graphics.
 
 .. toctree::
    :maxdepth: 1
@@ -36,4 +36,5 @@ display graphics.
    mpfmc
    unity_bcp_server
    mpf_and_mc_different_machines
+   multiple_mcs
    creating_your_own
