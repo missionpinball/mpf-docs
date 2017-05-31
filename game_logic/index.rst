@@ -22,9 +22,11 @@ to tutorials, event listings, and configuration
    Extra Balls <extra_balls/index>
    High Scores <high_scores/index>
    Logic Blocks <logic_blocks/index>
-   Multiballs <multiballs/index>
+   Match <match/index>
    Modes <modes/index>
+   Multiballs <multiballs/index>
    Player Variables <players/index>
+   Replays <replays/index>
    Timed Switches <timed_switches/index>
    Timers <timers/index>
    Shots <shots/index>
