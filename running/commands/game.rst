@@ -101,6 +101,15 @@ with a file name of ``<year>-<month>-<day>-<hour>-<min>-<sec>-mpf-<hostname>.log
 Note that log files are standard log file formats that can be read and parsed
 with log file utilities. (The "Console" app is built-in to OS X, for example.)
 
+--syslog_address
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33.8
+
+Log to the specified syslog address. This can be a domain socket such as ``/dev/log`` on
+Linux or ``/var/run/syslog`` on Mac. Alternatively, you an specify ``host:port`` for remote
+logging over UDP.
+
 -v (lowercase)
 ~~~~~~~~~~~~~~
 
