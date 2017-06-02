@@ -74,9 +74,9 @@ Get the bridge from https://gituhub.com/missionpinball/mpf-spike-bridge
 Note that we have a precompiled binary in there (as well as the C source code).
 
 
-.. note:: It might be hard to mark it as executable on Windows (but should be
-   possible). If you cannot do this proceed to the next step and afterwards
-   do the following afterwards:
+.. note:: It might be hard to mark the bridge binary as executable on Windows
+   (but should be possible). If you cannot do this proceed to the next step
+   and afterwards do the following:
    
    1. Download putty (might be useful for other purposes as well)
    2. Connect to the new COM port via putty and set speed to 115200 baud.
