@@ -30,7 +30,8 @@ what works and what doesn't!
 
 You need to mount the Linux root partition (which is probably #3).
 
-Windows may need some additional tools to mount ext3.
+On Windows you need an additional tools to mount ext3. We got a
+report that "Paragon ExtFS for Windows" works fine for this.
 
 3. Edit /etc/inittab
 --------------------
@@ -66,12 +67,37 @@ to run the original game again.)
 
 Add mpf-spike-bridge to /bin/bridge and mark it as executable.
 
+On Linux this can be done with `chmod +x bridge` from within the folder.
+
 Get the bridge from https://gituhub.com/missionpinball/mpf-spike-bridge
 
 Note that we have a precompiled binary in there (as well as the C source code).
 
+
+.. note:: It might be hard to mark it as executable on Windows (but should be
+   possible). If you cannot do this proceed to the next step and afterwards
+   do the following afterwards:
+   
+   1. Download putty (might be useful for other purposes as well)
+   2. Connect to the new COM port via putty and set speed to 115200 baud.
+   3. Power up spike
+   4. Press enter and you should get a command promt (if not your serial
+      connection is probably not working).
+   5. Type the following:
+   
+   ::
+
+      mount -o remount,rw /
+      chmod +x /bin/bridge
+      mount -o remount,ro /
+
+
 6. Unmount the SD card. Put it back in your spike system
 --------------------------------------------------------
+
+Unmount the card. Really! Do that! Spike will not boot from a corrupted
+filesystem. SD cards may need a while to write everything. Give them those
+extra 10s. This is particularly important on windows.
 
 Now when you power up the pinball machine, instead of running the
 original game code, it will run the spike bridge which will listen
