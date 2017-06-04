@@ -25,6 +25,15 @@ compatible, so our recommendation is to get a card that's around the
 same size as the current one. Let us know what you find in terms of
 what works and what doesn't!
 
+Known SD Cards that work:
+SanDisk Ultra Plus 16GB purchased from Best Buy
+
+One tool you can use to backup an image of your SD Card is HDD Raw Copy. This tool will back up a copy to your local drive and you can restore it to the new SD card. For a tutorial on backing up your Stern SD card using HDD Copy check out the following video. 
+
+https://www.youtube.com/watch?v=KlKw8raWixI&t=35s
+
+.. note:: Save a copy of your SD card image in case you need to restore your SD card. At one point, our SD memory card became corrupt and restoring from the backed up image fixed the issue. 
+
 2. Mount the SD card
 --------------------
 
@@ -69,7 +78,7 @@ Add mpf-spike-bridge to /bin/bridge and mark it as executable.
 
 On Linux this can be done with `chmod +x bridge` from within the folder.
 
-Get the bridge from https://gituhub.com/missionpinball/mpf-spike-bridge
+Get the bridge from https://github.com/missionpinball/mpf-spike-bridge
 
 Note that we have a precompiled binary in there (as well as the C source code).
 
@@ -78,8 +87,8 @@ Note that we have a precompiled binary in there (as well as the C source code).
    (but should be possible). If you cannot do this proceed to the next step
    and afterwards do the following:
    
-   1. Download putty (might be useful for other purposes as well)
-   2. Connect to the new COM port via putty and set speed to 115200 baud.
+   1. Download PuTTY from www.putty.org.  PuTTY is a free telnet app that allows you to remotely connect to the Linux OS running on the SPIKE system. PuTTY was also useful for verifying the connection from your Windows machine to the Linux OS running on SPIKE.
+   2. In PuTTY, select the "Serial" buttont, change to correct COM (COM1, COM3, COM4, etc) port vand set speed to 115200 baud.  If you are unsure oh which COM port Windows used when you plugged in your cable, open the Device Manager in the Control Panel.  Click open the PORTS drop down to find which COM port is in use.
    3. Power up spike
    4. Press enter and you should get a command promt (if not your serial
       connection is probably not working).
@@ -97,7 +106,7 @@ Note that we have a precompiled binary in there (as well as the C source code).
 
 Unmount the card. Really! Do that! Spike will not boot from a corrupted
 filesystem. SD cards may need a while to write everything. Give them those
-extra 10s. This is particularly important on windows.
+extra 10s. This is particularly important on Windows. If the red LED in the middle of the Stern CPU board is not blinking your SD card may be corrupt.  This author corrupted his SD card by removed the card without ejecting it properly.  
 
 Now when you power up the pinball machine, instead of running the
 original game code, it will run the spike bridge which will listen
