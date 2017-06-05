@@ -16,6 +16,10 @@ Ball Search
 .. contents::
    :local:
 
+.. note:: Ball search is off by default in MPF because it might hurt users not expecting it. In a prototype game
+          it might trigger quite frequently and coils can seriously injure humans. To turn it on follow
+          :doc:`configuring_ball_search`.
+
 MPF contains ball search functionality which is used to try to dislodge a stuck
 ball if MPF thinks there's a ball loose on the playfield but it hasn't hit any
 playfield switches in awhile and the player is not holding the flipper button
