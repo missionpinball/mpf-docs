@@ -5,26 +5,34 @@ Installing MPF on a Raspberry Pi 3
 
    Raspberry Pi support is experimental at this point. Users have found various issues with audio, and we're not sure
    whether the RPi has enough power to support MPF. So this document is more like a collection of notes versus a solid
-   guide. We welcome your feedback or experience with other low-cost systems, though at this point if you're getting
-   ready for a "final" computer for your machine, we'd probably recommend building an inexpensive (<$200) Intel-based
-   system for now and running Linux or Windows.
+   guide. We welcome your feedback or experience with other low-cost systems, though at this point if you're looking for
+   a development platform, we'd probably recommend buying a more beefy x86 computer. For a "final" machine an
+   inexpensive (<$200) Intel-based system running Linux or Windows might be better suited. However, it should be
+   possible to run your final game on a RPi3 if you tune your game accordingly. For example, this would include
+   transcoding your videos to a format which can be played hardware accelerated on the RPi.
+
 
 One first word:
 Don't try to install mpf on a Raspberry Pi B+ or Raspberry zero, it just won't work or will be very slow.
-Get yourself at least a Raspberry Pi 2 or 3, they have a quad-core processor running with more than 900MHz.
+Get yourself at a Raspberry Pi 3, they have a quad-core processor running with more than 900MHz. RPi3 also has better
+audio than RPi 1 (still not perfect). An HDMI audio adapter may be worthy for better audio.
 
-One nice thing we will have afterwards is a low-cost PC which will run fast enough for mpf-mc with audio, video, antialiazing and touchscreen support.
+One nice thing we will have afterwards is a low-cost PC which will run fast enough for mpf-mc with audio, video,
+antialiazing and touchscreen support.
 
 Let's start:
 
 - get the latest Kivypie version (a minimal version without X-Server but preinstalled kivy) here:
   http://kivypie.mitako.eu/kivy-download.html
-  Many Kudos to Albert Casals and their group, since normally its a pain to install kivy on a raspberry (compiling lasts forever).
+  Many Kudos to Albert Casals and their group, since normally its a pain to install kivy on a raspberry (compiling lasts
+  forever).
 
-- depending on your development os use Win32 Diskimager, dd, Imagewriter... to write your image to the sd-card (use at least an 8 GB Card). You can find Instructions here:
+- depending on your development os use Win32 Diskimager, dd, Imagewriter... to write your image to the sd-card (use at
+  least an 8 GB Card). You can find Instructions here:
   https://www.raspberrypi.org/documentation/installation/installing-images/
 
-- insert the sd-card into your pi and boot it up (first boot does take some time since it sets some os specific parameters)
+- insert the sd-card into your pi and boot it up (first boot does take some time since it sets some os specific
+  parameters)
 
 - login with user:sysop password:posys
 
@@ -58,22 +66,27 @@ The standard /tmp "folder" is too small on pipaos, just type:
 
 to get rid of it. (It will be created automatically if needed and will have the whole space afterwards)
 
-Now run the :doc:`MPF Linux Debian installer </install/linux>`. It will install MPF, MPF-MC and all dependencies for you.
+Now run the :doc:`MPF Linux Debian installer </install/linux>`. It will install MPF, MPF-MC and all dependencies for
+you.
 
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
-Sometimes it looks like it hangs, but it does not. It will take up to half an hour, at least on a Raspberry 1 (which you should not use). Compiling is really slow on the Raspi.
+Sometimes it looks like it hangs, but it does not. It will take up to half an hour, at least on a Raspberry 1 (which
+you should not use). Compiling is really slow on the Raspi.
 
-Now copy your machine folder from your develop station or create a new one under your home directory (/home/sysop/your_machine)
+Now copy your machine folder from your develop station or create a new one under your home directory
+(/home/sysop/your_machine)
 
 If you need a file-manager start mc (No, not the mpf mediacontroller, its the midnight commander ;-))
 
-If you need to copy your folders from an usb-stick you have to manually mount it (we dont have X, so everything has to be done by hand).
+If you need to copy your folders from an usb-stick you have to manually mount it (we dont have X, so everything has to
+be done by hand).
 
 ::
 
     sudo mount /dev/sda1 /mnt
 
-This works in 90% otherwise your stick is not sda1, just look inside the /dev folder to find out which device you have to mount or type
+This works in 90% otherwise your stick is not sda1, just look inside the /dev folder to find out which device you have
+to mount or type
 
 ::
 
@@ -83,7 +96,8 @@ to list your block devices.
 
 Now you find the contents of your stick in /mnt.
 
-To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have to put this in your machine/config/config.yaml:
+To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have to put this in your
+machine/config/config.yaml:
 
 ::
 
@@ -101,7 +115,8 @@ More or less important last steps:
 Serial communication:
 ---------------------
 Linux always had and has the possibility to log in via a serial connection.
-Since all of the pinball hardware I'm aware off uses serial communication with mpf leaving this feature running is not good at all, since you will get noise from your kernel.
+Since all of the pinball hardware I'm aware off uses serial communication with mpf leaving this feature running is not
+good at all, since you will get noise from your kernel.
 The device is called /dev/ttyAMA0 and you need to stop it from starting:
 
 Type:
@@ -126,7 +141,8 @@ console=ttyAMA0,115200 kgdboc=ttyAMA0, 115200
 
 and save the file.
 
-You have the possibility to connect RS 232 devices directly to the raspi but take care, the voltage levels are 3.3V on the raspi gpio.
+You have the possibility to connect RS 232 devices directly to the raspi but take care, the voltage levels are 3.3V on
+the raspi gpio.
 Further instructions here:
 http://elinux.org/RPi_Serial_Connection
 
