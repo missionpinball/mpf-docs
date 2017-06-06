@@ -44,12 +44,12 @@ Let's start:
 
     sudo raspi-config
 
-and choose 1. Expand Filesystem to use the whole SD-Card Space, we will need it.
+and choose 7. Advanced Options -> A1. Expand Filesystem to use the whole SD-Card Space, we will need it.
 You can change your username and localization settings too.
 
 After that we will give the GPU a bit more of RAM:
 
-Go to Advanced Options/A3 Memory split
+Go to 7. Advanced Options -> A3 Memory split
 and change the value to 256.
 
 Now reboot, login and type:
