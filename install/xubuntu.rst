@@ -139,3 +139,13 @@ We'll create one of our own to run the script we just added to our machine confi
 
 That's it. At this point, you should be able to reboot and watch the system auto-login to XFCE and then launch MPF
 using the script we added to your machine config.
+
+Other Considerations
+--------------------
+
+If using the SmartMatrix RGB DMD with this setup, you need to add the system
+user running your game to the ``dialout`` group.
+
+.. code-block:: console
+
+   sudo usermod -a -G dialout your_username
