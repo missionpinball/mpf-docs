@@ -10,4 +10,4 @@ This MPF documentation was written by:
 * Jeremy Edwards (pinman2020@gmail.com)
 * Jan Kantert (jan-mission-pinball@kantert.net)
 
-Want to help with the docs? See our :doc:`contributing` page for details. It's easy!
+Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!

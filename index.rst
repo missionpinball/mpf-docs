@@ -141,7 +141,8 @@ About MPF
 
 * :doc:`/about/index`
 * :doc:`/about/authors`
-* :doc:`/about/contributing`
+* :doc:`/about/contributing_to_mpf`
+* :doc:`/about/contributing_to_mpf_docs`
 * :doc:`/about/license`
 
 Follow us
