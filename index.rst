@@ -77,7 +77,8 @@
    About this Documentation </about/index>
    FAQ </faq/index>
    Glossary </glossary/index>
-   Contributing to MPF docs</about/contributing>
+   Contributing to MPF</about/contributing_to_mpf>
+   Contributing to MPF docs</about/contributing_to_mpf_docs>
    MPF Versions </versions/index>
 
 Mission Pinball Framework |version| Documentation
