@@ -8,9 +8,9 @@ We'd love to take your contribution upstream!
 
 Found a bug which you can reproduce? Fill an issue:
 
-* `MPF Issues on github <https://github.com/missionpinball/mpf/issues>`. Use
+* `MPF Issues on github <https://github.com/missionpinball/mpf/issues>`_. Use
   this for game and platform related bugs
-* `MPF-MC Issues on github <https://github.com/missionpinball/mpf/issues>`. Use
+* `MPF-MC Issues on github <https://github.com/missionpinball/mpf/issues>`_. Use
   this for media controller bugs such as problems with slides, widgets or
   audio.
 
