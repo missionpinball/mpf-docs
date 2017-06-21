@@ -105,3 +105,23 @@ Single value, type: ``number``. Default: ``None``
 
 The width of this video, in pixels.
 
+events_when_played:
+~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this video is played. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33
+
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this video stops playing. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.  These events can
+be useful to trigger some action when a video has finished playing (like remove a slide).
