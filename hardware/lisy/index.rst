@@ -9,6 +9,22 @@ The image of LISY Version 4.x and above includes the MPF game engine.
           visit www.lisy80.com, lot of documentation is available there.
 
 
+Two ways exist to use MPF with LISY.
+
+a. Running MPF on a separate PC and connecting to LISY via network or serial (slave mode)
+   This is generally recommended during development because it is easier to work on your MPF config using this setup.
+   You may use a LCD/DMD and the MPF media controller as well.
+
+b. Running MPF on LISY directly (master mode).
+   This is useful when your game is finished and you no longer want to connect a PC.
+   Please note that the Raspberry Pi on LISY is not powerful enough to run the MPF media controller.
+
+
+See the following image for an architecture overview:
+
+.. image:: /hardware/images/lisy_mpf_overview.jpg
+
+
 In this example we will assume you have a System80 pinball 'Devils Dare', where
 the image includes a small example of configuration mpf yaml configuration files.
 
