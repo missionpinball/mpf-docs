@@ -68,6 +68,11 @@ your pinball machine.
      a simple "USB to serial" converter which you plug into the SPIKE
      main board.
 
+* :doc:`LISY <lisy/index>`
+   * *New in MPF 0.50*
+   * Gottlieb System 1
+   * Gottlieb System 80
+
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
      it's not connected to physical hardware. (This is good for working on
