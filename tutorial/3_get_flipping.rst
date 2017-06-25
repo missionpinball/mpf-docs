@@ -362,6 +362,7 @@ each platform. Here they are again:
 * :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic/index>`
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
 * :doc:`Stern SPIKE </hardware/spike/index>`
+* :doc:`LISY </hardware/lisy/index>`
 
 You only need look at those docs for the specifics parts of the config that
 vary depending on your hardware. The good news is that 99.9% of the MPF
