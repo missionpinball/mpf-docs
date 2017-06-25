@@ -6,8 +6,8 @@ can be interfaced from MPF using the LISY1 or LISY80 controller boards.
 You can run MPF on the LISY controller or on an external PC (via ethernet/wifi or serial).
 The image of LISY Version 4.x and above includes the MPF game engine.
 
-.. note:: For general installation instruction and some background information visit www.lisy80.com.
-          More documentation is available there.
+.. note:: For general installation instruction and some background information visit
+          `www.lisy80.com <http://www.lisy80.com/>`_. More documentation is available there.
 
 
 Two ways exist to use MPF with LISY:
@@ -33,9 +33,9 @@ For Gottlieb System80/80A/80B games you will have to look for a 'LISY80' board.
 In case of an System1 look for 'LISY1' and in case you have an old Bally pinball with
 an AS-2518-17 or AS-2518-35 board look for 'LISY35' which will be available in the future.
 
-.. note:: See documentation at www.lisy80.com for details. Basically you replace
-          the MPU with the LISY board. You can still play the original ROM using
-          PinMAME on LISY.
+.. note:: See documentation at `www.lisy80.com <http://www.lisy80.com/>`_ for details.
+          Basically you replace the MPU with the LISY board.
+          You can still play the original ROM using PinMAME on LISY.
 
 2. Active MPF at startup
 ------------------------
@@ -87,7 +87,8 @@ Place your MPF config in the folder "/boot/mpfcfg/xxx/" on the SD-Card (replace 
 your game number with leading zeros if it is shorter than three digits).
 For instance with Dare Devil, the game would be at "/boot/mpfcfg/018/" on the SD-Card.
 Use an SD-card reader on your PC to add the config.
-Alternatively, you could copy the files using SSH onto a running LISY controller (see www.lisy.com for details).
+Alternatively, you could copy the files using SSH onto a running LISY controller (see
+`www.lisy80.com <http://www.lisy80.com/>`_ for details).
 As noted above, we suggest you to run MPF on your PC first and copy the config over once it it working.
 This mode will not allow you to run MPF-MC (which is also not needed for the segment displays):
 
