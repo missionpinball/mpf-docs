@@ -9,7 +9,7 @@ The image of LISY Version 4.x and above includes the MPF game engine.
           visit www.lisy80.com, lot of documentation is available there.
 
 
-Two ways exist to use MPF with LISY.
+Two ways exist to use MPF with LISY:
 
 a. Running MPF on a separate PC and connecting to LISY via network or serial (slave mode)
    This is generally recommended during development because it is easier to work on your MPF config using this setup.
@@ -25,14 +25,10 @@ See the following image for an architecture overview:
 .. image:: /hardware/images/lisy_mpf_overview.jpg
 
 
-In this example we will assume you have a System80 pinball 'Devils Dare', where
-the image includes a small example of configuration mpf yaml configuration files.
+1. Replace your original MPU with LISY1/80.
+-------------------------------------------
 
-1. Replace your original MPU with LISY80.
------------------------------------------
-
-As Devils Dare is a Gottlieb System80A Game you will have to look for a 'LISY80' board.
-LISY80 supports all System80, System80A and SyStem80B games.
+For Gottlieb System80/80A/80B games you will have to look for a 'LISY80' board.
 In case of an System1 look for 'LISY1' and in case you have an old Bally pinball with
 an AS-2518-17 or AS-2518-35 board look for 'LISY35' which will be available in the future.
 
@@ -43,23 +39,62 @@ an AS-2518-17 or AS-2518-35 board look for 'LISY35' which will be available in t
 2. Active MPF at startup
 ------------------------
 
-To activate mpf at startup, instead of default pinmame, you have to put
-dip4 (Option1) and dip8 (Autostart) to 'ON' and all other dips on that switch to 'OFF'.
+To activate mpf at startup, instead of default PinMAME, you have to put
+DIP 4 (option1) and DIP 8 (autostart) to 'ON' and all other dips on that switch to 'OFF'.
+If you want to run MPF on a separate PC set DIP 6 to 'ON' for "MPF Slave Mode".
+For "MPF Master Mode" where MPF runs on the Rapsberry Pi of the LISY controller set DIP 6 to 'OFF'.
+
+.. image:: /hardware/images/lisy_mpf_overview.jpg
+
 As ususal configure your specific Game Hardware via Switch 'S2'.
-In our example, for Devils Dare which is internal number'18', this means you have to
-configure S2 dip2 & dip5 to 'ON' and all others to 'OFF' (binary coding of decimal 18)
+For instance, for Devils Dare, which is internal number '18', set S2 DIP 2 and
+DIP 5 to 'ON' and all others to 'OFF' (binary coding of decimal 18).
 
-3. Add MPF config to SD Card
-----------------------------
+2a. Connect your PC running MPF to LISY via network or serial (only needed for MPF Slave Mode)
+----------------------------------------------------------------------------------------------
 
-As with internal number '18', the mpf configuration has to be placed in the folder
-"/boot/mpfcfg/018/" on the SD-Card. For this example you can run with the exisitng
-example yaml files or edit them within Windows (mount SD card) or within Linux.
-For Linux the systen can be accessed via network or via the serial console, again please have
-a look at the existing documentation at www.lisy80.com.
+You can connect the Raspberry Pi via USB to your PC to use the serial port.
+In that case add the following config to your machine:
 
-4. Power up
------------
+.. code-block:: yaml
+
+  hardware:
+    platform: lisy
+
+  lisy:
+    connection: serial
+    port: com1               # replace this with your com port
+    baud: 115200
+
+Alternatively, if you connect LISY via ethernet or WiFi use this config:
+
+.. code-block:: yaml
+
+  hardware:
+    platform: lisy
+
+  lisy:
+    connection: network
+    network_port: 5963
+    network_host: a.b.c.d    # replace this with the IP of LISY
+
+
+2b. Add MPF config to SD Card (only needed for MPF Master Mode)
+---------------------------------------------------------------
+
+Place your MPF config in the folder "/boot/mpfcfg/xxx/" on the SD-Card (replace xxx with
+your game number with leading zeros if it is shorter than three digits).
+For instance with Dare Devil, the game would be at "/boot/mpfcfg/018/" on the SD-Card.
+Use an SD-card reader on your PC to add the config.
+Alternatively, you could copy the files using SSH onto a running LISY controller (see www.lisy.com for details).
+As noted above, we suggest you to run MPF on your PC first and copy the config over once it it working.
+
+3. Power up LISY
+----------------
 
 Power up your system and enjoy.
 
+3a. Start MPF (only needed for MPF Slave Mode)
+----------------------------------------------
+
+Start MPF on you PC. Optionally
