@@ -1,12 +1,13 @@
 How to use MPF with Gottlieb System 1 or 80 machines
 ====================================================
 
-Starting with MPF 0.50, Gottlieb System 1 and 80 can be interfaced using the LISY1 or LISY80 platform.
+Starting with MPF 0.50 and LISY firmware version 4.02, Gottlieb System 1 and 80 machines
+can be interfaced from MPF using the LISY1 or LISY80 controller boards.
 You can run MPF on the LISY controller or on an external PC (via ethernet/wifi or serial).
 The image of LISY Version 4.x and above includes the MPF game engine.
 
-.. note:: For general installation instruction and some background information FIRST
-          visit www.lisy80.com, lot of documentation is available there.
+.. note:: For general installation instruction and some background information visit www.lisy80.com.
+          More documentation is available there.
 
 
 Two ways exist to use MPF with LISY:
