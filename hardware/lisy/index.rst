@@ -45,7 +45,7 @@ DIP 4 (option1) and DIP 8 (autostart) to 'ON' and all other dips on that switch 
 If you want to run MPF on a separate PC set DIP 6 to 'ON' for "MPF Slave Mode".
 For "MPF Master Mode" where MPF runs on the Rapsberry Pi of the LISY controller set DIP 6 to 'OFF'.
 
-.. image:: /hardware/images/lisy_mpf_overview.jpg
+.. image:: /hardware/images/LISY_modes.png
 
 As ususal configure your specific Game Hardware via Switch 'S2'.
 For instance, for Devils Dare, which is internal number '18', set S2 DIP 2 and
