@@ -89,6 +89,7 @@ For instance with Dare Devil, the game would be at "/boot/mpfcfg/018/" on the SD
 Use an SD-card reader on your PC to add the config.
 Alternatively, you could copy the files using SSH onto a running LISY controller (see www.lisy.com for details).
 As noted above, we suggest you to run MPF on your PC first and copy the config over once it it working.
+This mode will not allow you to run MPF-MC (which is also not needed for the segment displays):
 
 3. Power up LISY
 ----------------
@@ -98,4 +99,4 @@ Power up your system and enjoy.
 3a. Start MPF (only needed for MPF Slave Mode)
 ----------------------------------------------
 
-Start MPF on you PC. Optionally
+Start MPF on you PC. Optionally start MPF-MC (if you want to use an additional DMD or LCD).
