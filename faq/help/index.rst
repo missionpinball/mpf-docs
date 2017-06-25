@@ -5,12 +5,12 @@ Where can I go for help?
 ------------------------
 
 If you're stuck with something, feel free to post to the
-`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`.
+`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_.
 
 I think I've found a bug. Now what?
 -----------------------------------
 
-Again, post it to the `MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`.
+Again, post it to the `MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_.
 
 I want MPF to work with a new piece of hardware
 -----------------------------------------------
@@ -22,5 +22,5 @@ The easiest way to understand how these work is to look through the code for the
 This code is in the `platforms folder in MPF <https://github.com/missionpinball/mpf/tree/dev/mpf/platforms>`_.
 
 As always, if you have questions, please post them to the
-`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>` and we'll go from there!
+`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there!
 
