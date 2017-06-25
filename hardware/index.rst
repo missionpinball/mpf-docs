@@ -129,6 +129,7 @@ MPF supports:
    pololu_maestro/index
    SmartMatrix RGB DMD <smartmatrix/index>
    eli_dmd/index
+   Gottlieb System 1/80 (LISY) <lisy/index>
    existing_machines/index
    virtual/index
 
