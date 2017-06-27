@@ -249,10 +249,10 @@ To to this, run the following:
 
 ::
 
-  pip install mpf-mc --upgrade
+  pip install mpf mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
-MPF MC (and any of its requirements, like MPF). If newer versions are found, it
+MPF and MPF MC (and any new requirements). If newer versions are found, it
 will download and install them.
 
 Next steps!
