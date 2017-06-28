@@ -42,6 +42,9 @@ an AS-2518-17 or AS-2518-35 board look for 'LISY35' which will be available in t
           Basically you replace the MPU with the LISY board.
           You can still play the original ROM using PinMAME on LISY.
 
+
+.. image:: /hardware/images/lisy80_board.jpg
+
 2. Active MPF at startup
 ------------------------
 
