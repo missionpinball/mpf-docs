@@ -1,24 +1,29 @@
 How to use MPF with Gottlieb System 1 or 80 machines
 ====================================================
 
-Starting with MPF 0.50 and LISY firmware version 4.02, Gottlieb System 1 and 80 machines
-can be interfaced from MPF using the LISY1 or LISY80 controller boards.
-You can run MPF on the LISY controller or on an external PC (via ethernet/wifi or serial).
-The image of LISY Version 4.x and above includes the MPF game engine.
+.. versionadded:: 0.50
 
-.. note:: For general installation instruction and some background information visit
-          `www.lisy80.com <http://www.lisy80.com/>`_. More documentation is available there.
+MPF can directly control Gottlieb System 1 or System 80 machines via the
+LISY1 or LISY80 controller boards (with firmware 4.02+).
 
+.. note:: For general installation instruction and some background information on
+   the LISY hardware platform, visit `www.lisy80.com <http://www.lisy80.com/>`_.
 
-Two ways exist to use MPF with LISY:
+There are two ways this can be done:
 
-a. Running MPF on a separate PC and connecting to LISY via network or serial (slave mode)
-   This is generally recommended during development because it is easier to work on your MPF config using this setup.
-   You may use a LCD/DMD and the MPF media controller as well.
+a. Run MPF on a standalone PC which connects to the LISY hardware operating in
+   "slave" mode via Ethernet, WiFi, or serial. This is generally recommended during
+   development since it's easier to work on your MPF config using your own computer.
+   You can also use this configuration if you want to add an LCD or DMD to the older
+   Gottlieb machine.
 
-b. Running MPF on LISY directly (master mode).
-   This is useful when your game is finished and you no longer want to connect a PC.
-   Please note that the Raspberry Pi on LISY is not powerful enough to run the MPF media controller.
+b. Run MPF on the LISY hardware directly ("master" mode). (Technically MPF is running
+   on the LISY controller's Raspberry Pi Zero.) This option is nice when your game
+   is finished and you no longer want to connect a PC. Note that the Raspberry Pi on
+   the LISY is not powerful enough to run the MPF media controller, so this option is
+   really only valid for simpler, segment display type games. If you want to run a full
+   LCD or DMD, then just run MPF on a separate computer (which can still be small and
+   inside your machine) and connect to the LISY controller via Option (a) above.
 
 
 See the following image for an architecture overview:
