@@ -11,10 +11,9 @@ playfields:
 
 .. overview
 
-The ``playfields:`` section of your config is where you...
-
-.. todo::
-   Add description.
+The ``playfields:`` section of your config is where you configure your playfields in your machine.
+You can have multiple playfields and MPF will track balls per playfield.
+One playfield should contain the tag `default` so that the game knows which playfield to use.
 
 Optional settings
 -----------------
