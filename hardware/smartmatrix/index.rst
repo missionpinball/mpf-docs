@@ -193,20 +193,33 @@ Windows, you can just open Device Manager and see which port appears when you
 plug in the Teensy.
 
 On Mac or Linux, open up the terminal window and type the following command:
-``ls /dev/tty.*``  The output of this command will look something like this:
+``ls /dev/tty.*``  The output of this command will look something like this
+on Mac:
 
 ::
 
-   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+   /dev/tty.Bluetooth-Incoming-Port
+   /dev/tty.usbmodem1448891
+   
+Or this on linux:
 
-The port will be the one that has "usbmodem" in the name. (But the actual
-number might be different on your system.) You can run this command with the
+::
+
+   /dev/ttyUSB0
+   /dev/ttyACM0
+
+The port will be the one that has "usbmodem" in the name on Mac. On Linux it
+will probably be ttyUSBx or ttyACMx. (The actual number will likely be
+different on your system.) You can run this command with the
 Teensy unplugged, then plug it in, then run the command again, and see which
 port appears.
 
 So on Windows, you'll end up with something like:
 
 ::
+
+    hardware:
+        rgb_dmd: smartmatrix
 
     smartmatrix:
         port: com12
@@ -216,6 +229,9 @@ So on Windows, you'll end up with something like:
 And on Mac or Linux, it will look something like:
 
 ::
+
+    hardware:
+        rgb_dmd: smartmatrix
 
     smartmatrix:
         port: /dev/tty.usbmodem1448891
