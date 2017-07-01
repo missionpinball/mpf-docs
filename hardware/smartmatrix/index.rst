@@ -41,13 +41,19 @@ The following diagram shows how all the components fit together:
 This solution is very much a "home brew" solution that will require
 you to buy a lot of parts from various sources.
 
+Alternatively, FAST pinball also offers a RGB DMD which contains
+controller, panels and mounting brackets (ask them directly since it
+is not currently listed on their website). If you go with this solution
+skip steps 1 to 3. You still need a power supply (step 4).
+
 (1) The Panels
 ~~~~~~~~~~~~~~
 
 We originally had to buy the panels directly from China via AliExpress,
-but now `FAST Pinball sells a kit for $99 <https://squareup.com/store/fast-pinball-llc/item/rgb-dmd-panel-mounting-bracket-kit>`_.
+but now FAST Pinball sells a kit. 
 The FAST Pinball option is nice because the price is great and
-they also include a mounting bracket that fits a standard DMD cutout.
+they also include a mounting bracket that fits a standard DMD cutout
+(ask them directly since it is not currently listed on their website).
 
 If you buy the panels yourself on AliExpress, you'll pay about
 the same price for just the panels, you won't have a mounting bracket,
