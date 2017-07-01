@@ -225,6 +225,8 @@ And on Mac or Linux, it will look something like:
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
 example above. These are the settings that are needed for the SmartMatrix.
+If you are using the FAST DMD board set ``old_cookie`` to false and baud to
+`3000000`.
 
 3. Add a physical RGB DMD device entry
 --------------------------------------
