@@ -9,7 +9,10 @@ To enable ball search set `enable_ball_search` to True for your playfield(s). In
      playfield:
        enable_ball_search: True
 
-You can further configure ball search per :doc:`playfield </config/playfields>`. Most devices allow you to configure
+Ball search will run in multiple phases with increasing intensity (phase 1 to 3) and give up afterwards.
+You can further configure ball search per :doc:`playfield </config/playfields>`.
+
+Coils are included indirectly using their devices. Most devices allow you to configure
 their order in ball search using the `ball_search_order` attribute (see the
 :doc:`example ball_search </examples/ball_search/index>`). By default flippers are not included in ball search.
 However, you might want to enable it for upper playfield flippers:
@@ -24,3 +27,5 @@ However, you might want to enable it for upper playfield flippers:
 
 Make sure to include the tag `playfield_active` in all playfield switches which are not bound to devices. For instance
 do not put that tag into your plunger switch but put it to target, inlane and outlane switches.
+
+If you want to pulse a standalone coil which is not bound to any device, you can use pulse_events on ball_search_phase_x_searches (replace x with phase 1 to 3).
