@@ -10,6 +10,8 @@ To enable ball search set `enable_ball_search` to True for your playfield(s). In
        enable_ball_search: True
 
 Ball search will run in multiple phases with increasing intensity (phase 1 to 3) and give up afterwards.
+To change the timeout before ball search starts when no ball was seen by MPF, change `ball-search-timeout`.
+Similarly, `ball-search-interval` determines the delay between coil fires during search.
 You can further configure ball search per :doc:`playfield </config/playfields>`.
 
 Coils are included indirectly using their devices. Most devices allow you to configure
