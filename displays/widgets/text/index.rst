@@ -49,18 +49,13 @@ type: text
 Tells MPF that this is a text widget. This setting is required when using text
 widgets.
 
-Your text can contain placeholders which will be replaced and updated when the text is shown.
-Use `(param)` to replace the parameters of the event which triggers the show (usually you do not want to use this).
-Player vars from the current player can be accessed using `(player|var)` (e.g. `(player|score)` or `(player|ball)`).
-Furthermore, you can target a specific player using `(playerX|var)` where X is the player number starting at 1.
-To display machine variables use `(machine|var)` (e.g. `(machine|credit_string)`).
-
 text:
 ~~~~~
 
 This value is required. If you don't want text, use ""
 
-Link to dynamic text and text strings
+Your text can contain placeholders as described in :doc:`dynamic text </displays/widgets/text/text_dynamic>`.
+
 
 font_name:
 ~~~~~~~~~~
