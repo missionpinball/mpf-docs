@@ -28,6 +28,7 @@
    Game Logic </game_logic/index>
    Media Controllers & MPF-MC </mc/index>
    Displays & Graphics</displays/index>
+   Segment Displays</segment_diplays/index>
    Sound</sound/index>
    Shows </shows/index>
    Assets </assets/index>
