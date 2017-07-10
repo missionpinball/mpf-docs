@@ -91,9 +91,9 @@ way to actually hearing some sound!
 ----------------------------------------
 
 You probably don't need much assistance with this obvious step, but let's go through the process
-anyway just in case.  As of version 0.30, MPF supports .wav (Wave) and .ogg (Ogg Vorbis) audio
-files (we hope to add other formats in future releases such as .mp3 and .flac).  Locate some
-supported audio files and place them in the appropriate track folders that you created in the
+anyway just in case.  As of version 0.33, MPF supports 16-bit .wav (Wave), .ogg (Ogg Vorbis), and
+.flac (FLAC) audio files (we hope to add other formats in future releases such as .mp3).  Locate
+some supported audio files and place them in the appropriate track folders that you created in the
 previous step (a good site to find free public domain sounds is
 `www.freesound.org <http://www.freesound.org/>`_). Put all music files in the ``music`` folder,
 voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx`` folder.

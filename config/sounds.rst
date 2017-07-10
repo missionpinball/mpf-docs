@@ -17,6 +17,8 @@ single sound you want to use, rather, you only need to add individual assets to 
 that have settings which different from other assets in that asset's folder. (This section is part
 of the MPF media controller and only available if you're using MPF-MC for your media controller.)
 
+MPF-MC currently supports 16-bit Wave (.wav), Ogg Vorbis (.ogg), and FLAC (.flac) files.
+
 Here's an example:
 
 ::
