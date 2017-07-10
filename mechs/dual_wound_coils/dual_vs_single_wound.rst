@@ -127,7 +127,7 @@ So far both options (EOS and non-EOS) we discussed use dual-wound coils with
 power and hold windings.
 
 However there's a third option that some modern machines use as well. The third
-option is to use more traditional (e.g. "single wound") coils for your that do
+option is to use more traditional (e.g. "single wound") coils for your machine that do
 not have the dual "power" and "hold" windings.
 
 Of course you might be thinking, "How does that work? Wouldn't the coil

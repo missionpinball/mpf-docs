@@ -41,13 +41,19 @@ The following diagram shows how all the components fit together:
 This solution is very much a "home brew" solution that will require
 you to buy a lot of parts from various sources.
 
+Alternatively, FAST pinball also offers a RGB DMD which contains
+controller, panels and mounting brackets (ask them directly since it
+is not currently listed on their website). If you go with this solution
+skip steps 1 to 3. You still need a power supply (step 4).
+
 (1) The Panels
 ~~~~~~~~~~~~~~
 
 We originally had to buy the panels directly from China via AliExpress,
-but now `FAST Pinball sells a kit for $99 <https://squareup.com/store/fast-pinball-llc/item/rgb-dmd-panel-mounting-bracket-kit>`_.
+but now FAST Pinball sells a kit. 
 The FAST Pinball option is nice because the price is great and
-they also include a mounting bracket that fits a standard DMD cutout.
+they also include a mounting bracket that fits a standard DMD cutout
+(ask them directly since it is not currently listed on their website).
 
 If you buy the panels yourself on AliExpress, you'll pay about
 the same price for just the panels, you won't have a mounting bracket,
@@ -193,20 +199,33 @@ Windows, you can just open Device Manager and see which port appears when you
 plug in the Teensy.
 
 On Mac or Linux, open up the terminal window and type the following command:
-``ls /dev/tty.*``  The output of this command will look something like this:
+``ls /dev/tty.*``  The output of this command will look something like this
+on Mac:
 
 ::
 
-   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+   /dev/tty.Bluetooth-Incoming-Port
+   /dev/tty.usbmodem1448891
+   
+Or this on linux:
 
-The port will be the one that has "usbmodem" in the name. (But the actual
-number might be different on your system.) You can run this command with the
+::
+
+   /dev/ttyUSB0
+   /dev/ttyACM0
+
+The port will be the one that has "usbmodem" in the name on Mac. On Linux it
+will probably be ttyUSBx or ttyACMx. (The actual number will likely be
+different on your system.) You can run this command with the
 Teensy unplugged, then plug it in, then run the command again, and see which
 port appears.
 
 So on Windows, you'll end up with something like:
 
 ::
+
+    hardware:
+        rgb_dmd: smartmatrix
 
     smartmatrix:
         port: com12
@@ -217,6 +236,9 @@ And on Mac or Linux, it will look something like:
 
 ::
 
+    hardware:
+        rgb_dmd: smartmatrix
+
     smartmatrix:
         port: /dev/tty.usbmodem1448891
         baud: 2500000
@@ -225,6 +247,8 @@ And on Mac or Linux, it will look something like:
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
 example above. These are the settings that are needed for the SmartMatrix.
+If you are using the FAST DMD board set ``old_cookie`` to false and baud to
+`3000000`.
 
 3. Add a physical RGB DMD device entry
 --------------------------------------

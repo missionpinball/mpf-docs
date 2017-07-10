@@ -68,6 +68,11 @@ your pinball machine.
      a simple "USB to serial" converter which you plug into the SPIKE
      main board.
 
+* :doc:`LISY <lisy/index>`
+   * *New in MPF 0.50*
+   * Gottlieb System 1
+   * Gottlieb System 80
+
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
      it's not connected to physical hardware. (This is good for working on
@@ -118,6 +123,7 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
+   Gottlieb System 1 / System 80 (LISY) <lisy/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index

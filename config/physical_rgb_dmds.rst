@@ -11,7 +11,7 @@ physical_rgb_dmds:
 
 .. versionchanged:: 0.31
 
-The ``physical_rgb_dmd:`` section of your machine config is where you configure
+The ``physical_rgb_dmds:`` section of your machine config is where you configure
 the settings for a physical RGB DMD (dot matrix display). You only need this
 section if you have a RGB DMD connected via USB. If you have an mono DMD,
 configure that in the :doc:`physical_dmds` section.

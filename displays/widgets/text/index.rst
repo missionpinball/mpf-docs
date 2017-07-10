@@ -54,7 +54,8 @@ text:
 
 This value is required. If you don't want text, use ""
 
-Link to dynamic text and text strings
+Your text can contain placeholders as described in :doc:`dynamic text </displays/widgets/text/text_dynamic>`.
+
 
 font_name:
 ~~~~~~~~~~
