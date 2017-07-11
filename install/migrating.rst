@@ -5,9 +5,9 @@ Upgrading MPF to the latest version
 -----------------------------------
 This is covered in the relevant install sections:
 
- * Linux: :doc:`</install/linux#keeping-mpf-up-to-date>`_
- * Windows: :doc:`</install/windows#keeping-mpf-up-to-date>`_
- * Mac: :doc:`</install/mac#keeping-mpf-up-to-date>`_
+ * Linux: `<linux#keeping-mpf-up-to-date>`_
+ * Windows: `<windows#keeping-mpf-up-to-date>`_
+ * Mac: `<mac#keeping-mpf-up-to-date>`_
 
 If you are upgrading from 0.21 (or earlier) you need to install Python 3 (as explained in the installation section for your platform).
 
