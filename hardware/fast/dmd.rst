@@ -4,7 +4,7 @@ How to configure mono/traditional DMD (FAST Pinball)
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/physical_dmds`                                                 |
+| :doc:`/config/dmds`                                                          |
 +------------------------------------------------------------------------------+
 
 The FAST WPC and Core controllers can drive traditional single-color
@@ -31,7 +31,7 @@ See the :doc:`config` guide for details.
 Once you have your hardware and port set, you need to create the actual device
 entry for the DMD.
 
-You do this in the ``physical_dmds:`` section of the machine config. This
+You do this in the ``dmds:`` section of the machine config. This
 section is like the other common sections (switches, coils, etc.) where you
 enter the name(s) of your device(s), and then under each one, you enter its
 settings.
@@ -40,11 +40,11 @@ settings.
 physical DMD.)
 
 To do this, create a section in your machine-wide config called
-``physical_dmds:``, and then pick a name for the DMD, like this:
+``dmds:``, and then pick a name for the DMD, like this:
 
 ::
 
-    physical_dmds:
+    dmds:
       my_dmd:
          shades: 16
 
@@ -60,7 +60,7 @@ modern games will probably be 16 shades, but you can do 4 (or even 2) if you
 want an old school look.
 
 There are lots more options for the physical_dmd: section than just the
-"shades" option listed here. Check the :doc:`/config/physical_dmds` for a list
+"shades" option listed here. Check the :doc:`/config/dmds` for a list
 of all the options.
 
 Note that one option you do NOT have for physical DMDs is the color. That's
@@ -123,7 +123,7 @@ on the window and slide settings used in this machine config.
       height: 200
       title: Mission Pinball Framework
 
-    physical_dmds:
+    dmds:
       my_dmd:
          brightness: 1.0
 

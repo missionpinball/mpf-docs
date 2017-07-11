@@ -6,7 +6,7 @@ How to configure a "SmartMatrix" RGB LED DMD
 +==============================================================================+
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
-| :doc:`/config/physical_rgb_dmds`                                             |
+| :doc:`/config/rgb_dmds`                                                      |
 +------------------------------------------------------------------------------+
 | :doc:`/config/smartmatrix`                                                   |
 +------------------------------------------------------------------------------+
@@ -23,7 +23,7 @@ that's using FAST Pinball, P-ROC/P3-ROC, or OPP controller hardware.
 MPF supports several different types of RGB DMDs, and the SmartMatrix is just
 one of the options. More information about this type of display and other
 options that MPF supports is available in the
-:doc:`/displays/display/physical_rgb_dmd` documentation.
+:doc:`/displays/display/rgb_dmd` documentation.
 
 Here's an image of the SmartMatrix RGB DMD in action:
 
@@ -257,7 +257,7 @@ Once you have your SmartMatrix hardware platform set, you need to create the
 actual device entry for the RGB DMD and map it back to the SmartMatrix
 platform.
 
-You do this in the ``physical_rgb_dmds:`` section of the machine config. This
+You do this in the ``rgb_dmds:`` section of the machine config. This
 section is like the other common sections (switches, coils, etc.) where you
 enter the name(s) of your device(s), and then under each one, you enter its
 settings.
@@ -266,16 +266,16 @@ settings.
 physical DMD.)
 
 To do this, create a section in your machine-wide config called
-``physical_rgb_dmds:``, and then pick a name for the DMD, like this:
+``rgb_dmds:``, and then pick a name for the DMD, like this:
 
 ::
 
-    physical_rgb_dmds:
+    rgb_dmds:
       my_dmd:
          platform: smartmatrix
          brightness: .17
 
-There are several settings you can enter here. (See the :doc:`/config/physical_rgb_dmds`
+There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
 for details.) The only one you need to have is ``platform: smartmatrix`` which
 tells MPF that this RGB DMD should use the SmartMatrix hardware interface you
 configured in the previous step. (Otherwise if you don't specify a platform, it
@@ -332,7 +332,7 @@ When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
 connect to the Teensy.
 
-Note that the :doc:`/displays/display/physical_rgb_dmd` guide has more details
+Note that the :doc:`/displays/display/rgb_dmd` guide has more details
 on the window and slide settings used in this machine config.
 
 ::
@@ -356,7 +356,7 @@ on the window and slide settings used in this machine config.
       baud: 2500000
       old_cookie: true
 
-    physical_rgb_dmds:
+    rgb_dmds:
       my_dmd:
          brightness: .2
          platform: smartmatrix

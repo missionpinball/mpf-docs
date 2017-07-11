@@ -33,8 +33,8 @@ of 1.0 for mono DMDs since some of the hardware controllers do their own
 internal gamma correction, though others don't, so you might have to change
 them.
 
-We recommend you read the documentation for the :doc:`/config/physical_dmds`,
-:doc:`/config/physical_rgb_dmds`, and :doc:`/config/color_correction_profiles`
+We recommend you read the documentation for the :doc:`/config/dmds`,
+:doc:`/config/rgb_dmds`, and :doc:`/config/color_correction_profiles`
 (for LEDs) to set the proper gamma.
 
 Tuning your DMD gamma
@@ -59,7 +59,7 @@ you'll also have to add ``target: dmd`` or whatever you use to target slides
 to your DMD.)
 
 Now you can play with different gamma settings for your DMD in either your
-``physical_dmds:`` or ``physical_rgb_dmds:`` section. (Note you'll have to
+``dmds:`` or ``rgb_dmds:`` section. (Note you'll have to
 restart MPF after each change you make.)
 
 Note that you might also have to adjust ``brightness:`` along with ``gamma:``.

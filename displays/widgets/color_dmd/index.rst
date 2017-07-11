@@ -12,7 +12,7 @@ This is how you get a "Color DMD" look on your LCD display. (The :doc:`/displays
 guide walks you through that.)
 
 Note that the Color DMD Widget really is unrelated to whether you have a
-:doc:`physical RGB DMD </displays/display/physical_rgb_dmd>` in your machine. (Though
+:doc:`physical RGB DMD </displays/display/rgb_dmd>` in your machine. (Though
 if you do have a physical DMD, you can add a Color DMD widget to a slide in your
 on-screen window to see the Color DMD when you're running your machine in virtual mode.)
 

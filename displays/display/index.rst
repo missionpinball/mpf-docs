@@ -82,7 +82,7 @@ display type you want to use in your machine.
    :maxdepth: 1
 
    lcd
-   physical_mono_dmd
-   physical_rgb_dmd
+   dmd
+   rgb_dmd
    adding_dot_look_to_lcd
    alpha_numeric

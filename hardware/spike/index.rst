@@ -108,7 +108,7 @@ DMD
 ~~~
 
 We haven't added support for the red DMDs from SPIKE v1 machines. If
-you want a DMD today, you can add a standalone :doc:`RGB DMD </displays/display/physical_rgb_dmd>`
+you want a DMD today, you can add a standalone :doc:`RGB DMD </displays/display/rgb_dmd>`
 which will fit right into the position of the old DMD, or you can
 replace the DMD/speaker panel in your SPIKE machine with an LCD display
 which you can run from the HDMI output of your computer running MPF.

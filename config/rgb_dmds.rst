@@ -1,5 +1,5 @@
-physical_rgb_dmds:
-==================
+rgb_dmds:
+=========
 
 *Config file section*
 
@@ -9,15 +9,16 @@ physical_rgb_dmds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-The ``physical_rgb_dmds:`` section of your machine config is where you configure
-the settings for a physical RGB DMD (dot matrix display). You only need this
-section if you have a RGB DMD connected via USB. If you have an mono DMD,
-configure that in the :doc:`physical_dmds` section.
+The ``rgb_dmds:`` section of your machine config is where you configure
+the settings for physical RGB DMDs (dot matrix displays). You only need this
+section if you have a RGB DMD connected via USB. If you have a mono DMD,
+configure that in the :doc:`dmds` section.
 
 If you want to show a virtual RGB DMD in an on-screen window, you configure that
-as a Color DMD widget, not here.
+as a display widget with a dot filter. You don't need to use this ``rgb_dmds:`` section
+to do that.
 
-Note that there are no *height* and *width* settings here. The pixel size of
+Note there are no *height* and *width* settings here. The pixel size of
 your DMD is determined by the size of the ``source:`` display which drives the
 content for this DMD.
 
@@ -25,22 +26,22 @@ Here's an example:
 
 .. code-block:: yaml
 
-displays:
-  dmd:
-    width: 128
-    height: 32
+   displays:
+     dmd:
+       width: 128
+       height: 32
 
-physical_rgb_dmds:
-  smartmatrix:  # name of this DMD which can be whatever you want
-    brightness: .5
-    fps: 25
-    gamma: 2.5
+   rgb_dmds:
+     smartmatrix:  # name of this DMD which can be whatever you want
+       brightness: .5
+       fps: 25
+       gamma: 2.5
 
-Note that this section is called ``physical_rgb_dmds:`` (plural). Just like
+Note that this section is called ``rgb_dmds:`` (plural). Just like
 "switches" and "coils" and most everything else in MPF, this is a section that
 contains all your DMDs. Now since this is a DMD, you probably only have one,
 (though MPF can support as many as you want), but it's important to note that
-you add a ``physical_rgb_dmds:`` section to your config, then under that you
+you add a ``rgb_dmds:`` section to your config, then under that you
 add an entry for a specific DMD (which can be whatever you want), and then
 you enter one or more of the following settings:
 

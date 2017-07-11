@@ -49,6 +49,7 @@ indicated which type of config file it's valid in.
    credits: <credits>
    displays: <displays>
    diverters: <diverters>
+   dmds: <dmds>
    drop_target_banks: <drop_target_banks>
    drop_targets: <drop_targets>
    dual_wound_coils: <dual_wound_coils>
@@ -102,8 +103,6 @@ indicated which type of config file it's valid in.
    p_roc: <p_roc>
    p_roc_coil_overwrites: <p_roc_coil_overwrites>
    p_roc_coils: <p_roc_coils>
-   physical_dmds: <physical_dmds>
-   physical_rgb_dmds: <physical_rgb_dmds>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
@@ -112,6 +111,7 @@ indicated which type of config file it's valid in.
    queue_event_player: <queue_event_player>
    queue_relay_player: <queue_relay_player>
    random_event_player: <random_event_player>
+   rgb_dmds: <rgb_dmds>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
    scoring: <scoring>
