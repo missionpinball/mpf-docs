@@ -18,4 +18,4 @@ This event could be a switch hit (i.e. for `s_your_switch` use the event `s_your
 
 Furthermore, you can add or set any other player or machine variable.
 Placeholders are available as well.
-See the :doc:`example config </examples/scoring/index.html>` for working examples.
+See the :doc:`example config </examples/scoring/index>` for working examples.
