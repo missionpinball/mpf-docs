@@ -11,6 +11,7 @@ Scoring is commonly used to score points for the current player when a certain e
 This event could be a switch hit (i.e. for `s_your_switch` use the event `s_your_switch_active`).
 
 .. code-block:: yaml
+
   scoring:
     s_your_switch_active:
       score: 100
