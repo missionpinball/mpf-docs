@@ -305,7 +305,7 @@ To to this, run the following:
 
 ::
 
-  pip3 install mpf-mc --upgrade
+  pip3 install mpf mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
 MPF MC (and any of its requirements, like MPF). If newer versions are found, it
