@@ -9,13 +9,9 @@ These docs are hosted by Read the Docs at <http://docs.missionpinball.org>.
 You can also download PDF, HTML, and Epub versions. You can also clone
 the repo and build them yourself with Sphinx.
 
-The "latest" branch of these docs corresponds to the latest branch of
-MPF, (typically "dev"), though you can use the latest docs for any
+The "latest" branch of these docs corresponds to the latest released branch
 recent version of MPF. (We note which features have been added, changed,
 and removed as needed.)
-
-There are also version-specific branches of mpf-docs for all released
-versions of MPF.
 
 These docs are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 MPF and all code licensed [MIT](https://opensource.org/licenses/MIT).
