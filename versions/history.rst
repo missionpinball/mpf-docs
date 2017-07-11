@@ -12,13 +12,56 @@ Currently in Dev, plan in time for Chicago Pinball Expo October 2017
 
 New Features
 
-* TBD
+* Consolidated LEDs, matrix lights, GI, and flashers into a single "light" device. Much cleaner, less code,
+  and unified features across all light types.
+* Added RGBA color support (RGB colors plus an alpha channel)
+* Added LISY hardware platform support (for Gottlieb System 1 and System 80 machines)
+* Added MyPinballs 7 segment display support
+* Added segmented displays
+* Added "remote" platform
+* Added Raspberry Pi as a platform
+* Added stepper motor device
+* Added Trinamics Steprocker platform
+* Support fuzz testing
+* Added drop target PSU support
+* Improved and broke out game lifecycle events (will start, starting, started, etc.) for game, ball, and turn starts
+  and stops.
+* Made many more settings "templatable"
+* Logging to syslog
+* Cleaned up and simplified shots
+* Added Text UI
+
+* Added replay credits
+* Added developer documentation website (developer.missionpinball.org)
+* Added support for custom named colors
+
+Bug fixes & code improvements
+
+* Much more type checking
+* Improved logic around how playfields are marked active
+* Improved how device monitors work
+* Improved and added config template values
+* Improved multiball locks
+* Improved machine variable internals
+* Improved Stern SPIKE platform
+* Refactored mode device loading, config validation, and config player loading
+* Improved high score mode
 
 .. rubric:: MPF-MC
 
 New Features
 
-* TBD
+* Major display refactoring
+* Bitmap fonts
+* Relative animation values
+* Added widget rotation & scale animations
+* Animation values respect initial anchor points
+* Simplified, consolidated, & unified DMD, color DMD, and slide frame widgets
+
+Bug fixes & code improvements
+
+* Animation steps can be run simultaneously
+* Bail out when a video codec is missing
 
 0.33
 ----
