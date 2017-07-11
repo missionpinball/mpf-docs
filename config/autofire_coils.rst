@@ -95,8 +95,6 @@ for details.
 disable_events:
 ~~~~~~~~~~~~~~~
 
-.. versionchanged:: 0.32
-
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -154,16 +152,12 @@ ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Numeric value, default is ``100``
 
-.. versionadded:: 0.33
-
 A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
 checked first. Set to ``0`` if you do not want this device to be included in the ball search.
 See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 playfield:
 ~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

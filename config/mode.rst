@@ -201,6 +201,5 @@ attract mode starts again.
 game_mode:
 ~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 TODO

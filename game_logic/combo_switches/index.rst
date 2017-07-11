@@ -7,7 +7,6 @@ Combo Switches ("flipper cancel", etc.)
 | :doc:`/config/combo_switches`                                                |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.32
 
 .. contents::
    :local:

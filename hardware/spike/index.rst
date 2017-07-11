@@ -1,8 +1,6 @@
 How to use MPF with Stern SPIKE / SPIKE 2 machines
 ==================================================
 
-.. versionadded:: 0.33
-
 If you haven't done so already, be sure to read the :doc:`/start/index` page
 to understand how MPF talks to physical pinball machines in general.
 

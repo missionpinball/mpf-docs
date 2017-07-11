@@ -3,8 +3,6 @@ achievement_groups:
 
 *Config file section*
 
-.. versionadded:: 0.32
-
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
@@ -58,8 +56,6 @@ individual achievements are rotated in via the ``rotate_right_events:`` and/or
 allow_selection_change_while_disabled:
 --------------------------------------
 
-.. versionadded:: 0.33
-
 Boolean (yes/no or true/false) setting. Default is ``False``.
 
 Controls whether the currently selected achievement can be changed when the
@@ -68,8 +64,6 @@ random events will have no effect when the group is disabled.
 
 auto_select:
 ~~~~~~~~~~~~
-
-.. versionadded:: 0.32.3
 
 Boolean (yes/no or true/false) setting. Default is ``False``.
 
@@ -81,8 +75,6 @@ from all the achievements in the "enabled" states (and the "stopped" states if
 disable_while_achievement_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32.3
-
 Boolean (yes/no or true/false) setting. Default is ``True``.
 
 If True, this achievement will automatically disable itself when any of its
@@ -93,8 +85,6 @@ process for the next achievement.
 
 enable_while_no_achievement_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.32.3
 
 Boolean (yes/no or true/false) setting. Default is ``True``.
 
@@ -299,11 +289,6 @@ group is enabled.
 
 events_when_all_completed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32.3
-
-Prior to MPF 0.32.3, this event was called "events_when_all_complete". This
-was a mistake since the completed state is called "completed", not "complete"
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 

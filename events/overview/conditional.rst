@@ -1,7 +1,6 @@
 Conditional Events
 ==================
 
-.. versionadded:: 0.32
 
 So far we've talked about how events are just strings of text, for example:
 

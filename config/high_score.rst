@@ -9,8 +9,6 @@ high_score:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionchanged:: 0.31 (No longer valid in machine configs, just mode configs)
-
 .. overview
 
 The ``high_score:`` section of your config is where you...
@@ -42,19 +40,5 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 .. todo::
    Add description.
 
-select_tag:
-~~~~~~~~~~~
-.. deprecated:: 0.31
-
-shift_left_tag:
-~~~~~~~~~~~~~~~
-.. deprecated:: 0.31
-
-shift_right_tag:
-~~~~~~~~~~~~~~~~
-.. deprecated:: 0.31
-
 defaults:
 ~~~~~~~~~
-
-.. versionadded:: 0.33

@@ -213,8 +213,6 @@ retries_before_increasing_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``number``. Default: ``4``
 
-.. versionadded:: 0.33
-
 The number of times this ball device will attempt to eject the ball before increasing
 the eject coil pulse time as specified in the ``eject_coil_retry_pulse:`` above.
 

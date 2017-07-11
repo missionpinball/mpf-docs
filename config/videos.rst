@@ -108,8 +108,6 @@ The width of this video, in pixels.
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 A list of one or more names of events that MPF will post when this video is played. Enter the list
@@ -117,8 +115,6 @@ in the MPF config list format. These events are posted exactly as they’re ente
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 

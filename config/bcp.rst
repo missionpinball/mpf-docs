@@ -78,8 +78,6 @@ Single value, type: ``integer``. Default: ``5050``
 type:
 ~~~~~
 
-.. versionadded:: 0.31
-
 TODO
 
 event_map:
@@ -122,18 +120,12 @@ every player variable to the media controller. Here's an example:
 servers:
 --------
 
-.. versionadded:: 0.31
-
 todo
 
 ip:
 ~~~
 
-.. versionadded:: 0.31
-
 todo
-
-.. versionchanged:: 0.33
 
 Starting in MPF 0.33, you can use ``ip: None`` and MPF will listen for incoming connections
 on all network interfaces.
@@ -141,34 +133,25 @@ on all network interfaces.
 port:
 ~~~~~
 
-.. versionadded:: 0.31
-
 todo
 
 type:
 ~~~~~
-
-.. versionadded:: 0.31
 
 todo
 
 required:
 ---------
 
-.. versionadded:: 0.31
-
 TODO
 
 exit_on_close:
 --------------
 
-.. versionadded:: 0.32
 
 TODO
 
 debug:
 ~~~~~~
-
-.. versionadded:: 0.31
 
 TODO

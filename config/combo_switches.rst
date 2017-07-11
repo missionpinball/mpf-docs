@@ -9,7 +9,6 @@ combo_switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``combo_switches:`` section of your config is where you configure
 :doc:`combo switches </game_logic/combo_switches/index>` which are used for

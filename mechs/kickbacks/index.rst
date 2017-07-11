@@ -7,7 +7,6 @@ Kickbacks
 | :doc:`/config/kickbacks`                                                     |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.32
 
 .. contents::
    :local:

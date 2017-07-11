@@ -117,9 +117,6 @@ for multiple servos.
 
 reset_events:
 ~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -180,15 +177,11 @@ include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Boolean (True/False or Yes/No). Default is ``True``.
 
-.. versionadded:: 0.33
-
 Controls whether this servo is included in ball search.
 
 ball_search_min:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
-
-.. versionadded:: 0.31
 
 The value of the initial position that this servo will go to in ball search.
 
@@ -198,15 +191,11 @@ ball_search_max:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-.. versionadded:: 0.31
-
 The value of the second position that this servo will go to in ball search.
 
 ball_search_wait:
 ~~~~~~~~~~~~~~~~~
 Time value. Default ``5s``.
-
-.. versionadded:: 0.31
 
 How long this servo will pause in each position (min and max) before moving to the other position while ball
 search is active.

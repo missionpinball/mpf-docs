@@ -9,8 +9,6 @@ led_stripes
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.31
-
 A "led_stripe" will create "count" leds for you starting the number at "number_start".
 If you need a prefix or suffix for the number you can use "number_template". All settings
 in "led_template" will be applied to all LEDs. The only difference between

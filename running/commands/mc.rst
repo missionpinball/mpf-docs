@@ -65,7 +65,6 @@ Displays the command line help and exits. (Pretty much what's on this page.)
 -f
 ~~
 
-.. versionadded:: 0.32
 
 Forces MPF to load all assets at start (rather than the default behavior where
 some assets can be loaded only when modes start or based on other events).
@@ -85,8 +84,6 @@ with log file utilities. (The "Console" app is built-in to OS X, for example.)
 
 -L (uppercase)
 ~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 Specifies the name and path of the log file.
 

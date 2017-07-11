@@ -161,8 +161,6 @@ period.
 add_a_ball_events:
 ~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -180,8 +178,6 @@ be added into play).
 start_or_add_a_ball_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -194,8 +190,6 @@ started, will add another ball.
 
 ball_count_type:
 ~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Set this to either ``total`` or ``add``. Default is ``total``.
 

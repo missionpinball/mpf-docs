@@ -65,8 +65,6 @@ action:
 ~~~~~~~
 Single value of one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
 
-.. versionchanged:: 0.31 (Added "step_back" state)
-
 ``play``
    Starts playing the show. This is the default action which will happen if you don't include an ``action:`` setting.
 
@@ -93,7 +91,6 @@ block_queue:
 ~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. versionadded:: 0.32
 
 You can use ``block_queue: yes`` if you want the show to block a queue event until the show is
 done. Note that you can only use this if the event that starts the show is a
@@ -230,9 +227,6 @@ for this setting.
 
 sync_ms:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``integer``. Default: ``None``
 
 Sets the sync_ms value of this show which will delay the start to a certain millisecond multiple
@@ -249,7 +243,6 @@ useful (for example), to eject a ball when a show ends.
 events_when_advanced:
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -260,7 +253,6 @@ next step.
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -279,7 +271,6 @@ didn't make it all the way to the end, you can use *events_when_stopped*.
 events_when_looped:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -290,7 +281,6 @@ end and is jumping back to the first step).
 events_when_paused:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -300,7 +290,6 @@ Event(s) that will be posted when this show has been paused.
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -310,7 +299,6 @@ Event(s) that will be posted when this show is played (started).
 events_when_resumed:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -320,7 +308,6 @@ Event(s) that will be posted when this show is resumed from a pause.
 events_when_stepped_back:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -331,7 +318,6 @@ the previous step.
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -344,7 +330,6 @@ where it was.
 events_when_updated:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.

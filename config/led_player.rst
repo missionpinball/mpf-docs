@@ -34,9 +34,6 @@ Single value, type: ``string``. Default: ``white``
 
 fade:
 ~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::

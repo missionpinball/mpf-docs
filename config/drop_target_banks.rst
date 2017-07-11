@@ -100,7 +100,6 @@ reset_on_complete:
 ~~~~~~~~~~~~~~~~~~
 Time value. Default: ``None``
 
-.. versionadded:: 0.32
 
 By default, when a drop target bank completes, it does not automatically reset.
 If you want it to reset, then use this setting along with a time delay for when you

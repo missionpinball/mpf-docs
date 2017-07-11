@@ -98,14 +98,11 @@ indicated which type of config file it's valid in.
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
-   osc: <osc>
    p3_roc: <p3_roc>
    p_roc: <p_roc>
    p_roc_coil_overwrites: <p_roc_coil_overwrites>
    p_roc_coils: <p_roc_coils>
-   physical_dmd: (Deprecated) <physical_dmd>
    physical_dmds: <physical_dmds>
-   physical_rgb_dmd: (Deprecated) <physical_rgb_dmd>
    physical_rgb_dmds: <physical_rgb_dmds>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>

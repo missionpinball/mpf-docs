@@ -30,9 +30,6 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 reset_warnings_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionchanged:: 0.31
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details

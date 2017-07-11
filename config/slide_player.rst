@@ -210,11 +210,6 @@ add or remove a slide and the priority list is recalculated, whichever slide is 
 highest priority will be shown. This ``force:`` option is sort of a one-time thing.
 Really you should use priorities to control which slides are shown.
 
-persist:
-~~~~~~~~
-
-.. deprecated:: 0.33
-
 priority:
 ~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
@@ -250,7 +245,6 @@ Really you should use priorities to control which slides are shown.
 slide:
 ~~~~~~
 
-.. versionadded:: 0.32
 
 TODO
 

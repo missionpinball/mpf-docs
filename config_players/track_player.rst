@@ -1,7 +1,6 @@
 Track player
 ============
 
-.. versionadded:: 0.32
 
 The *track player* is a :doc:`config player </config_players/index>` that's used to control
 audio tracks when MPF events are received. Tracks can be stopped, paused, or played with an

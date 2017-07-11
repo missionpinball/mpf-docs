@@ -9,8 +9,6 @@ timed_switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.33
-
 Specifies :doc:`timed switches </game_logic/timed_switches/index>` which are used to
 post events when a switch is active for a continuous amount of time.
 

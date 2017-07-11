@@ -48,8 +48,6 @@ Default pulse_ms for all coils when not overwritten. This will be used when you 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
 
 For all platforms non-tickless platforms we poll this often.
@@ -81,6 +79,5 @@ This event will be posted for all tags after a switch turned active.
 default_show_sync_ms:
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 Default sync_mc for all shows when not specified otherwise.

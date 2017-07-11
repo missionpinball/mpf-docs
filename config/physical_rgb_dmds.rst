@@ -9,8 +9,6 @@ physical_rgb_dmds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionchanged:: 0.31
-
 The ``physical_rgb_dmds:`` section of your machine config is where you configure
 the settings for a physical RGB DMD (dot matrix display). You only need this
 section if you have a RGB DMD connected via USB. If you have an mono DMD,
@@ -63,8 +61,6 @@ gamma:
 ~~~~~~
 Single numeric value, Default: ``2.2``
 
-.. versionadded:: 0.33
-
 Sets the gamma of the DMD. See :doc:`instructions/gamma_correction` for details.
 
 Note that the default setting of ``2.2`` will probably be ok, though if your
@@ -104,8 +100,6 @@ automatically use a source display called "dmd".
 
 platform:
 ~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: ``string``. Default: ``None``
 

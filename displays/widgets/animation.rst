@@ -78,8 +78,6 @@ support widget rotation. That's a future feature we'll have to add).
 2. Relative animation values
 ----------------------------
 
-.. versionadded:: 0.33
-
 Sometimes it is desirable to animate a value a relative amount from a widget's current value rather than specifying
 an absolute target value.  This can be done using ``relative: True``.  With the ``relative:`` parameter set to
 ``True``, the new target value will set by adding the ``value:`` parameter to the widget's current ``property:``

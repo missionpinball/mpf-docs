@@ -9,7 +9,6 @@ queue_relay_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The queue_relay_player lets you "pause" queue event processing until some other
 event is posted, at which time the original queue event processing continues.

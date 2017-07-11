@@ -9,7 +9,6 @@ kickbacks:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``kickbacks:`` section of your machine config is used to define
 :doc:`kickback mechanisms </mechs/kickbacks/index>` which are a type of

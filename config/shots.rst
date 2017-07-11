@@ -211,9 +211,6 @@ menus and trouble reports.
 
 profile:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``string``. Default: ``profile``
 
 The name of the *shot profile* that will be applied to this shot.
@@ -383,7 +380,5 @@ switch activations and the shot would count.)
 
 sequence:
 ~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Like ``switch_sequence:``, except this setting is a list of events, rather than switches.

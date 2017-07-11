@@ -83,7 +83,6 @@ Displays the command line help and exits. (Pretty much what's on this page.)
 -f
 ~~
 
-.. versionadded:: 0.32
 
 Forces MPF to load all assets at start (rather than the default behavior where
 some assets can be loaded only when modes start or based on other events).
@@ -103,8 +102,6 @@ with log file utilities. (The "Console" app is built-in to OS X, for example.)
 
 --syslog_address
 ~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33.8
 
 Log to the specified syslog address. This can be a domain socket such as ``/dev/log`` on
 Linux or ``/var/run/syslog`` on Mac. Alternatively, you an specify ``host:port`` for remote

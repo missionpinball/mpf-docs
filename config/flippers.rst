@@ -102,9 +102,6 @@ for details.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
-
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -192,15 +189,11 @@ to lower-power pwm mode.
 power_setting_name:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.31
-
 TODO
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Boolean (True/False or Yes/No). Default is ``False``.
-
-.. versionadded:: 0.33
 
 Controls whether this flipper is included in ball search.
 
@@ -219,8 +212,6 @@ ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Numeric value, default is ``100``
 
-.. versionadded:: 0.33
-
 A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
 checked first. See the :doc:`/game_logic/ball_search/index` documentation for details.
 
@@ -228,15 +219,11 @@ ball_search_hold_time:
 ~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
-.. versionadded:: 0.33
-
 How long this flipper will be activated for when it is activated during ball search.
 
 
 playfield:
 ~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 The name of the playfield that this flipper is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

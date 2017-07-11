@@ -24,7 +24,6 @@ using MPF-MC for your media controller.)
 
 See the :doc:`config player </config_players/index>` for more information on config players.
 
-.. versionadded:: 0.32
 
 Usage in config files
 ---------------------

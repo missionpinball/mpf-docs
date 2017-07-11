@@ -7,8 +7,6 @@ Achievements
 | :doc:`/config/achievements`                                                  |
 +------------------------------------------------------------------------------+
 
-.. versionchanged:: 0.32
-
 .. contents::
    :local:
 

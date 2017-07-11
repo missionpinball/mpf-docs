@@ -9,8 +9,6 @@ config:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionchanged:: 0.31 (Now valid in mode configs too.)
-
 .. overview
 
 The ``config:`` section of your configuration files allows you to

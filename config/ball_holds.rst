@@ -9,8 +9,6 @@ ball_holds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.33
-
 The ``ball_holds:`` section of your config is used to list and configure
 :doc:`ball holds </game_logic/ball_holds/index>`.
 

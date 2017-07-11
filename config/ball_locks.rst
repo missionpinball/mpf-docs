@@ -92,7 +92,6 @@ A descriptive label.
 release_one_if_full_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
@@ -122,8 +121,6 @@ automatically add another ball into play after it locks a ball.
 
 reset_events:
 ~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.

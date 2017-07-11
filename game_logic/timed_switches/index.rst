@@ -7,8 +7,6 @@ Timed Switches
 | :doc:`/config/timed_switches`                                                |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.33
-
 .. contents::
    :local:
 

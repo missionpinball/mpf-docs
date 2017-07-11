@@ -192,8 +192,6 @@ is that it’s 0.25 of whatever monetary system you have.
 price_tier_template
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33.14
-
 Default "{{credits}} CREDITS ${{price}}"
 
 TODO
@@ -251,8 +249,6 @@ The numeric currency value for this pricing tier.
 
 events:
 -------
-
-.. versionadded:: 0.33.12
 
 A list of one or more events with settings which add credits based on MPF events. Like the pricing_tiers section, start each entry here
 with a minus sign and a space.

@@ -11,7 +11,6 @@ queue_event_player:
 | Valid in :doc:`shows </shows/index>`                                       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 .. note:: This section can also be used in a show file in the ``queue_events:`` section of a step.
 

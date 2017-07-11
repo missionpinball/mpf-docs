@@ -208,13 +208,7 @@ action:
 ~~~~~~~
 Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
 
-.. versionchanged:: 0.31 (Added "step_back" state)
-
 Specifies which show action is taken for the show on this state in the shot profile.
-
-key:
-~~~~
-.. deprecated:: 0.31
 
 loops:
 ~~~~~~
@@ -233,10 +227,6 @@ priority:
 Single value, type: ``integer``. Default: ``0``
 
 The priority shift of the show that's played.
-
-reset:
-~~~~~~
-.. deprecated:: 0.31
 
 show:
 ~~~~~
@@ -265,9 +255,6 @@ The step number the show will start on.
 
 sync_ms:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``integer``. Default: ``None``
 
 The sync_ms value of the show.

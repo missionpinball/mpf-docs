@@ -3,8 +3,6 @@ achievements:
 
 *Config file section*
 
-.. versionchanged:: 0.32
-
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
@@ -105,17 +103,6 @@ This is an indented list of key/value pairs for the
 played when this achievement changes state. (See the settings called
 "show_when_XXX" further down in this documentation.)
 
-start_enabled:
-~~~~~~~~~~~~~~
-
-.. deprecated:: 0.33
-
-This setting has been removed since it was unlike every other device in MPF.
-Achievements now use ``enable_events:`` to indicate initial state. If there are
-no enable events, the achievement will start enabled. If there are enable
-events, the achievement will start disabled since it's presumed that one of the
-start events will be used to enable it later.
-
 restart_after_stop_possible:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
@@ -175,7 +162,6 @@ in the ``events_when_enabled:`` setting.
 select_events:
 ~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
@@ -283,7 +269,6 @@ is enabled.
 events_when_selected:
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -339,7 +324,6 @@ Name of the show that will be started when this achievement has been enabled.
 show_when_selected:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 Single value, type: ``string``. Default: ``None``
 

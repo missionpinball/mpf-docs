@@ -128,7 +128,6 @@ means this sound will have no queue limit and will always play eventually.
 streaming:
 ~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
@@ -140,8 +139,6 @@ setting is ignored and a value of 1 is used.
 
 simultaneous_limit:
 ~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: ``integer``. Default: ``None``
 
@@ -157,8 +154,6 @@ played at once up to the limit of the track.  The value of this setting is ignor
 
 stealing_method:
 ~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: one of the following options: oldest, newest, skip. Default: ``oldest``
 
@@ -176,8 +171,6 @@ limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. O
 
 mode_end_action:
 ~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
 
@@ -212,8 +205,6 @@ volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as a decibel st
 fade_in:
 ~~~~~~~~
 
-.. versionadded:: 0.31
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 
@@ -221,8 +212,6 @@ The number of seconds over which to fade in the sound when it is played.
 
 fade_out:
 ~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
@@ -234,8 +223,6 @@ by an event.
 
 start_at:
 ~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
@@ -306,8 +293,6 @@ prior to the end of the sound. This value is specified as a :doc:`time string </
 
 markers:
 --------
-
-.. versionadded:: 0.31
 
 The ``markers:`` section establishes a list of markers and their associated events at specific
 times in the sound.  When a marker is reached during playback, the associated events will be

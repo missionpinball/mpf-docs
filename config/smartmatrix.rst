@@ -31,7 +31,6 @@ Single value, type: ``string``.
 baud:
 ~~~~~
 
-.. versionadded:: 0.32
 
 TODO
 
@@ -40,15 +39,9 @@ Optional settings
 
 The following sections are optional in the ``smartmatrix:`` section of your config. (If you don't include them, the default will be used).
 
-use_separate_thread:
-~~~~~~~~~~~~~~~~~~~~
-
-.. deprecated:: 0.32
-
 old_cookie:
 ~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 TODO
 

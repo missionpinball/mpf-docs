@@ -43,8 +43,6 @@ The following sections are optional in the ``playfield_transfers:`` section of y
 ball_switch:
 ~~~~~~~~~~~~
 
-.. versionchanged:: 0.32
-
 Single value, type: string name of a ``switches:`` device. Default: ``None``
 
 .. todo::
@@ -74,7 +72,6 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 transfer_events:
 ~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the

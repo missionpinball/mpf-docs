@@ -7,7 +7,6 @@ Achievement Groups
 | :doc:`/config/achievement_groups`                                            |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.32
 
 .. contents::
    :local:

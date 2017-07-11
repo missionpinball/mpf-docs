@@ -9,8 +9,6 @@ physical_dmds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionchanged:: 0.31
-
 The ``physical_dmds:`` section of your config is where you configure the settings for a physical DMD (dot matrix
 display). You only need this section if you have a physical monochrome DMD connected to a 14-pin header on a hardware
 controller. If you have an RGB DMD, configure that in the :doc:`physical_rgb_dmds` section.
@@ -53,8 +51,6 @@ set this to some value lower than 1.0. (e.g. a value of 0.9 will be 90% brightne
 gamma:
 ~~~~~~
 Single numeric value, Default: ``1.0``
-
-.. versionadded:: 0.33
 
 Sets the gamma of the DMD. See :doc:`instructions/gamma_correction` for details.
 
@@ -107,8 +103,6 @@ automatically use a source display called "dmd".
 
 platform:
 ~~~~~~~~~
-
-.. versionadded:: 0.31
 
 Single value, type: ``string``. Default: ``None``
 

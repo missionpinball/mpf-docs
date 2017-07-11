@@ -359,8 +359,6 @@ ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Numeric value, default is ``100``
 
-.. versionadded:: 0.33
-
 A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
 checked first. Set to ``0`` if you do not want this device to be included in the ball search.
 See the :doc:`/game_logic/ball_search/index` documentation for details.
@@ -369,14 +367,10 @@ ball_search_hold_time:
 ~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
-.. versionadded:: 0.33
-
 How long this diverter will be activated for when it is activated during ball search.
 
 playfield:
 ~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 The name of the playfield that this diverter is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

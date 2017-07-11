@@ -73,8 +73,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 disable_events:
 ~~~~~~~~~~~~~~~
 
-.. versionchanged:: 0.32
-
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -96,8 +94,6 @@ Event(s) which enable this ball save.
 
 early_ball_save_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
@@ -155,8 +151,6 @@ Events in this list, when posted, start this ball saver's countdown timer.
 eject_delay:
 ~~~~~~~~~~~~
 
-.. versionadded:: 0.31
-
 single|ms|0
 
 TODO
@@ -164,16 +158,12 @@ TODO
 only_last_ball:
 ~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.31
-
 single|bool|False
 
 TODO
 
 delayed_eject_events:
 ~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 dict|str:ms|None
 

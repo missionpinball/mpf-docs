@@ -9,8 +9,6 @@ multiball_locks:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.33
-
 
 The ``multiball_locks:`` section of your config is used to configure ball locks
 which will lock balls for multiball. Note that if you only want to hold a ball
@@ -64,8 +62,6 @@ will count towards this lock.
 
 locked_ball_counting_strategy:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33.8
 
 One of the following options: ``virtual_only``, ``min_virtual_physical``, ``physical_only``, ``no_virtual``. Default
 is ``virtual_only``.

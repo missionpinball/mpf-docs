@@ -105,8 +105,6 @@ See the :doc:`/game_logic/ball_search/index` documentation for details.
 ignore_switch_ms:
 ~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
 coils will set switches that could add to the score, start modes, etc. Default is ``500ms``.
 
@@ -140,8 +138,6 @@ have a knockdown coil, then these events will have no effect.)
 enable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.33
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -160,8 +156,6 @@ you need to keep the drop target up.
 
 disable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
@@ -222,7 +216,6 @@ See the :doc:`documentation on tags </config/instructions/tags>` for details.
 playfield:
 ~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

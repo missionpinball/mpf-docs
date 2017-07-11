@@ -139,7 +139,6 @@ track set to 0.5 (50%), sounds on that track will play at 40% overall volume (50
 events_when_played:
 ```````````````````
 
-.. versionadded:: 0.32
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
@@ -150,7 +149,6 @@ exactly as they’re entered.
 events_when_stopped:
 ````````````````````
 
-.. versionadded:: 0.32
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
@@ -160,7 +158,6 @@ in the MPF config list format. These events are posted exactly as they’re ente
 events_when_paused:
 ```````````````````
 
-.. versionadded:: 0.32
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 

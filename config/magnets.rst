@@ -9,7 +9,6 @@ magnets:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``magnets:`` section of your machine config is used to define magnet
 mechanisms from coils and (optionally) switches. There are settings that

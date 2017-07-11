@@ -164,8 +164,6 @@ default.
 net_buffer:
 ~~~~~~~~~~~
 
-.. versionadded:: 0.31
-
 single|int|10
 
 TODO
@@ -173,16 +171,12 @@ TODO
 rgb_buffer:
 ~~~~~~~~~~~
 
-.. versionadded:: 0.31
-
 single|int|3
 
 TODO
 
 dmd_buffer:
 ~~~~~~~~~~~
-
-.. versionadded:: 0.31
 
 single|int|3
 

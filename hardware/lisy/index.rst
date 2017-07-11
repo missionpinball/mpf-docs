@@ -1,8 +1,6 @@
 How to use MPF with Gottlieb System 1 or 80 machines
 ====================================================
 
-.. versionadded:: 0.50
-
 MPF can directly control Gottlieb System 1 or System 80 machines via the
 LISY1 or LISY80 controller boards (with firmware 4.02+).
 

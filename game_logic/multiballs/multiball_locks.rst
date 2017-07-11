@@ -12,8 +12,6 @@ Multiball Locks
 .. contents::
    :local:
 
-.. versionadded:: 0.33
-
 Multiball locks work in concert with multiball logic to "lock" balls for multiball.
 To use a multiball lock, you configure it for the ball device (or devices) that will
 be used to lock balls, and then when a ball enters one of those devices, the lock

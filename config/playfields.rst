@@ -74,15 +74,11 @@ ball_search_block_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Default: ``flipper_cradle``
 
-.. versionadded:: 0.33
-
 Event to block ball search. Used by flipper cradle.
 
 ball_search_unblock_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Default: ``flipper_cradle_release``
-
-.. versionadded:: 0.33
 
 Event to unblock ball search. Used by flipper cradle.
 
@@ -90,15 +86,11 @@ ball_search_enable_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Default: None
 
-.. versionadded:: 0.33
-
 Event to enable ball search.
 
 ball_search_disable_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Default: None
-
-.. versionadded:: 0.33
 
 Event to disable ball search.
 
@@ -111,8 +103,6 @@ Turn on/off debugging.
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
-
-.. versionchanged:: 0.31
 
 Enable ball_search by default. Use with care during development
 since coils may hurt you. Should be enabled in any production

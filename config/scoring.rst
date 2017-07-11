@@ -9,8 +9,6 @@ scoring:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionchanged:: 0.31 (Now valid only in mode configs, not machine configs)
-
 The ``scoring:`` section of your mode config lets you add, subtract, or replace player
 variables based on events that are posted.
 
@@ -83,10 +81,6 @@ action:
 
 One of the following settings: ``add``, ``set``, ``add_machine``, ``set_machine``. Default is ``add``.
 
-.. versionadded:: 0.32
-
-.. versionchanged:: 0.33
-
 By default, the scoring entries will be added to the existing value of a player variable. If you want to replace
 or reset the value of the player var, you can add ``action: set`` to the entry. However to do this, you have to
 indent that setting under the player var name, and then specify the value in the "score:" section. For example, if you
@@ -115,7 +109,6 @@ Starting in MPF 0.33, you can also add and set machine variables, by specifying 
 block:
 ~~~~~~
 
-.. versionadded:: 0.32
 
 Adding ``block: True`` to a scoring entry means that MPF will "block" this scoring entry from being sent down to
 scoring entries in lower priority modes.
@@ -145,8 +138,6 @@ There is also a shorthand way:
 
 string:
 ~~~~~~~
-
-.. versionadded:: 0.33
 
 Lets you set a player variable to a string value (text characters) rather than adding numeric value. This is useful
 for when you want to make slides that show some value and you need to "translate" some numeric value to words.
@@ -182,8 +173,6 @@ the value of the album, and it's automatically updated whenever the player var "
 
 player:
 ~~~~~~~
-
-.. versionadded:: 0.33
 
 Lets you specify which player (by number) this scoring entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
 effect the score or other player variables of players other than the current player.
