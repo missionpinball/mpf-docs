@@ -7,7 +7,11 @@ Here's an example:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
+
+   mpf-mc:
+     widgets:
+       camera: mpfmc.widgets.camera
 
    slide_player:
      mc_ready:

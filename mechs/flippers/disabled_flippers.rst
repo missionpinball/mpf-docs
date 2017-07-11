@@ -5,7 +5,7 @@ TODO
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     flippers:
       flipper_left_front:
@@ -35,7 +35,7 @@ TODO
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     mode:
       start_events: ball_starting, one_on_one_started

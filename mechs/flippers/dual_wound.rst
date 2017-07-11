@@ -21,7 +21,7 @@ Here's an example ``config.yaml`` with two switches added:
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:

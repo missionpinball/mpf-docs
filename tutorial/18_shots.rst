@@ -391,7 +391,7 @@ them step-by-step next.)
 
 ::
 
-   #config_version=4
+   #config_version=5
    # mode2 config file
 
    mode:

@@ -6,9 +6,11 @@ The bezier widget is used to draw a curved line on a :doc:`slide </displays/slid
 
 Here's an example:
 
+TODO This example just shows a blank slide in MPF 0.50?
+
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    slide_player:
      mc_ready:
@@ -17,7 +19,7 @@ Here's an example:
            points: 10, 10, 150, 450, 300, 100, 790, 590
            color: lime
            thickness: 5
-           cap: none
+           cap: square
          - type: bezier
            points: 0, 600, 400, 400, 400, 0
            color: pink
@@ -86,7 +88,7 @@ default, ``0.5`` is half as thick, etc.
 cap:
 ~~~~
 
-Determine the cap of the line, defaults to ‘round’. Can be one of ‘none’, ‘square’ or ‘round’
+Determine the cap of the line, defaults to ‘round’. Can be one of ‘square’ or ‘round’
 
 joint:
 ~~~~~~

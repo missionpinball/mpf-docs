@@ -59,7 +59,7 @@ file you can use as a starting point:
 
 ::
 
-   #show_version=4
+   #show_version=5
 
    - duration: 3s
      slides:
@@ -110,7 +110,7 @@ file you can use as a starting point:
             duration: 1s
             direction: top
 
-First, notice the first line is ``#show_version=4``. This is similar to the
+First, notice the first line is ``#show_version=5``. This is similar to the
 config_version in config files, except since this is a show file, it's "show_version".
 
 Next, notice that the show file is broken into steps, each beginning with a
@@ -155,7 +155,7 @@ back to the config file for the attract mode (
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     show_player:
       mode_attract_started: attract_display_loop

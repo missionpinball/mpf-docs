@@ -76,7 +76,7 @@ So again, the format in a config file would be:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    widget_player:
       some_event:
@@ -90,7 +90,7 @@ And the format in a show file would be:
 
 .. code-block:: yaml
 
-   #show_version=4
+   #show_version=5
 
    - duration: 1s
      widgets:

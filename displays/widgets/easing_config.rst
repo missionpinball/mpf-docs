@@ -35,7 +35,7 @@ core engine to run this example.)
 
 ::
 
-    # config_version=4
+    # config_version=5
 
     displays:
       default:
@@ -129,7 +129,7 @@ And here's the example where we animate the opacity:
 
 ::
 
-    # config_version=4
+    # config_version=5
 
     displays:
       default:

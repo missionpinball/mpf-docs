@@ -57,7 +57,7 @@ Note that if you're on Windows and you just right-click and select *New > Text D
 make sure that Windows Explorer is configured to show file extensions
 so you actually create a file called ``config.yaml`` and not ``config.yaml.txt``. (That's in the "View" menu of Explorer.)
 
-4. Add #config_version=4 to the top of your config file
+4. Add #config_version=5 to the top of your config file
 -------------------------------------------------------
 
 The first thing you need to do when you create any new config file for MPF is to add an entry on the very top line that
@@ -66,7 +66,7 @@ should look like this:
 
 ::
 
-   #config_version=4
+   #config_version=5
 
 So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_ or `Sublime <https://www.sublimetext.com/>`_)
 and then add that to the top of the file and save it.
@@ -83,7 +83,7 @@ At this point, your environment should look like this:
 
 .. image:: images/machine_config_folder.png
 
-Note the folder structure, the location of the ``config.yaml`` file, and the ``#config_version=4`` as the only
+Note the folder structure, the location of the ``config.yaml`` file, and the ``#config_version=5`` as the only
 contents of that file.
 
 5. Run your game!
@@ -154,7 +154,7 @@ If you get a crash with a message about a "Config file version mismatch", like t
        raise ValueError("Config file version mismatch: {}".format(filename))
    ValueError: Config file version mismatch: C:\pinball\your_machine\config\config.yaml
 
-This means you don't have ``#config_version=4`` in the top line of your config file. (Make sure you include the hash
+This means you don't have ``#config_version=5`` in the top line of your config file. (Make sure you include the hash
 mark as part of that.)
 
 If you get an error that says ``Could not find machine folder: 'None'``, that means that you ran MPF from the

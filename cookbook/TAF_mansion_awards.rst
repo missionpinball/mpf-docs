@@ -98,7 +98,7 @@ then you'll probably have a lot more than this in your machine config file.)
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    modes:
      - mansion_awards
@@ -157,37 +157,52 @@ then you'll probably have a lot more than this in your machine config file.)
      electric_chair:
        number: 01
 
-   matrix_lights:
+   lights:
      9_mil:
        number: L66
+       subtype: matrix
      6_mil:
        number: L54
+       subtype: matrix
      3_mil:
        number: L68
+       subtype: matrix
      thing:
        number: L51
+       subtype: matrix
      quick_multiball:
        number: L55
+       subtype: matrix
      graveyard_at_max:
        number: L67
+       subtype: matrix
      raise_the_dead:
        number: L52
+       subtype: matrix
      festers_tunnel_hunt:
        number: L56
+       subtype: matrix
      lite_extra_ball:
        number: L53
+       subtype: matrix
      seance:
        number: L57
+       subtype: matrix
      hit_cousin_it:
        number: L58
+       subtype: matrix
      mamushka:
        number: L45
+       subtype: matrix
      mansion_question:
        number: L65
+       subtype: matrix
      electric_chair_yellow:
        number: L64
+       subtype: matrix
      electric_chair_red:
        number: L47
+       subtype: matrix
 
    ball_devices:
 
@@ -427,7 +442,7 @@ Let's look at the config for the "chair_lit_3s" mode:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    mode:
      priority: 101
@@ -499,7 +514,7 @@ Here's the config for this mode:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    mode:
      priority: 102

@@ -12,7 +12,7 @@ machine config's ``modes:`` section, like this:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    modes:
       - base
@@ -88,7 +88,7 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    mode_settings:
       bonus_entries:

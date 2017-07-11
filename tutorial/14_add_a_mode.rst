@@ -94,7 +94,7 @@ like this:
 
 ::
 
-    #config_version=4
+    #config_version=5
     mode:
         start_events: ball_starting
         priority: 100
@@ -200,7 +200,7 @@ your complete ``base.yaml`` looks like this:
 
 ::
 
-   #config_version=4
+   #config_version=5
    mode:
        start_events: ball_starting
        priority: 100

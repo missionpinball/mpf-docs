@@ -12,7 +12,7 @@ this:
 
 ::
 
-    #config_version=4
+    #config_version=5
 
 In YAML, lines that start with # are ignored, which means the YAML
 processor skips this line, but MPF uses it to make sure the config
@@ -32,8 +32,8 @@ migrate your config files to the latest version.
 Which versions of MPF require which config_versions?
 ----------------------------------------------------
 
-
-+ MPF 0.30+: ``#config_version=4``
++ MPF 0.50+: ``#config_version=5``
++ MPF 0.30-0.33: ``#config_version=4``
 + MPF 0.20-0.21: ``#config_version=3``
 + MPF 0.19: ``#config_version=2``
 + MPF 0.17-0.18: ``#config_version=1``

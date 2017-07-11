@@ -124,7 +124,7 @@ step in that show:
 
 ::
 
-    # show_version=4
+    # show_version=5
     - time: 0
       slides:
         my_show_slide_1:

@@ -12,7 +12,7 @@ Read more about "dual wound" versus "single wound" coils in the
 :doc:`/mechs/dual_wound_coils/dual_vs_single_wound` guide.
 
 1. Add your flipper buttons
-----------------------------
+---------------------------
 
 First, make sure you have entries in your machine config for your flipper
 buttons.
@@ -21,7 +21,7 @@ Here's an example ``config.yaml`` with two switches added:
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:
@@ -176,7 +176,7 @@ we created in this How To guide:
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:

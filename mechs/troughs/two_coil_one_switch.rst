@@ -238,7 +238,7 @@ Here's the complete config
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_drain:

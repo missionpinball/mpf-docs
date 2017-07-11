@@ -78,7 +78,7 @@ like this:
 
 ::
 
-    #show_version=4
+    #show_version=5
     - duration: 1
       lights:
         l_light2: 0
@@ -110,7 +110,7 @@ the rainbow, you could create a show like this:
 
 ::
 
-    #show_version=4
+    #show_version=5
     - duration: 1
       leds:
         l_led1: red
@@ -172,7 +172,7 @@ of the event name, like this:
 
 ::
 
-   #config_version=4
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1: attract_light_show
@@ -218,7 +218,7 @@ speed. Simple, just add a ``speed: 4`` to the show_player entry.
 
 ::
 
-   #config_version=4
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1: attract_light_show
@@ -243,7 +243,7 @@ To fix this, we need to make a slight change to our YAML file, like this:
 
 ::
 
-   #config_version=4
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1:
@@ -257,7 +257,7 @@ If you wanted to, you could consolidate the duplicate ``mode_attract_started`` e
 
 ::
 
-   #config_version=4
+   #config_version=5
    show_player:
      mode_attract_started:
        attract_display_loop:

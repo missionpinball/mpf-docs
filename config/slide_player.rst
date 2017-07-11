@@ -117,7 +117,7 @@ section). Any of the examples above apply, you just don't include the event name
 
 ::
 
-   #show_version=4
+   #show_version=5
 
    - time: 0
      slides: slide1

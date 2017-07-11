@@ -24,7 +24,7 @@ Here is a sample show file. This file might be called something like
 
 ::
 
-   #show_version=4
+   #show_version=5
    - time: 0
      leds:
        led1: red
@@ -37,14 +37,14 @@ Notice it's essentially the same show we used as an example in the section on
 show config formats. However there's one important change.
 
 Since this is a standalone show file, we need to tell MPF what "version" of the
-show format this file is. MPF versions |version| use ``show_version=4``. If we ever
+show format this file is. MPF versions |version| use ``show_version=5``. If we ever
 change something in the show format, then we'll increment the version. (Don't
 worry though, we have and automated migration tool that converts shows to the
 new formats. That's actually part of the reason we include the show_version in
 the show files)
 
 The bottom line is that when you create a .yaml show file, the first line of
-the file must be ``#show_version=4`` so MPF knows it's working with the proper
+the file must be ``#show_version=5`` so MPF knows it's working with the proper
 type of file.
 
 Beyond that, the show file follows the show format covered elsewhere in this

@@ -18,7 +18,7 @@ more friendly switch names. (This is what makes it possible to interact
 with switch names like "left_flipper" and "right_inlane" versus "switch 27"
 or "switch 19".)
 
-So on the line after the ``#config_version=4`` entry from the previous
+So on the line after the ``#config_version=5`` entry from the previous
 tutorial step, write ``switches:`` (note
 the colon). Then on the next line, type four spaces (these must be
 spaces, not a tab), and write ``s_left_flipper:``. Then on the next
@@ -29,7 +29,7 @@ So now your ``config.yaml`` file should look like this:
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:
@@ -300,7 +300,7 @@ Again, recapping the rules of YAML:
   the same number of spaces, etc.
 + Make sure you *do not* have a space *before* each colon.
 + Make sure you *do* have a space *after* each colon.
-+ Make sure you have the ``#config_version=4`` as the first line in your file.
++ Make sure you have the ``#config_version=5`` as the first line in your file.
 
 6. Enabling your flippers
 -------------------------
@@ -439,7 +439,7 @@ existing *Demolition Man* machine.)
 
 ::
 
-    #config_version=4
+    #config_version=5
 
     hardware:
         platform: fast

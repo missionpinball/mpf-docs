@@ -12,7 +12,7 @@ Here's an example:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    slide_player:
     mc_ready:
