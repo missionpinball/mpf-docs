@@ -15,6 +15,7 @@ The ``game:`` section of the machine config holds settings related
 to the game play.
 
 ::
+
     game:
         balls_per_game: 3
         max_players: 4
@@ -56,14 +57,18 @@ balls_per_game:
 ~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``3``
 
-How many balls the game is. Typically it's 3 or 3 but it can be
+How many balls the game is. Typically it's 3 or 5 but it can be
 anything. MPF doesn't care.
+
+.. include:: template_setting.rst
 
 max_players:
 ~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``4``
 
 Controls the maximum number of players that can play a game.
+
+.. include:: template_setting.rst
 
 start_game_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~

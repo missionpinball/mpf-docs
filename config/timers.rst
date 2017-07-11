@@ -250,3 +250,5 @@ than real world time, and a countdown timer will actually tick a speed that's sl
 tick. (So in that case, you might set ``tick_interval: 1.25s`` or something like that. You can also set this
 really short if you want a hurry up, maybe every 100ms removed 77,000 worth of points or something.
 
+.. include:: template_setting.rst
+

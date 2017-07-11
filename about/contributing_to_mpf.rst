@@ -48,7 +48,7 @@ Getting started with an easy hack
 
 We maintain a list of issues which are self-contained and good to solve on
 their own without too much interaction with core code. We label those as 
-`easy hacks <https://github.com/missionpinball/mpf/labels/easy%20hack`_
+`easy hacks <https://github.com/missionpinball/mpf/labels/easy%20hack>`_
 (although they do not have to be easy, just self-containted). If you want
 to work on one of them (or any other issue) comment on the issue or write
 in the forum and we will assist you along the way.

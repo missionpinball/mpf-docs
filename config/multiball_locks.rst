@@ -62,6 +62,17 @@ List of one (or more) values, each is a type: string name of a ``ball_devices:``
 A list of one (or more) ball devices that will collect balls which
 will count towards this lock.
 
+locked_ball_counting_strategy:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 0.33.8
+
+One of the following options: ``virtual_only``, ``min_virtual_physical``, ``physical_only``, ``no_virtual``. Default
+is ``virtual_only``.
+
+See the :doc:`general multiball lock documentation </game_logic/multiballs/multiball_locks>`
+for an explanation of how each of these works.
+
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``

@@ -19,10 +19,12 @@ Future Tools
 ------------
 
 * GUI config builder
+* Music builder / looper / manager
 * Show builder
 * Slide / animation tool
 * Auto machine documentation builder
 * Machine fuzzer
+* Device / asset explorer (Why did this sound stop? Why is this LED red? etc)
 
 
 .. toctree::

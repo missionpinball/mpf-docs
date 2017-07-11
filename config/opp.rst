@@ -53,3 +53,10 @@ chains:
 .. versionadded:: 0.31
 
 TODO
+
+poll_hz:
+~~~~~~~~
+
+.. versionadded:: 0.33
+
+How many times per section the OPP hardware is polled for switch changes. Default is 100.
