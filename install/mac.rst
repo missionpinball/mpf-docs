@@ -208,6 +208,11 @@ like this:
 
    pip3 install mpf-mc
 
+.. note::
+
+   Since MPF 0.50 is not yet released, the command you need to run is
+   "pip install mpf-mc --pre" to get the latest "pre-release" version.
+
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
 are.
