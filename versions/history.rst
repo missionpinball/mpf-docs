@@ -30,7 +30,6 @@ New Features
 * Logging to syslog
 * Cleaned up and simplified shots
 * Added Text UI
-
 * Added replay credits
 * Added developer documentation website (developer.missionpinball.org)
 * Added support for custom named colors

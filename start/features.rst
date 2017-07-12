@@ -33,14 +33,17 @@ MPF currently interfaces with the following pinball control systems & electronic
   boards, FAST servo boards, or installation in existing WPC machines.
 + Open Pinball Project (OPP) open source controllers with Gen2 driver boards.
 + Stern SPIKE / SPIKE 2 pinball machines.
++ LISY controllers for Gottlieb System 1 and System 80 machines.
 + Mark Sunnucks's "Snux" System 11 driver board for use in System 11 and Data
   East machines, in concert with either a P-ROC or FAST WPC controller.
 + Fadecandy RGB LED controllers.
 + Open Pixel Control (OPC) LED and lighting controllers.
 + I2C servo controllers.
 + Pololu Maestro servo controllers.
-+ SmartMatrix RGB LED DMD controllers
-+ RGB.DMD RGB LED-based DMD controllers
++ SmartMatrix RGB LED DMD controllers.
++ RGB.DMD RGB LED-based DMD controllers.
++ MyPinballs segment display controllers.
++ Trinamics Steprocker stepper motor controllers.
 
 See the :doc:`Control Systems / Electronics</hardware/index>` documentation
 for full details.
@@ -119,6 +122,7 @@ Displays, DMDs, & Graphics
 + On-screen LCD displays, either high-def or with a "dot" look
 + Physical mono-color DMDs
 + RGB LED DMDs
++ Segmented displays
 + Display "slides" with priorities, transitions in and out
 + Display "widgets" (things you put on displays), including:
 
@@ -185,6 +189,31 @@ Tools
   your computer keyboard. (Great for testing!)
 + Detailed logging, config file checking, and helpful error messages to help you
   troubleshoot issues.
+
+Professional-level features
+---------------------------
+
+MPF contains hundreds of the "little" things most people never think about that
+help ensure machines running it are truly professional-level machines that can
+be placed in revenue service in public locations. Here are just a few random things
+that have caused people to say, "Hey, that's cool!" over the years:
+
++ Power supply management: MPF knows how much current each power supply has and how
+  much current various devices require, so it will intelligently manage and delay
+  coil firings to ensure fuses don't blow. (For example, don't reset the drop targets
+  at the same time the flippers are held on and a ball is being ejected.)
++ Tilt-through prevention: A sliding time window ensures that the tilt plumb-bob has
+  settled before the next player's ball is started.
++ Automatic ball routing and retry logic:
++ Asset pools: Sound effects, images, and videos can be "pooled" (with various settings
+  for randomness, weightings, etc.), ensuring that each "hit" of a target produces a
+  different sound instead of the same one over and over.
++ Audio loops and break / resume points: Cue points for music and audio to ensure that
+  music tracks are smoothly looped and advanced based on game play.
++ Advanced multi-track audio: Automatic ducking of music and sfx when voice tracks play,
+  etc.
++ Auto leveling based on accelerometer: The machine knows when it's out of level and
+  can post a credit dot or notify the operator.
 
 Developer-friendly
 ------------------
