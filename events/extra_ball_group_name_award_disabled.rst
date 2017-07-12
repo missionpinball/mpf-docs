@@ -1,5 +1,5 @@
-extra_ball_disabled_award
-=========================
+extra_ball_group_(name)_award_disabled
+======================================
 
 *MPF Event*
 

@@ -1,9 +1,10 @@
-player_add_success
+player_turn_ending
 ==================
 
 *MPF Event*
 
-A new player was just added to this game
+The current player's turn is ending. This is a queue event, and
+the player's turn won't actually end until the queue is cleared.
 
 Keyword arguments
 -----------------
@@ -12,9 +13,9 @@ Keyword arguments
 create entries in your config file that only respond to certain combinations of
 the arguments below.)
 
-``num``
-  The number of the player that was just added. (e.g. Player 1 will have *num=1*, Player 4 will have *num=4*, etc.)
+``number``
+  The player number
 
 ``player``
-  A reference to the instance of the Player() object.
+  The player object whose turn is ending.
 

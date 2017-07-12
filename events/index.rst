@@ -39,8 +39,6 @@ an event called *switch_s_left_slingshot_active*.
 
    achievement_(name)_state_(state) <achievement_name_state_state>
    asset_loading_complete <asset_loading_complete>
-   award_extra_ball <award_extra_ball>
-   award_lit_extra_ball <award_lit_extra_ball>
    ball_drain <ball_drain>
    ball_ended <ball_ended>
    ball_ending <ball_ending>
@@ -57,11 +55,13 @@ an event called *switch_s_left_slingshot_active*.
    ball_save_(name)_saving_ball <ball_save_name_saving_ball>
    ball_save_(name)_timer_start <ball_save_name_timer_start>
    ball_search_failed <ball_search_failed>
+   ball_search_prevents_game_start <ball_search_prevents_game_start>
    ball_search_started <ball_search_started>
    ball_search_stopped <ball_search_stopped>
    ball_started <ball_started>
    ball_starting <ball_starting>
    ball_will_end <ball_will_end>
+   ball_will_start <ball_will_start>
    balldevice_ball_missing <balldevice_ball_missing>
    balldevice_balls_available <balldevice_balls_available>
    balldevice_(balls)_ball_missing <balldevice_balls_ball_missing>
@@ -70,8 +70,11 @@ an event called *switch_s_left_slingshot_active*.
    balldevice_(name)_ball_eject_failed <balldevice_name_ball_eject_failed>
    balldevice_(name)_ball_eject_success <balldevice_name_ball_eject_success>
    balldevice_(name)_ball_enter <balldevice_name_ball_enter>
+   balldevice_(name)_broken <balldevice_name_broken>
    balldevice_(name)_ejecting_ball <balldevice_name_ejecting_ball>
    balls_in_play <balls_in_play>
+   bcp_clients_connected <bcp_clients_connected>
+   bcp_connection_attempt <bcp_connection_attempt>
    bonus_multiplier <bonus_multiplier>
    bonus_start <bonus_start>
    bonus_subtotal <bonus_subtotal>
@@ -97,13 +100,11 @@ an event called *switch_s_left_slingshot_active*.
    drop_target_(name)_up <drop_target_name_up>
    enabling_credit_play <enabling_credit_play>
    enabling_free_play <enabling_free_play>
-   extra_ball_awarded <extra_ball_awarded>
-   extra_ball_disabled_award <extra_ball_disabled_award>
-   extra_ball_lit <extra_ball_lit>
-   extra_ball_lit_awarded <extra_ball_lit_awarded>
-   extra_ball_lit_max_exceeded <extra_ball_lit_max_exceeded>
-   extra_ball_max_exceeded <extra_ball_max_exceeded>
-   extra_ball_unlit <extra_ball_unlit>
+   extra_ball_group_(name)_award_disabled <extra_ball_group_name_award_disabled>
+   extra_ball_group_(name)_awarded <extra_ball_group_name_awarded>
+   extra_ball_group_(name)_lit <extra_ball_group_name_lit>
+   extra_ball_group_(name)_lit_awarded <extra_ball_group_name_lit_awarded>
+   extra_ball_group_(name)_unlit <extra_ball_group_name_unlit>
    flipper_cancel <flipper_cancel>
    flipper_cradle <flipper_cradle>
    flipper_cradle_release <flipper_cradle_release>
@@ -112,6 +113,8 @@ an event called *switch_s_left_slingshot_active*.
    game_start <game_start>
    game_started <game_started>
    game_starting <game_starting>
+   game_will_end <game_will_end>
+   game_will_start <game_will_start>
    init_done <init_done>
    init_phase_1 <init_phase_1>
    init_phase_2 <init_phase_2>
@@ -145,6 +148,8 @@ an event called *switch_s_left_slingshot_active*.
    mode_(name)_starting <mode_name_starting>
    mode_(name)_stopped <mode_name_stopped>
    mode_(name)_stopping <mode_name_stopping>
+   mode_(name)_will_start <mode_name_will_start>
+   mode_(name)_will_stop <mode_name_will_stop>
    motor_(name)_reached_(position) <motor_name_reached_position>
    multi_player_ball_started <multi_player_ball_started>
    multiball_lock_(name)_full <multiball_lock_name_full>
@@ -157,12 +162,16 @@ an event called *switch_s_left_slingshot_active*.
    multiplayer_game <multiplayer_game>
    not_enough_credits <not_enough_credits>
    player_add_request <player_add_request>
-   player_add_success <player_add_success>
-   player_turn_start <player_turn_start>
+   player_added <player_added>
+   player_adding <player_adding>
+   player_turn_ended <player_turn_ended>
+   player_turn_ending <player_turn_ending>
    player_turn_started <player_turn_started>
    player_turn_starting <player_turn_starting>
-   player_turn_stop <player_turn_stop>
+   player_turn_will_end <player_turn_will_end>
+   player_turn_will_start <player_turn_will_start>
    player_(var_name) <player_var_name>
+   player_will_add <player_will_add>
    (playfield)_active <playfield_active>
    (playfield)_ball_count_change <playfield_ball_count_change>
    playfield_transfer_(playfield_transfer)_ball_transferred <playfield_transfer_playfield_transfer_ball_transferred>
@@ -192,7 +201,6 @@ an event called *switch_s_left_slingshot_active*.
    slide_(name)_created <slide_name_created>
    slide_(name)_removed <slide_name_removed>
    sw_(playfield)_active <sw_playfield_active>
-   sw_(tag_name) <sw_tag_name>
    switch_(name)_active <switch_name_active>
    switch_(name)_inactive <switch_name_inactive>
    text_input_(key)_abort <text_input_key_abort>

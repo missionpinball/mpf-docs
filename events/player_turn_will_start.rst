@@ -1,10 +1,11 @@
-player_turn_starting
-====================
+player_turn_will_start
+======================
 
 *MPF Event*
 
-The player's turn is in the process of starting. This is a queue
-event, and the player's turn won't actually start until the queue is cleared.
+A new player's turn will start. This event is only posted before the
+start of a new player's turn. If that player gets an extra ball and
+shoots again, this event is not posted a second time.
 
 Keyword arguments
 -----------------

@@ -1,11 +1,10 @@
-player_turn_start
-=================
+player_adding
+=============
 
 *MPF Event*
 
-A new player's turn will start. This event is only posted before the
-start of a new player's turn. If that player gets an extra ball and
-shoots again, this event is not posted a second time.
+A new player is in the process of being added to this game. This is a queue
+event, and the player won't actually be finished adding until the queue is cleared.
 
 Keyword arguments
 -----------------
@@ -18,5 +17,5 @@ the arguments below.)
   The player number
 
 ``player``
-  The player object whose turn is starting.
+  The player object for the player being added
 
