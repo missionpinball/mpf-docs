@@ -1,6 +1,8 @@
 OPP Lights
 ==========
 
+.. include:: /not_updated_yet.rst
+
 If you're using an OPP incandescent wing card, the lights are
 numbered the same as the input switches.  OPP bulbs are numbered
 sequentially depending on which wing board controls the output.

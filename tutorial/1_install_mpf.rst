@@ -1,5 +1,5 @@
-Tutorial step 1: Prerequisites
-==============================
+Tutorial step 1: Installing MPF on your computer
+================================================
 
 The first step to using MPF is to understand some basics about how it works and to actually
 get MPF installed on your computer. So that's what these next few steps will do.
@@ -12,40 +12,52 @@ tutorial. You can complete the entire thing via MPF's "virtual" hardware
 platform which lets you run MPF on your computer with no actual hardware attached.
 
 We should point out that MPF's virtual platform is *not* pinball emulation software. There is no
-3D-rendered playfield, and it's not like Future Pinball or Visual Pinball or anything.
+3D-rendered playfield like Pinball Arcade, and you can't really "play" your game. (This is because
+MPF is not pinball emulation software, rather, it's software to control a real pinball machine!)
 
-MPF is a bit different because it's designed to control a real, physical pinball
-machine, so when you run MPF's virtual platform interface, really all you're
-going to see is a lot of text and log messages as well as whatever's on your
-machine's DMD or LCD.
-
-Still, it's enough to get started. We'll show you how to map keyboard keys on your computer so
-you can "play" your machine to test it out.
+That said, MPF has tools which let you control switches and see lights flash on your computer screen,
+and you can arrange them onto an image of your playfield, so you can actually build a complete game
+in MPF before you ever start on a physical machine!
 
 2. Read the overview of MPF
 ---------------------------
 
 You certainly don't have to read through all the documentation to
 start this tutorial. However, the documentation is arranged in the order you should
-read it, so if you haven't read the documentation leading up to this point, please
+read it, so if you haven't read the stuff leading up to this point, please
 do that now. (If you're reading this online, start with the ":doc:`/start/index`" entry
 on the left. If you're reading a PDF, please turn to Page 1. :)
 
-3. Check your MPF version
--------------------------
+3. Install MPF
+--------------
 
-This tutorial is written for MPF versions |version|, but if you're just starting out you should run the
-latest version. So let's see which version of MPF you have installed.
+Obviously before you can start using MPF, you need to install it. At this point it's best to install MPF
+on whatever computer you use daily. There is certainly no need to try to put it on some small Linux single
+board computer or Raspberry Pi or whatever you ultimately plan to put in your pinball machine. For now just
+install it on your laptop.
 
-To do this, open a command prompt and run the following command:
+MPF runs on Windows, Mac, and Linux. You can find the installation instructions :doc:`here </install/index>`.
+
+Go do that now, and make sure that you get both MPF and the MPF-MC installed.
+
+3a. What if you already installed MPF?
+--------------------------------------
+
+If you already installed MPF, let's quickly make sure you're using the same version this tutorial is written
+for.
+
+This tutorial is written for MPF versions |version|.
+
+To see what version you have, open a command prompt (like you did when you installed MPF) and run the following
+command:
 
 ::
 
    mpf --version
 
-That command should print something like ``MPF v0.30.1``. Note that the version is three numbers, ``x.y.z``.
+That command should print something like ``MPF v0.33.12``. Note that the version is three numbers, ``x.y.z``.
 The last number (the "z") is the patch number and doesn't have any functional changes. (In other words, MPF
-0.30.0 and 0.30.2 have the same functions and features.)
+0.30.0 and 0.30.2 and 0.30.56 have the same functions and features.)
 
 .. tip::
 

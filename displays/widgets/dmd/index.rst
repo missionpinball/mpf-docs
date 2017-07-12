@@ -1,6 +1,10 @@
 DMD Widget
 ==========
 
+
+.. include:: /not_updated_yet.rst
+
+
 The DMD widget is used to render a :doc:`display </displays/display/index>` on a
 :doc:`slide </displays/slides/index>` which looks like a classic monochrome DMD.
 

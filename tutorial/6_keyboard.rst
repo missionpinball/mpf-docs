@@ -1,6 +1,8 @@
 Tutorial step 6: Add keyboard control
 =====================================
 
+.. include:: /not_updated_yet.rst
+
 Once you get to this point, you should be able to run the MPF game
 engine as well as the media controller, and you should have a pop-up
 window which shows some text. You should have your flippers

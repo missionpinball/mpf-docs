@@ -1,6 +1,8 @@
 Tutorial step 18: Add your first shot
 =====================================
 
+.. include:: /not_updated_yet.rst
+
 At this point you have a machine you can turn on, lights flash, the
 display works plays, you can hit start, you have a base mode with some
 simple scoring, and you can play complete games. Not bad! In this step

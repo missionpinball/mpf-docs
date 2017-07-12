@@ -1,6 +1,8 @@
 Color DMD Widget
 ================
 
+.. include:: /not_updated_yet.rst
+
 The Color DMD widget is used to render a :doc:`display </displays/display/index>` on a
 :doc:`slide </displays/slides/index>` and to apply options that make it look like a DMD (dot filters, etc.).
 

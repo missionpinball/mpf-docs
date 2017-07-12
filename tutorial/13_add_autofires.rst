@@ -1,6 +1,8 @@
 Tutorial step 13: Add slingshots, pop bumpers, and other "autofire" devices
 ===========================================================================
 
+.. include:: /not_updated_yet.rst
+
 While we're setting up the basic playfield devices, let's configure
 the "autofire" devices like slingshots and pop bumpers. (An "autofire
 device" is anything where you have one switch and one coil and the

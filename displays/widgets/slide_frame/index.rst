@@ -1,6 +1,8 @@
 Slide Frame Widget
 ==================
 
+.. include:: /not_updated_yet.rst
+
 The slide frame widget is used to create a "frame" on a :doc:`slide </displays/slides/index>`
 that is used to hold other slides. (Think of this like a picture-in-picture kind of thing.)
 

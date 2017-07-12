@@ -1,6 +1,8 @@
 Tutorial step 9. Add the start button
 =====================================
 
+.. include:: /not_updated_yet.rst
+
 Obviously in order to play an actual game, you have to be able to
 start a game, and that requires a start button. So let's add that now.
 

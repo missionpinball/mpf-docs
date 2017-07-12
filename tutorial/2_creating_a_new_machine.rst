@@ -1,6 +1,8 @@
 Tutorial step 2: Create your machine folder
 ===========================================
 
+.. include:: /not_updated_yet.rst
+
 Okay, so MPF is installed and you're able to run *Demo Man*. Great!
 Now it's time to create the folders and files for your own game.
 

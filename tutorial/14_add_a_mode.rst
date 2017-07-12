@@ -1,6 +1,8 @@
 Tutorial step 14: Add your first game mode
 ==========================================
 
+.. include:: /not_updated_yet.rst
+
 By this point in the tutorial you should have a "playable" game,
 though it's pretty boring because there's no scoring, no modes, and
 the display just shows *PLAYER X BALL X* the whole time.

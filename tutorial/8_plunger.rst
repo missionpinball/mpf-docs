@@ -1,6 +1,8 @@
 Tutorial step 8: Add your plunger lane
 ======================================
 
+.. include:: /not_updated_yet.rst
+
 In this step we're going to create your *plunger lane*
 (or *shooter lane* or *ball launcher* or *catapult* or whatever you
 want to call it).

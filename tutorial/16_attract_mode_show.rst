@@ -1,6 +1,8 @@
 Tutorial step 16: Create an attract mode display show
 =====================================================
 
+.. include:: /not_updated_yet.rst
+
 Now that we have a running game and some basic scoring, let's continue
 to make the display more useful by creating a slide show that plays during the attract mode
 and cycles through a few different slides. ("GAME OVER", "PRESS START", ... that sort of thing.)

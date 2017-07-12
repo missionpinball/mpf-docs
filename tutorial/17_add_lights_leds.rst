@@ -1,6 +1,8 @@
 Tutorial step 17: Add lights (or LEDs)
 ======================================
 
+.. include:: /not_updated_yet.rst
+
 Now that you're able to run a complete (albeit boring) game, let's get
 your lights or LEDs configured and make it so they play a show while
 your machine is in attract mode.

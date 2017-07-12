@@ -1,6 +1,8 @@
 Tutorial step 12: Add the rest of your ball devices
 ===================================================
 
+.. include:: /not_updated_yet.rst
+
 Now that you've added all your switches and coils, you'll probably
 notice that the ball is *still* getting stuck in devices on the
 playfield when it enters them. This is because MPF doesn't know that

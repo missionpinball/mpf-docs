@@ -1,6 +1,8 @@
 Tutorial step 7: Add your trough
 ================================
 
+.. include:: /not_updated_yet.rst
+
 At this point you have a flipping machine with a display, but you don't
 have a "working" pinball machine since you can't start or play games.
 

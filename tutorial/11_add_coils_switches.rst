@@ -1,6 +1,8 @@
 Tutorial step 11: Add the rest of your coils and switches
 =========================================================
 
+.. include:: /not_updated_yet.rst
+
 Okay, so at this point you have a working game. The biggest problem
 you might run into is that if you shoot your ball into a playfield
 device like a VUK or popper, the ball will get stuck. Why? Because you

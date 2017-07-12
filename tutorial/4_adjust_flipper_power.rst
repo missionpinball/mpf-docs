@@ -1,6 +1,8 @@
 Tutorial step 4: Adjust your flipper power
 ==========================================
 
+.. include:: /not_updated_yet.rst
+
 We casually mentioned in the previous step that MPF uses a very low
 default power setting for coils--mainly because we don't want to risk blowing
 apart some 40-year-old coil mechanism with a power setting that's too high. (Ask us

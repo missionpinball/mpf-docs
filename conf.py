@@ -11,7 +11,7 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.50'  # all versions these docs cover
+version = '0.50+'  # all versions these docs cover
 release = '0.50.x'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
