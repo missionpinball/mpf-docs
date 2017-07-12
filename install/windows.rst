@@ -135,10 +135,10 @@ and install it onto your computer.
 
 .. note::
 
-   Since MPF 0.50 is not yet released, the pip command you run has a ``--pre``
+   Since MPF 0.50 is not yet released, the pip command you run has a **--pre**
    at the end which tells it to get the latest "pre-release" version. Once MPF
-   0.50 is released, you won't need the ``--pre``. If you run pip without the
-   ``--pre`` now, you will get MPF 0.33, which is fine, but then you need to
+   0.50 is released, you won't need the **--pre**. If you run pip without the
+   **--pre** now, you will get MPF 0.33, which is fine, but then you need to
    read the 0.33 documentation, not this 0.50 documentation.
 
 Pip packages can include dependencies, which means that when you run this
