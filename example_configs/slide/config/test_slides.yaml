@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 modes:
  - mode1
@@ -62,3 +62,26 @@ slides:
     widgets:
       type: text
       text: TEST BACKGROUND COLOR & OPACITY
+  slide7:
+  - type: text
+    text: TEST Z-ORDER 50-1
+    y: -50
+    z: 50
+    color: ff0000
+    font_size: 50
+  - type: text
+    text: TEST Z-ORDER 100
+    z: 100
+    color: 00ff00
+    font_size: 50
+  - type: text
+    text: TEST Z-ORDER 0
+    y: 50
+    color: 0000ff
+    font_size: 50
+  - type: text
+    text: TEST Z-ORDER 50-2
+    y: 75
+    z: 50
+    color: ffff00
+    font_size: 50

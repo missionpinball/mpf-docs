@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 displays:
   window:
@@ -11,9 +11,11 @@ displays:
 
 slides:
   window:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
+      effects:
+        type: dmd
     - type: text
       text: DMD FONT & POSITIONING TEST
       font_size: 50

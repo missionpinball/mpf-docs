@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 diverters:
     d_test:
@@ -11,6 +11,7 @@ diverters:
 coils:
     c_diverter:
         number: 10
+        default_hold_power: 0.250
 
 switches:
     s_activate:

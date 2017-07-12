@@ -17,6 +17,13 @@ Mode config examples
 Here are some example mode config files that go along with the machine-wide
 config above.
 
+Note that there are multiple mode config examples here. You might not
+necessarily use more than one in your machine.
+
+.. literalinclude:: /example_configs/tilt/modes/base/config/base.yaml
+   :caption: `your_machine_folder/modes/base/config/base.yaml </_static/tilt/modes/base/config/base.yaml>`_
+   :language: yaml
+
 .. literalinclude:: /example_configs/tilt/modes/tilt/config/tilt.yaml
    :caption: `your_machine_folder/modes/tilt/config/tilt.yaml </_static/tilt/modes/tilt/config/tilt.yaml>`_
    :language: yaml

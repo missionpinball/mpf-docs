@@ -18,3 +18,11 @@ options. You wouldn't actually use more than one.
 .. literalinclude:: /example_configs/dmd/config/test_dmd.yaml
    :caption: `your_machine_folder/config/test_dmd.yaml </_static/dmd/config/test_dmd.yaml>`_
    :language: yaml
+
+.. literalinclude:: /example_configs/dmd/config/testDmd.yaml
+   :caption: `your_machine_folder/config/testDmd.yaml </_static/dmd/config/testDmd.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/dmd/config/testRgbDmd.yaml
+   :caption: `your_machine_folder/config/testRgbDmd.yaml </_static/dmd/config/testRgbDmd.yaml>`_
+   :language: yaml

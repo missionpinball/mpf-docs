@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 bcp:
     connections:
@@ -22,3 +22,4 @@ random_event_player:
 
 modes:
   - test_mode
+  - game_mode

@@ -1,12 +1,12 @@
-#config_version=4
+#config_version=5
 
 coils:
     c_hold:
         number:
-        allow_enable: True
+        default_hold_power: 1.0
     c_power:
         number:
-        pulse_ms: 20
+        default_pulse_ms: 20
 
 switches:
     s_eos:

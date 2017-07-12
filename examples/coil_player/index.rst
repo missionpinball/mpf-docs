@@ -10,3 +10,13 @@ real-world examples of how these configs are used.
 .. literalinclude:: /example_configs/coil_player/config/coil_player.yaml
    :caption: `your_machine_folder/config/coil_player.yaml </_static/coil_player/config/coil_player.yaml>`_
    :language: yaml
+
+Mode config examples
+--------------------
+
+Here are some example mode config files that go along with the machine-wide
+config above.
+
+.. literalinclude:: /example_configs/coil_player/modes/mode1/config/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/coil_player/modes/mode1/config/mode1.yaml>`_
+   :language: yaml

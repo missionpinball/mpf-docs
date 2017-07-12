@@ -1,5 +1,4 @@
-#config_version=4
-
+#config_version=5
 displays:
   default:
     width: 400
@@ -28,15 +27,14 @@ slides:
     text: ANIMATION TEST
     color: ff00ff
     font_size: 100
-    y: 300
     x: 400
+    y: 300
     animations:
       entrance2:
         property: x, y
         value: 0, 0
         duration: 1s
         timing: with_previous  # or after prev
-        repeat: True
 
   slide3:
     type: text
@@ -45,6 +43,10 @@ slides:
     opacity: 0
     animations:
       entrance3: fade_in, multi
+      fade_in: fade_in
+      advance_x: advance_x_50
+      advance_y: advance_y_50
+      advance_xy: advance_xy_50
 
   slide4:
     type: text
@@ -72,13 +74,13 @@ slides:
   slide7:
     type: text
     text: TEST ANIMATION ON show_slide
-    x: 0
+    x: 100
     color: ffaa00
     font_size: 50
     animations:
       show_slide:
         property: x
-        value: 400
+        value: 500
         duration: 500ms
 
   slide8:
@@ -95,25 +97,25 @@ slides:
   slide9:
     type: text
     text: ANIMATION pre_show_slide
-    x: 0
+    x: 100
     color: ffaa00
     font_size: 50
     animations:
       pre_show_slide:
         property: x
-        value: 400
+        value: 500
         duration: 500ms
 
   slide10:
     type: text
     text: ANIMATION show_slide
-    x: 0
+    x: 100
     color: ffaa00
     font_size: 50
     animations:
       show_slide:
         property: x
-        value: 400
+        value: 500
         duration: 500ms
 
   slide11:
@@ -141,33 +143,33 @@ slides:
   slide13:
     type: text
     text: RESET POSITION pre_show_slide
-    x: 0
+    x: 100
     animations:
       show_slide:
         - property: x
-          value: 100
+          value: 200
           duration: 1s
     reset_animations_events: pre_show_slide
 
   slide14:
     type: text
     text: RESET POSITION slide_play
-    x: 0
+    x: 100
     animations:
       show_slide:
         - property: x
-          value: 100
+          value: 200
           duration: 1s
     reset_animations_events: slide_play
 
   slide15:
     type: text
     text: RESET POSITION standard event
-    x: 0
+    x: 100
     animations:
       show_slide:
         - property: x
-          value: 100
+          value: 200
           duration: 1s
     reset_animations_events: event1
 
@@ -245,8 +247,8 @@ animations:
     duration: 1s
   - property: x
     value: 0%
-    duration: 100ms
-    timing: after_previous
+    duration: 1s
+    timing: with_previous
     repeat: False
 
   pulse:
@@ -257,3 +259,21 @@ animations:
     value: 1
     duration: 100ms
     timing: after_previous
+
+  advance_x_50:
+    property: x
+    value: 50
+    relative: True
+    duration: 1s
+
+  advance_y_50:
+    property: y
+    value: 50
+    relative: True
+    duration: 1s
+
+  advance_xy_50:
+    property: x, y
+    value: 50, 50
+    relative: True
+    duration: 1s

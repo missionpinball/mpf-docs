@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 modes:
   - mode1
@@ -13,18 +13,40 @@ slides:
     - type: image
       image: image1
       x: 50
+      animations:
+        show_slide:
+          - property: rotation
+            value: 360
+            duration: 2s
     - type: image
       image: image2
+      rotation: 25
       x: 80
     - type: image
       image: image3
+      scale: 1.5
       x: 110
     - type: image
       image: image4
+      rotation: -45
       x: 140
     - type: image
       image: image5
       x: 170
+      animations:
+        show_slide:
+          - property: scale
+            value: 3.0
+            duration: 1s
+          - property: scale
+            value: 0.1
+            duration: 1s
+          - property: scale
+            value: 3.0
+            duration: 1s
+          - property: scale
+            value: 1.0
+            duration: 1s
     - type: image
       image: image6
       x: 200

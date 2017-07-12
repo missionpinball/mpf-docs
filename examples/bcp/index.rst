@@ -15,6 +15,10 @@ options. You wouldn't actually use more than one.
    :caption: `your_machine_folder/config/config.yaml </_static/bcp/config/config.yaml>`_
    :language: yaml
 
+.. literalinclude:: /example_configs/bcp/config/multiple_connections_config.yaml
+   :caption: `your_machine_folder/config/multiple_connections_config.yaml </_static/bcp/config/multiple_connections_config.yaml>`_
+   :language: yaml
+
 .. literalinclude:: /example_configs/bcp/config/test_bcp_processor.yaml
    :caption: `your_machine_folder/config/test_bcp_processor.yaml </_static/bcp/config/test_bcp_processor.yaml>`_
    :language: yaml

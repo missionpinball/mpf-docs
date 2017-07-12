@@ -37,6 +37,7 @@ and/or show configs.
    ball_save </examples/ball_save/index>
    ball_search </examples/ball_search/index>
    bcp </examples/bcp/index>
+   bitmap_fonts </examples/bitmap_fonts/index>
    bonus </examples/bonus/index>
    carousel </examples/carousel/index>
    coil_player </examples/coil_player/index>
@@ -45,6 +46,7 @@ and/or show configs.
    config_interface </examples/config_interface/index>
    config_players </examples/config_players/index>
    credits </examples/credits/index>
+   data_manager </examples/data_manager/index>
    device </examples/device/index>
    device_collection </examples/device_collection/index>
    display </examples/display/index>
@@ -65,16 +67,20 @@ and/or show configs.
    kickback </examples/kickback/index>
    led </examples/led/index>
    led_player </examples/led_player/index>
+   lisy </examples/lisy/index>
    logic_blocks </examples/logic_blocks/index>
    magnet </examples/magnet/index>
    migrator </examples/migrator/index>
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
    motor </examples/motor/index>
+   mpf_configs </examples/mpf_configs/index>
    mpf_plugin_config_player_validation </examples/mpf_plugin_config_player_validation/index>
    mpfmc_configs </examples/mpfmc_configs/index>
    mpftestcase </examples/mpftestcase/index>
    multiball </examples/multiball/index>
+   multiball_locks </examples/multiball_locks/index>
+   mypinballs </examples/mypinballs/index>
    null </examples/null/index>
    openpixel </examples/openpixel/index>
    opp </examples/opp/index>
@@ -88,9 +94,12 @@ and/or show configs.
    plugin_config_player </examples/plugin_config_player/index>
    pololu_maestro </examples/pololu_maestro/index>
    randomizer </examples/randomizer/index>
+   rpi </examples/rpi/index>
    score_reels </examples/score_reels/index>
    scoring </examples/scoring/index>
    scriptlets </examples/scriptlets/index>
+   segment_display </examples/segment_display/index>
+   sequence_shot </examples/sequence_shot/index>
    service_mode </examples/service_mode/index>
    servo </examples/servo/index>
    shapes </examples/shapes/index>
@@ -103,6 +112,7 @@ and/or show configs.
    smart_virtual_platform </examples/smart_virtual_platform/index>
    snux </examples/snux/index>
    spike </examples/spike/index>
+   stepper </examples/stepper/index>
    switch_controller </examples/switch_controller/index>
    switch_player </examples/switch_player/index>
    text </examples/text/index>
@@ -111,7 +121,9 @@ and/or show configs.
    timed_switches </examples/timed_switches/index>
    timer </examples/timer/index>
    transitions </examples/transitions/index>
+   trinamics_steprocker </examples/trinamics_steprocker/index>
    utils </examples/utils/index>
    video </examples/video/index>
+   virtual_pinball </examples/virtual_pinball/index>
    widget_styles </examples/widget_styles/index>
    widgets </examples/widgets/index>

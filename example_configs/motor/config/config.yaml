@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 switches:
     s_position_up:
@@ -9,7 +9,7 @@ switches:
 coils:
     c_motor_run:
         number:
-        allow_enable: True
+        max_hold_power: 1.0
 
 motors:
     motorized_drop_target_bank:

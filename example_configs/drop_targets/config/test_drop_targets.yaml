@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 switches:
   switch1:
@@ -33,7 +33,7 @@ coils:
     number:
   coil4:
     number:
-    hold_power: 2
+    default_hold_power: 0.250
   coil5:
     number:
   coil6:

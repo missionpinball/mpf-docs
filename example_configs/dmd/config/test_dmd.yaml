@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 displays:
   default:
@@ -26,17 +26,12 @@ widgets:
     y: 0%
 slides:
   container_slide:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
-#      color: ff00aa
-#      source_display: dmd
-#      shades: 16
-#      gain: 2
-#      bg_color: 303030
-#      blur: .5
-#      pixel_size: .7
-#      dot_filter: false
+      source_display: dmd
+      effects:
+        - type: dmd
     - type: text
       text: TRADITIONAL DMD TEST
       y: 200

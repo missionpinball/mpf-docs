@@ -1,0 +1,44 @@
+#config_version=5
+
+displays:
+  default:
+    width: 800
+    height: 600
+
+slides:
+  static_text:
+    - type: text
+      text: TEST
+      font_name: f1fuv
+      bitmap_font: True
+      animations:
+        add_to_slide:
+          - property: rotation
+            value: 360
+            duration: 2s
+          - property: scale
+            value: 0.01
+            duration: 1s
+    - type: text
+      text: STATIC TEXT
+      font_name: test_font
+      bitmap_font: True
+      y: 200
+    - type: text
+      text: Bitmap Font Test @!$
+      font_name: test_font_2
+      bitmap_font: True
+      y: top - 100
+      opacity: 0
+      animations:
+        add_to_slide:
+          - property: opacity
+            value: 1.0
+            duration: 1s
+
+bitmap_fonts:
+  F1fuv:
+    descriptor: [ ' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
+
+slide_player:
+  static_text: static_text

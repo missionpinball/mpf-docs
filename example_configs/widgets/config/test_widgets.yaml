@@ -1,13 +1,12 @@
-#config_version=4
+#config_version=5
 
 modes:
 - mode1
 
 displays:
   default:
-    width: 400
-    height: 300
-
+    width: 800
+    height: 600
 
 widgets:
   widget1:
@@ -117,16 +116,132 @@ widgets:
   widget10:
     type: text
     text: (text)
-  info_frame:
-    - type: slide_frame
-      width: 210
-      height: 28
-      name: infoframe
-      y: 28
-      x: 0
-      anchor_y: top
-      anchor_x: left
-      z: 1000
+  widget_bezier:
+    - type: bezier
+      points: 400, 300, 100, 100, 400, 0
+      color: red
+      thickness: 5
+      animations:
+        add_to_slide:
+          - property: color, points
+            value: 0, 1, 0, 1, 200, 200, 50, 100, 100, 250
+            duration: 2s
+          - property: rotation
+            value: -300
+            duration: 2s
+            timing: with_previous
+          - property: color
+            value: 0, 0, 1, 1
+            duration: 1s
+          - property: color
+            value: 1, 1, 0, 1
+            duration: 1s
+  widget_ellipse:
+    - type: ellipse
+      width: 200
+      height: 100
+      angle_end: 0
+      color: magenta
+      opacity: 0.5
+      animations:
+        add_to_slide:
+          - property: pos
+            value: 100, 100
+            relative: true
+            duration: 2s
+          - property: rotation
+            value: 360
+            duration: 2s
+            timing: with_previous
+  widget_quad:
+    - type: quad
+      points: 300, 100, 350, 200, 500, 150, 450, 50
+      color: cornflowerblue
+      animations:
+        add_to_slide:
+          - property: points
+            value: 50, -50, -50, 50, 50, -50, -50, 50
+            duration: 1.5
+            relative: true
+          - property: rotation, scale
+            value: -720, -0.9
+            relative: true
+            duration: 1.5s
+            timing: with_previous
+          - property: points
+            value: -50, 50, 50, -50, -50, 50, 50, -50
+            duration: 1.5
+            relative: true
+          - property: rotation, scale
+            value: 720, 0.9
+            relative: true
+            duration: 1.5s
+            timing: with_previous
+  widget_rectangle:
+    - type: rectangle
+      x: 600
+      y: 300
+      width: 100
+      height: 200
+      color: gold
+      animations:
+        add_to_slide:
+          - property: rotation, scale, corner_radius
+            value: 540, 0.5, 50
+            duration: 1.5s
+          - property: scale
+            value: 0.5
+            duration: 1.0s
+          - property: rotation, scale, corner_radius
+            value: 0, 1.0, 0
+            duration: 1.5s
+  widget_line:
+    - type: line
+      points: 200, 50, 600, 50
+      thickness: 10
+      color: darkcyan
+      animations:
+        add_to_slide:
+          - property: rotation, scale
+            value: 360, 1.5
+            duration: 3s
+  widget_triangle:
+    - type: triangle
+      points: 100, 450, 100, 550, 200, 450
+      color: lawngreen
+      animations:
+        add_to_slide:
+          - property: rotation, scale
+            value: -900, 1.5
+            duration: 3s
+            easing: in_quint
+  widget_points:
+    - type: points
+      points: 100, 450, 100, 550, 200, 450
+      pointsize: 2
+      color: deeppink
+      animations:
+        add_to_slide:
+          - property: rotation, scale, pointsize
+            value: 900, 1.5, 8
+            duration: 3s
+            easing: in_quint
+  widget_text:
+    - type: text
+      text: TEST
+      font_size: 50
+      bold: true
+      color: lightyellow
+      animations:
+        add_to_slide:
+          - property: rotation, scale
+            value: 45, 1.5
+            duration: 2s
+            easing: in_quint
+          - property: scale
+            value: 0.75
+            duration: 1s
+            easing: out_quint
 
 widget_player:
   add_widget1_to_current: widget1
@@ -136,7 +251,8 @@ widget_player:
       slide: slide1
   add_widget6:
     widget6:
-      target: default
+      widget_settings:
+        z: -1
   remove_widget1_by_key:
     widget1:
       action: remove
@@ -153,7 +269,7 @@ widget_player:
       widget8:
         widget_settings:
           expire: 1s
-        target: default
+          z: -1
   add_widget8_custom_settings:
       widget8:
         widget_settings:
@@ -219,9 +335,8 @@ widget_player:
         color: red
   widget_to_parent:
     box11:
-      target: default
       widget_settings:
-        z: 1
+        z: -1
     box12:
       widget_settings:
         z: 2
@@ -243,8 +358,14 @@ widget_player:
   show_widget10:
     widget10:
       action: add
-  show_info_frame:
-    info_frame: {}
+  show_bezier_widget: widget_bezier
+  show_ellipse_widget: widget_ellipse
+  show_quad_widget: widget_quad
+  show_rectangle_widget: widget_rectangle
+  show_line_widget: widget_line
+  show_triangle_widget: widget_triangle
+  show_points_widget: widget_points
+  show_text_widget: widget_text
 
 slide_player:
   show_slide_1:

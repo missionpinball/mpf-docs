@@ -11,6 +11,10 @@ Note that there are multiple machine config
 examples here. They're just included to show different
 options. You wouldn't actually use more than one.
 
+.. literalinclude:: /example_configs/display/config/test_display.yaml
+   :caption: `your_machine_folder/config/test_display.yaml </_static/display/config/test_display.yaml>`_
+   :language: yaml
+
 .. literalinclude:: /example_configs/display/config/test_display_multiple.yaml
    :caption: `your_machine_folder/config/test_display_multiple.yaml </_static/display/config/test_display_multiple.yaml>`_
    :language: yaml

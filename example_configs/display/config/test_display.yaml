@@ -1,0 +1,90 @@
+# config_version=5
+
+window:
+  width: 600
+  height: 200
+  title: Mission Pinball Framework - Demo Man
+  resizable: true
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+
+displays:
+  window:
+    width: 600
+    height: 200
+  dmd:
+    width: 128
+    height: 32
+
+widget_styles:
+  text_default:
+    font_name: Quadrit
+    font_size: 10
+    adjust_top: 2
+    adjust_bottom: 3
+  space title huge:
+    font_name: DEADJIM
+    font_size: 29
+    antialias: true
+    adjust_top: 3
+    adjust_bottom: 3
+  space title:
+    font_name: DEADJIM
+    font_size: 21
+    antialias: true
+    adjust_top: 2
+    adjust_bottom: 3
+  medium:
+    font_name: pixelmix
+    font_size: 8
+    adjust_top: 1
+    adjust_bottom: 1
+  small:
+    font_name: smallest_pixel-7
+    font_size: 9
+    adjust_top: 2
+    adjust_bottom: 3
+  tall title:
+    font_name: big_noodle_titling
+    font_size: 20
+
+slides:
+  window_slide_1:
+  - type: display
+    width: 512
+    height: 128
+    source_display: dmd
+    effects:
+      - type: dmd
+        dot_color: ff5500
+        background_color: 220000
+  - type: text
+    style: tall title
+    text: MISSION PINBALL FRAMEWORK
+    anchor_y: top
+    y: top-3
+    font_size: 30
+    color: white
+  - type: rectangle
+    width: 514
+    height: 130
+    color: 444444
+  - type: text
+    style: tall title
+    text: DEMO MAN
+    anchor_x: right
+    anchor_y: bottom
+    y: bottom+3
+    x: right-42
+    font_size: 30
+    color: red
+  asset_status:
+  - type: text
+    text: "LOADING ASSETS"
+
+slide_player:
+  mc_ready.1: window_slide_1
+  mc_ready.2:
+    asset_status:
+      target: dmd

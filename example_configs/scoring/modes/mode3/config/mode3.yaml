@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
     start_events: start_mode3
     stop_events: stop_mode3
@@ -17,4 +17,13 @@ scoring:
         score:
             score: 10
             player: 2
+            action: set
+    score_float2:
+        score:
+            float: 2.0
+    score_float3:
+        score: 100 * current_player.multiplier
+    set_float:
+        multiplier:
+            float: 1.5
             action: set

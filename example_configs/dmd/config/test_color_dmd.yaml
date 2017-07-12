@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 displays:
   default:
@@ -10,13 +10,12 @@ displays:
 
 slides:
   slide1:
-    - type: color_dmd
+    - type: display
       width: 640
       height: 160
-#      color: ffcccc
-#      source_display: dmd
-#      shades: 4
-#      gain: 2
+      source_display: dmd
+      effects:
+        - type: color_dmd
     - type: text
       text: COLOR DMD TEST
       y: 200
@@ -24,6 +23,30 @@ slides:
       width: 642
       height: 162
       color: gray
+  slide2:
+    - type: display
+      y: top - 25
+      anchor_y: top
+      width: 640
+      height: 160
+      source_display: dmd
+      effects:
+        - type: color_dmd
+    - type: display
+      width: 640
+      height: 160
+      source_display: dmd
+      effects:
+        - type: dmd
+    - type: display
+      y: bottom + 25
+      anchor_y: bottom
+      width: 640
+      height: 160
+      source_display: dmd
+      effects:
+        - type: scanlines
+        - type: monochrome
   dmd_slide:
     - type: text
       text: DMD TEXT
@@ -121,6 +144,7 @@ slides:
 
 slide_player:
   slide1: slide1
+  slide2: slide2
   dmd_slide:
     dmd_slide:
       target: dmd

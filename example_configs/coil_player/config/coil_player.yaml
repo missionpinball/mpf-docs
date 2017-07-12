@@ -1,14 +1,17 @@
-#config_version=4
+#config_version=5
+
+modes:
+  - mode1
 
 coils:
   coil_1:
     number:
-    allow_enable: true
+    default_hold_power: 1.0
   coil_2:
     number:
   coil_3:
     number:
-    allow_enable: true
+    default_hold_power: 1.0
 
 coil_player:
   event1: coil_1
@@ -20,7 +23,7 @@ coil_player:
   event3:
     coil_1:
       action: pulse
-      ms: 49
+      pulse_ms: 49
   event4:
     coil_1:
       action: enable

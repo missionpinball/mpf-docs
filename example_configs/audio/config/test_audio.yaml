@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 sound_system:
   buffer: 2048
   frequency: 44100

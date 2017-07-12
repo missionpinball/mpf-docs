@@ -1,4 +1,4 @@
-# config_version=4
+# config_version=5
 
 mode:
   priority: 500
@@ -7,7 +7,8 @@ widget_player:
   mode1_add_widgets: widget2
   mode1_add_widget6:
     widget6:
-      target: default
+      widget_settings:
+        z: -1
   mode1_add_widget_with_key:
     widget2:
       key: newton_crosby

@@ -1,9 +1,9 @@
-#config_version=4
+#config_version=5
 
 coils:
   kickback_coil:
     number:
-    pulse_ms: 100
+    default_pulse_ms: 100
 
 switches:
   s_kickback:

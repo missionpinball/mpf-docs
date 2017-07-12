@@ -11,6 +11,10 @@ Note that there are multiple machine config
 examples here. They're just included to show different
 options. You wouldn't actually use more than one.
 
+.. literalinclude:: /example_configs/smart_virtual_platform/config/test_coil_fired_plunger.yaml
+   :caption: `your_machine_folder/config/test_coil_fired_plunger.yaml </_static/smart_virtual_platform/config/test_coil_fired_plunger.yaml>`_
+   :language: yaml
+
 .. literalinclude:: /example_configs/smart_virtual_platform/config/test_smart_virtual.yaml
    :caption: `your_machine_folder/config/test_smart_virtual.yaml </_static/smart_virtual_platform/config/test_smart_virtual.yaml>`_
    :language: yaml

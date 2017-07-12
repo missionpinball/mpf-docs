@@ -31,3 +31,7 @@ necessarily use more than one in your machine.
 .. literalinclude:: /example_configs/scoring/modes/mode3/config/mode3.yaml
    :caption: `your_machine_folder/modes/mode3/config/mode3.yaml </_static/scoring/modes/mode3/config/mode3.yaml>`_
    :language: yaml
+
+.. literalinclude:: /example_configs/scoring/modes/mode_for_logic_block/config/mode_for_logic_block.yaml
+   :caption: `your_machine_folder/modes/mode_for_logic_block/config/mode_for_logic_block.yaml </_static/scoring/modes/mode_for_logic_block/config/mode_for_logic_block.yaml>`_
+   :language: yaml

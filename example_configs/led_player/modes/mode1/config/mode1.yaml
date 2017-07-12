@@ -1,10 +1,10 @@
-# config_version=4
+# config_version=5
 
 mode:
   priority: 100
   game_mode: False
 
-led_player:
+light_player:
   event5:
     led1:
       color: orange
