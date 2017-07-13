@@ -112,7 +112,7 @@ You should get results that look something like this:
 
 .. image:: images/fresh_mpf_running.png
 
-This is MPF's default display when it's running. Don't worry--this is not what your machine's player's will see when
+This is MPF's default display when it's running. Don't worry--this is not what your machine's players will see when
 they play! :) We'll set that up later. This is more for you while you're building your MPF config.
 
 Notice a few things on this console display:

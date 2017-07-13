@@ -30,6 +30,7 @@ Now let's get started...
 
    1. Install MPF <1_install_mpf>
    2. Create your machine folder <2_creating_a_new_machine>
+   2a. Testing your machine <2a_testing>
    3. Get flipping! <3_get_flipping>
    4. Adjusting your flipper power <4_adjust_flipper_power>
    5. Add a display <5_add_a_display>
