@@ -29,4 +29,4 @@ folder in each step's machine folder.) You can even run the tests yourself (even
 know how to write tests) to verify that the config files you typed in are entered correctly.
 
 More information about writing unit tests for your machine, as well as the test writing tutorial, is available
-here: `http://developer.missionpinball.org/en/dev/testing/writing_machine_tests.html`_.
+here: `<http://developer.missionpinball.org/en/dev/testing/writing_machine_tests.html>`_.
