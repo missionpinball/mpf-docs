@@ -157,6 +157,14 @@ If you get a crash with a message about a "Config file version mismatch", like t
 This means you don't have ``#config_version=4`` in the top line of your config file. (Make sure you include the hash
 mark as part of that.)
 
+If the following line at the end of your log and nothing more happens you probably started mpf with mc (i.e. by omitting the `-b` switch).
+This can be fixed by either running `mpf -b` or by making sure that the media controller is running. 
+
+.. code-block:: console
+
+   BCPClientSocket.local_display : Connecting BCP to 'local_display' at localhost:5050...
+
+
 If you get an error that says ``Could not find machine folder: 'None'``, that means that you ran MPF from the
 wrong folder. For example:
 
@@ -168,12 +176,6 @@ wrong folder. For example:
 This happens because the command prompt is in the child "config" folder, rather than the base machine folder. So ``cd ..``
 up one level and try again.
 
-If the following line at the end of your log and nothing more happens you probably started mpf with mc (i.e. by omitting the `-b` switch).
-This can be fixed by either running `mpf -b` or by making sure that the media controller is running. 
-
-.. code-block:: console
-
-   BCPClientSocket.local_display : Connecting BCP to 'local_display' at localhost:5050...
 
 .. code-block:: doscon
 
