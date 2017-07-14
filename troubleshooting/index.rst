@@ -61,8 +61,8 @@ Similarly, you can run MPF-MC unit tests (they will take a bit longer and might 
 If you cannot solve the problem ask in our `support forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
 Please include the following information:
 
-1. The output of `mpf diagnosis`
+1. The output of ``mpf diagnosis``
 2. In case you suspect an installation problem include the output of unittests and if you can run demo_man.
-3. Add a log of your game. Therefore, run your game with `mpf both -v -V` and grab the latest MPF and MC log from the log folder in your machine.
+3. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and grab the latest MPF and MC log from the log folder in your machine.
 4. Describe how to reproduce your problem.
 5. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
