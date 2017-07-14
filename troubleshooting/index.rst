@@ -10,7 +10,11 @@ Run ``mpf diagnosis`` from within your machine folder to see if your installatio
 .. code-block:: console
 
   $ mpf diagnosis
+  
+  
   MPF version: MPF v0.50.0-dev.11
+  MPF install location: /data/home/jan/cloud/flipper/src/mpf/mpf
+  Machine folder detected: /data/home/jan/cloud/flipper/src/good_vs_evil
   MPF-MC version: MPF-MC v0.50.0-dev.5 (config_version=5, BCP v1.1, Requires MPF v0.50.0-dev.10)
   
   Serial ports found:
