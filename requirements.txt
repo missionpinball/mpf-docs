@@ -1,5 +1,6 @@
 Sphinx
 sphinx-rtd-theme
 gitpython
+cython==0.24.1
 -e git+https://github.com/missionpinball/mpf.git@dev#egg=mpf
 -e git+https://github.com/missionpinball/mpf-mc.git@dev#egg=mpfmc
