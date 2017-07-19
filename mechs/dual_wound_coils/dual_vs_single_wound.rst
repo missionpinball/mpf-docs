@@ -16,15 +16,15 @@ These two requirements are conceptually incompatible.
 The way you make a coil strong is you give it lots of power and make it really
 big. Unfortunately the byproduct of that is heat, which means if you make a
 nice, big, powerful coil that's strong enough to move the mechanism with the
-quick power it needs, then when the coil is left in the "on" state, it will
-coil will generate so much heat that it will burn up the coil. :(
+quick power it needs, then when the coil is left in the "on" state, it
+generates so much heat that it will burn up the coil. :(
 
 Fortunately the pinball companies solved this 60+ years ago with the concept
 of "dual wound" coils. A dual-wound coil is essentially two separate
 coils in one. (There are literally two separate wires wrapped around the coil
 sleeve instead of one.)
 
-Dual-wound coils have a strong (often called that "main" or "power" winding)
+Dual-wound coils have a strong (often called the "main" or "power") winding
 which is used for the initial "kick" of the coil, and they also have a
 lower-powered ("hold") winding which is used to hold the active position.
 
@@ -139,14 +139,14 @@ In electronics, there's a concept called "Pulse Width Modulation" (or "PWM"),
 which (in this case) basically means the control hardware turns the power on and
 off really fast. (Like, hundreds of times per second.)
 
-So the way this works is that you have a high-powered, strong coil which, is
-activated a full strength in order to
-provide the strong initial motion. However once the mechanism is in the
-up position (based on either an EOS switch, or based on the millisecond-level
-precise timing), the control system stops powering that coil at 100% and instead
-cuts the power back (using that PWM thing) to a smaller percent (like maybe
-12.5% or 25% or so). That reduced power is enough to keep the mech in the up
-position, but not enough to cause the coil to overheat and burn out.
+So the way this works is that you have a high-powered, strong coil which is
+activated a full strength in order to provide the strong initial motion.
+However once the mechanism is in the up position (based on either an EOS switch,
+or based on the millisecond-level precise timing), the control system stops
+powering that coil at 100% and instead cuts the power back (using that PWM thing)
+to a smaller percent (like maybe 12.5% or 25% or so). That reduced power is
+enough to keep the mech in the up position, but not enough to cause the coil
+to overheat and burn out.
 
 Advantages to using single-wound coils
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
