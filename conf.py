@@ -197,7 +197,10 @@ def setup_tests_link(link_name, repo_name, package_name):
     else:
         print(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files'))
         print(os.path.join(sys.prefix, 'src', package_name, 'tests', 'machine_files'))
-        raise RuntimeError("Cannot find {} repo. Aborting!".format(repo_name))
+        raise RuntimeError("Cannot find {} repo. Searched {} and {}. Aborting!".format(
+            repo_name,
+            os.path.join(sys.prefix, 'src', package_name, 'tests', 'machine_files'),
+            os.path.join(sys.prefix, 'src', package_name, 'tests', 'machine_files')))
 
     # verify_version(os.path.join(tests_root, os.pardir, '_version.py'))
 
