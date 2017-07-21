@@ -1,4 +1,5 @@
 Sphinx
 sphinx-rtd-theme
 gitpython
-mpf-mc>=0.50.0.dev0,<0.51
+-e git+https://github.com/missionpinball/mpf.git@dev#egg=mpf
+-e git+https://github.com/missionpinball/mpf-mc.git@dev#egg=mpfmc
