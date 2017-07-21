@@ -1,5 +1,4 @@
 Sphinx
 sphinx-rtd-theme
 gitpython
-cython==0.23.1
 mpf-mc>=0.50.0.dev0,<0.51
