@@ -17,6 +17,7 @@ to tutorials, event listings, and configuration
    Ball Search <ball_search/index>
    Ball Tracking <ball_tracking/index>
    Bonus <bonus/index>
+   Carousel <carousel>
    Coins & Credits <credits/index>
    Combo Switches <combo_switches/index>
    Extra Balls <extra_balls/index>
