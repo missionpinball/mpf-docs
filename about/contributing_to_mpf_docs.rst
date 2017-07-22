@@ -11,6 +11,37 @@ How does the layout work?
 The documentation uses reStructuredText (rst). 
 You can read about possible elements in the `rst documentation <http://www.sphinx-doc.org/en/stable/rest.html>`_. 
 
+Some excempts from the documentation above:
+
+A list of item:
+
+::
+
+  * element 1
+  * element 2
+  
+Looks like:
+
+* element 1
+* element 2
+
+Highlighted yaml:
+
+::
+
+  .. code-block:: yaml
+
+    element: 
+       subelement: value
+
+Looks like:
+
+
+.. code-block:: yaml
+
+  element: 
+    subelement: value
+
 
 To make a quick change to an existing page
 ------------------------------------------
