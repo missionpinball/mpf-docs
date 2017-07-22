@@ -18,18 +18,37 @@ A common use of the carousel is to create a mode selection proess.  For example,
 
 There is a reference to a code file in here so be careful to include that reference.  You don't need to download any code as it is already in you MPF installation.  Here is the process of configuring a carousel:
 
-* Create a mode folder and config file
-** <machine>/modes/carousel/config/carousel.yaml
-* Add the code to mode: section
-** code: mpf.modes.carousel.code.carousel.Carousel
+* Create a mode folder and config file ``<machine>/modes/carousel/config/carousel.yaml``
+* Add the code to ``mode:`` section:
+ 
+.. code-block:: yaml
+ 
+    code: mpf.modes.carousel.code.carousel.Carousel
+    
 * Create your selectable items.  These could be your mode names but you can name them anything for now.
-** selectable_items: terra, pyro, space, liquid
+
+.. code-block:: yaml
+
+   selectable_items: terra, pyro, space, liquid
+
 * Select the event(s) that choose the item.  For example, the start button. You could think of this an the "enter key" 
-** select_item_events: s_start_active
+
+.. code-block:: yaml
+
+   select_item_events: s_start_active
+
 * Select the event that moves to the next item in the list of items 
-** next_item_events: s_right_flipper_active
+
+.. code-block:: yaml
+
+  next_item_events: s_right_flipper_active
+
 * Select the event that moves back to the previous item in the list of items 
-** previous_item_events: s_left_flipper_active
+
+.. code-block:: yaml
+
+   previous_item_events: s_left_flipper_active
+
 
 There are two events of importance here:
 
@@ -40,60 +59,60 @@ You can use the carousel_<item>_highlighted event to display a slide showing the
 
 You can then use the carousel_<item>_selected event to start the mode that was selected by the player.
 
-::
+.. code-block:: yaml
 
-#config_version=4
-mode:
-  start_events: ball_starting
-  stop_events: carousel_terra_selected  # not sure what event to use here????
-  code: mpf.modes.carousel.code.carousel.Carousel
+  #config_version=4
+  mode:
+    start_events: ball_starting
+    stop_events: carousel_terra_selected  # not sure what event to use here????
+    code: mpf.modes.carousel.code.carousel.Carousel
+  
+  mode_settings:
+    selectable_items: terra, pyro, space, liquid
+    select_item_events: s_start_active
+    next_item_events: s_right_flipper_active
+    previous_item_events: s_left_flipper_active
 
-mode_settings:
-  selectable_items: terra, pyro, space, liquid
-  select_item_events: s_start_active
-  next_item_events: s_right_flipper_active
-  previous_item_events: s_left_flipper_active
-
-slide_player:
-  carousel_terra_highlighted: select_terra 
-  carousel_liquid_highlighted: select_liquid
-  carousel_space_highlighted: select_space
-  carousel_pyro_highlighted: select_pyro
-
-slides:  
-  select_liquid:
-    widgets:
-      - type: text
-        text: LIQUID METAL
-        font_size: 100
-        color: yellow
-    transition:
-      type: move_in
-      direction: right         
-  select_terra:
-    widgets:
-      - type: text
-        text: TERAFORM 
-        font_size: 100
-        color: yellow
-    transition:
-      type: move_in
-      direction: right           
-  select_space:
-    widgets:
-      - type: text
-        text: SPACE OUT 
-        font_size: 100
-        color: yellow
-    transition:
-      type: move_in
-      direction: right            
-  select_pyro:
-    widgets:
-      - type: text
-        text: PYRO 
-        font_size: 100
-        color: yellow
-    transition:
-      type: move_in
-      direction: right   
+  slide_player:
+    carousel_terra_highlighted: select_terra 
+    carousel_liquid_highlighted: select_liquid
+    carousel_space_highlighted: select_space
+    carousel_pyro_highlighted: select_pyro
+  
+  slides:  
+    select_liquid:
+      widgets:
+        - type: text
+          text: LIQUID METAL
+          font_size: 100
+          color: yellow
+      transition:
+        type: move_in
+        direction: right         
+    select_terra:
+      widgets:
+        - type: text
+          text: TERAFORM 
+          font_size: 100
+          color: yellow
+      transition:
+        type: move_in
+        direction: right           
+    select_space:
+      widgets:
+        - type: text
+          text: SPACE OUT 
+          font_size: 100
+          color: yellow
+      transition:
+        type: move_in
+        direction: right            
+    select_pyro:
+      widgets:
+        - type: text
+          text: PYRO 
+          font_size: 100
+          color: yellow
+      transition:
+        type: move_in
+        direction: right   
