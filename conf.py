@@ -57,7 +57,6 @@ html_static_path = ['_static', 'examples']
 # html_extra_path = []  # will be copied to root
 
 html_last_updated_fmt = '%b %d, %Y'
-html_use_smartypants = True
 htmlhelp_basename = 'MissionPinballFrameworkdoc'
 
 # -- Options for LaTeX output ---------------------------------------------

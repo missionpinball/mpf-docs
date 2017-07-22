@@ -17,7 +17,7 @@ The DMD widget is almost identical to the :doc:`/displays/widgets/color_dmd/inde
 except the DMD widget has the additional options to do the color reduction.
 
 Note that the DMD Widget really is unrelated to whether you have a
-:doc:`physical DMD </displays/display/physical_mono_dmd>` in your machine. (Though
+:doc:`physical DMD </displays/display/dmd>` in your machine. (Though
 if you do have a physical DMD, you can add a DMD widget to a slide in your
 on-screen window to see the DMD when you're running your machine in virtual mode.)
 
