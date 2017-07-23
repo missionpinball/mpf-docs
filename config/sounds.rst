@@ -248,18 +248,20 @@ List of one (or more) values, each is a type: ``string``.
 The list of track names to apply the ducking to when the sound is played. This most commonly
 contains the name of the track that music is played on.
 
-Optional settings
-~~~~~~~~~~~~~~~~~
-
-The following sections are optional in the ``ducking:`` section of your config. (If you don't
-include them, the default will be used).
-
 attack:
 ^^^^^^^
 Single value, type: ``time string (secs)``. Default: ``10ms``
 
 The duration of the period over which the ducking starts until it reaches its maximum attenuation
 (attack stage).  This value is specified as a :doc:`time string </config/instructions/time_strings>`.
+
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+
+The following sections are optional in the ``ducking:`` section of your config. (If you don't
+include them, the default will be used).
+
 
 attenuation:
 ^^^^^^^^^^^^
