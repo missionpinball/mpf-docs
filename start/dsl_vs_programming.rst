@@ -100,7 +100,7 @@ structures, then use your own Python code to do the logic within a mode, then
 use your mode code to post an event to use MPF's scoring system, etc.
 
 If you don't use MPF, then you have to write everything yourself in code. If you
-do you MPF, then you get to choose what you write in code and what you don't
+do use MPF, then you get to choose what you write in code and what you don't
 have to write. (Seriously, ball tracking is a hard. Use our pre-written code via
 the config files!)
 
