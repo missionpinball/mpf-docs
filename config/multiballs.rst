@@ -61,7 +61,7 @@ for this setting.
 
 ball_locks:
 ~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``ball_locks:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a ``ball_devices:`` device. Default: ``None``
 
 Use those devices first when ejecting balls to the playfield on multiball start. On start all balls from all
 locks will be ejected (maybe more than ball_count). If there are not enough balls in the lock more balls will be
