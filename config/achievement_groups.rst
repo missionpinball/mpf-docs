@@ -187,7 +187,7 @@ on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted, will randomly pick on of the available
+Events in this list, when posted, will randomly pick one of the available
 achievements and change it to its "selected" state. This is useful when a game
 is starting and you want one of the available achievements to start in a selected
 state. (e.g. pick a random mission to be highlighted.)
