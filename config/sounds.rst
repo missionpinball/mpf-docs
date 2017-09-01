@@ -127,8 +127,6 @@ means this sound will have no queue limit and will always play eventually.
 
 streaming:
 ~~~~~~~~~~
-
-
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Indicates whether or not the sound sound will be streamed (rather than stored in memory).
@@ -139,7 +137,6 @@ setting is ignored and a value of 1 is used.
 
 simultaneous_limit:
 ~~~~~~~~~~~~~~~~~~~
-
 Single value, type: ``integer``. Default: ``None``
 
 The numeric value indicating the maximum number of instances of this sound that may be played
@@ -154,7 +151,6 @@ played at once up to the limit of the track.  The value of this setting is ignor
 
 stealing_method:
 ~~~~~~~~~~~~~~~~
-
 Single value, type: one of the following options: oldest, newest, skip. Default: ``oldest``
 
 The ``stealing_method:`` of a sound determines the behavior of additional requests to play the
@@ -171,7 +167,6 @@ limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. O
 
 mode_end_action:
 ~~~~~~~~~~~~~~~~
-
 Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
 
 The ``mode_end_action:`` setting determines what action to take when the mode that initiates the
@@ -204,7 +199,6 @@ volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as a decibel st
 
 fade_in:
 ~~~~~~~~
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 
@@ -212,7 +206,6 @@ The number of seconds over which to fade in the sound when it is played.
 
 fade_out:
 ~~~~~~~~~
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 
@@ -223,7 +216,6 @@ by an event.
 
 start_at:
 ~~~~~~~~~
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 

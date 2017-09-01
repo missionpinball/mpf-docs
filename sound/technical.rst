@@ -32,11 +32,12 @@ streaming and editing) to complete complex workflows. The MPF MC audio interface
 for all its sound file loading functions and real-time audio streaming. All audio is fed into SDL2
 for final output.
 
-The audio interface is divided into tracks, which are analogous to channels on an audio mixer.
-Each track can play up to 32 sounds simultaneously (the limit for each track is configurable) and
-the output for each track is mixed together and fed to the SDL_Mixer track via the custom music
-player function. All of the sound generation and mixing functions are C functions (written in
-Cython) that run in the SDL2 audio thread.
+The audio interface is divided into :doc:`tracks </sound/tracks>`, which are analogous to channels
+on an audio mixer.  There are multiple types of audio tracks, each with its own specialized
+feature set. The output of each track is mixed together and fed to the SDL_Mixer track via the
+custom music player function. The audio mixing engine uses 16-bit integer calculations and
+brickwall limiting to ensure there are no numeric overflows. All of the sound generation and mixing
+functions are C functions (written in Cython) that run in the SDL2 audio thread.
 
 It is important to understand the threading models of both SDL2 and Python to avoid common
 threading problems. Python supports multiple threads, however it uses a mechanism called the

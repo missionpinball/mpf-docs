@@ -115,7 +115,6 @@ setting only applies to the ``set_volume`` action and will be ignored for all ot
 
 fade:
 ~~~~~
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 

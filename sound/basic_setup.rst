@@ -28,12 +28,15 @@ Example:
         master_volume: 0.75
         tracks:
            music:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.5
            voice:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.7
            sfx:
+              type: standard
               simultaneous_sounds: 8
               volume: 0.4
 
@@ -251,6 +254,7 @@ References
 
 + :doc:`Sound & Audio </sound/index>`
 + :doc:`Ducking </sound/ducking>`
++ :doc:`Tips & tricks </sound/tips_tricks>`
 + :doc:`sound_system: </config/sound_system>`
 + :doc:`sounds: </config/sounds>`
 + :doc:`sound_player: </config_players/sound_player>`
