@@ -40,6 +40,7 @@ them, with explanations of how to use them in config files and in shows.
    random_event_player
    show_player
    slide_player
+   sound_loop_set_player
    sound_player
    track_player
    trigger_player
