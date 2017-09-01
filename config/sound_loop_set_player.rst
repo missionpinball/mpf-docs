@@ -66,16 +66,12 @@ Other available optional settings:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Several other settings may be used in the sound player to override settings specified in the
-``sounds:`` section of config files.  Please refer to the :doc:`sounds: </config/sounds>`
-documentation for details about each setting.
+``sound_loop_sets:`` section of config files.  Please refer to the
+:doc:`sound_loop_sets: </config/sound_loop_sets>` documentation for details about each setting.
 
-+ ``loops:``
-+ ``priority:``
-+ ``max_queue_time:``
 + ``volume:``
 + ``fade_in:``
 + ``fade_out:``
-+ ``start_at:``
 + ``events_when_played:``
 + ``events_when_stopped:``
 + ``events_when_looping:``

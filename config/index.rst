@@ -131,6 +131,8 @@ indicated which type of config file it's valid in.
    smart_virtual: <smart_virtual>
    smartmatrix: <smartmatrix>
    snux: <snux>
+   sound_loop_set_player: <sound_loop_set_player>
+   sound_loop_sets: <sound_loop_sets>
    sound_player: <sound_player>
    sound_pools: <sound_pools>
    sound_system: <sound_system>
