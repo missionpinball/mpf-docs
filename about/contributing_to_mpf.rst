@@ -30,7 +30,7 @@ To work on MPF you need to install it in developer/editable mode:
    GitHub (only needed for media controller changes - skip otherwise).
 #. Run ``pip3 install -e .`` from within the mpf-mc folder to install MPF MC in
    editable mode (only needed for media controller changes - skip otherwise).
-#. Switch bith repositories to the branch corresponding to the version you want
+#. Switch both repositories to the branch corresponding to the version you want
    to work with. This should be ``dev`` in most cases or the current release
    for smaller bug fixed. Do what works best for you. We can help to forward or
    backport your changes.

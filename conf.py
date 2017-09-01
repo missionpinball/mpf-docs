@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # sphinx-doc config file
 
 import time
+import os
+import re
+import sys
+
 import git
 import sphinx_rtd_theme
 
@@ -18,8 +25,6 @@ project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
 author = 'The Mission Pinball Framework Team'
 
-
-
 # dev warning box will be shown in HTML builds for the following GitHub branch
 # names:
 branches_for_dev_warning = ['dev']
@@ -35,6 +40,11 @@ highlight_language = 'yaml'
 
 todo_include_todos = True
 
+# Tests Links -------------------------------------------------------
+
+mpf_examples = 'mpf_examples'
+mpfmc_examples = 'mpfmc_examples'
+
 # -- Options for HTML output ----------------------------------------------
 
 html_theme = 'sphinx_rtd_theme'
@@ -47,7 +57,6 @@ html_static_path = ['_static', 'examples']
 # html_extra_path = []  # will be copied to root
 
 html_last_updated_fmt = '%b %d, %Y'
-html_use_smartypants = True
 htmlhelp_basename = 'MissionPinballFrameworkdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -170,3 +179,49 @@ def setup(app):
               `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
         
         '''
+
+
+def setup_tests_link(link_name, repo_name, package_name):
+    try:
+        os.unlink(link_name)
+    except FileNotFoundError:
+        pass
+
+    if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')):
+        tests_root = os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')
+
+    elif os.path.isdir(os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files')):
+        tests_root = os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files')
+
+    else:
+        print(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files'))
+        print(os.path.join(sys.prefix, 'src', package_name, 'tests', 'machine_files'))
+        raise RuntimeError("Cannot find {} repo. Searched {} and {}. Aborting!".format(
+            repo_name,
+            os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files'),
+            os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')))
+
+    # verify_version(os.path.join(tests_root, os.pardir, '_version.py'))
+
+    print("Creating '{}' link to {}".format(link_name, tests_root))
+    os.symlink(tests_root, link_name)
+
+
+def verify_version(version_file):
+
+    #  http://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package
+    verstrline = open(version_file, "rt").read()
+    VSRE = r"^__short_version__ = ['\"]([^'\"]*)['\"]"
+    mo = re.search(VSRE, verstrline, re.M)
+    if mo:
+        mpf_version_required_string = mo.group(1)
+    else:
+        raise RuntimeError("Unable to find version string in %s." % (version_file,))
+
+    if mpf_version_required_string != mpf._version.__short_version__:
+        raise RuntimeError("mpf-examples version mismatch. MPF is version {} "
+                           "but the mpf-examples repo found requires MPF {}".format(
+            mpf._version.__short_version__, mpf_version_required_string))
+
+setup_tests_link(mpf_examples, 'mpf', 'mpf')
+setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')

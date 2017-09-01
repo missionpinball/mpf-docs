@@ -99,7 +99,7 @@ When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
 connect to the Teensy.
 
-Note that the :doc:`/displays/display/physical_mono_dmd` guide has more details
+Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
 
 ::
