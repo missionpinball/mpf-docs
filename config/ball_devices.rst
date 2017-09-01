@@ -54,7 +54,7 @@ multiple playfields, you can set that target here. Default is
 
 ball_missing_timeouts:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``20000ms``
 
 A list of timeouts that correspond to
 how much time after a ball goes missing passes before MPF assumes that
