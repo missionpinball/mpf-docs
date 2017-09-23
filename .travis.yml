@@ -11,7 +11,7 @@ python:
 
 install:
   - "git clone --branch dev https://github.com/missionpinball/mpf-debian-installer.git _mpf_installer"
-  - "_mpf_installer/install-mpf-dependencies && _mpf_installer/install-mc-dependencies"
+  - "sudo _mpf_installer/install-mpf-dependencies && sudo _mpf_installer/install-mc-dependencies"
   - "pip install -v -v -v -r requirements.txt"
 
 script:
