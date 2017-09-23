@@ -3,6 +3,8 @@
 # own webhook and is not related to anything that travis does.
 
 language: python
+dist: trusty
+sudo: required
 
 python:
   - "3.4"
