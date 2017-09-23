@@ -8,7 +8,7 @@ python:
   - "3.4"
 
 install:
-  - "pip install -q -r requirements.txt"
+  - "pip install -v -q -r requirements.txt"
 
 script:
   - "sphinx-build -nW -b html -d _build/doctrees . _build/html"
