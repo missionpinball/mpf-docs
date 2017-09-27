@@ -1,9 +1,46 @@
 Connecting your computer to the Stern SPIKE CPU node
 ====================================================
+There are at least 3 options to connect a computer running MPF to the SPIKE 
+CPU via a serial connection.
 
-MPF connects to the SPIKE CPU node via a serial connection. If you're running
-MPF on a regular computer, you'll need to buy a USB-to-serial adapter. There
-are lots of them, most for less than $10, and they're all pretty much the same.
+1. USB to USB Null Modem Cable 
+2. USB to Serial Adapter 
+3. Using two USB to Serial Adapters
+
+OPTION 1: USB to USB Null Modem Cable 
+=======================================
+
+Probably the cleanest and easiest method is to purchase the USB to USB Null Modem Cable.  
+With this cable, you can plug one end into the USB port on your computer and the other 
+end into one of the 
+two USB ports on the SPIKE board.  On a Windows computer, use the Device Manager to 
+determine which COM port the cable has been assigned by Windows.  Update you machine 
+configuration with the correct COM port (example, COM5).
+
+:
+
+  spike:
+    port: COM5
+
+
+Null modem cables used to be a common way to connect two computers together.  This is 
+the most expensive solution at about $50 USD.  However it looks just like a USB cable.  
+The only vendor that has the USB to USB Null Modem Cable is the FDTI company. 
+
+http://www.ftdichip.com/Products/Cables/USBtoUSB.htm
+
+This particular cable also provides faster data transfer rates up to 3 MBaud than Options 2 and 3.
+
+OPTION 2: USB to Serial Adapter
+===============================
+
+The second method is to purchase a USB-to-serial adapter and connect it to the DBGU 
+header (CN2) on the SPIKE CPU node.  The problem you may have is that not all SPIKE boards
+have the header soldered onto the board.  A header is essentially a 6 pin socket that the 
+adapter can plug into. If you do have the header at location CN2, great!  Read on.  
+
+Ok, you have a header on the SPIKE board.  Simply purchase an inexpensive USB to serial adapter
+and plug it in. There are lots of them, most for less than $10, and they're all pretty much the same.
 
 Some examples that should work (though we don't guarantee it and we're happy to
 hear feedback or recommendations):
@@ -31,14 +68,18 @@ Pins are marked GND, RX, TX. You do not need more than these.
 TODO add a photo and more detailed pinout instructions.
 
 
-Connect using two USB-Serial Adapters
--------------------------------------
+OPTION 3: Connect using two USB-Serial Adapters
+-----------------------------------------------
 
-Newer versions of the SPIKE CPU node do not have a connector attached to the CN2/DBGU header.
-(The board is the same, but you see a blank spot instead of the plug-in connector attached.)
+Newer versions of the SPIKE CPU node do not have a connector attached to the 
+CN2/DBGU header. The newer board is the same, but you see a blank spot instead 
+of the plug-in connector attached. If you do not want to solder a header onto 
+the SPIKE board then you need to go back to Option 1 or use this option. Soldering
+on the SPIKE board is risky if you lack experience with a solder iron and will 
+likely void your warranty. 
 
-In this case, you can solder on your own connector, *or* you can buy two USB serial adapters and
-then use the USB connection on the SPIKE CPU node.
+For this option, you can buy two USB serial adapters and then use the USB connection
+on the SPIKE CPU node.
 
 The one you connect to the SPIKE CPU node needs to have an actual FTDI brand chip because the
 FTDI drivers are included in the code on the SPIKE board. The second adapter for your computer
@@ -54,3 +95,6 @@ wires together to reduce interference, especially if your wires are more than a 
 The following diagram illustrates how everything fits together:
 
 .. image:: /hardware/images/spike_usb_to_usb.jpg
+
+You've essentially created a null modem cable as described in Option 1.  This option may be a little 
+cheaper but the solution is far less elegant and stable.
