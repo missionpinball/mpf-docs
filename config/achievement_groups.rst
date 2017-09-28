@@ -85,7 +85,7 @@ disable_while_achievement_started:
 
 Boolean (yes/no or true/false) setting. Default is ``True``.
 
-If True, this achievement will automatically disable itself when any of its
+If True, this achievement group will automatically disable itself when any of its
 member achievements are in the "started" states. This is the default behavior
 because an achievement group is typically used to select an achievement to run,
 and while an achievement is running, you usually want to disable the selection
