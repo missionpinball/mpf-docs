@@ -32,8 +32,8 @@ Visit the :doc:`/mechs/plungers/index` documentation for pictures that
 show each option and step-by-step guides which walk you through configuring
 each type for MPF.
 
-2. Revisit your trough/drain device
------------------------------------
+2. Revisit your trough/drain device and add it as source_device to your playfield
+---------------------------------------------------------------------------------
 
 Even though this is mentioned in the how-to guides, once you have your plunger
 device set up, be sure to go back to your trough or ball drain device and add
@@ -48,6 +48,16 @@ be something like "bd_catapult" or whatever you called it.
 
 Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
+
+Tell the playfield to use the plunger for new balls:
+
+::
+
+   playfields:
+       playfield:
+            tags: default
+            default_source_device: bd_plunger
+
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
