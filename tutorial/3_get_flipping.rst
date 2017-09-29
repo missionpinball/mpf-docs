@@ -205,6 +205,11 @@ Here's what you would create based on the switches and coils we've defined so fa
 
 ::
 
+    playfields:
+        playfield:
+            tags: default
+            default_source_device: None  # use None in steps before 8
+
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
