@@ -28,11 +28,17 @@ To work on MPF you need to install it in developer/editable mode:
    (only needed for media controller changes - skip otherwise).
 #. Clone your fork of the mpf repo to your local machine (``git clone
    https://github.com/YOUR_GITHUB_HANDLE/mpf/``)
+#. Install MPF dependencies if you did not install mpf before. On linux you can
+   run our installer `https://raw.githubusercontent.com/missionpinball/mpf-debian-installer/dev/install-mpf-dependencies`.
+   On other platforms check the :doc:`installation instructions </install/index>` instructions.
 #. Run ``pip3 install -e .`` from within the mpf folder to install MPF in editable
    mode.
 #. Clone your fork of the mpf-mc repo to your local machine (``git clone
       https://github.com/YOUR_GITHUB_HANDLE/mpf-mc/``; only needed for
    media controller changes - skip otherwise).
+#. Install MPF-MC dependencies if you did not install mpf-mc before. On linux
+   you can run our installer `https://raw.githubusercontent.com/missionpinball/mpf-debian-installer/dev/install-mc-dependencies`.
+   On other platforms check the :doc:`installation instructions </install/index>` instructions.
 #. Run ``pip3 install -e .`` from within the mpf-mc folder to install MPF MC in
    editable mode (only needed for media controller changes - skip otherwise and
    just run ``pip3 install mpf-mc --pre``).
