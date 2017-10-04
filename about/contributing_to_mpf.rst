@@ -23,24 +23,36 @@ Install MPF in development mode
 
 To work on MPF you need to install it in developer/editable mode:
 
-#. Clone the `mpf repo <https://github.com/missionpinball/mpf/>`_ from GitHub.
+#. Fork the `mpf repo <https://github.com/missionpinball/mpf/>`_ on GitHub.
+#. Fork the `mpf-mc repo <https://github.com/missionpinball/mpf-mc/>`_ on GitHub
+   (only needed for media controller changes - skip otherwise).
+#. Clone your fork of the mpf repo to your local machine (``git clone
+   https://github.com/YOUR_GITHUB_HANDLE/mpf/``)
 #. Run ``pip3 install -e .`` from within the mpf folder to install MPF in editable
    mode.
-#. Clone the `mpf-mc repo <https://github.com/missionpinball/mpf-mc/>`_ from
-   GitHub (only needed for media controller changes - skip otherwise).
+#. Clone your fork of the mpf-mc repo to your local machine (``git clone
+      https://github.com/YOUR_GITHUB_HANDLE/mpf-mc/``; only needed for
+   media controller changes - skip otherwise).
 #. Run ``pip3 install -e .`` from within the mpf-mc folder to install MPF MC in
-   editable mode (only needed for media controller changes - skip otherwise).
+   editable mode (only needed for media controller changes - skip otherwise and
+   just run ``pip3 install mpf-mc --pre``).
 #. Switch both repositories to the branch corresponding to the version you want
    to work with. This should be ``dev`` in most cases or the current release
    for smaller bug fixed. Do what works best for you. We can help to forward or
    backport your changes.
+#. Create a local branch to work on (``git checkout -b your_feature_name``).
 #. Makes your changes.
 #. Add your name to the ``AUTHORS`` file.
 #. If possible add an unit test. We can help with that and a first Pull Request
    without a test is definitely fine.
-#. Run ``make unit`` and check that all tests still pass. You can run them in
-   mpf and mpf-mc.
-#. Submit your pull request.
+#. Run ``python3 -m unittest discover -s mpf.tests`` and check that all tests
+   still pass. You achieve the same for mpf-mc with ``python3 -m unittest discover -s mpfmc.tests``.
+#. Commit your changes (``git commit -a``)
+#. Push your changes to your github (``git push your_feature_name``).
+#. Create and submit your pull request on github.
+
+We recommend you to use a decent IDE because it makes life easier.
+Most of the MPF developers use PyCharm but other IDEs will work as well.
 
 
 Getting started with an easy hack
