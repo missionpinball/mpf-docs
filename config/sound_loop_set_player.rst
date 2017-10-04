@@ -12,7 +12,7 @@ sound_loop_set_player:
 +----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``sound_loop_sets:`` section
-of a step.
+          of a step.
 
 .. overview
 
@@ -21,7 +21,7 @@ on sound loop sets when MPF events are received.  Additional information may be 
 :doc:`sound_player </config_players/sound_loop_set_player>` documentation.
 
 Required settings
-~~~~~~~~~~~~~~~~~
+-----------------
 
 The following sections are required in the ``layers:`` section of your config:
 
@@ -34,7 +34,7 @@ sound loop track. (You configure tracks and track names in the
 :doc:`sound_system: </config/sound_system>` section of your machine config files.)
 
 Optional settings
-~~~~~~~~~~~~~~~~~
+-----------------
 
 The following sections are optional in the ``sound_loop_set_player:`` section of your config.
 (If you don't include them, the default will be used).
@@ -63,7 +63,7 @@ Options for ``action:`` are:
   playing sound loop set (the sound on the layer will continue to play to the end of the current loop).
 
 Other available optional settings:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
 Several other settings may be used in the sound player to override settings specified in the
 ``sound_loop_sets:`` section of config files.  Please refer to the
