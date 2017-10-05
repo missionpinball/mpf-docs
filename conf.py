@@ -197,7 +197,7 @@ def setup_tests_link(link_name, repo_name, package_name):
     else:
         # clone repo
         print("Cloning {}".format(repo_name))
-        current_branch = git.Repo().active_branch.name
+        current_branch = "dev"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(os.getcwd(), '_src', repo_name), branch=current_branch)
 
         tests_root = os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')
