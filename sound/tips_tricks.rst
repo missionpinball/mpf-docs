@@ -21,7 +21,7 @@ Brickwall limiter
    properly in order to avoid the clipping that brickwall limiting adds when mixing signals
    that are too loud.
 
-:doc:`Ducking </sounds/ducking>`
+:doc:`Ducking </sound/ducking>`
    Ducking is an audio effect that lowers the level of one audio signal based upon the level of
    another audio signal (one sound "ducks" out of the way of another).
 

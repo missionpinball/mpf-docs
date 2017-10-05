@@ -33,7 +33,8 @@ language = None
 
 exclude_patterns = ['_build',
                     '_not_updated_yet',
-                    '_doc_tools']
+                    '_doc_tools',
+                    '_src']
 
 pygments_style = 'none'
 highlight_language = 'yaml'
@@ -190,18 +191,16 @@ def setup_tests_link(link_name, repo_name, package_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')):
         tests_root = os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')
 
-    elif os.path.isdir(os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files')):
-        tests_root = os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files')
+    elif os.path.isdir(os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')):
+        tests_root = os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')
 
     else:
-        print(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files'))
-        print(os.path.join(sys.prefix, 'src', package_name, 'tests', 'machine_files'))
-        raise RuntimeError("Cannot find {} repo. Searched {} and {}. Aborting!".format(
-            repo_name,
-            os.path.join(sys.prefix, 'src', repo_name, package_name, 'tests', 'machine_files'),
-            os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')))
+        # clone repo
+        print("Cloning {}".format(repo_name))
+        current_branch = git.Repo().active_branch.name
+        repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(os.getcwd(), '_src', repo_name), branch=current_branch)
 
-    # verify_version(os.path.join(tests_root, os.pardir, '_version.py'))
+        tests_root = os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')
 
     print("Creating '{}' link to {}".format(link_name, tests_root))
     os.symlink(tests_root, link_name)

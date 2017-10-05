@@ -1,7 +1,7 @@
 
 Remember that events in MPF can have key/value pairs (or keyword
 attributes) passed along with them. (For example, when a new player's
-turn starts, the event *player_turn_start* is posted along with
+turn starts, the event *player_turn_started* is posted along with
 keyword attributes *player* (the player object) and *number* (the
 integer number of that player). When a queue event is posted, it
 includes an attribute called queue which is a link to a QueuedEvent

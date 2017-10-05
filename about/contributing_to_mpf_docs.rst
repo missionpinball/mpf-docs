@@ -5,21 +5,19 @@ Want to help make these docs better! Great! We'd love any help, whether it's as
 small as correcting a typo, adding to a section that isn't clear, adding your
 own How To guide, or whatever else you want to change.
 
-How does the layout work? 
+How does the layout work?
 -------------------------
 
-The documentation uses reStructuredText (rst). 
-You can read about possible elements in the `rst documentation <http://www.sphinx-doc.org/en/stable/rest.html>`_. 
+The documentation uses reStructuredText (rst).
+You can read about possible elements in the `rst documentation <http://www.sphinx-doc.org/en/stable/rest.html>`_.
 
 Some excempts from the documentation above:
 
 A list of item:
 
-::
+    * element 1
+    * element 2
 
-  * element 1
-  * element 2
-  
 Looks like:
 
 * element 1
@@ -27,19 +25,16 @@ Looks like:
 
 Highlighted yaml:
 
-::
+    .. code-block:: yaml
 
-  .. code-block:: yaml
-
-    element: 
-       subelement: value
+      element:
+        subelement: value
 
 Looks like:
 
-
 .. code-block:: yaml
 
-  element: 
+  element:
     subelement: value
 
 

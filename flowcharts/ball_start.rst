@@ -12,7 +12,7 @@ ball of the first player in a new game:
     #. If there's not an active player (because this it the start of a new
        game), it called the game mode's ``player_rotate()`` method which maps
        the game's *player* attribute to the current player.
-    #. Posts an event called *player_turn_start*.
+    #. Posts an event called *player_turn_started*.
     #. The game mode's ``_player_turn_started()`` method is a callback for
        that event, which is called next.
 
