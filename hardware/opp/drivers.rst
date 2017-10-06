@@ -51,13 +51,10 @@ and hold_power/8 = time share the coil is on.
 The period is fixed at 16ms for OPP. To set the hold power to 25%, set
 hold_power to 2 and OPP will use 4ms/16ms = 25%.
 
-Because of firmware limitations in OPP hold_power 8 will translate to 15ms/16ms
-= 93.75% on. Same happens when allow_enable is set to true and no hold_power is
-provided. There is currently no way to permanently enable a hold coil in OPP.
-
 By using the MPF hold_power parameter you can only use 8 out of 16 possible
 steps. Therefore, you can also use the OPP specific parameter hold_power16
-which can range from 0 to 15.
+which can range from 0 to 16.  If hold_power16 is 16 or more, the coil will
+be held on at 100% power.
 
 ::
 
