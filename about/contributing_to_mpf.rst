@@ -45,14 +45,14 @@ To work on MPF you need to install it in developer/editable mode:
    for smaller bug fixed. Do what works best for you. We can help to forward or
    backport your changes.
 #. Create a local branch to work on (``git checkout -b your_feature_name``).
-#. Makes your changes.
+#. Make your changes.
 #. Add your name to the ``AUTHORS`` file.
 #. If possible add an unit test. We can help with that and a first Pull Request
    without a test is definitely fine.
 #. Run ``python3 -m unittest discover -s mpf.tests`` and check that all tests
    still pass. You achieve the same for mpf-mc with ``python3 -m unittest discover -s mpfmc.tests``.
 #. Commit your changes (``git commit -a``)
-#. Push your changes to your github (``git push your_feature_name``).
+#. Push your changes to your github (``git push origin your_feature_name``).
 #. Create and submit your pull request on github.
 
 We recommend you to use a decent IDE because it makes life easier.
