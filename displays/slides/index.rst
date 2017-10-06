@@ -64,3 +64,22 @@ to do with the active and current slides of another display.
    picture_in_picture
    split_screen
    display_targets
+
+Slides Events
+-------------
+
+These events can be useful within players.  For example, if you want to play 3 slides
+as a mode begins then the :doc:`/events/mode_modename_started` event can trigger the 
+slide_1 - but what triggers slide_2 and slide_3?  
+
+The slide_player: can be used to sequence the playing of additional slides using the
+slide_slide_1_removed event to trigger the next slide to be played. 
+
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/slide_slidename_active`                                        |
++------------------------------------------------------------------------------+
+| :doc:`/events/slide_slidename_removed`                                       |
++------------------------------------------------------------------------------+
+
