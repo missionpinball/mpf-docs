@@ -1,8 +1,6 @@
 OPP Lights
 ==========
 
-.. include:: /not_updated_yet.rst
-
 If you're using an OPP incandescent wing card, the lights are
 numbered the same as the input switches.  OPP bulbs are numbered
 sequentially depending on which wing board controls the output.
@@ -14,9 +12,10 @@ finally the bulb number on the card.
 
 ::
 
-    matrix_lights:
+    lights:
       some_light:
         number: 1-16
+        subtype: matrix
 
 The above example configures a bulb on the second OPP card, and
 the third wing board, first bulb  On the microprocessor card, the
