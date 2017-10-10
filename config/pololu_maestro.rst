@@ -41,6 +41,8 @@ Optional settings
 
 The following sections are optional in the ``pololu_maestro:`` section of your config. (If you don't include them, the default will be used).
 
+NOTE: The Pololu Maestro control center software and typical servo specifications work in units of microseconds.  The values used here are in quarter-microseconds, so to make them correspond multiply your servo specs by 4.  eg a servo with range of 600-2400 microsecods would be servo_min: 2400 and servo_max: 9600 for the full range.
+
 servo_max:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``9000``
