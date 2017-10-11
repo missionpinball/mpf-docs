@@ -184,6 +184,19 @@ def setup(app):
         
         '''
 
+def get_repo_path(repo_name):
+    if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):
+        return os.path.join(os.getcwd(), os.pardir, repo_name)
+
+    elif os.path.isdir(os.path.join(os.getcwd(), '_src', repo_name)):
+        return os.path.join(os.getcwd(), '_src', repo_name)
+
+    else:
+        # clone repo
+        print("Cloning {}".format(repo_name))
+        current_branch = "dev"
+        repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(os.getcwd(), '_src', repo_name), branch=current_branch)
+        return os.path.join(os.getcwd(), '_src', repo_name)
 
 def setup_tests_link(link_name, repo_name, package_name):
     try:
@@ -191,26 +204,14 @@ def setup_tests_link(link_name, repo_name, package_name):
     except FileNotFoundError:
         pass
 
-    if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')):
-        tests_root = os.path.join(os.getcwd(), os.pardir, repo_name, package_name, 'tests', 'machine_files')
-
-    elif os.path.isdir(os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')):
-        tests_root = os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')
-
-    else:
-        # clone repo
-        print("Cloning {}".format(repo_name))
-        current_branch = "dev"
-        repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(os.getcwd(), '_src', repo_name), branch=current_branch)
-
-        tests_root = os.path.join(os.getcwd(), '_src', repo_name, package_name, 'tests', 'machine_files')
+    tests_root = os.path.join(get_repo_path(repo_name), package_name, 'tests', 'machine_files')
 
     print("Creating '{}' link to {}".format(link_name, tests_root))
     os.symlink(tests_root, link_name)
 
 def build_event_references():
-    a = EventDocParser("events")
-    paths = ['../mpf/mpf', '../mpf-mc/mpfmc']
+    a = EventDocParser(os.path.join(os.getcwd(), "events"))
+    paths = [get_repo_path("mpf"), get_repo_path("mpf-mc")]
 
     # walk through the folders to scan
     for path in paths:
