@@ -57,10 +57,12 @@ your pinball machine.
    * P3-ROC with PDB driver boards (PD-16, SW-16, PD-LED)
    * Plasma & LED mono DMDs (P-ROC)
    * Accelerometer-based tilt (P3-ROC)
+   * I2C slave boards (see below for which I2C boards are supported) (P3-ROC)
+   * Alphanumeric displays via aux port (P-Roc)
 
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
-     switches, & incandescent lights
+     switches, switch matrix, LEDs & incandescent lights
 
 * :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
    * *New in MPF 0.33*
@@ -72,6 +74,10 @@ your pinball machine.
    * *New in MPF 0.50*
    * Gottlieb System 1
    * Gottlieb System 80
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
 
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
@@ -108,6 +114,20 @@ to provide additional functionality.
 
 * :doc:`RGB.DMD RGB LED display controller <eli_dmd/index>`
    * Supports a "real" color DMD made up of RGB LED matrix
+
+* MyPinballs
+   * *New in MPF 0.50*
+   * Alphanumeric segment displays
+
+* Trinamics
+   * *New in MPF 0.50*
+   * StepRocker stepper controller
+
+* Raspberry Pi 3
+   * *New in MPF 0.50*
+   * Local (MPF on the RPi) or remote via ethernet
+   * All inputs and outputs
+   * I2C and SPI
 
 Configuration Guides
 --------------------
