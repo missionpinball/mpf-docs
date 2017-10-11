@@ -11,6 +11,9 @@ import sys
 import git
 import sphinx_rtd_theme
 
+sys.path.append(os.getcwd())
+from _doc_tools.build_events_reference_docs import EventDocParser
+
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig']
 
@@ -205,6 +208,18 @@ def setup_tests_link(link_name, repo_name, package_name):
     print("Creating '{}' link to {}".format(link_name, tests_root))
     os.symlink(tests_root, link_name)
 
+def build_event_references():
+    a = EventDocParser("events")
+    paths = ['../mpf/mpf', '../mpf-mc/mpfmc']
+
+    # walk through the folders to scan
+    for path in paths:
+        for root, _, files in os.walk(path):
+            for file in [x for x in files if x.endswith('.py')]:
+                a.parse_file(os.path.join(root, file))
+
+    # create the index.rst based on everything that was found
+    a.write_index()
 
 def verify_version(version_file):
 
@@ -224,3 +239,5 @@ def verify_version(version_file):
 
 setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
+
+build_event_references()

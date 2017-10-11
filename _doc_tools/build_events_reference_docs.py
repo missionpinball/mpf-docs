@@ -2,16 +2,12 @@ import ast
 import os
 import re
 
-paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
-rst_path = '../events'
-dont_delete_files = []
-
-
 class EventDocParser(object):
 
-    def __init__(self):
+    def __init__(self, rst_path):
         self.file = None
         self.file_list = list()
+        self.rst_path = rst_path
 
     def parse_file(self, file_name):
 
@@ -81,13 +77,13 @@ an event called *switch_s_left_slingshot_active*.
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
+        with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
             f.write(index)
 
     def create_file(self, event, rst):
         filename = event.replace('(', '').replace(')', '') + '.rst'
 
-        with open(os.path.join(rst_path, filename), 'w') as f:
+        with open(os.path.join(self.rst_path, filename), 'w') as f:
             f.write(rst)
 
         return filename
@@ -193,7 +189,11 @@ the arguments below.)\n\n'''
         return output
 
 if __name__ == '__main__':
-    a = EventDocParser()
+    paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
+    rst_path = '../events'
+    dont_delete_files = []
+
+    a = EventDocParser(rst_path)
 
     # delete existing files
     for path, _, files in os.walk(rst_path):
