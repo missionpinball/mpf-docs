@@ -4,7 +4,7 @@ FAQ: Getting help
 Where can I go for help?
 ------------------------
 
-If you're stuck with something, feel free to post to the
+If you're stuck with something, feel free to post a message to the
 `MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_.
 
 I think I've found a bug. Now what?
