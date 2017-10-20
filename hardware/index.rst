@@ -3,8 +3,8 @@ MPF compatible control systems / hardware
 
 MPF controls a pinball machine by interfacing to a modern pinball control system.
 (See the :doc:`/start/index` for details.) MPF itself is hardware-independent,
-meaning that MPF (and the configs and code you build) can work with lots of
-different kinds of control systems and hardware devices.
+meaning that MPF (and the configs and code you build) runs on a :doc:`normal/embedded PC <computer/index>`
+and can work with lots of different kinds of control systems and hardware devices.
 
 Not only does this give you a choice of what type of pinball control hardware
 you want to use, it also means that you have the flexibility to change your
@@ -152,6 +152,7 @@ MPF supports:
    eli_dmd/index
    existing_machines/index
    virtual/index
+   Computer Requirements <computer/index>
 
 Other
 -----
