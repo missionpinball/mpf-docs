@@ -45,7 +45,7 @@ existing devices (those can live inside your machine folder) you will be able
 to instantiate them using config (if you want that).
 
 Code can be added either globally (using scriptlets or code hooks), per mode,
-as new/overloaded device or even as a custom platform. See the `MPF developer documentation <http://docs.missionpinball.org>`
+as new/overloaded device or even as a custom platform. See the `MPF developer documentation <http://docs.missionpinball.org>`_
 for more details about our APIs and interfaces.
 
 
