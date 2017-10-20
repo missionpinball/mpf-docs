@@ -20,6 +20,35 @@ one of the following categories:
 We understand the motivation behind all these thoughts, so we'd like to
 provide our perspective on these issues.
 
+You can still code in MPF
+-------------------------
+
+MPF does not prevent you from coding. We provide two levels of abstraction to
+programmers: hardware abstraction and device abstract. If you use a flipper
+device in code it will expose methods to disable or enable a flipper and work
+on any hardware which is supported in MPF. Plus the device will manage all the
+game integration (e.g. disable flipper after the game).
+
+Nevertheless, you might want to implement a different type of flipper (say
+with three coils each) and the flipper device might be a bad fit. Therefore,
+you can use the hardware abstraction interface and write rules in a hardware
+independent way (or overload the flipper device which does exactly that).
+
+If you want to use a very specific feature of your hardware and we did not
+implement an abstraction for it you can also access the hardware directly but
+it will likely not work on other platforms anymore. E.g. this might be the case
+if you want to do advanced stuff with the AUX port on the P-Roc.
+
+As you see, MPF offers you all kind of flexibility. You can access hardware
+directly or use abstractions. Plus, if you implement your own devices or extend
+existing devices (those can live inside your machine folder) you will be able
+to instantiate them using config (if you want that).
+
+Code can be added either globally (using scriptlets or code hooks), per mode,
+as new/overloaded device or even as a custom platform. See the `MPF developer documentation <http://docs.missionpinball.org>`
+for more details about our APIs and interfaces.
+
+
 Why config files?
 -----------------
 
