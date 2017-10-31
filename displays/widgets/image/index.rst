@@ -13,16 +13,15 @@ Settings
 .. code-block:: yaml
 
    type: image
-   image:
-   width:
-   height:
-   allow_stretch:
-   keep_ratio:
-
-   fps:
-   loops:
-   auto_play:
-   start_frame:
+     image:
+     width:
+     height:
+     allow_stretch:
+     keep_ratio:
+     fps:
+     loops:
+     auto_play:
+     start_frame:
 
 .. note:: Image widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
