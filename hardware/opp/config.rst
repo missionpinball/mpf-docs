@@ -75,5 +75,8 @@ This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
         ports: COM7
         poll_hz: 50
 
-!!! You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
-!!! Depending on the number of processor boards in your chain you could possibly miss some fast balls
+
+.. note::
+
+   You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
+   Depending on the number of processor boards in your chain you could possibly miss some fast balls
