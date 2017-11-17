@@ -62,3 +62,18 @@ this: ``\\.\COM10`` ``\\.\COM11`` ``\\.\COM12``, etc. (It's a Windows
 thing. Google it for details.) That said, it seems that Windows 10 can
 just use the port names like normal: ``com10, com11, com12``, so try
 that first and then try the alternate format if it doesn't work.
+
+Changing the polling rate
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you encounter issues with the polling rate (in other words: Your OPP processor boards can't answer MPF's polls fast enough) you may want to change it. (Default: 100Hz)
+This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
+
+::
+
+    opp:
+        ports: COM7
+        poll_hz: 50
+
+!!! You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
+!!! Depending on the number of processor boards in your chain you could possibly miss some fast balls
