@@ -59,12 +59,12 @@ We recommend you to use a decent IDE because it makes life easier.
 Most of the MPF developers use PyCharm but other IDEs will work as well.
 
 
-Getting started with an easy hack
----------------------------------
+Getting started with an open issue
+----------------------------------
 
 We maintain a list of issues which are self-contained and good to solve on
 their own without too much interaction with core code. We label those as 
-`easy hacks <https://github.com/missionpinball/mpf/labels/easy%20hack>`_
+`help wanted <https://github.com/missionpinball/mpf/labels/help%20wanted>`_
 (although they do not have to be easy, just self-containted). If you want
 to work on one of them (or any other issue) comment on the issue or write
 in the forum and we will assist you along the way.
