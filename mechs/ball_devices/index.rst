@@ -133,8 +133,8 @@ Related How To guides
 Related Events
 --------------
 * :doc:`/events/balldevice_ball_missing`
+* :doc:`/events/balldevice_name_ball_missing`
 * :doc:`/events/balldevice_balls_available`
-* :doc:`/events/balldevice_balls_ball_missing`
 * :doc:`/events/balldevice_captured_from_device`
 * :doc:`/events/balldevice_name_ball_eject_attempt`
 * :doc:`/events/balldevice_name_ball_eject_failed`

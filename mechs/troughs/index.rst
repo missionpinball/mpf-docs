@@ -180,7 +180,7 @@ post a photo of it to `MPF Users Google Group
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_balls_available`                                    |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_balls_ball_missing`                                 |
+| :doc:`/events/balldevice_name_ball_missing`                                  |
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_captured_from_device`                               |
 +------------------------------------------------------------------------------+
