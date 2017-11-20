@@ -1,68 +1,16 @@
 Choosing a computer to run MPF
 ==============================
 
-In addition to picking a pinball controller platform, you also need to
-decide what type of host computer you'll use. (By "host computer,"
-we're talking about the computer that will run MPF which will talk to
-the pinball controller via USB.) There are lots of host computer
-options, including small single-board computers, laptops, small-form
-factor x86 motherboards, etc. You're also going to have to decide on
-what OS you use (Windows, Linux, or Mac).
+Please make sure you read the  :doc:`Choosing a PC for MPF </hardware/computer/index>` section first.
 
-What kind of performance is required?
--------------------------------------
+In this section we talk about a potential production setup.
+Thus, this is mostly about compromises.
+What is the minimal (e.g. most cost effective) hardware?
+You probably want to tune your game first.
 
-One of the biggest things that will affect your choice of host
-computer will be the performance you need. Obviously the host computer
-has to "keep up" with your game, so if you pick an under-powered host
-computer then your game loop can slow down and you'll have issues. The
-computing needs of a pinball machine are actually pretty small. The
-core game, modes, ball tracking, dealing with switches, etc.—-all of
-that can probably be done on a very tiny computer. The real driver
-these days is your video and graphics. If you have a hi-def LCD window
-with lots of full video and layers and on-screen elements all blended
-together, then you're going to need a "real" computer to drive it
-and will not be happy with a small single-board computer.
+TODO
 
-Memory
-~~~~~~
 
-MPF itself doesn't require much memory. The real memory use comes from loading
-all the images, sounds, and videos into memory. MPF can load those on demand
-(or automatically when a mode starts, and unload them when the mode ends). This
-works well if you have a fast disk (SSD).
-
-However, if you have enough memory, MPF can pre-load everything when it starts.
-This will increase the startup time of your machine, but will make it so that
-everything runs fast once its booted.
-
-Note that 32-bit OSes only allow individual applications to access 2GB of
-memory, so if you have 6 gigs of assets and want to buy an machine with 8GB of
-RAM, you need to run a 64-bit OS. (MPF supports both 32-bit and 64-bit systems.
-If you run on 64-bit, make sure you also get the 64-bit version of Python.)
-
-CPU
-~~~
-
-The trend in computing these days (for both "real" computers and small
-single-board computers) is multi-core. Almost every computer these
-days has a dual-core or quad-core processor.
-
-MPF uses two processes (one for the game engine and one for the media
-controller), so it can make use of a dual-core system. However there is probably
-not much benefit to MPF running on machines with more than 2 cores (other than
-it frees up more cores for other non-MPF things.)
-
-Disk
-~~~~
-Disk space it not really an issue these days. The real question is disk
-performance in terms of SSD versus traditional spinning magnetic hard disks.
-
-SSD is fast, you can can get away with less memory since MPF can dynamically
-load and unload assets. However SSD can be damaged by unsafe shut downs, so to
-put an SSD in a pinball machine requires batteries to keep the computer alive
-while it shuts down or some partition configuration to set up read-only
-partitions and to disable wear leveling.
 
 Single-board versus "real" computers?
 -------------------------------------
