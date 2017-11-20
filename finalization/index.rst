@@ -8,6 +8,7 @@ Most of this is TODO
 
 .. toctree::
 
+   software
    host_computer
    os
    power
