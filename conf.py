@@ -37,7 +37,9 @@ language = None
 exclude_patterns = ['_build',
                     '_not_updated_yet',
                     '_doc_tools',
-                    '_src']
+                    '_src',
+                    'mpf_examples',
+                    'mpfmc_examples']
 
 pygments_style = 'none'
 highlight_language = 'yaml'
