@@ -247,4 +247,4 @@ setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 build_event_references()
 
 # remove _src
-shutil.rmtree("_src")
+shutil.rmtree("_src", ignore_errors=True)
