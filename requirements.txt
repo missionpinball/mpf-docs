@@ -1,4 +1,4 @@
 Sphinx
 sphinx-rtd-theme
 gitpython
-ruamel
+ruamel.yaml>=0.10,<0.11
