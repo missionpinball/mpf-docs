@@ -9,6 +9,7 @@ import re
 import sys
 
 import git
+import shutil
 import sphinx_rtd_theme
 
 sys.path.append(os.getcwd())
@@ -244,3 +245,6 @@ setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 
 build_event_references()
+
+# remove _src
+shutil.rmtree("_src")
