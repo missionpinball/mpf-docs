@@ -254,14 +254,14 @@ Events posted by achievements
 
 You can configure achievements to post certain events when they change state.
 
-Note that all achievements will always post events in the form
+Note that all achievements will by default post events in the form
 :doc:`/events/achievement_name_state_state` when they change state. The events
-listed below are in additional to that event.
+listed below, if defined, will replace the default event.
 
 events_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_enabled``.
 
 A single event, or a list of events, that will be posted when this achievement
 is enabled.
@@ -271,7 +271,7 @@ events_when_selected:
 
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_selected``.
 
 A single event, or a list of events, that will be posted when this
 achievement is selected.
@@ -279,28 +279,28 @@ achievement is selected.
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_started``.
 
 A single event, or a list of events, that will be posted when this achievement is started.
 
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_completed``.
 
 A single event, or a list of events, that will be posted when this achievement is complete.
 
 events_when_disabled:
 ~~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_disabled``.
 
 A single event, or a list of events, that will be posted when this achievement is disabled.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_stopped``.
 
 A single event, or a list of events, that will be posted when this achievement is stopped.
 
