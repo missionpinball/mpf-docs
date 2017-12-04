@@ -143,27 +143,4 @@ Default is ``0``.
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
-player_variable:
-~~~~~~~~~~~~~~~~
-
-By default, the current "state" (or progress) of sequence logic blocks
-are stored in a :doc:`player variable </game_logic/players/index>` called
-*<counter_name>_count*.
-For example, a logic block called "logic_block_1" would store its state
-in a player variable called *logic_block_1_count*.
-
-However, you can use the ``player_variable:`` setting to change this to
-any player variable you want.
-
-Making this change doesn't really affect anything other than the name of the
-variable. It's just for convenience if you prefer a different name.
-
-Note that this player variable stores the count of this logic block in a numeric
-value that represents what the current count value is. In other words, when a sequence
-logic block is just started or reset, the player variable tracking it is set to
-``0``. Then that increases by one as each step is complete.
-
-You can easily use it in a text widget to show the number of combos complete,
-or the number of pop bumper hits required for super jets, etc.
-
 .. include:: common.rst

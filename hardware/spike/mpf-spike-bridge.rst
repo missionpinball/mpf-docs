@@ -45,6 +45,13 @@ You need to mount the Linux root partition (which is probably #3).
 On Windows you need an additional tools to mount ext3. We got a
 report that "Paragon ExtFS for Windows" works fine for this.
 
+On Mac OS X, the tool "FUSE-ext2" is an option. You will most likely need to use sudo, and depending on your configuration
+the appropriate disk device may vary. In the following example, the Linux root is on partition 3 of the SD card, which is disk2:
+
+::
+   > sudo fuse-ext2 /dev/disk2s3 /Volumes/SD -o force
+
+
 3. Edit /etc/inittab
 --------------------
 
@@ -106,6 +113,14 @@ Note that we have a precompiled binary in there (as well as the C source code).
       mount -o remount,rw /
       chmod +x /bin/bridge
       mount -o remount,ro /
+
+.. note:: On OS X with fuse-ext2, overwriting files can fail without a message. When updating mpf-spike-bridge, 
+   you may want to remove the old bridge file before copying the new one.
+
+   ::
+      rm <sd_mount>/bin/bridge
+      cp <your_path>/mpf-spike-bridge/bridge <sd_mount>/bin/bridge
+      chmod 755 <sd_mount>/bin/bridge
 
 
 6. Unmount the SD card. Put it back in your spike system

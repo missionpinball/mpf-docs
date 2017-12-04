@@ -21,7 +21,10 @@ as the number of balls that are physically contained in a ball device.
 
 When a ball is locked, it will add a new ball into play from the ball device
 tagged with ``ball_add_live`` unless the device that just locked it is full,
-in which case it will eject a ball from the full device.
+in which case it will eject a ball from the full device. The events that
+control the ball ejections are queue events, so you can interrupt the delivery
+of a new ball with the :doc: `/config/queue_relay_player` (for example, to have
+a mode selection screen before returning to play).
 
 Whenever a new ball is locked, the event *multiball_lock_<name>_locked_ball*
 is posted with an argument "total_balls_locked". When the lock is full, it

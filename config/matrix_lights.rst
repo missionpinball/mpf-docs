@@ -13,10 +13,13 @@ matrix_lights:
 
 .. overview
 
-The ``matrix_lights:`` section of your config is where you...
+The ``matrix_lights:`` section of your config is where you configure physical matrix 
+(i.e. non-LED) lights for your hardware platform. 
 
-.. todo::
-   Add description.
+
+.. warning::
+   As of MPF 0.50, ``matrix_lights`` and ``leds`` have been combined into a single
+   ``lights`` configuration. See :doc: `/config/lights` for details.
 
 Required settings
 -----------------

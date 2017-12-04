@@ -13,10 +13,13 @@ leds:
 
 .. overview
 
-The ``leds:`` section of your config is where you...
+The ``leds:`` section of your config is where you configure physical LED 
+(i.e. discrete-addressable) lights for your hardware platform. 
 
-.. todo::
-   Add description.
+
+.. warning::
+   As of MPF 0.50, ``matrix_lights`` and ``leds`` have been combined into a single
+   ``lights`` configuration. See :doc: `/config/lights` for details.
 
 Required settings
 -----------------

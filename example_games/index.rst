@@ -33,6 +33,18 @@ actually run it, but you can look through the configs (which are well commented)
 
 The BnD repo is at https://github.com/gabeknuth/bnd
 
+Mass Effect 2
+-------------
+
+An extensive project to build a complete MPF game from scratch and play on a
+re-skinned Game of Thrones cabinet (Spike platform), inspired by the video game
+Mass Effect 2. With the exception of audio tracks extracted from the Mass Effect
+2 data files, all of the game code is available to clone from the repo and run.
+MPF monitor is supported so you can simulate gameplay without the Spike GoT hardware.
+
+All of the project code is at https://github.com/avanwinkle/masseffect2
+
+
 .. toctree::
    :hidden:
 

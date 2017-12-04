@@ -62,6 +62,13 @@ debug:
 Set to true for troubleshooting to print more details in the log.
 Default is ``False``.
 
+flow_control:
+~~~~~~
+
+Set to ``True`` to enable serial RTS/CTS flow control between MPF and the Spike bridge. May
+help improve responsiveness and reduce latency when streaming display data to the DMD.
+Default is ``False``.
+
 poll_hz:
 ~~~~~~~~
 

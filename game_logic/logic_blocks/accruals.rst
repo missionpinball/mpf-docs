@@ -135,24 +135,4 @@ those two logic blocks, if the events were posted in the order event2, event3, e
 then event5, that would complete logic block 2. Then later if event1 was posted, that
 would complete logic block 1.
 
-player_variable:
-~~~~~~~~~~~~~~~~
-
-By default, the current "state" (or progress) of accrual logic blocks
-are stored in a :doc:`player variable </game_logic/players/index>` called *<accrual_name>_status*.
-For example, a logic block called "logic_block_1" would store its state
-in a player variable called *logic_block_1_status*.
-
-However, you can use the ``player_variable:`` setting to change this to
-any player variable you want.
-
-Making this change doesn't really affect anything other than the name of the
-variable. It's just for convenience if you prefer a different name.
-
-Note that this player variable stores the state of this logic block in an
-internal list that's not easily accessible for text display purposes on a slide.
-If you want to display status or progress on a slide, you can use a combination
-of the logic block events or an event player along with slide or widget player
-entries to show whatever messages you want.
-
 .. include:: common.rst

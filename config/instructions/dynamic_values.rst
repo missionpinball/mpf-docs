@@ -31,6 +31,14 @@ in your scoring config like this:
       shot_jackpot_hit:
          score: current_player.troll_hits * 100000
 
+You can access other values dynamically as well, such as a timer ticking away
+a hurry-up or a counter to track how many times a multiplier switch has been hit
+
+.. code-block:: yaml
+   scoring:
+      collect_hurryup: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
+
+
 Another example might be operator settings. Rather than hard coding
 tilt warnings to 3, you might want to like the operator choose the
 tilt warnings.
@@ -64,6 +72,8 @@ current_player
    A list of player variables is here.
 
 players
+   Used to access player variables from specific players (by number), regardless
+   of who the current player is.
    ``players[0].variable_name``
 
 game
@@ -83,7 +93,10 @@ settings
 
 device
 
-   todo
+   Devices that have been registered with the machine can be found here, like logic blocks.
+   ``device.counters.superjets_counter.value``
+   ``device.accruals.magic_tokens.enabled``
+   ``device.sequences.world_tour.completed``
 
 Using if/else logic with dynamic values
 ---------------------------------------
