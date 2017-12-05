@@ -76,17 +76,17 @@ indicated which type of config file it's valid in.
    kickbacks: <kickbacks>
    kivy_config: <kivy_config>
    led_player: <led_player>
-   led_settings: <led_settings>
    led_stripes: <led_stripes>
    led_rings: <led_rings>
    leds: <leds>
+   lights: <lights>
+   light_settings: <light_settings>
    light_player: <light_player>
    logic_blocks: <logic_blocks>
    logging: <logging>
    machine: <machine>
    machine_vars: <machine_vars>
    magnets: <magnets>
-   matrix_light_settings: <matrix_light_settings>
    matrix_lights: <matrix_lights>
    mode: <mode>
    mode_settings: <mode_settings>

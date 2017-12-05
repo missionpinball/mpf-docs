@@ -2,7 +2,7 @@ Downloading & Installing MPF
 ============================
 
 Installing MPF is fairly straightforward. It can be used on Windows, Mac, or Linux, on both Intel x86 and ARM
-processors, and in 64-bit and 32-bit systems.
+processors, and in 64-bit and 32-bit systems (see :doc:`/hardware/computer/index` for details).
 
 Installing MPF for the first time
 ---------------------------------

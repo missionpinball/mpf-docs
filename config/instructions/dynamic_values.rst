@@ -35,6 +35,7 @@ You can access other values dynamically as well, such as a timer ticking away
 a hurry-up or a counter to track how many times a multiplier switch has been hit
 
 .. code-block:: yaml
+
    scoring:
       collect_hurryup: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
 

@@ -43,7 +43,7 @@ Other Triggered Events
 ~~~~~~~~~~~~~~~~~~~~~~
 
 You can also have a show depend on the state of a logic block while being triggered
-by another event, using :docs:`Conditional Events </events/overview/conditional>`.
+by another event, using :doc:`Conditional Events </events/overview/conditional>`.
 
 If the logic_block has a persistent state (``persist_state: true``), you can make
 a condition based on the player variable for the block:

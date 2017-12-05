@@ -81,14 +81,14 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 If ``True``, this light will log its configuration and color changes to the debug log.
 
 default_on_color:
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``ffffff``
 
 For multi-color LEDs, the color defined here will be used when the light is enabled via "on" 
 (as opposed to being enabled with a specific color). Not intended for single-color lights.
 
-fade_ms:
-~~~~~~~~
+default_fade_ms:
+~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 When this light receives instructions to change color, it can interpolate from its current value to the 
@@ -117,8 +117,8 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Lights can be referenced by their tags in light_players.
+Typical tags are `gi` for all GIs or `playfield_inserts` for all inserts on the playfield.
 
 type:
 ~~~~~
@@ -134,15 +134,15 @@ x:
 ~~
 Single value, type: ``integer``. Default: ``None``
 
-.. todo::
-   *Defined as part of ``light_groups``. No longer used here?*
+This is used for display_light_player to determine the position of this light on the playfield and
+use it as a huge display.
 
 y:
 ~~
 Single value, type: ``integer``. Default: ``None``
 
-.. todo::
-   *Defined as part of ``light_groups``. No longer used here?*
+This is used for display_light_player to determine the position of this light on the playfield and
+use it as a huge display.
 
 z:
 ~~
