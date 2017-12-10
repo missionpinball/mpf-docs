@@ -199,7 +199,7 @@ def get_repo_path(repo_name):
         print("Cloning {}".format(repo_name))
         current_branch = "dev"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(tempfile.gettempdir(), '_src', repo_name), branch=current_branch)
-        return os.path.join(os.getcwd(), '_src', repo_name)
+        return os.path.join(tempfile.gettempdir(), '_src', repo_name)
 
 def setup_tests_link(link_name, repo_name, package_name):
     try:
