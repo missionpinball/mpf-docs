@@ -1,18 +1,17 @@
 LEDs
 ====
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/leds`                                                          |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
-| :doc:`/config/led_settings`                                                  |
+| :doc:`/config/light_settings`                                                |
 +------------------------------------------------------------------------------+
 | :doc:`/config/led_stripes`                                                   |
 +------------------------------------------------------------------------------+
 | :doc:`/config/led_rings`                                                     |
 +------------------------------------------------------------------------------+
-| :doc:`/config/led_player`                                                    |
+| :doc:`/config/light_player`                                                  |
 +------------------------------------------------------------------------------+
 
 .. contents::
@@ -27,7 +26,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for LEDs is ``device.leds.<name>``.
+the prefix for LEDs is ``device.lights.<name>``.
 
 *color*
 
