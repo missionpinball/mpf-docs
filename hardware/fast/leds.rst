@@ -1,8 +1,6 @@
 How to configure LEDs (FAST Pinball)
 ====================================
 
-.. include:: /not_updated_yet.rst
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
@@ -20,7 +18,7 @@ as "WS2812" (or similar). You can buy them from many different
 companies, and they're what's sold as the "NeoPixel" brand of
 products from Adafruit. (They have all different shapes and sizes.)
 
-Most of the settings in the :doc:`/mechs/leds/index` documentation apply to LEDs
+Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LEDs
 connected to FAST Pinball controllers, however there are a few FAST-specific
 things to know.
 
@@ -34,11 +32,13 @@ channel and output, like this:
 
 ::
 
-   leds:
+   lights:
        l_led0:
            number: 0-0
+           type: grb
        l_right_ramp:
            number: 2-28
+           type: grb
 
 In the example above, RGB LED *l_led0* is LED #0 on channel 0, and
 *l_right_ramp* is LED #28 on channel 2. Note both the channel and LED
@@ -46,6 +46,9 @@ numbers start with 0, so your channel options for a FAST controller
 are 0-3, and your LED number options are 0-63. Also note that when you
 enter your FAST LED numbers with a dash like this, the values are
 integers, even if the rest of your FAST settings are in hex.
+Type `grb` configures the LED as WS2812 (such as the FAST LEDs) but it
+might be different for other types of LEDs. See :doc:`/config/lights`
+for details.
 
 If you know the actual hex numbers of your LEDs, you can enter the numbers like
 that, ranging from 00 to FF. If you don't know what this means, then just
