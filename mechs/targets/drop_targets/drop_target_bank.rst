@@ -35,7 +35,7 @@ the prefix for drop target banks is ``device.drop_target_banks.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

@@ -44,7 +44,7 @@ the prefix for playfields is ``device.playfields.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

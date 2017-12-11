@@ -78,7 +78,7 @@ plunger lane? In that case, the ball is not activating any switches, so MPF
 really has no idea if the ball is in the plunger line (which is fine) or if
 the ball is stuck somewhere on the playfield (which is not fine).
 
-TODO: This does not work yet and will be fixed soon.
+.. todo::  This does not work yet. Let us know in the forum if you need it.
 
 5. Configuring the ball save timer
 ----------------------------------

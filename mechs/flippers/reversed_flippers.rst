@@ -1,4 +1,4 @@
 How to enable "reversed flippers" (novelty mode)
 ================================================
 
-TODO
+:doc:`/about/help_us_to_write_it`

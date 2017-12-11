@@ -7,7 +7,7 @@ Servos
 | :doc:`/config/servos`                                                        |
 +------------------------------------------------------------------------------+
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 .. contents::
    :local:
@@ -25,7 +25,7 @@ the prefix for servos is ``device.servos.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

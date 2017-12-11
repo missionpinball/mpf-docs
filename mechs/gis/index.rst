@@ -4,9 +4,9 @@ GI (general illumination)
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/gis`                                                           |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
-| :doc:`/config/gi_player`                                                     |
+| :doc:`/config/light_player`                                                  |
 +------------------------------------------------------------------------------+
 
 .. contents::
@@ -19,9 +19,8 @@ dim.
 
 .. note::
 
-   GI strings in the "gis:" config section are only for older existing machines
-   that specifically have driver-powered GI strings. New custom machines will
-   just use LEDs for GIs, and they are configured as LEDs, not GIs.
+   In MPF 0.50 GIs became :doc:`/config/lights` with ``subtype`` gi. They behave
+   like any other lights in MPF.
 
 GI Strings are actually kind of complex. Many of them are AC (even in WPC
 machines), and some Williams WPC machines include triacs (kind of like a
@@ -32,7 +31,7 @@ switched their dimmable to DC. Some machines also have "enable" relays that
 must be activated first before certain GI strings will work.
 
 MPF hides all this complexity from you. You just define your GI strings in
-your machine configuration file and then you can enable, disable, and
+your machine :doc:`/config/lights` section and then you can enable, disable, and
 dim the dimmable ones as you wish.
 
 Monitorable Properties
@@ -40,7 +39,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for drop target banks is ``device.drop_target_banks.<name>``.
+the prefix for lights is ``device.lights.<name>``.
 
 *brightness*
    The numeric value of the brightness of this GI string, from 0-255.
@@ -48,7 +47,7 @@ the prefix for drop target banks is ``device.drop_target_banks.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

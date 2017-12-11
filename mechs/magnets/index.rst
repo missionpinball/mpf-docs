@@ -32,7 +32,7 @@ the prefix for magnets is ``device.magnets.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

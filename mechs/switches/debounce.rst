@@ -36,6 +36,12 @@ ball hit a pop bumper and that bumper fired once, but you actually got back
 multiple switch events which led to multiple scores, multiple sound effects,
 etc.)
 
+Depending on the type of switch you will miss switch hits with debouce time above
+10-20ms. Usually 1-10ms is a good range. If you want to prevent double events you
+can also use ``ignore_window_ms`` in MPF. E.g. for target set debounce to 1-5ms and
+``ignore_window_ms`` to a few hundred milliseconds (this is similar to recycle time
+for coils).
+
 Understanding switch scanning loop speed
 ----------------------------------------
 
@@ -119,52 +125,8 @@ switch matrix where the "column" is always active. But the reads of the direct
 switches are slotted into the timing of the reads of the matrix switches, meaning
 P-ROC direct switches are not read any faster or more often than matrix switches.
 
-(The P3-ROC uses SW-16 switch boards with 2 banks of direct switches each. I'm
-awaiting confirmation to see how the timing works on those.)
+The P3-ROC uses SW-16 switch boards with 2 banks of direct switches each. Those
+are scanned periodically every 2ms by default. Similarly, FAST hardware switches
+connected to FAST I/O boards are direct as well. However since each I/O board has
+its own processor on it, those switches are polled every 1ms.
 
-FAST hardware switches connected to FAST I/O boards are direct as well. However
-since each I/O board has its own processor on it, those switches are polled every
-1ms.
-
-(When FAST releases a switch matrix daughter board, those columns will need to
-be strobed 1-by-1, meaning FAST matrix switches will have longer polling intervals
-than FAST direct switches.)
-
-Putting it all together
------------------------
-
-The P-ROC hardware allows for two debounce settings: *on* and *off*. Debounce
-*on* means the switch must be in the same state for two consecutive reads before
-the switch change event is sent to the host, and debounce *off* means the switch
-event will be sent to the host as soon as it changes.
-
-The polling interval on the P-ROC is configurable, and you also need to take into
-consideration how big your matrix is (do you have 8 or 9 columns), how many
-direct switches you have, etc.
-
-FAST hardware accepts debounce settings based on milliseconds, e.g. "How many ms
-does a switch have to be in the new state before a change event is sent to the
-host?"
-
-Putting it all together this means that on a P-ROC, *debounce off* is not the
-same thing as as *debounce 0* on a FAST controller.
-
-Depending on your hardware, *debounce off* on a P-ROC could still mean it takes
-7ms (or more) for a switch to register, and *debounce on* on a P-ROC means that
-it could take 17ms (or more) for a switch to register.
-
-So if you have a FAST controller with a direct switch connected to a FAST I/O
-board, setting (for example) *debounce 5ms* does *not* mean the FAST controller
-is going to be "slower" to respond than a P-ROC that's set to *debounce off*.
-
-This also shows why the recommendation in the P-ROC community has historically
-been to set *debounce off* on autofire rules, since *debounce on* would mean a
-switch could potentially have to be activated for 17ms (or more, again,
-depending on the size of the matrix and other things). It's also why FAST has
-been recommending 10ms for "instant" response and 30ms for "regular" switches.
-(Which, if you don't like 10ms/30ms, you could change to 7ms/20ms, or whatever
-you want.)
-
-The point is that FAST's 10ms/30ms isn't actually that different than P-ROC's
-off/on settings when you actually dig under the hood and see how the timing
-works.

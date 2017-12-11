@@ -1,4 +1,4 @@
 How to enable "secondary playfield" flippers
 ============================================
 
-TODO
+:doc:`/about/help_us_to_write_it`

@@ -36,7 +36,7 @@ the prefix for LEDs is ``device.lights.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------
