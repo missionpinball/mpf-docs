@@ -75,7 +75,7 @@ mpf-docs repo so you can work on it offline, do the following:
 #. Clone the `mpf-docs repo <https://github.com/missionpinball/mpf-docs/>`_
    from GitHub.
 #. Switch to the branch corresponding to the version of the docs you want to
-   work with.
+   work with (usually *dev* or *latest*).
 #. Makes your changes.
 #. Add your name to the ``/authors/index.rst`` doc.
 #. To test the docs locally, you'll need *sphinx* and *sphinx_bootstrap_theme*,
