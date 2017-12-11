@@ -15,6 +15,8 @@ Some excempts from the documentation above:
 
 A list of item:
 
+::
+
     * element 1
     * element 2
 
@@ -24,6 +26,8 @@ Looks like:
 * element 2
 
 Highlighted yaml:
+
+::
 
     .. code-block:: yaml
 
