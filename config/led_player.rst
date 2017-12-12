@@ -20,7 +20,7 @@ led_player:
 The ``led_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -32,14 +32,14 @@ color:
 Single value, type: ``string``. Default: ``white``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 fade:
 ~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 .. note:: The ``led_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

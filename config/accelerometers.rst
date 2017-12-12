@@ -46,7 +46,7 @@ hit_limits:
 One or more sub-entries, each in the format of type: ``float``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 label:
 ~~~~~~
@@ -59,28 +59,28 @@ level_limits:
 One or more sub-entries, each in the format of type: ``float``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 level_x:
 ~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 level_y:
 ~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 level_z:
 ~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 number:
 ~~~~~~~

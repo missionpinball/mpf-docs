@@ -14,7 +14,7 @@ fadecandy:
 The ``fadecandy:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,40 +26,40 @@ dithering:
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 gamma:
 ~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``2.5``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 keyframe_interpolation:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 linear_cutoff:
 ~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 linear_slope:
 ~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 whitepoint:
 ~~~~~~~~~~~
 List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``1.0, 1.0, 1.0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

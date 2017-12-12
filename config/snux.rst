@@ -14,7 +14,7 @@ snux:
 The ``snux:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -26,14 +26,14 @@ diag_led_driver:
 Single value, type: string name of a ``coils:`` device.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 flipper_enable_driver:
 ~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``coils:`` device.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -45,5 +45,5 @@ platform:
 Single value, type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

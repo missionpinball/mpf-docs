@@ -14,7 +14,7 @@ open_pixel_control:
 The ``open_pixel_control:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,40 +26,40 @@ connection_attempts:
 Single value, type: ``integer``. Default: ``-1``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 connection_required:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 host:
 ~~~~~
 Single value, type: ``string``. Default: ``localhost``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 number_format:
 ~~~~~~~~~~~~~~
 Single value, type: one of the following options: int, hex. Default: ``int``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 port:
 ~~~~~
 Single value, type: ``int``. Default: ``7890``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

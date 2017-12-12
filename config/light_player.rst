@@ -20,7 +20,7 @@ light_player:
 The ``light_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -32,12 +32,12 @@ brightness:
 Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 fade:
 ~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

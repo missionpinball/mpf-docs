@@ -83,7 +83,7 @@ coil_overwrite:
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
@@ -138,7 +138,7 @@ switch_overwrite:
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tags:
 ~~~~~

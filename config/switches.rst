@@ -76,14 +76,14 @@ debounce:
 Single value, type: one of the following options: auto, quick, normal. Default: ``auto``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -117,7 +117,7 @@ label:
 Single value, type: ``string``. Default: ``%``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 platform:
 ~~~~~~~~~

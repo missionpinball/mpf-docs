@@ -99,7 +99,7 @@ debug:
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 flash_events:
 ~~~~~~~~~~~~~
@@ -124,28 +124,28 @@ hold_power:
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 hold_power32:
 ~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 hold_pwm_mask:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 platform:
 ~~~~~~~~~
@@ -163,54 +163,54 @@ pulse_ms:
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_power:
 ~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_power32:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_pwm_mask:
 ~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pwm_off_ms:
 ~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pwm_on_ms:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 recycle:
 ~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

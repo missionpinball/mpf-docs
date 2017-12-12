@@ -166,18 +166,18 @@ net_buffer:
 
 single|int|10
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 rgb_buffer:
 ~~~~~~~~~~~
 
 single|int|3
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 dmd_buffer:
 ~~~~~~~~~~~
 
 single|int|3
 
-TODO
+:doc:`/about/help_us_to_write_it`

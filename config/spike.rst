@@ -78,6 +78,4 @@ system to check for switch changes. Default is ``1000``.
 connection:
 ~~~~~~~~~~~
 
-Default is ``shell``
-
-TODO
+Default is ``shell``. Currently there are no other options.

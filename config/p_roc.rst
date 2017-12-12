@@ -14,7 +14,7 @@ p_roc:
 The ``p_roc:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,40 +26,40 @@ debug:
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 dmd_update_interval:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``33ms``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``100ms``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 use_watchdog:
 ~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 watchdog_time:
 ~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

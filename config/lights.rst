@@ -100,7 +100,7 @@ label:
 Single value, type: ``string``. Default: ``%``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 platform:
 ~~~~~~~~~

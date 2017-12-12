@@ -112,12 +112,15 @@ Using if/else logic with dynamic values
 Full Python code
 ----------------
 
-TODO (The format below probably doesn't work and needs to be tested)
+The format below probably doesn't work and needs to be tested (:doc:`/about/help_us_to_write_it`).
+
+
+.. code-block:: yaml
 
    logic_blocks:
       counters:
          my_counter:
-            count_complete_value: |
+            count_complete_value:
                if self.machine.game.player:
                   return 1
                else:

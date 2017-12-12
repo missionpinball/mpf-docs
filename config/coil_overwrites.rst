@@ -14,7 +14,7 @@ coil_overwrites:
 The ``coil_overwrites:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,26 +26,26 @@ hold_power:
 Single value, type: int(0,8). Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_ms:
 ~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_power:
 ~~~~~~~~~~~~
 Single value, type: int(0,8). Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 recycle:
 ~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

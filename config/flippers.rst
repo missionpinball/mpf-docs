@@ -128,7 +128,7 @@ eos_switch:
 Single value, type: string name of a ``switches:`` device. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 eos_switch_overwrite:
 ~~~~~~~~~~~~~~~~~~~~~
@@ -148,7 +148,7 @@ hold_coil_overwrite:
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 label:
 ~~~~~~
@@ -162,14 +162,14 @@ main_coil_overwrite:
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 switch_overwrite:
 ~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tags:
 ~~~~~
@@ -189,7 +189,7 @@ to lower-power pwm mode.
 power_setting_name:
 ~~~~~~~~~~~~~~~~~~~
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~

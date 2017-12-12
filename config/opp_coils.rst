@@ -14,7 +14,7 @@ opp_coils:
 The ``opp_coils:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,12 +26,12 @@ hold_power16:
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 recycle_factor:
 ~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

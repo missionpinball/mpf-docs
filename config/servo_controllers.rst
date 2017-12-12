@@ -14,7 +14,7 @@ servo_controllers:
 The ``servo_controllers:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,21 +26,21 @@ address:
 Single value, type: ``integer``. Default: ``64``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 platform:
 ~~~~~~~~~
@@ -58,19 +58,19 @@ servo_max:
 Single value, type: ``integer``. Default: ``600``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 servo_min:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``150``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

@@ -14,7 +14,7 @@ high_score:
 The ``high_score:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -26,7 +26,7 @@ categories:
 One or more sub-entries, each in the format of type: ``str``:``list``.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -38,7 +38,7 @@ award_slide_display_time:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``4s``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 defaults:
 ~~~~~~~~~

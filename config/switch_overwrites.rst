@@ -14,7 +14,7 @@ switch_overwrites:
 The ``switch_overwrites:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,5 +26,5 @@ debounce:
 Single value, type: one of the following options: quick, normal, None. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

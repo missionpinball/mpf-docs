@@ -68,7 +68,7 @@ debug:
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -129,7 +129,7 @@ source_playfield:
 Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
@@ -153,18 +153,18 @@ eject_delay:
 
 single|ms|0
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 only_last_ball:
 ~~~~~~~~~~~~~~~
 
 single|bool|False
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 delayed_eject_events:
 ~~~~~~~~~~~~~~~~~~~~~
 
 dict|str:ms|None
 
-TODO
+:doc:`/about/help_us_to_write_it`

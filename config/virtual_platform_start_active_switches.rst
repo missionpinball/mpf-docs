@@ -14,5 +14,5 @@ virtual_platform_start_active_switches:
 The ``virtual_platform_start_active_switches:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

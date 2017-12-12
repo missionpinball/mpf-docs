@@ -194,7 +194,7 @@ price_tier_template
 
 Default "{{credits}} CREDITS ${{price}}"
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 pricing_tiers:
 --------------

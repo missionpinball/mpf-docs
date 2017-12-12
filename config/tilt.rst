@@ -14,7 +14,7 @@ tilt:
 The ``tilt:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,7 +26,7 @@ multiple_hit_window:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300ms``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 reset_warnings_events:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -45,14 +45,14 @@ settle_time:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 slam_tilt_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``slam_tilt``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tilt_events:
 ~~~~~~~~~~~~
@@ -84,7 +84,7 @@ tilt_switch_tag:
 Single value, type: ``string``. Default: ``tilt``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tilt_warning_events:
 ~~~~~~~~~~~~~~~~~~~~
@@ -104,19 +104,19 @@ tilt_warning_switch_tag:
 Single value, type: ``string``. Default: ``tilt_warning``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tilt_warnings_player_var:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``tilt_warnings``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 warnings_to_tilt:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``3``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

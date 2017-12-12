@@ -14,7 +14,7 @@ smartmatrix:
 The ``smartmatrix:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -26,13 +26,13 @@ port:
 Single value, type: ``string``.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 baud:
 ~~~~~
 
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -43,5 +43,5 @@ old_cookie:
 ~~~~~~~~~~~
 
 
-TODO
+:doc:`/about/help_us_to_write_it`
 

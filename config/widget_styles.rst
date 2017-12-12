@@ -16,7 +16,7 @@ widget_styles:
 The ``widget_styles:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -28,7 +28,7 @@ color:
 Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``ffffffff``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 .. note:: The ``widget_styles:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

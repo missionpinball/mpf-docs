@@ -14,7 +14,7 @@ playfield_transfers:
 The ``playfield_transfers:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -26,14 +26,14 @@ captures_from:
 Single value, type: string name of a ``ball_devices:`` device.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 eject_target:
 ~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -46,28 +46,28 @@ ball_switch:
 Single value, type: string name of a ``switches:`` device. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 transfer_events:
 ~~~~~~~~~~~~~~~~
@@ -81,5 +81,3 @@ on how to enter settings here.
 Default: ``None``
 
 Events in this list, when posted,
-
-TODO

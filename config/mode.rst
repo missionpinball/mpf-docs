@@ -226,5 +226,4 @@ attract mode starts again.
 game_mode:
 ~~~~~~~~~~
 
-
-TODO
+:doc:`/about/help_us_to_write_it`

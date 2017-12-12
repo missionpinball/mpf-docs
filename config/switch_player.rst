@@ -14,7 +14,7 @@ switch_player:
 The ``switch_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,5 +26,5 @@ start_event:
 Single value, type: ``string``. Default: ``machine_reset_phase_3``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

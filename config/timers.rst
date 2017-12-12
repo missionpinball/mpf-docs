@@ -99,8 +99,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
 
-TODO: Remove from documentation
-
 control_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: sub-configuration containing control_events settings. Default: ``None``

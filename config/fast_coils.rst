@@ -14,7 +14,7 @@ fast_coils:
 The ``fast_coils:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,40 +26,40 @@ connection:
 Single value, type: one of the following options: network, local, auto. Default: ``auto``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 hold_power32:
 ~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 hold_pwm_mask:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_power32:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pulse_pwm_mask:
 ~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 recycle_ms:
 ~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

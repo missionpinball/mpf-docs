@@ -14,7 +14,7 @@ opp:
 The ``opp:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -26,7 +26,7 @@ ports:
 List of one (or more) values, each is a type: ``string``.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -38,19 +38,19 @@ baud:
 Single value, type: ``integer``. Default: ``115200``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 chains:
 ~~~~~~~
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 poll_hz:
 ~~~~~~~~

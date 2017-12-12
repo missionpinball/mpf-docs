@@ -14,5 +14,5 @@ kivy_config:
 The ``kivy_config:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

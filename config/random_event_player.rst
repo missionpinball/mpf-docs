@@ -18,7 +18,7 @@ random_event_player:
 The ``random_event_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Required settings
 -----------------
@@ -32,31 +32,28 @@ events:
 List of one (or more) values, each is a type: ``string``.
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 force_different:
 ~~~~~~~~~~~~~~~~
 
-
 single|bool|true
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 force_all:
 ~~~~~~~~~~
 
-
 single|bool|true
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 disable_random:
 ~~~~~~~~~~~~~~~
 
-
 single|bool|false
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 scope:
 ~~~~~~
@@ -64,4 +61,4 @@ scope:
 
 single|enum(player,machine)|player
 
-TODO
+:doc:`/about/help_us_to_write_it`

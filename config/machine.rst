@@ -14,7 +14,7 @@ machine:
 The ``machine:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,12 +26,12 @@ balls_installed:
 Single value, type: ``integer``. Default: ``1``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 min_balls:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

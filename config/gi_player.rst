@@ -20,7 +20,7 @@ gi_player:
 The ``gi_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -32,7 +32,7 @@ brightness:
 Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 .. note:: The ``gi_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

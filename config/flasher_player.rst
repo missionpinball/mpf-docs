@@ -20,7 +20,7 @@ flasher_player:
 The ``flasher_player:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -32,7 +32,7 @@ ms:
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 .. note:: The ``flasher_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

@@ -14,7 +14,7 @@ p_roc_coil_overwrites:
 The ``p_roc_coil_overwrites:`` section of your config is where you...
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -26,12 +26,12 @@ pwm_off_ms:
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 pwm_on_ms:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

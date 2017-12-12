@@ -48,12 +48,12 @@ servo_max:
 Single value, type: ``integer``. Default: ``9000``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 servo_min:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``3000``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 

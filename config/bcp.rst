@@ -66,19 +66,19 @@ host:
 Single value, type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 port:
 ^^^^^
 Single value, type: ``integer``. Default: ``5050``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 type:
 ~~~~~
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 event_map:
 ----------
@@ -143,15 +143,15 @@ todo
 required:
 ---------
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 exit_on_close:
 --------------
 
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 debug:
 ~~~~~~
 
-TODO
+:doc:`/about/help_us_to_write_it`

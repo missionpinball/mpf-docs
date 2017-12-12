@@ -360,7 +360,7 @@ entrance_switch_full_timeout:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 exit_count_delay:
 ~~~~~~~~~~~~~~~~~
@@ -464,7 +464,7 @@ player_controlled_eject_event:
 Single value, type: ``string``. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
 request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
@@ -504,5 +504,5 @@ target_on_unexpected_ball:
 Single value, type: string name of a ``ball_devices:`` device. Default: ``None``
 
 .. todo::
-   Add description.
+   :doc:`/about/help_us_to_write_it`
 
