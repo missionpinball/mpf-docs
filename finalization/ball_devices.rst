@@ -1,4 +1,4 @@
 Fine-tuning ball device timing
 ==============================
 
-TODO
+:doc:`/about/help_us_to_write_it`

@@ -78,7 +78,7 @@ machine-wide config, like this:
 
 Most modern pinball machines have bonus scores based on multiple things.
 
-TODO finish this....
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 4. Add some settings to your bonus mode config
 ----------------------------------------------
@@ -94,4 +94,4 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
       bonus_entries:
 
 
-TODO
+:doc:`/about/help_us_to_write_it`

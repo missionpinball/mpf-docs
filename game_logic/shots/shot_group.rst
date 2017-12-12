@@ -1,4 +1,4 @@
 Grouping Shots for lane change, rotation, etc.
 ==============================================
 
-TODO
+:doc:`/about/help_us_to_write_it`

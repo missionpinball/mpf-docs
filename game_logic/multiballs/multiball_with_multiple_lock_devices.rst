@@ -1,4 +1,4 @@
 How to create a multiball which uses multiple lock devices
 ==========================================================
 
-todo
+:doc:`/about/help_us_to_write_it`

@@ -41,7 +41,7 @@ To add a mode to your MPF machine configuration, you create a folder called
 each mode in your machine, like this.
 
 .. todo:
-   Add image
+   Add image. :doc:`/about/help_us_to_write_it`
 
 In your game, you might have dozens (or even
 hundreds) of mode folders. Each of your modes folders is almost like a mini-MPF

@@ -56,7 +56,7 @@ the prefix for ball locks is ``device.ball_locks.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

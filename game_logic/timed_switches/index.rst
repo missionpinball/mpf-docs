@@ -44,7 +44,7 @@ the prefix for timed switches is ``device.timed_switches.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------

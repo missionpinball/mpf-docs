@@ -1,7 +1,7 @@
 Match
 =====
 
-todo
+:doc:`/about/help_us_to_write_it`
 
 Editorial about why we think match is a bad idea
 

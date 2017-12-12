@@ -1,4 +1,4 @@
 Controlling your machine & computer power on / power off
 ========================================================
 
-TODO
+:doc:`/about/help_us_to_write_it`

@@ -8,7 +8,7 @@ Thus, this is mostly about compromises.
 What is the minimal (e.g. most cost effective) hardware?
 You probably want to tune your game first.
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 
 

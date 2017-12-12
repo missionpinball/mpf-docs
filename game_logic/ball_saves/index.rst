@@ -50,7 +50,7 @@ the prefix for ball saves is ``device.ball_saves.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------
