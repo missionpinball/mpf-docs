@@ -65,7 +65,7 @@ Connect the USB serial adapter to the DBGU header (CN2) on the SPIKE CPU node.
 
 Pins are marked GND, RX, TX. You do not need more than these.
 
-TODO add a photo and more detailed pinout instructions.
+.. todo:: Add a photo and more detailed pinout instructions (:doc:`/about/help_us_to_write_it`).
 
 
 OPTION 3: Connect using two USB-Serial Adapters

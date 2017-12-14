@@ -36,7 +36,8 @@ For :doc:`dynamic values </config/instructions/dynamic_values>` and
 the prefix for playfields is ``device.playfields.<name>``.
 
 *available_balls*
-   todo
+   Balls which will be available eventually. If a ball is requested it will be included
+   in available_balls but not in balls until it arrives.
 
 *balls*
    The number of balls on the playfield.

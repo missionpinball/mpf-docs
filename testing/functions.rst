@@ -3,7 +3,7 @@ MPF Test Functions
 
 Here's a list of test functions you can use for your own machine.
 
-todo
+:doc:`/about/help_us_to_write_it`
 
 MpfGameTestCase
 

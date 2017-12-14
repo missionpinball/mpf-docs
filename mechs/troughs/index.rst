@@ -44,7 +44,7 @@ where it's directed to the plunger lane.
 
 .. todo::
 
-   We need to add a photo of this type of trough.
+   We need to add a photo of this type of trough (:doc:`\/about\/help_us_to_write_it`).
 
 The advantage of modern troughs are (1) the balls entering are gravity-fed,
 meaning they only need one coil, and (2) they can hold a lot of balls. (Most

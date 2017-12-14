@@ -1,7 +1,7 @@
 Using MPF with existing pinball machines (Williams, Stern, etc.)
 ================================================================
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 Also link to spike here.
 

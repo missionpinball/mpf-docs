@@ -7,7 +7,7 @@ leaf switches, use :doc:`this guide <modern_mechanical>` instead.)
 
 .. todo::
 
-   We need to add a photo of this type of trough.
+   We need to add a photo of this type of trough (:doc:`\/about\/help_us_to_write_it`).
 
 The following diagram shows how the ball flow and eject coil work in
 a modern trough. (This is a side view)

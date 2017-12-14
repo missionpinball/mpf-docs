@@ -1,12 +1,10 @@
 How to configure Matrix Lights (P-ROC/P3-ROC)
 =============================================
 
-.. include:: /not_updated_yet.rst
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/matrix_lights`                                                 |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 | :doc:`/config/p_roc`                                                         |
 +------------------------------------------------------------------------------+
@@ -22,20 +20,21 @@ However there are a few things to know about using matrix lights with a P3-ROC.
 
    If you're using your P-ROC in an existing machine, then don't use the number
    settings here. Instead use the numbers from the existing machine section of
-   the documentation. (link TODO)
+   the documentation. (add link; :doc:`/about/help_us_to_write_it`)
 
 number:
 -------
 
-Configure the number for each lamp in your matrix_lights: section with an entry
+Configure the number for each lamp in your :doc:`/config/lights` section with an entry
 that contains a bunch of letters and numbers which specify the specific columns
 and row outputs that make up each lamp. It’s probably easiest to look at an
 example.
 
 ::
 
-   matrix_lights:
+   lights:
       some_light:
+         type: matrix
          number: C-A2-B0-0:R-A2-B1-0
 
 Notice there are two parts to the number, separated by a colon.
