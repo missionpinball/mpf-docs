@@ -168,6 +168,10 @@ def setup(app):
     # the context dict to the end of conf.py which means we don't have the
     # populated value at the global context yet, so we need to do it here.
 
+    if globals()['context']['github_version'].startswith("origin/"):
+        # no idea why there is an origin/ in there. breaks our edit on github links
+        globals()['context']['github_version'] = globals()['context']['github_version'][7:]
+
     if globals()['context']['github_version'] in branches_for_dev_warning:
 
         globals()['rst_prolog'] = '''
