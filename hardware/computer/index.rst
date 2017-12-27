@@ -82,7 +82,7 @@ Again, during development you want to have more RAM (8GB+) for your IDE and othe
 Development setup
 -----------------
 
-* CPU with at least for cores
+* CPU with at least four cores
 * 8GB RAM or more
 * SSD
 
