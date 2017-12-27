@@ -1,3 +1,5 @@
+.. highlight:: rest
+
 Contributing to MPF's Documentation
 ===================================
 
@@ -20,7 +22,7 @@ To do that:
 #. Make your change, and click the "Propose file change". This will create a
    pull request. Type a name describing your change, and click "Create pull
    request".
-#.  Details and screen shots of this entire process are `here <https://help.github.com/articles/editing-files-in-another-user-s-repository/>`_.
+#. Details and screen shots of this entire process are `here <https://help.github.com/articles/editing-files-in-another-user-s-repository/>`_.
 
 To make a suggestion for a new doc (or to point out an error)
 -------------------------------------------------------------
