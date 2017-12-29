@@ -29,6 +29,7 @@ Here's an example ``displays:`` section from *Demo Man* with two displays:
        width: 128
        height: 32
        default: true
+       round_anchor_x: left
 
 In the example above, one of the displays is called *window* and the other is called *dmd*. Note that the names here are
 completely arbitrary. Just naming a display "window" does not make it show up in the window, and naming a display "dmd"
@@ -67,6 +68,26 @@ Single value, type: ``integer``. Default: ``600``
 
 The height if the display, in pixels. Note that if you're showing this display on the screen, you can scale the screen
 window which will scale the display. So the height here can be thought of as the "native" height of the display.
+
+round_anchor_x:
+~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``center``
+
+Indicates that this display should not render center-aligned widgets on partial horizontal pixels,
+e.g. anchoring an 11px-wide widget at -5.5 pixels. When specified with ``left`` or ``right``, this
+display will round the pixel anchor position to the nearest whole pixel in that direction.
+
+This setting can also be configured on an individual widget to override the display's configuration.
+
+round_anchor_y:
+~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``middle``
+
+Indicates that this display should not render middle-aligned widgets on partial vertical pixels,
+e.g. anchoring an 11px-high widget at -5.5 pixels. When specified with ``bottom`` or ``top``, this
+display will round the pixel anchor position to the nearest whole pixel in that direction.
+
+This setting can also be configured on an individual widget to override the display's configuration.
 
 width:
 ~~~~~~
