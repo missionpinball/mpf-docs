@@ -179,10 +179,10 @@ not cropping, and they will not "cut off" or "trim" the widget.
 7. Widget position rounding
 -------------------------------------------
 
-Sometimes a center-anchored widget will have an odd number of pixels and receive a position with a half pixel. High-resolution
+Sometimes a center-anchored or percentage-based widget will end up at a position with a fractional pixel. High-resolution
 displays have no trouble smoothing out partial pixels, but low-resolution displays (like DMDs) may render the widget blurry.
 
-You can prevent MPF-MC from positioning widgets on partial pixels with the ``round_anchor_x:`` and ``round_anchor_y:``
+You can prevent MPF-MC from positioning widgets on pixel fractions with the ``round_anchor_x:`` and ``round_anchor_y:``
 setting, either locally on a widget or globally on the display. When present, this setting will force MPF-MC to round
 fractional anchor positions in the specified direction.
 
