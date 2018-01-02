@@ -73,9 +73,9 @@ round_anchor_x:
 ~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``center``
 
-Indicates that this display should not render center-aligned widgets on partial horizontal pixels,
+Indicates that this display should not render widgets on fractional horizontal pixels,
 e.g. anchoring an 11px-wide widget at -5.5 pixels. When specified with ``left`` or ``right``, this
-display will round the pixel anchor position to the nearest whole pixel in that direction.
+display will round the pixel position to the nearest whole pixel in that direction.
 
 This setting can also be configured on an individual widget to override the display's configuration.
 
@@ -83,9 +83,9 @@ round_anchor_y:
 ~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``middle``
 
-Indicates that this display should not render middle-aligned widgets on partial vertical pixels,
+Indicates that this display should not render widgets on fractional vertical pixels,
 e.g. anchoring an 11px-high widget at -5.5 pixels. When specified with ``bottom`` or ``top``, this
-display will round the pixel anchor position to the nearest whole pixel in that direction.
+display will round the pixel position to the nearest whole pixel in that direction.
 
 This setting can also be configured on an individual widget to override the display's configuration.
 
