@@ -109,9 +109,27 @@ process.  ``triangle_01`` has a relative weight of ``5`` out of a total weightin
 ``|1`` appended to ``triangle_04`` is unnecessary because a relative weight of ``1`` is the default
 value for all sounds in the pool that do not have explicit weight values assigned.
 
-That's it. Your sound pool has been configured to play a weighted random variation of our triangle
-sound every time the ``triangle`` sound pool is played. For additional sound pool setting options,
-take a look at the :doc:`sound_pools </config/sound_pools>` documentation.
+Sometimes you may want to have sounds included based on conditional events. You can add a condition
+to any sound and the sound pool will only include that sound if the condition evaluates to true at
+playback time. If the selection is random, excluded events will not be weighted in the distribution.
+If the selection is sequential, excluded events will simply be skipped.
+
+::
+
+   sound_pools:
+      triangle:
+         type: random
+         sounds:
+            - triangle_01
+            - triangle_02{current_player.triangles_found>1}|2
+            - triangle_03{current_player.triangles_found>2}
+            - triangle_04{device.achievements.supertriangle.state=="complete"}|5
+
+Sound conditions are formatted the same as all :doc:`conditional events </events/overview/conditional>`.
+Any sound in a pool can have a weight, a condition, both, or neither.
+
+For additional sound pool setting options, take a look at the :doc:`sound_pools </config/sound_pools>`
+documentation.
 
 4. Configuring the sound player
 -------------------------------
