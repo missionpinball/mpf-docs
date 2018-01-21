@@ -115,11 +115,11 @@ to provide additional functionality.
 * :doc:`RGB.DMD RGB LED display controller <eli_dmd/index>`
    * Supports a "real" color DMD made up of RGB LED matrix
 
-* MyPinballs
+* :doc:`MyPinballs Segment Display Controller <mypinballs/index>`
    * *New in MPF 0.50*
    * Alphanumeric segment displays
 
-* Trinamics
+* :doc:`Trinamics StepRocker <trinamics/index>`
    * *New in MPF 0.50*
    * StepRocker stepper controller
 
@@ -160,6 +160,8 @@ MPF supports:
    eli_dmd/index
    existing_machines/index
    virtual/index
+   Trinamics StepRocker <trinamics/index>
+   MyPinballs Segment Displays <mypinballs/index>
    Computer Requirements <computer/index>
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>

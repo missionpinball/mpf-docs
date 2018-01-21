@@ -26,7 +26,7 @@ Install ``smbus2`` via pip:
 * Some boards such as the Raspberry Pi have nativ I2C buses. Figure our which
   bus to use and make sure MPF has sufficient permissions to use it (Alternatively,
   you can also controll the I2C on the RPi remotely using the
-  :doc:`RPi </hardware/rpi.rst>` platform).
+  :doc:`RPi </hardware/rpi/index>` platform).
 
 * You can build an adapter to tap I2C out of a spare VGA, DVI or HDMI port:
   http://www.instructables.com/id/Worlds-Cheapest-I2C-I-Squared-C-Adapter/
