@@ -123,11 +123,19 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * StepRocker stepper controller
 
-* Raspberry Pi 3
+* :doc:`Raspberry Pi <rpi/index>`
    * *New in MPF 0.50*
    * Local (MPF on the RPi) or remote via ethernet
    * All inputs and outputs
    * I2C and SPI
+
+* :doc:`Native I2C on Linux <smbus/index>`
+   * *New in MPF 0.50*
+   * I2C devices on any nativ I2C bus
+
+* :doc:`MMA8451-based accelerometers <mma8451/index>`
+   * *New in MPF 0.50*
+   * Connected to I2C
 
 Configuration Guides
 --------------------
@@ -153,6 +161,9 @@ MPF supports:
    existing_machines/index
    virtual/index
    Computer Requirements <computer/index>
+   Native I2C <smbus/index>
+   Raspberry Pi <rpi/index>
+   MMA8451-based accelerometer <mma8451/index>
 
 Other
 -----
