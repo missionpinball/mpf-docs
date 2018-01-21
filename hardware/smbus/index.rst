@@ -70,7 +70,7 @@ See the :doc:`/hardware/platform` guide for more information about setting
 device-specific default platforms versus overriding the platform for individual
 devices.
 
-6. Understanding I2C numbering
+5. Understanding I2C numbering
 ----------------------------------------
 
 When using I2C addresses in I2C devices smbus2 will interpret those as
