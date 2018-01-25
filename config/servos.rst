@@ -22,8 +22,8 @@ and *servo2*:
 
    servos:
       servo1:
-         servo_min: 3000
-         servo_max: 9000
+         servo_min: 0.1
+         servo_max: 0.9
          positions:
              0.1: servo1_down
              0.9: servo1_up
@@ -31,8 +31,6 @@ and *servo2*:
          reset_events: reset_servo1
          number: 1
       servo2:
-         servo_min: 0
-         servo_max: 10000
          positions:
              0.2: servo2_left
              1.0: servo2_home
@@ -149,16 +147,16 @@ servo_max:
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 A numerical value that's sent to the servo which represents the servo's max
-position. The actually value for this will depend on your servo controller
-hardware. So controllers use values like 0.0 to 1.0 here, others use values
-like 3000 to 9000. So check your servo controller documentation.
+position. The actually value for this is normalized to 0.0 to 1.0 here.
+The controllers will convert it for the corresponding hardware.
 
 Note that the position settings earlier are always 0.0 to 1.0, and the max
 (and min, discussed below) are used to calculate what actual values are sent
 to the servo.
 
-So if you have ``servo_max: 9000`` and ``servo_min: 3000``, and then you set
-the servo position to 0.5, the actual value sent will be 6000.
+So if you have ``servo_max: 1.0`` and ``servo_min: 0.5``, and then you set
+the servo position to 0.5, the actual value sent will be 0.75. That position
+will be converted to an actual position in the hardware controller.
 
 servo_min:
 ~~~~~~~~~~
