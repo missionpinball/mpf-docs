@@ -25,8 +25,8 @@ and *servo2*:
          servo_min: 0.1
          servo_max: 0.9
          positions:
-             0.1: servo1_down
-             0.9: servo1_up
+             0.0: servo1_down
+             0.8: servo1_up
          reset_position: 0.5
          reset_events: reset_servo1
          number: 1
@@ -99,8 +99,9 @@ This is a sub-section mapping of servo positions to MPF event names. For example
       0.45: servo1_mid
 
 In MPF, servo ranges of motion are represented as numbers between 0.0 and 1.0.
-So 0.0 puts the servo at the extreme end of its range on one side, and 1.0 moves
-it to the end of motion on the other side. You can use positions in between with
+So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min: 
+discussed below, and 1.0 moves it to the end of motion on the other side as set by the
+servo_max: as set below. You can use positions in between with
 as much precision as your servo controller will allow. (For example, a value of .4444
 will tell the servo to move to 44.44% of the way between its minimum and maximum
 position.
@@ -147,7 +148,8 @@ servo_max:
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 A numerical value that's sent to the servo which represents the servo's max
-position. The actually value for this is normalized to 0.0 to 1.0 here.
+position in relation to the servo_max: set in the controllers configuration. 
+The actual value for this is normalized to 0.0 to 1.0 here.
 The controllers will convert it for the corresponding hardware.
 
 Note that the position settings earlier are always 0.0 to 1.0, and the max
