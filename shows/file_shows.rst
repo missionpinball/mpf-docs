@@ -11,7 +11,7 @@ A few notes for creating show files:
 
 * MPF config files are not case sensitive. You can mix-and-match
   uppercase and lowercase letters in the files, but internally MPF will not
-  be able to differentiate between ``YouShow.yaml`` and ``yourshow.yaml``.
+  be able to differentiate between ``YourShow.yaml`` and ``yourshow.yaml``.
 * Show names are "machine-wide" within MPF. This means that if you have two
   different shows with the same name in different locations, MPF will get
   confused.
