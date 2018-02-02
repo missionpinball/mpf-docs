@@ -36,7 +36,7 @@ Let's start:
 - insert the sd-card into your pi and boot it up (first boot does take some time since it sets some os specific
   parameters)
 
-- login with user:sysop password:posys
+- login with user:sysop password:posys. You can do this either via network or a serial port.
 
 - now type this:
 
@@ -117,8 +117,8 @@ More or less important last steps:
 Serial communication:
 ---------------------
 Linux always had and has the possibility to log in via a serial connection.
-Since all of the pinball hardware I'm aware off uses serial communication with mpf leaving this feature running is not
-good at all, since you will get noise from your kernel.
+If you run a hardware platform which uses the serial pin on the Raspberry
+you should disable the Linux login shell on that port.
 The device is called /dev/ttyAMA0 and you need to stop it from starting:
 
 Type:
