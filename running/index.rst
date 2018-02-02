@@ -99,6 +99,8 @@ Here's a list of valid MPF commands. Click on any one of them for full details a
 * :doc:`mpf mc <commands/mc>` (Starts the MPF Media Controller)
 * :doc:`mpf both <commands/both>` (Starts both the MPF game engine and media controller at the same time)
 * :doc:`mpf migrate <commands/migrate>` (Migrates older config and show files to the current version)
+* :doc:`mpf hardware <commands/hardware>` (Scan, inspect and configure hardware)
+* :doc:`mpf service <commands/service>` (Service command line interface)
 
 Specifying BCP ports
 --------------------
@@ -112,3 +114,10 @@ By default, the MPF game engine and the MC will connect via TCP port 5050.
    MPF command launcher <mpf>
    MPF commands <commands/index>
    Specifying BCP ports <ports>
+   mpf game <commands/game>
+   mpf mc <commands/mc>
+   mpf both <commands/both>
+   mpf migrate <commands/migrate>
+   mpf hardware <commands/hardware>
+   mpf service <commands/service>
+
