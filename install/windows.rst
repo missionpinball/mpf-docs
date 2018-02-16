@@ -80,12 +80,14 @@ that means you also have Python version 2 installed. (This is ok. You can have P
 and Python 3 installed at the same time.) However, if this is your case, you need to
 use a different command to start Python 3. See the :doc:`2_and_3` page for details.
 
-2. Upgrade pip
---------------
+2. Upgrade pip and setuptools
+-----------------------------
 
 Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
-the web. (It's kind of like an app store for Python apps.)
+the web. (It's kind of like an app store for Python apps.) Pip references another package
+called "setuptools" that is used to download, build, install, upgrade, and uninstall 
+Python packages.
 
 So the next step is to update the "pip" program itself to make sure you have the
 latest one. It's not really important to know exactly what this means right now,
@@ -98,32 +100,9 @@ just run it.
 This command will upgrade pip to the latest version which should be 9 or newer.
 
 Note that if you're running the command prompt *without* admin rights, you might get
-some red text and a permissions error, but that's ok. You can run the following command
-to show the version of pip (and the packages you have installed) like this:
+some red text and a permissions error, but that's ok. 
 
-::
-
-   pip list
-
-That will print out something like this:
-
-.. code-block:: doscon
-
-   C:\Users\BRIAN MADDEN>pip list
-   pip (9.0.1)
-   setuptools (18.2)
-
-   C:\Users\BRIAN MADDEN>
-
-Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
-this), and not the 7.x version that came with Python 3.4.4.
-
-3. Upgrade setuptools
----------------------
-
-Python includes a utility called "setuptools" which is a package to download, build, install, 
-upgrade, and uninstall Python packages. So the next step is to update the "setuptools" program 
-itself to make sure you have the latest one.
+Next, update the "setuptools" package.
 
 ::
 
@@ -131,9 +110,8 @@ itself to make sure you have the latest one.
 
 This command will upgrade setuptools to the latest version which should be 35.5.1 or newer.
 
-Note that if you're running the command prompt *without* admin rights, you might get
-some red text and a permissions error, but that's ok. You can run the following command
-to show the version of setuptools (and the packages you have installed) like this:
+You can run the following command to show the versions of pip and setuptools (and the other 
+packages you have installed) like this:
 
 ::
 
@@ -149,10 +127,10 @@ That will print out something like this:
 
    C:\Users\BRIAN MADDEN>
 
-Notice that setuptools is now version 35.5.1 (or later, depending on the latest version when you're doing
-this), and not the 18.x version that came with Python 3.4.4.
+Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
+this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated.
 
-4. Install MPF
+3. Install MPF
 --------------
 
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
@@ -297,7 +275,7 @@ this:
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
 
-5. Download & run the "Demo Man" example game
+4. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -308,7 +286,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-6. Install whatever drivers your hardware controller needs
+5. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
