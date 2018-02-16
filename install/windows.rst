@@ -89,26 +89,18 @@ the web. (It's kind of like an app store for Python apps.) Pip references anothe
 called "setuptools" that is used to download, build, install, upgrade, and uninstall 
 Python packages.
 
-So the next step is to update the "pip" program itself to make sure you have the
-latest one. It's not really important to know exactly what this means right now,
+So the next step is to update the "pip" and "setuptools" programs to make sure you have the
+latest versions. It's not really important to know exactly what this means right now,
 just run it.
 
 ::
 
-    pip install pip --upgrade
+    pip install pip setuptools --upgrade
 
-This command will upgrade pip to the latest version which should be 9 or newer.
+This command will upgrade pip and setuptools to the latest versions.
 
 Note that if you're running the command prompt *without* admin rights, you might get
 some red text and a permissions error, but that's ok. 
-
-Next, update the "setuptools" package.
-
-::
-
-    pip install setuptools --upgrade
-
-This command will upgrade setuptools to the latest version which should be 35.5.1 or newer.
 
 You can run the following command to show the versions of pip and setuptools (and the other 
 packages you have installed) like this:
@@ -128,7 +120,8 @@ That will print out something like this:
    C:\Users\BRIAN MADDEN>
 
 Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
-this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated.
+this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to 
+version 35.5.1 (or later).
 
 3. Install MPF
 --------------
