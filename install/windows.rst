@@ -118,7 +118,41 @@ That will print out something like this:
 Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
 this), and not the 7.x version that came with Python 3.4.4.
 
-3. Install MPF
+3. Upgrade setuptools
+---------------------
+
+Python includes a utility called "setuptools" which is a package to download, build, install, 
+upgrade, and uninstall Python packages. So the next step is to update the "setuptools" program 
+itself to make sure you have the latest one.
+
+::
+
+    pip install setuptools --upgrade
+
+This command will upgrade setuptools to the latest version which should be 35.5.1 or newer.
+
+Note that if you're running the command prompt *without* admin rights, you might get
+some red text and a permissions error, but that's ok. You can run the following command
+to show the version of setuptools (and the packages you have installed) like this:
+
+::
+
+   pip list
+
+That will print out something like this:
+
+.. code-block:: doscon
+
+   C:\Users\BRIAN MADDEN>pip list
+   pip (9.0.1)
+   setuptools (35.5.1)
+
+   C:\Users\BRIAN MADDEN>
+
+Notice that setuptools is now version 35.5.1 (or later, depending on the latest version when you're doing
+this), and not the 18.x version that came with Python 3.4.4.
+
+4. Install MPF
 --------------
 
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
@@ -263,7 +297,7 @@ this:
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
 
-4. Download & run the "Demo Man" example game
+5. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -274,7 +308,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-5. Install whatever drivers your hardware controller needs
+6. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
