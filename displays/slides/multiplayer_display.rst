@@ -109,7 +109,7 @@ left and right corners. We want to add the player_1 and player_2 widgets in the
 upper corners, and swap out the big "base_score_widget" for the slightly
 smaller "mp_score_widget" one:
 
-:
+::
 
   widget_player:
     { ... game_started: ... }
