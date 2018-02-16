@@ -30,6 +30,7 @@ Here are a list of the settings you can use for text widgets:
    font_name:
    bold:
    italic:
+   casing:
    number_grouping:
    min_digits:
    halign:
@@ -110,6 +111,19 @@ often not that great. You're better off finding an actual italicized version
 of your font and using it instead.
 
 The default setting is ``False``.
+
+casing:
+~~~~~~~
+
+A string value that changes the casing of the text on the widget. Available
+values are:
+
+* "lower": all characters will be lower case
+* "upper": ALL CHARACTERS WILL BE UPPER CASE
+* "title": All First Characters Are Capitalized
+* "capitalize": Only the first character is capitalized
+
+The default setting is ``None`` and the characters are displayed as-is.
 
 number_grouping:
 ~~~~~~~~~~~~~~~~
