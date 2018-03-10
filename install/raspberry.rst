@@ -180,8 +180,11 @@ To test the video playback capability under kivy into the framebuffer just run t
 
   python3 -m kivy.uix.videoplayer /usr/local/lib/python3.4/dist-packages/mpfmc/tests/machine_files/video/videos/mpf_video_small_test.mp4
 
+
 Troubleshooting:
 ----------------
+
+More documentation about kivypie can be found here: http://kivypie.mitako.eu/kivy-faq.html
 
 No sound:
 ---------
