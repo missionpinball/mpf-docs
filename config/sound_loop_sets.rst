@@ -32,7 +32,7 @@ the sound asset definition.
 
 .. rubric:: Option 2: Sound Loop Set With Multiple Layers
 
-widget, but use a dash (and a space) to dictate where a new widget starts,
+When specifying multiple layers use a dash (and a space) to dictate where a new layer starts,
 like this:
 
 .. code-block:: yaml

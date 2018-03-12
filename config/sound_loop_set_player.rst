@@ -23,7 +23,7 @@ on sound loop sets when MPF events are received.  Additional information may be 
 Required settings
 -----------------
 
-The following sections are required in the ``layers:`` section of your config:
+The following sections are required in the ``sound_loop_set_player:`` section of your config:
 
 track:
 ^^^^^^
@@ -81,4 +81,13 @@ Express configuration
 ---------------------
 
 The ``sound_loop_set_player`` does not support an express configuration.
+
+
+sound_loop_set:
+^^^^^^^^^^^^^^^
+Single value, type: ``string``.
+
+This is the name of the ``sound_loop_set`` asset used to perform the specified action. This must
+be the name an existing ``sound_loop_set`` specified in the ``sound_loop_sets:`` section
+:doc:`sound_system: </config/sound_system>` section of your machine config files.)
 
