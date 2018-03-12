@@ -6,20 +6,21 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python 3.4 (not Python 3.5 or 3.6)
+1. Install Python (3.4, 3.5, or 3.6)
 ---------------------------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.4, (Python 3.5 and newer will not work). You
-can download and install it from the Python website. (Keep reading for links)
+On Windows platforms, MPF requires Python 3.4, Python 3.5, or Python 3.6 (Python 3.7
+and newer are not currently supported). You can download and install it from the Python
+website. (Keep reading for links)
 
-.. warning::
+.. note::
 
-   To be very clear, on Windows, MPF requires Python 3.4. It will not run on
-   Python 3.5+.
+   Python 3.5 and 3.6 support for Windows were added in version 0.50.  Prior versions of
+   MPF did not support Python 3.5+ on Windows.
 
 There are two versions of Python, a 32-bit version and a 64-bit version, and you
 need to pick the one that matches the version of Windows you're using.
@@ -44,15 +45,19 @@ Here's an example of running this on a 64-bit Windows 10 machine:
 .. image:: images/check_windows_processor_architecture.png
 
 Then go to the Python website download the version you need. (Note that the final digit in the Python version
-number is the "patch" number, so 3.4.4 is a version of Python 3.4.) Or use the direct-download links here:
+number is the "patch" number, so 3.6.4 is a version of Python 3.6.) Or use the direct-download links here:
 
-+ `For 32-bit (x86) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
-+ `For 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
++ `Python 3.6 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4.exe>`_
++ `Python 3.6 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
++ `Python 3.5 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe>`_
++ `Python 3.5 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe>`_
++ `Python 3.4 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
++ `Python 3.4 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
 
-Installing Python 3.4 is pretty straightforward. It's a normal Windows installer.
+Installing Python is pretty straightforward. It's a normal Windows installer.
 
 The only thing you should change from the defaults is on the "Customize Python
-3.4.4" screen, we like to select the option "Add python.exe to Path". That way
+3.x.x" screen, we like to select the option "Add python.exe to Path". That way
 you can run ``python`` from any folder, rather than having to specify the full
 path to it. (Also make sure the "pip" option is selected, but that should be
 selected by default.)
