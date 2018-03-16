@@ -28,6 +28,7 @@ Here's an example of a typical sound_pool configuration.
     sound_pools:
        drain_callout:
           type: random_force_all
+          track: voice
           sounds:
              - drain_01
              - drain_02
@@ -36,6 +37,7 @@ Here's an example of a typical sound_pool configuration.
        slingshot:
           load: preload
           type: random
+          track: sfx
           sounds:
              - slingshot_01|5
              - slingshot_02|3
@@ -43,6 +45,7 @@ Here's an example of a typical sound_pool configuration.
        target_completion:
           load: on_demand
           type: sequence
+          track: sfx
           sounds:
              - target_completion_01
              - target_completion_02
@@ -79,12 +82,20 @@ of being randomly selected of 5 out of 10 (50%), `slingshot_02` 3/10 (30%), and 
        sound_pools:
        drain_callout:
           type: random_force_all
+          track: voice
           sounds:
              - drain_01
              - drain_02
              - "drain 03" # example of a sound with a space in its name using quotes
              - drain_04
 
+
+track:
+~~~~~~
+Single value, type: ``string``. Default: ``None``
+
+This is the name of the track this sound pool will play on. (You configure tracks and track names in the
+:doc:`sound_system: </config/sound_system>` section of your machine config files.)
 
 Optional settings
 -----------------
