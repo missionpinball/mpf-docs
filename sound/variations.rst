@@ -96,6 +96,7 @@ again:
    sound_pools:
       triangle:
          type: random
+         track: sfx
          sounds:
             - triangle_01|5
             - triangle_02|2
@@ -119,6 +120,7 @@ If the selection is sequential, excluded events will simply be skipped.
    sound_pools:
       triangle:
          type: random
+         track: sfx
          sounds:
             - triangle_01
             - triangle_02{current_player.triangles_found>1}|2

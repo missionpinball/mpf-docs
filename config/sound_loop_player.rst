@@ -1,5 +1,5 @@
-sound_loop_set_player:
-======================
+sound_loop_player:
+==================
 
 *Config file section*
 
@@ -16,14 +16,59 @@ sound_loop_set_player:
 
 .. overview
 
-The ``sound_loop_set_player:`` section of your config is where you specify actions to perform
+The ``sound_loop_player:`` section of your config is where you specify actions to perform
 on sound loop sets when MPF events are received.  Additional information may be found in the
-:doc:`sound_player </config_players/sound_loop_set_player>` documentation.
+:doc:`sound_player </config_players/sound_loop_player>` documentation.
+
+Examples:
+
+.. code-block:: yaml
+
+   sound_loop_player:
+     play_basic_beat:
+       loops:
+         action: play
+         sound_loop_set: basic_beat
+         queue: True
+     add_hi_hats:
+       loops:
+         action: play_layer
+         layer: 1
+         queue: True
+     stop_hi_hats:
+       loops:
+         action: stop_looping_layer
+         layer: 1
+     add_snare:
+       loops:
+         action: play_layer
+         fade_in: 2s
+         layer: 2
+     add_claps:
+       loops:
+         action: play_layer
+         layer: 3
+         queue: True
+
+Basic usage:
+
+.. code-block:: yaml
+
+   sound_loop_player:
+     <triggering_event_name>:
+       <sound_loop track name>:
+         action: <action name>
+         <optional settings>
+     <triggering_event_name>:
+       <sound_loop track name>:
+         action: <action name>
+         <optional settings>
+
 
 Required settings
 -----------------
 
-The following sections are required in the ``sound_loop_set_player:`` section of your config:
+The following sections are required in the ``sound_loop_player:`` section of your config:
 
 track:
 ^^^^^^
@@ -36,7 +81,7 @@ sound loop track. (You configure tracks and track names in the
 Optional settings
 -----------------
 
-The following sections are optional in the ``sound_loop_set_player:`` section of your config.
+The following sections are optional in the ``sound_loop_player:`` section of your config.
 (If you don't include them, the default will be used).
 
 action:
@@ -80,7 +125,7 @@ Several other settings may be used in the sound player to override settings spec
 Express configuration
 ---------------------
 
-The ``sound_loop_set_player`` does not support an express configuration.
+The ``sound_loop_player`` does not support an express configuration.
 
 
 sound_loop_set:
@@ -88,6 +133,6 @@ sound_loop_set:
 Single value, type: ``string``.
 
 This is the name of the ``sound_loop_set`` asset used to perform the specified action. This must
-be the name an existing ``sound_loop_set`` specified in the ``sound_loop_sets:`` section
-:doc:`sound_system: </config/sound_system>` section of your machine config files.)
+be the name an existing ``sound_loop_set`` specified in the ``sound_loop_sets:`` section of your
+machine config files.
 

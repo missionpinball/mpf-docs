@@ -137,7 +137,6 @@ documentation
 Pausing Background Music While a Video is Playing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 With the addition of the new :doc:`track_player </config/track_player>` config player in 0.32, it
 is now possible to control audio tracks using MPF events. One common use of this new functionality
 is to pause your music track while you play a video and resume the music when the video is

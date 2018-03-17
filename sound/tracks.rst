@@ -11,8 +11,8 @@ Track types
 
 The following types of audio tracks are available in MPF:
 
-+ ``standard`` - Standard audio tracks are the most commonly used and are virtually the same as the
-  audio tracks in the previous releases of MPF (since 0.30). Standard tracks have a setting to limit
++ ``standard`` - Standard audio tracks are the most commonly used and have a variety of playback
+  features to support most pinball audio needs. Standard tracks have a setting to limit
   the number of sounds that may be played simultaneously. If a standard track is busy playing its
   limit of simultaneous sounds, pending sounds can be added to a queue where they wait to be played
   until the track can play them. Several settings control a sound's behavior when a track is busy.
@@ -25,6 +25,13 @@ The following types of audio tracks are available in MPF:
   sound_loop tracks must be loaded in memory (streaming sounds are not supported). Sound loop tracks
   use :doc:`sound_loop_sets </config/sound_loop_sets>` which are special groups of
   :doc:`sounds </config/sounds>` to control the playback and looping of audio files.
+
++ ``playlist`` - New in MPF 0.50, playlist tracks provide a comprehensive set of music playing
+  capabilities that include named playlists (lists of sound assets), playback mode (sequential or
+  random/shuffled), crossfades between songs/playlists, and more.  Playlist tracks use
+  :doc:`playlists </config/playlists>` which contain a list of :doc:`sounds </config/sounds>`
+  (audio assets) video or audio files that can be played back sequentially or in random order and
+  can be set to repeat or stop after all sounds have been played.
 
 .. note::
 

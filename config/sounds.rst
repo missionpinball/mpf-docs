@@ -49,6 +49,31 @@ Optional settings
 The following sections are optional in the ``sounds:`` section of your config. (If you don't include
 them, the default will be used).
 
+about_to_finish_time:
+~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``None``
+
+The point relative to the end of the sound at which to post the ``events_when_about_to_finish`` event(s).
+A value of 0.5 seconds means to post the event(s) prior to the end of the sound. When set to ``None``, no events will be
+posted. This value is specified as a :doc:`time string </config/instructions/time_strings>`.
+
+events_when_about_to_finish:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this sound is about to finish playing.
+The exact timing of this event is determined by the ``about_to_finish_time`` setting for this sound.
+Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_looping:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this sound loops back to the
+beginning while playing. Enter the list in the MPF config list format. These events are posted
+exactly as they’re entered.
+
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
@@ -64,13 +89,22 @@ A list of one or more names of events that MPF will post when this sound stops p
 in the MPF config list format. These events are posted exactly as they’re entered.  These events can
 be useful to trigger some action when a callout has finished playing.
 
-events_when_looping:
-~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+fade_in:
+~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
 
-A list of one or more names of events that MPF will post when this sound loops back to the
-beginning while playing. Enter the list in the MPF config list format. These events are posted
-exactly as they’re entered.
+The number of seconds over which to fade in the sound when it is played.
+
+fade_out:
+~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
+
+The number of seconds over which to fade out the sound when it is stopped. This value is not
+applied when the sound stops on its own by reaching the end of the sound (will likely be added
+in a future version).  At the moment it only comes into play when the sound is actively stopped
+by an event.
 
 file:
 ~~~~~
@@ -100,16 +134,6 @@ specifies the number of times the sound should loop back to the beginning while 
 that this value is not the total number of times the sound is played, but the number of times it
 should play again after the first time through.
 
-priority:
-~~~~~~~~~
-Single value, type: ``integer``. Default: ``0``
-
-The numeric value indicating the priority or importance of this sound.  Sounds with higher priority
-values will preempt other sounds with lower priorities that are playing when a track has reached
-the maximum number of simultaneous sounds it is configured to play.  If the track is busy and the
-priorities of all sounds currently playing greater than or equal to this sound, the sound will be
-queued for playback and will have to wait to be played.
-
 max_queue_time:
 ~~~~~~~~~~~~~~~
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
@@ -125,15 +149,29 @@ for when you hit a pop bumper or slingshot) might only make sense if they're pla
 in those cases you might want to use a short (or no) queue time. The default setting is "None" which
 means this sound will have no queue limit and will always play eventually.
 
-streaming:
-~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+mode_end_action:
+~~~~~~~~~~~~~~~~
+Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
 
-Indicates whether or not the sound sound will be streamed (rather than stored in memory).
-Streaming sounds are limited to a single instance of the sound playing at a time.  Multiple
-different streaming sounds may be played simultaneously, just not more than a single
-instance of a particular sound. When ``streaming`` is set to ``False``, the ``simultaneous_limit``
-setting is ignored and a value of 1 is used.
+The ``mode_end_action:`` setting determines what action to take when the mode that initiates the
+playback of the sound ends. Options for ``mode_end_action:`` are:
+
++ ``stop`` - All currently playing and queued instances of the specified sound started by the mode
+  will be stopped/canceled. If the ``fade_out`` parameter has a non-zero value, the sound will fade
+  out over the specified number of seconds.
++ ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
+  sound started by the mode (the sound will continue to play to the end of the current loop). In
+  addition, any queued instances of the sound awaiting playback will be removed/canceled.
+
+priority:
+~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+The numeric value indicating the priority or importance of this sound.  Sounds with higher priority
+values will preempt other sounds with lower priorities that are playing when a track has reached
+the maximum number of simultaneous sounds it is configured to play.  If the track is busy and the
+priorities of all sounds currently playing greater than or equal to this sound, the sound will be
+queued for playback and will have to wait to be played.
 
 simultaneous_limit:
 ~~~~~~~~~~~~~~~~~~~
@@ -165,19 +203,15 @@ limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. O
 + ``skip`` - Do not steal/stop any currently running instances of the sound. Simply skip playback
   of the newly requested instance.
 
-mode_end_action:
-~~~~~~~~~~~~~~~~
-Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
+streaming:
+~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-The ``mode_end_action:`` setting determines what action to take when the mode that initiates the
-playback of the sound ends. Options for ``mode_end_action:`` are:
-
-+ ``stop`` - All currently playing and queued instances of the specified sound started by the mode
-  will be stopped/canceled. If the ``fade_out`` parameter has a non-zero value, the sound will fade
-  out over the specified number of seconds.
-+ ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
-  sound started by the mode (the sound will continue to play to the end of the current loop). In
-  addition, any queued instances of the sound awaiting playback will be removed/canceled.
+Indicates whether or not the sound sound will be streamed (rather than stored in memory).
+Streaming sounds are limited to a single instance of the sound playing at a time.  Multiple
+different streaming sounds may be played simultaneously, just not more than a single
+instance of a particular sound. When ``streaming`` is set to ``False``, the ``simultaneous_limit``
+setting is ignored and a value of 1 is used.
 
 track:
 ~~~~~~
@@ -196,23 +230,6 @@ to "balance" your sounds if you have one particular sound that's too loud or too
 volume parameters in MPF, this item can be represented as a number between 0.0 and 1.0 (1.0 is max
 volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as a decibel string from -inf to
 0.0 db (ex: ``-3.0 db``).
-
-fade_in:
-~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
-
-The number of seconds over which to fade in the sound when it is played.
-
-fade_out:
-~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
-
-The number of seconds over which to fade out the sound when it is stopped. This value is not
-applied when the sound stops on its own by reaching the end of the sound (will likely be added
-in a future version).  At the moment it only comes into play when the sound is actively stopped
-by an event.
 
 start_at:
 ~~~~~~~~~

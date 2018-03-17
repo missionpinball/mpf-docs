@@ -99,15 +99,17 @@ anyway just in case.  As of version 0.33, MPF supports 16-bit .wav (Wave), .ogg 
 some supported audio files and place them in the appropriate track folders that you created in the
 previous step (a good site to find free public domain sounds is
 `www.freesound.org <http://www.freesound.org/>`_). Put all music files in the ``music`` folder,
-voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx`` folder.
+voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx`` folder.  You
+are welcome to create any sub-folders you desire and put sounds in them to help keep things
+organized.
 
 4. Additional configuration for selected sounds
 -----------------------------------------------
 
 Now when you start your machine you will have some sounds available (assuming you placed some
-supported sound files in your folder during the last step) and they will all have some very basic
-default settings.  It is very likely that you won't be happy with the default settings for all of
-your sounds so let's create some more tailored settings for a few of them.
+supported sound files in your sounds folder during the last step) and they will all have some very
+basic default settings.  It is very likely that you won't be happy with the default settings for
+all of your sounds so let's create some more tailored settings for a few of them.
 
 Renaming some sounds
 ~~~~~~~~~~~~~~~~~~~~
@@ -256,7 +258,11 @@ References
 + :doc:`Ducking </sound/ducking>`
 + :doc:`Tips & tricks </sound/tips_tricks>`
 + :doc:`sound_system: </config/sound_system>`
++ :doc:`tracks </sound/tracks>`
 + :doc:`sounds: </config/sounds>`
 + :doc:`sound_player: </config_players/sound_player>`
++ :doc:`sound_loop_sets: </config/sound_loop_sets>`
++ :doc:`sound_loop_player: </config_players/sound_loop_player>`
++ :doc:`playlists: </config/playlists>`
++ :doc:`playlist_player: </config_players/playlist_player>`
 + :doc:`Instructions for entering gain values </config/instructions/gain_values>`
-
