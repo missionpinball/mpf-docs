@@ -37,3 +37,34 @@ The following types of audio tracks are available in MPF:
 
    All tracks can be a :doc:`ducking </sound/ducking>` target regardless of the type of track.
 
+Example track configuration:
+
+.. code-block:: yaml
+
+   sound_system:
+     buffer: 2048
+     frequency: 44100
+     channels: 2
+     master_volume: 0.9
+     tracks:
+       music:
+         volume: 0.5
+         simultaneous_sounds: 1
+         events_when_stopped: music_track_stopped
+         events_when_played: music_track_played
+         events_when_paused: music_track_paused
+       sfx:
+         volume: 0.4
+         simultaneous_sounds: 8
+         preload: yes
+       voice:
+         volume: 0.6
+         simultaneous_sounds: 1
+         preload: yes
+       loops:
+         type: sound_loop
+         volume: 0.6
+       playlist:
+         type: playlist
+         volume: 0.6
+         crossfade_time: 2s

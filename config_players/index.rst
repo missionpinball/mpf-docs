@@ -34,13 +34,14 @@ them, with explanations of how to use them in config files and in shows.
    gi_player
    led_player
    light_player
+   playlist_player
    plugin_player
    queue_event_player
    queue_relay_player
    random_event_player
    show_player
    slide_player
-   sound_loop_set_player
+   sound_loop_player
    sound_player
    track_player
    trigger_player

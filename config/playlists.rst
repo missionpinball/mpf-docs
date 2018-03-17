@@ -45,9 +45,9 @@ sounds:
 
 The ``sounds:`` section contains an indented list of existing sound assets (one per line) that will
 be contained in the playlist. It is suggested you use block sequence notation for this list (begin
-each line with a dash followed by a space ``- ``). Alternatively, you can enter the sound asset names
+each line with a dash followed by a space). Alternatively, you can enter the sound asset names
 in a comma-separated list. The sounds will be played in the order specfied (unless ``shuffle:`` is
-set to ``True``.
+set to ``True``).
 
 .. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
    in quotes:

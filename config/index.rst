@@ -106,6 +106,8 @@ indicated which type of config file it's valid in.
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
+   playlist_player: <playlist_player>
+   playlists: <playlists>
    plugins: <plugins>
    pololu_maestro: <pololu_maestro>
    queue_event_player: <queue_event_player>
@@ -131,7 +133,7 @@ indicated which type of config file it's valid in.
    smart_virtual: <smart_virtual>
    smartmatrix: <smartmatrix>
    snux: <snux>
-   sound_loop_set_player: <sound_loop_set_player>
+   sound_loop_player: <sound_loop_player>
    sound_loop_sets: <sound_loop_sets>
    sound_player: <sound_player>
    sound_pools: <sound_pools>
