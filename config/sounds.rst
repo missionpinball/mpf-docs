@@ -203,6 +203,14 @@ limit. This setting is ignored when ``simultaneous_limit`` is set to ``None``. O
 + ``skip`` - Do not steal/stop any currently running instances of the sound. Simply skip playback
   of the newly requested instance.
 
+start_at:
+~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Default: ``0``
+
+The position in the sound file (in seconds) to start playback of the sound when it is played. When
+the sound is looped it will loop back to the beginning of the sound file.
+
 streaming:
 ~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -210,7 +218,7 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Indicates whether or not the sound sound will be streamed (rather than stored in memory).
 Streaming sounds are limited to a single instance of the sound playing at a time.  Multiple
 different streaming sounds may be played simultaneously, just not more than a single
-instance of a particular sound. When ``streaming`` is set to ``False``, the ``simultaneous_limit``
+instance of a particular sound. When ``streaming`` is set to ``True``, the ``simultaneous_limit``
 setting is ignored and a value of 1 is used.
 
 track:
@@ -230,14 +238,6 @@ to "balance" your sounds if you have one particular sound that's too loud or too
 volume parameters in MPF, this item can be represented as a number between 0.0 and 1.0 (1.0 is max
 volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as a decibel string from -inf to
 0.0 db (ex: ``-3.0 db``).
-
-start_at:
-~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
-
-The position in the sound file (in seconds) to start playback of the sound when it is played. When
-the sound is looped it will loop back to the beginning of the sound file.
 
 ducking:
 --------
