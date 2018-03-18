@@ -80,6 +80,8 @@ For example:
              0.9: servo1_up
          reset_position: 0.5
          reset_events: reset_servo1
+         speed_limit: 0.5
+         acceleration_limit: 0.5
          number: 1
       servo2:
          positions:
@@ -118,6 +120,11 @@ be applied to all positions. For instance, if you move it to 0.0 it will actuall
 move to servo_min (0.2 in the example) and to servo_max for 1.0 (0.8 in the example).
 Everything in between will be interpolated.
 
+The Pololu Maestro servo controllers can accept speed and acceleration settings
+which specify how fast the servo moves to the new position, and how (or whether)
+it accelerates and decelerates when starting and stopping. If you want to use these 
+add the ``speed_limit:`` and ``acceleration_limit:`` settings to your config.
+
 5. Using the servo in your game
 -------------------------------
 
@@ -131,14 +138,7 @@ reference for details.
 6. Future enhancements
 ----------------------
 
-The Pololu Maestro servo controllers can accept speed and acceleration settings
-which specify how fast the servo moves to the new position, and how (or whether)
-it accelerates and decelerates when starting and stopping.
-
-These settings have not been implemented in MPF. (They're not hard, we just
-haven't done it.) So if you need them, contact us and we'll add them.)
-
-Also the multiple Pololu Maestro controllers can be chained together (via
-a single USB port). We also don't have support for that. (It requires adding
-and additional address setting to the servo config.) Again if you want that,
+Multiple Pololu Maestro controllers can be chained together (via
+a single USB port). We don't have support for that yet. (It requires adding
+and additional address setting to the servo config.) If you want that,
 let us know and we'll add it.
