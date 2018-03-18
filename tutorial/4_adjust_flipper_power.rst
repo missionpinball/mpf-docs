@@ -93,7 +93,7 @@ these pulse settings to operators via the service menu.
 ---------------------------------
 
 If you're using single-wound flipper coils, you should also take a
-look at the ``hold_power:`` values. (Again, to be clear, you only have
+look at the ``default_hold_power:`` values. (Again, to be clear, you only have
 to do this if your flippers have a single winding. If you have dual-wound
 coils then the hold winding is designed to be held on for long
 periods of time so you can safely keep it on full strength solid and
