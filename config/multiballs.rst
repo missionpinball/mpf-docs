@@ -209,3 +209,17 @@ work.
    added into play on top of whatever number of balls are already in play. So if this
    multiball is set to ``ball_count: 2`` and there are already 2 balls in play, then
    this multiball will add 2 more balls for a total of 4 balls live.
+
+replace_balls_in_play
+~~~~~~~~~~~~~~~~~~~~~
+
+Single value, type ``boolean``. Default is ``False``.
+
+This setting controls whether the multiball should include existing balls in play
+when counting the number of balls to add to the playfield. Specifically for
+machines which physically lock multiple balls, this setting should be used in
+tandem with :doc:`/config/multiball_locks#balls-to-replace` to accurately populate
+the multiball when it starts.
+
+See :doc:`game_logic/multiballs/multiball_with_traditional_ball_lock` for detailed
+instructions on using this setting.

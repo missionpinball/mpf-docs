@@ -72,6 +72,26 @@ is ``virtual_only``.
 See the :doc:`general multiball lock documentation </game_logic/multiballs/multiball_locks>`
 for an explanation of how each of these works.
 
+balls_to_replace:
+~~~~~~~~~~~~~~~~~
+Single value, type ``int``. Default: ``-1``
+
+By default a multiball lock will immediately replace every ball it locks with a
+new ball from the default device (i.e. the trough). With this setting you can
+instruct the lock to replace only up to a certain number of locked balls. A
+value of 0 means the lock will never replace balls, and -1 means it will always
+replace balls (default).
+
+This setting is useful for machines that physically lock multiple balls in a lock
+and replace them from the trough. When a full lock starts a multiball, for example,
+you may not want the game to add another ball from the trough. Usually this setting
+will be used in tandem with :doc:`/config/multiballs#replace-balls-in-play`.
+
+Caution: an improperly configured setting can lead the player to a state where
+no balls are active on the playfield and the game becomes stuck. See
+:doc:`game_logic/multiballs/multiball_with_traditional_ball_lock` for instructions
+and examples.
+
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
