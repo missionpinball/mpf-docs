@@ -100,11 +100,11 @@ periods of time so you can safely keep it on full strength solid and
 you can skip to the next step.)
 
 We don't have any good guidance for
-what your ``hold_power:`` values should be. Really you can just start
-with a value of 1 or 2 and then keep increasing it (whole numbers
-only) until your flipper holds are strong enough not to break their
-hold when a ball hits them. Each hardware platform has additional
-options for fine-turning the hold power if you find the values of 1-8
+what your ``default_hold_power:`` values should be. Really you can just start
+with a value of 0.125 or 0.25 and then keep increasing it (0.0 for 0% power to 1.0 for 100% power)
+until your flipper holds are strong enough not to break their
+hold when a ball hits them. Some hardware platform have additional
+options for fine-turning the hold power if this setting
 result in weird buzzing sounds or don't feel right. See the *coils:*
 section of each hardware platform's How To guide for details for your
 platform.
