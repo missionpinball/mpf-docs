@@ -85,11 +85,11 @@ replace balls (default).
 This setting is useful for machines that physically lock multiple balls in a lock
 and replace them from the trough. When a full lock starts a multiball, for example,
 you may not want the game to add another ball from the trough. Usually this setting
-will be used in tandem with :doc:`/config/multiballs#replace-balls-in-play`.
+will be used in tandem with replace-balls-in-play from :doc:`/config/multiballs`.
 
 Caution: an improperly configured setting can lead the player to a state where
 no balls are active on the playfield and the game becomes stuck. See
-:doc:`game_logic/multiballs/multiball_with_traditional_ball_lock` for instructions
+:doc:`/game_logic/multiballs/multiball_with_traditional_ball_lock` for instructions
 and examples.
 
 debug:

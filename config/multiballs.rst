@@ -218,8 +218,8 @@ Single value, type ``boolean``. Default is ``False``.
 This setting controls whether the multiball should include existing balls in play
 when counting the number of balls to add to the playfield. Specifically for
 machines which physically lock multiple balls, this setting should be used in
-tandem with :doc:`/config/multiball_locks#balls-to-replace` to accurately populate
+tandem with balls-to-replace from :doc:`/config/multiball_locks` to accurately populate
 the multiball when it starts.
 
-See :doc:`game_logic/multiballs/multiball_with_traditional_ball_lock` for detailed
+See :doc:`/game_logic/multiballs/multiball_with_traditional_ball_lock` for detailed
 instructions on using this setting.
