@@ -15,7 +15,7 @@ This guide explains how to connect a SmartMatrix RGB LED DMD to a
 pinball machine running MPF.
 
 A `SmartMatrix <http://docs.pixelmatix.com/SmartMatrix/shieldref.html>`_ is a
-cheap ($15) board that you attach to a Teensy ($20) microcontroller which lets
+cheap ($20) board that you attach to a Teensy ($25) microcontroller which lets
 you connect an RGB DMD matrix display to the computer running MPF. It's a
 standalone solution which you can use to add an RGB DMD to a pinball machine
 that's using FAST Pinball, P-ROC/P3-ROC, or OPP controller hardware.
@@ -68,7 +68,7 @@ Once you have your panel, you need a way to talk to them via a
 computer. The panels use some kind of 16-pin signalling system which
 is some kind of standard in the gigantic advertising display industry.
 
-The solution for MPF is to use a Teensy 3.2 (which is kind of like an Arduino).
+The solution for MPF is to use a Teensy 3.2 or 3.5 (which is kind of like an Arduino).
 The Teensy is available from multiple sources for about $20.
 `Here's the link to the website <https://www.pjrc.com/store/teensy32.html>`_
 of the guy who actually built it, and you can also
@@ -93,9 +93,7 @@ MPF uses to send the display data to the panels.
 
 Next you need a way for the Teensy to connect to the displays. That
 can be done with the SmartMatrix shield
-(`$15 from the guy who made the Teensy <https://www.pjrc.com/store/smartmatrix_kit.html>`_,
-though out of stock at the moment, so you might have to spend
-`$20 at Adafruit <http://www.adafruit.com/products/1902>`_).
+(`V4 of the shield is $20 at Adafruit <http://www.adafruit.com/products/1902>`_).
 
 The SmartMatrix shield is a "dumb" device
 that basically just connects the Teensy's GPIO pins to the 16-pin
@@ -165,6 +163,14 @@ have the download package available.
 Also, `here's the original sample code <https://github.com/pixelmatix/SmartMatrix/blob/sm3.0/examples/FeatureDemo/FeatureDemo.ino>`_
 we based our code on.
 
+If you are using V4 of the shield, you need to insert this line of code in the first line:
+
+::
+
+   #include <SmartLEDShieldV4.h> // this line must be first
+   
+The V4 shield's library uses more RAM which can causes the Teensy 3.2 to crash during animations or video playback. Using a Teensy 3.5 or 3.6 solves this issue as they have more RAM.
+
 Note that the width and height of your display is set in lines 11 & 12. You can change
 that if you want to use a different size display.
 
@@ -180,7 +186,7 @@ amount, then you can set it here and it will be "hard coded" into your Teensy.
 Here's a quick overview of how to install this code onto the Teensy. Full instructions are
 `here <https://github.com/pixelmatix/SmartMatrix>`_.
 
-+ Install the Arduino IDE v1.6.5
++ Install the Arduino IDE v1.8.5
 + Install the Teensyduino add-in which adds support for the Teensy
 + Load the smart_matrix_dmd_teensy_code.ino sketch from the mpf/tools
   folder or `this link <https://raw.githubusercontent.com/missionpinball/mpf/dev/tools/smart_matrix_dmd_teensy_code/smart_matrix_dmd_teensy_code.ino>`_
