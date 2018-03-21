@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 from mpf.core.config_validator import mpf_config_spec
 from mpf._version import __version__
@@ -23,12 +24,10 @@ class ConfigDocParser(object):
         self._load_config_spec()
         self.config_specs = self._create_config_specs(self.config_spec)
         self._load_existing_rsts()
-        self.create_rsts()
-        self.write_index()
 
     def create_file(self, config_section, rst):
         filename = config_section + '.rst'
-
+        print(config_section, rst)
         with open(os.path.join(rst_path, filename), 'w') as f:
             f.write(rst)
 
@@ -69,7 +68,7 @@ your machine-wide config, a mode-specific config, or both.
         final_dict = dict()
 
         for section, settings in source_dict.items():
-            if settings['__valid_in__'].lower() != 'none':
+            if '__valid_in__' in settings and settings['__valid_in__'].lower() != 'none':
                 final_dict[section] = (
                     self._create_subsection_config_spec(settings))
 
@@ -117,9 +116,13 @@ your machine-wide config, a mode-specific config, or both.
 
     def create_rsts(self):
         for k, v in self.config_specs.items():
-            self.create_rst(k, v)
+            self._create_rst(k, v)
 
-    def create_rst(self, name, spec):
+    def create_rst(self, name):
+        self._create_rst(name, self.config_specs[name])
+
+
+    def _create_rst(self, name, spec):
 
         if name in self.existing_rsts:
             existing_intro, self.existing_settings = (
@@ -135,15 +138,19 @@ your machine-wide config, a mode-specific config, or both.
         final_text += '=' * (len(name) + 1)
         final_text += '\n\n*Config file section*\n\n'
 
+        final_text += '+----------------------------------------------------------------------------+---------+\n'
         if 'machine' in spec['valid_in']:
-            final_text += '* Valid in machine config files: **YES**\n'
+            final_text += '| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |\n'
         else:
-            final_text += '* Valid in machine config files: **NO**\n'
+            final_text += '| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |\n'
 
+        final_text += '+----------------------------------------------------------------------------+---------+\n'
         if 'mode' in spec['valid_in']:
-            final_text += '* Valid in mode config files: **YES**\n\n'
+            final_text += '| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |\n'
         else:
-            final_text += '* Valid in mode config files: **NO**\n\n'
+            final_text += '| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |\n'
+
+        final_text += '+----------------------------------------------------------------------------+---------+\n\n'
 
         if 'show' in spec['valid_in']:
             final_text += '.. note:: This section can also be used in a show '
@@ -157,8 +164,7 @@ your machine-wide config, a mode-specific config, or both.
         else:
             final_text += 'The ``{}:`` section of your config is where ' \
                           'you...\n\n'.format(name)
-            final_text += '.. todo::\n'
-            final_text += '   Add description.'
+            final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
 
         final_text += '\n\n\n'
 
@@ -194,8 +200,9 @@ your machine-wide config, a mode-specific config, or both.
         elif level == 2:
             sep = '~'
             sep2 = '^'
-        elif level == 3:
+        else:
             sep = '^'
+            sep2 = '"'
 
         final_text = 'Required settings\n'
         final_text += sep * 17
@@ -218,7 +225,7 @@ your machine-wide config, a mode-specific config, or both.
                     break
 
             if not found:
-                final_text += '.. todo::\n   Add description.'
+                final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
 
             final_text += '\n\n'
 
@@ -232,8 +239,9 @@ your machine-wide config, a mode-specific config, or both.
         elif level == 2:
             sep = '~'
             sep2 = '^'
-        elif level == 3:
+        else:
             sep = '^'
+            sep2 = '"'
 
         final_text = 'Optional settings\n'
         final_text += sep * 17
@@ -258,7 +266,7 @@ your machine-wide config, a mode-specific config, or both.
                     break
 
             if not found:
-                final_text += '.. todo::\n   Add description.'
+                final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
 
             final_text += '\n\n'
 
@@ -306,7 +314,11 @@ your machine-wide config, a mode-specific config, or both.
         settings_dict = dict()
 
         # trim off the header info
-        doc = doc.split('.. overview\n\n')[1]
+        parts = doc.split('.. overview\n\n')
+        if len(parts) == 2:
+            doc = parts[1]
+        else:
+            doc = parts[0]
 
         # split the doc into a list of lines
         # doc = doc.split['\n']
@@ -331,7 +343,7 @@ your machine-wide config, a mode-specific config, or both.
 
         try:
             beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
-        except IndexError:
+        except (IndexError, ValueError):
             beginning = ''
 
         beginning = beginning.strip('\n')
@@ -445,10 +457,10 @@ your machine-wide config, a mode-specific config, or both.
         else:
             ftype = stype
 
-        return_string += 'type: {}. '.format(ftype)
+        return_string += 'type: {}.'.format(ftype)
 
         if default:
-            return_string += 'Default: ``{}``'.format(default)
+            return_string += ' Default: ``{}``'.format(default)
 
         return_string += '\n'
 
@@ -456,6 +468,10 @@ your machine-wide config, a mode-specific config, or both.
 
 
 if __name__ == '__main__':
-    # ConfigDocParser()
-    pass # disabling because this doesn't work anymore but I might want to use
+    parser = ConfigDocParser()
+    parser.create_rst(sys.argv[1])
+    #parser.create_rsts()
+    #parser.write_index()
+
+    #pass # disabling because this doesn't work anymore but I might want to use
     # it in the future
