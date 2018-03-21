@@ -118,6 +118,7 @@ indicated which type of config file it's valid in.
    score_reels: <score_reels>
    scoring: <scoring>
    scriptlets: <scriptlets>
+   segment_displays: <segment_displays>
    servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
    servos: <servos>
