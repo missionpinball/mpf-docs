@@ -28,6 +28,7 @@ indicated which type of config file it's valid in.
    :maxdepth: 1
 
    accelerometers: <accelerometers>
+   accruals: <accruals>
    achievements: <achievements>
    achievement_groups: <achievement_groups>
    animations: <animations>
@@ -46,6 +47,7 @@ indicated which type of config file it's valid in.
    color_correction_profiles: <color_correction_profiles>
    combo_switches: <combo_switches>
    config: <config>
+   counters: <counters>
    credits: <credits>
    displays: <displays>
    diverters: <diverters>
@@ -118,10 +120,12 @@ indicated which type of config file it's valid in.
    score_reels: <score_reels>
    scoring: <scoring>
    scriptlets: <scriptlets>
+   segment_displays: <segment_displays>
    servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
    servos: <servos>
    settings: <settings>
+   sequences: <sequences>
    shot_groups: <shot_groups>
    shot_profiles: <shot_profiles>
    shots: <shots>

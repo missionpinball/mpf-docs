@@ -72,7 +72,7 @@ The following sections are optional in the ``playlist_player:`` section of your 
 include them, the default will be used).
 
 action:
-~~~~~~~
+^^^^^^^
 Single value, type: one of the following options: play, stop. Default: ``play``
 
 The ``action:`` setting controls what action will be performed on the specified sound. Options for
@@ -89,14 +89,14 @@ The ``action:`` setting controls what action will be performed on the specified 
   clear the flag (turn repeat on or off).
 
 Other available optional settings:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Several other settings may be used in the playlist player to override settings specified in the
 ``playlists:`` section of config files.  The available settings differ depending upon the
 value of ``action:``.
 
 play action
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 + ``playlist:``
 + ``crossfade_mode:``
@@ -111,17 +111,17 @@ play action
 + ``events_when_sound_stopped:``
 
 advance action
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 No settings are available for the ``action: advance``.
 
 stop action
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 No settings are available for the ``action: advance``.
 
 set_repeat action
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 + ``repeat:``
 
