@@ -27,7 +27,6 @@ them, with explanations of how to use them in config files and in shows.
 .. toctree::
    :maxdepth: 1
 
-   bcp_player
    coil_player
    event_player
    flasher_player
@@ -44,5 +43,4 @@ them, with explanations of how to use them in config files and in shows.
    sound_loop_player
    sound_player
    track_player
-   trigger_player
    widget_player
