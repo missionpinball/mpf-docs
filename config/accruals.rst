@@ -11,7 +11,7 @@ accruals:
 
 .. overview
 
-See also :doc:`</game_logic/logic_blocks/accruals>`.
+See also :doc:`accruals </game_logic/logic_blocks/accruals>`.
 
 Settings
 --------

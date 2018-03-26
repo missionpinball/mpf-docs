@@ -11,7 +11,7 @@ counters:
 
 .. overview
 
-See also :doc:`</game_logic/logic_blocks/counters>`.
+See also :doc:`counters </game_logic/logic_blocks/counters>`.
 
 Settings
 --------

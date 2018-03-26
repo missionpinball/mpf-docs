@@ -11,7 +11,7 @@ sequences:
 
 .. overview
 
-See also :doc:`</game_logic/logic_blocks/sequences>`.
+See also :doc:`sequences </game_logic/logic_blocks/sequences>`.
 
 Settings
 --------
