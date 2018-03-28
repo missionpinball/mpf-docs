@@ -122,11 +122,11 @@ first before you can use MPF. Luckily this is just a one-time install, and you d
 install it again if you update MPF later.
 
 On Mac platforms, MPF requires Python 3.4 or 3.5. (There is a Python 3.6, but
-that's untested with MPF.) So we recommend that you install Python 3.5.
+that's untested with MPF on OSX.) So we recommend that you install Python 3.5.
 
-You can download Python 3.5 directly via `this link <https://www.python.org/ftp/python/3.5.2/python-3.5.2-macosx10.6.pkg>`_.
+You can download Python 3.5 directly via `this link <https://www.python.org/ftp/python/3.5.4/python-3.5.4-macosx10.6.pkg>`_.
 (Note that the final digit in the Python version number is the "patch" number,
-so 3.5.2 is the latest version of Python 3.5.)
+so 3.5.4 is the latest version of Python 3.5 as of the time this document was last updated.)
 
 .. image:: images/mac_install_python_1.jpg
 
@@ -148,7 +148,7 @@ window. To do that, run the command:
 
    python3 --version
 
-You should see it print something like "Python 3.5.2". Note that you have
+You should see it print something like "Python 3.5.4". Note that you have
 to run the command "Python3", not "Python", since the regular python command
 without the "3" on the end points to the Python 2.x that's built into your
 Mac. Here's a screenshot showing running "python" and "python3" and the
@@ -163,37 +163,43 @@ Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
 the web. (It's kind of like an app store for Python apps.)
 
-So the next step is to use pip to install/upgrade some components that we'll
-need to install MPF. (This command will actually update pip itself too.)
+Due to a bug in versions of pip older than 9.0.2 on the Mac, we cannot update *pip*
+using *pip*. So the next step is to download and run a special Python script to install
+the latest version of pip.
 
-Note that the command you run is "pip3", not "pip", since again we need to
-point to the pip that's associated with the Python 3.5 installation, not the
-built-in 2.x version.
+Update pip by running the following command:
+
+::
+
+    curl -O https://bootstrap.pypa.io/get-pip.py
+    python3 get-pip.py
+
+The latest version of pip should now be installed (9.0.3 or newer).
+
+Next, we need to install and update a few other python packages required to run mpf by
+running the following command:
 
 So next run the following command:
 
 ::
 
-    pip3 install pip setuptools cython==0.24.1 --upgrade
+    pip3 install setuptools cython==0.25.2 --upgrade
 
-This command will download and install the latest versions of the *pip* and
-*setuptools* packages, as well as version 0.24.1 of a package called *cython*.
-The results will look something like this (though the exact version numbers
-might be different depending on what's the latest whenever you're running this):
+This command will download and install the latest versions of the *setuptools*
+package, as well as version 0.25.2 of a package called *cython*. The results will
+look something like this (though the exact version numbers might be different
+depending on what's the latest whenever you're running this):
 
 ::
 
-   Collecting pip
-     Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
-       100% |################################| 1.3MB 2.5MB/s
    Collecting setuptools
      Downloading setuptools-32.3.1-py2.py3-none-any.whl (479kB)
        100% |################################| 481kB 4.3MB/s
-   Collecting cython==0.24.1
-     Downloading Cython-0.24.1-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
+   Collecting cython==0.25.2
+     Downloading Cython-0.25.2-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
        100% |################################| 3.8MB 7.6MB/s
-   Installing collected packages: pip, setuptools, cython
-   Successfully installed cython-0.24.1 pip-9.0.1 setuptools-32.3.1
+   Installing collected packages: setuptools, cython
+   Successfully installed cython-0.25.2 setuptools-32.3.1
 
 5. Install MPF
 --------------
@@ -270,7 +276,7 @@ this:
 ::
 
    Brians-Mac:~ brian$ mpf --version
-   MPF v0.33.12
+   MPF v0.50.82
 
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
