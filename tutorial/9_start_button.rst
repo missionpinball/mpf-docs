@@ -59,6 +59,13 @@ your config file:
 
         s:
             switch: s_start
+            
+While pressing keyboard switches is great and fast it would be a lot
+of work to map all your switches to the keyboard (and remembering
+which key does what). Therefore you can later use the
+:doc:`MPF monitor <tools/monitor/running>` to lay them out visually
+and trigger them with your mouse (you can start using it right now
+if you want).
 
 4. Add at least one playfield switch
 ------------------------------------
