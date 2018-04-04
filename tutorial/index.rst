@@ -47,3 +47,4 @@ Now let's get started...
    16. Add an attract mode display show <16_attract_mode_show>
    17. Add lights (or LEDs) <17_add_lights_leds>
    18. Add your first shot <18_shots>
+   19. Next steps <19_next_steps>
