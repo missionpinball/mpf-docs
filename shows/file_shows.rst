@@ -9,9 +9,8 @@ as you'd refer to it in your MPF configs.
 
 A few notes for creating show files:
 
-* MPF config files are not case sensitive. You can mix-and-match
-  uppercase and lowercase letters in the files, but internally MPF will not
-  be able to differentiate between ``YourShow.yaml`` and ``yourshow.yaml``.
+* MPF config files are case sensitive. It is best to stick to some kind of convention
+  (such as lowercase names with underscores).
 * Show names are "machine-wide" within MPF. This means that if you have two
   different shows with the same name in different locations, MPF will get
   confused.
