@@ -42,12 +42,12 @@ like this:
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
 
 Again, the ``number:`` entry in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered a ``pulse_ms:`` value of 20
+You'll also note that we went ahead and entered a ``default_pulse_ms:`` value of 20
 which will override the default pulse times of 10ms. It's hard to say
 at this point what values you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -138,7 +138,7 @@ Here's the complete config
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
 
     ball_devices:
         bd_drain:

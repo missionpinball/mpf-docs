@@ -150,6 +150,41 @@ slides:
       text: TEST NUMBER GROUPING & DOUBLE ZEROS
       y: 200
 
+  text_nocase:
+    - type: text
+      text: sAmPlE tExT caSiNg
+    - type: text
+      text: TEST CASING none
+      y: 200
+  text_lower:
+    - type: text
+      text: sAmPlE tExT caSiNg
+      casing: lower
+    - type: text
+      text: TEST CASING lower
+      y: 200
+  text_upper:
+    - type: text
+      text: sAmPlE tExT caSiNg
+      casing: upper
+    - type: text
+      text: TEST CASING upper
+      y: 200
+  text_title:
+    - type: text
+      text: sAmPlE tExT caSiNg
+      casing: title
+    - type: text
+      text: TEST CASING title
+      y: 200
+  text_capitalize:
+    - type: text
+      text: sAmPlE tExT caSiNg
+      casing: capitalize
+    - type: text
+      text: TEST CASING capitalize
+      y: 200
+
   mpfmc_font:
     - type: text
       text: MPF-MC FONT TEST
@@ -200,6 +235,11 @@ slide_player:
   text_with_player_var4: text_with_player_var4
   text_with_player_var_and_event: text_with_player_var_and_event
   number_grouping: number_grouping
+  text_nocase: text_nocase
+  text_lower: text_lower
+  text_upper: text_upper
+  text_title: text_title
+  text_capitalize: text_capitalize
   text_string1: text_string1
   text_string2: text_string2
   text_string3: text_string3

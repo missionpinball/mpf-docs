@@ -20,18 +20,18 @@ config above.
 Note that there are multiple mode config examples here. You might not
 necessarily use more than one in your machine.
 
-.. literalinclude:: /example_configs/scoring/modes/mode1/config/mode1.yaml
-   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/scoring/modes/mode1/config/mode1.yaml>`_
+.. literalinclude:: /example_configs/scoring/modes/mode3/config/mode3.yaml
+   :caption: `your_machine_folder/modes/mode3/config/mode3.yaml </_static/scoring/modes/mode3/config/mode3.yaml>`_
    :language: yaml
 
 .. literalinclude:: /example_configs/scoring/modes/mode2/config/mode2.yaml
    :caption: `your_machine_folder/modes/mode2/config/mode2.yaml </_static/scoring/modes/mode2/config/mode2.yaml>`_
    :language: yaml
 
-.. literalinclude:: /example_configs/scoring/modes/mode3/config/mode3.yaml
-   :caption: `your_machine_folder/modes/mode3/config/mode3.yaml </_static/scoring/modes/mode3/config/mode3.yaml>`_
-   :language: yaml
-
 .. literalinclude:: /example_configs/scoring/modes/mode_for_logic_block/config/mode_for_logic_block.yaml
    :caption: `your_machine_folder/modes/mode_for_logic_block/config/mode_for_logic_block.yaml </_static/scoring/modes/mode_for_logic_block/config/mode_for_logic_block.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/scoring/modes/mode1/config/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/scoring/modes/mode1/config/mode1.yaml>`_
    :language: yaml

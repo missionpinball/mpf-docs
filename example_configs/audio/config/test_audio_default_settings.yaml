@@ -15,6 +15,19 @@ assets:
         sfx:
             load: on_demand
             track: default
+            ducking:
+                target: default
+                delay: 0
+                attack: 0.3 sec
+                attenuation: 0.45
+                release_point: 0.5 sec
+                release: 1.0 sec
         music:
+            load: on_demand
+            track: default
+        loops:
+            load: preload
+            track: default
+        playlist:
             load: on_demand
             track: default

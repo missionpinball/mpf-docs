@@ -88,10 +88,15 @@ widgets:
     font_size: 100
   widget7:
     type: text
-    text: EXPIRES 1S
+    text: EXPIRES 1S (player|test)
     color: orange
     font_size: 100
     expire: 1s
+    animations:
+      test_event:
+        - property: rotation
+          value: 360
+          duration: .5s
   widget8:
     type: text
     text: WIDGET 8

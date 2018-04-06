@@ -36,7 +36,7 @@ would be entered into the MPF config as ``8-0``, etc.
    coils:
       c_shaker:
          number: 1-10  # Node 1, coil 10
-         pulse_ms: 100
+         default_pulse_ms: 100
          allow_enable: true
       c_flipper:
          number: 8-1  # Node 8, coil 1

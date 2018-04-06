@@ -72,5 +72,6 @@ only applies to pulse actions.
 pulse_ms:
 ~~~~~~~~~
 The number of milliseconds you'd like this coil to pulse for. This setting
-overrides the coil's default pulse_ms setting. Note that this setting
-only affects pulse actions.
+overrides the coil's *default_pulse_ms* setting. Note that this setting
+only affects pulse actions. Make sure you are not exceeding the coil's
+*max_pulse_ms* setting.

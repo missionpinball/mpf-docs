@@ -43,7 +43,7 @@ default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``10``
 
-Default pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
+Default default_pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~

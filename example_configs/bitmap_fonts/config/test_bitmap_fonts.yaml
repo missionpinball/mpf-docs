@@ -9,7 +9,7 @@ slides:
   static_text:
     - type: text
       text: TEST
-      font_name: f1fuv
+      font_name: F1fuv
       bitmap_font: True
       animations:
         add_to_slide:
@@ -38,6 +38,7 @@ slides:
 
 bitmap_fonts:
   F1fuv:
+    file: F1fuv.png
     descriptor: [ ' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
 
 slide_player:

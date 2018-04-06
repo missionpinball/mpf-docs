@@ -4,7 +4,7 @@ hardware:
     driverboards: pdb
     platform: p_roc
 
-P_ROC:
+p_roc:
   dmd_timing_cycles: 1, 2, 3, 4
 
 switches:
@@ -77,3 +77,8 @@ shows:
 
 show_player:
   play_test_show: test
+
+segment_displays:
+  display1:
+    number: 0
+

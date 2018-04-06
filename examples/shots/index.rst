@@ -28,18 +28,18 @@ config above.
 Note that there are multiple mode config examples here. You might not
 necessarily use more than one in your machine.
 
-.. literalinclude:: /example_configs/shots/modes/base/config/base.yaml
-   :caption: `your_machine_folder/modes/base/config/base.yaml </_static/shots/modes/base/config/base.yaml>`_
+.. literalinclude:: /example_configs/shots/modes/base2/config/base2.yaml
+   :caption: `your_machine_folder/modes/base2/config/base2.yaml </_static/shots/modes/base2/config/base2.yaml>`_
    :language: yaml
 
-.. literalinclude:: /example_configs/shots/modes/mode1/config/mode1.yaml
-   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/shots/modes/mode1/config/mode1.yaml>`_
+.. literalinclude:: /example_configs/shots/modes/base/config/base.yaml
+   :caption: `your_machine_folder/modes/base/config/base.yaml </_static/shots/modes/base/config/base.yaml>`_
    :language: yaml
 
 .. literalinclude:: /example_configs/shots/modes/mode2/config/mode2.yaml
    :caption: `your_machine_folder/modes/mode2/config/mode2.yaml </_static/shots/modes/mode2/config/mode2.yaml>`_
    :language: yaml
 
-.. literalinclude:: /example_configs/shots/modes/mode_shot_groups/config/mode_shot_groups.yaml
-   :caption: `your_machine_folder/modes/mode_shot_groups/config/mode_shot_groups.yaml </_static/shots/modes/mode_shot_groups/config/mode_shot_groups.yaml>`_
+.. literalinclude:: /example_configs/shots/modes/mode1/config/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/shots/modes/mode1/config/mode1.yaml>`_
    :language: yaml

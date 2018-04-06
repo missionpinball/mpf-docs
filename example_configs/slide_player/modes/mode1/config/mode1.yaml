@@ -1,4 +1,4 @@
-# config_version=5
+#config_version=5
 
 mode:
   priority: 500
@@ -17,6 +17,8 @@ slides:
 
 slide_player:
   show_mode1_slide: mode1_slide
+  remove_mode1_slide:
+    mode1_slide: remove
   show_mode1_slide_2:
     mode1_slide_2:
       priority: -350

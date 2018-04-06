@@ -52,7 +52,7 @@ using. Some machines have coil pulse times set really low, like 12 or
 14ms. Others might be 60 or 70ms. Our 1974 Big Shot machine has
 several coils with pulse times over 100ms. It all really depends.
 
-You adjust the pulse time for each coil by adding a ``pulse_ms:`` setting to
+You adjust the pulse time for each coil by adding a ``default_pulse_ms:`` setting to
 the coil's entry in the ``coils:`` section of your config file. (Notice
 that you make this change in the ``coils:`` section of your config, not
 the ``flippers:`` section.) So let's try changing your flipper coils
@@ -64,25 +64,25 @@ like this:
     coils:
         c_flipper_left_main:
             number: 00
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_left_hold:
             number: 01
             allow_enable: true
         c_flipper_right_main:
             number: 02
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_right_hold:
             number: 03
             allow_enable: true
 
-Notice that we only added ``pulse_ms:`` entries to the two main coils,
+Notice that we only added ``default_pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their
 pulse times are. Now play your game and see how it feels. Then keep on
-adjusting the ``pulse_ms:`` values up or down until your flippers
+adjusting the ``default_pulse_ms:`` values up or down until your flippers
 feel right. In the future we'll create a coil test tool that makes it
 easy to dial-in your settings without having to manually change the
 config file and re-run your game, but we don't have that yet. You
-might find that you have to adjust this ``pulse_ms:`` setting down the
+might find that you have to adjust this ``default_pulse_ms:`` setting down the
 road too. If you have a blank playfield then you might think that your
 coils are fine where they are, but once you add some ramps you might
 realize it's too hard to make a ramp shot and you have to increase the

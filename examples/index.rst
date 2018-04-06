@@ -38,6 +38,7 @@ and/or show configs.
    ball_search </examples/ball_search/index>
    bcp </examples/bcp/index>
    bitmap_fonts </examples/bitmap_fonts/index>
+   blocking_events </examples/blocking_events/index>
    bonus </examples/bonus/index>
    carousel </examples/carousel/index>
    coil_player </examples/coil_player/index>
@@ -65,16 +66,17 @@ and/or show configs.
    info_lights </examples/info_lights/index>
    keyboard </examples/keyboard/index>
    kickback </examples/kickback/index>
-   led </examples/led/index>
-   led_player </examples/led_player/index>
+   light </examples/light/index>
+   light_player </examples/light_player/index>
    lisy </examples/lisy/index>
    logic_blocks </examples/logic_blocks/index>
+   machine_vars </examples/machine_vars/index>
    magnet </examples/magnet/index>
-   migrator </examples/migrator/index>
+   match_mode </examples/match_mode/index>
+   mma8451 </examples/mma8451/index>
    mode_tests </examples/mode_tests/index>
    modes </examples/modes/index>
    motor </examples/motor/index>
-   mpf_configs </examples/mpf_configs/index>
    mpf_plugin_config_player_validation </examples/mpf_plugin_config_player_validation/index>
    mpfmc_configs </examples/mpfmc_configs/index>
    mpftestcase </examples/mpftestcase/index>
@@ -86,7 +88,6 @@ and/or show configs.
    opp </examples/opp/index>
    p3_roc </examples/p3_roc/index>
    p_roc </examples/p_roc/index>
-   physical_dmd </examples/physical_dmd/index>
    platform </examples/platform/index>
    player_vars </examples/player_vars/index>
    playfield </examples/playfield/index>
@@ -106,12 +107,13 @@ and/or show configs.
    shots </examples/shots/index>
    shows </examples/shows/index>
    slide </examples/slide/index>
-   slide_frame </examples/slide_frame/index>
    slide_player </examples/slide_player/index>
    smart_matrix </examples/smart_matrix/index>
    smart_virtual_platform </examples/smart_virtual_platform/index>
+   smbus2 </examples/smbus2/index>
    snux </examples/snux/index>
    spike </examples/spike/index>
+   state_machine </examples/state_machine/index>
    stepper </examples/stepper/index>
    switch_controller </examples/switch_controller/index>
    switch_player </examples/switch_player/index>

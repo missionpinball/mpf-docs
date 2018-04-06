@@ -94,7 +94,7 @@ A few caveats to this early bare-bones game:
 + Since you haven't configured any scoring yet, this game will be
   boring and nothing will score. But hey, you're playing!
 + If your flippers, trough eject, or plunger coil is too weak or too
-  strong, you can adjust them in the coil's ``pulse_ms:`` setting in the
+  strong, you can adjust them in the coil's ``default_pulse_ms:`` setting in the
   config file.
 + If you start MPF with a ball in the plunger lane and you
   have a coil-fired plunger, MPF will immediately fire the plunger to
@@ -157,7 +157,7 @@ That said, here's a list of things that could go wrong:
 + Trough switches are optos but you didn't add ``type: NC`` to your
   switch configurations. (Mechanical trough switches do not need a
   ``type:`` setting.)
-+ Trough is trying to eject, but the trough coil's ``pulse_ms:`` setting
++ Trough is trying to eject, but the trough coil's ``default_pulse_ms:`` setting
   is too weak and the ball can't get out.
 + Incorrect switch or coil numbers which don't match up to your actual
   hardware inputs and outputs.

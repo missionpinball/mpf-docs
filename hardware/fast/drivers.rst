@@ -114,7 +114,7 @@ time by adding a ``recycle_ms:`` setting, like this:
    coils:
       slingshot_r:
          number: 1-4
-         pulse_ms: 30
+         default_pulse_ms: 30
          platform_settings:
             recycle_ms: 100
 

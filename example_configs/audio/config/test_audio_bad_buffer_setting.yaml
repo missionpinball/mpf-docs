@@ -30,3 +30,9 @@ assets:
         music:
             load: on_demand
             track: music
+        loops:
+            load: preload
+            track: sfx
+        playlist:
+            load: on_demand
+            track: sfx

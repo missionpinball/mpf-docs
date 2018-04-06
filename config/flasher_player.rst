@@ -1,8 +1,6 @@
 flasher_player:
 ===============
 
-.. include:: /not_updated_yet.rst
-
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
@@ -17,10 +15,8 @@ flasher_player:
 
 .. overview
 
-The ``flasher_player:`` section of your config is where you...
+The ``flasher_player:`` section of your config is where you can flash lights.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -31,8 +27,8 @@ ms:
 ~~~
 Single value, type: ``integer``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Configures how long should that flasher be enabled.
+
 
 .. note:: The ``flasher_player:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
 

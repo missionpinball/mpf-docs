@@ -17,7 +17,7 @@ The only difference between :doc:`led_stripes </config/led_stripes>`  and
 
 Here's an example:
 
-.. literalinclude:: /example_configs/led/config/led_groups.yaml
+.. literalinclude:: /example_configs/light/config/light_groups.yaml
    :language: yaml
 
 

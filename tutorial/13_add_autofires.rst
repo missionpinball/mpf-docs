@@ -45,7 +45,7 @@ deactivate. See the :doc:`/config/autofire_coils` section of the configuration
 file reference for details, though you don't have to do that now.)
 
 Remember if you want to adjust the strength of these coils, you can do
-that in the coil's ``pulse_ms:`` setting in the ``coils:`` section of
+that in the coil's ``default_pulse_ms:`` setting in the ``coils:`` section of
 your config.
 
 Check out the complete config.yaml file so far

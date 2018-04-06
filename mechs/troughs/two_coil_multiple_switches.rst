@@ -67,15 +67,15 @@ them *c_drain_eject* and *c_trough_release* and enter them like this:
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_trough_release:
             number: 04
-            pulse_ms: 20
+            default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered ``pulse_ms:`` values of 20
+You'll also note that we went ahead and entered ``default_pulse_ms:`` values of 20
 which will override the default pulse times of 10ms. It's hard to say
 at this point what values you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -83,11 +83,12 @@ finish getting everything set up.
 
 Note that some trough coils use a shorter pulse to pop the ball into the plunger
 lane. However, some machines have gates or rotational devices that need to be
-active for much longer. So having a long pulse time, like ``pulse_ms: 1000``
+active for much longer. So having a long pulse time, like ``default_pulse_ms: 1000``
 (for one second) is totally fine. However, if the pulse time is over 255ms, then
 technically that coil is enabled and disabled versus pulsed, so in that case,
 you also need to add ``allow_enable: true`` which tells MPF it's ok to enable
-this coil for more than 255ms.
+this coil for more than 255ms (since 255ms is the maximum pulse time for most
+platforms).
 
 In other words, a trough release time of 1s would look like this:
 
@@ -95,7 +96,7 @@ In other words, a trough release time of 1s would look like this:
 
         c_trough_release:
             number: 04
-            pulse_ms: 1000
+            default_pulse_ms: 1000
             allow_enable: true
 
 3. Add your "drain" ball device
@@ -226,10 +227,10 @@ Here's the complete config
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_trough_release:
             number: 04
-            pulse_ms: 20
+            default_pulse_ms: 20
 
     ball_devices:
         bd_drain:

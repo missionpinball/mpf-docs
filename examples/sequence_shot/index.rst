@@ -10,3 +10,13 @@ real-world examples of how these configs are used.
 .. literalinclude:: /example_configs/sequence_shot/config/config.yaml
    :caption: `your_machine_folder/config/config.yaml </_static/sequence_shot/config/config.yaml>`_
    :language: yaml
+
+Mode config examples
+--------------------
+
+Here are some example mode config files that go along with the machine-wide
+config above.
+
+.. literalinclude:: /example_configs/sequence_shot/modes/mode1/config/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/sequence_shot/modes/mode1/config/mode1.yaml>`_
+   :language: yaml

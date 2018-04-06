@@ -20,16 +20,16 @@ config above.
 Note that there are multiple mode config examples here. You might not
 necessarily use more than one in your machine.
 
-.. literalinclude:: /example_configs/plugin_config_player/modes/mode1/config/mode1.yaml
-   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/plugin_config_player/modes/mode1/config/mode1.yaml>`_
+.. literalinclude:: /example_configs/plugin_config_player/modes/mode1/shows/show3.yaml
+   :caption: `your_machine_folder/modes/mode1/shows/show3.yaml </_static/plugin_config_player/modes/mode1/shows/show3.yaml>`_
    :language: yaml
 
 .. literalinclude:: /example_configs/plugin_config_player/modes/mode1/shows/show2.yaml
    :caption: `your_machine_folder/modes/mode1/shows/show2.yaml </_static/plugin_config_player/modes/mode1/shows/show2.yaml>`_
    :language: yaml
 
-.. literalinclude:: /example_configs/plugin_config_player/modes/mode1/shows/show3.yaml
-   :caption: `your_machine_folder/modes/mode1/shows/show3.yaml </_static/plugin_config_player/modes/mode1/shows/show3.yaml>`_
+.. literalinclude:: /example_configs/plugin_config_player/modes/mode1/config/mode1.yaml
+   :caption: `your_machine_folder/modes/mode1/config/mode1.yaml </_static/plugin_config_player/modes/mode1/config/mode1.yaml>`_
    :language: yaml
 
 Show file examples

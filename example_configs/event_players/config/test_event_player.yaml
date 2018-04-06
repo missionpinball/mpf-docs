@@ -18,6 +18,10 @@ event_player:
         event1
         event2
         event3
+    play_multiple_args2:
+        event1:
+          a: b
+          c: d
     play_multiple_args:
         event1: {"a": "b"}
         event2: {}
@@ -29,6 +33,12 @@ event_player:
     test_time_delay2: td2|1.5s
     test_conditional_mode{mode.mode1.active}: mode1_active
     test_conditional_mode{not mode.mode1.active}: mode1_not_active
+    test_conditional_handlers:
+        - event_always
+        - event_if_modeactive{mode.mode1.active}
+        - event_if_modestopping{mode.mode1.stopping}
+    play_placeholder_event:
+      - my_event_(machine.test)_123
 
 shows:
   test_event_show:

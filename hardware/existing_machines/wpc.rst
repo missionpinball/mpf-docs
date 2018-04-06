@@ -167,13 +167,13 @@ number, like this:
    coils:
      c_trough_eject:
        number: c01
-       pulse_ms: 25
+       default_pulse_ms: 25
      c_bottom_popper:
        number: c02
-       pulse_ms: 25
+       default_pulse_ms: 25
      c_plunger_lane:
        number: c03
-       pulse_ms: 25
+       default_pulse_ms: 25
 
 Fliptronics coils
 ~~~~~~~~~~~~~~~~~
@@ -209,13 +209,13 @@ An example in your config might be:
    coils:
      c_flipper_left_main:
        number: fllm
-       pulse_ms: 30
+       default_pulse_ms: 30
      c_flipper_left_hold:
        number: fllh
        allow_enable: true
      c_flipper_right_main:
        number: flrm
-       pulse_ms: 30
+       default_pulse_ms: 30
      c_flipper_right_hold:
        number: flrh
        allow_enable: true
@@ -270,15 +270,11 @@ GI strings are configured with ``G`` followed by the number, like this:
 -----------------------
 
 Since flashers in WPC machines are technically drivers (coils), they are also
-configured with the letter ``C`` followed by their number. However, you add them
-to the ``flashers:`` section of your config, not the ``coils:`` section. This
-is done so MPF knows to treat them like flashers which are just pulsed, rather
-than coils which can be enabled and have other coil-like things that don't
-apply to flashers.
+configured with the letter ``C`` followed by their number similar to ``coils``.
 
 ::
 
-   flashers:
+   coils:
      f_claw:
        number: c17
      f_jets:

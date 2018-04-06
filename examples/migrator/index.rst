@@ -1,2 +1,0 @@
-migrator (example config files)
-===============================

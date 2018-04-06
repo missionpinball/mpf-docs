@@ -11,12 +11,12 @@ Note that there are multiple machine config
 examples here. They're just included to show different
 options. You wouldn't actually use more than one.
 
-.. literalinclude:: /example_configs/assets_and_image/config/test_asset_loading.yaml
-   :caption: `your_machine_folder/config/test_asset_loading.yaml </_static/assets_and_image/config/test_asset_loading.yaml>`_
-   :language: yaml
-
 .. literalinclude:: /example_configs/assets_and_image/config/test_image.yaml
    :caption: `your_machine_folder/config/test_image.yaml </_static/assets_and_image/config/test_image.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/assets_and_image/config/test_asset_loading.yaml
+   :caption: `your_machine_folder/config/test_asset_loading.yaml </_static/assets_and_image/config/test_asset_loading.yaml>`_
    :language: yaml
 
 Mode config examples

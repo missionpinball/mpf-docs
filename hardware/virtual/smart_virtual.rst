@@ -13,7 +13,7 @@ simulate their switches:
 
 ::
 
-    
+
     switches:
         s_trough1:
             number: s31
@@ -25,15 +25,15 @@ simulate their switches:
             number: s34
         s_plunger_lane:
             number: s27
-    
+
     coils:
         c_trough_eject:
             number: c01
-            pulse_ms: 25
+            default_pulse_ms: 25
         c_plunger_eject:
             number: c03
-            pulse_ms: 25
-    
+            default_pulse_ms: 25
+
     ball_devices:
         bd_trough:
             tags: trough, home, drain
@@ -44,7 +44,7 @@ simulate their switches:
             ball_switches: s_plunger_lane
             eject_coil: c_plunger_eject
             tags: ball_add_live
-    
+
     keyboard:
         1:
             switch: s_trough1
@@ -135,7 +135,7 @@ You can also specify the smart virtual platform interface via the ``-X``
 (uppercase *X*) from the command line, like this:
 
 ::
-    
+
     mpf -X
 
 Or

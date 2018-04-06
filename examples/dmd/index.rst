@@ -11,12 +11,12 @@ Note that there are multiple machine config
 examples here. They're just included to show different
 options. You wouldn't actually use more than one.
 
-.. literalinclude:: /example_configs/dmd/config/test_color_dmd.yaml
-   :caption: `your_machine_folder/config/test_color_dmd.yaml </_static/dmd/config/test_color_dmd.yaml>`_
-   :language: yaml
-
 .. literalinclude:: /example_configs/dmd/config/test_dmd.yaml
    :caption: `your_machine_folder/config/test_dmd.yaml </_static/dmd/config/test_dmd.yaml>`_
+   :language: yaml
+
+.. literalinclude:: /example_configs/dmd/config/test_color_dmd.yaml
+   :caption: `your_machine_folder/config/test_color_dmd.yaml </_static/dmd/config/test_color_dmd.yaml>`_
    :language: yaml
 
 .. literalinclude:: /example_configs/dmd/config/testDmd.yaml
