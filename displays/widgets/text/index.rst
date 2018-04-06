@@ -57,7 +57,7 @@ This value is required. If you don't want text, use ""
 
 Your text can contain placeholders as described in :doc:`dynamic text </displays/widgets/text/text_dynamic>`.
 
-Newline characters (`\n`) are supported in text values to create multiple lines with line breaks, however
+Newline characters (`\\n`) are supported in text values to create multiple lines with line breaks, however
 you must surround the text with quotes or the backslash will be treated as a printing character and will
 appear in the output.  For example:
 
