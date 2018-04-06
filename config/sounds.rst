@@ -56,7 +56,8 @@ Default: ``None``
 
 The point relative to the end of the sound at which to post the ``events_when_about_to_finish`` event(s).
 A value of 0.5 seconds means to post the event(s) prior to the end of the sound. When set to ``None``, no events will be
-posted. This value is specified as a :doc:`time string </config/instructions/time_strings>`.
+posted. If the value of this setting is greater than the duration of the sound, the event(s) will be posted as soon as
+the sound begins playback. This value is specified as a :doc:`time string </config/instructions/time_strings>`.
 
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
