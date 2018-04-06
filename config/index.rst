@@ -77,8 +77,8 @@ indicated which type of config file it's valid in.
    kickbacks: <kickbacks>
    kivy_config: <kivy_config>
    led_player: <led_player>
-   led_stripes: <led_stripes>
-   led_rings: <led_rings>
+   light_stripes: <light_stripes>
+   light_rings: <light_rings>
    leds: <leds>
    lights: <lights>
    light_settings: <light_settings>
