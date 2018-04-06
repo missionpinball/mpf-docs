@@ -147,8 +147,8 @@ Default: ``None``
 
 Events in this list, when posted, will send enable the drop target's reset coil which
 means that balls that hit it do not cause the drop target to fall since the reset
-coil is being held on. Not that this will require either ``allow_enable: true`` in the coil's
-configuration or a ``hold_power:`` of less than 8 (full power).
+coil is being held on. Note that this will require either ``allow_enable: true`` in the coil's
+configuration or a ``default_hold_power:``/``max_hold_power`` setting.
 
 Also note that many drop target coils are not designed to be held on at full power, so you'll
 most likely want to use a hold power of less than 8. Start low and only use the minimum power

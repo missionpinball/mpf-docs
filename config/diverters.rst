@@ -349,10 +349,10 @@ options here:
 + ``pulse`` - MPF will pulse the coil to activate the diverter.
 + ``hold`` - MPF should hold the diverter coil in a constant state of
   "on" when the diverter is active. Note that if the coil is configured
-  with a *hold_power*, then it will use that pwm pattern to hold the
-  coil on. If no *hold_power* is configured, then MPF will use a
+  with a *default_hold_power*, then it will use that pwm pattern to hold the
+  coil on. If no *default_hold_power* is configured, then MPF will use a
   continuous enable to hold the coil. (In this case you would need to
-  add *allow_enable: true* to that coil's configuration in the *coils:*
+  add *allow_enable: true* or *max_hold_power* to that coil's configuration in the *coils:*
   section of your machine configuration file.)
 
 ball_search_order:

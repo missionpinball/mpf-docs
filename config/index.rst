@@ -59,7 +59,6 @@ indicated which type of config file it's valid in.
    extra_balls: <extra_balls>
    fadecandy: <fadecandy>
    fast: <fast>
-   fast_coil_overwrites: <fast_coil_overwrites>
    fast_coils: <fast_coils>
    fast_switches: <fast_switches>
    file_shows: <file_shows>

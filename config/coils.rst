@@ -86,7 +86,7 @@ MPF will not enable any coil at 100% power unless you also add an
 a safety precaution since many coils will burn up if you enable them
 on solid, so the fact that you have to explicitly allow this for a
 coil prevents you from screwing something up and accidentally enabling
-a coil that isn't supposed to be enabled. If you have a ``hold_power:``
+a coil that isn't supposed to be enabled. If you have a ``default_hold_power:``
 setting less than 8 (full power), then you don't need this
 ``allow_enable:`` entry since you are implying you want to hold the coil
 by adding the *default_hold_power* setting. The default default_hold_power is 100%, so
@@ -122,7 +122,7 @@ Default: ``None`` (Note that if you add an entry here, it will replace the defau
 also want the default value(s) to apply, add them too.)
 
 Enables (holds on) this coil. This requires that *allow_enable* is true
-or that a *hold_power* setting is configured.
+or that a *default_hold_power* or *max_hold_power* setting is configured.
 
 default_hold_power:
 ~~~~~~~~~~~~~~~~~~~
@@ -180,7 +180,7 @@ List of one or more events (with optional delay timings), in the
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
 
-Event(s) that pulse this coil (at its default pulse_ms and power settings).
+Event(s) that pulse this coil (at its default_pulse_ms and power settings).
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~

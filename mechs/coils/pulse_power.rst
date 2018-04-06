@@ -41,7 +41,7 @@ mechanisms with a 70vdc power supply has flipper pulse times of 14ms. Our
 1974 Gottlieb Big Shot machine using the original flipper mechs has a pulse
 time over 100ms.
 
-You adjust the pulse time for each coil by adding a ``pulse_ms:`` setting to
+You adjust the pulse time for each coil by adding a ``default_pulse_ms:`` setting to
 the coil's entry in the :doc:`/config/coils` section of your machine config
 file. (Notice that you make this change in the ``coils:`` section of your
 config, not the section for the individual mech that coil is part of.)
@@ -57,13 +57,13 @@ For example, for coils used in dual-wound flippers:
     coils:
         c_flipper_left_main:
             number: 00
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_left_hold:
             number: 01
             allow_enable: true
         c_flipper_right_main:
             number: 02
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_right_hold:
             number: 03
             allow_enable: true
@@ -76,19 +76,19 @@ Or for single-wound flipper coils:
         c_flipper_left:
             number: 0
             allow_enable: true
-            hold_power: 1
-            pulse_ms: 20
+            default_hold_power: 0.125
+            default_pulse_ms: 20
         c_flipper_right:
             number: 1
             allow_enable: true
-            hold_power: 1
-            pulse_ms: 20
+            default_hold_power: 0.125
+            default_pulse_ms: 20
 
 Again, you just need to play your game and see how it feels. Then keep on
-adjusting the ``pulse_ms:`` values up or down until your flippers
+adjusting the ``default_pulse_ms:`` values up or down until your flippers
 feel right.
 
-You might find that you have to adjust this ``pulse_ms:`` setting down the
+You might find that you have to adjust this ``default_pulse_ms:`` setting down the
 road too. If you have a blank playfield then you might think that your
 coils are fine where they are, but once you add some ramps you might
 realize it's too hard to make a ramp shot and you have to increase the
