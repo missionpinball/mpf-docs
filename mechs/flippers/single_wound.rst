@@ -190,11 +190,11 @@ we created in this How To guide:
         c_flipper_left:
             number: 0
             allow_enable: true
-            default_hold_power: 1
+            default_hold_power: 0.125
         c_flipper_right:
             number: 1
             allow_enable: true
-            default_hold_power: 1
+            default_hold_power: 0.125
 
     flippers:
         left_flipper:
