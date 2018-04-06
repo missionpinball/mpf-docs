@@ -6,7 +6,7 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 0.50
 ----
 
-Currently in Dev, plan in time for Chicago Pinball Expo October 2017
+Currently in Dev, targeting an April 2018 release
 
 .. rubric:: MPF
 
@@ -36,6 +36,7 @@ New Features
 
 Bug fixes & code improvements
 
+* Support for Python 3.5 and 3.6 on Windows (including P-ROC libraries)
 * Much more type checking
 * Improved logic around how playfields are marked active
 * Improved how device monitors work
@@ -46,6 +47,7 @@ Bug fixes & code improvements
 * Refactored mode device loading, config validation, and config player loading
 * Improved high score mode
 
+
 .. rubric:: MPF-MC
 
 New Features
@@ -55,12 +57,42 @@ New Features
 * Relative animation values
 * Added widget rotation & scale animations
 * Animation values respect initial anchor points
-* Simplified, consolidated, & unified DMD, color DMD, and slide frame widgets
+* Simplified, consolidated, & unified DMD, color DMD, and slide frame widgets into displays and display widgets
+* New 'sound_loop' audio track type optimized for live looping music control driven by events.  This specialized
+  audio track type can synchronize playback of multiple looping sounds simultaneously in layers and provides
+  gapless switching to a new set of loops. It is designed to build music that dynamically changes based on events
+  in your game.  Only supports in-memory sounds (no streaming).
+* New 'sound_loop_set' asset type. A sound_loop_set is an asset used to play sounds in a sound_loop track that is
+  basically a grouping of one or more sound assets.  The sounds in a loop set are arranged in layers. The master
+  layer contains the sound that establishes the length of the entire loop set. Whenever the sound in the master
+  layer loops, all other sounds in the sound_loop_set will also loop back to the beginning.
+* New 'sound_loop_player' config_player. The sound_loop_player is a config player that is used to control the
+  playback of sound_loop_sets in a sound_loop audio track. The track_player can also be used with a sound_loop
+  track to control volume and playback state.
+* New 'playlist' audio track type is designed to provide a comprehensive set of music playing capabilities that
+  include named playlists, playback mode (sequence, random, etc.), cross-fades between sounds/songs/playlists,
+  and more.
+* New 'playlist' asset type. A playlist is an asset used to group and play sound assets on a playlist track. A
+  playlist is basically an ordered group of sounds/songs typically used to playback music.
+* New 'playlist_player' config player. The playlist_player is a config player that is used to control the playback
+  of playlists (and their component sounds) in a playlist track.  The track_player can also be used with a playlist
+  track to control volume and playback state.
+* New sound 'about_to_finish' events (configurable for each sound). These post events at a specified time before
+  the sound ends.
 
 Bug fixes & code improvements
 
+* Support for Python 3.5 and 3.6 on Windows
+* Significant performance improvements
+* Fixed many leaks (especially widgets)
 * Animation steps can be run simultaneously
 * Bail out when a video codec is missing
+* Refactored the entire audio engine code (broke audio_interface.pyx into many different files, individual
+  source files for each track type and base class, eliminated .pxi files and established use of .pxd files)
+* Switched back to SDL_Mixer for main audio playback, mixing, and in-memory sound asset loading functions
+  (provide more reliable and faster loading of .ogg and .flac files)
+* Allow unlimited sound asset event markers (previously only allowed a fixed number)
+
 
 0.33
 ----
