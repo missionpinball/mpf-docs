@@ -89,8 +89,9 @@ As you'll see as you read through the MPF documentation, there are two main
 ways (plus a lot of little ways) to make things happen when certain events
 are posted:
 
-In the various :doc:`config players </config_players/index>` (slide_player,
-led_player, show_player, etc.), you create entries based on event names.
+In the various :doc:`config players </config_players/index>` (:doc:`slide_player </config_players/slide_player>`,
+:doc:`light_player </config_players/light_player>`, :doc:`show_player </config_players/show_player>`, etc.),
+you create entries based on event names.
 
 For example, in a config file:
 

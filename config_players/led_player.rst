@@ -1,15 +1,5 @@
 LED player
 ==========
 
-The *LED player* is a :doc:`config player </config_players/index>` that's used to set the color of LEDs
-(including fade rates).
-
-Usage in config files
----------------------
-
-In config files, the LED player is used via the ``led_player:`` section.
-
-Usage in shows
---------------
-
-In shows, the LED player is used via the ``leds:`` section of a step.
+`led_player` and `matrix_light_player` were replaced with :doc:`light_player </config_players/light_player>` in MPF 0.50.
+See :doc: `/config/lights` for details.
