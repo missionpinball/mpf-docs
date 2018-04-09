@@ -1,8 +1,6 @@
 light_player:
 =============
 
-.. include:: /not_updated_yet.rst
-
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
@@ -17,10 +15,37 @@ light_player:
 
 .. overview
 
-The ``light_player:`` section of your config is where you...
+The ``light_player:`` section of your config is where you can control lights
+in config or shows. Example in config:
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+.. code-block:: yaml
+
+   light_player:
+     some_event:
+       led1:
+         color: red
+         fade: 200ms
+       led2:
+         color: ff0000
+         fade: 2000ms
+
+.. code-block:: yaml
+
+   shows:
+      rainbow:
+         - lights:
+             (leds): red
+         - lights:
+             (leds): orange
+         - lights:
+             (leds): yellow
+         - lights:
+             (leds): green
+         - lights:
+             (leds): blue
+         - lights:
+             (leds): purple
+
 
 Optional settings
 -----------------
@@ -31,13 +56,20 @@ brightness:
 ~~~~~~~~~~~
 Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set a brightness to a light. If you use brightness on an RGB light MPF will
+use the brightness for every channel. For instance brigness ``AA`` will
+result in color ``AAAAAA``.
+
+color:
+~~~~~~
+Single value, type: ``string``. Default: ``white``
+
+Set a color to this light. If you apply a color to a non-RGB light it will use
+the maximum brightness of any channel.
 
 fade:
 ~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Time to fade this light in ms. Use this to achieve smooth transitions between colors.
 

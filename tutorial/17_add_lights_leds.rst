@@ -11,14 +11,12 @@ If you're following this tutorial with virtual hardware, it's still
 worth doing this step because use can use :doc:`/tools/monitor/index` to
 see your lights and LEDs in realtime against a picture of your playfield.
 
-1. Understand "lights" versus "LEDs"
-------------------------------------
+1. Understand "lights"
+----------------------
 
 In MPF, "lights" refers to bulbs that are plugged into a lamp matrix,
-while "LEDs" refers to direct-connected LEDs (which are usually RGB).
-
-In other words, if you have a lamp matrix, but you're using LED
-replacement bulbs with it, you still configure those as "lights".
+or to direct-connected LEDs (which are usually RGB). So lights might be
+either LEDs or lamps in a matrix.
 See :doc:`/mechs/leds/lights_versus_leds` for details.
 
 2. Add your lights/LEDs to your machine config file
@@ -26,32 +24,26 @@ See :doc:`/mechs/leds/lights_versus_leds` for details.
 
 Once you figure out whether you have lights or LEDs, you need to add the
 relevant section to your machine configuration file. There's probably
-not much to explain here. Adding lights and LEDs is pretty similar to adding
+not much to explain here. Adding lights is pretty similar to adding
 switches and coils.
 
 See the relevant documentation for each for instructions how
 to enter them:
 
 * :doc:`/mechs/lights/index`
-* :doc:`/mechs/leds/index`
 
 3: Create an attract mode light/LED show
 ----------------------------------------
 
-Once you add your lights or LEDs, you need a simple way to test them
+Once you add your lights, you need a simple way to test them
 to make sure they're working. We typically throw together a quick
 attract mode light show so we can see some blinking lights as soon as
 MPF boots up.
 
-
 The easiest way to create a complex series of light actions is with
 MPF's *show* functionality. This is the exact same type of show that
-we use for the display loop, except this time we configure lights or LEDs
+we use for the display loop, except this time we configure lights
 for each step instead of slides.
-
-Show entries for lights and LEDs are very similar, except with LEDs you
-specify full RGB values whereas with lights you just specify whether
-they're on or off.
 
 So the first thing to do is to create another show file in your attract mode
 shows folders. Let's call this one ``attract_light_show.yaml``. Your
@@ -114,32 +106,32 @@ the rainbow, you could create a show like this:
 
     #show_version=5
     - duration: 1
-      leds:
+      lights:
         l_led1: red
         l_led2: red
         l_led3: ff0000
     - duration: 1
-      leds:
+      lights:
         l_led1: ff6600
         l_led2: ff6600
         l_led3: ff6600
     - duration: 1
-      leds:
+      lights:
         l_led1: ffcc00
         l_led2: ffcc00
         l_led3: ffcc00
     - duration: 1
-      leds:
+      lights:
         l_led1: lime
         l_led2: 00ff00
         l_led3: 00ff00
     - duration: 1
-      leds:
+      lights:
         l_led1: blue
         l_led2: 0000ff
         l_led3: 0000ff
     - duration: 1
-      leds:
+      lights:
         l_led1: ff00aa
         l_led2: ff00aa
         l_led3: ff00aa
@@ -160,7 +152,7 @@ names, you can use `any of these colors <http://htmlcolorcodes.com/color-names/>
 ------------------------------
 
 This new show file is just like your existing display show, except this
-one contains settings for lights or LEDs. So to get it to play, add it to
+one contains settings for lights. So to get it to play, add it to
 the ``show_player:`` section of your attract mode config file, set to play
 on the *mode_attract_started* event just like the display show.
 
@@ -185,7 +177,7 @@ have more than one, ``.2``, etc. In fact you can have any number, they don't hav
 to be in order or anything.
 
 You also might be wondering why we don't just make a single attract show and
-put the slides and LEDs or lights in the same show?
+put the slides and lights in the same show?
 
 Certainly that's possible, but we like to keep things separate, as this will
 let you start and stop them on their own, and it will make it easier to
