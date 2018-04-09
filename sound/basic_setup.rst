@@ -212,6 +212,8 @@ Example ``sounds:`` configuration demonstrating most common settings:
         song_01:
             volume: 1.0
             priority: 100
+            about_to_finish_time: 2s
+            events_when_about_to_finish: song_01_about_to_finish
 
 5. Hooking up an MPF event to play a sound
 ------------------------------------------
@@ -266,3 +268,4 @@ References
 + :doc:`playlists: </config/playlists>`
 + :doc:`playlist_player: </config_players/playlist_player>`
 + :doc:`Instructions for entering gain values </config/instructions/gain_values>`
+

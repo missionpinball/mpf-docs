@@ -41,6 +41,7 @@ like this:
        basic_beat:
            sound: kick
            volume: 0.5
+           tempo: 130.0
            layers:
              - sound: hihat
                volume: 0.7
@@ -59,6 +60,7 @@ like this:
        basic_beat2:
            sound: kick2
            volume: 0.5
+           tempo: 130.0
            layers:
              - sound: hihat
                volume: 0.7
@@ -146,21 +148,14 @@ not applied when the sound stops on its own by reaching the end of the sound. It
 play when the sound is actively stopped by an event. A fade out sounds much more professional than
 an abrupt cutoff of a sound.
 
-mode_end_action:
-~~~~~~~~~~~~~~~~
+tempo:
+~~~~~~
 
-Single value, type: one of the following options: stop, stop_looping. Default: ``stop_looping``
+Single value, type: ``float``. Default: ``60.0``
 
-The ``mode_end_action:`` setting determines what action to take when the mode that initiates the
-playback of the sound loop set ends. Options for ``mode_end_action:`` are:
-
-+ ``stop`` - The currently playing instance of the specified sound loop set started by the mode
-  will be stopped/canceled. If the ``fade_out`` parameter has a non-zero value, the sound loop
-  set will fade out over the specified number of seconds.
-+ ``stop_looping`` - Looping will be canceled for all currently playing instances of the specified
-  sound loop set started by the mode (the sound loop set will continue to play to the end of the
-  current loop). In addition, any queued instances of the sound loop set awaiting playback will be
-  removed/canceled.
+The tempo of the sound loop set, expressed in beats per minute. This setting is used to calculate
+the timing of beat intervals when switching between sound loops. This setting only needed when using
+the ``timing: next_beat_interval`` setting in the (:doc:`sound_loop_player </config/sound_loop_player>`).
 
 layers:
 -------
@@ -209,3 +204,4 @@ the layer when the sound loop set is played. Options for ``initial_state:`` are:
 
 + ``play`` - The layer will be played whenever the sound loop set begins playback.
 + ``stop`` - The layer will be stopped whenever the sound loop set begins playback.
+
