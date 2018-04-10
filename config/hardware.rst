@@ -129,7 +129,7 @@ Single value, type: ``string``.
 + ``i2c``
 
 lights:
-~~~~~
+~~~~~~~
 Single value, type: ``string``. Default: ``default``
 
 + ``p_roc``
