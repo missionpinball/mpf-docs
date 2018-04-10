@@ -18,10 +18,10 @@ that does not include any tokens, like this:
 ::
 
    - time: 0
-     leds:
+     lights:
        led_01: red
    - time: 1
-     leds:
+     lights:
        led_01: off
 
 The example show above is simple. When it starts, it sets
@@ -56,10 +56,10 @@ of the show above using a token instead of a hard-coded LED name:
 ::
 
    - time: 0
-     leds:
+     lights:
        (led): red
    - time: 1
-     leds:
+     lights:
        (led): off
 
 Notice the second show is identical to the first, except every reference
@@ -75,10 +75,10 @@ the "leds" token with the value "led_02", which would make a show like this:
 ::
 
    - time: 0
-     leds:
+     lights:
        led_02: red
    - time: 1
-     leds:
+     lights:
        led_02: off
 
 The actual way that you start and send tokens to shows varies depending on what
@@ -122,7 +122,7 @@ consider the following section from your machine config:
 
 ::
 
-   leds:
+   lights:
      led_01:
          number: 00
          tags: tag1
@@ -147,11 +147,11 @@ This would result in a show that was equivalent to:
 ::
 
    - time: 0
-     leds:
+     lights:
        led_01: red
        led_02: red
    - time: 1
-     leds:
+     lights:
        led_01: off
        led_02: off
 
@@ -167,10 +167,10 @@ For example, this is a perfectly valid show:
 ::
 
    - time: 0
-     leds:
+     lights:
        (corndog): red
    - time: 1
-     leds:
+     lights:
        (corndog): off
 
 In this case, you'd just pass a value for the *corndog* token when you play the show:
@@ -196,10 +196,10 @@ You can also pass multiple tokens. Consider the following show:
 ::
 
    - time: 0
-     leds:
+     lights:
        (led): (color1)
    - time: 1
-     leds:
+     lights:
        (led): (color2)
 
 Notice there are three tokens in this show: *led*, *color1*, and *color2*. You might call this show *color_cycle*,

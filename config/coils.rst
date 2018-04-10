@@ -30,22 +30,26 @@ Here's an example section:
         flipper_right_main:
             number: A0-B0-0
             default_pulse_ms: 30
-            tags:
+            max_pulse_ms: 100
+            default_pulse_power: 0.7
+            max_pulse_power: 1.0
         flipper_right_hold:
             number: A0-B0-1
-            tags:
+            default_hold_power: 0.25
+            max_hold_power: 0.5
         knocker:
             number: A0-B1-0
             default_pulse_ms: 20
-            tags:
+            max_pulse_ms: 100
         pop_bumper_left:
             number: A0-B1-1
             default_pulse_ms: 18
-            tags: ball_search
+            max_pulse_ms: 100
         ball_gate:
             number: A0-B1-2
             default_hold_power: 0.375
-            tags: ball_search
+            max_hold_power: 0.5
+
 
 The options are as follows:
 

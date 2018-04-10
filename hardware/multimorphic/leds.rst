@@ -50,7 +50,7 @@ like this:
 
 ::
 
-   leds:
+   lights:
       l_led0:
          number: 8-0-1-2
 
@@ -68,7 +68,7 @@ such as:
 
 ::
 
-   leds:
+   lights:
       l_shoot_again:
          number: 8-60-61-62
          polarity: True

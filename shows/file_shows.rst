@@ -25,10 +25,10 @@ Here is a sample show file. This file might be called something like
 
    #show_version=5
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +1
-     leds:
+     lights:
        led1: off
    - time: + 1
 

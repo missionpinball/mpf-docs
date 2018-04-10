@@ -42,7 +42,7 @@ for LEDs, which you want to be FadeCandy, you would do it like this:
    hardware:
       platform: p_roc
       driverboards: pdb
-      leds: fadecandy
+      lights: fadecandy
 
 You can enter a device-specific default for the following types of devices
 here:
@@ -50,7 +50,7 @@ here:
 * coils:
 * switches:
 * matrix_lights:
-* leds:
+* lights:
 * dmd:
 * rgb_dmd:
 * gis:
@@ -74,7 +74,7 @@ FadeCandy, you could set up your config like this:
     hardware:
         platform: fast
 
-    leds:
+    lights:
         led00:
             number: 0-0
         led01:
@@ -91,9 +91,9 @@ You could also invert this, like so:
 
     hardware:
         platform: fast
-        leds: fadecandy
+        lights: fadecandy
 
-    leds:
+    lights:
         led00:
             number: 0-0
             platform: fast
