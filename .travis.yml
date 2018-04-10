@@ -10,8 +10,6 @@ matrix:
    - os: linux
      env: LINUX=ubuntu:16.04
      sudo: required
-     language: python
-     python: "3.5"
 
 services:
   - docker
@@ -21,4 +19,4 @@ before_install:
   - git clone --branch dev https://github.com/missionpinball/mpf-debian-installer.git _mpf_installer;
 
 script:
-  - docker run -v $PWD:$PWD -w $PWD $LINUX /bin/sh -c "pip3 install -q -r requirements.txt && _mpf_installer/install-mpf-dependencies && pip3 install _mpf/ && sphinx-build -nW -b html -d _build/doctrees . _build/html && sphinx-build -nW -b dummy -d _build/doctrees . _build/dummy";
+  - docker run -v $PWD:$PWD -w $PWD $LINUX /bin/sh -c "_mpf_installer/install-mpf-dependencies && pip3 install -q -r requirements.txt && pip3 install _mpf/ && sphinx-build -nW -b html -d _build/doctrees . _build/html && sphinx-build -nW -b dummy -d _build/doctrees . _build/dummy";
