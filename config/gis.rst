@@ -3,7 +3,7 @@ gis:
 
 .. warning::
    As of MPF 0.50, ``matrix_lights``, ``flashers`` and ``leds`` have been combined into a single
-   ``lights`` configuration. See :doc: `/config/lights` for details.
+   ``lights`` configuration. See :doc:`/config/lights` for details.
 
 *Config file section*
 
