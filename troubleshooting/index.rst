@@ -61,9 +61,9 @@ Similarly, you can run MPF-MC unit tests (they will take a bit longer and might 
 If you cannot solve the problem ask in our `support forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
 Please include the following information:
 
-. The output of ``mpf diagnosis``
-. In case you suspect an installation problem include the output of unittests and if you can run demo_man.
-. If you got a problem with a device (e.g. a ball_lock) or a platform (e.g. P-Roc or FAST) add `debug: True` to the relevant config section to enable extra debug output.
-. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and grab the latest MPF and MC log from the log folder in your machine.
-. Describe how to reproduce your problem.
-. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
+#. The output of ``mpf diagnosis``
+#. In case you suspect an installation problem include the output of unittests and if you can run demo_man.
+#. If you got a problem with a device (e.g. a ball_lock) or a platform (e.g. P-Roc or FAST) add `debug: True` to the relevant config section to enable extra debug output.
+#. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and grab the latest MPF and MC log from the log folder in your machine.
+#. Describe how to reproduce your problem.
+#. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
