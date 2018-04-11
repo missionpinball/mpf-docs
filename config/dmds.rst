@@ -19,7 +19,7 @@ That does not involve this ``dmds:`` section.
 Note that there are no *height* and *width* settings here. The pixel size of your DMD is determined by the size of the
 ``source:`` display which drives the content for this DMD.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     displays:
       dmd:

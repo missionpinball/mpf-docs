@@ -15,7 +15,7 @@ The ``config:`` section of your configuration files allows you to
 specify *additional* configuration files that will be read in after
 the current file is loaded. Here's an example:
 
-::
+.. code-block:: yaml
 
     config:
         - machine.yaml
@@ -28,7 +28,7 @@ Note that each file is on its own line, which starts with a minus,
 then a space, then the file. (The space is important.) Also note that
 you can (optionally) specify a path, like this:
 
-::
+.. code-block:: yaml
 
         - config\machine.yaml
         - config/my_game/machine.yaml

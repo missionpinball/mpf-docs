@@ -21,12 +21,12 @@ implement game logic. (e.g. "When this happens, do this.")
 If you add
 this section to your machine-wide config file, the entries here will
 always be active. If you enter it into a mode-specific config file,
-entries will only be active while that mode is active. 
+entries will only be active while that mode is active.
 
 Basic Event Playing
 -------------------
 
-::
+.. code-block:: mpf-config
 
     event_player:
         ball_starting:
@@ -105,7 +105,7 @@ trigger a variable number of handlers:
 In the above example, both "start_mode_shadowbroker_base" and "start_mode_n7_assignments" will
 be posted every time. One of either "start_mode_overlord" or "start_mode_arrival" will be posted,
 depending on whether the player has completed the collectorship achievement. And if the player_var
-"cash" is high enough, "start_mode_shopping" will also be posted. 
+"cash" is high enough, "start_mode_shopping" will also be posted.
 
 In many cases, conditions can be applied to either the triggering event or the handling event.
 For more information and examples of conditions, see :doc:`conditional events </events/overview/conditional>`.

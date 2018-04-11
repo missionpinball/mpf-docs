@@ -20,7 +20,7 @@ config file.
 
 Let's take a look at an example:
 
-::
+.. code-block:: mpf-config
 
    assets:
        images:

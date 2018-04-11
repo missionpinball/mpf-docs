@@ -20,20 +20,18 @@ shots or anything at the moment.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
+
+   ##! config: mode1
 
    extra_balls:
        my_mode_eb:
            award_events: alien_smashed
-           reset_events: wizard_done
 
 In the above example, the extra ball called ``my_mode_eb`` will be
 given to the player when the event ``alien_smashed`` is posted. After that,
 future ``alien_smashed`` events will not lead to additional extra balls. (The
-``my_mode_eb`` extra ball is "used up", in a sense. However, if the
-event ``wizard_done`` is posted, then that would reset this extra ball
-and it could be awarded again. (This is very rare, since you don't
-want a good player getting the same extra ball over and over.)
+``my_mode_eb`` extra ball is "used up", in a sense).
 
 This is all tracked per-player in a player variable dictionary called "extra_balls_awarded"
 
@@ -77,18 +75,6 @@ Single value, type: ``string``. Default: ``%``
 
 A descriptive name for this device which will show up in the service menu
 and reports.
-
-reset_events:
-~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, reset this extra ball, meaning it can be awarded to a player again even
-if it has previously been awarded.
 
 tags:
 ~~~~~

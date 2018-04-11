@@ -18,7 +18,7 @@ There's a default ``bcp:`` section in the default ``mpfconfig.yaml`` system-wide
 section that should be fine to get started, and then you can override
 it if needed for a specific situation:
 
-::
+.. code-block:: mpf-config
 
    bcp:
        connections:

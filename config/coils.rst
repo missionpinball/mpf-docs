@@ -24,7 +24,7 @@ get held on. This section *can* be used in your machine-wide config
 files. This section *cannot* be used in mode-specific config files.
 Here's an example section:
 
-::
+.. code-block:: mpf-config
 
     coils:
         flipper_right_main:

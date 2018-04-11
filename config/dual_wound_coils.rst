@@ -17,7 +17,7 @@ be used anywhere in MPF.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
    coils:
        c_hold:

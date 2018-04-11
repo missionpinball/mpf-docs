@@ -18,9 +18,26 @@ you group them into banks in the ``drop_target_banks:`` section.)
 Here's an example from *Judge Dredd*, with five drop targets we've given names
 *J*, *U*, *D*, *G*, and *E*.
 
-::
+.. code-block:: mpf-config
 
-    drop_targets:
+   #! switches:
+   #!    drop_target_j:
+   #!       number:
+   #!    drop_target_u:
+   #!       number:
+   #!    drop_target_d:
+   #!       number:
+   #!    drop_target_g:
+   #!       number:
+   #!    drop_target_e:
+   #!       number:
+   #! coils:
+   #!    reset_drop_targets:
+   #!       number:
+   #!    trip_drop_target_d:
+   #!       number:
+
+   drop_targets:
         j:
             switch: drop_target_j
             reset_coil: reset_drop_targets

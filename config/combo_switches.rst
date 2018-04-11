@@ -56,7 +56,7 @@ Built-in flipper cancel combo
 MPF's ``mpfconfig.yaml`` (the built-in machine config that's merged in with
 all machine configs) includes the following section:
 
-::
+.. code-block:: mpf-config
 
    combo_switches:
      both_flippers:

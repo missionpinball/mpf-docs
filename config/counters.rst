@@ -18,18 +18,22 @@ Settings
 
 The structure of counter logic blocks is like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
+
+   ##! config: mode1
 
   counters:
-     the_name_of_this_logic_block:
-        <settings>
-     some_other_logic_block:
-        <settings>
-     a_third_logic_block:
-        <settings>
+     the_name_of_this_counter:
+        count_events: my_count_event
+        count_complete_value: 10
+     some_other_counter:
+        count_events: s_my_switch_active
+        starting_count: 50
+        count_interval: 10
+        count_complete_value: 100
 
-Note that the actual name of the logic block doesn't really matter. Mainly
-it's used in the logs.
+Note that the actual name of the counter doesn't really matter. Mainly
+it's used in the logs and for event names.
 
 count_events:
 ~~~~~~~~~~~~~

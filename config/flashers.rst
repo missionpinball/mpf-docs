@@ -12,7 +12,7 @@ and use :doc:`light_player </config/light_player>` or
 
 Here is an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    # configure the flasher as coil
    coils:

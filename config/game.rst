@@ -14,7 +14,7 @@ game:
 The ``game:`` section of the machine config holds settings related
 to the game play.
 
-::
+.. code-block:: mpf-config
 
     game:
         balls_per_game: 3

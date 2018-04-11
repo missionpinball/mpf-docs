@@ -19,7 +19,7 @@ actually have two ``displays:``, the DMD is one and the on-screen window is the 
 
 Here's an example ``displays:`` section from *Demo Man* with two displays:
 
-::
+.. code-block:: mpf-config
 
    displays:
      window:
