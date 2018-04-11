@@ -4,7 +4,10 @@ import docutils.nodes
 import docutils.parsers.rst
 import docutils.utils
 import logging
-from mpf.tests.MpfDocTestCase import MpfDocTestCase
+try:
+    from mpf.tests.MpfDocTestCase import MpfDocTestCase
+except ImportError:
+    MpfDocTestCase = None
 
 
 class ConfigSnippetTester(object):
@@ -35,6 +38,8 @@ class CodeBlockVisitor(docutils.nodes.NodeVisitor):
         self.unit_tests = []
 
     def test_config(self, config_text, source):
+        if not MpfDocTestCase:
+            raise AssertionError("mpf not loaded")
         testcase = MpfDocTestCase(config_text)
         testcase._testMethodDoc = source
         self.unit_tests.append(testcase)
