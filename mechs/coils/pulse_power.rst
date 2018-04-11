@@ -52,8 +52,9 @@ default starting point.)
 
 For example, for coils used in dual-wound flippers:
 
-::
+.. code-block:: mpf-config
 
+    # random comment
     coils:
         c_flipper_left_main:
             number: 00
@@ -70,8 +71,9 @@ For example, for coils used in dual-wound flippers:
 
 Or for single-wound flipper coils:
 
-::
+.. code-block:: mpf-config
 
+    # random comment
     coils:
         c_flipper_left:
             number: 0

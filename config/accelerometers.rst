@@ -17,11 +17,10 @@ how many G forces trigger different events.
 Like other hardware devices, you create a sub-entry for each accelerometer, then under there you
 configure additional settings. For example:
 
-::
+.. code-block:: mpf-config
 
     accelerometers:
        test_accelerometer:
-           number: 1
            level_x: 0
            level_y: 0
            level_z: 1
@@ -82,11 +81,11 @@ Single value, type: ``integer``. Default: ``1``
 .. todo::
    :doc:`/about/help_us_to_write_it`
 
-number:
-~~~~~~~
-Single value, type: ``string``.
+platform_settings:
+~~~~~~~~~~~~~~~~~~
+One or more sub-entries.
 
-The platform-specific hardware number of this accelerometer.
+The platform-specific hardware settings of this accelerometer.
 
 platform:
 ~~~~~~~~~

@@ -1,17 +1,22 @@
 # Travis is only used to test the Sphinx build and is configured to fail on
 # bad links and references. The actual docs are published on RTD which has its
 # own webhook and is not related to anything that travis does.
+dist: trusty
+sudo: required
 
-language: python
+matrix:
+  fast_finish: true
+  include:
+   - os: linux
+     env: LINUX=ubuntu:16.04
+     sudo: required
 
-python:
-  - "3.6"
+services:
+  - docker
 
-install:
-  - "pip install -q -r requirements.txt"
+before_install:
+  - git clone --recursive --branch dev https://github.com/missionpinball/mpf.git _mpf;
+  - git clone --branch dev https://github.com/missionpinball/mpf-debian-installer.git _mpf_installer;
 
 script:
-  - "sphinx-build -nW -b html -d _build/doctrees . _build/html"
-
-# -n   Run in nit-picky mode, warn about all missing references.
-# -W   Turn warnings into errors.
+  - docker run -v $PWD:$PWD -w $PWD $LINUX /bin/sh -c "_mpf_installer/install-mpf-dependencies && apt-get install -y git && pip3 install -q -r requirements.txt && pip3 install _mpf/ && sphinx-build -nW -b html -d _build/doctrees . _build/html && sphinx-build -nW -b dummy -d _build/doctrees . _build/dummy";
