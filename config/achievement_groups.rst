@@ -21,7 +21,22 @@ that group.
 Here's an example achievement_groups section from Brooks & Dunn. (This is
 related to the example in the achievements config documentation.)
 
-::
+.. code-block:: mpf-config
+
+    ##! config: mode1
+
+    #! # create some empty achievements for the group
+    #! achievements:
+    #!  world_tour:
+    #!    enable_events: world_tour_fail, ball_will_end
+    #!  money_bags:
+    #!    enable_events: money_bags_fail, ball_will_end
+    #!  music_awards:
+    #!    enable_events: music_awards_fail, ball_will_end
+    #!  jukebox:
+    #!    enable_events: jukebox_fail, ball_will_end
+    #!  play_poker:
+    #!    enable_events: play_poker_fail, ball_will_end
 
     achievement_groups:
       my_group:

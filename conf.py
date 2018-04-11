@@ -183,7 +183,6 @@ def run_tests(app, exception):
         return
 
     result = unit_test.run_tests()
-    print(result)
     sys.exit(result)
 
 def setup(app):

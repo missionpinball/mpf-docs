@@ -19,7 +19,7 @@ mode, and you can't have two different animations with the same name.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    animations:
      fade_in:
