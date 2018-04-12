@@ -15,6 +15,7 @@ from sphinx.highlighting import lexers
 sys.path.append(os.getcwd())
 from _doc_tools.mpf_lexer import MpfLexer
 from _doc_tools.build_events_reference_docs import EventDocParser
+from _doc_tools.build_examples import ExampleBuilder
 from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
 
 extensions = ['sphinx.ext.todo',
@@ -276,5 +277,10 @@ setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 
 build_event_references()
+source_dirs = {"mpf_examples": "/mpf_examples", "mpfmc_examples": "/mpfmc_examples"}
+examples_root = 'examples'
+
+b = ExampleBuilder(source_dirs, examples_root)
+b.build()
 
 lexers['mpf-config'] = MpfLexer(startinline=True)
