@@ -18,7 +18,7 @@ light_player:
 The ``light_player:`` section of your config is where you can control lights
 in config or shows. Example in config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    light_player:
      some_event:
@@ -29,7 +29,7 @@ in config or shows. Example in config:
          color: ff0000
          fade: 2000ms
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    shows:
       rainbow:

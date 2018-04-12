@@ -16,7 +16,7 @@ that MPF will use.
 If you intend to use MPF with physical hardware, at a minimum you'll have a
 ``platform:`` and ``driverboards:`` section in your machine config, like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: fast

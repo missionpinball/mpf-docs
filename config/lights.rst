@@ -11,8 +11,8 @@ lights:
 
 .. overview
 
-The ``lights:`` section of your config is where you configure physical lights for your 
-hardware platform. 
+The ``lights:`` section of your config is where you configure physical lights for your
+hardware platform.
 
 .. note::
    As of MPF 0.50, all lights have been combined into this single
@@ -28,12 +28,12 @@ channels:
 ~~~~~~~~~
 List of ``lights`` settings for multi-color LEDs. Default: ``None``
 
-Instead of a single ``number`` address for a light, you can enter channels 
+Instead of a single ``number`` address for a light, you can enter channels
 corresponding to the multi-color channels of an RGB or RGBW LED. Each channel entry can
 contain any of the ``lights`` parameters listed on this page, but at least ``number`` is required.
 
-.. code-block:: yaml
-  
+.. code-block:: mpf-config
+
   lights:
     rainbow_star:
       type: rgb
@@ -84,14 +84,14 @@ default_on_color:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``ffffff``
 
-For multi-color LEDs, the color defined here will be used when the light is enabled via "on" 
+For multi-color LEDs, the color defined here will be used when the light is enabled via "on"
 (as opposed to being enabled with a specific color). Not intended for single-color lights.
 
 default_fade_ms:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
-When this light receives instructions to change color, it can interpolate from its current value to the 
+When this light receives instructions to change color, it can interpolate from its current value to the
 new value over a fade time. If no value is provided, the machine default will be used. If this light is
 part of a show that defines a fade time, the show's value will supercede this light's setting.
 
@@ -124,8 +124,8 @@ type:
 ~~~~~
 Single value, type: ``string`` (case-insensitive). Default: ``rgb``
 
-This describes the channel order of an LED. Can be 1 to many channels (if supported by hardware). 
-Valid channels: r (red), g (green), b (blue), w (white=minimum of red, green and blue), 
+This describes the channel order of an LED. Can be 1 to many channels (if supported by hardware).
+Valid channels: r (red), g (green), b (blue), w (white=minimum of red, green and blue),
 + (always on), - (always off).
 
 When using serial LEDs (e.g. with FAST or Fadecandy), use `rgb` for WS2812 and `grb` for WS2811 LEDs.

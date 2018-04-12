@@ -1,7 +1,7 @@
 logging:
 ========
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    logging:
        console:

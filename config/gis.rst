@@ -40,4 +40,4 @@ Here's an example from *Judge Dredd*:
             subtype: gi
 
 
-See :doc: `/config/lights` for details about the ``lights`` section.
+See :doc:`/config/lights` for details about the ``lights`` section.

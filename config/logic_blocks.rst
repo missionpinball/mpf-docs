@@ -12,7 +12,7 @@ Logic blocks moved one level up in MPF 0.50. Instead of
 
 just use:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     counters:
       your_counter:
