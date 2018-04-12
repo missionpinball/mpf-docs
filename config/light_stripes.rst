@@ -17,7 +17,7 @@ is how the x/y coordinates are computed.
 
 Here's an example:
 
-.. literalinclude:: /example_configs/light/config/light_groups.yaml
+.. literalinclude:: /mpf_examples/light/config/light_groups.yaml
    :language: yaml
 
 

@@ -17,7 +17,7 @@ one flipper button while hitting the launch button.
 
 Here's an example machine config file using them:
 
-.. literalinclude:: /example_configs/combo_switches/config/combo_switches.yaml
+.. literalinclude:: /mpf_examples/combo_switches/config/combo_switches.yaml
    :language: yaml
 
 To use combo switches, add a ``combo_switches:`` section to either a mode or

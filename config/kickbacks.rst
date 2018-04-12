@@ -17,7 +17,7 @@ that kicks the ball back into play, typically located in an outlane.
 
 Example:
 
-.. literalinclude:: /example_configs/kickback/config/config.yaml
+.. literalinclude:: /mpf_examples/kickback/config/config.yaml
    :caption: `/config/config.yaml </_static/kickback/config/config.yaml>`_
    :language: yaml
 

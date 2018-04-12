@@ -16,8 +16,8 @@ control the timing of grabbing, releasing, and "flinging" the ball.
 
 Example:
 
-.. literalinclude:: /example_configs/magnet/config/config.yaml
-   :caption: `/config/config.yaml </_static/magnet/config/config.yaml>`_
+.. literalinclude:: /mpf_examples/magnet/config/config.yaml
+   :caption: `/config/config.yaml </mpf_examples/magnet/config/config.yaml>`_
    :language: yaml
 
 magnet_coil:
