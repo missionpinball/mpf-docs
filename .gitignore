@@ -5,4 +5,5 @@ __pycache__/
 BUILD_WARNINGS.txt
 mpf_examples
 mpfmc_examples
+examples/
 events/*.rst
