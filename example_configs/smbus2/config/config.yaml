@@ -1,4 +1,0 @@
-#config_version=5
-
-hardware:
-    platform: smbus2

@@ -1,6 +1,0 @@
-#config_version=5
-
-switches:
-  s_playfield:
-    number:
-    tags: playfield_active

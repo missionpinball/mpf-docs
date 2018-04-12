@@ -1,5 +1,0 @@
-#config_version=5
-
-modes:
-  - mode_with_timers
-  - mode_with_timers2

@@ -1,9 +1,0 @@
-#config_version=5
-
-mode:
-  priority: 500
-
-sound_player:
-    play_sound_synthping_in_mode: 210871_synthping
-    play_sound_drum_group_in_mode: drum_group
-

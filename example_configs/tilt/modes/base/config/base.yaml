@@ -1,9 +1,0 @@
-#config_version=5
-
-mode:
-  start_events: ball_starting
-  priority: 100
-
-scoring:
-  test_scoring:
-    score: 100
