@@ -18,7 +18,7 @@ that will cause the servos to move to certain positions.
 Here's an example ``servos:`` section, with two servos defined called *servo1*
 and *servo2*:
 
-::
+.. code-block:: mpf-config
 
    servos:
       servo1:
@@ -99,7 +99,7 @@ This is a sub-section mapping of servo positions to MPF event names. For example
       0.45: servo1_mid
 
 In MPF, servo ranges of motion are represented as numbers between 0.0 and 1.0.
-So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min: 
+So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min:
 discussed below, and 1.0 moves it to the end of motion on the other side as set by the
 servo_max: as set below. You can use positions in between with
 as much precision as your servo controller will allow. (For example, a value of .4444
@@ -148,7 +148,7 @@ servo_max:
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 A numerical value that's sent to the servo which represents the servo's max
-position in relation to the servo_max: set in the controllers configuration. 
+position in relation to the servo_max: set in the controllers configuration.
 The actual value for this is normalized to 0.0 to 1.0 here.
 The controllers will convert it for the corresponding hardware.
 

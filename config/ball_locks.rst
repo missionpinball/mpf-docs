@@ -18,7 +18,7 @@ ball_locks:
 The ``ball_locks:`` section of your config is used to list and configure
 :doc:`logical ball locks </game_logic/ball_locks/index>`.
 
-Here's an example
+Here's an example:
 
 .. code-block:: mpf-config
 
@@ -28,7 +28,6 @@ Here's an example
    #! coils:
    #!    c_eject:
    #!       number:
-
    ball_devices:
       bd_bunker:
          eject_coil: c_eject

@@ -14,8 +14,18 @@ The ``multiballs:`` section of your config is where you configure multiballs.
 Here's an example which contains several different multiball configs. (In the
 real world, you'd probably only have one multiball for each mode.)
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #! coils:
+   #!    c_eject:
+   #!       number:
+   #! ball_devices:
+   #!    bd_lock:
+   #!       eject_coil: c_eject
+   #!       ball_switches: s_ball1
    multiballs:
        add_a_ball:
            ball_count: 1

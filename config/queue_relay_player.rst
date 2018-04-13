@@ -15,7 +15,7 @@ event is posted, at which time the original queue event processing continues.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    queue_relay_player:
       game_ending:

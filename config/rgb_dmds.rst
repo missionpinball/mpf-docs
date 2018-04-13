@@ -24,7 +24,7 @@ content for this DMD.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    displays:
      dmd:

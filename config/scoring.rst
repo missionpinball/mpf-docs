@@ -18,8 +18,9 @@ player variable.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! config: mode1
    scoring:
       target_1_hit:
          score: 1000   # adds 1000 to the player's "score" variable

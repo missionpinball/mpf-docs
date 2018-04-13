@@ -21,7 +21,7 @@ when MPF events are received.  Additional information may be found in the
 
 Examples:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    playlist_player:
      play_attract_music:

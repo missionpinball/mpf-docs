@@ -17,7 +17,7 @@ only available if you're using MPF-MC for your media controller.)
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
     playlists:
         attract_music:

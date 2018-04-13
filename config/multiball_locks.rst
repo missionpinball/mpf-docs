@@ -37,12 +37,24 @@ trough.)
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
-    multiball_locks:
-        bunker:
-            balls_to_lock: 3
-            lock_devices: bd_bunker
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #! coils:
+   #!    c_eject:
+   #!       number:
+   ball_devices:
+      bd_bunker:
+         eject_coil: c_eject
+         ball_switches: s_ball1
+
+   ##! config: mode1
+   multiball_locks:
+      bunker:
+         balls_to_lock: 3
+         lock_devices: bd_bunker
 
 Each sub-entry under the ``multiball_locks:`` section is the name of the multiball
 lock ("bunker") in the example above. Then each named ball lock has the
