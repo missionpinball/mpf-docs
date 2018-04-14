@@ -226,5 +226,9 @@ attract mode starts again.
 
 game_mode:
 ~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-:doc:`/about/help_us_to_write_it`
+A mode can only access player state if ``game_mode`` is set to ``True``.
+You can set this to ``False`` to allow a mode to run outside of a game.
+On example for such a mode is the attract mode.
+Game modes are automatically stopped at the end of a game.
