@@ -17,15 +17,28 @@ based on a switch activation in a pinball machine.
 
 Here’s an example:
 
-::
+.. code-block:: mpf-config
 
-    autofire_coils:
-        left_sling:
-            coil: c_left_sling
-            switch: s_left_sling
-        right_sling:
-            coil: c_right_sling
-            switch: s_right_sling
+   switches:
+      s_left_sling:
+         number: 1
+      s_right_sling:
+         number: 2
+   coils:
+      c_left_sling:
+         number: 1
+         default_pulse_ms: 10ms
+      c_right_sling:
+         number: 2
+         default_pulse_ms: 10ms
+
+   autofire_coils:
+       left_sling:
+           coil: c_left_sling
+           switch: s_left_sling
+       right_sling:
+           coil: c_right_sling
+           switch: s_right_sling
 
 Note that autofire coils in MPF are 1-to-1 in terms of coils-to-
 switches, so a single entry is for one switch to control one coil. On

@@ -14,7 +14,7 @@ Here's an example from a Gottlieb Big Shot
 
 .. image:: /mechs/images/plunger_no_switch.jpg
 
-.. literalinclude:: /example_configs/ball_device/config/test_ball_device_no_plunger_switch.yaml
+.. literalinclude:: /mpf_examples/ball_device/config/test_ball_device_no_plunger_switch.yaml
    :language: yaml
 
 1. Configure your trough / ball drain

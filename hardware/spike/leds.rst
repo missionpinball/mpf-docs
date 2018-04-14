@@ -4,9 +4,7 @@ How to configure LEDs & GI (Stern SPIKE)
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/matrix_lights`                                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/config/leds`                                                          |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 | :doc:`/config/spike`                                                         |
 +------------------------------------------------------------------------------+
@@ -31,12 +29,7 @@ Finally, in SPIKE machines, you'll sometimes see several LEDs connected to a sin
 output, meaning that when you set the brightness of that output, you're setting the
 brightness for all those LEDs.
 
-MPF uses the ``matrix_lights:`` section of the machine config to define LEDs. (This
-is somewhat confusing because LEDs in a SPIKE system are certainly *not* matrix lights,
-but the LED system in MPF currently assumes that all LEDs are RGB LEDs, and that's not
-how Stern SPIKE systems work. So you configure your LEDs as matrix lights. (This will
-be fixed in a feature version of MPF.)
-
+MPF uses the ``lights:`` section of the machine config to define LEDs.
 Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LEDs
 in Stern SPIKE machines, though there are a few SPIKE-specific things to know.
 
@@ -44,7 +37,7 @@ number:
 -------
 
 The main thing you need to know about configuring LEDs (besides the fact that you
-add them to the ``matrix_lights:`` section of your config) is how the hardware
+add them to the ``lights:`` section of your config) is how the hardware
 numbering works.
 
 Pretty much you just look up the number in the manual for your machine and then
@@ -62,7 +55,7 @@ as ``number: 8-47``.
 
 .. code-block:: yaml
 
-   matrix_lights:
+   lights:
       backlight:
          number: 0-0  # 0-0 is the special address for the backlight
       start_button:
@@ -101,33 +94,23 @@ Here's an example from the Wrestlemania Pro manual:
 
 .. image:: /hardware/images/spike_rgb_light_table.jpg
 
-You'd enter the three channels as three separate lights in the ``matrix_lights:`` section
-of your machine config.
+You could enter the three channels as three separate lights in the ``lights:`` section
+of your machine config. However, that would complicate your light shows and lights
+would not show up nicely in the MPF monitor.
 
-Once you do that, add a ``leds:`` section to your config, and then create an entry for
-the RGB LED name you'd like to use to control refer to the RGB LED which you can then
-set to any color. Then under there, for the ``number:``, enter the three names from the
-``matrix_lights:`` section (in order red, green, blue), and add the entry ``platform: lights``.
-
+Therefore, you can define a RGB light with multiple channels.
 What this does is create a new virtual RGB LED which is a grouping of the three LED
-channels into the RGB LED. Then you can use it like any LED.
-
-Note that when you do this, you will control the RGB LEDs as "leds" in your configs,
-while you'll control the single color LEDs, the GI, and the backbox light as "lights".
-Is that weird? Yes. But it works.
+channels into the RGB LED. Then you can use it like any light.
 
 .. code-block:: yaml
 
-   matrix_lights:
-      left_lane_arrow_red:
-         number: 11-3
-      left_lane_arrow_green:
-         number: 11-4
-      left_lane_arrow_blue:
-         number: 11-5
-
-   leds:
-      left_lane_arrow:
-         number: left_lane_arrow_red, left_lane_arrow_green, left_lane_arrow_blue
-         platform: lights
+   lights:
+     left_lane_arrow_rgb:
+       channels:
+         red:
+           number: 1-10
+         green:
+           number: 1-11
+         blue:
+           number: 1-12
 

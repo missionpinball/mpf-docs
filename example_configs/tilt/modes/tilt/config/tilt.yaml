@@ -1,5 +1,0 @@
-#config_version=5
-
-tilt:
-  reset_warnings_events: tilt_reset_warnings
-  tilt_events: tilt_event

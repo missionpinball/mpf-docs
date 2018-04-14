@@ -16,7 +16,7 @@ that MPF will use.
 If you intend to use MPF with physical hardware, at a minimum you'll have a
 ``platform:`` and ``driverboards:`` section in your machine config, like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: fast
@@ -74,7 +74,7 @@ Device-specific defaults
 The following optional settings can be used to set default platforms for a
 specific class of devices. Note that ``virtual`` and ``smart_virtual`` are
 valid options for all of these, though they are not included in the lists
-below.
+below. Also note that those lists are not exhaustive.
 
 See the :doc:`/hardware/index` section for details of how to use and setup
 each of these different types of platforms and hardware.
@@ -128,8 +128,8 @@ Single value, type: ``string``.
 
 + ``i2c``
 
-leds:
-~~~~~
+lights:
+~~~~~~~
 Single value, type: ``string``. Default: ``default``
 
 + ``p_roc``
@@ -138,13 +138,7 @@ Single value, type: ``string``. Default: ``default``
 + ``fadecandy``
 + ``opp``
 + ``openpixel``
-
-matrix_lights:
-~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``default``
-
-+ ``fast``
-+ ``p_roc``
++ ``spike``
 
 rgb_dmd:
 ~~~~~~~~

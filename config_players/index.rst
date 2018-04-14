@@ -17,8 +17,8 @@ Some examples:
   ``sounds:`` setting for that step.
 * You show slides on a display via a config file in the ``slide_player:`` section, and you show slides from a show step
   via the ``slides:`` setting for that step.
-* You set the color of LEDs via a config file in the ``led_player:`` section, and you set colors from a show step
-  via the ``leds:`` setting for that step.
+* You set the color of LEDs via a config file in the ``light_player:`` section, and you set colors from a show step
+  via the ``lights:`` setting for that step.
 * etc.
 
 There are several different config players in MPF and MPF-MC. Click on each below for specific details of how to use

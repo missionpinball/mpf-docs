@@ -13,10 +13,10 @@ to *loop*, meaning this should could be used to flash *led1* on and off.)
 ::
 
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +1
-     leds:
+     lights:
        led1: off
    - time: +1
 
@@ -35,7 +35,7 @@ Step 1:
 ::
 
    - time: 0
-     leds:
+     lights:
        led1: red
 
 Step 2:
@@ -43,7 +43,7 @@ Step 2:
 ::
 
    - time: +1
-     leds:
+     lights:
        led1: off
 
 Step 3:
@@ -56,7 +56,7 @@ Step 3:
    space between the dash and the key name. ``-time: 0`` will not work and give
    you an error (since there is no space between ``-`` and ``time``.). Also,
    make sure the individual setting names are all aligned vertically.
-   (In the example above, *time:* and *leds:*) are left-aligned.
+   (In the example above, *time:* and *lights:*) are left-aligned.
 
 Setting step time
 -----------------
@@ -136,20 +136,20 @@ For example, the following to shows are identical:
 ::
 
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +1
-     leds:
+     lights:
        led1: off
    - time: +1
 
 ::
 
    - duration: 1
-     leds:
+     lights:
        led1: red
    - duration: 1
-     leds:
+     lights:
        led1: off
 
 You can also mix and match "time" and "duration" settings in the same show (and even in the same step). The only thing
@@ -168,14 +168,14 @@ steps, you'd still want to specify a "duration" for the final step, like this:
 ::
 
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +1
-     leds:
+     lights:
        led1: green
    - time: +1
      duration: 1
-     leds:
+     lights:
        led1: blue
 
 "Holding" the final step
@@ -188,19 +188,19 @@ that runs once (no loop) and flashes a light which then stays on. You could do t
 ::
 
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +250ms
-     leds:
+     lights:
        led1: off
    - time: +250ms
-     leds:
+     lights:
        led1: red
    - time: +250ms
-     leds:
+     lights:
        led1: off
    - time: +250ms
-     leds:
+     lights:
        led1: red
      duration: -1
 

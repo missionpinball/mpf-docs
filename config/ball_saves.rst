@@ -14,7 +14,7 @@ ball_saves:
 The ``ball_saves:`` section of your config is where you create `ball save devices`.
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
     ball_saves:
       default:

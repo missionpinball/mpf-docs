@@ -18,7 +18,7 @@ on, etc.
 
 Here's an example ``info_lights:`` section from a machine configuration file:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     info_lights:
         match_00:
@@ -66,8 +66,7 @@ each of them you map them to the name of the light.
 
 Then they pretty much just work automatically.
 
-Note that the the ``light:`` entry in each of these can be either a light or LED name,
-(but you use "light" regardless).
+Note that the the ``light:`` entry in each of these refers to a device in the :doc:`/config/lights` section.
 
 match_XX:
 ---------

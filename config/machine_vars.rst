@@ -16,7 +16,7 @@ specify the initial state of machine variables that are set when MPF starts up.
 
 Example:
 
-.. literalinclude:: /example_configs/player_vars/config/player_vars.yaml
+.. literalinclude:: /mpf_examples/player_vars/config/player_vars.yaml
    :language: yaml
 
 Settings

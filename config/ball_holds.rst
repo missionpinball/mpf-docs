@@ -21,12 +21,24 @@ to hold balls from ball-to-ball or between players.
 
 Here's an example
 
-::
+.. code-block:: mpf-config
 
-    ball_holds:
-        bunker:
-            balls_to_hold: 1
-            hold_devices: bd_bunker
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #! coils:
+   #!    c_eject:
+   #!       number:
+
+   ball_devices:
+      bd_bunker:
+         eject_coil: c_eject
+         ball_switches: s_ball1
+
+   ball_holds:
+      bunker:
+         balls_to_hold: 1
+         hold_devices: bd_bunker
 
 Each sub-entry under the ``ball_holds:`` section is the name of the logical ball
 hold ("bunker") in the example above. Then each named ball hold has the

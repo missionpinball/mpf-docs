@@ -19,7 +19,7 @@ setting up the credits mode, so be sure to read that for the details.
 This page just contains the settings which control how the credits
 mode behaves. Here’s an example config:
 
-::
+.. code-block:: mpf-config
 
     credits:
       max_credits: 12

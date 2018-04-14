@@ -19,7 +19,9 @@ individual achievement.
 
 Here's an example achievements section from Brooks & Dunn:
 
-::
+.. code-block:: mpf-config
+
+   ##! config: mode1
 
    achievements:
      world_tour:

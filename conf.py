@@ -9,11 +9,14 @@ import re
 import sys
 import tempfile
 import git
-import shutil
 import sphinx_rtd_theme
+from sphinx.highlighting import lexers
 
 sys.path.append(os.getcwd())
+from _doc_tools.mpf_lexer import MpfLexer
 from _doc_tools.build_events_reference_docs import EventDocParser
+from _doc_tools.build_examples import ExampleBuilder
+from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
 
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig']
@@ -39,6 +42,8 @@ exclude_patterns = ['_build',
                     '_not_updated_yet',
                     '_doc_tools',
                     '_src',
+                    '_mpf',
+                    '_mpf_installer',
                     'mpf_examples',
                     'mpfmc_examples']
 
@@ -161,8 +166,31 @@ except TypeError:
     context['github_version'] = None
 
 
+# Test all configs in case the dummy builder is used
+unit_test = ConfigSnippetTester()
+
+def process_source(app, doctree, fromdocname):
+    # only run on dummy builder
+    if app.builder.name != "dummy":
+        return
+
+    visitor = CodeBlockVisitor(doctree)
+    doctree.walk(visitor)
+    unit_test.add_tests(visitor.unit_tests)
+
+def run_tests(app, exception):
+    # only run on dummy builder
+    if app.builder.name != "dummy":
+        return
+
+    result = unit_test.run_tests()
+    sys.exit(result)
+
 def setup(app):
     app.add_stylesheet('mpf.css')
+
+    app.connect('doctree-resolved', process_source)
+    app.connect('build-finished', run_tests)
 
     # We need to do this in the setup() function since ReadTheDocs will append
     # the context dict to the end of conf.py which means we don't have the
@@ -249,3 +277,10 @@ setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 
 build_event_references()
+source_dirs = {"mpf_examples": "/mpf_examples", "mpfmc_examples": "/mpfmc_examples"}
+examples_root = 'examples'
+
+b = ExampleBuilder(source_dirs, examples_root)
+b.build()
+
+lexers['mpf-config'] = MpfLexer(startinline=True)

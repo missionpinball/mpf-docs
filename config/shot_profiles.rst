@@ -15,10 +15,11 @@ apply to your shots.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
+   ##! config: mode1
    shot_profiles:
-       default:
+       my_default_profile:
            states:
              - name: unlit
                show: "off"

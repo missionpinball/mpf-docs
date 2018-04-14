@@ -19,7 +19,7 @@ Here's an example which is the settings we including in the default
 default with every game you run.) Also, by default, the auditor saves its audits to ``/audits/audits.yaml``
 in the folder for each machine. (Check out the documentation on the Auditor to see a sample audit log file.)
 
-::
+.. code-block:: mpf-config
 
     auditor:
         save_events:

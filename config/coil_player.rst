@@ -21,7 +21,7 @@ coil actions in that show step.
 
 Example from a config file:
 
-::
+.. code-block:: mpf-config
 
    coil_player:
       some_event: coil_1

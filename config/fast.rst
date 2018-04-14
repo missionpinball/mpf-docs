@@ -15,15 +15,11 @@ Controller. Note that we have a how to guide which includes
 :doc:`all the FAST-specific settings </hardware/fast/index>` throughout your entire config file,
 so be sure to read that if you have FAST hardware.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     fast:
         ports: com3, com4, com5
-        config_number_format: hex
-        baud: 921600
-        watchdog: 1s
-        default_debounce_close: 10ms
-        default_debounce_open: 30ms
+
 
 Required settings
 -----------------

@@ -8,7 +8,7 @@ How to configure a FadeCandy RGB LED Controller
 +==============================================================================+
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
-| :doc:`/config/leds`                                                          |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 | :doc:`/config/fadecandy`                                                     |
 +------------------------------------------------------------------------------+
@@ -112,7 +112,7 @@ platform for your LEDs and to instead use the ``fadecandy`` platform, like this:
     hardware:
         platform: p_roc
         driverboards: pdb
-        leds: fadecandy
+        lights: fadecandy
 
 See the :doc:`/hardware/platform` guide for more information about setting
 device-specific default platforms versus overriding the platform for individual
@@ -141,7 +141,7 @@ Consider the following config:
 
 ::
 
-   leds:
+   lights:
       l_led0:
          number: 0  # first LED on connector 0
       l_led1:
@@ -157,7 +157,7 @@ If you have more than one FadeCandy board, you can specify the board number
 
 ::
 
-   leds:
+   lights:
       l_led0:
          number: 0  # first LED on connector 0 of the first board
       l_led1:

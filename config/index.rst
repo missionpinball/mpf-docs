@@ -125,6 +125,7 @@ indicated which type of config file it's valid in.
    servos: <servos>
    settings: <settings>
    sequences: <sequences>
+   sequence_shots: <sequence_shots>
    shot_groups: <shot_groups>
    shot_profiles: <shot_profiles>
    shots: <shots>

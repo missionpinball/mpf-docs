@@ -2,40 +2,21 @@ import filecmp
 import os
 import shutil
 
-source_config_paths = ['../../mpf/mpf/tests/machine_files',
-                       '../../mpf-mc/mpfmc/tests/machine_files']
-
-local_config_path = '../example_configs'
-local_config_path_rst = '/example_configs'
-examples_root = '../examples'
-examples_index = '../examples/index.rst'
-
-file_types = ['.yaml', '.py']
-paths_to_ignore = ['data']
-
 
 class ExampleBuilder(object):
 
-    def __init__(self):
+    def __init__(self, source_dirs, examples_root):
+        self.examples_root = examples_root
+        self.file_types = ['.yaml', '.py']
+        self.paths_to_ignore = ['data']
+
         # all of these are tuples of (full_path, partial_path)
-        self.source_files = list()  # all files in the source folders
-        self.existing_files = list()  # all files in the docs folders
-        self.removed_files = list()  # files in docs but not source
-        self.files_in_both = list()  # files in both (based on name)
-
-        # all of these are tuples of (full source path & file, full dest path)
-        self.changed_files = list()  # files that are in both but have changed content
-        self.new_files = list()  # files in source but not docs
-
         self.examples_sections = dict()
+        for source, rst_dir in source_dirs.items():
+            self.add_examples_sections(source, rst_dir)
 
-        self.create_source_file_list()
-        self.create_existing_file_list()
-        self.find_duplicates()
-        self.update_existing_files()
-
+    def build(self):
         # the following build the examples folder structure
-        self.create_examples_sections()
         self.empty_existing_examples_folder()
         self.write_files()
         self.write_index()
@@ -45,7 +26,7 @@ class ExampleBuilder(object):
             for path, _, files in os.walk(source_path):
                 for file in files:
 
-                    if os.path.splitext(file)[1] not in file_types:
+                    if os.path.splitext(file)[1] not in self.file_types:
                         continue
 
                     full_path = os.path.join(path, file)
@@ -58,10 +39,10 @@ class ExampleBuilder(object):
                     self.source_files.append((full_path, partial_path))
 
     def create_existing_file_list(self):
-        for path, _, files in os.walk(local_config_path):
+        for path, _, files in os.walk(source_config_paths[0]):
             for file in files:
 
-                if os.path.splitext(file)[1] not in file_types:
+                if os.path.splitext(file)[1] not in self.file_types:
                     continue
 
                 full_path = os.path.join(path, file)
@@ -73,7 +54,7 @@ class ExampleBuilder(object):
                 self.existing_files.append((full_path, partial_path))
 
     def _check_ignored(self, path):
-        for ignore_path in paths_to_ignore:
+        for ignore_path in self.paths_to_ignore:
             if '/{}/'.format(ignore_path) in path:
                 return True
 
@@ -142,23 +123,28 @@ class ExampleBuilder(object):
                 used_count += 1
 
     def empty_existing_examples_folder(self):
-        shutil.rmtree(examples_root)
-        os.makedirs(examples_root)
+        try:
+            shutil.rmtree(self.examples_root)
+        except FileNotFoundError:
+            pass
+        os.makedirs(self.examples_root)
 
-    def create_examples_sections(self):
-        for dir in os.listdir(local_config_path):
+    def add_examples_sections(self, path, rst_path):
+        for dir in os.listdir(path):
             if dir.startswith('.'):
                 continue
-            self.examples_sections[dir] = dict()
-            self.examples_sections[dir]['config'] = list()
-            self.examples_sections[dir]['modes'] = list()
-            self.examples_sections[dir]['shows'] = list()
+            if dir not in self.examples_sections:
+                self.examples_sections[dir] = dict()
+                self.examples_sections[dir]['config'] = list()
+                self.examples_sections[dir]['modes'] = list()
+                self.examples_sections[dir]['shows'] = list()
 
-        for full_path, dirs, files in os.walk(local_config_path):
-            rel_path = full_path.replace(local_config_path, '')
+        for full_path, dirs, files in os.walk(path):
+            rel_path = os.path.abspath(full_path).replace(os.path.abspath(os.path.join(path, "..")), '')
+            name_path = os.path.abspath(full_path).replace(os.path.abspath(path), '')
 
             if files:
-                folders = rel_path.lstrip('/').split('/')
+                folders = name_path.lstrip('/').split('/')
                 section = folders[0]
                 if len(folders) > 1:
                     folder = folders[1]
@@ -166,11 +152,11 @@ class ExampleBuilder(object):
                     if (section in self.examples_sections and
                             folder in self.examples_sections[section]):
                         for file in files:
-                            self.examples_sections[section][folder].append(
-                                os.path.join(rel_path, file))
+                            if os.path.splitext(file)[1] not in self.file_types:
+                                continue
 
-        # import pprint
-        # pprint.pprint(self.examples_sections)
+                            self.examples_sections[section][folder].append((
+                                os.path.join(rel_path, file), os.path.join(name_path, file)))
 
     def write_files(self):
         for section, folders in self.examples_sections.items():
@@ -195,17 +181,15 @@ examples here. They're just included to show different
 options. You wouldn't actually use more than one.
 '''
 
-            for file in folders['config']:
-
-                local_path = '/'.join(file.split('/')[2:])
+            for file, path_in_config in folders['config']:
 
                 content += '''
-.. literalinclude:: {}{}
-   :caption: `your_machine_folder/{} </_static{}>`_
+.. literalinclude:: {}
+   :caption: `your_machine_folder{} <{}>`_
    :language: yaml
-'''.format(local_config_path_rst, file, local_path, file)
-            os.makedirs(examples_root + '/' + section, exist_ok=True)
-            with open(examples_root + '/' + section + '/index.rst', 'w') as f:
+'''.format(file, path_in_config, file)
+            os.makedirs(self.examples_root + '/' + section, exist_ok=True)
+            with open(self.examples_root + '/' + section + '/index.rst', 'w') as f:
                 f.write(content)
 
             # Mode configs
@@ -225,17 +209,15 @@ Note that there are multiple mode config examples here. You might not
 necessarily use more than one in your machine.
 '''
 
-            for file in folders['modes']:
-
-                local_path = '/'.join(file.split('/')[2:])
+            for file, path_in_config in folders['modes']:
 
                 content += '''
-.. literalinclude:: {}{}
-   :caption: `your_machine_folder/{} </_static{}>`_
+.. literalinclude:: {}
+   :caption: `your_machine_folder{} <{}>`_
    :language: yaml
-'''.format(local_config_path_rst, file, local_path, file)
-            os.makedirs(examples_root + '/' + section, exist_ok=True)
-            with open(examples_root + '/' + section + '/index.rst', 'w') as f:
+'''.format(file, path_in_config, file)
+            os.makedirs(self.examples_root + '/' + section, exist_ok=True)
+            with open(self.examples_root + '/' + section + '/index.rst', 'w') as f:
                 f.write(content)
 
             # Show files
@@ -253,17 +235,15 @@ Here are some example show files that go along with the above config(s).
 Note that there are multiple shows here.
 '''
 
-            for file in folders['shows']:
-
-                local_path = '/'.join(file.split('/')[2:])
+            for file, path_in_config in folders['shows']:
 
                 content += '''
-.. literalinclude:: {}{}
-   :caption: `your_machine_folder/{} </_static{}>`_
+.. literalinclude:: {}
+   :caption: `your_machine_folder{} <{}>`_
    :language: yaml
-'''.format(local_config_path_rst, file, local_path, file)
-            os.makedirs(examples_root + '/' + section, exist_ok=True)
-            with open(examples_root + '/' + section + '/index.rst', 'w') as f:
+'''.format(file, path_in_config, file)
+            os.makedirs(self.examples_root + '/' + section, exist_ok=True)
+            with open(self.examples_root + '/' + section + '/index.rst', 'w') as f:
                 f.write(content)
 
     def write_index(self):
@@ -294,10 +274,13 @@ and/or show configs.
         for folder in sorted(self.examples_sections.keys()):
             index += '   {} </examples/{}/index>\n'.format(folder, folder)
 
-        with open(examples_root + '/index.rst', 'w') as f:
+        with open(self.examples_root + '/index.rst', 'w') as f:
             f.write(index)
 
 
-
 if __name__ == '__main__':
-    a = ExampleBuilder()
+    source_dirs = {"../mpf_examples": "/mpf_examples", "../mpfmc_examples": "/mpfmc_examples"}
+    examples_root = '../examples'
+
+    b = ExampleBuilder(source_dirs, examples_root)
+    b.build()

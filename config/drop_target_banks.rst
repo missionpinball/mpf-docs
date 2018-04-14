@@ -15,12 +15,46 @@ Once you've configured your individual drop targets, you group them
 together into banks via the ``drop_target_banks:`` section of your
 config file. Here's an example from *Judge Dredd*:
 
-::
+.. code-block:: mpf-config
 
-    drop_target_banks:
+   #! switches:
+   #!    drop_target_j:
+   #!       number:
+   #!    drop_target_u:
+   #!       number:
+   #!    drop_target_d:
+   #!       number:
+   #!    drop_target_g:
+   #!       number:
+   #!    drop_target_e:
+   #!       number:
+   #! coils:
+   #!    reset_drop_targets:
+   #!       number:
+   #!    trip_drop_target_d:
+   #!       number:
+   #! drop_targets:
+   #!     j:
+   #!         switch: drop_target_j
+   #!         reset_coil: reset_drop_targets
+   #!     u:
+   #!         switch: drop_target_u
+   #!         reset_coil: reset_drop_targets
+   #!     d:
+   #!         switch: drop_target_d
+   #!         reset_coil: reset_drop_targets
+   #!         knockdown_coil: trip_drop_target_d
+   #!     g:
+   #!         switch: drop_target_g
+   #!         reset_coil: reset_drop_targets
+   #!     e:
+   #!         switch: drop_target_e
+   #!         reset_coil: reset_drop_targets
+
+   drop_target_banks:
         judge:
             drop_targets: j, u, d, g, e
-            reset_coils: c_reset_drop_targets
+            reset_coils: reset_drop_targets
             reset_on_complete: 1s
 
 What about drop target banks with lights?

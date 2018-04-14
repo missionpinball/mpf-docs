@@ -16,18 +16,18 @@ show items to the config. For example:
    shows:
       flash_red:
          - time: 0
-           leds:
+           lights:
              led1: red
          - time: +1
-           leds:
+           lights:
              led1: off
          - time: + 1
       blue_green_cycle:
          - time: 0
-           leds:
+           lights:
              led2: blue
          - time: +1
-           leds:
+           lights:
              led2: green
          - time: + 1
 

@@ -34,33 +34,67 @@ options here.)
    to enable the flippers, and those are configured elsewhere. (See the How To
    guides for details.)
 
-::
+.. code-block:: mpf-config
 
-        flippers:
-            lower_left:
-                main_coil: c_flipper_lower_left_main
-                hold_coil: c_flipper_lower_left_hold
-                activation_switch: s_flipper_left
-                eos_switch: flipperLwL_EOS
-                label: Left Main Flipper
-            lower_right:
-                main_coil: c_flipper_lower_right_main
-                hold_coil: c_flipper_lower_right_hold
-                activation_switch: s_flipper_right
-                eos_switch: flipperLwR_EOS
-                label: Right Main Flipper
-            upper_left:
-                main_coil: flipperUpLMain
-                hold_coil: flipperUpLHold
-                activation_switch: flipperUpL
-                eos_switch: flipperUpL_EOS
-                label: Upper Left Flipper
-            upper_right:
-                main_coil: flipperUpRMain
-                hold_coil: flipperUpRHold
-                activation_switch: flipperUpR
-                eos_switch: flipperUpR_EOS
-                label: Upper Right Flipper
+   #! switches:
+   #!    s_flipper_left:
+   #!       number:
+   #!    flipperLwL_EOS:
+   #!       number:
+   #!    s_flipper_right:
+   #!       number:
+   #!    flipperLwR_EOS:
+   #!       number:
+   #!    flipperUpL:
+   #!       number:
+   #!    flipperUpL_EOS:
+   #!       number:
+   #!    flipperUpR:
+   #!       number:
+   #!    flipperUpR_EOS:
+   #!       number:
+   #! coils:
+   #!    c_flipper_lower_left_main:
+   #!       number:
+   #!    c_flipper_lower_left_hold:
+   #!       number:
+   #!    c_flipper_lower_right_main:
+   #!       number:
+   #!    c_flipper_lower_right_hold:
+   #!       number:
+   #!    flipperUpLMain:
+   #!       number:
+   #!    flipperUpLHold:
+   #!       number:
+   #!    flipperUpRMain:
+   #!       number:
+   #!    flipperUpRHold:
+   #!       number:
+   flippers:
+      lower_left:
+          main_coil: c_flipper_lower_left_main
+          hold_coil: c_flipper_lower_left_hold
+          activation_switch: s_flipper_left
+          eos_switch: flipperLwL_EOS
+          label: Left Main Flipper
+      lower_right:
+          main_coil: c_flipper_lower_right_main
+          hold_coil: c_flipper_lower_right_hold
+          activation_switch: s_flipper_right
+          eos_switch: flipperLwR_EOS
+          label: Right Main Flipper
+      upper_left:
+          main_coil: flipperUpLMain
+          hold_coil: flipperUpLHold
+          activation_switch: flipperUpL
+          eos_switch: flipperUpL_EOS
+          label: Upper Left Flipper
+      upper_right:
+          main_coil: flipperUpRMain
+          hold_coil: flipperUpRHold
+          activation_switch: flipperUpR
+          eos_switch: flipperUpR_EOS
+          label: Upper Right Flipper
 
 Required settings
 -----------------

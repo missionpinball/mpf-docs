@@ -17,7 +17,7 @@ when the game starts.
 
 Example:
 
-.. literalinclude:: /example_configs/player_vars/config/player_vars.yaml
+.. literalinclude:: /mpf_examples/player_vars/config/player_vars.yaml
    :language: yaml
 
 Settings

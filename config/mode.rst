@@ -22,12 +22,12 @@ config and holds the settings for that specific mode.)
 
 Let's take a look at an example ``mode:`` section from a multiball mode:
 
-::
+.. code-block:: mpf-config
 
+    ##! config: mode1
     mode:
         start_events: ball_starting
         stop_events: timer_mode_timer_complete, shot_right_ramp
-        code: skillshot.SkillShot
         priority: 300
 
 Optional settings
@@ -154,16 +154,16 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 The default behavior for modes in MPF is that they're automatically
 stopped when the ball ends. Some modes (like the built-in *game* and
 *credit* modes) need to stay running even when the ball ends, so to
-support that you can add ``stop_on_ball_end: false``.  
+support that you can add ``stop_on_ball_end: false``.
 
-Another use of this option is to retain each player's progress towards 
+Another use of this option is to retain each player's progress towards
 the mode's completion after draining a ball; allowing the player
-to start where they left off in the mode on the next ball. To retain 
-the mode, you can use ``stop_on_ball_end: false`` to keep the state 
-of the mode for each player between balls.  
+to start where they left off in the mode on the next ball. To retain
+the mode, you can use ``stop_on_ball_end: false`` to keep the state
+of the mode for each player between balls.
 
-However, it is very likely that a mode will be left unfinished (open) 
-after the final ball, causing MPF to shutdown unexpectedly.  You will 
+However, it is very likely that a mode will be left unfinished (open)
+after the final ball, causing MPF to shutdown unexpectedly.  You will
 get an error similar to this:
 
 ::
@@ -173,8 +173,9 @@ get an error similar to this:
 To avoid this
 unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
 
-::
+.. code-block:: mpf-config
 
+   ##! config: mode1
    mode:
       start_events: mode_terra_2_start
       stop_events: mode_complete, game_ending
@@ -225,5 +226,9 @@ attract mode starts again.
 
 game_mode:
 ~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-:doc:`/about/help_us_to_write_it`
+A mode can only access player state if ``game_mode`` is set to ``True``.
+You can set this to ``False`` to allow a mode to run outside of a game.
+On example for such a mode is the attract mode.
+Game modes are automatically stopped at the end of a game.

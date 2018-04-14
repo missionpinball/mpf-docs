@@ -21,7 +21,7 @@ This section is particularly useful with the :doc:`/config/queue_relay_player`.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    queue_event_player:
       some_event:

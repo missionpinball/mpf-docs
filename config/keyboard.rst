@@ -21,7 +21,7 @@ and for posting events.
 
 Here's an example of it in action:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     keyboard:
         z:

@@ -48,10 +48,11 @@ But since you can enter more than one event for each step, you could think of
 those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND THEN* Step 2 (event3)
 *AND THEN* Step 3 (event4 *OR* event5), like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   logic_blocks:
-      sequences:
+   ##! config: mode1
+   sequences:
+      my_sequence:
          events:
             - event1, event2
             - event3
@@ -67,24 +68,24 @@ together to form complex logic.)
 
 For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   logic_blocks:
-      sequences:
-         logic_block_1:
-            events:
-               - event1
-               - event2
-               - event3
-               - event4
-               - event5
-            events_when_complete: logic_block_1_done
-         logic_block_2:
-            events:
-               - event1, event2, event3
-               - event4
-               - event5
-            events_when_complete: logic_block_2_done
+   ##! config: mode1
+   sequences:
+      logic_block_1:
+         events:
+            - event1
+            - event2
+            - event3
+            - event4
+            - event5
+         events_when_complete: logic_block_1_done
+      logic_block_2:
+         events:
+            - event1, event2, event3
+            - event4
+            - event5
+         events_when_complete: logic_block_2_done
 
 In the example above, there are two logic blocks. The first one just has five
 steps that need to complete (in 1-2-3-4-5 exact order since we're dealing with
@@ -99,6 +100,6 @@ So in the second one, you could get event2, event4, then event5 posted, for exam
 and that will lead to *logic_block_2_done* being posted.
 
 Note that you can have two logic blocks with the same events at the same time, and
-MPF will track the state of each logic block separately. 
+MPF will track the state of each logic block separately.
 
 .. include:: /game_logic/logic_blocks/common.rst

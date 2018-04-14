@@ -1,8 +1,6 @@
 Tutorial step 16: Create an attract mode display show
 =====================================================
 
-.. include:: /not_updated_yet.rst
-
 Now that we have a running game and some basic scoring, let's continue
 to make the display more useful by creating a slide show that plays during the attract mode
 and cycles through a few different slides. ("GAME OVER", "PRESS START", ... that sort of thing.)
@@ -133,7 +131,7 @@ In addition to the ``duration:`` setting in each step, also notice that each ste
 identical to the ``slide_player:`` section in a config file.
 
 So "slide_player: in config file" = "slides: in a show". (In the future you'll see this
-applies to other "players" like led_player: in a config file is the same as leds: in a show,
+applies to other "players" like light_player: in a config file is the same as lights: in a show,
 sound_player: in a config file is the same as sounds: in a show, etc.
 
 Then in the ``slides:`` section of each step, we've added a slide name. These slides are named
