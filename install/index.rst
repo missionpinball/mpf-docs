@@ -44,4 +44,5 @@ Migrating from previous versions of MPF
    :maxdepth: 1
 
    migrating
+   migrate4to5
 
