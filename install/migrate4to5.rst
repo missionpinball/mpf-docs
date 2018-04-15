@@ -7,7 +7,7 @@ instructions.
 
 Here are the steps:
 
-#. Update the config version number
+1. Update the config version number
 -----------------------------------
 
 The very first line in all your machine config files should be the following:
@@ -23,14 +23,14 @@ Change it in every config file to version 5:
    #config_version=5
 
 
-#. Rename physical dmd sections
+2. Rename physical dmd sections
 -------------------------------
 
 The ``physical_dmds:`` and ``physical_rgb_dmds:`` config sections have been renamed to ``dmds:`` and ``rgb_dmds:``.
 If you use these sections, rename them as specified.
 
 
-#. Event changes for game and mode lifecycle
+3. Event changes for game and mode lifecycle
 --------------------------------------------
 
 Several changes were made to game and mode events to be more consistent and allow more flexibility.
@@ -53,15 +53,15 @@ Several changes were made to game and mode events to be more consistent and allo
   the new method.
 
 
-#. Display refactor changes
+4. Display refactor changes
 ---------------------------
 
 The way graphics are displayed in the media controller has been changed.
 
 TODO: Finish this document
 
-#. Logic blocks
----------------
+5. Move logic blocks one level up
+---------------------------------
 
 Logic blocks have been moved one level. Up previously you would have this in your config:
 
@@ -80,7 +80,7 @@ In 0.50 just use:
       your_counter:
         count_events: count_it_up
 
-#. Renamed coil settings
+6. Renamed coil settings
 ------------------------
 
 ``pulse_ms``, ``pulse_power`` and ``hold_power`` have been split into two settings each.
@@ -109,7 +109,7 @@ Your coil could look like this in 0.50:
 
 See :doc:`coils </config/coils>` for details.
 
-#. Matrix_lights, leds, GIs, and flashers become lights
+7. Matrix_lights, leds, GIs, and flashers become lights
 -------------------------------------------------------
 
 All types of lights have been unified in MPF 0.50 and are configured in the ``lights`` section.

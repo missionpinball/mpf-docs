@@ -1,7 +1,7 @@
 Flasher player
 ==============
 
-The *flasher player* is a :doc:`config player </config_players/index>` that's used to flash flashers.
+The *flasher player* is a :doc:`config player </config_players/index>` that's used to flash lights.
 
 Usage in config files
 ---------------------
