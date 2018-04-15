@@ -9,5 +9,11 @@ This MPF documentation was written by:
 * Isaac Csandl (isaac.csandl@me.com)
 * Jeremy Edwards (pinman2020@gmail.com)
 * Jan Kantert (jan-mission-pinball@kantert.net)
+* Ryan Richardson
+* Anythony Winkle
+* Dan Howard
+* Mike O'Rourke
+* Chris Benn
+* Tim Wendt
 
 Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!
