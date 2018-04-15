@@ -13,8 +13,37 @@ You can group shots together via the ``shot_groups:`` section of your config fil
 
 For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    lane_l:
+    #!       number:
+    #!    lane_a:
+    #!       number:
+    #!    lane_n:
+    #!       number:
+    #!    lane_e:
+    #!       number:
+    #!    upper_standup:
+    #!       number:
+    ##! config: mode1
+    #! shots:
+    #!     lane_l:
+    #!         switch: lane_l
+    #!         show_tokens:
+    #!             light: lane_l
+    #!     lane_a:
+    #!         switch: lane_a
+    #!         show_tokens:
+    #!             light: lane_a
+    #!     lane_n:
+    #!         switch: lane_n
+    #!         show_tokens:
+    #!             light: lane_n
+    #!     lane_e:
+    #!         switch: lane_e
+    #!         show_tokens:
+    #!             light: lane_e
     shot_groups:
         upper_lanes:
             shots: lane_l, lane_a, lane_n, lane_e
