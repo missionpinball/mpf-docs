@@ -19,6 +19,15 @@ hardware platform.
    ``lights`` configuration. If you are using 0.33 or earlier, please see
    :doc:`/config/matrix_lights` for incandescent bulbs and :doc:`/config/leds` for LEDs.
 
+Here is a minimal example:
+
+.. code-block:: mpf-config
+
+  lights:
+    my_led:
+      number: 7
+
+
 Required settings
 -----------------
 

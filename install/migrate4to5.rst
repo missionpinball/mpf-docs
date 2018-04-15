@@ -7,7 +7,7 @@ instructions.
 
 Here are the steps:
 
-1. Update the config version number
+#. Update the config version number
 -----------------------------------
 
 The very first line in all your machine config files should be the following:
@@ -23,14 +23,14 @@ Change it in every config file to version 5:
    #config_version=5
 
 
-2. Rename physical dmd sections
+#. Rename physical dmd sections
 -------------------------------
 
 The ``physical_dmds:`` and ``physical_rgb_dmds:`` config sections have been renamed to ``dmds:`` and ``rgb_dmds:``.
 If you use these sections, rename them as specified.
 
 
-3. Event changes for game and mode lifecycle
+#. Event changes for game and mode lifecycle
 --------------------------------------------
 
 Several changes were made to game and mode events to be more consistent and allow more flexibility.
@@ -53,10 +53,86 @@ Several changes were made to game and mode events to be more consistent and allo
   the new method.
 
 
-4. Display refactor changes
+#. Display refactor changes
 ---------------------------
 
 The way graphics are displayed in the media controller has been changed.
 
 TODO: Finish this document
+
+#. Logic blocks
+---------------
+
+Logic blocks have been moved one level. Up previously you would have this in your config:
+
+.. code-block:: yaml
+
+    logic_blocks:
+      counters:
+        your_counter:
+          count_events: count_it_up
+
+In 0.50 just use:
+
+.. code-block:: mpf-config
+
+    counters:
+      your_counter:
+        count_events: count_it_up
+
+#. Renamed coil settings
+------------------------
+
+``pulse_ms``, ``pulse_power`` and ``hold_power`` have been split into two settings each.
+Rename ``pulse_ms`` into ``default_pulse_ms`` which very much behaves the same.
+This setting will be used if the coil is pulsed without any further settings.
+Furthermore, you may configure ``max_pulse_ms`` to limit the pulse length to prevent damage on your coils.
+
+``hold_power`` had a scale from 1-8 which was kind of arbitrary.
+We changed that to 0.0 to 1.0 (for 0% to 100% power) in 0.50.
+Therefore, if you used ``hold_power: 2`` that would become ``default_hold_power: 0.25`` (2 -> 2/8 = 0.25).
+Furthermore, you can set ``max_hold_power`` to limit the maximum hold power (defaults to ``default_hold_power`` if you
+do not specify it).
+The same applies to ``pulse_power`` which becomes ``default_pulse_power`` and ``max_pulse_power``.
+
+Your coil could look like this in 0.50:
+
+.. code-block:: mpf-config
+
+    coils:
+        flipper_right_main:
+            number: A0-B0-0
+            default_pulse_ms: 10
+            max_pulse_ms: 100
+            default_pulse_power: 0.25
+            max_pulse_power: 0.5
+
+See :doc:`coils </config/coils>` for details.
+
+#. Matrix_lights, leds, GIs, and flashers become lights
+-------------------------------------------------------
+
+All types of lights have been unified in MPF 0.50 and are configured in the ``lights`` section.
+Since some platforms support differnt types of lights with the same number we added a ``subtype`` setting which can be
+either ``matrix``, ``gi``, ``led`` or ``flasher``.
+
+Lights look like this in MPF 0.50:
+
+.. code-block:: mpf-config
+
+    lights:
+      gi_01:
+         number: G01
+         subtype: gi
+      led_01:
+         number: 7
+         subtype: led
+      matrix_light_01:
+         number: L66
+         subtype: matrix
+
+You can use ``light_player`` for all types of lights. ``led_player`` and ``gi_player`` consequently have been removed.
+Furthermore you can use ``flasher_player`` on all types lights (e.g. to flash the whole playfield with all GIs).
+
+See :doc:`lights </config/lights>` for details.
 
