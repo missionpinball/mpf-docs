@@ -12,25 +12,25 @@ than once without changing state after the first time). This event works well to
 shows, lights, slides, and to restore them on the next ball. However it should not be used
 for scoring (to handle an event when the counter changes, consider the *(name)_hit* event instead).
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-    logic_blocks:
-        counters:
-            my_counter:
-                count_events: my_count_event
-                starting_count: 0
-                count_complete_value: 3
+  ##! mode: my_mode
+  counters:
+      my_counter:
+          count_events: my_count_event
+          starting_count: 0
+          count_complete_value: 3
 
-    show_player:
-      logicblock_my_counter_updated{value == 0}:
-        my_show_initial:
-          key: my_counter_show  # this is to remove the previous show from the same player
-      logicblock_my_counter_updated{value == 1}:
-        my_show_first_hit:
-          key: my_counter_show  # this is to remove the previous show from the same player
-      logicblock_my_counter_updated{value >= 2}:
-        my_show_final:
-          key: my_counter_show  # this is to remove the previous show from the same player
+  show_player:
+   logicblock_my_counter_updated{value == 0}:
+     my_show_initial:
+       key: my_counter_show  # this is to remove the previous show from the same player
+   logicblock_my_counter_updated{value == 1}:
+     my_show_first_hit:
+       key: my_counter_show  # this is to remove the previous show from the same player
+   logicblock_my_counter_updated{value >= 2}:
+     my_show_final:
+       key: my_counter_show  # this is to remove the previous show from the same player
 
 
 Every time ``my_counter`` is updated (or restored) it will post
@@ -48,8 +48,9 @@ by another event, using :doc:`Conditional Events </events/overview/conditional>`
 If the logic_block has a persistent state (``persist_state: true``), you can make
 a condition based on the player variable for the block:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   show_player:
     some_other_event{current_player.my_counter_state==0}: my_show_initial
     some_other_event{current_player.my_counter_state==1}: my_show_once_hit
@@ -58,8 +59,9 @@ a condition based on the player variable for the block:
 If the logic_block is not persistent (``persist_state: false``), you can access the
 value directly from the block device:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   show_player:
     some_other_event{devices.counters.my_counter.value==0}: my_show_initial
     some_other_event{devices.counters.my_counter.value==1}: my_show_once_hit

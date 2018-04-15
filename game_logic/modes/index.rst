@@ -73,9 +73,10 @@ Again, anything that's specified in a mode's configuration file is only active
 while that mode is active. So if you have a mode called "multiball" with the
 following entry in that mode's config file:
 
-::
+.. code-block:: mpf-config
 
-    scoring:
+   ##! mode: my_mode
+   scoring:
         right_ramp_hit:
             score: 50000
 

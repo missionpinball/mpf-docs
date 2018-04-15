@@ -86,8 +86,9 @@ Most modern pinball machines have bonus scores based on multiple things.
 Now go back into your bonus mode folder open up ``bonus.yaml`` config file
 (which should be empty at this point), and enter a basic config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: bonus
    #config_version=5
 
    mode_settings:

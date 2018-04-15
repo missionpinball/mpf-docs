@@ -29,8 +29,9 @@ down.
 Here's an example of a counter you could use to track progress towards super
 jets:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   counters:
       super_jets:
           count_events: sw_pop

@@ -28,8 +28,9 @@ For example, let's say you had a mode where you wanted three shots to be hit,
 in any order, and when they were all hit, you lit another shot. You'd use
 an accrual logic block like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   accruals:
      name_of_my_logic_block:
         events:

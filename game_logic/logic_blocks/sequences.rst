@@ -20,8 +20,9 @@ listed.
 An example might be if you have to hit four shots in a specific order to complete
 a mode, like this example from the World Tour mode of *Brooks 'n Dunn*:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   sequences:
       finish_world_tour:
          events:
@@ -29,7 +30,7 @@ a mode, like this example from the World Tour mode of *Brooks 'n Dunn*:
            - shot_south_america_hit
            - shot_europe_hit
            - shot_australia_hit
-        events_when_complete: wt_done
+         events_when_complete: wt_done
 
 The example above has a single sequence logic block called "finish_world_tour". When
 it's enabled, it starts watching for the event *shot_north_america_hit* to be posted.
