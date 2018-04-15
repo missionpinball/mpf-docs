@@ -14,7 +14,7 @@ show_player:
 
 The ``show_player:`` section of your config is where you start, stop, pause, (etc.) shows. Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event: your_show_name
@@ -30,7 +30,7 @@ However there are times when you might want to specify additional options for a 
 playback speed, or configure how it repeats. In that case, instead of putting the show name on the same line as the
 event, you can put the show name on a new line under the event, and then add additional settings under it, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -47,7 +47,7 @@ once). Same for the other show above, which will play with a ``speed: 2`` and ``
 
 You can also mix-and-match formats, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event: your_show_name
@@ -99,7 +99,7 @@ done. Note that you can only use this if the event that starts the show is a
 For example, the mode stopping events are queue events. So take a look at the
 following config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       mode_my_mode_stopping:
@@ -155,7 +155,7 @@ a series of events instead of a show that auto plays.
 
 For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -194,7 +194,7 @@ Read what show tokens are :doc:`here </shows/tokens>`.
 
 For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event:

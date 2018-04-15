@@ -43,6 +43,7 @@ exclude_patterns = ['_build',
                     '_doc_tools',
                     '_src',
                     '_mpf',
+                    '_mpf_mc',
                     '_mpf_installer',
                     'mpf_examples',
                     'mpfmc_examples']

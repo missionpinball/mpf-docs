@@ -25,7 +25,7 @@ reference later.
 Generically-speaking, there are two formats you can use for slide_player
 entries: "express" and "full" configs. Express configs will look like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slide_player:
       event1: slide1
@@ -58,7 +58,7 @@ For example, the following config will show *slide_1* when *some_event* is poste
 will also override the default settings and show the slide on the display target called
 *display1* and at a priority that's 200 higher than the base priority.
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       some_event:
@@ -81,7 +81,7 @@ Note that slide names are global in MPF, so if you already had a slide defined c
 *slide_1* and you redefine it in your slide player like the example below, this new slide
 will become *slide_1* and the old one will be gone.
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       some_event:
@@ -97,7 +97,7 @@ will become *slide_1* and the old one will be gone.
 You can also mix-and-match defining a slide in the slide player as well as adjusting
 properties of how the slide is shown. Just add multiple settings, like this:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       some_event:
@@ -115,8 +115,9 @@ properties of how the slide is shown. Just add multiple settings, like this:
 Remember that these slide player settings can also be used in show steps (in a ``slides:``
 section). Any of the examples above apply, you just don't include the event name, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: show1
    #show_version=5
 
    - time: 0
@@ -171,7 +172,7 @@ Single value, type: one of the following options: play, remove. Default: ``play`
 
 For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       remove_slide_1:          # event name
@@ -180,7 +181,7 @@ For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
 You can also specify a transition for the removal, like this:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       remove_slide_1:          # event name
