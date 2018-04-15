@@ -17,7 +17,7 @@ Defining slides in the slides: section of a config file
 
 The main way to do it is in the "slides" section of a config file, like this:
 
-::
+.. code-block:: mpf-config
 
     slides:
         some_slide:
@@ -90,7 +90,7 @@ documentation for the slide_player is in the
 
 You can define slides in the slide_player like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         some_event:
@@ -122,11 +122,12 @@ configuration section of a config file).
 So here's an example of a slide created within a show for use within a specific
 step in that show:
 
-::
+.. code-block:: mpf-config
 
-    # show_version=5
-    - time: 0
-      slides:
+   ##! show: my_show
+   # show_version=5
+   - time: 0
+     slides:
         my_show_slide_1:
         - type: text
           text: MISSION PINBALL
