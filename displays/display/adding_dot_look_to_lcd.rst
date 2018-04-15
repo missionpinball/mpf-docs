@@ -8,7 +8,7 @@ like this:
 
 The final sections of the machine config to make this happen are here:
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:
@@ -63,7 +63,7 @@ The first is the "window", which is the display that represents your on-screen
 window. This should be set to the size of the screen window at the native
 resolution of the monitor or LCD where it's being shown.
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:
@@ -111,7 +111,7 @@ that will be shown in the window. In this case, the slide will only have a
 single widget, and that widget will be the Color DMD widget which will be used
 render the virtual DMD into the window.
 
-::
+.. code-block:: mpf-config
 
     slides:
       window_slide:
@@ -142,8 +142,9 @@ will be ever changing and will reflect what's happening in your machine.
 
 We're calling our first slide "dmd_slide":
 
-::
+.. code-block:: mpf-config
 
+   slides:
       dmd_slide:
         - type: text
           text: DOTS!
@@ -171,7 +172,7 @@ we just created to be shown. In this example, we're using the
 :doc:`init_done event </events/init_done>` since that's the event that's posted
 by the media controller once it's been initialized and ready to go.
 
-::
+.. code-block:: mpf-config
 
     slide_player:
       init_done:

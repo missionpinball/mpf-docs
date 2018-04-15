@@ -45,7 +45,7 @@ DMD. (Also it doesn't matter what color it is.)
 The first part of the config file above is where you create your logical
 displays like we covered in the :doc:`index` section.
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:
@@ -78,7 +78,7 @@ Next, we have a ``window:`` section which holds the settings for the actual
 on screen window itself. In this case we're just configuring it to be 800x600,
 with a window title of "Mission Pinball Framework".
 
-::
+.. code-block:: mpf-config
 
     window:
       width: 600
@@ -110,7 +110,7 @@ one already), and then create an entry for the slide that we want to show. In
 this case, we've decided to name that slide "window_slide_1". (Of course you can
 call this slide whatever you want.)
 
-::
+.. code-block:: mpf-config
 
     slides:
       window_slide_1:
@@ -123,12 +123,16 @@ The first widget will be a :doc:`DMD widget </displays/widgets/dmd/index>`
 which is a widget which renders a logical display onto a slide in a way that
 makes it look like a DMD:
 
-::
+.. code-block:: mpf-config
 
-      - type: dmd
-        width: 512
-        height: 128
-        pixel_color: ff5500
+   slides:
+      window_slide_1:
+         - type: display
+           effects:
+            - type: dmd
+              pixel_color: ff5500
+           width: 512
+           height: 128
 
 Again, there are lots of options here. Note that we're adding a ``height:`` and
 ``width:`` of 512x128. This is the on-screen pixel size of the DMD as it will
@@ -157,16 +161,24 @@ Next, we also added two more widgets to this slide—a text widget with the
 title of the machine, and a gray rectangle that's slightly larger than the DMD
 to give it a nice border.
 
-::
+.. code-block:: mpf-config
 
-      - type: text
-        text: MISSION PINBALL FRAMEWORK
-        anchor_y: top
-        y: top-3
-        font_size: 30
-      - type: rectangle
-        width: 514
-        height: 130
+   slides:
+      window_slide_1:
+         - type: display
+           effects:
+            - type: dmd
+              pixel_color: ff5500
+           width: 512
+           height: 128
+         - type: text
+           text: MISSION PINBALL FRAMEWORK
+           anchor_y: top
+           y: top-3
+           font_size: 30
+         - type: rectangle
+           width: 514
+           height: 130
 
 5. Configure the slide to show when MPF starts
 ----------------------------------------------
@@ -175,7 +187,7 @@ Now we have a nice slide with the virtual DMD on it, but if you run MPF, you
 still won't see it because we didn't tell MPF to show that slide in the window.
 So that's what we're doing here:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
       init_done:
