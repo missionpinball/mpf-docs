@@ -12,16 +12,15 @@ on other devices such as the Raspberry PI. Let us know if you need that.
 
 Connect the controller to the I2C port and add the following config section:
 
-::
+.. code-block:: mpf-config
 
    hardware:
-     servo_controllers: pololu_maestro
-     [...]
-     
-   servo_controller:
+     servo_controllers: i2c_servo_controller
+
+   servo_controllers:
      address: 0x40
-     
-     
+
+
 0x40 is actually the default I2C address for this chip but it might be different
 for some chips.
 
@@ -29,7 +28,7 @@ for some chips.
 ------------------
 Add your servos to config:
 
-::
+.. code-block:: mpf-config
 
    servos:
      servo1:

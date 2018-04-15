@@ -94,7 +94,7 @@ be able to connect to the LISY board.
 
 If you want to use the serial port, add/update the following sections in your machine config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
   hardware:
     platform: lisy
@@ -107,7 +107,7 @@ If you want to use the serial port, add/update the following sections in your ma
 Alternatively, if you want to connect using WiFi or Ethernet, add/update the following sections
 in your machine config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
   hardware:
     platform: lisy

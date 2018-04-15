@@ -30,7 +30,7 @@ controller: by channel & output number, or directly with the FAST
 hardware number. It's more straightforward to configure them by
 channel and output, like this:
 
-::
+.. code-block:: mpf-config
 
    lights:
        l_led0:

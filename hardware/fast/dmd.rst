@@ -42,7 +42,7 @@ physical DMD.)
 To do this, create a section in your machine-wide config called
 ``dmds:``, and then pick a name for the DMD, like this:
 
-::
+.. code-block:: mpf-config
 
     dmds:
       my_dmd:
@@ -102,11 +102,13 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-::
+.. code-block:: mpf-config
 
     hardware:
       platform: fast
       driverboards: fast
+
+    fast:
       ports: com3, com4, com5  # be sure to change this to your actual ports
 
     displays:
@@ -129,10 +131,12 @@ on the window and slide settings used in this machine config.
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: dmd  # this widget shows the DMD content in this slide too
+      - type: display
+        effects:
+         - type: dmd
+           pixel_color: ff5500
         width: 512
-        height: 128
-        pixel_color: ff5500  # makes on-screen pixels the classic DMD orange
+        height: 12
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top

@@ -14,14 +14,14 @@ determine whether the machine is level).
 To use the accelerometer on the P3-ROC, add it to your machine-wide config file
 like this:
 
-::
+.. code-block:: mpf-config
 
    accelerometers:
        p3_roc_accelerometer:
-           number: 1
+           platform_settings:
 
 The name (which is "p3_roc_accelerometer" in the example above) doesn't really
-matter, but it has to be ``number: 1``.
+matter.
 
 Other than that, use it like you would any accelerometer in MPF, by following
 the docs and guides in the :doc:`/mechs/accelerometers/index` section of the

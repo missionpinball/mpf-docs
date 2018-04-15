@@ -29,7 +29,7 @@ number (A=0, B=1), then the switch number (0-7).
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -54,7 +54,7 @@ Valid options are ``normal``, ``quick``, and ``auto``.
 To disable debouncing for a switch, add ``debounce: quick`` to the switch
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -64,7 +64,7 @@ config, like this:
 To force debouncing to always be used (which is also the default on the P-ROC,
 so not really needed), configure it like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:

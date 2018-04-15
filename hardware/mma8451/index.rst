@@ -6,7 +6,7 @@ Available on adafruit (and others): https://learn.adafruit.com/adafruit-mma8451-
 
 Configure using:
 
-::
+.. code-block:: mpf-config
 
    hardware:
      accelerometers: mma8451
@@ -16,7 +16,8 @@ Configure using:
        level_x: 0
        level_y: 0
        level_z: 1
-       number: 1-29
+       platform_settings:
+         number: 1-29
 
 
 This will configure an MMA8451 on I2C bus 1 with address 0x1D (29 decimal which

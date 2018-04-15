@@ -22,14 +22,14 @@ configure this.
 If you want to use this with a P3-ROC, you can configure it in your machine
 config it similar to this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
        driverboards: pdb
        platform: p3_roc
        servo_controllers: i2c_servo_controller
 
-   servo_controller:
+   servo_controllers:
        address: 0x40
 
    servos:

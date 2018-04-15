@@ -40,7 +40,7 @@ seconds. It will only happen the first time you plug in the hardware.)
 To use MPF with a FAST, you need to configure your platform as ``fast`` in your
 machine-wide config file, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: fast
@@ -116,16 +116,16 @@ For example, the four FAST ports might be something like on MAC:
    /dev/tty.usbserial-141B
    /dev/tty.usbserial-141C
    /dev/tty.usbserial-141D
-  
+
 On linux it would look like this:
-  
+
 ::
 
    /dev/ttyUSB0
    /dev/ttyUSB1
    /dev/ttyUSB2
    /dev/ttyUSB3
-   
+
 If you have multiple FAST devices they will enumerate more or less randomly
 dependent on the order they are plugged in. Unfortunately, the USB devices
 do not contain any serial number. However, we can pin them based on the USB

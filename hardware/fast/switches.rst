@@ -26,7 +26,7 @@ chain, then the dash, then the switch input number. Note that the position
 number starts with zero, so the first IO board in the chain is 0, the second
 is 1, etc.
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -72,7 +72,7 @@ is ``10ms`` for both the debounce open and debounce closed times, and the
 You can change any of these in the ``fast:`` section of your machine-wide
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    fast:
       default_quick_debounce_open: 2ms
@@ -91,13 +91,14 @@ debounce closed settings on a per-switch basis. To do that, just add a
 ``debounce_open:`` and/or ``debounce_close:`` setting to an individual switch,
 like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
          number: 1-0
-         debounce_open: 5ms
-         debounce_close: 20ms
+         platform_settings:
+            debounce_open: 5ms
+            debounce_close: 20ms
       some_other_switch:
          number: 3-24
 

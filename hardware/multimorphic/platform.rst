@@ -21,14 +21,14 @@ In your machine-wide config file, set the platform.
 
 For the P-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
 
 For the P3-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p3_roc
@@ -42,7 +42,7 @@ PD-16 or PD-8x8), then you set it like this:
 
 For the P-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
@@ -50,7 +50,7 @@ For the P-ROC:
 
 For the P3-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p3_roc
@@ -70,7 +70,7 @@ you'd like to change the timeout, you can do so in either the ``p_roc:`` or
 
 For the P-ROC:
 
-::
+.. code-block:: mpf-config
 
    p_roc:
       use_watchdog: true
@@ -78,7 +78,7 @@ For the P-ROC:
 
 For the P3-ROC:
 
-::
+.. code-block:: mpf-config
 
    p3_roc:
       use_watchdog: true

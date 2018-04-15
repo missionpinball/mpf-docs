@@ -37,7 +37,7 @@ config for MPF.
 
 If you're using a FAST WPC controller, it will look like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: fast
@@ -45,7 +45,7 @@ If you're using a FAST WPC controller, it will look like this:
 
 And if you're using a P-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
@@ -70,7 +70,7 @@ Matrix switches
 
 Matrix switches start with the letter ``S``, followed by the switch number. For example:
 
-::
+.. code-block:: mpf-config
 
    switches:
       s_left_slingshot:
@@ -102,8 +102,9 @@ Direct switches
 Direct switches (which are typically the coin and front door switches) are
 entered with the ``SD`` prefix, then the number, like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
       s_left_coin:
          number: sd1
       s_enter:
@@ -132,7 +133,7 @@ switches are used for other things.
 
 You would use Fliptronics switches in your config like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
      s_flipper_lower_right_eos:
@@ -162,7 +163,7 @@ To configure the regular coils (from the "Solenoid / Flasher" table in your
 machine's operator's manual, enter the letter ``C`` followed by the solenoid
 number, like this:
 
-::
+.. code-block:: mpf-config
 
    coils:
      c_trough_eject:
@@ -204,7 +205,7 @@ Fliptronics coils up to other random things (typically magnets and diverters).
 
 An example in your config might be:
 
-::
+.. code-block:: mpf-config
 
    coils:
      c_flipper_left_main:
@@ -231,40 +232,51 @@ An example in your config might be:
 Lights are configured with the letter ``L`` followed by the lamp number from the
 manual:
 
-::
+.. code-block:: mpf-config
 
-   matrix_lights:
+   lights:
      l_ball_save:
        number: l11
+       subtype: matrix
      l_fortress_multiball:
        number: L12
+       subtype: matrix
      l_museum_multiball:
        number: L13
+       subtype: matrix
      l_cryoprison_multiball:
        number: l14
+       subtype: matrix
      l_wasteland_multiball:
        number: L15
+       subtype: matrix
      l_shoot_again:
        number: l16
+       subtype: matrix
 
 5. Configuring GI (general illumination)
 ----------------------------------------
 
 GI strings are configured with ``G`` followed by the number, like this:
 
-::
+.. code-block:: mpf-config
 
-   gis:
+   lights:
      gi_back_panel:
        number: g01
+       subtype: gi
      gi_upper_right:
        number: g02
+       subtype: gi
      gi_upper_left:
        number: g03
+       subtype: gi
      gi_lower_right:
        number: g04
+       subtype: gi
      gi_lower_left:
        number: g05
+       subtype: gi
 
 6. Configuring flashers
 -----------------------
@@ -272,7 +284,7 @@ GI strings are configured with ``G`` followed by the number, like this:
 Since flashers in WPC machines are technically drivers (coils), they are also
 configured with the letter ``C`` followed by their number similar to ``coils``.
 
-::
+.. code-block:: mpf-config
 
    coils:
      f_claw:

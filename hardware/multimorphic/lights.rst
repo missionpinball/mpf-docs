@@ -30,11 +30,11 @@ that contains a bunch of letters and numbers which specify the specific columns
 and row outputs that make up each lamp. It’s probably easiest to look at an
 example.
 
-::
+.. code-block:: mpf-config
 
    lights:
       some_light:
-         type: matrix
+         subtype: matrix
          number: C-A2-B0-0:R-A2-B1-0
 
 Notice there are two parts to the number, separated by a colon.
@@ -72,14 +72,14 @@ config.
 
 For P-ROC:
 
-::
+.. code-block:: mpf-config
 
    p_roc:
       lamp_matrix_strobe_time: 100ms
 
 For P3-ROC:
 
-::
+.. code-block:: mpf-config
 
    p3_roc:
       lamp_matrix_strobe_time: 100ms

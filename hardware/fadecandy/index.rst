@@ -139,7 +139,7 @@ The following diagram explains how the numbering works:
 
 Consider the following config:
 
-::
+.. code-block:: mpf-config
 
    lights:
       l_led0:
@@ -155,7 +155,7 @@ Consider the following config:
 If you have more than one FadeCandy board, you can specify the board number
 (starting with 0) along with the LED number, like this:
 
-::
+.. code-block:: mpf-config
 
    lights:
       l_led0:

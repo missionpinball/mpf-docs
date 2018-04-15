@@ -11,7 +11,7 @@ How to configure alpha-numeric displays (P-ROC)
 
 The P-ROC includes support four alpha-numeric displays (0-3). You can configure them in MPF:
 
-::
+.. code-block:: mpf-config
 
   segment_displays:
     display1:

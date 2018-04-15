@@ -44,7 +44,7 @@ physical DMD.)
 To do this, create a section in your machine-wide config called
 ``dmds:``, and then pick a name for the DMD, like this:
 
-::
+.. code-block:: mpf-config
 
     dmds:
       my_dmd:
@@ -112,7 +112,7 @@ for "high_cycles" to find a few threads where people are talking about these
 settings. Then you can set them in the ``p_roc: dmd_timing_cycles:`` section of
 your machine-wide config, like this:
 
-::
+.. code-block:: mpf-config
 
    p_roc:
       dmd_timing_cycles: 90, 190, 50, 377
@@ -148,7 +148,7 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-::
+.. code-block:: mpf-config
 
     hardware:
       platform: p_roc
@@ -174,10 +174,12 @@ on the window and slide settings used in this machine config.
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: dmd  # this widget shows the DMD content in this slide too
+      - type: display
+        effects:
+         - type: dmd
+           pixel_color: ff5500
         width: 512
-        height: 128
-        pixel_color: ff5500  # makes on-screen pixels the classic DMD orange
+        height: 12
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top

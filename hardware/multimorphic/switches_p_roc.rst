@@ -35,7 +35,7 @@ are numbered 0-31. (See the P-ROC documentation for the connector mappings.)
 Direct switches are configured in your machine config file by starting the
 number with "SD", like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -51,7 +51,7 @@ Matrix Switches
 If you're using a switch matrix, then the switch numbers are entered using
 the column number, then a slash, then the row number.
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -127,7 +127,7 @@ Valid options are ``normal``, ``quick``, and ``auto``.
 To disable debouncing for a switch, add ``debounce: quick`` to the switch
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -137,7 +137,7 @@ config, like this:
 To force debouncing to always be used (which is also the default on the P-ROC,
 so not really needed), configure it like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:

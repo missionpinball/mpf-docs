@@ -40,7 +40,7 @@ the following on a PD-16 driver board:
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    coils:
       some_coil:
