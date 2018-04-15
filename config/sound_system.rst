@@ -17,7 +17,7 @@ if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound configuration.
 
-::
+.. code-block:: mpf-config
 
     sound_system:
         buffer: 1024

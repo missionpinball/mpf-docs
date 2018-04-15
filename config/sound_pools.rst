@@ -23,7 +23,7 @@ only available if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound_pool configuration.
 
-::
+.. code-block:: mpf-config
 
     sound_pools:
        drain_callout:

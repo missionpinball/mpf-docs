@@ -35,7 +35,7 @@ to all audio tracks in the sound system.
 
 Example:
 
-::
+.. code-block:: mpf-config
 
     track_player:
         pause_music_track:
@@ -57,22 +57,22 @@ In shows, the track player is used via the ``tracks:`` section of a step.
 
 Example:
 
-::
+.. code-block:: mpf-config
 
     shows:
         my_show_with_sound:
             - time: 0
-                tracks:
-                    music:
-                        action: set_volume
-                        volume: 0.3
-                        fade: 0.25 sec
+              tracks:
+                 music:
+                     action: set_volume
+                     volume: 0.3
+                     fade: 0.25 sec
             - time: 3.5
-                tracks:
-                    music:
-                        action: set_volume
-                        volume: 0.5
-                        fade: 0.25 sec
+              tracks:
+                 music:
+                     action: set_volume
+                     volume: 0.5
+                     fade: 0.25 sec
 
 Required settings
 -----------------

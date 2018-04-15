@@ -14,7 +14,8 @@ window:
 The ``window:`` section of your config is where you configure the properties
 of the on-screen window which is created by MPF-MC.
 
-::
+.. code-block:: mpf-config
+
     window:
         width: 800
         height: 600

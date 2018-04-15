@@ -21,7 +21,7 @@ MPF-MC currently supports 16-bit Wave (.wav), Ogg Vorbis (.ogg), and FLAC (.flac
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         extra_ball:

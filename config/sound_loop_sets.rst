@@ -24,7 +24,7 @@ set called *basic_beat* that references the sound asset named *kick*.  This is t
 sound loop set definition you can have.  The volume of the *kick* sound will be taken from
 the sound asset definition.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    sound_loop_sets:
        basic_beat:
@@ -35,7 +35,7 @@ the sound asset definition.
 When specifying multiple layers use a dash (and a space) to dictate where a new layer starts,
 like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    sound_loop_sets:
        basic_beat:

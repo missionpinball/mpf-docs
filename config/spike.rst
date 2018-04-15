@@ -17,7 +17,7 @@ Note that we have a how to guide which includes
 :doc:`all the SPIKE-specific settings </hardware/spike/index>` throughout your entire
 config file, so be sure to read that if you have a SPIKE machine.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    hardware:
       platform: spike

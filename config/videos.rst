@@ -41,7 +41,7 @@ settings specified for each asset.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    videos:
      intro_video:

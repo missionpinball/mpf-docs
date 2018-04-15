@@ -29,8 +29,9 @@ The settings structure of timers is like this:
 Here's an example timers: section from the "Money Bags" mode in *Brooks 'n Dunn* which
 contains two timers:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mode1
    timers:
        mb_intro_timer:
            start_value: 3
@@ -62,8 +63,9 @@ is hit.
 
 Here's another example of timers from *Demo Man's* skillshot mode:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mode1
    timers:
      mode_timer:
        start_value: 3
@@ -165,8 +167,9 @@ Options:
 
 Here's an example of control events in action:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mode1
    timers:
       my_timer:
          direction: down

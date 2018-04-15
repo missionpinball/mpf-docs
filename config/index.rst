@@ -153,7 +153,6 @@ indicated which type of config file it's valid in.
    timed_switches: <timed_switches>
    timers: <timers>
    track_player: <track_player>
-   trigger_player: <trigger_player>
    video_pools: <video_pools>
    videos: <videos>
    virtual_platform_start_active_switches: <virtual_platform_start_active_switches>

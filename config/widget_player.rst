@@ -25,7 +25,7 @@ in the config reference is for reference later.
 Generically-speaking, there are two formats you can use for widget_player
 entries: "express" and "full" configs. Express configs will look like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widget_player:
       event1: widget1
@@ -59,7 +59,7 @@ For example, the following config will add *widget_1* when *some_event* is poste
 will also override the default settings and add widget to the slide called *slide_2*, even
 if that's not the current slide that's showing.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widget_player:
       some_event:

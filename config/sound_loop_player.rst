@@ -22,7 +22,7 @@ on sound loop sets when MPF events are received.  Additional information may be 
 
 Examples:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    sound_loop_player:
      play_basic_beat:
