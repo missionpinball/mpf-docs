@@ -224,7 +224,7 @@ See the How To guide on widget styles for details.
 So now you've seen all the options for positioning and placement of widgets. But how do you actually use them? Simple.
 Everything discussed here are just regular widget settings. So you can use them in slides:
 
-::
+.. code-block:: mpf-config
 
    slides:
       slide1:
@@ -237,7 +237,7 @@ Everything discussed here are just regular widget settings. So you can use them 
 
 You can use them in :doc:`named widgets <reusable_widgets>`:
 
-::
+.. code-block:: mpf-config
 
    widgets:
       my_cool_widget:
@@ -249,7 +249,7 @@ You can use them in :doc:`named widgets <reusable_widgets>`:
 
 You can use them in the widget player:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -261,11 +261,13 @@ You can use them in the widget player:
 
 And you can use them in shows:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: test_show
    - time: 1s
      widgets:
         my_widget:
            target: lcd
-           x: top
-           y: right-15.4%
+           widget_settings:
+              x: top
+              y: right-15.4%

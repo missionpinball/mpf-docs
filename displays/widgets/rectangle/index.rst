@@ -7,7 +7,7 @@ are the same.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
 

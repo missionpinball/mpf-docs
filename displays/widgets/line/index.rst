@@ -7,7 +7,7 @@ curved line, you can use the :doc:`/displays/widgets/bezier/index`.)
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
 

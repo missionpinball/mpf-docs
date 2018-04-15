@@ -25,7 +25,7 @@ drawn in the order they are in the config.
 For example, here's a slide that has widget3.1, then widget3.2, then
 widget3.3:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slides:
       3_widgets:
@@ -60,7 +60,7 @@ drawn on top of those with lower values.
 
 Here's the same example as before, but with ``z:`` values added:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slides:
       3_widgets:

@@ -8,7 +8,7 @@ several ways you can expire a widget:
 Option 1: In the widget or slide definition
 -------------------------------------------
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widgets:
       my_widget:
@@ -28,7 +28,7 @@ the expiration when the widget is shown via the widget player.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widgets:
       my_widget:
@@ -51,7 +51,7 @@ Instead of automatically removing a widget after a pre-determined amount of time
 you can use the widget player to remove a widget by name, which means you can use one event
 to show the widget and another event to remove it. For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widgets:
       my_widget:

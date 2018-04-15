@@ -1,21 +1,28 @@
 Slide Frame Widget
 ==================
 
-.. include:: /not_updated_yet.rst
-
 The slide frame widget is used to create a "frame" on a :doc:`slide </displays/slides/index>`
 that is used to hold other slides. (Think of this like a picture-in-picture kind of thing.)
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
 
+   displays:
+     window:
+       height: 200
+       width: 600
+     my_frame:
+       width: 400
+       height: 300
+       default: true
+
    slides:
      base_slide:
-       - type: slide_frame
-         name: my_frame
+       - type: display
+         source_display: my_frame
          width: 400
          height: 300
          x: 300

@@ -8,7 +8,7 @@ Here's an example:
 
 TODO This example just shows a blank slide in MPF 0.50?
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
 

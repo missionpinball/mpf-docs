@@ -15,7 +15,7 @@ Before we look at how to create reusable widgets, let's look at how regular widg
 You probably know that you can have a ``slides:`` section of your config (either machine-wide or mode-specific configs),
 and when you define a slide, you can specify what widgets are on that slide, like this:
 
-::
+.. code-block:: mpf-config
 
    slides:
       my_slide:
@@ -48,7 +48,7 @@ config. (This can be either a machine-wide or a mode config file.)
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    widgets:
       laughing_jackal:
@@ -80,7 +80,7 @@ widget (which display, which slide, etc.)
 If you just want to add your widget to whichever slide is current on the default display, you can use the "express"
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event: laughing_jackal
@@ -101,7 +101,7 @@ Adding a widget to a specific slide
 If you want to add your widget to a particular slide (versus whatever slide happens to be showing at the moment), you
 can do so by specifying that slide name in the ``widget_player:``. For example:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:              # event that will trigger this widget to show
@@ -115,7 +115,7 @@ slide is not being shown, the widget will still be added, and it will be there t
 Remember you can add as many events and widgets as you want to the ``widget_player:`` section of your config, and you
 can even mix-and-match formats, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -129,7 +129,7 @@ Adding a widget to a specific display target
 Rather than specifying a particular slide to add your widget to, you can target a display or slide frame, and the
 widget will be added "on top" of whatever slide is currently being shown:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -154,7 +154,7 @@ For example, if you use a
 widget for the tilt warning like in the previous example, you'd probably want that widget to be removed after a few
 seconds, which you could do like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       tilt_warning:             # event
@@ -178,7 +178,7 @@ Removing widgets
 You can also use the widget player to remove named widgets from a slide that had been previous added. To do this,
 just add an ``action: remove`` setting to the widget player, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       show_jackal: laughing_jackal
@@ -195,7 +195,7 @@ Creating named groups of widgets
 All of the examples in this guide showed using a single widget as named widget. But you can actually define multiple
 widgets in a named widget (essentially meaning that your named widget is really a named group of widgets. For example:
 
-::
+.. code-block:: mpf-config
 
    widgets:
      widget3:
@@ -233,7 +233,7 @@ Adding multiple named widgets in one event
 You can also add multiple named widgets from a single event. This is nice if you want to add widgets to
 multiple displays or slides at the same time. For example:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:

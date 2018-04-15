@@ -5,7 +5,7 @@ The camera widget is used to show live video from an attached camera a :doc:`sli
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
 
