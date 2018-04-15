@@ -46,7 +46,7 @@ which you can use to dial-in your gamma setting.
 The easiest way to show this slide on your physical DMD is to make a
 temporary addition to your machine config to add a slide player, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slide_player:
       mode_attract_started:

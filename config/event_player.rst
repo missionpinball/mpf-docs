@@ -30,18 +30,18 @@ Basic Event Playing
 
     event_player:
         ball_starting:
-            cmd_flippers_enable
-            cmd_autofire_coils_enable
-            cmd_drop_targets_reset
+            - cmd_flippers_enable
+            - cmd_autofire_coils_enable
+            - cmd_drop_targets_reset
         ball_ending:
-            cmd_flippers_disable
-            cmd_autofire_coils_disable
+            - cmd_flippers_disable
+            - cmd_autofire_coils_disable
         tilt:
-            cmd_flippers_disable
-            cmd_autofire_coils_disable
+            - cmd_flippers_disable
+            - cmd_autofire_coils_disable
         slam_tilt:
-            cmd_flippers_disable
-            cmd_autofire_coils_disable
+            - cmd_flippers_disable
+            - cmd_autofire_coils_disable
 
 The event player settings above will post the events
 *cmd_flippers_enable*, *cmd_autofire_coils_enable*, and

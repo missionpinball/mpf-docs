@@ -16,6 +16,7 @@ Without dynamic values, your scoring section would be static, like this:
 
 .. code-block:: yaml
 
+   ##! mode: mode1
    scoring:
       shot_jackpot_hit:
          score: 100000
@@ -25,8 +26,9 @@ holds the number of trolls hit that you want to multiply by 100,000
 when the shot is made. You can use the "current_player" dynamic value
 in your scoring config like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mode1
    scoring:
       shot_jackpot_hit:
          score: current_player.troll_hits * 100000
@@ -34,10 +36,12 @@ in your scoring config like this:
 You can access other values dynamically as well, such as a timer ticking away
 a hurry-up or a counter to track how many times a multiplier switch has been hit
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mode1
    scoring:
-      collect_hurryup: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
+      collect_hurryup:
+         score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
 
 
 Another example might be operator settings. Rather than hard coding
@@ -46,14 +50,14 @@ tilt warnings.
 
 So instead of this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    tilt:
       warnings_to_tilt: 3
 
 You would have this instead:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    tilt:
       warnings_to_tilt: settings.tilt_warnings
@@ -102,26 +106,10 @@ device
 Using if/else logic with dynamic values
 ---------------------------------------
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   logic_blocks:
-      counters:
-         my_counter:
-            count_complete_value: 5 if player.wizard_complete else 3
-
-Full Python code
-----------------
-
-The format below probably doesn't work and needs to be tested (:doc:`/about/help_us_to_write_it`).
-
-
-.. code-block:: yaml
-
-   logic_blocks:
-      counters:
-         my_counter:
-            count_complete_value:
-               if self.machine.game.player:
-                  return 1
-               else:
-                  return 5
+   ##! mode: mode1
+   counters:
+      my_counter:
+         count_events: count_up
+         count_complete_value: 5 if player.wizard_complete else 3
