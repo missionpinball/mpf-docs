@@ -26,7 +26,7 @@ Let's start:
   http://kivypie.mitako.eu/kivy-download.html
   Many Kudos to Albert Casals and their group, since normally its a pain to install kivy on a raspberry (compiling lasts
   forever).
-  
+
 - Unzip the image (do not copy .zip file to your SD card).
 
 - depending on your development os use Win32 Diskimager, dd, Imagewriter... to write your image to the sd-card (use at
@@ -101,7 +101,7 @@ Now you find the contents of your stick in /mnt.
 To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have to put this in your
 machine/config/config.yaml:
 
-::
+.. code-block:: mpf-config
 
   window:
     width: 1280

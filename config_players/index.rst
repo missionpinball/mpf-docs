@@ -28,6 +28,7 @@ them, with explanations of how to use them in config files and in shows.
    :maxdepth: 1
 
    coil_player
+   display_light_player
    event_player
    flasher_player
    gi_player

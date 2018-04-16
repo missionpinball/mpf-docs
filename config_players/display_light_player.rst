@@ -8,15 +8,16 @@ them on any LEDs (or more specifically any lights) in your machine.
 
 To use this in a show you can use this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: test_show
    - display_lights:
        your_source_display:     # use any display defined in your machine
          lights: "*"            # map all lights. you can also use a tag
 
 Or standalone:
 
-::
+.. code-block:: mpf-config
 
    display_light_player:
      your_event:
@@ -27,14 +28,14 @@ Or standalone:
 Then map your lights to a position on the display:
 
 
-::
+.. code-block:: mpf-config
 
    lights:
      l_light1:
        number: 1
        x: 0.3595817467355206
        y: 0.026751757949132805
-     l_light2
+     l_light2:
        number:2
        x: 0.34303657433971446
        y: 0.02873336964906857

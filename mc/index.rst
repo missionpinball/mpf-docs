@@ -38,4 +38,3 @@ used for very advanced 3D display graphics.
    mpf_and_mc_different_machines
    multiple_mcs
    creating_your_own
-   display_light_player
