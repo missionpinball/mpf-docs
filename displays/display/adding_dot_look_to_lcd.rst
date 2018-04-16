@@ -21,11 +21,12 @@ The final sections of the machine config to make this happen are here:
 
     slides:
       window_slide:
-        - type: color_dmd
+        - type: display
+          effects:
+           - type: color_dmd
+             pixel_size: .5
           width: 800
           height: 600
-          pixel_size: .5
-
       dmd_slide:
         - type: text
           text: DOTS!
@@ -115,10 +116,12 @@ render the virtual DMD into the window.
 
     slides:
       window_slide:
-        - type: color_dmd
+        - type: display
+          effects:
+           - type: color_dmd
+             pixel_size: .5
           width: 800
           height: 600
-          pixel_size: .5
 
 We decided to name this slide "window_slide", though you can name it
 whatever you want.
@@ -190,8 +193,8 @@ display.
 5. Other options & positioning your DMD
 ---------------------------------------
 
-Finally, remember to check the documentation for the
-:doc:`color_dmd widget </displays/widgets/color_dmd/index>` for a full list of
+Finally, remember to check the documentation for the :doc:`display widget </displays/widgets/display/index>` and the
+:doc:`color_dmd effect </displays/widgets/display/effects>` for a full list of
 the options you can use to fine-tune how the DMD looks in the window. For
 example, you can configure the pixel size, the glow radius, the color of the
 space between the pixels, gain, tint, etc.
@@ -214,5 +217,5 @@ You can also use the various :doc:`window: </config/window>` options (such as
 full screen) to properly align the content of the display with the visible area.
 
 Finally, even though this example was using the color_dmd widget, you could
-replace it with the :doc:`dmd widget </displays/widgets/dmd/index>` for a
+replace it with the :doc:`display widget </displays/widgets/display/index>` with a :doc:`dmd effect </displays/widgets/display/effects>` for a
 single color look instead of full color.

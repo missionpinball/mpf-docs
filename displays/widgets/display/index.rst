@@ -10,7 +10,7 @@ Display Widget
 
 The display widget is used to show the contents of a display on a slide :doc:`slide </displays/slides/index>`
 or another display (think of this like a picture-in-picture kind of thing). To attempt to clear up any
-confusion, there are two types of displays: a :doc:`display <displays/display/index>` which is basically an
+confusion, there are two types of displays: a :doc:`display </displays/display/index>` which is basically an
 in-memory target for for slides and widgets, and a display widget (this help topic) which enables the graphical
 display of the previously mentioned type of display within its boundaries (it is the actual visual output of
 the logical display).
