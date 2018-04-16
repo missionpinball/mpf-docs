@@ -57,8 +57,9 @@ that mode's ``/shows`` folder since it keeps everything from one mode together.
 Here's a complete sample ``attract_display_loop.yaml``
 file you can use as a starting point:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: attract_display_loop
    #show_version=5
 
    - duration: 3s
@@ -153,8 +154,9 @@ this show to play whenever the attract mode is running. To do this, go
 back to the config file for the attract mode (
 ``<your_machine>/modes/attract/config/attract.yaml``) and add the following:
 
-::
+.. code-block:: mpf-config
 
+    ##! mode: test_mode
     #config_version=5
 
     show_player:
@@ -185,9 +187,9 @@ entry from your ``slide_player:`` section.
 
 OLD machine-wide config (partial):
 
-::
+.. code-block:: mpf-config
 
-   OLD:
+   # old
    slides:
      welcome_slide:
        widgets:
@@ -209,7 +211,7 @@ OLD machine-wide config (partial):
 
 NEW machine-wide config:
 
-::
+.. code-block:: mpf-config
 
    slides:
      welcome_slide:
@@ -246,6 +248,6 @@ Check out the complete config.yaml file so far
 If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_16``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_16>mpf both

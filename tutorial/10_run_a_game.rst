@@ -22,7 +22,7 @@ your config file, add a ``ball_started:`` entry with the following
 information. Your complete ``slide_player:`` section should now look
 like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
      init_done: welcome_slide
@@ -53,8 +53,24 @@ from each of your two flipper sections of your config file. So now
 your ```flippers:`` section should look like this: (It might not be 100%
 identical since you might have single-wound flipper coils and/or EOS switches.)
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 0
+    #!     s_right_flipper:
+    #!         number: 1
+    #! coils:
+    #!     c_flipper_left_main:
+    #!         number: 0
+    #!     c_flipper_left_hold:
+    #!         number: 1
+    #!         allow_enable: true
+    #!     c_flipper_right_main:
+    #!         number: 2
+    #!     c_flipper_right_hold:
+    #!         number: 3
+    #!         allow_enable: yes
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -73,7 +89,7 @@ without the ``-x`` or ``-X`` command line options. (If you don't have a physical
 machine and you want to simulate a game using the keyboard keys,
 skip to Step 4 below.)
 
-::
+.. code-block:: doscon
 
   C:\pinball\your_machine>mpf both -v
 
@@ -176,7 +192,7 @@ folder with the name ``step10.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step10
 

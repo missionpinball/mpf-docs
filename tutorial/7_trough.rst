@@ -45,7 +45,7 @@ type of trough or ball drain you have in your machine.
 Once you have your trough or drain device (or devices, in some cases)
 set up, add one more setting to that device:
 
-::
+.. code-block:: yaml
 
    debug: yes
 
@@ -61,9 +61,27 @@ debug log from filling up with too much gunk.
 For example, if you have a modern style trough with a jam switch, you'd
 add the debug setting like this:
 
-::
+.. code-block:: mpf-config
 
-   ball_devices:
+    #! switches:
+    #!     s_trough1:
+    #!         number: 1
+    #!     s_trough2:
+    #!         number: 2
+    #!     s_trough3:
+    #!         number: 3
+    #!     s_trough4:
+    #!         number: 4
+    #!     s_trough5:
+    #!         number: 5
+    #!     s_trough6:
+    #!         number: 6
+    #!     s_trough_jam:
+    #!         number: 7
+    #! coils:
+    #!     c_trough_eject:
+    #!         number: 3
+    ball_devices:
        bd_trough:
            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
            eject_coil: c_trough_eject
@@ -96,6 +114,6 @@ folder with the name ``step7.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step7

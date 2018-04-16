@@ -37,7 +37,7 @@ The first step is simply to add a ``scoring:`` section to your base mode's
 ``<your_machine>/modes/base/config/base.yaml``. Add a new top level
 configuration item called *scoring:*, like this:
 
-::
+.. code-block:: yaml
 
     scoring:
 
@@ -53,8 +53,9 @@ up.) To give the player points when a switch is hit, add sub-entries
 to the ``scoring:`` section of your config file, with some switch name
 followed by "_active", like this:
 
-::
+.. code-block:: mpf-config
 
+    ##! mode: base
     scoring:
         s_right_inlane_active:
             score: 100
@@ -108,8 +109,9 @@ section--even player variables that you make up.
 
 For example, try changing your scoring section to this:
 
-::
+.. code-block:: mpf-config
 
+    ##! mode: base
     scoring:
         s_right_inlane_active:
             score: 100
@@ -137,8 +139,9 @@ So now that we're tracking this potato variable, let's add it to the display. To
 the slide that is show when the base mode starts. (So we're going to be editing ``<your_machine>/modes/config/base.yaml``
 again. Add the potato text entry, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: base
    slide_player:
      mode_base_started:
        widgets:
@@ -186,6 +189,6 @@ Check out the complete config.yaml file so far
 If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_15``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_15>mpf both

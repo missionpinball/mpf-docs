@@ -73,7 +73,7 @@ The first thing you need to do when you create any new config file for MPF is to
 tells MPF what “version” of the MPF config spec you’re using for the file you’re creating. For MPF |version|, that
 should look like this:
 
-::
+.. code-block:: yaml
 
    #config_version=5
 
@@ -173,7 +173,7 @@ This means you don't have ``#config_version=5`` in the top line of your config f
 mark as part of that.)
 
 If the following line at the end of your log and nothing more happens you probably started mpf with mc (i.e. by omitting the `-b` switch).
-This can be fixed by either running `mpf -b` or by making sure that the media controller is running. 
+This can be fixed by either running `mpf -b` or by making sure that the media controller is running.
 
 .. code-block:: console
 

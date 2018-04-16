@@ -13,8 +13,9 @@ First, add the switch for your start button to the ``switches:`` section
 of your config file. Again this should be easy by now. In this
 tutorial we'll just call this button ``s_start`` and add it like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_start:
             number: 10
 
@@ -35,8 +36,9 @@ we use a "start" tag behind the scenes to make whatever switch you
 want act as the start button. So now your start switch in your
 ``switches:`` section should look like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_start:
             number: 11
             tags: start
@@ -55,11 +57,12 @@ hardware. For your start button keyboard key, how about using the ``S``
 key? To do so, add an entry like this to the ``keyboard:`` section of
 your config file:
 
-::
+.. code-block:: mpf-config
 
+   keyboard:
         s:
             switch: s_start
-            
+
 4. Add at least one playfield switch
 ------------------------------------
 
@@ -79,8 +82,9 @@ switch. However you'll eventually tag all your playfield switches with
 this, create a new entry in your ``switches:`` section for one of your
 playfield switches, for example:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_right_inlane:
             number: 12
             tags: playfield_active
@@ -88,8 +92,9 @@ playfield switches, for example:
 While you're at it, create a keyboard key mapping for this switch in
 the ``keyboard:`` section of your config, like this:
 
-::
+.. code-block:: mpf-config
 
+   keyboard:
         q:
             switch: s_right_inlane
 
@@ -120,6 +125,6 @@ folder with the name ``step9.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step9

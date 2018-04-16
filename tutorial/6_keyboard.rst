@@ -28,7 +28,7 @@ of action in MPF you want to map them to. (Switches, in this case.)
 Here's an example where we map the left flipper button to the ``Z`` key
 and the right flipper button to the ``?`` key:
 
-::
+.. code-block:: mpf-config
 
     keyboard:
         z:

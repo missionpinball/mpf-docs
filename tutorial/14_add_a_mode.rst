@@ -94,8 +94,9 @@ called ``mode:``. On the next line, indent four spaces and add the entry
 spaces and type ``priority: 100``. Your ``base.yaml`` file should now look
 like this:
 
-::
+.. code-block:: mpf-config
 
+    ##! mode: my_mode
     #config_version=5
     mode:
         start_events: ball_starting
@@ -149,7 +150,7 @@ the next line, type two spaces, then a dash, then another space, then
 type ``base``. So now that section of your ``config.yaml`` should look
 like this:
 
-::
+.. code-block:: yaml
 
     modes:
       - base
@@ -200,8 +201,9 @@ To do this, go back to your base mode's config file (``<your_machine>/modes/base
 and add a section called ``slide_player:``. Then add the following subsections so
 your complete ``base.yaml`` looks like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: base
    #config_version=5
    mode:
        start_events: ball_starting
@@ -279,7 +281,7 @@ can go into your machine-wide ``config.yaml`` and remove the slide_player:
 entry for ball_started:. So now the slide_player: in your machine-wide
 ``config.yaml`` should just look like this:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       init_done: welcome_slide
@@ -309,6 +311,6 @@ Note that this is a different folder than the previous steps. Since we now have 
 folder and to the ``mpf-examples/tutorial_step_14`` folder, then run ``mpf both``. (You don't need the ``-c`` option
 since we're back to using ``config.yaml`` instead of a custom config file name.)
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_14>mpf both

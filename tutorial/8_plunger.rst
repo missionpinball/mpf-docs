@@ -1,8 +1,6 @@
 Tutorial step 8: Add your plunger lane
 ======================================
 
-.. include:: /not_updated_yet.rst
-
 In this step we're going to create your *plunger lane*
 (or *shooter lane* or *ball launcher* or *catapult* or whatever you
 want to call it).
@@ -39,7 +37,7 @@ Even though this is mentioned in the how-to guides, once you have your plunger
 device set up, be sure to go back to your trough or ball drain device and add
 the new plunger lane as an eject target, like this:
 
-::
+.. code-block:: yaml
 
    eject_targets: bd_plunger
 
@@ -51,8 +49,15 @@ this to the second device (the one that feeds the plunger).
 
 Tell the playfield to use the plunger for new balls:
 
-::
+.. code-block:: mpf-config
 
+   #! switches:
+   #!      s_plunger:
+   #!          number: 10
+   #! ball_devices:
+   #!      bd_plunger:
+   #!          ball_switches: s_plunger
+   #!          mechanical_eject: true
    playfields:
        playfield:
             tags: default
@@ -68,7 +73,7 @@ for this step which you can view in the ``mpf-examples/tutorial`` folder with th
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step8
 
@@ -82,7 +87,7 @@ should see some cool things in your log file. To do this,
 launch the MPF game engine with the ``-v`` command line options so it
 shows the verbose information in the log file, like this:
 
-::
+.. code-block:: doscon
 
     C:\pinball\your_machine>mpf -vb
 

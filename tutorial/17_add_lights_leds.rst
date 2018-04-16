@@ -70,8 +70,9 @@ that actually exist for you. If you have matrix lights, add entries to
 your ``attract_light_show.yaml`` file so that it looks something like
 like this:
 
-::
+.. code-block:: mpf-config
 
+    ##! show: attract_light_show
     #show_version=5
     - duration: 1
       lights:
@@ -102,8 +103,9 @@ different colors for each light at each step. For example, if you just
 wanted to have a show that cycled three RGB LEDs through the colors of
 the rainbow, you could create a show like this:
 
-::
+.. code-block:: mpf-config
 
+    ##! show: attract_light_show
     #show_version=5
     - duration: 1
       lights:
@@ -164,8 +166,9 @@ a warning about the duplicate so you can fix it.)
 MPF offers a way around this though, in that you can add a ``.1`` to the end
 of the event name, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: test_mode
    #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
@@ -210,7 +213,7 @@ actual speed at play time.
 So if we want each step to be 1/4th of a second, we need to play the show at 4x the
 speed. Simple, just add a ``speed: 4`` to the show_player entry.
 
-::
+.. code-block:: yaml
 
    #config_version=5
    show_player:
@@ -223,7 +226,7 @@ speed. Simple, just add a ``speed: 4`` to the show_player entry.
 If you try to run MPF with the config above, MPF will halt with the following error
 (scroll to the right to see it all):
 
-::
+.. code-block:: python
 
    ValueError: YAML error found in file /mpf-examples/tutorial_step_17/modes/attract/config/attract.yaml. Line 6, Position 10
 
@@ -235,8 +238,9 @@ value, but then it also sees ``speed: 4`` indented under it. The YAML processor 
 
 To fix this, we need to make a slight change to our YAML file, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: test_mode
    #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
@@ -249,8 +253,9 @@ then we added the speed setting under there.
 
 If you wanted to, you could consolidate the duplicate ``mode_attract_started`` entries like so:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: test_mode
    #config_version=5
    show_player:
      mode_attract_started:
@@ -296,7 +301,7 @@ Again, we'd make every step of every show have a duration of 1. Then in our
 ``show_player:`` configuration, we'd configure the list of shows to
 play when the attract mode starts instead of just one. For example:
 
-::
+.. code-block:: yaml
 
     show_player:
         mode_attract_started:
@@ -326,6 +331,6 @@ Check out the complete config.yaml file so far
 If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_17``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_17>mpf both

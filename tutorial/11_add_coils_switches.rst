@@ -50,7 +50,7 @@ folder with the name ``step11.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step11
 

@@ -1,8 +1,6 @@
 Tutorial step 4: Adjust your flipper power
 ==========================================
 
-.. include:: /not_updated_yet.rst
-
 We casually mentioned in the previous step that MPF uses a very low
 default power setting for coils--mainly because we don't want to risk blowing
 apart some 40-year-old coil mechanism with a power setting that's too high. (Ask us
@@ -59,7 +57,7 @@ the ``flippers:`` section.) So let's try changing your flipper coils
 from the default of 10ms to 20ms. Change your config file so it looks
 like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left_main:
@@ -128,6 +126,6 @@ be at ``/mpf-examples/tutorial/config/step4.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf -c step4
