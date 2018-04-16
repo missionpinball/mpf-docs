@@ -136,3 +136,22 @@ Furthermore you can use ``flasher_player`` on all types lights (e.g. to flash th
 
 See :doc:`lights </config/lights>` for details.
 
+8. Define a source device for your playfield
+--------------------------------------------
+
+Remove ``tags: ball_add_live`` from your ball devices and instead define a ``default_source_device``
+to feed the playfield:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!     s_plunger:
+    #!         number: 10
+    #! ball_devices:
+    #!     bd_plunger:
+    #!         ball_switches: s_plunger
+    #!         mechanical_eject: true
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
