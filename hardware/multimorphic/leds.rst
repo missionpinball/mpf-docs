@@ -69,7 +69,8 @@ such as:
    lights:
       l_shoot_again:
          number: 8-60-61-62
-         polarity: True
+         platform_settings:
+            polarity: True
 
 **True** = common cathode (or common ground),
 **False** = common anode (or common 3.3V)
