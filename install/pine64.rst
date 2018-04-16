@@ -42,7 +42,9 @@ Locale
 Locale arrives broken and this wreaks all kinds of havoc, so here's how to fix
 it.
 
-Assuming you want US English, substitute your preferred language if not::
+Assuming you want US English, substitute your preferred language if not:
+
+.. code-block:: console
 
    $ sudo locale-gen "en_US.UTF-8"
    Generating locales...
@@ -57,11 +59,15 @@ Assuming you want US English, substitute your preferred language if not::
 That command will open a text-based dialog, we recommend that you don’t choose
 “ALL” and only select the one or a few languages you want (generating them all
 takes a long time). Then reboot, then do the above reconfigure step AGAIN, then
-reboot, then run::
+reboot, then run:
+
+.. code-block:: console
 
     $ locale
 
-And make sure it looks good. Mine says::
+And make sure it looks good. Mine says:
+
+.. code-block:: console
 
    LANG=en_US.UTF-8
    LANGUAGE=en
@@ -88,7 +94,7 @@ Fix the Software Boutique
 This arrives broken, too. Oddly, running the Mate Welcome as root and clicking
 a button partly fixes it.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ sudo ubuntu-mate-welcome
 
@@ -105,20 +111,20 @@ after that.
 Install Missing pip3
 --------------------
 
-.. code-block:: bash
+.. code-block:: console
 
    $ apt-get install python3-pip
 
 The path where ``pip`` puts executables is not in the system default path, so
 edit ``~/.bashrc`` to add the following path:
 
-.. code-block:: bash
+.. code-block:: console
 
   $ sudo nano ~/.bashrc
 
 At the bottom of the file add the following:
 
-.. code-block:: none
+.. code-block:: console
 
    export PATH=~/.local/bin:$PATH
 
@@ -141,20 +147,20 @@ files.
 
 Unzip the file:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ unzip v0.30.zip .
 
 If this does not run you may need to install unzip:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ sudo apt-get install unzip
 
 After unzip, run ./mpf-debian-installer-0.30/install from the folder you
 unzipped the files to. Consult the README for more information.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ pip3 install mpf-mc
 

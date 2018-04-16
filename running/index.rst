@@ -34,7 +34,7 @@ folder. This is the folder that contains your machine's ``config``, ``modes``,
 
 Then run:
 
-::
+.. code-block:: console
 
    mpf both <enter>
 
@@ -46,7 +46,7 @@ Starting the MPF media controller
 Alternately you can choose to run just the media controller by itself (still
 from within your machine folder) like this:
 
-::
+.. code-block:: console
 
     mpf mc <enter>
 
@@ -57,7 +57,7 @@ Starting the MPF game engine
 
 You can run the MPF game engine by itself by running:
 
-::
+.. code-block:: console
 
     mpf game <enter>
 
@@ -72,7 +72,7 @@ Specifying command-line options
 There are several command-like options you can use when you run MPF. To use them, add them *after* the name
 of the MPF command you're running, like:
 
-::
+.. code-block:: console
 
    mpf game -x -v
 

@@ -33,7 +33,7 @@ listen on.
 
 Valid port numbers are anything between 1024 and 65535.
 
-::
+.. code-block:: mpf-config
 
    # config_version=5
 

@@ -33,7 +33,7 @@ menu:
 
 Then inside that window, type the following command and press Enter:
 
-::
+.. code-block:: doscon
 
     echo %PROCESSOR_ARCHITECTURE%
 
@@ -72,7 +72,7 @@ After you log out and log back in, (or just restart your computer), open a comma
 again and type the following command, then press ENTER: (note there are two dashes before
 the word "version")
 
-::
+.. code-block:: doscon
 
     python --version
 
@@ -91,26 +91,26 @@ use a different command to start Python 3. See the :doc:`2_and_3` page for detai
 Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
 the web. (It's kind of like an app store for Python apps.) Pip references another package
-called "setuptools" that is used to download, build, install, upgrade, and uninstall 
+called "setuptools" that is used to download, build, install, upgrade, and uninstall
 Python packages.
 
 So the next step is to update the "pip" and "setuptools" programs to make sure you have the
 latest versions. It's not really important to know exactly what this means right now,
 just run it.
 
-::
+.. code-block:: doscon
 
     pip install pip setuptools --upgrade
 
 This command will upgrade pip and setuptools to the latest versions.
 
 Note that if you're running the command prompt *without* admin rights, you might get
-some red text and a permissions error, but that's ok. 
+some red text and a permissions error, but that's ok.
 
-You can run the following command to show the versions of pip and setuptools (and the other 
+You can run the following command to show the versions of pip and setuptools (and the other
 packages you have installed) like this:
 
-::
+.. code-block:: doscon
 
    pip list
 
@@ -125,7 +125,7 @@ That will print out something like this:
    C:\Users\BRIAN MADDEN>
 
 Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
-this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to 
+this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to
 version 35.5.1 (or later).
 
 3. Install MPF
@@ -134,7 +134,7 @@ version 35.5.1 (or later).
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
 To do this, run the following command from the command prompt:
 
-::
+.. code-block:: doscon
 
     pip install mpf-mc --pre
 
@@ -258,7 +258,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 If you want to make sure that MPF was installed, you can run:
 
-::
+.. code-block:: doscon
 
    mpf --version
 
@@ -306,7 +306,7 @@ MPF installation.
 
 To to this, run the following:
 
-::
+.. code-block:: doscon
 
   pip install mpf mpf-mc --upgrade
 

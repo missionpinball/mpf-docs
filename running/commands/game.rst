@@ -43,13 +43,13 @@ Examples:
 
 Run MPF and load the config file ``config/config.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game
 
 Run MPF and load the config file ``config/nodisplay.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game -c nodisplay
 
@@ -57,13 +57,13 @@ You can also chain multiple config files together by specifying a comma-separate
 list (no spaces). For example, to load ``config/config.yaml`` first, and then
 once that's loaded, merge in changes from ``config/fast.yaml``, run:
 
-::
+.. code-block:: shell
 
    $ mpf game -c config,fast
 
 To load a machine folder from some other location, such as ``/home/brian/pinball/demo_man/config/config.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game -c /home/brian/pinball/demo_man/config/config.yaml
 

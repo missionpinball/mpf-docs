@@ -21,8 +21,9 @@ A few notes for creating show files:
 Here is a sample show file. This file might be called something like
 ``flash_red.yaml`` and would be located in your machine's ``/shows`` folder:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    #show_version=5
    - time: 0
      lights:
@@ -30,7 +31,7 @@ Here is a sample show file. This file might be called something like
    - time: +1
      lights:
        led1: off
-   - time: + 1
+   - time: +1
 
 Notice it's essentially the same show we used as an example in the section on
 show config formats. However there's one important change.

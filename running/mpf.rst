@@ -18,7 +18,7 @@ Command line options
 
 Prints the version of MPF and exits:
 
-::
+.. code-block:: console
 
    $ mpf --version
    MPF v0.30.0

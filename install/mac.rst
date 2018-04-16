@@ -97,7 +97,7 @@ CMD + Spacebar) and then just type "Terminal", like this:
 Next, type the following command into the prompt in the terminal and press
 Enter:
 
-::
+.. code-block:: console
 
    xcode-select --install
 
@@ -150,7 +150,7 @@ password, and you're all set.
 You can check to make sure Python 3.5 installed correctly from the Terminal
 window. To do that, run the command:
 
-::
+.. code-block:: console
 
    python3 --version
 
@@ -175,7 +175,7 @@ the latest version of pip.
 
 Update pip by running the following command:
 
-::
+.. code-block:: console
 
     curl -O https://bootstrap.pypa.io/get-pip.py
     python3 get-pip.py
@@ -187,7 +187,7 @@ running the following command:
 
 So next run the following command:
 
-::
+.. code-block:: console
 
     pip3 install setuptools cython==0.25.2 --upgrade
 
@@ -196,7 +196,7 @@ package, as well as version 0.25.2 of a package called *cython*. The results wil
 look something like this (though the exact version numbers might be different
 depending on what's the latest whenever you're running this):
 
-::
+.. code-block:: console
 
    Collecting setuptools
      Downloading setuptools-32.3.1-py2.py3-none-any.whl (479kB)
@@ -218,7 +218,7 @@ installing is "mpf-mc", which is the
 package, but that package will also install the MPF game engine. Install MPF
 like this:
 
-::
+.. code-block:: console
 
    pip3 install mpf-mc --pre
 
@@ -248,7 +248,7 @@ are.
    The "kivy" component will take awhile to install. Maybe a minute or two
    where it looks like it's not doing anything, but it's fine.
 
-::
+.. code-block:: console
 
    Brians-Mac:~ brian$ pip3 install mpf-mc
    Collecting mpf-mc
@@ -299,14 +299,14 @@ Patch your Terminal undr High Sierra, so that it can show the UI correctely (oth
 
 If you want to make sure that MPF was installed, quit the Terminal app and restart it, and then run:
 
-::
+.. code-block:: console
 
    mpf --version
 
 This command can be run from anywhere and should produce output something like
 this:
 
-::
+.. code-block:: console
 
    Brians-Mac:~ brian$ mpf --version
    MPF v0.50.82
@@ -347,7 +347,7 @@ MPF installation.
 
 To to this, run the following:
 
-::
+.. code-block:: console
 
   pip3 install mpf mpf-mc --upgrade
 

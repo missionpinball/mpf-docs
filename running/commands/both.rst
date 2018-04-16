@@ -9,7 +9,7 @@ window. However the log files in your machine's ``/logs`` folder will still be s
 
 Also note that you can pass command line options to both MPF and MPF-MC after the "both" command, like this:
 
-::
+.. code-block:: shell
 
    mpf both -v
 

@@ -10,8 +10,9 @@ Here is a very simple show with two steps. The first step sets the color of
 another second, the show is over. (Most likely you'd configure a show like this
 to *loop*, meaning this should could be used to flash *led1* on and off.)
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
      lights:
        led1: red
@@ -32,25 +33,28 @@ dash, then a space. So you could say that the example show above has three steps
 
 Step 1:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
      lights:
        led1: red
 
 Step 2:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: +1
      lights:
        led1: off
 
 Step 3:
 
-::
+.. code-block:: mpf-config
 
-   - time: + 1
+   ##! show: my_show
+   - time: +1
 
 .. important:: YAML formatting can be tricky. It's important that you include a
    space between the dash and the key name. ``-time: 0`` will not work and give
@@ -97,9 +101,10 @@ Sometimes it's more convenient to specify the timing of a step in a show
 relative to the step before it. To do that, enter the *time* value with a + in
 front of it, like this:
 
-::
+.. code-block:: mpf-config
 
-   time: +1
+   ##! show: my_show
+   - time: +1
 
 Relative step times are nice because you can adjust the timing of one step and
 then all the other relative steps after it are shifted back or forwards
@@ -109,18 +114,19 @@ You can mix-and-match incremental and absolute times in the same show,
 and you can also combine the plus sign for relative times with seconds or
 millisecond values. For example:
 
-::
+.. code-block:: mpf-config
 
+  ##! show: my_show
   - time: 0   # plays right away, at 0 seconds
-    ...
+    # ...
   - time: +1  # plays 1 sec after the previous, 1 sec after show start
-    ...
+    # ...
   - time: +1  # plays 1 sec after the previous, 2 secs after show start
-    ...
+    # ...
   - time: 4   # plays 4 secs after show start, 2 secs after the previous
-    ...
+    # ...
   - time: +1  # plays 1 sec after the previous, 5 secs after show start
-    ...
+    #...
 
 Note that since shows use YAML formatting, you can use the hash sign (``#``) to
 add comments which MPF ignores.
@@ -133,8 +139,9 @@ is essentially specifying when a step ends). The difference is subtle, but each 
 
 For example, the following to shows are identical:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
      lights:
        led1: red
@@ -143,8 +150,9 @@ For example, the following to shows are identical:
        led1: off
    - time: +1
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - duration: 1
      lights:
        led1: red
@@ -165,8 +173,9 @@ For example, with "time"-based steps, you're specifying the time when a step sta
 next one starts. But what about your last step in the show? How long should it run for? If you just use time-based
 steps, you'd still want to specify a "duration" for the final step, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
      lights:
        led1: red
@@ -185,8 +194,9 @@ You can set a ``duration: -1`` for an "infinite" duration of a step. (Think of t
 useful in shows that you want to run and then hold something in their final state. For example, maybe you want a show
 that runs once (no loop) and flashes a light which then stays on. You could do that like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
      lights:
        led1: red

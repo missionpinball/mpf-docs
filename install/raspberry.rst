@@ -40,7 +40,7 @@ Let's start:
 
 - now type this:
 
-::
+.. code-block:: shell
 
     sudo raspi-config
 
@@ -54,7 +54,7 @@ and change the value to 256.
 
 Now reboot, login and type:
 
-::
+.. code-block:: shell
 
     sudo apt-get update
 
@@ -62,7 +62,7 @@ to update the debian repositories links.
 
 The standard /tmp "folder" is too small on pipaos, just type:
 
-::
+.. code-block:: shell
 
     sudo umount /tmp
 
@@ -83,14 +83,14 @@ If you need a file-manager start mc (No, not the mpf mediacontroller, its the mi
 If you need to copy your folders from an usb-stick you have to manually mount it (we dont have X, so everything has to
 be done by hand).
 
-::
+.. code-block:: shell
 
     sudo mount /dev/sda1 /mnt
 
 This works in 90% otherwise your stick is not sda1, just look inside the /dev folder to find out which device you have
 to mount or type
 
-::
+.. code-block:: shell
 
     lsblk
 
@@ -123,13 +123,13 @@ The device is called /dev/ttyAMA0 and you need to stop it from starting:
 
 Type:
 
-::
+.. code-block:: shell
 
   sudo systemctl disable serial-getty@ttyAMA0.service
 
 Now you have to disable the console itself:
 
-::
+.. code-block:: shell
 
   sudo mc
 
@@ -139,7 +139,9 @@ Now go to /boot and press F4 over cmdline.txt.
 
 Remove these entries:
 
-console=ttyAMA0,115200 kgdboc=ttyAMA0, 115200
+::
+
+  console=ttyAMA0,115200 kgdboc=ttyAMA0, 115200
 
 and save the file.
 
@@ -164,19 +166,19 @@ Video Playback:
 ---------------
 If you need video capability in your mpf-mc you need to install one player that kivy will use to play your videos:
 
-::
+.. code-block:: shell
 
   sudo apt-get install omxplayer
 
 You can try videoplayback with
 
-::
+.. code-block:: shell
 
   omxplayer your_video.mp4
 
 To test the video playback capability under kivy into the framebuffer just run this command:
 
-::
+.. code-block:: shell
 
   python3 -m kivy.uix.videoplayer /usr/local/lib/python3.4/dist-packages/mpfmc/tests/machine_files/video/videos/mpf_video_small_test.mp4
 
@@ -195,7 +197,7 @@ https://www.raspberrypi.org/documentation/configuration/audio-config.md
 Do a reboot:
 ------------
 
-::
+.. code-block:: shell
 
   sudo reboot
 
@@ -220,7 +222,7 @@ http://www.putty.org/
 See whats going on on your pinball:
 -----------------------------------
 
-::
+.. code-block:: shell
 
   sudo dispman_vncserver
 
@@ -234,7 +236,7 @@ Start mpf and mpf-mc
 
 To test your installation type
 
-::
+.. code-block:: shell
 
   mpf
 
@@ -244,7 +246,7 @@ Press (STRG+ALT F2) to change to the second terminal tty2.
 
 Login and start mpf-mc inside your machine folder with
 
-::
+.. code-block:: shell
 
   mpf mc
 

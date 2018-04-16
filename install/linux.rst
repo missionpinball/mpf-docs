@@ -30,7 +30,7 @@ Keeping MPF up-to-date
 
 To upgrade MPF just re-run the installer which will make sure that you will also get updated dependencies:
 
-::
+.. code-block:: console
 
   sudo ./install
 
@@ -40,7 +40,7 @@ MPF installation.
 
 To to this, run the following:
 
-::
+.. code-block:: console
 
   pip3 install mpf mpf-mc --upgrade
 
@@ -50,13 +50,13 @@ will download and install them.
 
 To install the latest dev release (not generally recommended) which allows you to try bleeding-edge features run:
 
-::
+.. code-block:: console
 
   pip3 install mpf mpf-mc --pre --upgrade
-  
+
 To downgrade (or install a specific release x.yy.z) run:
 
-::
+.. code-block:: console
 
   pip3 install mpf=x.yy.z
   pip3 install mpf-mc=x.yy.z

@@ -11,7 +11,7 @@ The actual format for a show in a config file is identical to the format of a st
 Basically you add a ``shows:`` section to a config, create sub-sections based on show name, and then add normal
 show items to the config. For example:
 
-::
+.. code-block:: mpf-config
 
    shows:
       flash_red:
@@ -21,7 +21,7 @@ show items to the config. For example:
          - time: +1
            lights:
              led1: off
-         - time: + 1
+         - time: +1
       blue_green_cycle:
          - time: 0
            lights:
@@ -29,7 +29,7 @@ show items to the config. For example:
          - time: +1
            lights:
              led2: green
-         - time: + 1
+         - time: +1
 
 The section above contains two shows: *flash_red* and *blue_green_cycle*.
 
