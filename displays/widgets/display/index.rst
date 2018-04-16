@@ -1,6 +1,13 @@
 Display Widget
 ==============
 
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   Effects <effects>
+
+
 The display widget is used to show the contents of a display on a slide :doc:`slide </displays/slides/index>`
 or another display (think of this like a picture-in-picture kind of thing). To attempt to clear up any
 confusion, there are two types of displays: a :doc:`display <displays/display/index>` which is basically an
