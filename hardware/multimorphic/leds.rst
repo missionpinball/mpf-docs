@@ -1,8 +1,6 @@
 How to configure LEDs (P-ROC/P3-ROC)
 ====================================
 
-.. include:: /not_updated_yet.rst
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
@@ -48,7 +46,7 @@ specify four parts, separated by dashes:
 You separate those with dashes, so an example PD-LED configuration might look
 like this:
 
-::
+.. code-block:: mpf-config
 
    lights:
       l_led0:
@@ -66,7 +64,7 @@ hook it up between the PD-LED’s output and ground, or between the output and
 3.3v.) You can then use the config file to specify which type of LED you have,
 such as:
 
-::
+.. code-block:: mpf-config
 
    lights:
       l_shoot_again:

@@ -1,8 +1,6 @@
 How to configure a FadeCandy RGB LED Controller
 ===============================================
 
-.. include:: /not_updated_yet.rst
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
@@ -107,7 +105,7 @@ To configure MPF to use FadeCandy LEDs, you can add an entry to the
 ``hardware:`` section of your machine config to tell it to override the default
 platform for your LEDs and to instead use the ``fadecandy`` platform, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: p_roc

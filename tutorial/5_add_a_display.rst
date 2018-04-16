@@ -1,8 +1,6 @@
 Tutorial step 5: Add a display
 ==============================
 
-.. include:: /not_updated_yet.rst
-
 In this step, we're going to add a graphical on-screen window which
 will help show what's happening in your machine as it runs. If you're
 planning to put an LCD display in the backbox of your machine, this is

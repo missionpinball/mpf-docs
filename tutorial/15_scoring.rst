@@ -1,8 +1,6 @@
 Tutorial step 15: Add scoring
 =============================
 
-.. include:: /not_updated_yet.rst
-
 By now you have a "playable" game with a base game mode, and you've
 got a score showing on the display, but it's still pretty boring since
 nothing is actually configured to register a score yet. So in this

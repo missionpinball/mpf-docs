@@ -1,12 +1,10 @@
 How to configure Matrix Lights (FAST Pinball)
 =============================================
 
-.. include:: /not_updated_yet.rst
-
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/matrix_lights`                                                 |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 
 Matrix lights are currently only supported on FAST Pinball via their WPC

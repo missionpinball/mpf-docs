@@ -1,8 +1,6 @@
 ball_devices:
 =============
 
-.. include:: /not_updated_yet.rst
-
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
@@ -260,7 +258,7 @@ VUK*, the *leftcannon*, or the *right cannon*. In that machine, the
 *left VUK*, *left cannon*, and *right cannon* are all ball devices. So
 the *eject_targets:* setting looks like this:
 
-::
+.. code-block:: yaml
 
     eject_targets: playfield, bd_leftVUK, bd_leftCannonVUK, bd_rightCannonVUK
 
@@ -312,7 +310,7 @@ confirmed before it assumes the eject failed. The order you enter them
 here matches up with the order of your *eject_targets*. For example,
 consider the following two lines from a ball device configuration:
 
-::
+.. code-block:: yaml
 
     eject_targets: playfield, bd_leftVUK, bd_leftCannonVUK, bd_rightCannonVUK
     eject_timeouts: 500ms, 2s, 4s, 4s

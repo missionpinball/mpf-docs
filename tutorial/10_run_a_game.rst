@@ -1,8 +1,6 @@
 Tutorial step 10: Run a real game
 =================================
 
-.. include:: /not_updated_yet.rst
-
 Holy Moly! It's actually time to run your first real game with MPF.
 When we say a "real" game, we're talking about with multiple players
 and balls machine flow from attract to game mode and back to attract

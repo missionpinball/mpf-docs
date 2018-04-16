@@ -1,8 +1,6 @@
 Tutorial step 3: Get flipping!
 ==============================
 
-.. include:: /not_updated_yet.rst
-
 There's something exciting about seeing the first flips from your
 own code, so in this step we're going to focus on getting your flippers working.
 

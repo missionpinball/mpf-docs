@@ -21,7 +21,7 @@ number:
 
 For PD-16-based devices, the numbering format is:
 
-::
+.. code-block:: yaml
 
    number: Ax-By-z
 

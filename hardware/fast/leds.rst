@@ -65,7 +65,7 @@ messages.
 
 To help combat this, there are two settings you can adjust:
 
-::
+.. code-block:: mpf-config
 
    mpf:
       default_led_hw_update_hz: 50
