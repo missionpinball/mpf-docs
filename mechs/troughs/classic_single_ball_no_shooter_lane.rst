@@ -8,7 +8,7 @@ machines of the early 1980s.
 
 Here's an example from a XXX:
 
-.. todo:: Add an picture of a machine without shooter lane.
+.. todo:: Add an picture of a machine without shooter lane (:doc:`/about/help_us_to_write_it`).
 
 1. Add the drain switch
 -----------------------

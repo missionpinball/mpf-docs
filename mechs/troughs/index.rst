@@ -146,16 +146,28 @@ Here's an example from Gottlieb Big Shot:
 If you have a system like this, read the :doc:`classic_single_ball` guide to
 continue.
 
-Option 6: Something we haven't seen yet
+Option 6: Classic single ball, single coil, no shooter lane
+-----------------------------------------------------------
+
+Very similar to Option 5 but the drain directly ejects back into the playfield.
+There is no shooter lane. This was used in early EM machines.
+
+.. todo:: Add an picture of a machine without shooter lane (:doc:`/about/help_us_to_write_it`).
+
+
+If you have a system like this, read the :doc:`classic_single_ball_no_shooter_lane` guide to
+continue.
+
+Option 7: Something we haven't seen yet
 ---------------------------------------
 
 If you're using MPF with a machine that has some kind of trough or drain system
 that we haven't covered here, we would like to know about it so we can write a
 how to guide and/or add support for it in MPF.
 
-As far as we know, however, these 5 options should cover everything. For example,
+As far as we know, however, these 6 options should cover everything. For example,
 you might have a machine that you think is different, but when you really look
-at it, it's just a weird form of one of these 5 options. (Bally Fathom is a great
+at it, it's just a weird form of one of these 6 options. (Bally Fathom is a great
 example of this. It's like a classic single-ball trough where there is a drain
 that ejects a ball all the way into the plunger lane, but there are two additional
 switches in the apron wall where balls rest before they land in the drain device.
