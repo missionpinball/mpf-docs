@@ -11,7 +11,7 @@ Windows
    Just choose all the defaults and you should be ok.
 2. Open a command prompt and run: (You can run this from any folder)
 
-::
+.. code-block:: console
 
    pip install mpf-monitor
 
@@ -22,7 +22,7 @@ Windows
 
 To update MPF Monitor to the latest version at any time, run:
 
-::
+.. code-block:: console
 
    pip install mpf-monitor --upgrade
 
@@ -36,13 +36,13 @@ Mac
 Open a terminal window and run the following command: (You can run this from
 any folder)
 
-::
+.. code-block:: console
 
    pip3 install mpf-monitor
 
 To update MPF Monitor to the latest version at any time, run:
 
-::
+.. code-block:: console
 
    pip3 install mpf-monitor --upgrade
 
@@ -60,13 +60,13 @@ potentially run ``apt-get install python3-pyqt5``.
 
 Install mpf-monitor via pip:
 
-::
+.. code-block:: console
 
    pip install mpf-monitor
 
 To update MPF Monitor to the latest version at any time, run:
 
-::
+.. code-block:: console
 
    pip install mpf-monitor --upgrade
 

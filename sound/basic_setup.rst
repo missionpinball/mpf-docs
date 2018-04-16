@@ -22,7 +22,7 @@ be played simultaneously so that is what we have configured in the example below
 
 Example:
 
-::
+.. code-block:: mpf-config
 
     sound_system:
         master_volume: 0.75
@@ -73,7 +73,7 @@ respective tracks (*music*, *sfx*, and *voice*) so we set the ``track:`` setting
 
 ``assets:`` section in machine configuration file:
 
-::
+.. code-block:: mpf-config
 
     assets:
         sounds:
@@ -128,7 +128,7 @@ to it in my config files as ``triangle`` and not ``22783__franciscopadilla__80-m
 (see :doc:`sounds: </config/sounds>` in the documentation for more details) I can put the following
 text:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -146,7 +146,7 @@ machine.  This allows you to balance out sounds from various sources rather than
 the levels in each sound file using audio editing software.  Building on the example above, let's
 set the volume of the *triangle* sound in our config file:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -181,7 +181,7 @@ information about all these settings.
 
 Example ``sounds:`` configuration demonstrating most common settings:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -229,7 +229,7 @@ The scenario in this example is we want our song from the previous example (``so
 infinitely when the *attract* mode starts and stop when the *attract* mode stops.  Create the
 following entries in the ``sound_player:`` section of the machine config file:
 
-::
+.. code-block:: mpf-config
 
     sound_player:
         mode_attract_started:

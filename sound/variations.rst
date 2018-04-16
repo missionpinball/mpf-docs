@@ -35,7 +35,7 @@ simple triangle sound on `www.freesound.org <http://www.freesound.org/>`_ that w
 it an easier name to remember (``triangle_01``) using the ``file:`` setting (or you could simply
 rename the file to *triangle_01.wav* and omit the *file:* setting):
 
-::
+.. code-block:: mpf-config
 
    sounds:
       triangle_01:
@@ -49,7 +49,7 @@ the same directory as your first sound file.  We are now ready to add them to th
 section in the machine configuration file (I named the sound variations *triangle_02*,
 *triangle_03*, and *triangle_04*:
 
-::
+.. code-block:: mpf-config
 
    sounds:
       triangle_01:
@@ -69,7 +69,7 @@ We now have 4 variations of the same basic triangle sound.  It's time to put the
 sound pool object so we can treat them as a single sound.  To do so, we need to add a
 ``sound_pools:`` section to our machine configuration file as follows:
 
-::
+.. code-block:: mpf-config
 
    sound_pools:
       triangle:
@@ -91,7 +91,7 @@ can we make that happen? It's very easy to do. We can add weights to each sound 
 specify the probability of each sound being selected.  Let's look at our ``sound_pools:`` section
 again:
 
-::
+.. code-block:: mpf-config
 
    sound_pools:
       triangle:
@@ -115,7 +115,7 @@ to any sound and the sound pool will only include that sound if the condition ev
 playback time. If the selection is random, excluded events will not be weighted in the distribution.
 If the selection is sequential, excluded events will simply be skipped.
 
-::
+.. code-block:: mpf-config
 
    sound_pools:
       triangle:

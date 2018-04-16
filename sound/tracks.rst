@@ -39,7 +39,7 @@ The following types of audio tracks are available in MPF:
 
 Example track configuration:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    sound_system:
      buffer: 2048

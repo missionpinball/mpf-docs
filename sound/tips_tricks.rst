@@ -146,7 +146,7 @@ The basic concept is to add an event to the video that is triggered when the vid
 one when the video is stopped.  Those events are then added to the ``track_player`` section of
 your config file:
 
-::
+.. code-block:: mpf-config
 
     track_player:
         my_video_is_playing:
