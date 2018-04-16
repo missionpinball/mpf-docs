@@ -7,8 +7,9 @@ For example, you might have a ``scoring:`` entry in your config which watches
 for an event called *target1_hit*, and when it sees it, it adds 1000 points
 to the player's score, like this:
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: base
   scoring:
       target1_hit:
           score: 1000
@@ -95,7 +96,7 @@ you create entries based on event names.
 
 For example, in a config file:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       mpf_is_awesome: my_slide
@@ -108,8 +109,14 @@ Also, a lot of things in MPF have ``XX_events:`` settings, (the "XX" will be
 some word) which is where you can event event names that cause that action to
 happen. For example, you may have a drop target configured like this:
 
-::
+.. code-block:: mpf-config
 
+   #! switches:
+   #!    s_drop_target_1:
+   #!       number: 1
+   #! coils:
+   #!    c_drop_target_reset:
+   #!       number: 1
    drop_targets:
       my_drop_target:
          switch: s_drop_target_1

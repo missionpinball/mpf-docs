@@ -102,8 +102,9 @@ variables will be broadcast via BCP to the media controller. (MPF will
 send these any time there's a change.) You can either list out the
 individual names of the players variables you want to send, like this:
 
-::
+.. code-block:: mpf-config
 
+   bcp:
         player_variables:
             ball
             extra_balls
@@ -112,8 +113,9 @@ Or you can use the entry `__all__` (that's two underscores, the
 letters "all", then two more underscores) to send every change of
 every player variable to the media controller. Here's an example:
 
-::
+.. code-block:: mpf-config
 
+   bcp:
         player_variables:
             __all__
 

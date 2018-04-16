@@ -91,12 +91,15 @@ One or more sub-entries, each in the format of type: ``float``:``str``. Default:
 
 This is a sub-section mapping of servo positions to MPF event names. For example:
 
-::
+.. code-block:: mpf-config
 
-  positions:
-      0.1: servo1_down
-      0.9: servo1_up
-      0.45: servo1_mid
+   #! servos:
+   #!    servo1:
+   #!       number: 1
+         positions:
+            0.1: servo1_down
+            0.9: servo1_up
+            0.45: servo1_mid
 
 In MPF, servo ranges of motion are represented as numbers between 0.0 and 1.0.
 So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min:
@@ -133,9 +136,12 @@ move to its reset position (discussed below).
 Note that by default, *ball_starting* is a reset event, so if you don't want
 the servo to reset on the start of each ball, you can override that like this:
 
-::
+.. code-block:: mpf-config
 
-  reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
+   #! servos:
+   #!    servo1:
+   #!       number: 1
+         reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
 
 reset_position:
 ~~~~~~~~~~~~~~~

@@ -56,7 +56,7 @@ and item3. You can enter this into your config file in one of several
 ways. First, you can enter all the items on one line separated by
 commas:
 
-::
+.. code-block:: yaml
 
     config: item1, item2, item3
 
@@ -64,7 +64,7 @@ Second, you can enter all the items on one line separated by spaces:
 (Obviously you can't do this if your individual items have spaces in
 their names. In that case, just use commas.)
 
-::
+.. code-block:: yaml
 
     config: item1 item2 item3
 
@@ -72,7 +72,7 @@ Third, you can enter each item on its own line, like this: (Be sure
 that you indent your list items, and that they are all indented the
 same amount.
 
-::
+.. code-block:: yaml
 
     config:
         item1
@@ -83,7 +83,7 @@ Fourth, you can enter each item on its own line, indented, with each
 line starting with a dash, like this: (Be sure to include the space
 after the dash before the list item. It's a YAML thing.)
 
-::
+.. code-block:: yaml
 
     config:
         - item1
@@ -106,7 +106,7 @@ Blocks where we have multiple steps that can each be made up of one or
 more events.) The easiest way to enter these into your configuration
 files is to combine the method using commas and dashes, like this:
 
-::
+.. code-block:: yaml
 
     config:
         - item1, item2
@@ -119,7 +119,7 @@ item contains item3, item4, and item5, and the third list item
 contains item6. You can also enter each item on it's own line and then
 use dashes to signify where a new list item starts, like this:
 
-::
+.. code-block:: yaml
 
     config:
         - item1

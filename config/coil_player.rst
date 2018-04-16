@@ -44,8 +44,9 @@ The coil player's express config is the "pulse" action.
 
 Example coil player from a show:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: test
    - time: 0
      coils:
        coil1: pulse

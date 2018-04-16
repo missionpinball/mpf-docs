@@ -12,7 +12,7 @@ Entering a simple numeric gain value
 To enter a simple numeric gain value, simply enter a number between 0.0 and 1.0 with no appended
 label string.  Some examples:
 
-::
+.. code-block:: yaml
 
    master_volume: 0.5
 
@@ -36,7 +36,7 @@ numeric gain value between 0.0 and 1.0.
 
 Some examples:
 
-::
+.. code-block:: yaml
 
    master_volume: -6.0db
 

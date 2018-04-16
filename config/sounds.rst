@@ -320,7 +320,7 @@ a sound at that point on the user's next turn (using mode code).
 
 Here's a simple example utilizing markers:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         long_sound_1:

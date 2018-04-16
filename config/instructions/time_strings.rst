@@ -22,7 +22,7 @@ To enter a time duration in seconds, simply add an “s” or “sec” after yo
 (This can be uppercase or lowercase and you can put a space in between your number
 and the letters if you want.) Some examples:
 
-::
+.. code-block:: yaml
 
    ball_count_delay: 0.5s
 
@@ -43,7 +43,7 @@ setting should say whether the default is seconds or ms.
 
 Some examples:
 
-::
+.. code-block:: yaml
 
    ball_count_delay: 500ms
 
@@ -66,7 +66,7 @@ While this isn’t practical for things like ball device delays, it’s used in 
 
 Some examples:
 
-::
+.. code-block:: yaml
 
    credit_expiration_time: 2m     # 2 minutes
 

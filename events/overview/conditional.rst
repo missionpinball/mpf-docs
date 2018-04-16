@@ -36,7 +36,7 @@ config files when you enter things that take action on events.
 For example, here's a section of a config file that would show a slide called
 "lets_go" when the *ball_started* event was posted:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started: lets_go
@@ -50,7 +50,7 @@ have certain values.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{ball==1}: first_ball_intro
@@ -62,7 +62,7 @@ any player.)
 
 Of course you can use multiple entries with different values, like this:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{ball==1}: first_ball_intro
@@ -74,7 +74,7 @@ Ball 1, the "lets_go" slide will be posted.
 
 You can also combine things here using ``and`` or ``or``. For example:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{ball==1 or ball==3}: special_slide
@@ -83,7 +83,7 @@ Now the "special_slide" will be shown for either ball 1 *or* ball 3.
 
 You can also combine with "and", for example:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{ball==3 and player==1}: special_slide
@@ -99,7 +99,7 @@ can also use ``current_player.`` to access player variables,
 ``machine.`` to access machine variables, ``game.`` game attributes,
 and ``settings.`` to access operator settings.
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{current_player.score > 1000000}: you_rule
@@ -115,7 +115,7 @@ But wait, there's more!
 You can also use standard math operators (``+``, ``-``, ``*``, ``/``, etc.)
 to evaluate whether the action should take place:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       ball_started{ball > 1 and current_player.score < ((ball - 1) * 10000)}: uh_oh

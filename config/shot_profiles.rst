@@ -121,9 +121,24 @@ This setting lets you specify a custom rotation pattern that's used
 when an event from this profile's rotation_events: section is posted.
 You enter it as a list of Ls and Rs, for example:
 
-::
+.. code-block:: mpf-config
 
-    rotation_pattern: L, L, L, L, R, R, R, R
+   ##! config: mode1
+   shot_profiles:
+       my_default_profile:
+           states:
+             - name: unlit
+               show: "off"
+             - name: red
+               show: led_color
+               show_tokens:
+                  color: red
+             - name: blue
+               show: "flash"
+               show_tokens:
+                  color: blue
+
+           rotation_pattern: L, L, L, L, R, R, R, R
 
 In the above example, the first four times a rotation_event is posted,
 this shot group will rotate to the left, then the next four to the

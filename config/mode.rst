@@ -166,7 +166,7 @@ However, it is very likely that a mode will be left unfinished (open)
 after the final ball, causing MPF to shutdown unexpectedly.  You will
 get an error similar to this:
 
-::
+.. code-block:: python
 
    AssertionError('Mode terra_2 is not supposed to run outside of game.',)
 

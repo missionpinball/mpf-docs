@@ -10,7 +10,7 @@ the machine-wide configs and mode config files). You specify the
 config version with a list that starts with a hash sign, like
 this:
 
-::
+.. code-block:: yaml
 
     #config_version=5
 

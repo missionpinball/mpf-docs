@@ -61,8 +61,9 @@ For example, if you want a target called "upper" to reset when a mode
 called "shoot_here" starts, you could create an entry like this in the
 shoot here mode's shoot_here.yaml mode configuration file:
 
-::
+.. code-block:: mpf-config
 
+    ##! mode: shoot_here
     event_player:
       mode_shoot_here_started:
         cmd_upper_target_reset
@@ -73,8 +74,9 @@ Conditional Event Playing
 Events in the event player can be conditional, to allow precise control over
 when an event is played:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: base
    event_player:
        mode_base_started{current_player.score>10000}:
          start_mode_superbonusround
@@ -92,8 +94,9 @@ will be posted depending on whether the *ironthrone* achievement has been comple
 Conditions can also be applied to events within a list, to allow one event to
 trigger a variable number of handlers:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: base
    event_player:
       reenable_nonrecruit_modes:
          - start_mode_shadowbroker_base

@@ -22,7 +22,7 @@ Even though these configuration entries use the word "events"
 you have a flipper device that you want to enable when a ball starts,
 you can add the following line to the configuration for your flipper:
 
-::
+.. code-block:: yaml
 
     enable_events: ball_started
 
@@ -35,7 +35,7 @@ want to disable a flipper when the ball ends, but you also want to
 make sure it's disabled when a tilt or slam tilt event is posted. In
 that case you'd enter your configuration like this:
 
-::
+.. code-block:: yaml
 
     disable_events: ball_ending, tilt, slam_tilt
 
@@ -51,7 +51,7 @@ Note that when you're entering multiple events, you can
 enter them all on the same line separated by commas, or you can enter
 each one on its own line started with a dash and a space, like this:
 
-::
+.. code-block:: yaml
 
     disable_events:
         - ball_ending
@@ -69,7 +69,7 @@ cause the enable, disable, or reset events to wait after one of your
 events is fired. Here's an example from the "Solids" drop target bank
 in Big Shot:
 
-::
+.. code-block:: yaml
 
             reset_events:
                 ball_starting: 0
@@ -83,7 +83,7 @@ different delays.) In case you're wondering why we did this, take a
 look at the reset_events configuration for the other bank of drop
 targets (called "Stripes") in Big Shot:
 
-::
+.. code-block:: yaml
 
             reset_events:
                 ball_starting: 0.25s

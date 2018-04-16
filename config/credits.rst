@@ -222,8 +222,10 @@ first one.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
+   credits:
+      # ...
       pricing_tiers:
         - price: .50
           credits: 1
@@ -253,8 +255,10 @@ events:
 A list of one or more events with settings which add credits based on MPF events. Like the pricing_tiers section, start each entry here
 with a minus sign and a space.
 
-::
+.. code-block:: mpf-config
 
+   credits:
+      # ...
       events:
         - event: special
           type: special
