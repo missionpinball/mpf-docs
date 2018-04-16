@@ -10,14 +10,12 @@ Most popular
 But also these:
 
 * Bezier Curve
-* Color DMD
-* DMD
+* Display
 * Ellipse
 * Line
 * Points
 * Quad
 * Rectangle
-* Slide Frame
 * Text Input
 * Triangle
 * Common Settings (all widgets)
@@ -29,16 +27,14 @@ But also these:
    Text <text/index>
    Image <image/index>
    Video <video/index>
-   Camera <camera/index>
    Bezier Curve <bezier/index>
-   Color DMD <color_dmd/index>
-   DMD <dmd/index>
+   Display <display/index>
    Ellipse <ellipse/index>
    Line <line/index>
    Points <points/index>
    Quad <quad/index>
    Rectangle <rectangle/index>
-   Slide Frame <slide_frame/index>
    Text Input <text_input/index>
    Triangle <triangle/index>
+   Camera <camera/index>
    Common Settings (all widgets) <common_settings>
