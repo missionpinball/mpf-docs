@@ -181,6 +181,8 @@ def process_source(app, doctree, fromdocname):
 
 def run_tests(app, exception):
     # only run on dummy builder
+    if exception:
+        print(exception)
     if app.builder.name != "dummy":
         return
 
