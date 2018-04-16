@@ -24,6 +24,7 @@ class MpfLexer(YamlLexer):
             (r'\n+', Text),
             # doc ignore comment
             (r'#![^\n]*\n', nothing(Text)),
+            (r'##![^\n]*\n', nothing(Text)),
             # a comment
             (r'#[^\n]*', Comment.Single),
             # the '%YAML' directive
