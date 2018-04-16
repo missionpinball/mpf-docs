@@ -1,5 +1,5 @@
-How to configure a classic single-ball trough
-=============================================
+How to configure a classic single-ball trough without shooter lane
+==================================================================
 
 This guide will show you how to configure MPF to use an older-style single
 ball drain without shooter lane. This is the type of configuration that some single-ball
