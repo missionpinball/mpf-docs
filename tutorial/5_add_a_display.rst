@@ -366,7 +366,7 @@ called ``mpf both`` which launches both the game engine and the MC together.
 
 Use it just like the others:
 
-. code-block:: doscon
+.. code-block:: doscon
 
     C:\pinball\your_machine>mpf both
 
@@ -388,7 +388,7 @@ be at ``/mpf-examples/tutorial/config/step5.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-. code-block:: doscon
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf -c step5
 
