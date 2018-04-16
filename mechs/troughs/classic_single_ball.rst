@@ -20,7 +20,7 @@ And here's a diagram which shows this a bit more clearly: (This is a side view)
 The first step is to add the drain switch to the ``switches:``
 section of your machine config file.
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_drain:
@@ -37,7 +37,7 @@ Next, create the entry in your ``coils:`` section for the drain eject
 coil. Again, the name doesn't matter. We'll call it *c_drain_eject* and enter it
 like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_drain_eject:
@@ -87,14 +87,26 @@ configuration settings for your drain ball device.
 
 Your drain device configuration should look now look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_drain:
+    #!         number: 01
+    #!     s_plunger:
+    #!         number: 02
+    #! coils:
+    #!     c_drain_eject:
+    #!         number: 03
+    #!         default_pulse_ms: 20
     ball_devices:
         bd_drain:
             ball_switches: s_drain
             eject_coil: c_drain_eject
             eject_targets: bd_plunger_lane
             tags: drain, home, trough
+    #!     bd_plunger_lane:
+    #!         ball_switches: s_drain
+    #!         eject_coil: c_drain_eject
 
 4. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
@@ -117,8 +129,11 @@ you're running with one of the virtual hardware interfaces. To use it,
 simply add the section along with a list of the switches you want to
 start active. For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_drain:
+    #!         number: 01
     virtual_platform_start_active_switches:
         s_drain
 
@@ -127,13 +142,15 @@ Here's the complete config
 
 .. begin_mpfdoctest:config/config.yaml
 
-::
+.. code-block:: mpf-config
 
     #config_version=5
 
     switches:
         s_drain:
             number: 01
+        s_plunger:
+            number: 02
 
     coils:
         c_drain_eject:
@@ -149,8 +166,13 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger_lane:
-            tags: ball_add_live
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger_lane
+           tags: default
 
     virtual_platform_start_active_switches:
         s_drain

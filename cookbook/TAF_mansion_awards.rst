@@ -222,7 +222,7 @@ then you'll probably have a lot more than this in your machine config file.)
        ball_switches: plunger_lane
        mechanical_eject: true
        eject_timeouts: 3s
-       tags: home, ball_add_live
+       tags: home
 
      electric_chair:
        ball_switches: electric_chair
@@ -231,6 +231,11 @@ then you'll probably have a lot more than this in your machine config file.)
      swamp_kickout:
        ball_switches: swamp_kickout
        eject_coil: swamp_kickout
+
+   playfields:
+       playfield:
+           default_source_device: plunger_lane
+           tags: default
 
    ##! mode: mansion_awards
    # mode will be defined below

@@ -102,6 +102,15 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Turn on/off debugging.
 
+default_source_device:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``BallDevice``. Default: ``None``
+
+The source ball device to use to feed balls to this playfield.
+This source device must be able to eject directly to the playfield.
+Usually this is your launcher ball device.
+If you do not have a launcher use the trough device.
+
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``

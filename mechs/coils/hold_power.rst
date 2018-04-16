@@ -31,7 +31,7 @@ The default_hold_power setting is a value from 0.0-1.0, with 0 being 0% power
 
 Consider the following example:
 
-::
+.. code-block:: mpf-config
 
    coils:
       some_coil:

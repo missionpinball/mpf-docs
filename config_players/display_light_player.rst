@@ -36,7 +36,7 @@ Then map your lights to a position on the display:
        x: 0.3595817467355206
        y: 0.026751757949132805
      l_light2:
-       number:2
+       number: 2
        x: 0.34303657433971446
        y: 0.02873336964906857
 

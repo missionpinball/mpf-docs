@@ -42,7 +42,11 @@ simulate their switches:
         bd_plunger:
             ball_switches: s_plunger_lane
             eject_coil: c_plunger_eject
-            tags: ball_add_live
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
     keyboard:
         1:

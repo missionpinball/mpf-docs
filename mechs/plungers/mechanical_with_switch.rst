@@ -21,7 +21,8 @@ fired option, then follow the :doc:`auto_manual` guide instead.
 The first step is to add your plunger lane switches to the ``switches:``
 section of your machine config file. Here's an example:
 
-::
+
+.. code-block:: mpf-config
 
    switches:
       s_plunger_lane:
@@ -48,11 +49,16 @@ of your machine-wide config, and then create sub entries for the ball switch.
 Here's an example. Note that in this case, we've left out the other ball devices
 (such as your trough and/or drain):
 
-::
 
-    ball_devices:
+.. code-block:: mpf-config
+
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   ball_devices:
         bd_plunger:
             ball_switches: s_plunger_lane
+            mechanical_eject: true
 
 In the example above, we named the plunger device *bd_plunger*, but if course you can
 name it whatever you want. You might use *bd_right_plunger* and
@@ -76,9 +82,12 @@ from this device, and when that happens, and eject attempt has been made.
 
 To do that, add ``mechanical_eject: true`` to your plunger device, like this:
 
-::
+.. code-block:: mpf-config
 
-    ball_devices:
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   ball_devices:
         bd_plunger:
             ball_switches: s_plunger_lane
             mechanical_eject: true
@@ -134,22 +143,34 @@ Here are some examples of these settings in action.
 First, for a typical coil-fired plunger lane / catapult that ejects the ball
 directly to the playfield: (This is probably 99% of all cases)
 
-::
+.. code-block:: mpf-config
 
-    ball_devices:
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   ball_devices:
         bd_plunger:
-            ...
+   #!          ball_switches: s_plunger_lane
+   #!          mechanical_eject: true
+            # ...
             eject_timeouts: 3s
 
 Next, for a coil-fired plunger that has a switch at the exit of the plunger
 lane that is only hit if the ball has made it out of the plunger and cannot
 be hit by a random ball on the playfield:
 
-::
+.. code-block:: mpf-config
 
-    ball_devices:
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   #!    s_plunger_lane_exit:
+   #!       number: 2-7
+   ball_devices:
         bd_plunger:
-            ...
+   #!          ball_switches: s_plunger_lane
+   #!          mechanical_eject: true
+            # ...
             confirm_eject_type: switch
             confirm_eject_switch: s_plunger_lane_exit
             eject_timeouts: 3s
@@ -157,11 +178,25 @@ be hit by a random ball on the playfield:
 Next, if your plunger lane ejects into another ball device (a cannon, in this
 case):
 
-::
+.. code-block:: mpf-config
 
-    ball_devices:
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   #!    s_canon:
+   #!       number: 3-1
+   #! coils:
+   #!    c_canon:
+   #!       number: 2-2
+   #!       default_pulse_ms: 20
+   ball_devices:
+   #!      bd_cannon:
+   #!          ball_switches: s_canon
+   #!          eject_coil: c_canon
         bd_plunger:
-            ...
+   #!          ball_switches: s_plunger_lane
+   #!          mechanical_eject: true
+            # ...
             eject_targets: bd_cannon
             eject_timeouts: 2s
 
@@ -172,9 +207,26 @@ Once you have your plunger device set up, you need to go back to your trough
 or ball drain device and add the new plunger to your trough's ``eject_targets:``,
 like this:
 
-::
+.. code-block:: mpf-config
 
-    ball_devices:
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   #!    s_trough1:
+   #!       number: 3-1
+   #!    s_trough2:
+   #!       number: 3-2
+   #!    s_trough3:
+   #!       number: 3-3
+   #!    s_trough4:
+   #!       number: 3-4
+   #!    s_trough_jam:
+   #!       number: 3-5
+   #! coils:
+   #!    c_trough_eject:
+   #!       number: 2-2
+   #!       default_pulse_ms: 20
+   ball_devices:
         bd_trough:
             ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
             eject_coil: c_trough_eject
@@ -182,6 +234,9 @@ like this:
             jam_switch: s_trough_jam
             eject_coil_jam_pulse: 15ms
             eject_targets: bd_plunger
+   #!      bd_plunger:
+   #!          ball_switches: s_plunger_lane
+   #!          mechanical_eject: true
 
 Of course you'd add the name that you gave your plunger device, which could
 be something like "bd_catapult" or whatever you called it.
@@ -189,21 +244,29 @@ be something like "bd_catapult" or whatever you called it.
 Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
 
-6. Add the ball_add_live_tag
-----------------------------
+6. Add the plunger als default_source_device
+--------------------------------------------
 
-Next you need to add a tag to your plunger lane ball device called ``ball_add_live``
-which is used to tell MPF that this ball device is used to add a new ball
+Next you need to your plunger lane ball device ``default_source_device`` to
+your playfield to tell MPF that this ball device is used to add a new ball
 into play.
 
-To do that, add the tags section to your new plunger ball device, like this:
+To do that, add your new plunger ball device as ``default_source_device`` in
+the default ``playfield``, like this:
 
-::
+.. code-block:: mpf-config
 
-   ball_devices:
-      bd_plunger:
-         ...
-         tags: ball_add_live
+   #! switches:
+   #!    s_plunger_lane:
+   #!       number: 2-6
+   #! ball_devices:
+   #!     bd_plunger:
+   #!          ball_switches: s_plunger_lane
+   #!          mechanical_eject: true
+   playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
 7. Tag your playfield switches
 ------------------------------
@@ -223,13 +286,30 @@ include the switches and coils for the trough.
 
 This config is what probably 99% of machines with coil-fired plungers will use:
 
-::
+.. code-block:: mpf-config
 
    switches:
       s_plunger_lane:
          number: 2-6
+      s_launch_button:
+         number: 1-5
+      s_trough1:
+         number: 3-1
+      s_trough2:
+         number: 3-2
+      s_trough3:
+         number: 3-3
+      s_trough4:
+         number: 3-4
+      s_trough_jam:
+         number: 3-5
 
-    ball_devices:
+   coils:
+        c_trough_eject:
+            number: 3-1
+            default_pulse_ms: 20
+
+   ball_devices:
 
         bd_trough:
             ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
@@ -243,4 +323,8 @@ This config is what probably 99% of machines with coil-fired plungers will use:
             ball_switches: s_plunger_lane
             mechanical_eject: true
             eject_timeouts: 3s
-            tags: ball_add_live
+
+   playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default

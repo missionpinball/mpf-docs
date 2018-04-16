@@ -34,23 +34,23 @@ section of your config file. Create an entry in your ``switches:`` section for
 each switch in your trough, like this: (This example has six switches plus the
 jam switch. Yours may have more or less.)
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
         s_trough2:
-            number: 03
+            number: 3
         s_trough3:
-            number: 04
+            number: 4
         s_trough4:
-            number: 05
+            number: 5
         s_trough5:
-            number: 06
+            number: 6
         s_trough6:
-            number: 07
+            number: 7
         s_trough_jam:
-            number: 08
+            number: 8
 
 Note that we configured this switches with numbers ``02`` through ``08``, but
 you should use the actual switch numbers for your control system that the trough
@@ -78,11 +78,11 @@ Next, create an entry in your ``coils:`` section for your trough's eject
 coil. Again, the name doesn't matter. We'll call this *c_trough_eject*
 and enter it like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_trough_eject:
-            number: 04
+            number: 4
             default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
@@ -291,31 +291,29 @@ the trough, it's just the one.
 Here's the complete config
 --------------------------
 
-.. begin_mpfdoctest:config/config.yaml
-
-::
-
-    #config_version=5
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
         s_trough2:
-            number: 03
+            number: 3
         s_trough3:
-            number: 04
+            number: 4
         s_trough4:
-            number: 05
+            number: 5
         s_trough5:
-            number: 06
+            number: 6
         s_trough6:
-            number: 07
+            number: 7
         s_trough_jam:
-            number: 08
+            number: 8
+        s_plunger:
+            number: 10
 
     coils:
         c_trough_eject:
-            number: 04
+            number: 4
             default_pulse_ms: 20
 
     ball_devices:
@@ -329,8 +327,13 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger:
-            tags: ball_add_live
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
     virtual_platform_start_active_switches:
         s_trough1
@@ -339,8 +342,6 @@ Here's the complete config
         s_trough4
         s_trough5
         s_trough6
-
-.. end_mpfdoctest
 
 What if it doesn't work?
 ------------------------

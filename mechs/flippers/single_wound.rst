@@ -19,9 +19,7 @@ buttons.
 
 Here's an example ``config.yaml`` with two switches added:
 
-::
-
-    #config_version=5
+.. code-block:: mpf-config
 
     switches:
         s_left_flipper:
@@ -54,7 +52,7 @@ be able to skip.
 Next you need to add entries for your flipper coils to your machine-wide
 config. These will be added to a section called ``coils:``.
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left:
@@ -102,8 +100,24 @@ flipper that you defined in Steps 1 and 2.
 
 Here's what you would create based on the switches and coils we've defined so far:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 1
+    #!         tags: left_flipper
+    #!     s_right_flipper:
+    #!         number: 2
+    #!         tags: right_flipper
+    #! coils:
+    #!     c_flipper_left:
+    #!         number: 0
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
+    #!     c_flipper_right:
+    #!         number: 1
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
     flippers:
         left_flipper:
             main_coil: c_flipper_left
@@ -131,8 +145,24 @@ file:
 
 So now the ``flippers:`` section of your config file should look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 1
+    #!         tags: left_flipper
+    #!     s_right_flipper:
+    #!         number: 2
+    #!         tags: right_flipper
+    #! coils:
+    #!     c_flipper_left:
+    #!         number: 0
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
+    #!     c_flipper_right:
+    #!         number: 1
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
     flippers:
         left_flipper:
             main_coil: c_flipper_left
@@ -174,7 +204,7 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-::
+.. code-block:: mpf-config
 
     #config_version=5
 

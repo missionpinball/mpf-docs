@@ -19,9 +19,7 @@ buttons.
 
 Here's an example ``config.yaml`` with two switches added:
 
-::
-
-    #config_version=5
+.. code-block:: mpf-config
 
     switches:
         s_left_flipper:
@@ -56,7 +54,7 @@ config. These will be added to a section called ``coils:``. Since we're using
 dual-wound coils, there will actually be two coil entries for each coil—one for
 the power (main) winding, and one for the hold winding.
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left_main:
@@ -99,8 +97,26 @@ flipper that you defined in Steps 1 and 2.
 
 Here's what you would create based on the switches and coils we've defined so far:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    s_left_flipper:
+    #!        number: 1
+    #!        tags: left_flipper
+    #!    s_right_flipper:
+    #!        number: 2
+    #!        tags: right_flipper
+    #! coils:
+    #!     c_flipper_left_main:
+    #!         number: 0
+    #!     c_flipper_left_hold:
+    #!         number: 1
+    #!         allow_enable: true
+    #!     c_flipper_right_main:
+    #!         number: 2
+    #!     c_flipper_right_hold:
+    #!         number: 3
+    #!         allow_enable: true
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -130,8 +146,26 @@ file:
 
 So now the ``flippers:`` section of your config file should look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    s_left_flipper:
+    #!        number: 1
+    #!        tags: left_flipper
+    #!    s_right_flipper:
+    #!        number: 2
+    #!        tags: right_flipper
+    #! coils:
+    #!     c_flipper_left_main:
+    #!         number: 0
+    #!     c_flipper_left_hold:
+    #!         number: 1
+    #!         allow_enable: true
+    #!     c_flipper_right_main:
+    #!         number: 2
+    #!     c_flipper_right_hold:
+    #!         number: 3
+    #!         allow_enable: true
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
