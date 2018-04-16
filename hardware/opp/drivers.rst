@@ -15,7 +15,7 @@ numbers 12 to 15. The coil is numbered using the position of the
 OPP card (starting at 0), then a '-', and finally the coil number
 on the card.
 
-::
+.. code-block:: mpf-config
 
     coils:
       some_coil:
@@ -32,7 +32,7 @@ The OPP hardware also has the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time. For
 example, consider the following configuration:
 
-::
+.. code-block:: mpf-config
 
     coils:
         some_coil:
@@ -51,13 +51,13 @@ If you want to hold a driver on at less than full power, MPF does this by using
 The period is fixed at 16ms for OPP. To set the hold power to 25%, set
 default_hold_power to .25 and OPP will use 4ms/16ms = 25%.
 
-::
+.. code-block:: mpf-config
 
     coils:
       some_coil:
         number: 0-3
         default_pulse_ms: 32
-        default_pulse_ms: 0.5
+        default_hold_power: 0.5
 
 This will configure OPP card 0, solenoid wing 0, last solenoid to
 have an initial pulse of 32 ms, and then be held on at 50% power.

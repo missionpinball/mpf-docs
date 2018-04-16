@@ -7,7 +7,7 @@ feature becomes more mature.
 
 LEDs work similar to matrix_lights (board 1, LED 1):
 
-::
+.. code-block:: mpf-config
 
     lights:
       some_led:

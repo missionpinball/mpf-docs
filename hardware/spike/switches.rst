@@ -27,7 +27,7 @@ extension boards. Here's an example from Wrestlemania Pro:
 
 This would result in the following switch entries:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    switches:
       s_left_inlane:
@@ -55,7 +55,7 @@ This would result in the following switch entries:
          number: 8-2
       s_right_flipper:
          number: 8-3
-      s_left_lane
+      s_left_lane:
          number: 11-3
       s_left_orbit:
          number: 9-11

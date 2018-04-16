@@ -10,8 +10,8 @@ can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 -------------------------------------
 
 Just like any hardware device you connect to a computer, you need to install
-the drivers so your computer can see it. It is easier to do the initial 
-hardware configuration on a Windows PC. Follow the "Getting Started" section of the 
+the drivers so your computer can see it. It is easier to do the initial
+hardware configuration on a Windows PC. Follow the "Getting Started" section of the
 `Pololu Maestro Servo Controller User's Guide <https://www.pololu.com/docs/0J40/all>`_.
 You will need to set Maestro's serial mode to USB Dual Port on the Serial Settings tab
 of the Maestro Control Center.
@@ -25,7 +25,7 @@ for servos. (MPF supports several different models of servo controllers.)
 To do this, add ``servo_controllers: pololu_maestro`` to the ``hardware:`` section
 of your machine-wide config file, like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
      platform: fast
@@ -47,14 +47,14 @@ use the first one (the lower number).
 
 Add a section to your machine-wide config like this:
 
-::
+.. code-block:: mpf-config
 
    pololu_maestro:
      port: COM5
 
 On Linux or Mac, it will probably look like this:
 
-::
+.. code-block:: mpf-config
 
    pololu_maestro:
       port: /dev/ttyACM0
@@ -69,7 +69,7 @@ entries in there for each servo you have.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    servos:
       servo1:
@@ -122,7 +122,7 @@ Everything in between will be interpolated.
 
 The Pololu Maestro servo controllers can accept speed and acceleration settings
 which specify how fast the servo moves to the new position, and how (or whether)
-it accelerates and decelerates when starting and stopping. If you want to use these 
+it accelerates and decelerates when starting and stopping. If you want to use these
 add the ``speed_limit:`` and ``acceleration_limit:`` settings to your config.
 
 5. Using the servo in your game

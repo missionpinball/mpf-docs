@@ -49,7 +49,8 @@ On Mac OS X, the tool "FUSE-ext2" is an option. You will most likely need to use
 the appropriate disk device may vary. In the following example, the Linux root is on partition 3 of the SD card, which is disk2:
 
 ::
-   > sudo fuse-ext2 /dev/disk2s3 /Volumes/SD -o force
+
+   sudo fuse-ext2 /dev/disk2s3 /Volumes/SD -o force
 
 
 3. Edit /etc/inittab
@@ -60,7 +61,7 @@ Last line needs to be changed to enable login without a password:
 ::
 
    S0:2345:respawn:/sbin/getty 115200 ttyS0 -n -l /bin/sh
-   
+
 Furthermore, you might want to add this line to allow USB login
 (e.g. if your board does not have DBGU populated).
 
@@ -96,7 +97,7 @@ Note that we have a precompiled binary in there (as well as the C source code).
 .. note:: It might be hard to mark the bridge binary as executable on Windows
    (but should be possible). If you cannot do this proceed to the next step
    and afterwards do the following:
-   
+
    1. Download PuTTY from www.putty.org.  PuTTY is a free telnet app that allows you to remotely connect to the Linux
       OS running on the SPIKE system. PuTTY was also useful for verifying the connection from your Windows machine to
       the Linux OS running on SPIKE.
@@ -107,14 +108,14 @@ Note that we have a precompiled binary in there (as well as the C source code).
    4. Press enter and you should get a command promt (if not, your serial
       connection is probably not working).
    5. Type the following:
-   
+
    ::
 
       mount -o remount,rw /
       chmod +x /bin/bridge
       mount -o remount,ro /
 
-.. note:: On OS X with fuse-ext2, overwriting files can fail without a message. When updating mpf-spike-bridge, 
+.. note:: On OS X with fuse-ext2, overwriting files can fail without a message. When updating mpf-spike-bridge,
    you may want to remove the old bridge file before copying the new one.
 
    ::

@@ -37,7 +37,7 @@ Install ``smbus2`` via pip:
   Hardware can be bought ready-made for less than 10 bucks.
 
 
-3. Connect your hardware 
+3. Connect your hardware
 ------------------------
 
 Connect the hardware to the bus. This will be at least SDA, SCL and ground.
@@ -59,7 +59,7 @@ To configure MPF to use nativ I2C, you can add an entry to the
 ``hardware:`` section of your machine config to tell it to override the default
 platform for your I2C devices and to instead use the ``smbus2`` platform, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: p_roc
@@ -71,7 +71,7 @@ device-specific default platforms versus overriding the platform for individual
 devices.
 
 5. Understanding I2C numbering
-----------------------------------------
+------------------------------
 
 When using I2C addresses in I2C devices smbus2 will interpret those as
 bus-address. If you only provide an address it will use bus 0. On Linux

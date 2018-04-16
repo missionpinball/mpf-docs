@@ -17,7 +17,7 @@ config is the default platform for all types of mechanisms across all of MPF.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
@@ -37,7 +37,7 @@ specify the default for.
 For example, if you want to use a P-ROC as the default for everything except
 for LEDs, which you want to be FadeCandy, you would do it like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
@@ -69,7 +69,7 @@ For example, if you're using a FAST Pinball controller which can control up to
 256 LEDs, but you also want to add some more LEDs that will be attached to a
 FadeCandy, you could set up your config like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: fast
@@ -87,7 +87,7 @@ the number 0 is a Fadecandy number).
 
 You could also invert this, like so:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: fast

@@ -50,7 +50,7 @@ skip steps 1 to 3. You still need a power supply (step 4).
 ~~~~~~~~~~~~~~
 
 We originally had to buy the panels directly from China via AliExpress,
-but now FAST Pinball sells a kit. 
+but now FAST Pinball sells a kit.
 The FAST Pinball option is nice because the price is great and
 they also include a mounting bracket that fits a standard DMD cutout
 (ask them directly since it is not currently listed on their website).
@@ -168,7 +168,7 @@ If you are using V4 of the shield, you need to insert this line of code in the f
 ::
 
    #include <SmartLEDShieldV4.h> // this line must be first
-   
+
 The V4 shield's library uses more RAM which can causes the Teensy 3.2 to crash during animations or video playback. Using a Teensy 3.5 or 3.6 solves this issue as they have more RAM.
 
 Note that the width and height of your display is set in lines 11 & 12. You can change
@@ -212,7 +212,7 @@ on Mac:
 
    /dev/tty.Bluetooth-Incoming-Port
    /dev/tty.usbmodem1448891
-   
+
 Or this on linux:
 
 ::
@@ -228,7 +228,7 @@ port appears.
 
 So on Windows, you'll end up with something like:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         rgb_dmd: smartmatrix
@@ -240,7 +240,7 @@ So on Windows, you'll end up with something like:
 
 And on Mac or Linux, it will look something like:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         rgb_dmd: smartmatrix
@@ -274,7 +274,7 @@ physical DMD.)
 To do this, create a section in your machine-wide config called
 ``rgb_dmds:``, and then pick a name for the DMD, like this:
 
-::
+.. code-block:: mpf-config
 
     rgb_dmds:
       my_dmd:
@@ -341,7 +341,7 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/rgb_dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:  # on screen window
@@ -369,7 +369,9 @@ on the window and slide settings used in this machine config.
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: color_dmd  # this widget shows the DMD content in this slide too
+      - type: display    # this widget shows the DMD content in this slide too
+        effects:
+         - type: color_dmd
         width: 512
         height: 128
       - type: text

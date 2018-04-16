@@ -11,8 +11,7 @@ To understand why the smart virtual platform exists, consider this simple
 machine config for a trough, a plunger lane, and keyboard key mappings to
 simulate their switches:
 
-::
-
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
@@ -123,7 +122,7 @@ run it.
 You can also manually specify the smart virtual interface
 in the machine config, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: smart_virtual

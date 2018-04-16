@@ -31,7 +31,7 @@ the node number and address number (with a dash between them). For example,
 the driver for the left flipper coil with the address ``8-DR-0``
 would be entered into the MPF config as ``8-0``, etc.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    coils:
       c_shaker:

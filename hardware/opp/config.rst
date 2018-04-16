@@ -7,7 +7,7 @@ Configuring your machine for OPP
 To use MPF with OPP, you need to configure your platform as *opp*,
 like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: opp
@@ -49,7 +49,7 @@ If you're using an OPP controller, you need to add the serial port to
 your MPF config. So if you plug in the OPP controller and see a port
 such as *COM7* appear, you'd set your config like this:
 
-::
+.. code-block:: mpf-config
 
     opp:
         ports: COM7
@@ -69,7 +69,7 @@ Changing the polling rate
 If you encounter issues with the polling rate (in other words: Your OPP processor boards can't answer MPF's polls fast enough) you may want to change it. (Default: 100Hz)
 This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
 
-::
+.. code-block:: mpf-config
 
     opp:
         ports: COM7

@@ -26,7 +26,7 @@ To use MPF with a SPIKE hardware, you need to configure your platform as ``spike
 machine-wide config file. You'll also need to add a "spike:" section with some additional
 settings:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    hardware:
       platform: spike

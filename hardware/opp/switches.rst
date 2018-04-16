@@ -18,7 +18,7 @@ on the card.
 
 Enter them as a combination of board-switch, like ``0-12``.
 
-::
+.. code-block:: mpf-config
 
     switches:
       some_switch:

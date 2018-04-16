@@ -53,7 +53,7 @@ the node. What you're left with is the node address and LED number.
 For example, the Shoot Again light with the address ``8a-LP-47`` would be entered
 as ``number: 8-47``.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    lights:
       backlight:
@@ -102,7 +102,7 @@ Therefore, you can define a RGB light with multiple channels.
 What this does is create a new virtual RGB LED which is a grouping of the three LED
 channels into the RGB LED. Then you can use it like any light.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    lights:
      left_lane_arrow_rgb:
