@@ -2,7 +2,7 @@ Installing MPF on Mac
 =====================
 
 MPF can be used on Mac OS X 10.9 and newer, including Mavericks, Yosemite,
-El Capitan, and MacOS Sierra.
+El Capitan, Sierra and High Sierra.
 
 .. note::
 
@@ -111,6 +111,13 @@ Click the "Install" button here to get just the command line tools. The
 
 The download will be about 150 MB, and the total install will be about 1.1 GB.
 
+After the installation of the tools you need to accept the license agreeement from Apple.
+The following command starts that process in the Terminal, just follow the instructions provided:
+
+::
+
+   sudo xcodebuild -license
+
 If you already have the command line tools installed, that's fine. You'll get
 some kind of error saying they're already installed and you can move on.
 
@@ -121,12 +128,11 @@ MPF is written in a computer language called "Python". This means you have to in
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Mac platforms, MPF requires Python 3.4 or 3.5. (There is a Python 3.6, but
-that's untested with MPF on OSX.) So we recommend that you install Python 3.5.
+On Mac platforms, MPF requires Python above 3.4. We lately tested Python 3.6 and it can be used.
 
-You can download Python 3.5 directly via `this link <https://www.python.org/ftp/python/3.5.4/python-3.5.4-macosx10.6.pkg>`_.
+You can download Python 3.6 directly via `this link <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_.
 (Note that the final digit in the Python version number is the "patch" number,
-so 3.5.4 is the latest version of Python 3.5 as of the time this document was last updated.)
+so 3.6.5 is the latest version of Python 3.6 as of the time this document was last updated.)
 
 .. image:: images/mac_install_python_1.jpg
 
@@ -148,7 +154,7 @@ window. To do that, run the command:
 
    python3 --version
 
-You should see it print something like "Python 3.5.4". Note that you have
+You should see it print something like "Python 3.6.5". Note that you have
 to run the command "Python3", not "Python", since the regular python command
 without the "3" on the end points to the Python 2.x that's built into your
 Mac. Here's a screenshot showing running "python" and "python3" and the
@@ -200,6 +206,8 @@ depending on what's the latest whenever you're running this):
        100% |################################| 3.8MB 7.6MB/s
    Installing collected packages: setuptools, cython
    Successfully installed cython-0.25.2 setuptools-32.3.1
+   
+We recommend to stick to the specific cython Version, as others broke our installation process while testing the installation on different Macs.
 
 5. Install MPF
 --------------
@@ -212,12 +220,24 @@ like this:
 
 ::
 
-   pip3 install mpf-mc
+   pip3 install mpf-mc --pre
 
 .. note::
 
    Since MPF 0.50 is not yet released, the command you need to run is
-   "pip install mpf-mc --pre" to get the latest "pre-release" version.
+   "pip install mpf-mc --pre" to get the latest "pre-release" version, so that MPF runs under Mac.
+   
+   If you Upgrade your installation add --upgrade to the call like this:   
+
+::
+
+   pip3 install mpf-mc --pre --upgrade
+   
+If you are using High Sierra please add the --user option to get around a specific rights problem:
+
+::
+
+   pip3 install mpf-mc --pre --upgrade --user
 
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
@@ -263,6 +283,19 @@ are.
      Running setup.py install for mpf-mc ... done
    Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.12 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
    Brians-Mac:~ brian$
+   
+Now you will have to install PyQt5 to get the rest of the system running later on:
+
+::
+
+   sudo pip3 install PyQt5
+   
+Patch your Terminal undr High Sierra, so that it can show the UI correctely (otherwise it produces an error in "curs_set()"):
+
+::
+
+    export TERM=xterm-256color
+    
 
 If you want to make sure that MPF was installed, quit the Terminal app and restart it, and then run:
 
@@ -286,7 +319,7 @@ version is the latest.)
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
 to download a bundle of MPF examples and run our "Demo Man" example game. To do that, follow
-the instructions in the :doc:`/example_games/demo_man` guide.
+the instructions in the :doc:`/example_games/demo_man` guide. But make sure to get the -dev Version for 0.50.
 
 There's another example project you can also check out if you want called the "MC Demo" (for media controller demo)
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
@@ -328,3 +361,5 @@ Next steps!
 Now that MPF is installed, you can follow our
 :doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
 building your own game in MPF!
+
+Make sure to lookup mpf-monitor later, if you want to simulate and configure a machine you own in hardware.
