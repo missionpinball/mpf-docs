@@ -2,17 +2,13 @@ How to configure a classic single-ball trough
 =============================================
 
 This guide will show you how to configure MPF to use an older-style single
-ball drain. This is the type of configuration that most (all?) single-ball
+ball drain without shooter lane. This is the type of configuration that some single-ball
 machines use, from EM machines of the 1950s through electronic single ball
 machines of the early 1980s.
 
-Here's an example from a Gottlieb Big Shot (1974 EM):
+Here's an example from a XXX:
 
-.. image:: /mechs/images/classic_single_ball_trough_photo.jpg
-
-And here's a diagram which shows this a bit more clearly: (This is a side view)
-
-.. image:: /mechs/images/classic_single_ball.png
+.. todo:: Add an picture of a machine without shooter lane.
 
 1. Add the drain switch
 -----------------------
@@ -76,11 +72,6 @@ configuration settings for your drain ball device.
   switch to know whether or not this device has a ball.
 * Add ``eject_coil: c_drain_eject`` which is the name of the coil that will
   eject the ball from the drain.
-* Add ``eject_targets: bd_plunger_lane`` which tells MPF that this ball device
-  ejects its balls into the device called *bd_plunger_lane*. (We won't actually
-  create the plunger device in this How To guide, but you need to have it, so
-  see the :doc:`/mechs/plungers/index` documentation for full details since
-  there are lots of different types of plungers.
 * Add ``tags: drain, home, trough`` which tells MPF that balls entering this
   device mean that a ball has drained from the playfield, that it's ok to start
   a game with a ball here, and that this device is used to store unused balls.
@@ -102,13 +93,46 @@ Your drain device configuration should look now look like this:
         bd_drain:
             ball_switches: s_drain
             eject_coil: c_drain_eject
-            eject_targets: bd_plunger_lane
             tags: drain, home, trough
-    #!     bd_plunger_lane:
+
+4. Add the trough als default_source_device
+-------------------------------------------
+
+Normally you would use your plunger device as source device for your playfield.
+But since there is no plunger lane, that means
+we have to go back to the trough ball device and use it as source device.
+Therefore, you need to add your trough ball device as ``default_source_device`` to
+your playfield to tell MPF that this ball device is used to add a new ball
+into play.
+
+To do that, add your trough device as ``default_source_device`` in
+the default ``playfield``, like this:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!     s_drain:
+    #!         number: 01
+    #!     s_plunger:
+    #!         number: 02
+    #! coils:
+    #!     c_drain_eject:
+    #!         number: 03
+    #!         default_pulse_ms: 20
+    #! ball_devices:
+    #!     bd_drain:
     #!         ball_switches: s_drain
     #!         eject_coil: c_drain_eject
+    #!         tags: drain, home, trough
+    playfields:
+       playfield:
+           default_source_device: bd_drain
+           tags: default
 
-4. Configure your virtual hardware to start with balls in the trough
+Then when MPF needs to add a live ball into play, it will eject a ball
+from the trough and you're all set!
+
+5. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
 
 While we're talking about the trough, it's probably a good idea to configure
@@ -147,8 +171,6 @@ Here's the complete config
     switches:
         s_drain:
             number: 01
-        s_plunger:
-            number: 02
 
     coils:
         c_drain_eject:
@@ -159,17 +181,11 @@ Here's the complete config
         bd_drain:
             ball_switches: s_drain
             eject_coil: c_drain_eject
-            eject_targets: bd_plunger_lane
             tags: drain, home, trough
-
-        # bd_plunger is a placeholder just so the trough's eject_targets are valid
-        bd_plunger_lane:
-            ball_switches: s_plunger
-            mechanical_eject: true
 
     playfields:
        playfield:
-           default_source_device: bd_plunger_lane
+           default_source_device: bd_drain
            tags: default
 
     virtual_platform_start_active_switches:

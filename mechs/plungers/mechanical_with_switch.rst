@@ -247,7 +247,7 @@ this to the second device (the one that feeds the plunger).
 6. Add the plunger als default_source_device
 --------------------------------------------
 
-Next you need to your plunger lane ball device ``default_source_device`` to
+Next you need to add your plunger lane ball device as ``default_source_device`` to
 your playfield to tell MPF that this ball device is used to add a new ball
 into play.
 

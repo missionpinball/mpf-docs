@@ -28,6 +28,7 @@ Here are the options:
 * :doc:`Older style with two coils and switches for each ball <two_coil_multiple_switches>`
 * :doc:`Older style with two coils and only one ball switch <two_coil_one_switch>`
 * :doc:`Classic single ball, single coil <classic_single_ball>`
+* :doc:`Classic single ball, single coil, no shooter lane <classic_single_ball_no_shooter_lane>`
 
 Since there are so many different options, you need to first identify which
 type of trough or ball drain system your machine has. So look at the following
@@ -202,3 +203,4 @@ post a photo of it to `MPF Users Google Group
    two_coil_multiple_switches
    two_coil_one_switch
    classic_single_ball
+   classic_single_ball_no_shooter_lane

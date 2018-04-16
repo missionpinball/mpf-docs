@@ -44,21 +44,32 @@ Instead the plunger lane area is considered part playfield, so a ball in the
 plunger lane that's not sitting on a switch is just like any other area of the
 playfield where the ball might be rolling around while it's not on a switch.
 
-3. Add a ball_add_live tag to your trough
------------------------------------------
+3. Add the trough als default_source_device
+-------------------------------------------
 
-In machines where the plunger lane is a ball device, we add a tag called
-``ball_add_live`` to the plunger ball device. The "ball_add_live" tag
-is used to tell MPF that this is the device which is used (by default) to
-add a live ball into play.
-
+Normally you would use your plunger device as source device for your playfield.
 But since your plunger lane with no switch is not a ball device, that means
-we have to go back to the trough ball device and add the ``ball_add_live``
-tag to it. (Your trough device will already have the ``trough`` tag applied
-to it, and depending on how your machine is laid it, it might also have the
-``drain`` tag applied.)
+we have to go back to the trough ball device and use it as source device.
+Therefore, you need to add your trough ball device as ``default_source_device`` to
+your playfield to tell MPF that this ball device is used to add a new ball
+into play.
 
-So add ``ball_add_live`` to your trough now.
+To do that, add your trough device as ``default_source_device`` in
+the default ``playfield``, like this:
+
+.. code-block:: mpf-config
+
+   #! switches:
+   #!    s_trough:
+   #!       number: 2-6
+   #! ball_devices:
+   #!     bd_trough:
+   #!          ball_switches: s_trough
+   #!          mechanical_eject: true
+   playfields:
+       playfield:
+           default_source_device: bd_trough
+           tags: default
 
 Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set!
