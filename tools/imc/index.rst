@@ -7,7 +7,7 @@ and see the results in realtime in your on-screen window.
 Running the iMC does two things:
 
 1. It launches the MC like normal, loading your game's config files.
-2. It launches a second window which has a multi-line editable text box where you can type or past slide configs.
+2. It launches a second window which has a multi-line editable text box where you can type or paste slide configs.
 
 The idea is you can use the iMC to keep tweaking and fine-tuning your slide and widget settings in a way that's
 much easier than starting your game and going through your game to find the slide you're looking for.
