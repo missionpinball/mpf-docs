@@ -138,7 +138,6 @@ on top of every slide? Or maybe something like the news crawl on the bottom
 of the *Dialed In* display?
 
 So instead of using a ``slide:`` setting with your widget player, you can use
-the ``target:`` setting and enter of name of a display or a slide frame.
-In that case, the widget will be added there, and not to the slide, meaning
-your widget will ride "on top" of the slides (and even on top of any slide
-transitions that take place).
+the ``target:`` setting and enter of name of a display. In that case, the widget
+will be added there, and not to the slide, meaning your widget will ride "on top"
+of the slides (and even on top of any slide transitions that take place).

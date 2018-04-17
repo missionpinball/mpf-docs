@@ -126,7 +126,7 @@ can even mix-and-match formats, like this:
 Adding a widget to a specific display target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rather than specifying a particular slide to add your widget to, you can target a display or slide frame, and the
+Rather than specifying a particular slide to add your widget to, you can target a display, and the
 widget will be added "on top" of whatever slide is currently being shown:
 
 .. code-block:: mpf-config
@@ -136,8 +136,7 @@ widget will be added "on top" of whatever slide is currently being shown:
          laughing_jackal:
             target: display1
 
-Remember in MPF, display targets can either be the names of a display (dmd, window, etc.), or they can be the name of
-a slide frame which is a widget on another slide which holds its own slides (sort of like picture-in-picture).
+Remember in MPF, display targets are the names of a display (dmd, window, etc.).
 
 More details about this are in the :doc:`layers` guide.
 

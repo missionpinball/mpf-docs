@@ -69,7 +69,7 @@ Settings
    height:
    effects:
 
-.. note:: Slide frame widgets also have "common" widget settings for position, opacity,
+.. note:: Display widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
    :doc:`common widget settings </displays/widgets/common_settings>` page.
 
