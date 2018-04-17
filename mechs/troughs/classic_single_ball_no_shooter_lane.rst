@@ -6,9 +6,9 @@ ball drain without shooter lane. This is the type of configuration that some sin
 machines use, from EM machines of the 1950s through electronic single ball
 machines of the early 1980s.
 
-Here's an example from a XXX:
+Here's an example from a Gottlieb Playball (1971 EM):
 
-.. todo:: Add an picture of a machine without shooter lane (:doc:`/about/help_us_to_write_it`).
+.. image:: /mechs/images/classic_single_ball_trough_without_shooter_lane_photo.png
 
 1. Add the drain switch
 -----------------------

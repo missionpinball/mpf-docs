@@ -152,7 +152,9 @@ Option 6: Classic single ball, single coil, no shooter lane
 Very similar to Option 5 but the drain directly ejects back into the playfield.
 There is no shooter lane. This was used in early EM machines.
 
-.. todo:: Add an picture of a machine without shooter lane (:doc:`/about/help_us_to_write_it`).
+Here's an example from Gottlieb Playball:
+
+.. image:: /mechs/images/classic_single_ball_trough_without_shooter_lane_photo.png
 
 
 If you have a system like this, read the :doc:`classic_single_ball_no_shooter_lane` guide to
