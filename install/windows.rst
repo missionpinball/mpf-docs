@@ -87,8 +87,8 @@ that means you also have Python version 2 installed. (This is ok. You can have P
 and Python 3 installed at the same time.) However, if this is your case, you need to
 use a different command to start Python 3. See the :doc:`2_and_3` page for details.
 
-2. Upgrade pip
---------------
+2. Upgrade pip and setuptools
+-----------------------------
 
 Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
@@ -96,37 +96,18 @@ the web. (It's kind of like an app store for Python apps.) Pip references anothe
 called "setuptools" that is used to download, build, install, upgrade, and uninstall
 Python packages.
 
-So the next step is to update the "pip" program to make sure you have the latest version.
-It's not really important to know exactly what this means right now, just run it.
-
-Using your web browser, download the following file to your computer (right-click on the
-following link and select 'Save as...'): `<https://bootstrap.pypa.io/get-pip.py>`_. Be sure
-you pay attention to where you save the file as you will need the path in the next step (you
-may want to move it someplace with a short and easy to type path).
-
-Next, in the command prompt window, navigate to the folder where you saved the file in the
-previous step and type the following:
+So the next step is to update the "pip" and "setuptools" programs to make sure you have the
+latest versions. It's not really important to know exactly what this means right now,
+just run it.
 
 .. code-block:: doscon
 
-    python get-pip.py
+    pip install pip setuptools --upgrade
 
-This will install the latest version of pip. While pip can be used to update itself, we've
-encountered some problems recently where this is not always successful. Running the get-pip
-script is the most reliable and is the recommended method of installing and updating pip.
+This command will upgrade pip and setuptools to the latest versions.
 
-3. Upgrade setuptools
----------------------
-
-Pip references another package called "setuptools" that is used to download, build, install,
-upgrade, and uninstall Python packages. This step updates the "setuptools" program to make
-sure you have the latest version.
-
-.. code-block:: doscon
-
-    pip install setuptools --upgrade
-
-This command will upgrade setuptools to the latest version.
+Note that if you're running the command prompt *without* admin rights, you might get
+some red text and a permissions error, but that's ok.
 
 You can run the following command to show the versions of pip and setuptools (and the other
 packages you have installed) like this:
@@ -140,15 +121,16 @@ That will print out something like this:
 .. code-block:: doscon
 
    C:\Users\BRIAN MADDEN>pip list
-   pip (10.0.0)
-   setuptools (39.0.1)
+   pip (9.0.1)
+   setuptools (35.5.1)
 
    C:\Users\BRIAN MADDEN>
 
-Notice that pip is now version 10.0.0 (or later, depending on the latest version when you're doing
-this).  Setuptools has also been updated to version 39.0.1 (or later).
+Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
+this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to
+version 35.5.1 (or later).
 
-4. Install MPF
+3. Install MPF
 --------------
 
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
@@ -293,7 +275,7 @@ this:
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
 
-5. Download & run the "Demo Man" example game
+4. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -304,7 +286,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-6. Install whatever drivers your hardware controller needs
+5. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
