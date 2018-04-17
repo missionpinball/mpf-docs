@@ -56,9 +56,230 @@ Several changes were made to game and mode events to be more consistent and allo
 4. Display refactor changes
 ---------------------------
 
-The way graphics are displayed in the media controller has been changed.
+Several changes were made to the various display components of the media controller. This section will
+lead you through the various steps to modify your display-related configurations.
 
-TODO: Finish this document
+dmd and color_dmd widgets have been removed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``dmd`` and ``color_dmd`` widgets have been removed and replaced with a new ``display`` widget and
+associated ``effects`` setting (``dmd`` and ``color_dmd`` have become effects that can be applied
+to any ``display`` widget). The following ``dmd`` widget settings have moved to the effects section
+(``type: dmd``): dot_filter, blur, pixel_size (now dot_size), pixel_color (now dot_color), dark_color
+(now filter_color), bg_color (now background_color), gain, shades, and luminosity. The following ``color_dmd``
+widget settings have moved to the effects section (``type: color_dmd``): dot_filter, blur, pixel_size
+(now dot_size), dark_color (now filter_color), bg_color (now background_color, gain, and shades. For
+detailed information see the :doc:`display </displays/widgets/display/index>` and
+:doc:`display effects </displays/widgets/display/effects>` sections of the documentation.
+
+Here is an example slide config from 0.33 using ``dmd`` and ``color_dmd`` widgets:
+
+.. code-block:: yaml
+
+   slides:
+     dmd_slide:
+       - type: dmd
+         width: 640
+         height: 160
+         source_display: dmd
+         color: ff00aa
+         gain: 2
+     color_dmd_slide:
+       - type: color_dmd
+         width: 640
+         height: 160
+         source_display: dmd
+         shades: 4
+         gain: 1.5
+
+In 0.50 the above example becomes:
+
+.. code-block:: mpf-config
+
+   slides:
+     dmd_slide:
+       - type: display
+         width: 640
+         height: 160
+         source_display: dmd
+         effects:
+           - type: dmd
+             dots_x: 128
+             dots_y: 32
+             dot_color: ff00aa
+             gain: 2
+     color_dmd_slide:
+       - type: display
+         width: 640
+         height: 160
+         source_display: dmd
+         effects:
+           - type: color_dmd
+             dots_x: 128
+             dots_y: 32
+             shades: 4
+             gain: 1.5
+
+Be sure to specify the ``dots_x`` and ``dots_y`` settings in your new config (the number of dots that will
+be drawn in the dmd effects). These values used to be automatically set  based on the dimensions of the display
+specified in the ``source_display`` setting. However, they have not been decoupled and can be set as desired.
+
+slide_frame widgets have been removed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``slide_frame`` widgets have been removed and replaced by a combination of a ``display`` widget and a
+corresponding entry in the ``displays:`` section. The changes are best illustrated using an example. This
+step only applies to your project if you are using ``slide_frame`` widgets.
+
+Example in MPF 0.33 using slide frames:
+
+.. code-block:: yaml
+
+   #config_version=4
+
+   displays:
+     default:
+       width: 400
+       height: 300
+
+   slides:
+     slide1:
+     - type: slide_frame
+       width: 200
+       height: 100
+       name: frame1
+       y: 50
+       x: 50
+       anchor_y: bottom
+       anchor_x: left
+     - type: text
+       text: SLIDE FRAME IN SLIDE 1
+       font_size: 20
+       y: bottom
+       anchor_y: bottom
+     slide2:
+     - type: text
+       text: slide2
+     frame1_text:
+     - type: text
+       text: SLIDE 1 IN FRAME
+       color: lime
+       font_size: 10
+     - type: rectangle
+       width: 200
+       height: 100
+       color: 550000
+     frame1_text2:
+     - type: text
+       text: SLIDE 2 IN FRAME
+       color: black
+       font_size: 10
+     - type: rectangle
+       width: 200
+       height: 100
+       color: 00ff00
+
+   slide_player:
+     show_slide1: slide1
+     show_slide2: slide2
+     show_frame_text:
+       frame1_text:
+         target: frame1
+     show_frame_text2:
+       frame1_text2:
+         target: frame1
+
+Now the same configuration in MPF 0.50 becomes:
+
+.. code-block:: mpf-config
+
+   #config_version=4
+
+   displays:
+     default:
+       width: 400
+       height: 300
+     frame1:
+       width: 200
+       height: 100
+
+   slides:
+     slide1:
+     - type: display
+       width: 200
+       height: 100
+       source_display: frame1
+       y: 50
+       x: 50
+       anchor_y: bottom
+       anchor_x: left
+     - type: text
+       text: SLIDE FRAME IN SLIDE 1
+       font_size: 20
+       y: bottom
+       anchor_y: bottom
+     slide2:
+     - type: text
+       text: slide2
+     frame1_text:
+     - type: text
+       text: SLIDE 1 IN FRAME
+       color: lime
+       font_size: 10
+     - type: rectangle
+       width: 200
+       height: 100
+       color: 550000
+     frame1_text2:
+     - type: text
+       text: SLIDE 2 IN FRAME
+       color: black
+       font_size: 10
+     - type: rectangle
+       width: 200
+       height: 100
+       color: 00ff00
+
+   slide_player:
+     show_slide1: slide1
+     show_slide2: slide2
+     show_frame_text:
+       frame1_text:
+         target: frame1
+     show_frame_text2:
+       frame1_text2:
+         target: frame1
+
+To modify your configs, do the following steps for each ``slide_frame`` widget:
+
+- Create an entry in your ``displays:`` section using the ``name:`` setting of the ``slide_frame``.
+  Also set the ``width:`` and ``height:`` settings of the display using the values from the slide frame.
+- Change the widget ``type:`` value from ``slide_frame`` to ``display``.
+- Change the widget ``name:`` setting to ``source_display:``.
+
+Don't forget if you have any trouble with these migration steps to post your issue in the MPF Users forum.
+Other users who have already gone through the migration process will be happy to help.
+
+image widget loops setting changed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``loops:`` setting of image widgets has been altered to be consistent with other areas of MPF (``-1`` to
+loop infinitely, ``0`` no repeats/loops, ``> 0`` the number of times to repeat after the first time through).
+Previously a value of ``0`` indicated infinite looping. Please review your image widget ``loops:`` settings and
+subtract 1 from any existing value to maintain the same behavior as previously.
+
+widget animations now use anchor position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All widget animations now use the widget anchor position when animating widget position values (``x``, ``y``,
+``pos``).  In MPF versions prior to 0.50 widget position animations always used the lower-left corner, even
+when a different widget anchor position was set. This made it difficult to return widgets to their start
+position when the animations used different coordinate offsets than the widget (animating the widget back to
+the same numeric starting position put the widget in a different location than it was in originally).  Now
+the position coordinates are consistent no matter the anchor position. Please review your widget position
+animations and adjust any values accordingly to get the behavior you want.  Widgets that have a lower-left
+corner anchor position will not need any adjustments.
+
 
 5. Move logic blocks one level up
 ---------------------------------
