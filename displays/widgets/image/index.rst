@@ -77,10 +77,11 @@ Default is 10.
 loops:
 ~~~~~~
 
-The number of times an animated image will loop. Set to ``0`` for unlimited. (Note this is
-different than other areas of MPF, which use ``-1`` to indicate unlimited loops.)
+The number of times an animated image will loop. Set to ``-1`` for unlimited. Note this is
+now consistent in 0.50 with other areas of MPF. In earlier versions of MPF this setting used
+``0`` to specify unlimited loops.
 
-Default is 0.
+Default is ``-1``.
 
 auto_play:
 ~~~~~~~~~~
