@@ -1,3 +1,4 @@
+:orphan:
 Sounds (asset type)
 ===================
 

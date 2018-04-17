@@ -1,3 +1,4 @@
+:orphan:
 Images (asset type)
 ===================
 

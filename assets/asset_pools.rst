@@ -1,3 +1,4 @@
+:orphan:
 Creating "pools" of assets
 ==========================
 

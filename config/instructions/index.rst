@@ -1,7 +1,7 @@
 Config file instructions
 ========================
 
-:doc:`/about/help_us_to_write_it`
+This section contains some general formatting guidelines.
 
 .. toctree::
 

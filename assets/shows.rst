@@ -1,3 +1,4 @@
+:orphan:
 Shows (asset type)
 ==================
 

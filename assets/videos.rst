@@ -1,3 +1,4 @@
+:orphan:
 Videos (asset type)
 ===================
 

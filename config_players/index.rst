@@ -35,7 +35,6 @@ them, with explanations of how to use them in config files and in shows.
    led_player
    light_player
    playlist_player
-   plugin_player
    queue_event_player
    queue_relay_player
    random_event_player

@@ -36,11 +36,4 @@ into the "laser" asset which is associate with the pop bumper, and then each
 time the pop bumper is hit you get one of the four sounds played at random
 instead of the same sound over and over.
 
-.. toctree::
-   :maxdepth: 1
 
-   asset_pools
-   images
-   shows
-   sounds
-   videos
