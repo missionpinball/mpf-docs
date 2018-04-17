@@ -135,8 +135,6 @@ Example in MPF 0.33 using slide frames:
 
 .. code-block:: yaml
 
-   #config_version=4
-
    displays:
      default:
        width: 400
@@ -192,8 +190,6 @@ Example in MPF 0.33 using slide frames:
 Now the same configuration in MPF 0.50 becomes:
 
 .. code-block:: mpf-config
-
-   #config_version=4
 
    displays:
      default:
