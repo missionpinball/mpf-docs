@@ -48,14 +48,7 @@ Related How To guides
 
    dual_wound
    single_wound
-   multiple
-   enabling_secondary_flippers
    disabled_flippers
-   reversed_flippers
-   no_hold_flippers
-   weak_flippers
-   inverted_flippers
-   delayed_flippers
 
 Related Events
 --------------

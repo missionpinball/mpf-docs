@@ -42,11 +42,6 @@ the prefix for playfields is ``device.playfields.<name>``.
 *balls*
    The number of balls on the playfield.
 
-Related How To guides
----------------------
-
-:doc:`/about/help_us_to_write_it`
-
 Related Events
 --------------
 

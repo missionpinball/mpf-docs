@@ -20,4 +20,6 @@ This is an example:
            coil: c_popbumper_left
            switch: s_popbumper_left
 
-:doc:`/about/help_us_to_write_it`
+
+Adjust ``default_pulse_ms`` and ``default_pulse_power`` in your coil
+to control the strength and sound of your popbumpers.

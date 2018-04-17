@@ -1,3 +1,4 @@
+:orphan:
 How to enable "delayed flippers" (novelty mode)
 ===============================================
 

@@ -1,3 +1,4 @@
+:orphan:
 How to configure multiple flippers
 ==================================
 
