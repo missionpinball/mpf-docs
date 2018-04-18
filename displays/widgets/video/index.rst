@@ -129,7 +129,7 @@ when the event is posted, the action will be applied to the video.
 
 Consider the example below:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slides:
      my_slide:

@@ -44,8 +44,9 @@ jets:
 And here's the logic block we use for the :doc:`Addams Family mansion awards </cookbook/TAF_mansion_awards>`
 to make sure the mansions is initialized only once per game:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+  ##! mode: my_mode
   counters:
     initialize_mansion:
       count_events: mode_chair_lit_started
