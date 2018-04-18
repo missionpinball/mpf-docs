@@ -27,7 +27,7 @@ which events add or subtract value to which player variables in the
 ``variable_player:`` section of a mode's configuration file.
 
 2. Add a *variable_player:* section to your base.yaml mode config file
---------------------------------------------------------------
+----------------------------------------------------------------------
 
 The first step is simply to add a ``variable_player:`` section to your base mode's
 *base.yaml* config file. So in this case, that will be
