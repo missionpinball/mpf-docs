@@ -244,7 +244,7 @@ Dec 1, 2016
 * Added options for "random" events (force next, force all, save per-player, etc.)
 * Added events to the BCP monitor (meaning they can be viewed in the MPF Monitor app)
 * Added ``-f`` command line option to force all assets to load on boot for testing purposes
-* Added :doc:`scoring </config/scoring>` options (add, replace, block)
+* Added scoring options (add, replace, block)
 * Use color "on" for LED default colors
 * Allow multiple config player entries to fire from the same event
 * Ensure that events created by the MC are sent to MPF
