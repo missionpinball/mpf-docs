@@ -1,5 +1,5 @@
-scoring:
-========
+variable_player:
+================
 
 *Config file section*
 
@@ -9,19 +9,19 @@ scoring:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-The ``scoring:`` section of your mode config lets you add, subtract, or replace player
+The ``variable_player:`` section of your mode config lets you add, subtract, or replace player
 variables based on events that are posted.
 
 At the most basic level, you can use this to add to a player's score (which is technically
 adding value to the player variable called *score*), but in reality you can affect any
-player variable.
+player or machine variable.
 
 Here's an example:
 
 .. code-block:: mpf-config
 
    ##! config: mode1
-   scoring:
+   player_variable:
       target_1_hit:
          score: 1000   # adds 1000 to the player's "score" variable
       ramp_1_hit:
@@ -29,12 +29,12 @@ Here's an example:
          ramps: 1      # adds 1 to the player's "ramps" variable
       ramp_1_timeout:
          ramps:
-           score: 0      # sets the player's "ramps" variable to 0.
+           int: 0        # sets the player's "ramps" variable to 0.
            action: set   # means that this event will "set" (or reset) the variable to the value, rather than add to it
       ramp_2_hit:
          score:
-            score: 25000 * current_player.ramps  # multiplies the value of the current player's "ramps" variable by 25,000 and adds the result to the player's "score" variable
-            block: true   # "blocks" this scoring event from being passed to scoring sections from lower-priority modes
+            int: 25000 * current_player.ramps  # multiplies the value of the current player's "ramps" variable by 25,000 and adds the result to the player's "score" variable
+            block: true   # "blocks" this event from being passed to variable player sections from lower-priority modes
       counter_treasure_value_complete:
          treasure_name:
             string: RUBY  # Sets the player's "treasure_name" variable to a string called "RUBY"
@@ -42,11 +42,11 @@ Here's an example:
 Settings
 --------
 
-Like many sections of MPF configs, the ``scoring:`` section format is generically setup like this:
+Like many sections of MPF configs, the ``variable_player:`` section format is generically setup like this:
 
 .. code-block:: yaml
 
-   scoring:
+   variable_player:
       some_event:
          <settings>
       some_other_event:
@@ -54,7 +54,7 @@ Like many sections of MPF configs, the ``scoring:`` section format is genericall
       another_event:
          <settings>
 
-The following settings can be used with each event section listed in your scoring section:
+The following settings can be used with each event section listed in your variable_player section:
 
 <any_player_variable>:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ exist, it will set the player variable to that.) For example:
 
 .. code-block:: yaml
 
-   scoring:
+   variable_player:
       some_event:
          score: 1000
          aliens: 1
@@ -82,27 +82,21 @@ action:
 
 One of the following settings: ``add``, ``set``, ``add_machine``, ``set_machine``. Default is ``add``.
 
-By default, the scoring entries will be added to the existing value of a player variable. If you want to replace
+By default, the variable player entries will be added to the existing value of a player variable. If you want to replace
 or reset the value of the player var, you can add ``action: set`` to the entry. However to do this, you have to
-indent that setting under the player var name, and then specify the value in the "score:" section. For example, if you
+indent that setting under the player var name, and then specify the value in the "int:" section. For example, if you
 want the example from the above section to reset the aliens player variable to 1 instead of adding 1 to the current
 value, it would look like this:
 
 .. code-block:: yaml
 
-   scoring:
+   variable_player:
       some_event:
          score: 1000
          aliens:         # the player var you want to reset
-            score: 1     # the value you're resetting this player var to
+            int: 1       # the integer value you're resetting this player var to
             action: set  # means you're resetting it, rather than adding to it
          bonus: 10
-
-.. note::
-
-   Resetting a player variable is confusing, because you need to include a ``score:`` entry to specify the value of the
-   player variable you're resetting, and you do that via the ``score:`` section even though the player variable might
-   be something other than "score". We'll change this in a future version of MPF.
 
 Starting in MPF 0.33, you can also add and set machine variables, by specifying ``action: add_machine`` or
 ``action: set_machine``. In these cases the machine variable is specified just like the player variable in the "set" example above.
@@ -110,46 +104,56 @@ Starting in MPF 0.33, you can also add and set machine variables, by specifying 
 block:
 ~~~~~~
 
-
-Adding ``block: True`` to a scoring entry means that MPF will "block" this scoring entry from being sent down to
-scoring entries in lower priority modes.
+Adding ``block: True`` to a variable_player entry means that MPF will "block" this scoring entry from being sent down to
+variable_player entries in lower priority modes.
 
 This is useful if you have a shot in a base mode that scores 500 points, but then in some timed mode you want that shot
 to be 5,000 points but you don't also want the base mode to score the 500 points on top of the 5,000 from the higher
 mode.
 
-Note that when you use block, you also have to include the ``score:`` setting indented, and that setting is called
-"score" even if you're adding to a different player variable. For example:
+Note that when you use block, you also have to include the ``int:``, ``float:``, or ``string:`` setting indented. For example:
 
 .. code-block:: yaml
 
-  scoring:
+  variable_player:
     ramp_1_hit:
       score:
-        score: 5000
+        int: 5000
         block: true
 
 There is also a shorthand way:
 
 .. code-block:: yaml
 
-  scoring:
+  variable_player:
     ramp_1_hit:
       score: 5000|block
+
+int:
+~~~~
+
+Adds or sets a player or machine variable to the specified integer value (this is the most common use of the variable_player).
+The ``int:`` setting takes priority over the ``float:`` setting so if both are present only the ``int:`` will be used.
+
+float:
+~~~~~~
+
+Adds or sets a player or machine variable to the specified float value.  The ``int:`` setting takes priority over the ``float:``
+setting so if both are present only the ``int:`` will be used.
 
 string:
 ~~~~~~~
 
-Lets you set a player variable to a string value (text characters) rather than adding numeric value. This is useful
+Lets you set a player or machine variable to a string value (text characters) rather than adding numeric value. This is useful
 for when you want to make slides that show some value and you need to "translate" some numeric value to words.
 
 Here's an example from *Brooks 'n Dunn* where there is a player variable (set via a counter) which tracks the
-player's current album value. We ue the scoring section tied to the events posted when the player variable changes
+player's current album value. We ue the variable_player section tied to the events posted when the player variable changes
 and conditional events to set the current name of the album value, like this:
 
 .. code-block:: yaml
 
-   scoring:
+   variable_player:
       player_album_value{value==1}:
          album_name:
            string: SILVER
@@ -175,17 +179,7 @@ the value of the album, and it's automatically updated whenever the player var "
 player:
 ~~~~~~~
 
-Lets you specify which player (by number) this scoring entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
+Lets you specify which player (by number) this variable_player entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
 effect the score or other player variables of players other than the current player.
 
-If the ``player:`` setting is not used, then this scoring entry will default to the current player.
-
-score:
-~~~~~~
-
-todo
-
-float:
-~~~~~~
-
-todo
+If the ``player:`` setting is not used, then this variable_player entry will default to the current player.

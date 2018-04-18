@@ -45,6 +45,7 @@ Bug fixes & code improvements
 * Improved machine variable internals
 * Improved Stern SPIKE platform
 * Refactored mode device loading, config validation, and config player loading
+* Renamed "scoring" to "variable_player"
 * Improved high score mode
 
 

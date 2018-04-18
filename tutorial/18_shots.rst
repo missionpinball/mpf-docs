@@ -53,14 +53,14 @@ can change the name of the shot to something more meaningful later.
 Next, open the mode config file for your base mode, which is
 ``<your_machine>/modes/base/config/base.yaml``
 
-Find the ``scoring:`` section that you added in Step 15, and change the
+Find the ``variable_player:`` section that you added in Step 15, and change the
 first entry from ``s_right_inlane_active:`` to ``my_first_shot_hit``,
 like this:
 
 .. code-block:: mpf-config
 
    ##! mode: base
-   scoring:
+   variable_player:
        my_first_shot_hit:  # this was s_right_inlane_active
            score: 100
        s_flipper_lower_left_active:
@@ -71,7 +71,7 @@ like this:
 
 Do you understand what this is doing?
 
-Remember that the scoring section will add (or remove) value from a player
+Remember that the variable_player section will add (or remove) value from a player
 variable when certain events happen. So the OLD entry from Step 15 would
 increase the score by 100 points when the event "s_right_inlane_active" happened, and the
 NEW entry changes that so the 100 points are added when the event
@@ -338,12 +338,12 @@ And so on...
 Now let's look at how we can give the player a different number of points when
 they hit that shot depending on what state the shot's in.
 
-Here's the existing scoring section from the base mode config:
+Here's the existing variable_player section from the base mode config:
 
 .. code-block:: mpf-config
 
    ##! mode: base
-   scoring:
+   variable_player:
        my_first_shot_hit:
            score: 100
        s_flipper_lower_left_active:
@@ -356,12 +356,12 @@ Again, the player gets 100 points each time that shot is made regardless of what
 state it's in since the scoring event is the generic shot hit event which does
 not include details of what state the shot is in.
 
-Now let's change the scoring section to this:
+Now let's change the variable_player section to this:
 
 .. code-block:: mpf-config
 
    ##! mode: base
-   scoring:
+   variable_player:
        my_first_shot_my_first_profile_unlit_hit:
            score: 100
        my_first_shot_my_first_profile_flashing_hit:
@@ -372,7 +372,7 @@ Now let's change the scoring section to this:
        s_flipper_lower_right_active:
            potato: -2
 
-We changed the name of the event for the first scoring entry from
+We changed the name of the event for the first variable_player entry from
 "my_first_shot_hit" to "my_first_shot_my_first_profile_unlit_hit". This means
 those 100 points will only be added if that shot is hit while it has the
 "my_first_profile" applied AND while that profile is in the state "unlit".
@@ -428,7 +428,7 @@ them step-by-step next.)
    widget_player:
        mode_mode2_started: mode2_start_banner
 
-   scoring:
+   variable_player:
        my_first_shot_hit:
           score: 1
 
@@ -475,16 +475,16 @@ Press ``M`` to stop mode2 again and notice that the +1 scoring stops.
 So what's happening here?
 
 First, notice that in the ``mode2.yaml`` file, we configured the following
-scoring entry:
+variable_player entry:
 
 .. code-block:: mpf-config
 
    ##! mode: mode2
-   scoring:
+   variable_player:
        my_first_shot_hit:
           score: 1
 
-Notice that that scoring entry is just based on "my_first_shot" being hit. It
+Notice that that variable_player entry is just based on "my_first_shot" being hit. It
 does not contain any of the profile or state information in it, which means that
 it will always score the +1 regardless of the state of that shot.
 
@@ -515,7 +515,7 @@ applying a different shot profile in the jackpot mode.
 
 To illustrate this, open up your ``mode2.yaml`` file and:
 
-#. Updated the ``scoring:`` section from the example below
+#. Updated the ``variable_player:`` section from the example below
 #. Add the ``shots:`` section from below
 #. Add the ``shot_profiles:`` section from below
 
@@ -526,7 +526,7 @@ To illustrate this, open up your ``mode2.yaml`` file and:
    #!       number: 1
    ##! mode: mode2
    # snippet from mode2.yaml
-   scoring:
+   variable_player:
        my_first_shot_mode2_flashing_hit:
          score: 10000
        my_first_shot_mode2_lit_hit:
@@ -621,8 +621,8 @@ shot profiles from lower priority modes will be disabled. Since mode2 runs at pr
 "my_first_profile" which we assigned in the machine-wide config will be blocked. (Machine-wide config
 items run at priority 0.)
 
-And, since the scoring events in the base mode are based on the shot being hit with the "my_first_profile"
-applied, this is why when mode2 is running, we don't get the scoring events from the base mode. Those
+And, since the variable_player events in the base mode are based on the shot being hit with the "my_first_profile"
+applied, this is why when mode2 is running, we don't get the variable_player events from the base mode. Those
 events are not posted because my_first_profile is not active because the higher priority profile attached
 to the shot in mode2 is blocking it.
 

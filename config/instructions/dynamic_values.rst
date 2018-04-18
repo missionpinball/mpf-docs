@@ -12,24 +12,24 @@ on for a full list.)
 For example, you might want to have a shot called "jackpot" that scores
 a multiplier which is the number of shots made times 100k points.
 
-Without dynamic values, your scoring section would be static, like this:
+Without dynamic values, your variable_player (scoring) section would be static, like this:
 
 .. code-block:: yaml
 
    ##! mode: mode1
-   scoring:
+   variable_player:
       shot_jackpot_hit:
          score: 100000
 
 But let's say you have a player variable called "troll_hits" which
 holds the number of trolls hit that you want to multiply by 100,000
 when the shot is made. You can use the "current_player" dynamic value
-in your scoring config like this:
+in your variable_player config like this:
 
 .. code-block:: mpf-config
 
    ##! mode: mode1
-   scoring:
+   variable_player:
       shot_jackpot_hit:
          score: current_player.troll_hits * 100000
 
@@ -39,7 +39,7 @@ a hurry-up or a counter to track how many times a multiplier switch has been hit
 .. code-block:: mpf-config
 
    ##! mode: mode1
-   scoring:
+   variable_player:
       collect_hurryup:
          score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
 

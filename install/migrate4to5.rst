@@ -23,14 +23,143 @@ Change it in every config file to version 5:
    #config_version=5
 
 
-2. Rename physical dmd sections
+2. Rename scoring section to variable_player
+--------------------------------------------
+
+The ``scoring:`` config section has been renamed to ``variable_player:`` to more accurately convey its functionality
+(since it can be used to set new values of both machine and player variables and not just change the score). The
+``score:`` section in show steps has been renamed to ``variables:``.  Finally, the ``score:`` setting under these
+sections has been renamed ``int:`` for consistency and to avoid confusion since it is really setting an integer value
+of the specified variable and may be totally unrelated to score.
+
+Steps to update your configs:
+
+- Rename the ``scoring:`` section in all your config files to ``variable_player:``.
+- Rename the ``score:`` section in all your show steps to ``variables:``.
+- Rename the ``score:`` setting in the above sections to ``int:``.
+
+.. note::
+   Be very careful when renaming any ``score:`` entry in these sections as there were three possible uses of this value
+   (which has led to some confusion and is one of the reasons for making this change).  ``score:`` can be the name of a
+   show step section (should be easy to recognize as it is found only in shows) and will be the highest indent level for
+   a ``score:`` entry in a show file.  ``score:`` is also the name of a player variable and must not be renamed when used
+   in this context.  Finally, ``score:`` sometimes refers to the new integer value to add or set the player variable.
+
+Here is an example of scoring used in a config file in MPF 0.33 and how to modify it for 0.50:
+
+.. code-block:: yaml
+
+   scoring:             # Rename to 'variable_player:'
+     test_event1:
+       score: 100       # DO NOT RENAME, refers to player variable name
+       var_a: 1
+       var_c: current_player.ramps
+     test_set_100:
+       score:           # DO NOT RENAME, refers to player variable name
+         score: 100     # Rename to 'int:' as it refers to new int value to set score variable to
+         action: set
+     test_set_200:
+       test1:
+         score: 200     # Rename to 'int:' as it refers to new int value to set test1 variable to
+         action: set
+     test_set_string:
+       string_test:
+         string: HELLO
+     test_set_machine_var:
+       my_var:
+         score: 100     # Rename to 'int:' as it refers to new int value to set my_var variable to
+         action: set_machine
+     test_add_machine_var:
+       my_var:
+         score: 23      # Rename to 'int:' as it refers to new int value to set my_var variable to
+         action: add_machine
+     test_score_mode:
+       score: 100       # DO NOT RENAME, refers to player variable name
+     s_counter_target_active:
+       score: 10        # DO NOT RENAME, refers to player variable name
+     s_kills_counter_target_active:
+       score: 100       # DO NOT RENAME, refers to player variable name
+
+Here is the same config example after modification in 0.50:
+
+.. code-block:: mpf-config
+
+   variable_player:
+     test_event1:
+       score: 100
+       var_a: 1
+       var_c: current_player.ramps
+     test_set_100:
+       score:
+         int: 100
+         action: set
+     test_set_200:
+       test1:
+         int: 200
+         action: set
+     test_set_string:
+       string_test:
+         string: HELLO
+     test_set_machine_var:
+       my_var:
+         int: 100
+         action: set_machine
+     test_add_machine_var:
+       my_var:
+         int: 23
+         action: add_machine
+     test_score_mode:
+       score: 100
+     s_counter_target_active:
+       score: 10
+     s_kills_counter_target_active:
+       score: 100
+
+Here is an example of scoring used in a show in MPF 0.33 and how to modify it for 0.50:
+
+.. code-block:: yaml
+
+   shows:
+     example_show_name:
+       - time: 0
+         score:         # Rename to 'variables:'
+           score: 10    # DO NOT RENAME, refers to player variable name
+       - time: 1
+         score:         # Rename to 'variables:'
+           score:       # DO NOT RENAME, refers to player variable name
+             score: 200 # Rename to 'int:' as it refers to new int value to add to score variable
+       - time: 2
+         score:         # Rename to 'variables:'
+           loops:       # player variable name
+             score: 10  # Rename to 'int:' as it refers to new int value to add to score variable
+
+Here is the same show example after modification in 0.50:
+
+.. code-block:: mpf-config
+
+   shows:
+     example_show_name:
+       - time: 0
+         variables:
+           score: 10
+       - time: 1
+         variables:
+           score:
+             int: 200
+       - time: 2
+         variables:
+           loops:
+             int: 10
+
+
+3. Rename physical dmd sections
 -------------------------------
 
 The ``physical_dmds:`` and ``physical_rgb_dmds:`` config sections have been renamed to ``dmds:`` and ``rgb_dmds:``.
 If you use these sections, rename them as specified.
 
 
-3. Event changes for game and mode lifecycle
+4. Event changes for game and mode lifecycle
 --------------------------------------------
 
 Several changes were made to game and mode events to be more consistent and allow more flexibility.
@@ -53,7 +182,7 @@ Several changes were made to game and mode events to be more consistent and allo
   the new method.
 
 
-4. Display refactor changes
+5. Display refactor changes
 ---------------------------
 
 Several changes were made to the various display components of the media controller. This section will
@@ -277,7 +406,7 @@ animations and adjust any values accordingly to get the behavior you want.  Widg
 corner anchor position will not need any adjustments.
 
 
-5. Move logic blocks one level up
+6. Move logic blocks one level up
 ---------------------------------
 
 Logic blocks have been moved one level. Up previously you would have this in your config:
@@ -297,7 +426,7 @@ In 0.50 just use:
       your_counter:
         count_events: count_it_up
 
-6. Renamed coil settings
+7. Renamed coil settings
 ------------------------
 
 ``pulse_ms``, ``pulse_power`` and ``hold_power`` have been split into two settings each.
@@ -326,7 +455,7 @@ Your coil could look like this in 0.50:
 
 See :doc:`coils </config/coils>` for details.
 
-7. Matrix_lights, leds, GIs, and flashers become lights
+8. Matrix_lights, leds, GIs, and flashers become lights
 -------------------------------------------------------
 
 All types of lights have been unified in MPF 0.50 and are configured in the ``lights`` section.
@@ -353,7 +482,7 @@ Furthermore you can use ``flasher_player`` on all types lights (e.g. to flash th
 
 See :doc:`lights </config/lights>` for details.
 
-8. Define a source device for your playfield
+9. Define a source device for your playfield
 --------------------------------------------
 
 Remove ``tags: ball_add_live`` from your ball devices and instead define a ``default_source_device``

@@ -100,12 +100,12 @@ Setting Variables
 
 MPF configuration files do not work with variables as easily as "real" programming languages. The primary
 method of changing a variable is by configuring the change you would like to make.
-In the current version of MPF (0.33), this is primarily done in the ''scoring:'' section of your mode.
+In the current version of MPF, this is primarily done in the ``variable_player:`` section of your mode.
 
 .. code-block:: mpf-config
 
   ##! mode: my_mode
-  scoring:
+  variable_player:
     # add 1 to bumper_hits
     bumper_1_active:
       bumper_hits: 1
@@ -118,7 +118,7 @@ The apostrophes are not required but allowed.
 .. code-block:: mpf-config
 
   ##! mode: my_mode
-  scoring:
+  variable_player:
     carousel_left_scoop_scene_selected:
       current_ladder:
         action: set
@@ -132,7 +132,7 @@ progress towards completing the mode.
 .. code-block:: mpf-config
 
   ##! mode: my_mode
-  scoring:
+  variable_player:
     mode_is_complete{current_player.current_ladder=="Scene 1"}:
       ladder_scene_1: 1
 

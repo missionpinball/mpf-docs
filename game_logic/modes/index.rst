@@ -76,14 +76,14 @@ following entry in that mode's config file:
 .. code-block:: mpf-config
 
    ##! mode: my_mode
-   scoring:
+   variable_player:
         right_ramp_hit:
             score: 50000
 
 In that case the *right_ramp_hit* shot event will only award the points when
-that multiball mode is running. When it stops, that scoring configuration is
-removed. (You can also configure certain events to be "blocked" from propagating
-down to lower-priority modes. More on that in a bit.)
+that multiball mode is running. When it stops, that variable_player/scoring
+configuration is removed. (You can also configure certain events to be "blocked"
+from propagating down to lower-priority modes. More on that in a bit.)
 
 Machine-wide versus mode-specific folders and configurations
 ------------------------------------------------------------
