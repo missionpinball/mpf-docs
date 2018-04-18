@@ -84,6 +84,7 @@ Here is the same config example after modification in 0.50:
 
 .. code-block:: mpf-config
 
+   ##! mode: my_mode
    variable_player:
      test_event1:
        score: 100

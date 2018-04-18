@@ -21,7 +21,7 @@ Here's an example:
 .. code-block:: mpf-config
 
    ##! config: mode1
-   player_variable:
+   variable_player:
       target_1_hit:
          score: 1000   # adds 1000 to the player's "score" variable
       ramp_1_hit:
