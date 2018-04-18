@@ -95,8 +95,31 @@ coil_overwrite:
 ~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+You can overwrite ``recycle``, ``pulse_ms``, ``pulse_power`` or ``hold_power``
+of the coil for this device.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   switches:
+      s_left_sling:
+         number: 1
+   coils:
+      c_left_sling:
+         number: 1
+         default_pulse_ms: 10ms
+
+   autofire_coils:
+       stronger_left_sling:
+           coil: c_left_sling
+           switch: s_left_sling
+           coil_overwrite:
+              pulse_ms: 20ms
+
+In this example we increase ``pulse_ms`` of the slingshot.
+If you define multiple versions of a autofire_coil (here slingshot) make
+sure that you only enable one of them at a time.
 
 debug:
 ~~~~~~
@@ -150,8 +173,7 @@ switch_overwrite:
 ~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+You can overwrite the ``debounce`` setting of your switch in this device.
 
 tags:
 ~~~~~

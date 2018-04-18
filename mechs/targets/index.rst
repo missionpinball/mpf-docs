@@ -17,7 +17,7 @@ Targets
 +------------------------------------------------------------------------------+
 | :doc:`/config/drop_target_banks`                                             |
 +------------------------------------------------------------------------------+
-| :doc:`/about/help_us_to_write_it`                                            |
+| :doc:`/config/switches`                                                      |
 +------------------------------------------------------------------------------+
 
 There are many types of targets on a pinball playfield some of which are described here. In the Mission Pinball
