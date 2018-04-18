@@ -117,7 +117,6 @@ indicated which type of config file it's valid in.
    rgb_dmds: <rgb_dmds>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
-   scoring: <scoring>
    scriptlets: <scriptlets>
    segment_displays: <segment_displays>
    servo_controller: <servo_controller>
@@ -153,6 +152,7 @@ indicated which type of config file it's valid in.
    timed_switches: <timed_switches>
    timers: <timers>
    track_player: <track_player>
+   variable_player: <variable_player>
    video_pools: <video_pools>
    videos: <videos>
    virtual_platform_start_active_switches: <virtual_platform_start_active_switches>

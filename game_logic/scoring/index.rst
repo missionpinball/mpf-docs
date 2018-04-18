@@ -4,15 +4,15 @@ Scoring
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/scoring`                                                       |
+| :doc:`/config/variable_player`                                               |
 +------------------------------------------------------------------------------+
 
-Scoring is commonly used to score points for the current player when a certain event is posted.
+The variable_player is commonly used to score points for the current player when a certain event is posted.
 This event could be a switch hit (i.e. for `s_your_switch` use the event `s_your_switch_active`).
 
 .. code-block:: yaml
 
-  scoring:
+  variable_player:
     s_your_switch_active:
       score: 100
 

@@ -28,7 +28,7 @@ text:
 .. code-block:: mpf-config
 
   ##! mode: my_mode
-  scoring:
+  variable_player:
     counter_hit:
       score: 100 * device.counters.logic_block_1.value
                    # The logic block stores the count as the 'value' attribute

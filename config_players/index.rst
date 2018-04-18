@@ -19,6 +19,8 @@ Some examples:
   via the ``slides:`` setting for that step.
 * You set the color of LEDs via a config file in the ``light_player:`` section, and you set colors from a show step
   via the ``lights:`` setting for that step.
+* You set player and machine variables based on events in the ``variable_player:`` section (this is commonly used for
+  scoring in your machine), and you set variables from a show step via the ``variables:`` setting of that step.
 * etc.
 
 There are several different config players in MPF and MPF-MC. Click on each below for specific details of how to use
@@ -43,4 +45,5 @@ them, with explanations of how to use them in config files and in shows.
    sound_loop_player
    sound_player
    track_player
+   variable_player
    widget_player

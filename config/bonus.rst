@@ -128,8 +128,8 @@ entries where it's just "some player variable multiplied by some score". (For ex
 In the example above, the first entry called "alien_bonus" will multiply the "aliens" player variable times 25000.
 
 Note that the bonus mode doesn't care what player variable you use, and it would be up to you to make sure that the
-player variable you choose is updated throughout your game (either through a ``scoring:`` section or a logic block or
-something like that).
+player variable you choose is updated throughout your game (either through a ``variable_player:`` section or a logic
+block or something like that).
 
 Also if you choose not to include this entry, that's fine. In that case the ``score:`` entry will be used by itself.
 Notice in the example at the top of this page from *Brooks 'n Dunn* that it's not used when we need the advanced math
