@@ -62,8 +62,9 @@ The following settings can be used with each event section listed in your variab
 You can include any player variable under an event to add numeric value to that variable. (If the variable doesn't
 exist, it will set the player variable to that.) For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! config: mode1
    variable_player:
       some_event:
          score: 1000
@@ -88,8 +89,9 @@ indent that setting under the player var name, and then specify the value in the
 want the example from the above section to reset the aliens player variable to 1 instead of adding 1 to the current
 value, it would look like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! config: mode1
    variable_player:
       some_event:
          score: 1000
@@ -113,21 +115,23 @@ mode.
 
 Note that when you use block, you also have to include the ``int:``, ``float:``, or ``string:`` setting indented. For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-  variable_player:
-    ramp_1_hit:
-      score:
-        int: 5000
-        block: true
+   ##! config: mode1
+   variable_player:
+      ramp_1_hit:
+         score:
+            int: 5000
+            block: true
 
 There is also a shorthand way:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-  variable_player:
-    ramp_1_hit:
-      score: 5000|block
+   ##! config: mode1
+   variable_player:
+      ramp_1_hit:
+         score: 5000|block
 
 int:
 ~~~~
@@ -151,8 +155,9 @@ Here's an example from *Brooks 'n Dunn* where there is a player variable (set vi
 player's current album value. We ue the variable_player section tied to the events posted when the player variable changes
 and conditional events to set the current name of the album value, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! config: mode1
    variable_player:
       player_album_value{value==1}:
          album_name:

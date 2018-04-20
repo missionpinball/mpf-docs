@@ -14,9 +14,9 @@ a multiplier which is the number of shots made times 100k points.
 
 Without dynamic values, your variable_player (scoring) section would be static, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   ##! mode: mode1
+   ##! config: mode1
    variable_player:
       shot_jackpot_hit:
          score: 100000
