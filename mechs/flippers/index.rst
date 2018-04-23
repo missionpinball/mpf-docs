@@ -49,6 +49,7 @@ Related How To guides
    dual_wound
    single_wound
    disabled_flippers
+   enabling_secondary_flippers
 
 Related Events
 --------------
