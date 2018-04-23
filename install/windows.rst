@@ -316,6 +316,13 @@ This will cause *pip* to contact PyPI to see if there's a newer version of the
 MPF and MPF MC (and any new requirements). If newer versions are found, it
 will download and install them.
 
+.. warning::
+
+   If you are upgrading from MPF 0.33 to 0.50 you will need to manually perform
+   several migration steps to modify your configuration files or they will not
+   work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
+   for step-by-step instructions.
+
 To install the latest dev release (not generally recommended) which allows you to try bleeding-edge features run:
 
 .. code-block:: doscon
@@ -328,14 +335,6 @@ To downgrade (or install a specific release x.yy.z) run:
 
   pip install mpf=x.yy.z
   pip install mpf-mc=x.yy.z
-
-.. warning::
-
-   If you are upgrading from MPF 0.33 to 0.50 you will need to manually perform
-   several migration steps to modify your configuration files or they will not
-   work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
-   for step-by-step instructions.
-
 
 Next steps!
 -----------
