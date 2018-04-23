@@ -6,7 +6,7 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 0.50
 ----
 
-Currently in Dev, targeting an April 2018 release
+April 23, 2018
 
 .. rubric:: MPF
 
