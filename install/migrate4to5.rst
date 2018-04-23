@@ -23,7 +23,15 @@ Change it in every config file to version 5:
    #config_version=5
 
 
-2. Rename scoring section to variable_player
+2. Config files are now case sensitive
+--------------------------------------
+
+Setting names in config files are now case sensitive. In MPF 0.17 to 0.33 settings were case insensitive but it
+caused many problems and thus has been dropped. Please carefully review your config files to ensure you use
+consistent casing in your names.
+
+
+3. Rename scoring section to variable_player
 --------------------------------------------
 
 The ``scoring:`` config section has been renamed to ``variable_player:`` to more accurately convey its functionality
@@ -153,14 +161,14 @@ Here is the same show example after modification in 0.50:
              int: 10
 
 
-3. Rename physical dmd sections
+4. Rename physical dmd sections
 -------------------------------
 
 The ``physical_dmds:`` and ``physical_rgb_dmds:`` config sections have been renamed to ``dmds:`` and ``rgb_dmds:``.
 If you use these sections, rename them as specified.
 
 
-4. Event changes for game and mode lifecycle
+5. Event changes for game and mode lifecycle
 --------------------------------------------
 
 Several changes were made to game and mode events to be more consistent and allow more flexibility.
@@ -183,7 +191,7 @@ Several changes were made to game and mode events to be more consistent and allo
   the new method.
 
 
-5. Display refactor changes
+6. Display refactor changes
 ---------------------------
 
 Several changes were made to the various display components of the media controller. This section will
@@ -407,7 +415,7 @@ animations and adjust any values accordingly to get the behavior you want.  Widg
 corner anchor position will not need any adjustments.
 
 
-6. Move logic blocks one level up
+7. Move logic blocks one level up
 ---------------------------------
 
 Logic blocks have been moved one level. Up previously you would have this in your config:
@@ -427,7 +435,7 @@ In 0.50 just use:
       your_counter:
         count_events: count_it_up
 
-7. Renamed coil settings
+8. Renamed coil settings
 ------------------------
 
 ``pulse_ms``, ``pulse_power`` and ``hold_power`` have been split into two settings each.
@@ -456,7 +464,7 @@ Your coil could look like this in 0.50:
 
 See :doc:`coils </config/coils>` for details.
 
-8. Matrix_lights, leds, GIs, and flashers become lights
+9. Matrix_lights, leds, GIs, and flashers become lights
 -------------------------------------------------------
 
 All types of lights have been unified in MPF 0.50 and are configured in the ``lights`` section.
@@ -483,8 +491,8 @@ Furthermore you can use ``flasher_player`` on all types lights (e.g. to flash th
 
 See :doc:`lights </config/lights>` for details.
 
-9. Define a source device for your playfield
---------------------------------------------
+10. Define a source device for your playfield
+---------------------------------------------
 
 Remove ``tags: ball_add_live`` from your ball devices and instead define a ``default_source_device``
 to feed the playfield:
