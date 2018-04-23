@@ -11,7 +11,7 @@ text is on the display, etc.
 What's great about these tests is that they're easy to write, so you can write them bit-by-bit as you're creating
 your MPF config files. Eventually you'll have tests that cover hundreds of little things, and you can run them
 every time you change something in your config. Then down the road when your config is very advanced, you might
-be changing something in one area that accidentally breaks something else. (Maybe a mode does stop properly so
+be changing something in one area that accidentally breaks something else. (Maybe a mode doesn't stop properly so
 an unrelated playfield light is the wrong color.) Without tests, you might only find the bug after hours of play,
 but with the tests, you'll know immediately that something isn't right.
 
