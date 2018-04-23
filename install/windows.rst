@@ -138,20 +138,12 @@ To do this, run the following command from the command prompt:
 
 .. code-block:: doscon
 
-    pip install mpf-mc --pre
+    pip install mpf-mc
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
 pip will connect to the internet and download MPF-MC from the Python app store
 and install it onto your computer.
-
-.. note::
-
-   Since MPF 0.50 is not yet released, the pip command you run has a **--pre**
-   at the end which tells it to get the latest "pre-release" version. Once MPF
-   0.50 is released, you won't need the **--pre**. If you run pip without the
-   **--pre** now, you will get MPF 0.33, which is fine, but then you need to
-   read the 0.33 documentation, not this 0.50 documentation.
 
 Pip packages can include dependencies, which means that when you run this
 command, you'll see a bunch (like 20 or so) packages get downloaded and installed. The
