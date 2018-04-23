@@ -15,15 +15,24 @@ New Features
 * Consolidated LEDs, matrix lights, GI, and flashers into a single "light" device. Much cleaner, less code,
   and unified features across all light types.
 * Added RGBA color support (RGB colors plus an alpha channel)
+* Hardware fade support for all light (fade-in and fade-out).
+* Added segmented displays support
 * Added LISY hardware platform support (for Gottlieb System 1 and System 80 machines)
 * Added MyPinballs 7 segment display support
-* Added segmented displays
-* Added "remote" platform
-* Added Raspberry Pi as a platform
+* Added P-Roc alphanumeric displays support
+* Added Raspberry Pi as a platform (remote via ethernet or local using pigpio)
 * Added stepper motor device
+* Added motor device (with position and/or end switches)
 * Added Trinamics Steprocker platform
-* Support fuzz testing
-* Added drop target PSU support
+* Added SPIKE DMD support
+* Support for FAST RGB DMD support
+* Added digital output support (either mapped as drivers or lights)
+* Added native I2C support on linux (via SMBus)
+* Added NXP MMA8451 accelerometer support (via I2C)
+* Support fuzz testing (to find crashes in a machine without playing it)
+* Added PSU support to manage maximum power usage.
+  Coil pulses can specify a maximum delay which is used to reorder pulses
+  (used by ball devices, score reels and drop targets).
 * Improved and broke out game lifecycle events (will start, starting, started, etc.) for game, ball, and turn starts
   and stops.
 * Made many more settings "templatable"
@@ -33,6 +42,10 @@ New Features
 * Added replay credits
 * Added developer documentation website (developer.missionpinball.org)
 * Added support for custom named colors
+* Added pluggable ejectors and ball counters in ball devices
+* Added "mpf service" command to spawn a service cli (similar to service mode or SPIKE game cli)
+* Added "mpf hardware scan" to enumerate all hardware platforms
+* Added "mpf hardware update_firmware" to send firmware updates to all hardware platforms
 
 Bug fixes & code improvements
 
@@ -43,10 +56,15 @@ Bug fixes & code improvements
 * Improved and added config template values
 * Improved multiball locks
 * Improved machine variable internals
+* Improved ball tracking
+* Improved ball handling in ball devices
 * Improved Stern SPIKE platform
 * Refactored mode device loading, config validation, and config player loading
 * Renamed "scoring" to "variable_player"
 * Improved high score mode
+* More robust score reels
+* Performance improvements for fadecandy LED updates
+* Performance improvements for smartmatrix devices (separate sender thread)
 
 
 .. rubric:: MPF-MC
@@ -80,6 +98,8 @@ New Features
   track to control volume and playback state.
 * New sound 'about_to_finish' events (configurable for each sound). These post events at a specified time before
   the sound ends.
+* New display_light_player to use your playfield lights as display in MC.
+  Also supports transparency to overlay a graphic/animation above your light shows.
 
 Bug fixes & code improvements
 
@@ -93,6 +113,16 @@ Bug fixes & code improvements
 * Switched back to SDL_Mixer for main audio playback, mixing, and in-memory sound asset loading functions
   (provide more reliable and faster loading of .ogg and .flac files)
 * Allow unlimited sound asset event markers (previously only allowed a fixed number)
+
+.. rubric:: MPF-Monitor
+
+New Features
+
+* Device list shows all monitorable attributes
+
+Bug fixes & code improvements
+
+* Improved performance of light updates/Smooth light shows
 
 
 0.33
