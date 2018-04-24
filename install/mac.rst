@@ -121,8 +121,8 @@ The following command starts that process in the Terminal, just follow the instr
 If you already have the command line tools installed, that's fine. You'll get
 some kind of error saying they're already installed and you can move on.
 
-3. Install Python 3.5 (not Python 3.6)
---------------------------------------
+3. Install Python 3.5 or 3.6
+----------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
