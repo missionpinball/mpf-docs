@@ -74,16 +74,11 @@ in your game code and configuration file. When it comes time to create
 service menu, you can create plain-English labels with spaces and
 capitalization everything. But that comes later.
 
-Finally, note that most things in MPF config files are case-insensitive,
-and MPF converts most things to lowercase. (Not everything, though.
-Certain things like labels and text strings will be in whatever case
-you enter them as. But in general stuff is case insensitive.)
-
-The reason we mention this is
-because you can *not* have two things configured with the same name
-that only vary based on case sensitivity. For example, the switch
-names ``s_lane_trEk`` and ``s_lane_treK`` are not allowed since they'd
-both be converted internally to ``s_lane_trek``.
+In pre-0.50 versions, MPF was not case-sensitive and would internally convert most
+things to lowercase before comparison. This proved to be problematic, so MPF is 
+now case-sensitive for all elements of your config files. Our configuration directives
+use only lowercase letters, underscores, and numbers. While you are free to format 
+your tags as you wish, be aware that case-consistency is now required.
 
 Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
@@ -178,11 +173,11 @@ files, values of "yes" and "true" are the same, so we use one of each just to de
 interchangeable.)
 
 Anyway, the purpose of the ``allow_enable:`` setting is that as a safety precaution, MPF does not allow you to enable
-(that is, to hold a coil in it's "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
+(that is, to hold a coil in its "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
 This will help to prevent some errant config from enabling a coil that you didn't mean to enable and burning it up or
 starting a fire.
 
-So in the case if your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
+So in the case of your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
 to act as a flipper, that coil need to be allowed to be enabled (held on).
 
 4. Add your flipper "devices"
