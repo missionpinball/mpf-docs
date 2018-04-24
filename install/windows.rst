@@ -296,12 +296,13 @@ Keeping MPF up-to-date
 ----------------------
 
 Since MPF is a work-in-progress, you can use the *pip* command to update your
-MPF installation.
+MPF installation along with the pip and setuptools packages.
 
 To to this, run the following:
 
 .. code-block:: doscon
 
+  pip install pip setuptools --upgrade
   pip install mpf mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
