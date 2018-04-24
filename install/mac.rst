@@ -349,11 +349,14 @@ To to this, run the following:
 
 .. code-block:: console
 
+  curl -O https://bootstrap.pypa.io/get-pip.py
+  python3 get-pip.py
+  pip3 install setuptools --upgrade
   pip3 install mpf mpf-mc --upgrade
 
-This will cause *pip* to contact PyPI to see if there's a newer version of the
-MPF MC (and any of its requirements, like MPF). If newer versions are found, it
-will download and install them.
+This will first update the required Python packages *pip* and *setuptools* and then cause
+*pip* to contact PyPI to see if there's a newer version of the MPF MC (and any of its
+requirements, like MPF). If newer versions are found, it will download and install them.
 
 .. warning::
 

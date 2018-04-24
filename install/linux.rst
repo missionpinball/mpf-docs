@@ -42,6 +42,7 @@ To to this, run the following:
 
 .. code-block:: console
 
+  pip3 install pip setuptools --upgrade
   pip3 install mpf mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
