@@ -40,10 +40,8 @@ settings:
 Some notes on the settings:
 
 port:
-
-
    Use the port of your USB-serial adapter or of the internal serial
-   on the RPi. On Windows, this will have a name like "COM5".
+   on your computer. On Windows, this will have a name like "COM5".
 
 baud:
    This needs to match the value from Step 3 in the
@@ -62,3 +60,36 @@ nodes:
 
    Only map the node boards and ignore the extension boards because those
    are transparent to MPF. Just consider 8 and 8a/8b to be the same node.
+
+Once you got your game running you can increase the speed using ``runtime_baud``:
+
+.. code-block:: mpf-config
+
+   hardware:
+      platform: spike
+
+   spike:
+      port: /dev/ttyUSB0
+      baud: 115200
+      runtime_baud: 2000000
+      debug: False
+      nodes: 0, 1, 8, 9, 10, 11
+
+This will increase the baudrate after the start of the mpf-spike-bridge.
+You do not have to change anything to use this setting.
+The following baudrate are supported:
+
+* 230400
+* 460800
+* 576000
+* 1000000
+* 1152000
+* 2000000
+* 2500000
+* 3000000
+* 3500000
+* 4000000
+
+Depending on your hardware setup they might or might not work.
+Most setups communicate reliably up to something beween 1Mbaud and 2.5Mbaud.
+To stream full 30fps to your DMD you need about 2Mbaud.
