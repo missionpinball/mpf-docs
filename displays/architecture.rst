@@ -21,56 +21,77 @@ together.
 
 The major components of the MPF Media Controller's display system are:
 
+Window
+------
+
+Every MPF-MC application has one (and only one) window.  It is the fundamental graphical
+element that maps directly to a graphical window on the host operating system. If you do
+not provide a "window:" section in your config, a default window will be created for you
+(800 x 600 pixels). The size settings (width, height) control the dimensions (in pixels)
+of the host operating system window that will be created. Various settings in the `window:`
+section control the appearance and behavior of the main on-screen window which is created
+by MPF-MC. These settings include things such as whether or not the window has a border,
+is full screen, or whether special image processing is applied to the window using effects.
+These effects perform image processing to the source image of the window and can be used to
+get an old-school "DMD look" or "color DMD" look to your window as well as other special
+effects.
+
 Displays
 --------
 
-Every "target" display is setup in MPF as a display. For example, if you have
-a DMD, that is your display. If you have an LCD with a graphical window, then
-that is your display. MPF can support multiple displays at the same time, so
-you could have a DMD in the backbox and then a smaller LCD display on the
-playfield.
-
-You can even create sub-displays where one display has a small window which is
-another display (kind of like picture-in-picture). For example, you could use
-this to have a dot-effect window inside of a high def window on an LCD in the
-backbox.
+Before anything can actually be shown on the window, it must first be drawn in a display.
+Displays are an internal representation of a blank canvas that holds graphical content.
+It is important to not confuse these displays with physical hardware displays (like an
+LCD monitor or a DMD). These displays can be shown on such physical devices, but there is
+not necessarily a one-to-one mapping between them. One of the most import features of
+displays are they are targets for showing slides (you can think of them as slide managers).
+The MPF-MC can have multiple display canvases at the same time, and you can map different
+ones to different physical displays. You can even create sub-displays where one display has
+a small region which is another display (kind of like picture-in-picture). The most
+important setting for a display is its size (with, height) in pixels. If you do not specify
+any displays in your "displays:" section of your config files, a default display (800 x
+600 pixels) will be automatically created for you.
 
 Slides
 ------
 
-Every display has a list of "slides", (which are the same height and width of
-the display). One slide is "active" at a time, meaning it's the slide that's
-showing. Think of these like slides in a slide projector. You'll probably end
-up with hundreds of slides, but only one is showing at a time.
-
-You can use transition effects to switch from one slide to another. (These are
-things like sliding in, pushing, fading, flipping, etc.)
-
-You'll probably end up with hundreds of slides.
+Every display has a list of “slides”, (which are the same height and width of the display).
+One slide is “active” at a time, meaning it’s the slide that’s showing. Think of these like
+slides in a slide projector. You’ll probably end up with hundreds of slides, but only one is
+showing at a time. You can use transition effects to switch from one slide to another (these
+are things like sliding in, pushing, fading, flipping, etc.).
 
 Widgets
 -------
 
-Widgets are the "things" you actually put on slides. There are lots of
-different types of widgets, including text, images, videos, shapes, etc.
+Widgets are the “things” you actually put on slides. There are lots of different types of
+widgets, including text, images, videos, shapes, etc. Different widgets have different
+properties, like their x,y position on the slide, their size, color, etc. You can position
+widgets on slides with pixel-level accuracy, or you can use relative positions like “10%
+down from the top edge”, or “centered”, or “25% to the left of center”, etc. Using relative
+positions means that your display will be resolution independent.
 
-Different widgets have different properties, like their x,y position on the
-slide, their size, color, etc.
+You can also animate the properties of a widget. For example, a widget could start out at
+the bottom of the display and then move to the center, or you can animate the size, color,
+scale, rotation, or the opacity, or pretty much anything other widget property you desire.
+You can chain together multiple animations to run back-to-back, or you can configure
+multiple animations to happen at the same time. You can even configure the “curve” of the
+formula that’s used to animate widgets, so you can have them smoothly accelerate and
+decelerate, or slow down as they’re animating, or pop into place, etc.
 
-You can position widgets on slides with pixel-level accuracy, or you can use
-relative positions like "10% down from the top edge", or "centered", or
-"25% to the left of center", etc. Using relative positions means that your
-display will be resolution independent.
+Display Widget
+--------------
 
-You can also animate the properties of a widget. For example, a widget could
-start out at the bottom of the display and then move to the center, or you can
-animate the size, or the color, or the opacity, or pretty much anything else
-you want. You can chain together multiple animations to run back-to-back, or you
-can configure multiple animations to happen at the same time.
-
-You can even configure the "curve" of the formula that's used to animate
-widgets, so you can have them smoothly accelerate and decelerate, or slow down
-as they're animating, or pop into place, etc.
+One widget type of special importance (and deserving of its own introductory paragraph) is the
+display widget. The display widget is used to show the contents of a display on the screen
+(remember from above a display is just an in-memory drawing canvas, the display widget allows
+its contents to be shown). The main window automatically creates a display widget that has the
+same dimensions of the window. Now if you only require a simple graphical layout where one
+slide is shown at a time and fills the entire window, then you need not concern yourself any
+further with the display widget. However if you require a more advanced layout, the display
+widget will enable you to accomplish that. Display widgets can also be configured to apply
+special image processing to the contents of the display. These effects can be used to get an
+old-school "DMD look" or "color DMD" look to your window as well as other special effects.
 
 All these concepts come from PowerPoint. :)
 -------------------------------------------
