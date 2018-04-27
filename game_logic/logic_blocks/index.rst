@@ -41,6 +41,8 @@ world examples from *Attack from Mars* (if we were building that game in MPF):
 * An accrual can be used in the Martian Attack mode to track all 4 of the
   martians being hit
 
+You should also read about :doc:`integration of show and logic blocks <integrating_logic_blocks_and_shows>`.
+
 .. toctree::
    :titlesonly:
    :hidden:
