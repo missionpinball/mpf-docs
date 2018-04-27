@@ -69,6 +69,7 @@ indicated which type of config file it's valid in.
    gi_player: <gi_player>
    gis: <gis>
    hardware: <hardware>
+   hardware_sound_player: <hardware_sound_player>
    high_score: <high_score>
    image_pools: <image_pools>
    images: <images>

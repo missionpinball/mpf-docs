@@ -23,6 +23,98 @@ Some examples:
   scoring in your machine), and you set variables from a show step via the ``variables:`` setting of that step.
 * etc.
 
+
+Standalone Config Player
+------------------------
+
+General syntax looks like this in a standalone player:
+
+Normal syntax
+~~~~~~~~~~~~~
+
+.. code-block:: yaml
+
+   example_player:
+     event_which_is_posted_elsewhere:
+       <depends on the player>
+
+For example (show_player; short syntax):
+
+.. code-block:: mpf-config
+
+   show_player:
+     event_which_is_posted_elsewhere:
+       your_show: play
+
+Another example (show_player; long syntax):
+
+.. code-block:: mpf-config
+
+   show_player:
+     event_which_is_posted_elsewhere:
+       your_show:
+         action: play
+         sync_ms: 1000
+
+One line syntax
+~~~~~~~~~~~~~~~
+This is not supported in all players. This usually performs the default action on the element:
+
+.. code-block:: yaml
+
+   example_player:
+     event_which_is_posted_elsewhere: <depends on the player>
+
+An example (show_player):
+
+.. code-block:: mpf-config
+
+   show_player:
+     event_which_is_posted_elsewhere: your_show
+
+Config Player in a Show
+-----------------------
+
+All config players also work in shows.
+However, you need to skip the event which triggers the player since the action is triggered by the show.
+
+Normal syntax
+~~~~~~~~~~~~~
+
+This supports the same syntax as above (just without the event).
+Also note that instead of ``example_player:`` it becomes ``examples:``.
+
+.. code-block:: yaml
+
+   - duration: 2s
+     examples:
+       <depends on the player>
+
+For example (show_player; short syntax):
+
+.. code-block:: mpf-config
+
+   ##! show: test
+   - duration: 2s
+     shows:
+       your_show: play
+
+Another example (show_player; long syntax):
+
+.. code-block:: mpf-config
+
+   ##! show: test
+   - duration: 2s
+     shows:
+       your_show:
+         action: play
+         sync_ms: 1000
+
+One line syntax
+~~~~~~~~~~~~~~~
+There is no one line syntax in shows.
+
+
 There are several different config players in MPF and MPF-MC. Click on each below for specific details of how to use
 them, with explanations of how to use them in config files and in shows.
 
@@ -34,6 +126,7 @@ them, with explanations of how to use them in config files and in shows.
    event_player
    flasher_player
    gi_player
+   hardware_sound_player
    led_player
    light_player
    playlist_player
