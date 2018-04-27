@@ -20,7 +20,7 @@ In shows, the sound player is used via the ``hardware_sounds:`` section of a ste
 Optional settings
 -----------------
 
-Additional information may be found in the :doc:`sound_player </config/hardware_sound_player>`
+Additional information may be found in the :doc:`hardware_sound_player </config/hardware_sound_player>`
 configuration reference documentation.
 
 
