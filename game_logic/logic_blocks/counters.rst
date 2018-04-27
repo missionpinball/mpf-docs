@@ -7,6 +7,12 @@ Counter Logic Blocks
 | :doc:`/config/counters`                                                      |
 +------------------------------------------------------------------------------+
 
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`integrating_logic_blocks_and_shows`                                    |
++------------------------------------------------------------------------------+
+
 "Counters" are :doc:`logic blocks </game_logic/logic_blocks/index>`
 that track the number of times a certain event happens towards the
 progress of a completion goal.

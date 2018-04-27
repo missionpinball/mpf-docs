@@ -143,6 +143,7 @@ indicated which type of config file it's valid in.
    sound_system: <sound_system>
    sounds: <sounds>
    spike: <spike>
+   state_machines: <state_machines>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>

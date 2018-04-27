@@ -20,6 +20,9 @@ There are three types of logic blocks in MPF:
    Watch for several different events that need to occur *in a specific order*,
    and once they do, a "complete" event is posted.
 
+:doc:`state_machines <state_machines>`
+   A generic state machine with arbitrary state transitions and state.
+
 Logic blocks can be configured to store their state in player variables,
 meaning that each logic block will remember where it was from ball-to-ball.
 
@@ -45,4 +48,5 @@ world examples from *Attack from Mars* (if we were building that game in MPF):
    Counters <counters>
    Accruals <accruals>
    Sequences <sequences>
+   State Machines <state_machines>
    integrating_logic_blocks_and_shows
