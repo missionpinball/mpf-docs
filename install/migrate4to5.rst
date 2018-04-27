@@ -510,3 +510,21 @@ to feed the playfield:
        playfield:
            default_source_device: bd_plunger
            tags: default
+
+11. If you are using counters in your slides add a variable_player
+------------------------------------------------------------------
+
+Counters no longer save their state in player variables.
+If you are using something like ``(YOUR_COUNTER_count)`` in a slide or widget
+you can use a :doc:`lights </config_players/variable_player>` to restore
+the old behaviour:
+
+.. code-block:: mpf-config
+
+   ##! mode: my_mode
+   variable_player:
+      logicblock_YOUR_COUNTER_updated:
+          YOUR_COUNTER_count:
+              int: value
+              action: set
+
