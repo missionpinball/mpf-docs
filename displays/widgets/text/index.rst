@@ -98,13 +98,19 @@ a DMD or color DMD (or other pixel-style display), we have some
 :doc:`built in DMD fonts </displays/widgets/dmd_fonts>` that you
 can use which are pre-configured for DMDs.
 
+bitmap_font:
+~~~~~~~~~~~~
+A true/false value indicating whether the `font_name:` setting contains the name of a
+:doc:`bitmap_font </config/bitmap_fonts>` asset.  When set to `True`, `font_name:` must
+refer to an existing bitmap_font asset name and `font_size:` will be ignored. When set to
+`False`, `font_name:` should refer to a font name.
+
 font_size:
 ~~~~~~~~~~
 
 The size of the font (in points). Default is 15.
 
-See the :doc:`full documentation on fonts </displays/widgets/fonts>` for
-details.
+See the :doc:`full documentation on fonts </displays/widgets/fonts>` for details.
 
 bold:
 ~~~~~
