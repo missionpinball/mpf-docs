@@ -39,6 +39,34 @@ either ``my_show_initial`` (value is 0), ``my_show_first_hit`` (value is 1) or
 ``my_show_final`` (value is 2 or 3) are shown. All show_players have the same key so
 they will stop any other show playing with the same key.
 
+Actions which should only happen once
+-------------------------------------
+
+If you want something to happen only once when the logic_block advances (and
+not on mode restart) you should use the ``_hit`` event.
+E.g. for a callout use this:
+
+.. code-block:: mpf-config
+
+  ##! mode: my_mode
+  counters:
+      my_counter:
+          count_events: my_count_event
+          starting_count: 0
+          count_complete_value: 10
+
+  sound_player:
+   logicblock_my_counter_hit{remaining == 5}:
+     sound_just_5_remaining:
+      action: play
+   logicblock_my_counter_hit{remaining == 2}:
+     sound_just_2_remaining:
+      action: play
+   logicblock_my_counter_hit{remaining == 1}:
+     sound_just_1_remaining:
+      action: play
+
+
 Other Triggered Events
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -66,3 +94,11 @@ value directly from the block device:
     some_other_event{devices.counters.my_counter.value==0}: my_show_initial
     some_other_event{devices.counters.my_counter.value==1}: my_show_once_hit
     some_other_event{devices.counters.my_counter.value==2}: my_show_twice_hit
+
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/logicblock_name_updated`                                       |
++------------------------------------------------------------------------------+
+| :doc:`/events/logicblock_name_hit`                                           |
++------------------------------------------------------------------------------+

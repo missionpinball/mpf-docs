@@ -7,6 +7,12 @@ Sequence Logic Blocks
 | :doc:`/config/sequences`                                                     |
 +------------------------------------------------------------------------------+
 
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`integrating_logic_blocks_and_shows`                                    |
++------------------------------------------------------------------------------+
+
 "Sequences" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events
 that are first posted in a specific order.
