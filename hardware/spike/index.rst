@@ -59,12 +59,12 @@ swap out a board.
 Stern SPIKE features that work today
 ------------------------------------
 
-* Coils / drivers
-* Switches
-* LEDs & GIs
-* Backbox LEDs
+* :doc:`Coils / drivers <drivers>`
+* :doc:`Switches <switches>`
+* :doc:`LEDs & GIs <leds>`
+* :doc:`Backbox LEDs <leds>`
 * Hardware Rules (flippers, pop bumpers, slingshots, etc.)
-* DMDs
+* :doc:`DMDs <dmds>`
 
 How does the MPF SPIKE interface work?
 --------------------------------------
@@ -105,14 +105,6 @@ Stern and you're all set.
 Stern SPIKE features that do not work (yet)!
 --------------------------------------------
 
-DMD
-~~~
-
-We haven't added support for the red DMDs from SPIKE v1 machines. If
-you want a DMD today, you can add a standalone :doc:`RGB DMD </displays/display/rgb_dmd>`
-which will fit right into the position of the old DMD, or you can
-replace the DMD/speaker panel in your SPIKE machine with an LCD display
-which you can run from the HDMI output of your computer running MPF.
 
 Sound
 ~~~~~
@@ -157,4 +149,5 @@ use any HDMI display connected to the machine running MPF.
    Configuring MPF for SPIKE <config>
    Coils & Drivers <drivers>
    LEDs, GI, & Backbox lights <leds>
+   DMDs <dmds>
    Switches <switches>
