@@ -39,6 +39,65 @@ either ``my_show_initial`` (value is 0), ``my_show_first_hit`` (value is 1) or
 ``my_show_final`` (value is 2 or 3) are shown. All show_players have the same key so
 they will stop any other show playing with the same key.
 
+Another way to achieve the same thing is this:
+
+
+You can even achieve this a bit simpler than in the example. Like this:
+
+.. code-block:: mpf-config
+
+  ##! mode: my_mode
+  counters:
+      my_counter:
+          count_events: my_count_event
+          starting_count: 0
+          count_complete_value: 3
+
+  show_player:
+    logicblock_my_counter_updated{enabled}:
+      my_show:
+        key: my_counter_show
+        start_step: value + 1
+        show_tokens:
+          led1: l_led1
+          led2: l_led2
+          led3: l_led3
+          color: magenta
+    logicblock_my_counter_updated{not enabled}:
+      my_counter_show: stop
+
+This will start the show ``my_show`` at the value of the counter ``my_counter``.
+For instance when the counter is 0 it will start step 1, counter 1 will run step 2 and so on.
+Once the counter is disabled the show it stopped (but other behaviours are possible).
+
+``my_show`` could look like this:
+
+.. code-block:: mpf-config
+
+   ##! show: my_show
+   #show_version=5
+   - duration: -1
+     lights:
+       (led1): off
+       (led2): off
+       (led3): off
+   - duration: -1
+     lights:
+       (led1): (color)
+       (led2): off
+       (led3): off
+   - duration: -1
+     lights:
+       (led1): (color)
+       (led2): (color)
+       (led3): off
+   - duration: -1
+     lights:
+       (led1): (color)
+       (led2): (color)
+       (led3): (color)
+
+
 Actions which should only happen once
 -------------------------------------
 
