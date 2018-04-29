@@ -51,6 +51,7 @@ indicated which type of config file it's valid in.
    counters: <counters>
    credits: <credits>
    displays: <displays>
+   digital_outputs: <digital_outputs>
    diverters: <diverters>
    dmds: <dmds>
    drop_target_banks: <drop_target_banks>
