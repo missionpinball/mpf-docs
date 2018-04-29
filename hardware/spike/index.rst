@@ -64,6 +64,7 @@ Stern SPIKE features that work today
 * LEDs & GIs
 * Backbox LEDs
 * Hardware Rules (flippers, pop bumpers, slingshots, etc.)
+* DMDs
 
 How does the MPF SPIKE interface work?
 --------------------------------------
