@@ -391,6 +391,10 @@ your machine-wide config, a mode-specific config, or both.
         elif num == 'dict':
             return_string = ('Parent setting for one (or more) sub-settings. '
                              'Each sub-setting is a ')
+        elif num == 'omap':
+            return_string = ('Ordered list for one (or more) sub-settings. '
+                             'Each sub-setting is a ')
+
         else:
             raise AssertionError("Invalid config spec num: {}".format(num))
 
