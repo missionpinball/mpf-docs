@@ -389,7 +389,7 @@ Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
 
 8. Add the plunger as a default_source_device
---------------------------------------------
+---------------------------------------------
 
 Next you need to add your plunger lane ball device ``default_source_device`` to
 your playfield to tell MPF that this ball device is used to add a new ball
