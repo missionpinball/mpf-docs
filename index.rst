@@ -26,6 +26,7 @@
    Control Systems / Hardware </hardware/index>
    Pinball Mechanisms </mechs/index>
    Game Logic </game_logic/index>
+   Game Design </game_design/index>
    Media Controllers & MPF-MC </mc/index>
    Displays & Graphics</displays/index>
    Segment Displays</segment_displays/index>

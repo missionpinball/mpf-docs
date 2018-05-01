@@ -23,7 +23,8 @@ setting.
 When the first switch in a sequence is activated, the sequence_shot
 will start watching for the next one. When that one is activated, it
 looks for the next, and so on. Once the last switch is activated, the
-shot is considered "hit".
+shot is considered "hit" and the device posts ``your_sequence_shot_hit`` (if
+your shot is called ``your_sequence_shot``).
 
 .. code-block:: mpf-config
 
