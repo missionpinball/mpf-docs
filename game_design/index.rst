@@ -31,6 +31,14 @@ Questions answered in this section:
 * Can it restart if it failed?
 * Where will it contine on restart?
 
+Game Startup
+------------
+
+Questions answered in this section:
+
+* How to select modes/players during start?
+* How to implement a (timed) skill shot?
+
 Wizard Modes
 ------------
 
@@ -40,7 +48,19 @@ Questions answered in this section:
 * How to start a wizard mode?
 * What to do after wizard mode?
 
+Other modes
+-----------
+
+Questions answered in this section:
+
+* How to implement roll over lanes in a mode?
+* How to implement a mystery award mode?
+* How to implement a standup target bank mode?
+
+
+
 .. toctree::
    :titlesonly:
 
    Mode Selection <mode_selection>
+   Game Mode <game_mode>
