@@ -7,6 +7,10 @@ These guides include the numbering format (how you map specific entries in your
 config files to board and connector locations) as well as overall settings that
 affect how your hardware performs.
 
+This page is about the software side of things.
+Hardware and electrical engineering stuff is documented at the
+`P-Roc section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/P-ROC_Main_Page>`_.
+
 3 steps to using a P-ROC/P3-ROC
 -------------------------------
 
