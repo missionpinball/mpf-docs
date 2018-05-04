@@ -19,6 +19,11 @@ Questions answered in this section:
 * How to start the mode?
 * Can multiple modes run at once?
 
+.. toctree::
+   :titlesonly:
+
+   Mode Selection <mode_selection>
+
 Game Mode
 ---------
 
@@ -39,6 +44,11 @@ Questions answered in this section:
 * How to select modes/players during start?
 * How to implement a (timed) skill shot?
 
+.. toctree::
+   :titlesonly:
+
+   Game Mode <game_mode>
+
 Wizard Modes
 ------------
 
@@ -57,11 +67,7 @@ Questions answered in this section:
 * How to implement a mystery award mode?
 * How to implement a standup target bank mode?
 
-
-
 .. toctree::
    :titlesonly:
 
-   Mode Selection <mode_selection>
-   Game Mode <game_mode>
    Other Game Modes <other_modes>
