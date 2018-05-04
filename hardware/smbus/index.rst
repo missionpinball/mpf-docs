@@ -7,17 +7,17 @@ How to use nativ I2C on Linux (SMBUS2)
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
 
-MPF can control I2C devices on Linux using the Python smbus2 extension.
+MPF can control I2C devices on Linux using the Python smbus2_asyncio extension.
 
 
-1. Install the smbus2 extension
--------------------------------
+1. Install the smbus2_asyncio extension
+---------------------------------------
 
-Install ``smbus2`` via pip:
+Install ``smbus2_asyncio`` via pip:
 
 ::
 
-   pip3 install smbus2
+   pip3 install smbus2_asyncio
 
 
 2. Figure out which bus to use
@@ -34,7 +34,13 @@ Install ``smbus2`` via pip:
 * Commercial USB-I2C adapters exist but are usually very expensive
 
 * You can `build your own USB-I2C adapter <https://github.com/harbaum/I2C-Tiny-USB>`_.
-  Hardware can be bought ready-made for less than 10 bucks.
+  Hardware can be bought ready-made for less than 10 bucks. Atiny85 based boards can be bought at
+  Adafruit as `Trinket <https://www.adafruit.com/product/1501>`_ (and elsewhere just google it).
+
+
+This is an adafruit trinket used as USB-I2C adapter for an :doc:`MMA8451-based accelerometer </hardware/mma8451/index>`:
+
+.. image:: /hardware/images/mma8451-i2c-usb-accelerometer.jpg
 
 
 3. Connect your hardware

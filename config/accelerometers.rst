@@ -21,6 +21,7 @@ configure additional settings. For example:
 
     accelerometers:
        test_accelerometer:
+           number: 1
            level_x: 0
            level_y: 0
            level_z: 1
@@ -46,6 +47,12 @@ One or more sub-entries, each in the format of type: ``float``:``str``. Default:
 
 .. todo::
    :doc:`/about/help_us_to_write_it`
+
+number:
+~~~~~~~
+Single value, type: ``string``.
+
+Number of this device in your hardware platform. The actual meaning of this number depends on your hardware platform.
 
 label:
 ~~~~~~
@@ -103,3 +110,13 @@ tags:
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Note there are no "special" tags for accelerometers.
+
+
+Hardware platforms which support accelerometers:
+------------------------------------------------
+
++--------------------------------------------------------------------------------------+
+| :doc:`P3-Roc </hardware/multimorphic/accelerometer>`                                 |
++--------------------------------------------------------------------------------------+
+| :doc:`MMA8451-based I2C accelerometers </hardware/mma8451/index>`                    |
++--------------------------------------------------------------------------------------+
