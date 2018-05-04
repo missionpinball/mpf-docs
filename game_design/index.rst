@@ -64,3 +64,4 @@ Questions answered in this section:
 
    Mode Selection <mode_selection>
    Game Mode <game_mode>
+   Other Game Modes <other_modes>
