@@ -7,8 +7,17 @@ since MPF Monitor is an early prototype.
 Windows
 -------
 
-1. Install PyQt5 from here: https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5.1/
-   Just choose all the defaults and you should be ok.
+1. Install PyQt5.  Open a command prompt and run:
+
+.. code-block:: console
+
+   pip install PyQt5
+   
+.. note::  
+
+If this does not work, you can also try to download and install from here: https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5.1/
+Just choose all the defaults and you should be ok.
+   
 2. Open a command prompt and run: (You can run this from any folder)
 
 .. code-block:: console
