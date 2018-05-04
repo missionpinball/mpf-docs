@@ -118,7 +118,7 @@ is just as simple as creating slides and setting their target value to the name 
 them. Here is our example from the previous steps that has now been extended to show a simple slide in each of the
 four quadrants:
 
-   .. code-block:: mpf-config
+.. code-block:: mpf-config
 
    #config_version=5
 
