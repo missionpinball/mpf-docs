@@ -4,8 +4,7 @@ I2C Servo Controllers
 MPF currently supports PCA9685/PCA9635 based servo controllers via I2C.
 One exemple for such a controller is the
 `Adafruit 16-Channel 12-bit PWM/Servo Driver <https://www.adafruit.com/product/815>`_.
-We currently only support I2C on the P3-Roc but it would be easy to support
-on other devices such as the Raspberry PI. Let us know if you need that.
+You can use any I2C platform supported by MPF (see :doc:`/hardware/i2c_platforms`).
 
 1. Installing I2C Servo Controllers
 -----------------------------------

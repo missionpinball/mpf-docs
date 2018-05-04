@@ -137,6 +137,15 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * Connected to I2C
 
+Browse Platforms by Capabilites
+-------------------------------
+
+.. toctree::
+   :titlesonly:
+
+   i2c_platforms
+   servo_platforms
+
 Configuration Guides
 --------------------
 
