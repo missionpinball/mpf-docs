@@ -9,6 +9,12 @@ counters:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
++------------------------------------------------------------------------------+
+| Related Tutorial                                                             |
++==============================================================================+
+| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
++------------------------------------------------------------------------------+
+
 .. overview
 
 See also :doc:`counters </game_logic/logic_blocks/counters>`.
