@@ -99,7 +99,7 @@ Once the counter is disabled the show it stopped (but other behaviours are possi
 
 
 Actions which should only happen once
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want something to happen only once when the logic_block advances (and
 not on mode restart) you should use the ``_hit`` event.
@@ -132,19 +132,7 @@ Other Triggered Events
 You can also have a show depend on the state of a logic block while being triggered
 by another event, using :doc:`Conditional Events </events/overview/conditional>`.
 
-If the logic_block has a persistent state (``persist_state: true``), you can make
-a condition based on the player variable for the block:
-
-.. code-block:: mpf-config
-
-  ##! mode: my_mode
-  show_player:
-    some_other_event{current_player.my_counter_state==0}: my_show_initial
-    some_other_event{current_player.my_counter_state==1}: my_show_once_hit
-    some_other_event{current_player.my_counter_state==2}: my_show_twice_hit
-
-If the logic_block is not persistent (``persist_state: false``), you can access the
-value directly from the block device:
+You can access the value directly from the device variable using ``devices.counters.my_counter.value``:
 
 .. code-block:: mpf-config
 
