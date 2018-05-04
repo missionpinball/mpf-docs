@@ -33,6 +33,8 @@ There are generally two types of mode selection:
 * Selection using flipper/action/start buttons after hitting a scoop or on ball start.
   In those cases you have to delay the eject of the ball (see below for an example how to do that).
 
+Please let us know if you got a snippet which might be useful for other users and is missing here.
+We would be very happy to :doc:`include it </about/help_us_to_write_it>`.
 
 Common types of selection modes:
 
@@ -127,6 +129,8 @@ The advantage of that is that you can use :doc:`/config/achievement_groups` to t
 completion of combinations modes (e.g. completions of rows in Stern Starwars).
 You can also do that with :doc:`condition events </events/overview/conditional>`
 or :doc:`/config/accruals`.
+
+You probably want to :doc:`integrate shows with the logic blocks </game_logic/logic_blocks/integrating_logic_blocks_and_shows>` next.
 
 
 Select mode and start by shot

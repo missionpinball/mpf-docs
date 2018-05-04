@@ -7,6 +7,12 @@ State Machine Logic Block
 | :doc:`/config/state_machines`                                                |
 +------------------------------------------------------------------------------+
 
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`integrating_logic_blocks_and_shows`                                    |
++------------------------------------------------------------------------------+
+
 "State machines" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger state transitions based on the current state and an event.
 
