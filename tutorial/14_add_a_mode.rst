@@ -255,11 +255,11 @@ after it happened. (Hopefully that makes sense?)
 
 Anyway, if you look at the ``slide_player:`` settings, you'll see
 that the slide that is shown when the event ``mode_base_started`` is posted
-contains three text widget. One that shows the score, one the shows the
+contains three text widgets. One that shows the score, one that shows the
 player and one that shows the current ball number. Note that the ``text:`` entries
 for those have have some words in parentheses.
 
-Words in parentheses signs are variables that are replaced in real
+Words in parenthesis signs are variables that are replaced in real
 time when they're updated. In this case these are "player variables"
 because they are values that belong to the current player. More on
 using dynamic text (that is, text that automatically updated itself
@@ -271,7 +271,7 @@ Also note that there are some additional positioning settings, like ``x:``, ``y:
 Finally, note that the text widget showing the score has settings for ``number_grouping:`` and ``min_digits:``.
 You can read about what those do in the :doc:`documentation for the text display widget </displays/widgets/text/index>`.
 
-6. Remove the old slide_player: ball_started entry
+7. Remove the old slide_player: ball_started entry
 --------------------------------------------------
 
 Now that you have this cool score display from your new base mode, you
