@@ -46,3 +46,43 @@ For example:
       some_coil:
          number: A0-B1-6
          default_pulse_ms: 30
+
+Burst Switches as Local Outputs (P3-Roc only)
+---------------------------------------------
+
+If you want to use burst switches as local outputs set DIP switch 1 to ``on`` on the P3-Roc.
+You can use those 64 output as direct outputs:
+
+.. code-block:: mpf-config
+
+   coils:
+      local_output0:
+         number: direct-0  # direct driver 0
+      local_output20:
+         number: direct-20 # direct driver 20
+
+Make sure to assign IDs >= 2 to all PD-16 boards if you set DIP 1 (MPF cannot check this for you).
+Local outputs behave just like any other output on the P3-Roc.
+Hardware rules, pulse, hold, pwm etc. will behave exactly the same way.
+
+You may also use outputs as ``digital_outputs``. For instance, to control a motor driver circuit:
+
+.. code-block:: mpf-config
+
+   digital_outputs:
+      motor_left:
+         number: direct-5
+         type: driver
+      motor_rigth:
+         number: direct-6
+         type: driver
+
+.. warning::
+
+   There is no electronic protection on the P3-Roc for burst switches (neither as local outputs nor as burst optos).
+   Additionally, there are no drivers attached to the outputs and they cannot drive any pinball mechs.
+   Make sure not to draw too much current out of those outputs.
+   Also, any voltage above 3.3V or below 0V will irrevisibly damage the P3-Roc.
+   Make sure you know what you are doing before turning this on.
+   We advise to use PD-16 for normal playfield/mech drivers and only use local outputs with additional
+   circuits (not directly).
