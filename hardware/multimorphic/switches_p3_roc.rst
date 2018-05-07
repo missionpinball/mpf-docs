@@ -65,6 +65,15 @@ You can configure burst optos using the following syntax:
 Make sure to disable DIP switches 1 and 2 on the P3-Roc.
 You can configure up to five switches per driver.
 
+.. note::
+
+   There is currently no reliable way to read the initial state of burst optos.
+   MPF will assume that all burst IRs are open on start-up. This might cause
+   if you use it to track balls in a ball lock which might contain balls from
+   a previous game. This limitation will probably go away in future firmware
+   update of the P3-Roc.
+
+
 Burst Switches as Local Inputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -82,6 +91,11 @@ You can use those 64 inputs as direct inputs:
 Make sure to assign IDs >= 4 to all SW-16 boards if you set DIP 2.
 Local switches behave just like any other switch on the P3-Roc.
 Hardware rules, debouncing etc. will behave exactly the same way.
+
+.. note::
+
+   You need at least Firmware version 2.6 to use burst switches as local inputs
+   on the P3-Roc.
 
 
 .. warning::

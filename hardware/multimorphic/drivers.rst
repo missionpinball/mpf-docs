@@ -77,6 +77,11 @@ You may also use outputs as ``digital_outputs``. For instance, to control a moto
          number: direct-6
          type: driver
 
+.. note::
+
+   You need at least Firmware version 2.6 to use burst switches as local outputs
+   on the P3-Roc.
+
 .. warning::
 
    There is no electronic protection on the P3-Roc for burst switches (neither as local outputs nor as burst optos).
