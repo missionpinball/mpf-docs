@@ -189,6 +189,8 @@ are no currency symbols here or anything. A value of .25 could be 0.25
 dollars or 0.25 Euros or 0.25 Francs—it really doesn't matter. The key
 is that it’s 0.25 of whatever monetary system you have.
 
+.. include:: template_setting.rst
+
 price_tier_template
 ~~~~~~~~~~~~~~~~~~~
 
@@ -231,6 +233,14 @@ Here's an example:
           credits: 1
         - price: 2
           credits: 5
+
+
+price:
+~~~~~~
+
+Price for number of ``credits``.
+
+.. include:: template_setting.rst
 
 Optional settings
 ~~~~~~~~~~~~~~~~~

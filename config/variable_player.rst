@@ -138,12 +138,14 @@ int:
 
 Adds or sets a player or machine variable to the specified integer value (this is the most common use of the variable_player).
 The ``int:`` setting takes priority over the ``float:`` setting so if both are present only the ``int:`` will be used.
+You can use :doc:`placeholders </config/instructions/dynamic_values>` which evalute to int as well.
 
 float:
 ~~~~~~
 
 Adds or sets a player or machine variable to the specified float value.  The ``int:`` setting takes priority over the ``float:``
 setting so if both are present only the ``int:`` will be used.
+You can use :doc:`placeholders </config/instructions/dynamic_values>` which evalute to float as well.
 
 string:
 ~~~~~~~

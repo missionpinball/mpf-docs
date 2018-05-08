@@ -65,6 +65,8 @@ Default is ``None``.
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
+.. include:: template_setting.rst
+
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
 
