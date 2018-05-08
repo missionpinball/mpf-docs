@@ -234,9 +234,10 @@ So on Windows, you'll end up with something like:
         rgb_dmd: smartmatrix
 
     smartmatrix:
-        port: com12
-        baud: 2500000
-        old_cookie: true
+        smartmatrix_1:
+           port: com12
+           baud: 2500000
+           old_cookie: true
 
 And on Mac or Linux, it will look something like:
 
@@ -244,11 +245,12 @@ And on Mac or Linux, it will look something like:
 
     hardware:
         rgb_dmd: smartmatrix
-
+    
     smartmatrix:
-        port: /dev/tty.usbmodem1448891
-        baud: 2500000
-        old_cookie: true
+        smartmatrix_1:
+           port: "/dev/tty.usbmodem1448891"
+           baud: 2500000
+           old_cookie: true
 
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
@@ -277,9 +279,10 @@ To do this, create a section in your machine-wide config called
 .. code-block:: mpf-config
 
     rgb_dmds:
-      my_dmd:
+      smartmatrix_1:
          platform: smartmatrix
-         brightness: .17
+         hardware_brightness: .17
+         source_display: dmd
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
 for details.) The only one you need to have is ``platform: smartmatrix`` which
@@ -358,12 +361,13 @@ on the window and slide settings used in this machine config.
       title: Mission Pinball Framework
 
     smartmatrix:
-      port: com5  # this will most likely be a different port for you
-      baud: 2500000
-      old_cookie: true
+      smartmatrix_1:
+        port: com5  # this will most likely be a different port for you
+        baud: 2500000
+        old_cookie: true
 
     rgb_dmds:
-      my_dmd:
+      smartmatrix_1:
          brightness: .2
          platform: smartmatrix
 
