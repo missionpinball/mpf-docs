@@ -71,37 +71,106 @@ You can also use dynamic values in :doc:`conditional events </events/overview/co
 Types of dynamic values
 -----------------------
 
-current_player
-   Used to get a player variable from the current player. The format is
-   ``current_player.variable_name``, for example ``current_player.ball``.
-   A list of player variables is here.
-
-players
-   Used to access player variables from specific players (by number), regardless
-   of who the current player is.
-   ``players[0].variable_name``
-
-game
-   game.tilted
-   game.slam_tilted
-   game.num_players
-   game.balls_in_play
+You can use the following types of placeholders.
 
 
-machine
+Current Player Variables
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-   machine.game
+You can access a player variable ``X`` of the current player using
+``current_player.X``.
+For instance, ``current_player.my_player_var`` will access ``my_player_var``
+of the current player.
+This placeholder is only available when a game is active.
 
-settings
+Common player variables are:
 
-   todo
+* ``current_player.score`` - Score of the current player
+* ``current_player.ball`` - Current ball
 
-device
+Player Variables of Specific Player
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Devices that have been registered with the machine can be found here, like logic blocks.
-   ``device.counters.superjets_counter.value``
-   ``device.accruals.magic_tokens.enabled``
-   ``device.sequences.world_tour.completed``
+You can access a player variable ``X`` of a specific player ``P`` using
+``players[X].P``.
+``X`` starts at 0. So player 1 will be ``players[0].P``.
+For instance, ``players[1].my_player_var`` will access ``my_player_var``
+for player 2. ``players[0].my_player_var`` will access player 1.
+This placeholder is only available when a game is active.
+
+Common player variables are:
+
+* ``players[0].score`` - Score of player 1
+* ``players[1].score`` - Score of player 2
+* ``players[2].score`` - Score of player 3
+* ``players[3].score`` - Score of player 4
+
+Game Variables
+~~~~~~~~~~~~~~
+
+You can access game variable ``X`` using ``game.X``.
+This placeholder is only available when a game is active.
+
+Common game variables are:
+
+* ``game.max_players`` - Maximum players currently allowed
+* ``game.num_players`` - Number of players in game
+* ``game.balls_per_game`` - Balls per game
+* ``game.balls_in_play`` - Balls in play
+* ``game.tilted`` - True if the game has been tilted
+* ``game.slam_tilted`` - True if the game has been slam tilted
+
+Additionally, a game has all common mode variables (see below).
+``game.X`` is just a convenient way to access ``mode.game.X``.
+
+Machine Variables
+~~~~~~~~~~~~~~~~~
+
+You can access machine variable ``X`` using ``machine.X``.
+
+Common machine variables are:
+
+* ``machine.player1_score`` - Player 1 score from the last game
+* ``machine.player2_score`` - Player 2 score from the last game
+* ``machine.player3_score`` - Player 3 score from the last game
+* ``machine.player4_score`` - Player 4 score from the last game
+* ``machine.credits_string`` - String for credits or freeplay
+* ``machine.credits_value`` - Human readable credits string
+
+
+Settings
+~~~~~~~~
+
+You can access setting ``X`` using ``settings.X``.
+
+Devices
+~~~~~~~
+
+You can access variable ``X`` of device ``D`` of type ``T`` using ``device.T.D.X``.
+For instance you can access the value of counter ``my_counter`` using
+``device.counters.my_counter.value``.
+
+Common device variables are:
+
+* ``device.counters.my_counter.value``
+* ``device.counters.my_counter.enabled``
+* ``device.flippers.left_flipper.enabled``
+* ``device.playfields.playfield.balls``
+* ``device.ball_devices.my_lock.balls``
+* ``device.counters.superjets_counter.value``
+* ``device.accruals.magic_tokens.enabled``
+* ``device.sequences.world_tour.completed``
+
+
+Modes
+~~~~~
+
+You can access variable ``X`` of mode ``M`` using ``mode.M.X``.
+
+Common device variables are:
+
+* ``mode.my_mode.active``
+
 
 Using if/else logic with dynamic values
 ---------------------------------------

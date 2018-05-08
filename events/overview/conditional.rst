@@ -128,16 +128,7 @@ learned in school.)
 Most likely you wouldn't get that complex, but it's nice to know that you
 can if you want. :)
 
-Things you can use
-------------------
-
-* ``current_player.``
-* ``players.``
-* ``game.``
-* ``machine.``
-* ``settings.``
-* ``device.``
-* ``mode.``
+You can use all :doc:`placeholder variables </config/instructions/dynamic_values>`.
 
 Comparisons
 -----------
