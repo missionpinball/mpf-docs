@@ -33,7 +33,7 @@ Here's an example:
 
    rgb_dmds:
      smartmatrix:  # name of this DMD which can be whatever you want
-       brightness: .5
+       hardware_brightness: .5
        fps: 25
        gamma: 2.5
 
@@ -47,8 +47,8 @@ you enter one or more of the following settings:
 
 (If you don't include any of the settings below, the default will be used).
 
-brightness:
-~~~~~~~~~~~
+hardware_brightness:
+~~~~~~~~~~~~~~~~~~~~
 Single numeric value, Default: ``0.5``
 
 A brightness multiplier for the DMD. Default is 0.5 which is 50% brightness,
@@ -57,6 +57,8 @@ lower as needed.
 
 Note that brightness is closely related to gamma (see below). You'll probably
 want to adjust both of them together.
+
+.. include:: template_setting.rst
 
 gamma:
 ~~~~~~
