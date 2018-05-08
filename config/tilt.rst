@@ -11,10 +11,8 @@ tilt:
 
 .. overview
 
-The ``tilt:`` section of your config is where you...
+The ``tilt:`` section of your config is where you configure a tilt mode.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -25,8 +23,7 @@ multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300ms``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Window in which hits are ignored after a tilt hit.
 
 reset_warnings_events:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -44,15 +41,15 @@ settle_time:
 ~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Time to wait after the machine is tilted before a new ball can be started.
+This prevents that a player can tilt his ball and the first ball of the next
+player.
 
 slam_tilt_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``slam_tilt``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Switch tags which will cause a slam tilt.
 
 tilt_events:
 ~~~~~~~~~~~~
@@ -83,8 +80,9 @@ tilt_switch_tag:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``tilt``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Switch tag for switches which cause the machine to tilt (without prior
+warnigns). You want to use the tag configured in ``tilt_warning_switch_tag``
+in most cases.
 
 tilt_warning_events:
 ~~~~~~~~~~~~~~~~~~~~
@@ -103,20 +101,18 @@ tilt_warning_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``tilt_warning``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Switch tags for switches which cause a tilt warning.
 
 tilt_warnings_player_var:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``tilt_warnings``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Player var to use to store tilt warnings.
 
 warnings_to_tilt:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``3``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Number of warnings until the machine tilts.
 
+.. include:: template_setting.rst
