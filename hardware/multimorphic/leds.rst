@@ -14,6 +14,8 @@ Note that if you're using a P-ROC/P3-ROC and you want to use serial-controlled
 LEDs (NeoPixels, etc.), then you can do that with a P-ROC/P3-ROC by using a
 :doc:`FadeCandy </hardware/fadecandy/index>` instead of a PD-LED. You can also
 mix-and-match PD-LEDs and FadeCandy LEDs.
+If you are using a PD-8x8 or a local matrix on the P-Roc see the instructions
+about :doc:`Matrix lights for P/P3-Roc <leds>`.
 
 Understanding the PD-LED board
 ------------------------------
@@ -51,9 +53,13 @@ like this:
    lights:
       l_led0:
          number: 8-0-1-2
+         subtype: led
 
 The example above configures "l_led0” as the LED connected to PD-LED board at
 address 8, using outputs 0, 1, and 2 as its red, green, and blue connections.
+
+``subtype: led`` is only needed on the P-Roc since ``subtype`` defaults to ``led``
+on the P3-Roc defaults. The P-Roc defaults to ``matrix``.
 
 polarity:
 ---------

@@ -13,6 +13,8 @@ How to configure Matrix Lights (P-ROC/P3-ROC)
 
 To configure matrix lights connected to a PD-8x8 and a P-ROC or P3-ROC, you can
 follow the guides and instructions in the :doc:`/mechs/lights/index` docs.
+If you are using PD-LED with see the instructions about
+:doc:`LEDs on PD-LED for P/P3-Roc <leds>`.
 
 However there are a few things to know about using matrix lights with a P3-ROC.
 
@@ -54,6 +56,9 @@ The second part is the row information:
 * ``0`` means input "0"
 
 Luckily this is only something you have to work out once. :)
+
+You only need ``subtype: matrix`` on the P3-Roc since ``subtype`` defaults to
+``led``. The P-Roc defaults to ``matrix`` so you may omit it there.
 
 Fine tuning column strobe times
 -------------------------------
