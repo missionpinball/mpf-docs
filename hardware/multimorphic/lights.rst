@@ -72,7 +72,7 @@ the same everywhere and you didn't have to worry about any other settings.
 However now that it's possible to use LEDs replacement bulbs in your lamp
 matrices, and there are all sorts of LEDs like "anti-ghosting" and things like
 that, you may want to fine-tune the timing of how the columns are activated.
-You can do that in the ``p_roc:`` or ``p3_roc:`` sections of your machine-wide
+You can do that in the ``p_roc:`` section of your machine-wide
 config.
 
 For P-ROC:
@@ -86,7 +86,7 @@ For P3-ROC:
 
 .. code-block:: mpf-config
 
-   p3_roc:
+   p_roc:
       lamp_matrix_strobe_time: 100ms
 
 100ms is the default setting (which is used if you don't add this entry), but
