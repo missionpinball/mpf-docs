@@ -56,7 +56,7 @@ This is an example for simple scoring with multiplier:
    #! assert_player_variable 300 score
 
 The multiplier will be tracked per player and carry over to the next ball.
-At start we set it to ``1`` using a ``player_vars </config/player_vars>``
+At start we set it to ``1`` using a :doc:``player_vars </config/player_vars>``
 entry in config for every player.
 
 You can also reset the multiplier on every ball if you want: 
