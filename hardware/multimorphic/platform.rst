@@ -68,18 +68,10 @@ by default with a timeout of 1 second. If you would like to disable this, or
 you'd like to change the timeout, you can do so in either the ``p_roc:`` or
 ``p3_roc:`` section of your machine-wide config.
 
-For the P-ROC:
+For the P-ROC or P3-Roc:
 
 .. code-block:: mpf-config
 
    p_roc:
-      use_watchdog: true
-      watchdog_time: 1s
-
-For the P3-ROC:
-
-.. code-block:: mpf-config
-
-   p3_roc:
       use_watchdog: true
       watchdog_time: 1s
