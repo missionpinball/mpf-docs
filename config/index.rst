@@ -45,7 +45,6 @@ indicated which type of config file it's valid in.
    coil_overwrites: <coil_overwrites>
    coil_player: <coil_player>
    coils: <coils>
-   color_correction_profiles: <color_correction_profiles>
    combo_switches: <combo_switches>
    config: <config>
    counters: <counters>
