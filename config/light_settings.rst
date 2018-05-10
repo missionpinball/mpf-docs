@@ -132,7 +132,8 @@ brightness curve for the lights. The default is 1.0.
 
 whitepoint:
 ^^^^^^^^^^^
-List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``1.0, 1.0, 1.0``
+List of three values, each is a type: ``number`` (will be converted to floating point).
+Default: ``1.0, 1.0, 1.0``
 
 Specifies the white point (or white balance) of your lights. Enter it as
 a list of three floating point values that correspond to the red,
