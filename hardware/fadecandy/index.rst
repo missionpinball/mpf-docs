@@ -205,3 +205,16 @@ the :doc:`/config/fadecandy` section of your machine configuration file.
 Specifically, you can set the keyframe interpolation, dithering, gamma, white
 point, linear slope, and linear cutoff. The defaults should be fine for almost
 everyone, though you can go nuts if you want.
+
+9. Color Correction
+-------------------
+
+If you are using RGB LEDs, they might not be perfectly white when you turn
+them on. They might be pinkish or blueish instead depending on the brand of
+the LED. To a certain extend this is normal/expected and you can compensate
+for it by configuring
+:doc:`hardware color correction in the fadecandy </config/fadecandy>`.
+If you need more than one correction profile (e.g. for multiple LED models)
+you need to fall back to
+:doc:`software color_correction profiles in light_settings </config/light_settings>`.
+Hardware correction should be preferred and give you much more dynamic range.

@@ -101,7 +101,7 @@ assign the channels directly:
               - number: 3-2
            white:
               - number: 4-0
-     my_ws2812_after_rgbw: 
+     my_ws2812_after_rgbw:
         channels:
            red:
               - number: 4-1
@@ -111,7 +111,7 @@ assign the channels directly:
               - number: 5-0
 
 The RGBW shifts all the channels by one internally. As you can see this can
-quickly become confusing so it might be wise to run RGBW LEDs (or any 
+quickly become confusing so it might be wise to run RGBW LEDs (or any
 non-three-channel LEDs) as a separate chain.
 
 Parallel LEDs
@@ -154,6 +154,15 @@ You can also have multiple channels per color (if you do not want to make them d
               - number: 6
               - number: 7
 
+Color Correction
+----------------
+
+If you are using RGB LEDs, they might not be perfectly white when you turn
+them on. They might be pinkish or blueish instead depending on the brand of
+the LED. To a certain extend this is normal/expected and you can compensate
+for it by configuring
+:doc:`color_correction profiles in light_settings </config/light_settings>`.
+
 
 Monitorable Properties
 ----------------------
@@ -162,9 +171,8 @@ For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for LEDs is ``device.lights.<name>``.
 
-*color*
-
-*corrected_color*
+* *color*
+* *corrected_color*
 
 
 +------------------------------------------------------------------------------+

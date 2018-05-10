@@ -88,3 +88,11 @@ by default, meaning it's disabled.)
 
 See the :doc:`/config/fast` section of the config file reference for details.
 
+Color Correction
+----------------
+
+If you are using RGB LEDs, they might not be perfectly white when you turn
+them on. They might be pinkish or blueish instead depending on the brand of
+the LED. To a certain extend this is normal/expected and you can compensate
+for it by configuring
+:doc:`color_correction profiles in light_settings </config/light_settings>`.

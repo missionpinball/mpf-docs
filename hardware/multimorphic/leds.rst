@@ -61,8 +61,8 @@ address 8, using outputs 0, 1, and 2 as its red, green, and blue connections.
 ``subtype: led`` is only needed on the P-Roc since ``subtype`` defaults to ``led``
 on the P3-Roc defaults. The P-Roc defaults to ``matrix``.
 
-polarity:
----------
+polarity
+--------
 
 The PD-LED allows you to use either common anode or common cathode LEDs. (See
 the PD-LED documentation for details. The type of LED would dictate whether you
@@ -88,3 +88,12 @@ dependent on whether you’re controlling the anode or the cathode with your
 outputs, so basically if you turn on your PD-LED and all your LEDs turn on,
 then flip DIP switch 6 on the PD-LED to the opposite position and power cycle
 the board.
+
+Color Correction
+----------------
+
+If you are using RGB LEDs, they might not be perfectly white when you turn
+them on. They might be pinkish or blueish instead depending on the brand of
+the LED. To a certain extend this is normal/expected and you can compensate
+for it by configuring
+:doc:`color_correction profiles in light_settings </config/light_settings>`.
