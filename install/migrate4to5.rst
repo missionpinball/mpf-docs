@@ -516,7 +516,7 @@ to feed the playfield:
 
 Counters no longer save their state in player variables.
 If you are using something like ``(YOUR_COUNTER_count)`` in a slide or widget
-you can use a :doc:`lights </config_players/variable_player>` to restore
+you can use a :doc:`variable_player </config_players/variable_player>` to restore
 the old behaviour:
 
 .. code-block:: mpf-config
@@ -528,3 +528,59 @@ the old behaviour:
               int: value
               action: set
 
+12. Sequence shots became separate devices
+------------------------------------------
+
+If you are using ``switch_sequences`` in your :doc:`shots </config/shots>`
+convert them to a separate device.
+
+Old syntax:
+
+.. code-block:: yaml
+
+   switches:
+      switch1:
+         number:
+      switch2:
+         number:
+      switch3:
+         number:
+
+   shots:
+      left_orbit:
+          switch_sequence: switch1, switch2, switch3
+          time: 3s
+
+New syntax:
+
+.. code-block:: mpf-config
+
+   switches:
+      switch1:
+         number:
+      switch2:
+         number:
+      switch3:
+         number:
+
+   sequence_shots:
+      left_orbit_sequence:
+         switch_sequence: switch1, switch2, switch3
+         sequence_timeout: 3s
+
+   ##! mode: test
+   # in case you still want the shot (does not do much anymore in this example):
+   shots:
+      left_orbit:
+         hit_events: left_orbit_sequence_hit
+
+   ##! test
+   start_game
+   start_mode test
+   mock_event left_orbit_sequence_hit
+   mock_event left_orbit_hit
+   hit_and_release_switch switch1
+   hit_and_release_switch switch2
+   hit_and_release_switch switch3
+   assert_event_called left_orbit_sequence_hit
+   assert_event_called left_orbit_hit
