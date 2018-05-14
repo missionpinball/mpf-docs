@@ -34,7 +34,7 @@ internal gamma correction, though others don't, so you might have to change
 them.
 
 We recommend you read the documentation for the :doc:`/config/dmds`,
-:doc:`/config/rgb_dmds`, and :doc:`/config/color_correction_profiles`
+:doc:`/config/rgb_dmds`, and :doc:`/config/light_settings`
 (for LEDs) to set the proper gamma.
 
 Tuning your DMD gamma
