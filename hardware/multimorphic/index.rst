@@ -2,7 +2,7 @@ How to configure Multimorphic (P-ROC & P3-ROC) hardware
 =======================================================
 
 Here's a list of all the How To guides which explain how to use MPF with
-`Multimorphic P-ROC and P3-ROC control systems <http://pinballcontrollers.com/>`_.
+`Multimorphic P-ROC and P3-ROC control systems <https://www.multimorphic.com/category/circuit-boards/>`_.
 These guides include the numbering format (how you map specific entries in your
 config files to board and connector locations) as well as overall settings that
 affect how your hardware performs.
