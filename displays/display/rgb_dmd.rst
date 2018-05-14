@@ -41,26 +41,8 @@ The final version of the relevant sections of your machine config for a
 physical RGB DMD with an on screen window too will look like
 this:
 
-1. Shout-out to Eli Curtz!
---------------------------
 
-It's likely that no one would be using RGB LED DMDs if it wasn't for the efforts
-of Eli Curtz.
-
-`Eli first posted <http://www.pinballcontrollers.com/forum/index.php?topic=1396.msg12382#msg12382>`_
-about these types of panels in the P-ROC forum in 2014. At that
-time we could only find panels with 3mm spacing between pixels which
-was a bit larger than traditional pinball DMDs, but that's what kicked
-off the conversation about, "Whoa, maybe we could use these for 'real'
-color DMDs some day." Then in September 2015, Eli posted again telling
-us that we could now get panels with 2.5mm spacing which is the
-perfect size we need. Eli also showed us how to connect them and what
-software we needed to make everything work. So really everything here
-is because of Eli. All we did is take everything he showed us and
-write it down. (Well, that and we also created the interface for MPF,
-but that was the easy part.) So thanks Eli!
-
-2. Add your displays to your MPF config
+1. Add your displays to your MPF config
 ---------------------------------------
 
 Next, add the DMD display to your list of displays in your machine-wide config
@@ -93,7 +75,7 @@ Notice that we set ``default: true`` for the DMD display. This is because as
 we're creating display content in our game, we want it (by default) to show up
 in the DMD (since that will be the primary display in our game).
 
-3. Add your window configuration
+2. Add your window configuration
 --------------------------------
 
 The ``window:`` section of the machine-wide config holds the settings for the
@@ -119,7 +101,7 @@ setting to this section. That's because we have a logical display called
 "window", and when you have that, the on-screen window will automatically use
 that display as its source.
 
-4. Configure a window slide to show the on screen DMD
+3. Configure a window slide to show the on screen DMD
 -----------------------------------------------------
 
 Now we have a working on-screen window and a working physical RGB DMD. But if
@@ -201,7 +183,7 @@ to give it a nice border.
            height: 130
            color: 444444
 
-5. Configure the slide to show when MPF starts
+4. Configure the slide to show when MPF starts
 ----------------------------------------------
 
 Now we have a nice slide with the virtual DMD on it, but if you run MPF, you
@@ -235,7 +217,7 @@ because we haven't set up any slide_player entries to add content to it, but
 that's something you can do by following the tutorial or looking at the guides
 for the slides and widgets here.
 
-6. What if you don't want the on-screen window?
+5. What if you don't want the on-screen window?
 -----------------------------------------------
 
 There might be some scenarios where you just want the physical DMD with no
@@ -249,7 +231,7 @@ In this case, you wouldn't need the ``default: true`` entry for the dmd in the
 ``displays:`` section because you only have one display, so it will automatically
 be the default.
 
-7. Configure your RGB DMD Hardware
+6. Configure your RGB DMD Hardware
 ----------------------------------
 
 At this point you have two displays configured, and you have default content
