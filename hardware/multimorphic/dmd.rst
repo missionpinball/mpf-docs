@@ -107,7 +107,7 @@ certain types of DMDs. To address this, the P-ROC allows you to fine-tune
 the timings of the individual `bit planes <https://en.wikipedia.org/wiki/Bit_plane>`_
 that make up the image.
 
-For details on this, you can search the `P-ROC forums <http://www.pinballcontrollers.com/forum>`_
+For details on this, you can search the P-ROC forums (now defunct)
 for "high_cycles" to find a few threads where people are talking about these
 settings. Then you can set them in the ``p_roc: dmd_timing_cycles:`` section of
 your machine-wide config, like this:

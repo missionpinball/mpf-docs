@@ -4,7 +4,7 @@ RGB.DMD Controller
 It's likely that no one would be using :doc:`RGB LED DMDs </hardware/eli_dmd/index>`
 if it wasn't for the efforts of Eli Curtz.
 
-Eli first posted about these types of panels in the P-ROC forum (now defunc) in 2014.
+Eli first posted about these types of panels in the P-ROC forum (now defunct) in 2014.
 At that time we could only find panels with 3mm spacing between pixels which
 was a bit larger than traditional pinball DMDs, but that's what kicked
 off the conversation about, "Whoa, maybe we could use these for 'real'

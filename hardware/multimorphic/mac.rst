@@ -121,7 +121,7 @@ sure the paths in ``include_dirs`` within CMakeLists.txt are correct.
 
 Pypinproc is a wrapper library that allows Python apps (like MPF) to talk to
 the libpinproc that you installed in the previous step. Unfortunately the
-version that is available from the pinballcontrollers.com website only works
+version that is available from the multimorphic.com website only works
 with Python 2.x, and MPF uses Python 3.x, so you have to download a version
 that we modified to work with Python 3:
 

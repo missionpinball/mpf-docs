@@ -8,7 +8,7 @@ The Mission Pinball Framework was started in 2014 by Brian Madden and Gabe Knuth
 them had dreamed of building their own pinball machines for years, and in 2013, they discovered the
 P-ROC and the wonderful community of home brew pinball builders and hackers.
 
-The P-ROC pinball control system works with an open source project called `pyprocgame <http://www.pinballcontrollers.com/forum/index.php?board=9.0>`_
+The P-ROC pinball control system works with an open source project called ``pyprocgame``
 which is a Python-based game framework. Pyprocgame is great, but it's pretty basic. (It's more of
 a pinball development environment versus a complete framework.) One of the challenges
 we saw was that people kept on having to "reinvent the wheel" with each game they built. After reading
@@ -93,8 +93,8 @@ MPF. Just please create more pinball!
 
 At this time, if you don't want to use MPF, there are a few other options:
 
-* `pyprocgame <http://www.pinballcontrollers.com/forum/index.php?board=9.0>`_ (P-ROC/P3-ROC only)
+* pyprocgame (P-ROC/P3-ROC only; website defunct)
 * `PyProcGameHD+SkeletonGame <http://mjocean.github.io/PyProcGameHD-SkeletonGame/>`_ (P-ROC/P3-ROC only, adds HD graphics and more to pyprogame)
 * `Open Pinball Project framework <https://openpinballproject.wordpress.com/>`_ (Open Pinball Project hardware only)
-* `Rampant Slug Framework <http://rampantslug.com.au/#pinball>`_ (P-ROC/P3-ROC only)
+* Rampant Slug Framework (P-ROC/P3-ROC only; website defunct)
 * `FreeWPC <https://github.com/bcd/freewpc>`_ (WPC hardware only, lets you write new code in C, burn it to ROMS, and run it on original WPC hardware)
