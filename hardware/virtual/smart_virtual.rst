@@ -1,6 +1,12 @@
 The "Smart Virtual" Platform
 ============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+
 MPF's *Smart Virtual Platform* is based on the :doc:`virtual platform <virtual>`
 with one key difference: The Smart Virtual platform watches
 for coil pulse events and adjusts switches in response to simulate

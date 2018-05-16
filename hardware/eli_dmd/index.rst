@@ -1,6 +1,18 @@
 RGB.DMD Controller
 ==================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/rgb_dmds`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/smartmatrix`                                                   |
++------------------------------------------------------------------------------+
+| :doc:`/config/displays`                                                      |
++------------------------------------------------------------------------------+
+
 The RGB.DMD controller was designed as a variant to the SmartMatrix that would
 be capable of both controlling RGB LED panels and accepting and decoding the
 DMD signal from an existing commercial pinball machine. As soon as RGB LED
@@ -40,3 +52,8 @@ Can copy the following example (and replace ``com12`` with your com port):
            port: com12
            baud: 3000000
            old_cookie: false
+
+    rgb_dmds:
+      smartmatrix_1:
+         platform: smartmatrix
+         source_display: dmd

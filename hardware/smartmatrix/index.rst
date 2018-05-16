@@ -10,6 +10,8 @@ How to configure a "SmartMatrix" RGB LED DMD
 +------------------------------------------------------------------------------+
 | :doc:`/config/smartmatrix`                                                   |
 +------------------------------------------------------------------------------+
+| :doc:`/config/displays`                                                      |
++------------------------------------------------------------------------------+
 
 This guide explains how to connect a SmartMatrix RGB LED DMD to a
 pinball machine running MPF.
@@ -41,7 +43,8 @@ The following diagram shows how all the components fit together:
 This solution is very much a "home brew" solution that will require
 you to buy a lot of parts from various sources.
 
-Alternatively, FAST pinball also offers a RGB DMD which contains
+Alternatively, FAST pinball also offers a
+:doc:`RGB DMD </hardware/fast/dmd>` which contains
 controller, panels and mounting brackets (ask them directly since it
 is not currently listed on their website). If you go with this solution
 skip steps 1 to 3. You still need a power supply (step 4).
@@ -118,7 +121,7 @@ all, each pixel is actually three separate LEDs (one each for red,
 green, and blue), and a 128x32 display means that you have 4,096
 pixels. So that's 12,228 LEDs you need to power!
 
-Since you're ordering your RGB LED display panels from FAST Pinball,
+If you're ordering your RGB LED display panels from FAST Pinball,
 you can also order a
 `5v, 10A power supply from them for $19 <https://squareup.com/store/fast-pinball-llc/item/five-volt-ten-amp-switching-power-supply>`_.
 
@@ -126,6 +129,7 @@ you can also order a
 
 An ATX computer power supply will probably have a decent amount of amps also,
 so that could be an option too, just check the specs.
+Any other 5V supply with decent power should also work.
 
 One thing about these RGB LED-based displays is they are bright.
 Like, really, really bright. (We're talking "burn your retinas if you
@@ -354,6 +358,7 @@ on the window and slide settings used in this machine config.
         width: 128
         height: 32
         default: true
+        round_anchor_x: left
 
     window:
       width: 600

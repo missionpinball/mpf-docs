@@ -1,6 +1,12 @@
 The Virtual Platform
 ====================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+
 MPF's virtual platform interface is a software-only platform you can
 use if you don't have a physical pinball controller attached.
 

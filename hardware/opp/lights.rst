@@ -1,6 +1,13 @@
 OPP Lights
 ==========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/lights`                                                        |
++------------------------------------------------------------------------------+
+
+
 If you're using an OPP incandescent wing card, the lights are
 numbered the same as the input switches.  OPP bulbs are numbered
 sequentially depending on which wing board controls the output.

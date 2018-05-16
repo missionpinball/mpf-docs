@@ -68,8 +68,6 @@ platform for your I2C devices and to instead use the ``smbus2`` platform, like t
 .. code-block:: mpf-config
 
     hardware:
-        platform: p_roc
-        driverboards: pdb
         i2c: smbus2
 
 See the :doc:`/hardware/platform` guide for more information about setting

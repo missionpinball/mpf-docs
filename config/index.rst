@@ -81,6 +81,7 @@ indicated which type of config file it's valid in.
    led_player: <led_player>
    light_stripes: <light_stripes>
    light_rings: <light_rings>
+   lisy: <lisy>
    leds: <leds>
    lights: <lights>
    light_settings: <light_settings>
@@ -99,6 +100,7 @@ indicated which type of config file it's valid in.
    mpf-mc: <mpf-mc>
    multiball_locks: <multiball_locks>
    multiballs: <multiballs>
+   mypinballs: <mypinballs>
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
@@ -116,10 +118,12 @@ indicated which type of config file it's valid in.
    queue_event_player: <queue_event_player>
    queue_relay_player: <queue_relay_player>
    random_event_player: <random_event_player>
+   raspberry_pi: <raspberry_pi>
    rgb_dmds: <rgb_dmds>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
    scriptlets: <scriptlets>
+   segment_display_player: <segment_display_player>
    segment_displays: <segment_displays>
    servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
@@ -146,6 +150,7 @@ indicated which type of config file it's valid in.
    sounds: <sounds>
    spike: <spike>
    state_machines: <state_machines>
+   steppers: <steppers>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>
@@ -155,6 +160,7 @@ indicated which type of config file it's valid in.
    timed_switches: <timed_switches>
    timers: <timers>
    track_player: <track_player>
+   trinamics_steprocker: <trinamics_steprocker>
    variable_player: <variable_player>
    video_pools: <video_pools>
    videos: <videos>

@@ -1,5 +1,14 @@
 Connecting your computer to the Stern SPIKE CPU node
 ====================================================
+
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/spike`                                                         |
++------------------------------------------------------------------------------+
+
 There are at least 3 options to connect a computer running MPF to the SPIKE
 CPU via a serial connection.
 

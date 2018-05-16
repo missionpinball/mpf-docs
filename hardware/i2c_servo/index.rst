@@ -1,6 +1,16 @@
 I2C Servo Controllers
 =====================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/servo_controllers`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/config/servos`                                                        |
++------------------------------------------------------------------------------+
+
 MPF currently supports PCA9685/PCA9635 based servo controllers via I2C.
 One exemple for such a controller is the
 `Adafruit 16-Channel 12-bit PWM/Servo Driver <https://www.adafruit.com/product/815>`_.

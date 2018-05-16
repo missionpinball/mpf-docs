@@ -1,6 +1,13 @@
 OPP Switches
 ============
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/switches`                                                      |
++------------------------------------------------------------------------------+
+
+
 For switches, you can use most of the settings as outlined in the
 ``switches:`` section of the config file reference. There are only a
 few things that are OPP-specific:

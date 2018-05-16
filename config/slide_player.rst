@@ -245,9 +245,10 @@ Really you should use priorities to control which slides are shown.
 
 slide:
 ~~~~~~
+Single value, type: ``string``. Default: ``None``
 
-
-:doc:`/about/help_us_to_write_it`
+You can specify the slide name here (instead of as key for the complete player).
+There are reasons to use this but you won't need it in most cases.
 
 target:
 ~~~~~~~

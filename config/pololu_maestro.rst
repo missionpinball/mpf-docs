@@ -23,7 +23,8 @@ specific the first (lower numbered) port here. For example:
       port: COM5
 
 Note that there are a few other settings you need to configure in other areas
-to use a Pololu Maestro servo controller. See the How To guide for details.
+to use a Pololu Maestro servo controller. See the
+:doc:`How To guide </hardware/pololu_maestro/index>` for details.
 
 Required settings
 -----------------
@@ -47,13 +48,13 @@ servo_max:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``9000``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Quarter-microseconds to use for the max servo value.
+The default (9000) translates to 2250 microseconds or 2.25ms.
 
 servo_min:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``3000``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Quarter-microseconds to use for the max servo value.
+The default (3000) translates to 750 microseconds or 0.75ms.
 

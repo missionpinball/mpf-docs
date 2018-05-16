@@ -1,6 +1,14 @@
 MMA8451-based accelerometers
 ============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/accelerometers`                                                |
++------------------------------------------------------------------------------+
+
 This chips can be connected to I2C and act a tilt and leveler.
 Available on `adafruit <https://learn.adafruit.com/adafruit-mma8451-accelerometer-breakout/overview>`_ (and elsewhere).
 

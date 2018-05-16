@@ -1,6 +1,15 @@
 Pololu Maestro Servo Controller
 ===============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/pololu_maestro`                                                |
++------------------------------------------------------------------------------+
+| :doc:`/config/servos`                                                        |
++------------------------------------------------------------------------------+
+
+
 MPF supports servos connected to Pololu Maestro servo controllers. Each Maestro
 can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 
@@ -28,8 +37,6 @@ of your machine-wide config file, like this:
 .. code-block:: mpf-config
 
    hardware:
-     platform: fast
-     driverboards: fast
      servo_controllers: pololu_maestro
 
 This tells MPF that you want the default servo platform to be ``pololu_maestro``.

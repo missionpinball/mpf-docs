@@ -133,6 +133,7 @@ them, with explanations of how to use them in config files and in shows.
    queue_event_player
    queue_relay_player
    random_event_player
+   segment_display_player
    show_player
    slide_player
    sound_loop_player

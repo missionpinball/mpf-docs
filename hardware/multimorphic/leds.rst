@@ -4,7 +4,7 @@ How to configure LEDs (P-ROC/P3-ROC)
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/leds`                                                          |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 
 This guide explains how to configure MPF to use LEDs attached to a Multimorphic

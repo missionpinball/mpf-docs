@@ -1,11 +1,17 @@
 OPP LEDs
 ========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/lights`                                                        |
++------------------------------------------------------------------------------+
+
 OPP hardware can directly drive LED strips.  This features is
 currently being developed.  Documentation will be added as the
 feature becomes more mature.
 
-LEDs work similar to matrix_lights (board 1, LED 1):
+LEDs work similar to matrix lights (board 1, LED 1):
 
 .. code-block:: mpf-config
 

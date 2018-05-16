@@ -223,6 +223,8 @@ to lower-power pwm mode.
 power_setting_name:
 ~~~~~~~~~~~~~~~~~~~
 
+A machine setting to use to adjust the (relative) power.
+
 :doc:`/about/help_us_to_write_it`
 
 include_in_ball_search:

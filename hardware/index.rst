@@ -176,11 +176,6 @@ MPF supports:
    Raspberry Pi <rpi/index>
    MMA8451-based accelerometer <mma8451/index>
 
-Other
------
-
-:doc:`/about/help_us_to_write_it`
-
 .. toctree::
 
    hw_rules
