@@ -58,12 +58,39 @@ Now you can use them in :doc:`/config/flasher_player` (or also in
     flash:
       flasher_01: 100ms
 
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for lights is ``device.lights.<name>``.
+
+*color*
+   The color of this string. If you set it to brightness values all color channels
+      will have the same value. Brightness 100 (of 255) will be hex 64 and color 646464.
+
+Related How To guides
+---------------------
+
+See the documentation of your platform on how to configure GIs.
 
 +------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
+| Platform related How To                                                      |
 +==============================================================================+
-| :doc:`/about/help_us_to_write_it`                                            |
+| :doc:`P/P3-Roc leds </hardware/multimorphic/leds>`                           |
 +------------------------------------------------------------------------------+
+| :doc:`P/P3-Roc matrix light </hardware/multimorphic/lights>`                 |
++------------------------------------------------------------------------------+
+| :doc:`FAST leds </hardware/fast/leds>`                                       |
++------------------------------------------------------------------------------+
+| :doc:`FAST matrix light </hardware/fast/lights>`                             |
++------------------------------------------------------------------------------+
+| :doc:`OPP leds </hardware/opp/leds>`                                         |
++------------------------------------------------------------------------------+
+| :doc:`OPP matrix light </hardware/opp/lights>`                               |
++------------------------------------------------------------------------------+
+
+
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |

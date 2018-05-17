@@ -8,6 +8,9 @@ GI (general illumination)
 +------------------------------------------------------------------------------+
 | :doc:`/config/light_player`                                                  |
 +------------------------------------------------------------------------------+
+| :doc:`/config/coils`                                                         |
++------------------------------------------------------------------------------+
+
 
 .. contents::
    :local:
@@ -34,6 +37,48 @@ MPF hides all this complexity from you. You just define your GI strings in
 your machine :doc:`/config/lights` section and then you can enable, disable, and
 dim the dimmable ones as you wish.
 
+This is an example for a :doc:`light </config/lights>` with ``subtype: gi``:
+
+.. code-block:: mpf-config
+
+  lights:     
+    gi_string_left:
+      number: 3		# number depends on your platform
+      subtype: gi
+
+In modern machines (such as Spike) your GIs might just be handled as lights.
+The details depend on your hardware platform and are outlined in the platform
+documentation.
+
+This is an example for a :doc:`light </config/lights>` in Spike:
+
+.. code-block:: mpf-config
+
+  lights:     
+    gi_string_left:
+      number: 3		# number depends on your platform
+      subtype: led	# might be matrix in some platforms
+
+In some cases GIs are connected to normal drivers on your driver board
+(e.g. on a PD-16 on the P3-Roc).
+If that is the case you should configure them as :doc:`coils </config/coils>`.
+Then add them as :doc:`light </config/lights>` with ``platform: drivers``:
+
+.. code-block:: mpf-config
+
+  coils:
+    gi_string_left:
+      number: A1-B1-3		# number depends on your platform
+      allow_enable: True	# this will allow 100% enable without pwm
+
+  lights:     
+    gi_string_left:
+      number: gi_string_left	# map this light to a driver
+      platform: drivers
+
+Alternatively, you could also use :doc:`coil_player </config/coil_player>`
+but this gives you the convinience of being able to use GIs in normal light shows.
+
 Monitorable Properties
 ----------------------
 
@@ -41,13 +86,31 @@ For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for lights is ``device.lights.<name>``.
 
-*brightness*
-   The numeric value of the brightness of this GI string, from 0-255.
+*color*
+   The color of this string. If you set it to brightness values all color channels
+   will have the same value. Brightness 100 (of 255) will be hex 64 and color 646464.
 
 Related How To guides
 ---------------------
 
-:doc:`/about/help_us_to_write_it`
+See the documentation of your platform on how to configure GIs.
+
++------------------------------------------------------------------------------+
+| Platform related How To                                                      |
++==============================================================================+
+| :doc:`P/P3-Roc leds </hardware/multimorphic/leds>`                           |
++------------------------------------------------------------------------------+
+| :doc:`P/P3-Roc matrix light </hardware/multimorphic/lights>`                 |
++------------------------------------------------------------------------------+
+| :doc:`FAST leds </hardware/fast/leds>`                                       |
++------------------------------------------------------------------------------+
+| :doc:`FAST matrix light </hardware/fast/lights>`                             |
++------------------------------------------------------------------------------+
+| :doc:`OPP leds </hardware/opp/leds>`                                         |
++------------------------------------------------------------------------------+
+| :doc:`OPP matrix light </hardware/opp/lights>`                               |
++------------------------------------------------------------------------------+
+
 
 Related Events
 --------------

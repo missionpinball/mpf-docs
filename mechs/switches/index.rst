@@ -63,6 +63,7 @@ Related How To guides
 
 * :doc:`/tutorial/3_get_flipping`
 * :doc:`optos`
+* :doc:`mechanical_switches`
 
 Related Events
 --------------
@@ -77,3 +78,4 @@ Related Events
    debounce
    switch_controller
    optos
+   mechanical_switches
