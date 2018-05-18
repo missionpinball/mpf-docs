@@ -1,9 +1,19 @@
 Rollover Switches
 =================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/switches`                                                      |
++------------------------------------------------------------------------------+
+
 Rollover switches in MPF are configured as normal switches.
 Furthermore, they are often paired with a light (below an insert)
 which qualifies them as candidate for a shots in MPF.
+They are usually :doc:`mechanical micro switches </mechs/switches/mechanical_switches>`.
+
+:doc:`TODO: Add a picture of a rollover switch </about/help_us_to_write_it>`
+
 
 This is an example:
 
