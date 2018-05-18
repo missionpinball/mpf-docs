@@ -12,7 +12,7 @@ Furthermore, they are often paired with a light (below an insert)
 which qualifies them as candidate for a shots in MPF.
 They are usually :doc:`mechanical micro switches </mechs/switches/mechanical_switches>`.
 
-:doc:`TODO: Add a picture of a rollover switch </about/help_us_to_write_it>`
+.. image:: /mechs/images/rollover_micro_switch.jpg
 
 
 This is an example:

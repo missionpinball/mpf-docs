@@ -13,12 +13,20 @@ There are two common types of mechanical switches:
 First, blade switches which are very cheap and reliable but cannot be used
 everywhere:
 
-:doc:`TODO: Add a picture of a blade switch </about/help_us_to_write_it>`
+.. image:: /mechs/images/blade_target_switch.jpg
 
 Second, micro switches which are very small and commonly used for roll over
-switches:
+switches.
+Those usually have three connectors:
 
-:doc:`TODO: Add a picture of a micro switch </about/help_us_to_write_it>`
+* *C* - common pin for *NO* and *NC*
+* *NO* - normally open - connected to *C* only when the switch is pressed
+* *NC* - normally closed - connected to *C* only when the switch is not pressed
+
+Usually, you connect *C* to ground and *NO* to your direct input (see below
+for switch matrices).
+
+.. image:: /mechs/images/micro_switches_common_no_nc.jpg
 
 Electronically and logically both switches work similarly.
 
@@ -31,7 +39,7 @@ a closed switch by the platform.
 
 :doc:`TODO: Add electronical drawing for switch on direct input. </about/help_us_to_write_it>`
 
-Additionally, you can use switches in a switch matrix. 
+Additionally, you can use switches in a switch matrix.
 In a switch matrix columns are connected to drivers and rows to switches.
 Columns are then pulsed sequentially and the rows are read.
 Each switch has to use a diode to prevent closing other columns.

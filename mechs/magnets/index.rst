@@ -15,6 +15,11 @@ MPF supports the ability to control precise timing for magnets which you can
 use to grab and release balls. It also includes the ability to set timings to
 "fling" a ball by grabbing, releasing, then pulsing the magnet again.
 
+.. image:: /mechs/images/magnet1.jpg
+.. image:: /mechs/images/magnet2.jpg
+.. image:: /mechs/images/magnet3.jpg
+
+
 Monitorable Properties
 ----------------------
 

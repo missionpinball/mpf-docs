@@ -9,7 +9,7 @@ Spinners
 
 Spinners are rotating metal plates which close a switch once per rotation.
 
-:doc:`TODO: Add a picture of a spinner </about/help_us_to_write_it>`
+.. image:: /mechs/images/spinner.jpg
 
 In MPF spinners are configured just like normal switches:
 
