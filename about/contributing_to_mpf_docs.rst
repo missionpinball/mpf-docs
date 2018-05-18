@@ -7,6 +7,10 @@ Want to help make these docs better! Great! We'd love any help, whether it's as
 small as correcting a typo, adding to a section that isn't clear, adding your
 own How To guide, or whatever else you want to change.
 
+If you got any questions please ask in the
+`MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_.
+We are happy to help you with any contribution.
+
 To make a quick change to an existing page
 ------------------------------------------
 
