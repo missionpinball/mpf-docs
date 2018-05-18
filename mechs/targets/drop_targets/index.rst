@@ -19,6 +19,10 @@ targets as a :doc:`drop target bank <drop_target_bank>` and put the coil there.
 Additionally, there may be a knockdown coil which allows the software to knock the
 target down.
 
+.. image:: /mechs/images/drop_target_front.jpg
+.. image:: /mechs/images/drop_target_side.jpg
+.. image:: /mechs/images/drop_target_back.jpg
+
 This is an example:
 
 .. code-block:: mpf-config

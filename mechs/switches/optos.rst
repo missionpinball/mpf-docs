@@ -13,7 +13,16 @@ They usually cover ranges up to 10cm and are used in places where normal
 lane is too wide or on a ramp).
 Optos are also commonly used in ball troughs.
 
-:doc:`TODO: Add a picture of a pair of optos. </about/help_us_to_write_it>`
+Williams optos:
+
+.. image:: /mechs/images/williams_optos_front.jpg
+.. image:: /mechs/images/williams_optos_back.jpg
+
+Stern Spike optos (there seems to be an additionall 5V at the receiver side):
+
+.. image:: /mechs/images/spike_optos_front.jpg
+
+
 
 Electronically they consist of a sender and a receiver.
 The sender is usually connected to 5-12V power with a current limiting resistor
@@ -31,7 +40,7 @@ For this reason, the input will be closed when the beam is not interrupted and
 open when the opto is interrupted.
 This is exactly inverse than a normal switch and you have to configure your
 opto as *normally closed* (short ``NC``) for that reason.
-If your opto is using an additional PCB for optos it might invert the signal 
+If your opto is using an additional PCB for optos it might invert the signal
 and revert this effect (just try normally closed first and change it later -
 it will not break anything).
 
