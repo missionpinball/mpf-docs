@@ -19,11 +19,11 @@ Second, micro switches which are very small and commonly used for roll over
 switches.
 Those usually have three connectors:
 
-* *C* - common pin for *NO* and *NC*
-* *NO* - normally open - connected to *C* only when the switch is pressed
-* *NC* - normally closed - connected to *C* only when the switch is not pressed
+* ``C`` - common pin for ``NO`` and ``NC``
+* ``NO`` - normally open - connected to ``C`` only when the switch is pressed
+* ``NC`` - normally closed - connected to ``C`` only when the switch is not pressed
 
-Usually, you connect *C* to ground and *NO* to your direct input (see below
+Usually, you connect ``C`` to ground and ``NO`` to your direct input (see below
 for switch matrices).
 
 .. image:: /mechs/images/micro_switches_common_no_nc.jpg

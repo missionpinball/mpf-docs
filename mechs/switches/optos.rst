@@ -13,16 +13,9 @@ They usually cover ranges up to 10cm and are used in places where normal
 lane is too wide or on a ramp).
 Optos are also commonly used in ball troughs.
 
-Williams optos:
 
-.. image:: /mechs/images/williams_optos_front.jpg
-.. image:: /mechs/images/williams_optos_back.jpg
-
-Stern Spike optos (there seems to be an additionall 5V at the receiver side):
-
-.. image:: /mechs/images/spike_optos_front.jpg
-
-
+Electronical details
+--------------------
 
 Electronically they consist of a sender and a receiver.
 The sender is usually connected to 5-12V power with a current limiting resistor
@@ -46,14 +39,37 @@ it will not break anything).
 
 :doc:`TODO: Add electronical drawing for sender and receiver. </about/help_us_to_write_it>`
 
+
+Williams optos
+~~~~~~~~~~~~~~
+
+.. image:: /mechs/images/williams_optos_front.jpg
+.. image:: /mechs/images/williams_optos_back.jpg
+
 In most platforms with direct inputs you can directly connect a receiver to an
 input.
-You connect the collector to the input (C) and the emitter (E) to ground.
+You connect the collector to the input (``C``) and the emitter (``E``) to ground.
 Consult the documentation of your hardware platform for details.
 
-For the sender connect the kathode (K) to ground and the anode (A) to a
+For the sender connect the kathode (``K``) to ground and the anode (``A``) to a
 current limiting resistor. Connect the resistor to power. DO NOT omit the
 resistor to power without any current limiting or it will break/burn.
+
+Stern Spike optos
+~~~~~~~~~~~~~~~~~
+
+Labels on Stern Spike optos looks different but they work similarly:
+
+.. image:: /mechs/images/spike_optos_front.jpg
+
+On the sender (left) connect ``+5`` to 5V and ``G`` to GND.
+A current limiting resistor is not required since it is embedded on the sender.
+
+The receiver also connects ``+5`` to 5V and ``G`` to GND.
+Additionally, connect signal ``S`` to your input.
+
+Config
+------
 
 You can configure a normally closed opto like this:
 
