@@ -5,9 +5,7 @@ This guide will show you how to configure MPF to use a modern-style trough
 with opto boards. (If you have a modern-style trough which uses mechanical
 leaf switches, use :doc:`this guide <modern_mechanical>` instead.)
 
-.. todo::
-
-   We need to add a photo of this type of trough (:doc:`\/about\/help_us_to_write_it`).
+.. image:: /mechs/images/trough_opto_fast.jpg
 
 The following diagram shows how the ball flow and eject coil work in
 a modern trough. (This is a side view)

@@ -11,6 +11,12 @@ ball_devices:
 
 The ``ball_devices:`` section of your config is where you configure your :doc:`ball devices </mechs/ball_devices/index>`.
 
+You can find examples here:
+
+* :doc:`Troughs </mechs/troughs/index>`
+* :doc:`Plungers </mechs/plungers/index>`
+* :doc:`Scoops/Vertical UP Kickers (VUKs)/Saucer Holes </mechs/scoops/index>`
+
 Optional settings
 -----------------
 

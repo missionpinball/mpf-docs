@@ -64,6 +64,7 @@ Related How To guides
 * :doc:`/tutorial/3_get_flipping`
 * :doc:`optos`
 * :doc:`mechanical_switches`
+* :doc:`service_and_door_switches`
 
 Related Events
 --------------
@@ -79,3 +80,4 @@ Related Events
    switch_controller
    optos
    mechanical_switches
+   service_and_door_switches

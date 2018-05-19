@@ -9,6 +9,16 @@ Slingshots
 
 Slingshots are configured as :doc:`autofire_coils </config/autofire_coils>` in MPF.
 
+.. image:: /mechs/images/slingshot_side.jpg
+.. image:: /mechs/images/slingshot_front.jpg
+
+A sling shot usually consists of two
+:doc:`blade switches </mechs/switches/mechanical_switches>` and
+one :doc:`coil </config/coils>`.
+Those switches are wired in parallel because it does not matter which switch
+was closed to fire to slingshot. Connect one side of each switch to ground and
+the other side of both switches to the same input.
+
 This is an example:
 
 .. code-block:: mpf-config

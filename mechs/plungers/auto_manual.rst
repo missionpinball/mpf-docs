@@ -7,6 +7,8 @@ a mechanical spring-powered plunger as well as a coil-fired auto plunge option.
 Here's an example of this:
 
 .. image:: /mechs/images/auto_manual_plunger.jpg
+.. image:: /mechs/images/auto_launcher_side.jpg
+.. image:: /mechs/images/auto_launcher_bottom.jpg
 
 If you have a purely mechanical plunger with no autolaunch option, follow the
 :doc:`mechanical_with_switch` guide instead. If you have a standard coil-fired

@@ -30,6 +30,7 @@ to tutorials, event listings, and configuration
    Replays <replays/index>
    Timed Switches <timed_switches/index>
    Timers <timers/index>
+   Service Mode <service_mode/index>
    Shots <shots/index>
    Skill Shot <skill_shot/index>
    Video Modes <video_modes/index>
