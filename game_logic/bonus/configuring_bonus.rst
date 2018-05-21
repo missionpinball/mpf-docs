@@ -78,7 +78,16 @@ machine-wide config, like this:
 
 Most modern pinball machines have bonus scores based on multiple things.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Use a :doc:`/config/variable_player` to count some bonuses:
+
+.. code-block:: mpf-config
+
+  ##! config: mode1
+  variable_player:
+    ramp_shot_hit:
+      bonus_ramps: 1
+    s_target1_active:
+      some_variable: 1
 
 4. Add some settings to your bonus mode config
 ----------------------------------------------
@@ -92,7 +101,52 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
    #config_version=5
 
    mode_settings:
+      display_delay_ms: 1s
+      hurry_up_delay_ms: 0
       bonus_entries:
+       - event: bonus_ramps
+         score: 400
+       - event: bonus_math
+         score: 1200 * (current_player.some_variable + 2)
 
+   slide_player:
+      mode_bonus_started: bonus_start_slide
+      bonus_ramps: bonus_ramp_slide
+      bonus_math: bonus_math_slide
+      bonus_total: bonus_total_slide
 
-:doc:`/about/help_us_to_write_it`
+   slides:
+     bonus_start_slide:
+       widgets:
+         - type: text
+           text: Bonus
+     bonus_ramp_slide:
+       - type: text
+         text: "Ramps (player|level)"
+       - type: text
+         text: (score)
+     bonus_math_slide:
+       - type: text
+         text: "Some variable (player|some_variable)"
+       - type: text
+         text: (score)
+     bonus_multiplier_slide:
+       - type: text
+         text: "Multiplier"
+       - type: text
+         text: "(multiplier)X"
+     bonus_total_slide:
+       - type: text
+         text: "Total Bonus"
+       - type: text
+         text: (score)
+   ##! test
+   #! start_game
+   #! advance_time_and_run 1
+   #! drain_ball
+   #! advance_time_and_run 1
+   #! stop_game 10
+   #! advance_time_and_run 1
+
+You can use :doc:`placeholder variables </config/instructions/dynamic_values>`
+and math in all your score entries.
