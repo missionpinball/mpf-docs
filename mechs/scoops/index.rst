@@ -109,3 +109,10 @@ certain condition match):
 When you mode is running the eject will be delayed by 10s (duration of your
 show). Add all your lights, shows and slides to this show.
 After the show ended it will eject normally.
+
+The same can be achieved using a :doc:`ball_hold device </config/ball_holds>`.
+If you want your saucer/VUK/scoop to lock a ball for a
+:doc:`multiball </config/multiballs>` use
+a `ball_lock device </config/ball_locks>` instead (see
+:doc:`multiball </game_logic/multiballs/index>` in the game design section for
+more details).
