@@ -69,7 +69,7 @@ Single value, type: float(0,1). Default: ``None``
 This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an float value from 0-1 (i.e.
 0% power to 100% power) which controls the relative power.
-If not set it will use ``default_hold_power`` of the :doc:`/config/coil`.
+If not set it will use ``default_hold_power`` of the :doc:`/config/coils`.
 
 pulse_power:
 ~~~~~~~~~~~~
@@ -79,7 +79,7 @@ The power factor which controls how much power is applied during the initial
 pulse phase of the coil's activation. (Note that not all hardware platforms
 support variable pulse power.)
 
-If not set it will use ``default_pulse_power`` of the :doc:`/config/coil`.
+If not set it will use ``default_pulse_power`` of the :doc:`/config/coils`.
 
 pulse_ms:
 ~~~~~~~~~
@@ -87,4 +87,4 @@ The number of milliseconds you'd like this coil to pulse for. This setting
 overrides the coil's *default_pulse_ms* setting. Note that this setting
 only affects pulse actions. Make sure you are not exceeding the coil's
 *max_pulse_ms* setting.
-If not set it will use ``default_pulse_ms`` of the :doc:`/config/coil`.
+If not set it will use ``default_pulse_ms`` of the :doc:`/config/coils`.
