@@ -27,6 +27,23 @@ You can configure ball saves to have various start and
 stop events and timers, and you can configure multiple ones in
 different modes that do different things.
 
+This is an example:
+
+.. code-block:: mpf-config
+
+    ball_saves:
+      random_ball_save:
+        active_time: 5s
+        hurry_up_time: 2s
+        grace_period: 2s
+        enable_events: event_on_dangerous_action
+        auto_launch: yes
+        balls_to_save: 1
+
+When ``event_on_dangerous_action`` is posted the ball save will be active for
+5s ``active_time`` + 2s ``grace_period`` = 7s.
+Hurry up will start after 5s ``active_time`` - 2s ``hurry_up_time`` = 3s.
+
 Monitorable Properties
 ----------------------
 
@@ -50,7 +67,7 @@ the prefix for ball saves is ``device.ball_saves.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+* :doc:`Ball save at ball start </game_logic/ball_start_end/index>`
 
 Related Events
 --------------

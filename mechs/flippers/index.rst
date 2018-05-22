@@ -29,6 +29,21 @@ coils, as flippers in pinball machines can be either type.
 You should also probably read the EOS Switches guide if your machine has flipper
 EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
+Default Events
+--------------
+
+MPF contains built-in support for the flipper cancel combo. If you
+add the tag ``left_flipper`` to your left flipper switch, and ``right_flipper``
+to your right flipper switch, then whenever the player hits both flippers at
+the same time, an MPF event called *flipper_cancel* will be posted.
+This is implemented as :doc:`combo switch </game_logic/combo_switches/index>`.
+
+Additionally, MPF contains a default
+:doc:`timed switch </game_logic/timed_switches/index>` for flipper cradle.
+It will post ``flipper_cradle`` when a player cradles a ball for 3s.
+Later it will post ``flipper_cradle_release`` when the player releases the
+ball.
+
 Monitorable Properties
 ----------------------
 
