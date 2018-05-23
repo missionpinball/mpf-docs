@@ -15,6 +15,31 @@ change in action, click to control switches, and lay out everything on an image 
 The interactive MC lets you create YAML configurations for slides and widgets in realtime and see them
 on a display. This is great for fine tuning and tweaking your slides.
 
+:doc:`Service Cli <service_cli/index>`
+--------------------------------------
+
+The MPF service cli is a fast way to debug or troubleshoot your machine during
+development and operation.
+
+Machine Fuzzer
+--------------
+
+Fuzz your machine using afl to find crashes in MPF, your config or your code.
+Currently not documented. Let us know if you want to use it.
+
+Show Creator
+------------
+
+* `Simple light show generator for MPF <https://github.com/missionpinball/showcreator>`_
+
+Hardware Debugger
+-----------------
+
+The hardware debugger allows you to scan all your configured hardware platforms.
+In some cases it also supports firmware updates and configuration settings.
+See :doc:`mpf hardware </running/commands/hardware>` for details.
+
+
 Future Tools
 ------------
 
@@ -23,7 +48,6 @@ Future Tools
 * Show builder
 * Slide / animation tool
 * Auto machine documentation builder
-* Machine fuzzer
 * Device / asset explorer (Why did this sound stop? Why is this LED red? etc)
 
 
@@ -33,3 +57,4 @@ Future Tools
 
    monitor/index
    imc/index
+   service_cli/index

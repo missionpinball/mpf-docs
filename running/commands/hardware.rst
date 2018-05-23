@@ -12,3 +12,7 @@ scan
 ~~~~
 Start MPF, scan all configured hardware platforms, dump their state and exit
 
+firmware_update
+~~~~~~~~~~~~~~~
+Start MPF, scan all configured hardware platforms, update their firmware if
+not up to date and exit.
