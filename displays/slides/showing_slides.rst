@@ -2,7 +2,8 @@ How to Show a Slide on a Display
 ================================
 
 Once you have your :doc:`slides created <creating_slides>`, you need to decide
-which slides you show when.
+which slides you show when. (Just remember you can test slides and widgets
+interactively using :doc:`Interactive MC (iMC) </tools/imc/index>`.)
 
 Using the slide_player
 ----------------------

@@ -11,8 +11,10 @@ slides:
 
 The ``slides:`` section of your config is where you pre-define "named" slides
 that you can then use later in shows and the slide_player section of a config
-file. (See the :doc:`/displays/slides/showing_slides` guide for details on
-this.)
+file. See the :doc:`/displays/slides/showing_slides` guide for details on
+this.
+You can test slides and widgets interactively using
+:doc:`Interactive MC (iMC) </tools/imc/index>`.
 
 Slide names are universal throughout MPF, so if you create two slides with the
 same name—even in different modes—one of them will overwrite the other and

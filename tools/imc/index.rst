@@ -21,3 +21,4 @@ Since the iMC uses the regular MC and the regular config files, you have access 
 videos, widget styles, fonts, etc. from your machine config.
 
 
+See :doc:`mpf imc command </running/commands/imc>`.

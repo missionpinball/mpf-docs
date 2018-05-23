@@ -114,10 +114,4 @@ By default, the MPF game engine and the MC will connect via TCP port 5050.
    MPF command launcher <mpf>
    MPF commands <commands/index>
    Specifying BCP ports <ports>
-   mpf game <commands/game>
-   mpf mc <commands/mc>
-   mpf both <commands/both>
-   mpf migrate <commands/migrate>
-   mpf hardware <commands/hardware>
-   mpf service <commands/service>
 

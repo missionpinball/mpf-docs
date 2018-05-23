@@ -3,6 +3,8 @@ How to create slides
 
 Since slides are so critical in MPF's display system, let's look at how you
 actually create slides.
+You can test slides and widgets interactively using
+:doc:`Interactive MC (iMC) </tools/imc/index>`.
 
 There are several ways you can define and create slides:
 

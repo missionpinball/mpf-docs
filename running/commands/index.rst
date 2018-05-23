@@ -50,5 +50,8 @@ To update the firmware of your hardware controllers (if supported by your platfo
    mpf diagnosis <diagnosis>
    mpf game <game>
    mpf mc <mc>
+   mpf imc <imc>
    mpf migrate <migrate>
    mpf monitor <monitor>
+   mpf hardware <hardware>
+   mpf service <service>

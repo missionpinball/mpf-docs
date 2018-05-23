@@ -21,6 +21,8 @@ section of a :doc:`show step </shows/content>`.
 Full instructions on how to use the slide_player are included in the
 :doc:`/displays/widgets/index` section of the documentation. The stuff here
 in the config reference is for reference later.
+You can test slides and widgets interactively using
+:doc:`Interactive MC (iMC) </tools/imc/index>`.
 
 Generically-speaking, there are two formats you can use for widget_player
 entries: "express" and "full" configs. Express configs will look like this:

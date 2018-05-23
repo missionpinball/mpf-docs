@@ -16,7 +16,8 @@ removed) based on events being posted.
 
 Note that the slide player is a :doc:`config_player </config_players/index>`, so everything
 mentioned below is valid in the ``slide_player:`` section of a config file *and* in the ``slides:``
-section of a show step.
+section of a show step. You can test slides and widgets interactively using
+:doc:`Interactive MC (iMC) </tools/imc/index>`.
 
 Full instructions on how to use the slide_player are included in the
 :doc:`/displays/slides/showing_slides` guide. The documentation here is for
