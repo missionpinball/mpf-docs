@@ -8,3 +8,5 @@ Credits guide for details of how to set it up.
 The credits mode is highly-configurable, including pricing per game,
 currencies, price tiering ($0.50 for 1 credit, $2.00 for 5, etc.),
 credit expiration, etc.
+
+See :doc:`/game_logic/credits/index` for details.

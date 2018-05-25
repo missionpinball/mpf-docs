@@ -33,6 +33,9 @@ In fact even the "game" itself is a mode in MPF! MPF includes many built-in
 modes (that you can use outright or customize), and you can create your own
 modes as needed.
 
+We documented the general approach to design a game in the
+:doc:`Game Design </game_design/index>` section.
+
 How modes work in MPF
 ---------------------
 
@@ -244,6 +247,8 @@ Using modes as game logic
 | Related How To Guides                                                        |
 +==============================================================================+
 | :doc:`Creating your first game mode </tutorial/14_add_a_mode>`               |
++------------------------------------------------------------------------------+
+| :doc:`Game Design </game_design/index>`                                      |
 +------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+

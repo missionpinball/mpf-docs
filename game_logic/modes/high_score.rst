@@ -16,3 +16,5 @@ scores in *<your_machine_folder>/data/high_scores.yaml* file. It
 automatically reads them in when MPF boots to create machine variables
 that can be accessed from your game, and it automatically updates the
 high scores on disk when they change after a game ends.
+
+See :doc:`/game_logic/high_scores/index` for details.
