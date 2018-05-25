@@ -12,11 +12,29 @@ Carousel
 .. contents::
    :local:
 
-A carousel allows you to create process for the player to select from a list of items such as selecting a mode to play.  The carousel is implemented as a mode.  The player can move through a list of items that you provide on the display or cycle through playfield inserts.
+A carousel allows you to create process for the player to select from a list
+of items such as selecting a mode to play.
+The carousel is implemented as a mode.
+The player can move through a list of items that you provide on the display
+or cycle through playfield inserts.
 
-A common use of the carousel is to create a mode selection proess.  For example, the player can scroll through a list of modes on the display.  Each mode could be presented to the user as a slide.  The player can move from slide to slide using the flippers.  Once the player decides which mode to play, he can select the mode by hitting the start button or both flippers at once.  This is just one example of how you could implement a carousel as a mode selection process.
+This is just one way to select modes. More ways to implement mode selection
+are described in the :doc:`mode selection section </game_design/mode_selection>`
+of the :doc:`game design documentation </game_design/index>`.
 
-There is a reference to a code file in here so be careful to include that reference.  You don't need to download any code as it is already in you MPF installation.  Here is the process of configuring a carousel:
+A common use of the carousel is to create a mode selection process.
+For example, the player can scroll through a list of modes on the display.
+Each mode could be presented to the user as a slide.
+The player can move from slide to slide using the flippers.
+Once the player decides which mode to play, he can select the mode by hitting
+the start button or both flippers at once.
+This is just one example of how you could implement a carousel as a mode
+selection process.
+
+There is a reference to a code file in here so be careful to include that
+reference.
+You don't need to download any code as it is already in you MPF installation.
+Here is the process of configuring a carousel:
 
 * Create a mode folder and config file ``<machine>/modes/carousel/config/carousel.yaml``
 * Add the code to ``mode:`` section:
