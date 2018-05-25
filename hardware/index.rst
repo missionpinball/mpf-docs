@@ -137,15 +137,6 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * Connected to I2C
 
-Browse Platforms by Capabilites
--------------------------------
-
-.. toctree::
-   :titlesonly:
-
-   i2c_platforms
-   servo_platforms
-
 Configuration Guides
 --------------------
 
@@ -164,20 +155,29 @@ MPF supports:
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
-   pololu_maestro/index
+   Pololu Maestro <pololu_maestro/index>
    SmartMatrix RGB DMD <smartmatrix/index>
-   eli_dmd/index
-   existing_machines/index
-   virtual/index
-   Trinamics StepRocker <trinamics/index>
+   RGB.DMD <eli_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
+   Trinamics StepRocker <trinamics/index>
    Computer Requirements <computer/index>
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>
    MMA8451-based accelerometer <mma8451/index>
+   Virtual Hardware <virtual/index>
+   Existing Machines <existing_machines/index>
 
 .. toctree::
 
    hw_rules
    numbers
    platform
+
+Browse Platforms by Capabilites
+-------------------------------
+
+.. toctree::
+   :titlesonly:
+
+   i2c_platforms
+   servo_platforms
