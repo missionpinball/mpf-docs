@@ -71,6 +71,7 @@ indicated which type of config file it's valid in.
    gis: <gis>
    hardware: <hardware>
    hardware_sound_player: <hardware_sound_player>
+   hardware_sound_systems: <hardware_sound_systems>
    high_score: <high_score>
    image_pools: <image_pools>
    images: <images>

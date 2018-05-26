@@ -12,6 +12,7 @@ how to connect and configure existing machines with MPF.
 * :doc:`Stern Whitestar <whitestar>`
 * :doc:`Stern SAM <sam>`
 * :doc:`Stern SPIKE / SPIKE 2 <spike>`
+* :doc:`Pinball 2000 <pinball2000>`
 
 Please let us know if you want to connect any other machine.
 
@@ -25,3 +26,4 @@ Please let us know if you want to connect any other machine.
    gottlieb_system80
    sam
    spike
+   pinball2000

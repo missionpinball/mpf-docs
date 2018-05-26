@@ -8,6 +8,8 @@ You can use MPF to control existing Williams / Bally / Midway WPC, WPC-S, and WP
 
 The main options for pinball controller hardware is the :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
 (not the P3-ROC). FAST has a WPC controller too but it never hit general availability.
+The people who created the :doc:`LISY boards </hardware/lisy/index>` are also working on a "LISY35" board for
+Bally/WPC machines with AS-2518-17 or AS-2518-35 CPU boards.
 
 In both cases, you remove the existing MPU board from the backbox of your machine and replace it with the
 new controller. You then connect up all the existing cables and connectors to the new controller, so in
