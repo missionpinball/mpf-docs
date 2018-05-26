@@ -6,8 +6,8 @@ You can use MPF to control existing Williams / Bally / Midway WPC, WPC-S, and WP
 1. Connecting the physical hardware
 -----------------------------------
 
-Your two options for pinball controller hardware are the Multimorphic P-ROC (not the P3-ROC) or the FAST
-Pinball WPC controller.
+The main options for pinball controller hardware is the :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
+(not the P3-ROC). FAST has a WPC controller too but it never hit general availability.
 
 In both cases, you remove the existing MPU board from the backbox of your machine and replace it with the
 new controller. You then connect up all the existing cables and connectors to the new controller, so in
@@ -28,6 +28,10 @@ A few notes:
 * The existing DMD, if you choose to use it, is unplugged from the WPC DMD driver board and instead plugged
   into a 14-pin header on the P-ROC or FAST WPC controller. This means you can remove the existing DMD
   driver board from the backbox.
+
+For the P-Roc connect your machine according to the
+`P-Roc connector mappings <https://www.multimorphic.com/content/uploads/2017/08/P-ROC_Connector_Mappings_v2.pdf>`_.
+
 
 2. Configuring MPF for WPC machines
 -----------------------------------
@@ -254,6 +258,8 @@ manual:
        number: l16
        subtype: matrix
 
+See :doc:`/config/lights` and :doc:`/config/light_player` for details on how to use them.
+
 5. Configuring GI (general illumination)
 ----------------------------------------
 
@@ -278,6 +284,8 @@ GI strings are configured with ``G`` followed by the number, like this:
        number: g05
        subtype: gi
 
+See :doc:`/config/lights` and :doc:`/config/light_player` for details on how to use them.
+
 6. Configuring flashers
 -----------------------
 
@@ -297,3 +305,5 @@ configured with the letter ``C`` followed by their number similar to ``coils``.
        number: c23
      f_left_ramp_lower:
        number: c24
+
+See :doc:`/config/flashers` for details on how to use flashers.

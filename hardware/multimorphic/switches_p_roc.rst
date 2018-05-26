@@ -22,8 +22,9 @@ format.
 .. note::
 
    If you're using your P-ROC in an existing machine, then don't use the number
-   settings here. Instead use the numbers from the existing machine section of
-   the documentation. (add link; :doc:`/about/help_us_to_write_it`)
+   settings here. Instead use the numbers from the
+   :doc:`existing machine section </hardware/existing_machines/index>`
+   of the documentation.
 
 Direct Switches
 ~~~~~~~~~~~~~~~
