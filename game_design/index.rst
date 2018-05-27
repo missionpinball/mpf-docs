@@ -1,5 +1,5 @@
-How to design a game in MPF
-===========================
+How to design a game in MPF using Modes
+=======================================
 
 This section assumes that you already configured all your hardware devices
 (especially all your :doc:`ball device </config/ball_devices>`).

@@ -39,12 +39,12 @@ This is an example:
      priority: 500
      start_events: game_ending, start_high_score
      use_wait_queue: true
-   
+
    high_score:
      _overwrite: True
      enter_initials_timeout: 60
      award_slide_display_time: 4s
-   
+
      # define your high score categories and the awards
      categories: !!omap
      - score:
@@ -59,7 +59,7 @@ This is an example:
          - HIGH SCORE 8
      - loops:
          - LOOP CHAMP
-   
+
      # set the defaults
      defaults:
        score:
@@ -71,16 +71,16 @@ This is an example:
          - JOH: 500000
          - ELI: 400000
          - MIK: 300000
-         - ANT: 200000      
+         - ANT: 200000
        loops:
          - JAN: 42
-         
+
    # optional: change the slides (you can omit all the following)
    slide_player:
      _overwrite: True
      high_score_enter_initials: high_score_enter_initials
      high_score_award_display: high_score_award_display
-   
+
    slides:
      _overwrite: True
      high_score_enter_initials:
@@ -89,23 +89,23 @@ This is an example:
        font_size: 18
        text: PLAYER (player_num)
        color: ffff00
-       x: 105    
+       x: 105
        y: 90
-       
+
      - type: text
        style: tall_title
        font_size: 18
        text: (award)
        color: f0f0f0
-       x: 105    
+       x: 105
        y: 70
-       
+
      - type: text_input
        initial_char: A
-       dynamic_x: false    
+       dynamic_x: false
        key: high_score
        style: tall_title
-       font_size: 18    
+       font_size: 18
        max_chars: 3
        x: 105
        y: 20
@@ -113,21 +113,21 @@ This is an example:
        shift_right_event: sw_lower_right_flipper
        select_event: sw_start
        color: ff0000
-   
+
      - type: text
        style: tall_title
        text: '<       >'
-       font_size: 18    
+       font_size: 18
        x: 105
        y: 20
        color: ff0000
-   
-       
+
+
      - type: text
        text: ''
        key: high_score
-       font_size: 18    
-       style: tall_title    
+       font_size: 18
+       style: tall_title
        x: 105
        y: 50
        color: ff00ff
@@ -142,19 +142,19 @@ This is an example:
            duration: 0.3s
            repeat: true
            easing: in_out_quint
-           
+
      high_score_award_display:
      - type: text
        text: (player_name)
-       font_size: 18    
-       style: tall_title    
+       font_size: 18
+       style: tall_title
        anchor_y: middle
        anchor_x: middle
        x: middle
        y: middle
        color: 00ff00
        animations:
-         show_slide: 
+         show_slide:
          - property: opacity
            value: 1
            duration: 0.05s
@@ -164,21 +164,21 @@ This is an example:
            repeat: true
      - type: text
        text: (award)
-       font_size: 18    
-       style: tall_title    
+       font_size: 18
+       style: tall_title
        x: 105
        y: 110
        color: 0000ff
      - type: text
        text: (value)
-       style: tall_title    
+       style: tall_title
        x: 105
        y: 30
        color: 4040FF
        font_size: 20
        number_grouping: true
        min_digits: 2
-   
+
    ##! test
    #! assert_machine_variable 1000000 score1_value
    #! assert_machine_variable MPF score1_name
@@ -219,7 +219,7 @@ High score mode will also create a few machine variables for you:
 * :doc:`/machine_vars/high_score_categoryposition_label` - ``score1_label`` = GRAND CHAMPION
 * :doc:`/machine_vars/high_score_categoryposition_name` - ``score1_name`` = MPF
 * :doc:`/machine_vars/high_score_categoryposition_value` - ``score1_value`` = 1000000
- 
+
 In this case this will be ``score1_value``, ``score1_name`` and
 ``score1_label`` (till ``score9_value``, ``score9_name`` and ``score9_label``).
 Additionally, there will be ``loop1_label``, ``loop1_value`` and
@@ -231,6 +231,9 @@ scores.
 +==============================================================================+
 | :doc:`/game_logic/scoring/index`                                             |
 +------------------------------------------------------------------------------+
+| :doc:`/game_design/index`                                                    |
++------------------------------------------------------------------------------+
+
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |

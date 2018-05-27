@@ -24,7 +24,7 @@ to tutorials, event listings, and configuration
    Extra Balls <extra_balls/index>
    High Scores <high_scores/index>
    Logic Blocks <logic_blocks/index>
-   Match <match/index>
+   Match Mode <match_mode/index>
    Modes <modes/index>
    Multiballs <multiballs/index>
    Player Variables <players/index>

@@ -137,6 +137,12 @@ A game will always cost 1 credit per player.
 In this example, 50ct will give you 1 credit and $2 will give you 5 credits.
 When ``s_coin_left`` is hit 25ct are added (or 1/2 credit).
 
++------------------------------------------------------------------------------+
+| Related How To guides                                                        |
++==============================================================================+
+| :doc:`/game_design/index`                                                    |
++------------------------------------------------------------------------------+
+
 
 +------------------------------------------------------------------------------+
 | Machine Variables                                                            |

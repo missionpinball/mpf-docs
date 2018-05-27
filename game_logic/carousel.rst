@@ -135,3 +135,10 @@ You can then use the carousel_<item>_selected event to start the mode that was s
       transition:
         type: move_in
         direction: right
+
+
++------------------------------------------------------------------------------+
+| Related How To guides                                                        |
++==============================================================================+
+| :doc:`/game_design/index`                                                    |
++------------------------------------------------------------------------------+

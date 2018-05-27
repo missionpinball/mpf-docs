@@ -9,9 +9,13 @@ based on any player variables, and other "standard" things. You can also
 extend and enhance it if you have specific requirements that aren't covered by
 the built-in mode.
 
-Related How To guides
----------------------
-* :doc:`configuring_bonus`
++------------------------------------------------------------------------------+
+| Related How To guides                                                        |
++==============================================================================+
+| :doc:`configuring_bonus`                                                     |
++------------------------------------------------------------------------------+
+| :doc:`/game_design/index`                                                    |
++------------------------------------------------------------------------------+
 
 Related Events
 --------------

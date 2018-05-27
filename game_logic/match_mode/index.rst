@@ -1,15 +1,11 @@
-Tilt
-====
-
-Tilt is a built-in mode. To enable it, just add the ``tilt`` mode to your machine config list of modes.
-
-Tilt runs at all times, since the machine has to look for slam tilts while games are not running.
-
-Talk about tilt throughs
-
-Ball end events are posted immediately.
+Match Mode
+==========
 
 :doc:`/about/help_us_to_write_it`
+
+Editorial about why we think match is a bad idea
+
+Note that match only makes sense if your machine is set for credit play
 
 
 +------------------------------------------------------------------------------+
