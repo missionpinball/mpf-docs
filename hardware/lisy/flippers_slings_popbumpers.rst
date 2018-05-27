@@ -25,6 +25,6 @@ as light):
            enable_events: ball_started
            disable_events: ball_will_end
 
-This config will automatically, enable the flippers on ball start and disable
+This config will automatically enable the flippers on ball start and disable
 them on ball end. You can add more events to enable/disable them during the
 game.
