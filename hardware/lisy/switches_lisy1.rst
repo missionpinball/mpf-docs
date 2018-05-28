@@ -24,8 +24,8 @@ pinmame does it:
 .. note::
 
    As the SLAM switch is usually closed, the logic is inverted here.
-   A closed SLAM switch is interpreted as open within ``mpfserver`` and should
-   be configured as normally closed ``NC`` in MPF.
+   A closed SLAM switch is interpreted as open within ``mpfserver`` and does
+   not have to be configured as normally closed ``NC`` in MPF.
 
 You can start with this config:
 
@@ -34,7 +34,6 @@ You can start with this config:
    switches:
        slam:
            number: 76
-           type: 'NC'
        outhole:
            number: 66
        reset:
