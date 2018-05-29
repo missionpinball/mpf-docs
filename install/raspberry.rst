@@ -194,6 +194,8 @@ If you have trouble getting sound out of your speakers or monitor have a look he
 
 https://www.raspberrypi.org/documentation/configuration/audio-config.md
 
+If sound plays via omxplayer but not in MPF, set use_sdl_mixer_loader: False in your MPF configuration file. 
+
 Do a reboot:
 ------------
 
