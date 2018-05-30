@@ -161,8 +161,7 @@ eos_switch:
 ~~~~~~~~~~~
 Single value, type: string name of a ``switches:`` device. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+EOS switch on this flipper (if there is one).
 
 eos_switch_overwrite:
 ~~~~~~~~~~~~~~~~~~~~~
@@ -180,9 +179,8 @@ The name of the hold coil winding for dual-wound flipper coils.
 hold_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
-
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Overwrites settings on the hold_coil.
+See :doc:`coil_overwrites` for details.
 
 label:
 ~~~~~~
@@ -195,15 +193,15 @@ main_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Overwrites settings on the main_coil.
+See :doc:`coil_overwrites` for details.
 
 switch_overwrite:
 ~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Overwrites settings on the activation_switch.
+See :doc:`switch_overwrites` for details.
 
 tags:
 ~~~~~
@@ -222,10 +220,32 @@ to lower-power pwm mode.
 
 power_setting_name:
 ~~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``None``
 
-A machine setting to use to adjust the (relative) power.
+A :doc:`machine setting </config/settings>` to use to adjust the (relative) power.
+It can be used to allow the operator to adjust the power in service mode.
 
-:doc:`/about/help_us_to_write_it`
+This is an example:
+
+.. code-block:: mpf-config
+
+   coils:
+       c_flipper_main:
+           number:
+   
+   switches:
+       s_flipper:
+           number: 1
+           tags: left_flipper
+   
+   flippers:
+       f_test_flippers_with_settings:
+           main_coil: c_flipper_main
+           power_setting_name: flipper_power
+           activation_switch: s_flipper
+
+MPF comes with a :doc:`setting </config/settings>` called ``flipper_power`` by
+default and you can add additional ones.
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~

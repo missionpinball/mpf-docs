@@ -363,8 +363,10 @@ entrance_switch_full_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+When using an ``entrance_switch`` and setting this to anything except 0,
+the device will be considered to be full after ``entrance_switch_full_timeout``
+ms. This is used in some troughs where the last ball sits on the entrance
+switch (see :doc:`/mechs/troughs/two_coil_one_switch`).
 
 exit_count_delay:
 ~~~~~~~~~~~~~~~~~
@@ -467,8 +469,8 @@ player_controlled_eject_event:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+When using player controlled eject wait for this eject to autofire the
+ball.
 
 request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
@@ -491,8 +493,6 @@ Special-purpose tags for ball devices include:
 + ``home`` - Specifies that any balls here are "home" and that the game
   can start. When MPF boots up, any balls that are in devices not tagged
   with "home" are automatically ejected.
-+ ``ball_add_live`` - Used to tag the device you want to use to launch new
-  balls into play. Typically this is the plunger device.
 + ``drain`` - Specifies that a ball entering this device means the ball has
   "drained" from the playfield. (i.e. it's used to indicate a player
   lost the ball, versus some other random playfield lock.)
@@ -503,10 +503,11 @@ Special-purpose tags for ball devices include:
   balls from the playfield which it then immediately kicks over to a
   "trough" device which holds the balls that are not in play.
 
+The use of ``ball_add_live`` is discontinued. Use ``default_source_device`` in
+your :doc:`playfield </config/playfields>` instead.
+
 target_on_unexpected_ball:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
-
+Target playfield to use when capturing an unexpected ball.

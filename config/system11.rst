@@ -11,10 +11,10 @@ system11:
 
 .. overview
 
-The ``system11:`` section of your config is where you...
+The ``system11:`` section of your config is where your system11 machine.
+This is usually used together with the :doc:`snux platform </hardware/snux/index>`.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+See :doc:`snux` or :doc:`/hardware/snux/index` for an example.
 
 Required settings
 -----------------
@@ -25,8 +25,7 @@ ac_relay_driver:
 ~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``coils:`` device.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The driver to use to drive the AC relay which switches between A and C side drivers.
 
 Optional settings
 -----------------
@@ -37,6 +36,4 @@ ac_relay_delay_ms:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``75ms``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
-
+Delay when switching between A and C side.

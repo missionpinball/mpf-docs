@@ -103,6 +103,9 @@ This is an example:
        max_credits_reached:
            max_credits_reached_slide:
                expire: 2s
+       player_added:
+           player_added_slide:
+               expire: 1s
 
    slides:
        credit_added_slide:
@@ -124,6 +127,25 @@ This is an example:
        max_credits_reached_slide:
            - type: text
              text: MAX CREDITS REACHED
+       player_added_slide:
+           - type: text
+             text: PLAYER ADDED
+             font_size: 12
+             color: white 
+
+   sound_player:
+       credits_added:
+           credit_added_sound:
+               action: play
+               loops: 0
+       not_enough_credits:
+           need_more_money:
+               action: play
+               loops: 0
+       player_added:
+           player_added_sound:
+               action: play
+               loops: 0  
 
    ##! test
    #! assert_machine_variable 0 credit_units
@@ -136,6 +158,9 @@ This is an example:
 A game will always cost 1 credit per player.
 In this example, 50ct will give you 1 credit and $2 will give you 5 credits.
 When ``s_coin_left`` is hit 25ct are added (or 1/2 credit).
+
+This mode will also play sounds and show slides when adding credits or players
+since both can happen before or during a game.
 
 +------------------------------------------------------------------------------+
 | Related How To guides                                                        |
@@ -171,4 +196,6 @@ When ``s_coin_left`` is hit 25ct are added (or 1/2 credit).
 | :doc:`/events/max_credits_reached`                                           |
 +------------------------------------------------------------------------------+
 | :doc:`/events/not_enough_credits`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/player_added`                                                  |
 +------------------------------------------------------------------------------+

@@ -196,7 +196,7 @@ price_tier_template
 
 Default "{{credits}} CREDITS ${{price}}"
 
-:doc:`/about/help_us_to_write_it`
+Placeholder to generate the credits string.
 
 pricing_tiers:
 --------------

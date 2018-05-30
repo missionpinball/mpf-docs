@@ -11,10 +11,9 @@ high_score:
 
 .. overview
 
-The ``high_score:`` section of your config is where you...
-
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The ``high_score:`` section of your config is where you configure the built-in
+high score mode.
+See :doc:`/game_logic/high_scores/index` for details.
 
 Required settings
 -----------------
@@ -25,8 +24,8 @@ categories:
 ~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``list``.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+An ordered map of categories which contain a list of awards.
+See :doc:`/game_logic/high_scores/index` for an example.
 
 Optional settings
 -----------------
@@ -37,8 +36,11 @@ award_slide_display_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``4s``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+How long should the award slide be displayed?
 
 defaults:
 ~~~~~~~~~
+One or more sub-entries, each in the format of type: ``str``:``dict``.
+
+A map of categories with a list of player/score tuples.
+See :doc:`/game_logic/high_scores/index` for an example.

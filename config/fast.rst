@@ -159,21 +159,18 @@ default.
 
 net_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``10``
 
-single|int|10
-
-:doc:`/about/help_us_to_write_it`
+Max backlog for the NET port to prevent overflows in the FAST CPU.
 
 rgb_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``3``
 
-single|int|3
-
-:doc:`/about/help_us_to_write_it`
+Max backlog for the RGB port to prevent overflows in the FAST CPU.
 
 dmd_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``3``
 
-single|int|3
-
-:doc:`/about/help_us_to_write_it`
+Max backlog for the DMD port to prevent overflows in the FAST CPU.

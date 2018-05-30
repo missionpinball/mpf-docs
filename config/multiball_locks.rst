@@ -20,7 +20,8 @@ track the number of balls locked virtually which is not necessarily the same
 as the number of balls that are physically contained in a ball device.
 
 When a ball is locked, it will add a new ball into play from the ball device
-tagged with ``ball_add_live`` unless the device that just locked it is full,
+which is set in ``default_source_device`` of your playfield unless the device
+that just locked it is full,
 in which case it will eject a ball from the full device. The events that
 control the ball ejections are queue events, so you can interrupt the delivery
 of a new ball with the :doc: `/config/queue_relay_player` (for example, to have

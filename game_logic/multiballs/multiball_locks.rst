@@ -46,7 +46,7 @@ Ball locks are stored on a per-player basic and are NOT based on the number of b
 that are physically contained in any ball devices.
 
 When a ball is locked, a new ball will be added into play (from whichever ball device
-is tagged with the ``ball_add_live`` tag) unless the device that just received the
+set in ``default_source_device`` of the playfield) unless the device that just received the
 locked ball is full, in which case the ball will be released from the device that
 the ball just entered instead.
 
@@ -61,7 +61,8 @@ which will in turn post a "lock full" event which you can use to start a multiba
 That multiball will release all the balls it can from the lock devices this
 multiball lock uses, and if it still needs more balls (maybe because you're using
 a virtual lock or because a previous player emptied them out), then it will make
-up the difference be adding new balls from the ball device tagged with ``ball_add_live``.
+up the difference be adding new balls from the ball device set in
+``default_source_device`` of your :doc:`playfield </config/playfields>`.
 
 Monitorable Properties
 ----------------------

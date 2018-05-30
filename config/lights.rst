@@ -108,8 +108,7 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Name of the light in service mode.
 
 platform:
 ~~~~~~~~~

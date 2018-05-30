@@ -87,15 +87,41 @@ debounce:
 ~~~~~~~~~
 Single value, type: one of the following options: auto, quick, normal. Default: ``auto``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The debounce setting to use in hardware.
+``quick`` means very low to no debounce (could also be named "off").
+``normal`` implies debounce "on" and should be used in most cases.
+The exact timings of those settings depend on your hardware platform.
+(``quick`` usually is 0-1ms, ``normal`` is 1-4ms).
+
+The main purpose of this is to reduce the number of events/amount of
+communication from the hardware.
+For targets and swiches in debounce ``normal`` should be good in almost all
+cases.
+
+However, in some cases, you want to disable debounce (e.g. use ``quick``)
+when using :doc:`hardware rules </config/autofire_coils>` such as pop bumpers
+or sling shots.
+``auto`` will use ``normal`` if no hardware rules are configured or ``quick``
+when rules are configured. Therefore, you usually can leave this at ``auto``.
+
+Switch debouncing is somewhat different from debouncing in other domains since
+the switch has to be active for the whole period of debouncing (ot at least
+during sampling).
+It could also be referred as "minimum activation time" (as one discipline of
+debouncing).
+If you want to make sure that the switch does not activate again within
+a certain period have a look at ``ignore_window_ms`` (another discipline of
+debouncing).
+If you want to control the fire rate of your :doc:`coil </config/coils>` have
+a look at the ``recycle`` setting (configurable in some platforms).
+
+See :doc:`/mechs/switches/debounce` for details.
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set this to true to get additional debug output.
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -128,8 +154,7 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Name of this switch in service mode.
 
 platform:
 ~~~~~~~~~
