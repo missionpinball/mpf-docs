@@ -8,8 +8,6 @@ How to configure Matrix Lights (P-ROC/P3-ROC)
 +------------------------------------------------------------------------------+
 | :doc:`/config/p_roc`                                                         |
 +------------------------------------------------------------------------------+
-| :doc:`/config/p3_roc`                                                        |
-+------------------------------------------------------------------------------+
 
 To configure matrix lights connected to a PD-8x8 and a P-ROC or P3-ROC, you can
 follow the guides and instructions in the :doc:`/mechs/lights/index` docs.

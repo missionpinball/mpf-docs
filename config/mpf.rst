@@ -11,10 +11,7 @@ mpf:
 
 .. overview
 
-The ``mpf:`` section of your config is where you...
-
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The ``mpf:`` section of your config is where you configure global MPF settings.
 
 Optional settings
 -----------------
@@ -33,12 +30,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 MPF will post switch_event_active and switch_event_inactive (see below) when this is enabled.
 
-default_flash_ms:
-~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``50``
-
-Default flash_ms for all flashers when not overwritten.
-
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``10``
@@ -47,7 +38,6 @@ Default default_pulse_ms for all coils when not overwritten. This will be used w
 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
-
 Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
 
 For all platforms non-tickless platforms we poll this often.
@@ -78,6 +68,6 @@ This event will be posted for all tags after a switch turned active.
 
 default_show_sync_ms:
 ~~~~~~~~~~~~~~~~~~~~~
-
+Single value, type: ``integer``. Default: ``None``
 
 Default sync_mc for all shows when not specified otherwise.

@@ -11,7 +11,7 @@ p_roc:
 
 .. overview
 
-The ``p_roc:`` section of your config is where you configure hardware specific bits about the P-Roc.
+The ``p_roc:`` section of your config is where you configure hardware specific bits about the P-Roc or P3-Roc.
 In most cases you can omit this config and stick with the defaults.
 
 
@@ -30,20 +30,22 @@ and send us your log.
 
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
-List of four values, each is a type: ``integer``. Default: ``None``
+List of four values, each is a type: ``integer``. Default: ``None``. Only P-Roc (not P3-Roc).
 
 Those values determine the timing to drive the different shades of your DMD.
 See :doc:`/hardware/multimorphic/dmd` for details.
 
 dmd_update_interval:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``33ms``
+Single value, type: ``time string (ms)`` :doc:`(Instructions for entering time strings) </config/instructions/time_strings>`.
+Default: ``33ms``. Only P-Roc (not P3-Roc).
 
 The update interval of your DMD. Usually you do not have to change this.
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``100ms``
+Single value, type: ``time string (ms)`` :doc:`(Instructions for entering time strings) </config/instructions/time_strings>`.
+Default: ``100ms``
 
 The column strobe time for your lamp matrix. See :doc:`/hardware/multimorphic/lights` for details.
 

@@ -11,9 +11,16 @@ raspberry_pi:
 
 .. overview
 
-The ``raspberry_pi:`` section of your config is where you...
+The ``raspberry_pi:`` section of your config is where you configure your Raspberry Pi running pigpio.
+See :doc:`/hardware/rpi/index` for details.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+This is an example:
+
+.. code-block:: mpf-config
+
+   raspberry_pi:
+       ip: localhost
+       port: 8888
 
 
 Required settings
@@ -25,7 +32,7 @@ ip:
 ~~~
 Single value, type: ``string``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+IP of your Raspberry Pi. MPF will connect to this IP. Hostname does not work here.
 
 
 Optional settings
@@ -37,6 +44,6 @@ port:
 ~~~~~
 Single value, type: ``integer``. Default: ``8888``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Port of the pigpio daemon on your Raspberry Pi (in case you change it).
 
 

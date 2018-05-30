@@ -14,6 +14,7 @@ fadecandy:
 The ``fadecandy:`` section of your config is where you configure your fadecandy
 hardware platform.
 Usually you can leave this at the defaults.
+See :doc:`/hardware/fadecandy/index` for more details.
 
 From the `fadecandy documentation <https://github.com/scanlime/fadecandy>`_:
 

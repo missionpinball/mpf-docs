@@ -1,5 +1,5 @@
-scriptlets:
-===========
+custom_code:
+============
 
 *Config file section*
 
@@ -11,7 +11,7 @@ scriptlets:
 
 .. overview
 
-The ``scriptlets:`` section of your config is where you list you custom code scriptlets.
-This has been deprecated with 0.50+. Use :doc:`custom_code` instead.
-Scriptlets still work but will be removed eventually.
-
+The ``custom_code:`` section of your config is a list where you register your custom code classes.
+You can find an example here: :doc:`/examples/custom_code/index`.
+More documentation about custom_code can be found in the
+`MPF developer documentation <http://developer.missionpinball.org/en/dev/code/machine_code.html>`_.

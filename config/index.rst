@@ -49,6 +49,7 @@ indicated which type of config file it's valid in.
    config: <config>
    counters: <counters>
    credits: <credits>
+   custom_code: <custom_code>
    displays: <displays>
    digital_outputs: <digital_outputs>
    diverters: <diverters>
@@ -105,7 +106,6 @@ indicated which type of config file it's valid in.
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
-   p3_roc: <p3_roc>
    p_roc: <p_roc>
    p_roc_coil_overwrites: <p_roc_coil_overwrites>
    p_roc_coils: <p_roc_coils>

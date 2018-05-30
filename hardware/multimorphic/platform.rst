@@ -8,8 +8,6 @@ How to configure MPF for the P-ROC/P3-ROC platform
 +------------------------------------------------------------------------------+
 | :doc:`/config/p_roc`                                                         |
 +------------------------------------------------------------------------------+
-| :doc:`/config/p3_roc`                                                        |
-+------------------------------------------------------------------------------+
 
 Once you have your :doc:`P-ROC/P3-ROC drivers installed <hardware_drivers>`,
 you need to configure your machine to use the P-ROC or P3-ROC.

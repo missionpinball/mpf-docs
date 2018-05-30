@@ -11,10 +11,36 @@ playfield_transfers:
 
 .. overview
 
-The ``playfield_transfers:`` section of your config is where you...
+The ``playfield_transfers:`` section of your config is where you configure
+devices which transfer balls between playfields.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+This is an example:
+
+.. code-block:: mpf-config
+
+   switches:
+       s_transfer:
+           number:
+
+   playfield_transfers:
+       transfer1:
+           ball_switch: s_transfer
+           captures_from: playfield1
+           eject_target: playfield2
+
+       transfer2:
+           transfer_events: transfer_ball
+           captures_from: playfield1
+           eject_target: playfield2
+
+   playfields:
+       playfield1:
+           label: Playfield 1
+           default_source_device: None
+       playfield2:
+           label: Playfield 2
+           default_source_device: None
+
 
 Required settings
 -----------------
@@ -23,17 +49,15 @@ The following sections are required in the ``playfield_transfers:`` section of y
 
 captures_from:
 ~~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device.
+Single value, type: string name of a ``playfields:`` device.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Source playfield for the transfer.
 
 eject_target:
 ~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device.
+Single value, type: string name of a ``playfields:`` device.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Target playfield for the transfer.
 
 Optional settings
 -----------------
@@ -45,34 +69,28 @@ ball_switch:
 
 Single value, type: string name of a ``switches:`` device. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Ball switch which triggers the transfer.
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set this to true to see more debug output.
 
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Name in service mode.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Tags of the device. Not used currently.
 
 transfer_events:
 ~~~~~~~~~~~~~~~~
-
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -80,4 +98,4 @@ on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted,
+Events in this list, when posted, will trigger a ball transfer.
