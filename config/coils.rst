@@ -53,17 +53,11 @@ Here's an example section:
 
 The options are as follows:
 
+
 Required settings
 -----------------
 
 The following sections are required in the ``coils:`` section of your config:
-
-<name>:
-~~~~~~~
-
-Each subsection of *coils:* is the name of the coil as you'd like to
-refer to it in your game code. This can really be anything you want,
-but it's obviously best to pick something that makes sense.
 
 number:
 ~~~~~~~
@@ -75,11 +69,11 @@ depend on which control system you're using and how the coil is connected.
 
 See the :doc:`/hardware/numbers` guide for details.
 
+
 Optional settings
 -----------------
 
-The following sections are optional in the ``coils:`` section of your config. (If
-you don't include them, the default will be used).
+The following sections are optional in the ``coils:`` section of your config. (If you don't include them, the default will be used).
 
 allow_enable:
 ~~~~~~~~~~~~~
@@ -100,37 +94,9 @@ If you try to enable a coil that does not have *default_hold_power* configured
 or *allow_enabled* set to true, then the coil will not actually be
 enabled and you'll get an error in your log file.
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-See the :doc:`documentation on the debug setting </config/instructions/debug>`
-for details.
-
-disable_events:
-~~~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Disables this coil (meaning that if it's active, it's shut off).
-
-enable_events:
-~~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Enables (holds on) this coil. This requires that *allow_enable* is true
-or that a *default_hold_power* or *max_hold_power* setting is configured.
-
 default_hold_power:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: float(0,1). Default: ``None``
+Single value, type: float(0,1).
 
 This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an float value from 0-1 (i.e.
@@ -149,46 +115,9 @@ worry about this section.
 This provides the default value for any enable calls on the coil. Devices
 might call enable with a differnt power setting.
 
-max_hold_power:
-~~~~~~~~~~~~~~~
-Single value, type: float(0,1). Default: ``None``
-
-This controlls the maximum allowed hold power for this this coil. While
-*default_hold_power* sets the default for all enable calls on the coil
-this defined the upper limit. If this is not set MPF will use *default_hold_power*.
-Usually you can omit this setting.
-
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
-
-A descriptive name for this device which will show up in the service menu
-and reports.
-
-platform:
-~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the platform this coil is connected to. The default value of ``None`` means the
-default hardware platform will be used. You only need to change this if you have
-multiple different hardware platforms in use and this coil is not connected
-to the default platform.
-
-See the :doc:`/hardware/platform` guide for details.
-
-pulse_events:
-~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) that pulse this coil (at its default_pulse_ms and power settings).
-
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
@@ -197,19 +126,12 @@ extremely weak, but set low for safety purposes.
 
 default_pulse_power:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: float(``0``-``1``). Default: ``1``
+Single value, type: float(0,1).
 
 The power factor which controls how much power is applied during the initial
 pulse phase of the coil's activation. (Note that not all hardware platforms
 support variable pulse power.) See the section on *default_hold_power:* above for
 details. It will also used in rules.
-
-max_pulse_power:
-~~~~~~~~~~~~~~~~
-Single value, type: float(``0``-``1``). Default: ``1``
-
-Set the maxium pulse power. If pulse is called on the coil without any parameters
-*default_pulse_power* is used.
 
 default_recycle:
 ~~~~~~~~~~~~~~~~
@@ -224,10 +146,117 @@ the hardware platform used. See the documentation for your specific hardware
 platform if you'd like more control than what's available with the straight
 on/off settings.
 
+disable_events:
+~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+
+:doc:`device control events </config/instructions/device_control_events>` format.
+
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
+
+Disables this coil (meaning that if it's active, it's shut off).
+
+enable_events:
+~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+
+:doc:`device control events </config/instructions/device_control_events>` format.
+
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
+
+Enables (holds on) this coil. This requires that *allow_enable* is true
+or that a *default_hold_power* or *max_hold_power* setting is configured.
+
+max_hold_power:
+~~~~~~~~~~~~~~~
+Single value, type: float(0,1).
+
+This controlls the maximum allowed hold power for this this coil. While
+*default_hold_power* sets the default for all enable calls on the coil
+this defined the upper limit. If this is not set MPF will use *default_hold_power*.
+Usually you can omit this setting.
+
+max_pulse_ms:
+~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+max_pulse_power:
+~~~~~~~~~~~~~~~~
+Single value, type: float(0,1). Default: ``1.0``
+
+Set the maxium pulse power. If pulse is called on the coil without any parameters
+*default_pulse_power* is used.
+
+platform:
+~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the platform this coil is connected to. The default value of ``None`` means the
+default hardware platform will be used. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.
+
+platform_settings:
+~~~~~~~~~~~~~~~~~~
+Single value, type: dict.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+psu:
+~~~~
+Single value, type: string name of a ``psus:`` device. Default: ``default``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+pulse_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+
+:doc:`device control events </config/instructions/device_control_events>` format.
+
+Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
+also want the default value(s) to apply, add them too.)
+
+Event(s) that pulse this coil (at its default_pulse_ms and power settings).
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+A descriptive name for this device which will show up in the service menu
+and reports.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for coils: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+
