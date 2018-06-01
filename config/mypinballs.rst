@@ -12,8 +12,7 @@ mypinballs:
 .. overview
 
 The ``mypinballs:`` section of your config is where your mypinballs segment display controller.
-
-.. todo:: :doc:`/about/help_us_to_write_it`
+See :doc:`/hardware/mypinballs/index` for details.
 
 
 Required settings
@@ -25,7 +24,7 @@ port:
 ~~~~~
 Single value, type: ``string``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Serial port to use.
 
 
 Optional settings
@@ -37,12 +36,12 @@ baud:
 ~~~~~
 Single value, type: ``integer``. Default: ``115200``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Baud rate to use on the serial port.
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Set to true to see more debug output.
 
 

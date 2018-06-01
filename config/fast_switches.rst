@@ -11,10 +11,21 @@ fast_switches:
 
 .. overview
 
-The ``fast_switches:`` section of your config is where you...
+The ``fast_switches:`` section of your config is where you configure platform
+specific details about switches when using
+:doc:`fast hardware </hardware/fast/index>`.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+.. code-block:: mpf-config
+
+   switches:
+      some_switch:
+         number:
+         platform_settings:
+           debounce_close: 2ms
+           debounce_open: 4ms
+
+Please make sure to read :doc:`/mechs/switches/debounce` before changing those
+times.
 
 Optional settings
 -----------------
@@ -25,13 +36,11 @@ debounce_close:
 ~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set the switch debounce time for closing the switch.
 
 debounce_open:
 ~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set the switch debounce time for opening the switch.
 

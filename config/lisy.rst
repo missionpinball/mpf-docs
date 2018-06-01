@@ -12,9 +12,7 @@ lisy:
 .. overview
 
 The ``lisy:`` section of your config is where your lisy platform.
-
-.. todo:: :doc:`/about/help_us_to_write_it`
-
+See :doc:`/hardware/lisy/index` for details.
 
 Optional settings
 -----------------
@@ -25,54 +23,42 @@ baud:
 ~~~~~
 Single value, type: ``integer``. Default: ``None``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Baudrate when connecting to LISY using a serial port.
 
 connection:
 ~~~~~~~~~~~
 Single value, type: one of the following options: network, serial. Default: ``network``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
-
-console_log:
-~~~~~~~~~~~~
-Single value, type: one of the following options: none, basic, full. Default: ``none``
-
-.. todo:: :doc:`/about/help_us_to_write_it`
+Whatever to use a network or serial connection.
 
 display_flash_frequency:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
-
-file_log:
-~~~~~~~~~
-Single value, type: one of the following options: none, basic, full. Default: ``basic``
-
-.. todo:: :doc:`/about/help_us_to_write_it`
+How fast should the displays flash? Defaults to once per second or 1Hz.
 
 network_host:
 ~~~~~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Host to connect when connecting to LISY via network.
 
 network_port:
 ~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``None``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Port to connect when connecting to LISY via network.
 
 poll_hz:
 ~~~~~~~~
 Single value, type: ``integer``. Default: ``1000``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+How fast should MPF poll LISY for switch changes? Defaults to 1000Hz
 
 port:
 ~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Serial port when connecting to LISY using serial.
 
 

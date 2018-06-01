@@ -63,7 +63,6 @@ indicated which type of config file it's valid in.
    fast: <fast>
    fast_coils: <fast_coils>
    fast_switches: <fast_switches>
-   file_shows: <file_shows>
    flasher_player: <flasher_player>
    flashers: <flashers>
    flippers: <flippers>
@@ -107,8 +106,6 @@ indicated which type of config file it's valid in.
    opp: <opp>
    opp_coils: <opp_coils>
    p_roc: <p_roc>
-   p_roc_coil_overwrites: <p_roc_coil_overwrites>
-   p_roc_coils: <p_roc_coils>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
@@ -126,7 +123,6 @@ indicated which type of config file it's valid in.
    scriptlets: <scriptlets>
    segment_display_player: <segment_display_player>
    segment_displays: <segment_displays>
-   servo_controller: <servo_controller>
    servo_controllers: <servo_controllers>
    servos: <servos>
    settings: <settings>

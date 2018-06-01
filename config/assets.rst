@@ -71,7 +71,7 @@ in the config file reference which will explain what settings and be used and wh
 
 Asset types include:
 
-+ :doc:`/config/file_shows`
++ :doc:`/config/shows` (use file_shows entry)
 + :doc:`/config/images`
 + :doc:`/config/sounds`
 + :doc:`/config/videos`

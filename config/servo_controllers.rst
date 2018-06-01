@@ -11,10 +11,10 @@ servo_controllers:
 
 .. overview
 
-The ``servo_controllers:`` section of your config is where you...
+The ``servo_controllers:`` section of your config is where you configure
+PCA9685/PCA9635-based I2C servo controllers.
+See :doc:`/hardware/i2c_servo/index` for details.
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
 
 Optional settings
 -----------------
@@ -25,22 +25,20 @@ address:
 ~~~~~~~~
 Single value, type: ``integer``. Default: ``64``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+I2C address of your controller. The default of the chip is ``0x40`` which is
+``64`` in decimal. There might be some prefix depending on your I2C interface.
 
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set this to true to see more debug output.
 
 label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Label of the controller in service mode.
 
 platform:
 ~~~~~~~~~
@@ -57,20 +55,19 @@ servo_max:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``600``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The controller is driving the servo using PWM. ``servo_max`` defines thes the
+upper PWM limit. It will use a duty cycle of ``value/4096`` at 50Hz.
 
 servo_min:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``150``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The controller is driving the servo using PWM. ``servo_min`` defines thes the
+lower PWM limit. It will use a duty cycle of ``value/4096`` at 50Hz.
+
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
-
+List of tags for this controller. Currently not used.

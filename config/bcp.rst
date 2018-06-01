@@ -35,15 +35,6 @@ it if needed for a specific situation:
                port: 5051
                type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
 
-       player_variables:
-         __all__
-
-       machine_variables:
-         __all__
-
-       shots:
-         __all__
-
        debug: false
 
 connections:
@@ -65,95 +56,76 @@ host:
 ^^^^^
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The host to connect to for this connection.
 
 port:
 ^^^^^
 Single value, type: ``integer``. Default: ``5050``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+The port to connect to for this connection.
 
 type:
 ~~~~~
+Single value, type: ``string``. Default: ``None``
 
-:doc:`/about/help_us_to_write_it`
+The class to implement the transport.
+Use ``mpf.core.bcp.bcp_socket_client.BCPClientSocket`` to use the standard
+MPF BCP protocol.
 
-event_map:
-----------
-
-This section contains a list of MPF events that get mapped to BCP
-commands. You shouldn't have to change this. This is what MPF uses
-internally to map MPF events to the BCP command specification.
-
-+ `<event_name>:` The name of the MPF event you're creating a mapping
-  for.
-+ `command:` The name of the BCP command that will be sent when the
-  MPF event is posted.
-+ `params:` A list of parameters that will be passed via BCP along
-  with this BCP command.
-
-player_variables:
------------------
-
-The `player_variables:` section lets you specify which MPF player
-variables will be broadcast via BCP to the media controller. (MPF will
-send these any time there's a change.) You can either list out the
-individual names of the players variables you want to send, like this:
-
-.. code-block:: mpf-config
-
-   bcp:
-        player_variables:
-            ball
-            extra_balls
-
-Or you can use the entry `__all__` (that's two underscores, the
-letters "all", then two more underscores) to send every change of
-every player variable to the media controller. Here's an example:
-
-.. code-block:: mpf-config
-
-   bcp:
-        player_variables:
-            __all__
-
-servers:
---------
-
-todo
-
-ip:
-~~~
-
-todo
-
-Starting in MPF 0.33, you can use ``ip: None`` and MPF will listen for incoming connections
-on all network interfaces.
-
-port:
-~~~~~
-
-todo
-
-type:
-~~~~~
-
-todo
+More implementations are possible here. For instance, a highly efficient
+implemententation for production or an encrypted socket for communication
+over the Internet.
 
 required:
 ---------
+Single value, type: ``boolean``. Default: ``True``
 
-:doc:`/about/help_us_to_write_it`
+Whatever this connection is required for MPF to run.
+Set this to false if you want MPF not to wait for this connection on start.
 
 exit_on_close:
 --------------
+Single value, type: ``boolean``. Default: ``True``
 
+Whatever MPF should exit if this connection disconnects.
+This is usually true for the media manager because we want MPF to exit once it
+is closed.
 
-:doc:`/about/help_us_to_write_it`
+servers:
+--------
+The `servers:` section is where you can specify bcp server instances
+which can be connected from other processes.
+For instance, this is used for the :doc:`service cli </running/commands/service>`.
+MPF supports connecting to multiple servers simultaneously which
+is why you can add multiple entries here.
+
+The ``servers:`` section contains the following nested sub-settings
+
+ip:
+~~~
+Single value, type: ``string``. Default: ``None``
+
+The IP to bind the server on.
+Starting in MPF 0.33, you can use ``ip: None`` and MPF will listen for incoming
+connections on all network interfaces.
+
+port:
+~~~~~
+Single value, type: ``int``. Default: ``5050``
+
+The port to bind the server on.
+
+type:
+~~~~~
+Single value, type: ``string``. Default: ``None``
+
+The class to implement the transport.
+Use ``mpf.core.bcp.bcp_socket_client.BCPClientSocket`` to use the standard
+MPF BCP protocol.
+
 
 debug:
 ~~~~~~
+Single value, type: ``boolean``. Default: ``False``
 
-:doc:`/about/help_us_to_write_it`
+Set this to true to see more debug messages in the log.
