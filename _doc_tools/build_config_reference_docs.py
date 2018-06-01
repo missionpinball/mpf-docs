@@ -6,6 +6,7 @@ from mpf._version import __version__
 import mpf
 
 import ruamel.yaml as yaml
+from mpf.core.utility_functions import Util
 
 rst_path = '../config'
 
@@ -19,15 +20,13 @@ class ConfigDocParser(object):
         self.config_specs = dict()
 
         self.existing_rsts = list()
-        self.existing_settings = dict()
 
         self._load_config_spec()
-        self.config_specs = self._create_config_specs(self.config_spec)
+        self.config_specs, self.all_specs = self._create_config_specs(self.config_spec)
         self._load_existing_rsts()
 
     def create_file(self, config_section, rst):
         filename = config_section + '.rst'
-        print(config_section, rst)
         with open(os.path.join(rst_path, filename), 'w') as f:
             f.write(rst)
 
@@ -67,13 +66,15 @@ your machine-wide config, a mode-specific config, or both.
 
     def _create_config_specs(self, source_dict):
         final_dict = dict()
+        all_specs = dict()
 
         for section, settings in source_dict.items():
+            all_specs[section] =  (self._create_subsection_config_spec(settings))
             if '__valid_in__' in settings and settings['__valid_in__'].lower() != 'none':
                 final_dict[section] = (
                     self._create_subsection_config_spec(settings))
 
-        return final_dict
+        return final_dict, all_specs
 
     def _create_subsection_config_spec(self, settings):
         final_dict = dict()
@@ -119,20 +120,47 @@ your machine-wide config, a mode-specific config, or both.
         for k, v in self.config_specs.items():
             self._create_rst(k, v)
 
-    def create_rst(self, name):
-        self._create_rst(name, self.config_specs[name])
+    def _prepare_default_texts(self, existing_settings):
+        texts = {
+            "label": "Name of this device in service mode.",
+            "debug": "Set this to true to see additional debug output. This might impact the performance of MPF.",
+            "console_log": "Log level for the console log for this device.",
+            "file_log": "Log level for the file log for this device.",
+        }
+        # if it is already there remove it
+        for section in existing_settings:
+            if section[0] in texts:
+                del texts[section[0]]
 
+        # add the remaining
+        for section, text in texts.items():
+            existing_settings[(section, section + ":", 2, "Optional settings")] = text
 
-    def _create_rst(self, name, spec):
+    def create_rst(self, name, type):
+        assert type in ("device", "other")
+        spec = self.config_specs[name]
+        if type == "device":
+            device_spec = self.all_specs["device"]
+            del device_spec["valid_in"]
+            spec = Util.dict_merge(spec, device_spec)
+
+            self._create_rst(name, spec, True)
+        else:
+            self._create_rst(name, spec, False)
+
+    def _create_rst(self, name, spec, device=False):
 
         if name in self.existing_rsts:
-            existing_intro, self.existing_settings = (
+            existing_intro, existing_settings = (
                 self.tokenize_existing_rst(os.path.join(rst_path,
                                                         name + '.rst')))
 
         else:
             existing_intro = ''
-            self.existing_settings = dict()
+            existing_settings = dict()
+
+        if device:
+            self._prepare_default_texts(existing_settings)
 
         final_text = ''
         final_text += '{}:\n'.format(name)
@@ -169,31 +197,34 @@ your machine-wide config, a mode-specific config, or both.
 
         final_text += '\n\n\n'
 
-        final_text += self.build_sections(name, spec)
+        final_text += self.build_sections(name, spec, existing_settings)
+        for setting in existing_settings:
+            if setting[1].endswith(":"):
+                print("WARNING: Removing setting {} from {}".format(setting[0], name))
 
         self.create_file(name, final_text)
 
-    def build_sections(self, name, spec, level=1):
+    def build_sections(self, name, spec, existing_settings, level=1):
         final_text = ''
 
         if spec['required']:
             final_text += self.add_required_section(spec['required'], name,
-                                                    level)
+                                                    existing_settings, level)
             final_text += '\n'
 
         if spec['optional']:
             final_text += self.add_optional_section(spec['optional'], name,
-                                                    level)
+                                                    existing_settings, level)
             final_text += '\n'
 
         if 'sub_sections' in spec and spec['sub_sections']:
             final_text += self.add_subsection_section(spec['sub_sections'],
-                                                      name, level)
+                                                      name, existing_settings, level)
             final_text += '\n'
 
         return final_text
 
-    def add_required_section(self, required_list, name, level):
+    def add_required_section(self, required_list, name, existing_settings, level):
 
         if level == 1:
             sep = '-'
@@ -219,10 +250,11 @@ your machine-wide config, a mode-specific config, or both.
 
             found = False
 
-            for k1, v1 in self.existing_settings.items():
+            for k1, v1 in existing_settings.items():
                 if k1[0] == setting[0] and k1[2] == level + 1:
                     final_text += v1
                     found = True
+                    del existing_settings[k1]
                     break
 
             if not found:
@@ -232,7 +264,7 @@ your machine-wide config, a mode-specific config, or both.
 
         return final_text
 
-    def add_optional_section(self, optional_list, name, level):
+    def add_optional_section(self, optional_list, name, existing_settings, level):
 
         if level == 1:
             sep = '-'
@@ -260,10 +292,11 @@ your machine-wide config, a mode-specific config, or both.
 
             found = False
 
-            for k1, v1 in self.existing_settings.items():
+            for k1, v1 in existing_settings.items():
                 if k1[0] == setting[0] and k1[2] == level + 1:
                     final_text += v1
                     found = True
+                    del existing_settings[k1]
                     break
 
             if not found:
@@ -273,15 +306,16 @@ your machine-wide config, a mode-specific config, or both.
 
         return final_text
 
-    def add_subsection_section(self, subsection_dict, name, level):
+    def add_subsection_section(self, subsection_dict, name, existing_settings, level):
         if level == 1:
             sep = '-'
             sep2 = '~'
         elif level == 2:
             sep = '~'
             sep2 = '^'
-        elif level == 3:
+        else:
             sep = '^'
+            sep2 = '"'
 
         final_text = ''
 
@@ -293,10 +327,11 @@ your machine-wide config, a mode-specific config, or both.
 
             found = False
 
-            for k1, v1 in self.existing_settings.items():
+            for k1, v1 in existing_settings.items():
                 if k1[0] == k and k1[2] == level + 1:
                     final_text += v1
                     found = True
+                    del existing_settings[k1]
                     break
 
             if not found:
@@ -304,7 +339,7 @@ your machine-wide config, a mode-specific config, or both.
                               "the following nested sub-settings".format(k)
 
             final_text += '\n\n'
-            final_text += self.build_sections(k, v, level+1)
+            final_text += self.build_sections(k, v, existing_settings, level+1)
 
         return final_text
 
@@ -395,6 +430,13 @@ your machine-wide config, a mode-specific config, or both.
         elif num == 'omap':
             return_string = ('Ordered list for one (or more) sub-settings. '
                              'Each sub-setting is a ')
+        elif num == 'event_handler':
+            return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
+                    'device control events </config/instructions/device_control_events>).'
+            if default is not None and default != "None":
+                return_string += " Default: " + default
+            return_string += '\n'
+            return return_string
 
         else:
             raise AssertionError("Invalid config spec num: {}".format(num))
@@ -464,7 +506,7 @@ your machine-wide config, a mode-specific config, or both.
 
         return_string += 'type: {}.'.format(ftype)
 
-        if default:
+        if default is not None and default != "None":
             return_string += ' Default: ``{}``'.format(default)
 
         return_string += '\n'
@@ -474,9 +516,6 @@ your machine-wide config, a mode-specific config, or both.
 
 if __name__ == '__main__':
     parser = ConfigDocParser()
-    parser.create_rst(sys.argv[1])
+    parser.create_rst(sys.argv[1], sys.argv[2])
     #parser.create_rsts()
     #parser.write_index()
-
-    #pass # disabling because this doesn't work anymore but I might want to use
-    # it in the future
