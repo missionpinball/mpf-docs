@@ -62,6 +62,7 @@ Each subsection of ``switches:`` is a switch name, which is how you
 refer to the switch in your game code. Then there are several
 parameters for each switch:
 
+
 Required settings
 -----------------
 
@@ -76,6 +77,7 @@ switch is physically connected to. The exact format used here will
 depend on which control system you're using and how the switch is connected.
 
 See the :doc:`/hardware/numbers` guide for details.
+
 
 Optional settings
 -----------------
@@ -116,12 +118,6 @@ a look at the ``recycle`` setting (configurable in some platforms).
 
 See :doc:`/mechs/switches/debounce` for details.
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-Set this to true to get additional debug output.
-
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
@@ -149,12 +145,6 @@ then again 50ms later, the second activation will be ignored. The timer is set b
 the last switch hit that *activated* the switch, so if another switch hit came in 105ms
 after the first (which would be 55ms after the second), it will also count.
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
-
-Name of this switch in service mode.
-
 platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
@@ -165,6 +155,73 @@ multiple different hardware platforms in use and this coil is not connected
 to the default platform.
 
 See the :doc:`/hardware/platform` guide for details.
+
+platform_settings:
+~~~~~~~~~~~~~~~~~~
+Single value, type: dict. Default: ``None``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+type:
+~~~~~
+Single value, type: one of the following options: NC, NO. Default: ``NO``
+
+You can add ``NC`` as a type (like ``type: NC``) to indicate that this
+switch is a normally closed switch, i.e. it's closed when it's
+inactive and open when it's active. This is mostly used for optos.
+
+Switches which are type NC are automatically inverted by the Switch
+Controller. In other words an NC switch is still "active" when it's
+being activated, but the Switch Controller knows that activation
+actually occurs when the switch opens, rather than closes. Setting the
+type to NC here means that you never have to worry about this
+inversion anywhere else in your game code.
+
+x:
+~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+
+X Position of this switch on the playfield.
+Used for :doc:`display_light_player </config_players/display_light_players>`.
+
+y:
+~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+
+Y Position of this switch on the playfield.
+Used for :doc:`display_light_player </config_players/display_light_players>`.
+
+z:
+~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+
+Z Position of this switch on the playfield.
+Currently unused.
+
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to get additional debug output.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this switch in service mode.
 
 tags:
 ~~~~~
@@ -192,17 +249,4 @@ tags on its own, including:
   released, not pressed, which allows the "time held down" to be sent to MPF
   to perform alternate game start actions.)
 
-type:
-~~~~~
-Single value, type: one of the following options: NC, NO. Default: ``NO``
 
-You can add ``NC`` as a type (like ``type: NC``) to indicate that this
-switch is a normally closed switch, i.e. it's closed when it's
-inactive and open when it's active. This is mostly used for optos.
-
-Switches which are type NC are automatically inverted by the Switch
-Controller. In other words an NC switch is still "active" when it's
-being activated, but the Switch Controller knows that activation
-actually occurs when the switch opens, rather than closes. Setting the
-type to NC here means that you never have to worry about this
-inversion anywhere else in your game code.
