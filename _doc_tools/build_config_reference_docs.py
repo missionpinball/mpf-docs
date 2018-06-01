@@ -2,8 +2,8 @@ import os
 import re
 import sys
 
-from mpf.core.config_validator import mpf_config_spec
 from mpf._version import __version__
+import mpf
 
 import ruamel.yaml as yaml
 
@@ -57,7 +57,8 @@ your machine-wide config, a mode-specific config, or both.
             f.write(index)
 
     def _load_config_spec(self):
-        self.config_spec = yaml.load(mpf_config_spec)
+        with open(os.path.join(os.path.dirname(mpf.__file__), "config_spec.yaml")) as f:
+            self.config_spec = yaml.load(f)
 
     def _load_existing_rsts(self):
         self.existing_rsts = [x[:-4] for x in os.listdir(rst_path)
