@@ -9,13 +9,13 @@ coils:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 +------------------------------------------------------------------------------+
 | Related Tutorial                                                             |
 +==============================================================================+
 | :doc:`/mechs/coils/index`                                                    |
 +------------------------------------------------------------------------------+
-
-.. overview
 
 The ``coils:`` section of your config is used to map coil
 (solenoid) names to driver board outputs. You can also set the
@@ -211,8 +211,8 @@ Single value, type: float(``0``-``1``). Default: ``1``
 Set the maxium pulse power. If pulse is called on the coil without any parameters
 *default_pulse_power* is used.
 
-recycle:
-~~~~~~~~
+default_recycle:
+~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether this coil should add a small delay before it's allowed to
