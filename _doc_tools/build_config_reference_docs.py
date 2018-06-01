@@ -432,7 +432,7 @@ your machine-wide config, a mode-specific config, or both.
                              'Each sub-setting is a ')
         elif num == 'event_handler':
             return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
-                    'device control events </config/instructions/device_control_events>).'
+                    'device control events </config/instructions/device_control_events>`).'
             if default is not None and default != "None":
                 return_string += " Default: " + default
             return_string += '\n'

@@ -148,7 +148,7 @@ on/off settings.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -159,7 +159,7 @@ Disables this coil (meaning that if it's active, it's shut off).
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -216,7 +216,7 @@ Single value, type: string name of a ``psus:`` device. Default: ``default``
 
 pulse_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 :doc:`device control events </config/instructions/device_control_events>` format.
 
