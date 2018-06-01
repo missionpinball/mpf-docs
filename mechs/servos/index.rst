@@ -9,6 +9,8 @@ Servos
 
 :doc:`/about/help_us_to_write_it`
 
+:doc:`TODO: Add a picture of a servo </about/help_us_to_write_it>`
+
 .. contents::
    :local:
 

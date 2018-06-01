@@ -273,8 +273,7 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set this to ``True`` to see more debug output.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -333,8 +332,7 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Name in service mode.
 
 reset_events:
 ~~~~~~~~~~~~~
@@ -345,15 +343,13 @@ on how to enter settings here.
 
 Default: ``machine_reset_phase_3``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Reset will disable the diverter.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Tags are currently unused.
 
 targets_when_active:
 ~~~~~~~~~~~~~~~~~~~~
