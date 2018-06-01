@@ -182,14 +182,14 @@ x:
 Single value, type: ``number`` (will be converted to floating point). Default: ``None``
 
 X Position of this switch on the playfield.
-Used for :doc:`display_light_player </config_players/display_light_players>`.
+Used for :doc:`display_light_player </config_players/display_light_player>`.
 
 y:
 ~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``None``
 
 Y Position of this switch on the playfield.
-Used for :doc:`display_light_player </config_players/display_light_players>`.
+Used for :doc:`display_light_player </config_players/display_light_player>`.
 
 z:
 ~~
