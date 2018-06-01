@@ -9,6 +9,8 @@ switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 +------------------------------------------------------------------------------+
 | Related Tutorial                                                             |
 +==============================================================================+
@@ -18,9 +20,6 @@ switches:
 +------------------------------------------------------------------------------+
 | :doc:`/mechs/switches/mechanical_switches`                                   |
 +------------------------------------------------------------------------------+
-
-
-.. overview
 
 The *switches:* section of the config files is used to map switch names
 to controller board inputs. You can map both direct and matrix
