@@ -1,7 +1,7 @@
 Debouncing in Pinball Machines
 ==============================
 
-A pinball machine is a mechanical machine with a lot mechanical, electronical
+A pinball machine is a mechanical machine with a lot mechanical, electronic
 and electromagnetical interferences. This has to be mitigated on multiple
 levels to prevent unwanted effects:
 
@@ -12,7 +12,7 @@ levels to prevent unwanted effects:
    slides or play sounds on a switch event. If this event occurs very often
    this may easily slow down your game.
 #. Prevent coils from pulsing too often. If a coil pulses on a switch hit
-   and the switch actives constantly it might essentially be stuck on for
+   and the switch activates constantly it might essentially be stuck on for
    the whole time which in the best case would only blow a fuse and in the
    worst case might burn down the machine.
 
@@ -24,7 +24,7 @@ Switch Debouncing at the Hardware Level
 
 To prevent too much communication between you hardware platform and your CPU
 there is typically some switch debouncing at the hardware level.
-This is what most electronical engineers will first think about when taking
+This is what most electronic engineers will first think about when taking
 about *debouncing*.
 
 On the surface, switch *debounce* is pretty straightforward. Switches are
@@ -38,7 +38,7 @@ consecutive reads" to be considered debounced, while other platforms
 "a switch must be in a new state for X milliseconds before it's considered
 debounced." In practise, there is not much difference between those two.
 
-When considering switch debounce, the swich usually is supposed to be active
+When considering switch debounce, the swtich usually is supposed to be active
 for the whole debounce time. So this could also be called "minimum active
 time". Usually this time is in the range of two to four milliseconds.
 The reason for that is that waiting for a minimum active time induces some
@@ -95,11 +95,11 @@ This will not affect hardware rules. Use ``recycle`` on your
 This is what most javascript programmers understand when they hear debouncing.
 Kind of related but also a bit different from what EEs understand by it.
 
-Throtteling
-~~~~~~~~~~~
+Throttling
+~~~~~~~~~~
 
 There is another technique which is commonly used in the javascript works when
-working with computationally expensive callbacks which is called throtteling.
+working with computationally expensive callbacks which is called throttling.
 The goal here is similar but the implementation is differerent.
 Instead of having a window after each activation this defines a maximum number
 of calls per time unit. For instance a maximum of 10 calls per second.
