@@ -12,7 +12,7 @@ trinamics_steprocker:
 .. overview
 
 The ``trinamics_steprocker:`` section of your config is where you configure
-the :doc:`trinamics steprocker platform /hardware/trinamics_steprocker/index`.
+the :doc:`trinamics steprocker platform </hardware/trinamics/index>`.
 
 
 Required settings
