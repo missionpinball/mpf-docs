@@ -16,6 +16,8 @@ coils (since one coil typically resets an entire bank) and to
 get additional events posted when the entire bank is up, down
 or in a mixed state.
 
+:doc:`TODO: Add a picture of a drop target bank </about/help_us_to_write_it>`
+
 Monitorable Properties
 ----------------------
 

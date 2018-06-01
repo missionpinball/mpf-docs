@@ -19,6 +19,8 @@ MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors instead
 of low-power lighting circuitry.
 
+:doc:`TODO: Add a picture of a flasher </about/help_us_to_write_it>`
+
 MPF's flasher devices are only used in older machines (WPC, Stern SAM, System 11)
 since modern LED-based machines typically use regular LED devices (or combinations
 of them) as flashers. (So basically a "flasher" in MPF is any single-color

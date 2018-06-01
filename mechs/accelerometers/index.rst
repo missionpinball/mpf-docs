@@ -15,6 +15,8 @@ acceleration (rate of change of velocity). For example, an accelerometer at rest
 measure an acceleration due to Earth's gravity, straight upwards (by definition) of g ~= 9.81 m/s2. By contrast,
 accelerometers in free fall (falling toward the center of the Earth at a rate of about 9.81 m/s2) will measure zero.
 
+:doc:`TODO: Add a picture of an accelerometer </about/help_us_to_write_it>`
+
 Accelerometers in pinball could be used to measure a machine's TILT, replacing the tilt bob, to measure vibration, or
 even the angle of the playfield at a given time.
 

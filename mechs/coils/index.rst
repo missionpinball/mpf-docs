@@ -14,6 +14,8 @@ In MPF, you typically list all the coils in your machine in the
 with default options for them, like pulse times, PWM values, whether they can
 be enabled (held on), etc.
 
+:doc:`TODO: Add a picture of a coil </about/help_us_to_write_it>`
+
 You don't typically work with coils directly, rather, you tend to add them to
 other devices once they've been defined (flippers, autofires, ball devices,
 diverters, etc.)

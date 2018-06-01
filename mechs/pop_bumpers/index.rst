@@ -1,7 +1,15 @@
 Pop Bumpers
 ===========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/autofire_coils`                                                |
++------------------------------------------------------------------------------+
+
 Popbumpers are configured as :doc:`autofire_coils </config/autofire_coils>` in MPF.
+
+:doc:`TODO: Add a picture of pop bumpers </about/help_us_to_write_it>`
 
 This is an example:
 

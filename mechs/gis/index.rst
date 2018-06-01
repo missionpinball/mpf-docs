@@ -25,6 +25,9 @@ dim.
    In MPF 0.50 GIs became :doc:`/config/lights` with ``subtype`` gi. They behave
    like any other lights in MPF.
 
+:doc:`TODO: Add a picture of a GI string </about/help_us_to_write_it>`
+:doc:`TODO: Add a picture of GI LEDs </about/help_us_to_write_it>`
+
 GI Strings are actually kind of complex. Many of them are AC (even in WPC
 machines), and some Williams WPC machines include triacs (kind of like a
 transistor for AC) and "zero cross" AC waveform detection circuits so they can

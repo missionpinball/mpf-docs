@@ -14,6 +14,8 @@ One at the entry and one to signal success.
 To detect only shots where both switches were hit in order you can use
 :doc:`sequence_shots </config/sequence_shots>`.
 
+:doc:`TODO: Add a picture of an orbit </about/help_us_to_write_it>`
+
 .. code-block:: mpf-config
 
    switches:

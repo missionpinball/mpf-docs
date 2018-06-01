@@ -16,6 +16,8 @@ Believe it or not, the playfield in MPF is technically a :doc:`ball device </mec
 This is needed since MPF wants to know where all the balls are at all
 times, so it needs to know which balls are "in" the playfield device.
 
+:doc:`TODO: Add a picture of a playfield </about/help_us_to_write_it>`
+
 The playfield is also responsible for tracking balls that
 "disappeared" from it without going into other devices—-a process which
 kicks off the :doc:`ball search </game_logic/ball_search/index>`.

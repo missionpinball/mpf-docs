@@ -17,6 +17,8 @@ that kicks the ball back into play, typically located in an outlane.
 It is often paired with a :doc:`ball_save </config/ball_saves>` to compensate for
 missed kickbacks.
 
+:doc:`TODO: Add a picture of a kickback </about/help_us_to_write_it>`
+
 This is an example:
 
 .. code-block:: mpf-config

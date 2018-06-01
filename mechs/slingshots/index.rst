@@ -4,7 +4,7 @@ Slingshots
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/drop_target_banks`                                             |
+| :doc:`/config/autofire_coils`                                                |
 +------------------------------------------------------------------------------+
 
 Slingshots are configured as :doc:`autofire_coils </config/autofire_coils>` in MPF.

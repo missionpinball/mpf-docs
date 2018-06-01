@@ -11,6 +11,8 @@ A *dual-wound coil* is a coil (solenoid) with two windings--one "strong"
 power (or "main") winding for moving the coil, and a second weaker / lower-power
 winding for "holding" the coil in the active position.
 
+:doc:`TODO: Add a picture a dual wound coil </about/help_us_to_write_it>`
+
 Dual-wound coils are typically used for flippers, diverters, gates, and
 other devices in pinball machines that need a strong initial movement
 followed by an extended hold period.

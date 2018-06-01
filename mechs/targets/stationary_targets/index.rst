@@ -1,11 +1,13 @@
-Stationary Targets
-==================
+Stationary or Standup Targets
+=============================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
 | :doc:`/config/switches`                                                      |
 +------------------------------------------------------------------------------+
+
+:doc:`TODO: Add a picture of a standup target </about/help_us_to_write_it>`
 
 
 Mission Pinball Framework's (MPF) *stationary target* device represents a switch in a pinball machine. This might also

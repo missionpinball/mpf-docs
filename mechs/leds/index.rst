@@ -43,6 +43,7 @@ Other serial LEDs contain three white LEDs (WWW order).
 If nothing is specified MPF assumes RGB order so you need to specify it for any
 LED with a different channel order.
 
+:doc:`TODO: Add a picture of WS2812 </about/help_us_to_write_it>`
 
 .. code-block:: mpf-config
 
@@ -116,6 +117,8 @@ non-three-channel LEDs) as a separate chain.
 
 Parallel LEDs
 -------------
+
+:doc:`TODO: Add a picture of a parallel RGB LED </about/help_us_to_write_it>`
 
 With parallel LEDs you usually got a bit more flexibility with your channel
 assignments. You can dedice to make an LED with only a red channel for example.

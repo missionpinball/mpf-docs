@@ -17,6 +17,9 @@ Lights
 In MPF 0.50 all LEDs, matrix lights and GIs are configured as :doc:`/config/lights`.
 See :doc:`/mechs/leds/lights_versus_leds` for details.
 
+:doc:`TODO: Add a picture of leds </about/help_us_to_write_it>`
+:doc:`TODO: Add a picture of bulbs </about/help_us_to_write_it>`
+
 Monitorable Properties
 ----------------------
 
