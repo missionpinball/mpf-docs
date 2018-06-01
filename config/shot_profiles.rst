@@ -220,12 +220,6 @@ Single value, type: ``string``.
 This is the name of the step. In other words, it's what "state" the
 shot is in when this profile step is active.
 
-action:
-~~~~~~~
-Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
-
-Specifies which show action is taken for the show on this state in the shot profile.
-
 loops:
 ~~~~~~
 Single value, type: ``integer``. Default: ``-1``
@@ -274,6 +268,3 @@ sync_ms:
 Single value, type: ``integer``. Default: ``None``
 
 The sync_ms value of the show.
-
-.. note:: The ``states:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-
