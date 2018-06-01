@@ -270,8 +270,6 @@ is enabled.
 
 events_when_selected:
 ~~~~~~~~~~~~~~~~~~~~~
-
-
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``achievement_(name)_state_selected``.
 
@@ -325,8 +323,6 @@ Name of the show that will be started when this achievement has been enabled.
 
 show_when_selected:
 ~~~~~~~~~~~~~~~~~~~
-
-
 Single value, type: ``string``. Default: ``None``
 
 Name of the show that will be started when this achievement has been selected.

@@ -67,8 +67,7 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Set this to true to see more debug output.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -94,7 +93,6 @@ Event(s) which enable this ball save.
 
 early_ball_save_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -128,9 +126,10 @@ source_playfield:
 ~~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
 
-.. todo::
-   :doc:`/about/help_us_to_write_it`
+Playfield to eject the saved balls to.
 
+tags:
+~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Special / reserved tags for ball saves: *None*
@@ -150,21 +149,23 @@ Events in this list, when posted, start this ball saver's countdown timer.
 
 eject_delay:
 ~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-single|ms|0
-
-:doc:`/about/help_us_to_write_it`
+Delay the eject of the new ball for ``eject_delay`` ms.
+This might be useful if you want to play a show or some sounds first for dramatic reasons.
 
 only_last_ball:
 ~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-single|bool|False
-
-:doc:`/about/help_us_to_write_it`
+Only save the last ball.
+In case two balls are in play and only one drains it will not be saved.
 
 delayed_eject_events:
 ~~~~~~~~~~~~~~~~~~~~~
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
 
-dict|str:ms|None
-
-:doc:`/about/help_us_to_write_it`
+Delay the eject until a event from ``delayed_eject_events`` is posted.
+For instance, this can be used in combination with ``only_last_ball`` at the
+end of a wizard mode to drain all balls and continue the game later.
