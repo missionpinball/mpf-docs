@@ -207,11 +207,7 @@ def setup(app):
 
         globals()['rst_prolog'] = '''
         
-         .. only:: html
-        
-           .. note::
-           
-              Please participate in the `MPF User Survey 2018 <https://docs.google.com/forms/d/e/1FAIpQLSeaufA2kIU7cIFx2kcnvTcpwsBiYqEzt0pAQ7ZIgeYPkp7wTg/viewform>`_.
+        .. only:: html
         
            .. warning::
            
@@ -225,18 +221,6 @@ def setup(app):
               `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
         
         '''
-    else:
-
-        globals()['rst_prolog'] = '''
-
-         .. only:: html
-        
-           .. note::
-           
-              Please participate in the `MPF User Survey 2018 <https://docs.google.com/forms/d/e/1FAIpQLSeaufA2kIU7cIFx2kcnvTcpwsBiYqEzt0pAQ7ZIgeYPkp7wTg/viewform>`_.
-        
-        '''
-       
 
 def get_repo_path(repo_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):
