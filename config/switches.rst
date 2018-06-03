@@ -160,7 +160,8 @@ platform_settings:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: dict. Default: ``None``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Dict of platform specific settings.
+See your platform documentation about this.
 
 type:
 ~~~~~
