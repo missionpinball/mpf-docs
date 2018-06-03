@@ -15,7 +15,7 @@ chain, then the dash, then the driver/switch number. Note that the position
 number starts with zero, so the first IO board in the chain is 0, the second
 is 1, etc.
 
-Fast three different types of node boards:
+Fast has three different types of node boards:
 
 0804 - 8 Switches, 4 Inputs
 ---------------------------
