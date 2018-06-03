@@ -113,6 +113,7 @@ indicated which type of config file it's valid in.
    playlists: <playlists>
    plugins: <plugins>
    pololu_maestro: <pololu_maestro>
+   psus: <psus>
    queue_event_player: <queue_event_player>
    queue_relay_player: <queue_relay_player>
    random_event_player: <random_event_player>

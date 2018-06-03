@@ -213,7 +213,7 @@ Consult your platform documentation for those settings.
 
 psu:
 ~~~~
-Single value, type: string name of a ``psus:`` device. Default: ``default``
+Single value, type: string name of a :doc:`psus <psus>` device. Default: ``default``
 
 Specify to which :doc:`power supply unit <psus>` this coil is connected.
 This is used for power management. In some cases, MPF can deliberately delay

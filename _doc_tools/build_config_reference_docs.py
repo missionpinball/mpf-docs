@@ -493,8 +493,9 @@ your machine-wide config, a mode-specific config, or both.
                 stype.replace('enum(', '').replace(',', ', ')[:-1])
 
         elif stype.startswith('machine'):
-            ftype = "string name of a ``{}:`` device".format(
-                stype.replace('machine(', '')[:-1])
+            ftype = "string name of a :doc:`{} <{}>` device".format(
+                    stype.replace('machine(', '')[:-1],
+                    stype.replace('machine(', '')[:-1])
 
         elif ':' in stype:
             stype = tuple(stype.split(':'))

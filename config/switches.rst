@@ -120,7 +120,7 @@ See :doc:`/mechs/switches/debounce` for details.
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 A list of one or more names of events that MPF will post when this
 switch goes active. These events are posted exactly as they're entered, in addition to any
@@ -128,7 +128,7 @@ events that are posted based on the switch's tags.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 A list of one or more names of events that MPF will post when this
 switch goes inactive.
@@ -147,7 +147,7 @@ after the first (which would be 55ms after the second), it will also count.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Name of the platform this switch is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -158,7 +158,7 @@ See the :doc:`/hardware/platform` guide for details.
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict. Default: ``None``
+Single value, type: dict.
 
 Dict of platform specific settings.
 See your platform documentation about this.
@@ -180,25 +180,24 @@ inversion anywhere else in your game code.
 
 x:
 ~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+Single value, type: ``number`` (will be converted to floating point).
 
 X Position of this switch on the playfield.
 Currently unused.
 
 y:
 ~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+Single value, type: ``number`` (will be converted to floating point).
 
 Y Position of this switch on the playfield.
 Currently unused.
 
 z:
 ~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``None``
+Single value, type: ``number`` (will be converted to floating point).
 
 Z Position of this switch on the playfield.
 Currently unused.
-
 
 console_log:
 ~~~~~~~~~~~~
@@ -226,7 +225,7 @@ Name of this switch in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 You can add tags to switches to logically group them in your game code
 to make it easier to do things. (Like "if all the switches tagged with
