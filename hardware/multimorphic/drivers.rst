@@ -12,12 +12,14 @@ connected to PD-16 board's driver outputs) with P-ROC/P3-ROC hardware, you can
 follow the guides and instructions in the :doc:`/mechs/coils/index` docs.
 
 (If you're using a P-ROC with an existing machine's driver board, like a WPC
-machine, then see the existing machine documentation. Link TODO)
+machine, then see the :doc:`existing machine documentation </hardware/existing_machines/index>`.)
 
 The only specific thing you have to know for this platform is the number format:
 
 number:
 -------
+
+.. image:: /hardware/images/multimorphic_PD-16.png
 
 For PD-16-based devices, the numbering format is:
 
@@ -49,6 +51,8 @@ For example:
 
 Burst Switches as Local Outputs (P3-Roc only)
 ---------------------------------------------
+
+.. image:: /hardware/images/multimorphic_p3_roc.png
 
 If you want to use burst switches as local outputs set DIP switch 1 to ``on`` on the P3-Roc.
 You can use those 64 output as direct outputs:

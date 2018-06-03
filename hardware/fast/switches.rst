@@ -21,6 +21,8 @@ number:
 When you're using FAST IO boards, switches plug into individual IO boards.
 Then the IO boards are connected together in a loop.
 
+.. image:: /hardware/images/fast-io-3208.png
+
 The ``number:`` setting for each switch is its board's position number in the
 chain, then the dash, then the switch input number. Note that the position
 number starts with zero, so the first IO board in the chain is 0, the second
@@ -46,7 +48,7 @@ Notes:
 
 Also note that prior versions of MPF just numbered all the switches in one
 continuous sequence from the first board through the last, but that was
-confusing. You can still do that if you want (in either hex or integer format),
+confusing. You can still do that if you want (in integer format),
 but we feel the board-input format is much easier to understand.
 
 Debounce options

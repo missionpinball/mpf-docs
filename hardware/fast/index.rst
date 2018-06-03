@@ -14,6 +14,7 @@ Hardware and electrical engineering stuff is documented at the
 .. toctree::
    :titlesonly:
 
+   Connecting FAST to your Computer <connecting>
    Installing hardware drivers & configuring COM ports <config>
    Switches <switches>
    Coils/Drivers/Magnets/Motors <drivers>

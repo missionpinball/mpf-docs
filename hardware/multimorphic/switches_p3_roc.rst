@@ -20,6 +20,8 @@ Instead, you add SW-16 boards which each have 16 direct switch inputs. (e.g.
 there is no switch matrix.) You can connect up to 16 SW-16s to support as many
 as 256 switches.
 
+.. image:: /hardware/images/multimorphic_SW-16.png
+
 To configure the ``number:`` of a switch connected to an SW-16 board and a
 P3-ROC, you have two options.
 
@@ -46,6 +48,8 @@ Burst switch inputs (J3 to J10) on the P3-Roc can be used in two ways in MPF.
   This is how they were originally intended.
 * Local Inputs - Alternatively you can use them as direct local inputs (and the burst drivers as outputs;
   see :doc:`drivers` section for details).
+
+.. image:: /hardware/images/multimorphic_p3_roc.png
 
 Burst Switches as Burst Optos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

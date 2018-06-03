@@ -24,6 +24,8 @@ The PD-LED controls up to 84 individual LED elements, which can be used to
 control individual single color LEDs, or (more likely), combined into groups to
 control RGB LEDs.
 
+.. image:: /hardware/images/multimorphic_PD-LED.png
+
 The PD-LED uses a "direct" connection method for LEDs, where each LED
 has connections for each color element running back to the PD-LED. This is a
 different architecture than the serial-controlled "Neo Pixel" type LEDs that

@@ -29,6 +29,7 @@ the P-ROC or P3-ROC.
    :titlesonly:
    :hidden:
 
+   Connecting P/P3-Roc <connecting>
    Installing Hardware Drivers <hardware_drivers>
    Setting the platform for P-ROC/P3-ROC <platform>
 

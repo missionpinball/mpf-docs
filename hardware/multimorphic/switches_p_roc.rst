@@ -10,6 +10,8 @@ How to configure switches (P-ROC)
 To configure switches on a P-ROC, you can follow the guides and instructions in
 the :doc:`/mechs/switches/index` docs.
 
+.. image:: /hardware/images/multimorphic_p_roc.png
+
 However there are a few things to know about using switches with a P-ROC.
 
 number:

@@ -18,6 +18,8 @@ as "WS2812" (or similar). You can buy them from many different
 companies, and they're what's sold as the "NeoPixel" brand of
 products from Adafruit. (They have all different shapes and sizes.)
 
+.. image:: /hardware/images/fast-nano.png
+
 Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LEDs
 connected to FAST Pinball controllers, however there are a few FAST-specific
 things to know.
