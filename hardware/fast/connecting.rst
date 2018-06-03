@@ -28,17 +28,17 @@ Node boards
 
 Fast offers three different types of node boards:
 
-0804 - 8 Switches, 4 Inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0804 - 8 Switches, 4 Drivers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /hardware/images/fast-io-0804.png
 
-1616 - 16 Switches, 16 Inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1616 - 16 Switches, 16 Drivers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /hardware/images/fast-io-1616.png
 
-3208 - 32 Switches, 08 Inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3208 - 32 Switches, 08 Drivers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /hardware/images/fast-io-3208.png
