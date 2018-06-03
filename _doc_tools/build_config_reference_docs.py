@@ -461,11 +461,11 @@ your machine-wide config, a mode-specific config, or both.
 
         elif stype == 'secs':
             ftype = '``time string (secs)`` (:doc:`Instructions for entering '\
-                    'time strings) </config/instructions/time_strings>` '
+                    'time strings </config/instructions/time_strings>`) '
 
         elif stype == 'ms':
             ftype = '``time string (ms)`` (:doc:`Instructions for entering '\
-                    'time strings) </config/instructions/time_strings>` '
+                    'time strings </config/instructions/time_strings>`) '
 
         elif stype == 'list':
             ftype = '``list`` (:doc:`Instructions ' \
@@ -479,10 +479,10 @@ your machine-wide config, a mode-specific config, or both.
                     '*0*-*255*)'
 
         elif stype == 'pow2':
-            ftype = '``integer`` (must be a power of 2'
+            ftype = '``integer`` (must be a power of 2)'
 
         elif stype == 'gain':
-            ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0'
+            ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0)'
 
         elif stype.startswith('subconfig'):
             ftype = 'sub-configurating containing {} settings'.format(
