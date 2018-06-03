@@ -7,10 +7,6 @@ specific entries in your config files to board and connector locations) as well
 as overall settings that affect how your FAST hardware performs. (Watch dogs,
 update speeds, etc.)
 
-This page is about the software side of things.
-Hardware and electrical engineering stuff is documented at the
-`FAST section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/Fast>`_.
-
 .. toctree::
    :titlesonly:
 

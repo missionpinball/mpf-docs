@@ -53,5 +53,5 @@ Servos
 ------
 
 * :doc:`FAST Pinball (Servo daughterboard) <fast/servos>`
-* :doc:`P3-ROC (I2C servo controller) <multimorphic/servos>`
+* :doc:`I2C servo controllers <i2c_servo/index>`
 * :doc:`Pololu Maestro <pololu_maestro/index>`

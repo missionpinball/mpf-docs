@@ -1,6 +1,11 @@
 Connecting P/P3-Roc to your Computer
 ====================================
 
+This page is about connecting the P/P3-Roc to your computer.
+It roughly covers connecting the bus between the nodes.
+For electronic details see the
+`P-Roc section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/P-ROC_Main_Page>`_.
+
 P-Roc
 -----
 

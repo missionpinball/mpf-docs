@@ -7,10 +7,6 @@ These guides include the numbering format (how you map specific entries in your
 config files to board and connector locations) as well as overall settings that
 affect how your hardware performs.
 
-This page is about the software side of things.
-Hardware and electrical engineering stuff is documented at the
-`P-Roc section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/P-ROC_Main_Page>`_.
-
 3 steps to using a P-ROC/P3-ROC
 -------------------------------
 
@@ -45,4 +41,4 @@ the P-ROC or P3-ROC.
    RGB DMD (P-ROC & P3-ROC) <rgb_dmd>
    Alpha-numeric displays (P-ROC) <alpha_numeric>
    Accelerometer (P3-ROC) <accelerometer>
-   Servos (P3-ROC) <servos>
+   I2C (P3-ROC) <i2c>

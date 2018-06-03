@@ -1,5 +1,5 @@
-How to configure servos (P3-ROC)
-================================
+How to use I2C on the P3-ROC
+============================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
@@ -8,13 +8,21 @@ How to configure servos (P3-ROC)
 +------------------------------------------------------------------------------+
 
 The P3-ROC contains an I2C port (J17) which is accessible to MPF. You can use
-this port to control an I2C-based servo. (You can't plug the servo directly
-into the P3-ROC, rather, you can buy an I2C-based servo controller and plug it
-into the P3-ROC.)
+this port to control any I2C-based device.
+
+.. image:: /hardware/images/multimorphic_p3_roc.png
 
 You need to connect SDA, SCL and ground. You may not need the 3.3V from the
 P3-ROC as your controller might be a different voltage (which you can then
 get directly from your power supply), but again that depends on the board.
+
+
+I2C Servo Controller
+--------------------
+
+For instance you can connect a servo controller via I2c.
+(You can't plug the servo directly into the P3-ROC, rather, you can buy an
+I2C-based servo controller and plug it into the P3-ROC.)
 
 See the :doc:`/hardware/i2c_servo/index` documentation for details on how to
 configure this.

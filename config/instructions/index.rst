@@ -21,3 +21,4 @@ This section contains some general formatting guidelines.
    express_config
    lists
    yaml
+   text_templates
