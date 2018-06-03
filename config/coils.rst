@@ -182,7 +182,9 @@ max_pulse_ms:
 ~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Maximum allowed pulse time for this coil.
+If set, MPF will raise an error if any code tries to pulse the coil for more
+than ``max_pulse_ms``.
 
 max_pulse_power:
 ~~~~~~~~~~~~~~~~
@@ -206,13 +208,17 @@ platform_settings:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: dict.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Dict of platform specific settings.
+Consult your platform documentation for those settings.
 
 psu:
 ~~~~
 Single value, type: string name of a ``psus:`` device. Default: ``default``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Specify to which :doc:`power supply unit <psus>` this coil is connected.
+This is used for power management. In some cases, MPF can deliberately delay
+coil pulses to prevent too many coils from firing and drawing to much current
+from your PSU.
 
 pulse_events:
 ~~~~~~~~~~~~~
