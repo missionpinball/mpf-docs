@@ -6,6 +6,8 @@ The "Smart Virtual" Platform
 +==============================================================================+
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
+| :doc:`/config/smart_virtual`                                                 |
++------------------------------------------------------------------------------+
 
 MPF's *Smart Virtual Platform* is based on the :doc:`virtual platform <virtual>`
 with one key difference: The Smart Virtual platform watches
@@ -158,7 +160,9 @@ etc.
 What does the smart virtual platform do?
 ----------------------------------------
 
-The smart virtual platform currently simulates the following pinball mechanisms:
+The smart virtual platform currently simulates the following pinball mechanisms.
+You can configure some of them in the
+:doc:`smart_virtual section </config/smart_virtual>`.
 
 Ball Devices
 ~~~~~~~~~~~~
