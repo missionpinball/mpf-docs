@@ -302,7 +302,7 @@ To to this, run the following:
 
 .. code-block:: doscon
 
-  pip install pip setuptools --upgrade
+  pip install setuptools --upgrade
   pip install mpf mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
