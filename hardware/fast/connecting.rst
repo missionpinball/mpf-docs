@@ -42,3 +42,29 @@ Fast offers three different types of node boards:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /hardware/images/fast-io-3208.png
+
+On Linux: Add udev rules to ensure persistent device names
+----------------------------------------------------------
+
+If you have more than one ttyUSB device connected to your PC (e.g. the FAST
+Nano and a FAST DMD) you can assign a name to your ports
+based on the USB port they are connected to.
+
+First identify the port of your FAST hardware. Usually it should be
+``/dev/ttyUSB0`` or ``/dev/ttyUSB5``.
+
+Then run ``udevadm info`` on your port:
+
+.. code-block:: shell
+
+   udevadm inf /dev/ttyUSB0
+
+This will show you the ``DEVPATH``. Now replace the last part ``ttyUSBX`` with
+an asterisk and add an udev rules like this in ``/etc/udev/rules.d/fast.rules``:
+
+::
+
+   SUBSYSTEM=="tty", ACTION=="add", DEVPATH=="/devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.1/*", SYMLINK+="ttyNET", GROUP="adm", MODE="0660"
+
+After a reboot you should get a ``/dev/ttyNET`` device if you connect a FAST
+device to that specific USB port. You can use that port in your config.

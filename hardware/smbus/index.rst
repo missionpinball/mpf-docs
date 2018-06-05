@@ -82,3 +82,27 @@ bus-address. If you only provide an address it will use bus 0. On Linux
 bus 0 will ususally be /dev/i2c-0, 1 will be /dev/i2c-1 and so on.
 
 
+6. Add udev rules if you have multiple i2c devices
+--------------------------------------------------
+
+If you have more than one i2c device connected to your PC via USB you can
+assign a name to your ports based on the USB port they are connected to.
+
+First identify the port of your I2C hardware. Usually it should be
+``/dev/i2c0`` or ``/dev/i2c1``.
+
+Then run ``udevadm info`` on your port:
+
+.. code-block:: shell
+
+   udevadm inf /dev/i2c0
+
+This will show you the ``DEVPATH``. Now replace the last part ``i2cX`` with
+an asterisk and add an udev rules like this in ``/etc/udev/rules.d/i2c.rules``:
+
+::
+
+   SUBSYSTEM=="i2c-dev", ACTION=="add", DEVPATH=="/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.1/1-3.1:1.0/*", SYMLINK+="i2c-front", GROUP="adm", MODE="0660
+
+After a reboot you should get a ``/dev/i2c-front`` device if you connect an i2c
+device to that specific USB port. You can use that port in your config.

@@ -70,6 +70,8 @@ this: ``\\.\COM10`` ``\\.\COM11`` ``\\.\COM12``, etc. (It's a Windows
 thing. Google it for details.) That said, it seems that Windows 10 can
 just use the port names like normal: ``com10, com11, com12``, so try
 that first and then try the alternate format if it doesn't work.
+On Linux, the port usually is ``/dev/ttyACM0`` or ``/dev/ttyACM1``.
+On Mac, look for some ``/dev/cu.modemXXXX`` device.
 
 Changing the polling rate
 ~~~~~~~~~~~~~~~~~~~~~~~~~

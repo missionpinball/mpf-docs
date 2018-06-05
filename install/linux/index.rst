@@ -68,3 +68,32 @@ To downgrade (or install a specific release x.yy.z) run:
 
   pip3 install mpf=x.yy.z
   pip3 install mpf-mc=x.yy.z
+
+
+Specific Hardware Devices
+-------------------------
+
+We got some write-ups for specific hardware platforms.
+They follow the general linux installation schema but also cover some details
+about that hardware.
+
+.. toctree::
+   :maxdepth: 1
+
+   Raspberry Pi <raspberry>
+   Pine64 <pine64>
+
+
+Specific Linux Distributions
+----------------------------
+
+Specifics about certain linux distributions.
+
+.. toctree::
+   :maxdepth: 1
+
+   Xubuntu Linux <xubuntu>
+
+Specific Linux Distributions
+----------------------------
+

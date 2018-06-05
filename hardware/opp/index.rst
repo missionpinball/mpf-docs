@@ -10,6 +10,7 @@ Hardware and electrical engineering stuff is documented at the
 
 .. toctree::
 
+   connecting
    config
    switches
    drivers

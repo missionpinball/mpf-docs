@@ -68,7 +68,7 @@ The standard /tmp "folder" is too small on pipaos, just type:
 
 to get rid of it. (It will be created automatically if needed and will have the whole space afterwards)
 
-Now run the :doc:`MPF Linux Debian installer </install/linux>`. It will install MPF, MPF-MC and all dependencies for
+Now run the :doc:`MPF Linux Debian installer </install/linux/index>`. It will install MPF, MPF-MC and all dependencies for
 you.
 
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
@@ -202,18 +202,6 @@ Do a reboot:
 .. code-block:: shell
 
   sudo reboot
-
-OPP Hardware not found:
------------------------
-If you are using OPP Hardware you have to blacklist the Cypress Thermometer:
-in /etc/modprobe.d/blacklist.conf add:
-
-::
-
-  blacklist cytherm
-
-If blacklist.conf does not exist, just create a new empty file as root.
-The USB Enumerator thinks a Thermometer is plugged in but it is definitely not ;-)
 
 Remote log in:
 --------------

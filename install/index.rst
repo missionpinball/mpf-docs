@@ -15,10 +15,7 @@ entire process. Select the OS you're using from the list below:
 
    Windows <windows>
    Mac <mac>
-   Debian / Ubuntu Linux <linux>
-   Xubuntu Linux <xubuntu>
-   Raspberry Pi <raspberry>
-   Pine64 <pine64>
+   Linux <linux/index>
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
