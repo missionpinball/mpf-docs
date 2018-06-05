@@ -28,6 +28,8 @@ Connect all your SW-16 boards to the switch bus and all your PD-16 and PD-8x8
 boards to your driver bus. Use twisted wires but connect + to + and - to - on
 all nodes.
 
+.. image:: /hardware/images/multimorphic_p3_roc_wireing.png
+
 SW-16
 ~~~~~
 
