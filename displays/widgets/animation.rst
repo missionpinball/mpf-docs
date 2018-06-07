@@ -300,6 +300,23 @@ initial position.
 
 Again, you can use any combination of properties and any number of steps for each event.
 
+You can also use a property from your event.
+For instance, you can move a widget based on a player variable:
+
+.. code-block:: mpf-config
+
+   slides:
+      slide1:
+         widgets:
+            - type: text
+              text: I'M GOING TO MOVE
+              x: 50
+              y: 50
+         animations:
+            player_loops:        # this is posted when the player variable "loops" changes
+               property: y
+               value: (value)    # this is the value of loops
+
 6. Looping and repeating animations
 -----------------------------------
 
