@@ -102,12 +102,31 @@ to the default platform.
 
 See the :doc:`/hardware/platform` guide for details.
 
+There is a special platform ``drivers`` which will reference a driver which
+has to be configured in the ``number`` setting.
+It can be used if you got a light which is connected to a driver in your
+platform.
+That might be the case for :doc:`GIs </mechs/gis/index>` for example.
+This is an example for a driver as light:
+
+.. code-block:: mpf-config
+
+  coils:
+    light_connected_to_a_driver:
+      number: 42           # number depends on your platform
+      allow_enable: True   # this will allow 100% enable without pwm
+
+  lights:     
+    light_on_a_driver:
+      number: light_connected_to_a_driver    # map this light to a driver
+      platform: drivers
+
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: dict.
 
 Platform-specific light settings.
-Consult your platform documenation for details.
+Consult your platform documentation for details.
 
 subtype:
 ~~~~~~~~
@@ -117,7 +136,7 @@ If you hardware platform supports multiple types of lights you need to set
 a ``subtype`` to tell your platform how to address this light (to prevent
 ``number`` collisions).
 Typical values are ``led``, ``matrix`` or ``gi``.
-Consult your platform documenation for details.
+Consult your platform documentation for details.
 
 type:
 ~~~~~

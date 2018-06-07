@@ -20,6 +20,54 @@ See :doc:`/mechs/leds/lights_versus_leds` for details.
 :doc:`TODO: Add a picture of leds </about/help_us_to_write_it>`
 :doc:`TODO: Add a picture of bulbs </about/help_us_to_write_it>`
 
+This is an example of for a light:
+
+.. code-block:: mpf-config
+
+  lights:
+    my_led:
+      number: 7
+
+For WS2812 LEDs use ``type: grb`` (WS2811 does not need this):
+
+.. code-block:: mpf-config
+
+  lights:
+    my_ws2812_led:
+      number: 23
+      type: grb
+
+You can also map individual color channels:
+
+.. code-block:: mpf-config
+
+  lights:
+    rgb_led:
+      type: rgb
+      channels:
+        red:
+          number: 9-29
+        green:
+          number: 9-30
+        blue:
+          number: 9-31
+        white:
+          number: 9-32
+
+If your light is connected to a driver use this example:
+
+.. code-block:: mpf-config
+
+  coils:
+    light_connected_to_a_driver:
+      number: 42           # number depends on your platform
+      allow_enable: True	# this will allow 100% enable without pwm
+
+  lights:     
+    light_on_a_driver:
+      number: light_connected_to_a_driver	# map this light to a driver
+      platform: drivers
+
 Monitorable Properties
 ----------------------
 
