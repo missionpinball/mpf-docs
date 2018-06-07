@@ -19,7 +19,7 @@ Current score (during a game only):
 
 Any :doc:`variable <dynamic_values>` needs to be enclosed in ``{}``.
 Either you can use ``{variable}`` or ``{variable:format_string}``.
-Any `python format string https://docs.python.org/3/library/string.html#string-formatting`_
+Any `python format string <https://docs.python.org/3/library/string.html#string-formatting>`_
 will work here.
 
 Common format strings
