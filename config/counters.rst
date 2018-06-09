@@ -4,10 +4,12 @@ counters:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
+
+.. overview
 
 +------------------------------------------------------------------------------+
 | Related Tutorial                                                             |
@@ -15,13 +17,8 @@ counters:
 | :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
 +------------------------------------------------------------------------------+
 
-.. overview
-
+The ``counters:`` section of your config is where you configure counter logic blocks.
 See also :doc:`counters </game_logic/logic_blocks/counters>`.
-
-Settings
---------
-
 The structure of counter logic blocks is like this:
 
 .. code-block:: mpf-config
@@ -41,8 +38,15 @@ The structure of counter logic blocks is like this:
 Note that the actual name of the counter doesn't really matter. Mainly
 it's used in the logs and for event names.
 
+
+Required settings
+-----------------
+
+The following sections are required in the ``counters:`` section of your config:
+
 count_events:
 ~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 This is an event (or a :doc:`list of events </config/instructions/lists>`) that, when posted, will
 increment or decrement the count for this Counter.
@@ -54,8 +58,15 @@ different kinds of events separately, use an :doc:`Accrual <accruals>` or
 
 This setting is required.
 
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``counters:`` section of your config. (If you don't include them, the default will be used).
+
 count_complete_value:
 ~~~~~~~~~~~~~~~~~~~~~
+Single value, type: template_int.
 
 When the Counter exceeds (or gets below if you're counting down) this
 value, it will post its "complete" event and be considered complete.
@@ -67,8 +78,32 @@ for this setting.
 
 .. include:: template_setting.rst
 
+count_interval:
+~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``1``
+
+Specifies the numeric count change is for each hit. In other
+words, this is how much is added or removed from the count with each
+hit. Default is 1, but you can make it whatever you want if you want
+your count to increase by more or less than one whenever a count event
+occurs. You could use this, for example, in a mode to create a counter
+that tracks the value of a shot. Maybe it starts at 2,000,000, but
+each shot a playfield standup increases the value by 250,000.
+
+Default is ``1``.
+
+direction:
+~~~~~~~~~~
+Single value, type: ``string``. Default: ``up``
+
+This is either ``up`` or ``down`` and specifies whether this counter
+counts up or counts down.
+
+Default is ``up``.
+
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``0``
 
 This is an :doc:`MPF time value string </config/instructions/time_strings>`
 that will be used to group
@@ -85,29 +120,9 @@ count (and it will set its own 500ms timer to ignore future hits).
 
 Default is ``0`` (which means all hits are counted).
 
-count_interval:
-~~~~~~~~~~~~~~~
-
-Specifies the numeric count change is for each hit. In other
-words, this is how much is added or removed from the count with each
-hit. Default is 1, but you can make it whatever you want if you want
-your count to increase by more or less than one whenever a count event
-occurs. You could use this, for example, in a mode to create a counter
-that tracks the value of a shot. Maybe it starts at 2,000,000, but
-each shot a playfield standup increases the value by 250,000.
-
-Default is ``1``.
-
-direction:
-~~~~~~~~~~
-
-This is either ``up`` or ``down`` and specifies whether this counter
-counts up or counts down.
-
-Default is ``up``.
-
 starting_count:
 ~~~~~~~~~~~~~~~
+Single value, type: template_int. Default: ``0``
 
 This is the starting value of the Counter and the value it goes back
 to when it's reset. Default is zero. If you're configuring a counter
@@ -119,4 +134,36 @@ Default is ``0``.
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Currently unused.
+
 .. include:: /game_logic/logic_blocks/common.rst
+
+

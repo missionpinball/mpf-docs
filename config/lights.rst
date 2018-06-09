@@ -73,7 +73,7 @@ For multi-color LEDs, the color defined here will be used when the light is enab
 
 fade_ms:
 ~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
 
 When this light receives instructions to change color, it can interpolate from its current value to the
 new value over a fade time. If no value is provided, the machine default will be used. If this light is
