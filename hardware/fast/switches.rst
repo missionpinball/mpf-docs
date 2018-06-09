@@ -68,7 +68,7 @@ Specifying default debounce settings
 
 By default, MPF provides two debounce profiles for switches ("normal" and
 "quick"). When using FAST pinball controllers, the "normal" debounce profile
-is ``10ms`` for both the debounce open and debounce closed times, and the
+is ``4ms`` for both the debounce open and debounce closed times, and the
 "quick" debounce profile is ``2ms`` for both debounce open and closed times.
 
 You can change any of these in the ``fast:`` section of your machine-wide
@@ -79,8 +79,8 @@ config, like this:
    fast:
       default_quick_debounce_open: 2ms
       default_quick_debounce_close: 2ms
-      default_normal_debounce_open: 10ms
-      default_normal_debounce_close: 10ms
+      default_normal_debounce_open: 4ms
+      default_normal_debounce_close: 4ms
 
 (Note that other settings from the ``fast:`` section of your config have not
 been included here for clarity.)
