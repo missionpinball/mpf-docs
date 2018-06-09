@@ -119,26 +119,12 @@ disable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
 Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
 disabling the "keep up".
 
 enable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
 
 Events in this list, when posted, will send enable the drop target's reset coil which
 means that balls that hit it do not cause the drop target to fall since the reset
@@ -175,12 +161,6 @@ See :doc:`psus` for details.
 knockdown_events:
 ~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
 
 Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
@@ -219,10 +199,6 @@ See :doc:`psus` for details.
 reset_events:
 ~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_starting, machine_reset_phase_3
-
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
 
 Default: ``ball_starting, machine_reset_phase_3``
 
