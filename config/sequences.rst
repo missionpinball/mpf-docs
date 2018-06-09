@@ -4,10 +4,12 @@ sequences:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
+
+.. overview
 
 +------------------------------------------------------------------------------+
 | Related Tutorial                                                             |
@@ -15,12 +17,8 @@ sequences:
 | :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
 +------------------------------------------------------------------------------+
 
-.. overview
 
 See also :doc:`sequences </game_logic/logic_blocks/sequences>`.
-
-Settings
---------
 
 The structure of sequence logic blocks is like this:
 
@@ -37,8 +35,15 @@ The structure of sequence logic blocks is like this:
 Note that the actual name of the logic block doesn't really matter. Mainly
 they're just used in the logs.
 
+
+Required settings
+-----------------
+
+The following sections are required in the ``sequences:`` section of your config:
+
 events:
 ~~~~~~~
+List of one (or more) values, each is a type: ``string``.
 
 The events section of a sequence logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -107,5 +112,40 @@ and that will lead to *logic_block_2_done* being posted.
 
 Note that you can have two logic blocks with the same events at the same time, and
 MPF will track the state of each logic block separately.
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``sequences:`` section of your config. (If you don't include them, the default will be used).
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Currently unused.
 
 .. include:: /game_logic/logic_blocks/common.rst
