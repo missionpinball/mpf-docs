@@ -68,9 +68,6 @@ diverter. Of course sometime a drop target can be both, like the
 "D" target in *Judge Dredd*. Feel free to post to the forum with
 questions.
 
-What about drop targets with lights?
-------------------------------------
-
 Notice there are no settings to control lights associated with drop
 targets, but many machines (like *Judge Dredd* used in the example)
 have lights for each drop target. To control those lights, you'd
@@ -81,23 +78,21 @@ case you'd end up specifying your switch for this drop target as well
 as for a shot for it. It's okay to have the same switch in both
 places.
 
+Create one entry in your ``drop_targets:`` section for each drop target
+in your machine. Don’t worry about grouping drop targets into banks
+here. (That’s done in the ``drop_target_banks:`` section.) The drop
+target name can be whatever you want, and it will be the name for this
+drop target which is used throughout your machine.
+
+
 Required settings
 -----------------
 
 The following sections are required in the ``drop_targets:`` section of your config:
 
-<name>:
-~~~~~~~
-
-Create one entry in your *drop_targets:* section for each drop target
-in your machine. Don’t worry about grouping drop targets into banks
-here. (That’s done in the *drop_target_banks:* section.) The drop
-target name can be whatever you want, and it will be the name for this
-drop target which is used throughout your machine.
-
 switch:
 ~~~~~~~
-Single value, type: string name of a ``switches:`` device.
+Single value, type: string name of a :doc:`switches <switches>` device.
 
 The name of the switch that's activated when this drop target is down.
 (Note that active switch = target down, so if your drop target uses
@@ -105,6 +100,7 @@ opto switches which are reversed, then you need to configure this
 switch with *type: NC* in the *switches:* section of your config file.)
 MPF will automatically update the state of the drop target whenever
 the switch changes state.
+
 
 Optional settings
 -----------------
@@ -119,29 +115,10 @@ A relative value which controls the order individual devices are pulsed when bal
 checked first. Set to ``0`` if you do not want this device to be included in the ball search.
 See the :doc:`/game_logic/ball_search/index` documentation for details.
 
-ignore_switch_ms:
-~~~~~~~~~~~~~~~~~
+disable_keep_up_events:
+~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
-coils will set switches that could add to the score, start modes, etc. Default is ``500ms``.
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-See the :doc:`documentation on the debug setting </config/instructions/debug>`
-for details.
-
-knockdown_coil:
-~~~~~~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. Default: ``None``
-
-This is an optional coil that's used to knock down a drop target. Most
-drop targets do not have these. (In the *Judge Dredd* example above,
-you'll notice that only the *D* target has a knockdown coil.
-
-knockdown_events:
-~~~~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -149,11 +126,12 @@ on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
-have a knockdown coil, then these events will have no effect.)
+Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
+disabling the "keep up".
 
 enable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
@@ -171,29 +149,52 @@ Also note that many drop target coils are not designed to be held on at full pow
 most likely want to use a hold power of less than 8. Start low and only use the minimum power
 you need to keep the drop target up.
 
-disable_keep_up_events:
-~~~~~~~~~~~~~~~~~~~~~~~
+ignore_switch_ms:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
 
-One or more sub-entries, either as a list of events, or key/value pairs of
+How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
+coils will set switches that could add to the score, start modes, etc. Default is ``500ms``.
+
+knockdown_coil:
+~~~~~~~~~~~~~~~
+Single value, type: string name of a :doc:`coils <coils>` device.
+
+This is an optional coil that's used to knock down a drop target. Most
+drop targets do not have these. (In the *Judge Dredd* example above,
+you'll notice that only the *D* target has a knockdown coil.
+
+knockdown_coil_max_wait_ms:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+
+Max time allowed to delay the pulse of the knockdown coil.
+This is used to prevent excess power usage.
+See :doc:`psus` for details.
+
+knockdown_events:
+~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
 
 Default: ``None``
 
-Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
-disabling the "keep up".
+Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
+have a knockdown coil, then these events will have no effect.)
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
+playfield:
+~~~~~~~~~~
+Single value, type: string name of a :doc:`playfields <playfields>` device. Default: ``playfield``
 
-A descriptive name for this device which will show up in the service menu
-and reports.
+The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
+change this value if you have more than one playfield and you're managing them separately.
 
 reset_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device. Default: ``None``
+Single value, type: string name of a :doc:`coils <coils>` device.
 
 The name of the coil that is pulsed to reset this drop target. The
 pulse time will be whatever you configure as the default pulse time
@@ -207,9 +208,18 @@ reset all the drop targets. If you enter the coil three times (one for
 each drop target), then it will pulse three times when the bank is
 reset.
 
+reset_coil_max_wait_ms:
+~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+
+Max time allowed to delay the pulse of the reset coil.
+This is used to prevent excess power usage.
+See :doc:`psus` for details.
+
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_starting, machine_reset_phase_3
+
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
 on how to enter settings here.
@@ -222,17 +232,38 @@ this drop target is part of a drop target bank, then resetting this
 drop target will have no effect. (Instead you would reset the bank.)
 Default is *ball_starting, machine_reset_phase_3*.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+A descriptive name for this device which will show up in the service menu
+and reports.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for drop targets: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
-playfield:
-~~~~~~~~~~
 
-
-The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
-change this value if you have more than one playfield and you're managing them separately.
