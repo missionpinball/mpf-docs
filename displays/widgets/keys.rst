@@ -9,4 +9,4 @@ straightforward). You only need to use a key if you want to put multiple instanc
 same widget on the same slide, and then you need a way to identify a individual ones to
 update or remove them.
 
-TODO
+:doc:`/about/help_us_to_write_it`
