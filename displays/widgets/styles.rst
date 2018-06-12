@@ -1,4 +1,4 @@
 Widget Styles
 =============
 
-todo
+See :doc:`/config/widget_styles`.
