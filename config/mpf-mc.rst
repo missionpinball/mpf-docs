@@ -31,14 +31,17 @@ bcp_interface:
 ~~~~~~~~~~~~~~
 String, default is ``localhost``.
 
-todo
+The interface to bind for the BCP connection.
 
 fps:
 ~~~~
+Single integer value, default is ``30``.
 
-todo
+Limit the frames per second to ``fps``.
+This prevents using excessive CPU for MPF MC.
 
 allow_invalid_config_sections:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single boolean value, default is ``True``.
 
-todo
+Allow sections which are not known to MPF.
