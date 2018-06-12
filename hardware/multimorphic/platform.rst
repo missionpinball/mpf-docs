@@ -55,8 +55,8 @@ For the P3-ROC:
       driverboards: pdb
 
 Note that if you're using a P-ROC with an existing machine, then your driver
-boards will be either wpc, stern, etc. See the documentation on configuring
-MPF for use in existing machines for details. (link TODO)
+boards will be either wpc, stern, etc. See the documentation on
+:doc:`configuring MPF for use in existing machines </hardware/existing_machines/index>` for details.
 
 3. Configure your watch dog timeout
 -----------------------------------
