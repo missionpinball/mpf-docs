@@ -1,4 +1,4 @@
 Widgets versus Slides: When to use each?
 ========================================
 
-todo
+:doc:`/about/help_us_to_write_it`
