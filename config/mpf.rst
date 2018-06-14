@@ -40,7 +40,12 @@ default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
 
-For all platforms non-tickless platforms we poll this often.
+For all non-tickless platforms we poll this often.
+This usually means how often we will read switches.
+Reducing this setting might reduce the amounts of CPU significantly.
+We recommand to keep this at least at 50Hz or you will loose switch hits.
+For smooth game play aim at 100Hz.
+Everything above that will mostly only reduce switch latency.
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
