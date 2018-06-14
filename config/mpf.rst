@@ -38,7 +38,7 @@ Default default_pulse_ms for all coils when not overwritten. This will be used w
 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
+Single value, type: ``number`` (will be converted to floating point). Default: ``100.0``
 
 For all non-tickless platforms we poll this often.
 This usually means how often we will read switches.
