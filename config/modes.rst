@@ -22,4 +22,4 @@ This is an example:
     - my_mode1
     - my_mode2
 
-See :doc:`/game_logic/modes/index` and `/game_design/index` for details about modes.
+See :doc:`/game_logic/modes/index` and :doc:`/game_design/index` for details about modes.
