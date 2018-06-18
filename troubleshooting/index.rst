@@ -1,10 +1,31 @@
 Troubleshooting
 ===============
 
-1. Run diagnosis
+1. Run MPF without text ui
+--------------------------
+
+The text ui which is shown by default may hide some errors and make
+troubleshooting more difficult.
+To disable text ui run mpf using:
+
+.. code-block:: console
+
+  $ mpf game -t
+
+You can also add some more logging output:
+
+.. code-block:: console
+
+  $ mpf game -t -v -V
+
+Scroll up in the console (or check the log file in the ``logs`` folder) to find
+the error which was emitted.
+
+
+2. Run diagnosis
 ----------------
 
-If your game won't run, let's make sure MPF is ok.
+If your game won't run and you don't get an error, let's make sure MPF is ok.
 Run ``mpf diagnosis`` from within your machine folder to see if your installation is fine:
 
 .. code-block:: console
@@ -54,8 +75,8 @@ Similarly, you can run MPF-MC unit tests (they will take a bit longer and might 
   Ran 182 tests in 193.610s
 
   OK
-  
-2. Ask in our forum
+
+3. Ask in our forum
 -------------------
 
 If you cannot solve the problem ask in our `support forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
