@@ -146,11 +146,11 @@ You can access setting ``X`` using ``settings.X``.
 Devices
 ~~~~~~~
 
-You can access variable ``X`` of device ``D`` of type ``T`` using ``device.T.D.X``.
+You can access property ``X`` of device ``D`` of type ``T`` using ``device.T.D.X``.
 For instance you can access the value of counter ``my_counter`` using
 ``device.counters.my_counter.value``.
 
-Common device variables are:
+Common device properties are:
 
 * ``device.counters.my_counter.value``
 * ``device.counters.my_counter.enabled``
@@ -161,13 +161,18 @@ Common device variables are:
 * ``device.accruals.magic_tokens.enabled``
 * ``device.sequences.world_tour.completed``
 
+MPF uses consistent names across devices, so for example any device that tracks a 
+number will have a ``value`` property and any device that can be enabled/disabled will
+have an ``enabled`` property. The full list of properties available for a specific
+device are listed in the "Monitorable Properties" section of that device's
+documentation page.
 
 Modes
 ~~~~~
 
-You can access variable ``X`` of mode ``M`` using ``mode.M.X``.
+You can access property ``X`` of mode ``M`` using ``mode.M.X``.
 
-Common device variables are:
+Common mode properties are:
 
 * ``mode.my_mode.active``
 
