@@ -69,7 +69,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for multiballs is ``device.multiballs.<name>``.
+the prefix for multiball locks is ``device.multiball_locks.<name>``.
 
 *enabled*
    Boolean (true/false) as to whether this multiball lock is enabled.
