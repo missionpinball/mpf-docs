@@ -27,7 +27,7 @@ With serial LEDs you got a chain of LEDs which are connected to a controller
 board on one side.
 In contrast, with parallel LEDs every LED has its own wire(s) to the controller.
 While parallel LEDs are more robust in general they also require much more wiring.
-Which kind of LEDs your using usually depends on what is supported in your
+Which kind of LEDs you're using usually depends on what is supported in your
 platform (some support both).
 
 Serial LEDs
@@ -118,7 +118,7 @@ Parallel LEDs
 -------------
 
 With parallel LEDs you usually got a bit more flexibility with your channel
-assignments. You can dedice to make an LED with only a red channel for example.
+assignments. You can decide to make an LED with only a red channel for example.
 MPF cannot guess your hardware layout in most platforms.
 Therefore your have to explicitly tell MPF your channel layout:
 
