@@ -115,25 +115,33 @@ restart_on_next_ball_when_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-If True/Yes, then this achievement is set to the "started" state when the
+If True/Yes, then this achievement will stay in the "started" state when the
 player's next ball starts if it was in the "started" state when the previous
 ball ended. This is useful if you want to restart a mode that was running when
 the ball ended.
 
 Note that this restart will also play the ``show_when_started:`` show, and it
-will also post the ``events_when_started:`` events.
+will also post the ``events_when_started:`` events. 
+
+If False/No, this achievement's state will change from "started" to "stopped"
+when the next ball starts. This will *not* play the ``show_when_stopped:`` show and
+it will *not* post the ``events_when_stopped:`` events.
+
 
 enable_on_next_ball_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-If a ball ends when this achievement is enabled, should it automatically enable itself again
-when the next ball starts? This is similar to the
-``restart_on_next_ball_when_started:`` event from above, except it applies to
-the "enabled" state instead of the "started" state.
+If True/Yes, this achievement will stay "enabled" when the next ball starts if
+it was enabled when the last ball ended. If False/No, this achivement will be
+changed to "disabled" when the next ball starts.
 
-This setting will also play the ``show_when_enabled:`` show, and it
-will also post the ``events_when_enabled:`` events.
+This is similar to the ``restart_on_next_ball_when_started:`` event from above,
+except it applies to the "enabled" state instead of the "started" state.
+
+This setting will also play the ``show_when_enabled:`` show and post the 
+``events_when_enabled:`` events when re-enabling, but will not play or post
+anything when disabling.
 
 debug:
 ~~~~~~

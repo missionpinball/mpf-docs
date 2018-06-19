@@ -301,7 +301,7 @@ This is a very flexible way to achieve this.
 Select a mode at the start of ball 1
 ------------------------------------
 
-Use this to delay the start of the first ball of a player until he selected a mode:
+Use this to delay the start of a player's first ball until they select a mode:
 
 .. code-block:: mpf-config
 
