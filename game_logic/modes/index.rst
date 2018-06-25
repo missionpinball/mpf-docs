@@ -113,7 +113,7 @@ When to use modes
 
 As you read this, it's natural to think of MPF's modes like game modes, and
 certainly that's a big part of how they're used. But there is no limit to the
-number of modes that can be active at any one time (and it doesn't negative
+number of modes that can be active at any one time (and it doesn't negatively
 affect performance to have dozens of modes running at once), so when you start
 programming your game you'll probably end up breaking your game logic into lots
 of little modes.
