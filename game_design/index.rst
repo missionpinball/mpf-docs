@@ -58,6 +58,11 @@ Questions answered in this section:
 * How to start a wizard mode?
 * What to do after wizard mode?
 
+.. toctree::
+   :titlesonly:
+
+   Wizard Modes <wizard_modes>
+
 Other modes
 -----------
 
@@ -71,3 +76,19 @@ Questions answered in this section:
    :titlesonly:
 
    Other Game Modes <other_modes>
+
+Layering Modes Example
+----------------------
+
+Examples given in this section:
+
+* How to define mode categories and helper modes
+* How to move in and out of game and wizard modes
+* How to track and persist progress outside of modes
+
+.. toctree::
+   :titlesonly:
+
+   Layering Modes Example <mode_layering>
+
+
