@@ -129,7 +129,7 @@ List of one (or more) device control events (:doc:`Instructions for entering dev
 Events in this list, when posted, will send enable the drop target's reset coil which
 means that balls that hit it do not cause the drop target to fall since the reset
 coil is being held on. Note that this will require either ``allow_enable: true`` in the coil's
-configuration or a ``default_hold_power:``/``max_hold_power`` setting.
+configuration or a ``default_hold_power:``/``max_hold_power`` setting. See the (:doc:`Adjust coil hold power </mechs/coils/hold_power>`) documentation for details.
 
 Also note that many drop target coils are not designed to be held on at full power, so you'll
 most likely want to use a hold power of less than 8. Start low and only use the minimum power
