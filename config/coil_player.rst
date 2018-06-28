@@ -28,7 +28,7 @@ Example from a config file:
       some_other_event:
          coil_2:
             action: enable
-            power: .5
+            hold_power: .5
 
 In the example above, when the event called ``some_event`` is posted, coil_1 will pulse.
 When the event ``some_other_event`` is posted, coil_2 will enable (be held on) at power
