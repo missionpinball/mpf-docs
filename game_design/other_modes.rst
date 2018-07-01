@@ -118,7 +118,7 @@ This is an example:
                lanes_lit_complete: 1s
 
    show_player:
-       hot_lanes_lit_complete:
+       shot_lanes_lit_complete:
            flash:
                loops: 4
                speed: 4
