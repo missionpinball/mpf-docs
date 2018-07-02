@@ -64,8 +64,8 @@ The radius of the ring (in relative size to the x/y coordinates of the
 ``center_x:`` and ``center_y:`` positions. This is used for
 the calculation of x/y positions of individual LEDs only.
 
-led_template:
-~~~~~~~~~~~~~
+light_template:
+~~~~~~~~~~~~~~~
 This is a list of sub-settings (indented) that are regular settings from the
 :doc:`leds` section of your machine config. Any settings that are valid there
 are valid here, and they're applied to all the LEDs in the ring.
