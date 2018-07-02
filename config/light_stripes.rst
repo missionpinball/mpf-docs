@@ -1,13 +1,15 @@
-light_stripes
-=============
+light_stripes:
+==============
 
-*Config File Section*
+*Config file section*
 
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
+
+.. overview
 
 A "led_stripe" will create "count" leds for you starting the number at "number_start".
 If you need a prefix or suffix for the number you can use "number_template". All settings
@@ -21,17 +23,58 @@ Here's an example:
    :language: yaml
 
 
-number_start:
-~~~~~~~~~~~~~
-The integer value for the number for the first LED in the stripe. (MPF assumes
-that all the LEDs in the stripe are numbered sequentially.)
+Required settings
+-----------------
+
+The following sections are required in the ``light_stripes:`` section of your config:
 
 count:
 ~~~~~~
+Single value, type: ``integer``.
+
 The integer value for how many LEDs are in the stripe.
+
+light_template:
+~~~~~~~~~~~~~~~
+Single value, type: sub-configurating containing lights,device settings.
+
+This is a list of sub-settings (indented) that are regular settings from the
+:doc:`lights` section of your machine config. Any settings that are valid there
+are valid here, and they're applied to all the LEDs in the stripe.
+
+number_start:
+~~~~~~~~~~~~~
+Single value, type: ``integer``.
+
+The integer value for the number for the first LED in the stripe. (MPF assumes
+that all the LEDs in the stripe are numbered sequentially.)
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``light_stripes:`` section of your config. (If you don't include them, the default will be used).
+
+direction:
+~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point).
+
+The angle (in degrees, 0-360) the this LED stripe is positioned on the
+playfield. This is used for the calculation of x/y positions of individual
+LEDs only.
+
+distance:
+~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point).
+
+The distance between individual LEDs (in relative size to the x/y coordinates
+of the ``start_x:`` and ``start_y:`` positions. This is used for
+the calculation of x/y positions of individual LEDs only.
 
 number_template:
 ~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
 MPF automatically configures the LEDs in a stripe. The first one uses the
 ``number_start:`` value, and then it counts up from there up through the
 ``count:`` value.
@@ -47,26 +90,44 @@ The example config with a number template of ``7-{}`` with a number start of
 
 start_x:
 ~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point).
+
 The "x" position of the first LED. (This is not used in MPF yet.)
 
 start_y:
 ~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point).
+
 The "y" position of the first LED.
 
-direction:
-~~~~~~~~~~
-The angle (in degrees, 0-360) the this LED stripe is positioned on the
-playfield. This is used for the calculation of x/y positions of individual
-LEDs only.
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-distance:
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
 ~~~~~~~~~
-The distance between individual LEDs (in relative size to the x/y coordinates
-of the ``start_x:`` and ``start_y:`` positions. This is used for
-the calculation of x/y positions of individual LEDs only.
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-led_template:
-~~~~~~~~~~~~~
-This is a list of sub-settings (indented) that are regular settings from the
-:doc:`leds` section of your machine config. Any settings that are valid there
-are valid here, and they're applied to all the LEDs in the stripe.
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Unused.
+
+
