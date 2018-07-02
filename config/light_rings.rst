@@ -9,11 +9,11 @@ light_rings
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-A "led_rings" will create "count" leds for you starting the number at
+A "light_rings" will create "count" lights for you starting the number at
 "number_start". If you need a prefix or suffix for the number you can use
-"number_template". All settings in "led_template" will be applied to all LEDs.
+"number_template". All settings in "light_template" will be applied to all lights.
 The only difference between :doc:`light_stripes </config/light_stripes>`  and
-:doc:`led_rings </config/light_rings>` is how the x/y coordinates are computed.
+:doc:`light_rings </config/light_rings>` is how the x/y coordinates are computed.
 
 Here's an example:
 
@@ -67,5 +67,5 @@ the calculation of x/y positions of individual LEDs only.
 light_template:
 ~~~~~~~~~~~~~~~
 This is a list of sub-settings (indented) that are regular settings from the
-:doc:`leds` section of your machine config. Any settings that are valid there
+:doc:`lights` section of your machine config. Any settings that are valid there
 are valid here, and they're applied to all the LEDs in the ring.
