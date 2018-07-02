@@ -9,6 +9,8 @@ ball_holds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``ball_holds:`` section of your config is used to list and configure
 :doc:`ball holds </game_logic/ball_holds/index>`.
 
@@ -44,6 +46,7 @@ Each sub-entry under the ``ball_holds:`` section is the name of the logical ball
 hold ("bunker") in the example above. Then each named ball hold has the
 following settings:
 
+
 Required settings
 -----------------
 
@@ -51,10 +54,11 @@ The following sections are required in the ``ball_holds:`` section of your confi
 
 hold_devices:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``ball_devices:`` device.
+List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device.
 
 A list of one (or more) ball devices that will collect balls which
 will count towards this hold.
+
 
 Optional settings
 -----------------
@@ -63,7 +67,7 @@ The following sections are optional in the ``ball_holds:`` section of your confi
 
 balls_to_hold:
 ~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: ``integer``.
 
 The number of balls this ball hold should hold. If you don't include it, then
 the ball hold capacity will be automatically calculated based on the combined
@@ -72,6 +76,57 @@ capacity of all the ball devices that make up this ball hold.
 If one of the associated hold devices receives a ball and this ball hold is
 full, then the ball device will just release the ball again.
 
+disable_events:
+~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Event(s) which disable this ball hold.
+
+enable_events:
+~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Event(s) which enable this ball hold.
+
+release_all_events:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Event(s) which cause this ball hold to release all balls.
+
+release_one_events:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Event(s) which cause this ball hold to release a single ball.
+
+release_one_if_full_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Event(s) which cause this ball hold to release a single ball only if the ball
+hold contains the number of balls that matches its ``balls_to_hold:`` setting.
+
+reset_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered
+
+Event(s) which cause this ball hold to reset its held ball count.
+
+source_playfield:
+~~~~~~~~~~~~~~~~~
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Default: ``playfield``
+
+The name of the playfield that feeds balls to this hold. If you only
+have one playfield (which is most games), you can leave this setting
+out. Default is the playfield called *playfield*.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -79,25 +134,11 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
 
-disable_events:
-~~~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) which disable this ball hold.
-
-enable_events:
-~~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) which enable this ball hold.
+Log level for the file log for this device.
 
 label:
 ~~~~~~
@@ -105,53 +146,12 @@ Single value, type: ``string``. Default: ``%``
 
 A descriptive label.
 
-release_one_if_full_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) which cause this ball hold to release a single ball only if the ball
-hold contains the number of balls that matches its ``balls_to_hold:`` setting.
-
-release_one_events:
-~~~~~~~~~~~~~~~~~~~
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) which cause this ball hold to release a single ball.
-
-reset_events:
-~~~~~~~~~~~~~
-
-List of one or more events (with optional delay timings), in the
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
-Event(s) which cause this ball hold to reset its held ball count.
-
-.. todo:: more detail needed
-
-source_playfield:
-~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
-
-The name of the playfield that feeds balls to this hold. If you only
-have one playfield (which is most games), you can leave this setting
-out. Default is the playfield called *playfield*.
-
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for ball holds: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+
