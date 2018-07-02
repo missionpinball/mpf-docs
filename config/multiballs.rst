@@ -9,6 +9,8 @@ multiballs:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``multiballs:`` section of your config is where you configure multiballs.
 
 Here's an example which contains several different multiball configs. (In the
@@ -57,126 +59,29 @@ real world, you'd probably only have one multiball for each mode.)
            start_events: mb6_start
            ball_locks: bd_lock
 
-You can use the following settings for each multiball:
 
-ball_count: (Required)
-~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``.
+Required settings
+-----------------
 
-The number of balls this multiball should eject (and maintain during shoot again period). Note: It may eject more balls
-when using locks but only ball_count balls will be maintained during shoot again.
+The following sections are required in the ``multiballs:`` section of your config:
 
-Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
-for this setting.
-
-ball_locks:
+ball_count:
 ~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``ball_devices:`` device. Default: ``None``
+Single value, type: template_int.
 
-Use those devices first when ejecting balls to the playfield on multiball start. On start all balls from all
-locks will be ejected (maybe more than ball_count). If there are not enough balls in the lock more balls will be
-requested to the source_playfield.
+The number of balls this multiball should eject (and maintain during shoot again period).
+This is a template so you can use :doc:`dynamic values </config/instructions/dynamic_values>`
+to calculate this during runtime.
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-See the :doc:`documentation on the debug setting </config/instructions/debug>`
-for details.
+Optional settings
+-----------------
 
-disable_events:
-~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, disable this multiball. When disabled,
-the other events (like start and add a ball) do not work. If this multiball
-is in a mode config, then it will also be disabled when the mode it's in stops.
-
-enable_events:
-~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, enable this multiball. Note that enabling a
-multiball is not the same as starting it, but the other events (like to start
-the multiball or, or add a ball, etc.) do not work unless this multiball is enabled.
-
-Note that if you do not add any ``enable_events:`` (which is the default), this
-multiball will be automatically enabled when the mode it's in starts.
-
-reset_events:
-~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``machine_reset_phase_3, ball_starting``
-
-Event(s) that reset this multiball, which means they disable it as well as
-disabling shoot again and resetting the ball add counts to 0.
-
-shoot_again:
-~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``10s``
-
-Specifies a time period for "shoot again" which is a sort of automatic ball save for
-multiballs. The timer will start when this multiball starts, and any balls that
-drain during this time will be re-added into play.
-
-source_playfield:
-~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
-
-The name of the playfield (from the ``playfields:`` section of your machine config
-that this multiball will add balls to. You don't have to worry about this unless
-you have multiple playfields that you're managing separately (which is rare, usually
-only in head-to-head type games).
-
-start_events:
-~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, start the multiball. Note that these events will
-only have an effect if this multiball is enabled.
-
-stop_events:
-~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, stop the multiball. If there are multiball balls
-on the playfield, there's nothing that can be done about that (unless you want to
-disable the flippers). However stopping the multiball will cut off the "shoot again"
-period.
+The following sections are optional in the ``multiballs:`` section of your config. (If you don't include them, the default will be used).
 
 add_a_ball_events:
 ~~~~~~~~~~~~~~~~~~
-
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Events in this list, when posted, will add one ball into play. Posting an event
 multiple times will add one ball for each time the event is posted.
@@ -185,21 +90,9 @@ This is useful for "add-a-ball" functionality (which you can combine with a
 counter and/or conditional events if you want to cap how many total balls can
 be added into play).
 
-start_or_add_a_ball_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, will either start the multiball, or, if it's
-started, will add another ball.
-
 ball_count_type:
 ~~~~~~~~~~~~~~~~
+Single value, type: one of the following options: add, total. Default: ``total``
 
 Set this to either ``total`` or ``add``. Default is ``total``.
 
@@ -220,10 +113,36 @@ work.
    multiball is set to ``ball_count: 2`` and there are already 2 balls in play, then
    this multiball will add 2 more balls for a total of 4 balls live.
 
-replace_balls_in_play
-~~~~~~~~~~~~~~~~~~~~~
+ball_locks:
+~~~~~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device.
 
-Single value, type ``boolean``. Default is ``False``.
+Use those devices first when ejecting balls to the playfield on multiball start. On start all balls from all
+locks will be ejected (maybe more than ball_count). If there are not enough balls in the lock more balls will be
+requested to the source_playfield.
+
+disable_events:
+~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, disable this multiball. When disabled,
+the other events (like start and add a ball) do not work. If this multiball
+is in a mode config, then it will also be disabled when the mode it's in stops.
+
+enable_events:
+~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, enable this multiball. Note that enabling a
+multiball is not the same as starting it, but the other events (like to start
+the multiball or, or add a ball, etc.) do not work unless this multiball is enabled.
+
+Note that if you do not add any ``enable_events:`` (which is the default), this
+multiball will be automatically enabled when the mode it's in starts.
+
+replace_balls_in_play:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
 
 This setting controls whether the multiball should include existing balls in play
 when counting the number of balls to add to the playfield. Specifically for
@@ -233,3 +152,83 @@ the multiball when it starts.
 
 See :doc:`/game_logic/multiballs/multiball_with_traditional_ball_lock` for detailed
 instructions on using this setting.
+
+reset_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting
+
+Event(s) that reset this multiball, which means they disable it as well as
+disabling shoot again and resetting the ball add counts to 0.
+
+shoot_again:
+~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``10s``
+
+Specifies a time period for "shoot again" which is a sort of automatic ball save for
+multiballs. The timer will start when this multiball starts, and any balls that
+drain during this time will be re-added into play.
+
+source_playfield:
+~~~~~~~~~~~~~~~~~
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Default: ``playfield``
+
+The name of the playfield (from the ``playfields:`` section of your machine config
+that this multiball will add balls to. You don't have to worry about this unless
+you have multiple playfields that you're managing separately (which is rare, usually
+only in head-to-head type games).
+
+start_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, start the multiball. Note that these events will
+only have an effect if this multiball is enabled.
+
+start_or_add_a_ball_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, will either start the multiball, or, if it's
+started, will add another ball.
+
+stop_events:
+~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, stop the multiball. If there are multiball balls
+on the playfield, there's nothing that can be done about that (unless you want to
+disable the flippers). However stopping the multiball will cut off the "shoot again"
+period.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Unused.
+
+
