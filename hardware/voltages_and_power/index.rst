@@ -147,5 +147,10 @@ power rails.
 Additionally, those boards allow you to disconnect components at a central
 location.
 Usually, those boards will also connect all ground for you.
-See :doc:`/hardware/multimorphic/power_entry` or
-:doc:`/hardware/fast/power_filter` for details.
+
+Some common boards:
+
+* :doc:`Multimorphic Power Entry Board </hardware/multimorphic/power_entry>`
+* :doc:`FAST Power Filter Board </hardware/fast/power_filter>`
+* `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
+* Stern Spike Power Distribution Board (part number 520-5343-01)
