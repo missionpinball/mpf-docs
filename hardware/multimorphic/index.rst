@@ -42,3 +42,4 @@ the P-ROC or P3-ROC.
    Alpha-numeric displays (P-ROC) <alpha_numeric>
    Accelerometer (P3-ROC) <accelerometer>
    I2C (P3-ROC) <i2c>
+   Power Entry Board <power_entry>

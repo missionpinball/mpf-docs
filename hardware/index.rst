@@ -28,6 +28,8 @@ more, so if there's a hardware device that you'd like to use that we don't suppo
 let us know. (Or better yet, write your own interface to it and submit a pull
 request to the MPF codebase!)
 
+Also see our guide on :doc:`voltages found in a pinball machine <voltages_and_power/index>`.
+
 List of supported control systems & hardware
 --------------------------------------------
 
@@ -166,6 +168,7 @@ MPF supports:
    MMA8451-based accelerometer <mma8451/index>
    Virtual Hardware <virtual/index>
    Existing Machines <existing_machines/index>
+   Voltages and Power <voltages_and_power/index>
 
 .. toctree::
 

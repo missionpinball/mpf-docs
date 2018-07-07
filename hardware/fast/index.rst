@@ -20,3 +20,4 @@ update speeds, etc.)
    Traditional (single color) DMDs <dmd>
    RGB DMDs <rgb_dmd>
    Servos <servos>
+   Power Filter Board <power_filter>

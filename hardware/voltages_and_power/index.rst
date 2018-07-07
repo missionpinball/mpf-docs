@@ -1,0 +1,113 @@
+Voltages and Power
+==================
+
+A pinball machine uses multiple different voltages for different purposes.
+You need at least one power supply unit (PSU) to transform the AC power
+to multiple DC rails.
+
+.. warning::
+
+   If you are unsure ask a professional electric engineer. This guide does not
+   provide all information needed to design and operate a
+   high-voltage/high-current system in a pinball machine. Use this at your own
+   risk. Electricity can be dangerous and might kill you or burn down your
+   house.
+
+
+Primary side - 230/110V
+-----------------------
+
+At the mains your machine usually runs at 230V or 110V depending on the region.
+Some PSUs are able to work with both voltages.
+Sometimes there is a switch to select the input voltage.
+In other cases a PSU might only work with a certain input voltage.
+Make sure to check this before connecting the PSU to the mains.
+
+In case you run a traditional transformer you usually have to wire the windings
+differently depending on the input voltage.
+If you get this wrong the output voltages might be different or the transformer
+may burst into flames.
+
+In any case it is a good idea and common practise to add a fuse before your PSU
+or transformer in case anything goes wrong.
+This is for your own safety and for the safety of your neighborhood because
+if stuff starts burning it might cause a lot of damage.
+
+High Voltage - 48V to 80V
+-------------------------
+
+High voltage (HV) is used to drive coils in your machine.
+In modern machines 48V is used which technically classifies as low voltage
+in most countries around the world (it is still not safe to touch and can kill
+you).
+This is preferred if you start a new design as PSUs for 48V are readily
+available at a good price.
+Most machines use supplies with around 6A to 10A.
+
+Older machines used transformers with 70V to 80V.
+Those are more expensive, heavier and harder to get nowadays.
+They are generally not recommended for new designs.
+If you want to produce a machine this will also be harder to certify in most
+countries.
+
+A large capacitor might help to keep this rail stable since pulsing and PWMing
+coil causes large electric and magnetic spikes.
+In some cases a PSU might driving coils without a capacitor on the rail.
+
+You might want to use at least one fuse on the HV rail to prevent coils from
+burning.
+Most coils will start burning after a while if you enable them permanently
+without PWM (see ``hold_power`` in :doc:`/config/coils` for details).
+You do not want that. Instead the fuse should trip and cut the power.
+It might be wise to use multiple coils (e.g. one per bank of coils).
+
+Light Power
+-----------
+
+You lights will require a lot of power.
+Depending on the type of light the voltage might differ.
+Traditional incandescent bulbs need something around 12V to 24V.
+LEDs usually run at 5V (sometimes 12V).
+Make sure to understand how much power you need for your lights.
+Then calculate which wires, connectors, PSU and fuses you need.
+This is very likely a high-current setup and standard connectors with thin
+wires will certainly cause problems (or fire) in your machine.
+
+For instance, every LED will draw around 20mA. Triple that for RGB LEDs.
+With 80 RGB LEDs for inserts and 80 RGB GIs you will end up at 10A power or 50W.
+Most connectors are rated for less than 10A and you will see some voltage drop
+with thin wires (check the resistance).
+
+Make sure this is properly fused since this may easily burn down your machine.
+
+Display Power
+-------------
+
+RGB DMDs usually need either 5V or 12V and might draw a few amps at full
+brightness.
+Traditional DMDs might need very high voltages.
+Definitely ask a professional before getting started.
+
+As with any power rail: Add a fuse.
+
+Logic Power
+-----------
+
+In most cases this will be 5V and 12V.
+Most systems use 12V for switches and 5V to power logic components.
+In most cases you don't need many amps on those rails.
+It might be wise to run separate 12/5V rails for logic components and
+light/display power to prevent problems with interferences.
+
+As with other rails: Add a fuse to be safe.
+
+
+Power Filter Boards
+-------------------
+
+Some vendors sell power filter boards which help you to build your different
+power rails.
+Additionally, those boards allow you to disconnect components at a central
+location.
+See :doc:`/hardware/multimorphic/power_entry` or
+:doc:`/hardware/fast/power_filter` for details.
