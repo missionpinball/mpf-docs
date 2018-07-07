@@ -128,7 +128,7 @@ It is very important to connect all grounds if you use multiple PSUs.
 We cannot stress this enough.
 Not ensuring this will be very dangerous!
 
-In general, it is perferred to connect the ground at the PSUs then below
+In general, it is preferred to connect the ground at the PSUs then below
 the playfield.
 Then run a separate ground for each power rail from the PSU to the playfield.
 
