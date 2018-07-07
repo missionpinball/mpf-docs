@@ -58,7 +58,7 @@ You want to use at least one fuse on the HV rail to prevent coils from burning.
 Most coils will start burning after a while if you enable them permanently
 without PWM (see ``hold_power`` in :doc:`/config/coils` for details).
 You do not want that. Instead the fuse should trip and cut the power.
-It might be wise to use multiple coils (e.g. one per bank of coils).
+It might be wise to use multiple fuses (e.g. one per bank of coils).
 
 Light Power
 -----------
