@@ -54,8 +54,7 @@ A large capacitor might help to keep this rail stable since pulsing and PWMing
 coil causes large electric and magnetic spikes.
 In some cases a PSU might driving coils without a capacitor on the rail.
 
-You might want to use at least one fuse on the HV rail to prevent coils from
-burning.
+You want to use at least one fuse on the HV rail to prevent coils from burning.
 Most coils will start burning after a while if you enable them permanently
 without PWM (see ``hold_power`` in :doc:`/config/coils` for details).
 You do not want that. Instead the fuse should trip and cut the power.
@@ -102,6 +101,43 @@ light/display power to prevent problems with interferences.
 As with other rails: Add a fuse to be safe.
 
 
+Electromagnetic Compatibility EMC/EMI
+-------------------------------------
+
+You need to make sure that your machine complies with regulations and will
+not disturb police radios/air traffic control or your neighbors Wifi.
+Especially pulsing or PWMing coils will cause a lot of interferences.
+This might cause RF emissions and make you a lot of enemies.
+The most important step to mitigate EMI is to run your power and return wire
+in parallel and make them the same length.
+There will be a magnetic field between HV and GND to your coil when current
+flows.
+If current changes, the field will change and you will transmit signal which
+is what you want to avoid.
+Additionally, add free flow diodes to your coils to prevent self-induction
+voltage from travelling back to your driver board and PSU (which will transmit
+another signal).
+
+EMC is a complex topic. If in doubt consult an electic engineer.
+
+
+Common Ground
+-------------
+
+It is very important to connect all grounds if you use multiple PSUs.
+We cannot stress this enough.
+Not ensuring this will be very dangerous!
+
+In general, it is perferred to connect the ground at the PSUs then below
+the playfield.
+Then run a separate ground for each power rail from the PSU to the playfield.
+
+Interferences on the ground of the HV rail might cause problems in other rails.
+Especially for serial LEDs and logic power.
+In case you run into those problems consult with a electric engineer.
+The right capacitors and the right wireing might help with this case for example.
+
+
 Power Filter Boards
 -------------------
 
@@ -109,5 +145,6 @@ Some vendors sell power filter boards which help you to build your different
 power rails.
 Additionally, those boards allow you to disconnect components at a central
 location.
+Usually, those boards will also connect all ground for you.
 See :doc:`/hardware/multimorphic/power_entry` or
 :doc:`/hardware/fast/power_filter` for details.
