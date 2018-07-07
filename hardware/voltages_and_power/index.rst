@@ -52,7 +52,8 @@ countries.
 
 A large capacitor might help to keep this rail stable since pulsing and PWMing
 coil causes large electric and magnetic spikes.
-In some cases a PSU might driving coils without a capacitor on the rail.
+In some cases a PSU might turn off while driving coils without a capacitor on
+this rail.
 
 You want to use at least one fuse on the HV rail to prevent coils from burning.
 Most coils will start burning after a while if you enable them permanently
