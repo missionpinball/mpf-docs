@@ -1,4 +1,4 @@
-How to use nativ I2C on Linux (SMBUS2)
+How to use native I2C on Linux (SMBUS2)
 ======================================
 
 +------------------------------------------------------------------------------+
@@ -23,7 +23,7 @@ Install ``smbus2`` via pip:
 2. Figure out which bus to use
 ------------------------------
 
-* Some boards such as the Raspberry Pi have nativ I2C buses. Figure our which
+* Some boards such as the Raspberry Pi have native I2C buses. Figure out which
   bus to use and make sure MPF has sufficient permissions to use it (Alternatively,
   you can also controll the I2C on the RPi remotely using the
   :doc:`RPi </hardware/rpi/index>` platform).
@@ -55,7 +55,7 @@ your platform is set to ``fast``, MPF assumes your I2C devices are connected to 
 controller, and if your platform is set to ``p3_roc``, MPF assumes
 your I2C devices are connected to the P3-Roc board.
 
-To configure MPF to use nativ I2C, you can add an entry to the
+To configure MPF to use native I2C, you can add an entry to the
 ``hardware:`` section of your machine config to tell it to override the default
 platform for your I2C devices and to instead use the ``smbus2`` platform, like this:
 
