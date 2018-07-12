@@ -63,7 +63,7 @@ a rule might be "when this switch is activated, pulse that coil", or "when this
 switch is released, cut off the power to that coil".
 
 Then when one of these "hardware rules" (as we call them in MPF) is written
-to the hardware pinball controller, that controller can handle it all be itself
+to the hardware pinball controller, that controller can handle it all by itself
 with minimal delay (usually in a millisecond or two) without having to deal with
 USB and MPF and all that.
 
