@@ -16,6 +16,12 @@ MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
 
+There are a few typical switch types in pinball machines (read those for details):
+
+* :doc:`rollover_switches`
+* :doc:`mechanical_switches`
+* :doc:`optos`
+
 MPF supports all types of switches found in all generations of pinball machines,
 including matrix switches, direct switches, Fliptronics switches, switches
 connected to I/O boards, etc.
@@ -27,7 +33,8 @@ actually active when they're open.) In MPF, you configure your switches in the
 (like whether the switch is "active" when it's in the open state or the closed
 state.)
 
-You can also configure debounce settings for each switch, which controls how MPF
+You can also configure :doc:`debounce settings <debounce>` for each switch,
+which controls how MPF
 responds to switch events. Saying that a switch has to be "debounced" means that
 the pinball controller makes sure the switch is actually in its current state
 for a few milliseconds before it send the switch event to MPF. This can be
@@ -37,6 +44,14 @@ electrical interference or other little weird things.
 Most switches in pinball machines are debounced except for the ones that you
 absolutely want to fire instantly, like flipper switches and the switches
 attached to automatically fired coils like slingshots and pop bumpers.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   switches:
+      my_switch:
+         number: 42	# number from your hardware platform
 
 Switch Concepts
 ---------------
@@ -64,6 +79,7 @@ Related How To guides
 * :doc:`/tutorial/3_get_flipping`
 * :doc:`optos`
 * :doc:`mechanical_switches`
+* :doc:`rollover_switches`
 * :doc:`service_and_door_switches`
 
 Related Events
@@ -81,3 +97,4 @@ Related Events
    optos
    mechanical_switches
    service_and_door_switches
+   rollover_switches

@@ -13,7 +13,7 @@ what's going on in your game).
 Pinball Mechs in MPF include:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Accelerometers <accelerometers/index>
    Autofire Coils <autofire_coils/index>
@@ -32,7 +32,6 @@ Pinball Mechs in MPF include:
    Playfields <playfields/index>
    Plungers / Launch Devices <plungers/index>
    Pop Bumpers <pop_bumpers/index>
-   Rollover Switches <rollovers/index>
    Score Reels <score_reels/index>
    Scoops / Vertical Up Kickers (VUKs) / Saucer holes <scoops/index>
    Servos <servos/index>
