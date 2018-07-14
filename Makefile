@@ -177,6 +177,12 @@ info:
 	make -C $(BUILDDIR)/texinfo info
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
 
+.PHONY: unit
+unit:
+	$(SPHINXBUILD) -b dummy $(ALLSPHINXOPTS) $(BUILDDIR)/unit
+	@echo
+	@echo "Config test finished."
+
 .PHONY: gettext
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
