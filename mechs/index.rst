@@ -13,22 +13,18 @@ what's going on in your game).
 Pinball Mechs in MPF include:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    Accelerometers <accelerometers/index>
    Autofire Coils <autofire_coils/index>
    Ball Devices <ball_devices/index>
    Coils (Solenoids) <coils/index>
    Diverters <diverters/index>
-   Drop Targets <targets/drop_targets/index>
    Dual-Wound Coils <dual_wound_coils/index>
    Flashers <flashers/index>
    Flippers <flippers/index>
    GI (general illumination) <gis/index>
    Kickback Lanes <kickbacks/index>
-   Kicking Targets <targets/kicking_targets/index>
-   Stationary Targets <targets/stationary_targets/index>
-   Vari Targets <targets/vari_targets/index>
    Lights <lights/index>
    LEDs <leds/index>
    Loops / Orbits / Ramps <loops/index>
@@ -45,6 +41,6 @@ Pinball Mechs in MPF include:
    Spinners <spinners/index>
    Stepper Motors <steppers/index>
    Switches <switches/index>
-   Stand-up Targets <targets/index>
+   Targets <targets/index>
    Troughs / Ball Drains <troughs/index>
 
