@@ -190,8 +190,3 @@ the prefix for LEDs is ``device.lights.<name>``.
 | None                                                                         |
 +------------------------------------------------------------------------------+
 
-.. toctree::
-
-   lights_versus_leds
-
-

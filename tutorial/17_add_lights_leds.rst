@@ -15,7 +15,7 @@ see your lights and LEDs in realtime against a picture of your playfield.
 In MPF, "lights" refers to bulbs that are plugged into a lamp matrix,
 or to direct-connected LEDs (which are usually RGB). So lights might be
 either LEDs or lamps in a matrix.
-See :doc:`/mechs/leds/lights_versus_leds` for details.
+See :doc:`/mechs/lights/lights_versus_leds` for details.
 
 2. Add your lights/LEDs to your machine config file
 ---------------------------------------------------

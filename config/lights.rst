@@ -106,7 +106,7 @@ There is a special platform ``drivers`` which will reference a driver which
 has to be configured in the ``number`` setting.
 It can be used if you got a light which is connected to a driver in your
 platform.
-That might be the case for :doc:`GIs </mechs/gis/index>` for example.
+That might be the case for :doc:`GIs </mechs/lights/gis>` for example.
 This is an example for a driver as light:
 
 .. code-block:: mpf-config

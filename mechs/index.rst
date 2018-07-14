@@ -20,12 +20,9 @@ Pinball Mechs in MPF include:
    Ball Devices <ball_devices/index>
    Coils (Solenoids) <coils/index>
    Diverters <diverters/index>
-   Flashers <flashers/index>
    Flippers <flippers/index>
-   GI (general illumination) <gis/index>
    Kickback Lanes <kickbacks/index>
    Lights <lights/index>
-   LEDs <leds/index>
    Loops / Orbits / Ramps <loops/index>
    Magnets <magnets/index>
    Motors <motors/index>
