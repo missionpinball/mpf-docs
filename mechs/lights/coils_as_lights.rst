@@ -14,9 +14,10 @@ Coils as Lights
 +------------------------------------------------------------------------------+
 
 Sometimes you will find lights on a (coil) driver.
-There are various rasons for this and MPF supports it.
+There are various reasons for this and MPF supports it.
 You can either use :doc:`/config/coil_player` to control those lights but it
 will be different from normal lights (and light shows).
+Alternatively, you can map the coils to a light (recommended).
 To map a coil as light you can use the following config:
 
 .. code-block:: mpf-config
