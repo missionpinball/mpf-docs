@@ -24,7 +24,7 @@ options for how flippers are fine tuned.
 MPF also has support for various "novelty" flipper modes (no-hold flippers,
 reversed flipper buttons, weak flippers, etc.)
 
-We recommend you read the :doc:`/mechs/dual_wound_coils/dual_vs_single_wound`
+We recommend you read the :doc:`/mechs/coils/dual_vs_single_wound`
 guide to understand the difference between "dual wound" and "single wound"
 coils, as flippers in pinball machines can be either type.
 

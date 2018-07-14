@@ -18,7 +18,7 @@ Single-wound versus dual-wound coil holds
 
 The way you configure coil holds depends on whether the coil in question is
 a "single wound" or "dual wound" coil. See the
-:doc:`/mechs/dual_wound_coils/dual_vs_single_wound` guide for details.
+:doc:`dual_vs_single_wound` guide for details.
 
 Adjusting single-wound coil "hold" strength
 -------------------------------------------

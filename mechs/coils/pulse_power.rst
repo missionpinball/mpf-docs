@@ -13,7 +13,7 @@ This is much nicer than the old days (even the 1990s WPC era) where pulse
 times were fixed, and you adjusted the strength of a mechanism by literally
 swapping out the coil with a stronger or weaker one!
 
-.. note:: If you have :doc:`"dual wound" </mechs/dual_wound_coils/index>`
+.. note:: If you have :doc:`"dual wound" <dual_wound_coils>`
    coils, which are common for flippers,
    diverters, and other mechs which are "held" in the on position, you can use
    the pulse settings defined in this guide to control the initial "pulse"

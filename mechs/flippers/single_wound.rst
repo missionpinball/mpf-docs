@@ -9,7 +9,7 @@ connect two wires), then it's a single-wound coil and this guide is for you.
 If it has three wires (or three tabs), then read the :doc:`dual_wound` guide.
 
 Read more about "dual wound" versus "single wound" coils in the
-:doc:`/mechs/dual_wound_coils/dual_vs_single_wound` guide.
+:doc:`/mechs/coils/dual_vs_single_wound` guide.
 
 1. Add your flipper buttons
 ---------------------------

@@ -199,10 +199,13 @@ include:
 People have also pointed out that Stern's S.A.M. system (which they used in from
 about 2006-2015) used the single-wound PWM-style flippers, but then with the
 SPIKE system (from 2015 onwards) went back to the dual-wound computer controlled
-option. So even in this modern era, there's precedent for using dual-wound coils.
+option for a while. However, they later switched back to single-wound PWM-style
+flippers. We can only speculate why they did that and it might involve that
+dual-wound flippers are easier to control from software with a new control system.
 
 Really the only reasons to use the single-wound coils are:
 
 * You already have mechanisms that use single-wound coils
 * You're running out of driver outputs in your control system and you don't want
   to "waste" two drivers per mech.
+* Single-wound are cheaper to produce
