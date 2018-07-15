@@ -26,7 +26,7 @@ There are multiple types of lights (read those for specific details):
 * :doc:`coils_as_lights`
 
 
-:doc:`TODO: Add a picture of a selection of lights </about/help_us_to_write_it>`
+.. image:: /mechs/images/lights_vs_leds.jpg
 
 This is an example of for a light:
 
