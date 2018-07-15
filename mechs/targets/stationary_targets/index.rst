@@ -7,8 +7,7 @@ Stationary or Standup Targets
 | :doc:`/config/switches`                                                      |
 +------------------------------------------------------------------------------+
 
-:doc:`TODO: Add a picture of a standup target </about/help_us_to_write_it>`
-
+.. image:: /mechs/images/blade_target_switch.jpg
 
 Mission Pinball Framework's (MPF) *stationary target* device represents a switch in a pinball machine. This might also
 be know as a stand-up target. It is essentially a switch above the playfield with a scoring value
