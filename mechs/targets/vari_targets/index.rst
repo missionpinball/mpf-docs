@@ -14,6 +14,7 @@ associated with it that changes depending on how hard the ball hits it.
 Typically the harder the ball hit the more points awarded.
 
 This is a vari-target in a Gottlieb Playball (1971):
+
 .. image:: /mechs/images/vari_target_top.jpg
 
 Technically, a vari-target has one switch per position and a reset coil to
