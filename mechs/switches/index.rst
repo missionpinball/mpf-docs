@@ -30,7 +30,7 @@ Typical switch applications in pinball machines are:
 * As part of a mech such as
   :doc:`Drop targets </mechs/targets/drop_targets/index>`,
   :doc:`Popbumpers </mechs/pop_bumpers/index>` or
-  :doc:`Popbumpers </mechs/ball_devices/index>`/:doc:`Troughs </mechs/troughs/index>`
+  :doc:`Ball Devices </mechs/ball_devices/index>`/:doc:`Troughs </mechs/troughs/index>`
 * :doc:`Service and door switches <service_and_door_switches>`
 
 MPF supports all types of switches found in all generations of pinball machines,
