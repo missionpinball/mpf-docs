@@ -82,14 +82,14 @@ listed above.
 
 Picking a random machine as an example, *Judge Dredd* has eight(!) ball devices:
 
-1. The trough
-2. The right plunger lane
+1. :doc:`The trough </mechs/troughs/index>`
+2. The right :doc:`plunger lane </mechs/plungers/index>`
 3. The left plunger lane
 4. The Sniper VUK
 5. The Hall of Justice VUK
 6. The Deadworld orbit thingy
 7. The crane
-8. The playfield
+8. :doc:`The playfield </mechs/playfields/index>`
 
 MPF keeps track of how many balls are in each ball device at all
 times, and it knows which devices are in the process of ejecting (and which

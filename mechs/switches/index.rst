@@ -16,11 +16,22 @@ MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
 
-There are a few typical switch types in pinball machines (read those for details):
+There are two general switch types in pinball machines (read those for details):
 
-* :doc:`rollover_switches`
-* :doc:`mechanical_switches`
-* :doc:`optos`
+* :doc:`Mechanical switches <mechanical_switches>`
+* :doc:`Optical switches <optos>`
+
+Typical switch applications in pinball machines are:
+
+* :doc:`Rollover/lane switches <rollover_switches>`
+* :doc:`Standup targets </mechs/targets/stationary_targets/index>`
+* :doc:`Spinners </mechs/spinners/index>`
+* :doc:`Flipper buttons </mechs/flippers/index>` and :doc:`Flipper end-of-stroke switches </mechs/flippers/eos_switches>`
+* As part of a mech such as
+  :doc:`Drop targets </mechs/targets/drop_targets/index>`,
+  :doc:`Popbumpers </mechs/pop_bumpers/index>` or
+  :doc:`Popbumpers </mechs/ball_devices/index>`/:doc:`Troughs </mechs/troughs/index>`
+* :doc:`Service and door switches <service_and_door_switches>`
 
 MPF supports all types of switches found in all generations of pinball machines,
 including matrix switches, direct switches, Fliptronics switches, switches

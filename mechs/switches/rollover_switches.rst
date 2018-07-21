@@ -14,8 +14,12 @@ They are usually :doc:`mechanical micro switches </mechs/switches/mechanical_swi
 
 .. image:: /mechs/images/rollover_micro_switch.jpg
 
+Typical part numbers:
 
-This is an example:
+* Stern/Sega/Data East: 500-6227-01/500-6227-03 or 500-6227-02/500-6227-04 or 500-5707-00
+* Spooky Pinball: SP-SW-001 or SP-SW-002
+
+This is an example config:
 
 .. code-block:: mpf-config
 
