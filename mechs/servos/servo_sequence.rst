@@ -46,3 +46,6 @@ posted (three times to open and three times to close):
       my_toy_hit:
          toy_hit:
             loops: 2
+
+To see how this can be used in a real machine we recommend this
+`explanation video by the pinball amigos <https://www.youtube.com/watch?v=1QOOJNtsGxw&t=58>`_.
