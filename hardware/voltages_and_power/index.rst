@@ -61,6 +61,15 @@ without PWM (see ``hold_power`` in :doc:`/config/coils` for details).
 You do not want that. Instead the fuse should trip and cut the power.
 It might be wise to use multiple fuses (e.g. one per bank of coils).
 
+Common power supplies for 48V:
+
+* Meanwell SP320-48 - Used by Stern Spike
+
+Common power supplies for 70V - 80V (not recommended for new designs):
+
+* AnTek PS-4N70R5R12 - 70V + unregulated 5V and unregulated 12V
+
+
 Light Power
 -----------
 
@@ -80,15 +89,25 @@ with thin wires (check the resistance).
 
 Make sure this is properly fused since this may easily burn down your machine.
 
+Common power supplies:
+
+* Standard ATX power supplies - Work well but you might have to cut the connectors
+* Meanwell SP/MW for 12V or 24V - Precalculate your current and get one with some headroom
+
 Display Power
 -------------
 
 RGB DMDs usually need either 5V or 12V and might draw a few amps at full
 brightness.
 Traditional DMDs might need very high voltages.
-Definitely ask a professional before getting started.
+Definitely ask a professional before getting started with traditional DMDs.
 
 As with any power rail: Add a fuse.
+
+Common power supplies (for 12V):
+
+* Standard ATX power supplies
+* Meanwell RD65A - A cheap 5V and 12V supply
 
 Logic Power
 -----------
@@ -101,6 +120,10 @@ light/display power to prevent problems with interferences.
 
 As with other rails: Add a fuse to be safe.
 
+Common power supplies (for 12V):
+
+* Standard ATX power supplies
+* Meanwell RD65A - A cheap 5V and 12V supply
 
 Electromagnetic Compatibility EMC/EMI
 -------------------------------------
@@ -125,9 +148,11 @@ EMC is a complex topic. If in doubt consult an electic engineer.
 Common Ground
 -------------
 
-It is very important to connect all grounds if you use multiple PSUs.
-We cannot stress this enough.
-Not ensuring this will be very dangerous!
+.. warning::
+
+   It is very important to connect all grounds if you use multiple PSUs.
+   We cannot stress this enough.
+   Not ensuring this will be very dangerous!
 
 In general, it is preferred to connect the ground at the PSUs then below
 the playfield.

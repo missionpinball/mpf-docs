@@ -12,6 +12,8 @@ psus:
 .. overview
 
 The ``psus:`` section of your config is where you power supply units.
+See :doc:`/hardware/voltages_and_power/index` for details about voltages in
+pinball machines and some electric details.
 Then specify to which PSU your :doc:`coils <coils>` are connected.
 This is used for power management. In some cases, MPF ,ay deliberately delay
 coil pulses to prevent too many coils from firing and drawing to much current
