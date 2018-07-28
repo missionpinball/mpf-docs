@@ -139,6 +139,9 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * Connected to I2C
 
+There is a :doc:`hardware roadmap <roadmap>` for other hardware which we want
+to support in the future.
+
 Configuration Guides
 --------------------
 
@@ -175,6 +178,7 @@ MPF supports:
    hw_rules
    numbers
    platform
+   roadmap
 
 Browse Platforms by Capabilites
 -------------------------------
