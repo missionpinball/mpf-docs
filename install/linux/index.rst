@@ -66,8 +66,17 @@ To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: console
 
-  pip3 install mpf=x.yy.z
-  pip3 install mpf-mc=x.yy.z
+  pip3 install mpf==x.yy.z
+  pip3 install mpf-mc==x.yy.z
+
+Uninstalling MPF 
+----------------------
+
+To remove MPF either because it is no longer needed or to perform a clean install run:
+
+.. code-block:: console
+
+  sudo pip3 unstall mpf-mc mpf
 
 
 Specific Hardware Devices
