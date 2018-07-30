@@ -26,10 +26,6 @@ Connect the controller to the I2C port and add the following config section:
    hardware:
      servo_controllers: i2c_servo_controller
 
-   servo_controllers:
-     address: 0x40
-
-
 0x40 is actually the default I2C address for this chip but it might be different
 for some chips.
 
@@ -41,7 +37,17 @@ Add your servos to config:
 
    servos:
      servo1:
-       number: 0
+       number: 0  # first servo on controller
 
 All these config options are explained in-depth in the :doc:`servos: section </config/servos>`
 of the config file reference.
+
+You can also provide an I2C address per servo:
+
+.. code-block:: mpf-config
+
+   servos:
+     servo_on_controller_63_0:
+       number: 63-0  # first servo on board with ID 0x3F / 63
+     servo_on_controller_63_1:
+       number: 63-1  # second servo on board with ID 0x3F / 63
