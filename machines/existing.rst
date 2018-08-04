@@ -4,23 +4,25 @@ Controlling an existing machine with MPF
 If you want to use MPF to write your own custom game code for an *existing*
 Williams or Stern pinball machine, you replace the original CPU board in the
 machine with a modern pinball controller board (called a *hardware controller*)
-such as a :doc:`P-ROC</hardware/multimorphic/index>` or :doc:`FAST</hardware/fast/index>` Controller. That hardware
+such as a :doc:`P-ROC</hardware/multimorphic/index>` Controller (but not P3-Roc).
+That hardware
 controller interfaces with the existing machine's driver boards to control the
 coils, lights, and DMD, and it provides a "bridge" (via USB) to a host
 computer running Python and the Mission Pinball Framework.
 
-============================= ===== ==== ==== ======
-Machine Type                  P-ROC FAST LISY Direct
-============================= ===== ==== ==== ======
-Williams / Bally / Midway WPC X     X
-Williams / Bally System 11    X     X
-Data East                     X     X
-Stern S.A.M.                  X
-Stern Whitestar               X
-Stern SPIKE / SPIKE 2                         X
-Gottlieb System 1                        X
-Gottlieb System 80                       X
-============================= ===== ==== ==== ======
+========================================================================= ===== ==== ======
+Machine Type                                                              P-ROC LISY Direct
+========================================================================= ===== ==== ======
+:doc:`Williams / Bally / Midway WPC </hardware/existing_machines/wpc>`    X
+:doc:`Williams / Bally System 11 </hardware/existing_machines/system11>`  X
+:doc:`Data East </hardware/existing_machines/data_east>`                  X
+:doc:`Stern S.A.M. </hardware/existing_machines/sam>`                     X
+:doc:`Stern Whitestar </hardware/existing_machines/whitestar>`            X
+:doc:`Pinball 2000 </hardware/existing_machines/pinball2000>`             X
+:doc:`Stern SPIKE / SPIKE 2  </hardware/existing_machines/spike>`                    X
+:doc:`Gottlieb System 1 </hardware/existing_machines/gottlieb_system1>`         X
+:doc:`Gottlieb System 80 </hardware/existing_machines/gottlieb_system80>`       X
+========================================================================= ===== ==== ======
 
 Notes:
 
