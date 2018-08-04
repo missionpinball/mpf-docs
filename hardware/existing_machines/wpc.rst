@@ -34,6 +34,9 @@ A few notes:
 For the P-Roc connect your machine according to the
 `P-Roc connector mappings <https://www.multimorphic.com/content/uploads/2017/08/P-ROC_Connector_Mappings_v2.pdf>`_.
 
+More technical information can be found in the
+`PinWiki Williams WPC <http://www.pinwiki.com/wiki/index.php?title=Williams_WPC>`_ page.
+
 
 2. Configuring MPF for WPC machines
 -----------------------------------

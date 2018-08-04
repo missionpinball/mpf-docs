@@ -6,3 +6,6 @@ Data east machines can be controlled using the
 :doc:`WPC controller <wpc>`
 such as the :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
 (not the P3-ROC). This is similar to :doc:`system11`.
+
+More technical information can be found in the
+`PinWiki Data East/Sega <http://www.pinwiki.com/wiki/index.php?title=Data_East/Sega>`_ page.
