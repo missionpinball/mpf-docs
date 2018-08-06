@@ -63,7 +63,11 @@ It might be wise to use multiple fuses (e.g. one per bank of coils).
 
 Common power supplies for 48V:
 
-* Meanwell SP320-48 - Used by Stern Spike
+* Meanwell SP320-48 - Used by Stern Spike (not recommended because it is a bit
+  too weak)
+* Meanwell RSP500-48 - Used by Stern Spike 1 (starting from Ghostbusters) and
+  Spike 2
+* Meanwell SE-600-48 - Used by Spooky
 
 Common power supplies for 70V - 80V (not recommended for new designs):
 
