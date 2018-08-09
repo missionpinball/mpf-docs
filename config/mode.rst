@@ -156,11 +156,10 @@ stopped when the ball ends. Some modes (like the built-in *game* and
 *credit* modes) need to stay running even when the ball ends, so to
 support that you can add ``stop_on_ball_end: false``.
 
-Another use of this option is to retain each player's progress towards
-the mode's completion after draining a ball; allowing the player
-to start where they left off in the mode on the next ball. To retain
-the mode, you can use ``stop_on_ball_end: false`` to keep the state
-of the mode for each player between balls.
+Another use of this option is to retain the mode's progress towards
+completion after draining a ball; allowing the next player to start
+their ball where the previous player left off in the mode. To enable
+this behavior, you can add ``stop_on_ball_end: false``.
 
 However, it is very likely that a mode will be left unfinished (open)
 after the final ball, causing MPF to shutdown unexpectedly.  You will
