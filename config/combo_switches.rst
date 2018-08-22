@@ -73,6 +73,32 @@ make sure this event is only posted if the player hits the flipper buttons
 within 500ms, then you can copy and add this section to your own machine
 config file and it will overwrite this default config.
 
+Here is an example of using flipper_cancel to cancel a show:
+
+.. code-block:: mpf-config
+
+  shows:
+     mode_intro:
+       - duration: 5
+         slides:
+           mode_intro_slide:
+             widgets:
+               - type: text
+                 text: Hit 50 switches to light jackpot
+                 color: white
+                 font_size: 100
+
+  show_player:
+     start_mode_intro_show:
+       mode_intro:
+         loops: 0
+         events_when_stopped: mode_intro_show_ended
+     flipper_cancel:
+       mode_intro:
+         action: stop
+
+The start_mode_intro_show will play for 5 seconds unless both flipper buttons are pressed which will cancel the show.
+
 Combo Settings
 --------------
 
