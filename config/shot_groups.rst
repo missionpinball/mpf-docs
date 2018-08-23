@@ -226,6 +226,20 @@ Resetting a shot group means that every shot in the group
 jumps back to the first state in whatever shot profile is active at
 that time.
 
+restart_events:
+~~~~~~~~~~~~~~~
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+A list of one or more events that will restart all the shots in this shot group.
+A restart is the same as calling reset and enable, so restarting a shot group
+will jump every shot in the group to the first state of that shot's profile and
+immediately enable all the shots.
+
 rotate_events:
 ~~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of

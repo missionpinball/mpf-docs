@@ -203,6 +203,18 @@ Events in this list, when posted, reset this shot. Resetting a
 shot means that it jumps back to the first state in whatever *shot
 profile* is active at that time.
 
+restart_events:
+~~~~~~~~~~~~~
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted, restart this shot. Restarting a shot is
+equivalent to resetting and then enabling the shot, done with a single event.
+
 show_tokens:
 ~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
