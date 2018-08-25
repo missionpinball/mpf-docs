@@ -46,7 +46,7 @@ this to false if you want to manually advance the shot some other way.
 
 block:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
 
 Lets you control whether hits to this shot
 are propagated down to lower priority modes. The default value is true
