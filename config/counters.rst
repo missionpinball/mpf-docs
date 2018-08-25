@@ -38,6 +38,20 @@ The structure of counter logic blocks is like this:
 Note that the actual name of the counter doesn't really matter. Mainly
 it's used in the logs and for event names.
 
+Counters no longer save their state in player variables.
+If you are using something like ``(YOUR_COUNTER_count)`` in a slide or widget
+you can use a :doc:`variable_player </config_players/variable_player>` to restore
+the old behaviour:
+
+.. code-block:: mpf-config
+
+   ##! mode: my_mode
+   variable_player:
+      logicblock_YOUR_COUNTER_updated:
+          YOUR_COUNTER_count:
+              int: value
+              action: set
+
 
 Required settings
 -----------------

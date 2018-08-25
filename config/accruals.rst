@@ -149,4 +149,6 @@ List of one (or more) values, each is a type: ``string``.
 Currently unused.
 
 
+.. include:: /game_logic/logic_blocks/player_variable.rst
+
 .. include:: /game_logic/logic_blocks/common.rst
