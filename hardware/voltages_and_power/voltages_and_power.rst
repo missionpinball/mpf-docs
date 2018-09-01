@@ -167,6 +167,9 @@ Especially for serial LEDs and logic power.
 In case you run into those problems consult with an electric engineer.
 The right capacitors and the right wireing might help with this case for example.
 
+Common "ground" generally refers to the neutral wire of your PSU which should
+not be confused with ground/electric earth.
+See :doc:`ground_and_appliance_classes` for details about ground vs neutral.
 
 Power Filter Boards
 -------------------
