@@ -55,7 +55,8 @@ contain any of the ``lights`` parameters listed on this page, but at least ``num
           number: 9-31
 
 Note that a light must have either ``channels`` or ``number`` defined, but cannot have both.
-
+See :doc:`/mechs/lights/leds` for more details about how to configure channels
+for different types of LEDs.
 color_correction_profile:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``.

@@ -1,5 +1,5 @@
-How to configure LEDs (P-ROC/P3-ROC)
-====================================
+How to configure LEDs on the PD-LED (P-ROC/P3-ROC)
+==================================================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
@@ -63,6 +63,48 @@ address 8, using outputs 0, 1, and 2 as its red, green, and blue connections.
 ``subtype: led`` is only needed on the P-Roc since ``subtype`` defaults to ``led``
 on the P3-Roc defaults. The P-Roc defaults to ``matrix``.
 
+You might connect different color channels to your PD-LED.
+For instance you might have only a red channel:
+
+.. code-block:: mpf-config
+
+  lights:
+      my_red_only_insert:
+        channels:
+           red:
+              - number: 8-0   # board 8 and first channel
+
+
+Alternatively, you can use the same syntax as for `l_led0` above:
+
+.. code-block:: mpf-config
+
+  lights:
+      l_led0:
+        channels:
+           red:
+              - number: 8-0
+           green:
+              - number: 8-1
+           blue:
+              - number: 8-2
+
+
+Or you can configure a white LED:
+
+.. code-block:: mpf-config
+
+  lights:
+      my_white_light:
+        channels:
+           white:
+              - number: 8-4
+
+You can also configure two red channel, green plus white or any other
+combination.
+See :doc:`/mechs/lights/leds` for more details about how to configure channels
+for different types of LEDs.
+
 polarity
 --------
 
@@ -99,3 +141,24 @@ them on. They might be pinkish or blueish instead depending on the brand of
 the LED. To a certain extend this is normal/expected and you can compensate
 for it by configuring
 :doc:`color_correction profiles in light_settings </config/light_settings>`.
+
+
+Serial LEDs on the PD-LED
+-------------------------
+
+The PD-LED supports serial LEDs.
+Let us know in the forum if you want to use this feature and we will
+add a config option for it.
+
+Amplifying PD-LED channels with FETs
+------------------------------------
+
+PD-LED drives LEDs with a current of 22mA.
+However, it cannot exceed its operating voltage and can only drive very few
+LEDs at once.
+If you want to drive more than a few LEDs on one channel (e.g. GIs or long
+strips) you can connect a FET (as stated in the manual).
+This is an example of such a circuit:
+
+.. image:: /hardware/images/FET-LEDs.png
+
