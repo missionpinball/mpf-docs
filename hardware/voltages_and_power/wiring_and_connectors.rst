@@ -5,6 +5,14 @@ Usually there are two types of wires/connectors used in a pinball machine.
 One for all low current connections (i.e. switches or logic) and one for
 high current connections (i.e. coils).
 
+.. warning::
+
+   If you are unsure ask a professional electric engineer. This guide does not
+   provide all information needed to design and operate a
+   high-voltage/high-current system in a pinball machine. Use this at your own
+   risk. Electricity can be dangerous and might kill you or burn down your
+   house.
+
 High Current
 ------------
 
