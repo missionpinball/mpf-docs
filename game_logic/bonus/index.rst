@@ -87,7 +87,6 @@ a final slide.
 
 .. code-block:: mpf-config
 
-  ##! mode: bonus
   #config_version=5
 
   slide_player:
