@@ -9,6 +9,8 @@ rgb_dmds:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``rgb_dmds:`` section of your machine config is where you configure
 the settings for physical RGB DMDs (dot matrix displays). You only need this
 section if you have a RGB DMD connected via USB. If you have a mono DMD,
@@ -45,24 +47,37 @@ you add a ``rgb_dmds:`` section to your config, then under that you
 add an entry for a specific DMD (which can be whatever you want), and then
 you enter one or more of the following settings:
 
-(If you don't include any of the settings below, the default will be used).
+Optional settings
+-----------------
 
-hardware_brightness:
-~~~~~~~~~~~~~~~~~~~~
-Single numeric value, Default: ``0.5``
+The following sections are optional in the ``rgb_dmds:`` section of your config. (If you don't include them, the default will be used).
 
-A brightness multiplier for the DMD. Default is 0.5 which is 50% brightness,
-(because LED RGB DMDs are crazy bright!), but you can adjust this higher or
-lower as needed.
+brightness:
+~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-Note that brightness is closely related to gamma (see below). You'll probably
-want to adjust both of them together.
+Brightness value multiplied in software (as an OpenGL shader in MC).
+Using ``hardware_brightness`` is preferred if your hardware supports it.
 
-.. include:: template_setting.rst
+channel_order:
+~~~~~~~~~~~~~~
+Single value, type: ``string`` (case-insensitive). Default: ``rgb``
+
+Channel order of your rgb dmd.
+Change this if colors are swapped on your hardware.
+Any order (such as ``rgb``, ``grb``, ``brg`` and so) will work.
+
+fps:
+~~~~
+Single value, type: ``integer``. Default: ``30``
+
+How many frames per second this DMD will be updated. Note that some RGB DMDs
+cannot handle the full 30fps, so you might have to dial this back to around
+25 or so or else the DMD won't be able to keep up and will get behind.
 
 gamma:
 ~~~~~~
-Single numeric value, Default: ``2.2``
+Single value, type: ``number`` (will be converted to floating point). Default: ``2.2``
 
 Sets the gamma of the DMD. See :doc:`instructions/gamma_correction` for details.
 
@@ -79,19 +94,32 @@ want to adjust both of them together.
    making it look right. So click the link above and make the adjustment. It's
    a one-time thing.
 
-fps:
-~~~~
-Single value, type: ``integer``. Default: ``30``
+hardware_brightness:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: template_float. Default: ``1.0``
 
-How many frames per second this DMD will be updated. Note that some RGB DMDs
-cannot handle the full 30fps, so you might have to dial this back to around
-25 or so or else the DMD won't be able to keep up and will get behind.
+A brightness multiplier for the DMD (because RGB DMDs are crazy bright).
+Note that brightness is closely related to gamma (see above). You'll probably
+want to adjust both of them together.
+
+.. include:: template_setting.rst
 
 only_send_changes:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Specifies whether every frame is sent to the DMD, or only changed frames.
+
+platform:
+~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the platform this DMD is connected to. The default value of ``None`` means the
+default hardware platform will be used. You only need to change this if you have
+multiple different hardware platforms in use and this coil is not connected
+to the default platform.
+
+See the :doc:`/hardware/platform` guide for details.
 
 source_display:
 ~~~~~~~~~~~~~~~
@@ -101,15 +129,33 @@ The name of the display (from the ``displays:`` section of your machine config) 
 DMD. Whatever's on the source display will be displayed on the DMD. If you don't specify a source, MPF will
 automatically use a source display called "dmd".
 
-platform:
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
 ~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-Single value, type: ``string``. Default: ``None``
+Log level for the file log for this device.
 
-Name of the platform this DMD is connected to. The default value of ``None`` means the
-default hardware platform will be used. You only need to change this if you have
-multiple different hardware platforms in use and this coil is not connected
-to the default platform.
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
 
-See the :doc:`/hardware/platform` guide for details.
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used currently.
 
