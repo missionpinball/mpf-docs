@@ -59,6 +59,7 @@ indicated which type of config file it's valid in.
    dual_wound_coils: <dual_wound_coils>
    event_player: <event_player>
    extra_balls: <extra_balls>
+   extra_ball_groups: <extra_ball_groups>
    fadecandy: <fadecandy>
    fast: <fast>
    fast_coils: <fast_coils>
