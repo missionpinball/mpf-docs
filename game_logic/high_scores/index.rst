@@ -25,7 +25,10 @@ names (or initials) when they've achieved a high score. Features include:
 + Events for high score awards and entry, so you can configure
   high score entry screens.
 
-This is an example:
+Don't have a display to enter initials? See :doc:`high_scores_in_ems` for how
+to use the high score mode without entering initials.
+
+This is an example (for machines with display):
 
 .. code-block:: mpf-config
 
