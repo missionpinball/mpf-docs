@@ -128,7 +128,7 @@ MPF is written in a computer language called "Python". This means you have to in
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Mac platforms, MPF requires Python above 3.4. We lately tested Python 3.6 and it can be used.
+On Mac platforms, MPF requires Python 3.5 or never. We lately tested Python 3.6 and it can be used.
 
 You can download Python 3.6 directly via `this link <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_.
 (Note that the final digit in the Python version number is the "patch" number,

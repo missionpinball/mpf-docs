@@ -6,15 +6,16 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python (3.4, 3.5, or 3.6)
+1. Install Python (3.5, or 3.6)
 ---------------------------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.4, Python 3.5, or Python 3.6 (Python 3.7
-and newer are not currently supported). While MPF will run on Python 3.4, it is recommended
+On Windows platforms, MPF requires Python 3.5, or Python 3.6 (Python 3.7
+and newer are not currently supported). While MPF will run on Python 3.4, some of our
+depenencies dropped support for 3.4 and can no longer be installed. It is recommended
 you use the newest supported version of Python available when you are setting up your PC
 (Python 3.6 as of the time this document was last updated). You can download and install it
 from the Python website. (Keep reading for links)
@@ -53,8 +54,6 @@ number is the "patch" number, so 3.6.4 is a version of Python 3.6.) Or use the d
 + `Python 3.6 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
 + `Python 3.5 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe>`_
 + `Python 3.5 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe>`_
-+ `Python 3.4 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
-+ `Python 3.4 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
 
 Installing Python is pretty straightforward. It's a normal Windows installer.
 

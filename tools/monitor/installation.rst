@@ -62,10 +62,11 @@ of MPF Monitor can work across several versions of MPF.)
 Linux
 -----
 
-Note that these instructions assume you're running Python 3.5. If you're
-running Python 3.4, you'll need to first manually download and install
-`PyQt5 <https://sourceforge.net/projects/pyqt/files/PyQt5>`_. You could also
-potentially run ``apt-get install python3-pyqt5``.
+Note that these instructions assume you're running Python 3.5+.
+You need to download and install
+`PyQt5 <https://sourceforge.net/projects/pyqt/files/PyQt5>`_.
+It is best to use the package manager of your distribution to achieve that.
+For example, in debian/ubuntu, you should run ``apt-get install python3-pyqt5``.
 
 Install mpf-monitor via pip:
 
