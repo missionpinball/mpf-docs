@@ -4,7 +4,7 @@ Tuning Software for Production
 Run MPF in production mode
 --------------------------
 
-Add the ``-p`` flag to the commandline to run MPF in production mode.
+Add the ``-P`` flag to the commandline to run MPF in production mode.
 This will give you some performance gains and reduce the amount of debug
 output.
 MPF will also try to keep running in some cases instead of exiting the game.
