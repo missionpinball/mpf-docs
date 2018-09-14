@@ -129,6 +129,14 @@ Common power supplies (for 12V):
 * Standard ATX power supplies
 * Meanwell RD65A - A cheap 5V and 12V supply
 
+PC Power
+--------
+
+Most machines run embedded PCs which come with their own PSU.
+Sometimes they run off 5V (such as the Raspberry Pi).
+Others use standard ATX power supplies.
+See :doc:`/finalization/power` for details about power on/off.
+
 Electromagnetic Compatibility EMC/EMI
 -------------------------------------
 
