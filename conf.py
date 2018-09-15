@@ -280,8 +280,9 @@ setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 
 build_event_references()
-source_dirs = {"mpf_examples": "/mpf_examples", "mpfmc_examples": "/mpfmc_examples"}
-examples_root = 'examples'
+source_dirs = {os.path.join(os.getcwd(), "mpf_examples"): "/mpf_examples",
+               os.path.join(os.getcwd(), "mpfmc_examples"): "/mpfmc_examples"}
+examples_root = os.path.join(os.getcwd(), 'examples')
 
 b = ExampleBuilder(source_dirs, examples_root)
 b.build()
