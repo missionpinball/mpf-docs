@@ -7,7 +7,7 @@ Light All Top Lanes to Increase Multiplier
 This example shows how to make a classic rule used in many games.  By making the three top lanes light (J, A, and M), the playfield multiplier is increased from 1X to 2X, 3X, 4X, 5X, and then to 10X.  The Right and Left Flipper buttons are used to control a lane change, and ending the ball resets the mode.
 This example is based on Bally's Heavy Metal Meltdown.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
   #config_version=5
 
@@ -42,7 +42,7 @@ This example is based on Bally's Heavy Metal Meltdown.
       shots: top_lane_J, top_lane_A, top_lane_M
       rotate_left_events: s_left_flipper_active
       rotate_right_events: s_right_flipper_active
-      reset_events: 
+      reset_events:
         JAM_lanes_lit_complete: 1s
 
   variable_player:
@@ -75,7 +75,7 @@ This example is based on Bally's Heavy Metal Meltdown.
 
   show_player:
     JAM_lanes_lit_complete:
-      flash: 
+      flash:
         loops: 4
         speed: 4
         show_tokens:
