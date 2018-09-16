@@ -65,7 +65,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # html_logo = None
 html_favicon = '_static/images/icons/favicon.ico'
-html_static_path = ['_static', 'examples']
+html_static_path = ['_static']
 
 # html_extra_path = []  # will be copied to root
 
