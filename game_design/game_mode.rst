@@ -2,7 +2,7 @@ Game Modes
 ==========
 
 Make to Top Lanes Lit to Increase a Multiplier
-------------------------------
+----------------------------------------------
 
 This example shows how to make a classic rule used in many games.  By making the three top lanes light (J, A, and M), the playfield multiplier is increased from 1X to 2X, 3X, 4X, 5X, and then to 10X.  The Right and Left Flipper buttons are used to control a lane change, and ending the ball resets the mode.
 
