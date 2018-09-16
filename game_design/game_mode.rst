@@ -4,15 +4,56 @@ Game Modes
 Light All Top Lanes to Increase Multiplier
 ------------------------------------------
 
-This example shows how to make a classic rule used in many games.  By making the three top lanes light (J, A, and M), the playfield multiplier is increased from 1X to 2X, 3X, 4X, 5X, and then to 10X.  The Right and Left Flipper buttons are used to control a lane change, and ending the ball resets the mode.
+This example shows how to make a classic rule used in many games.
+By making the three top lanes light (J, A, and M), the playfield multiplier
+is increased from 1X to 2X, 3X, 4X, 5X, and then to 10X.
+The Right and Left Flipper buttons are used to control a lane change,
+and ending the ball resets the mode.
 This example is based on Bally's Heavy Metal Meltdown.
 
 .. code-block:: mpf-config
 
-  #config_version=5
+  #! switches:
+  #!   s_top_lane_J:
+  #!     number:
+  #!   s_top_lane_A:
+  #!     number:
+  #!   s_top_lane_M:
+  #!     number:
+  #! lights:
+  #!   l_jam_J:
+  #!     number:
+  #!   l_jam_A:
+  #!     number:
+  #!   l_jam_M:
+  #!     number:
+  #!   JAM_lanes:
+  #!     number:
+  #!   Playfield_2X:
+  #!     number:
+  #!   Playfield_3X:
+  #!     number:
+  #!   Playfield_4X:
+  #!     number:
+  #!   Playfield_5X:
+  #!     number:
+  #!   Playfield_10X:
+  #!     number:
+  #! shows:
+  #!   Playfield_2x_on:
+  #!     - duration: 1
+  #!   Playfield_3x_on:
+  #!     - duration: 1
+  #!   Playfield_4x_on:
+  #!     - duration: 1
+  #!   Playfield_5x_on:
+  #!     - duration: 1
+  #!   Playfield_10x_on:
+  #!     - duration: 1
 
+  ##! mode: JAM_rollover
   mode:
-    start_events: ball_starting
+    start_events: ball_started
     priority: 110
 
   counters:
@@ -100,3 +141,23 @@ This example is based on Bally's Heavy Metal Meltdown.
       Playfield_10x_on:
         show_tokens:
           lights: Playfield_2X, Playfield_3X, Playfield_4X, Playfield_5X, Playfield_10X
+  ##! test
+  #! start_game
+  #! assert_player_variable 1 pf_multiplier
+  #! hit_and_release_switch s_top_lane_J
+  #! hit_and_release_switch s_top_lane_A
+  #! hit_and_release_switch s_top_lane_M
+  #! assert_player_variable 2 pf_multiplier
+  #! advance_time_and_run 2
+  #! hit_and_release_switch s_top_lane_J
+  #! hit_and_release_switch s_top_lane_A
+  #! hit_and_release_switch s_top_lane_M
+  #! assert_player_variable 3 pf_multiplier
+  #! advance_time_and_run 2
+  #! drain_ball
+  #! advance_time_and_run 2
+  #! assert_player_variable 1 pf_multiplier
+  #! hit_and_release_switch s_top_lane_J
+  #! hit_and_release_switch s_top_lane_A
+  #! hit_and_release_switch s_top_lane_M
+  #! assert_player_variable 2 pf_multiplier
