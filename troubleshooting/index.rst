@@ -31,24 +31,24 @@ Run ``mpf diagnosis`` from within your machine folder to see if your installatio
 .. code-block:: console
 
   $ mpf diagnosis
-  
-  
+
+
   MPF version: MPF v0.50.0-dev.11
   MPF install location: /data/home/jan/cloud/flipper/src/mpf/mpf
   Machine folder detected: /data/home/jan/cloud/flipper/src/good_vs_evil
   MPF-MC version: MPF-MC v0.50.0-dev.5 (config_version=5, BCP v1.1, Requires MPF v0.50.0-dev.10)
-  
+
   Serial ports found:
-  /dev/ttyUSB3        
+  /dev/ttyUSB3
       desc: Quad RS232-HS
       hwid: USB VID:PID=0403:6011 LOCATION=1-12
-  /dev/ttyUSB2        
+  /dev/ttyUSB2
       desc: Quad RS232-HS
       hwid: USB VID:PID=0403:6011 LOCATION=1-12
-  /dev/ttyUSB1        
+  /dev/ttyUSB1
       desc: Quad RS232-HS
       hwid: USB VID:PID=0403:6011 LOCATION=1-12
-  /dev/ttyUSB0        
+  /dev/ttyUSB0
       desc: Quad RS232-HS
       hwid: USB VID:PID=0403:6011 LOCATION=1-12
 
@@ -65,7 +65,7 @@ Additionally, you can run the MPF and MPF-MC unit tests (the number of tests may
   Ran 622 tests in 20.818s
 
   OK
-  
+
 Similarly, you can run MPF-MC unit tests (they will take a bit longer and might show some deprecation warnings from kivy):
 
 .. code-block:: console
@@ -76,7 +76,37 @@ Similarly, you can run MPF-MC unit tests (they will take a bit longer and might 
 
   OK
 
-3. Ask in our forum
+3. Debug crashes/segfaults/hangs
+--------------------------------
+
+If you experience a crash/segfault or hang (especially in MC) you can run
+`gdb on python <https://wiki.python.org/moin/DebuggingWithGdb>`_ to find the
+crash or hang.
+You can attach a debugger to the running mc process like this:
+
+.. code-block:: console
+
+  $ ps aux | grep mpf
+  jan       9678 12.4  0.3 1082068 127304 pts/2  SNl+ 23:17   0:06 /usr/bin/python3 /usr/local/bin/mpf mc
+  jan       9760 37.0  0.1 571368 56660 pts/3    Sl+  23:17   0:01 /usr/bin/python3 /usr/local/bin/mpf game -X
+
+In this example ``9678`` is the pid of MC and ``9760`` is the pid of MPF.
+You can then attach gdb:
+
+.. code-block:: console
+
+  $ sudo gdb python3 9678
+  [...]
+  (gdb) thread apply all bt
+  [...]
+  (gdb) thread apply all py-bt
+  [...]
+
+Please send us the complete output of gdb.
+That will help us to figure out the problem.
+
+
+4. Ask in our forum
 -------------------
 
 If you cannot solve the problem ask in our `support forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
