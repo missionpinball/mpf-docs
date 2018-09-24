@@ -330,6 +330,8 @@ is *2 seconds*, etc. If you don't specify a list of eject timeouts, or
 if the length of the list is less than the number of eject targets,
 then the default value of *10 seconds* is used.
 
+See :doc:`/finalization/ball_devices` for details about thouse timeouts.
+
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
