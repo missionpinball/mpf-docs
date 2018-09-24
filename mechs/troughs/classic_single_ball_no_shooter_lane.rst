@@ -1,6 +1,14 @@
 How to configure a classic single-ball trough without shooter lane
 ==================================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style single
 ball drain without shooter lane. This is the type of configuration that some single-ball
 machines use, from EM machines of the 1950s through electronic single ball

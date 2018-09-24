@@ -1,6 +1,14 @@
 How to configure an older style trough with two coils and switches for each ball
 ================================================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style drain
 and trough combination that uses two coils (one to eject the ball from the
 drain hole and a second to release a ball into the plunger lane).

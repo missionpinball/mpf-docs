@@ -1,6 +1,14 @@
 Plunger lanes with no ball switch
 =================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 Modern pinball machines have a switch in the plunger lane that tells
 the software that a ball is sitting in the plunger lane waiting to
 be plunged.

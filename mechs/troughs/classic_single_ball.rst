@@ -1,6 +1,14 @@
 How to configure a classic single-ball trough
 =============================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style single
 ball drain. This is the type of configuration that most (all?) single-ball
 machines use, from EM machines of the 1950s through electronic single ball

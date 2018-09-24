@@ -1,6 +1,14 @@
 Combo (mechanical + coil-fired) plungers
 ========================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide explains how to configure a "combo" plunger lane which has both
 a mechanical spring-powered plunger as well as a coil-fired auto plunge option.
 

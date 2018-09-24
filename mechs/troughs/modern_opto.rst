@@ -1,6 +1,14 @@
 How to configure a modern trough with opto switches
 ===================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use a modern-style trough
 with opto boards. (If you have a modern-style trough which uses mechanical
 leaf switches, use :doc:`this guide <modern_mechanical>` instead.)
