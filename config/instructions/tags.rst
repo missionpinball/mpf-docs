@@ -18,26 +18,30 @@ Some tags will cause events to be generated.  An example of this is a switch dev
        number: 1
        tags: start, skyfall
 
-In this case, whenever the start switch is activated, there will be two events fired.  You will see something like this in the log.
+In this case, whenever the start switch is activated, there will be two events fired.
+You will see something like this in the log:
 
-.. code-block:: mpf-config
+.. code-block:: console
+
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start'====== Args={}
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start_active'====== Args={}
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall_active'====== Args={}
 
-Both events are prefixed with "sw_" as a default.  You can overriide this with the :doc:`/config/mpf.rst` section.
+Both events are prefixed with ``sw_`` as a default.  You can override this with the :doc:`/config/mpf` section.
 
 
 **Power of Tags**
 -----------------
 
-While tags and events can be used interchangeably at times, the real power lies in multiple taggging.  When you use the same tags on multiple devices it can save you coding time and reduce the size of your configurations.
+While tags and events can be used interchangeably at times, the real power lies in multiple taggging.
+When you use the same tags on multiple devices it can save you coding time and reduce the size of your configurations.
 
 Example 1 - Pop Bumpers
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-For this example, a game with 3 popbumpers will all behave in the same way.  To start we will give 100 points for every hit of a pop bumper.
+For this example, a game with 3 popbumpers will all behave in the same way.
+To start we will give 100 points for every hit of a pop bumper.
 
 Firstly we define the popbumper switches.
 
@@ -53,14 +57,17 @@ Firstly we define the popbumper switches.
      mygame_popbumper_right:
        number: 57
        tags: mygame_popbumper
-       
-Now we want to score 100 points every time a pop bumper is hit.  We have two ways of accomplishing this same goal.  One with pure events and one with tags.
+
+Now we want to score 100 points every time a pop bumper is hit.
+We have two ways of accomplishing this same goal.
+One with pure events and one with tags.
 
 Example with events:
 
 .. code-block:: mpf-config
 
-  scoring:
+  ##! mode: my_mode
+  variable_player:
     mygame_popbumper_left_active:
       score: 100
     mygame_popbumper_top_active:
@@ -73,20 +80,26 @@ Now with tags:
 
 .. code-block:: mpf-config
 
-  scoring:
+  ##! mode: my_mode
+  variable_player:
     sw_mygame_popbumper:
       score: 100
 
 
-As you can see, if you have a repeating event you can save yourself some time and coding by using tags.  Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
+As you can see, if you have a repeating event you can save yourself some time and coding by using tags.
+Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
 
 
 Example 2 - Playfield is active
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Another example is tagging specific switches on a playfield to validate if a ball is in play or not.  These would be any switches a ball could hit within regular game play.
+Another example is tagging specific switches on a playfield to validate if a ball is in play or not.
+These would be any switches a ball could hit within regular game play.
 
-Building on the first example, we can add a second tag to the pop bumpers in case there is a loose ball on the playfield.  For our purposes we will check that if a pop bumper is hit, then the skill shot must be disabled.
+Building on the first example, we can add a second tag to the pop bumpers in
+case there is a loose ball on the playfield.
+For our purposes we will check that if a pop bumper is hit, then the skill
+shot must be disabled.
 
 First we add the tags.
 
@@ -110,7 +123,8 @@ Now we perform our logic based on this new tag.
    event_player:
      sw_playfield_active: mygame_disable_skillshot
 
-In this case whenever the playfield has an active ball if will fire the event *mygame_disable_skillshot*.  What you do with the event *mygame_disable_skillshot* is up to you.
+In this case whenever the playfield has an active ball if will fire the event *mygame_disable_skillshot*.
+What you do with the event *mygame_disable_skillshot* is up to you.
 
 
 **Reserved Tags in MPF**
@@ -120,13 +134,33 @@ MPF contains some reserved tags that are used for certain devices.  An example o
 
 .. code-block:: mpf-config
 
-   mygame_balldevice_trough:
-     ball_switches: mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3
-     eject_coil: mygame_coil_trough_eject
-     eject_targets: mygame_balldevice_shooter_lane
-     tags: trough, home
-    
-    
-The two tags on the ball trough device assist MPF in determining various characteristics of this device.  Namely that it is considered  a 'home' device where balls can come to rest when a game is not in play.  And the 'trough' tag to help MPF denote that this is a ball trough and not some other style of captive device like a saucer.
+   #! switches:
+   #!   s_test1:
+   #!     number: 1
+   #!   mygame_switch_trough_1:
+   #!     number: 2
+   #!   mygame_switch_trough_2:
+   #!     number: 3
+   #!   mygame_switch_trough_3:
+   #!     number: 4
+   #! coils:
+   #!   mygame_coil_trough_eject:
+   #!     number: 1
+   ball_devices:
+   #!   mygame_balldevice_shooter_lane:
+   #!     ball_switches: s_test1
+   #!     mechanical_eject: True
+     mygame_balldevice_trough:
+       ball_switches: mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3
+       eject_coil: mygame_coil_trough_eject
+       eject_targets: mygame_balldevice_shooter_lane
+       tags: trough, home
 
-   
+The two tags on the ball trough device assist MPF in determining various
+characteristics of this device.
+Namely that it is considered  a 'home' device where balls can come to rest
+when a game is not in play.
+And the 'trough' tag to help MPF denote that this is a ball trough and not
+some other style of captive device like a saucer.
+
+
