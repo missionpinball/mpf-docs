@@ -80,3 +80,5 @@ documentation to see how you can add slides and widgets to your display.
 Also, if you want to make the content on your window look like dots, or if you
 want to show a "virtual" DMD in your window, check out the other guides in this
 section.
+
+See :doc:`multiple_screens` for informations about using two or more LCDs.

@@ -86,3 +86,4 @@ display type you want to use in your machine.
    rgb_dmd
    adding_dot_look_to_lcd
    alpha_numeric
+   multiple_screens
