@@ -4,7 +4,7 @@ Understanding tags
 **General Theory**
 ------------------
 
-A common definition of a tag is "a label attached to someone or something for the purpose of identification or to give other information".  This is the whole idea behind tags in MPF.  You can add one or more tags on to the various parts of your game.  These tags can be used in various ways such as firing events or identifying a device in some way.
+A common definition of a tag is "a label attached to someone or something for the purpose of identification or to give other information".  This sums up the whole idea behind tags in MPF.  You can add one or more tags on to the various parts of your game.  These tag identifiers can then be used in various ways such as firing events or identifying a device in some particular way.
 
 **Tags and Events**
 -------------------
@@ -18,13 +18,21 @@ Some tags will cause events to be generated.  An example of this is a switch dev
        number: 1
        tags: start, skyfall
 
-In this case, whenever the start switch is activated, there will be two events.  sw_start and sw_skyfall.  They are both prefixed with "sw_" as a default.  You can overriide this with the :doc:`/config/mpf.rst` section.
+In this case, whenever the start switch is activated, there will be two events fired.  You will see something like this in the log.
+
+.. code-block:: mpf-config
+   2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start'====== Args={}
+   2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_start_active'====== Args={}
+   2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}
+   2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall_active'====== Args={}
+
+Both events are prefixed with "sw_" as a default.  You can overriide this with the :doc:`/config/mpf.rst` section.
 
 
 **Power of Tags**
 -----------------
 
-While most tags can be subsituted with events the power lies in multiple taggging whereby you use the same tags on multiple devices which can save you time and reduce the size of your configurations.
+While tags and events can be used interchangeably at times, the real power lies in multiple taggging.  When you use the same tags on multiple devices it can save you coding time and reduce the size of your configurations.
 
 Example 1 - Pop Bumpers
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,13 +78,13 @@ Now with tags:
       score: 100
 
 
-As you can see, if you have a repeating event you can save yourself some time and coding by using tags.  Any switch tagged as mygame_popbumper will echo a sw_mygame_popbumper event.
+As you can see, if you have a repeating event you can save yourself some time and coding by using tags.  Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
 
 
 Example 2 - Playfield is active
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Another example is tagging specific switches on a playfield to denote if a ball is in play or not.  These would be any switches a ball could hit within regular game play.
+Another example is tagging specific switches on a playfield to validate if a ball is in play or not.  These would be any switches a ball could hit within regular game play.
 
 Building on the first example, we can add a second tag to the pop bumpers in case there is a loose ball on the playfield.  For our purposes we will check that if a pop bumper is hit, then the skill shot must be disabled.
 
@@ -102,7 +110,7 @@ Now we perform our logic based on this new tag.
    event_player:
      sw_playfield_active: mygame_disable_skillshot
 
-In this case whenever the playfield has an active ball if will fire the event mygame_disable_skillshot.  What you do with the event mygame_disable_skillshot is up to you.
+In this case whenever the playfield has an active ball if will fire the event *mygame_disable_skillshot*.  What you do with the event *mygame_disable_skillshot* is up to you.
 
 
 **Reserved Tags in MPF**
@@ -119,6 +127,6 @@ MPF contains some reserved tags that are used for certain devices.  An example o
      tags: trough, home
     
     
-The two tags assist MPF in determine various characteristics of this device.  Namely that it is considered  a 'home' device where balls can come to rest when a game is not in play.  And the 'trough' tag to help MPF denote that this is a ball trough.
+The two tags on the ball trough device assist MPF in determining various characteristics of this device.  Namely that it is considered  a 'home' device where balls can come to rest when a game is not in play.  And the 'trough' tag to help MPF denote that this is a ball trough and not some other style of captive device like a saucer.
 
    
