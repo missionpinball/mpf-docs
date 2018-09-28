@@ -34,7 +34,7 @@ Both events are prefixed with ``sw_`` as a default.  You can override this with 
 **Power of Tags**
 -----------------
 
-While tags and events can be used interchangeably at times, the real power lies in multiple taggging.
+While tags and events can be used interchangeably at times, the real power lies in multiple tagging.
 When you use the same tags on multiple devices it can save you coding time and reduce the size of your configurations.
 
 Example 1 - Pop Bumpers
@@ -93,38 +93,31 @@ Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
 Example 2 - Playfield is active
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Another example is tagging specific switches on a playfield to validate if a ball is in play or not.
-These would be any switches a ball could hit within regular game play.
+Another example is tagging specific switches on a playfield to validate if a
+ball is in play or not.
+These would be any switches a ball could hit within regular game play which
+are not part of a device.
+Some devices such as drop targets will trigger their own switch during ball
+search and we do not want them to end ball search doing that.
+Therefore, they got built-in support for marking the playfield active and your
+should not tag those switches (MPF will also complain if you do).
 
-Building on the first example, we can add a second tag to the pop bumpers in
-case there is a loose ball on the playfield.
-For our purposes we will check that if a pop bumper is hit, then the skill
-shot must be disabled.
+For our purposes we will check if a ball hits the roll over in the orbit
+after it was plunged.
+At that point it is obviously on the playfield and ball search should not
+start.
 
-First we add the tags.
+All we need to do is add a tag:
 
 .. code-block:: mpf-config
 
    switches:
-     mygame_popbumper_left:
+     mygame_orbit_l:
        number: 55
-       tags: mygame_popbumper, playfield_active
-     mygame_popbumper_top:
+       tags: playfield_active
+     mygame_orbit_r:
        number: 56
-       tags: mygame_popbumper, playfield_active
-     mygame_popbumper_right:
-       number: 57
-       tags: mygame_popbumper, playfield_active
-
-Now we perform our logic based on this new tag.
-
-.. code-block:: mpf-config
-
-   event_player:
-     sw_playfield_active: mygame_disable_skillshot
-
-In this case whenever the playfield has an active ball if will fire the event *mygame_disable_skillshot*.
-What you do with the event *mygame_disable_skillshot* is up to you.
+       tags: playfield_active
 
 
 **Reserved Tags in MPF**
