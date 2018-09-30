@@ -20,8 +20,25 @@ Electronically, all of those mechs consist of a switch or opto and a coil to
 eject the ball.
 
 .. image:: /mechs/images/scoop_front.jpg
+   :scale: 25%
+   :align: left
+   :alt: Scoop from front
+
 .. image:: /mechs/images/scoop_back.jpg
+   :scale: 25%
+   :align: left
+   :alt: Scoop from back
+
 .. image:: /mechs/images/scoop_side.jpg
+   :scale: 25%
+   :align: left
+   :alt: Scoop from side
+
+.. |clearfloat|  raw:: html
+
+    <div style="clear: both;"></div>
+
+|clearfloat|
 
 In MPF, you configure them as :doc:`ball devices </mechs/ball_devices/index>`
 since they can count balls and choose to keep or eject it.
@@ -49,7 +66,7 @@ It is very common to delay the game when the ball is inside a scoop/VUK/saucer
 to show animations and play sounds.
 You can achieve this using a :doc:`queue_relay_player </config/queue_relay_player>`
 in your mode (you might want to use
-:doc`conditional events </events/overview/conditional>` to only trigger it when
+:doc:`conditional events </events/overview/conditional>` to only trigger it when
 certain condition match):
 
 .. code-block:: mpf-config
@@ -113,6 +130,6 @@ After the show ended it will eject normally.
 The same can be achieved using a :doc:`ball_hold device </config/ball_holds>`.
 If you want your saucer/VUK/scoop to lock a ball for a
 :doc:`multiball </config/multiballs>` use
-a `ball_lock device </config/ball_locks>` instead (see
+a :doc:`ball_lock device </config/ball_locks>` instead (see
 :doc:`multiball </game_logic/multiballs/index>` in the game design section for
 more details).
