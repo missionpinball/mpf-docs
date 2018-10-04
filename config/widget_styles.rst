@@ -32,7 +32,8 @@ For instance, a default style for all
 Specifying widget styles
 ------------------------
 
-You can also specify a style for a certain widget.
+You can also specify re-usable styles and apply them to widgets. In the following
+example, the text "HELLO" will render at font size 100:
 
 .. code-block:: mpf-config
 
@@ -45,3 +46,32 @@ You can also specify a style for a certain widget.
        - type: text
          text: HELLO
          style: big_style
+
+You can supply multiple styles to a single widget, and they will be applied in
+the order given.
+
+.. code-block:: mpf-config
+
+  widget_styles:
+    warning_text:
+      font_size: 12
+      color: yellow
+    bottom_left:
+      anchor_x: left
+      anchor_y: bottom
+      x: 5
+      y: 5
+    hurryup:
+      color: red
+
+  widgets:
+    timer_runout:
+      - type: text
+        text: Hurry!
+        style: warning_text, bottom_left, hurryup
+
+In the above example, the text "Hurry!" will be anchored in the lower-left of
+the display and rendered at size 12 and color red. Notice that the color from
+the *hurryup* style overwrites the color from *warning_text* style, because of
+the order the styles are listed in the widget.
+

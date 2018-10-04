@@ -168,11 +168,15 @@ The default value is ``ffffffff`` which is white at 100% opacity.
 style:
 ~~~~~~
 
-The name of the style you want to apply to this widget. Note that styles must
-be previously defined someone in your config in order to use them. Also you can
-override any setting from the style by also manually including it in the
-widget config. See the :doc:`style documentation </displays/widgets/styles>`
+The name of the style (or styles) you want to apply to this widget. Note that
+styles must be previously defined someone in your config in order to use them.
+Also you can override any setting from the style by also manually including it
+in the widget config. See the :doc:`style documentation </displays/widgets/styles>`
 for details.
+
+*New in MPF 0.51:* Multiple style names can be provided for this setting, and
+the corresponding styles will be applied to the widget sequentially. As a result,
+individual style names cannot have spaces in them.
 
 The default value is ``None`` which means no style is used.
 
