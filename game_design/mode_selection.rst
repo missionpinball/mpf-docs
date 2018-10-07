@@ -322,3 +322,36 @@ Use this to delay the start of a player's first ball until they select a mode:
 You can replace ``player_turn_starting{player.ball==0}`` with just ``player_turn_starting`` to have the selection
 on every ball (but not on extra balls). If you also want to trigger is on extra balls use
 ``ball_starting``.
+
+Using the start button to select modes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Normally, pressing the start button will cause MPF to add another player.
+To suppress this during mode selection you can do the following:
+
+.. code-block:: mpf-config
+
+   # Add the following to the game section of your machine's config.yaml
+   # This will disable the start button for adding players
+   game:
+      add_player_switch_tag: add_player
+
+   ##! mode: attract
+   # Add this to your attract.yaml
+   event_player:
+      s_start_active: sw_add_player
+
+   ##! mode: game_running
+   # Have something in your base mode to trigger another mode (e.g. the carousel above)
+   # and in that mode have the following (to reenable the start button):
+   event_player:
+      s_start_active: sw_add_player
+
+   #! ##! test
+   #! start_game
+   #! assert_player_count 1
+   #! hit_and_release_switch s_start
+   #! assert_player_count 1
+   #! start_mode game_running
+   #! hit_and_release_switch s_start
+   #! assert_player_count 2
