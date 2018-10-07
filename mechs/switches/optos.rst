@@ -129,8 +129,8 @@ resistor to power without any current limiting or it will break/burn.
 
 Part numbers:
 
-* Transmitter: A16908 or A14231
-* Receiver: A16909 or A14232
+* Transmitter: A-16908 or A-14231
+* Receiver: A-16909 or A-14232
 
 Diodes used (in case you need to replace them):
 
