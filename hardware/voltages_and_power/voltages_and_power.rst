@@ -51,11 +51,19 @@ Those are more expensive, heavier and harder to get nowadays.
 They are generally not recommended for new designs.
 If you want to produce a machine this will also be harder to certify in most
 countries.
+Some people use 24V supplies which technically works but is not recommended
+because coils tend to be quite weak and unreliable in those settings.
 
 A large capacitor might help to keep this rail stable since pulsing and PWMing
 coil causes large electric and magnetic spikes.
 In some cases a PSU might turn off while driving coils without a capacitor on
 this rail.
+In other cases pulses might be unstable because the voltage will drop too much
+during the pulse (seems to be common with 24V supplies).
+If you are increasing pulse times and there seems to be no change in the power
+of the coil you are likely experiencing the second issue.
+Adding large capacitors or using a power entry board (see below) is recommended
+in those cases.
 
 You want to use at least one fuse on the HV rail to prevent coils from burning.
 Most coils will start burning after a while if you enable them permanently
