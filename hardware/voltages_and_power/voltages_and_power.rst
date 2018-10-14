@@ -4,6 +4,8 @@ Voltages and Power
 A pinball machine uses multiple different voltages for different purposes.
 You need at least one power supply unit (PSU) to transform the AC power
 to multiple DC rails.
+See :doc:`wiring_and_connectors` for more details on the wires thickness and
+connectors to use for the different power rails below.
 
 .. warning::
 
