@@ -1,6 +1,16 @@
 Shots
 =====
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/shots`                                                         |
++------------------------------------------------------------------------------+
+| :doc:`/config/shot_profiles`                                                 |
++------------------------------------------------------------------------------+
+| :doc:`/config/shot_groups`                                                   |
++------------------------------------------------------------------------------+
+
 In MPF, a "shot" is a switch (or combination) of switches that the player shoots
 for. Examples include:
 
@@ -11,16 +21,11 @@ for. Examples include:
 Most shots have lights or LEDs associated with them which are on, off, flashing, and/or
 certain colors to reflect what "state" the shot is in.
 
-
 Broadly speaking, a shot is anything the player shoots at during a
 game. It could be a standup target, a lane, a ramp, a loop, a drop
 target, a pop bumper, a toy, etc.
 
-
-
-You can read the :doc:`full shots documentation </game_logic/shots/index>` for
-details, but the short version
-is that in MPF, you define switches (or a sequence of switches) as a "shot". Then
+In MPF, you define switches (or a sequence of switches) as a "shot". Then
 whenever that shot is made, MPF posts events which you can use to trigger scores,
 achievements, shows, etc.
 
@@ -65,6 +70,44 @@ mentioned, you probably just want to score the million points for the jackpot if
 shot is made while the multiball mode is running and *not* score the 1,000 points
 for that shot from the base mode even though the base mode is still running under the
 multiball mode.
+
+Example
+-------
+
+This is an example of a shot in a mode:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!    lane_l:
+    #!       number:
+    ##! mode: inlanes
+    shots:
+        my_shot:
+            switch: lane_l
+            show_tokens:
+                light: lane_l
+
+The shot will use the default profile which has the states ``unlit`` and ``lit``.
+It will start ``unlit`` and go to ``lit`` after the first hit.
+The first hit will post :doc:`shot_my_shot_unlit_hit </events/shot_state_hit>`
+and the second hit will post
+:doc:`shot_my_shot_lit_hit </events/shot_state_hit>`.
+Those events are commonly used to trigger logic based on the shot.
+
+
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/shot_hit`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/events/shot_profile_hit`                                              |
++------------------------------------------------------------------------------+
+| :doc:`/events/shot_profile_state_hit`                                        |
++------------------------------------------------------------------------------+
+| :doc:`/events/shot_state_hit`                                                |
++------------------------------------------------------------------------------+
+
 
 .. toctree::
 
