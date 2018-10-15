@@ -57,5 +57,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/combo_switch_state`
-* :doc:`/events/flipper_cancel`
+.. include:: /events/include_combo_switches.rst

@@ -42,6 +42,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/drop_target_bank_name_down`
-* :doc:`/events/drop_target_bank_name_up`
-* :doc:`/events/drop_target_bank_name_mixed`
+.. include:: /events/include_drop_target_banks.rst

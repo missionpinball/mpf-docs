@@ -122,8 +122,7 @@ This is an example:
            chimes: None, chime1, chime2, chime3, None
            lights_tag: player2
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/reel_name_advance`                                             |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+.. include:: /events/include_score_reels.rst

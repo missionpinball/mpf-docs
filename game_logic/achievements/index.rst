@@ -75,7 +75,7 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/achievement_name_state_state`
+.. include:: /events/include_achievements.rst
 * Plus any custom events as defined in the achievement's configuration in your
   config files.
 

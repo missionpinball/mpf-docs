@@ -96,20 +96,14 @@ and the second hit will post
 Those events are commonly used to trigger logic based on the shot.
 
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/shot_hit`                                                      |
-+------------------------------------------------------------------------------+
-| :doc:`/events/shot_profile_hit`                                              |
-+------------------------------------------------------------------------------+
-| :doc:`/events/shot_profile_state_hit`                                        |
-+------------------------------------------------------------------------------+
-| :doc:`/events/shot_state_hit`                                                |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+.. include:: /events/include_shots.rst
 
 
 .. toctree::
 
    shot_group
    shot_profiles
+   sequence_shots

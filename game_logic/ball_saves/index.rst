@@ -71,9 +71,5 @@ Related How To guides
 
 Related Events
 --------------
-* :doc:`/events/ball_save_name_disabled`
-* :doc:`/events/ball_save_name_enabled`
-* :doc:`/events/ball_save_name_grace_period`
-* :doc:`/events/ball_save_name_hurry_up`
-* :doc:`/events/ball_save_name_saving_ball`
-* :doc:`/events/ball_save_name_timer_start`
+
+.. include:: /events/include_ball_saves.rst

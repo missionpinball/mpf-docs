@@ -42,9 +42,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/magnet_name_flinged_ball`
-* :doc:`/events/magnet_name_flinging_ball`
-* :doc:`/events/magnet_name_grabbed_ball`
-* :doc:`/events/magnet_name_grabbing_ball`
-* :doc:`/events/magnet_name_released_ball`
-* :doc:`/events/magnet_name_releasing_ball`
+.. include:: /events/include_magnets.rst

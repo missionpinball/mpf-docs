@@ -56,4 +56,5 @@ the prefix for kickbacks is ``device.kickbacks.<name>``.
 
 Related Events
 --------------
-* :doc:`/events/kickback_name_fired`
+
+.. include:: /events/include_kickbacks.rst

@@ -74,3 +74,9 @@ Describes an event that will cause this shot group to reset back to its original
 Enable/Disable Events:
 ~~~~~~~~~~~~~~~~~~~~~~
 Describe events that will cause this shot group to be enabled/disabled, in this case we are using Ball_Started and Ball_Ending.
+
+
+Related Events
+--------------
+
+.. include:: /events/include_shot_groups.rst

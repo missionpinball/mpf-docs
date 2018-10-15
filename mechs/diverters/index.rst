@@ -106,7 +106,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/diverter_name_activating`
-* :doc:`/events/diverter_name_deactivating`
-* :doc:`/events/diverter_name_disabling`
-* :doc:`/events/diverter_name_enabling`
+.. include:: /events/include_diverters.rst

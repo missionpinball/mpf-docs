@@ -45,6 +45,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/ball_hold_name_balls_released`
-* :doc:`/events/ball_hold_name_full`
-* :doc:`/events/ball_hold_name_held_ball`
+.. include:: /events/include_ball_holds.rst

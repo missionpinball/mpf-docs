@@ -74,11 +74,7 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/multiball_name_ended`
-* :doc:`/events/multiball_name_lost_ball`
-* :doc:`/events/multiball_name_shoot_again`
-* :doc:`/events/multiball_name_shoot_again_ended`
-* :doc:`/events/multiball_name_started`
+.. include:: /events/include_multiballs.rst
 
 .. toctree::
    :hidden:

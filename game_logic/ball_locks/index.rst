@@ -53,13 +53,7 @@ the prefix for ball locks is ``device.ball_locks.<name>``.
 *lock_queue*
    List of pairs of the device & ball counts that are queued to be released.
 
-Related How To guides
----------------------
-
-.. todo:: :doc:`/about/help_us_to_write_it`
-
 Related Events
 --------------
-* :doc:`/events/ball_lock_name_balls_released`
-* :doc:`/events/ball_lock_name_full`
-* :doc:`/events/ball_lock_name_locked_ball`
+
+.. include:: /events/include_ball_locks.rst

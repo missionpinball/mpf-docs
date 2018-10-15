@@ -61,8 +61,7 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/drop_target_name_down`
-* :doc:`/events/drop_target_name_up`
+.. include:: /events/include_drop_targets.rst
 
 .. toctree::
 

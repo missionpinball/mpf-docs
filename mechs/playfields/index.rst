@@ -47,11 +47,7 @@ the prefix for playfields is ``device.playfields.<name>``.
 Related Events
 --------------
 
-* :doc:`/events/sw_playfield_active`                                           |
-* :doc:`/events/unexpected_ball_on_playfield`                                  |
-* :doc:`/events/playfield_active`                                              |
-* :doc:`/events/playfield_ball_count_change`                                   |
-* :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
+.. include:: /events/include_playfields.rst
 
 Other playfield concepts
 ------------------------

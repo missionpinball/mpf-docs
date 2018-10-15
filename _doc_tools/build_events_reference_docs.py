@@ -35,20 +35,20 @@ class EventDocParser(object):
                             elif statement.targets[0].id == "config_section":
                                 config_section = str(statement.value.s)
 
-            elif isinstance(x, ast.Str) and (x.s.strip().lower().startswith(
-                    'event:')):
-                event, rst = self.parse_string(x)
+                for y in ast.walk(x):
+                    if isinstance(y, ast.Str) and (y.s.strip().lower().startswith('event:')):
+                        event, rst = self.parse_string(y)
 
-                if event:
-                    event = event.strip('.')
+                        if event:
+                            event = event.strip('.')
 
-                if rst:
-                    filename = self.create_file(event, rst)
-                    self.file_list.append((event, filename))
+                        if rst:
+                            filename = self.create_file(event, rst)
+                            self.file_list.append((event, filename))
 
-                if config_section and rst:
-                    self.device_events[config_section].append(event)
-                    self.device_labels[config_section] = class_label
+                        if config_section and rst:
+                            self.device_events[config_section].append(event)
+                            self.device_labels[config_section] = class_label
 
     def write_index(self):
 
@@ -119,6 +119,17 @@ Device Indexes
 
             with open(os.path.join(self.rst_path, 'index_{}.rst'.format(config_section)), 'w') as f:
                 f.write(rst)
+
+            rst = ""
+
+            for event in events:
+                rst += '* :doc:`/events/{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+
+            rst += "\n"
+
+            with open(os.path.join(self.rst_path, 'include_{}.rst'.format(config_section)), 'w') as f:
+                f.write(rst)
+
 
         with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
             f.write(index)
