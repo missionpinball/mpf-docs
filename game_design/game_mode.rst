@@ -1,6 +1,12 @@
 Game Modes
 ==========
 
+Weak flipper modes
+------------------
+
+See: :doc:`/mechs/flippers/weak_flippers`.
+
+
 Light All Top Lanes to Increase Multiplier
 ------------------------------------------
 

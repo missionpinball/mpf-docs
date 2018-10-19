@@ -67,6 +67,7 @@ Related How To guides
    single_wound
    disabled_flippers
    enabling_secondary_flippers
+   weak_flippers
 
 Related Events
 --------------
