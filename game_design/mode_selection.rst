@@ -320,7 +320,7 @@ Use this to delay the start of a player's first ball until they select a mode:
 
 
 You can replace ``player_turn_starting{player.ball==0}`` with just ``player_turn_starting`` to have the selection
-on every ball (but not on extra balls). If you also want to trigger is on extra balls use
+on every ball (but not on extra balls). If you also want to trigger it on extra balls use
 ``ball_starting``.
 
 Using the start button to select modes
