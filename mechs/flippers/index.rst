@@ -22,7 +22,7 @@ different ways they've been wired over the years), as well as a lot of different
 options for how flippers are fine tuned.
 
 MPF also has support for various "novelty" flipper modes (no-hold flippers,
-reversed flipper buttons, weak flippers, etc.)
+reversed flipper buttons, :doc:`weak flippers <weak_flippers>`, etc.)
 
 We recommend you read the :doc:`/mechs/coils/dual_vs_single_wound`
 guide to understand the difference between "dual wound" and "single wound"
