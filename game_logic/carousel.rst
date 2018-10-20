@@ -1,5 +1,5 @@
 Carousel
-============
+========
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
@@ -136,9 +136,142 @@ You can then use the carousel_<item>_selected event to start the mode that was s
         type: move_in
         direction: right
 
+Doctor Who Carousel
+-------------------
+        
+The following example is based around Bally's Doctor Who.  When the player starts a game, the player is shown via a carousel the option to pick eight modes, each representing a certain Doctor.  The flipper buttons control the carousel right and. left When the Launch Button is pressed, the game starts the mode selected by the player and launches the ball.
+
+.. code-block:: mpf-config
+
+    #config_version=5
+    
+    ##carousel.yaml
+    ## ./pinball/machine_files/your_machine/modes/carousel/config/
+
+    mode:
+      start_events: ball_starting
+      stop_events: carousel_Doctor1_selected, carousel_Doctor2_selected, carousel_Doctor3_selected, carousel_Doctor4_selected, carousel_Doctor5_selected, carousel_Doctor6_selected, carousel_Doctor7_selected, carousel_Doctor8_selected
+      code: mpf.modes.carousel.code.carousel.Carousel
+      priority: 125
+
+    mode_settings:
+      selectable_items: Doctor1, Doctor2, Doctor3, Doctor4, Doctor5, Doctor6, Doctor7, Doctor8
+      select_item_events: sw_launch_active
+      next_item_events: sw_right_flipper_active
+      previous_item_events: sw_left_flipper_active
+
+    slide_player:
+      carousel_Doctor1_highlighted: select_Doctor1
+      carousel_Doctor2_highlighted: select_Doctor2
+      carousel_Doctor3_highlighted: select_Doctor3
+      carousel_Doctor4_highlighted: select_Doctor4
+      carousel_Doctor5_highlighted: select_Doctor5
+      carousel_Doctor6_highlighted: select_Doctor6
+      carousel_Doctor7_highlighted: select_Doctor7
+      carousel_Doctor8_highlighted: select_Doctor8
+
+    slides:
+      select_Doctor1:
+        widgets:
+          - type: text
+            text: Doctor 1
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor2:
+        widgets:
+          - type: text
+            text: Doctor 2
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor3:
+        widgets:
+          - type: text
+            text: Doctor 3
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor4:
+        widgets:
+          - type: text
+            text: Doctor 4
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor5:
+        widgets:
+          - type: text
+            text: Doctor 5
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor6:
+        widgets:
+          - type: text
+            text: Doctor 6
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor7:
+        widgets:
+          - type: text
+            text: Doctor 7
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+      select_Doctor8:
+        widgets:
+          - type: text
+            text: Doctor 8
+            font_size: 10
+            color: yellow
+        transition:
+          type: move_in
+          direction: right
+          
+    event_player:
+      select_Doctor1: mode_Doctor_1_start
+      select_Doctor2: mode_Doctor_2_start
+      select_Doctor3: mode_Doctor_3_start
+      select_Doctor4: mode_Doctor_4_start
+      select_Doctor5: mode_Doctor_5_start
+      select_Doctor6: mode_Doctor_6_start
+      select_Doctor7: mode_Doctor_7_start
+      select_Doctor8: mode_Doctor_8_start
+  
+Then, each mode that the carousel can start is set up with the following.
+  
+.. code-block:: mpf-config 
+
+    #config_version=5
+
+    ##Example:  Doctor_1.yaml
+
+    mode:
+      start_events: carousel_Doctor1_selected
+      stop_events: ball_ended
+      priority: 130
+  
+    ##Then the rest of the mode's code.
 
 +------------------------------------------------------------------------------+
 | Related How To guides                                                        |
 +==============================================================================+
 | :doc:`/game_design/index`                                                    |
 +------------------------------------------------------------------------------+
+
