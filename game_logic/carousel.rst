@@ -240,6 +240,7 @@ Then, each mode that the carousel can start is set up with the following.
 
     #config_version=5
 
+    ##! mode: Doctor_1
     ##Example:  Doctor_1.yaml
 
     mode:
