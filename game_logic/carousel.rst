@@ -145,7 +145,8 @@ The following example is based around Bally's Doctor Who.  When the player start
 
     #config_version=5
     
-    ##carousel.yaml
+    ##! mode: carousel
+    # put this in your modes/carousel/config/carousel.yaml
     ## ./pinball/machine_files/your_machine/modes/carousel/config/
 
     mode:
