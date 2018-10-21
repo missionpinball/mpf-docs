@@ -137,7 +137,7 @@ To do this, run the following command from the command prompt:
 
 .. code-block:: doscon
 
-    pip install mpf-mc --pre
+    pip install mpf mpf-mc --pre
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
@@ -146,11 +146,11 @@ and install it onto your computer.
 
 .. note::
 
-   Since MPF 0.50 is not yet released, the pip command you run has a **--pre**
+   Since MPF 0.51 is not yet released, the pip command you run has a **--pre**
    at the end which tells it to get the latest "pre-release" version. Once MPF
    0.50 is released, you won't need the **--pre**. If you run pip without the
-   **--pre** now, you will get MPF 0.33, which is fine, but then you need to
-   read the 0.33 documentation, not this 0.50 documentation.
+   **--pre** now, you will get MPF 0.50, which is fine, but then you need to
+   read the 0.50 documentation, not this 0.51/dev documentation.
 
 Pip packages can include dependencies, which means that when you run this
 command, you'll see a bunch (like 20 or so) packages get downloaded and installed. The
@@ -165,7 +165,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN>pip install mpf-mc --pre
+   C:\Users\BRIAN MADDEN>pip install mpf mpf-mc --pre
    Collecting mpf-mc
      Downloading mpf_mc-0.50.0.dev5-cp34-none-win32.whl (6.4MB)
        100% |################################| 6.4MB 176kB/s
@@ -269,7 +269,7 @@ this:
 .. code-block:: doscon
 
    C:\Users\BRIAN MADDEN> mpf --version
-   MPF v0.50.0
+   MPF v0.51.0
 
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
@@ -322,6 +322,9 @@ will download and install them.
    several migration steps to modify your configuration files or they will not
    work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
    for step-by-step instructions.
+
+Install the dev version
+-----------------------
 
 To install the latest dev release (not generally recommended) which allows you to try bleeding-edge features run:
 
