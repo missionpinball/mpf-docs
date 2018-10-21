@@ -158,7 +158,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN>pip install mpf-mc --pre
+   C:\Users\BRIAN MADDEN>pip install mpf-mc
    Collecting mpf-mc
      Downloading mpf_mc-0.50.0.dev5-cp34-none-win32.whl (6.4MB)
        100% |################################| 6.4MB 176kB/s
@@ -315,6 +315,9 @@ will download and install them.
    several migration steps to modify your configuration files or they will not
    work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
    for step-by-step instructions.
+
+Installing the dev version
+--------------------------
 
 To install the latest dev release (not generally recommended) which allows you to try bleeding-edge features run:
 
