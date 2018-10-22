@@ -24,21 +24,21 @@ This is a basic example:
      stop_events: my_mode_succeeded
 
    timers:
-      timer1:
+      t1:
          start_value: 3
          end_value: 0
          direction: down
          control_events:
             - action: restart
               event: timer1_start
-      timer2:
+      t2:
          start_value: 3
          end_value: 0
          direction: down
          control_events:
             - action: restart
               event: timer2_start
-      timer3:
+      t3:
          start_value: 3
          end_value: 0
          direction: down
@@ -47,9 +47,9 @@ This is a basic example:
               event: timer3_start
 
    event_player:
-      timer1_start{device.timers.timer2.running and device.timers.timer3.running}: my_mode_succeeded
-      timer2_start{device.timers.timer1.running and device.timers.timer3.running}: my_mode_succeeded
-      timer3_start{device.timers.timer1.running and device.timers.timer2.running}: my_mode_succeeded
+      timer_t1_started{device.timers.timer2.running and device.timers.timer3.running}: my_mode_succeeded
+      timer_t2_started{device.timers.timer1.running and device.timers.timer3.running}: my_mode_succeeded
+      timer_t3_started{device.timers.timer1.running and device.timers.timer2.running}: my_mode_succeeded
 
    ##! test
    #! start_game
