@@ -224,8 +224,13 @@ We'll start off with the easier mode first as all the heavy lifting is handled b
 
 Stepping through how we're using each setting:
 
+.. code-block:: mpf-config
+
 ``start_events: Super_Jets_Go, Super_Jets_Resume_Go``
+
    The way the super_jets mode is called is if either "Super_Jets_Go" or "Super_Jets_Resume_Go" are posted.
+
+.. code-block:: mpf-config
 
 ``s_left_bumper_active:
    score: 3000000|block``
@@ -234,12 +239,16 @@ Everytime s_left_bumper_active is seen, the score has 3,000,000 points added ont
 
 This code is used for all three jets.
 
+.. code-block:: mpf-config
+
 ``show_player:
      mode_super_jets_started:
        super_jets_startup:
          loops: 0``
          
 The Show Player shows the slide names "super_jets_started" at the start of the mode.  The settings in super_jets_started.yaml dictate the size, font, and duration of the slide being used.
+
+.. code-block:: mpf-config
 
 ``Super_Jets_on:
     show_tokens:
@@ -339,10 +348,14 @@ Next we need to create a mode called "super_jets_setup" to control when to call 
 
 Let's look at each of these settings:
 
+.. code-block:: mpf-config
+
 ``mode:
     start_events: ball_starting``
 
 Here, we are saying that we want "super_jets_setup" to start as soon as the game starts a ball, including extra balls.
+
+.. code-block:: mpf-config
 
 ``shots:
     jets:
@@ -360,6 +373,8 @@ This section establishes our shots.  Any time "s_right_bumper", "s_left_bumper",
 
 "right_rollover" and "left_rollover" will show a hit any time their associated switch is made.  Also, when their shots are made, their corresponding insert will also light up because we have a "show_tokens" section listing a light.
 
+.. code-block:: mpf-config
+
 ``shot_groups:
     rollover_lanes:
       shots: right_rollover, left_rollover
@@ -369,6 +384,8 @@ This section establishes our shots.  Any time "s_right_bumper", "s_left_bumper",
         rollover_lanes_lit_complete: 1s``
 
 This section is to set up the behavior of our rollover lanes.  First, we list our shots, "right_rollover" and "left_rollover".  Then we designate our left flipper as a switch to rotate our shots left, and the right flipper to rotate the shots right.  This is how we can use the flippers to move a lit rollover to the other lane to try and get the ball to go into an unlit rollover lane and complete the rollovers.  "reset_events" is used to pause the shot group for 1 second as the rollover lanes are reset so they are both off again.
+
+.. code-block:: mpf-config
 
 ``counters:
     lb_jets_count:
@@ -408,6 +425,8 @@ This is the heart of the mode. There are three counters here to help control the
 
 The final counter is for the rollover lanes, "lb_rollover_complete_count".  We use this to track how many times the rollovers are comeplete, form 0 to 40.  We use 40, because 50,000 * 40 = 2,000,000 which is the maximum addition of points we can add to the jets if not in Super Jets mode.  By using "persist_state: false" we reset the count on the end of every ball back to 0.
 
+.. code-block:: mpf-config
+
 ``event_player:
     Super_Jets_Go:
       start_mode_super_jets
@@ -416,6 +435,7 @@ The final counter is for the rollover lanes, "lb_rollover_complete_count".  We u
 
 Here is where we call our modes depending on what events are posted by the mode.  Both events, "Super_Jets_Go" and "Super_Jets_Resume_Go" call the same mode to start, "super_jets", but because we have two different counters calling the mode under different conditions, we have to set it up like this.
 
+.. code-block:: mpf-config
 
 ``variable_player:
     s_left_bumper_active:
@@ -436,6 +456,8 @@ This is how the scoring is handled before Super Pops is active.  Each jet bumper
 We also have a small score for when the rollover lanes are completed.
 
 What is "sj_active"?  This is a player variable set up previously to help with determining when to use which counter to activate super jets.  Initially, the game sets "sj_active" to an integer value of 0.  But, when Super Pops are activated by "lb_jets_count" because we hit the target of 100 hit, the variable player sets "sj_active" to an integer of 1 as the mode starts.  Now, if the ball drains, and a new ball is launched, "lb_jets_resume" will be enabled to start counting, and because its count ends at 25 instead of 100, it will call super_jets before "lb_jets_count".  "sj_active" will also stay at a value of 1 because every time the super_jets mode is called, we set "sj_active" is set to 1.
+
+.. code-block:: mpf-config
 
 ``show_player:
   mode_super_jets_setup_started{current_player.sj_active>0}:
