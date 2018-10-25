@@ -35,10 +35,10 @@ Here are the specific rules we need to implement:
 * Each completion of the two inlanes above the jet bumpers add 50,000 to each jet bumper hit (1,050,000, 1,100,000, and so on.)
 * Lit inlanes are movable with the flippers.
 * One the inlane value reaches 2,000,000 per it, the inlanes stop adding 50,000 when completed.
-*Super Pops occur when 100 jet bumper hits occue in the game.  The amount of hits carry over to the next ball.
-*Once the Super Pops mode has been made, the mode is active until the ball drains.
-*Super Pops can be restarted by hitting the jet bumpers 25 more times.
-*Once Super Pops have been made, the Super Pops insert on the playfield turns on and stays on.
+* Super Pops occur when 100 jet bumper hits occue in the game.  The amount of hits carry over to the next ball.
+* Once the Super Pops mode has been made, the mode is active until the ball drains.
+* Super Pops can be restarted by hitting the jet bumpers 25 more times.
+* Once Super Pops have been made, the Super Pops insert on the playfield turns on and stays on.
 
 Step 1. The machine-wide prerequisites
 --------------------------------------
