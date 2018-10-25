@@ -233,7 +233,7 @@ Stepping through how we're using each setting:
 .. code-block:: mpf-config
 
 ``s_left_bumper_active:
-    score: 3000000|block``
+    score: 3000000 block``
  
 Everytime s_left_bumper_active is seen, the score has 3,000,000 points added onto it.  the |block is used to prevent any other instances that awards points for hitting s_left_bumper_active from adding points as well.
 
