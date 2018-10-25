@@ -227,14 +227,14 @@ Stepping through how we're using each setting:
 
 .. code-block:: yaml
 
-``start_events: Super_Jets_Go, Super_Jets_Resume_Go``
+   start_events: Super_Jets_Go, Super_Jets_Resume_Go
 
-   The way the super_jets mode is called is if either "Super_Jets_Go" or "Super_Jets_Resume_Go" are posted.
+The way the super_jets mode is called is if either "Super_Jets_Go" or "Super_Jets_Resume_Go" are posted.
 
 .. code-block:: yaml
 
- ``s_left_bumper_active:
-     score: 3000000|block``
+   s_left_bumper_active:
+     score: 3000000|block
  
 Everytime "s_left_bumper_active" is seen, the score has 3,000,000 points added onto it.  The `|block` is used to prevent any other instances that awards points for hitting "s_left_bumper_active" from adding points as well.
 
@@ -242,18 +242,18 @@ This code is used for all three jets.
 
 .. code-block:: yaml
 
- ``show_player:
+   show_player:
      mode_super_jets_started:
        super_jets_startup:
-         loops: 0``
-         
+         loops: 0
+
 The Show Player shows the slide names "super_jets_started" at the start of the mode.  The settings in super_jets_started.yaml dictate the size, font, and duration of the slide being used.
 
 .. code-block:: yaml
 
- ``Super_Jets_on:
+   Super_Jets_on:
      show_tokens:
-       lights: l_super_jets``
+       lights: l_super_jets
 
 Plays the show called "Super_Jets_on" when this mode starts, lighting the Super Jets light on the playfield.
 
@@ -352,13 +352,13 @@ Let's look at each of these settings:
 
 .. code-block:: yaml
 
-``start_events: ball_starting``
+   start_events: ball_starting
 
 Here, we are saying that we want "super_jets_setup" to start as soon as the game starts a ball, including extra balls.
 
 .. code-block:: yaml
 
- ``shots:
+   shots:
      jets:
        switch: s_right_bumper, s_left_bumper, s_middle_bumper
      right_rollover:
@@ -368,7 +368,7 @@ Here, we are saying that we want "super_jets_setup" to start as soon as the game
      left_rollover:
        switch: s_left_rollover
        show_tokens:
-         light: l_left_rollover``
+         light: l_left_rollover
 
 This section establishes our shots.  Any time "s_right_bumper", "s_left_bumper", or "s_middle_bumper" is activated, the shot "jet" will register a hit.
 
@@ -376,19 +376,19 @@ This section establishes our shots.  Any time "s_right_bumper", "s_left_bumper",
 
 .. code-block:: yaml
 
- ``shot_groups:
+   shot_groups:
      rollover_lanes:
        shots: right_rollover, left_rollover
        rotate_left_events: s_left_flipper_active
        rotate_right_events: s_right_flipper_active
        reset_events:
-         rollover_lanes_lit_complete: 1s``
+         rollover_lanes_lit_complete: 1s
 
 This section is to set up the behavior of our rollover lanes.  First, we list our shots, "right_rollover" and "left_rollover".  Then we designate our left flipper as a switch to rotate our shots left, and the right flipper to rotate the shots right.  This is how we can use the flippers to move a lit rollover to the other lane to try and get the ball to go into an unlit rollover lane and complete the rollovers.  "reset_events" is used to pause the shot group for 1 second as the rollover lanes are reset so they are both off again.
 
 .. code-block:: yaml
 
- ``counters: 
+   counters: 
      lb_jets_count:
        count_events: jets_hit
        starting_count: 0
@@ -416,7 +416,7 @@ This section is to set up the behavior of our rollover lanes.  First, we list ou
        count_complete_value: 40
        reset_on_complete: false
        direction: up
-       persist_state: false``
+       persist_state: false
 
 This is the heart of the mode. There are three counters here to help control the program.
 
@@ -428,17 +428,17 @@ The final counter is for the rollover lanes, "lb_rollover_complete_count".  We u
 
 .. code-block:: yaml
 
- ``event_player:
+   event_player:
      Super_Jets_Go:
        start_mode_super_jets
      Super_Jets_Go_Again:
-       start_mode_super_jets``
+       start_mode_super_jets
 
 Here is where we call our modes depending on what events are posted by the mode.  Both events, "Super_Jets_Go" and "Super_Jets_Resume_Go" call the same mode to start, "super_jets", but because we have two different counters calling the mode under different conditions, we have to set it up like this.
 
 .. code-block:: yaml
 
- ``variable_player:
+   variable_player:
      s_left_bumper_active:
        score: 1000000 + (device.counters.lb_rollover_complete_count.value * 50000)
      s_middle_bumper_active:
@@ -450,7 +450,7 @@ Here is where we call our modes depending on what events are posted by the mode.
      mode_super_jets_started:
        sj_active:
          int: 1
-         action: set``
+         action: set
 
 This is how the scoring is handled before Super Pops is active.  Each jet bumper hit is worth 1,000,000 at the start.  But, we also have to add 50,000 points for each time the rollovers are completed.  To do that, we take the value of the counter, "lb_rollover_complete_count" and multiply it by 50000.  Then we add that value to the standard 1,000,000.  Remember in "super_jets" that we added `|block` to the end of the scoring?  That was in part to keep these lines from continuing to add to the score, and to just have the scoring from "super_jets.yaml" to appear.
 
@@ -460,11 +460,11 @@ What is "sj_active"?  This is a player variable set up previously to help with d
 
 .. code-block:: yaml
 
- ``show_player:
+   show_player:
      mode_super_jets_setup_started{current_player.sj_active>0}:
        Super_Jets_on:
          show_tokens:
-           lights: l_super_jets``
+           lights: l_super_jets
 
 When "sj_active" has been set to 1, it is greater than 0.  Now, the light for Super Jets will stay on from now on whenever a ball starts, and the super_jets_setup mode starts.
 
