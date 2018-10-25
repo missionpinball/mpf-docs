@@ -229,20 +229,20 @@ Stepping through how we're using each setting:
 
 ``s_left_bumper_active:
     score: 3000000|block``
-   Everytime s_left_bumper_active is seen, the score has 3,000,000 points added onto it.  the |block is used to prevent any other instances that awards points for hitting s_left_bumper_active from adding points as well.
+Everytime s_left_bumper_active is seen, the score has 3,000,000 points added onto it.  the |block is used to prevent any other instances that awards points for hitting s_left_bumper_active from adding points as well.
 
-   This code is used for all three jets.
+This code is used for all three jets.
 
 ``show_player:
      mode_super_jets_started:
        super_jets_startup:
          loops: 0``
-   The Show Player shows the slide names "super_jets_started" at the start of the mode.  The settings in super_jets_started.yaml dictate the size, font, and duration of the slide being used.
+The Show Player shows the slide names "super_jets_started" at the start of the mode.  The settings in super_jets_started.yaml dictate the size, font, and duration of the slide being used.
 
 ``Super_Jets_on:
     show_tokens:
       lights: l_super_jets``
-   Plays the show called "Super_Jets_on" when this mode starts, lighting the Super Jets light on the playfield.
+Plays the show called "Super_Jets_on" when this mode starts, lighting the Super Jets light on the playfield.
 
 
 Step 3. Create an setup mode for Super Jets
@@ -340,7 +340,7 @@ Let's look at each of these settings:
 ``mode:
     start_events: ball_starting``
 
-  Here, we are saying that we want "super_jets_setup" to start as soon as the game starts a ball, including extra balls.
+Here, we are saying that we want "super_jets_setup" to start as soon as the game starts a ball, including extra balls.
 
 ``shots:
     jets:
@@ -458,7 +458,6 @@ Here we set up a quick slide that pops up on the DMD when we've started Super Po
            - type: text
              text: SUPER JETS
              font_size: 20
-             color: green
              y: 60%
              priority: 200
 
