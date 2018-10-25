@@ -229,6 +229,7 @@ Stepping through how we're using each setting:
 
 ``s_left_bumper_active:
     score: 3000000|block``
+ 
 Everytime s_left_bumper_active is seen, the score has 3,000,000 points added onto it.  the |block is used to prevent any other instances that awards points for hitting s_left_bumper_active from adding points as well.
 
 This code is used for all three jets.
@@ -237,6 +238,7 @@ This code is used for all three jets.
      mode_super_jets_started:
        super_jets_startup:
          loops: 0``
+         
 The Show Player shows the slide names "super_jets_started" at the start of the mode.  The settings in super_jets_started.yaml dictate the size, font, and duration of the slide being used.
 
 ``Super_Jets_on:
