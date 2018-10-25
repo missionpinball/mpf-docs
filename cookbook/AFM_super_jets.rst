@@ -228,7 +228,7 @@ Stepping through how we're using each setting:
    The way the super_jets mode is called is if either "Super_Jets_Go" or "Super_Jets_Resume_Go" are posted.
 
 ``s_left_bumper_active:
-    score: 3000000|block``
+   score: 3000000|block``
  
 Everytime s_left_bumper_active is seen, the score has 3,000,000 points added onto it.  the |block is used to prevent any other instances that awards points for hitting s_left_bumper_active from adding points as well.
 
