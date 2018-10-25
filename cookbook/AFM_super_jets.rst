@@ -53,7 +53,7 @@ then you'll probably have a lot more than this in your machine config file. Also
 
 Notice the "player_vars" section.  It has a player variable named "sj_active".  We will explain this later on, but for now we'll just say that it is how we will tell if we are starting Super Jets for the first time or resuming it after starting it but draining.
 
-.. code-block:: mpf-config
+.. code-block:: yaml
 
    #config_version=5
 
@@ -263,7 +263,7 @@ Step 3. Create an setup mode for Super Jets
 
 Next we need to create a mode called "super_jets_setup" to control when to call the "super_jets" mode.  There's lot going on here, but we'll go through it step by step.
 
-.. code-block:: mpf-config
+.. code-block:: yaml
 
    ##! mode: super_jets_startup
    #config_version=5
@@ -473,7 +473,7 @@ Step 4. Set up your Super Jets Slide
 ------------------------------------
 Here we set up a quick slide that pops up on the DMD when we've started Super Pops.
 
-.. code-block:: mpf-config
+.. code-block:: yaml
 
    ##! mode: super_jets_startup
        - duration: 2s
@@ -490,7 +490,7 @@ Step 5. Add the light for Super Jets
 ------------------------------------
 And finally, we set up a lightshow for turning on the Super Jets insert on the playfield.
 
-.. code-block:: mpf-config
+.. code-block:: yaml
 
    ##! mode: Super_Jets_on
        - time: 0
