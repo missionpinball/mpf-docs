@@ -47,9 +47,9 @@ This is a basic example:
               event: timer3_start
 
    event_player:
-      timer_t1_started{device.timers.timer2.running and device.timers.timer3.running}: my_mode_succeeded
-      timer_t2_started{device.timers.timer1.running and device.timers.timer3.running}: my_mode_succeeded
-      timer_t3_started{device.timers.timer1.running and device.timers.timer2.running}: my_mode_succeeded
+      timer_t1_started{device.timers.t2.running and device.timers.t3.running}: my_mode_succeeded
+      timer_t2_started{device.timers.t1.running and device.timers.t3.running}: my_mode_succeeded
+      timer_t3_started{device.timers.t1.running and device.timers.t2.running}: my_mode_succeeded
 
    ##! test
    #! start_game
