@@ -10,10 +10,10 @@ know and we'll write a recipe for it!
 Here are the recipes that are done:
 
 * :doc:`The Addams Family: Mansion Awards <TAF_mansion_awards>`
+* :doc:`Attack From Mars: Super Jets <AFM_super_jets>`
 
 And here's what's on our to-do list:
 
-+ *Attack from Mars:* Super Jets
 + *Indiana Jones: The Pinball Adventure:* INDY rollover lanes and lane change
 + *Attack from Mars:* 5-Way Combo
 + *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
@@ -27,3 +27,4 @@ And here's what's on our to-do list:
    :maxdepth: 1
 
    The Addams Family: Mansion Awards <TAF_mansion_awards>
+   Attack From Mars: Super Jets <AFM_super_jets>
