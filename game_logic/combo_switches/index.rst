@@ -52,7 +52,7 @@ the prefix for combo switches is ``device.combo_switches.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+* :doc:`Canceling ball end shows using flipper_cancel </game_logic/ball_start_end/index>`
 
 Related Events
 --------------
