@@ -497,4 +497,4 @@ And finally, we set up a lightshow for turning on the Super Jets insert on the p
        lights:
          l_super_jets: ff
 
-At this point you should have a working Super Pop mode.  If any of this feels unclear or I've muddied up the explanation, feel free to email me at travisbmartin@gmail.com and I'll lend a hand and edit this cookbook. -Trav
+At this point you should have a working Super Pop mode.  If any of this feels unclear or I've muddied up the explanation, feel free to join the discussion in the forums at https://groups.google.com/forum/#!topic/mpf-users/oVwBRQOgodY .
