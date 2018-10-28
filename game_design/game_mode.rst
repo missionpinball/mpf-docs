@@ -57,16 +57,16 @@ This is a basic example:
    #! post start_my_mode
    #! post timer1_start
    #! assert_mode_running my_mode
-   #! assert_bool_condition True device.timers.timer1.running
+   #! assert_bool_condition True device.timers.t1.running
    #! advance_time_and_run 4
-   #! assert_bool_condition False device.timers.timer1.running
+   #! assert_bool_condition False device.timers.t1.running
    #! post timer2_start
    #! post timer3_start
    #! advance_time_and_run 1
    #! assert_mode_running my_mode
-   #! assert_bool_condition False device.timers.timer1.running
-   #! assert_bool_condition True device.timers.timer2.running
-   #! assert_bool_condition True device.timers.timer3.running
+   #! assert_bool_condition False device.timers.t1.running
+   #! assert_bool_condition True device.timers.t2.running
+   #! assert_bool_condition True device.timers.t3.running
    #! post timer1_start
    #! assert_mode_not_running my_mode
    #! assert_event_called my_mode_succeeded
