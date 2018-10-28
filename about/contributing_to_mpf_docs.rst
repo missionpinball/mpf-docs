@@ -94,4 +94,4 @@ mpf-docs repo so you can work on it offline, do the following:
    additional warnings from whatever docs you added or changed. (The built docs
    will be in the ``_build/html`` folder. You can open *index.html* in your
    local browser to preview your changes.
-#. Submit your pull request.
+#. `Submit your pull request <https://help.github.com/articles/creating-a-pull-request-from-a-fork/>`_
