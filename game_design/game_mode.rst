@@ -24,21 +24,21 @@ This is a basic example:
      stop_events: my_mode_succeeded
 
    timers:
-      timer1:
+      t1:
          start_value: 3
          end_value: 0
          direction: down
          control_events:
             - action: restart
               event: timer1_start
-      timer2:
+      t2:
          start_value: 3
          end_value: 0
          direction: down
          control_events:
             - action: restart
               event: timer2_start
-      timer3:
+      t3:
          start_value: 3
          end_value: 0
          direction: down
@@ -47,9 +47,9 @@ This is a basic example:
               event: timer3_start
 
    event_player:
-      timer1_start{device.timers.timer2.running and device.timers.timer3.running}: my_mode_succeeded
-      timer2_start{device.timers.timer1.running and device.timers.timer3.running}: my_mode_succeeded
-      timer3_start{device.timers.timer1.running and device.timers.timer2.running}: my_mode_succeeded
+      timer_t1_started{device.timers.t2.running and device.timers.t3.running}: my_mode_succeeded
+      timer_t2_started{device.timers.t1.running and device.timers.t3.running}: my_mode_succeeded
+      timer_t3_started{device.timers.t1.running and device.timers.t2.running}: my_mode_succeeded
 
    ##! test
    #! start_game
@@ -57,16 +57,16 @@ This is a basic example:
    #! post start_my_mode
    #! post timer1_start
    #! assert_mode_running my_mode
-   #! assert_bool_condition True device.timers.timer1.running
+   #! assert_bool_condition True device.timers.t1.running
    #! advance_time_and_run 4
-   #! assert_bool_condition False device.timers.timer1.running
+   #! assert_bool_condition False device.timers.t1.running
    #! post timer2_start
    #! post timer3_start
    #! advance_time_and_run 1
    #! assert_mode_running my_mode
-   #! assert_bool_condition False device.timers.timer1.running
-   #! assert_bool_condition True device.timers.timer2.running
-   #! assert_bool_condition True device.timers.timer3.running
+   #! assert_bool_condition False device.timers.t1.running
+   #! assert_bool_condition True device.timers.t2.running
+   #! assert_bool_condition True device.timers.t3.running
    #! post timer1_start
    #! assert_mode_not_running my_mode
    #! assert_event_called my_mode_succeeded
