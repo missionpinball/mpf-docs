@@ -12,7 +12,7 @@ playfield_transfers:
 .. overview
 
 The ``playfield_transfers:`` section of your config is where you configure
-devices which transfer balls between playfields.
+devices which transfer balls between :doc:`playfields </mechs/playfields/index>`.
 
 This is an example:
 
