@@ -492,3 +492,31 @@ something a certain number of times. For example:
 
 In the example above, when the MPF event "flash_3x" is posted, it will cause
 widget1 to pulse three times.
+
+11. Animating a progress bar
+----------------------------
+
+MPF can also animate progress bars or similar things.
+In this example, we animate a progress bar based on the player vairable
+``progress`` by hooking the width of the bar to the event ``player_progress``
+which is posted when the value changes:
+
+.. code-block:: mpf-config
+
+   slides:
+     green_slide:
+       widgets:
+         - type: rectangle
+           y: 50
+           z: 20
+           anchor_x: left
+           anchor_y: center
+           width: 0
+           height: 16
+           corner_radius: 3
+           corner_segments: 3
+           color: 00FF00
+           animations:
+               player_progress:
+                   - property: width
+                     value: (value)
