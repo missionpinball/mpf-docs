@@ -123,9 +123,9 @@ certain condition match):
    #! advance_time_and_run 10
    #! assert_balls_on_playfield 0
 
-When you mode is running the eject will be delayed by 10s (duration of your
+When your mode is running the eject will be delayed by 10s (duration of your
 show). Add all your lights, shows and slides to this show.
-After the show ended it will eject normally.
+After the show ends it will eject normally.
 
 The same can be achieved using a :doc:`ball_hold device </config/ball_holds>`.
 If you want your saucer/VUK/scoop to lock a ball for a
