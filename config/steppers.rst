@@ -53,7 +53,7 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 ball_search_wait:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``5s``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -107,13 +107,13 @@ Single value, type: ``integer``. Default: ``20``
 
 named_positions:
 ~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``float``:``str``. Default: ``None``
+One or more sub-entries, each in the format of type: ``float``:``str``.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -131,7 +131,7 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -144,6 +144,36 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 velocity_limit:
 ~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
