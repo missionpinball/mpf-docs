@@ -188,3 +188,4 @@ Browse Platforms by Capabilites
 
    i2c_platforms
    servo_platforms
+   stepper_platforms
