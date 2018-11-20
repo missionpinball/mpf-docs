@@ -146,9 +146,42 @@ for it by configuring
 Serial LEDs on the PD-LED
 -------------------------
 
-The PD-LED supports serial LEDs.
-Let us know in the forum if you want to use this feature and we will
-add a config option for it.
+Starting with PD-LED v2 you can use the PD-LED to drive serial LEDs.
+To enable a serial LEDs you need to configure your PD-LED board in your
+``p_roc`` section.
+Assuming your PD-LED has the ID 4 you can use the following config to enable
+all serial LEDs and and define a few:
+
+.. code-block:: mpf-config
+
+   p_roc:
+     pd_led_boards:
+       4:
+         use_lpd880x_0: True
+         use_lpd880x_1: True
+         use_lpd880x_2: True
+         use_ws281x_0: True
+         use_ws281x_1: True
+         use_ws281x_2: True
+
+   lights:
+      l_serial_chain_0_first:
+         number: 8-100-101-102
+         subtype: led
+      l_serial_chain_0_second:
+         number: 8-103-104-105
+         subtype: led
+      l_serial_chain_1_first:
+         number: 8-250-251-252
+         subtype: led
+      l_serial_chain_2_first:
+         number: 8-400-401-402
+         subtype: led
+
+By default MPF maps the first chain (of both LPD880x and WS281x) to LEDs 100 to 249.
+The second chain to 250 to 399 and the third to 400 to 599.
+You can change those settings in the :doc:`/config/pd_led_boards` section.
+
 
 Amplifying PD-LED channels with FETs
 ------------------------------------
