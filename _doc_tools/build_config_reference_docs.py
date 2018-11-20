@@ -138,14 +138,17 @@ your machine-wide config, a mode-specific config, or both.
 
     def create_rst(self, name, type):
         assert type in ("device", "other")
-        spec = self.config_specs[name]
         if type == "device":
+            spec = self.config_specs[name]
             device_spec = self.all_specs["device"]
             del device_spec["valid_in"]
             spec = Util.dict_merge(spec, device_spec)
 
             self._create_rst(name, spec, True)
         else:
+            spec = self.all_specs[name]
+            if "valid_in" not in spec:
+                spec["valid_in"] = ""
             self._create_rst(name, spec, False)
 
     def _create_rst(self, name, spec, device=False):
