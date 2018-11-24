@@ -6,7 +6,7 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 0.51
 ----
 
-Released: TBD
+Released: November 24, 2018
 
 This is a 0.50 maintainence release with cleanups and some refactorings.
 Breaking changes in common features are minimal but some minor changes might be
