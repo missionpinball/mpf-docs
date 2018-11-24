@@ -220,24 +220,17 @@ like this:
 
 .. code-block:: console
 
-   pip3 install mpf-mc --pre
-
-.. note::
-
-   Since MPF 0.50 is not yet released, the command you need to run is
-   "pip install mpf-mc --pre" to get the latest "pre-release" version, so that MPF runs under Mac.
-   
-   If you Upgrade your installation add --upgrade to the call like this:   
+   pip3 install mpf-mc
 
 ::
 
-   pip3 install mpf-mc --pre --upgrade
+   pip3 install mpf-mc --upgrade
    
 If you are using High Sierra please add the --user option to get around a specific rights problem:
 
 ::
 
-   pip3 install mpf-mc --pre --upgrade --user
+   pip3 install mpf-mc --upgrade --user
 
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
