@@ -12,7 +12,8 @@ MPF with multiple fixes and enhancements made every day. You can see the stream 
 `here for MPF-MC <https://github.com/missionpinball/mpf-mc/commits/dev>`_. (Actually we work on the docs a lot too,
 check out the latest updates `here <https://github.com/missionpinball/mpf-docs/commits/latest>`_.)
 
-Anyway, we release a new version of MPF about every 6 months. (See the full release history :doc:`here <history>`).
+Anyway, we release a new version of MPF about every 6 months. (See the full
+release history :doc:`here <release_notes>`).
 
 MPF version numbering follows a standard called `semantic versioning <http://semver.org/>`_ which uses a
 "MAJOR.MINOR.PATCH" version number format. For example, the version number ``0.31.8`` is major version 0, minor
