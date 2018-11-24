@@ -16,3 +16,4 @@ is valid for MPF versions |version|.
    understanding
    release_notes
    roadmap
+   release_checklist
