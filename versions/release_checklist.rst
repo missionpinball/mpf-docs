@@ -3,7 +3,7 @@ MPF release checklist
 
 What to do to make a MPF release?
 
-* [ ] Update :docs:`release_notes` (mpf-docs repository dev branch)
+* [ ] Update :doc:`release_notes` (mpf-docs repository dev branch)
 * [ ] Create draft blog post in ``missionpinball-website`` repository (in ``_draft`` folder)
 * Create ``a.bb.x`` branch (e.g. 0.50.x) and push it based on dev
 ** [ ] ``mpf`` repository
@@ -38,6 +38,7 @@ What to do to make a MPF release?
 ** [ ] ``a.bb.x`` on ``mpf-examples`` repository
 ** [ ] ``a.bb`` on ``mpf-docs`` repository
 * [ ] Publish release post on forum
+* [ ] Increase version in forum header
 * [ ] Publish release post on pinside
 * [ ] Publish release post on slack
 * Delete pre releases on pypi
