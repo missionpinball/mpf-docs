@@ -15,25 +15,56 @@ The ``playlists:`` section of your config is where you configure non-default par
 playlist assets you want to use in your game. (This section is part of the MPF media controller and
 only available if you're using MPF-MC for your media controller.)
 
-Here's an example:
+Here is an example:
 
 .. code-block:: mpf-config
 
-    playlists:
-        attract_music:
-            sounds: drumbeat_7, rainbow_disco_bears, dirty_grinding_beat_loop, hippie_ahead
-            shuffle: False
-            repeat: False
-            events_when_played: attract_music_played
-            events_when_stopped: attract_music_stopped
-            events_when_looping: attract_music_looping
-            events_when_sound_changed: attract_music_sound_changed
-            events_when_sound_stopped: attract_music_sound_stopped
-        mode_1_music:
-            sounds:
-                - song_1
-                - song_2
-                - song_3
+   # ---------------------
+   # SOUNDS::PLAYLIST
+   # ---------------------
+   playlists:
+     playlistIntro:
+       shuffle: false
+       repeat: false
+       sounds:
+         - voiceAnnouncerNewsFlash1
+         - voiceAnnouncerMessage1
+         - voiceAnnouncerAliensAttack1
+
+     playlistHighScore:
+       shuffle: true
+       repeat: true
+       crossfade_mode: override
+       crossfade_time: 5s
+       sounds:
+         - soundHighScore001
+         - soundHighScore002
+         - soundHighScore003
+         - soundHighScore004
+
+   # ---------------------
+   # PLAYLIST::PLAYER
+   # ---------------------
+   playlist_player:
+     # -------------------
+     # ADDED SURPRISE VOICE DURING ATTRACT MODE
+     playlistAttention:
+       trackplaylist:
+         playlist: playlistIntro
+         action: play
+
+     # -------------------
+     # MUSIC DURING HIGH SCORE ENTRY
+     high_score_enter_initials:
+       trackplaylist:
+         playlist: playlistHighScore
+         shuffle: true
+         repeat: true
+         action: play
+
+     mode_attract_started:
+       trackplaylist:
+         action: stop
 
 Required settings
 -----------------
