@@ -154,7 +154,7 @@ Lets you set a player or machine variable to a string value (text characters) ra
 for when you want to make slides that show some value and you need to "translate" some numeric value to words.
 
 Here's an example from *Brooks 'n Dunn* where there is a player variable (set via a counter) which tracks the
-player's current album value. We ue the variable_player section tied to the events posted when the player variable changes
+player's current album value. We use the variable_player section tied to the events posted when the player variable changes
 and conditional events to set the current name of the album value, like this:
 
 .. code-block:: mpf-config
