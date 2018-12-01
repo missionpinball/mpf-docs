@@ -67,3 +67,14 @@ You can also use MPF Monitor with no hardware attached using one of
 MPF's :doc:`virtual platforms </hardware/virtual/index>`. Specifically the
 :doc:`smart virtual platform </hardware/virtual/smart_virtual>` works great if
 you're using MPF without physical hardware.
+
+Resize switches and lights on your playfield
+--------------------------------------------
+
+Depending on your image dimensions switches and lights might be a little small
+or too large.
+You can change that using the ``device_size`` setting in your
+``moniitor/monitor.yaml``.
+The default ``device_size`` is ``0.02``.
+You might try ``device_size: 0.015`` as first line in ``moniitor/monitor.yaml``
+to decrease the size of all switches and lights a bit.
