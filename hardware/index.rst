@@ -165,6 +165,7 @@ MPF supports:
    RGB.DMD <eli_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
    Trinamics StepRocker <trinamics/index>
+   StepStick Steppers <stepstick/index>
    Computer Requirements <computer/index>
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>

@@ -151,6 +151,7 @@ indicated which type of config file it's valid in.
    spike: <spike>
    state_machines: <state_machines>
    steppers: <steppers>
+   step_stick_stepper_settings: <step_stick_stepper_settings>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>
