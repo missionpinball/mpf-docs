@@ -60,3 +60,5 @@ You should hook up your steppers to an external power source and
 not draw that power from the PD-LED.
 However, make sure to connect the ground of your power supply.
 See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.
+Connect those stepper drivers as described in
+:doc:`/hardware/stepstick/index` (but use the PD-LED outputs).
