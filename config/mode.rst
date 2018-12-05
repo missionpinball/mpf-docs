@@ -178,8 +178,13 @@ unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
    mode:
       start_events: mode_terra_2_start
       stop_events: mode_complete, game_ending
-      stop_on_ball_end: false
+      stop_on_ball_end: False
+      game_mode: False
 
+However, a mode with ``stop_on_ball_end: False`` set must be a non game mode
+(i.e. ``game_mode: False`` is also set).
+To prevent crashes you cannot use all player functionality (such as accessing
+player variable) in this mode.
 
 stop_priority:
 ~~~~~~~~~~~~~~
