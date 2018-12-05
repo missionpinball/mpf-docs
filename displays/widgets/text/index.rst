@@ -159,7 +159,7 @@ a mix-and-match of letters and numbers.
 The default setting is ``False``. (Note that prior to MPF 0.30, the default
 setting was ``True``.)
 
-.. todo::
+.. note::
 
    Currently this setting only inserts a comma. We need to add a setting to
    allow other characters (like a period which is common in Europe). If this is

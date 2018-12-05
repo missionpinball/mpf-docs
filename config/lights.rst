@@ -169,8 +169,7 @@ z:
 ~~
 Single value, type: ``number`` (will be converted to floating point).
 
-.. todo::
-   *No longer used?*
+Currently not used anywhere.
 
 console_log:
 ~~~~~~~~~~~~
