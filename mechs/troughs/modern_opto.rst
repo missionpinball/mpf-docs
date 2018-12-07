@@ -28,6 +28,12 @@ is no ball blocking the path) and inactive when a ball is present and in the way
 
 .. image:: /mechs/images/trough_opto_diagram.jpg
 
+0. Connect your trough
+----------------------
+
+If you are building a custom pinball machine you need to connect the
+http://www.scottdanesi.com/?p=1433
+
 1. Add your trough switches
 ---------------------------
 

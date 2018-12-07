@@ -15,7 +15,7 @@ segment_display_player:
 
 The ``segment_display_player:`` section of your config is a :doc:`/config_players/index`
 which controls :doc:`segment_displays`.
-See :doc:`/segment_displays/index` for details.
+See :doc:`/displays/display/alpha_numeric` for details.
 
 Optional settings
 -----------------

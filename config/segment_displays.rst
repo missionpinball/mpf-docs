@@ -11,8 +11,9 @@ segment_displays:
 
 .. overview
 
-The ``segment_displays:`` section of your config is where you define your segment
-displays. This can be 7-segment or alphanumeric displays which are typically
+The ``segment_displays:`` section of your config is where you define your
+:doc:`segment displays </displays/display/alpha_numeric>`.
+This can be 7-segment or alphanumeric displays which are typically
 used in older machines.
 
 

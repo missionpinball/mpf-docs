@@ -73,3 +73,6 @@ Then configure your dmd like in this example:
          target: window
        dmd_slide_1:
          target: dmd
+
+Note that the :doc:`/displays/display/dmd` guide has more details
+on the window and slide settings used in this machine config.

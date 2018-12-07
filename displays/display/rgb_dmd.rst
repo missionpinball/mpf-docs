@@ -8,11 +8,7 @@ Using an RGB full-color LED DMD
 +------------------------------------------------------------------------------+
 
 MPF supports RGB full-color LED DMDs. There are several hardware options you
-can use for this:
-
-* :doc:`SmartMatrix </hardware/smartmatrix/index>`
-* :doc:`RGB.DMD </hardware/eli_dmd/index>`
-* :doc:`FAST Pinball RGB DMD </hardware/fast/rgb_dmd>`
+can use for this: :doc:`/hardware/dmd_platforms`.
 
 This guide shows you how to configure MPF to use one of these displays.
 

@@ -23,12 +23,12 @@ via the config files.
 Here are a few photos of the MPF Media Controller's display system in action.
 These were all created with configuration files and without manual programming.
 
-Here's a traditional single-color / mono DMD:
+Here's a traditional :doc:`single-color / mono DMD <display/dmd>`:
 
 .. image:: images/display_mono_dmd.jpg
 
 Here's an on-screen window (or what many people called an "LCD" display. In this
-case, it's showing on single color DMD virtually with no "dot" filter applied,
+case, it's showing on single :doc:`color DMD <display/rgb_dmd>` virtually with no "dot" filter applied,
 along with other on-screen content:
 
 .. image:: images/display_window.jpg
@@ -53,11 +53,18 @@ about the details and just want to start using your display, you can jump
 directly into our :doc:`step-by-step tutorial </tutorial/index>` which covers
 how to get your display running.)
 
+Additionally, MPF also supports
+:doc:`segment displays and alpha numeric displays <display/alpha_numeric>`.
+Both physically and virtually.
+Another type of displays are :doc:`score reels </mechs/score_reels/index>`
+which can also be controlled.
+
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    Concepts & Architecture </displays/architecture>
    Displays <display/index>
    Slides <slides/index>
    Widgets <widgets/index>
+   Media Controller <mc/index>
 

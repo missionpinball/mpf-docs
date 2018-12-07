@@ -41,5 +41,5 @@ Config looks like this:
        number: 6
 
 You can configure your serial port in `port`.
-See :doc:`segment_display </segment_displays/index>` for more informations about how to drive segment display in your
+See :doc:`segment_display </displays/display/alpha_numeric>` for more informations about how to drive segment display in your
 game.
