@@ -1,6 +1,25 @@
 Using multiple screens
 ======================
 
+This section covers using multiple displays and screens.
+
+Distinction between displays, windows and screens
+-------------------------------------------------
+
+The MPF media controller knows windows and displays.
+A ``window`` is the window where MPF-MC pops up on your desktop using kivy.
+Internally, MPF can have multiple ``displays`` which are internal viewports
+and can be targeted by slides.
+A ``display`` can either be displayed on a ``window`` or on one or more DMDs.
+Additionally, a ``display`` can also show one or more other ``displays`` using
+:doc:`display widgets </displays/widgets/display/index>`.
+MPF does not know about screens which are phyiscal monitors connected to your
+machine.
+However, the kivy window can span multiple screens.
+
+Using multiple screens on your PC
+---------------------------------
+
 Some machines use more than one screen.
 Unfortunately, kivy (the graphics framework we use) does only support one
 screen and cannot easily be started two times.
@@ -41,3 +60,14 @@ Use ``width`` and ``height`` to set the size of the window.
 
 Then put a slide containing two ``display`` widgets on your display.
 See :doc:`/displays/widgets/display/index` for details.
+
+Using multiple displays
+-----------------------
+
+You can easily use two DMDs and one LCD (or two LCDs with the solution above).
+To implement that you need to define multiple displays.
+One diplay per DMD and one for your LCD.
+If you want to show your DMDs on the LCD (i.e. during development) you can also
+define a forth display and create a slide which contains three
+:doc:`display widgets </displays/widgets/display/index>` to show the other
+three displays.

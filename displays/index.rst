@@ -18,7 +18,8 @@ via the config files.
 
 .. note::
 
-   Everything in this "Displays & Graphics" section is about default the MPF Media Controller
+   Everything in this "Displays & Graphics" section is about the default MPF Media Controller.
+   See the :doc:`media controller <mc/index>` section for details and alternative implementations.
 
 Here are a few photos of the MPF Media Controller's display system in action.
 These were all created with configuration files and without manual programming.
