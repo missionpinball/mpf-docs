@@ -119,7 +119,10 @@ Please include the following information:
 #. Describe how to reproduce your problem.
 #. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
 
+
+5. More Howtos
+--------------
+
 .. toctree::
-   :hidden:
 
    debugging_memory_leaks
