@@ -118,3 +118,8 @@ Please include the following information:
 #. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and grab the latest MPF and MC log from the log folder in your machine.
 #. Describe how to reproduce your problem.
 #. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
+
+.. toctree::
+   :hidden:
+
+   debugging_memory_leaks
