@@ -50,6 +50,8 @@ This is an example config:
      platform: rpi_dmd
 
    rpi_dmd:
+     cols: 32
+     rows: 32
      gpio_slowdown: 2
      pwm_lsb_nanoseconds: 300
 
