@@ -121,6 +121,7 @@ indicated which type of config file it's valid in.
    random_event_player: <random_event_player>
    raspberry_pi: <raspberry_pi>
    rgb_dmds: <rgb_dmds>
+   rpi_dmd: <rpi_dmd>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
    scriptlets: <scriptlets>

@@ -163,6 +163,7 @@ MPF supports:
    Pololu Maestro <pololu_maestro/index>
    SmartMatrix RGB DMD <smartmatrix/index>
    RGB.DMD <eli_dmd/index>
+   Raspberry Pi DMD <rpi_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
    Trinamics StepRocker <trinamics/index>
    StepStick Steppers <stepstick/index>

@@ -18,9 +18,13 @@ Raspberry PI (pigpio)
 
 The rpi platform can be used to control inputs (switches), outputs (coils), I2C
 and servos on the RPi remotely (or locally) using pigpio. You need to install
-the ``apigpio`` extension via pip to use it.
+the ``apigpio`` extension via pip to use it:
 
-This is an example:
+.. code-block:: console
+
+   pip3 install apigpio
+
+This is an example config:
 
 .. code-block:: mpf-config
 
