@@ -130,6 +130,32 @@ can if you want. :)
 
 You can use all :doc:`placeholder variables </config/instructions/dynamic_values>`.
 
+Subscribed config players
+-------------------------
+
+Sometimes you want to play a show, display a slide or enable a light
+when certain condition hold true and remove/disable it when the condition no
+longer holds.
+This would usually require two config player entries with two different events
+to add and remove the show (or light).
+However, MPF supports subscriptions in config players for certain (not all)
+variables.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   light_player:
+     "{machine.test_machine_var == 23}":
+       led4: red
+     "{current_player.test_player_var == 42}":
+       led5: red
+
+If will turn ``led4`` to ``red`` once the machine variable ``test_machine_var``
+becomes ``23`` and turns ``led4`` back to ``off`` once ``test_machine_var``
+becomes something else.
+Same for ``led5`` and player variable ``test_player_var``.
+
 Comparisons
 -----------
 
