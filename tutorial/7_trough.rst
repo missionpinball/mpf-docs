@@ -6,7 +6,7 @@ have a "working" pinball machine since you can't start or play games.
 
 So the next two steps in this tutorial, we're going to get your first two
 *ball devices* set up—your trough and plunger lane.
-(A ball device is anything in MPF that holds a ball.
+(A ball device is anything in MPF that holds a ball).
 
 1. Read about ball devices
 --------------------------

@@ -89,13 +89,16 @@ shows the verbose information in the log file, like this:
 
 .. code-block:: doscon
 
-    C:\pinball\your_machine>mpf -vb
+    C:\pinball\your_machine>mpf -vbt
 
 You don't have to launch the media controller this time since we're
 just looking at the console output of the MPF game engine, which is
 why we added the ``b`` command line option too. (The ``b`` option
 tells the MPF game engine not to use the BCP protocol and not to
 try to connect to the MC.)
+You also have to add ``t`` to disable the text ui to see the verbose log.
+Otherwise, you would only see the verbose output in the logfile in the ``logs``
+directory of your machine.
 
 Once your game is running, drop a ball into your trough and you
 should see a whole bunch of trough switches changing between active
