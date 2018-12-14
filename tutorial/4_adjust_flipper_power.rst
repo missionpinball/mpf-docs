@@ -23,7 +23,7 @@ when it's fired.
 
 You can set the default pulse time for each coil in
 the coil's entry in the ``coils:`` section of your config file. If you
-don't specify a time for a particular coil, then MPF will a default
+don't specify a time for a particular coil, then MPF will use a default
 pulse time of 10ms.
 
 So in the last step, we got your flipper coils working, but as they are now,

@@ -75,9 +75,9 @@ service menu, you can create plain-English labels with spaces and
 capitalization everything. But that comes later.
 
 In pre-0.50 versions, MPF was not case-sensitive and would internally convert most
-things to lowercase before comparison. This proved to be problematic, so MPF is 
+things to lowercase before comparison. This proved to be problematic, so MPF is
 now case-sensitive for all elements of your config files. Our configuration directives
-use only lowercase letters, underscores, and numbers. While you are free to format 
+use only lowercase letters, underscores, and numbers. While you are free to format
 your tags as you wish, be aware that case-consistency is now required.
 
 Speaking of formatting files, let's look at a few important things
@@ -194,6 +194,7 @@ by combining other devices.
 
 You create your flipper devices by adding a ``flippers:`` section to
 your config file, and then specifying the switch and coil(s) for each flipper.
+Since the flippers belong to a playfield we also create this now.
 Here's what you would create based on the switches and coils we've defined so far:
 
 .. code-block:: mpf-config
