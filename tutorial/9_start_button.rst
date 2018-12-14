@@ -75,7 +75,8 @@ At this point you might be
 wondering, "Wait, I thought the eject_timeouts for the plunger was
 used to let MPF know when a ball really made it out of the plunger?"
 That's true, and technically at this point you don't need a playfield
-switch. However you'll eventually tag all your playfield switches with
+switch. However, this will speed up your ejects in a real machine and
+you'll eventually tag all your playfield switches with
 ``playfield_active``, so we're just getting starting on this now. To do
 this, create a new entry in your ``switches:`` section for one of your
 playfield switches, for example:
@@ -106,8 +107,8 @@ we're not going to go into those now.)
 If you do decide to add all
 your playfield switches now, you'll want to add the *playfield_active*
 tag to all the switches that might be hit by a ball being loose on the
-playfield. (So lane switches, ramp switches, rollovers, standups, drop
-targets, etc.) You do *not* want to tag ball device switches with
+playfield. (So lane switches, ramp switches, rollovers, standups etc.)
+You do *not* want to tag ball device switches with
 ``playfield_active`` since if a ball is in a ball device, then it's not
 loose on the playfield.
 

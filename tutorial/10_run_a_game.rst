@@ -23,9 +23,9 @@ like this:
 .. code-block:: mpf-config
 
     slide_player:
-     init_done: welcome_slide
-     mode_attract_started: attract_started
-     ball_started:
+      init_done: welcome_slide
+      mode_attract_started: attract_started
+      ball_started:
          widgets:
             type: text
             text: PLAYER (number) BALL (ball)
