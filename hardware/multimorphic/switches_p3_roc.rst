@@ -22,12 +22,21 @@ as 256 switches.
 
 .. image:: /hardware/images/multimorphic_SW-16.png
 
+Each SW-16 has a unique ``board number`` which is set using DIP switches
+(find that out now).
+On each board there are two ``banks`` (A and B) of 8 switches.
+Then each switch has an ``input number`` (0 to 7).
+
 To configure the ``number:`` of a switch connected to an SW-16 board and a
-P3-ROC, you have two options.
+P3-ROC, you have two options:
+
+Board Bank Switch Syntax
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first (and easier) option is to enter the number as a combination of the
-SW-16 board address (0-15, as configured by the DIP switches), then the bank
-number (A=0, B=1), then the switch number (0-7).
+SW-16 ``board address`` (0-15, as configured by the DIP switches), then the
+``bank number`` (Bank A is 0, Bank B is 1), then the switch ``input number``
+(0-7).
 
 For example:
 
@@ -38,6 +47,28 @@ For example:
          number: A0-B0-0  # SW-16 board at address 0, Bank A, Switch 0
       my_other_switch:
          number: A2-B1-5  # SW-16 board at address 2, Bank B, Switch 5
+
+Direct Numbering
+~~~~~~~~~~~~~~~~
+
+You can also use the internal number.
+As mentioned in the SW-16 manual you can calculate those using:
+
+``Bank A switch: P3-ROC switch # = SW-16 address * 16 + Bank A switch input``
+``Bank B switch: P3-ROC switch # = SW-16 address * 16 + 8 + Bank B switch input``
+
+However, we recommend the above syntax because it will perform this calcuation
+for you.
+
+For example:
+
+.. code-block:: mpf-config
+
+   switches:
+      my_switch:
+         number: 0   # SW-16 board at address 0, Bank A, Switch 0
+      my_other_switch:
+         number: 45  # SW-16 board at address 2, Bank B, Switch 5
 
 Burst Switch Inputs
 -------------------
