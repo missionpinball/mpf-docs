@@ -126,3 +126,4 @@ Please include the following information:
 .. toctree::
 
    debugging_memory_leaks
+   debugging_yaml_parse_errors
