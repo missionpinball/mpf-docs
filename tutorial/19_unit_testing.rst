@@ -1,7 +1,7 @@
-Tutorial step 2a: Testing your machine
+Tutorial step 19: Testing your machine
 ======================================
 
-Before we continue to Step 3, we want to take a moment to let you know about MPF's automated testing features.
+Before you continue with your machine, we want to take a moment to let you know about MPF's automated testing features.
 
 One of the cool things about MPF is that you can write "tests" which actually launch and run MPF and your
 machine config and then check to make sure everything is alright. These tests can hit switches and check to

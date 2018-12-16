@@ -404,5 +404,8 @@ If the welcome slide works but you never see the attract slide, make sure you ha
 ``mode_attract_started:`` event name spelled properly. Also make sure you do *NOT* run MPF with the
 ``-b`` option since that tells it not to connect to the MC.
 
+If you get YAML errors either copy the complete example below or read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
+
 Most of the other errors should be pretty self-explanatory. If you get stuck, feel free to post
 to the `mpf-users Google group <https://groups.google.com/forum/#!forum/mpf-users>`_.

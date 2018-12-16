@@ -319,6 +319,9 @@ Again, recapping the rules of YAML:
 + Make sure you *do* have a space *after* each colon.
 + Make sure you have the ``#config_version=5`` as the first line in your file.
 
+If you struggle to spot the problem read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
+
 6. Enabling your flippers
 -------------------------
 
@@ -611,6 +614,9 @@ If a flipper gets stuck on:
 If you're still running into trouble, feel free to post to the mpf-users
 Google group. We'll incorporate your issues into this tutorial to
 make it easier for everyone in the future!
+
+If you get YAML errors either copy the complete example below or read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
 
 Check out the complete config.yaml file so far
 ----------------------------------------------

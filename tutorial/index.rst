@@ -30,7 +30,6 @@ Now let's get started...
 
    1. Install MPF <1_install_mpf>
    2. Create your machine folder <2_creating_a_new_machine>
-   2a. Testing your machine <2a_testing>
    3. Get flipping! <3_get_flipping>
    4. Adjusting your flipper power <4_adjust_flipper_power>
    5. Add a display <5_add_a_display>
@@ -47,4 +46,5 @@ Now let's get started...
    16. Add an attract mode display show <16_attract_mode_show>
    17. Add lights (or LEDs) <17_add_lights_leds>
    18. Add your first shot <18_shots>
-   19. Next steps <19_next_steps>
+   19. Testing your machine <19_unit_testing>
+   20. Next steps <20_next_steps>

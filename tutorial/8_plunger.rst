@@ -169,5 +169,7 @@ letters, numbers, and the underscore, and that none of your names start with a n
 Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons.
+See our :doc:`/troubleshooting/debugging_yaml_parse_errors` guide if you
+got YAML errors.
 At this point your trough is ready to go! Next we have to configure
 your plunger lane.
