@@ -17,6 +17,8 @@ Snux System 11 Driver Board
 
 :doc:`/about/help_us_to_write_it`
 
+System 11 pinball machines can be driven by both P-ROC (not P3-ROC) and FAST controllers, however they will not interface to the System 11 MPU board; instead you need to replace the MPU with a 'Snux' board.
+
 This is an example:
 
 .. code-block:: mpf-config
