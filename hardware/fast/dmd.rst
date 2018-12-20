@@ -124,6 +124,7 @@ on the window and slide settings used in this machine config.
       width: 600
       height: 200
       title: Mission Pinball Framework
+      source_display: window
 
     dmds:
       my_dmd:
@@ -134,9 +135,9 @@ on the window and slide settings used in this machine config.
       - type: display
         effects:
          - type: dmd
-           pixel_color: ff5500
+           dot_color: ff5500
         width: 512
-        height: 12
+        height: 128
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top
@@ -149,7 +150,7 @@ on the window and slide settings used in this machine config.
       dmd_slide_1:  # slide we'll show on the physical DMD
       - type: text
         text: IT WORKS!
-        font_size: 30
+        font_size: 25
 
     slide_player:
       init_done:
