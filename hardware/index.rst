@@ -171,6 +171,7 @@ MPF supports:
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>
    MMA8451-based accelerometer <mma8451/index>
+   SPI Big Bang Switches <spi_bit_bang/index>
    Virtual Hardware <virtual/index>
    Existing Machines <existing_machines/index>
    Voltages and Power <voltages_and_power/index>

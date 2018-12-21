@@ -218,3 +218,4 @@ post a photo of it to `MPF Users Google Group
    two_coil_one_switch
    classic_single_ball
    classic_single_ball_no_shooter_lane
+   spike_trough

@@ -149,6 +149,7 @@ indicated which type of config file it's valid in.
    sound_pools: <sound_pools>
    sound_system: <sound_system>
    sounds: <sounds>
+   spi_bit_bang <spi_bit_bang>
    spike: <spike>
    state_machines: <state_machines>
    steppers: <steppers>

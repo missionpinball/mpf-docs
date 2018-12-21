@@ -28,11 +28,19 @@ is no ball blocking the path) and inactive when a ball is present and in the way
 
 .. image:: /mechs/images/trough_opto_diagram.jpg
 
+If you got a Stern Spike Trough but are not using Stern Spike (not recommended)
+read the :doc:`Stern Spike Trough guide <spike_trough>`.
+
 0. Connect your trough
 ----------------------
 
-If you are building a custom pinball machine you need to connect the
-http://www.scottdanesi.com/?p=1433
+Skip this step if your trough is already connected.
+Otherwise, you need to power your opto transmitters and connect the opto
+receivers to your inputs.
+Make sure that you got proper current limiting in place.
+This might be already present on the trough PCB (i.e. on older Stern troughs)
+or you might need to add current limiting resistors.
+Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.
 
 1. Add your trough switches
 ---------------------------
