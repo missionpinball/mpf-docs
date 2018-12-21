@@ -122,6 +122,8 @@ indicated which type of config file it's valid in.
    raspberry_pi: <raspberry_pi>
    rgb_dmds: <rgb_dmds>
    rpi_dmd: <rpi_dmd>
+   score_queue_player: <score_queue_player>
+   score_queues: <score_queues>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
    scriptlets: <scriptlets>
