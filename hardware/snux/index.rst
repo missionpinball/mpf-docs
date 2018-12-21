@@ -267,7 +267,7 @@ to other folks who are interested in modernizing System 11 machines.
 Mark lives in the UK, so the exact price you pay depends on the exchange rate,
 shipping to your country but it's around $180 US (Then you
 also have to buy a P-ROC to drive it.) You can
-contact Mark via PM (on Pinside as Snux). In addition to the board there are 
+contact Mark via PM (on Pinside as Snux). In addition to the board there are
 3 or 4 cables you'll need, Mark can advise.
 
 Displays
@@ -275,8 +275,8 @@ Displays
 
 All System 11 machines used various combinations of segment displays
 and these cannot be directly controlled via the P-ROC.  If you do want to use
-the original segment displays, Jim at mypinballs.com sells an adaptor board 
-that will connect between the P-ROC and the displays.   Otherwise you can use the 
+the original segment displays, Jim at mypinballs.com sells an adaptor board
+that will connect between the P-ROC and the displays.   Otherwise you can use the
 various other display options that MPF provides.
 
 
@@ -331,9 +331,8 @@ platform as *p_roc*, but then for *driverboards* you
 configure it as *snux*, like this:
 
 
-::
+.. code-block:: mpf-config
 
-    
     hardware:
         platform: p_roc
         driverboards: snux
@@ -353,9 +352,8 @@ file which means you don't have to add them to your own config file,
 but we're including them here just for completeness:
 
 
-::
+.. code-block:: mpf-config
 
-    
     snux:
         flipper_enable_driver_number: c23
         diag_led_driver_number: c24
@@ -385,9 +383,8 @@ boards that may exist at some point.  Here's the system11
 configuration section from Pin*Bot:
 
 
-::
+.. code-block:: mpf-config
 
-    
     system11:
         ac_relay_delay_ms: 75
         ac_relay_driver_number: c14
@@ -435,9 +432,8 @@ need to add an "A" or a "C" to the end of the driver number. Here's a
 snippet (incomplete) from the *Pin*Bot* machine-wide config file:
 
 
-::
+.. code-block:: mpf-config
 
-    
     coils:
       outhole:
         number: c01a
@@ -448,13 +444,6 @@ snippet (incomplete) from the *Pin*Bot* machine-wide config file:
       visor_motor:
         number: c13
         allow_enable: true
-
-
-
-::
-
-    
-    flashers:
       upper_pf_and_topper_1:
         number: c02c
       left_insert_bottom:
@@ -502,10 +491,9 @@ have an 8x8 lamp matrix, there should be no numbers 9 or 0 anywhere in
 your lamp numbers. Here's a snippet of the configuration from Pin*Bot:
 
 
-::
+.. code-block:: mpf-config
 
-    
-    matrix_lights:
+    lights:
         game_over_backbox:
             number: L11
         match_backbox:
@@ -545,9 +533,9 @@ row 6 is number 38, you actually enter "L56". Here's another snippet
 from *Pin*Bot*:
 
 
-::
+.. code-block:: mpf-config
 
-    
+   switches:
         left_outlane:
             number: S24
             label: Left Outlane
@@ -598,10 +586,23 @@ style trough, link below (since many games do this, even ones that aren't System
 look something like this:
 
 
-::
+.. code-block:: mpf-config
 
-    
-    ball_devices:
+   #! switches:
+   #!    outhole:
+   #!       number: 1
+   #!    trough1:
+   #!       number: 2
+   #!    trough2:
+   #!       number: 3
+   #!    plunger_lane:
+   #!       number: 4
+   #! coils:
+   #!    outhole:
+   #!       number: 1
+   #!    trough:
+   #!       number: 2
+   ball_devices:
         outhole:
             ball_switches: outhole
             eject_coil: outhole
@@ -612,11 +613,10 @@ look something like this:
             ball_switches: trough1, trough2
             eject_coil: trough
             eject_targets: plunger_lane
-            tags: home
+            tags: home, trough
         plunger_lane:
             ball_switches:  plunger_lane
             mechanical_eject: true
-            tags: home, ball_add_live
             eject_timeouts: 3s
 
 
@@ -626,6 +626,7 @@ tags so that each device is tagged with it's exact role. (And hey! Now
 you know why these are all separate tags in MPF instead of a single
 tag called "trough".)
 
+See :doc:`Setting up a System 11 Style Trough </mechs/troughs/two_coil_multiple_switches>` for details.
 
 
 (E) Final Steps and additional information
@@ -638,9 +639,6 @@ the forum if you find anything that's weird or that doesn't work as
 expected.
 
 `Snux on Pinside <https://pinside.com/pinball/community/pinsiders/snux>`_.
-
-`Setting up a System 11 Style Trough <http://docs.missionpinball.org/en/latest/mechs/troughs/two_coil_multiple_switches.html>`_.
-
 
 
 This is an example code block with the main Sys11 elements in.
