@@ -131,7 +131,7 @@ score and finally disable:
 
     enable_events: ball_started.3
     score_events: ball_started.2
-    enable_events: ball_started.1
+    disable_events: ball_started.1
 
 Without explicit priorities (or some logic in the device) the order of the
 three handlers would be random and you might see the following entry in the
