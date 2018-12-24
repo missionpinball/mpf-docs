@@ -19,3 +19,6 @@ MPF automatically registers event handlers from modes with the priority of that
 mode, meaning high-priority modes get access to an event before lower-priority
 modes. (This is useful since it gives higher-priority modes a chance to "block"
 events from lower-priority modes.)
+
+See :doc:`/config/instructions/device_control_events` on how to use event
+handlers in devices.

@@ -68,7 +68,6 @@ understand:
 
    overview/index
    overview/conditional
-   overview/multiple_things_from_one_event
    overview/priorities
    overview/event_types
 
