@@ -226,7 +226,7 @@ This example is based on Bally's Heavy Metal Meltdown.
   #! hit_and_release_switch s_top_lane_M
   #! assert_player_variable 3 pf_multiplier
   #! advance_time_and_run 2
-  #! drain_ball
+  #! drain_all_balls
   #! advance_time_and_run 2
   #! assert_player_variable 1 pf_multiplier
   #! hit_and_release_switch s_top_lane_J

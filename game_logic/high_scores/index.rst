@@ -193,14 +193,14 @@ This is an example (for machines with display):
    #! start_mode my_mode
    #! post score_100
    #! assert_player_variable 2000000 score
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 2 ball
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 3 ball
    #! mock_event high_score_enter_initials
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 3 ball
    #! assert_event_called high_score_enter_initials

@@ -143,7 +143,7 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
    ##! test
    #! start_game
    #! advance_time_and_run 1
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! stop_game 10
    #! advance_time_and_run 1

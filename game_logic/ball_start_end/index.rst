@@ -167,7 +167,7 @@ meantime. Use it for very short sounds or light flashes:
    #! mock_event test_stop
    #! start_game
    #! advance_time_and_run 1
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run .1
    #! assert_event_called test_stop
    #! assert_mode_running my_mode
@@ -236,7 +236,7 @@ sequences and delaying the game flow in the meantime:
    #! assert_event_not_called mode_ball_starting_show_ended
    #! advance_time_and_run 5
    #! assert_event_called mode_ball_starting_show_ended
-   #! drain_ball
+   #! drain_all_balls
    #! # still on ball 1
    #! mock_event test_start
    #! mock_event mode_ball_starting_show_ended

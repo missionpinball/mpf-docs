@@ -108,20 +108,20 @@ certain condition match):
    ##! test
    #! start_game
    #! mock_event test_event
-   #! assert_balls_on_playfield 0
+   #! assert_balls_on_playfield 1
    #! hit_switch s_scoop
    #! advance_time_and_run .9
-   #! assert_balls_on_playfield -1
-   #! advance_time_and_run 2
    #! assert_balls_on_playfield 0
+   #! advance_time_and_run 2
+   #! assert_balls_on_playfield 1
    #! assert_event_not_called test_event
    #! start_mode my_mode
    #! hit_switch s_scoop
    #! advance_time_and_run 2
    #! assert_event_called test_event
-   #! assert_balls_on_playfield -1
-   #! advance_time_and_run 10
    #! assert_balls_on_playfield 0
+   #! advance_time_and_run 10
+   #! assert_balls_on_playfield 1
 
 When your mode is running the eject will be delayed by 10s (duration of your
 show). Add all your lights, shows and slides to this show.
