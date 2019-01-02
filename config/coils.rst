@@ -113,7 +113,7 @@ coil is just pulsed (which is most of them), then you don't need to
 worry about this section.
 
 This provides the default value for any enable calls on the coil. Devices
-might call enable with a differnt power setting.
+might call enable with a different power setting.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
