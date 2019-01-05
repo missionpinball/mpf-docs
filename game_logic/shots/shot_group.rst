@@ -57,6 +57,20 @@ Example config for lane changing lights.
            disable_events: ball_ending
 
 
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for multiballs is ``device.shots.<name>``.
+
+*common_state*
+   The name of the common state of all shots in the group.
+   Will be ``None`` if there is no common state.
+   State names depend on the profile of your shots (by default ``lit`` and
+   ``unlit``).
+
+
 Shot Group Overview:
 --------------------
 Shot Group:
