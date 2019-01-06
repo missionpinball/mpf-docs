@@ -95,3 +95,84 @@ You may also use outputs as ``digital_outputs``. For instance, to control a moto
    Make sure you know what you are doing before turning this on.
    We advise to use PD-16 for normal playfield/mech drivers and only use local outputs with additional
    circuits (not directly).
+
+Pulse time
+~~~~~~~~~~
+
+The P-Roc, P3-Roc and/or PD-16 have the ability to specify the "pulse time".
+Pulse time is the coil's initial kick time.
+For example, consider the following configuration:
+
+.. code-block:: mpf-config
+
+    coils:
+        some_coil:
+            number:
+            default_pulse_ms: 30
+
+When MPF sends this coil a pulse command, the coil will be fired for 30ms.
+
+Pulse Power
+~~~~~~~~~~~
+
+You can also set the power of pulses on your coil:
+
+.. code-block:: mpf-config
+
+    coils:
+        some_coil:
+            number:
+            default_pulse_ms: 30
+            default_pulse_power: 0.5
+
+See the hold power section below for internal details about PWM times.
+With the P-Roc it is not possible to use ``default_hold_power`` and
+``default_pulse_power`` at the same time.
+
+Hold Power
+~~~~~~~~~~
+
+If you want to hold a driver on at less than full power, MPF does this by using
+``default_hold_power`` parameter which works for all platforms.
+It can range from 0.0 to 1.0 and defines the time share the coil is on
+(0%-100%).
+
+The P-Roc internally uses two parameters which determine how many milliseconds
+the coil will be on (pwm-on time) and off (pwm-off time).
+MPF will calculate those based on your power settings.
+
+.. code-block:: mpf-config
+
+    coils:
+      some_coil:
+        number:
+        default_pulse_ms: 32
+        default_hold_power: 0.5
+
+When enabled, this driver will be pulsed for 32ms and then hold on at 50% duty
+which will convert to 1ms on, 1ms off, 1ms on, 1ms off and so on.
+
+With the P-Roc it is not possible to use ``default_hold_power`` and
+``default_pulse_power`` at the same time.
+
+
+Recycle
+~~~~~~~
+
+You can set :doc:`recycle time </mechs/coils/recycle>`
+to your coil to prevent it from overheating by repeated pulses.
+The recycle time is not configurable on the P-Roc but you can turn it on or
+off (default on).
+This is an example:
+
+.. code-block:: mpf-config
+
+    coils:
+      some_coil_with_recycle:
+        number:
+        default_pulse_ms: 32
+        default_recycle: True
+      some_coil_without_recycle:
+        number:
+        default_pulse_ms: 32
+        default_recycle: False
