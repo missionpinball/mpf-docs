@@ -79,6 +79,16 @@ Optional settings
 
 The following sections are optional in the ``snux:`` section of your config. (If you don't include them, the default will be used).
 
+prefer_a_side_event:
+~~~~~~~~~~~~~~~~~~~~
+Single value.  The name of an event that will make the AC relay sit on the 'A' side when at rest.  Default: ``game_ended``
+Generally when the game is idle, the AC relay should be de-energised, so it sits on the 'A' side.
+
+prefer_c_side_event:
+~~~~~~~~~~~~~~~~~~~~
+Single value.  The name of an event that will make the AC relay sit on the 'C' side when at rest.  Default: ``game_starting``
+Generally when the game is in play, the AC relay should be energised, favouring the 'C' side which generally handles the flashers.  This means they respond quickly without the need to wait on the relay being energised.
+
 platform:
 ~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
