@@ -16,7 +16,7 @@ configure multiball devices. Multiball devices are "abstract"
 devices in that they're more of a concept rather than a physical
 device on the playfield. The multiball "device" is used to start
 multiball. This section can be used in your machine-wide config files.
-This sectioncanbe used in mode-specific config files.
+This section can be used in mode-specific config files.
 
 Here's an example which contains several different multiball configs. (In the
 real world, you'd probably only have one multiball for each mode.)
