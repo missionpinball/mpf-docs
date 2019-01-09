@@ -19,13 +19,26 @@ started.
 
 This means that the "ball_started" event isn't just MPF saying, "Hey, a ball
 just started", rather, it's more like MPF saying, "Hey, a ball just started
-for player 2, ball 3."
+for player 2, ball 3.".
+You can also see that in your mpf log:
 
-By the way, in case you're wondering how we know that the *ball_started* event
-has those parameters (or even that *ball_started* is an event), they're
+.. code-block:: console
+
+   INFO : EventManager : Event: ======'ball_started'====== Args={'player': 2, 'ball': 3}
+
+By the way, in case you're wondering how we know that the ``ball_started`` event
+has those parameters (or even that ``ball_started`` is an event), they're
 all in the :doc:`event reference guide </events/index>`, and the entry for
 :doc:`/events/ball_started` lists the parameters it has along with an
 explanation of what those mean.
+
+In addition to parameters in your event you can also reference most devices in
+your machine.
+For instance, you might want to start a mode after a counter reached a certain
+value.
+You can reference any
+:doc:`placeholder variable </config/instructions/dynamic_values>` in a condtion
+and also apply arbitrary logic/conditions to them.
 
 Using keyword arguments in your config files
 --------------------------------------------
@@ -127,6 +140,19 @@ learned in school.)
 
 Most likely you wouldn't get that complex, but it's nice to know that you
 can if you want. :)
+
+You can also reference devices in your machine.
+The syntax for that is ``device.DEVICE_TYPE.DEVICE_NAME.PLACEHOLDER``.
+For instance, to reference the ``value`` of a ``counter`` called
+``your_mode_counter`` you would use
+``device.counters.your_mode_counter.value``.
+In the following example we show a slide when the value of the counter is
+above ``5`` in ball ``3``
+
+.. code-block:: mpf-config
+
+   slide_player:
+      ball_started{ball == 3 and device.counters.your_mode_counter.value > 5}: nearly_did_all_modes
 
 You can use all :doc:`placeholder variables </config/instructions/dynamic_values>`.
 
