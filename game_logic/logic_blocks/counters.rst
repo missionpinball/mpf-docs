@@ -62,3 +62,64 @@ to make sure the mansions is initialized only once per game:
       count_complete_value: 1
       persist_state: true
 
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.counters.<name>``.
+
+*value*
+   The count of this counter.
+
+*enabled*
+   Boolean (true/false) which shows whether this counter is enabled.
+
+*completed*
+   True if the block is completed. Otherwise False.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   ##! mode: my_mode
+   counters:
+    test_counter:
+      count_events: count_up
+      reset_on_complete: False
+      count_complete_value: 3
+
+   event_player:
+      test_event{device.counters.test_counter.value > 1}: count_above_one
+      test_event{device.counters.test_counter.completed}: count_completed
+
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event count_above_one
+   #! mock_event count_completed
+   #! post test_event
+   #! assert_event_not_called count_above_one
+   #! post count_up
+   #! assert_int_condition 1 device.counters.test_counter.value
+   #! post test_event
+   #! assert_event_not_called count_above_one
+   #! post count_up
+   #! assert_int_condition 2 device.counters.test_counter.value
+   #! assert_bool_condition False device.counters.test_counter.completed
+   #! post test_event
+   #! assert_event_called count_above_one
+   #! assert_event_not_called count_completed
+   #! post count_up
+   #! assert_int_condition 3 device.counters.test_counter.value
+   #! assert_bool_condition True device.counters.test_counter.completed
+   #! post test_event
+   #! assert_event_called count_completed
+
+Related Events
+--------------
+
+* :doc:`/events/logicblock_name_complete`
+* :doc:`/events/logicblock_name_hit`
+* :doc:`/events/logicblock_name_updated`
+

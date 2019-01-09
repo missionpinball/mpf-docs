@@ -51,4 +51,107 @@ then once it is, it moves on, and any posted before or after are just ignored.
 Once all four events have been posted in order, the event *wt_done* is posted which you
 can use to stop the mode or add a score or play a show or whatever you want.
 
+Monitorable Properties
+----------------------
 
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.sequences.<name>``.
+
+*value*
+   The state of this sequence as list.
+   There will be one entry for every element in the sequence.
+   For instance, if your sequence has three elements if will be a list of len
+   three with index 0 for the status of your first element, 1 for the seconds
+   and 2 for the third element.
+   Elements will be 0 at the beginning and turn to 1 when completed.
+
+*enabled*
+   Boolean (true/false) which shows whether this sequence is enabled.
+
+*completed*
+   True if the block is completed. Otherwise False.
+
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.accruals.<name>``.
+
+*value*
+   The state of this accrual as position.
+   In the beginning this will be ``0``.
+   Once the first step has been completed it will be ``1``.
+   Then ``2`` after the second and so on.
+
+*enabled*
+   Boolean (true/false) which shows whether this accrual is enabled.
+
+*completed*
+   True if the block is completed. Otherwise False.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   ##! mode: my_mode
+   sequences:
+      test_sequence:
+         events:
+            - shot1_hit
+            - shot2_hit
+            - shot3_hit
+         reset_on_complete: False
+
+   event_player:
+      test_event{device.sequences.test_sequence.value == 1}: shot1_was_hit
+      test_event{device.sequences.test_sequence.value == 2}: shot2_was_hit
+      test_event{device.sequences.test_sequence.value == 3}: shot3_was_hit
+      test_event{device.sequences.test_sequence.completed}: sequence_completed
+
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event shot1_was_hit
+   #! mock_event shot2_was_hit
+   #! mock_event shot3_was_hit
+   #! mock_event sequence_completed
+   #! assert_int_condition 0 device.sequences.test_sequence.value
+   #! post test_event
+   #! assert_event_not_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! post shot1_hit
+   #! assert_int_condition 1 device.sequences.test_sequence.value
+   #! assert_bool_condition False device.sequences.test_sequence.completed
+   #! post test_event
+   #! assert_event_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! assert_event_not_called sequence_completed
+   #! post shot3_hit
+   #! post shot2_hit
+   #! post test_event
+   #! assert_event_called shot1_was_hit
+   #! assert_event_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! assert_event_not_called sequence_completed
+   #! assert_int_condition 2 device.sequences.test_sequence.value
+   #! assert_bool_condition False device.sequences.test_sequence.completed
+   #! post shot3_hit
+   #! post test_event
+   #! assert_event_called shot1_was_hit
+   #! assert_event_called shot2_was_hit
+   #! assert_event_called shot3_was_hit
+   #! assert_event_called sequence_completed
+   #! assert_int_condition 3 device.sequences.test_sequence.value
+   #! assert_bool_condition True device.sequences.test_sequence.completed
+
+
+Related Events
+--------------
+
+* :doc:`/events/logicblock_name_complete`
+* :doc:`/events/logicblock_name_hit`
+* :doc:`/events/logicblock_name_updated`

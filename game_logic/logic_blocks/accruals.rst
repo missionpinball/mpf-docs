@@ -57,4 +57,85 @@ Again, since this is an accrual logic block, those three events can be happen in
 any order. If one of them is posted twice, that's fine. It doesn't count as one of the
 other events nor does it "undo" the fact that it was hit.
 
+Monitorable Properties
+----------------------
 
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.accruals.<name>``.
+
+*value*
+   The state of this accrual as list.
+   There will be one entry for every element in the accrual.
+   For instance, if your accrual has three elements if will be a list of len
+   three with index 0 for the status of your first element, 1 for the seconds
+   and 2 for the third element.
+   Elements will be 0 at the beginning and turn to 1 when completed.
+
+*enabled*
+   Boolean (true/false) which shows whether this accrual is enabled.
+
+*completed*
+   True if the block is completed. Otherwise False.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   ##! mode: my_mode
+   accruals:
+      test_accrual:
+         events:
+            - shot1_hit
+            - shot2_hit
+            - shot3_hit
+         reset_on_complete: False
+
+   event_player:
+      test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
+      test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
+      test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
+      test_event{device.accruals.test_accrual.completed}: accrual_completed
+
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event shot1_was_hit
+   #! mock_event shot2_was_hit
+   #! mock_event shot3_was_hit
+   #! mock_event accrual_completed
+   #! assert_bool_condition False device.accruals.test_accrual.value[0]
+   #! assert_bool_condition False device.accruals.test_accrual.value[1]
+   #! assert_bool_condition False device.accruals.test_accrual.value[2]
+   #! post test_event
+   #! assert_event_not_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! post shot1_hit
+   #! assert_bool_condition True device.accruals.test_accrual.value[0]
+   #! assert_bool_condition False device.accruals.test_accrual.value[1]
+   #! assert_bool_condition False device.accruals.test_accrual.value[2]
+   #! assert_bool_condition False device.accruals.test_accrual.completed
+   #! post test_event
+   #! assert_event_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! assert_event_not_called accrual_completed
+   #! post shot3_hit
+   #! post shot2_hit
+   #! post test_event
+   #! assert_event_called shot1_was_hit 2
+   #! assert_event_called shot2_was_hit
+   #! assert_event_called shot3_was_hit
+   #! assert_event_called accrual_completed
+   #! assert_bool_condition True device.accruals.test_accrual.value[0]
+   #! assert_bool_condition True device.accruals.test_accrual.value[1]
+   #! assert_bool_condition True device.accruals.test_accrual.value[2]
+   #! assert_bool_condition True device.accruals.test_accrual.completed
+
+Related Events
+--------------
+
+* :doc:`/events/logicblock_name_complete`
+* :doc:`/events/logicblock_name_hit`
+* :doc:`/events/logicblock_name_updated`
