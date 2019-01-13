@@ -241,7 +241,7 @@ So on Windows, you'll end up with something like:
         smartmatrix_1:
            port: com12
            baud: 2500000
-           old_cookie: true
+           old_cookie: false
 
 And on Mac or Linux, it will look something like:
 
@@ -254,12 +254,12 @@ And on Mac or Linux, it will look something like:
         smartmatrix_1:
            port: "/dev/tty.usbmodem1448891"
            baud: 2500000
-           old_cookie: true
+           old_cookie: false
 
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
 example above. These are the settings that are needed for the SmartMatrix.
-If you are using the FAST DMD board set ``old_cookie`` to false and baud to
+If you are using the FAST DMD board set baud to
 `3000000`.
 
 3. Add a physical RGB DMD device entry
@@ -369,7 +369,7 @@ on the window and slide settings used in this machine config.
       smartmatrix_1:
         port: com5  # this will most likely be a different port for you
         baud: 2500000
-        old_cookie: true
+        old_cookie: false
 
     rgb_dmds:
       smartmatrix_1:
