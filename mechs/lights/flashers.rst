@@ -26,6 +26,18 @@ since modern LED-based machines typically use regular LED devices (or combinatio
 of them) as flashers. (So basically a "flasher" in MPF is any single-color
 light that's connected to a driver output rather than a light output.
 
+Hardware
+--------
+
+#89 bulbs are commonly used as flashers in pinball machines.
+Those are rated at 13V but typically driven at higher voltages for only a very
+short amount of time.
+Turning them on permanently will burn quickly in most machines.
+
+
+Config
+------
+
 Starting with MPF 0.50 flashers and lights have been unified. Depending on your
 platform flashers might be :doc:`/config/lights` or :doc:`/config/coils`. In most
 cases they are configures as :doc:`coil </config/coils>`:
