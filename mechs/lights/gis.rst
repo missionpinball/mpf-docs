@@ -19,6 +19,7 @@ MPF includes support for GI (general illumination) light strings which are
 common in existing Williams and Stern machines. You can specify GI
 strings which you can then enable, disable, or (if the hardware supports it)
 dim.
+Typically, there are one to four GI strings.
 
 .. note::
 
@@ -38,6 +39,12 @@ sync their dimming commands with the AC current wave. Later Williams WPC
 machines split their GI into non-dimmable (which used still used AC) and
 switched their dimmable to DC. Some machines also have "enable" relays that
 must be activated first before certain GI strings will work.
+In general those bulbs are the same models as used for inserts (#44 and #47
+for EM and early SS; #444/#555/#249 for later SS; #906 for later machines).
+
+GI string might also be
+:doc:`connected to a driver <coils_as_lights>` and not part of a light matrix.
+In recent machines LEDs are used but still driven in strings.
 
 Config
 ------

@@ -52,13 +52,8 @@ See :doc:`/tutorial/9_start_button` for details.
 You might want to integrate the button into your attract light show.
 
 
-Related How To guides
----------------------
-
-See the documentation of your platform on how to configure GIs.
-
 +------------------------------------------------------------------------------+
-| Platform related How To                                                      |
+| Related How To Guides                                                        |
 +==============================================================================+
 | :doc:`/tutorial/9_start_button`                                              |
 +------------------------------------------------------------------------------+
