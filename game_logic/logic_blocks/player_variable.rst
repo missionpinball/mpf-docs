@@ -1,5 +1,5 @@
 player_variable:
-================
+~~~~~~~~~~~~~~~~
 
 Prior to MPF 0.50 the state of logic blocks has been persisted to player
 variables.
