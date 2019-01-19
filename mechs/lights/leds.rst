@@ -43,7 +43,35 @@ Other serial LEDs contain three white LEDs (WWW order).
 If nothing is specified MPF assumes RGB order so you need to specify it for any
 LED with a different channel order.
 
+Hardware
+~~~~~~~~
+
+There are two common types of serial LEDs: WS281x and LPD880x.
+Those LEDs are chained which means that the controller only connects to the
+first LED.
+The first LED will connect to the second.
+The second to the third and so on.
+
 :doc:`TODO: Add a picture of WS2812 </about/help_us_to_write_it>`
+
+Both types are spec'd for 4.5V to 5.5V operations and you should make sure that
+the voltage does not drop below 4.5V inside the chain at full brightness.
+Otherwise, your colors will be off and the LEDs might start to flicker.
+We recommend you to turn on all your LEDs and measure this.
+In most cases it is helpful to run your
+:doc:`power supply </hardware/voltages_and_power/voltages_and_power>` at 5.5V
+instead of 5V to give your LEDs some headroom.
+
+Additionally, make sure to run separate ground lines for serial LEDs from
+your PSU.
+We recommend you to connect the ground at the PSU and not below the playfield
+because coils will create a lot of spike in the ground line otherwise.
+However, make sure that you connect your grounds or you will be in danger!
+
+Config in MPF
+~~~~~~~~~~~~~
+
+You can define serial LEDS in MPF as :doc:`/config/lights`:
 
 .. code-block:: mpf-config
 
