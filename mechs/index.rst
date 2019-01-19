@@ -35,7 +35,7 @@ Pinball Mechs in MPF include:
    Slingshot <slingshots/index>
    Spinners <spinners/index>
    Stepper Motors <steppers/index>
-   Switches/Optos <switches/index>
+   Switches/Optos/Buttons <switches/index>
    Targets <targets/index>
    Troughs / Ball Drains <troughs/index>
 

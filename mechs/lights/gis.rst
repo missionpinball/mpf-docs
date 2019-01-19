@@ -25,6 +25,9 @@ dim.
    In MPF 0.50 GIs became :doc:`/config/lights` with ``subtype`` gi. They behave
    like any other lights in MPF.
 
+Hardware
+--------
+
 :doc:`TODO: Add a picture of a GI string </about/help_us_to_write_it>`
 :doc:`TODO: Add a picture of GI LEDs </about/help_us_to_write_it>`
 
@@ -35,6 +38,9 @@ sync their dimming commands with the AC current wave. Later Williams WPC
 machines split their GI into non-dimmable (which used still used AC) and
 switched their dimmable to DC. Some machines also have "enable" relays that
 must be activated first before certain GI strings will work.
+
+Config
+------
 
 MPF hides all this complexity from you. You just define your GI strings in
 your machine :doc:`/config/lights` section and then you can enable, disable, and
