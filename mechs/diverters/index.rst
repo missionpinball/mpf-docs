@@ -101,9 +101,14 @@ the prefix for diverters is ``device.diverters.<name>``.
 Related How To guides
 ---------------------
 
-:doc:`/about/help_us_to_write_it`
+ * :doc:`up_down_ramps`
 
 Related Events
 --------------
 
 .. include:: /events/include_diverters.rst
+
+
+.. toctree::
+
+   up_down_ramps
