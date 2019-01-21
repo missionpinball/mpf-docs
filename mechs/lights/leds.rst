@@ -52,7 +52,7 @@ first LED.
 The first LED will connect to the second.
 The second to the third and so on.
 
-:doc:`TODO: Add a picture of WS2812 </about/help_us_to_write_it>`
+.. image:: images/ws2812array.png
 
 Both types are spec'd for 4.5V to 5.5V operations and you should make sure that
 the voltage does not drop below 4.5V inside the chain at full brightness.
