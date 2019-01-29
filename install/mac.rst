@@ -39,6 +39,9 @@ To remove the old MPF Mac installation:
 If you don't know how to find your ``/usr/local/bin`` folder, you can use
 the "Go to Folder" technique shown in Step 1.
 
+Prerequisites and Python Environment
+====================================
+
 1. Download the Mac Multimedia Frameworks
 -----------------------------------------
 
@@ -111,7 +114,7 @@ Click the "Install" button here to get just the command line tools. The
 
 The download will be about 150 MB, and the total install will be about 1.1 GB.
 
-After the installation of the tools you need to accept the license agreeement from Apple.
+After the installation of the tools you may need to accept the license agreeement from Apple.
 The following command starts that process in the Terminal, just follow the instructions provided:
 
 ::
@@ -121,18 +124,18 @@ The following command starts that process in the Terminal, just follow the instr
 If you already have the command line tools installed, that's fine. You'll get
 some kind of error saying they're already installed and you can move on.
 
-3. Install Python 3.5 or 3.6
+3. Install Python 3.5+
 ----------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Mac platforms, MPF requires Python 3.5 or never. We lately tested Python 3.6 and it can be used.
+On Mac platforms, MPF requires Python 3.5 or newer. It is well-tested on 3.6 and somewhat tested on 3.7.
 
-You can download Python 3.6 directly via `this link <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_.
+You can download Python 3.6 directly via `this link <https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.9.pkg>`_.
 (Note that the final digit in the Python version number is the "patch" number,
-so 3.6.5 is the latest version of Python 3.6 as of the time this document was last updated.)
+so 3.6.8 is the latest version of Python 3.6 as of the time this document was last updated.)
 
 .. image:: images/mac_install_python_1.jpg
 
@@ -162,6 +165,60 @@ different between the two:
 
 .. image:: images/mac_python_versions.jpg
 
+4. Create a Virtual Environment
+-------------------------------
+
+Python includes a utility call "virtual environment" that creates a safe,
+isolated environment to install packages and configure python. It's strongly
+recommended to install MPF in a virtual environment, so that other Python
+programs can't pollute it (and it can't pollute others).
+
+To create a virtual enviroment, choose a folder where you want to install
+a copy of python and keep the enviroment's packages. For this example, we'll
+call the environment "mpfenv" and put it in our home directory (known as "~").
+
+.. code-block:: console
+
+  python3 -m venv ~/mpfenv
+
+If you have multiple versions of Python3 (say, 3.4 and 3.6), you can specify
+which one to use in the virtual environment:
+
+.. code-block:: console
+
+  python3.6 -m venv ~/mpfenv
+
+5. Activate your Virtual Environment
+------------------------------------
+
+To keep your virtual enviroment isolated, it only activates when you tell it to.
+You can enable the virtual environment with the dot command from the terminal:
+
+.. code-block:: console
+
+  . ~/mpfenv/bin/activate
+
+Note that the first character is a period, followed by a space, then the path
+to your virtual environment and "/bin/activate".
+
+.. note::
+  You may want to write this step down, as you'll run it every time you open up
+  a terminal window to work on MPF*
+
+You'll know you're in the virtual environment because the console prompt will include
+the name of your venv in parenthesis. Conveniently, the python you used to create
+the virtual environment will now be the default python.
+
+.. code-block:: console
+
+  My-Mac:~ python --version
+  Python 2.7.10
+  My-Mac:~ . ~/mpfenv/bin/activate
+  (mpfenv) My-Mac:~ python --version
+  Python 3.6.8
+  (mpfenv) My-Mac:~ 
+
+
 4. Install/upgrade some Python components
 -----------------------------------------
 
@@ -169,18 +226,27 @@ Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
 the web. (It's kind of like an app store for Python apps.)
 
-Due to a bug in versions of pip older than 9.0.2 on the Mac, we cannot update *pip*
-using *pip*. So the next step is to download and run a special Python script to install
-the latest version of pip.
+If you created a virtual environment using Python3, then pip will be correct.
+If you are not using a virtual environment and have both Python2 and Python3 
+on your system, you'll want to check your version:
 
-Update pip by running the following command:
+.. code-block:: console
+  
+  My-Mac:~ $ pip --version
+  pip 8.0.2 from /usr/bin/pip (python 2.7)
+  My-Mac:~ $ pip3 --version
+  pip 18.0.1 from /usr/bin/pip3 (python 3.6)
+
+If your "pip" is for Python2, then you'll use "pip3" through the rest of this guide.
+
+The versions of pip that come with Python aren't always the newest, so it's a
+good idea to update pip by running the following command:
 
 .. code-block:: console
 
-    curl -O https://bootstrap.pypa.io/get-pip.py
-    python3 get-pip.py
+  pip install --update pip
 
-The latest version of pip should now be installed (9.0.3 or newer).
+The latest version of pip should now be installed.
 
 Next, we need to install and update a few other python packages required to run mpf by
 running the following command:
@@ -189,12 +255,12 @@ So next run the following command:
 
 .. code-block:: console
 
-    pip3 install setuptools cython==0.25.2 --upgrade
+    pip install --upgrade setuptools cython
 
 This command will download and install the latest versions of the *setuptools*
-package, as well as version 0.25.2 of a package called *cython*. The results will
-look something like this (though the exact version numbers might be different
-depending on what's the latest whenever you're running this):
+and *cython* packages. The results will look something like this (though the 
+exact version numbers might be different depending on what's the latest 
+whenever you're running this):
 
 .. code-block:: console
 
@@ -206,38 +272,29 @@ depending on what's the latest whenever you're running this):
        100% |################################| 3.8MB 7.6MB/s
    Installing collected packages: setuptools, cython
    Successfully installed cython-0.25.2 setuptools-32.3.1
-   
-We recommend to stick to the specific cython Version, as others broke our installation process while testing the installation on different Macs.
+  
+Installing MPF & MC
+===================
 
-5. Install MPF
---------------
+5.1 Install MPF & MC (Stable Release)
+-------------------------------------
 
-Next you can run pip again to install MPF itself. Technically what you're
-installing is "mpf-mc", which is the
-`Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_
-package, but that package will also install the MPF game engine. Install MPF
-like this:
+First, double-check you're in your virtual enviroment, if you set one up.
+
+Next you can run pip again to install MPF itself, along with MPF-MC (the
+`Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_)
+Install MPF and MC like this:
 
 .. code-block:: console
 
-   pip3 install mpf-mc --pre
+   pip install mpf mpf-mc
 
-.. note::
+If you are using High Sierra or newer, you may need to add the --user option to get
+around a specific rights problem if the above doesn't work.
 
-   Since MPF 0.50 is not yet released, the command you need to run is
-   "pip install mpf-mc --pre" to get the latest "pre-release" version, so that MPF runs under Mac.
-   
-   If you Upgrade your installation add --upgrade to the call like this:   
+.. code_block:: console
 
-::
-
-   pip3 install mpf-mc --pre --upgrade
-   
-If you are using High Sierra please add the --user option to get around a specific rights problem:
-
-::
-
-   pip3 install mpf-mc --pre --upgrade --user
+   pip install mpf mpf-mc --user
 
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
@@ -250,7 +307,7 @@ are.
 
 .. code-block:: console
 
-   Brians-Mac:~ brian$ pip3 install mpf-mc
+   My-Mac:~ $ pip3 install mpf-mc
    Collecting mpf-mc
      Downloading mpf-mc-0.32.12.tar.gz (11.1MB)
        100% |################################| 11.1MB 29.6MB/s
@@ -282,22 +339,9 @@ are.
      Running setup.py install for kivy ... done
      Running setup.py install for mpf-mc ... done
    Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.12 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
-   Brians-Mac:~ brian$
+   My-Mac:~ $
    
-Now you will have to install PyQt5 to get the rest of the system running later on:
-
-::
-
-   sudo pip3 install PyQt5
-   
-Patch your Terminal undr High Sierra, so that it can show the UI correctely (otherwise it produces an error in "curs_set()"):
-
-::
-
-    export TERM=xterm-256color
-    
-
-If you want to make sure that MPF was installed, quit the Terminal app and restart it, and then run:
+If you want to make sure that MPF was installed, run:
 
 .. code-block:: console
 
@@ -308,13 +352,86 @@ this:
 
 .. code-block:: console
 
-   Brians-Mac:~ brian$ mpf --version
-   MPF v0.50.82
+   My-Mac:~ $ mpf --version
+   MPF v0.51.3
 
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
 
-6. Download & run the "Demo Man" example game
+5.2 Install MPF & MC (Latest)
+-----------------------------
+
+The stable release of MPF is updated every few months, but if you always want the most up-to-date
+changes, which often fix (but sometimes cause) bugs and introduce new features, you can run MPF
+directly from the codebase.
+
+You can use *git* to clone the MPF and MC repositories onto your computer, which will download
+the current code (instead of the latest release code, which pip downloads). Git will automatically
+create a folder in your current directory, so choose where you want them to live and run the 
+following commands:
+
+.. code-block:: console
+
+  My-Mac:~ $ git clone https://github.com/missionpinball/mpf.git
+  Cloning into 'mpf'...
+  Receiving objects: 100%, done.
+  Resolving deltas: 100%, done.
+  
+  My-Mac:~ $ git clone https://github.com/missionpinball/mpf-mc.git
+  Cloning into 'mpf-mc'...
+  Receiving objects: 100%, done.
+  Resolving deltas: 100%, done.
+
+Now we'll use pip to "install" MPF and MC, but we'll explicitly tell pip to run the code
+out of the folders we've specified (instead of downloading and caching the latest release).
+Because git automatically created the "mpf" and "mpf-mc" folders, we can use those folder names
+with the `-e` flag.
+
+.. code-block:: console
+
+  pip install -e mpf
+  pip install -e mpf-mc
+
+When the installs complete, you can confirm that MPF and MC are running locally by using
+the pip list command. It should output a long list of packages that are installed, and note
+that mpf and mpf-mc have your folder in the Location column.
+
+.. code-block:: console
+
+  My-Mac:~ $ pip list
+  Package          Version     Location
+  ---------------- ----------- -------------------------
+  Cython           0.29.3
+  idna             2.8
+  Kivy             1.10
+  Kivy-Garden      0.1.4
+  mpf              0.51.3      /Users/anthony/git/mpf
+  mpf-mc           0.51.5      /Users/anthony/git/mpf-mc
+  Pillow           5.4.1
+  pip              19.0.1
+  Pygments         2.3.1
+
+.. note::
+
+  You will have many more packages in your list, the above sample is abridged for demonstration purposes.
+
+6. Update Kivy to 1.11
+----------------------
+
+There is a known bug in Kivy 1.10 that causes intermittent freezing in applications, including MC.
+As of this writing (January 2019) there is no scheduled release date for Kivy 1.11 that fixes the
+bug, but we can manually install it from github.
+
+.. code-block:: console
+
+  pip install https://github.com/kivy/kivy/archive/master.zip
+
+This installation may take a couple of minutes.
+
+Running Pinball Games in MPF
+============================
+
+7. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -325,7 +442,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-7. Install whatever drivers your hardware controller needs
+8. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
@@ -335,12 +452,12 @@ documentation for details. (You don't have to worry about that now if you just
 want to play with MPF first.)
 
 Running MPF
------------
+===========
 
 See the section :doc:`/running/index` for details and command-line options.
 
-Keeping MPF up-to-date
-----------------------
+9.1 Keeping MPF up-to-date (Stable Release)
+---------------------------------------
 
 Since MPF is a work-in-progress, you can use the *pip* command to update your
 MPF installation.
@@ -378,8 +495,33 @@ To downgrade (or install a specific release x.yy.z) run:
   pip3 install mpf=x.yy.z
   pip3 install mpf-mc=x.yy.z
 
+9.2 Keeping MPF up-to-date (Latest)
+-----------------------------------
+
+When you cloned the MPF and MC repositories and installed them, you saved a snapshot of MPF and MC 
+on the day you cloned them. Any time you want to fetch the latest
+updates and fixes, go to the mpf (or mpf-mc) repository folder and pull the newest code.
+
+.. code-block:: console
+
+  My-Mac:~ $ cd mpf
+  My-Mac:mpf $ git pull
+  remote: Counting objects: 12, done.
+  Unpacking objects: 100%, done.
+
+If there are any changes, they will be downloaded. You do not need to re-install or update with pip
+in any way, because you are always running the code directly out of the repository folder.
+
+If there are no changes, git will let you know.
+
+.. code-block:: console
+
+  My-Mac:~ $ cd mpf-mc
+  My-Mac:mpf-mc $ git pull
+  Already up to date.
+
 Next steps!
------------
+===========
 
 Now that MPF is installed, you can follow our
 :doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
