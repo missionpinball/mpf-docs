@@ -294,6 +294,17 @@ whenever you're running this):
    Installing collected packages: setuptools, cython
    Successfully installed cython-0.25.2 setuptools-32.3.1
   
+By default, pip downloads and installs precompiled binaries. The Kivy binaries
+include frameworks that can conflict with the Mac Library frameworks, so it's
+preferred to install Kivy and build a local binary. We can tell pip to not
+download the precompiled binary:
+
+.. code-block:: console
+
+  pip install kivy --no-binary :all:
+
+This installation may take a couple of minutes.
+
 Installing MPF & MC
 ===================
 
@@ -380,19 +391,24 @@ this:
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
 
-5.2 Install MPF & MC (Latest)
------------------------------
+5.2 Install MPF & MC (Development Build)
+----------------------------------------
 
-The stable release of MPF is updated every few months, but if you always want the most up-to-date
-changes, which often fix (but sometimes cause) bugs and introduce new features, you can run MPF
-from the latest development build.
+The stable release of MPF is updated every few months, after being tested and used
+by the development team. If you want to play with the most up-to-date changes, 
+you can run MPF from the latest development build. This is not recommended for most
+users.
+
+The development builds may include new features in progress, changes to behavior,
+and bugs. Running the development builds is recommended for people who want to
+actively participate in the development and testing of MPF.
 
 The installation instructions are the same, except for including "--pre" in the install command
 (for "prerelease").
 
 .. code-block:: console
 
-   pip install --pre mpf mpf-mc
+   pip install --upgrade --pre mpf mpf-mc
 
 The prereleases will have "dev" in their version number to indicate that they are under development.
 
@@ -401,27 +417,18 @@ The prereleases will have "dev" in their version number to indicate that they ar
    My-Mac:~ $ mpf --version
    MPF v0.52.0.dev3
 
-6. Update Kivy to 1.11
-----------------------
-
-There is a known bug in Kivy 1.10 that causes intermittent freezing in applications, including MC.
-As of this writing (January 2019) there is no scheduled release date for Kivy 1.11 that fixes the
-bug, but we can manually install it.
+If you want to switch from the development build back to the stable release, uninstall
+and run the install command without the "--pre".
 
 .. code-block:: console
 
-  pip install https://github.com/kivy/kivy/archive/master.zip
-
-This installation may take a couple of minutes.
-
-.. note::
-
-  To avoid dependency conflicts, it's best to install MPF & MC first, and then update Kivy.
+  pip uninstall mpf mpf-mc
+  pip install mpf mpf-mc
 
 Running Pinball Games in MPF
 ============================
 
-7. Download & run the "Demo Man" example game
+6. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -432,7 +439,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-8. Install whatever drivers your hardware controller needs
+7. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
@@ -446,7 +453,7 @@ Running MPF
 
 See the section :doc:`/running/index` for details and command-line options.
 
-9. Keeping MPF up-to-date
+8. Keeping MPF up-to-date
 ---------------------------------------
 
 Since MPF is a work-in-progress, you can use the *pip* command to update your
