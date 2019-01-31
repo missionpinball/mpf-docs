@@ -4,8 +4,11 @@ Installing the MPF Monitor
 Here's how you install the MPF Monitor. These instructions are a bit rough
 since MPF Monitor is an early prototype.
 
-Windows
--------
+Windows and Mac
+---------------
+
+MPF Monitor has dependencies on MPF and should be run in the same environment.
+If you use a virtual environment for MPF, activate it before proceeding.
 
 1. Install PyQt5.  Open a command prompt and run:
 
@@ -39,25 +42,6 @@ Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
 numbers of the Monitor and MPF are not the same. (For example, the same version
 of MPF Monitor can work across several versions of MPF.)
 
-Mac
----
-
-Open a terminal window and run the following command: (You can run this from
-any folder)
-
-.. code-block:: console
-
-   pip3 install mpf-monitor
-
-To update MPF Monitor to the latest version at any time, run:
-
-.. code-block:: console
-
-   pip3 install mpf-monitor --upgrade
-
-Note that since MPF Monitor is a separate app from MPF and MPF-MC, the version
-numbers of the Monitor and MPF are not the same. (For example, the same version
-of MPF Monitor can work across several versions of MPF.)
 
 Linux
 -----
