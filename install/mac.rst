@@ -181,19 +181,15 @@ call the environment "mpfenv" and put it in our home directory (known as "~").
 
   python3 -m venv ~/mpfenv
 
-If you have multiple versions of Python3 (say, 3.4 and 3.6), you can specify
-which one to use in the virtual environment:
-
-.. code-block:: console
-
-  python3.6 -m venv ~/mpfenv
-
 .. note::
 
-  A virtual environment is recommended for any general-use computer you'll be
-  using MPF on. For a dedicated MPF machine that will have no other programs
-  installed (for example, a computer inside a pinball cabinet), a virtual 
-  environment is not recommended.
+  If you have multiple versions of Python3 (say, 3.4 and 3.6), you can specify
+  which one to use in the virtual environment: ``python3.6 -m venv ~/mpfenv``
+
+A virtual environment is recommended for any general-use computer you'll be
+using MPF on. For a dedicated MPF machine that will have no other programs
+installed (for example, a computer inside a pinball cabinet), a virtual 
+environment is not recommended.
 
 5. Activate your Virtual Environment
 ------------------------------------
@@ -211,7 +207,7 @@ to your virtual environment and "/bin/activate".
 .. note::
 
   You may want to write this step down, as you'll run it every time you open up
-  a terminal window to work on MPF*
+  a terminal window to work on MPF
 
 You'll know you're in the virtual environment because the console prompt will include
 the name of your venv in parenthesis.
@@ -233,15 +229,17 @@ the name of your venv in parenthesis.
    you must type "python3" to use Python 3; inside the virtual environment,
    you can use "python" to refer to Python 3.
 
-4. Install/upgrade some Python components
+6. Install/upgrade some Python components
 -----------------------------------------
+
+**4.1 Upgrade Pip**
 
 Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
 the web. (It's kind of like an app store for Python apps.)
 
 If you are not using a virtual environment and have both Python 2 and Python 3 
-on your system, you'll most likely need to use "pip3". Check your version to see:
+on your system, you'll most likely need to use pip3. Check your version to see:
 
 .. code-block:: console
   
@@ -250,17 +248,17 @@ on your system, you'll most likely need to use "pip3". Check your version to see
   My-Mac:~ $ pip3 --version
   pip 16.2.1 from /usr/bin/pip3 (python 3.6)
 
-If your "pip" is for Python 2, then you'll use "pip3" through the rest of this guide. 
+If your ``pip`` is for Python 2, then you'll use ``pip3`` through the rest of this guide. 
 
-If you created a virtual environment using Python 3, then "pip" will be the same 
-as "pip3" and you can use them interchangably.
+If you created a virtual environment using Python 3, then ``pip`` will be the same 
+as ``pip3`` and you can use them interchangably.
 
 .. code-block:: console
   
   (mpfenv) My-Mac:~ $ pip --version
-  pip 19.0.1 from ~/venv/lib/python3.6/site-packages/pip (python 3.6)
+  pip 19.0.1 from ~/mpfenv/lib/python3.6/site-packages/pip (python 3.6)
   (mpfenv) My-Mac:~ $ pip3 --version
-  pip 19.0.1 from ~/venv/lib/python3.6/site-packages/pip (python 3.6)
+  pip 19.0.1 from ~/mpfenv/lib/python3.6/site-packages/pip (python 3.6)
 
 The versions of pip that come with Python aren't always the newest, so it's a
 good idea to update pip by running the following command:
@@ -270,6 +268,8 @@ good idea to update pip by running the following command:
   pip install --update pip
 
 The latest version of pip should now be installed.
+
+**4.2 Install Setuptools and Cython**
 
 Next, we need to install and update a few other python packages required to run mpf by
 running the following command:
@@ -294,25 +294,31 @@ whenever you're running this):
    Installing collected packages: setuptools, cython
    Successfully installed cython-0.25.2 setuptools-32.3.1
   
-By default, pip downloads and installs precompiled binaries. The Kivy binaries
-include frameworks that can conflict with the Mac Library frameworks, so it's
-preferred to install Kivy and build a local binary. We can tell pip to not
-download the precompiled binary:
+**4.3 Install Kivy**
+
+Finally, we need to install a graphics framework called Kivy.
+
+By default, pip will download and install precompiled binaries. The Kivy binaries
+include frameworks that can conflict with the Mac Library frameworks we
+added in step 1, so instead we want pip to download the uncompiled Kivy files 
+and make a new binary. 
+
+We can tell pip to do that with the following command:
 
 .. code-block:: console
 
   pip install kivy --no-binary :all:
 
-This installation may take a couple of minutes.
+The installation of Kivy may take a couple of minutes.
 
 Installing MPF & MC
 ===================
 
-5.1 Install MPF & MC (Stable Release)
+7. Install MPF & MC (Stable Release)
 -------------------------------------
 
 First, double-check that you've activated your virtual enviroment, if you set one up.
-Next you can run pip again to install MPF itself, along with MPF-MC (the
+Next you can run pip to install MPF itself, along with MPF-MC (the
 `Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_).
 
 Install MPF and MC like this:
@@ -321,22 +327,16 @@ Install MPF and MC like this:
 
    pip install mpf mpf-mc
 
-If you are using High Sierra or newer, and aren't using a virtual environment,
-you may need to add the --user option to get around a specific rights problem
-(use the following if the previous command didn't work). 
 
-.. code-block:: console
+.. note::
 
-   pip install mpf mpf-mc --user
+  If you are using High Sierra or newer and aren't using a virtual environment,
+  you may encounter a permissions error. If so, add ``--user`` to the end of the 
+  above command.
 
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
 are.
-
-.. note::
-
-   The "kivy" component will take awhile to install. Maybe a minute or two
-   where it looks like it's not doing anything, but it's fine.
 
 .. code-block:: console
 
@@ -391,19 +391,21 @@ this:
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
 
-5.2 Install MPF & MC (Development Build)
+7.2 Install MPF & MC (Development Build)
 ----------------------------------------
 
 The stable release of MPF is updated every few months, after being tested and used
 by the development team. If you want to play with the most up-to-date changes, 
-you can run MPF from the latest development build. This is not recommended for most
-users.
+you can run MPF from the latest development build. 
+*This is not recommended for most users.*
 
-The development builds may include new features in progress, changes to behavior,
-and bugs. Running the development builds is recommended for people who want to
-actively participate in the development and testing of MPF.
+.. note::
 
-The installation instructions are the same, except for including "--pre" in the install command
+  The development builds may include new features in progress, changes to behavior,
+  and bugs. Running the development builds is recommended for people who want to
+  actively participate in the development and testing of MPF.
+
+The installation instructions are the same, except for including ``--pre`` in the install command
 (for "prerelease").
 
 .. code-block:: console
@@ -418,7 +420,7 @@ The prereleases will have "dev" in their version number to indicate that they ar
    MPF v0.52.0.dev3
 
 If you want to switch from the development build back to the stable release, uninstall
-and run the install command without the "--pre".
+and run the install command without ``--pre``.
 
 .. code-block:: console
 
@@ -428,7 +430,7 @@ and run the install command without the "--pre".
 Running Pinball Games in MPF
 ============================
 
-6. Download & run the "Demo Man" example game
+8. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -439,7 +441,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-7. Install whatever drivers your hardware controller needs
+9. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
@@ -453,7 +455,7 @@ Running MPF
 
 See the section :doc:`/running/index` for details and command-line options.
 
-8. Keeping MPF up-to-date
+10. Keeping MPF up-to-date
 ---------------------------------------
 
 Since MPF is a work-in-progress, you can use the *pip* command to update your
