@@ -57,7 +57,7 @@ What to do to make a MPF release?
 
 - Update ``dev`` branch on ``mpf-docs``
 
-  - Update version to next release
+  - Update version to next release in ``conf.py``
 
 - Protect branches
 
