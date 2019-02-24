@@ -4,6 +4,8 @@ Center Post Ball Save
 Some machines have a mechanical ball save called center post.
 It pops up between the flippers and prevents the ball from draining.
 
+.. image:: /game_logic/images/center_post.jpg
+
 To use it in MPF we reuse a diverter.
 A simple :doc:`/config/coil_player` would work as well but then we would have
 to reimplement ball search and service mode logic.
