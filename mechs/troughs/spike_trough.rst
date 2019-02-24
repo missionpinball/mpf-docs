@@ -28,6 +28,16 @@ your trough as described in :doc:`modern_opto`.
    optos (unless you are using Stern Spike).
    This will make your life easier.
 
+Part numbers:
+-------------
+
+ * Transmitter: 520-5344-00
+ * Receiver: 520-5345-00/520-5345-01
+
+
+Config (if you are not on Stern Spike):
+---------------------------------------
+
 If you got a Stern Spike trough but are not using
 :doc:`Stern Spike </hardware/spike/index>` you can use our
 :doc:`SPI Bit Bang platform </hardware/spi_bit_bang/index>` to read the

@@ -42,6 +42,60 @@ This might be already present on the trough PCB (i.e. on older Stern troughs)
 or you might need to add current limiting resistors.
 Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.
 
+Bally/Williams Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: #A-18617-1 or 5768-14121-02 or PBL-600-0035-00 or PBL-600-0005-00
+ * Receiver: #A-18618-1 or 5768-14122-02 or PBL-600-0036-00 or PBL-600-0006-00
+ * Transmitter/Receiver: PBL-600-0054-00 or PBL-600-0055-00
+
+Those boards need an additional current limiting resistor on the transmitter.
+Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.
+You can connect the receivers one by one to your inputs.
+Don't forget to connect your the receiver board to ground.
+
+FAST Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: FP-AUX-001-?
+ * Receiver: FP-AUX-001-2
+
+The FAST transmitter already has parts for current limiting and you can connect
+it directly to 12V and ground.
+You can connect the receivers one by one to your inputs.
+Don't forget to connect your the receiver board to ground.
+
+Stern Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: 515-0173-00/520-5173-00
+ * Receiver: 515-0174-00/520-5174-00
+
+This board only covers the first ball position and the jam position.
+All other positions are typically covered by normal switches.
+Transmitter contains current limiting circuit and you can connect it directly
+to 5V.
+The receiver needs to be powered and also inverts the optos.
+There is typically no need to set ``NC`` on using those boards.
+You can follow the :doc:`modern_mechanical` guide to configure your trough.
+
+Spike Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: 520-5344-00
+ * Receiver: 520-5345-00/520-5345-01
+
+If you got a Stern Spike Trough but are not using Stern Spike (not recommended)
+read the :doc:`Stern Spike Trough guide <spike_trough>`.
+
 1. Add your trough switches
 ---------------------------
 
