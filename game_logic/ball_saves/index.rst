@@ -69,6 +69,11 @@ Related How To guides
 
 * :doc:`Ball save at ball start </game_logic/ball_start_end/index>`
 
+.. toctree::
+   :hidden:
+
+   center_post
+
 Related Events
 --------------
 
