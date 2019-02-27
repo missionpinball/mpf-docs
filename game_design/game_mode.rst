@@ -81,7 +81,7 @@ By making the three top lanes light (J, A, and M), the playfield multiplier
 is increased from 1X to 2X, 3X, 4X, 5X, and then to 10X.
 The Right and Left Flipper buttons are used to control a lane change,
 and ending the ball resets the mode.
-This example is based on Bally's Heavy Metal Meltdown.
+This example is based on Bally's Heavy Metal Meltdown.  The example below creates a new mode called JAM_rollover, and uses a machine-wide player variable named pf_multiplier.  This variable is what can be used in other parts of the game logic to multiply values based on the current multiplier value, for example, when calculating end of ball bonuses.  The counter value lb_JAM_complete_count is used as the count value in the JAM_lanes_done{count==2} within the variable_player conditional event statements.
 
 .. code-block:: mpf-config
 
