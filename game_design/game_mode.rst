@@ -85,6 +85,7 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
 
 .. code-block:: mpf-config
 
+  # in your machine config
   #! switches:
   #!   s_top_lane_J:
   #!     number:
@@ -124,6 +125,7 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
   #!     - duration: 1
 
   ##! mode: JAM_rollover
+  # in modes/JAM_rollover
   mode:
     start_events: ball_started
     priority: 110
