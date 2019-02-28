@@ -63,13 +63,13 @@ been ejected from a ball device to the playfield.
 
 If a ball device ejects to a playfield that has no balls on it, then the
 first time a switch tagged with ``playfield_active`` is hit, MPF knows the ball
-successfully made it out of the device any onto the playfield. Ball devices
+successfully made it out of the device and onto the playfield. Ball devices
 also have eject timeouts which will be used to confirm that a ball was ejected
 to the playfield if the timeout expires and the ball has not fallen back into
 the device that ejected it, which is useful since it's possible for the ball
 to make it out of the device but then not to hit a switch right away.
 
-The playfield_active tagged switches are only used to confirm ball ejects to
+The playfield_active tagged switches are only used to confirm a ball ejects to
 the playfield if there are no current balls on the playfield when the device
 ejects a ball to it. If there is a ball (or multiple balls) on the playfield
 when a device ejects a ball to the playfield, then MPF doesn't know whether a
