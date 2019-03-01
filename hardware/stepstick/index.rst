@@ -72,7 +72,7 @@ Connecting your stepper driver
 ------------------------------
 
 Connect the ``DIR`` pin to your ``direction_output``, ``STP`` to your
-``step_output`` and``GND`` to your ground.
+``step_output`` and ``GND`` to your ground.
 If use an ``enable_output`` connect it to ``EN``, ``SLP`` and ``RST``
 (not all driver have all of them).
 Otherwise, pull them to VDD or the driver will not work.
