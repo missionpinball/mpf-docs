@@ -7,7 +7,7 @@ python:
   install:
      - requirements: requirements.txt
 build:
-  image: 3.6
+  image: stable
 sphinx:
   builder: html
   configuration: conf.py
