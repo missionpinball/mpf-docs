@@ -136,4 +136,4 @@ user running your game to the ``dialout`` group.
 
    sudo usermod -a -G dialout your_username
 
-.. include:: /install/common_problems_and_solutions
+.. include:: /install/common_problems_and_solutions.rst

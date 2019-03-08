@@ -169,4 +169,4 @@ Running MPF
 
 See the :doc:`/running/index` page for details and command-line options.
 
-.. include:: /install/common_problems_and_solutions
+.. include:: /install/common_problems_and_solutions.rst

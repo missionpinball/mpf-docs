@@ -242,4 +242,4 @@ Login and start mpf-mc inside your machine folder with
 
 Enjoy!
 
-.. include:: /install/common_problems_and_solutions
+.. include:: /install/common_problems_and_solutions.rst
