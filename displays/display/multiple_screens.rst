@@ -46,8 +46,8 @@ This can be achieved using the following config:
       fullscreen: false
       left: 0
       top: 0
-      width: 3840
-      height: 1080
+      width: 3840    # width of display1 + display2
+      height: 1080   # common height (or the maximum of both)
       maxfps: 30
       multisamples: 2
       position: custom  # auto, custom
@@ -55,10 +55,46 @@ This can be achieved using the following config:
       resizable: false
       rotation: 0
 
+    displays:
+      display1:
+         width: 1920
+         height: 1080
+      display2:
+         width: 1920
+         height: 1080
+      combined_display:
+         width: 3840
+         height: 1080
+
+    slides:
+      base_slide:
+         - type: display
+           source_display: display1
+           width: 1920
+           height: 1080
+           x: left
+           anchor_x: left
+         - type: display
+           source_display: display2
+           width: 1920
+           height: 1080
+           x: right
+           anchor_x: right
+
+    slide_player:
+      mc_ready:
+         base_slide:
+            target: combined_display
+
 Use ``width`` and ``height`` to set the size of the window.
 ``left`` and ``top`` are used to position the window.
 
-Then put a slide containing two ``display`` widgets on your display.
+We created one window which spans both screens.
+Then we define a display ``combined_display`` which will be displayed on
+startup by the slide ``base_slide`` spanning both screens.
+``base_slide`` contains two widgets which show the displays ``display1``
+and ``display2``.
+You can now target any slides to those two displays.
 See :doc:`/displays/widgets/display/index` for details.
 
 Using multiple displays
