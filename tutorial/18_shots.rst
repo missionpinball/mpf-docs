@@ -17,18 +17,20 @@ documentation to understand what a shot is.
 2. Create your first shot
 -------------------------
 
-To define your a shot, you add a ``shots:`` entry to a config file, and
-then under there, you set the switch, timing, and other details that
+To define your a shot, you add a ``shots:`` entry to a config file in a mode,
+and then under there, you set the switch, timing, and other details that
 make up that shot.
 
-You'd typically define your shots in your machine-wide config , since
-shots are based on that actual physical hardware. In this case the
-shot you define is available to be used in every mode (though you
-certainly don't have to use it in every mode.)
+You'd typically define your shots per mode, since
+the behavior differs depending on the mode.
+If you want a shot to be available in every mode you can also put them in
+the ``base`` mode which is usually active all the time.
 
-You can also define default behaviors for each shot in the machine-wide
-config (which you can then override in a specific mode if you want
-to do something different with that shot in that mode).
+.. note::
+
+   Before 0.30 you could define shots per machine-wide. This cause very complex
+   configs and is no longer supported. You can put shots into your base mode
+   if you want them to be active all the time during a game.
 
 Let's start by creating our first shot in the base mode.
 
