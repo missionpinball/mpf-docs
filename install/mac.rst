@@ -501,3 +501,5 @@ Now that MPF is installed, you can follow our
 building your own game in MPF!
 
 Make sure to lookup mpf-monitor later, if you want to simulate and configure a machine you own in hardware.
+
+.. include:: /install/common_problems_and_solutions

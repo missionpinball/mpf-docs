@@ -345,3 +345,5 @@ Next steps!
 Now that MPF is installed, you can follow our
 :doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
 building your own game in MPF!
+
+.. include:: /install/common_problems_and_solutions
