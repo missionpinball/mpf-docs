@@ -34,8 +34,10 @@ settings:
    spike:
       port: /dev/ttyUSB0
       baud: 115200
+      flow_control: False
       debug: False
       nodes: 0, 1, 8, 9, 10, 11
+      runtime_baud: 115200
 
 Some notes on the settings:
 
@@ -45,9 +47,20 @@ port:
 
 baud:
    This needs to match the value from Step 3 in the
-   :doc:`MPF SPIKE bridge instructions <mpf-spike-bridge>`. Note that since
-   only control and switch information is sent across this bus, 115k baud is
-   plenty fast enough, though it can technically support more.
+   :doc:`MPF SPIKE bridge instructions <mpf-spike-bridge>`.
+   It is used to initialise the connection to SPIKE only.
+   Afterwards, the bridge will switch to ``runtime_baud``.
+
+flow_control:
+   If your hardware supports flow control and you connected "RTS" and "CTS" in
+   the previous steps set this to True. It will make the connection much more
+   stable at higher speeds.
+   It can be ``False`` for a first test.
+
+runtime_baud:
+   Note that since only control and switch information is sent across this bus,
+   115k baud is plenty fast enough if you choose not to use a DMD.
+   However, if you want to use a DMD you need more speed (see below for details).
 
 debug:
    Set this to true for print more details in the log.
@@ -72,6 +85,7 @@ Once you got your game running you can increase the speed using ``runtime_baud``
       port: /dev/ttyUSB0
       baud: 115200
       runtime_baud: 2000000
+      flow_control: True
       debug: False
       nodes: 0, 1, 8, 9, 10, 11
 
@@ -93,3 +107,4 @@ The following baudrate are supported:
 Depending on your hardware setup they might or might not work.
 Most setups communicate reliably up to something beween 1Mbaud and 2.5Mbaud.
 To stream full 30fps to your DMD you need about 2Mbaud.
+You need flow_control at rates higher than about 0.5MBaud.

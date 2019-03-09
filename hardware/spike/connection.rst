@@ -76,6 +76,11 @@ Pins are marked GND, RX, TX. You do not need more than these.
 
 .. todo:: Add a photo and more detailed pinout instructions (:doc:`/about/help_us_to_write_it`).
 
+Unfortunately, this header seems to be missing on some revisions of Spike.
+You can solder it in though.
+However, it does not contain any flow-control pins to it will not work at
+higher baud rates (up to 400k roughly).
+
 
 OPTION 3: Connect using two USB-Serial Adapters
 -----------------------------------------------
@@ -100,6 +105,10 @@ These two adapters will have connectors or headers on them that you need to conn
 Connect the "RX" (receive) from one to the "TX" (transmit) on the other and vice-versa. Also
 connect the grounds (possible labeled "GND") together. It's probably a good idea to twist the
 wires together to reduce interference, especially if your wires are more than a few inches long.
+
+In addition to above you should also "CTS" to "DTS" and "DTS" to "CTS".
+This will allow you to enable hardware flow control which is essential at
+higher baud rates (up to 3M).
 
 The following diagram illustrates how everything fits together:
 
