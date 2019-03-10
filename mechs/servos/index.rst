@@ -7,7 +7,7 @@ Servos
 | :doc:`/config/servos`                                                        |
 +------------------------------------------------------------------------------+
 
-:doc:`TODO: Add a picture of a servo </about/help_us_to_write_it>`
+.. image:: /mechs/images/servos.jpg
 
 A servo is device which can move to a certain position based on internal
 feedback.
