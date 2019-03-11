@@ -6,6 +6,8 @@ The `light show generator for MPF <https://github.com/missionpinball/showcreator
 loads your LED positions from the :doc:`/tools/monitor/index`
 config and lets you create show for transitions.
 
+.. image:: /tools/images/showcreator.png
+
 
 Running the showcreator on Windows
 ----------------------------------
@@ -17,9 +19,11 @@ Running the showcreator on Windows
 Compiling and running the showcreator on Ubuntu
 -----------------------------------------------
 
+Inside a new install folder:
+
 .. code-block:: console
 
-   # inside a new src folder
+   # inside a new install folder
    apt install linux-libc-dev:i386 libxft2:i386 g++-multilib gcc-multilib libxpm-dev:i386 libxxf86vm-dev:i386 libgl1-mesa-dev:i386 libglu1-mesa-dev:i386
    git clone https://github.com/blitz-research/blitzmax.git
    cd blitzmax
@@ -34,7 +38,9 @@ Compiling and running the showcreator on Ubuntu
    # run it
    ./led
 
-Afterwards you can run the showcreator using (from within your new folder):
+Afterwards you can run the showcreator using (from within your install folder):
+
+.. code-block:: console
 
    ./showcreator/led
 
