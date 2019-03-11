@@ -17,16 +17,50 @@ This is an example:
 
 .. code-block:: mpf-config
 
+   # main config
+   p_roc:
+     use_separate_thread: true
+     pd_led_boards:
+       6:
+          use_stepper_0: true
+          stepper_speed: 1352400000 # Determine empiricall. Increasing slows pulsesrate
+
+   switches:
+       s_stepper_home:
+           number: 4/0/5
    steppers:
-       linearAxis_stepper:
-           number: 1
-           pos_min:   -5 # negative is behind home
-           pos_max: 1000
-           homing_direction: clockwise
-           named_positions:
-               -5: test_00
-               999: test_01
-               500: test_10
+     ramp_diverter:
+       number: 6-0
+       homing_mode: switch
+       homing_switch: s_stepper_home
+       homing_direction: clockwise
+       pos_min: 0 # Default. (Neg values are behind home)
+       pos_max: 100 # Default
+       reset_events: machine_reset_phase_3, ball_starting, ball_will_end
+       reset_position: 0 # Default
+       debug: true
+       named_positions:
+         2: move_to_2
+         25: move_to_25
+         45: move_to_45
+
+   ##! mode: base
+   # base mode
+   timers:
+     test_diverter:
+       start_value: 0
+       end_value: 6
+       start_running: yes
+       restart_on_complete: true
+
+   event_player:
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==1}:
+       move_to_2
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==3}:
+       move_to_25
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==5}:
+       move_to_45
+
 
 
 
@@ -111,7 +145,7 @@ This is a sub-section mapping of stepper positions to MPF event names. For examp
            named_positions:
                0: move_home
                999: move_to_999
-               500: move_to_500
+               -500: move_to_-500 # Negative positions are behind home
 
 The values in this ``named_positions:`` list represent MPF events that, when posted,
 tell this stepper to move to a certain position. So in the example above, when the
