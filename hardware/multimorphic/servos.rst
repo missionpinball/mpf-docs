@@ -23,6 +23,7 @@ all servos and and define two of them:
    p_roc:
      pd_led_boards:
        4:
+         max_servo_value: 300 # rougly maps to 2ms.       
          use_servo_0: True
          use_servo_1: True
          use_servo_2: True
@@ -46,6 +47,10 @@ The number of your servos has to be ``id_of_your_ped_led-number``.
 In this case ``4-0`` and ``4-1`` for the first and second servo on PD-LED 4.
 You will not be able to use LED 72 to LED 83 on the PD-LED when enabling all
 servos.
+
+max_servo_value determines the width of the pulses sent to the servo.  This value 
+can be altered to increase of decrease the servo arc within the physical limits
+of the device. Higher values widen pulsewidth increasing the range of motion.
 
 You should hook up your servos to an external power source (usually 5V) and
 not draw that power from the PD-LED.
