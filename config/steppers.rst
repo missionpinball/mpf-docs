@@ -17,48 +17,49 @@ This is an example:
 
 .. code-block:: mpf-config
 
-#Config
-p_roc:
-  use_separate_thread: true
-  pd_led_boards:
-    6:
-       use_stepper_0: true
-       stepper_speed: 1352400000 # Determine empiricall. Increasing slows pulsesrate
+   # main config
+   p_roc:
+     use_separate_thread: true
+     pd_led_boards:
+       6:
+          use_stepper_0: true
+          stepper_speed: 1352400000 # Determine empiricall. Increasing slows pulsesrate
 
-switches:
-    s_stepper_home:
-        number: 4/0/5
-steppers:
-  ramp_diverter:
-    number: 6-0
-    homing_mode: switch
-    homing_switch: s_stepper_home
-    homing_direction: clockwise 
-    pos_min: 0 # Default. (Neg values are behind home)
-    pos_max: 100 # Default 
-    reset_events: machine_reset_phase_3, ball_starting, ball_will_end
-    reset_position: 0 # Default
-    debug: true
-    named_positions:
-      2: move_to_2
-      25: move_to_25
-      45: move_to_45
+   switches:
+       s_stepper_home:
+           number: 4/0/5
+   steppers:
+     ramp_diverter:
+       number: 6-0
+       homing_mode: switch
+       homing_switch: s_stepper_home
+       homing_direction: clockwise
+       pos_min: 0 # Default. (Neg values are behind home)
+       pos_max: 100 # Default
+       reset_events: machine_reset_phase_3, ball_starting, ball_will_end
+       reset_position: 0 # Default
+       debug: true
+       named_positions:
+         2: move_to_2
+         25: move_to_25
+         45: move_to_45
 
-#Base
-timers:
-  test_diverter:
-    start_value: 0
-    end_value: 6
-    start_running: yes
-    restart_on_complete: true
+   ##! mode: base
+   # base mode
+   timers:
+     test_diverter:
+       start_value: 0
+       end_value: 6
+       start_running: yes
+       restart_on_complete: true
 
-event_player:
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==1}:
-    move_to_2
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==3}:
-    move_to_25
-  timer_test_diverter_tick{device.timers.test_diverter.ticks==5}:
-    move_to_45
+   event_player:
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==1}:
+       move_to_2
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==3}:
+       move_to_25
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==5}:
+       move_to_45
 
 
 
