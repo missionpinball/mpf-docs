@@ -64,8 +64,11 @@ color:
 ~~~~~~
 Single value, type: ``string``. Default: ``white``
 
-Set a color to this light. If you apply a color to a non-RGB light it will use
-the maximum brightness of any channel.
+Set a color to this light. Color values may be a hex string (e.g. `22FFCC`), a list of RGB values 
+(e.g. `[50, 128, 206]`),or a color name (e.g. `turquoise`). MPF knows 140+ standard web color names, 
+and you can define your own custom colors in the :doc:`/config/named_colors` section of your config. 
+
+If you apply a color to a non-RGB light it will use the maximum brightness of any channel.
 
 fade:
 ~~~~~

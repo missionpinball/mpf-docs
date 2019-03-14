@@ -57,6 +57,7 @@ contain any of the ``lights`` parameters listed on this page, but at least ``num
 Note that a light must have either ``channels`` or ``number`` defined, but cannot have both.
 See :doc:`/mechs/lights/leds` for more details about how to configure channels
 for different types of LEDs.
+
 color_correction_profile:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``.
@@ -71,6 +72,10 @@ Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*)
 
 For multi-color LEDs, the color defined here will be used when the light is enabled via "on"
 (as opposed to being enabled with a specific color). Not intended for single-color lights.
+
+Color values may be a hex string (e.g. `22FFCC`), a list of RGB values (e.g. `[50, 128, 206]`),
+or a color name (e.g. `turquoise`). MPF knows 140+ standard web color names, and you can define your
+own custom colors in the :doc:`/config/named_colors` section of your config. 
 
 fade_ms:
 ~~~~~~~~
