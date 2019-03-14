@@ -95,8 +95,31 @@ pretty straightforward, though you might have to play with the ``z:`` setting (t
 example, if your current slide has a full size background, you'd want to configure your widget with a ``z:`` setting
 that's a higher priority so it shows up on top of the background image.)
 
-Adding a widget to a specific slide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding a widget to a specific slide (by slide)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to build a slide and include a reusable widget, you can reference the widget's name in your slide config
+by declaring ``widget:`` instead of ``type:``.
+
+.. code-block:: mpf-config
+
+   widgets:
+     jackpot_value_widget:
+       - type: text
+         text: (jackpot_total)
+         style: body_med
+
+   slides:
+     hero_hurryup:
+       - type: text
+         text: "Hurry Up!"
+       - type: text
+         text: "Jackpot:"
+       - widget: jackpot_value_widget
+
+
+Adding a widget to a specific slide (by event)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to add your widget to a particular slide (versus whatever slide happens to be showing at the moment), you
 can do so by specifying that slide name in the ``widget_player:``. For example:
@@ -244,3 +267,65 @@ multiple displays or slides at the same time. For example:
 Note that if you do this, the structure of YAML requires that you have at least
 one setting under each widget name, so you can just add a ``target:`` or ``action: add``
 if you don't want to change or set anything else in the widget.
+
+Dynamically choosing a widget based on variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use a placeholder widget in a slide to dynamically choose any reusable widget for
+that slide, depending on an event parameter or player variable. 
+
+To create a placeholder widget in the slide, use the ``widget:`` setting with the standard
+:doc:`dynamic text </displays/widgets/text/text_dynamic>` formatting.
+
+For example, using the player variable "hero_class" to pick an image widget:
+
+.. code-block:: mpf-config
+
+   widgets:
+     hero_portrait_rogue:
+       - type: image
+         image: portrait_rogue
+     hero_portrait_bard:
+       - type: image
+         image: portrait_bard
+     hero_portrait_mage:
+       - type: image
+         image: portrait_mage
+
+   slides:
+     hero_slide:
+       - type: text
+         text: (player|name)
+       - type: text
+         text: Level (player|level)
+       - widget: hero_portrait_(player|hero_class)
+
+You can also use the parameters of an event to determine the widget to include. In the following example
+from a game with different multiballs, the event `mball_lock_lit` might post with either "angel" or
+"demon" as the `mball_name` parameter.
+
+.. code-block:: mpf-config
+
+   slide_player:
+     mball_lock_lit: mball_lock_slide
+
+   slides:
+     mball_lock_slide:
+       widgets:
+         - type: text
+           text: Lock is Lit
+         - widget: lock_lit_(mball_name)
+
+   widgets:
+     lock_lit_angel:
+       - type: text
+         text: Angels Anarchy
+       - type: image
+         image: bg_locklit_angels
+     lock_lit_demon:
+       - type: text
+         text: Demons Derby
+       - type: image
+         image: bg_locklit_demons
+
+

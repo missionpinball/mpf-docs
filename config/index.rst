@@ -103,6 +103,7 @@ indicated which type of config file it's valid in.
    multiball_locks: <multiball_locks>
    multiballs: <multiballs>
    mypinballs: <mypinballs>
+   named_colors: <named_colors>
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
