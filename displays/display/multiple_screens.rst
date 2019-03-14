@@ -104,6 +104,6 @@ You can easily use two DMDs and one LCD (or two LCDs with the solution above).
 To implement that you need to define multiple displays.
 One diplay per DMD and one for your LCD.
 If you want to show your DMDs on the LCD (i.e. during development) you can also
-define a forth display and create a slide which contains three
+define a fourth display and create a slide which contains three
 :doc:`display widgets </displays/widgets/display/index>` to show the other
 three displays.
