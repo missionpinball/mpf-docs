@@ -29,6 +29,8 @@ This is an example:
     troll_target:
       number: 10
       default_on_color: troll_green
+    l_jackpot:
+      number: 20
 
   light_player:
     trolls_disabled:
