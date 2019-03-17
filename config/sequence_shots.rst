@@ -63,7 +63,7 @@ Here is an example with events:
 .. code-block:: mpf-config
 
    sequence_shots:
-       sequence_events:
+       my_event_based_sequence_shot:
            event_sequence:
                - event1
                - event2
@@ -90,7 +90,7 @@ And one with switches:
    #!   seq2_delay:
    #!     number:
    sequence_shots:
-       sequence_switches:
+       my_switch_based_sequence_shot:
            switch_sequence:
                - seq2_1
                - seq2_2
