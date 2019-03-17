@@ -16,6 +16,7 @@ flasher_player:
 .. overview
 
 The ``flasher_player:`` section of your config is where you can flash lights.
+See :doc:`/config_players/flasher_player` for details.
 
 
 Optional settings

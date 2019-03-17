@@ -51,6 +51,8 @@ Example coil player from a show:
      coils:
        coil1: pulse
 
+See :doc:`/config_players/coil_player` for details.
+
 Optional settings
 -----------------
 

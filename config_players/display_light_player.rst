@@ -44,3 +44,18 @@ Then map your lights to a position on the display:
 You can map those in the MPF monitor and then copy the locations using the
 script in ``tools/monitor_to_config.py`` or manually. You may need to adjust
 config names in the script (improvements welcome).
+
+Usage in config files
+---------------------
+
+In config files, the coil player is used via the ``display_light_player:`` section.
+
+Usage in shows
+--------------
+
+In shows, the coil player is used via the ``display_lights:`` section of a step.
+
+Config Options
+--------------
+
+See :doc:`/config/display_light_player` for config details.

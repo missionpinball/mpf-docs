@@ -13,3 +13,8 @@ Usage in shows
 --------------
 
 In shows, the light player is used via the ``lights:`` section of a step.
+
+Config Options
+--------------
+
+See :doc:`/config/light_player` for config details.

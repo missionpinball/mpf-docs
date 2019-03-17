@@ -39,6 +39,9 @@ Here's an example:
          treasure_name:
             string: RUBY  # Sets the player's "treasure_name" variable to a string called "RUBY"
 
+
+See :doc:`/config_players/variable_player` for details.
+
 Settings
 --------
 

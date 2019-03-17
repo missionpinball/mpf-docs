@@ -13,3 +13,8 @@ Usage in shows
 --------------
 
 In shows, the segment display player is used via the ``segment_displays:`` section of a step.
+
+Config Options
+--------------
+
+See :doc:`/config/segment_display_player` for config details.

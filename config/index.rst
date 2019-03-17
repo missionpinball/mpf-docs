@@ -50,6 +50,7 @@ indicated which type of config file it's valid in.
    counters: <counters>
    credits: <credits>
    custom_code: <custom_code>
+   display_light_player: <display_light_player>
    displays: <displays>
    digital_outputs: <digital_outputs>
    diverters: <diverters>
