@@ -57,7 +57,7 @@ your machine-wide config, a mode-specific config, or both.
 
     def _load_config_spec(self):
         with open(os.path.join(os.path.dirname(mpf.__file__), "config_spec.yaml")) as f:
-            self.config_spec = yaml.load(f)
+            self.config_spec = yaml.safe_load(f)
 
     def _load_existing_rsts(self):
         self.existing_rsts = [x[:-4] for x in os.listdir(rst_path)
@@ -187,7 +187,7 @@ your machine-wide config, a mode-specific config, or both.
         if 'show' in spec['valid_in']:
             final_text += '.. note:: This section can also be used in a show '
             final_text += 'file in the ``{}s:`` section of a step.\n\n'.format(
-                          name.split('_')[0])
+                          name.split('_player')[0])
 
         final_text += '.. overview\n\n'
 
