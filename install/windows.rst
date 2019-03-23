@@ -347,3 +347,30 @@ Now that MPF is installed, you can follow our
 building your own game in MPF!
 
 .. include:: /install/common_problems_and_solutions.rst
+
+Permission errors on update
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you installed Python as Administrator you might get permissions error when
+upgrading packages using pip:
+
+.. code-block:: doscon
+
+   pip install pip setuptools --upgrade
+   Collecting pip
+     Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
+   Collecting setuptools
+     Using cached https://files.pythonhosted.org/packages/d1/6a/4b2fcefd2ea0868810e92d519dacac1ddc64a2e53ba9e3422c3b62b378a6/setuptools-40.8.0-py2.py3-none-any.whl
+   Installing collected packages: pip, setuptools
+     Found existing installation: pip 9.0.1
+       Uninstalling pip-9.0.1:
+   Exception:
+   Traceback (most recent call last):
+     File "c:\program files\python36\lib\shutil.py", line 544, in move
+       os.rename(src, real_dst)
+   PermissionError: [WinError 5] Access is denied: 'c:\\program files\\python36\\lib\\site-packages\\pip-9.0.1.dist-info\\description.rst' -> 'C:\\Users\\XXX\\AppData\\Local\\Temp\\pip-81ah1j9u-uninstall\\program files\\python36\\lib\\site-packages\\pip-9.0.1.dist-info\\description.rst'
+
+Run your console as Administrator to fix this.
+This can be done by right clicking on the console (in the start menu) and selecting "Start as Administrator".
+Re-run the command and it should work.
+If not let us know!
