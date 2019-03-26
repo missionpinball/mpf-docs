@@ -112,3 +112,5 @@ Related Events
 .. toctree::
 
    up_down_ramps
+   servo_as_diverter
+   stepper_as_diverter
