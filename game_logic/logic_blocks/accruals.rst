@@ -139,3 +139,5 @@ Related Events
 * :doc:`/events/logicblock_name_complete`
 * :doc:`/events/logicblock_name_hit`
 * :doc:`/events/logicblock_name_updated`
+
+.. include:: common_problems.rst
