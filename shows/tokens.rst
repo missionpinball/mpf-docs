@@ -221,6 +221,14 @@ which you could then play like this:
                color1: green
                color2: blue
 
+Tokens vs Tags
+--------------
+
+Almost all devices support tags.
+In :doc:`config players </config_players/index>` such as
+:doc:`light_player </config_players/light_player>` you can also reference
+multiple lights by their tags.
+
 The bottom line
 ---------------
 

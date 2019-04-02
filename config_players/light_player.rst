@@ -31,16 +31,32 @@ In shows, the light player is used via the ``lights:`` section of a step.
 .. code-block:: mpf-config
 
    lights:
+      l_light:
+         number:
+
+   shows:
+      red_color:
+         - lights:
+             l_light: red
+
+   show_player:
+      turn_light_red_event: red_color
+
+   ##! test
+   #! post turn_light_red_event
+   #! advance_time_and_run .1
+   #! assert_light_color l_light red
+
+Setting multiple lights
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: mpf-config
+
+   lights:
       l_target1:
          number:
       l_target2:
          number:
-      l_drop1:
-         number:
-         tags: drops
-      l_drop2:
-         number:
-         tags: drops
 
    shows:
       rainbow:
@@ -63,10 +79,6 @@ In shows, the light player is used via the ``lights:`` section of a step.
          rainbow:
             show_tokens:
                leds: l_target1, l_target2
-      play_rainbow_show_via_tag:
-         rainbow:
-            show_tokens:
-               leds: drops
 
    ##! test
    #! post play_rainbow_show_on_targets
@@ -76,6 +88,49 @@ In shows, the light player is used via the ``lights:`` section of a step.
    #! advance_time_and_run 1
    #! assert_light_color l_target1 orange
    #! assert_light_color l_target2 orange
+
+The show ``rainbow`` will turn your LED(s) in the placeholder ``(leds)``
+to a different color every second (because 1s is the default duration of a step).
+The last step (purple) will stay for 3s.
+When you post ``play_rainbow_show_on_targets`` the show is played on two
+lights which are referenced directly.
+
+Setting lights via tags
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: mpf-config
+
+   lights:
+      l_drop1:
+         number:
+         tags: drops
+      l_drop2:
+         number:
+         tags: drops
+
+   shows:
+      rainbow:
+         - lights:
+             (tag): red
+         - lights:
+             (tag): orange
+         - lights:
+             (tag): yellow
+         - lights:
+             (tag): green
+         - lights:
+             (tag): blue
+         - lights:
+             (tag): purple
+           duration: 3s
+
+   show_player:
+      play_rainbow_show_via_tag:
+         rainbow:
+            show_tokens:
+               tag: drops
+
+   ##! test
    #! post play_rainbow_show_via_tag
    #! advance_time_and_run .1
    #! assert_light_color l_drop1 red
@@ -84,11 +139,7 @@ In shows, the light player is used via the ``lights:`` section of a step.
    #! assert_light_color l_drop1 orange
    #! assert_light_color l_drop2 orange
 
-The show ``rainbow`` will turn your LED(s) in the placeholder ``(leds)``
-to a different color every second (because 1s is the default duration of a step).
-The last step (purple) will stay for 3s.
-When you post ``play_rainbow_show_on_targets`` the show is played on two
-lights which are referenced directly.
+
 In ``play_rainbow_show_via_tag`` we reference (two) lights via the tag
 ``drops``.
 
