@@ -32,5 +32,5 @@ play. See the tutorial for details on how to do this.
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
 +==============================================================================+
-| :doc:`high score in attract </game_logic/high_score/index>`                  |
+| :doc:`high score in attract </game_logic/high_scores/index>`                 |
 +------------------------------------------------------------------------------+
