@@ -228,6 +228,101 @@ In this case this will be ``score1_value``, ``score1_name`` and
 Additionally, there will be ``loop1_label``, ``loop1_value`` and
 ``loop1_name``. You can use those in your attract slides to show previous high
 scores.
+This is an example of an attract mode which shows high scores:
+
+.. code-block:: mpf-config
+
+   # in your machine wide config file
+   widget_styles:
+       attract_mode_high_score_display_label:
+           font_size: 30
+           anchor_x: right
+           anchor_y: top
+           x: center-10
+           bold: true
+       attract_mode_high_score_display_name:
+           font_size: 30
+           anchor_x: right
+           anchor_y: top
+           x: center+70
+       attract_mode_high_score_display_score:
+           font_size: 30
+           anchor_x: left
+           anchor_y: top
+           x: center+90
+           number_grouping: true
+           min_digits: 1
+
+   ##! show: attract
+   # in your attract mode show file
+   - duration: 20s
+     slides:
+       show_high_scores:
+           widgets:
+           - type: Text
+             text: HIGH SCORES
+             font_size: 60
+             bold: true
+             anchor_x: center
+             anchor_y: center
+             x: center
+             y: top-100
+           - type: Text
+             text: (machine|score1_label)
+             style: attract_mode_high_score_display_label
+             y: top-200
+           - type: Text
+             text: (machine|score1_name)
+             style: attract_mode_high_score_display_name
+             y: top-200
+           - type: Text
+             text: (machine|score1_value)
+             style: attract_mode_high_score_display_score
+             y: top-200
+           - type: Text
+             text: (machine|score2_label)
+             style: attract_mode_high_score_display_label
+             y: top-240
+           - type: Text
+             text: (machine|score2_name)
+             style: attract_mode_high_score_display_name
+             y: top-240
+           - type: Text
+             text: (machine|score2_value)
+             style: attract_mode_high_score_display_score
+             y: top-240
+           - type: Text
+             text: (machine|score3_label)
+             style: attract_mode_high_score_display_label
+             y: top-280
+           - type: Text
+             text: (machine|score3_name)
+             style: attract_mode_high_score_display_name
+             y: top-280
+           - type: Text
+             text: (machine|score3_value)
+             style: attract_mode_high_score_display_score
+             y: top-280
+           - type: Text
+             text: LOOP CHAMPION
+             font_size: 60
+             bold: true
+             anchor_x: center
+             anchor_y: center
+             x: center
+             y: top-500
+           - type: Text
+             text: (machine|loops1_label)
+             style: attract_mode_high_score_display_label
+             y: top-600
+           - type: Text
+             text: (machine|loops1_name)
+             style: attract_mode_high_score_display_name
+             y: top-600
+           - type: Text
+             text: (machine|loops1_value)
+             style: attract_mode_high_score_display_score
+             y: top-600
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
@@ -236,7 +331,8 @@ scores.
 +------------------------------------------------------------------------------+
 | :doc:`/game_design/index`                                                    |
 +------------------------------------------------------------------------------+
-
+| :doc:`high_scores_in_ems`                                                    |
++------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
