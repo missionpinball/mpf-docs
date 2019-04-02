@@ -27,6 +27,42 @@ Example uses of timers might include:
 The example config files section of the documentation contains
 :doc:`examples of timers in modes </examples/timer/index>`.
 
+Displaying the value of a timer on a slide
+------------------------------------------
+
+If you want to use your timer in a slide you have to set the value to a
+player variable first:
+
+.. code-block:: mpf-config
+
+   ##! mode: your_mode
+   # in your mode
+   timers:
+       your_timer:
+           start_value: 0
+           end_value: 20
+           control_events:
+               - action: start
+                 event: mode_your_mode_started
+
+   variable_player:
+      timer_your_timer_tick:
+         your_timer_variable_times_100:
+            int: device.your_timer.ticks * 100
+            action: set
+
+   slides:
+       show_timer:
+           widgets:
+           - type: Text
+             text: (player|your_timer_variable_times_100)
+
+In this example we update the player variable ``timer_your_timer_tick``
+every time the timer changes based on the tick event.
+The value is multiplied by 100 (but you can also omit this or do anything
+:doc:`/config_players/variable_player` supports).
+Afterwards, you can use the variable in your slide.
+
 Related Events
 --------------
 
