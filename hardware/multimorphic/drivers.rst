@@ -14,6 +14,8 @@ follow the guides and instructions in the :doc:`/mechs/coils/index` docs.
 (If you're using a P-ROC with an existing machine's driver board, like a WPC
 machine, then see the :doc:`existing machine documentation </hardware/existing_machines/index>`.)
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 The only specific thing you have to know for this platform is the number format:
 
 number:

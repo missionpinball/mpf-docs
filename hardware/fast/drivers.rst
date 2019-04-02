@@ -13,6 +13,8 @@ To configure coils, drivers, motors, and/or magnets (basically anything connecte
 IO board's driver outputs) with FAST Pinball hardware, you can follow the guides
 and instructions in the :doc:`/mechs/coils/index` docs.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 However there are a few things to know and some additional options you get
 with FAST hardware that are discussed here.
 

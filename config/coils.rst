@@ -50,6 +50,7 @@ Here's an example section:
             default_hold_power: 0.375
             max_hold_power: 0.5
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 The options are as follows:
 

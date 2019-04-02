@@ -9,6 +9,8 @@ Coils (Solenoids)
 | :doc:`/config/coil_player`                                                   |
 +------------------------------------------------------------------------------+
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 In MPF, you typically list all the coils in your machine in the
 :doc:`coils: section </config/coils>` of your machine configuration file, along
 with default options for them, like pulse times, PWM values, whether they can

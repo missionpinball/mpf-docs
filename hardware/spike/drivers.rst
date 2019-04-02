@@ -13,6 +13,8 @@ To configure coils, drivers, motors, and/or magnets (basically anything connecte
 node's driver outputs) for Stern SPIKE machines, you can follow the guides
 and instructions in the :doc:`/mechs/coils/index` docs.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 However there are a few things to know and some additional options you get
 with SPIKE hardware that are discussed here.
 

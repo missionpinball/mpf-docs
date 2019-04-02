@@ -11,6 +11,8 @@ OPP coils / drivers
 There are a few things to know about controlling drivers and coils
 with OPP hardware.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 Number
 ~~~~~~
 

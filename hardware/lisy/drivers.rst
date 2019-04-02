@@ -7,6 +7,8 @@ Configuring Drivers in LISY
 | :doc:`/config/coils`                                                         |
 +------------------------------------------------------------------------------+
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 Configure drivers according to the manual of your machine.
 LISY does not support any ``hold_power`` or ``pulse_power`` other than 1.0.
 So the coil will always enable with full power (which is fine in older

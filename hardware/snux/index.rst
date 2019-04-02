@@ -420,6 +420,8 @@ the "Solenoid Select Relay."
 4. Configuring driver numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 When you configure coils, flashers, and gis in your MPF hardware
 config, you can enter the numbers straight out of the operators
 manual. The only thing to note here is that you must add a "C" to the
