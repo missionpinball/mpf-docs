@@ -185,6 +185,34 @@ You can also have multiple channels per color (if you do not want to make them d
               - number: 6
               - number: 7
 
+Serial vs Parallel LEDs
+-----------------------
+
+There is a controversy if serial LEDs are feasible below the playfield or not.
+In general, serial LEDs require much less wiring which make them much cheaper
+during assembly.
+However, if one LED fails within a chain all subsequent ones will likely also
+fail until the broken LED is changed.
+Interference will happen below a playfield and might disturb the colors.
+In practise the refresh rate of serial LEDs are so high that you will not
+notice any incorrect colors.
+It is unclear how interference affects the reliability of the controller
+chips of serial LEDs.
+Jersey Jack Pinball tried serial LEDs in the Wizard of Oz (WoZ) and ran into
+a lot of reliability issues.
+Finally, they reverted back to parallel LEDs (one I2C driver chip per chain).
+One of the problems they had was interferences in the ground line which is
+why we recommend a separate power supply for serial LEDs and a separate ground
+line (but still common ground;
+see :doc:`the voltages and power guide </hardware/voltages_and_power/voltages_and_power>`
+for details).
+
+For production runs you should probably be careful with serial LEDs.
+At least test extensively.
+However, you might take some risks in a homebrew machine because serial LEDs
+are quite cheap and easy to replace once broken.
+In practise they seem to work just fine for all homebrew machines we know.
+
 Color Correction
 ----------------
 
