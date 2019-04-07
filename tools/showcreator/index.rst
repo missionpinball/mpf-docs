@@ -84,9 +84,11 @@ You set the start and end positions, rotations, scales and colors of that shape
 anywhere you want over the playfield.
 
 Here we start with a gradient bar at the top of the playfield in a pink color.
+
 .. image:: /tools/images/showcreator_start.png
 
 We want the final position to be here at the bottom, in a darker red shade.
+
 .. image:: /tools/images/showcreator_end.png
 
 You can then adjust the length of the animation in milliseconds and hence the number of steps in the final show.
@@ -96,6 +98,7 @@ Based on these settings, it will create a light show for you which contains all 
 per step for each of the lights the shape passes over. Lightshow playback speed can be adjusted in MPF.
 
 You're not restricted to just the included shapes.  You can make your own shapes and drop them in the shapes folder.
+
 .. image:: /tools/images/showcreator_shapes.png
 
 Once you get the hang of animating a single shape, you can go further by adding in more shapes.
