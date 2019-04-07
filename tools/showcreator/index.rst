@@ -74,51 +74,36 @@ Neat right?
 You might ask: How does it know where my lights are located on the playfield?
 
 Luckily, you probably already have them set if you used the :doc:`MPF Monitor </tools/monitor/index>`.
-It allows you to use drag an drop to position all your switches and lights on
+It allows you to use drag and drop to position all your switches and lights on
 a playfield image.
 Those positions are then saved to the ``monitor/monitor.yaml`` file in your
 machine folder.
-All you have to do is to copy the lights to the ``ledsloc.txt`` file in the
-show creator and your are good to go (this might become unnecessary in the
-future).
+All you have to do is point the light show creator to the ``monitor/monitor.yaml`` file on startup.
 
-This how a ``monitor/monitor.yaml`` looks:
+You set the start and end positions, rotations, scales and colors of that shape
+anywhere you want over the playfield.
 
-.. code-block:: yaml
+Here we start with a gradient bar at the top of the playfield in a pink color.
+.. image:: /tools/images/showcreator_start.png
 
-   drop_target:
-     t_figure_front:
-       x: 0.1598135527333567
-       y: 0.2635487843024701
-   flipper:
-     flipper_left_back:
-       x: 0.6544089443822798
-       y: 0.8534547080449149
-   light:
-     gi_left_back_light_0:
-       x: 0.5151063672560986
-       y: 0.4518074675853541
-     gi_left_back_light_1:
-       x: 0.5228274477074748
-       y: 0.4874764781841978
-     gi_left_back_light_10:
-       x: 0.5692904656319291
-       y: 0.7657640987721404
+We want the final position to be here at the bottom, in a darker red shade.
+.. image:: /tools/images/showcreator_end.png
 
-And this is what your ``ledsloc.txt`` should look for the same machine (omit
-everything except your lights):
+You can then adjust the length of the animation in milliseconds and hence the number of steps in the final show.
+In this example, the shape will be moved from the start to finish in 24 steps.
 
-.. code-block:: yaml
+Based on these settings, it will create a light show for you which contains all needed commands
+per step for each of the lights the shape passes over. Lightshow playback speed can be adjusted in MPF.
 
-     gi_left_back_light_0:
-       x: 0.5151063672560986
-       y: 0.4518074675853541
-     gi_left_back_light_1:
-       x: 0.5228274477074748
-       y: 0.4874764781841978
-     gi_left_back_light_10:
-       x: 0.5692904656319291
-       y: 0.7657640987721404
+You're not restricted to just the included shapes.  You can make your own shapes and drop them in the shapes folder.
+.. image:: /tools/images/showcreator_shapes.png
+
+Once you get the hang of animating a single shape, you can go further by adding in more shapes.
+You can add a total of 256 shapes in animation segments.
+Each segment can be set to ``concurrent`` (start and end same time as the previous segment)
+or ``follow`` (start after previous segment)
+This allows for more interesting multipart shows. For example you could have several color swipes coming from different directions
+one after the other or effects like multiple spotlights moving across the playfield like a hollywood premiere.
 
 
 Running the showcreator on Windows
@@ -180,7 +165,7 @@ Key bindings
 Dynamic Shows
 -------------
 
-It is great to render static shows which will not change during runtime.
+The tool is handy to render static shows which will not change during runtime.
 If you want to render shows dynamically (using your GPU) you can also use
 :doc:`your lights as display in MC </config_players/display_light_player>`
 but that will cost much more resources during runtime than offline generated
