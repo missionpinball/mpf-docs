@@ -97,6 +97,9 @@ This is an example:
       test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
       test_event{device.accruals.test_accrual.completed}: accrual_completed
 
+Note: For this last conditional logic to be able to evaluate as true, the accrual setting 
+reset_on_complete must be set to No/False.
+
    ##! test
    #! start_game
    #! start_mode my_mode
