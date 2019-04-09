@@ -111,3 +111,4 @@ Related Events
    service_and_door_switches
    rollover_switches
    start_tournament_and_launcher_buttons
+   breakout_boards
