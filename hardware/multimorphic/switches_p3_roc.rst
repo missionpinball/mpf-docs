@@ -108,6 +108,14 @@ You can configure up to five switches per driver.
    a previous game. This limitation will probably go away in future firmware
    update of the P3-Roc.
 
+Burst Opto PCBs
+^^^^^^^^^^^^^^^
+
+Burst optos are unlike normal :doc:`/mechs/switches/optos` and you cannot
+use normal optos.
+Instead, they use 40kHz infrared transmitters and receivers.
+Multimorphic sells them as single transmitter/receiver (part number:
+PCBA-0011-0002) and as bank of 8 (part number: PCBA-0003-0003).
 
 Burst Switches as Local Inputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
