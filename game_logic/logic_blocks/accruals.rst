@@ -89,16 +89,17 @@ This is an example:
             - shot1_hit
             - shot2_hit
             - shot3_hit
-         reset_on_complete: False
+         reset_on_complete: False   # this is needed for the last event player
 
    event_player:
       test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
       test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
       test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
+
       test_event{device.accruals.test_accrual.completed}: accrual_completed
 
-Note: For this last conditional logic to be able to evaluate as true, the accrual setting 
-reset_on_complete must be set to No/False.
+   # Note: For this last conditional logic to be able to evaluate as true, the accrual setting 
+   # reset_on_complete must be set to No/False. Otherwise the accrual will reset instantly and this will never be true.
 
    ##! test
    #! start_game
