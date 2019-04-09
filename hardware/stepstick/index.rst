@@ -22,7 +22,6 @@ Configuring your stepper
 A step stick stepper needs two or three outputs which define the hardware
 number: ``direction_output:step_output`` or
 ``direction_output:step_output:enable_output``.
-In case you omit ``enable_output`` make sure it is pulled high permanently.
 In addition, you need a ``homing_switch`` so MPF can find the ``0`` position
 of your stepper at startup.
 
@@ -73,9 +72,9 @@ Connecting your stepper driver
 
 Connect the ``DIR`` pin to your ``direction_output``, ``STP`` to your
 ``step_output`` and ``GND`` to your ground.
-If use an ``enable_output`` connect it to ``EN``, ``SLP`` and ``RST``
-(not all driver have all of them).
-Otherwise, pull them to VDD or the driver will not work.
+If use an ``enable_output`` connect it to ``EN``.
+Otherwise, pull it to ``GND`` or the driver will not work.
+Connect ``SLP`` and ``RST`` to ``VDD`` (not all driver have all of them).
 In addition, you need to pull ``M0``, ``M1`` and ``M2`` to VDD or GND
 to configure the step resolution.
 Your stepper will connect to ``1A``, ``1B``, ``2A`` and ``2B``.
