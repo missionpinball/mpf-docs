@@ -144,12 +144,25 @@ Breakout boards for parallel LEDs
 You likely want to buy or build some breakout boards for your LEDs when you
 are using parallel LEDs in your machine.
 Otherwise, you might end up in wiring hell for your lights.
-Luckily, Multimorphic offers breakout boards (part number: PCBA-0025-0002)
+Luckily, there breakout boards exist
 which connect via a ribbon cable to your PD-LED.
-They also sell matching RGB LEDs (part number: PCBA-0004-0001) and flashers
-(part number: PCBA-0024-0001).
+
+Breakout boards:
+
+* Four LEDs breakout (Multimorphic) - PCBA-0025-0002
+* Five equally spaced LEDs + three LEDs breakout (Multimorphic) - PCBA-0030-0001
+* Breakout wire harness (PBL) for four LEDs - PBL-600-0274-00
+
+Part numbers of lights and flashers:
+
+* GI RGB LED (PBL) - PBL-600-0230-00
+* RGB Insert LED (PBL) - PBL-600-0220-01
+* RGB Insert LED (Multimorphic) - PCBA-0004-0001
+* Flasher (Multimorphic) - PCBA-0024-0001
+* Pop bumber RGB LED (PBL) - PBL-600-0258-00
+
 Additionally, they got a PCB with five equally spaced LEDs which breaks out
-another three LEDs (part number: PCBA-0030-0001).
+another three LEDs (part number: ).
 Make sure to check those out because it will make your live easier.
 In your final machine you will probably build some larger PCBs and connect
 them using ribbon cables.

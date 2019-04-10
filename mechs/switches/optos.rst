@@ -105,6 +105,10 @@ forward current).
 For 12V you need a 220ohm at 1 watt which will get very hot (do not use a
 standard 1/2watt resistor).
 
+Common parts:
+
+* 4x Opto board - PBL-600-0256-00
+
 
 Common Parts in Pinball Machines
 --------------------------------

@@ -39,16 +39,16 @@ If you need more than 7A use multiple pins.
 Molex part numbers (KK series):
 
 * 2 positions: 09-50-3021
-* 3 positions: 22-01-2037
-* 4 positions: 22-01-2047
-* 5 positions: 22-01-2057
-* 6 positions: 22-01-2067
+* 3 positions: 09-50-3031
+* 4 positions: 09-50-3041
+* 5 positions: 09-50-3051
+* 6 positions: 09-50-3061
 * 8 positions: 09-50-3081
 * 9 positions: 09-50-3091
 * 10 positions: 09-50-3101
 * 11 positions: 09-50-3111
 * 12 positions: 09-50-3121
-* Crimps:  39-00-0342 or 08-52-0072
+* Crimps: 39-00-0342 or 08-52-0072
 
 Low Current/Logic Power
 -----------------------
@@ -80,3 +80,15 @@ Sourcing Connectors
 Those connectors and crimps can be purchased from Digikey or Mouser.
 Additionally, you can buy those at your pinball supplier but they tend to be
 quite pricy.
+
+Power Distribution Boards
+-------------------------
+
+Your power rails will fan out below the playfield to various mechs and boards.
+The simplest solution to implement this are terminal blocks which work fine
+but make it hard to disconnect stuff temporarily.
+Luckily, various board exist to solve this issue:
+
+* Spooky/PBL Power Distribution board (part number: PBL-600-0224-00)
+* FAST Playfield Interchange Board
+* Multimorphic Power Distribution board (part number: unknown)

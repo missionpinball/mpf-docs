@@ -202,5 +202,6 @@ Some common boards:
 
 * :doc:`Multimorphic Power Entry Board </hardware/multimorphic/power_entry>`
 * :doc:`FAST Power Filter Board </hardware/fast/power_filter>`
+* Spooky/PBL Power Entry Board (part number: PBL-600-0253-00)
 * `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
-* Stern Spike Power Distribution Board (part number 520-5343-01)
+* Stern Spike Power Distribution Board (part number: 520-5343-01)

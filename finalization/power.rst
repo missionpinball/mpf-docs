@@ -14,7 +14,7 @@ Computer Start-up and Shutdown Controller
 Scott Danesi sells a board called
 `Computer Start-up and Shutdown Controller (CSSC) <http://www.danesidesigns.com/products/cssc/>`_
 which will trigger a shutdown of your PC when the main power supply of your
-machine is turned of.
+machine is turned of (part number: PBL-600-0322-00).
 However, you need to make sure that the PC still has power until shutdown is
 complete.
 You can either use a separate outlet (and make sure not to disconnect it early)

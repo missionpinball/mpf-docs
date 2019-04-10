@@ -13,7 +13,7 @@ separate connector per switch.
 If you are building a homebrew game there are a few designs around which can be
 build in China for a few bucks (just ask in our forum).
 Some of those boards also provide power for :doc:`optos <optos>`.
-There is one commercial board from Multimorphic (part number: unknown) which
+There is one commercial board from Multimorphic (part number: PCBA-0018-0002) which
 provides one JST connector per switch and also distributes power to optos (see
 :doc:`optos` for details).
 
