@@ -24,11 +24,9 @@ Running the MPF Monitor
    on it.)
 #. Edit ``monitor.yaml`` to remove devices from the playfield you don't want
    anymore.
-#. When you resize or reposition one of the monitor windows, a file called
-   ``/monitor/layout.yaml`` will be created that contains the window
-   positioning information so the monitor can restore the layout the next time
-   you run it. (If you use MPF from multiple computers, don't sync the layout
-   file so each computer can have its own settings.)
+#. When you resize or reposition one of the monitor windows, the window
+   positioning information will be stored, so the monitor can restore the
+   layout the next time you run it.
 
 Understanding MPF Monitor folders & files
 -----------------------------------------
