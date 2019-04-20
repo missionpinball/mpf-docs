@@ -70,10 +70,7 @@ In this example, there are three settings for the first step:
 The **property** setting is the name of the widget's property that you want to animate. This can be almost any
 numerical property of the widget, including ``x:``, ``y:``, ``opacity``, etc. (Different widget types have
 different types of animatable properties. For example, on text widgets you can animate the ``font_size:``, on
-various shape widgets you can animate the ``height:`` and ``width:``, etc.)
-
-Pretty much the only thing you can't animate at this point is rotation (since MPF doesn't currently
-support widget rotation. That's a future feature we'll have to add).
+various shape widgets you can animate the ``height:``, ``width:`` and ``rotation:``, etc.)
 
 2. Relative animation values
 ----------------------------
@@ -84,8 +81,8 @@ an absolute target value.  This can be done using ``relative: True``.  With the 
 value when the animation starts.  When ``relative:`` is set to ``False``, the animation target uses the actual
 ``value:`` property value as its destination.
 
-The following example animates a widget 50 pixels in the ``x`` direction over one second from its current location
-and then -50 pixels in the ``y`` direction over another second:
+The following example animates a widget 50 pixels in the ``x`` direction over one second from its current location,
+ then -50 pixels in the ``y`` direction over another second followed by a 45 degree rotation over 500 ms:
 
 ::
 
@@ -97,6 +94,10 @@ and then -50 pixels in the ``y`` direction over another second:
                     value: -50
                     relative: True
                     duration: 1s
+                  - property: rotation
+                    value: 45
+                    relative: True
+                    duration: 500ms
 
 3. Animation trigger events
 ---------------------------
@@ -243,12 +244,12 @@ etc.)
 
 It is also possible to animate multiple properties in a single animation step by using a list in both the ``property:``
 and ``value:`` parameters (there must be the same number of items in both lists).  The following example moves a widget
-diagonally to the coordinate (10, 20) over 5 seconds:
+diagonally to the coordinate (10, 20) while rotating it 180 degrees over 5 seconds:
 
 ::
 
-                  - property: x, y
-                    value: 10, 20
+                  - property: x, y, rotation
+                    value: 10, 20, 180
                     duration: 5s
 
 5. Multi-step animations with different trigger events
