@@ -12,6 +12,7 @@ The following settings are "common" settings that apply to all :doc:`types of wi
    anchor_y:
    opacity:
    z:
+   rotation:
    animations:
    reset_animations_events:
    color:
@@ -126,6 +127,13 @@ The default z value is ``0``.
 
 If you do want to add a widget with a particular z order to an existing slide,
 you'll probably have to set those existing widgets to a z value other than 0.
+
+rotation:
+~~~~~~~~~
+
+Specifies the rotation of the widget. Values are entered in degrees. For example,
+90 = one quarter rotation clockwise. May be used to rotate images and GIFs.
+
 
 animations:
 ~~~~~~~~~~~
