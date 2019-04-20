@@ -178,7 +178,9 @@ Multimorphic produces and sells optos with a JST connector.
 The transmitter contains a current limiting resistor for 12V (you only have to
 connect one of the 12V and GND pins). You don't need an additional resistor
 but you are also bound to 12V. They might work at 5V but the range will be much
-lower.
+lower. Though the surface mount resistor on the transmitter board is designed to run 
+"hot," it still requires a surrounding air gap to dissipate heat. 3D printed parts 
+mounted against this reisitor will melt. 
 
 Part numbers:
 
