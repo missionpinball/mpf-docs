@@ -62,6 +62,8 @@ Default: ``None``
 
 Events in this list, when posted, cause a :doc:`/events/tilt` to occur
 which will end the current ball in progress with no end of ball bonus.
+You usually want to use tilt_warning_events because this one will instantly
+tilt the machine on the first event.
 
 tilt_slam_tilt_events:
 ~~~~~~~~~~~~~~~~~~~~~~
