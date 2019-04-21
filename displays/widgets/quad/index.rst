@@ -39,6 +39,9 @@ Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
 
+The following quad widget settings may be :doc:`animated </displays/widgets/animation>`: `color:`,
+`points:`, `opacity:`, `rotation:`, and `scale:`.
+
 type: quad
 ~~~~~~~~~~
 
