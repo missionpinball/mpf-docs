@@ -22,8 +22,15 @@ If you want to implement your own game end mode use this template:
 This example will block the game ending process until you post ``stop_my_mode``
 in your config or stop the mode from code.
 
-Alternatively, you can use :doc:`/config_players/queue_relay_player` to achieve the same.
-Put this into your base mode to start your custom mode on the end of ball three:
+Start Mode After Last Ball of Every Player
+------------------------------------------
+
+Alternatively, you can use :doc:`/config_players/queue_relay_player` to achieve
+the same as above.
+In this example we start a mode after the last ball of every player (but you can
+also use ``game_ending`` as above).
+Put this into your base mode to start your custom mode on the end of ball three
+(or remove the condition to start if after every ball):
 
 .. code-block:: mpf-config
 
