@@ -35,7 +35,6 @@ Put this into your base mode to start your custom mode on the end of ball three
 .. code-block:: mpf-config
 
     ##! mode: base
-
    queue_relay_player:
      ball_ending{current_player.ball==3}:
        post: start_your_mode

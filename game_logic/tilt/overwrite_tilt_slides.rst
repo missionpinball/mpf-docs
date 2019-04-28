@@ -35,3 +35,10 @@ You can overwrite them using the following config:
 By setting the ``_overwrite: true`` you will overwrite the complete ``slides:``
 section of the built-in tilt mode.
 The slides above are the default slides.
+
+.. note::
+
+   You can add a slide for the ``slam_tilt`` event.
+   However, by default the ``tilt`` slide is also shown at the same time so
+   you have to make sure that your slide has a higher priority than that
+   slide.
