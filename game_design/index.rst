@@ -77,6 +77,33 @@ Questions answered in this section:
 
    Other Game Modes <other_modes>
 
+Ball End Modes
+--------------
+
+Questions answered in this section:
+
+* How to start a mode after the ball for a player drained?
+* How to implement a bonus mode?
+
+.. toctree::
+   :titlesonly:
+
+   Ball End Modes <ball_end_modes>
+
+Game End Modes
+--------------
+
+Questions answered in this section:
+
+* How to start a mode after the last player drain his ball?
+* How to implement a highscore mode?
+* How to implement a match mode?
+
+.. toctree::
+   :titlesonly:
+
+   Game End Modes <game_end_modes>
+
 Layering Modes Example
 ----------------------
 

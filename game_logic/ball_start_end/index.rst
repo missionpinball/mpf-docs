@@ -52,31 +52,31 @@ It is also very common to start a ball save on eject:
    playfields:
      playfield:
        default_source_device: bd_plunger
-   
+
    lights:
      l_ball_save:
        number:
-   
+
    switches:
      s_plunger:
        number:
-   
+
    coils:
      c_eject:
        number:
-   
+
    ball_devices:
      bd_plunger:
        eject_coil: c_eject
        ball_switches: s_plunger
        tags: home, trough, drain
        eject_timeouts: 1s
-   
+
    ##! mode: my_mode
    # in your mode
    mode:
       start_events: ball_started
-   
+
    ball_saves:
      ball_save_ball_save:
        active_time: 10s
@@ -84,7 +84,7 @@ It is also very common to start a ball save on eject:
        timer_start_events: balldevice_bd_plunger_ejecting_ball
        auto_launch: yes
        balls_to_save: 1
-   
+
    show_player:
       ball_save_ball_save_ball_save_timer_start:
         flash_color:
@@ -102,7 +102,7 @@ It is also very common to start a ball save on eject:
             color: orange
       ball_save_ball_save_ball_save_disabled:
         ball_save: stop
-   
+
    ##! test
    #! hit_switch s_plunger
    #! advance_time_and_run 1
@@ -189,7 +189,7 @@ sequences and delaying the game flow in the meantime:
    mode:
        start_events: ball_will_start   # in normal mode use ball_started instead
        priority: 200
-   
+
    slide_player:
        ball_starting: ball_starting_slide
        ball_ending: ball_ending_slide
@@ -205,7 +205,7 @@ sequences and delaying the game flow in the meantime:
       ball_ending:
           post: start_ball_ending_show
           wait_for: mode_ball_ending_show_ended
-   
+
    show_player:
        flipper_cancel:
            ball_starting_show: stop
@@ -265,3 +265,8 @@ E.g. use ``ball_starting{ball==1 and not is_extra_ball}`` to only delay the
 first ball (excluding extra balls). Similarly, you can use
 ``ball_starting{is_extra_ball}`` to delay any extra ball start and show some
 animations there.
+
+More examples
+-------------
+
+See :doc:`/game_design/index` and :doc:`/game_design/game_end_modes` in particular for more examples.

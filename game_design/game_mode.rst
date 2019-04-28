@@ -235,3 +235,8 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
   #! hit_and_release_switch s_top_lane_A
   #! hit_and_release_switch s_top_lane_M
   #! assert_player_variable 2 pf_multiplier
+
+Delay Ball Start/Stop to Show Slides/Sounds
+-------------------------------------------
+
+See :doc:`/game_logic/ball_start_end/index`.
