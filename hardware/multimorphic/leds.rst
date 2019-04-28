@@ -136,7 +136,9 @@ turn on or turn off when the board is reset. Which position does what is
 dependent on whether you’re controlling the anode or the cathode with your
 outputs, so basically if you turn on your PD-LED and all your LEDs turn on,
 then flip DIP switch 6 on the PD-LED to the opposite position and power cycle
-the board.
+the board. Note: If servos are connected to a PD-LED board, DIP switch 6 also 
+effects servo signal on power up. See :doc:`/hardware/multimorphic/servos` for 
+additional information.
 
 Breakout boards for parallel LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
