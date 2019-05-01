@@ -92,8 +92,8 @@ Player Variables of Specific Player
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can access a player variable ``X`` of a specific player ``P`` using
-``players[X].P``.
-``X`` starts at 0. So player 1 will be ``players[0].P``.
+``players[P].X``.
+``P`` starts at 0. So player 1 will be ``players[0].P``.
 For instance, ``players[1].my_player_var`` will access ``my_player_var``
 for player 2. ``players[0].my_player_var`` will access player 1.
 This placeholder is only available when a game is active.
