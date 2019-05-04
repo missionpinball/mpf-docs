@@ -395,8 +395,91 @@ service credits. (The service credits count and ``total_value`` will
 always be the same since a service credit switch is always worth one
 credit.)
 
+(G) Allow operator settings of pricing tiers in service modes
+-------------------------------------------------------------
 
-(G) Check out this complete credits config file
+In your final machine you do not want to edit the yaml to change pricing
+tiers.
+Luckily, there is the
+:doc:`built-in service mode </game_logic/service_mode/index>` which allows
+you to add :doc:`more settings </config/settings>`.
+Let us add two settings and use them in the credits config:
+
+.. code-block:: mpf-config
+
+   # in your machine wide config
+   switches:
+      s_coin_left:
+         number:
+      s_service_coin:
+         number:
+
+   settings:
+      credits_price_one_credit:
+         label: Price for one credit
+         values:
+            .25: "25ct"
+            .5: "50ct"
+            .75: "75ct"
+            1: "1 dollar"
+            2: "2 dollar"
+            3: "3 dollar"
+            4: "4 dollar"
+            5: "5 dollar"
+         default: .5
+         key_type: float
+         sort: 500
+      credits_price_tier2:
+         label: Price for price tier 2
+         values:
+            .25: "25ct"
+            .5: "50ct"
+            .75: "75ct"
+            1: "1 dollar"
+            2: "2 dollar"
+            3: "3 dollar"
+            4: "4 dollar"
+            5: "5 dollar"
+         default: 2
+         key_type: float
+         sort: 510
+      credits_credits_tier2:
+         label: Number of credits for tier 2
+         values:
+            2: "2"
+            3: "3"
+            4: "4"
+            5: "5"
+            6: "6"
+            7: "7"
+            8: "8"
+            9: "9"
+            10: "10"
+         default: 5
+         key_type: int
+         sort: 520
+
+   credits:
+      max_credits: 12
+      free_play: False
+      service_credits_switch: s_service_coin
+      switches:
+         - switch: s_coin_left
+           type: money
+           value: .25
+      pricing_tiers:
+         - price: settings.credits_price_one_credit
+           credits: 1
+         - price: settings.credits_price_tier2
+           credits: settings.credits_credits_tier2
+      fractional_credit_expiration_time: 15m
+      credit_expiration_time: 2h
+      persist_credits_while_off_time: 1h
+      free_play_string: FREE PLAY
+      credits_string: CREDITS
+
+
+(H) Check out this complete credits config file
 -----------------------------------------------
 
 Here's the complete credits config file from the Demo Man sample game.
@@ -414,24 +497,69 @@ This is an example:
        s_service_coin:
            number:
 
+   settings:
+      credits_price_one_credit:
+         label: Price for one credit
+         values:
+            .25: "25ct"
+            .5: "50ct"
+            .75: "75ct"
+            1: "1 dollar"
+            2: "2 dollar"
+            3: "3 dollar"
+            4: "4 dollar"
+            5: "5 dollar"
+         default: .5
+         key_type: float
+         sort: 500
+      credits_price_tier2:
+         label: Price for price tier 2
+         values:
+            .25: "25ct"
+            .5: "50ct"
+            .75: "75ct"
+            1: "1 dollar"
+            2: "2 dollar"
+            3: "3 dollar"
+            4: "4 dollar"
+            5: "5 dollar"
+         default: 2
+         key_type: float
+         sort: 510
+      credits_credits_tier2:
+         label: Number of credits for tier 2
+         values:
+            2: "2"
+            3: "3"
+            4: "4"
+            5: "5"
+            6: "6"
+            7: "7"
+            8: "8"
+            9: "9"
+            10: "10"
+         default: 5
+         key_type: int
+         sort: 520
+
    credits:
-       max_credits: 12
-       free_play: False
-       service_credits_switch: s_service_coin
-       switches:
-           - switch: s_coin_left
-             type: money
-             value: .25
-       pricing_tiers:
-           - price: .50
-             credits: 1
-           - price: 2
-             credits: 5
-       fractional_credit_expiration_time: 15m
-       credit_expiration_time: 2h
-       persist_credits_while_off_time: 1h
-       free_play_string: FREE PLAY
-       credits_string: CREDITS
+      max_credits: 12
+      free_play: False
+      service_credits_switch: s_service_coin
+      switches:
+         - switch: s_coin_left
+           type: money
+           value: .25
+      pricing_tiers:
+         - price: settings.credits_price_one_credit
+           credits: 1
+         - price: settings.credits_price_tier2
+           credits: settings.credits_credits_tier2
+      fractional_credit_expiration_time: 15m
+      credit_expiration_time: 2h
+      persist_credits_while_off_time: 1h
+      free_play_string: FREE PLAY
+      credits_string: CREDITS
 
    ##! mode: attract
    # in modes/attract/config/attract.yaml
