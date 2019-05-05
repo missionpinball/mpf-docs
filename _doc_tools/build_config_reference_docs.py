@@ -453,8 +453,17 @@ your machine-wide config, a mode-specific config, or both.
         elif stype == 'float':
             ftype = '``number`` (will be converted to floating point)'
 
+        elif stype == 'template_float':
+            ftype = '``number`` or ``template`` (will be converted to floating point; ' \
+                    ':doc:`Instructions for entering templates ' \
+                    '</config/instructions/dynamic_values>`)'
+
         elif stype == 'int':
             ftype = '``integer``'
+
+        elif stype == 'template_int':
+            ftype = '``integer`` or ``template`` (:doc:`Instructions for entering templates ' \
+                    '</config/instructions/dynamic_values>`)'
 
         elif stype == 'num':
             ftype = '``number`` (can be integer or floating point)'
@@ -462,13 +471,27 @@ your machine-wide config, a mode-specific config, or both.
         elif stype == 'bool' or stype == 'boolean' or stype == 'bool_int':
             ftype = '``boolean`` (Yes/No or True/False)'
 
+        elif stype == 'template_bool':
+            ftype = '``boolean`` or ``template`` (Yes/No or True/False; :doc:`Instructions for entering templates ' \
+                    '</config/instructions/dynamic_values>`)'
+
         elif stype == 'secs':
             ftype = '``time string (secs)`` (:doc:`Instructions for entering '\
-                    'time strings </config/instructions/time_strings>`) '
+                    'time strings </config/instructions/time_strings>`)'
+
+        elif stype == 'template_secs':
+            ftype = '``time string (secs) or template`` (:doc:`Instructions for entering '\
+                    'time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates ' \
+                    '</config/instructions/dynamic_values>`)'
 
         elif stype == 'ms':
             ftype = '``time string (ms)`` (:doc:`Instructions for entering '\
-                    'time strings </config/instructions/time_strings>`) '
+                    'time strings </config/instructions/time_strings>`)'
+
+        elif stype == 'template_ms':
+            ftype = '``time string (ms) or template`` (:doc:`Instructions for entering '\
+                    'time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates ' \
+                    '</config/instructions/dynamic_values>`)'
 
         elif stype == 'list':
             ftype = '``list`` (:doc:`Instructions ' \
