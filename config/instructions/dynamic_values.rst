@@ -52,6 +52,8 @@ So instead of this:
 
 .. code-block:: mpf-config
 
+   ##! mode: tilt
+   # in your tilt mode
    tilt:
       warnings_to_tilt: 3
 
@@ -59,12 +61,29 @@ You would have this instead:
 
 .. code-block:: mpf-config
 
-   tilt:
-      warnings_to_tilt: settings.tilt_warnings
+   # in your maschine config
+   settings:
+      warnings_to_tilt:
+         label: Number of tilt warnings
+         values:
+            0: "no warnings"
+            1: "1"
+            2: "2"
+            3: "3"
+            5: "5"
+            10: "10"
+         default: 3
+         key_type: int
+         sort: 600
 
-(Note the example above requires that you have a ``settings:`` section
+   ##! mode: tilt
+   # in your tilt mode
+   tilt:
+      warnings_to_tilt: settings.warnings_to_tilt
+
+Note the example above requires that you have a ``settings:`` section
 in your machine config and that you've defined a setting called
-"tilt_warnings").
+"tilt_warnings". See :doc:`/game_logic/tilt/index` for more details.
 
 You can also use dynamic values in :doc:`conditional events </events/overview/conditional>`.
 
