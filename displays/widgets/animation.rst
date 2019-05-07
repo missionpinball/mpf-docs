@@ -498,7 +498,7 @@ widget1 to pulse three times.
 ----------------------------
 
 MPF can also animate progress bars or similar things.
-In this example, we animate a progress bar based on the player vairable
+In this example, we animate a progress bar based on the player variable
 ``progress`` by hooking the width of the bar to the event ``player_progress``
 which is posted when the value changes:
 
