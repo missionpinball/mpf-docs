@@ -67,8 +67,8 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.state_machines.<name>``.
+the prefix for state machines is ``device.state_machines.<name>``.
 
 *state*
    The state of this state machine as string.
-   This will be on of your entries in your states section.
+   This will be one of your entries in your states section.
