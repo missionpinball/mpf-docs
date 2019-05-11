@@ -50,4 +50,25 @@ This is an example:
            target: start
            events: state_machine_reset
 
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event going_to_step2
+   #! assert_str_condition start device.state_machines.my_state.state
+   #! post state_machine_proceed
+   #! assert_str_condition step1 device.state_machines.my_state.state
+   #! assert_event_not_called going_to_step2
+   #! post state_machine_proceed2
+   #! assert_str_condition step2 device.state_machines.my_state.state
+   #! assert_event_called going_to_step2
 
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.state_machines.<name>``.
+
+*state*
+   The state of this state machine as string.
+   This will be on of your entries in your states section.
