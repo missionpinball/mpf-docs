@@ -24,6 +24,15 @@ You can build the docs using **Sphinx**. You will first need to install
     pip install gitpython
     pip install sphinx_rtd_theme
 
+### Running Unit Tests
+
+To test that MPF can run all the config snippets in the docs and run the
+corresponding unit tests inside the docs (if there is one) type:
+
+    make unit
+
+### Compiling HTML
+
 Compile the docs to `./_build/html/` with the command:
 
     make html
