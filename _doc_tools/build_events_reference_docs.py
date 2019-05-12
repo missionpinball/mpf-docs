@@ -19,8 +19,11 @@ class EventDocParser(object):
         class_label = None
         config_section = None
 
-        with open(file_name) as f:
-            my_ast = ast.parse(f.read())
+        try:
+            with open(file_name) as f:
+                my_ast = ast.parse(f.read())
+        except:
+            raise AssertionError("Error while parsing {}".format(file_name))
 
         for x in ast.walk(my_ast):
             if isinstance(x, ast.ClassDef):
