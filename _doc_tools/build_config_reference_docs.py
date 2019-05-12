@@ -422,28 +422,7 @@ your machine-wide config, a mode-specific config, or both.
                 # we have a heading sep
                 return i - 1
 
-    def _get_spec_string(self, num, stype, default=None):
-        if num == 'single':
-            return_string = 'Single value, '
-        elif num == 'list' or num == 'set':
-            return_string = 'List of one (or more) values, each is a '
-        elif num == 'dict':
-            return_string = ('Parent setting for one (or more) sub-settings. '
-                             'Each sub-setting is a ')
-        elif num == 'omap':
-            return_string = ('Ordered list for one (or more) sub-settings. '
-                             'Each sub-setting is a ')
-        elif num == 'event_handler':
-            return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
-                    'device control events </config/instructions/device_control_events>`).'
-            if default is not None and default != "None":
-                return_string += " Default: " + default
-            return_string += '\n'
-            return return_string
-
-        else:
-            raise AssertionError("Invalid config spec num: {}".format(num))
-
+    def _get_type_desc(self, stype):
         if stype == 'str':
             ftype = '``string``'
 
@@ -511,8 +490,8 @@ your machine-wide config, a mode-specific config, or both.
             ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0)'
 
         elif stype.startswith('subconfig'):
-            ftype = 'sub-configurating containing {} settings'.format(
-                stype.replace('subconfig(', '')[:-1])
+            config = stype.replace('subconfig(', '')[:-1]
+            ftype = ':doc:`{} <{}>`'.format(config, config)
 
         elif stype.startswith('enum'):
             ftype = 'one of the following options: {}'.format(
@@ -524,12 +503,38 @@ your machine-wide config, a mode-specific config, or both.
                     stype.replace('machine(', '')[:-1])
 
         elif ':' in stype:
-            stype = tuple(stype.split(':'))
-            return_string = 'One or more sub-entries, each in the format of '
-            ftype = '``{}``:``{}``'.format(stype[0], stype[1])
+            raise AssertionError("Should be catched earlier.")
 
         else:
             ftype = stype
+
+        return ftype
+
+    def _get_spec_string(self, num, stype, default=None):
+        if num == 'single':
+            return_string = 'Single value, '
+        elif num == 'list' or num == 'set':
+            return_string = 'List of one (or more) values, each is a '
+        elif num == 'dict':
+            stype = tuple(stype.split(':'))
+            return_string = 'One or more sub-entries, each in the format of {} : {}'.format(
+                self._get_type_desc(stype[0]), self._get_type_desc(stype[1]))
+            return return_string
+        elif num == 'omap':
+            return_string = ('Ordered list for one (or more) sub-settings. '
+                             'Each sub-setting is a ')
+        elif num == 'event_handler':
+            return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
+                    'device control events </config/instructions/device_control_events>`).'
+            if default is not None and default != "None":
+                return_string += " Default: " + default
+            return_string += '\n'
+            return return_string
+
+        else:
+            raise AssertionError("Invalid config spec num: {}".format(num))
+
+        ftype = self._get_type_desc(stype)
 
         return_string += 'type: {}.'.format(ftype)
 

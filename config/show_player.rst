@@ -308,3 +308,10 @@ Default: ``None``.
 Event(s) that will be posted when this show has been updated. Note that the
 show "update" function has not been implemented yet, so this setting is more
 of a placeholder at the moment.
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   show_config: <show_config>

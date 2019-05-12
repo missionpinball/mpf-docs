@@ -6,6 +6,10 @@ State Machine Logic Block
 +==============================================================================+
 | :doc:`/config/state_machines`                                                |
 +------------------------------------------------------------------------------+
+| :doc:`/config/state_machine_states`                                          |
++------------------------------------------------------------------------------+
+| :doc:`/config/state_machine_transitions`                                     |
++------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
@@ -15,6 +19,9 @@ State Machine Logic Block
 
 "State machines" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger state transitions based on the current state and an event.
+
+Technically, this is a `finite state machine <https://en.wikipedia.org/wiki/Finite-state_machine>`_
+as known from CS class.
 
 This is an example:
 
