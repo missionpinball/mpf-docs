@@ -17,7 +17,7 @@ state_machines:
 
 .. overview
 
-The ``state_machines:`` section of your config is where you configure generic state machines.
+The ``state_machines:`` section of your config is where you configure generic :doc:`state machines </game_logic/logic_blocks/state_machines>`.
 
 
 Required settings
