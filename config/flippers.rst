@@ -127,7 +127,7 @@ This setting is optional because you can also use ``sw_flip_enable`` below but
 
 ball_search_hold_time:
 ~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1s``
 
 How long this flipper will be activated for when it is activated during ball search.
 
@@ -165,8 +165,7 @@ EOS switch on this flipper (if there is one).
 
 eos_switch_overwrite:
 ~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``.
-
+One or more sub-entries, each in the format of ``string`` : ``string``
 If you're using an end of stroke switch with this flipper, enter the
 switch name here.
 
@@ -178,7 +177,7 @@ The name of the hold coil winding for dual-wound flipper coils.
 
 hold_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: sub-configurating containing coil_overwrites settings.
+Single value, type: :doc:`coil_overwrites <coil_overwrites>`.
 
 Overwrites settings on the hold_coil.
 See :doc:`coil_overwrites` for details.
@@ -202,7 +201,7 @@ to include an option for flippers in ball search. :)
 
 main_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: sub-configurating containing coil_overwrites settings.
+Single value, type: :doc:`coil_overwrites <coil_overwrites>`.
 
 Overwrites settings on the main_coil.
 See :doc:`coil_overwrites` for details.
@@ -259,8 +258,7 @@ Disables a flipper from software. Use this together with ``sw_flip_events``.
 
 switch_overwrite:
 ~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``.
-
+One or more sub-entries, each in the format of ``string`` : ``string``
 Overwrites settings on the activation_switch.
 See :doc:`switch_overwrites` for details.
 
