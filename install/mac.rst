@@ -265,7 +265,7 @@ good idea to update pip by running the following command:
 
 .. code-block:: console
 
-  pip install --update pip
+  pip install --upgrade pip
 
 The latest version of pip should now be installed.
 
