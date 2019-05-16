@@ -37,7 +37,7 @@ See the :doc:`Hardware Section </hardware/index>` for all hardware supported by
 MPF.
 
 
-Power and Wireing
+Power and Wiring
 -----------------
 
 You should invest some time into at the beginning of your custom pinball
