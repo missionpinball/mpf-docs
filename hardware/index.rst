@@ -81,6 +81,14 @@ your pinball machine.
    * Switches, rules and coils
    * Lights and enable triggers
 
+* :doc:`Arduino Pinball Controller (APC) <apc/index>`
+   * *New in MPF 0.53*
+   * System 3 to System 11c
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
+
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
      it's not connected to physical hardware. (This is good for working on
@@ -157,6 +165,7 @@ MPF supports:
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
    Gottlieb System 1 / System 80 (LISY) <lisy/index>
+   Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index

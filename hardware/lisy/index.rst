@@ -61,3 +61,4 @@ This includes:
    lights
    segment_displays
    sound
+   protocol

@@ -20,6 +20,8 @@ There are a few common choices:
 * :doc:`Multimorphic P3-Roc </hardware/multimorphic/index>`
 * :doc:`FAST Pinball </hardware/fast/index>`
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
+* :doc:`LISY Home (custom pinball version of LISY) </hardware/lisy/index>`
+* :doc:`Arduino Pinball Controller </hardware/apc/index>`
 
 P3-Roc and FAST are both commercial systems at a similar price point but
 features vary slightly so compare them wisely.
