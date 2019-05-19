@@ -38,7 +38,7 @@ want act as the start button. So now your start switch in your
 
    switches:
         s_start:
-            number: 11
+            number: 10
             tags: start
 
 3. Add keyboard entries for your start switch
