@@ -86,6 +86,7 @@ add the debug setting like this:
            tags: trough, home, drain
            jam_switch: s_trough_jam
            eject_coil_jam_pulse: 15ms
+           debug: yes
 
 4. Don't test yet
 -----------------
