@@ -222,7 +222,7 @@ The mode priorities also affect the priorities of things like all display
 widgets and slides. For example, your base mode might play an animation and a
 light show when a ramp shot is made in the base game mode, but when your special
 higher mode is running you might want to play a different slide and a different
-light show. So be specifying the special mode to run at a higher priority, it
+light show. So by specifying the special mode to run at a higher priority, it
 will get priority access to the display and lights. (Again you can configure
 this on a setting-by-setting basis, because there are plenty of times where you
 might actually want the lower-priority shows to play even when a higher priority
