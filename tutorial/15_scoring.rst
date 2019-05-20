@@ -127,7 +127,7 @@ Also notice that when the right flipper is hit, the player variable called "pota
 from it.
 
 Player variables exist and are tracked even if they're not displayed anywhere. So if you run your game now and start
-flipping, the potato value will change. Again, player variables are stored on a per-player basis, so if you start add
+flipping, the potato value will change. Again, player variables are stored on a per-player basis, so if you start adding
 additional players to the game, they'll each have their own copies of their own player variables. Also the player
 variables are destroyed when the game ends. (It is possible to save certain variables from game-to-game, but we'll
 discuss those later, as those are not player variables.)
