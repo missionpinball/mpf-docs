@@ -130,11 +130,17 @@ computer.
 ~~~~~~~~~~~~~~
 
 Ignores all ``platform:`` settings in your config files and forces MPF to run
-using the *virtual* platform interface. This is nice for testing when you don't
-have your physical hardware attached.
+using the :doc:`virtual platform </hardware/virtual/smart_virtual>` interface.
+This is nice for testing when you don't have your physical hardware attached.
 
 -X (uppercase)
 ~~~~~~~~~~~~~~
 
-Like `-x`, except it forces the *smart virtual* platform.
+Like `-x`, except it forces the
+:doc:`smart virtual platform </hardware/virtual/smart_virtual>`.
 
+--vpx
+~~~~~
+
+Like `-x`, except it forces the
+:doc:`Virtual Pinball (VPX) platform </hardware/virtual/virtual_pinball_vpx>`.
