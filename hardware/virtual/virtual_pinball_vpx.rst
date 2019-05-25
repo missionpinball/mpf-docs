@@ -15,7 +15,6 @@ To use the VPX platform you need to install the
 `MPF-VPX bridge <https://github.com/missionpinball/mpf-vpcom-bridge>`_ and
 add some VPX scripts to your VPX table.
 
-The GameName set in VPX is not used to check or validate the MPF machine.
 The bridge will connect to the running MPF machine when you start your VPX
 table.
 As the VPX table is used only to emulate the hardware and should not contain
@@ -58,6 +57,7 @@ Configure VPX
 In VPX you need to adjust your script to talk to MPF.
 You can also looks this up in the example project inside the
 `bridge repository <https://github.com/missionpinball/mpf-vpcom-bridge>`_.
+The GameName set in VPX is not used to check or validate the MPF machine.
 
 Setup controller and timers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
