@@ -1,4 +1,4 @@
-enstalling MPF on Windows
+Installing MPF on Windows
 =========================
 MPF can be used on Windows 7, 8, and 10, in both 32-bit and 64-bit versions. The
 installation process is pretty much automated, and the whole thing should only
