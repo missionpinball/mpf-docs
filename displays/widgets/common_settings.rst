@@ -132,7 +132,7 @@ rotation:
 ~~~~~~~~~
 
 Specifies the rotation of the widget. Values are entered in degrees. For example,
-90 = one quarter rotation clockwise. May be used to rotate images and GIFs.
+90 = one quarter rotation counter clockwise. May be used to rotate images and GIFs.
 
 
 animations:
