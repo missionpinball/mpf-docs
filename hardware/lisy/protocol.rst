@@ -379,3 +379,292 @@ Example:
    "1", "1", "25", "Set lamp 25 to off"
 
 No response is expected.
+
+
+Get Status of Solenoid (0x14)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get the status of a solenoid.
+Payload is the solenoid index:
+
+.. csv-table:: Payload of Command 0x14 - Get Status of Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to query"
+
+Example:
+
+.. csv-table:: Example Command 0x14 - Get Status of Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "20", "Command 20 - Get Status of Solenoid"
+   "1", "1", "25", "Query status of solenoid 25"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x14 - Get Status of Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "0=Off, 1=On, 2=Solenoid not existing"
+
+Example:
+
+.. csv-table:: Example Response to 0x14 - Get Status of Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "0", "Status of solenoid is off"
+
+MPF will not use this.
+After init/reset MPF assumes all solenoids to be in state disabled.
+
+
+Enable Solenoid at Full Power (0x15)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Enable solenoid at full power.
+Payload is the solenoid index:
+
+.. csv-table:: Payload of Command 0x15 - Enable Solenoid at Full Power
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to enable"
+
+Example:
+
+.. csv-table:: Example Command 0x15 - Enable Solenoid at Full Power
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "21", "Command 21 - Enable Solenoid at Full Power"
+   "1", "1", "25", "Enable solenoid 25 at full power"
+
+No response is expected.
+This is mostly used in older machines where solenoids could be enabled without PWM.
+
+
+Disable Solenoid (0x16)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Disable solenoid.
+Payload is the solenoid index:
+
+.. csv-table:: Payload of Command 0x16 - Disable Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to disable"
+
+Example:
+
+.. csv-table:: Example Command 0x16 - Disable Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "21", "Command 22 - Disable Solenoid"
+   "1", "1", "25", "Disable solenoid 25"
+
+No response is expected.
+
+Pulse Solenoid (0x17)
+^^^^^^^^^^^^^^^^^^^^^
+
+Pulse solenoid with it's configured pulse time.
+Payload is the solenoid index:
+
+.. csv-table:: Payload of Command 0x17 - Pulse Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to pulse"
+
+Example:
+
+.. csv-table:: Example Command 0x17 - Pulse Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "21", "Command 23 - Pulse Solenoid"
+   "1", "1", "25", "Pulse solenoid 25"
+
+No response is expected.
+Use command 0x18 to configure the pulse time.
+
+Set Solenoid Pulse Time (0x18)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Configure the pulse time of a solenoid in milliseconds.
+Payload is the solenoid index and pulse time.
+
+.. csv-table:: Payload of Command 0x18 - Pulse Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to pulse"
+   "2", "1", "Pulse time in ms (0-255)"
+
+Example:
+
+.. csv-table:: Example Command 0x18 - Pulse Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "21", "Command 23 - Pulse Solenoid"
+   "1", "1", "25", "Pulse solenoid 25"
+   "2", "1", "50", "Set pulse time to 50ms"
+
+No response is expected.
+This will affect pulses in command 0x17.
+
+Displays
+^^^^^^^^
+
+TODO
+
+Get Status of Switch (0x28)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get the status of a switch.
+Payload is the switch index:
+
+.. csv-table:: Payload of Command 0x28 - Get Status of Switch
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``s`` of the switch to query"
+
+Example:
+
+.. csv-table:: Example Command 0x28 - Get Status of Switch
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "40", "Command 40 - Get Status of Switch"
+   "1", "1", "25", "Query status of switch 25"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x28 - Get Status of Switch
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "0=Off, 1=On, 2=Switch not existing"
+
+Example:
+
+.. csv-table:: Example Response to 0x28 - Get Status of Switch
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "0", "Status of switch is off"
+
+MPF will read all switches at startup using this command.
+
+
+Get Changed Switches (0x29)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Check is switches changed.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x29 - Get Changed Switches
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "40", "Command 41 - Get Changed Switches"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x29 - Get Changed Switches
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "127=No change. Otherwise: The numer of changed switch. Bit 7 is the status of that switch."
+
+Example:
+
+.. csv-table:: Example Response to 0x29 - Get Changed Switches
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "10", "Switch 10 turned off"
+
+MPF will poll this at 100 Hz by default.
+
+Sound
+^^^^^
+
+TODO
+
+Init/Reset (0x36)
+^^^^^^^^^^^^^^^^^
+
+Reset and initialize the platform.
+MPF will expect this command to reset all coil configs and to disable all coils and lights.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x36 - Init/Reset
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "54", "Command 54 - Init/Reset"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x36 - Init/Reset
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "0=OK. Otherwise an error code. MPF will retry on error."
+
+Example:
+
+.. csv-table:: Example Response to 0x36 - Init/Reset
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "0", "Reset ok."
+
+This will be the first command send by MPF.
+
+
+Watchdog (0x65)
+^^^^^^^^^^^^^^^
+
+Will be send every 500ms.
+The hardware is expected to disable all solenoids and light if it did not get a watchdog for 1s.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x65 - Watchdog
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "101", "Command 101 - Watchdog"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x65 - Watchdog
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "0=OK. Otherwise an error code"
+
+Example:
+
+.. csv-table:: Example Response to 0x65 - Watchdog
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "0", "Watchdog ok."
+
+This be send periodically at 2 Hz in MPF.
