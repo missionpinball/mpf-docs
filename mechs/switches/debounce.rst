@@ -1,40 +1,129 @@
-Switch Debounce Theory
-======================
+Debouncing in Pinball Machines
+==============================
 
-There's a lot of confusion around how "debounce" works in pinball machines and
-in MPF, mainly because different hardware platforms do things in very different
-ways. So this tech note will explain the different ways that debounce works,
-how MPF deals with it, and the technical back stories.
+A pinball machine is a mechanical machine with a lot mechanical, electronic
+and electromagnetical interferences. This has to be mitigated on multiple
+levels to prevent unwanted effects:
 
-Understanding debounce
-----------------------
+#. Prevent too much communication between hardware platform and CPU. A lot of
+   switch changes could easily overflow the communication bus or starve the
+   CPU/controller.
+#. Prevent too many switch events in the game. It is not uncommon to show
+   slides or play sounds on a switch event. If this event occurs very often
+   this may easily slow down your game.
+#. Prevent coils from pulsing too often. If a coil pulses on a switch hit
+   and the switch activates constantly it might essentially be stuck on for
+   the whole time which in the best case would only blow a fuse and in the
+   worst case might burn down the machine.
+
+As you can see there are multiple types of debouncing.
+We will explain how to use those in the following:
+
+Switch Debouncing at the Hardware Level
+---------------------------------------
+
+To prevent too much communication between you hardware platform and your CPU
+there is typically some switch debouncing at the hardware level.
+This is what most electronic engineers will first think about when taking
+about *debouncing*.
 
 On the surface, switch *debounce* is pretty straightforward. Switches are
 mechanical things, computers are fast, and your pinball software wants to make
 sure a switch is actually in a new state before acting on a switch.
 
 Pinball controllers set debounce in different ways. For example, some platforms
-(P-ROC, P3-ROC) say "a switch must be in a new state for 2 consecutive reads"
-to be considered debounced, while other platforms (FAST) focus on time-based
-durations rather than number of reads, saying, "a switch must be in a new state
-for X milliseconds before it's considered debounced."
+(for instance, P-ROC, P3-ROC) say "a switch must be in a new state for 2
+consecutive reads" to be considered debounced, while other platforms
+(e.g. FAST) focus on time-based durations rather than number of reads, saying,
+"a switch must be in a new state for X milliseconds before it's considered
+debounced." In practise, there is not much difference between those two.
 
-When discussing debounce, a lot of people tend to fixate on how "long" the
-debounce is (10ms, 30ms, etc.), and conversations devolve into arguments about
-switch lag and human perception, the "feel" of "instant", etc.
+When considering switch debounce, the switch usually is supposed to be active
+for the whole debounce time. So this could also be called "minimum active
+time". Usually this time is in the range of two to four milliseconds.
+The reason for that is that waiting for a minimum active time induces some
+lag to the switch event.
 
-But the "lag" of a switch response is only part of the conversation about
-debounce times.
+Still, switch debounce is often disabled for hardware rules (e.g. for
+pop bumpers or sling shots) to render them more responsive. However, this also
+them more susceptible to interferences or phantom hits. For that reason,
+in some platforms, even in that case a minimal debounce time is enforced
+(around one millisecond).
 
-The other important thing is if you set your debounce times too long, then you
+There is very little reason to increase switch
+debounce time to more than about four ms (see next section on what to do
+instead).
+Because if you set your debounce times too long, then you
 risk switch events being missed. (It would be annoying if a ball brushed
 a pop bumper and the bumper not didn't fire.)
 
-If you set your debounces too short, you risk getting multiple switch events for
-what should have been a single switch event. (Again it would be annoying if a
-ball hit a pop bumper and that bumper fired once, but you actually got back
-multiple switch events which led to multiple scores, multiple sound effects,
-etc.)
+By default, MPF will enable switch debounce in all
+:doc:`switches </config/switches>`. For autofires such as pop bumpers or sling
+shots it will be disabled. You can overwrite this using the ``debounce``
+setting in your :doc:`switches </config/switches>`.
+
+Preventing too many Switch Events in MPF
+----------------------------------------
+
+Depending on the type of switch you will see hits between five and fifty
+milliseconds. So any switch debounce time above that will miss switch hits.
+However, if you set your debounces too short, you risk getting multiple switch
+events for what should have been a single switch event. (Again it would be
+annoying if a ball hit a pop bumper and that bumper fired once, but you
+actually got back multiple switch events which led to multiple scores, multiple
+sound effects, etc.)
+
+The solution to this is to combine switch debounce with a window to ignore
+multiple hits. There are two ways to implement this. 
+
+Ignore Window
+~~~~~~~~~~~~~
+
+The first and most used way is to define a period after registered hit which
+ignores all further hits.
+This setting is called ``ignore_window_ms`` in your 
+:doc:`switch config </config/switches>`.
+For example, if you set ``ignore_window_ms: 100``, then a switch is activated once,
+then again 50ms later, the second activation will be ignored. The timer is set based on
+the last switch hit that *activated* the switch, so if another switch hit came in 105ms
+after the first (which would be 55ms after the second), it will also count.
+
+In most cases you can easily set ``ignore_window_ms`` to a few hundred milliseconds.
+This will not affect hardware rules. Use ``recycle`` on your
+:doc:`coil </config/coils>` instead.
+
+This is what most javascript programmers understand when they hear debouncing.
+Kind of related but also a bit different from what EEs understand by it.
+
+Throttling
+~~~~~~~~~~
+
+There is another technique which is commonly used in the javascript works when
+working with computationally expensive callbacks which is called throttling.
+The goal here is similar but the implementation is differerent.
+Instead of having a window after each activation this defines a maximum number
+of calls per time unit. For instance a maximum of 10 calls per second.
+This would certainly also be possible in MPF but is currently not supported.
+We think this would be inferior to ``ignore_window_ms`` since it is more
+susceptible to bursts it might still cause temporary lags.
+However, we might add this later to prevent permanent problems with bad
+or bouncy switches.
+
+Preventing Coil Overheating
+---------------------------
+
+When enabling coils you usually use PWM to control the maximum power.
+However, when pulsing coils they are often enabled without any PWM for a while.
+This works fine for a single activation but might cause problems when a switch
+is activated repeatedly (i.e. because of interferences). In that case, the coil
+would be permanently pulsed and, thereby, enabled all the time. That will
+hopefully only blow a fuse on that coil but might as well burn down the
+machine. To prevent this there is ``recycle`` on your
+:doc:`coil </config/coils>`. When set to true it will prevent any further pulse
+for a certain time after a pulse (similar to ``ignore_window_ms`` on the
+switch above). The duration depends on your platform and might also be
+configurable.
+
 
 Understanding switch scanning loop speed
 ----------------------------------------
@@ -51,120 +140,11 @@ have matrix or direct switches. (More on this in a bit.)
 
 The important thing, though, is that different controllers and different types
 of switches are checked at different intervals. That could be every millisecond,
-or every 2ms, or every 8ms... really it's up to the controller and switch type
+or every 1ms, or every 2ms... really it's up to the controller and switch type
 as they're all different.
+Scanning speed induces some delay and jitter to your debounce times.
+Refer to your platform documentation for details.
 
-Debounce + switch scanning loop speed = confusion!
---------------------------------------------------
-
-Now combine the two previous concepts, and you quickly see we have some complex
-scenarios about how "debounce" *really* works.
-
-For example, let's start with a switch on a platform that defines debounce as
-two consecutive reads of the same state. How does that translate into real-world
-time? In other words, how long does that switch need to be active before the
-controller considers it to be active?
-
-We can't answer that question until we understand the switch scanning loop
-speed.
-
-For example, if the controller hardware steps through each switch poll at 1ms
-intervals, that means it polls the direct switches, then 1ms later is polls
-column 1, then 1ms, column 2, 1ms, column 3, etc.
-
-So in the case of an 8x8 matrix with a single bank of direct switches, the
-status of each switch is polled every 9ms.
-
-Now imagine you have a switch configured for no debounce. How long does that
-switch have to be in the new state to be considered changed?
-
-If the switch changes state at the exact perfect instant that its column is
-being read, then the active time for that switch is essentially instant.
-
-However, if that switch's column is read, then 1ms later that switch goes active,
-then 7ms after that the switch goes inactive again--all that happened within the
-9ms polling "gap".
-
-In other words, you could have a switch which was technically active for 7ms,
-but the pinball controller completely missed it!
-
-Same for debouncing. If debouncing needs a switch to be in the active state for
-two consecutive reads to be considered active, and the switch polling loop only
-poll that switch's column, then you could actually have a switch that was active
-for 17ms (1ms less than 9ms * 2 reads), and the switch would not be seen as
-active!
-
-So, again using a 9ms polling loop as an example:
-
-=============  ====================  ======================================
-Type           Min time to activate  Max time that still might not activate
-=============  ====================  ======================================
-Debounced      10ms                  17ms
-Not Debounced  1ms                   7ms
-=============  ====================  ======================================
-
-Matrix versus direct switches
------------------------------
-
-These longer loop times between switch reads are a necessity when switch matrices
-are used. After all, you can only step through the matrix so fast before running
-into FCC issues.
-
-In theory, "direct" switches could mean the switches could be polled more often.
-However, just because a switch is called a "direct" switch doesn't automatically
-mean that it's polled more often.
-
-For example, on the P-ROC, the direct switches are essentially like an extra 1x8
-switch matrix where the "column" is always active. But the reads of the direct
-switches are slotted into the timing of the reads of the matrix switches, meaning
-P-ROC direct switches are not read any faster or more often than matrix switches.
-
-(The P3-ROC uses SW-16 switch boards with 2 banks of direct switches each. I'm
-awaiting confirmation to see how the timing works on those.)
-
-FAST hardware switches connected to FAST I/O boards are direct as well. However
-since each I/O board has its own processor on it, those switches are polled every
-1ms.
-
-(When FAST releases a switch matrix daughter board, those columns will need to
-be strobed 1-by-1, meaning FAST matrix switches will have longer polling intervals
-than FAST direct switches.)
-
-Putting it all together
------------------------
-
-The P-ROC hardware allows for two debounce settings: *on* and *off*. Debounce
-*on* means the switch must be in the same state for two consecutive reads before
-the switch change event is sent to the host, and debounce *off* means the switch
-event will be sent to the host as soon as it changes.
-
-The polling interval on the P-ROC is configurable, and you also need to take into
-consideration how big your matrix is (do you have 8 or 9 columns), how many
-direct switches you have, etc.
-
-FAST hardware accepts debounce settings based on milliseconds, e.g. "How many ms
-does a switch have to be in the new state before a change event is sent to the
-host?"
-
-Putting it all together this means that on a P-ROC, *debounce off* is not the
-same thing as as *debounce 0* on a FAST controller.
-
-Depending on your hardware, *debounce off* on a P-ROC could still mean it takes
-7ms (or more) for a switch to register, and *debounce on* on a P-ROC means that
-it could take 17ms (or more) for a switch to register.
-
-So if you have a FAST controller with a direct switch connected to a FAST I/O
-board, setting (for example) *debounce 5ms* does *not* mean the FAST controller
-is going to be "slower" to respond than a P-ROC that's set to *debounce off*.
-
-This also shows why the recommendation in the P-ROC community has historically
-been to set *debounce off* on autofire rules, since *debounce on* would mean a
-switch could potentially have to be activated for 17ms (or more, again,
-depending on the size of the matrix and other things). It's also why FAST has
-been recommending 10ms for "instant" response and 30ms for "regular" switches.
-(Which, if you don't like 10ms/30ms, you could change to 7ms/20ms, or whatever
-you want.)
-
-The point is that FAST's 10ms/30ms isn't actually that different than P-ROC's
-off/on settings when you actually dig under the hood and see how the timing
-works.
+In most cases switch matrixes are scanned slighly slower than direct switches
+on a hardware platform. However, they are usually still fast enough not to
+cause any problems with missed switches.

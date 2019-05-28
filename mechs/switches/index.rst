@@ -16,6 +16,23 @@ MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
 
+There are two general switch types in pinball machines (read those for details):
+
+* :doc:`Mechanical switches <mechanical_switches>`
+* :doc:`Optical switches <optos>`
+
+Typical switch applications in pinball machines are:
+
+* :doc:`Rollover/lane switches <rollover_switches>`
+* :doc:`Standup targets </mechs/targets/stationary_targets/index>`
+* :doc:`Spinners </mechs/spinners/index>`
+* :doc:`Flipper buttons </mechs/flippers/index>` and :doc:`Flipper end-of-stroke switches </mechs/flippers/eos_switches>`
+* As part of a mech such as
+  :doc:`Drop targets </mechs/targets/drop_targets/index>`,
+  :doc:`Popbumpers </mechs/pop_bumpers/index>` or
+  :doc:`Ball Devices </mechs/ball_devices/index>`/:doc:`Troughs </mechs/troughs/index>`
+* :doc:`Service and door switches <service_and_door_switches>`
+
 MPF supports all types of switches found in all generations of pinball machines,
 including matrix switches, direct switches, Fliptronics switches, switches
 connected to I/O boards, etc.
@@ -27,7 +44,8 @@ actually active when they're open.) In MPF, you configure your switches in the
 (like whether the switch is "active" when it's in the open state or the closed
 state.)
 
-You can also configure debounce settings for each switch, which controls how MPF
+You can also configure :doc:`debounce settings <debounce>` for each switch,
+which controls how MPF
 responds to switch events. Saying that a switch has to be "debounced" means that
 the pinball controller makes sure the switch is actually in its current state
 for a few milliseconds before it send the switch event to MPF. This can be
@@ -38,6 +56,14 @@ Most switches in pinball machines are debounced except for the ones that you
 absolutely want to fire instantly, like flipper switches and the switches
 attached to automatically fired coils like slingshots and pop bumpers.
 
+This is an example:
+
+.. code-block:: mpf-config
+
+   switches:
+      my_switch:
+         number: 42	# number from your hardware platform
+
 Switch Concepts
 ---------------
 * :doc:`debounce`
@@ -46,7 +72,7 @@ Switch Concepts
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for switches is ``device.switches.<name>``.
 
@@ -63,12 +89,15 @@ Related How To guides
 
 * :doc:`/tutorial/3_get_flipping`
 * :doc:`optos`
+* :doc:`mechanical_switches`
+* :doc:`rollover_switches`
+* :doc:`service_and_door_switches`
+* :doc:`start_tournament_and_launcher_buttons`
 
 Related Events
 --------------
 * :doc:`/events/switch_name_active`
 * :doc:`/events/switch_name_inactive`
-* :doc:`/events/sw_tag_name`
 
 
 .. toctree::
@@ -78,3 +107,8 @@ Related Events
    debounce
    switch_controller
    optos
+   mechanical_switches
+   service_and_door_switches
+   rollover_switches
+   start_tournament_and_launcher_buttons
+   breakout_boards

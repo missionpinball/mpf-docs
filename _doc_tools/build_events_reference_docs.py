@@ -1,36 +1,57 @@
 import ast
 import os
 import re
-
-paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
-rst_path = '../events'
-dont_delete_files = []
+from collections import defaultdict
 
 
 class EventDocParser(object):
 
-    def __init__(self):
+    def __init__(self, rst_path):
         self.file = None
         self.file_list = list()
+        self.rst_path = rst_path
+        self.device_labels = {}
+        self.device_events = defaultdict(list)
 
     def parse_file(self, file_name):
 
         self.file = file_name
+        class_label = None
+        config_section = None
 
-        with open(file_name) as f:
-            my_ast = ast.parse(f.read())
+        try:
+            with open(file_name) as f:
+                my_ast = ast.parse(f.read())
+        except:
+            raise AssertionError("Error while parsing {}".format(file_name))
 
         for x in ast.walk(my_ast):
-            if isinstance(x, ast.Str) and (x.s.strip().lower().startswith(
-                    'event:')):
-                event, rst = self.parse_string(x)
+            if isinstance(x, ast.ClassDef):
+                class_label = None
+                config_section = None
+                for statement in x.body:
+                    if isinstance(statement, ast.Assign) and len(statement.targets) == 1 and \
+                       isinstance(statement.targets[0], ast.Name) and isinstance(statement.value, ast.Str):
+                            #print('class: %s, %s=%s' % (str(x.name), str(statement.targets[0].id), str(statement.value)))
+                            if statement.targets[0].id == "class_label":
+                                class_label = str(statement.value.s)
+                            elif statement.targets[0].id == "config_section":
+                                config_section = str(statement.value.s)
 
-                if event:
-                    event = event.strip('.')
+                for y in ast.walk(x):
+                    if isinstance(y, ast.Str) and (y.s.strip().lower().startswith('event:')):
+                        event, rst = self.parse_string(y)
 
-                if rst:
-                    filename = self.create_file(event, rst)
-                    self.file_list.append((event, filename))
+                        if event:
+                            event = event.strip('.')
+
+                        if rst:
+                            filename = self.create_file(event, rst)
+                            self.file_list.append((event, filename))
+
+                        if config_section and rst:
+                            self.device_events[config_section].append(event)
+                            self.device_labels[config_section] = class_label
 
     def write_index(self):
 
@@ -50,7 +71,6 @@ understand:
 
    overview/index
    overview/conditional
-   overview/multiple_things_from_one_event
    overview/priorities
    overview/event_types
 
@@ -81,13 +101,45 @@ an event called *switch_s_left_slingshot_active*.
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(rst_path, 'index.rst'), 'w') as f:
+        index += '''
+Device Indexes
+--------------
+        
+.. toctree::
+   :maxdepth: 1
+
+'''
+        for config_section, events in sorted(self.device_events.items()):
+            index += '   {} <index_{}>\n'.format(self.device_labels[config_section], config_section)
+
+            rst = self.device_labels[config_section] + "\n"
+            rst += "=" * (len(self.device_labels[config_section])) + "\n\n"
+            rst += "See: :doc:`/config/{}`".format(config_section) + "\n\n"
+
+            for event in events:
+                rst += '* :doc:`{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+
+            with open(os.path.join(self.rst_path, 'index_{}.rst'.format(config_section)), 'w') as f:
+                f.write(rst)
+
+            rst = ""
+
+            for event in events:
+                rst += '* :doc:`/events/{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+
+            rst += "\n"
+
+            with open(os.path.join(self.rst_path, 'include_{}.rst'.format(config_section)), 'w') as f:
+                f.write(rst)
+
+
+        with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
             f.write(index)
 
     def create_file(self, event, rst):
         filename = event.replace('(', '').replace(')', '') + '.rst'
 
-        with open(os.path.join(rst_path, filename), 'w') as f:
+        with open(os.path.join(self.rst_path, filename), 'w') as f:
             f.write(rst)
 
         return filename
@@ -193,7 +245,11 @@ the arguments below.)\n\n'''
         return output
 
 if __name__ == '__main__':
-    a = EventDocParser()
+    paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
+    rst_path = '../events'
+    dont_delete_files = []
+
+    a = EventDocParser(rst_path)
 
     # delete existing files
     for path, _, files in os.walk(rst_path):

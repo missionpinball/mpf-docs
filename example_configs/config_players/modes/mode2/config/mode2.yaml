@@ -1,6 +1,0 @@
-#config_version=4
-mode:
-  priority: 200
-  game_mode: False
-
-banana_player:

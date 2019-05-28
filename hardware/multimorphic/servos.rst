@@ -1,42 +1,65 @@
-How to configure servos (P3-ROC)
-================================
+Servos on a PD-LED (P-ROC/P3-ROC)
+=================================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
 | :doc:`/config/servos`                                                        |
 +------------------------------------------------------------------------------+
+| :doc:`/config/pd_led_boards`                                                 |
++------------------------------------------------------------------------------+
 
-The P3-ROC contains an I2C port (J17) which is accessible to MPF. You can use
-this port to control an I2C-based servo. (You can't plug the servo directly
-into the P3-ROC, rather, you can buy an I2C-based servo controller and plug it
-into the P3-ROC.)
+Starting with PD-LED v3 you can configure up to twelve steppers on a PD-LED.
 
-You need to connect SDA, SCL and ground. You may not need the 3.3V from the
-P3-ROC as your controller might be a different voltage (which you can then
-get directly from your power supply), but again that depends on the board.
+.. image:: /hardware/images/multimorphic_PD-LED.png
 
-See the :doc:`/hardware/i2c_servo/index` documentation for details on how to
-configure this.
+To enable servos you need to configure your PD-LED board in your ``p_roc``
+section.
+Assuming your PD-LED has the ID 4 you can use the following config to enable
+all servos and and define two of them:
 
-If you want to use this with a P3-ROC, you can configure it in your machine
-config it similar to this:
+.. code-block:: mpf-config
 
-::
-
-   hardware:
-       driverboards: pdb
-       platform: p3_roc
-       servo_controllers: i2c_servo_controller
-
-   servo_controller:
-       address: 0x40
+   p_roc:
+     pd_led_boards:
+       4:
+         max_servo_value: 300 # rougly maps to 2ms.       
+         use_servo_0: True
+         use_servo_1: True
+         use_servo_2: True
+         use_servo_3: True
+         use_servo_4: True
+         use_servo_5: True
+         use_servo_6: True
+         use_servo_7: True
+         use_servo_8: True
+         use_servo_9: True
+         use_servo_10: True
+         use_servo_11: True
 
    servos:
-       servo1:
-           number: 3
+      servos_4_0:
+         number: 4-0
+      servos_4_1:
+         number: 4-1
 
-The address and number of your servo and servo controller can be found in the
-documentation of your controller and are most likely configurable. You can also
-connect multiple I2C servo controllers to the P3-ROC by configuring them with
-unique I2C addresses.
+The number of your servos has to be ``id_of_your_ped_led-number``.
+In this case ``4-0`` and ``4-1`` for the first and second servo on PD-LED 4.
+You will not be able to use LED 72 to LED 83 on the PD-LED when enabling all
+servos.
+
+max_servo_value determines the width of the pulses sent to the servo.  This value 
+can be altered to increase of decrease the servo arc within the physical limits
+of the device. Higher values widen pulsewidth increasing the range of motion.
+
+DIP switch 6 of the PD-LED controls the default state of the LED outputs when the
+board first receives power. Because servos receive signal from LED outputs, 
+placing this DIP switch in the on position can activate a servo prior to the
+PD-LED receiving instructions from the controller and MPF. This in turn may
+lead to a servo thermal overload state and failure. When using servos, 
+DIP switch 6 should be maintained in the OFF position.
+
+You should hook up your servos to an external power source (usually 5V) and
+not draw that power from the PD-LED.
+However, make sure to connect the ground of your power supply.
+See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.

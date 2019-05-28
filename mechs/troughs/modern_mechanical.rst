@@ -1,6 +1,14 @@
 How to configure a modern trough with mechanical switches
 =========================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use a modern-style trough
 which uses mechanical leaf switches. If you have a modern trough that uses
 opto boards, use :doc:`this guide <modern_opto>` instead.
@@ -34,23 +42,23 @@ section of your config file. Create an entry in your ``switches:`` section for
 each switch in your trough, like this: (This example has six switches plus the
 jam switch. Yours may have more or less.)
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
         s_trough2:
-            number: 03
+            number: 3
         s_trough3:
-            number: 04
+            number: 4
         s_trough4:
-            number: 05
+            number: 5
         s_trough5:
-            number: 06
+            number: 6
         s_trough6:
-            number: 07
+            number: 7
         s_trough_jam:
-            number: 08
+            number: 8
 
 Note that we configured this switches with numbers ``02`` through ``08``, but
 you should use the actual switch numbers for your control system that the trough
@@ -78,17 +86,17 @@ Next, create an entry in your ``coils:`` section for your trough's eject
 coil. Again, the name doesn't matter. We'll call this *c_trough_eject*
 and enter it like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_trough_eject:
-            number: 04
-            pulse_ms: 20
+            number: 4
+            default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered a ``pulse_ms:`` value of 20
+You'll also note that we went ahead and entered a ``default_pulse_ms:`` value of 20
 which will override the default pulse time of 10ms. It's hard to say
 at this point what value you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -291,32 +299,30 @@ the trough, it's just the one.
 Here's the complete config
 --------------------------
 
-.. begin_mpfdoctest:config/config.yaml
-
-::
-
-    #config_version=4
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
         s_trough2:
-            number: 03
+            number: 3
         s_trough3:
-            number: 04
+            number: 4
         s_trough4:
-            number: 05
+            number: 5
         s_trough5:
-            number: 06
+            number: 6
         s_trough6:
-            number: 07
+            number: 7
         s_trough_jam:
-            number: 08
+            number: 8
+        s_plunger:
+            number: 10
 
     coils:
         c_trough_eject:
-            number: 04
-            pulse_ms: 20
+            number: 4
+            default_pulse_ms: 20
 
     ball_devices:
         bd_trough:
@@ -329,8 +335,13 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger:
-            tags: ball_add_live
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
     virtual_platform_start_active_switches:
         s_trough1
@@ -339,8 +350,6 @@ Here's the complete config
         s_trough4
         s_trough5
         s_trough6
-
-.. end_mpfdoctest
 
 What if it doesn't work?
 ------------------------

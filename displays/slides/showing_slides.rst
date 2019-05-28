@@ -2,7 +2,8 @@ How to Show a Slide on a Display
 ================================
 
 Once you have your :doc:`slides created <creating_slides>`, you need to decide
-which slides you show when.
+which slides you show when. (Just remember you can test slides and widgets
+interactively using :doc:`Interactive MC (iMC) </tools/imc/index>`.)
 
 Using the slide_player
 ----------------------
@@ -18,14 +19,14 @@ meaning that you basically say, "play THIS slide when THAT event happens".
 For example, if you want to play a slide named "good_job" when the event
 "left_lane_hit" is posted, you would set your config like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         left_lane_hit: good_job
 
 You can have as many event/slide combinations as you want, like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         left_lane_hit: good_job
@@ -38,7 +39,7 @@ options for showing each slide. But instead of putting the
 slide name after the event name, you can also create a sub-entry with the
 slide name, then *another* sub-entry with additional options, like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         right_ramp_hit:
@@ -48,17 +49,16 @@ slide name, then *another* sub-entry with additional options, like this:
 
 You can mix-and-match all of these in a single config, like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
          left_lane_hit: good_job
          right_lane_hit: good_job
          left_ramp_hit: ramp_champ
-         slide_player:
-            right_ramp_hit:
-                ramp_hit_slide:
-                    expire: 2s
-                    target: dmd
+         right_ramp_hit:
+             ramp_hit_slide:
+                 expire: 2s
+                 target: dmd
 
 In the example above, when the event "left_ramp_hit" happens, the slide
 "ramp_champ" is shown. When the event "right_ramp_hit" happens, the slide
@@ -81,17 +81,19 @@ player in a show, you add a :doc:`/config/slides` section to a show step.
 For example, if you want a slide called "happy_face" to play in a step in a
 show, you can do it like this (this is a snippet of a single step in a show):
 
-::
+.. code-block:: mpf-config
 
-    - duration: 3s
-      slide: happy_face
+   ##! show: my_show
+   - duration: 3s
+     slides: happy_face
 
 Again, you can use the sub-entry format to specify additional options:
 
-::
+.. code-block:: mpf-config
 
-    - duration: 3s
-      slide:
+   ##! show: my_show
+   - duration: 3s
+     slides:
         happy_face:
           target: playfield_screen
 

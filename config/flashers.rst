@@ -1,214 +1,39 @@
 flashers:
 =========
 
-*Config file section*
+*Removed in 0.50.*
 
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
-+----------------------------------------------------------------------------+---------+
+In most cases flashers can be configured as :doc:`coils </config/coils>`.
+You can use :doc:`coil_player </config/coil_player>` to pulse/flash them.
+Alternatively, you can configure them as :doc:`lights </config/lights>`
+and use :doc:`light_player </config/light_player>` or
+:doc:`flasher_player </config/flasher_player>` to control them.
 
-.. overview
 
-The ``flashers:`` section of your config is where you configure your
-machine's flashers. Note that flashers in MPF are lights that are connected
-to driver outputs. Most new custom machines use LEDs (or groups of LEDs)
-connected to the LED boards, so those configured as LEDs, not flashers.
-But for WPC and Stern machines with driver-based flashers, you'd configure
-those here.
+Here is an example:
 
-Here's an example from a Williams *Road Show* machine:
+.. code-block:: mpf-config
 
-::
+   # configure the flasher as coil
+   coils:
+       flasher_01:
+           number: 4                # this number depends on your hardware
+           default_pulse_ms: 40     # pulse duration to use if no specified elsewhere
+           max_hold_power: 1.0      # needed if you want to use flasher and light_player
 
-    flashers:
-        f_little_flipper:
-            number: c37
-            label: Flasher above middle left flipper
-            tags: white
-        f_left_ramp:
-            number: c38
-            label: Flasher above Bob's Bunker
-            tags: yellow
-        f_back_white:
-            number: c39
-            flash_ms: 40
-            label: Two white rear wall flashers
-            tags: white
-        f_back_yellow:
-            number: c40
-            flash_ms: 40
-            label: Two yellow rear wall flashers
-            tags: yellow
-        f_back_red:
-            number: c41
-            flash_ms: 40
-            label: Two red rear wall flashers
-            tags: red
-        f_blasting_zone:
-            number: c42
-            label: Blasting Zone flasher
-            tags: white
-        f_right_ramp:
-            number: c43
-            label: Flasher in front of Red
-            tags: white
-        f_jets_at_max:
-            number: c44
-            label: Playfield insert in the pop bumpers
-            tags: white
+   # you can flash the flasher using flasher player
+   coil_player:
+     flash_coil:
+       flasher_01:
+         action: pulse              # will use the default 40ms pulse
 
-Required settings
------------------
+   # create a light which is backed by a coil (optional if you want to use light_player and flasher_player)
+   lights:
+       flasher_01:
+           number: flasher_01       # name of your coil
+           platform: drivers        # use a coil
 
-The following sections are required in the ``flashers:`` section of your config:
-
-<FlasherName>:
-~~~~~~~~~~~~~~
-
-Each subsection of ``flashers:`` is the name of the flasher as you’d like
-to refer to it in your game code. This can really be anything you
-want, but it’s obviously best to pick something that makes sense.
-
-number:
-~~~~~~~
-Single value, type: ``string``.
-
-This is the number for the flasher which specifies which driver output
-the flasher is physically connected to. The exact format used here will
-depend on the hardware controller and machine type you're using.
-
-Since flashers are are connected to driver outputs
-(just like coils), the number scheme here is identical to coils. Refer
-to the ``number:`` section of your hardware platform's ``coils:`` documentation
-for details.
-
-The *Road Show* example file above is for WPC driver boards, which is why the
-flasher numbers are in the *Cxx* format.)
-
-Optional settings
------------------
-
-The following sections are optional in the ``flashers:`` section of your config. (If you don't include them, the default will be used).
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-.. todo::
-   Add description.
-
-flash_events:
-~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause this flasher to flash using its default *flash_ms:* time.
-
-flash_ms:
-~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
-
-The default time, in milliseconds, that this flasher will flash for
-when it's sent a "flash" command.
-
-hold_power:
-~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-hold_power32:
-~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-hold_pwm_mask:
-~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
-
-.. todo::
-   Add description.
-
-platform:
-~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the platform this flasher is connected to. The default value of ``None`` means the
-default hardware platform will be used. You only need to change this if you have
-multiple different hardware platforms in use and this coil is not connected
-to the default platform.
-
-See the :doc:`/hardware/platform` guide for details.
-
-pulse_ms:
-~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-pulse_power:
-~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-pulse_power32:
-~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-pulse_pwm_mask:
-~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-pwm_off_ms:
-~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-pwm_on_ms:
-~~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
-
-.. todo::
-   Add description.
-
-recycle:
-~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
-
-.. todo::
-   Add description.
-
-tags:
-~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
-
-.. todo::
-   Add description.
-
+   # use the light to flash the flasher
+   flasher_player:
+      flash_flasher_01:
+         flasher_01: 100ms

@@ -4,7 +4,7 @@ shot_groups:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
@@ -13,8 +13,37 @@ You can group shots together via the ``shot_groups:`` section of your config fil
 
 For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    lane_l:
+    #!       number:
+    #!    lane_a:
+    #!       number:
+    #!    lane_n:
+    #!       number:
+    #!    lane_e:
+    #!       number:
+    #!    upper_standup:
+    #!       number:
+    ##! config: mode1
+    #! shots:
+    #!     lane_l:
+    #!         switch: lane_l
+    #!         show_tokens:
+    #!             light: lane_l
+    #!     lane_a:
+    #!         switch: lane_a
+    #!         show_tokens:
+    #!             light: lane_a
+    #!     lane_n:
+    #!         switch: lane_n
+    #!         show_tokens:
+    #!             light: lane_n
+    #!     lane_e:
+    #!         switch: lane_e
+    #!         show_tokens:
+    #!             light: lane_e
     shot_groups:
         upper_lanes:
             shots: lane_l, lane_a, lane_n, lane_e
@@ -116,18 +145,12 @@ Default: ``None``
 
 Events in this list, when posted,
 
-A list of one or more events that will disable this shot group. This
+A list of one or more events that will disable all the shots in this shot group. This
 can be a simple list of events or a time-delayed list. If you do
 not specify any disable_events, then MPF will automatically create
 *disable_events* based on the list in the `config_validator:
 shot_groups: disable_events:` section of your machine-wide config. (By
-default that's *ball_ended*.) If you specify any *disable_events* in
-your machine-wide config, then none of the default *disable_events*
-will be added. (i.e. if you also want to include the default
-*disable_events*, you will have to add them here too.) If you specify
-any *disable_events* in a mode-specific config, then those events are
-only active during that mode. Mode-specific *disable_events* are in
-addition to machine-wide *disable_events*.
+default that's *ball_ended*.)
 
 disable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -156,22 +179,17 @@ Default: ``None``
 
 Events in this list, when posted,
 
-A list of one or more events that will enable this shot group.
-(Enabling a shot group will also enable all of the individual shots
-that make up this group.) This can be a simple list of events or a
-time-delayed list. If a shot group is not enabled, then it will not
-post hit events and shot rotation is disabled. If you do not specify
-any enable_events, then MPF will automatically create enable events
-based on the list in the `config_validator: shot_groups:
-enable_events:` section of your machine-wide config. (By default
-that's *ball_started*, meaning your shot groups are automatically
-enabled when a ball starts.) If you specify any *enable_events* in
-your machine-wide config, then none of the default enable events will
-be added. (i.e. if you also want to include the default
-*enable_events*, you will have to add them here too.) If you specify
-any *enable_events* in a mode-specific config, then those events are
-only active during that mode. Mode-specific *enable_events* are in
-addition to machine-wide *enable_events*.
+A list of one or more events that will enable all of the individual shots
+in this shot group. (The shot group itself has no enabled/disabled state
+except for rotation.) This can be a simple list of events or a
+time-delayed list. If a shot in the group is not enabled, then it will not
+post hit events but it *will* still rotate its profile state when the shot group
+rotates.
+
+The presence or absence of this value will not affect whether individual shots
+in the group can be enabled via their own `enable_events` settings. An individual
+shot can always be enabled/disabled regardless of the group state, although
+a subsequent group enable/disable events will also affect that individual shot.
 
 enable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,44 +216,6 @@ Single value, type: ``string``. Default: ``%``
 The plain-English name for this device that will show up in operator
 menus and trouble reports.
 
-profile:
-~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-The name of the :doc:`shot profile <shot_profiles>` that will be applied to all the shots
-in this shot group.
-
-+ If you’re editing a machine-wide config file , then the profile name
-  specified here will be the default profile for each shot in the group
-  any time a mode-specific config doesn't override it. (If you don’t
-  specify a profile name, MPF will assign the shot profile called
-  “default”.)
-+ If you’re in a mode configuration file , then this profile entry is
-  the name of the shot profile that will be applied to each shot in this
-  group only when this mode is active. (i.e. it’s applied when the mode
-  starts and it’s removed when the mode ends.) Like other mode-specific
-  settings, shot profiles take on the priorities of the modes they’re
-  in, so if you have a profile from a mode at priority 200 and another
-  from priority 300, the profile from the priority 300 mode will be
-  applied. If that mode stops, then the shot will get the profile from
-  the priority 200 mode.
-
-remove_active_profile_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
-
-A list of one or more events that will cause the active shot profile
-to be removed from every shot in the group, and the next-highest
-priority profile to be applied. This can be a simple list of events or
-a time-delayed list.
-
 reset_events:
 ~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
@@ -245,6 +225,20 @@ shot group. This can be a simple list of events or a time-delayed list.
 Resetting a shot group means that every shot in the group
 jumps back to the first state in whatever shot profile is active at
 that time.
+
+restart_events:
+~~~~~~~~~~~~~~~
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+A list of one or more events that will restart all the shots in this shot group.
+A restart is the same as calling reset and enable, so restarting a shot group
+will jump every shot in the group to the first state of that shot's profile and
+immediately enable all the shots.
 
 rotate_events:
 ~~~~~~~~~~~~~~

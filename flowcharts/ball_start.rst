@@ -12,7 +12,7 @@ ball of the first player in a new game:
     #. If there's not an active player (because this it the start of a new
        game), it called the game mode's ``player_rotate()`` method which maps
        the game's *player* attribute to the current player.
-    #. Posts an event called *player_turn_start*.
+    #. Posts an event called *player_turn_started*.
     #. The game mode's ``_player_turn_started()`` method is a callback for
        that event, which is called next.
 
@@ -48,8 +48,8 @@ ball of the first player in a new game:
 
 #. The playfield's ``add_ball()`` method is called.
 
-    #. The ball controller looks for a ball device tagged with
-       ``ball_add_live``, and it changes that device's desired ball count to 1.
+    #. The ball controller looks for a ball device in the ``default_source_device``
+       setting of your playfield, and it changes that device's desired ball count to 1.
        (In this example lets assume that you have a plunger lane and a
        trough.)
     #. The trough sees that one of its eject targets (the plunger lane)
@@ -57,12 +57,9 @@ ball of the first player in a new game:
     #. The plunger lane receives and confirms that it now has a ball.
     #. If this machine has a launch button and a coil-fired plunger, the
        player hits a button tagged with ``player_controlled_eject_tag``.
-    #. The ball controller receives a request to add a live ball and posts
-       the *ball_add_live* event.
-    #. The ball device with the ``ball_add_live`` tag responds by
-       ejecting its ball.
-    #. When that ball eject is confirmed (based on the settings for that
-       device), the ball controller posts the *ball_live_added* event.
+    #. The ball controller receives a request to add a live ball.
+    #. The ball device in the ``default_source_device`` of your playfield
+       ejects its ball.
     #. If the machine is configured with a player_controller_eject_tag,
        that tag is passed as the trigger event that will launch the ball.
 

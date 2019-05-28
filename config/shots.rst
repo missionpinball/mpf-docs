@@ -4,7 +4,7 @@ shots:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
@@ -41,8 +41,20 @@ modes.
 
 Here's a sample *shots:* section from a config file:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    lane_l:
+    #!       number:
+    #!    lane_a:
+    #!       number:
+    #!    lane_n:
+    #!       number:
+    #!    lane_e:
+    #!       number:
+    #!    upper_standup:
+    #!       number:
+    ##! config: mode1
     shots:
         lane_l:
             switch: lane_l
@@ -60,22 +72,10 @@ Here's a sample *shots:* section from a config file:
             switch: lane_e
             show_tokens:
                 light: lane_e
-        upper_standup
+        upper_standup:
             switch: upper_standup
             show_tokens:
                 leds: led_17, led_19
-        right_ramp:
-            switch_sequence: right_ramp_enter, right_ramp_made
-            time: 2s
-        left_orbit:
-            switch_sequence: left_rollover, top_right_opto
-            time: 3s
-        weak_right_orbit:
-            switch_sequence: top_right-opto, top_center_rollover
-            time: 3s
-        full_right_orbit:
-            switch: top_right_opto, left_rollover
-            time: 3s
 
 Create one entry in your ``shots:`` section for each shot in your
 machine. Don't worry about grouping shots here. (That's done in the
@@ -111,17 +111,6 @@ post hit events and therefore do not trigger scoring or other events
 related to a shot hit. They are useful if you need to move a shot to a
 starting state (like selecting a shot to be active for skill shot).
 
-cancel_switch:
-~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
-
-A switch (or list of switches) that will cause any in-progress switch
-sequence tracking to be canceled. (Think of it like a cancel "abort"
-switch.) If you enter more than one switch here, any of them being hit
-will cause the sequence tracking to reset. If MPF is currently
-tracking multiple in-process sequences, a cancel_switch hit will
-cancel all of them.
-
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
@@ -129,37 +118,6 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot
 problems with this shot.
-
-delay_switch:
-~~~~~~~~~~~~~
-Parent setting for one (or more) sub-settings. Each sub-setting is a type: string name of a ``switches):m:`` device. Default: ``None``
-
-This lets you specify a switch along with a time value that will
-prevent this shot from tracking from being hit. In other words, the
-shot only counts if the delay_switch was *not* hit within the time
-specified. If you use this with a single switch shot, then the time
-must pass before the shot will count. If you use this with a
-switch_sequence, then the time must pass before a new sequence will
-start to be tracked. Enter this switch with a time value (in seconds
-or ms), like this:
-
-::
-
-    shots:
-      mode_start:
-        switch: mode_start
-        delay_switch:
-          rear_entry: 1.5s
-      rear_entry_mode_start:
-        switch_sequence: rear_entry, mode_start
-        time: 1.5s
-
-The example above illustrates a typical use for this where you have a
-single switch which you can hit from the front, and then also a rear
-entry where a rear switch is hit then the main switch. Setting up the
-switch sequence for the rear entry is easy, but without the
-delay_switch on the front entry, then a ball going in the rear entry
-would trigger a hit event for the front shot too.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -211,9 +169,6 @@ menus and trouble reports.
 
 profile:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``string``. Default: ``profile``
 
 The name of the *shot profile* that will be applied to this shot.
@@ -235,19 +190,6 @@ Shots can have (and track) multiple profiles at the same time (up to one
 profile per mode). Only the show from the highest-priority profile will
 play though.
 
-remove_active_profile_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause the active shot profile
-to be removed, and the next-highest priority profile to be applied.
-Default is *None*.
-
 reset_events:
 ~~~~~~~~~~~~~
 One or more sub-entries, either as a list of events, or key/value pairs of
@@ -261,6 +203,18 @@ Events in this list, when posted, reset this shot. Resetting a
 shot means that it jumps back to the first state in whatever *shot
 profile* is active at that time.
 
+restart_events:
+~~~~~~~~~~~~~~~
+One or more sub-entries, either as a list of events, or key/value pairs of
+event names and delay times. (See the
+:doc:`/config/instructions/device_control_events` documentation for details
+on how to enter settings here.
+
+Default: ``None``
+
+Events in this list, when posted, restart this shot. Restarting a shot is
+equivalent to resetting and then enabling the shot, done with a single event.
+
 show_tokens:
 ~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
@@ -270,7 +224,19 @@ run when this shot is in a certain state.
 
 For example, consider the following shot config:
 
-::
+.. code-block:: mpf-config
+
+   #! switches:
+   #!    switch1:
+   #!       number:
+   ##! config: mode1
+   shot_profiles:
+       flash:
+           states:
+             - name: unlit
+               show: "off"
+             - name: lit
+               show: "flash"
 
    shots:
       shot1:
@@ -287,14 +253,17 @@ The purpose of show tokens is so you can create resuable shows that you could ap
 
 For example, imagine if you wanted to create a shot to flash an LED between red and off. It might look like this:
 
-::
+.. code-block:: mpf-config
 
   # show to flash an LED
-
-  - time: 0
-    (leds): red
-  - time: 1
-    (leds): off
+  shows:
+   flash_light:
+    - time: 0
+      lights:
+        (leds): red
+    - time: 1
+      lights:
+        (leds): off
 
 Assuming the "flash" profile (as defined in the ``profile: flash`` in the above shot) was configured for the state
 that show was in, when the shot entered that state, it would replace the ``(leds):`` section of the show with ``led1``.
@@ -321,36 +290,6 @@ complete when all the switches are hit. (That's what the
 just in case you have a shot where you want any of the switches being
 hit to count as that shot being hit.
 
-switch_sequence:
-~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
-
-A *switch_sequence* is where you configure your shot so that multiple
-switches have to be hit, in order, for the shot to be registered as
-being hit. You can optionally specify a time limit for these switches (i.e.
-the sequence must be completed within the time limit) with the ``time:``
-setting.
-
-When the first switch in a sequence is activated, the shot
-will start watching for the next one. When that one is activated, it
-looks for the next, and so on. Once the last switch is activated, the
-shot is considered "hit".
-
-Notice in the example above that there are
-two different shots with the same switches, but the order of the
-switches is inverted between the two. This is because the *left orbit*
-and *right orbit* shots in this machine use the same two switches, but
-the order the switches are activated in dictates which shot was just
-made.
-
-Shots in MPF are able to track multiple simultaneous sequences
-in situations which is nice when multiple balls are on the playfield.
-If the first switch in a sequence is hit twice before the sequence
-completes, MPF will start tracking two sequences. Then when the next
-switch is it, it will only advance one sequence. If the next switch is
-hit again, it will advance the other sequence. But if the next switch
-is never hit a second time, then the second shot will not complete.
-
 switches:
 ~~~~~~~~~
 List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
@@ -367,23 +306,3 @@ List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.
-
-time:
-~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
-
-This is the time limit the switches in the ``switch_sequence:`` section have to
-be activated in, from
-start to finish, in order for the shot to be posted. You can enter
-values with "s" or "ms" after the number, like `200ms` or `3s`. If you
-just enter a number then the system assumes you mean seconds. If you
-do not enter a time, or you enter a value of 0, then there is no
-timeout (i.e. the player could literally take multiple minutes between
-switch activations and the shot would count.)
-
-sequence:
-~~~~~~~~~
-
-.. versionadded:: 0.31
-
-Like ``switch_sequence:``, except this setting is a list of events, rather than switches.

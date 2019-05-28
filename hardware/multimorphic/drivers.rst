@@ -12,16 +12,20 @@ connected to PD-16 board's driver outputs) with P-ROC/P3-ROC hardware, you can
 follow the guides and instructions in the :doc:`/mechs/coils/index` docs.
 
 (If you're using a P-ROC with an existing machine's driver board, like a WPC
-machine, then see the existing machine documentation. Link TODO)
+machine, then see the :doc:`existing machine documentation </hardware/existing_machines/index>`.)
+
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 The only specific thing you have to know for this platform is the number format:
 
 number:
 -------
 
+.. image:: /hardware/images/multimorphic_PD-16.png
+
 For PD-16-based devices, the numbering format is:
 
-::
+.. code-block:: yaml
 
    number: Ax-By-z
 
@@ -40,42 +44,137 @@ the following on a PD-16 driver board:
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    coils:
       some_coil:
          number: A0-B1-6
-         pulse_ms: 30
+         default_pulse_ms: 30
 
-Fine tuning hold power
-----------------------
+Burst Switches as Local Outputs (P3-Roc only)
+---------------------------------------------
 
-When using the P-ROC or P3-ROC, you can fine tune a coils hold power setting.
+.. image:: /hardware/images/multimorphic_p3_roc.png
 
-First, you're able to use ``hold_power:`` (with a value 0-8) as described in
-the :doc:`/mechs/coils/hold_power` documentation.
+If you want to use burst switches as local outputs set DIP switch 1 to ``on`` on the P3-Roc.
+You can use those 64 output as direct outputs:
 
-However, instead of using ``hold_power:``, you can alternately configure a
-repeating pattern of "on" and "off" times, specified in milliseconds, via
-``pwm_on_ms:`` and ``pwm_off_ms:`` settings, like this:
-
-::
+.. code-block:: mpf-config
 
    coils:
+      local_output0:
+         number: direct-0  # direct driver 0
+      local_output20:
+         number: direct-20 # direct driver 20
+
+Make sure to assign IDs >= 2 to all PD-16 boards if you set DIP 1 (MPF cannot check this for you).
+Local outputs behave just like any other output on the P3-Roc.
+Hardware rules, pulse, hold, pwm etc. will behave exactly the same way.
+
+You may also use outputs as ``digital_outputs``. For instance, to control a motor driver circuit:
+
+.. code-block:: mpf-config
+
+   digital_outputs:
+      motor_left:
+         number: direct-5
+         type: driver
+      motor_rigth:
+         number: direct-6
+         type: driver
+
+.. note::
+
+   You need at least Firmware version 2.6 to use burst switches as local outputs
+   on the P3-Roc.
+
+.. warning::
+
+   There is no electronic protection on the P3-Roc for burst switches (neither as local outputs nor as burst optos).
+   Additionally, there are no drivers attached to the outputs and they cannot drive any pinball mechs.
+   Make sure not to draw too much current out of those outputs.
+   Also, any voltage above 3.3V or below 0V will irrevisibly damage the P3-Roc.
+   Make sure you know what you are doing before turning this on.
+   We advise to use PD-16 for normal playfield/mech drivers and only use local outputs with additional
+   circuits (not directly).
+
+Pulse time
+~~~~~~~~~~
+
+The P-Roc, P3-Roc and/or PD-16 have the ability to specify the "pulse time".
+Pulse time is the coil's initial kick time.
+For example, consider the following configuration:
+
+.. code-block:: mpf-config
+
+    coils:
+        some_coil:
+            number:
+            default_pulse_ms: 30
+
+When MPF sends this coil a pulse command, the coil will be fired for 30ms.
+
+Pulse Power
+~~~~~~~~~~~
+
+You can also set the power of pulses on your coil:
+
+.. code-block:: mpf-config
+
+    coils:
+        some_coil:
+            number:
+            default_pulse_ms: 30
+            default_pulse_power: 0.5
+
+See the hold power section below for internal details about PWM times.
+With the P-Roc it is not possible to use ``default_hold_power`` and
+``default_pulse_power`` at the same time.
+
+Hold Power
+~~~~~~~~~~
+
+If you want to hold a driver on at less than full power, MPF does this by using
+``default_hold_power`` parameter which works for all platforms.
+It can range from 0.0 to 1.0 and defines the time share the coil is on
+(0%-100%).
+
+The P-Roc internally uses two parameters which determine how many milliseconds
+the coil will be on (pwm-on time) and off (pwm-off time).
+MPF will calculate those based on your power settings.
+
+.. code-block:: mpf-config
+
+    coils:
       some_coil:
-         number: A0-B1-6
-         pwm_on_ms: 2
-         pwm_off_ms: 2
+        number:
+        default_pulse_ms: 32
+        default_hold_power: 0.5
 
-Then if that coil is enabled (held on), it will be on for 2ms, then off for 2ms,
-then repeat.
+When enabled, this driver will be pulsed for 32ms and then hold on at 50% duty
+which will convert to 1ms on, 1ms off, 1ms on, 1ms off and so on.
 
-Notes:
+With the P-Roc it is not possible to use ``default_hold_power`` and
+``default_pulse_power`` at the same time.
 
-* This only affects coils that are held on. Pulse actions will always
-  be at 100%.
-* If you configure a ``hold_power:`` setting, it will take precedence over the
-  ``pwm_on_ms:`` and ``pwm_off_ms:`` settings, so don't configure both.
-* When you configure these settings, you do not need the ``allow_enable: true``
-  setting.
 
+Recycle
+~~~~~~~
+
+You can set :doc:`recycle time </mechs/coils/recycle>`
+to your coil to prevent it from overheating by repeated pulses.
+The recycle time is not configurable on the P-Roc but you can turn it on or
+off (default on).
+This is an example:
+
+.. code-block:: mpf-config
+
+    coils:
+      some_coil_with_recycle:
+        number:
+        default_pulse_ms: 32
+        default_recycle: True
+      some_coil_without_recycle:
+        number:
+        default_pulse_ms: 32
+        default_recycle: False

@@ -12,9 +12,11 @@ show_player:
 .. note:: This section can also be used in a show file in the ``shows:`` section of a step.
 
 
-The ``show_player:`` section of your config is where you start, stop, pause, (etc.) shows. Here's an example:
+The ``show_player:`` section of your config is where you start, stop, pause, (etc.) shows.
 
-.. code-block:: yaml
+Here is an example:
+
+.. code-block:: mpf-config
 
    show_player:
       some_event: your_show_name
@@ -23,38 +25,7 @@ The ``show_player:`` section of your config is where you start, stop, pause, (et
 In the example above, when the event *some_event* is posted, the show called ``your_show_name`` will be played (started).
 When the event *some_other_event* is posted, the show called ``another_show`` will be played.
 
-Notice that the config above has simple key/value pairs in the form of *event: show*. You can list as many of those as
-you want in the show player, and when each event is posted, it will start the show with the same name.
-
-However there are times when you might want to specify additional options for a show. Perhaps you want to change the
-playback speed, or configure how it repeats. In that case, instead of putting the show name on the same line as the
-event, you can put the show name on a new line under the event, and then add additional settings under it, like this:
-
-.. code-block:: yaml
-
-   show_player:
-      some_event:
-         your_show_name:
-            loops: 0
-      some_other_event:
-         another_show:
-            speed: 2
-            sync_ms: 500
-
-In the example above, the show ``your_show_name`` will play when the event *some_event* is posted, but instead of playing
-with the default settings only, it will also play with the setting ``loops: 0`` (meaning it will not loop and just play
-once). Same for the other show above, which will play with a ``speed: 2`` and ``sync_ms: 500``.
-
-You can also mix-and-match formats, like this:
-
-.. code-block:: yaml
-
-   show_player:
-      some_event: your_show_name
-      some_other_event:
-         another_show:
-            speed: 2
-            sync_ms: 500
+See :doc:`/config_players/show_player` for details.
 
 Settings
 --------
@@ -64,8 +35,6 @@ The following settings can be added under a show name. If you don't include them
 action:
 ~~~~~~~
 Single value of one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
-
-.. versionchanged:: 0.31 (Added "step_back" state)
 
 ``play``
    Starts playing the show. This is the default action which will happen if you don't include an ``action:`` setting.
@@ -93,7 +62,6 @@ block_queue:
 ~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. versionadded:: 0.32
 
 You can use ``block_queue: yes`` if you want the show to block a queue event until the show is
 done. Note that you can only use this if the event that starts the show is a
@@ -102,7 +70,7 @@ done. Note that you can only use this if the event that starts the show is a
 For example, the mode stopping events are queue events. So take a look at the
 following config:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       mode_my_mode_stopping:
@@ -158,7 +126,7 @@ a series of events instead of a show that auto plays.
 
 For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -197,7 +165,7 @@ Read what show tokens are :doc:`here </shows/tokens>`.
 
 For example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -225,14 +193,11 @@ Single value, type: ``integer``. Default: ``1``
 
 Which step the show starts on when it's played.
 
-Note that you can use a :doc:`placeholder value </config/instructions/placeholders>`
+Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
 
 sync_ms:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``integer``. Default: ``None``
 
 Sets the sync_ms value of this show which will delay the start to a certain millisecond multiple
@@ -249,7 +214,6 @@ useful (for example), to eject a ball when a show ends.
 events_when_advanced:
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -260,7 +224,6 @@ next step.
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -279,7 +242,6 @@ didn't make it all the way to the end, you can use *events_when_stopped*.
 events_when_looped:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -290,7 +252,6 @@ end and is jumping back to the first step).
 events_when_paused:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -300,7 +261,6 @@ Event(s) that will be posted when this show has been paused.
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -310,7 +270,6 @@ Event(s) that will be posted when this show is played (started).
 events_when_resumed:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -320,7 +279,6 @@ Event(s) that will be posted when this show is resumed from a pause.
 events_when_stepped_back:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -331,7 +289,6 @@ the previous step.
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -344,7 +301,6 @@ where it was.
 events_when_updated:
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
 Default: ``None``.
@@ -352,3 +308,10 @@ Default: ``None``.
 Event(s) that will be posted when this show has been updated. Note that the
 show "update" function has not been implemented yet, so this setting is more
 of a placeholder at the moment.
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   show_config: <show_config>

@@ -19,11 +19,12 @@ setting up the credits mode, so be sure to read that for the details.
 This page just contains the settings which control how the credits
 mode behaves. Here’s an example config:
 
-::
+.. code-block:: mpf-config
 
     credits:
       max_credits: 12
       free_play: no
+      price_tier_template: "{{credits}} CREDITS ${{price}}"
       service_credits_switch: s_esc
       switches:
         - switch: s_left_coin
@@ -37,6 +38,19 @@ mode behaves. Here’s an example config:
           credits: 1
         - price: 2
           credits: 5
+      events:
+        - event: special
+          type: special
+          credits: 1
+        - event: replay
+          type: replay
+          credits: 1
+        - event: high_score_credit
+          type: high_score
+          credits: 1
+        - event: match
+          type: match
+          credits: 1
       fractional_credit_expiration_time: 15m
       credit_expiration_time: 2h
       persist_credits_while_off_time: 1h
@@ -108,6 +122,8 @@ The maximum number of credits you want to allow on the machine. Note
 that pinball machines can't prevent players from adding money to
 machines, so be careful with this.
 
+.. include:: template_setting.rst
+
 persist_credits_while_off_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1h``
@@ -173,6 +189,15 @@ are no currency symbols here or anything. A value of .25 could be 0.25
 dollars or 0.25 Euros or 0.25 Francs—it really doesn't matter. The key
 is that it’s 0.25 of whatever monetary system you have.
 
+.. include:: template_setting.rst
+
+price_tier_template
+~~~~~~~~~~~~~~~~~~~
+
+Default "{{credits}} CREDITS ${{price}}"
+
+Placeholder to generate the credits string.
+
 pricing_tiers:
 --------------
 
@@ -199,13 +224,23 @@ first one.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
+   credits:
+      # ...
       pricing_tiers:
         - price: .50
           credits: 1
         - price: 2
           credits: 5
+
+
+price:
+~~~~~~
+
+Price for number of ``credits``.
+
+.. include:: template_setting.rst
 
 Optional settings
 ~~~~~~~~~~~~~~~~~
@@ -224,3 +259,39 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 The numeric currency value for this pricing tier.
 
+events:
+-------
+
+A list of one or more events with settings which add credits based on MPF events. Like the pricing_tiers section, start each entry here
+with a minus sign and a space.
+
+.. code-block:: mpf-config
+
+   credits:
+      # ...
+      events:
+        - event: special
+          type: special
+          credits: 1
+        - event: replay
+          type: replay
+          credits: 1
+        - event: high_score_credit
+          type: high_score
+          credits: 1
+        - event: match
+          type: match
+          credits: 1
+
+event:
+~~~~~~
+The event that will trigger a credit action.
+
+type:
+~~~~~
+String which can be whatever you want, used for audits. This lets you track different types of credits, for example, money in versus replays
+versus specials versus high score awards, etc.
+
+award:
+~~~~~~
+Numeric value of the number of credits you'd like to award.

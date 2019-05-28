@@ -30,14 +30,14 @@ Visit the :doc:`/mechs/plungers/index` documentation for pictures that
 show each option and step-by-step guides which walk you through configuring
 each type for MPF.
 
-2. Revisit your trough/drain device
------------------------------------
+2. Revisit your trough/drain device and add it as source_device to your playfield
+---------------------------------------------------------------------------------
 
 Even though this is mentioned in the how-to guides, once you have your plunger
 device set up, be sure to go back to your trough or ball drain device and add
 the new plunger lane as an eject target, like this:
 
-::
+.. code-block:: yaml
 
    eject_targets: bd_plunger
 
@@ -46,6 +46,23 @@ be something like "bd_catapult" or whatever you called it.
 
 Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
+
+Tell the playfield to use the plunger for new balls:
+
+.. code-block:: mpf-config
+
+   #! switches:
+   #!      s_plunger:
+   #!          number: 10
+   #! ball_devices:
+   #!      bd_plunger:
+   #!          ball_switches: s_plunger
+   #!          mechanical_eject: true
+   playfields:
+       playfield:
+            tags: default
+            default_source_device: bd_plunger
+
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
@@ -56,7 +73,7 @@ for this step which you can view in the ``mpf-examples/tutorial`` folder with th
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step8
 
@@ -70,15 +87,18 @@ should see some cool things in your log file. To do this,
 launch the MPF game engine with the ``-v`` command line options so it
 shows the verbose information in the log file, like this:
 
-::
+.. code-block:: doscon
 
-    C:\pinball\your_machine>mpf -vb
+    C:\pinball\your_machine>mpf -vbt
 
 You don't have to launch the media controller this time since we're
 just looking at the console output of the MPF game engine, which is
 why we added the ``b`` command line option too. (The ``b`` option
 tells the MPF game engine not to use the BCP protocol and not to
 try to connect to the MC.)
+You also have to add ``t`` to disable the text ui to see the verbose log.
+Otherwise, you would only see the verbose output in the logfile in the ``logs``
+directory of your machine.
 
 Once your game is running, drop a ball into your trough and you
 should see a whole bunch of trough switches changing between active
@@ -149,5 +169,7 @@ letters, numbers, and the underscore, and that none of your names start with a n
 Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons.
+See our :doc:`/troubleshooting/debugging_yaml_parse_errors` guide if you
+got YAML errors.
 At this point your trough is ready to go! Next we have to configure
 your plunger lane.

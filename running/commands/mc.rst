@@ -20,13 +20,13 @@ Examples:
 
 Run MPF MC and load the config file ``config/config.yaml``:
 
-::
+.. code-block:: console
 
    $ mpf mc
 
 Run MPF and load the config file ``config/nodisplay.yaml``:
 
-::
+.. code-block:: console
 
    $ mpf mc -c nodisplay
 
@@ -34,13 +34,13 @@ You can also chain multiple config files together by specifying a comma-separate
 list (no spaces). For example, to load ``config/config.yaml`` first, and then
 once that's loaded, merge in changes from ``config/fast.yaml``, run:
 
-::
+.. code-block:: console
 
    $ mpf mc -c config,fast
 
 To load a machine folder from some other location, such as ``/home/brian/pinball/demo_man/config/config.yaml``:
 
-::
+.. code-block:: console
 
    $ mpf mc -c /home/brian/pinball/demo_man/config/config.yaml
 
@@ -65,7 +65,6 @@ Displays the command line help and exits. (Pretty much what's on this page.)
 -f
 ~~
 
-.. versionadded:: 0.32
 
 Forces MPF to load all assets at start (rather than the default behavior where
 some assets can be loaded only when modes start or based on other events).
@@ -85,8 +84,6 @@ with log file utilities. (The "Console" app is built-in to OS X, for example.)
 
 -L (uppercase)
 ~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 Specifies the name and path of the log file.
 

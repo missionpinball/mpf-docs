@@ -11,8 +11,26 @@ kivy_config:
 
 .. overview
 
-The ``kivy_config:`` section of your config is where you...
+The ``kivy_config:`` section of your config is where you configure kivy.
 
-.. todo::
-   Add description.
+You can directly configure kivy here. Usually you don't need this but in some
+cases it allows some additional tweaking (e.g. for embedded workloads).
+All options are documented in
+`the kivy config documentation <https://kivy.org/docs/api-kivy.config.html#available-configuration-tokens>`_.
 
+This is an example:
+
+.. code-block:: mpf-config
+
+   kivy_config:
+     kivy:
+       desktop: 1
+       exit_on_escape: true
+     graphics:
+       borderless: false
+       fbo: hardware  # hardware, software, force-hardware
+       fullscreen: false
+       multisamples: 2
+       position: auto  # auto, custom
+       show_cursor: true
+       resizable: true

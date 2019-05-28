@@ -17,7 +17,7 @@ if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound configuration.
 
-::
+.. code-block:: mpf-config
 
     sound_system:
         buffer: 1024
@@ -27,12 +27,15 @@ Here's an example of a typical sound configuration.
         master_volume: 0.75
         tracks:
            music:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.5
            voice:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.7
            sfx:
+              type: standard
               simultaneous_sounds: 8
               volume: 0.4
 
@@ -112,6 +115,69 @@ Optional settings
 The following sections are optional in the ``tracks:`` section of your config. (If you don't include them,
 the default will be used).
 
+type:
+`````
+Single value, type: one of the following options: standard, sound_loop. Default: ``standard``
+
+The track ``type:`` setting determines what type of audio track will be used. For more detailed
+information about the various audio track types see :doc:`Tracks </sound/tracks>`. Options for
+``type:`` are:
+
++ ``standard`` - The track will be a standard audio track. Standard audio tracks provide a
+  comprehensive set of features to support most pinball audio needs. This will be the audio track
+  type you will use most of the time (prior to MPF version 0.50 only standard audio tracks were
+  available).
+  settings.
++ ``sound_loop`` - The track will be a sound loop audio track.  Sound loop audio tracks are optimized
+  for live looping music control driven by events.  This specialized track type can synchronize
+  playback of multiple looping sounds simultaneously in layers and supports gapless switching to a
+  new set of loops. Sound loops are designed to build music that dynamically changes based on events
+  in your game.  Sound used in sound_loop tracks must be loaded in memory (streaming sounds are not
+  supported).
+
+Common settings
+~~~~~~~~~~~~~~~
+
+The following settings are common to all track types:
+
+volume:
+```````
+Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
+-inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+
+This is the volume setting for this track (how loud will it be), as either a value between 0.0 and
+1.0 or a decibel value between -inf and 0.0 db. Note that each track's volume will be combined
+with the overall system volume. So if your MPF master volume is set to 0.8 (80%) and you have a
+track set to 0.5 (50%), sounds on that track will play at 40% overall volume (50% of 80%).
+
+events_when_played:
+```````````````````
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is played or resumed after
+being stopped/paused. Enter the list in the MPF config list format. These events are posted
+exactly as they’re entered.
+
+events_when_stopped:
+````````````````````
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is stopped. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_paused:
+```````````````````
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when the track is paused. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+
+Standard track settings
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The following settings are specific to standard audio tracks:
+
 simultaneous_sounds:
 ````````````````````
 Single value, type: ``integer`` (between ``1`` and ``32``). Default: ``8``
@@ -126,45 +192,9 @@ existing sound? Should it wait until the existing sound is done? How long should
 control all this on a per sound basis (see the :doc:`sounds: </config/sounds>` documentation for
 more information).
 
-volume:
-```````
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
--inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+Sound loop track settings
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the volume setting for this track (how loud will it be), as either a value between 0.0 and
-1.0 or a decibel value between -inf and 0.0 db. Note that each track's volume will be combined
-with the overall system volume. So if your MPF master volume is set to 0.8 (80%) and you have a
-track set to 0.5 (50%), sounds on that track will play at 40% overall volume (50% of 80%).
+The following settings are specific to sound loop audio tracks:
 
-events_when_played:
-```````````````````
-
-.. versionadded:: 0.32
-
-List of one (or more) values, each is a type: ``string``. Default: ``None``
-
-A list of one or more names of events that MPF will post when the track is played or resumed after
-being stopped/paused. Enter the list in the MPF config list format. These events are posted
-exactly as they’re entered.
-
-events_when_stopped:
-````````````````````
-
-.. versionadded:: 0.32
-
-List of one (or more) values, each is a type: ``string``. Default: ``None``
-
-A list of one or more names of events that MPF will post when the track is stopped. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.
-
-events_when_paused:
-```````````````````
-
-.. versionadded:: 0.32
-
-List of one (or more) values, each is a type: ``string``. Default: ``None``
-
-A list of one or more names of events that MPF will post when the track is paused. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.
-
-
+*None*

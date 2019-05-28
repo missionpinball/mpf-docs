@@ -11,55 +11,31 @@ open_pixel_control:
 
 .. overview
 
-The ``open_pixel_control:`` section of your config is where you...
+The ``open_pixel_control:`` section of your config is where you configure a openpixel light controller.
+This is usually used together with a :doc:`fadecandy </hardware/fadecandy/index>`
+but can also be used standalone.
+Usually, you don't have to change anything.
 
-.. todo::
-   Add description.
 
 Optional settings
 -----------------
 
 The following sections are optional in the ``open_pixel_control:`` section of your config. (If you don't include them, the default will be used).
 
-connection_attempts:
-~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``-1``
-
-.. todo::
-   Add description.
-
-connection_required:
-~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-.. todo::
-   Add description.
-
 debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Set this to true to see more debug log lines.
 
 host:
 ~~~~~
 Single value, type: ``string``. Default: ``localhost``
 
-.. todo::
-   Add description.
-
-number_format:
-~~~~~~~~~~~~~~
-Single value, type: one of the following options: int, hex. Default: ``int``
-
-.. todo::
-   Add description.
+Hostname of the openpixel server to connect.
 
 port:
 ~~~~~
 Single value, type: ``int``. Default: ``7890``
 
-.. todo::
-   Add description.
-
+Port of the openpixel server to connect.

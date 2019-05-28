@@ -20,7 +20,7 @@ config file.
 
 Let's take a look at an example:
 
-::
+.. code-block:: mpf-config
 
    assets:
        images:
@@ -36,11 +36,16 @@ Let's take a look at an example:
 
 The above config contains the asset settings for *image* assets. Notice
 there are 4 entries under ``images:``: ``default``, ``preload``, ``on_demand``,
-and ``potato``. Those names represent subfolders that could contain image
+and ``potato``. Those names represent sub-folders that could contain image
 assets.
 
 Then under each of those, there are one or more key/value pairs. These key/value
-pairs are applied to assets located in the subfolders above.
+pairs are applied to assets located in the sub-folders above.
+
+.. note:: Although you can create sub-folders nested as many levels deep as you
+   wish, only the top-level sub-folder can be listed in the assets section. Any
+   assets in sub-folders below the top level will inherit the settings from
+   their top-level sub-folder parent.
 
 The ``default`` entry is special, as it applies to the root folder as well as
 any assets that are in folders that are not specified here.
@@ -52,9 +57,11 @@ from above:
 
 In this case, ``/your_machine/images/hello.jpg`` would have the ``default:`` settings
 applied, ``/your_machine/images/preload/special.jpg`` would have the ``load: preload``
-key/value pair applied to it, etc.
+key/value pair applied to it, ``/your_machine/images/potato/toppings/cheese.jpg`` would
+have the ``some_key: some_value`` and ``something_else: whatever`` key/value pairs
+applied to it, etc.
 
-The ``assets:`` section of the config file doesn't really car what the key/value pairs are. They're
+The ``assets:`` section of the config file doesn't really care what the key/value pairs are. They're
 just the defaults for the assets in those folders, and if they're not valid settings then MPF will
 give you an error. (Note that different types of assets have different settings options and
 different keys & values that are correct.)
@@ -64,7 +71,7 @@ in the config file reference which will explain what settings and be used and wh
 
 Asset types include:
 
-+ :doc:`/config/file_shows`
++ :doc:`/config/shows` (use file_shows entry)
 + :doc:`/config/images`
 + :doc:`/config/sounds`
 + :doc:`/config/videos`

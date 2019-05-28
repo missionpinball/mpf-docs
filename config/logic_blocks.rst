@@ -1,20 +1,25 @@
 logic_blocks:
 =============
 
-*Config file section*
+Logic blocks moved one level up in MPF 0.50. Instead of
 
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
-+----------------------------------------------------------------------------+---------+
+.. code-block:: yaml
 
-.. overview
+    logic_blocks:
+      counters:
+        your_counter:
+          count_events: count_it_up
 
-The ``logic_blocks:`` section of your config is where you configure your logic blocks.
+just use:
 
-There are three sub-sections that go under the ``logic_blocks:`` section which each
-correspond to a different type of logic block:
+.. code-block:: mpf-config
+
+    counters:
+      your_counter:
+        count_events: count_it_up
+
+
+There are three type of logic blocks:
 
 * :doc:`accruals: </game_logic/logic_blocks/accruals>`
 * :doc:`counters: </game_logic/logic_blocks/counters>`

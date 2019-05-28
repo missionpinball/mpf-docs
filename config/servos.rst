@@ -18,21 +18,19 @@ that will cause the servos to move to certain positions.
 Here's an example ``servos:`` section, with two servos defined called *servo1*
 and *servo2*:
 
-::
+.. code-block:: mpf-config
 
    servos:
       servo1:
-         servo_min: 3000
-         servo_max: 9000
+         servo_min: 0.1
+         servo_max: 0.9
          positions:
-             0.1: servo1_down
-             0.9: servo1_up
+             0.0: servo1_down
+             0.8: servo1_up
          reset_position: 0.5
          reset_events: reset_servo1
          number: 1
       servo2:
-         servo_min: 0
-         servo_max: 10000
          positions:
              0.2: servo2_left
              1.0: servo2_home
@@ -93,16 +91,20 @@ One or more sub-entries, each in the format of type: ``float``:``str``. Default:
 
 This is a sub-section mapping of servo positions to MPF event names. For example:
 
-::
+.. code-block:: mpf-config
 
-  positions:
-      0.1: servo1_down
-      0.9: servo1_up
-      0.45: servo1_mid
+   #! servos:
+   #!    servo1:
+   #!       number: 1
+         positions:
+            0.1: servo1_down
+            0.9: servo1_up
+            0.45: servo1_mid
 
 In MPF, servo ranges of motion are represented as numbers between 0.0 and 1.0.
-So 0.0 puts the servo at the extreme end of its range on one side, and 1.0 moves
-it to the end of motion on the other side. You can use positions in between with
+So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min:
+discussed below, and 1.0 moves it to the end of motion on the other side as set by the
+servo_max: as set below. You can use positions in between with
 as much precision as your servo controller will allow. (For example, a value of .4444
 will tell the servo to move to 44.44% of the way between its minimum and maximum
 position.
@@ -117,9 +119,6 @@ for multiple servos.
 
 reset_events:
 ~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
-
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
 :doc:`/config/instructions/device_control_events` documentation for details
@@ -137,9 +136,12 @@ move to its reset position (discussed below).
 Note that by default, *ball_starting* is a reset event, so if you don't want
 the servo to reset on the start of each ball, you can override that like this:
 
-::
+.. code-block:: mpf-config
 
-  reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
+   #! servos:
+   #!    servo1:
+   #!       number: 1
+         reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
 
 reset_position:
 ~~~~~~~~~~~~~~~
@@ -152,16 +154,17 @@ servo_max:
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
 A numerical value that's sent to the servo which represents the servo's max
-position. The actually value for this will depend on your servo controller
-hardware. So controllers use values like 0.0 to 1.0 here, others use values
-like 3000 to 9000. So check your servo controller documentation.
+position in relation to the servo_max: set in the controllers configuration.
+The actual value for this is normalized to 0.0 to 1.0 here.
+The controllers will convert it for the corresponding hardware.
 
 Note that the position settings earlier are always 0.0 to 1.0, and the max
 (and min, discussed below) are used to calculate what actual values are sent
 to the servo.
 
-So if you have ``servo_max: 9000`` and ``servo_min: 3000``, and then you set
-the servo position to 0.5, the actual value sent will be 6000.
+So if you have ``servo_max: 1.0`` and ``servo_min: 0.5``, and then you set
+the servo position to 0.5, the actual value sent will be 0.75. That position
+will be converted to an actual position in the hardware controller.
 
 servo_min:
 ~~~~~~~~~~
@@ -180,15 +183,11 @@ include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Boolean (True/False or Yes/No). Default is ``True``.
 
-.. versionadded:: 0.33
-
 Controls whether this servo is included in ball search.
 
 ball_search_min:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
-
-.. versionadded:: 0.31
 
 The value of the initial position that this servo will go to in ball search.
 
@@ -198,15 +197,11 @@ ball_search_max:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-.. versionadded:: 0.31
-
 The value of the second position that this servo will go to in ball search.
 
 ball_search_wait:
 ~~~~~~~~~~~~~~~~~
 Time value. Default ``5s``.
-
-.. versionadded:: 0.31
 
 How long this servo will pause in each position (min and max) before moving to the other position while ball
 search is active.

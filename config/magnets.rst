@@ -9,7 +9,6 @@ magnets:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``magnets:`` section of your machine config is used to define magnet
 mechanisms from coils and (optionally) switches. There are settings that
@@ -17,8 +16,8 @@ control the timing of grabbing, releasing, and "flinging" the ball.
 
 Example:
 
-.. literalinclude:: /example_configs/magnet/config/config.yaml
-   :caption: `/config/config.yaml </_static/magnet/config/config.yaml>`_
+.. literalinclude:: /mpf_examples/magnet/config/config.yaml
+   :caption: `/config/config.yaml </mpf_examples/magnet/config/config.yaml>`_
    :language: yaml
 
 magnet_coil:

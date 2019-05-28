@@ -1,4 +1,0 @@
-#config_version=4
-
-unrelated_section:
-  invalid_key: crap

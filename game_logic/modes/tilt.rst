@@ -14,5 +14,4 @@ weighed switches, and rolling balls), or it can use accelerometers
 to determine G-forces and angle of the machine which can trigger
 tilts.
 
-See the How To: Create a Tilt guide for details on how to use it in
-your machine.
+See :doc:`/game_logic/tilt/index` for details.

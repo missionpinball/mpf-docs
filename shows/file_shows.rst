@@ -9,9 +9,8 @@ as you'd refer to it in your MPF configs.
 
 A few notes for creating show files:
 
-* MPF config files are not case sensitive. You can mix-and-match
-  uppercase and lowercase letters in the files, but internally MPF will not
-  be able to differentiate between ``YouShow.yaml`` and ``yourshow.yaml``.
+* MPF config files are case sensitive. It is best to stick to some kind of convention
+  (such as lowercase names with underscores).
 * Show names are "machine-wide" within MPF. This means that if you have two
   different shows with the same name in different locations, MPF will get
   confused.
@@ -22,29 +21,30 @@ A few notes for creating show files:
 Here is a sample show file. This file might be called something like
 ``flash_red.yaml`` and would be located in your machine's ``/shows`` folder:
 
-::
+.. code-block:: mpf-config
 
-   #show_version=4
+   ##! show: my_show
+   #show_version=5
    - time: 0
-     leds:
+     lights:
        led1: red
    - time: +1
-     leds:
+     lights:
        led1: off
-   - time: + 1
+   - time: +1
 
 Notice it's essentially the same show we used as an example in the section on
 show config formats. However there's one important change.
 
 Since this is a standalone show file, we need to tell MPF what "version" of the
-show format this file is. MPF versions |version| use ``show_version=4``. If we ever
+show format this file is. MPF versions |version| use ``show_version=5``. If we ever
 change something in the show format, then we'll increment the version. (Don't
 worry though, we have and automated migration tool that converts shows to the
 new formats. That's actually part of the reason we include the show_version in
 the show files)
 
 The bottom line is that when you create a .yaml show file, the first line of
-the file must be ``#show_version=4`` so MPF knows it's working with the proper
+the file must be ``#show_version=5`` so MPF knows it's working with the proper
 type of file.
 
 Beyond that, the show file follows the show format covered elsewhere in this

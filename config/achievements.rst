@@ -3,8 +3,6 @@ achievements:
 
 *Config file section*
 
-.. versionchanged:: 0.32
-
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
@@ -21,7 +19,9 @@ individual achievement.
 
 Here's an example achievements section from Brooks & Dunn:
 
-::
+.. code-block:: mpf-config
+
+   ##! config: mode1
 
    achievements:
      world_tour:
@@ -105,17 +105,6 @@ This is an indented list of key/value pairs for the
 played when this achievement changes state. (See the settings called
 "show_when_XXX" further down in this documentation.)
 
-start_enabled:
-~~~~~~~~~~~~~~
-
-.. deprecated:: 0.33
-
-This setting has been removed since it was unlike every other device in MPF.
-Achievements now use ``enable_events:`` to indicate initial state. If there are
-no enable events, the achievement will start enabled. If there are enable
-events, the achievement will start disabled since it's presumed that one of the
-start events will be used to enable it later.
-
 restart_after_stop_possible:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
@@ -126,25 +115,33 @@ restart_on_next_ball_when_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-If True/Yes, then this achievement is set to the "started" state when the
+If True/Yes, then this achievement will stay in the "started" state when the
 player's next ball starts if it was in the "started" state when the previous
 ball ended. This is useful if you want to restart a mode that was running when
 the ball ended.
 
 Note that this restart will also play the ``show_when_started:`` show, and it
-will also post the ``events_when_started:`` events.
+will also post the ``events_when_started:`` events. 
+
+If False/No, this achievement's state will change from "started" to "stopped"
+when the next ball starts. This will *not* play the ``show_when_stopped:`` show and
+it will *not* post the ``events_when_stopped:`` events.
+
 
 enable_on_next_ball_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-If a ball ends when this achievement is enabled, should it automatically enable itself again
-when the next ball starts? This is similar to the
-``restart_on_next_ball_when_started:`` event from above, except it applies to
-the "enabled" state instead of the "started" state.
+If True/Yes, this achievement will stay "enabled" when the next ball starts if
+it was enabled when the last ball ended. If False/No, this achivement will be
+changed to "disabled" when the next ball starts.
 
-This setting will also play the ``show_when_enabled:`` show, and it
-will also post the ``events_when_enabled:`` events.
+This is similar to the ``restart_on_next_ball_when_started:`` event from above,
+except it applies to the "enabled" state instead of the "started" state.
+
+This setting will also play the ``show_when_enabled:`` show and post the 
+``events_when_enabled:`` events when re-enabling, but will not play or post
+anything when disabling.
 
 debug:
 ~~~~~~
@@ -175,7 +172,6 @@ in the ``events_when_enabled:`` setting.
 select_events:
 ~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 One or more sub-entries, either as a list of events, or key/value pairs of
 event names and delay times. (See the
@@ -268,25 +264,22 @@ Events posted by achievements
 
 You can configure achievements to post certain events when they change state.
 
-Note that all achievements will always post events in the form
+Note that all achievements will by default post events in the form
 :doc:`/events/achievement_name_state_state` when they change state. The events
-listed below are in additional to that event.
+listed below, if defined, will replace the default event.
 
 events_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_enabled``.
 
 A single event, or a list of events, that will be posted when this achievement
 is enabled.
 
 events_when_selected:
 ~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.32
-
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_selected``.
 
 A single event, or a list of events, that will be posted when this
 achievement is selected.
@@ -294,28 +287,28 @@ achievement is selected.
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_started``.
 
 A single event, or a list of events, that will be posted when this achievement is started.
 
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_completed``.
 
 A single event, or a list of events, that will be posted when this achievement is complete.
 
 events_when_disabled:
 ~~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_disabled``.
 
 A single event, or a list of events, that will be posted when this achievement is disabled.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
 :doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
+Default: ``achievement_(name)_state_stopped``.
 
 A single event, or a list of events, that will be posted when this achievement is stopped.
 
@@ -338,9 +331,6 @@ Name of the show that will be started when this achievement has been enabled.
 
 show_when_selected:
 ~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.32
-
 Single value, type: ``string``. Default: ``None``
 
 Name of the show that will be started when this achievement has been selected.
@@ -368,3 +358,11 @@ show_when_stopped:
 Single value, type: ``string``. Default: ``None``
 
 Name of the show that will be started when this achievement has been stopped.
+
+sync_ms:
+~~~~~~~~
+
+Single value, type: number. Default: ``None``
+
+A sync_ms value used for any shows which are started by this achievement. See the
+:doc:`full sync_ms documentation for details </shows/sync_ms>`.

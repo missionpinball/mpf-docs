@@ -11,8 +11,9 @@ plugins:
 
 .. overview
 
-The ``plugins:`` section of your config is where you...
+The ``plugins:`` section of your config is where you list all plugin classes to load.
+By default it contains:
 
-.. todo::
-   Add description.
-
+* :doc:`info_lights`
+* :doc:`switch_player`
+* :doc:`auditor`

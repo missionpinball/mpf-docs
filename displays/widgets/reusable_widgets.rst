@@ -15,7 +15,7 @@ Before we look at how to create reusable widgets, let's look at how regular widg
 You probably know that you can have a ``slides:`` section of your config (either machine-wide or mode-specific configs),
 and when you define a slide, you can specify what widgets are on that slide, like this:
 
-::
+.. code-block:: mpf-config
 
    slides:
       my_slide:
@@ -48,7 +48,7 @@ config. (This can be either a machine-wide or a mode config file.)
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    widgets:
       laughing_jackal:
@@ -80,7 +80,7 @@ widget (which display, which slide, etc.)
 If you just want to add your widget to whichever slide is current on the default display, you can use the "express"
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event: laughing_jackal
@@ -95,13 +95,36 @@ pretty straightforward, though you might have to play with the ``z:`` setting (t
 example, if your current slide has a full size background, you'd want to configure your widget with a ``z:`` setting
 that's a higher priority so it shows up on top of the background image.)
 
-Adding a widget to a specific slide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding a widget to a specific slide (by slide)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to build a slide and include a reusable widget, you can reference the widget's name in your slide config
+by declaring ``widget:`` instead of ``type:``.
+
+.. code-block:: mpf-config
+
+   widgets:
+     jackpot_value_widget:
+       - type: text
+         text: (jackpot_total)
+         style: body_med
+
+   slides:
+     hero_hurryup:
+       - type: text
+         text: "Hurry Up!"
+       - type: text
+         text: "Jackpot:"
+       - widget: jackpot_value_widget
+
+
+Adding a widget to a specific slide (by event)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to add your widget to a particular slide (versus whatever slide happens to be showing at the moment), you
 can do so by specifying that slide name in the ``widget_player:``. For example:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:              # event that will trigger this widget to show
@@ -115,7 +138,7 @@ slide is not being shown, the widget will still be added, and it will be there t
 Remember you can add as many events and widgets as you want to the ``widget_player:`` section of your config, and you
 can even mix-and-match formats, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -126,18 +149,17 @@ can even mix-and-match formats, like this:
 Adding a widget to a specific display target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rather than specifying a particular slide to add your widget to, you can target a display or slide frame, and the
+Rather than specifying a particular slide to add your widget to, you can target a display, and the
 widget will be added "on top" of whatever slide is currently being shown:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
          laughing_jackal:
             target: display1
 
-Remember in MPF, display targets can either be the names of a display (dmd, window, etc.), or they can be the name of
-a slide frame which is a widget on another slide which holds its own slides (sort of like picture-in-picture).
+Remember in MPF, display targets are the names of a display (dmd, window, etc.).
 
 More details about this are in the :doc:`layers` guide.
 
@@ -154,7 +176,7 @@ For example, if you use a
 widget for the tilt warning like in the previous example, you'd probably want that widget to be removed after a few
 seconds, which you could do like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       tilt_warning:             # event
@@ -178,7 +200,7 @@ Removing widgets
 You can also use the widget player to remove named widgets from a slide that had been previous added. To do this,
 just add an ``action: remove`` setting to the widget player, like this:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       show_jackal: laughing_jackal
@@ -195,7 +217,7 @@ Creating named groups of widgets
 All of the examples in this guide showed using a single widget as named widget. But you can actually define multiple
 widgets in a named widget (essentially meaning that your named widget is really a named group of widgets. For example:
 
-::
+.. code-block:: mpf-config
 
    widgets:
      widget3:
@@ -233,7 +255,7 @@ Adding multiple named widgets in one event
 You can also add multiple named widgets from a single event. This is nice if you want to add widgets to
 multiple displays or slides at the same time. For example:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -245,3 +267,65 @@ multiple displays or slides at the same time. For example:
 Note that if you do this, the structure of YAML requires that you have at least
 one setting under each widget name, so you can just add a ``target:`` or ``action: add``
 if you don't want to change or set anything else in the widget.
+
+Dynamically choosing a widget based on variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use a placeholder widget in a slide to dynamically choose any reusable widget for
+that slide, depending on an event parameter or player variable. 
+
+To create a placeholder widget in the slide, use the ``widget:`` setting with the standard
+:doc:`dynamic text </displays/widgets/text/text_dynamic>` formatting.
+
+For example, using the player variable "hero_class" to pick an image widget:
+
+.. code-block:: mpf-config
+
+   widgets:
+     hero_portrait_rogue:
+       - type: image
+         image: portrait_rogue
+     hero_portrait_bard:
+       - type: image
+         image: portrait_bard
+     hero_portrait_mage:
+       - type: image
+         image: portrait_mage
+
+   slides:
+     hero_slide:
+       - type: text
+         text: (player|name)
+       - type: text
+         text: Level (player|level)
+       - widget: hero_portrait_(player|hero_class)
+
+You can also use the parameters of an event to determine the widget to include. In the following example
+from a game with different multiballs, the event `mball_lock_lit` might post with either "angel" or
+"demon" as the `mball_name` parameter.
+
+.. code-block:: mpf-config
+
+   slide_player:
+     mball_lock_lit: mball_lock_slide
+
+   slides:
+     mball_lock_slide:
+       widgets:
+         - type: text
+           text: Lock is Lit
+         - widget: lock_lit_(mball_name)
+
+   widgets:
+     lock_lit_angel:
+       - type: text
+         text: Angels Anarchy
+       - type: image
+         image: bg_locklit_angels
+     lock_lit_demon:
+       - type: text
+         text: Demons Derby
+       - type: image
+         image: bg_locklit_demons
+
+

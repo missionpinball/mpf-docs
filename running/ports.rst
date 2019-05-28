@@ -5,7 +5,7 @@ How to change the TCP ports MPF uses
    in MPF-MC v0.32.10.
 
 Various MPF components talk to each other via a TCP socket protocol called
-:doc:`BCP </bcp/index>` (which we invented). By default, MPF and MPF-MC each
+BCP (which we invented). By default, MPF and MPF-MC each
 listen for incoming BCP connections on the following two TCP ports:
 
 * ``5050`` MPF-MC
@@ -33,14 +33,14 @@ listen on.
 
 Valid port numbers are anything between 1024 and 65535.
 
-::
+.. code-block:: mpf-config
 
-   # config_version=4
+   # config_version=5
 
-bcp:
-  connections:
-     local_display:
-        port: 1234
+   bcp:
+     connections:
+        local_display:
+           port: 1234
 
-mpf-mc:
-  bcp_port: 1234
+   mpf-mc:
+     bcp_port: 1234

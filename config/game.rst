@@ -14,15 +14,26 @@ game:
 The ``game:`` section of the machine config holds settings related
 to the game play.
 
-::
+.. code-block:: mpf-config
+
     game:
         balls_per_game: 3
         max_players: 4
+
 
 Optional settings
 -----------------
 
 The following sections are optional in the ``game:`` section of your config. (If you don't include them, the default will be used).
+
+add_player_event:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+An event name which will request to add a player.
+Same as ``add_player_switch_tag`` but using an event instead oa switch tag
+(see below).
+
 
 add_player_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -54,16 +65,28 @@ in ball devices tagged with ``home``.
 
 balls_per_game:
 ~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``3``
+Single value, type: template_int. Default: ``3``
 
-How many balls the game is. Typically it's 3 or 3 but it can be
+How many balls the game is. Typically it's 3 or 5 but it can be
 anything. MPF doesn't care.
+
+.. include:: template_setting.rst
 
 max_players:
 ~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``4``
+Single value, type: template_int. Default: ``4``
 
 Controls the maximum number of players that can play a game.
+
+.. include:: template_setting.rst
+
+start_game_event:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Event to request to start a game.
+Same as ``start_game_switch_tag`` but using an event instead of a switch tag
+(see below for details).
 
 start_game_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -75,4 +98,3 @@ it's possible that starting a game is not allowed. For example, if the
 machine is set to require credits and there are not enough credits available.)
 
 This is the name of the tag in the ``tags:`` section of one of your switches.
-

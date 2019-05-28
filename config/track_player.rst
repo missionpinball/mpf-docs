@@ -22,21 +22,9 @@ sounds currently playing on a track can be stopped (again with an optional fade
 out time). (This player is part of the MPF media controller and only available if you're
 using MPF-MC for your media controller.)
 
-See the :doc:`config player </config_players/index>` for more information on config players.
+This is an example:
 
-.. versionadded:: 0.32
-
-Usage in config files
----------------------
-
-In config files, the track player is used via the ``track_player:`` section.  Event names that
-will trigger track actions are nested sub-headings and track names are listed as nested
-sub-headings below that.  ``__all__`` can be used in place of a track name to apply the action
-to all audio tracks in the sound system.
-
-Example:
-
-::
+.. code-block:: mpf-config
 
     track_player:
         pause_music_track:
@@ -51,29 +39,7 @@ Example:
                 action: stop_all_sounds
                 fade: 0.5 sec
 
-Usage in shows
---------------
-
-In shows, the track player is used via the ``tracks:`` section of a step.
-
-Example:
-
-::
-
-    shows:
-        my_show_with_sound:
-            - time: 0
-                tracks:
-                    music:
-                        action: set_volume
-                        volume: 0.3
-                        fade: 0.25 sec
-            - time: 3.5
-                tracks:
-                    music:
-                        action: set_volume
-                        volume: 0.5
-                        fade: 0.25 sec
+See the :doc:`config player </config_players/index>` for more information on config players.
 
 Required settings
 -----------------
@@ -116,7 +82,6 @@ setting only applies to the ``set_volume`` action and will be ignored for all ot
 
 fade:
 ~~~~~
-
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 Default: ``0``
 

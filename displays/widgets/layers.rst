@@ -25,7 +25,7 @@ drawn in the order they are in the config.
 For example, here's a slide that has widget3.1, then widget3.2, then
 widget3.3:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slides:
       3_widgets:
@@ -60,7 +60,7 @@ drawn on top of those with lower values.
 
 Here's the same example as before, but with ``z:`` values added:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    slides:
       3_widgets:
@@ -138,7 +138,6 @@ on top of every slide? Or maybe something like the news crawl on the bottom
 of the *Dialed In* display?
 
 So instead of using a ``slide:`` setting with your widget player, you can use
-the ``target:`` setting and enter of name of a display or a slide frame.
-In that case, the widget will be added there, and not to the slide, meaning
-your widget will ride "on top" of the slides (and even on top of any slide
-transitions that take place).
+the ``target:`` setting and enter of name of a display. In that case, the widget
+will be added there, and not to the slide, meaning your widget will ride "on top"
+of the slides (and even on top of any slide transitions that take place).

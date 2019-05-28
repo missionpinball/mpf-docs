@@ -16,10 +16,12 @@ coils (since one coil typically resets an entire bank) and to
 get additional events posted when the entire bank is up, down
 or in a mixed state.
 
+.. image:: /mechs/images/drop_target_bank.jpg
+
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for drop target banks is ``device.drop_target_banks.<name>``.
 
@@ -35,11 +37,9 @@ the prefix for drop target banks is ``device.drop_target_banks.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+* :doc:`index`
 
 Related Events
 --------------
 
-* :doc:`/events/drop_target_bank_name_down`
-* :doc:`/events/drop_target_bank_name_up`
-* :doc:`/events/drop_target_bank_name_mixed`
+.. include:: /events/include_drop_target_banks.rst

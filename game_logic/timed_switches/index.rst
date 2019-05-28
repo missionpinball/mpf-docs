@@ -7,8 +7,6 @@ Timed Switches
 | :doc:`/config/timed_switches`                                                |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.33
-
 .. contents::
    :local:
 
@@ -35,24 +33,20 @@ Note that timed switches are similar to, but not the same as :doc:`combo switche
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for timed switches is ``device.timed_switches.<name>``.
 
-*activation_count*
-   Number which reflects what state this timed switch is in.
-   You could think of this like ``0`` = no timed switches are active, and ``1`` =
-   1 is active. But if you have multiple switches in your timed switch section and
-   multiple switches are active for more than the time specified, this count would go
-   higher than 1 to reflect the number of switches that are held active.
+*active_switches*
+   List of switches that are currently active past the time that this timed_switches: section is
+   set for.
 
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------
 
-* :doc:`/events/flipper_cradle`
-* :doc:`/events/flipper_cradle_release`
+.. include:: /events/include_timed_switches.rst

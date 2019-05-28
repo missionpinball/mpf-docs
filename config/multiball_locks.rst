@@ -9,8 +9,6 @@ multiball_locks:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.33
-
 
 The ``multiball_locks:`` section of your config is used to configure ball locks
 which will lock balls for multiball. Note that if you only want to hold a ball
@@ -22,8 +20,12 @@ track the number of balls locked virtually which is not necessarily the same
 as the number of balls that are physically contained in a ball device.
 
 When a ball is locked, it will add a new ball into play from the ball device
-tagged with ``ball_add_live`` unless the device that just locked it is full,
-in which case it will eject a ball from the full device.
+which is set in ``default_source_device`` of your playfield unless the device
+that just locked it is full,
+in which case it will eject a ball from the full device. The events that
+control the ball ejections are queue events, so you can interrupt the delivery
+of a new ball with the :doc: `/config/queue_relay_player` (for example, to have
+a mode selection screen before returning to play).
 
 Whenever a new ball is locked, the event *multiball_lock_<name>_locked_ball*
 is posted with an argument "total_balls_locked". When the lock is full, it
@@ -36,12 +38,24 @@ trough.)
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
-    multiball_locks:
-        bunker:
-            balls_to_lock: 3
-            lock_devices: bd_bunker
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #! coils:
+   #!    c_eject:
+   #!       number:
+   ball_devices:
+      bd_bunker:
+         eject_coil: c_eject
+         ball_switches: s_ball1
+
+   ##! config: mode1
+   multiball_locks:
+      bunker:
+         balls_to_lock: 3
+         lock_devices: bd_bunker
 
 Each sub-entry under the ``multiball_locks:`` section is the name of the multiball
 lock ("bunker") in the example above. Then each named ball lock has the
@@ -61,6 +75,35 @@ List of one (or more) values, each is a type: string name of a ``ball_devices:``
 
 A list of one (or more) ball devices that will collect balls which
 will count towards this lock.
+
+locked_ball_counting_strategy:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+One of the following options: ``virtual_only``, ``min_virtual_physical``, ``physical_only``, ``no_virtual``. Default
+is ``virtual_only``.
+
+See the :doc:`general multiball lock documentation </game_logic/multiballs/multiball_locks>`
+for an explanation of how each of these works.
+
+balls_to_replace:
+~~~~~~~~~~~~~~~~~
+Single value, type ``int``. Default: ``-1``
+
+By default a multiball lock will immediately replace every ball it locks with a
+new ball from the default device (i.e. the trough). With this setting you can
+instruct the lock to replace only up to a certain number of locked balls. A
+value of 0 means the lock will never replace balls, and -1 means it will always
+replace balls (default).
+
+This setting is useful for machines that physically lock multiple balls in a lock
+and replace them from the trough. When a full lock starts a multiball, for example,
+you may not want the game to add another ball from the trough. Usually this setting
+will be used in tandem with replace-balls-in-play from :doc:`/config/multiballs`.
+
+Caution: an improperly configured setting can lead the player to a state where
+no balls are active on the playfield and the game becomes stuck. See
+:doc:`/game_logic/multiballs/multiball_with_traditional_ball_lock` for instructions
+and examples.
 
 debug:
 ~~~~~~

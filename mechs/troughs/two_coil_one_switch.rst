@@ -1,6 +1,14 @@
 How to configure an older style trough with two coils and only one ball switch
 ==============================================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style drain
 and trough combination that uses two coils (one to eject the ball from the
 drain hole and a second to release a ball into the plunger lane).
@@ -32,13 +40,13 @@ section of your config file. Create an entry in your ``switches:`` section for
 the drain switch as well as each switch in your trough, like this: (This
 example has three switches in the trough. Yours may have more or less.)
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_drain:
-            number: 01
+            number: 1
         s_trough_enter:
-            number: 02
+            number: 2
 
 Note that we configured this switches with numbers ``01`` and ``02``, but
 you should use the actual switch numbers for your control system that the
@@ -55,20 +63,20 @@ Next, create the entries in your ``coils:`` section for the drain eject
 coil and the trough release coil. Again, the names don't matter. We'll call
 them *c_drain_eject* and *c_trough_release* and enter them like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_drain_eject:
-            number: 03
-            pulse_ms: 20
+            number: 3
+            default_pulse_ms: 20
         c_trough_release:
-            number: 04
-            pulse_ms: 20
+            number: 4
+            default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered ``pulse_ms:`` values of 20
+You'll also note that we went ahead and entered ``default_pulse_ms:`` values of 20
 which will override the default pulse times of 10ms. It's hard to say
 at this point what values you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -76,20 +84,20 @@ finish getting everything set up.
 
 Note that some trough coils use a shorter pulse to pop the ball into the plunger
 lane. However, some machines have gates or rotational devices that need to be
-active for much longer. So having a long pulse time, like ``pulse_ms: 1000``
-(for one second) is totally fine. However, if the pulse time is over 255ms, then
-technically that coil is enabled and disabled versus pulsed, so in that case,
-you also need to add ``allow_enable: true`` which tells MPF it's ok to enable
-this coil for more than 255ms.
+active for much longer. However, if the pulse time is over about 50ms, then
+that coil should be enabled with PWM and disabled versus pulsed, so in that case,
+you also need to add ``default_pulse_power:`` which tells MPF it's ok to enable
+this coil (with 25% hold power in this case).
 
-In other words, a trough release time of 1s would look like this:
+In other words, a trough with long release time would look like this:
 
-::
+.. code-block:: mpf-config
 
+   coils:
         c_trough_release:
-            number: 04
-            pulse_ms: 1000
-            allow_enable: true
+            number: 4
+            default_pulse_ms: 20ms
+            default_hold_power: 0.25
 
 3. Add your "drain" ball device
 -------------------------------
@@ -128,14 +136,32 @@ configuration settings for your drain ball device.
 
 Your drain device configuration should look now look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_drain:
+    #!         number: 1
+    #!     s_trough_enter:
+    #!         number: 2
+    #! coils:
+    #!     c_drain_eject:
+    #!         number: 3
+    #!         default_pulse_ms: 20
+    #!     c_trough_release:
+    #!         number: 4
+    #!         default_pulse_ms: 20
     ball_devices:
         bd_drain:
             ball_switches: s_drain
             eject_coil: c_drain_eject
             eject_targets: bd_trough
             tags: drain
+    #!     bd_trough:
+    #!         entrance_switch: s_trough_enter
+    #!         entrance_switch_full_timeout: 500ms
+    #!         ball_capacity: 3
+    #!         eject_coil: c_trough_release
+    #!         tags: trough, home
 
 4. Add your "trough" ball device
 --------------------------------
@@ -167,8 +193,18 @@ The configuration is pretty straightforward:
 
 Your trough device configuration should look now look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_trough_enter:
+    #!         number: 2
+    #!     s_plunger:
+    #!         number: 10
+    #! coils:
+    #!     c_trough_release:
+    #!         number: 4
+    #!         default_pulse_ms: 20
+    ball_devices:
         bd_trough:
             entrance_switch: s_trough_enter
             entrance_switch_full_timeout: 500ms
@@ -176,6 +212,37 @@ Your trough device configuration should look now look like this:
             eject_coil: c_trough_release
             eject_targets: bd_plunger_lane
             tags: trough, home
+    #!     bd_plunger_lane:
+    #!         ball_switches: s_plunger
+    #!         mechanical_eject: true
+
+If you need to enable ``c_trough_release`` for 1s (more than a few ms) it would look like this:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!     s_trough_enter:
+    #!         number: 2
+    #!     s_plunger:
+    #!         number: 10
+    coils:
+        c_trough_release:
+            number: 4
+            default_pulse_ms: 20ms
+            default_hold_power: 0.25
+
+    ball_devices:
+        bd_trough:
+            entrance_switch: s_trough_enter
+            entrance_switch_full_timeout: 500ms
+            ball_capacity: 3
+            eject_coil: c_trough_release
+            eject_coil_enable_time: 100ms
+            eject_targets: bd_plunger_lane
+            tags: trough, home
+    #!     bd_plunger_lane:
+    #!         ball_switches: s_plunger
+    #!         mechanical_eject: true
 
 5. Configure the balls installed
 --------------------------------
@@ -200,7 +267,7 @@ starts up.
 
 Here's an example from the machine config:
 
-::
+.. code-block:: mpf-config
 
     machine:
         balls_installed: 4
@@ -226,33 +293,34 @@ you're running with one of the virtual hardware interfaces. To use it,
 simply add the section along with a list of the switches you want to
 start active. For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_trough_enter:
+    #!         number: 2
     virtual_platform_start_active_switches:
         s_trough_enter
 
 Here's the complete config
 --------------------------
 
-.. begin_mpfdoctest:config/config.yaml
-
-::
-
-    #config_version=4
+.. code-block:: mpf-config
 
     switches:
         s_drain:
             number: 01
         s_trough_enter:
             number: 02
+        s_plunger:
+            number: 10
 
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_trough_release:
             number: 04
-            pulse_ms: 20
+            default_pulse_ms: 20
 
     ball_devices:
         bd_drain:
@@ -265,19 +333,21 @@ Here's the complete config
             entrance_switch_full_timeout: 500ms
             ball_capacity: 3
             eject_coil: c_trough_release
-            eject_targets: bd_plunger_lane
+            eject_targets: bd_plunger
             tags: trough, home
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
-        bd_plunger_lane:
-            tags: ball_add_live
+        bd_plunger:
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
     machine:
         balls_installed: 4
 
     virtual_platform_start_active_switches:
         s_trough_enter
-
-.. end_mpfdoctest
-

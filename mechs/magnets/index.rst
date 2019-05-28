@@ -7,7 +7,6 @@ Magnets
 | :doc:`/config/magnets`                                                       |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.32
 
 .. contents::
    :local:
@@ -16,10 +15,15 @@ MPF supports the ability to control precise timing for magnets which you can
 use to grab and release balls. It also includes the ability to set timings to
 "fling" a ball by grabbing, releasing, then pulsing the magnet again.
 
+.. image:: /mechs/images/magnet1.jpg
+.. image:: /mechs/images/magnet2.jpg
+.. image:: /mechs/images/magnet3.jpg
+
+
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for magnets is ``device.magnets.<name>``.
 
@@ -33,14 +37,9 @@ the prefix for magnets is ``device.magnets.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+:doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------
 
-* :doc:`/events/magnet_name_flinged_ball`
-* :doc:`/events/magnet_name_flinging_ball`
-* :doc:`/events/magnet_name_grabbed_ball`
-* :doc:`/events/magnet_name_grabbing_ball`
-* :doc:`/events/magnet_name_released_ball`
-* :doc:`/events/magnet_name_releasing_ball`
+.. include:: /events/include_magnets.rst

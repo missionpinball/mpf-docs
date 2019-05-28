@@ -1,8 +1,4 @@
 Testing your machine
 ====================
 
-TODO
-
-.. toctree::
-
-   functions
+This section moved to the :doc:`developer documentation </developer/index>`.

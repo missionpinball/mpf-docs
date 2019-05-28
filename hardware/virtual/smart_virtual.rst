@@ -1,6 +1,14 @@
 The "Smart Virtual" Platform
 ============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/smart_virtual`                                                 |
++------------------------------------------------------------------------------+
+
 MPF's *Smart Virtual Platform* is based on the :doc:`virtual platform <virtual>`
 with one key difference: The Smart Virtual platform watches
 for coil pulse events and adjusts switches in response to simulate
@@ -11,9 +19,8 @@ To understand why the smart virtual platform exists, consider this simple
 machine config for a trough, a plunger lane, and keyboard key mappings to
 simulate their switches:
 
-::
+.. code-block:: mpf-config
 
-    
     switches:
         s_trough1:
             number: s31
@@ -25,15 +32,15 @@ simulate their switches:
             number: s34
         s_plunger_lane:
             number: s27
-    
+
     coils:
         c_trough_eject:
             number: c01
-            pulse_ms: 25
+            default_pulse_ms: 25
         c_plunger_eject:
             number: c03
-            pulse_ms: 25
-    
+            default_pulse_ms: 25
+
     ball_devices:
         bd_trough:
             tags: trough, home, drain
@@ -43,8 +50,12 @@ simulate their switches:
         bd_plunger:
             ball_switches: s_plunger_lane
             eject_coil: c_plunger_eject
-            tags: ball_add_live
-    
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
+
     keyboard:
         1:
             switch: s_trough1
@@ -123,7 +134,7 @@ run it.
 You can also manually specify the smart virtual interface
 in the machine config, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: smart_virtual
@@ -135,7 +146,7 @@ You can also specify the smart virtual platform interface via the ``-X``
 (uppercase *X*) from the command line, like this:
 
 ::
-    
+
     mpf -X
 
 Or
@@ -149,7 +160,9 @@ etc.
 What does the smart virtual platform do?
 ----------------------------------------
 
-The smart virtual platform currently simulates the following pinball mechanisms:
+The smart virtual platform currently simulates the following pinball mechanisms.
+You can configure some of them in the
+:doc:`smart_virtual section </config/smart_virtual>`.
 
 Ball Devices
 ~~~~~~~~~~~~

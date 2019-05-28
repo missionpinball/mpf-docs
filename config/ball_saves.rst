@@ -14,7 +14,7 @@ ball_saves:
 The ``ball_saves:`` section of your config is where you create `ball save devices`.
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
     ball_saves:
       default:
@@ -67,13 +67,10 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Set this to true to see more debug output.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
@@ -96,9 +93,6 @@ Event(s) which enable this ball save.
 
 early_ball_save_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.33
-
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -132,9 +126,10 @@ source_playfield:
 ~~~~~~~~~~~~~~~~~
 Single value, type: string name of a ``ball_devices:`` device. Default: ``playfield``
 
-.. todo::
-   Add description.
+Playfield to eject the saved balls to.
 
+tags:
+~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
 Special / reserved tags for ball saves: *None*
@@ -154,18 +149,23 @@ Events in this list, when posted, start this ball saver's countdown timer.
 
 eject_delay:
 ~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
 
-.. versionadded:: 0.31
-
-single|ms|0
-
-TODO
+Delay the eject of the new ball for ``eject_delay`` ms.
+This might be useful if you want to play a show or some sounds first for dramatic reasons.
 
 only_last_ball:
 ~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. versionadded:: 0.31
+Only save the last ball.
+In case two balls are in play and only one drains it will not be saved.
 
-single|bool|False
+delayed_eject_events:
+~~~~~~~~~~~~~~~~~~~~~
+List of one or more events (with optional delay timings), in the
+:doc:`device control events </config/instructions/device_control_events>` format.
 
-TODO
+Delay the eject until a event from ``delayed_eject_events`` is posted.
+For instance, this can be used in combination with ``only_last_ball`` at the
+end of a wizard mode to drain all balls and continue the game later.

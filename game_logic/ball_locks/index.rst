@@ -40,7 +40,7 @@ per mode.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for ball locks is ``device.ball_locks.<name>``.
 
@@ -53,13 +53,7 @@ the prefix for ball locks is ``device.ball_locks.<name>``.
 *lock_queue*
    List of pairs of the device & ball counts that are queued to be released.
 
-Related How To guides
----------------------
-
-.. todo:: TODO
-
 Related Events
 --------------
-* :doc:`/events/ball_lock_name_balls_released`
-* :doc:`/events/ball_lock_name_full`
-* :doc:`/events/ball_lock_name_locked_ball`
+
+.. include:: /events/include_ball_locks.rst

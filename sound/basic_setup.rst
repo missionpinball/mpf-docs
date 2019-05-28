@@ -22,18 +22,21 @@ be played simultaneously so that is what we have configured in the example below
 
 Example:
 
-::
+.. code-block:: mpf-config
 
     sound_system:
         master_volume: 0.75
         tracks:
            music:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.5
            voice:
+              type: standard
               simultaneous_sounds: 1
               volume: 0.7
            sfx:
+              type: standard
               simultaneous_sounds: 8
               volume: 0.4
 
@@ -70,7 +73,7 @@ respective tracks (*music*, *sfx*, and *voice*) so we set the ``track:`` setting
 
 ``assets:`` section in machine configuration file:
 
-::
+.. code-block:: mpf-config
 
     assets:
         sounds:
@@ -91,20 +94,22 @@ way to actually hearing some sound!
 ----------------------------------------
 
 You probably don't need much assistance with this obvious step, but let's go through the process
-anyway just in case.  As of version 0.30, MPF supports .wav (Wave) and .ogg (Ogg Vorbis) audio
-files (we hope to add other formats in future releases such as .mp3 and .flac).  Locate some
-supported audio files and place them in the appropriate track folders that you created in the
+anyway just in case.  As of version 0.33, MPF supports 16-bit .wav (Wave), .ogg (Ogg Vorbis), and
+.flac (FLAC) audio files (we hope to add other formats in future releases such as .mp3).  Locate
+some supported audio files and place them in the appropriate track folders that you created in the
 previous step (a good site to find free public domain sounds is
 `www.freesound.org <http://www.freesound.org/>`_). Put all music files in the ``music`` folder,
-voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx`` folder.
+voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx`` folder.  You
+are welcome to create any sub-folders you desire and put sounds in them to help keep things
+organized.
 
 4. Additional configuration for selected sounds
 -----------------------------------------------
 
 Now when you start your machine you will have some sounds available (assuming you placed some
-supported sound files in your folder during the last step) and they will all have some very basic
-default settings.  It is very likely that you won't be happy with the default settings for all of
-your sounds so let's create some more tailored settings for a few of them.
+supported sound files in your sounds folder during the last step) and they will all have some very
+basic default settings.  It is very likely that you won't be happy with the default settings for
+all of your sounds so let's create some more tailored settings for a few of them.
 
 Renaming some sounds
 ~~~~~~~~~~~~~~~~~~~~
@@ -123,7 +128,7 @@ to it in my config files as ``triangle`` and not ``22783__franciscopadilla__80-m
 (see :doc:`sounds: </config/sounds>` in the documentation for more details) I can put the following
 text:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -141,7 +146,7 @@ machine.  This allows you to balance out sounds from various sources rather than
 the levels in each sound file using audio editing software.  Building on the example above, let's
 set the volume of the *triangle* sound in our config file:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -176,7 +181,7 @@ information about all these settings.
 
 Example ``sounds:`` configuration demonstrating most common settings:
 
-::
+.. code-block:: mpf-config
 
     sounds:
         triangle:
@@ -207,6 +212,8 @@ Example ``sounds:`` configuration demonstrating most common settings:
         song_01:
             volume: 1.0
             priority: 100
+            about_to_finish_time: 2s
+            events_when_about_to_finish: song_01_about_to_finish
 
 5. Hooking up an MPF event to play a sound
 ------------------------------------------
@@ -222,7 +229,7 @@ The scenario in this example is we want our song from the previous example (``so
 infinitely when the *attract* mode starts and stop when the *attract* mode stops.  Create the
 following entries in the ``sound_player:`` section of the machine config file:
 
-::
+.. code-block:: mpf-config
 
     sound_player:
         mode_attract_started:
@@ -251,8 +258,14 @@ References
 
 + :doc:`Sound & Audio </sound/index>`
 + :doc:`Ducking </sound/ducking>`
++ :doc:`Tips & tricks </sound/tips_tricks>`
 + :doc:`sound_system: </config/sound_system>`
++ :doc:`tracks </sound/tracks>`
 + :doc:`sounds: </config/sounds>`
 + :doc:`sound_player: </config_players/sound_player>`
++ :doc:`sound_loop_sets: </config/sound_loop_sets>`
++ :doc:`sound_loop_player: </config_players/sound_loop_player>`
++ :doc:`playlists: </config/playlists>`
++ :doc:`playlist_player: </config_players/playlist_player>`
 + :doc:`Instructions for entering gain values </config/instructions/gain_values>`
 

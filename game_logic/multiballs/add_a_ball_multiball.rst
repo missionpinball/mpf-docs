@@ -1,4 +1,4 @@
 How to create an "add-a-ball" style multiball
 =============================================
 
-todo
+:doc:`/about/help_us_to_write_it`

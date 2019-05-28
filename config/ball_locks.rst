@@ -18,14 +18,25 @@ ball_locks:
 The ``ball_locks:`` section of your config is used to list and configure
 :doc:`logical ball locks </game_logic/ball_locks/index>`.
 
-Here's an example
+Here's an example:
 
-::
+.. code-block:: mpf-config
 
-    ball_locks:
-        bunker:
-            balls_to_lock: 3
-            lock_devices: bd_bunker
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #! coils:
+   #!    c_eject:
+   #!       number:
+   ball_devices:
+      bd_bunker:
+         eject_coil: c_eject
+         ball_switches: s_ball1
+
+   ball_locks:
+       bunker:
+           balls_to_lock: 3
+           lock_devices: bd_bunker
 
 Each sub-entry under the ``ball_locks:`` section is the name of the logical ball
 lock ("bunker") in the example above. Then each named ball lock has the
@@ -92,7 +103,6 @@ A descriptive label.
 release_one_if_full_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
@@ -122,8 +132,6 @@ automatically add another ball into play after it locks a ball.
 
 reset_events:
 ~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.

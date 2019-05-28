@@ -22,12 +22,12 @@ config and holds the settings for that specific mode.)
 
 Let's take a look at an example ``mode:`` section from a multiball mode:
 
-::
+.. code-block:: mpf-config
 
+    ##! config: mode1
     mode:
         start_events: ball_starting
         stop_events: timer_mode_timer_complete, shot_right_ramp
-        code: skillshot.SkillShot
         priority: 300
 
 Optional settings
@@ -156,6 +156,36 @@ stopped when the ball ends. Some modes (like the built-in *game* and
 *credit* modes) need to stay running even when the ball ends, so to
 support that you can add ``stop_on_ball_end: false``.
 
+Another use of this option is to retain the mode's progress towards
+completion after draining a ball; allowing the next player to start
+their ball where the previous player left off in the mode. To enable
+this behavior, you can add ``stop_on_ball_end: false``.
+
+However, it is very likely that a mode will be left unfinished (open)
+after the final ball, causing MPF to shutdown unexpectedly.  You will
+get an error similar to this:
+
+.. code-block:: python
+
+   AssertionError('Mode terra_2 is not supposed to run outside of game.',)
+
+To avoid this
+unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
+
+.. code-block:: mpf-config
+
+   ##! config: mode1
+   mode:
+      start_events: mode_terra_2_start
+      stop_events: mode_complete, game_ending
+      stop_on_ball_end: False
+      game_mode: False
+
+However, a mode with ``stop_on_ball_end: False`` set must be a non game mode
+(i.e. ``game_mode: False`` is also set).
+To prevent crashes you cannot use all player functionality (such as accessing
+player variable) in this mode.
+
 stop_priority:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``0``
@@ -200,7 +230,9 @@ attract mode starts again.
 
 game_mode:
 ~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-.. versionadded:: 0.32
-
-TODO
+A mode can only access player state if ``game_mode`` is set to ``True``.
+You can set this to ``False`` to allow a mode to run outside of a game.
+On example for such a mode is the attract mode.
+Game modes are automatically stopped at the end of a game.

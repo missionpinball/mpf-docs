@@ -11,10 +11,10 @@ score_reel_groups:
 
 .. overview
 
-The ``score_reel_groups:`` section of your config is where you...
+The ``score_reel_groups:`` section of your config is where you configure groups of :doc:`score reels <score_reels>`.
+Every reel only displays one digits so they have to be grouped to display longer scores.
+See :doc:`/mechs/score_reels/index` for more details.
 
-.. todo::
-   Add description.
 
 Required settings
 -----------------
@@ -25,8 +25,9 @@ reels:
 ~~~~~~
 List of one (or more) values, each is a type: string name of a ``score_reels:`` device.
 
-.. todo::
-   Add description.
+List the :doc:`score reels <score_reels>` which make up this group.
+Start with the highest digit. The last entry will be the right most digit.
+You may use None if there is no reel for a digit.
 
 Optional settings
 -----------------
@@ -37,69 +38,20 @@ chimes:
 ~~~~~~~
 List of one (or more) values, each is a type: string name of a ``coils:`` device. Default: ``None``
 
-.. todo::
-   Add description.
-
-config:
-~~~~~~~
-Single value, type: ``string``. Default: ``lazy``
-
-.. todo::
-   Add description.
-
-confirm:
-~~~~~~~~
-Single value, type: ``string``. Default: ``lazy``
-
-.. todo::
-   Add description.
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-.. todo::
-   Add description.
-
-hw_confirm_time:
-~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300``
-
-.. todo::
-   Add description.
-
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
-
-.. todo::
-   Add description.
+List the :doc:`coils <coils>` driving the chime which are rung when the reel overflows.
+Start with the highest digit. The last entry will be the right most digit.
+You may use None if there is no chime for a digit.
 
 lights_tag:
 ~~~~~~~~~~~
 Single value, type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
-
-max_simultaneous_coils:
-~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``2``
-
-.. todo::
-   Add description.
-
-repeat_pulse_time:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``200``
-
-.. todo::
-   Add description.
+Lights to turn on when this group is active.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
-
+Tag groups with the player which uses it.
+Add ``player1`` to use this reel for player 1. Use ``player2`` for player 2 and so on.
+A reel can be used for more than one player.

@@ -92,9 +92,10 @@ called ``mode:``. On the next line, indent four spaces and add the entry
 spaces and type ``priority: 100``. Your ``base.yaml`` file should now look
 like this:
 
-::
+.. code-block:: mpf-config
 
-    #config_version=4
+    ##! mode: my_mode
+    #config_version=5
     mode:
         start_events: ball_starting
         priority: 100
@@ -147,7 +148,7 @@ the next line, type two spaces, then a dash, then another space, then
 type ``base``. So now that section of your ``config.yaml`` should look
 like this:
 
-::
+.. code-block:: yaml
 
     modes:
       - base
@@ -198,9 +199,10 @@ To do this, go back to your base mode's config file (``<your_machine>/modes/base
 and add a section called ``slide_player:``. Then add the following subsections so
 your complete ``base.yaml`` looks like this:
 
-::
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: base
+   #config_version=5
    mode:
        start_events: ball_starting
        priority: 100
@@ -253,11 +255,11 @@ after it happened. (Hopefully that makes sense?)
 
 Anyway, if you look at the ``slide_player:`` settings, you'll see
 that the slide that is shown when the event ``mode_base_started`` is posted
-contains three text widget. One that shows the score, one the shows the
+contains three text widgets. One that shows the score, one that shows the
 player and one that shows the current ball number. Note that the ``text:`` entries
 for those have have some words in parentheses.
 
-Words in parentheses signs are variables that are replaced in real
+Words in parenthesis signs are variables that are replaced in real
 time when they're updated. In this case these are "player variables"
 because they are values that belong to the current player. More on
 using dynamic text (that is, text that automatically updated itself
@@ -269,7 +271,7 @@ Also note that there are some additional positioning settings, like ``x:``, ``y:
 Finally, note that the text widget showing the score has settings for ``number_grouping:`` and ``min_digits:``.
 You can read about what those do in the :doc:`documentation for the text display widget </displays/widgets/text/index>`.
 
-6. Remove the old slide_player: ball_started entry
+7. Remove the old slide_player: ball_started entry
 --------------------------------------------------
 
 Now that you have this cool score display from your new base mode, you
@@ -277,7 +279,7 @@ can go into your machine-wide ``config.yaml`` and remove the slide_player:
 entry for ball_started:. So now the slide_player: in your machine-wide
 ``config.yaml`` should just look like this:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       init_done: welcome_slide
@@ -307,6 +309,6 @@ Note that this is a different folder than the previous steps. Since we now have 
 folder and to the ``mpf-examples/tutorial_step_14`` folder, then run ``mpf both``. (You don't need the ``-c`` option
 since we're back to using ``config.yaml`` instead of a custom config file name.)
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_14>mpf both

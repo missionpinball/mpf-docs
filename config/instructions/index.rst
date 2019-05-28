@@ -1,14 +1,15 @@
 Config file instructions
 ========================
 
-TODO
+This section contains some general formatting guidelines.
 
 .. toctree::
 
    config_version
    machine_config
    mode_config
-   placeholders
+   dynamic_values
+   gamma_correction
    gain_values
    time_strings
    case_insensitivity
@@ -20,3 +21,4 @@ TODO
    express_config
    lists
    yaml
+   text_templates

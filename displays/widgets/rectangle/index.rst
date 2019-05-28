@@ -7,9 +7,9 @@ are the same.
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   #config_version=4
+   #config_version=5
 
    slide_player:
      mc_ready:
@@ -58,6 +58,9 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following rectangle widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:``, ``y:``, ``width:``,
+``height:``, ``color:``, ``corner_radius:``, ``opacity:``, ``rotation:``, and ``scale:``.
 
 width:
 ~~~~~~

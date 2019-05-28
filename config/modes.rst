@@ -11,8 +11,15 @@ modes:
 
 .. overview
 
-The ``modes:`` section of your config is where you...
+The ``modes:`` section of your config is where you configure which modes can be
+loaded in your machine.
 
-.. todo::
-   Add description.
+This is an example:
 
+.. code-block:: yaml
+
+  modes:
+    - my_mode1
+    - my_mode2
+
+See :doc:`/game_logic/modes/index` and :doc:`/game_design/index` for details about modes.

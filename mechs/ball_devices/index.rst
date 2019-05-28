@@ -52,7 +52,7 @@ the states an arrow is connected to.
 .. image:: /mechs/images/ball_device_fsm_diagram.png
 
 When you configure ball devices in MPF, you configure the list of other
-devices that a ball device an eject to. This allows MPF to have an understanding
+devices that a ball device can eject to. This allows MPF to have an understanding
 of the "chain" of devices and enables it to route balls to where they need to
 go. (:doc:`/mechs/diverters/index` also figure into this chain, meaning MPF
 can ensure that diverters are set properly as it's routing balls around.)
@@ -82,14 +82,14 @@ listed above.
 
 Picking a random machine as an example, *Judge Dredd* has eight(!) ball devices:
 
-1. The trough
-2. The right plunger lane
+1. :doc:`The trough </mechs/troughs/index>`
+2. The right :doc:`plunger lane </mechs/plungers/index>`
 3. The left plunger lane
 4. The Sniper VUK
 5. The Hall of Justice VUK
 6. The Deadworld orbit thingy
 7. The crane
-8. The playfield
+8. :doc:`The playfield </mechs/playfields/index>`
 
 MPF keeps track of how many balls are in each ball device at all
 times, and it knows which devices are in the process of ejecting (and which
@@ -106,7 +106,7 @@ known type of device in every pinball machine ever created.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for ball devices is ``device.ball_devices.<name>``.
 
@@ -132,10 +132,9 @@ Related How To guides
 
 Related Events
 --------------
-* :doc:`/events/balldevice_ball_missing`
-* :doc:`/events/balldevice_balls_available`
-* :doc:`/events/balldevice_balls_ball_missing`
-* :doc:`/events/balldevice_captured_from_device`
+
+.. include:: /events/include_ball_devices.rst
+
 * :doc:`/events/balldevice_name_ball_eject_attempt`
 * :doc:`/events/balldevice_name_ball_eject_failed`
 * :doc:`/events/balldevice_name_ball_eject_success`

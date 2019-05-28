@@ -124,7 +124,7 @@ Configuring Transitions
 Transitions are specified as an additional property of a ``slide_player:``
 config or the ``slides:`` section of a show config. For example:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         left_ramp_hit:
@@ -140,7 +140,7 @@ with a transition time of 2 seconds, pushing the new slide in from the right.
 
 Transitions can be combined with other slide settings, like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         left_ramp_hit:
@@ -154,7 +154,7 @@ Transitions can be combined with other slide settings, like this:
 You can also configure ``transition_out:`` settings which are transitions that
 will be applied to a slide when it is removed, like this:
 
-::
+.. code-block:: mpf-config
 
     slide_player:
         left_ramp_hit:

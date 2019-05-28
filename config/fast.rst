@@ -15,15 +15,11 @@ Controller. Note that we have a how to guide which includes
 :doc:`all the FAST-specific settings </hardware/fast/index>` throughout your entire config file,
 so be sure to read that if you have FAST hardware.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
     fast:
         ports: com3, com4, com5
-        config_number_format: hex
-        baud: 921600
-        watchdog: 1s
-        default_debounce_close: 10ms
-        default_debounce_open: 30ms
+
 
 Required settings
 -----------------
@@ -163,27 +159,18 @@ default.
 
 net_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``10``
 
-.. versionadded:: 0.31
-
-single|int|10
-
-TODO
+Max backlog for the NET port to prevent overflows in the FAST CPU.
 
 rgb_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``3``
 
-.. versionadded:: 0.31
-
-single|int|3
-
-TODO
+Max backlog for the RGB port to prevent overflows in the FAST CPU.
 
 dmd_buffer:
 ~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``3``
 
-.. versionadded:: 0.31
-
-single|int|3
-
-TODO
+Max backlog for the DMD port to prevent overflows in the FAST CPU.

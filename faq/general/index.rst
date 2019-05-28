@@ -8,8 +8,9 @@ The Mission Pinball Framework was started in 2014 by Brian Madden and Gabe Knuth
 them had dreamed of building their own pinball machines for years, and in 2013, they discovered the
 P-ROC and the wonderful community of home brew pinball builders and hackers.
 
-The P-ROC pinball control system works with an open source project called `pyprocgame <http://www.pinballcontrollers.com/forum/index.php?board=9.0>`_
-which is a Python-based game framework. Pyprocgame is great, but it's pretty basic. One of the challenges
+The P-ROC pinball control system works with an open source project called ``pyprocgame``
+which is a Python-based game framework. Pyprocgame is great, but it's pretty basic. (It's more of
+a pinball development environment versus a complete framework.) One of the challenges
 we saw was that people kept on having to "reinvent the wheel" with each game they built. After reading
 forum posts about "How do you write code for a trough?" about ten times, we thought, "Why isn't there a
 framework that just 'does that' for you?"
@@ -19,12 +20,12 @@ wanted to build their own pinball machines weren't software developers. So we th
 to create a framework where the majority of the "programming" could be done with text-based configuration
 files.
 
-So in May 2014, we decided to start building the Mission Pinball Framework.
+So in June 2014, we decided to start building the Mission Pinball Framework.
 
 Around the same time, FAST Pinball came onto the market to offer an alternative control system to the
 P-ROC and P3-ROC. At that we thought, "Great, let's make the Mission Pinball Framework so that's it's
-hardware-independent and can work with the FAST Pinball or P-ROC systems (or any other future system
-that would come out).
+hardware-independent and can work with the FAST Pinball or P-ROC systems (plus any other future systems
+that came out).
 
 Isn't using config files limiting?
 ----------------------------------
@@ -32,6 +33,11 @@ Isn't using config files limiting?
 Finding the balance between "config files" and "real programming" is an age-old battle. We have a guide
 called :doc:`/start/dsl_vs_programming` which explains this in more detail, including our perspective on
 it and why we decided to make config files the focus on MPF.
+
+Can I mix "real" code in with MPF config files?
+-----------------------------------------------
+
+Yes! See `developer.missionpinball.org <http://developer.missionpinball.org>`_ for details and examples.
 
 Where does the name come from?
 ------------------------------
@@ -69,7 +75,8 @@ yet at a 1.0 release. However we release new versions every few months and don't
 anytime soon.
 
 We do expect to get to a 1.0 release at some point, but we don't have a specific time-frame for that.
-Earliest would be late 2017, though who knows?
+The important thing is to look at the `code commit history <https://github.com/missionpinball/mpf/blob/dev/AUTHORS>`_
+and to notice that MPF is being very actively developed!
 
 How can I download the documentation and read it offline?
 ---------------------------------------------------------
@@ -86,9 +93,8 @@ MPF. Just please create more pinball!
 
 At this time, if you don't want to use MPF, there are a few other options:
 
-* `pyprocgame <http://www.pinballcontrollers.com/forum/index.php?board=9.0>`_ (P-ROC/P3-ROC only)
+* pyprocgame (P-ROC/P3-ROC only; website defunct)
 * `PyProcGameHD+SkeletonGame <http://mjocean.github.io/PyProcGameHD-SkeletonGame/>`_ (P-ROC/P3-ROC only, adds HD graphics and more to pyprogame)
 * `Open Pinball Project framework <https://openpinballproject.wordpress.com/>`_ (Open Pinball Project hardware only)
-* `Rampant Slug Framework <http://rampantslug.com.au/#pinball>`_ (P-ROC/P3-ROC only)
+* Rampant Slug Framework (P-ROC/P3-ROC only; website defunct)
 * `FreeWPC <https://github.com/bcd/freewpc>`_ (WPC hardware only, lets you write new code in C, burn it to ROMS, and run it on original WPC hardware)
-

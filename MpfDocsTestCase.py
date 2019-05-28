@@ -26,7 +26,7 @@ class MpfDocsTestCase(MpfTestCase):
 
     ::
 
-        #config_version=4
+        #config_version=5
 
         switches:
             s_left_flipper:

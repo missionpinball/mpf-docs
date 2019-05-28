@@ -11,8 +11,7 @@ scriptlets:
 
 .. overview
 
-The ``scriptlets:`` section of your config is where you...
-
-.. todo::
-   Add description.
+The ``scriptlets:`` section of your config is where you list you custom code scriptlets.
+This has been deprecated with 0.50+. Use :doc:`custom_code` instead.
+Scriptlets still work but will be removed eventually.
 

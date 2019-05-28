@@ -7,8 +7,6 @@ Achievements
 | :doc:`/config/achievements`                                                  |
 +------------------------------------------------------------------------------+
 
-.. versionchanged:: 0.32
-
 .. contents::
    :local:
 
@@ -59,12 +57,12 @@ flashing, but it only rotates through incomplete achievements.)
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for achievements is ``device.achievements.<name>``.
 
 *state*
-   The string name of ths state this achievement is in. Options will be one
+   The string name of the state this achievement is in. Options will be one
    of the following: *disabled*, *enabled*, *started*, *stopped*, *selected*,
    or *completed*. If this achievement is in a mode that has not been started
    yet, then its state will be an empty string.
@@ -77,7 +75,7 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/achievement_name_state_state`
+.. include:: /events/include_achievements.rst
 * Plus any custom events as defined in the achievement's configuration in your
   config files.
 

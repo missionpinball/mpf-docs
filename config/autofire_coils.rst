@@ -17,15 +17,28 @@ based on a switch activation in a pinball machine.
 
 Here’s an example:
 
-::
+.. code-block:: mpf-config
 
-    autofire_coils:
-        left_sling:
-            coil: c_left_sling
-            switch: s_left_sling
-        right_sling:
-            coil: c_right_sling
-            switch: s_right_sling
+   switches:
+      s_left_sling:
+         number: 1
+      s_right_sling:
+         number: 2
+   coils:
+      c_left_sling:
+         number: 1
+         default_pulse_ms: 10ms
+      c_right_sling:
+         number: 2
+         default_pulse_ms: 10ms
+
+   autofire_coils:
+       left_sling:
+           coil: c_left_sling
+           switch: s_left_sling
+       right_sling:
+           coil: c_right_sling
+           switch: s_right_sling
 
 Note that autofire coils in MPF are 1-to-1 in terms of coils-to-
 switches, so a single entry is for one switch to control one coil. On
@@ -82,8 +95,31 @@ coil_overwrite:
 ~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   Add description.
+You can overwrite ``recycle``, ``pulse_ms``, ``pulse_power`` or ``hold_power``
+of the coil for this device.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+   switches:
+      s_left_sling:
+         number: 1
+   coils:
+      c_left_sling:
+         number: 1
+         default_pulse_ms: 10ms
+
+   autofire_coils:
+       stronger_left_sling:
+           coil: c_left_sling
+           switch: s_left_sling
+           coil_overwrite:
+              pulse_ms: 20ms
+
+In this example we increase ``pulse_ms`` of the slingshot.
+If you define multiple versions of a autofire_coil (here slingshot) make
+sure that you only enable one of them at a time.
 
 debug:
 ~~~~~~
@@ -94,8 +130,6 @@ for details.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-
-.. versionchanged:: 0.32
 
 List of one or more events (with optional delay timings), in the
 :doc:`device control events </config/instructions/device_control_events>` format.
@@ -139,8 +173,7 @@ switch_overwrite:
 ~~~~~~~~~~~~~~~~~
 One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
 
-.. todo::
-   Add description.
+You can overwrite the ``debounce`` setting of your switch in this device.
 
 tags:
 ~~~~~
@@ -154,16 +187,12 @@ ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Numeric value, default is ``100``
 
-.. versionadded:: 0.33
-
 A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
 checked first. Set to ``0`` if you do not want this device to be included in the ball search.
 See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 playfield:
 ~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 The name of the playfield that this autofire device is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

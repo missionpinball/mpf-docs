@@ -1,19 +1,8 @@
 Understanding the debug: setting
 ================================
 
-.. todo::
-
-   Need to add this
-
-.. code-block:: yaml
-
-   mpf:
-      debug_log:
-         - clock
-
-============ =========================================================
-Entry        Module it debugs
-============ =========================================================
-clock        Scheduled tasks & callbacks
-modes        Mode controller (starting and stopping modes)
-============ =========================================================
+Almost every device and platform in MPF contains a ``debug`` setting.
+If you set this to ``True`` MPF will generate more log output for this device.
+This may greatly increase the log size and decrease performance.
+Enable it if you got problems with a certain device or platform to debug
+problems later on.

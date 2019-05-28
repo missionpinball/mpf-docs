@@ -1,13 +1,19 @@
 How to configure a modern trough with opto switches
 ===================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use a modern-style trough
 with opto boards. (If you have a modern-style trough which uses mechanical
 leaf switches, use :doc:`this guide <modern_mechanical>` instead.)
 
-.. todo::
-
-   We need to add a photo of this type of trough.
+.. image:: /mechs/images/trough_opto_fast.jpg
 
 The following diagram shows how the ball flow and eject coil work in
 a modern trough. (This is a side view)
@@ -22,6 +28,74 @@ is no ball blocking the path) and inactive when a ball is present and in the way
 
 .. image:: /mechs/images/trough_opto_diagram.jpg
 
+If you got a Stern Spike Trough but are not using Stern Spike (not recommended)
+read the :doc:`Stern Spike Trough guide <spike_trough>`.
+
+0. Connect your trough
+----------------------
+
+Skip this step if your trough is already connected.
+Otherwise, you need to power your opto transmitters and connect the opto
+receivers to your inputs.
+Make sure that you got proper current limiting in place.
+This might be already present on the trough PCB (i.e. on older Stern troughs)
+or you might need to add current limiting resistors.
+Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.
+
+Bally/Williams Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: #A-18617-1 or 5768-14121-02 or PBL-600-0035-00 or PBL-600-0005-00
+ * Receiver: #A-18618-1 or 5768-14122-02 or PBL-600-0036-00 or PBL-600-0006-00
+ * Transmitter/Receiver: PBL-600-0054-00 or PBL-600-0055-00
+
+Those boards need an additional current limiting resistor on the transmitter.
+Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.
+You can connect the receivers one by one to your inputs.
+Don't forget to connect your the receiver board to ground.
+
+FAST Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: FP-AUX-001-?
+ * Receiver: FP-AUX-001-2
+
+The FAST transmitter already has parts for current limiting and you can connect
+it directly to 12V and ground.
+You can connect the receivers one by one to your inputs.
+Don't forget to connect your the receiver board to ground.
+
+Stern Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: 515-0173-00/520-5173-00
+ * Receiver: 515-0174-00/520-5174-00
+
+This board only covers the first ball position and the jam position.
+All other positions are typically covered by normal switches.
+Transmitter contains current limiting circuit and you can connect it directly
+to 5V.
+The receiver needs to be powered and also inverts the optos.
+There is typically no need to set ``NC`` on using those boards.
+You can follow the :doc:`modern_mechanical` guide to configure your trough.
+
+Spike Trough Opto Boards:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part numbers:
+
+ * Transmitter: 520-5344-00
+ * Receiver: 520-5345-00/520-5345-01
+
+If you got a Stern Spike Trough but are not using Stern Spike (not recommended)
+read the :doc:`Stern Spike Trough guide <spike_trough>`.
+
 1. Add your trough switches
 ---------------------------
 
@@ -30,29 +104,29 @@ section of your machine config file. Create an entry in the ``switches:`` sectio
 each switch in your trough, like this: (This example has six switches plus the
 jam switch. Yours may have more or less.)
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
             type: NC
         s_trough2:
-            number: 03
+            number: 3
             type: NC
         s_trough3:
-            number: 04
+            number: 4
             type: NC
         s_trough4:
-            number: 05
+            number: 5
             type: NC
         s_trough5:
-            number: 06
+            number: 6
             type: NC
         s_trough6:
-            number: 07
+            number: 7
             type: NC
         s_trough_jam:
-            number: 08
+            number: 8
             type: NC
 
 Note that we configured this switches with numbers ``02`` through ``08``, but
@@ -81,17 +155,17 @@ Next, create an entry in your ``coils:`` section for your trough's eject
 coil. Again, the name doesn't matter. We'll call this *c_trough_eject*
 and enter it like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_trough_eject:
             number: 04
-            pulse_ms: 20
+            default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered a ``pulse_ms:`` value of 20
+You'll also note that we went ahead and entered a ``default_pulse_ms:`` value of 20
 which will override the default pulse time of 10ms. It's hard to say
 at this point what value you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -294,37 +368,37 @@ the trough, it's just the one.
 Here's the complete config
 --------------------------
 
-::
-
-    #config_version=4
+.. code-block:: mpf-config
 
     switches:
         s_trough1:
-            number: 02
+            number: 2
             type: NC
         s_trough2:
-            number: 03
+            number: 3
             type: NC
         s_trough3:
-            number: 04
+            number: 4
             type: NC
         s_trough4:
-            number: 05
+            number: 5
             type: NC
         s_trough5:
-            number: 06
+            number: 6
             type: NC
         s_trough6:
-            number: 07
+            number: 7
             type: NC
         s_trough_jam:
-            number: 08
+            number: 8
             type: NC
+        s_plunger:
+            number: 10
 
     coils:
         c_trough_eject:
-            number: 04
-            pulse_ms: 20
+            number: 4
+            default_pulse_ms: 20
 
     ball_devices:
         bd_trough:
@@ -337,8 +411,13 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger:
-            tags: ball_add_live
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger
+           tags: default
 
     virtual_platform_start_active_switches:
         s_trough1

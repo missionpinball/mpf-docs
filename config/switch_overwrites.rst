@@ -4,17 +4,16 @@ switch_overwrites:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
 .. overview
 
-The ``switch_overwrites:`` section of your config is where you...
-
-.. todo::
-   Add description.
+Some devices offer a ``switch_overwrites:`` setting where you can overwrite
+settings of a switch used in that devices.
+This is commonly used in :doc:`flippers` and :doc:`autofire_coils`.
 
 Optional settings
 -----------------
@@ -25,6 +24,5 @@ debounce:
 ~~~~~~~~~
 Single value, type: one of the following options: quick, normal, None. Default: ``None``
 
-.. todo::
-   Add description.
-
+Overwrite the ``debounce`` setting on a coil.
+See ``debounce`` in :doc:`switches` for details.

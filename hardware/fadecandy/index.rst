@@ -6,7 +6,7 @@ How to configure a FadeCandy RGB LED Controller
 +==============================================================================+
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
-| :doc:`/config/leds`                                                          |
+| :doc:`/config/lights`                                                        |
 +------------------------------------------------------------------------------+
 | :doc:`/config/fadecandy`                                                     |
 +------------------------------------------------------------------------------+
@@ -105,12 +105,12 @@ To configure MPF to use FadeCandy LEDs, you can add an entry to the
 ``hardware:`` section of your machine config to tell it to override the default
 platform for your LEDs and to instead use the ``fadecandy`` platform, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: p_roc
         driverboards: pdb
-        leds: fadecandy
+        lights: fadecandy
 
 See the :doc:`/hardware/platform` guide for more information about setting
 device-specific default platforms versus overriding the platform for individual
@@ -137,9 +137,9 @@ The following diagram explains how the numbering works:
 
 Consider the following config:
 
-::
+.. code-block:: mpf-config
 
-   leds:
+   lights:
       l_led0:
          number: 0  # first LED on connector 0
       l_led1:
@@ -153,9 +153,9 @@ Consider the following config:
 If you have more than one FadeCandy board, you can specify the board number
 (starting with 0) along with the LED number, like this:
 
-::
+.. code-block:: mpf-config
 
-   leds:
+   lights:
       l_led0:
          number: 0  # first LED on connector 0 of the first board
       l_led1:
@@ -205,3 +205,16 @@ the :doc:`/config/fadecandy` section of your machine configuration file.
 Specifically, you can set the keyframe interpolation, dithering, gamma, white
 point, linear slope, and linear cutoff. The defaults should be fine for almost
 everyone, though you can go nuts if you want.
+
+9. Color Correction
+-------------------
+
+If you are using RGB LEDs, they might not be perfectly white when you turn
+them on. They might be pinkish or blueish instead depending on the brand of
+the LED. To a certain extend this is normal/expected and you can compensate
+for it by configuring
+:doc:`hardware color correction in the fadecandy </config/fadecandy>`.
+If you need more than one correction profile (e.g. for multiple LED models)
+you need to fall back to
+:doc:`software color_correction profiles in light_settings </config/light_settings>`.
+Hardware correction should be preferred and give you much more dynamic range.

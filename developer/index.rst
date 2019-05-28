@@ -1,28 +1,15 @@
-Information for Software Developers
-===================================
+Developer Documentation
+=======================
 
 We talk a lot about how you don't have to be an experienced software developer to use MPF. However, if you are an
-experienced developer, you can either (1) extend MPF by writing custom code for your machine, or (2) help us make
-MPF better:
+experienced developer, there are a few ways you can leverage your coding knowledge:
 
-Adding custom code to your game
--------------------------------
+* You can add custom code to your machine for parts of your game where you'd rather write "real" code versus using
+  config files.
+* You can add custom code to handle unique and one-off hardware.
+* You can write Python-based unit tests to test your machine.
+* You can extend MPF to add features or to support new types of hardware.
 
-.. toctree::
-   :maxdepth: 1
+Instructions for all of this, as well as an API reference, is available at the MPF Developer Documentation website:
 
-   custom_code
-   Custom mode code <mode_code>
-   Scriptlets (custom device code) (Scriptlets) <scriptlets>
-   api
-
-Helping us improve MPF
-----------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   contributing
-   installation
-   hardware
-   unittests
+http://developer.missionpinball.org

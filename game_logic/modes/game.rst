@@ -35,3 +35,6 @@ game mode. Typically anything you want to do to affect the game is
 done in additional modes you create. (And all the configuration for
 scoring, game modes, shots, etc. is done in a "base" game mode that
 runs per player as their turn starts.) See the tutorial for details.
+
+We documented the general approach to design a game in the
+:doc:`Game Design </game_design/index>` section.

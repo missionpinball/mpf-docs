@@ -15,13 +15,14 @@ Shows without tokens
 To understand how tokens work, let's first look at a show
 that does not include any tokens, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        led_01: red
    - time: 1
-     leds:
+     lights:
        led_01: off
 
 The example show above is simple. When it starts, it sets
@@ -32,11 +33,10 @@ and off.
 If you called this show *flash_red*, you could play it via the
 *show_player:* section of your config, like this:
 
-::
+.. code-block:: mpf-config
 
    show_player:
-      some_event:
-         show: flash_red
+      some_event: flash_red
 
 The problem with this show is that it's hard-coded. It only
 works for *led_01*, and it only cycles the colors between red
@@ -53,13 +53,14 @@ Adding tokens to shows
 This is where tokens come in. Consider a slightly modified version
 of the show above using a token instead of a hard-coded LED name:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        (led): red
    - time: 1
-     leds:
+     lights:
        (led): off
 
 Notice the second show is identical to the first, except every reference
@@ -72,13 +73,14 @@ fly.
 So in the second show here, when you run the show, you could tell it "replace
 the "leds" token with the value "led_02", which would make a show like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        led_02: red
    - time: 1
-     leds:
+     lights:
        led_02: off
 
 The actual way that you start and send tokens to shows varies depending on what
@@ -87,7 +89,7 @@ you're doing in MPF. (Typically they're tied to shots or events.)
 For example, here's how you'd do it via the *show_player:*. (In this example, we
 also add ``loops: -1`` which will cause the show to loop (repeat) indefinitely.
 
-::
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -100,7 +102,7 @@ MPF can run multiple instances of a show at the same time, so you could run
 the above show multiple times (at the same time), passing different tokens to each
 one, meaning you could use the same show to flash lots of lights at once:
 
-::
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -120,9 +122,9 @@ Putting multiple values into a single token
 You can also use tags to insert multiple values into a single token. For example,
 consider the following section from your machine config:
 
-::
+.. code-block:: mpf-config
 
-   leds:
+   lights:
      led_01:
          number: 00
          tags: tag1
@@ -133,7 +135,7 @@ consider the following section from your machine config:
 You can see that both *led_01* and *led_02* have the *tag1* tag applied. So if you play the
 show above (with the *leds* token), you can actually pass the tag name to the token instead:
 
-::
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -144,14 +146,15 @@ show above (with the *leds* token), you can actually pass the tag name to the to
 
 This would result in a show that was equivalent to:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        led_01: red
        led_02: red
    - time: 1
-     leds:
+     lights:
        led_01: off
        led_02: off
 
@@ -164,18 +167,19 @@ is. All it's doing is a find-and-replace when the show starts with whatever toke
 
 For example, this is a perfectly valid show:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        (corndog): red
    - time: 1
-     leds:
+     lights:
        (corndog): off
 
 In this case, you'd just pass a value for the *corndog* token when you play the show:
 
-::
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -193,19 +197,20 @@ when the show starts.
 
 You can also pass multiple tokens. Consider the following show:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: my_show
    - time: 0
-     leds:
+     lights:
        (led): (color1)
    - time: 1
-     leds:
+     lights:
        (led): (color2)
 
 Notice there are three tokens in this show: *led*, *color1*, and *color2*. You might call this show *color_cycle*,
 which you could then play like this:
 
-::
+.. code-block:: mpf-config
 
    show_player:
       some_event:
@@ -215,6 +220,14 @@ which you could then play like this:
                led: led_02
                color1: green
                color2: blue
+
+Tokens vs Tags
+--------------
+
+Almost all devices support tags.
+In :doc:`config players </config_players/index>` such as
+:doc:`light_player </config_players/light_player>` you can also reference
+multiple lights by their tags.
 
 The bottom line
 ---------------

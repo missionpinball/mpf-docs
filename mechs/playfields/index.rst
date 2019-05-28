@@ -16,6 +16,8 @@ Believe it or not, the playfield in MPF is technically a :doc:`ball device </mec
 This is needed since MPF wants to know where all the balls are at all
 times, so it needs to know which balls are "in" the playfield device.
 
+:doc:`TODO: Add a picture of a playfield </about/help_us_to_write_it>`
+
 The playfield is also responsible for tracking balls that
 "disappeared" from it without going into other devices—-a process which
 kicks off the :doc:`ball search </game_logic/ball_search/index>`.
@@ -25,35 +27,39 @@ The default playfield ball device (called
 one playfield, though if you have a mini-playfield or a head-to-head
 machine then you can configure additional playfield devices.
 
+Ball tracking and ball search is performed per playfield in MPF.
+Therefore, most devices in MPF belong to one playfield and mark it as active
+when they see a ball.
+You should configure the exact playfield for every device as soon as you have
+more than one playfield in your machine.
+Otherwise, MPF will complain about unexpected balls (e.g. you will see
+:doc:`/events/unexpected_ball_on_playfield` events), ball search might
+at the wrong time and ball tracking might go haywire.
+To transfer balls you can use :doc:`playfield transfer <playfield_transfer>`
+or :doc:`ball devices </mechs/ball_devices/index>`.
+A ball device might capture from one playfield and eject to another.
+
 Playfields are configured in the :doc:`playfields: section </config/playfields>`
 of the configuration file.
 
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for playfields is ``device.playfields.<name>``.
 
 *available_balls*
-   todo
+   Balls which will be available eventually. If a ball is requested it will be included
+   in available_balls but not in balls until it arrives.
 
 *balls*
    The number of balls on the playfield.
 
-Related How To guides
----------------------
-
-.. todo:: TODO
-
 Related Events
 --------------
 
-* :doc:`/events/sw_playfield_active`                                           |
-* :doc:`/events/unexpected_ball_on_playfield`                                  |
-* :doc:`/events/playfield_active`                                              |
-* :doc:`/events/playfield_ball_count_change`                                   |
-* :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
+.. include:: /events/include_playfields.rst
 
 Other playfield concepts
 ------------------------

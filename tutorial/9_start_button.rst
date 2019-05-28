@@ -11,8 +11,9 @@ First, add the switch for your start button to the ``switches:`` section
 of your config file. Again this should be easy by now. In this
 tutorial we'll just call this button ``s_start`` and add it like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_start:
             number: 10
 
@@ -33,10 +34,11 @@ we use a "start" tag behind the scenes to make whatever switch you
 want act as the start button. So now your start switch in your
 ``switches:`` section should look like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_start:
-            number: 11
+            number: 10
             tags: start
 
 3. Add keyboard entries for your start switch
@@ -53,8 +55,9 @@ hardware. For your start button keyboard key, how about using the ``S``
 key? To do so, add an entry like this to the ``keyboard:`` section of
 your config file:
 
-::
+.. code-block:: mpf-config
 
+   keyboard:
         s:
             switch: s_start
 
@@ -72,13 +75,15 @@ At this point you might be
 wondering, "Wait, I thought the eject_timeouts for the plunger was
 used to let MPF know when a ball really made it out of the plunger?"
 That's true, and technically at this point you don't need a playfield
-switch. However you'll eventually tag all your playfield switches with
+switch. However, this will speed up your ejects in a real machine and
+you'll eventually tag all your playfield switches with
 ``playfield_active``, so we're just getting starting on this now. To do
 this, create a new entry in your ``switches:`` section for one of your
 playfield switches, for example:
 
-::
+.. code-block:: mpf-config
 
+   switches:
         s_right_inlane:
             number: 12
             tags: playfield_active
@@ -86,8 +91,9 @@ playfield switches, for example:
 While you're at it, create a keyboard key mapping for this switch in
 the ``keyboard:`` section of your config, like this:
 
-::
+.. code-block:: mpf-config
 
+   keyboard:
         q:
             switch: s_right_inlane
 
@@ -101,8 +107,8 @@ we're not going to go into those now.)
 If you do decide to add all
 your playfield switches now, you'll want to add the *playfield_active*
 tag to all the switches that might be hit by a ball being loose on the
-playfield. (So lane switches, ramp switches, rollovers, standups, drop
-targets, etc.) You do *not* want to tag ball device switches with
+playfield. (So lane switches, ramp switches, rollovers, standups etc.)
+You do *not* want to tag ball device switches with
 ``playfield_active`` since if a ball is in a ball device, then it's not
 loose on the playfield.
 
@@ -118,6 +124,6 @@ folder with the name ``step9.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step9

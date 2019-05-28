@@ -23,30 +23,33 @@ only available if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound_pool configuration.
 
-::
+.. code-block:: mpf-config
 
     sound_pools:
        drain_callout:
           type: random_force_all
+          track: voice
           sounds:
-             drain_01
-             drain_02
-             drain_03
-             drain_04
+             - drain_01
+             - drain_02
+             - drain_03
+             - drain_04
        slingshot:
           load: preload
           type: random
+          track: sfx
           sounds:
-             slingshot_01|5
-             slingshot_02|3
-             slingshot_03|2
+             - slingshot_01|5
+             - slingshot_02|3
+             - slingshot_03|2
        target_completion:
           load: on_demand
           type: sequence
+          track: sfx
           sounds:
-             target_completion_01
-             target_completion_02
-             target_completion_03
+             - target_completion_01
+             - target_completion_02
+             - target_completion_03
 
 To create a sound pool, add a sub entry to the  ``sound_pools:`` section of your config which will
 be the name of that sound pool. The name must be unique among all sound pools *and* sound assets.
@@ -62,14 +65,37 @@ sounds:
 ~~~~~~~
 
 The ``sounds:`` section contains an indented list of existing sound assets (one per line) that will
-be contained in the sound pool.  Optionally, a number may be appended to the sound asset name
-delimited by a pipe (``|``) character.  This optional number controls the relative weighting for
+be contained in the sound pool.  It is suggested you use block sequence notation for this list (begin
+each line with a dash followed by a space ``- ``). Optionally, a number may be appended to the sound asset
+name delimited by a pipe (``|``) character.  This optional number controls the relative weighting for
 random item selection, or the number of times to play the sound before moving to the next sound
 in the pool with a sequence pool. If no weight value is provided, a default value of ``1`` will be
 applied. In the example above, the `slingshot:` random sound pool contains relative weighting
 values.  The weights sum to 10 for the three sounds so the `slingshot_01` sound has a probability
 of being randomly selected of 5 out of 10 (50%), `slingshot_02` 3/10 (30%), and `slingshot_03`
 2/10 (20%).
+
+.. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
+   in quotes:
+   ::
+
+       sound_pools:
+       drain_callout:
+          type: random_force_all
+          track: voice
+          sounds:
+             - drain_01
+             - drain_02
+             - "drain 03" # example of a sound with a space in its name using quotes
+             - drain_04
+
+
+track:
+~~~~~~
+Single value, type: ``string``. Default: ``None``
+
+This is the name of the track this sound pool will play on. (You configure tracks and track names in the
+:doc:`sound_system: </config/sound_system>` section of your machine config files.)
 
 Optional settings
 -----------------

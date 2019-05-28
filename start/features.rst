@@ -2,8 +2,7 @@ MPF complete feature list
 =========================
 
 Even though MPF is a work-in-progress that's not yet complete, the core dev team
-has been working on it for over two years, with over 5,000 hours of combined
-effort.
+has been working on it since 2014, with thousands of hours of combined effort.
 
 Major Features & Concepts
 -------------------------
@@ -15,29 +14,36 @@ Major Features & Concepts
   generates an event, and you can use those events to trigger actions (scoring,
   lights, starting a mode, etc.)
 + Advanced programmers and customization can be done via the API. (The
-  API is fully documented at `mpf-api.readthedocs.org <http://mpf-api.readthedocs.org/>`_
+  API is fully documented at `developer.missionpinball.org <http://developer.missionpinball.org/>`_.)
 + You can easily switch between hardware platforms, so if sometime down the road
   you want to switch hardware or the company whose hardware you're using
   goes out of business, all your effort is not lost as you can easily move
-  everything to a new hardware platform with a simple config file change.
+  everything to a new hardware platform with a few changed lines in your config file.
 
 Compatible control systems / electronics
 ----------------------------------------
+
+MPF currently interfaces with the following pinball control systems & electronics
+(which in turn control the physical pinball machine hardware):
 
 + Multimorphic P-ROC & P3-ROC pinball controllers, with either PD-8x8, PD-16,
   PD-LED, and SW-16 driver and accessory boards or installation in existing WPC,
   Stern Whitestar, or Stern SAM machines.
 + FAST Pinball Core, Nano & WPC controllers, with 3802, 1616, and 0804 I/O
   boards, FAST servo boards, or installation in existing WPC machines.
-+ Open Pinball Project (OPP) open source controlled with Gen2 driver boards.
++ Open Pinball Project (OPP) open source controllers with Gen2 driver boards.
 + Stern SPIKE / SPIKE 2 pinball machines.
++ LISY controllers for Gottlieb System 1 and System 80 machines.
 + Mark Sunnucks's "Snux" System 11 driver board for use in System 11 and Data
   East machines, in concert with either a P-ROC or FAST WPC controller.
 + Fadecandy RGB LED controllers.
 + Open Pixel Control (OPC) LED and lighting controllers.
 + I2C servo controllers.
 + Pololu Maestro servo controllers.
-+ SmartMatrix RGB LED DMD controllers
++ SmartMatrix RGB LED DMD controllers.
++ RGB.DMD RGB LED-based DMD controllers.
++ MyPinballs segment display controllers.
++ Trinamics Steprocker stepper motor controllers.
 
 See the :doc:`Control Systems / Electronics</hardware/index>` documentation
 for full details.
@@ -45,11 +51,13 @@ for full details.
 Pinball mechanism support
 -------------------------
 
+MPF currently supports the following different types of pinball playfield mechanisms:
+
 + Switches (normally open, normally closed, mechanical or opto, with
   configurable debounce settings)
-+ Coils / drivers (pulse, enable, disable, pwm)
-+ Matrix-based lights
-+ LED RGB-based lights
++ Coils / drivers / solenoids (pulse, enable, disable, PWM)
++ Lamp matrix-based incandescent lights & LEDs
++ LEDs (RGB, GRB, RGBA, RGBW, RGBAW)
 + Accelerometers
 + GI (general illumination)
 + Flashers
@@ -57,21 +65,25 @@ Pinball mechanism support
 + Pop bumpers / slingshots
 + Drop targets and drop target banks
 + Diverters
-+ All forms of troughs (modern, System 11, early WPC, early '80s, etc.)
++ All forms of troughs (modern, System 11, early WPC, early '80s, Gottlieb System 3, etc.)
 + Ball devices (scoops, VUKs, saucers, locks, etc.)
 + Multiple playfields and playfield transfers (including head-to-head machines)
 + Driver-enabled devices (like flippers and pop bumpers in System 11 machines)
-+ Mechanical and coil-fired plungers and ball launchers
++ Mechanical and coil-fired plungers, ball launchers, and catapults
 + EM score reels
 + Kickbacks
 + Magnets
 + Rollover switches
 + Servos
++ Stepper motors
++ Traditional motors
 
 See the :doc:`Pinball Mechs</mechs/index>` documentation for full details.
 
 Game logic
 ----------
+
+MPF includes built-in support for all the pinball machine and game logic you need, inculding:
 
 + Modes and a mode stack (start / stop / restart / stacked modes)
 + Ball locks
@@ -100,6 +112,7 @@ Game logic
 + Timers (start / stop / pause / count down / count up)
 + Video modes
 + Switch combinations (flipper cancel, hold flipper button to start super skill shot, etc.)
++ Timed switches (hold the flipper for 2 seconds to show game stats, etc.)
 
 See the :doc:`Game Logic</game_logic/index>` documentation for full details.
 
@@ -109,6 +122,7 @@ Displays, DMDs, & Graphics
 + On-screen LCD displays, either high-def or with a "dot" look
 + Physical mono-color DMDs
 + RGB LED DMDs
++ Segmented displays
 + Display "slides" with priorities, transitions in and out
 + Display "widgets" (things you put on displays), including:
 
@@ -156,6 +170,7 @@ Machine Management
   anywhere in MPF to game operators.
 + A data manager which handles reading and writing data from disk, including
   audits, earnings, machine variables, high scores, etc.
++ Power supply management (map drivers to power supplies to make sure not too many things fire at once)
 
 Tools
 -----
@@ -164,6 +179,8 @@ Tools
   tool that connects to a live running instance of MPF and shows the status of
   various devices. You can interact with it by clicking on switches and see your
   game in action on your computer.
++ An "interactive" media controller which lets you interactively build and test
+  display slides, widgets, and animations.
 + A switch player which lets you build automatically scripts to "replay" switches
   for testing your game.
 + A complete set of test functions which you can use to write your own automated
@@ -172,6 +189,31 @@ Tools
   your computer keyboard. (Great for testing!)
 + Detailed logging, config file checking, and helpful error messages to help you
   troubleshoot issues.
+
+Professional-level features
+---------------------------
+
+MPF contains hundreds of the "little" things most people never think about that
+help ensure machines running it are truly professional-level machines that can
+be placed in revenue service in public locations. Here are just a few random things
+that have caused people to say, "Hey, that's cool!" over the years:
+
++ Power supply management: MPF knows how much current each power supply has and how
+  much current various devices require, so it will intelligently manage and delay
+  coil firings to ensure fuses don't blow. (For example, don't reset the drop targets
+  at the same time the flippers are held on and a ball is being ejected.)
++ Tilt-through prevention: A sliding time window ensures that the tilt plumb-bob has
+  settled before the next player's ball is started.
++ Automatic ball routing and retry logic:
++ Asset pools: Sound effects, images, and videos can be "pooled" (with various settings
+  for randomness, weightings, etc.), ensuring that each "hit" of a target produces a
+  different sound instead of the same one over and over.
++ Audio loops and break / resume points: Cue points for music and audio to ensure that
+  music tracks are smoothly looped and advanced based on game play.
++ Advanced multi-track audio: Automatic ducking of music and sfx when voice tracks play,
+  etc.
++ Auto leveling based on accelerometer: The machine knows when it's out of level and
+  can post a credit dot or notify the operator.
 
 Developer-friendly
 ------------------

@@ -96,9 +96,9 @@ Here's what our machine config looks like. (Note that this is complete in terms
 of what we need to make this recipe work, but if you have a real Addams Family
 then you'll probably have a lot more than this in your machine config file.)
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   #config_version=4
+   #config_version=5
 
    modes:
      - mansion_awards
@@ -149,45 +149,60 @@ then you'll probably have a lot more than this in your machine config file.)
 
    coils:
      drain:
-       number: 05
+       number: "05"
      trough:
-       number: 04
+       number: "04"
      swamp_kickout:
-       number: 08
+       number: "08"
      electric_chair:
-       number: 01
+       number: "01"
 
-   matrix_lights:
+   lights:
      9_mil:
        number: L66
+       subtype: matrix
      6_mil:
        number: L54
+       subtype: matrix
      3_mil:
        number: L68
+       subtype: matrix
      thing:
        number: L51
+       subtype: matrix
      quick_multiball:
        number: L55
+       subtype: matrix
      graveyard_at_max:
        number: L67
+       subtype: matrix
      raise_the_dead:
        number: L52
+       subtype: matrix
      festers_tunnel_hunt:
        number: L56
+       subtype: matrix
      lite_extra_ball:
        number: L53
+       subtype: matrix
      seance:
        number: L57
+       subtype: matrix
      hit_cousin_it:
        number: L58
+       subtype: matrix
      mamushka:
        number: L45
+       subtype: matrix
      mansion_question:
        number: L65
+       subtype: matrix
      electric_chair_yellow:
        number: L64
+       subtype: matrix
      electric_chair_red:
        number: L47
+       subtype: matrix
 
    ball_devices:
 
@@ -207,7 +222,7 @@ then you'll probably have a lot more than this in your machine config file.)
        ball_switches: plunger_lane
        mechanical_eject: true
        eject_timeouts: 3s
-       tags: home, ball_add_live
+       tags: home
 
      electric_chair:
        ball_switches: electric_chair
@@ -216,6 +231,18 @@ then you'll probably have a lot more than this in your machine config file.)
      swamp_kickout:
        ball_switches: swamp_kickout
        eject_coil: swamp_kickout
+
+   playfields:
+       playfield:
+           default_source_device: plunger_lane
+           tags: default
+
+   ##! mode: mansion_awards
+   # mode will be defined below
+   ##! mode: chair_lit
+   # mode will be defined below
+   ##! mode: chair_lit_3s
+   # mode will be defined below
 
 Step 2. Add the achievements
 ----------------------------
@@ -235,17 +262,19 @@ mansion achievements.
 You'll notice that most of them are almost identical. For
 example, here's the entry for Thing Multiball:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-  thing_multiball:
-    show_tokens:
-      lights: thing
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_thing_multiball  # starts thing_multiball mode
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_thing_multiball
-    reset_events: reset_mansion
+   ##! mode: mansion_awards
+   achievements:
+      thing_multiball:
+         show_tokens:
+            lights: thing
+         show_when_selected: flash
+         show_when_completed: on
+         events_when_started: award_thing_multiball  # starts thing_multiball mode
+         enable_events: initialize_mansion, reset_mansion
+         complete_events: award_thing_multiball
+         reset_events: reset_mansion
 
 Stepping through how we're using each setting:
 
@@ -295,23 +324,49 @@ Step 3. Create an achievement group
 Next we need to create an achievement group called "mansion_awards" which will
 group the 12 mansion achievements together. That will look like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: mansion_awards
+   #! achievements:
+   #!   9_mil:
+   #!      show_tokens:
+   #!   6_mil:
+   #!      show_tokens:
+   #!   3_mil:
+   #!      show_tokens:
+   #!   thing_multiball:
+   #!      show_tokens:
+   #!   quick_multiball:
+   #!      show_tokens:
+   #!   graveyard_at_max:
+   #!      show_tokens:
+   #!   raise_the_dead:
+   #!      show_tokens:
+   #!   festers_tunnel_hunt:
+   #!      show_tokens:
+   #!   lite_extra_ball:
+   #!      show_tokens:
+   #!   seance:
+   #!      show_tokens:
+   #!   hit_cousin_it:
+   #!      show_tokens:
+   #!   mamushka:
+   #!      show_tokens:
    achievement_groups:
      mansion_awards:
        achievements:
-           9_mil
-           6_mil
-           3_mil
-           thing_multiball
-           quick_multiball
-           graveyard_at_max
-           raise_the_dead
-           festers_tunnel_hunt
-           lite_extra_ball
-           seance
-           hit_cousin_it
-           mamushka
+           - 9_mil
+           - 6_mil
+           - 3_mil
+           - thing_multiball
+           - quick_multiball
+           - graveyard_at_max
+           - raise_the_dead
+           - festers_tunnel_hunt
+           - lite_extra_ball
+           - seance
+           - hit_cousin_it
+           - mamushka
        show_tokens:
          lights: electric_chair_yellow, electric_chair_red
        auto_select: yes
@@ -425,9 +480,10 @@ The chair_lit_3s mode
 
 Let's look at the config for the "chair_lit_3s" mode:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: chair_lit_3s
+   #config_version=5
 
    mode:
      priority: 101
@@ -497,9 +553,10 @@ ball ends, as by default, all modes end when the ball ends automatically.)
 
 Here's the config for this mode:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: chair_lit
+   #config_version=5
 
    mode:
      priority: 102
@@ -513,9 +570,8 @@ Here's the config for this mode:
      mode_chair_lit_started: light_chair, cancel_chair_timer
      mode_chair_lit_3s_started: cancel_chair_timer
 
-   logic_blocks:
-     counters:
-       initialize_mansion:
+   counters:
+      initialize_mansion:
          count_events: mode_chair_lit_started
          events_when_complete: initialize_mansion
          count_complete_value: 1
@@ -562,25 +618,27 @@ We'll tackle this in two parts.
 
 First, take a look at the Hit Cousin It and Mamuska achievements:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   hit_cousin_it:
-     show_tokens:
-       lights: hit_cousin_it
-     show_when_selected: flash
-     show_when_completed: on
-     events_when_started: award_hit_cousin_it # starts hit_cousin_it mode
-     complete_events: award_hit_cousin_it
-     reset_events: reset_mansion
+   ##! mode: mansion_awards
+   achievements:
+      hit_cousin_it:
+        show_tokens:
+          lights: hit_cousin_it
+        show_when_selected: flash
+        show_when_completed: on
+        events_when_started: award_hit_cousin_it # starts hit_cousin_it mode
+        complete_events: award_hit_cousin_it
+        reset_events: reset_mansion
 
-   mamushka:
-     show_tokens:
-       lights: mamushka
-     show_when_selected: flash
-     show_when_completed: on
-     events_when_started: award_mamushka  # starts mamushka mode
-     complete_events: award_mamushka
-     reset_events: reset_mansion
+      mamushka:
+        show_tokens:
+          lights: mamushka
+        show_when_selected: flash
+        show_when_completed: on
+        events_when_started: award_mamushka  # starts mamushka mode
+        complete_events: award_mamushka
+        reset_events: reset_mansion
 
 Notice that they're slightly different than the other 10 mansion awards in that
 they do NOT have enable events.
@@ -603,13 +661,13 @@ selection will always be one of those two.
 However, once the initial selection is made, we need a way to enable the
 remaining 10 mansion awards. For this we'll use a counter logic block:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: chair_lit
    # This is in the chair_lit mode config, NOT machine-wide config
 
-   logic_blocks:
-     counters:
-       initialize_mansion:
+   counters:
+      initialize_mansion:
          count_events: mode_chair_lit_started
          events_when_complete: initialize_mansion
          count_complete_value: 1
@@ -669,27 +727,29 @@ Step 8. Setup the 3 Mil / 6 Mil linking
 This is pretty simple. Just add the events posted when one achievement is
 started to the complete events for the other. Here are the examples:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   6_mil:
-    show_tokens:
-      lights: 6_mil
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_6_mil  # instant points award & plays shows, also spots 3 mil
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_6_mil, award_3_mil
-    reset_events: reset_mansion
+   ##! mode: mansion_awards
+   achievements:
+      6_mil:
+         show_tokens:
+            lights: 6_mil
+         show_when_selected: flash
+         show_when_completed: on
+         events_when_started: award_6_mil  # instant points award & plays shows, also spots 3 mil
+         enable_events: initialize_mansion, reset_mansion
+         complete_events: award_6_mil, award_3_mil
+         reset_events: reset_mansion
 
-   3_mil:
-    show_tokens:
-      lights: 3_mil
-    show_when_selected: flash
-    show_when_completed: on
-    events_when_started: award_3_mil  # instant points award & plays shows, also spots 6 mil
-    enable_events: initialize_mansion, reset_mansion
-    complete_events: award_3_mil, award_6_mil
-    reset_events: reset_mansion
+      3_mil:
+         show_tokens:
+            lights: 3_mil
+         show_when_selected: flash
+         show_when_completed: on
+         events_when_started: award_3_mil  # instant points award & plays shows, also spots 6 mil
+         enable_events: initialize_mansion, reset_mansion
+         complete_events: award_3_mil, award_6_mil
+         reset_events: reset_mansion
 
 Notice that the 6_mil's ``complete_events:`` includes *award_3_mil* and vice-versa.
 

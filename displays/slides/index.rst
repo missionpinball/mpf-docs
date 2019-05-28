@@ -8,7 +8,7 @@ or slides in an old-fashioned slide projector.
 You create multiple slides (each with its own content), and then you tell MPF
 when to activate certain slides. Every slide has a priority, so if multiple
 slides are active at the same time, the one with the highest priority will be
-shown. You acn also set "transitions" which control what visual effect is used
+shown. You can also set "transitions" which control what visual effect is used
 to transition from the current slide to the new slide. (Transitions are things like
 cross-fade, move in, push out, etc.)
 
@@ -64,3 +64,22 @@ to do with the active and current slides of another display.
    picture_in_picture
    split_screen
    display_targets
+
+Slides Events
+-------------
+
+These events can be useful within players.  For example, if you want to play 3 slides
+as a mode begins then the :doc:`/events/mode_name_started` event can trigger the
+slide_1 - but what triggers slide_2 and slide_3?
+
+The slide_player: can be used to sequence the playing of additional slides using the
+slide_slide_1_removed event to trigger the next slide to be played.
+
++------------------------------------------------------------------------------+
+| Related Events                                                               |
++==============================================================================+
+| :doc:`/events/slide_name_active`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/events/slide_name_removed`                                            |
++------------------------------------------------------------------------------+
+

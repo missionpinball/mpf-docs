@@ -9,7 +9,6 @@ combo_switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``combo_switches:`` section of your config is where you configure
 :doc:`combo switches </game_logic/combo_switches/index>` which are used for
@@ -18,7 +17,7 @@ one flipper button while hitting the launch button.
 
 Here's an example machine config file using them:
 
-.. literalinclude:: /example_configs/combo_switches/config/combo_switches.yaml
+.. literalinclude:: /mpf_examples/combo_switches/config/combo_switches.yaml
    :language: yaml
 
 To use combo switches, add a ``combo_switches:`` section to either a mode or
@@ -57,7 +56,7 @@ Built-in flipper cancel combo
 MPF's ``mpfconfig.yaml`` (the built-in machine config that's merged in with
 all machine configs) includes the following section:
 
-::
+.. code-block:: mpf-config
 
    combo_switches:
      both_flippers:
@@ -73,6 +72,32 @@ to change or override this (perhaps you want to set a ``max_offset_time:`` to
 make sure this event is only posted if the player hits the flipper buttons
 within 500ms, then you can copy and add this section to your own machine
 config file and it will overwrite this default config.
+
+Here is an example of using flipper_cancel to cancel a show:
+
+.. code-block:: mpf-config
+
+  shows:
+     mode_intro:
+       - duration: 5
+         slides:
+           mode_intro_slide:
+             widgets:
+               - type: text
+                 text: Hit 50 switches to light jackpot
+                 color: white
+                 font_size: 100
+
+  show_player:
+     start_mode_intro_show:
+       mode_intro:
+         loops: 0
+         events_when_stopped: mode_intro_show_ended
+     flipper_cancel:
+       mode_intro:
+         action: stop
+
+The start_mode_intro_show will play for 5 seconds unless both flipper buttons are pressed which will cancel the show.
 
 Combo Settings
 --------------

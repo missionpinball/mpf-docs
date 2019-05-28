@@ -176,7 +176,29 @@ things.
 The only other thing to know about adjustments is that they only affect the positioning of the widget. Adjustments are
 not cropping, and they will not "cut off" or "trim" the widget.
 
-7. Widget positioning can be done in styles
+7. Widget position rounding
+-------------------------------------------
+
+Sometimes a center-anchored or percentage-based widget will end up at a position with a fractional pixel. High-resolution
+displays have no trouble smoothing out partial pixels, but low-resolution displays (like DMDs) may render the widget blurry.
+
+You can prevent MPF-MC from positioning widgets on pixel fractions with the ``round_anchor_x:`` and ``round_anchor_y:``
+setting, either locally on a widget or globally on the display. When present, this setting will force MPF-MC to round
+fractional anchor positions in the specified direction.
+
+* ``round_anchor_x: left`` - Round the horizonal pixel position down
+* ``round_anchor_x: right`` - Round the horizonal pixel position up
+* ``round_anchor_x: center`` - Do not round the pixel position (default)
+* ``round_anchor_y: bottom`` - Round the vertical pixel position down
+* ``round_anchor_y: top`` - Round the vertical pixel position up
+* ``round_anchor_y: center`` - Do not round the pixel position (default)
+
+.. image:: /displays/images/widget_anchor_rounding.png
+
+This setting is valid on ``widgets`` and ``displays``. If you have a display and a widget both configured for rounding,
+the widget's setting will take priority.
+
+8. Widget positioning can be done in styles
 -------------------------------------------
 
 One of the powerful features of widgets in MPF is that you can configure widget styles, which are like buckets of
@@ -196,13 +218,13 @@ a style to define popups and other things that you'll use over and over.)
 
 See the How To guide on widget styles for details.
 
-8. Putting it all together
+9. Putting it all together
 --------------------------
 
 So now you've seen all the options for positioning and placement of widgets. But how do you actually use them? Simple.
 Everything discussed here are just regular widget settings. So you can use them in slides:
 
-::
+.. code-block:: mpf-config
 
    slides:
       slide1:
@@ -215,7 +237,7 @@ Everything discussed here are just regular widget settings. So you can use them 
 
 You can use them in :doc:`named widgets <reusable_widgets>`:
 
-::
+.. code-block:: mpf-config
 
    widgets:
       my_cool_widget:
@@ -227,7 +249,7 @@ You can use them in :doc:`named widgets <reusable_widgets>`:
 
 You can use them in the widget player:
 
-::
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
@@ -239,11 +261,13 @@ You can use them in the widget player:
 
 And you can use them in shows:
 
-::
+.. code-block:: mpf-config
 
+   ##! show: test_show
    - time: 1s
      widgets:
         my_widget:
            target: lcd
-           x: top
-           y: right-15.4%
+           widget_settings:
+              x: top
+              y: right-15.4%

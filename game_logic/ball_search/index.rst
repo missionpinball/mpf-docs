@@ -10,9 +10,15 @@ Ball Search
 +------------------------------------------------------------------------------+
 | :doc:`/config/playfields`                                                    |
 +------------------------------------------------------------------------------+
+| :doc:`example ball_search </examples/ball_search/index>`                     |
++------------------------------------------------------------------------------+
 
 .. contents::
    :local:
+
+.. note:: Ball search is off by default in MPF because it might hurt users not expecting it. In a prototype game
+          it might trigger quite frequently and coils can seriously injure humans. To turn it on follow
+          :doc:`configuring_ball_search`.
 
 MPF contains ball search functionality which is used to try to dislodge a stuck
 ball if MPF thinks there's a ball loose on the playfield but it hasn't hit any
@@ -35,25 +41,19 @@ Ball search in MPF is fairly automatic. It's enabled when MPF thinks that balls
 are on the playfield, and disabled when no balls are free. (This means that
 even when a machine tilts, ball search is still active until the balls drain, etc.)
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`configuring_ball_search`                                               |
-+------------------------------------------------------------------------------+
+Related How To guides
+---------------------
+* :doc:`configuring_ball_search`
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/ball_search_failed`                                            |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_search_started`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/ball_search_stopped`                                           |
-+------------------------------------------------------------------------------+
-| :doc:`/events/flipper_cradle`                                                |
-+------------------------------------------------------------------------------+
-| :doc:`/events/flipper_cradle_release`                                        |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+* :doc:`/events/ball_search_failed`
+* :doc:`/events/ball_search_started`
+* :doc:`/events/ball_search_stopped`
+* :doc:`/events/flipper_cradle`
+* :doc:`/events/flipper_cradle_release`
+
 
 .. toctree::
    :hidden:

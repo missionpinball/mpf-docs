@@ -1,8 +1,0 @@
-#config_version=4
-
-switches:
-    s_test:
-        number:
-    s_test2:
-        number:
-

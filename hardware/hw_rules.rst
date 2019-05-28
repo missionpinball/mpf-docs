@@ -63,7 +63,7 @@ a rule might be "when this switch is activated, pulse that coil", or "when this
 switch is released, cut off the power to that coil".
 
 Then when one of these "hardware rules" (as we call them in MPF) is written
-to the hardware pinball controller, that controller can handle it all be itself
+to the hardware pinball controller, that controller can handle it all by itself
 with minimal delay (usually in a millisecond or two) without having to deal with
 USB and MPF and all that.
 
@@ -85,3 +85,21 @@ This is all automatic
 The good news about these hardware rules is that there's nothing you need to
 do to use them. This is just one of the things that MPF does behind the
 scenes, thanks to the smart people who designed the pinball controllers.
+
+What kind of rules does MPF use?
+--------------------------------
+
+1. Pulse + Cancel: This means that we pulse a coil when a switch becomes active and cancel the pulse when the switch becomes inactive.
+2. Pulse + Cancel + Hold: This means that we pulse and then enable a coil with pwm when a switch becomes active and cancel the pulse when the switch becomes inactive.
+3. Just Pulse: This means that we pulse a coil when a switch becomes active but never cancel the pulse.
+4. Pulse + Cancel + Hold + EOS: This means that we pulse and then enable a coil with pwm when a switch becomes active and cancel the pulse when the switch becomes inactive. Additionally, the pulse is changed to pwm when EOS becomes inactive (its usually normally closed).
+
+For most platforms 1 and 2 is basically the same rule (e.g. rule 1 is rule 2 with ``hold power = 0``).
+
+We use type 2 for single wound flippers.
+For dual wound we use type 1 on the main/high power coils and type 2 on the hold coil (often with 100% pwm = full enable).
+When flippers have EOS we use type 4 rules (for dual wound flippers with hold=0).
+Rule 3 is used for pop bumpers.
+
+Not all platforms support all types of rules.
+In those cases we use the next best available rule (e.g. 1 instead of 3 or the other way around).

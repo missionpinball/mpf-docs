@@ -13,6 +13,8 @@ Diverters
 In MPF, a diverter (sometimes spelled "divertor") is anything that alters
 the path of the ball based on the state it's in, including:
 
+:doc:`TODO: Add a picture of a diverter </about/help_us_to_write_it>`
+
 + A traditional diverter which is a metal flap at the end of a rod,
   typically used on ramps to "divert" the ball one way or the other.
 + A coil-controlled post that pops up (or down) to let the ball either
@@ -80,7 +82,7 @@ diverter will send a ball to when it's enabled or disabled.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for diverters is ``device.diverters.<name>``.
 
@@ -99,12 +101,16 @@ the prefix for diverters is ``device.diverters.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+ * :doc:`up_down_ramps`
 
 Related Events
 --------------
 
-* :doc:`/events/diverter_name_activating`
-* :doc:`/events/diverter_name_deactivating`
-* :doc:`/events/diverter_name_disabling`
-* :doc:`/events/diverter_name_enabling`
+.. include:: /events/include_diverters.rst
+
+
+.. toctree::
+
+   up_down_ramps
+   servo_as_diverter
+   stepper_as_diverter

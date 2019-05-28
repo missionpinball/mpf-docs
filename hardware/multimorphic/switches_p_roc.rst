@@ -10,6 +10,8 @@ How to configure switches (P-ROC)
 To configure switches on a P-ROC, you can follow the guides and instructions in
 the :doc:`/mechs/switches/index` docs.
 
+.. image:: /hardware/images/multimorphic_p_roc.png
+
 However there are a few things to know about using switches with a P-ROC.
 
 number:
@@ -22,8 +24,9 @@ format.
 .. note::
 
    If you're using your P-ROC in an existing machine, then don't use the number
-   settings here. Instead use the numbers from the existing machine section of
-   the documentation. (link TODO)
+   settings here. Instead use the numbers from the
+   :doc:`existing machine section </hardware/existing_machines/index>`
+   of the documentation.
 
 Direct Switches
 ~~~~~~~~~~~~~~~
@@ -35,7 +38,7 @@ are numbered 0-31. (See the P-ROC documentation for the connector mappings.)
 Direct switches are configured in your machine config file by starting the
 number with "SD", like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -51,7 +54,7 @@ Matrix Switches
 If you're using a switch matrix, then the switch numbers are entered using
 the column number, then a slash, then the row number.
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -127,7 +130,7 @@ Valid options are ``normal``, ``quick``, and ``auto``.
 To disable debouncing for a switch, add ``debounce: quick`` to the switch
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -137,7 +140,7 @@ config, like this:
 To force debouncing to always be used (which is also the default on the P-ROC,
 so not really needed), configure it like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:

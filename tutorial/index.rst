@@ -4,7 +4,7 @@ MPF Tutorial
 Let's learn by example!
 
 This tutorial will walk you through using MPF to create a basic pinball machine
-config. Since MPF is just software that supports lots of different physucal
+config. Since MPF is just software that supports lots of different physical
 hardware, you don't actually need to have physical pinball machine hardware to
 complete the tutorial. You can create a "virtual"
 pinball machine for now and then hook up a real machine later.
@@ -28,7 +28,7 @@ Now let's get started...
 .. toctree::
    :maxdepth: 1
 
-   1. Prerequisites <1_prerequisites>
+   1. Install MPF <1_install_mpf>
    2. Create your machine folder <2_creating_a_new_machine>
    3. Get flipping! <3_get_flipping>
    4. Adjusting your flipper power <4_adjust_flipper_power>
@@ -46,3 +46,5 @@ Now let's get started...
    16. Add an attract mode display show <16_attract_mode_show>
    17. Add lights (or LEDs) <17_add_lights_leds>
    18. Add your first shot <18_shots>
+   19. Testing your machine <19_unit_testing>
+   20. Next steps <20_next_steps>

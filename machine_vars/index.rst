@@ -29,6 +29,9 @@ configs:
    (high_score_category)(position)_label <high_score_categoryposition_label>
    (high_score_category)(position)_name <high_score_categoryposition_name>
    (high_score_category)(position)_value <high_score_categoryposition_value>
+   lisy_api_version <lisy_api_version>
+   lisy_hardware <lisy_hardware>
+   lisy_version <lisy_version>
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
    player(x)_score <playerx_score>

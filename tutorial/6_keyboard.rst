@@ -26,7 +26,7 @@ of action in MPF you want to map them to. (Switches, in this case.)
 Here's an example where we map the left flipper button to the ``Z`` key
 and the right flipper button to the ``?`` key:
 
-::
+.. code-block:: mpf-config
 
     keyboard:
         z:
@@ -43,7 +43,7 @@ that key normally it types a slash. (The question mark is the shift
 option for that key.) So if you set a key mapping and it doesn't work,
 try the other character on the key.)
 
-Again make sure that you have proper YAML formatting. The ``z:`` and ``"?:"``
+Again make sure that you have proper YAML formatting. The ``z:`` and ``"?":``
 entries should indented the same number of spaces, and the "switch"
 words should be indented further. Also make sure you have a space to
 the right of the colon after ``switch:``. At first you might think it's
@@ -121,6 +121,15 @@ mechanisms (like flippers), meaning the flippers are activated by the
 control system rather than MPF software.
 
 Read the :doc:`/hardware/hw_rules` guide for details.
+
+4. Install the MPF Monitor (optional)
+-------------------------------------
+While pressing keyboard switches is great and fast it would be a lot
+of work to map all your switches to the keyboard (and remembering
+which key does what). Therefore you can later use the
+:doc:`MPF monitor </tools/monitor/running>` to lay them out visually
+and trigger them with your mouse (you can start using it right now
+if you want).
 
 What if it doesn't work?
 ------------------------

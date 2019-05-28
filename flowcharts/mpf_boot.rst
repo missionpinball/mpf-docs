@@ -30,7 +30,7 @@ pretty high level gist:
     #. light controller
     #. bcp
     #. logic blocks
-    #. scoring
+    #. variable player/scoring
     #. shot profile manager
 
 #. System events are registered (for things like shutdown, quit, etc.)

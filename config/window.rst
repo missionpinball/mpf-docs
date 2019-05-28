@@ -12,9 +12,10 @@ window:
 .. overview
 
 The ``window:`` section of your config is where you configure the properties
-of the on-screen window which is created by MPF-MC.
+of the main on-screen window which is created by MPF-MC.
 
-::
+.. code-block:: mpf-config
+
     window:
         width: 800
         height: 600
@@ -24,6 +25,8 @@ of the on-screen window which is created by MPF-MC.
         fullscreen: no
         exit_on_escape: True
         source_display: window
+        effects:
+            - type: dmd
 
 .. note::
    If you do not add a ``window:`` section to your machine config, MPF will
@@ -39,6 +42,14 @@ borderless:
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``0``
 
 Controls whether the pop-up window has a border (the "frame") around it.
+
+effects:
+~~~~~~~~
+
+An optional list of effects to apply to the window contents. These effects perform image processing to the
+source image and can be used to get an old school "DMD look" or "color DMD look" to your window
+as well as other special effects.  For more information on effects, please review the
+:doc:`effects </displays/widgets/display/effects>` documentation.
 
 exit_on_escape:
 ~~~~~~~~~~~~~~~

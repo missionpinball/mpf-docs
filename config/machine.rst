@@ -11,10 +11,7 @@ machine:
 
 .. overview
 
-The ``machine:`` section of your config is where you...
-
-.. todo::
-   Add description.
+The ``machine:`` section of your config is where you configure defails about the number of balls in your machine.
 
 Optional settings
 -----------------
@@ -25,13 +22,12 @@ balls_installed:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
-.. todo::
-   Add description.
+The (maximum) number of balls which should be installed in your machine.
 
 min_balls:
 ~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``
 
-.. todo::
-   Add description.
+The minimum number of balls required to start a game.
+If less than ``min_balls`` are present MPF will refuse to stat a game.
 

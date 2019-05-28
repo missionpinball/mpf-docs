@@ -6,8 +6,10 @@ You can use MPF to control existing Williams / Bally / Midway WPC, WPC-S, and WP
 1. Connecting the physical hardware
 -----------------------------------
 
-Your two options for pinball controller hardware are the Multimorphic P-ROC (not the P3-ROC) or the FAST
-Pinball WPC controller.
+The main options for pinball controller hardware is the :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
+(not the P3-ROC). FAST has a WPC controller too but it never hit general availability.
+The people who created the :doc:`LISY boards </hardware/lisy/index>` are also working on a "LISY35" board for
+Bally/WPC machines with AS-2518-17 or AS-2518-35 CPU boards.
 
 In both cases, you remove the existing MPU board from the backbox of your machine and replace it with the
 new controller. You then connect up all the existing cables and connectors to the new controller, so in
@@ -29,6 +31,13 @@ A few notes:
   into a 14-pin header on the P-ROC or FAST WPC controller. This means you can remove the existing DMD
   driver board from the backbox.
 
+For the P-Roc connect your machine according to the
+`P-Roc connector mappings <https://www.multimorphic.com/content/uploads/2017/08/P-ROC_Connector_Mappings_v2.pdf>`_.
+
+More technical information can be found in the
+`PinWiki Williams WPC <http://www.pinwiki.com/wiki/index.php?title=Williams_WPC>`_ page.
+
+
 2. Configuring MPF for WPC machines
 -----------------------------------
 
@@ -37,7 +46,7 @@ config for MPF.
 
 If you're using a FAST WPC controller, it will look like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: fast
@@ -45,7 +54,7 @@ If you're using a FAST WPC controller, it will look like this:
 
 And if you're using a P-ROC:
 
-::
+.. code-block:: mpf-config
 
    hardware:
       platform: p_roc
@@ -70,7 +79,7 @@ Matrix switches
 
 Matrix switches start with the letter ``S``, followed by the switch number. For example:
 
-::
+.. code-block:: mpf-config
 
    switches:
       s_left_slingshot:
@@ -102,8 +111,9 @@ Direct switches
 Direct switches (which are typically the coin and front door switches) are
 entered with the ``SD`` prefix, then the number, like this:
 
-::
+.. code-block:: mpf-config
 
+   switches:
       s_left_coin:
          number: sd1
       s_enter:
@@ -132,7 +142,7 @@ switches are used for other things.
 
 You would use Fliptronics switches in your config like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
      s_flipper_lower_right_eos:
@@ -162,18 +172,18 @@ To configure the regular coils (from the "Solenoid / Flasher" table in your
 machine's operator's manual, enter the letter ``C`` followed by the solenoid
 number, like this:
 
-::
+.. code-block:: mpf-config
 
    coils:
      c_trough_eject:
        number: c01
-       pulse_ms: 25
+       default_pulse_ms: 25
      c_bottom_popper:
        number: c02
-       pulse_ms: 25
+       default_pulse_ms: 25
      c_plunger_lane:
        number: c03
-       pulse_ms: 25
+       default_pulse_ms: 25
 
 Fliptronics coils
 ~~~~~~~~~~~~~~~~~
@@ -204,18 +214,18 @@ Fliptronics coils up to other random things (typically magnets and diverters).
 
 An example in your config might be:
 
-::
+.. code-block:: mpf-config
 
    coils:
      c_flipper_left_main:
        number: fllm
-       pulse_ms: 30
+       default_pulse_ms: 30
      c_flipper_left_hold:
        number: fllh
        allow_enable: true
      c_flipper_right_main:
        number: flrm
-       pulse_ms: 30
+       default_pulse_ms: 30
      c_flipper_right_hold:
        number: flrh
        allow_enable: true
@@ -231,54 +241,65 @@ An example in your config might be:
 Lights are configured with the letter ``L`` followed by the lamp number from the
 manual:
 
-::
+.. code-block:: mpf-config
 
-   matrix_lights:
+   lights:
      l_ball_save:
        number: l11
+       subtype: matrix
      l_fortress_multiball:
        number: L12
+       subtype: matrix
      l_museum_multiball:
        number: L13
+       subtype: matrix
      l_cryoprison_multiball:
        number: l14
+       subtype: matrix
      l_wasteland_multiball:
        number: L15
+       subtype: matrix
      l_shoot_again:
        number: l16
+       subtype: matrix
+
+See :doc:`/config/lights` and :doc:`/config/light_player` for details on how to use them.
 
 5. Configuring GI (general illumination)
 ----------------------------------------
 
 GI strings are configured with ``G`` followed by the number, like this:
 
-::
+.. code-block:: mpf-config
 
-   gis:
+   lights:
      gi_back_panel:
        number: g01
+       subtype: gi
      gi_upper_right:
        number: g02
+       subtype: gi
      gi_upper_left:
        number: g03
+       subtype: gi
      gi_lower_right:
        number: g04
+       subtype: gi
      gi_lower_left:
        number: g05
+       subtype: gi
+
+See :doc:`/config/lights` and :doc:`/config/light_player` for details on how to use them.
 
 6. Configuring flashers
 -----------------------
 
 Since flashers in WPC machines are technically drivers (coils), they are also
-configured with the letter ``C`` followed by their number. However, you add them
-to the ``flashers:`` section of your config, not the ``coils:`` section. This
-is done so MPF knows to treat them like flashers which are just pulsed, rather
-than coils which can be enabled and have other coil-like things that don't
-apply to flashers.
+configured with the letter ``C`` followed by their number similar to ``coils``.
 
-::
+.. code-block:: mpf-config
 
-   flashers:
+   coils:
      f_claw:
        number: c17
      f_jets:
@@ -289,3 +310,5 @@ apply to flashers.
        number: c23
      f_left_ramp_lower:
        number: c24
+
+See :doc:`/config/flashers` for details on how to use flashers.

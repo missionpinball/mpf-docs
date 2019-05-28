@@ -28,6 +28,7 @@ Here are the options:
 * :doc:`Older style with two coils and switches for each ball <two_coil_multiple_switches>`
 * :doc:`Older style with two coils and only one ball switch <two_coil_one_switch>`
 * :doc:`Classic single ball, single coil <classic_single_ball>`
+* :doc:`Classic single ball, single coil, no shooter lane <classic_single_ball_no_shooter_lane>`
 
 Since there are so many different options, you need to first identify which
 type of trough or ball drain system your machine has. So look at the following
@@ -44,7 +45,7 @@ where it's directed to the plunger lane.
 
 .. todo::
 
-   We need to add a photo of this type of trough.
+   We need to add a photo of this type of trough (:doc:`\/about\/help_us_to_write_it`).
 
 The advantage of modern troughs are (1) the balls entering are gravity-fed,
 meaning they only need one coil, and (2) they can hold a lot of balls. (Most
@@ -145,16 +146,30 @@ Here's an example from Gottlieb Big Shot:
 If you have a system like this, read the :doc:`classic_single_ball` guide to
 continue.
 
-Option 6: Something we haven't seen yet
+Option 6: Classic single ball, single coil, no shooter lane
+-----------------------------------------------------------
+
+Very similar to Option 5 but the drain directly ejects back into the playfield.
+There is no shooter lane. This was used in early EM machines.
+
+Here's an example from Gottlieb Playball:
+
+.. image:: /mechs/images/classic_single_ball_trough_without_shooter_lane_photo.png
+
+
+If you have a system like this, read the :doc:`classic_single_ball_no_shooter_lane` guide to
+continue.
+
+Option 7: Something we haven't seen yet
 ---------------------------------------
 
 If you're using MPF with a machine that has some kind of trough or drain system
 that we haven't covered here, we would like to know about it so we can write a
 how to guide and/or add support for it in MPF.
 
-As far as we know, however, these 5 options should cover everything. For example,
+As far as we know, however, these 6 options should cover everything. For example,
 you might have a machine that you think is different, but when you really look
-at it, it's just a weird form of one of these 5 options. (Bally Fathom is a great
+at it, it's just a weird form of one of these 6 options. (Bally Fathom is a great
 example of this. It's like a classic single-ball trough where there is a drain
 that ejects a ball all the way into the plunger lane, but there are two additional
 switches in the apron wall where balls rest before they land in the drain device.
@@ -180,7 +195,7 @@ post a photo of it to `MPF Users Google Group
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_balls_available`                                    |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_balls_ball_missing`                                 |
+| :doc:`/events/balldevice_name_ball_missing`                                  |
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_captured_from_device`                               |
 +------------------------------------------------------------------------------+
@@ -202,3 +217,5 @@ post a photo of it to `MPF Users Google Group
    two_coil_multiple_switches
    two_coil_one_switch
    classic_single_ball
+   classic_single_ball_no_shooter_lane
+   spike_trough

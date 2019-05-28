@@ -3,8 +3,8 @@ MPF compatible control systems / hardware
 
 MPF controls a pinball machine by interfacing to a modern pinball control system.
 (See the :doc:`/start/index` for details.) MPF itself is hardware-independent,
-meaning that MPF (and the configs and code you build) can work with lots of
-different kinds of control systems and hardware devices.
+meaning that MPF (and the configs and code you build) runs on a :doc:`normal/embedded PC <computer/index>`
+and can work with lots of different kinds of control systems and hardware devices.
 
 Not only does this give you a choice of what type of pinball control hardware
 you want to use, it also means that you have the flexibility to change your
@@ -27,6 +27,8 @@ MPF currently supports the following hardware control systems. We are always add
 more, so if there's a hardware device that you'd like to use that we don't support,
 let us know. (Or better yet, write your own interface to it and submit a pull
 request to the MPF codebase!)
+
+Also see our guide on :doc:`voltages found in a pinball machine <voltages_and_power/index>`.
 
 List of supported control systems & hardware
 --------------------------------------------
@@ -57,16 +59,35 @@ your pinball machine.
    * P3-ROC with PDB driver boards (PD-16, SW-16, PD-LED)
    * Plasma & LED mono DMDs (P-ROC)
    * Accelerometer-based tilt (P3-ROC)
+   * I2C slave boards (see below for which I2C boards are supported) (P3-ROC)
+   * Alphanumeric displays via aux port (P-Roc)
 
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
-     switches, & incandescent lights
+     switches, switch matrix, LEDs & incandescent lights
 
 * :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
    * *New in MPF 0.33*
    * A computer running MPF can directly connect to a SPIKE machine with
      a simple "USB to serial" converter which you plug into the SPIKE
      main board.
+
+* :doc:`LISY <lisy/index>`
+   * *New in MPF 0.50*
+   * Gottlieb System 1
+   * Gottlieb System 80
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
+
+* :doc:`Arduino Pinball Controller (APC) <apc/index>`
+   * *New in MPF 0.53*
+   * System 3 to System 11c
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
 
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
@@ -104,6 +125,31 @@ to provide additional functionality.
 * :doc:`RGB.DMD RGB LED display controller <eli_dmd/index>`
    * Supports a "real" color DMD made up of RGB LED matrix
 
+* :doc:`MyPinballs Segment Display Controller <mypinballs/index>`
+   * *New in MPF 0.50*
+   * Alphanumeric segment displays
+
+* :doc:`Trinamics StepRocker <trinamics/index>`
+   * *New in MPF 0.50*
+   * StepRocker stepper controller
+
+* :doc:`Raspberry Pi <rpi/index>`
+   * *New in MPF 0.50*
+   * Local (MPF on the RPi) or remote via ethernet
+   * All inputs and outputs
+   * I2C and SPI
+
+* :doc:`Native I2C on Linux <smbus/index>`
+   * *New in MPF 0.50*
+   * I2C devices on any nativ I2C bus
+
+* :doc:`MMA8451-based accelerometers <mma8451/index>`
+   * *New in MPF 0.50*
+   * Connected to I2C
+
+There is a :doc:`hardware roadmap <roadmap>` for other hardware which we want
+to support in the future.
+
 Configuration Guides
 --------------------
 
@@ -118,22 +164,42 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
+   Gottlieb System 1 / System 80 (LISY) <lisy/index>
+   Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
-   pololu_maestro/index
+   Pololu Maestro <pololu_maestro/index>
    SmartMatrix RGB DMD <smartmatrix/index>
-   eli_dmd/index
-   existing_machines/index
-   virtual/index
-
-Other
------
-
-TODO
+   RGB.DMD <eli_dmd/index>
+   Raspberry Pi DMD <rpi_dmd/index>
+   MyPinballs Segment Displays <mypinballs/index>
+   Trinamics StepRocker <trinamics/index>
+   StepStick Steppers <stepstick/index>
+   Computer Requirements <computer/index>
+   Native I2C <smbus/index>
+   Raspberry Pi <rpi/index>
+   MMA8451-based accelerometer <mma8451/index>
+   SPI Big Bang Switches <spi_bit_bang/index>
+   Virtual Hardware <virtual/index>
+   Existing Machines <existing_machines/index>
+   Voltages and Power <voltages_and_power/index>
 
 .. toctree::
 
    hw_rules
    numbers
    platform
+   roadmap
+
+Browse Platforms by Capabilites
+-------------------------------
+
+.. toctree::
+   :titlesonly:
+
+   i2c_platforms
+   servo_platforms
+   stepper_platforms
+   segment_display_platforms
+   dmd_platforms

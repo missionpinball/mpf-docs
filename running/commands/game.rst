@@ -43,13 +43,13 @@ Examples:
 
 Run MPF and load the config file ``config/config.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game
 
 Run MPF and load the config file ``config/nodisplay.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game -c nodisplay
 
@@ -57,13 +57,13 @@ You can also chain multiple config files together by specifying a comma-separate
 list (no spaces). For example, to load ``config/config.yaml`` first, and then
 once that's loaded, merge in changes from ``config/fast.yaml``, run:
 
-::
+.. code-block:: shell
 
    $ mpf game -c config,fast
 
 To load a machine folder from some other location, such as ``/home/brian/pinball/demo_man/config/config.yaml``:
 
-::
+.. code-block:: shell
 
    $ mpf game -c /home/brian/pinball/demo_man/config/config.yaml
 
@@ -83,7 +83,6 @@ Displays the command line help and exits. (Pretty much what's on this page.)
 -f
 ~~
 
-.. versionadded:: 0.32
 
 Forces MPF to load all assets at start (rather than the default behavior where
 some assets can be loaded only when modes start or based on other events).
@@ -100,6 +99,13 @@ with a file name of ``<year>-<month>-<day>-<hour>-<min>-<sec>-mpf-<hostname>.log
 
 Note that log files are standard log file formats that can be read and parsed
 with log file utilities. (The "Console" app is built-in to OS X, for example.)
+
+--syslog_address
+~~~~~~~~~~~~~~~~
+
+Log to the specified syslog address. This can be a domain socket such as ``/dev/log`` on
+Linux or ``/var/run/syslog`` on Mac. Alternatively, you an specify ``host:port`` for remote
+logging over UDP.
 
 -v (lowercase)
 ~~~~~~~~~~~~~~
@@ -124,11 +130,17 @@ computer.
 ~~~~~~~~~~~~~~
 
 Ignores all ``platform:`` settings in your config files and forces MPF to run
-using the *virtual* platform interface. This is nice for testing when you don't
-have your physical hardware attached.
+using the :doc:`virtual platform </hardware/virtual/smart_virtual>` interface.
+This is nice for testing when you don't have your physical hardware attached.
 
 -X (uppercase)
 ~~~~~~~~~~~~~~
 
-Like `-x`, except it forces the *smart virtual* platform.
+Like `-x`, except it forces the
+:doc:`smart virtual platform </hardware/virtual/smart_virtual>`.
 
+--vpx
+~~~~~
+
+Like `-x`, except it forces the
+:doc:`Virtual Pinball (VPX) platform </hardware/virtual/virtual_pinball_vpx>`.

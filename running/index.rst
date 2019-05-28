@@ -34,7 +34,7 @@ folder. This is the folder that contains your machine's ``config``, ``modes``,
 
 Then run:
 
-::
+.. code-block:: console
 
    mpf both <enter>
 
@@ -46,7 +46,7 @@ Starting the MPF media controller
 Alternately you can choose to run just the media controller by itself (still
 from within your machine folder) like this:
 
-::
+.. code-block:: console
 
     mpf mc <enter>
 
@@ -57,7 +57,7 @@ Starting the MPF game engine
 
 You can run the MPF game engine by itself by running:
 
-::
+.. code-block:: console
 
     mpf game <enter>
 
@@ -72,7 +72,7 @@ Specifying command-line options
 There are several command-like options you can use when you run MPF. To use them, add them *after* the name
 of the MPF command you're running, like:
 
-::
+.. code-block:: console
 
    mpf game -x -v
 
@@ -99,6 +99,8 @@ Here's a list of valid MPF commands. Click on any one of them for full details a
 * :doc:`mpf mc <commands/mc>` (Starts the MPF Media Controller)
 * :doc:`mpf both <commands/both>` (Starts both the MPF game engine and media controller at the same time)
 * :doc:`mpf migrate <commands/migrate>` (Migrates older config and show files to the current version)
+* :doc:`mpf hardware <commands/hardware>` (Scan, inspect and configure hardware)
+* :doc:`mpf service <commands/service>` (Service command line interface)
 
 Specifying BCP ports
 --------------------
@@ -112,3 +114,4 @@ By default, the MPF game engine and the MC will connect via TCP port 5050.
    MPF command launcher <mpf>
    MPF commands <commands/index>
    Specifying BCP ports <ports>
+

@@ -30,6 +30,7 @@ Here are a list of the settings you can use for text widgets:
    font_name:
    bold:
    italic:
+   casing:
    number_grouping:
    min_digits:
    halign:
@@ -43,6 +44,9 @@ Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
 
+The following text widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:``, ``y:``, ``font_size:``,
+``color:``, ``opacity:``, ``rotation:``, and ``scale:``.
+
 type: text
 ~~~~~~~~~~
 
@@ -54,7 +58,22 @@ text:
 
 This value is required. If you don't want text, use ""
 
-Link to dynamic text and text strings
+Your text can contain placeholders as described in :doc:`dynamic text </displays/widgets/text/text_dynamic>`.
+
+Newline characters (`\\n`) are supported in text values to create multiple lines with line breaks, however
+you must surround the text with quotes or the backslash will be treated as a printing character and will
+appear in the output.  For example:
+
+.. code-block:: yaml
+
+   text: "Multiple\nlines"
+
+will create multiple text lines with a line break, while the following will not:
+
+.. code-block:: yaml
+
+   text: Multiple\nlines
+
 
 font_name:
 ~~~~~~~~~~
@@ -82,13 +101,19 @@ a DMD or color DMD (or other pixel-style display), we have some
 :doc:`built in DMD fonts </displays/widgets/dmd_fonts>` that you
 can use which are pre-configured for DMDs.
 
+bitmap_font:
+~~~~~~~~~~~~
+A true/false value indicating whether the `font_name:` setting contains the name of a
+:doc:`bitmap_font </config/bitmap_fonts>` asset.  When set to `True`, `font_name:` must
+refer to an existing bitmap_font asset name and `font_size:` will be ignored. When set to
+`False`, `font_name:` should refer to a font name.
+
 font_size:
 ~~~~~~~~~~
 
 The size of the font (in points). Default is 15.
 
-See the :doc:`full documentation on fonts </displays/widgets/fonts>` for
-details.
+See the :doc:`full documentation on fonts </displays/widgets/fonts>` for details.
 
 bold:
 ~~~~~
@@ -110,6 +135,19 @@ of your font and using it instead.
 
 The default setting is ``False``.
 
+casing:
+~~~~~~~
+
+A string value that changes the casing of the text on the widget. Available
+values are:
+
+* "lower": all characters will be lower case
+* "upper": ALL CHARACTERS WILL BE UPPER CASE
+* "title": All First Characters Are Capitalized
+* "capitalize": Only the first character is capitalized
+
+The default setting is ``None`` and the characters are displayed as-is.
+
 number_grouping:
 ~~~~~~~~~~~~~~~~
 
@@ -124,7 +162,7 @@ a mix-and-match of letters and numbers.
 The default setting is ``False``. (Note that prior to MPF 0.30, the default
 setting was ``True``.)
 
-.. todo::
+.. note::
 
    Currently this setting only inserts a comma. We need to add a setting to
    allow other characters (like a period which is common in Europe). If this is
@@ -171,6 +209,13 @@ widget is automatically created and sized based on the actual text and font
 chosen.
 
 The default setting is ``middle``.
+
+anchor_y: baseline
+~~~~~~~~~~~~~~~~~~
+
+Text widgets have an additional ``baseline`` option in addition to the other baseline
+options detailed in the :doc:`common widget settings </displays/widgets/common_settings>`
+documentation.
 
 Examples
 --------

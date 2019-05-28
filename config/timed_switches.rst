@@ -9,8 +9,6 @@ timed_switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.33
-
 Specifies :doc:`timed switches </game_logic/timed_switches/index>` which are used to
 post events when a switch is active for a continuous amount of time.
 
@@ -18,7 +16,7 @@ Here's an example. This example is actually built-in to MPF via the MPF default 
 file, so if you want to use these flipper cradle events, you don't have to enter them
 yourself as they're already there.
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    timed_switches:
      flipper_cradle:

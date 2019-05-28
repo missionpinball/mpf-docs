@@ -14,9 +14,68 @@ diverters:
 You create and configure your diverters in the *diverters:* section of
 your machine configuration file. Here's an example from *Star Trek: The Next Generation*:
 
-::
+.. code-block:: mpf-config
 
-    diverters:
+   #! switches:
+   #!    s_ball1:
+   #!       number:
+   #!    s_ball2:
+   #!       number:
+   #!    s_ball3:
+   #!       number:
+   #!    s_ball4:
+   #!       number:
+   #!    s_ball5:
+   #!       number:
+   #!    s_under_ueft_hole:
+   #!       number:
+   #!    s_under_borg_hole:
+   #!       number:
+   #!    s_under_top_hole:
+   #!       number:
+   #!    s_under_left_hole:
+   #!       number:
+   #!    s_enter_left_ramp:
+   #!       number:
+   #! coils:
+   #!    c_eject1:
+   #!       number:
+   #!    c_eject2:
+   #!       number:
+   #!    c_eject3:
+   #!       number:
+   #!    c_eject4:
+   #!       number:
+   #!    c_eject5:
+   #!       number:
+   #!    c_top_divertor:
+   #!       number:
+   #!    c_under_divertor_top:
+   #!       number:
+   #!    c_under_divertor_bottom:
+   #!       number:
+   #!    c_top_drop_down:
+   #!       number:
+   #!    c_top_drop_up:
+   #!       number:
+   #! ball_devices:
+   #!    bd_borg_ship:
+   #!       eject_coil: c_eject1
+   #!       ball_switches: s_ball1
+   #!    bd_catapult:
+   #!       eject_coil: c_eject2
+   #!       ball_switches: s_ball2
+   #!    bd_left_vuk:
+   #!       eject_coil: c_eject3
+   #!       ball_switches: s_ball3
+   #!    bd_left_cannon_vuk:
+   #!       eject_coil: c_eject4
+   #!       ball_switches: s_ball4
+   #!    bd_right_cannon_vuk:
+   #!       eject_coil: c_eject5
+   #!       ball_switches: s_ball5
+
+   diverters:
         top_diverter:
             activation_coil: c_top_divertor # WMS uses the -tor spelling
             type: hold
@@ -30,12 +89,12 @@ your machine configuration file. Here's an example from *Star Trek: The Next Gen
             activation_coil: c_under_divertor_top
             type: hold
             activation_time: 3s
-            activation_switches: s_underTopHole, s_underLeftHole, s_underBorgHole
-            targets_when_active: bd_rightCannonVUK
-            targets_when_inactive: bd_leftVUK
+            activation_switches: s_under_top_hole, s_under_left_hole, s_under_borg_hole
+            targets_when_active: bd_left_cannon_vuk
+            targets_when_inactive: bd_left_vuk
             feeder_devices: bd_catapult
         subway_bottom_diverter:
-            activation_coil: c_underDivertorBottom
+            activation_coil: c_under_divertor_bottom
             type: hold
             activation_time: 3s
             activation_switches: s_under_top_hole, s_under_ueft_hole, s_under_borg_hole
@@ -214,8 +273,7 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-.. todo::
-   Add description.
+Set this to ``True`` to see more debug output.
 
 disable_events:
 ~~~~~~~~~~~~~~~
@@ -274,8 +332,7 @@ label:
 ~~~~~~
 Single value, type: ``string``. Default: ``%``
 
-.. todo::
-   Add description.
+Name in service mode.
 
 reset_events:
 ~~~~~~~~~~~~~
@@ -286,15 +343,13 @@ on how to enter settings here.
 
 Default: ``machine_reset_phase_3``
 
-.. todo::
-   Add description.
+Reset will disable the diverter.
 
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Default: ``None``
 
-.. todo::
-   Add description.
+Tags are currently unused.
 
 targets_when_active:
 ~~~~~~~~~~~~~~~~~~~~
@@ -349,17 +404,15 @@ options here:
 + ``pulse`` - MPF will pulse the coil to activate the diverter.
 + ``hold`` - MPF should hold the diverter coil in a constant state of
   "on" when the diverter is active. Note that if the coil is configured
-  with a *hold_power*, then it will use that pwm pattern to hold the
-  coil on. If no *hold_power* is configured, then MPF will use a
+  with a *default_hold_power*, then it will use that pwm pattern to hold the
+  coil on. If no *default_hold_power* is configured, then MPF will use a
   continuous enable to hold the coil. (In this case you would need to
-  add *allow_enable: true* to that coil's configuration in the *coils:*
+  add *allow_enable: true* or *max_hold_power* to that coil's configuration in the *coils:*
   section of your machine configuration file.)
 
 ball_search_order:
 ~~~~~~~~~~~~~~~~~~
 Numeric value, default is ``100``
-
-.. versionadded:: 0.33
 
 A relative value which controls the order individual devices are pulsed when ball search is running. Lower numbers are
 checked first. Set to ``0`` if you do not want this device to be included in the ball search.
@@ -369,14 +422,10 @@ ball_search_hold_time:
 ~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``1s``
 
-.. versionadded:: 0.33
-
 How long this diverter will be activated for when it is activated during ball search.
 
 playfield:
 ~~~~~~~~~~
-
-.. versionadded:: 0.33
 
 The name of the playfield that this diverter is on. The default setting is "playfield", so you only have to
 change this value if you have more than one playfield and you're managing them separately.

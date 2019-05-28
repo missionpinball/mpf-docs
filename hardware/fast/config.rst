@@ -40,7 +40,7 @@ seconds. It will only happen the first time you plug in the hardware.)
 To use MPF with a FAST, you need to configure your platform as ``fast`` in your
 machine-wide config file, like this:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: fast
@@ -86,7 +86,7 @@ popup menu.
 Then expand the "Ports (COM & LPT)" menu section to see which ports the FAST
 Controller is using. The easiest way to do this is to open the Device Manager
 to that section, then plug your FAST Controller in (or power it on) and just
-see which for port names appear.
+see which four port names appear.
 
 The port names will start with "COM" and then be a number, and there will be
 four consecutive numbers to represent the four FAST ports.
@@ -108,7 +108,7 @@ The four FAST ports will have the name that starts with "tty.usbserial-", then
 a number, then a letter A-D. (The number will be different on every system.)
 The port ending with the "A" is the first port, the "B" is the second, etc.
 
-For example, the four FAST ports might be something like:
+For example, the four FAST ports might be something like on MAC:
 
 ::
 
@@ -116,6 +116,34 @@ For example, the four FAST ports might be something like:
    /dev/tty.usbserial-141B
    /dev/tty.usbserial-141C
    /dev/tty.usbserial-141D
+
+On linux it would look like this:
+
+::
+
+   /dev/ttyUSB0
+   /dev/ttyUSB1
+   /dev/ttyUSB2
+   /dev/ttyUSB3
+
+If you have multiple FAST devices they will enumerate more or less randomly
+dependent on the order they are plugged in. Unfortunately, the USB devices
+do not contain any serial number. However, we can pin them based on the USB
+port they are plugged into. On linux this can be achieved using a UDEV rules
+such as this:
+
+::
+
+   SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"
+
+The device will then be available as /dev/ttyDMD1. You can run the following
+command while plugging in the device to get the relevand ID_PATH_TAG (and
+also idVendor and idProduct in case they changed with other revisions):
+
+::
+
+   udevadm monitor --property
+
 
 4. Add the ports to your config file
 ------------------------------------

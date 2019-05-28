@@ -1,6 +1,13 @@
 OPP Lights
 ==========
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/lights`                                                        |
++------------------------------------------------------------------------------+
+
+
 If you're using an OPP incandescent wing card, the lights are
 numbered the same as the input switches.  OPP bulbs are numbered
 sequentially depending on which wing board controls the output.
@@ -10,11 +17,12 @@ position 3 contains bulbs 24 to 31. The bulb is numbered using
 the position of the OPP card (starting at 0), then a '-', and
 finally the bulb number on the card.
 
-::
+.. code-block:: mpf-config
 
-    matrix_lights:
+    lights:
       some_light:
         number: 1-16
+        subtype: matrix
 
 The above example configures a bulb on the second OPP card, and
 the third wing board, first bulb  On the microprocessor card, the

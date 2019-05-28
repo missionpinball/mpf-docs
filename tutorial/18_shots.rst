@@ -17,25 +17,29 @@ documentation to understand what a shot is.
 2. Create your first shot
 -------------------------
 
-To define your a shot, you add a ``shots:`` entry to a config file, and
-then under there, you set the switch, timing, and other details that
+To define your a shot, you add a ``shots:`` entry to a config file in a mode,
+and then under there, you set the switch, timing, and other details that
 make up that shot.
 
-You'd typically define your shots in your machine-wide config , since
-shots are based on that actual physical hardware. In this case the
-shot you define is available to be used in every mode (though you
-certainly don't have to use it in every mode.)
+You'd typically define your shots per mode, since
+the behavior differs depending on the mode.
+If you want a shot to be available in every mode you can also put them in
+the ``base`` mode which is usually active all the time.
 
-You can also define default behaviors for each shot in the machine-wide
-config (which you can then override in a specific mode if you want
-to do something different with that shot in that mode).
+.. note::
 
-Let's start by creating our first shot in the machine-wide config file.
+   Before 0.30 you could define shots per machine-wide. This cause very complex
+   configs and is no longer supported. You can put shots into your base mode
+   if you want them to be active all the time during a game.
 
-::
+Let's start by creating our first shot in the base mode.
 
-   # config.yaml (machine-wide config file)
+.. code-block:: mpf-config
 
+    #! switches:
+    #!    s_right_inlane:
+    #!       number: 1
+    ##! mode: base
     shots:
       my_first_shot:
         switch: s_right_inlane  # pick a switch that's valid in your machine
@@ -51,15 +55,14 @@ can change the name of the shot to something more meaningful later.
 Next, open the mode config file for your base mode, which is
 ``<your_machine>/modes/base/config/base.yaml``
 
-Find the ``scoring:`` section that you added in Step 15, and change the
+Find the ``variable_player:`` section that you added in Step 15, and change the
 first entry from ``s_right_inlane_active:`` to ``my_first_shot_hit``,
 like this:
 
-::
+.. code-block:: mpf-config
 
-   # base.yaml (config file for base mode)
-
-   scoring:
+   ##! mode: base
+   variable_player:
        my_first_shot_hit:  # this was s_right_inlane_active
            score: 100
        s_flipper_lower_left_active:
@@ -70,7 +73,7 @@ like this:
 
 Do you understand what this is doing?
 
-Remember that the scoring section will add (or remove) value from a player
+Remember that the variable_player section will add (or remove) value from a player
 variable when certain events happen. So the OLD entry from Step 15 would
 increase the score by 100 points when the event "s_right_inlane_active" happened, and the
 NEW entry changes that so the 100 points are added when the event
@@ -149,11 +152,13 @@ and change the ``shots:`` section.
 
 If you have LEDs in your machine, change it to this:
 
-::
+.. code-block:: mpf-config
 
-   # config.yaml (machine-wide config file)
-
-    shots:
+   #! switches:
+   #!    s_right_inlane:
+   #!       number: 1
+   ##! mode: base
+   shots:
       my_first_shot:
         switch: s_right_inlane
         show_tokens:
@@ -161,11 +166,13 @@ If you have LEDs in your machine, change it to this:
 
 If you have a lamp matrix, change it to this:
 
-::
+.. code-block:: mpf-config
 
-   # config.yaml (machine-wide config file)
-
-    shots:
+   #! switches:
+   #!    s_right_inlane:
+   #!       number: 1
+   ##! mode: base
+   shots:
       my_first_shot:
         switch: s_right_inlane
         show_tokens:
@@ -199,10 +206,9 @@ To do this, we'll again use the machine-wide config file and add a section
 called ``shot_profiles:``. Create that section now, and define a shot
 profile called "my_first_profile" with the following settings
 
-::
+.. code-block:: mpf-config
 
-   # config.yaml (machine-wide config file)
-
+   ##! mode: base
    shot_profiles:
       my_first_profile:
          states:
@@ -256,9 +262,23 @@ is separate from playing the show.
 So next we need to tell our shot that it should use the new profile we
 just created by adding a ``profile:`` setting.
 
-::
+.. code-block:: mpf-config
 
-    shots:
+   #! switches:
+   #!    s_right_inlane:
+   #!       number: 1
+   ##! mode: base
+   #! shot_profiles:
+   #!    my_first_profile:
+   #!       states:
+   #!          - name: unlit  # step 1
+   #!            show: off
+   #!          - name: flashing  # step 2
+   #!            show: flash
+   #!          - name: lit  # step 3
+   #!            show: on
+   #!       loop: yes
+   shots:
       my_first_shot:
         switch: s_right_inlane
         show_tokens:
@@ -320,13 +340,12 @@ And so on...
 Now let's look at how we can give the player a different number of points when
 they hit that shot depending on what state the shot's in.
 
-Here's the existing scoring section from the base mode config:
+Here's the existing variable_player section from the base mode config:
 
-::
+.. code-block:: mpf-config
 
-   # base.yaml (config file for base mode)
-
-   scoring:
+   ##! mode: base
+   variable_player:
        my_first_shot_hit:
            score: 100
        s_flipper_lower_left_active:
@@ -339,13 +358,12 @@ Again, the player gets 100 points each time that shot is made regardless of what
 state it's in since the scoring event is the generic shot hit event which does
 not include details of what state the shot is in.
 
-Now let's change the scoring section to this:
+Now let's change the variable_player section to this:
 
-::
+.. code-block:: mpf-config
 
-   # base.yaml (config file for base mode)
-
-   scoring:
+   ##! mode: base
+   variable_player:
        my_first_shot_my_first_profile_unlit_hit:
            score: 100
        my_first_shot_my_first_profile_flashing_hit:
@@ -356,7 +374,7 @@ Now let's change the scoring section to this:
        s_flipper_lower_right_active:
            potato: -2
 
-We changed the name of the event for the first scoring entry from
+We changed the name of the event for the first variable_player entry from
 "my_first_shot_hit" to "my_first_shot_my_first_profile_unlit_hit". This means
 those 100 points will only be added if that shot is hit while it has the
 "my_first_profile" applied AND while that profile is in the state "unlit".
@@ -389,9 +407,10 @@ mode configuration file for that mode.
 Open up the ``mode2.yaml`` file and add the following lines. (We'll explain
 them step-by-step next.)
 
-::
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: mode2
+   #config_version=5
    # mode2 config file
 
    mode:
@@ -411,7 +430,7 @@ them step-by-step next.)
    widget_player:
        mode_mode2_started: mode2_start_banner
 
-   scoring:
+   variable_player:
        my_first_shot_hit:
           score: 1
 
@@ -421,7 +440,7 @@ Remember that you also have to go back into your machine-wide config file to add
 
 Here are changes you'll make to the machine-wide config file:
 
-::
+.. code-block:: yaml
 
    # from the machine-wide config.yaml file
 
@@ -458,15 +477,16 @@ Press ``M`` to stop mode2 again and notice that the +1 scoring stops.
 So what's happening here?
 
 First, notice that in the ``mode2.yaml`` file, we configured the following
-scoring entry:
+variable_player entry:
 
-::
+.. code-block:: mpf-config
 
-   scoring:
+   ##! mode: mode2
+   variable_player:
        my_first_shot_hit:
           score: 1
 
-Notice that that scoring entry is just based on "my_first_shot" being hit. It
+Notice that that variable_player entry is just based on "my_first_shot" being hit. It
 does not contain any of the profile or state information in it, which means that
 it will always score the +1 regardless of the state of that shot.
 
@@ -497,24 +517,26 @@ applying a different shot profile in the jackpot mode.
 
 To illustrate this, open up your ``mode2.yaml`` file and:
 
-#. Updated the ``scoring:`` section from the example below
+#. Updated the ``variable_player:`` section from the example below
 #. Add the ``shots:`` section from below
 #. Add the ``shot_profiles:`` section from below
 
-::
+.. code-block:: mpf-config
 
+   #! switches:
+   #!    s_right_inlane:
+   #!       number: 1
+   ##! mode: mode2
    # snippet from mode2.yaml
-
-   ...
-
-   scoring:
+   variable_player:
        my_first_shot_mode2_flashing_hit:
          score: 10000
        my_first_shot_mode2_lit_hit:
          score: 100
 
    shots:
-     my_first_shot:
+     my_first_shot_mode2:
+       switch: s_right_inlane
        profile: mode2
 
    shot_profiles:
@@ -548,8 +570,19 @@ going on.
 First, notice that we added a ``shots:`` section and then added "my_first_shot"
 to it, like this:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: mode2
+   #! shot_profiles:
+   #!   mode2:
+   #!      states:
+   #!         - name: flashing
+   #!           show: flash
+   #!           speed: 5
+   #!         - name: lit
+   #!           show: on
+   #!      loop: no
+   #!      block: yes
    shots:
      my_first_shot:
        profile: mode2
@@ -565,8 +598,9 @@ files are only active when that mode is active.)
 
 Next, take a look at the ``shot_profiles:`` section:
 
-::
+.. code-block:: mpf-config
 
+   ##! mode: mode2
    shot_profiles:
      mode2:
         states:
@@ -589,8 +623,8 @@ shot profiles from lower priority modes will be disabled. Since mode2 runs at pr
 "my_first_profile" which we assigned in the machine-wide config will be blocked. (Machine-wide config
 items run at priority 0.)
 
-And, since the scoring events in the base mode are based on the shot being hit with the "my_first_profile"
-applied, this is why when mode2 is running, we don't get the scoring events from the base mode. Those
+And, since the variable_player events in the base mode are based on the shot being hit with the "my_first_profile"
+applied, this is why when mode2 is running, we don't get the variable_player events from the base mode. Those
 events are not posted because my_first_profile is not active because the higher priority profile attached
 to the shot in mode2 is blocking it.
 
@@ -612,7 +646,7 @@ Check out the complete config.yaml file so far
 If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_18``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_18>mpf both
 

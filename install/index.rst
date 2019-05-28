@@ -2,7 +2,7 @@ Downloading & Installing MPF
 ============================
 
 Installing MPF is fairly straightforward. It can be used on Windows, Mac, or Linux, on both Intel x86 and ARM
-processors, and in 64-bit and 32-bit systems.
+processors, and in 64-bit and 32-bit systems (see :doc:`/hardware/computer/index` for details).
 
 Installing MPF for the first time
 ---------------------------------
@@ -15,9 +15,7 @@ entire process. Select the OS you're using from the list below:
 
    Windows <windows>
    Mac <mac>
-   Linux <linux>
-   Raspberry Pi <raspberry>
-   Pine64 <pine64>
+   Linux <linux/index>
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
@@ -43,4 +41,5 @@ Migrating from previous versions of MPF
    :maxdepth: 1
 
    migrating
+   migrate4to5
 

@@ -7,7 +7,6 @@ Combo Switches ("flipper cancel", etc.)
 | :doc:`/config/combo_switches`                                                |
 +------------------------------------------------------------------------------+
 
-.. versionadded:: 0.32
 
 .. contents::
    :local:
@@ -42,7 +41,7 @@ have to be held, and how long they have to be released.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for combo switches is ``device.combo_switches.<name>``.
 
@@ -53,10 +52,9 @@ the prefix for combo switches is ``device.combo_switches.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+* :doc:`Canceling ball end shows using flipper_cancel </game_logic/ball_start_end/index>`
 
 Related Events
 --------------
 
-* :doc:`/events/combo_switch_state`
-* :doc:`/events/flipper_cancel`
+.. include:: /events/include_combo_switches.rst

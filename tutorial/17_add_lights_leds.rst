@@ -9,47 +9,39 @@ If you're following this tutorial with virtual hardware, it's still
 worth doing this step because use can use :doc:`/tools/monitor/index` to
 see your lights and LEDs in realtime against a picture of your playfield.
 
-1. Understand "lights" versus "LEDs"
-------------------------------------
+1. Understand "lights"
+----------------------
 
 In MPF, "lights" refers to bulbs that are plugged into a lamp matrix,
-while "LEDs" refers to direct-connected LEDs (which are usually RGB).
-
-In other words, if you have a lamp matrix, but you're using LED
-replacement bulbs with it, you still configure those as "lights".
-See :doc:`/mechs/leds/lights_versus_leds` for details.
+or to direct-connected LEDs (which are usually RGB). So lights might be
+either LEDs or lamps in a matrix.
+See :doc:`/mechs/lights/lights_versus_leds` for details.
 
 2. Add your lights/LEDs to your machine config file
 ---------------------------------------------------
 
 Once you figure out whether you have lights or LEDs, you need to add the
 relevant section to your machine configuration file. There's probably
-not much to explain here. Adding lights and LEDs is pretty similar to adding
+not much to explain here. Adding lights is pretty similar to adding
 switches and coils.
 
 See the relevant documentation for each for instructions how
 to enter them:
 
 * :doc:`/mechs/lights/index`
-* :doc:`/mechs/leds/index`
 
 3: Create an attract mode light/LED show
 ----------------------------------------
 
-Once you add your lights or LEDs, you need a simple way to test them
+Once you add your lights, you need a simple way to test them
 to make sure they're working. We typically throw together a quick
 attract mode light show so we can see some blinking lights as soon as
 MPF boots up.
 
-
 The easiest way to create a complex series of light actions is with
 MPF's *show* functionality. This is the exact same type of show that
-we use for the display loop, except this time we configure lights or LEDs
+we use for the display loop, except this time we configure lights
 for each step instead of slides.
-
-Show entries for lights and LEDs are very similar, except with LEDs you
-specify full RGB values whereas with lights you just specify whether
-they're on or off.
 
 So the first thing to do is to create another show file in your attract mode
 shows folders. Let's call this one ``attract_light_show.yaml``. Your
@@ -76,9 +68,10 @@ that actually exist for you. If you have matrix lights, add entries to
 your ``attract_light_show.yaml`` file so that it looks something like
 like this:
 
-::
+.. code-block:: mpf-config
 
-    #show_version=4
+    ##! show: attract_light_show
+    #show_version=5
     - duration: 1
       lights:
         l_light2: 0
@@ -108,36 +101,37 @@ different colors for each light at each step. For example, if you just
 wanted to have a show that cycled three RGB LEDs through the colors of
 the rainbow, you could create a show like this:
 
-::
+.. code-block:: mpf-config
 
-    #show_version=4
+    ##! show: attract_light_show
+    #show_version=5
     - duration: 1
-      leds:
+      lights:
         l_led1: red
         l_led2: red
         l_led3: ff0000
     - duration: 1
-      leds:
+      lights:
         l_led1: ff6600
         l_led2: ff6600
         l_led3: ff6600
     - duration: 1
-      leds:
+      lights:
         l_led1: ffcc00
         l_led2: ffcc00
         l_led3: ffcc00
     - duration: 1
-      leds:
+      lights:
         l_led1: lime
         l_led2: 00ff00
         l_led3: 00ff00
     - duration: 1
-      leds:
+      lights:
         l_led1: blue
         l_led2: 0000ff
         l_led3: 0000ff
     - duration: 1
-      leds:
+      lights:
         l_led1: ff00aa
         l_led2: ff00aa
         l_led3: ff00aa
@@ -158,7 +152,7 @@ names, you can use `any of these colors <http://htmlcolorcodes.com/color-names/>
 ------------------------------
 
 This new show file is just like your existing display show, except this
-one contains settings for lights or LEDs. So to get it to play, add it to
+one contains settings for lights. So to get it to play, add it to
 the ``show_player:`` section of your attract mode config file, set to play
 on the *mode_attract_started* event just like the display show.
 
@@ -170,9 +164,10 @@ a warning about the duplicate so you can fix it.)
 MPF offers a way around this though, in that you can add a ``.1`` to the end
 of the event name, like this:
 
-::
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: test_mode
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1: attract_light_show
@@ -183,7 +178,7 @@ have more than one, ``.2``, etc. In fact you can have any number, they don't hav
 to be in order or anything.
 
 You also might be wondering why we don't just make a single attract show and
-put the slides and LEDs or lights in the same show?
+put the slides and lights in the same show?
 
 Certainly that's possible, but we like to keep things separate, as this will
 let you start and stop them on their own, and it will make it easier to
@@ -216,9 +211,9 @@ actual speed at play time.
 So if we want each step to be 1/4th of a second, we need to play the show at 4x the
 speed. Simple, just add a ``speed: 4`` to the show_player entry.
 
-::
+.. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1: attract_light_show
@@ -229,7 +224,7 @@ speed. Simple, just add a ``speed: 4`` to the show_player entry.
 If you try to run MPF with the config above, MPF will halt with the following error
 (scroll to the right to see it all):
 
-::
+.. code-block:: python
 
    ValueError: YAML error found in file /mpf-examples/tutorial_step_17/modes/attract/config/attract.yaml. Line 6, Position 10
 
@@ -241,9 +236,10 @@ value, but then it also sees ``speed: 4`` indented under it. The YAML processor 
 
 To fix this, we need to make a slight change to our YAML file, like this:
 
-::
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: test_mode
+   #config_version=5
    show_player:
      mode_attract_started: attract_display_loop
      mode_attract_started.1:
@@ -255,9 +251,10 @@ then we added the speed setting under there.
 
 If you wanted to, you could consolidate the duplicate ``mode_attract_started`` entries like so:
 
-::
+.. code-block:: mpf-config
 
-   #config_version=4
+   ##! mode: test_mode
+   #config_version=5
    show_player:
      mode_attract_started:
        attract_display_loop:
@@ -302,7 +299,7 @@ Again, we'd make every step of every show have a duration of 1. Then in our
 ``show_player:`` configuration, we'd configure the list of shows to
 play when the attract mode starts instead of just one. For example:
 
-::
+.. code-block:: yaml
 
     show_player:
         mode_attract_started:
@@ -332,6 +329,6 @@ Check out the complete config.yaml file so far
 If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_17``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial_step_17>mpf both

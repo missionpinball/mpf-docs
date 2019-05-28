@@ -33,6 +33,9 @@ In fact even the "game" itself is a mode in MPF! MPF includes many built-in
 modes (that you can use outright or customize), and you can create your own
 modes as needed.
 
+We documented the general approach to design a game in the
+:doc:`Game Design </game_design/index>` section.
+
 How modes work in MPF
 ---------------------
 
@@ -41,7 +44,7 @@ To add a mode to your MPF machine configuration, you create a folder called
 each mode in your machine, like this.
 
 .. todo:
-   Add image
+   Add image. :doc:`/about/help_us_to_write_it`
 
 In your game, you might have dozens (or even
 hundreds) of mode folders. Each of your modes folders is almost like a mini-MPF
@@ -73,16 +76,17 @@ Again, anything that's specified in a mode's configuration file is only active
 while that mode is active. So if you have a mode called "multiball" with the
 following entry in that mode's config file:
 
-::
+.. code-block:: mpf-config
 
-    scoring:
+   ##! mode: my_mode
+   variable_player:
         right_ramp_hit:
             score: 50000
 
 In that case the *right_ramp_hit* shot event will only award the points when
-that multiball mode is running. When it stops, that scoring configuration is
-removed. (You can also configure certain events to be "blocked" from propagating
-down to lower-priority modes. More on that in a bit.)
+that multiball mode is running. When it stops, that variable_player/scoring
+configuration is removed. (You can also configure certain events to be "blocked"
+from propagating down to lower-priority modes. More on that in a bit.)
 
 Machine-wide versus mode-specific folders and configurations
 ------------------------------------------------------------
@@ -112,7 +116,7 @@ When to use modes
 
 As you read this, it's natural to think of MPF's modes like game modes, and
 certainly that's a big part of how they're used. But there is no limit to the
-number of modes that can be active at any one time (and it doesn't negative
+number of modes that can be active at any one time (and it doesn't negatively
 affect performance to have dozens of modes running at once), so when you start
 programming your game you'll probably end up breaking your game logic into lots
 of little modes.
@@ -218,7 +222,7 @@ The mode priorities also affect the priorities of things like all display
 widgets and slides. For example, your base mode might play an animation and a
 light show when a ramp shot is made in the base game mode, but when your special
 higher mode is running you might want to play a different slide and a different
-light show. So be specifying the special mode to run at a higher priority, it
+light show. So by specifying the special mode to run at a higher priority, it
 will get priority access to the display and lights. (Again you can configure
 this on a setting-by-setting basis, because there are plenty of times where you
 might actually want the lower-priority shows to play even when a higher priority
@@ -244,17 +248,23 @@ Using modes as game logic
 +==============================================================================+
 | :doc:`Creating your first game mode </tutorial/14_add_a_mode>`               |
 +------------------------------------------------------------------------------+
+| :doc:`Game Design </game_design/index>`                                      |
++------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
 +==============================================================================+
-| :doc:`/events/mode_name_started`                                             |
+| :doc:`/events/mode_name_will_start`                                          |
 +------------------------------------------------------------------------------+
 | :doc:`/events/mode_name_starting`                                            |
 +------------------------------------------------------------------------------+
-| :doc:`/events/mode_name_stopped`                                             |
+| :doc:`/events/mode_name_started`                                             |
++------------------------------------------------------------------------------+
+| :doc:`/events/mode_name_will_stop`                                           |
 +------------------------------------------------------------------------------+
 | :doc:`/events/mode_name_stopping`                                            |
++------------------------------------------------------------------------------+
+| :doc:`/events/mode_name_stopped`                                             |
 +------------------------------------------------------------------------------+
 | :doc:`/events/clear`                                                         |
 +------------------------------------------------------------------------------+

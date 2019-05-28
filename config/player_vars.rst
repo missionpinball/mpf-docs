@@ -10,7 +10,6 @@ player_vars:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
-.. versionadded:: 0.32
 
 The ``player_vars:`` section of your machine-wide config file lets you
 specify the initial state of player variables that are set for a player
@@ -18,7 +17,7 @@ when the game starts.
 
 Example:
 
-.. literalinclude:: /example_configs/player_vars/config/player_vars.yaml
+.. literalinclude:: /mpf_examples/player_vars/config/player_vars.yaml
    :language: yaml
 
 Settings

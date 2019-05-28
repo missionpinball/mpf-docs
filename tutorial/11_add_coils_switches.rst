@@ -23,11 +23,12 @@ they're listed in there. We don't worry about tags at this point
 *except for* ``playfield_active`` tag. We add this tag to any switch the
 ball can hit when it's active and rolling around on the playfield. (So
 this is going to be your lanes, slingshots, pop bumpers, ramp entry &
-exit switches, rollovers, stand up targets, drop targets, and anything
+exit switches, rollovers, stand up targets, and anything
 else the ball can hit when it's in motion. The tricky thing is that
 you do not add a ``playfield_active`` tag to switches in other ball
-devices. For example, if you have a hole in the playfield that the
-ball rolls into which requires a coil pulse to kick it out of—-that is
+devices (drop_targets, kickbacks, troughs or the shooter lane).
+For example, if you have a hole in the playfield that the
+ball rolls into which requires a coil pulse to kick it out of -- that is
 not a playfield switch (since when the ball is in that hole, it's not
 actively rolling around the playfield). We'll actually set that switch
 up as a part of a ball device in a later step.
@@ -48,7 +49,7 @@ folder with the name ``step11.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf both -c step11
 

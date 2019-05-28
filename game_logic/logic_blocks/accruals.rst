@@ -1,6 +1,20 @@
 Accrual Logic Blocks
 ====================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/accruals`                                                      |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`integrating_logic_blocks_and_shows`                                    |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/scoring_based_on_logic_blocks`                |
++------------------------------------------------------------------------------+
+
 "Accruals" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events.
 
@@ -22,16 +36,16 @@ For example, let's say you had a mode where you wanted three shots to be hit,
 in any order, and when they were all hit, you lit another shot. You'd use
 an accrual logic block like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   logic_blocks:
-      accruals:
-         name_of_my_logic_block:
-            events:
-               - shot1_hit
-               - shot2_hit
-               - shot3_hit
-            events_when_complete: enable_winning_shot
+  ##! mode: my_mode
+  accruals:
+     name_of_my_logic_block:
+        events:
+           - shot1_hit
+           - shot2_hit
+           - shot3_hit
+        events_when_complete: enable_winning_shot
 
 There are much more settings (as you'll see below), but the basic logic block
 above (which is called "name_of_my_logic_block") will watch for the events
@@ -43,116 +57,91 @@ Again, since this is an accrual logic block, those three events can be happen in
 any order. If one of them is posted twice, that's fine. It doesn't count as one of the
 other events nor does it "undo" the fact that it was hit.
 
-Settings
---------
+Monitorable Properties
+----------------------
 
-The structure of accrual logic blocks are like this:
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball holds is ``device.accruals.<name>``.
 
-.. code-block:: yaml
+*value*
+   The state of this accrual as list.
+   There will be one entry for every element in the accrual.
+   For instance, if your accrual has three elements if will be a list of len
+   three with index 0 for the status of your first element, 1 for the seconds
+   and 2 for the third element.
+   Elements will be 0 at the beginning and turn to 1 when completed.
 
-   logic_blocks:
-      accruals:
-         the_name_of_this_logic_block:
-            <settings>
-         some_other_logic_block:
-            <settings>
-         a_third_logic_block:
-            <settings>
+*enabled*
+   Boolean (true/false) which shows whether this accrual is enabled.
 
-Note that the actual name of the logic block doesn't really matter. Mainly
-they're used in the logs.
+*completed*
+   True if the block is completed. Otherwise False.
 
-events:
-~~~~~~~
+This is an example:
 
-The events section of an accrual logic block is where you define the
-events this logic block will watch for in order to make progress towards
-completion.
+.. code-block:: mpf-config
 
-The real power of logic blocks is that you can enter more than one
-event for each step, and *only one* of the of the events of that step has to
-happen for that step to be complete.
-
-Another way to look at it is that there's an *AND* between all the steps.
-For the Accrual to complete, you need Step 1 *AND* Step 2 *AND* Step 3.
-But since you can enter more than one event for each step, you could think of
-those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND* Step 2 (event3)
-*AND* Step 3 (event4 *OR* event5), like this:
-
-.. code-block:: yaml
-
-   logic_blocks:
-      accruals:
+   ##! mode: my_mode
+   accruals:
+      test_accrual:
          events:
-            - event1, event2
-            - event3
-            - event4, event5
+            - shot1_hit
+            - shot2_hit
+            - shot3_hit
+         reset_on_complete: False   # this is needed for the last event player
 
-It might seem kind of confusing at first, but
-you can build this up bit-by-bit and figure them out as you go along.
+   event_player:
+      test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
+      test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
+      test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
 
-You can enter anything you want for your events, whether it's one of
-MPF's built-in events or a made-up event that another logic block
-posts when it completes. (This is how you chain multiple logic blocks
-together to form complex logic.)
+      test_event{device.accruals.test_accrual.completed}: accrual_completed
 
-For example:
+   # Note: For this last conditional logic to be able to evaluate as true, the accrual setting 
+   # reset_on_complete must be set to No/False. Otherwise the accrual will reset instantly and this will never be true.
 
-.. code-block:: yaml
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event shot1_was_hit
+   #! mock_event shot2_was_hit
+   #! mock_event shot3_was_hit
+   #! mock_event accrual_completed
+   #! assert_bool_condition False device.accruals.test_accrual.value[0]
+   #! assert_bool_condition False device.accruals.test_accrual.value[1]
+   #! assert_bool_condition False device.accruals.test_accrual.value[2]
+   #! post test_event
+   #! assert_event_not_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! post shot1_hit
+   #! assert_bool_condition True device.accruals.test_accrual.value[0]
+   #! assert_bool_condition False device.accruals.test_accrual.value[1]
+   #! assert_bool_condition False device.accruals.test_accrual.value[2]
+   #! assert_bool_condition False device.accruals.test_accrual.completed
+   #! post test_event
+   #! assert_event_called shot1_was_hit
+   #! assert_event_not_called shot2_was_hit
+   #! assert_event_not_called shot3_was_hit
+   #! assert_event_not_called accrual_completed
+   #! post shot3_hit
+   #! post shot2_hit
+   #! post test_event
+   #! assert_event_called shot1_was_hit 2
+   #! assert_event_called shot2_was_hit
+   #! assert_event_called shot3_was_hit
+   #! assert_event_called accrual_completed
+   #! assert_bool_condition True device.accruals.test_accrual.value[0]
+   #! assert_bool_condition True device.accruals.test_accrual.value[1]
+   #! assert_bool_condition True device.accruals.test_accrual.value[2]
+   #! assert_bool_condition True device.accruals.test_accrual.completed
 
-   logic_blocks:
-      accruals:
-         logic_block_1:
-            events:
-               - event1
-               - event2
-               - event3
-               - event4
-               - event5
-            events_when_complete: logic_block_1_done
-         logic_block_2:
-            events:
-               - event1, event2, event3
-               - event4
-               - event5
-            events_when_complete: logic_block_2_done
+Related Events
+--------------
 
-In the example above, there are two logic blocks. The first one just has five
-steps that need to complete (in any order since we're dealing with accrual logic
-blocks), and each step only has one event that will mark is as complete. So basically
-any of those five events 1-5 can be posted in any order, and then *logic_block_1_done*
-will be posted.
+* :doc:`/events/logicblock_name_complete`
+* :doc:`/events/logicblock_name_hit`
+* :doc:`/events/logicblock_name_updated`
 
-In the second example, if event 1, 2, or 3 is posted, that will count for step 1, and then
-both events 4 and 5 need to be posted for steps 2 and 3. (Again, in any order.)
-
-So in the second one, you could get event4, event2, then event5 posted, for example,
-and that will lead to *logic_block_2_done* being posted.
-
-Note that you can have two logic blocks with the same events at the same time, and
-MPF will track the state of each logic block separately. So in the above config with
-those two logic blocks, if the events were posted in the order event2, event3, event4,
-then event5, that would complete logic block 2. Then later if event1 was posted, that
-would complete logic block 1.
-
-player_variable:
-~~~~~~~~~~~~~~~~
-
-By default, the current "state" (or progress) of accrual logic blocks
-are stored in a :doc:`player variable </game_logic/players/index>` called *<accrual_name>_status*.
-For example, a logic block called "logic_block_1" would store its state
-in a player variable called *logic_block_1_status*.
-
-However, you can use the ``player_variable:`` setting to change this to
-any player variable you want.
-
-Making this change doesn't really affect anything other than the name of the
-variable. It's just for convenience if you prefer a different name.
-
-Note that this player variable stores the state of this logic block in an
-internal list that's not easily accessible for text display purposes on a slide.
-If you want to display status or progress on a slide, you can use a combination
-of the logic block events or an event player along with slide or widget player
-entries to show whatever messages you want.
-
-.. include:: common.rst
+.. include:: common_problems.rst

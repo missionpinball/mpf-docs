@@ -10,6 +10,7 @@ update speeds, etc.)
 .. toctree::
    :titlesonly:
 
+   Connecting FAST to your Computer <connecting>
    Installing hardware drivers & configuring COM ports <config>
    Switches <switches>
    Coils/Drivers/Magnets/Motors <drivers>
@@ -19,3 +20,4 @@ update speeds, etc.)
    Traditional (single color) DMDs <dmd>
    RGB DMDs <rgb_dmd>
    Servos <servos>
+   Power Filter Board <power_filter>

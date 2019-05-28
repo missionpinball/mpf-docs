@@ -15,10 +15,11 @@ apply to your shots.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
+   ##! config: mode1
    shot_profiles:
-       default:
+       my_default_profile:
            states:
              - name: unlit
                show: "off"
@@ -45,7 +46,7 @@ this to false if you want to manually advance the shot some other way.
 
 block:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
 
 Lets you control whether hits to this shot
 are propagated down to lower priority modes. The default value is true
@@ -120,9 +121,24 @@ This setting lets you specify a custom rotation pattern that's used
 when an event from this profile's rotation_events: section is posted.
 You enter it as a list of Ls and Rs, for example:
 
-::
+.. code-block:: mpf-config
 
-    rotation_pattern: L, L, L, L, R, R, R, R
+   ##! config: mode1
+   shot_profiles:
+       my_default_profile:
+           states:
+             - name: unlit
+               show: "off"
+             - name: red
+               show: led_color
+               show_tokens:
+                  color: red
+             - name: blue
+               show: "flash"
+               show_tokens:
+                  color: blue
+
+           rotation_pattern: L, L, L, L, R, R, R, R
 
 In the above example, the first four times a rotation_event is posted,
 this shot group will rotate to the left, then the next four to the
@@ -204,18 +220,6 @@ Single value, type: ``string``.
 This is the name of the step. In other words, it's what "state" the
 shot is in when this profile step is active.
 
-action:
-~~~~~~~
-Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
-
-.. versionchanged:: 0.31 (Added "step_back" state)
-
-Specifies which show action is taken for the show on this state in the shot profile.
-
-key:
-~~~~
-.. deprecated:: 0.31
-
 loops:
 ~~~~~~
 Single value, type: ``integer``. Default: ``-1``
@@ -233,10 +237,6 @@ priority:
 Single value, type: ``integer``. Default: ``0``
 
 The priority shift of the show that's played.
-
-reset:
-~~~~~~
-.. deprecated:: 0.31
 
 show:
 ~~~~~
@@ -265,12 +265,6 @@ The step number the show will start on.
 
 sync_ms:
 ~~~~~~~~
-
-.. versionchanged:: 0.32
-
 Single value, type: ``integer``. Default: ``None``
 
 The sync_ms value of the show.
-
-.. note:: The ``states:`` section of your config may contain additional settings not mentioned here. Read the introductory text for details of what those might be.
-

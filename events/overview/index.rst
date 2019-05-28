@@ -3,26 +3,27 @@ Events Overview
 
 It's easiest to understand the concept of events by going through some examples.
 
-For example, you might have a ``scoring:`` entry in your config which watches
+For example, you might have a ``variable_player:`` entry in your config which watches
 for an event called *target1_hit*, and when it sees it, it adds 1000 points
 to the player's score, like this:
 
-::
+.. code-block:: mpf-config
 
-  scoring:
+  ##! mode: base
+  variable_player:
       target1_hit:
           score: 1000
 
-What's really happening behind the scenes here is MPF's score system tells
+What's really happening behind the scenes here is MPF's variable_player system tells
 the event system, "Hey, if you see an event called *target1_hit*, let me know
-about it." (This is called "registering a handler", because the scoring system
+about it." (This is called "registering a handler", because the variable_player system
 is registering with the event since that it can handle that event.)
 
 Then later on, the switch for target 1 gets activated, and the shot controller
 posts the event called *target1_hit*. The Event Manager says, "Hey, I remember
-the scoring system wanted to know about that", so it tells the scoring system
-that *target1_hit* was just posted and the scoring system can wake up and deal
-with it (adding the points, in this case).
+the variable_player system wanted to know about that", so it tells the variable_player
+system that *target1_hit* was just posted and the variable_player system can wake up and
+deal with it (adding the points, in this case).
 
 So really there are two parts to the events system:
 
@@ -77,7 +78,7 @@ Some random examples:
 
 * The game mode will look for ball_drain events which it will handle by ending
   the current player's ball.
-* The scoring system might look for a shot hit event to add points to the
+* The variable_player system might look for a shot hit event to add points to the
   player's score.
 * A jackpot mode might look for a ramp made event to play a show which will
   flash some lights and display a jackpot slide.
@@ -89,12 +90,13 @@ As you'll see as you read through the MPF documentation, there are two main
 ways (plus a lot of little ways) to make things happen when certain events
 are posted:
 
-In the various :doc:`config players </config_players/index>` (slide_player,
-led_player, show_player, etc.), you create entries based on event names.
+In the various :doc:`config players </config_players/index>` (:doc:`slide_player </config_players/slide_player>`,
+:doc:`light_player </config_players/light_player>`, :doc:`show_player </config_players/show_player>`, etc.),
+you create entries based on event names.
 
 For example, in a config file:
 
-::
+.. code-block:: mpf-config
 
    slide_player:
       mpf_is_awesome: my_slide
@@ -107,8 +109,14 @@ Also, a lot of things in MPF have ``XX_events:`` settings, (the "XX" will be
 some word) which is where you can event event names that cause that action to
 happen. For example, you may have a drop target configured like this:
 
-::
+.. code-block:: mpf-config
 
+   #! switches:
+   #!    s_drop_target_1:
+   #!       number: 1
+   #! coils:
+   #!    c_drop_target_reset:
+   #!       number: 1
    drop_targets:
       my_drop_target:
          switch: s_drop_target_1

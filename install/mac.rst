@@ -2,7 +2,7 @@ Installing MPF on Mac
 =====================
 
 MPF can be used on Mac OS X 10.9 and newer, including Mavericks, Yosemite,
-El Capitan, and MacOS Sierra.
+El Capitan, Sierra and High Sierra.
 
 .. note::
 
@@ -13,6 +13,9 @@ El Capitan, and MacOS Sierra.
 Also at this time, installing all the components you need to run MPF on a Mac
 will require almost 2 GB of disk space. MPF itself it only about 12 MB, but
 there are a lot of supporting things that MPF needs as you'll see here.
+
+We have a video which shows this entire installation process in action
+which is available at `<https://www.youtube.com/watch?v=lJEfQGffXsA>`_
 
 Here are the steps to install MPF on a Mac:
 
@@ -35,6 +38,9 @@ To remove the old MPF Mac installation:
 
 If you don't know how to find your ``/usr/local/bin`` folder, you can use
 the "Go to Folder" technique shown in Step 1.
+
+Prerequisites and Python Environment
+------------------------------------
 
 1. Download the Mac Multimedia Frameworks
 -----------------------------------------
@@ -94,7 +100,7 @@ CMD + Spacebar) and then just type "Terminal", like this:
 Next, type the following command into the prompt in the terminal and press
 Enter:
 
-::
+.. code-block:: console
 
    xcode-select --install
 
@@ -108,22 +114,28 @@ Click the "Install" button here to get just the command line tools. The
 
 The download will be about 150 MB, and the total install will be about 1.1 GB.
 
+After the installation of the tools you may need to accept the license agreeement from Apple.
+The following command starts that process in the Terminal, just follow the instructions provided:
+
+::
+
+   sudo xcodebuild -license
+
 If you already have the command line tools installed, that's fine. You'll get
 some kind of error saying they're already installed and you can move on.
 
-3. Install Python 3.5 (not Python 3.6)
---------------------------------------
+3. Install Python 3.5+
+----------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Mac platforms, MPF requires Python 3.4 or 3.5. (There is a Python 3.6, but
-that's untested with MPF.) So we recommend that you install Python 3.5.
+On Mac platforms, MPF requires Python 3.5 or newer. It is well-tested on 3.6 and somewhat tested on 3.7.
 
-You can download Python 3.5 directly via `this link <https://www.python.org/ftp/python/3.5.2/python-3.5.2-macosx10.6.pkg>`_.
+You can download Python 3.6 directly via `this link <https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.9.pkg>`_.
 (Note that the final digit in the Python version number is the "patch" number,
-so 3.5.2 is the latest version of Python 3.5.)
+so 3.6.8 is the latest version of Python 3.6 as of the time this document was last updated.)
 
 .. image:: images/mac_install_python_1.jpg
 
@@ -138,14 +150,14 @@ password, and you're all set.
    Python 3 that you install here will happily live alongside the Python 2.x
    that your Mac already has.
 
-You can check to make sure Python 3.5 installed correctly from the Terminal
+You can check to make sure Python 3 installed correctly from the Terminal
 window. To do that, run the command:
 
-::
+.. code-block:: console
 
    python3 --version
 
-You should see it print something like "Python 3.5.2". Note that you have
+You should see it print something like "Python 3.6.5". Note that you have
 to run the command "Python3", not "Python", since the regular python command
 without the "3" on the end points to the Python 2.x that's built into your
 Mac. Here's a screenshot showing running "python" and "python3" and the
@@ -153,70 +165,182 @@ different between the two:
 
 .. image:: images/mac_python_versions.jpg
 
-4. Install/upgrade some Python components
+4. Create a Virtual Environment
+-------------------------------
+
+Python includes a utility call "virtual environment" that creates a safe,
+isolated place to install packages and configure python. It's strongly
+recommended to install MPF in a virtual environment, so that other Python
+programs can't interfere with it (and it can't interfere with others).
+
+To create a virtual enviroment, choose a folder where you want to install
+a copy of python and keep the enviroment's packages. For this example, we'll
+call the environment "mpfenv" and put it in our home directory (known as "~").
+
+.. code-block:: console
+
+  python3 -m venv ~/mpfenv
+
+.. note::
+
+  If you have multiple versions of Python3 (say, 3.4 and 3.6), you can specify
+  which one to use in the virtual environment: ``python3.6 -m venv ~/mpfenv``
+
+A virtual environment is recommended for any general-use computer you'll be
+using MPF on. For a dedicated MPF machine that will have no other programs
+installed (for example, a computer inside a pinball cabinet), a virtual
+environment is not recommended.
+
+5. Activate your Virtual Environment
+------------------------------------
+
+To keep itself isolated from other programs, your virtual enviroment only activates when you tell it to.
+You can enable the virtual environment with the dot command from the terminal:
+
+.. code-block:: console
+
+  . ~/mpfenv/bin/activate
+
+Note that the first character is a period, followed by a space, then the path
+to your virtual environment and "/bin/activate".
+
+.. note::
+
+  You may want to write this step down, as you'll run it every time you open up
+  a terminal window to work on MPF
+
+You'll know you're in the virtual environment because the console prompt will include
+the name of your venv in parenthesis.
+
+.. code-block:: console
+
+  My-Mac:~ python --version
+  Python 2.7.10
+  My-Mac:~ . ~/mpfenv/bin/activate
+
+  (mpfenv) My-Mac:~ python --version
+  Python 3.6.8
+  (mpfenv) My-Mac:~
+
+.. note::
+
+   The python you used to create the virtual environment will now be the
+   default python. Outside the virtual environment "python" is Python 2 and
+   you must type "python3" to use Python 3; inside the virtual environment,
+   you can use "python" to refer to Python 3.
+
+6. Install/upgrade some Python components
 -----------------------------------------
+
+**4.1 Upgrade Pip**
 
 Python includes a utility called "pip" which is the name of the Python Package
 Manager. Pip is used to install Python packages and applications from
 the web. (It's kind of like an app store for Python apps.)
 
-So the next step is to use pip to install/upgrade some components that we'll
-need to install MPF. (This command will actually update pip itself too.)
+If you are not using a virtual environment and have both Python 2 and Python 3
+on your system, you'll most likely need to use pip3. Check your version to see:
 
-Note that the command you run is "pip3", not "pip", since again we need to
-point to the pip that's associated with the Python 3.5 installation, not the
-built-in 2.x version.
+.. code-block:: console
 
-So next run the following command:
+  My-Mac:~ $ pip --version
+  pip 8.0.2 from /usr/bin/pip (python 2.7)
+  My-Mac:~ $ pip3 --version
+  pip 16.2.1 from /usr/bin/pip3 (python 3.6)
 
-::
+If your ``pip`` is for Python 2, then you'll use ``pip3`` through the rest of this guide.
 
-    pip3 install pip setuptools cython==0.24.1 --upgrade
+If you created a virtual environment using Python 3, then ``pip`` will be the same
+as ``pip3`` and you can use them interchangably.
 
-This command will download and install the latest versions of the *pip* and
-*setuptools* packages, as well as version 0.24.1 of a package called *cython*.
-The results will look something like this (though the exact version numbers
-might be different depending on what's the latest whenever you're running this):
+.. code-block:: console
 
-::
+  (mpfenv) My-Mac:~ $ pip --version
+  pip 19.0.1 from ~/mpfenv/lib/python3.6/site-packages/pip (python 3.6)
+  (mpfenv) My-Mac:~ $ pip3 --version
+  pip 19.0.1 from ~/mpfenv/lib/python3.6/site-packages/pip (python 3.6)
 
-   Collecting pip
-     Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
-       100% |################################| 1.3MB 2.5MB/s
+The versions of pip that come with Python aren't always the newest, so it's a
+good idea to update pip by running the following command:
+
+.. code-block:: console
+
+  pip install --upgrade pip
+
+The latest version of pip should now be installed.
+
+**4.2 Install Setuptools and Cython**
+
+Next, we need to install and update a few other python packages required to run mpf by
+running the following command:
+
+.. code-block:: console
+
+    pip install --upgrade setuptools cython
+
+This command will download and install the latest versions of the *setuptools*
+and *cython* packages. The results will look something like this (though the
+exact version numbers might be different depending on what's the latest
+whenever you're running this):
+
+.. code-block:: console
+
    Collecting setuptools
      Downloading setuptools-32.3.1-py2.py3-none-any.whl (479kB)
        100% |################################| 481kB 4.3MB/s
-   Collecting cython==0.24.1
-     Downloading Cython-0.24.1-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
+   Collecting cython==0.25.2
+     Downloading Cython-0.25.2-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
        100% |################################| 3.8MB 7.6MB/s
-   Installing collected packages: pip, setuptools, cython
-   Successfully installed cython-0.24.1 pip-9.0.1 setuptools-32.3.1
+   Installing collected packages: setuptools, cython
+   Successfully installed cython-0.25.2 setuptools-32.3.1
 
-5. Install MPF
---------------
+**4.3 Install Kivy**
 
-Next you can run pip again to install MPF itself. Technically what you're
-installing is "mpf-mc", which is the
-`Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_
-package, but that package will also install the MPF game engine. Install MPF
-like this:
+Finally, we need to install a graphics framework called Kivy.
 
-::
+By default, pip will download and install precompiled binaries. The Kivy binaries
+include frameworks that can conflict with the Mac Library frameworks we
+added in step 1, so instead we want pip to download the uncompiled Kivy files
+and make a new binary.
 
-   pip3 install mpf-mc
+We can tell pip to do that with the following command:
+
+.. code-block:: console
+
+  pip install kivy --no-binary :all:
+
+The installation of Kivy may take a couple of minutes.
+
+Installing MPF & MC
+-------------------
+
+7. Install MPF & MC (Stable Release)
+-------------------------------------
+
+First, double-check that you've activated your virtual enviroment, if you set one up.
+Next you can run pip to install MPF itself, along with MPF-MC (the
+`Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_).
+
+Install MPF and MC like this:
+
+.. code-block:: console
+
+   pip install mpf mpf-mc
+
+
+.. note::
+
+  If you are using High Sierra or newer and aren't using a virtual environment,
+  you may encounter a permissions error. If so, add ``--user`` to the end of the
+  above command.
 
 Your results should look something like the results below. The MPF install will
 download and install several other packages which what all these other things
 are.
 
-.. note::
+.. code-block:: console
 
-   The "kivy" component will take awhile to install. Maybe a minute or two
-   where it looks like it's not doing anything, but it's fine.
-
-::
-
-   Brians-Mac:~ brian$ pip3 install mpf-mc
+   My-Mac:~ $ pip3 install mpf-mc
    Collecting mpf-mc
      Downloading mpf-mc-0.32.12.tar.gz (11.1MB)
        100% |################################| 11.1MB 29.6MB/s
@@ -248,37 +372,76 @@ are.
      Running setup.py install for kivy ... done
      Running setup.py install for mpf-mc ... done
    Successfully installed Kivy-Garden-0.1.4 kivy-1.9.1 mpf-0.32.6 mpf-mc-0.32.12 pyserial-3.2.1 pyserial-asyncio-0.3 requests-2.12.4 ruamel.base-1.0.0 ruamel.yaml-0.10.23
-   Brians-Mac:~ brian$
+   My-Mac:~ $
 
-If you want to make sure that MPF was installed, you can run:
+If you want to make sure that MPF was installed, run:
 
-::
+.. code-block:: console
 
    mpf --version
 
 This command can be run from anywhere and should produce output something like
 this:
 
-::
+.. code-block:: console
 
-   Brians-Mac:~ brian$ mpf --version
-   MPF v0.32.6
+   My-Mac:~ $ mpf --version
+   MPF v0.51.3
 
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
 
-6. Download & run the "Demo Man" example game
+7.2 Install MPF & MC (Development Build)
+----------------------------------------
+
+The stable release of MPF is updated every few months, after being tested and used
+by the development team. If you want to play with the most up-to-date changes,
+you can run MPF from the latest development build.
+*This is not recommended for most users.*
+
+.. note::
+
+  The development builds may include new features in progress, changes to behavior,
+  and bugs. Running the development builds is recommended for people who want to
+  actively participate in the development and testing of MPF.
+
+The installation instructions are the same, except for including ``--pre`` in the install command
+(for "prerelease").
+
+.. code-block:: console
+
+   pip install --upgrade --pre mpf mpf-mc
+
+The prereleases will have "dev" in their version number to indicate that they are under development.
+
+.. code-block:: console
+
+   My-Mac:~ $ mpf --version
+   MPF v0.52.0.dev3
+
+If you want to switch from the development build back to the stable release, uninstall
+and run the install command without ``--pre``.
+
+.. code-block:: console
+
+  pip uninstall mpf mpf-mc
+  pip install mpf mpf-mc
+
+Running Pinball Games in MPF
+----------------------------
+
+8. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
 to download a bundle of MPF examples and run our "Demo Man" example game. To do that, follow
-the instructions in the :doc:`/example_machines/demo_man` guide.
+the instructions in the :doc:`/example_games/demo_man` guide. But make sure to get the -dev Version for 0.50.
 
 There's another example project you can also check out if you want called the "MC Demo" (for media controller demo)
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
-Instructions for running the MC Demo are :doc:`here </example_machines/mc_demo>`.
+Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-7. Install whatever drivers your hardware controller needs
+9. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific
@@ -292,21 +455,43 @@ Running MPF
 
 See the section :doc:`/running/index` for details and command-line options.
 
-Keeping MPF up-to-date
-----------------------
+10. Keeping MPF up-to-date
+---------------------------------------
 
 Since MPF is a work-in-progress, you can use the *pip* command to update your
 MPF installation.
 
 To to this, run the following:
 
-::
+.. code-block:: console
 
-  pip3 install mpf-mc --upgrade
+  pip3 install --upgrade mpf mpf-mc
 
-This will cause *pip* to contact PyPI to see if there's a newer version of the
-MPF MC (and any of its requirements, like MPF). If newer versions are found, it
-will download and install them.
+This will trigger *pip* to contact the PyPI servers to see if there's a newer version of MPF or MC
+(and any of their requirements). If newer versions are found, pip will download and install them.
+
+.. warning::
+
+   If you are upgrading from MPF 0.33 to 0.50 you will need to manually perform
+   several migration steps to modify your configuration files or they will not
+   work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
+   for step-by-step instructions.
+
+The standard upgrade will only find stable releases, which are recommended for most users.
+To install the latest development build, which may include new features and fixes (but might
+also break or have new bugs), include "--pre" in your upgrade command:
+
+.. code-block:: console
+
+  pip3 install --upgrade --pre mpf mpf-mc
+
+To downgrade (or install a specific release x.yy.z) run:
+
+.. code-block:: console
+
+  pip3 install mpf=x.yy.z
+  pip3 install mpf-mc=x.yy.z
+
 
 Next steps!
 -----------
@@ -314,3 +499,7 @@ Next steps!
 Now that MPF is installed, you can follow our
 :doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
 building your own game in MPF!
+
+Make sure to lookup mpf-monitor later, if you want to simulate and configure a machine you own in hardware.
+
+.. include:: /install/common_problems_and_solutions.rst

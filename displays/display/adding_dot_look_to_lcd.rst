@@ -8,7 +8,7 @@ like this:
 
 The final sections of the machine config to make this happen are here:
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:
@@ -21,11 +21,12 @@ The final sections of the machine config to make this happen are here:
 
     slides:
       window_slide:
-        - type: color_dmd
+        - type: display
+          effects:
+           - type: color_dmd
+             pixel_size: .5
           width: 800
           height: 600
-          pixel_size: .5
-
       dmd_slide:
         - type: text
           text: DOTS!
@@ -63,7 +64,7 @@ The first is the "window", which is the display that represents your on-screen
 window. This should be set to the size of the screen window at the native
 resolution of the monitor or LCD where it's being shown.
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:
@@ -111,14 +112,16 @@ that will be shown in the window. In this case, the slide will only have a
 single widget, and that widget will be the Color DMD widget which will be used
 render the virtual DMD into the window.
 
-::
+.. code-block:: mpf-config
 
     slides:
       window_slide:
-        - type: color_dmd
+        - type: display
+          effects:
+           - type: color_dmd
+             pixel_size: .5
           width: 800
           height: 600
-          pixel_size: .5
 
 We decided to name this slide "window_slide", though you can name it
 whatever you want.
@@ -142,8 +145,9 @@ will be ever changing and will reflect what's happening in your machine.
 
 We're calling our first slide "dmd_slide":
 
-::
+.. code-block:: mpf-config
 
+   slides:
       dmd_slide:
         - type: text
           text: DOTS!
@@ -171,7 +175,7 @@ we just created to be shown. In this example, we're using the
 :doc:`init_done event </events/init_done>` since that's the event that's posted
 by the media controller once it's been initialized and ready to go.
 
-::
+.. code-block:: mpf-config
 
     slide_player:
       init_done:
@@ -189,8 +193,8 @@ display.
 5. Other options & positioning your DMD
 ---------------------------------------
 
-Finally, remember to check the documentation for the
-:doc:`color_dmd widget </displays/widgets/color_dmd/index>` for a full list of
+Finally, remember to check the documentation for the :doc:`display widget </displays/widgets/display/index>` and the
+:doc:`color_dmd effect </displays/widgets/display/effects>` for a full list of
 the options you can use to fine-tune how the DMD looks in the window. For
 example, you can configure the pixel size, the glow radius, the color of the
 space between the pixels, gain, tint, etc.
@@ -213,5 +217,5 @@ You can also use the various :doc:`window: </config/window>` options (such as
 full screen) to properly align the content of the display with the visible area.
 
 Finally, even though this example was using the color_dmd widget, you could
-replace it with the :doc:`dmd widget </displays/widgets/dmd/index>` for a
+replace it with the :doc:`display widget </displays/widgets/display/index>` with a :doc:`dmd effect </displays/widgets/display/effects>` for a
 single color look instead of full color.

@@ -9,19 +9,17 @@ connect two wires), then it's a single-wound coil and this guide is for you.
 If it has three wires (or three tabs), then read the :doc:`dual_wound` guide.
 
 Read more about "dual wound" versus "single wound" coils in the
-:doc:`/mechs/dual_wound_coils/dual_vs_single_wound` guide.
+:doc:`/mechs/coils/dual_vs_single_wound` guide.
 
 1. Add your flipper buttons
-----------------------------
+---------------------------
 
 First, make sure you have entries in your machine config for your flipper
 buttons.
 
 Here's an example ``config.yaml`` with two switches added:
 
-::
-
-    #config_version=4
+.. code-block:: mpf-config
 
     switches:
         s_left_flipper:
@@ -54,17 +52,17 @@ be able to skip.
 Next you need to add entries for your flipper coils to your machine-wide
 config. These will be added to a section called ``coils:``.
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left:
             number: 0
             allow_enable: true
-            hold_power: 1
+            default_hold_power: 0.125
         c_flipper_right:
             number: 1
             allow_enable: true
-            hold_power: 1
+            default_hold_power: 0.125
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever names you want for your coils.
@@ -78,10 +76,10 @@ specifically add ``allow_enable: true`` to that coil's config.
 Since flippers need to be held on (as long as the flipper button is active),
 you need ``allow_enable: true`` in the coil config for them.
 
-Finally, notice that there's a ``hold_power: 1`` setting for each coil. That
-is the power value (from 0-8) which controls how much power is applied to the
-flipper when it's held on. A value of 1 is 1/8th power, (12.5%), a value of 2
-is 2/8 which is 1/4 which is 25%, a value of 3 is 37.5%, 4 is 50%, etc.
+Finally, notice that there's a ``default_hold_power: 0.125`` setting for each coil. That
+is the power value (from 0-1) which controls how much power is applied to the
+flipper when it's held on. A value of 0.125 is 12.5% power, a value of 2
+is 25% which, a value of 0.375 is 37.5%, 0.5 is 50%, etc.
 
 We just start with the lowest setting for now and you can increase it later if
 it's not enough.
@@ -102,14 +100,30 @@ flipper that you defined in Steps 1 and 2.
 
 Here's what you would create based on the switches and coils we've defined so far:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 1
+    #!         tags: left_flipper
+    #!     s_right_flipper:
+    #!         number: 2
+    #!         tags: right_flipper
+    #! coils:
+    #!     c_flipper_left:
+    #!         number: 0
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
+    #!     c_flipper_right:
+    #!         number: 1
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
     flippers:
         left_flipper:
-            main_coil: c_flipper_left_main
+            main_coil: c_flipper_left
             activation_switch: s_left_flipper
         right_flipper:
-            main_coil: c_flipper_right_main
+            main_coil: c_flipper_right
             activation_switch: s_right_flipper
 
 4. Enabling your flippers
@@ -131,19 +145,34 @@ file:
 
 So now the ``flippers:`` section of your config file should look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 1
+    #!         tags: left_flipper
+    #!     s_right_flipper:
+    #!         number: 2
+    #!         tags: right_flipper
+    #! coils:
+    #!     c_flipper_left:
+    #!         number: 0
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
+    #!     c_flipper_right:
+    #!         number: 1
+    #!         allow_enable: true
+    #!         default_hold_power: 0.125
     flippers:
         left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
+            main_coil: c_flipper_left
             activation_switch: s_left_flipper
             enable_events: machine_reset_phase_3
         right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
+            main_coil: c_flipper_right
             activation_switch: s_right_flipper
             enable_events: machine_reset_phase_3
+
 
 5. Configure your control system hardware
 -----------------------------------------
@@ -175,9 +204,9 @@ Here's the complete config
 Here's the complete machine config file (or sections of the machine config file)
 we created in this How To guide:
 
-::
+.. code-block:: mpf-config
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:
@@ -191,11 +220,11 @@ we created in this How To guide:
         c_flipper_left:
             number: 0
             allow_enable: true
-            hold_power: 1
+            default_hold_power: 0.125
         c_flipper_right:
             number: 1
             allow_enable: true
-            hold_power: 1
+            default_hold_power: 0.125
 
     flippers:
         left_flipper:

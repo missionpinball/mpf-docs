@@ -7,9 +7,9 @@ curved line, you can use the :doc:`/displays/widgets/bezier/index`.)
 
 Here's an example:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-   #config_version=4
+   #config_version=5
 
    slide_player:
     mc_ready:
@@ -58,6 +58,9 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following line widget settings may be :doc:`animated </displays/widgets/animation>`: ``color:``,
+``thickness:``, ``opacity:``, ``points:``, ``rotation:``, and ``scale:``.
 
 type: line
 ~~~~~~~~~~

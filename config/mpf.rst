@@ -11,10 +11,7 @@ mpf:
 
 .. overview
 
-The ``mpf:`` section of your config is where you...
-
-.. todo::
-   Add description.
+The ``mpf:`` section of your config is where you configure global MPF settings.
 
 Optional settings
 -----------------
@@ -33,26 +30,22 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 MPF will post switch_event_active and switch_event_inactive (see below) when this is enabled.
 
-default_flash_ms:
-~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``50``
-
-Default flash_ms for all flashers when not overwritten.
-
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``10``
 
-Default pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
+Default default_pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``100.0``
 
-.. versionadded:: 0.33
-
-Single value, type: ``number`` (will be converted to floating point). Default: ``1000.0``
-
-For all platforms non-tickless platforms we poll this often.
+For all non-tickless platforms we poll this often.
+This usually means how often we will read switches.
+Reducing this setting might reduce the amounts of CPU significantly.
+We recommand to keep this at least at 50Hz or you will loose switch hits.
+For smooth game play aim at 100Hz.
+Everything above that will mostly only reduce switch latency.
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,7 +73,6 @@ This event will be posted for all tags after a switch turned active.
 
 default_show_sync_ms:
 ~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 0.32
+Single value, type: ``integer``. Default: ``None``
 
 Default sync_mc for all shows when not specified otherwise.

@@ -6,16 +6,18 @@ How to configure a "SmartMatrix" RGB LED DMD
 +==============================================================================+
 | :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
-| :doc:`/config/physical_rgb_dmds`                                             |
+| :doc:`/config/rgb_dmds`                                                      |
 +------------------------------------------------------------------------------+
 | :doc:`/config/smartmatrix`                                                   |
++------------------------------------------------------------------------------+
+| :doc:`/config/displays`                                                      |
 +------------------------------------------------------------------------------+
 
 This guide explains how to connect a SmartMatrix RGB LED DMD to a
 pinball machine running MPF.
 
 A `SmartMatrix <http://docs.pixelmatix.com/SmartMatrix/shieldref.html>`_ is a
-cheap ($15) board that you attach to a Teensy ($20) microcontroller which lets
+cheap ($20) board that you attach to a Teensy ($25) microcontroller which lets
 you connect an RGB DMD matrix display to the computer running MPF. It's a
 standalone solution which you can use to add an RGB DMD to a pinball machine
 that's using FAST Pinball, P-ROC/P3-ROC, or OPP controller hardware.
@@ -23,7 +25,7 @@ that's using FAST Pinball, P-ROC/P3-ROC, or OPP controller hardware.
 MPF supports several different types of RGB DMDs, and the SmartMatrix is just
 one of the options. More information about this type of display and other
 options that MPF supports is available in the
-:doc:`/displays/display/physical_rgb_dmd` documentation.
+:doc:`/displays/display/rgb_dmd` documentation.
 
 Here's an image of the SmartMatrix RGB DMD in action:
 
@@ -41,13 +43,20 @@ The following diagram shows how all the components fit together:
 This solution is very much a "home brew" solution that will require
 you to buy a lot of parts from various sources.
 
+Alternatively, FAST pinball also offers a
+:doc:`RGB DMD </hardware/fast/dmd>` which contains
+controller, panels and mounting brackets (ask them directly since it
+is not currently listed on their website). If you go with this solution
+skip steps 1 to 3. You still need a power supply (step 4).
+
 (1) The Panels
 ~~~~~~~~~~~~~~
 
 We originally had to buy the panels directly from China via AliExpress,
-but now `FAST Pinball sells a kit for $99 <https://squareup.com/store/fast-pinball-llc/item/rgb-dmd-panel-mounting-bracket-kit>`_.
+but now FAST Pinball sells a kit.
 The FAST Pinball option is nice because the price is great and
-they also include a mounting bracket that fits a standard DMD cutout.
+they also include a mounting bracket that fits a standard DMD cutout
+(ask them directly since it is not currently listed on their website).
 
 If you buy the panels yourself on AliExpress, you'll pay about
 the same price for just the panels, you won't have a mounting bracket,
@@ -62,7 +71,7 @@ Once you have your panel, you need a way to talk to them via a
 computer. The panels use some kind of 16-pin signalling system which
 is some kind of standard in the gigantic advertising display industry.
 
-The solution for MPF is to use a Teensy 3.2 (which is kind of like an Arduino).
+The solution for MPF is to use a Teensy 3.2 or 3.5 (which is kind of like an Arduino).
 The Teensy is available from multiple sources for about $20.
 `Here's the link to the website <https://www.pjrc.com/store/teensy32.html>`_
 of the guy who actually built it, and you can also
@@ -87,9 +96,7 @@ MPF uses to send the display data to the panels.
 
 Next you need a way for the Teensy to connect to the displays. That
 can be done with the SmartMatrix shield
-(`$15 from the guy who made the Teensy <https://www.pjrc.com/store/smartmatrix_kit.html>`_,
-though out of stock at the moment, so you might have to spend
-`$20 at Adafruit <http://www.adafruit.com/products/1902>`_).
+(`V4 of the shield is $20 at Adafruit <http://www.adafruit.com/products/1902>`_).
 
 The SmartMatrix shield is a "dumb" device
 that basically just connects the Teensy's GPIO pins to the 16-pin
@@ -114,7 +121,7 @@ all, each pixel is actually three separate LEDs (one each for red,
 green, and blue), and a 128x32 display means that you have 4,096
 pixels. So that's 12,228 LEDs you need to power!
 
-Since you're ordering your RGB LED display panels from FAST Pinball,
+If you're ordering your RGB LED display panels from FAST Pinball,
 you can also order a
 `5v, 10A power supply from them for $19 <https://squareup.com/store/fast-pinball-llc/item/five-volt-ten-amp-switching-power-supply>`_.
 
@@ -122,6 +129,7 @@ you can also order a
 
 An ATX computer power supply will probably have a decent amount of amps also,
 so that could be an option too, just check the specs.
+Any other 5V supply with decent power should also work.
 
 One thing about these RGB LED-based displays is they are bright.
 Like, really, really bright. (We're talking "burn your retinas if you
@@ -159,6 +167,14 @@ have the download package available.
 Also, `here's the original sample code <https://github.com/pixelmatix/SmartMatrix/blob/sm3.0/examples/FeatureDemo/FeatureDemo.ino>`_
 we based our code on.
 
+If you are using V4 of the shield, you need to insert this line of code in the first line:
+
+::
+
+   #include <SmartLEDShieldV4.h> // this line must be first
+
+The V4 shield's library uses more RAM which can causes the Teensy 3.2 to crash during animations or video playback. Using a Teensy 3.5 or 3.6 solves this issue as they have more RAM.
+
 Note that the width and height of your display is set in lines 11 & 12. You can change
 that if you want to use a different size display.
 
@@ -174,7 +190,7 @@ amount, then you can set it here and it will be "hard coded" into your Teensy.
 Here's a quick overview of how to install this code onto the Teensy. Full instructions are
 `here <https://github.com/pixelmatix/SmartMatrix>`_.
 
-+ Install the Arduino IDE v1.6.5
++ Install the Arduino IDE v1.8.5
 + Install the Teensyduino add-in which adds support for the Teensy
 + Load the smart_matrix_dmd_teensy_code.ino sketch from the mpf/tools
   folder or `this link <https://raw.githubusercontent.com/missionpinball/mpf/dev/tools/smart_matrix_dmd_teensy_code/smart_matrix_dmd_teensy_code.ino>`_
@@ -193,38 +209,58 @@ Windows, you can just open Device Manager and see which port appears when you
 plug in the Teensy.
 
 On Mac or Linux, open up the terminal window and type the following command:
-``ls /dev/tty.*``  The output of this command will look something like this:
+``ls /dev/tty.*``  The output of this command will look something like this
+on Mac:
 
 ::
 
-   /dev/tty.Bluetooth-Incoming-Port	/dev/tty.usbmodem1448891
+   /dev/tty.Bluetooth-Incoming-Port
+   /dev/tty.usbmodem1448891
 
-The port will be the one that has "usbmodem" in the name. (But the actual
-number might be different on your system.) You can run this command with the
+Or this on linux:
+
+::
+
+   /dev/ttyUSB0
+   /dev/ttyACM0
+
+The port will be the one that has "usbmodem" in the name on Mac. On Linux it
+will probably be ttyUSBx or ttyACMx. (The actual number will likely be
+different on your system.) You can run this command with the
 Teensy unplugged, then plug it in, then run the command again, and see which
 port appears.
 
 So on Windows, you'll end up with something like:
 
-::
+.. code-block:: mpf-config
+
+    hardware:
+        rgb_dmd: smartmatrix
 
     smartmatrix:
-        port: com12
-        baud: 2500000
-        old_cookie: true
+        smartmatrix_1:
+           port: com12
+           baud: 2500000
+           old_cookie: false
 
 And on Mac or Linux, it will look something like:
 
-::
+.. code-block:: mpf-config
 
+    hardware:
+        rgb_dmd: smartmatrix
+    
     smartmatrix:
-        port: /dev/tty.usbmodem1448891
-        baud: 2500000
-        old_cookie: true
+        smartmatrix_1:
+           port: "/dev/tty.usbmodem1448891"
+           baud: 2500000
+           old_cookie: false
 
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
 example above. These are the settings that are needed for the SmartMatrix.
+If you are using the FAST DMD board set baud to
+`3000000`.
 
 3. Add a physical RGB DMD device entry
 --------------------------------------
@@ -233,7 +269,7 @@ Once you have your SmartMatrix hardware platform set, you need to create the
 actual device entry for the RGB DMD and map it back to the SmartMatrix
 platform.
 
-You do this in the ``physical_rgb_dmds:`` section of the machine config. This
+You do this in the ``rgb_dmds:`` section of the machine config. This
 section is like the other common sections (switches, coils, etc.) where you
 enter the name(s) of your device(s), and then under each one, you enter its
 settings.
@@ -242,16 +278,17 @@ settings.
 physical DMD.)
 
 To do this, create a section in your machine-wide config called
-``physical_rgb_dmds:``, and then pick a name for the DMD, like this:
+``rgb_dmds:``, and then pick a name for the DMD, like this:
 
-::
+.. code-block:: mpf-config
 
-    physical_rgb_dmds:
-      my_dmd:
+    rgb_dmds:
+      smartmatrix_1:
          platform: smartmatrix
-         brightness: .17
+         hardware_brightness: .17
+         source_display: dmd
 
-There are several settings you can enter here. (See the :doc:`/config/physical_rgb_dmds`
+There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
 for details.) The only one you need to have is ``platform: smartmatrix`` which
 tells MPF that this RGB DMD should use the SmartMatrix hardware interface you
 configured in the previous step. (Otherwise if you don't specify a platform, it
@@ -308,10 +345,10 @@ When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
 connect to the Teensy.
 
-Note that the :doc:`/displays/display/physical_rgb_dmd` guide has more details
+Note that the :doc:`/displays/display/rgb_dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-::
+.. code-block:: mpf-config
 
     displays:
       window:  # on screen window
@@ -321,6 +358,7 @@ on the window and slide settings used in this machine config.
         width: 128
         height: 32
         default: true
+        round_anchor_x: left
 
     window:
       width: 600
@@ -328,18 +366,21 @@ on the window and slide settings used in this machine config.
       title: Mission Pinball Framework
 
     smartmatrix:
-      port: com5  # this will most likely be a different port for you
-      baud: 2500000
-      old_cookie: true
+      smartmatrix_1:
+        port: com5  # this will most likely be a different port for you
+        baud: 2500000
+        old_cookie: false
 
-    physical_rgb_dmds:
-      my_dmd:
+    rgb_dmds:
+      smartmatrix_1:
          brightness: .2
          platform: smartmatrix
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: color_dmd  # this widget shows the DMD content in this slide too
+      - type: display    # this widget shows the DMD content in this slide too
+        effects:
+         - type: color_dmd
         width: 512
         height: 128
       - type: text

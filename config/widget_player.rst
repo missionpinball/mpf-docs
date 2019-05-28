@@ -14,57 +14,19 @@ widget_player:
 The ``widget_player:`` section of your config is where you configure widgets to be added to,
 removed from, or updated on slides based on based on events being posted.
 
-Note that the widget player is a :doc:`config_player </config_players/index>`, so everything
-mentioned below is valid in the ``widget_player:`` section of a config file *and* in the ``widgets:``
-section of a :doc:`show step </shows/content>`.
+This is an example:
 
-Full instructions on how to use the slide_player are included in the
-:doc:`/displays/widgets/index` section of the documentation. The stuff here
-in the config reference is for reference later.
-
-Generically-speaking, there are two formats you can use for widget_player
-entries: "express" and "full" configs. Express configs will look like this:
-
-.. code-block:: yaml
-
-   widget_player:
-      event1: widget1
-      event2: widget2
-      event3: widget3
-
-Full configs will look like this:
-
-.. code-block:: yaml
-
-   widget_player:
-      event1:
-         widget1:
-            <settings>
-      event2:
-         widget2:
-            <settings>
-      event3:
-         widget3:
-            <settings>
-
-In both cases, these configurations are saying, "When *event1* is posted,
-add widget *widget1*. When *event2* is posted, add *widget2*. Etc."
-
-This "express" config is down-and-dirty, with no options, to just add widgets to
-the current slide on the default display.
-The full config lets you specify additional options (based on the settings
-detailed below).
-
-For example, the following config will add *widget_1* when *some_event* is posted, but it
-will also override the default settings and add widget to the slide called *slide_2*, even
-if that's not the current slide that's showing.
-
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    widget_player:
       some_event:
          widget_1:
             slide: slide_2
+
+It will add widget_1 to slide_2.
+
+See :doc:`/config_players/widget_player` for details.
+
 
 Settings
 --------
@@ -76,7 +38,7 @@ So again, the format in a config file would be:
 
 .. code-block:: yaml
 
-   #config_version=4
+   #config_version=5
 
    widget_player:
       some_event:
@@ -90,7 +52,7 @@ And the format in a show file would be:
 
 .. code-block:: yaml
 
-   #show_version=4
+   #show_version=5
 
    - duration: 1s
      widgets:

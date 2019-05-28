@@ -40,6 +40,9 @@ widgets (and their properties and settings), then look at how you position and
 animate them, how to use widget styles, and how you can create the reusable
 widgets.
 
+You can test slides and widgets interactively using
+:doc:`Interactive MC (iMC) </tools/imc/index>`.
+
 .. toctree::
    :maxdepth: 1
 

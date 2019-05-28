@@ -18,7 +18,7 @@ more friendly switch names. (This is what makes it possible to interact
 with switch names like "left_flipper" and "right_inlane" versus "switch 27"
 or "switch 19".)
 
-So on the line after the ``#config_version=4`` entry from the previous
+So on the line after the ``#config_version=5`` entry from the previous
 tutorial step, write ``switches:`` (note
 the colon). Then on the next line, type four spaces (these must be
 spaces, not a tab), and write ``s_left_flipper:``. Then on the next
@@ -27,9 +27,9 @@ line, type eight spaces and add ``number:``. Repeat that again for
 
 So now your ``config.yaml`` file should look like this:
 
-::
+.. code-block:: mpf-config
 
-    #config_version=4
+    #config_version=5
 
     switches:
         s_left_flipper:
@@ -74,16 +74,11 @@ in your game code and configuration file. When it comes time to create
 service menu, you can create plain-English labels with spaces and
 capitalization everything. But that comes later.
 
-Finally, note that most things in MPF config files are case-insensitive,
-and MPF converts most things to lowercase. (Not everything, though.
-Certain things like labels and text strings will be in whatever case
-you enter them as. But in general stuff is case insensitive.)
-
-The reason we mention this is
-because you can *not* have two things configured with the same name
-that only vary based on case sensitivity. For example, the switch
-names ``s_lane_trEk`` and ``s_lane_treK`` are not allowed since they'd
-both be converted internally to ``s_lane_trek``.
+In pre-0.50 versions, MPF was not case-sensitive and would internally convert most
+things to lowercase before comparison. This proved to be problematic, so MPF is
+now case-sensitive for all elements of your config files. Our configuration directives
+use only lowercase letters, underscores, and numbers. While you are free to format
+your tags as you wish, be aware that case-consistency is now required.
 
 Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
@@ -123,7 +118,7 @@ The :doc:`/hardware/numbers` guide explains how hardware numbering works on each
 supports, so check that out now and enter your real numbers, not the made-up
 ones we use below.
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_left_flipper:
@@ -152,7 +147,7 @@ dual-wound coils. If you have single-wound coils, or you have more than
 two flippers, refer to the :doc:`/mechs/flippers/index` documentation for
 examples of how to configure them.
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left_main:
@@ -178,11 +173,11 @@ files, values of "yes" and "true" are the same, so we use one of each just to de
 interchangeable.)
 
 Anyway, the purpose of the ``allow_enable:`` setting is that as a safety precaution, MPF does not allow you to enable
-(that is, to hold a coil in it's "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
+(that is, to hold a coil in its "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
 This will help to prevent some errant config from enabling a coil that you didn't mean to enable and burning it up or
 starting a fire.
 
-So in the case if your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
+So in the case of your flippers, the "hold" coil of a flipper needs to have ``allow_enable: true`` since in order for it
 to act as a flipper, that coil need to be allowed to be enabled (held on).
 
 4. Add your flipper "devices"
@@ -199,9 +194,31 @@ by combining other devices.
 
 You create your flipper devices by adding a ``flippers:`` section to
 your config file, and then specifying the switch and coil(s) for each flipper.
+Since the flippers belong to a playfield we also create this now.
 Here's what you would create based on the switches and coils we've defined so far:
 
-::
+.. code-block:: mpf-config
+
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 0
+    #!     s_right_flipper:
+    #!         number: 1
+    #! coils:
+    #!     c_flipper_left_main:
+    #!         number: 0
+    #!     c_flipper_left_hold:
+    #!         number: 1
+    #!         allow_enable: true
+    #!     c_flipper_right_main:
+    #!         number: 2
+    #!     c_flipper_right_hold:
+    #!         number: 3
+    #!         allow_enable: yes
+    playfields:
+        playfield:
+            tags: default
+            default_source_device: None  # use None in steps before 8
 
     flippers:
         left_flipper:
@@ -222,7 +239,7 @@ can read your config files and that there aren't any errors. Open a
 command prompt, switch to your machine folder, and run MPF again (like
 Step 2), also with the ``-b`` option:
 
-::
+.. code-block:: doscon
 
     C:\your_machine\mpf -b
 
@@ -231,7 +248,7 @@ look like much is happening here. The main thing is to make sure that
 MPF starts and runs without giving you any errors--meaning that everything
 you setup in your config file is ok.
 
-::
+.. code-block:: doscon
 
    C:\pinball\your_machine>mpf -b
    INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
@@ -253,7 +270,7 @@ to try depending on what your error was.
 
 If the last line in your console output was something like this:
 
-::
+.. code-block:: python
 
   ValueError: Found a "switchs:" section in config file C:\your_machine\config\config, but that section is not valid in machine config files.
 
@@ -262,7 +279,7 @@ the above example has "switchs" instead of "switches".
 
 Or maybe the error is more like this:
 
-::
+.. code-block:: python
 
    AssertionError: Config validation error: Entry flippers:left_flipper:main_coil:c_fliper_left_main is not valid.
 
@@ -271,7 +288,7 @@ typo--the coil name is spelled wrong (one "p" in flipper instead of two).
 
 Or something like this:
 
-::
+.. code-block:: python
 
    AssertionError: Your config contains a value for the setting "flippers:left_flipper:holdcoil", but this is not a valid setting name.
 
@@ -284,7 +301,7 @@ read through the output in the logs and to trace down what they're complaining a
 You might also get errors saying there's some kind of YAML problem. For example, if you remove the colon after the
 ``coils:`` section and re-run MPF, you get the following error:
 
-::
+.. code-block:: python
 
    ValueError: YAML error found in file /Users/brian/git/mpf-examples/tutorial/config/config.yaml. Line 16, Position 24
 
@@ -300,7 +317,10 @@ Again, recapping the rules of YAML:
   the same number of spaces, etc.
 + Make sure you *do not* have a space *before* each colon.
 + Make sure you *do* have a space *after* each colon.
-+ Make sure you have the ``#config_version=4`` as the first line in your file.
++ Make sure you have the ``#config_version=5`` as the first line in your file.
+
+If you struggle to spot the problem read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
 
 6. Enabling your flippers
 -------------------------
@@ -317,7 +337,7 @@ just want to enable your flippers right away, without an actual game.
 this, add the following entry to each of your flippers in your config
 file:
 
-::
+.. code-block:: yaml
 
     enable_events: machine_reset_phase_3
 
@@ -326,8 +346,28 @@ each of your flippers that they should enable themselves when MPF is booting up,
 ball to start.) So now the ``flippers:`` section of your config file should look like this: (If you have single-wound
 coils, then you won't have the ``hold_coil:`` entries here.)
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_left_flipper:
+    #!         number: 0
+    #!     s_right_flipper:
+    #!         number: 1
+    #! coils:
+    #!     c_flipper_left_main:
+    #!         number: 0
+    #!     c_flipper_left_hold:
+    #!         number: 1
+    #!         allow_enable: true
+    #!     c_flipper_right_main:
+    #!         number: 2
+    #!     c_flipper_right_hold:
+    #!         number: 3
+    #!         allow_enable: yes
+    #! playfields:
+    #!     playfield:
+    #!         tags: default
+    #!         default_source_device: None  # use None in steps before 8
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -362,6 +402,7 @@ each platform. Here they are again:
 * :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic/index>`
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
 * :doc:`Stern SPIKE </hardware/spike/index>`
+* :doc:`LISY </hardware/lisy/index>`
 
 You only need look at those docs for the specifics parts of the config that
 vary depending on your hardware. The good news is that 99.9% of the MPF
@@ -373,7 +414,7 @@ use, rather, follow the instructions from the bullet list above.
 
 FAST Pinball with FAST IO driver boards:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: fast
@@ -388,7 +429,7 @@ FAST Pinball with FAST IO driver boards:
 
 P-ROC installed in an existing WPC machine:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: p_roc
@@ -400,7 +441,7 @@ P-ROC installed in an existing WPC machine:
 
 P3-ROC with P-ROC driver & switch boards:
 
-::
+.. code-block:: mpf-config
 
     hardware:
         platform: p3_roc
@@ -436,9 +477,9 @@ will affect your coil and switch numbers). But here's the general
 idea. (This is the exact file we use with a FAST WPC controller plugged into an
 existing *Demolition Man* machine.)
 
-::
+.. code-block:: mpf-config
 
-    #config_version=4
+    #config_version=5
 
     hardware:
         platform: fast
@@ -462,6 +503,11 @@ existing *Demolition Man* machine.)
             number: FLRH
             allow_enable: yes
 
+    playfields:
+        playfield:
+            tags: default
+            default_source_device: None  # use None in steps before 8
+
     flippers:
         left_flipper:
             main_coil: c_flipper_left_main
@@ -484,7 +530,7 @@ personal taste. It really makes no difference.
 At this point you're ready to run your game, and you should be able to
 flip your flippers! Run your game with the following command:
 
-::
+.. code-block:: doscon
 
     C:\your_machine\mpf -b
 
@@ -569,6 +615,9 @@ If you're still running into trouble, feel free to post to the mpf-users
 Google group. We'll incorporate your issues into this tutorial to
 make it easier for everyone in the future!
 
+If you get YAML errors either copy the complete example below or read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
+
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
@@ -579,7 +628,7 @@ repo that contains the Demo Man game that you ran in Step 1.)
 The tutorial files are in the ``tutorial`` folder. If you just run MPF by itself
 from the tutorial game folder, you'll get an error:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf
    OSError: Could not find file Z:\git\mpf-examples\tutorial\config\config
@@ -593,7 +642,7 @@ However, you can use the ``-c`` command line option to specify the name of the c
 file that MPF should load instead of ``config.yaml``. So if you want to run the
 example game from the tutorial associated with Step 3, it would just be this:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf -c step3
 

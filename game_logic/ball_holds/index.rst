@@ -27,7 +27,7 @@ per mode.
 Monitorable Properties
 ----------------------
 
-For :doc:`config placeholders </config/instructions/placeholders>` and
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
 the prefix for ball holds is ``device.ball_holds.<name>``.
 
@@ -40,11 +40,9 @@ the prefix for ball holds is ``device.ball_holds.<name>``.
 Related How To guides
 ---------------------
 
-.. todo:: TODO
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Related Events
 --------------
 
-* :doc:`/events/ball_hold_name_balls_released`
-* :doc:`/events/ball_hold_name_full`
-* :doc:`/events/ball_hold_name_held_ball`
+.. include:: /events/include_ball_holds.rst

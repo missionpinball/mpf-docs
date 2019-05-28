@@ -1,7 +1,9 @@
+:orphan:
+
 How to configure multiple flippers
 ==================================
 
-TODO
+:doc:`/about/help_us_to_write_it`
 
 Multiple flippers with a single switch
 

@@ -1,4 +1,6 @@
+:orphan:
+
 How to enable "no hold flippers" (novelty mode)
 ===============================================
 
-TODO
+:doc:`/about/help_us_to_write_it`

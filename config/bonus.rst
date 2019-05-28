@@ -20,7 +20,9 @@ valid in the bonus mode's mode configuration file.
 
 Here's an example from *Brooks 'n Dunn*:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
+
+   ##! config: mode1
 
    mode_settings:
      display_delay_ms: 4000
@@ -115,7 +117,7 @@ score: (required)
 ~~~~~~~~~~~~~~~~~
 
 How many points this bonus entry is worth. Note that this will be multiplied by the ``player_score_entry:`` (if it's
-present). Also note that you can use :doc:`placeholder values </config/instructions/placeholders>` here if you want to
+present). Also note that you can use :doc:`dynamic values </config/instructions/dynamic_values>` here if you want to
 do advanced math.
 
 player_score_entry:
@@ -126,8 +128,8 @@ entries where it's just "some player variable multiplied by some score". (For ex
 In the example above, the first entry called "alien_bonus" will multiply the "aliens" player variable times 25000.
 
 Note that the bonus mode doesn't care what player variable you use, and it would be up to you to make sure that the
-player variable you choose is updated throughout your game (either through a ``scoring:`` section or a logic block or
-something like that).
+player variable you choose is updated throughout your game (either through a ``variable_player:`` section or a logic
+block or something like that).
 
 Also if you choose not to include this entry, that's fine. In that case the ``score:`` entry will be used by itself.
 Notice in the example at the top of this page from *Brooks 'n Dunn* that it's not used when we need the advanced math

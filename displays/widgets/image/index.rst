@@ -10,20 +10,6 @@ Image types that support alpha channels (like PNGs) are supported.
 Settings
 --------
 
-.. code-block:: yaml
-
-   type: image
-   image:
-   width:
-   height:
-   allow_stretch:
-   keep_ratio:
-
-   fps:
-   loops:
-   auto_play:
-   start_frame:
-
 .. note:: Image widgets also have "common" widget settings for position, opacity,
    animations, color, style, etc. Those are not listed here, but are instead covered in
    :doc:`common widget settings </displays/widgets/common_settings>` page.
@@ -32,70 +18,48 @@ Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
 
+The following image widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:``, ``y:``,
+``color:``, ``rotation:``, ``scale:``, ``fps:``, ``current_frame:``, and ``opacity:``.
+
 
 type: image
 ~~~~~~~~~~~
+Single value, type: ``string``.
 
 Tells MPF that this is an image widget
 
 image:
 ~~~~~~
+Single value, type: string name of a :doc:`image </assets/images>`.
 
 The name of the image asset this widget will show. Details on image
 assets are :doc:`here </assets/images>`.
 
-width:
-~~~~~~
-Net yet implemented. TODO
-
-Default is 0
-
-height:
-~~~~~~~
-Net yet implemented. TODO
-
-Default is 0
-
-allow_stretch:
-~~~~~~~~~~~~~~
-Net yet implemented. TODO
-
-Default is False
-
-keep_ratio:
-~~~~~~~~~~~
-Net yet implemented. TODO
-
-Default is False
-
 fps:
 ~~~~
+Single value, type: ``integer``. Default: ``10``.
 
 For animated images, sets how fast it plays (frames per second).
 
-Default is 10.
-
 loops:
 ~~~~~~
+Single value, type: ``integer``. Default: ``-1``.
 
-The number of times an animated image will loop. Set to ``0`` for unlimited. (Note this is
-different than other areas of MPF, which use ``-1`` to indicate unlimited loops.)
-
-Default is 0.
+The number of times an animated image will loop. Set to ``-1`` for unlimited. Note this is
+now consistent in 0.50 with other areas of MPF. In earlier versions of MPF this setting used
+``0`` to specify unlimited loops.
 
 auto_play:
 ~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 If the image is an animated image, configures whether it plays automatically when it's loaded.
-
-Default is True.
 
 This is good for looping images, but if you have an image you want to play at a specific point,
 you probably want to set this to no and play it from specific events via the widget player.
 
 start_frame:
 ~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``.
 
-Net yet implemented. TODO
-
-Default is 0.
+Which start frame to use for animated images.

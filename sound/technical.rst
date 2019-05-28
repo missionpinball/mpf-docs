@@ -2,9 +2,9 @@ MPF Sound & Audio Technical Overview
 ====================================
 
 The MPF MC Audio Interface is a custom audio Python extension library with features designed to
-support common pinball sound requirements. It is written on top of the SDL2 and GStreamer
-libraries that are installed with Kivy which is required to run the MPF MC software (no additional
-installs necessary for the audio library).
+support common pinball sound requirements. It is written on top of the SDL2, SDL_Mixer, and
+GStreamer libraries that are installed with Kivy which is required to run the MPF MC software
+(no additional installs necessary for the audio library).
 
 .. image:: images/technical_overview.png
 
@@ -20,6 +20,11 @@ library through its mutex-related functions. The audio library also uses the SDL
 conversion functions to convert between various low-level audio formats to communicate with the
 system sound hardware.
 
+SDL_Mixer (`https://www.libsdl.org/projects/SDL_mixer/ <https://www.libsdl.org/projects/SDL_mixer/>`_)
+is an add-on library for SDL2 that provides basic audio mixing, sound loading and playback, and
+sound streaming capabilities.  The MPF MC audio interface does not use the mixing features of
+SDL_Mixer. Instead, it only utilizes the sound file loading functions of the library.
+
 GStreamer (`https://gstreamer.freedesktop.org/ <https://gstreamer.freedesktop.org/>`_) is an open
 source, cross-platform pipeline-based multimedia framework that links together a wide variety of
 media-handling components (including simple audio playback, audio and video playback, recording,
@@ -27,10 +32,12 @@ streaming and editing) to complete complex workflows. The MPF MC audio interface
 for all its sound file loading functions and real-time audio streaming. All audio is fed into SDL2
 for final output.
 
-The audio interface is divided into tracks, which are analogous to channels on an audio mixer.
-Each track can play up to 32 sounds simultaneously (the limit for each track is configurable) and
-the output for each track is mixed together and fed to the SDL_Mixer track via the custom music
-player function. All of the sound generation and mixing functions are C functions that run in
+The audio interface is divided into :doc:`tracks </sound/tracks>`, which are analogous to channels
+on an audio mixer.  There are multiple types of audio tracks, each with its own specialized
+feature set. The output of each track is mixed together and fed to the SDL_Mixer track via the
+custom music player function. The audio mixing engine uses 16-bit integer calculations and
+brickwall limiting to ensure there are no numeric overflows (and their resulting distortion).
+All of the sound generation and mixing functions are C functions (written in Cython) that run in
 the SDL2 audio thread.
 
 It is important to understand the threading models of both SDL2 and Python to avoid common
@@ -40,20 +47,21 @@ once.  This simplifies many low-level details.  SDL2 creates its own audio threa
 receive and process audio data and send it to the audio hardware.  As this audio thread is not a
 Python thread, it does not interact with the GIL and therefore is unable to access any Python
 objects within its context.  This means that only C types and data structures may be utilized in
-the SDL_Mixer effect callback function; no Python objects can be used. Because the MPF MC is a
-Python application, a Python extension library is the only choice in which to use the SDL_Mixer
-and SDL2 libraries.  Since the extension library utilizes both Python and C objects, the GIL
-needs to be managed in the audio library along with thread protection to avoid race conditions
-and deadlocks. These design constraints led to the choice of using Cython (`http://cython.org/
-<http://cython.org/>`_) as the language to implement the MPF MC audio library.  Cython is a
-superset of the Python language that additionally supports calling C functions and using C types,
-an ideal choice for wrapping external C libraries and using them in a Python application.
+the SDL2 audio callback function; no Python objects can be used. Because the MPF MC is a Python
+application, a Python extension library is the only choice in which to use the GStreamer,
+SDL_Mixer and SDL2 libraries.  Since the extension library utilizes both Python and C objects,
+the GIL needs to be managed in the audio library along with thread protection to avoid race
+conditions and deadlocks. These design constraints led to the choice of using Cython
+(`http://cython.org/ <http://cython.org/>`_) as the language to implement the MPF MC audio library.
+Cython is a superset of the Python language that additionally supports calling C functions and
+using C types, an ideal choice for wrapping external C libraries and using them in a Python
+application.
 
 Sounds are MPF assets and are created by the MPF asset loader.  The actual sound loading code is
-contained in the audio library and is performed by GStreamer.  A Python container object wraps
-the C object returned by the loading process.  This wrapper allows the sound data to be managed
-by a Python object.  The audio library extracts the C object when necessary and passes it to the
-audio thread where it can be used to generate audio.
+contained in the audio library and is performed by SDL_Mixer and GStreamer.  A Python container
+object wraps the C object returned by the loading process.  This wrapper allows the sound data to
+be managed by a Python object.  The audio library extracts the C object when necessary and passes
+it to the audio thread where it can be used to generate audio.
 
 The :doc:`sound_player: </config_players/sound_player>` enables MPF events to trigger sound actions,
 such as play, stop, and stop looping. It is a config_player and runs as a plug-in in MPF and also

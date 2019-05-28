@@ -11,8 +11,6 @@ shows:
 
 .. overview
 
-The ``shows:`` section of your config is where you...
-
-.. todo::
-   Add description.
-
+The ``shows:`` section of your config is where you define shows in your config.
+See :doc:`/shows/config_shows` for details.
+Furthermore, you can also :doc:`define shows in separate files </shows/file_shows>`.

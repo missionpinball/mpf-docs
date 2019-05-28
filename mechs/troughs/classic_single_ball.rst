@@ -1,6 +1,14 @@
 How to configure a classic single-ball trough
 =============================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style single
 ball drain. This is the type of configuration that most (all?) single-ball
 machines use, from EM machines of the 1950s through electronic single ball
@@ -20,7 +28,7 @@ And here's a diagram which shows this a bit more clearly: (This is a side view)
 The first step is to add the drain switch to the ``switches:``
 section of your machine config file.
 
-::
+.. code-block:: mpf-config
 
     switches:
         s_drain:
@@ -37,17 +45,17 @@ Next, create the entry in your ``coils:`` section for the drain eject
 coil. Again, the name doesn't matter. We'll call it *c_drain_eject* and enter it
 like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
 
 Again, the ``number:`` entry in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
 
-You'll also note that we went ahead and entered a ``pulse_ms:`` value of 20
+You'll also note that we went ahead and entered a ``default_pulse_ms:`` value of 20
 which will override the default pulse times of 10ms. It's hard to say
 at this point what values you'll actually need. You can always adjust
 this at any time. You can play with the exact values in a bit once we
@@ -87,14 +95,26 @@ configuration settings for your drain ball device.
 
 Your drain device configuration should look now look like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_drain:
+    #!         number: 01
+    #!     s_plunger:
+    #!         number: 02
+    #! coils:
+    #!     c_drain_eject:
+    #!         number: 03
+    #!         default_pulse_ms: 20
     ball_devices:
         bd_drain:
             ball_switches: s_drain
             eject_coil: c_drain_eject
             eject_targets: bd_plunger_lane
             tags: drain, home, trough
+    #!     bd_plunger_lane:
+    #!         ball_switches: s_drain
+    #!         eject_coil: c_drain_eject
 
 4. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
@@ -117,28 +137,31 @@ you're running with one of the virtual hardware interfaces. To use it,
 simply add the section along with a list of the switches you want to
 start active. For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!     s_drain:
+    #!         number: 01
     virtual_platform_start_active_switches:
         s_drain
 
 Here's the complete config
 --------------------------
 
-.. begin_mpfdoctest:config/config.yaml
+.. code-block:: mpf-config
 
-::
-
-    #config_version=4
+    #config_version=5
 
     switches:
         s_drain:
             number: 01
+        s_plunger:
+            number: 02
 
     coils:
         c_drain_eject:
             number: 03
-            pulse_ms: 20
+            default_pulse_ms: 20
 
     ball_devices:
         bd_drain:
@@ -149,10 +172,13 @@ Here's the complete config
 
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
         bd_plunger_lane:
-            tags: ball_add_live
+            ball_switches: s_plunger
             mechanical_eject: true
+
+    playfields:
+       playfield:
+           default_source_device: bd_plunger_lane
+           tags: default
 
     virtual_platform_start_active_switches:
         s_drain
-
-.. end_mpfdoctest

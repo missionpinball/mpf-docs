@@ -3,7 +3,9 @@ persist_state:
 
 Boolean setting (yes/no or true/false) which controls whether this logic block
 remembers where it was from ball-to-ball. If ``False``, then this logic block will
-reset itself whenever a new ball starts.
+reset itself whenever a new ball starts. If ``True``, then this logic block will
+be saved to the player variable *<logic_block_name>_state*.
+
 
 Note that logic block state is always maintained on a per-player basis,
 regardless of what this setting is configured for.

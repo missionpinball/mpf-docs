@@ -11,8 +11,17 @@ text_strings:
 
 .. overview
 
-The ``text_strings:`` section of your config is where you...
+The ``text_strings:`` section of your config is where you define text strings
+which can be used in slides or widgets.
 
-.. todo::
-   Add description.
+This is an example:
 
+.. code-block:: mpf-config
+
+   text_strings:
+     greeting: HELLO PLAYER. THIS IS YOUR BALL (ball)
+
+   slides:
+     slides_with_text:
+       - type: text
+         text: $greeting

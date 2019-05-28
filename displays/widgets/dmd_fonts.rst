@@ -9,11 +9,12 @@ widgets.
 If you don't use one of these fonts on your DMD and just show some text, here's
 what the results look like:
 
-::
+.. code-block:: mpf-config
 
-    my_slide:
-    - type: text
-      text: MISSION
+   slides:
+       my_slide:
+       - type: text
+         text: MISSION
 
 .. image:: /displays/images/dmd_default.png
 
@@ -28,12 +29,13 @@ style: dmd_big
 
 dmd_big is 10 pixels tall.
 
-::
+.. code-block:: mpf-config
 
-    my_slide:
-    - type: text
-      style: dmd_big
-      text: MISSION
+   slides:
+       my_slide:
+       - type: text
+         style: dmd_big
+         text: MISSION
 
 .. image:: /displays/images/dmd_big.png
 
@@ -42,12 +44,13 @@ style: dmd_med
 
 dmd_med is 7 pixels tall.
 
-::
+.. code-block:: mpf-config
 
-    my_slide:
-    - type: text
-      style: dmd_med
-      text: MISSION
+   slides:
+       my_slide:
+       - type: text
+         style: dmd_med
+         text: MISSION
 
 .. image:: /displays/images/dmd_med.png
 
@@ -59,12 +62,13 @@ dmd_small is 5 pixels tall.
 Notice that this font has a color set and we're using it with a Color DMD. All
 three of these fonts (like any font) can be used on a mono or color DMD.
 
-::
+.. code-block:: mpf-config
 
-    my_slide:
-    - type: text
-      style: dmd_small
-      text: MISSION
-      color: 00ffcc
+   slides:
+       my_slide:
+       - type: text
+         style: dmd_small
+         text: MISSION
+         color: 00ffcc
 
 .. image:: /displays/images/dmd_small.png

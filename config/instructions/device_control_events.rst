@@ -22,7 +22,7 @@ Even though these configuration entries use the word "events"
 you have a flipper device that you want to enable when a ball starts,
 you can add the following line to the configuration for your flipper:
 
-::
+.. code-block:: yaml
 
     enable_events: ball_started
 
@@ -35,7 +35,7 @@ want to disable a flipper when the ball ends, but you also want to
 make sure it's disabled when a tilt or slam tilt event is posted. In
 that case you'd enter your configuration like this:
 
-::
+.. code-block:: yaml
 
     disable_events: ball_ending, tilt, slam_tilt
 
@@ -51,7 +51,7 @@ Note that when you're entering multiple events, you can
 enter them all on the same line separated by commas, or you can enter
 each one on its own line started with a dash and a space, like this:
 
-::
+.. code-block:: yaml
 
     disable_events:
         - ball_ending
@@ -69,7 +69,7 @@ cause the enable, disable, or reset events to wait after one of your
 events is fired. Here's an example from the "Solids" drop target bank
 in Big Shot:
 
-::
+.. code-block:: yaml
 
             reset_events:
                 ball_starting: 0
@@ -83,7 +83,7 @@ different delays.) In case you're wondering why we did this, take a
 look at the reset_events configuration for the other bank of drop
 targets (called "Stripes") in Big Shot:
 
-::
+.. code-block:: yaml
 
             reset_events:
                 ball_starting: 0.25s
@@ -110,3 +110,36 @@ reset the Stripes drop target bank.
 You can enter these delay times in
 either seconds or milliseconds, as outlined :doc:`here </config/instructions/time_strings>`.
 All this is done via the config files with no custom Python code needed! :)
+
+Messing with priorities
+-----------------------
+
+By default the handler will have the priority of your mode or 1 if its ouside
+of a mode.
+In addition, some devices increase the priority of some handlers over others.
+For instance, disable is handled before enabled (in case you are using both
+on the same event).
+Normally, this is just fine and you do not have to worry.
+However, there are cases where you want to increase the priority of a certain
+handler.
+You add ``.x`` to your event to increase the priority by ``x``.
+
+In the following example, we ensure that the device will first enable, then
+score and finally disable:
+
+.. code-block:: yaml
+
+    enable_events: ball_started.3
+    score_events: ball_started.2
+    disable_events: ball_started.1
+
+Without explicit priorities (or some logic in the device) the order of the
+three handlers would be random and you might see the following entry in the
+log:
+
+.. code-block:: console
+
+   Duplicate handler for class MyDevice on event ball_started with priority 1. Handlers: x
+
+You can read more about
+:doc:`event handler priorities </events/overview/priorities>`

@@ -4,7 +4,7 @@ How to configure mono/traditional DMD (FAST Pinball)
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/physical_dmds`                                                 |
+| :doc:`/config/dmds`                                                          |
 +------------------------------------------------------------------------------+
 
 The FAST WPC and Core controllers can drive traditional single-color
@@ -31,7 +31,7 @@ See the :doc:`config` guide for details.
 Once you have your hardware and port set, you need to create the actual device
 entry for the DMD.
 
-You do this in the ``physical_dmds:`` section of the machine config. This
+You do this in the ``dmds:`` section of the machine config. This
 section is like the other common sections (switches, coils, etc.) where you
 enter the name(s) of your device(s), and then under each one, you enter its
 settings.
@@ -40,11 +40,11 @@ settings.
 physical DMD.)
 
 To do this, create a section in your machine-wide config called
-``physical_dmds:``, and then pick a name for the DMD, like this:
+``dmds:``, and then pick a name for the DMD, like this:
 
-::
+.. code-block:: mpf-config
 
-    physical_dmds:
+    dmds:
       my_dmd:
          shades: 16
 
@@ -60,7 +60,7 @@ modern games will probably be 16 shades, but you can do 4 (or even 2) if you
 want an old school look.
 
 There are lots more options for the physical_dmd: section than just the
-"shades" option listed here. Check the :doc:`/config/physical_dmds` for a list
+"shades" option listed here. Check the :doc:`/config/dmds` for a list
 of all the options.
 
 Note that one option you do NOT have for physical DMDs is the color. That's
@@ -99,14 +99,16 @@ When you run it, do not use the ``-x`` or ``-X`` options, because either of
 those will tell MPF to not use physical hardware which means it won't try to
 connect to the Teensy.
 
-Note that the :doc:`/displays/display/physical_mono_dmd` guide has more details
+Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-::
+.. code-block:: mpf-config
 
     hardware:
       platform: fast
       driverboards: fast
+
+    fast:
       ports: com3, com4, com5  # be sure to change this to your actual ports
 
     displays:
@@ -122,17 +124,20 @@ on the window and slide settings used in this machine config.
       width: 600
       height: 200
       title: Mission Pinball Framework
+      source_display: window
 
-    physical_dmds:
+    dmds:
       my_dmd:
          brightness: 1.0
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: dmd  # this widget shows the DMD content in this slide too
+      - type: display
+        effects:
+         - type: dmd
+           dot_color: ff5500
         width: 512
         height: 128
-        pixel_color: ff5500  # makes on-screen pixels the classic DMD orange
       - type: text
         text: MISSION PINBALL FRAMEWORK
         anchor_y: top
@@ -145,7 +150,7 @@ on the window and slide settings used in this machine config.
       dmd_slide_1:  # slide we'll show on the physical DMD
       - type: text
         text: IT WORKS!
-        font_size: 30
+        font_size: 25
 
     slide_player:
       init_done:

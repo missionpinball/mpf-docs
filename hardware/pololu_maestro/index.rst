@@ -1,17 +1,31 @@
 Pololu Maestro Servo Controller
 ===============================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/pololu_maestro`                                                |
++------------------------------------------------------------------------------+
+| :doc:`/config/servos`                                                        |
++------------------------------------------------------------------------------+
+
+
 MPF supports servos connected to Pololu Maestro servo controllers. Each Maestro
 can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 
 .. image:: /hardware/images/pololu_maestro.jpg
 
+Here is an
+`explanation video by the pinball amigos <https://www.youtube.com/watch?v=1QOOJNtsGxw&t=58>`_
+on how to setup a pololu maestro (and more).
+
+
 1. Install the Pololu Maestro drivers
 -------------------------------------
 
 Just like any hardware device you connect to a computer, you need to install
-the drivers so your computer can see it. It is easier to do the initial 
-hardware configuration on a Windows PC. Follow the "Getting Started" section of the 
+the drivers so your computer can see it. It is easier to do the initial
+hardware configuration on a Windows PC. Follow the "Getting Started" section of the
 `Pololu Maestro Servo Controller User's Guide <https://www.pololu.com/docs/0J40/all>`_.
 You will need to set Maestro's serial mode to USB Dual Port on the Serial Settings tab
 of the Maestro Control Center.
@@ -25,11 +39,9 @@ for servos. (MPF supports several different models of servo controllers.)
 To do this, add ``servo_controllers: pololu_maestro`` to the ``hardware:`` section
 of your machine-wide config file, like this:
 
-::
+.. code-block:: mpf-config
 
    hardware:
-     platform: fast
-     driverboards: fast
      servo_controllers: pololu_maestro
 
 This tells MPF that you want the default servo platform to be ``pololu_maestro``.
@@ -47,14 +59,14 @@ use the first one (the lower number).
 
 Add a section to your machine-wide config like this:
 
-::
+.. code-block:: mpf-config
 
    pololu_maestro:
      port: COM5
 
 On Linux or Mac, it will probably look like this:
 
-::
+.. code-block:: mpf-config
 
    pololu_maestro:
       port: /dev/ttyACM0
@@ -69,21 +81,21 @@ entries in there for each servo you have.
 
 For example:
 
-::
+.. code-block:: mpf-config
 
    servos:
       servo1:
-         servo_min: 3000
-         servo_max: 9000
+         servo_min: 0.2
+         servo_max: 0.8
          positions:
              0.1: servo1_down
              0.9: servo1_up
          reset_position: 0.5
          reset_events: reset_servo1
+         speed_limit: 0.5
+         acceleration_limit: 0.5
          number: 1
       servo2:
-         servo_min: 0
-         servo_max: 10000
          positions:
              0.2: servo2_left
              1.0: servo2_home
@@ -114,42 +126,16 @@ a series of microsecond-level pulses which the servo reads and can then
 translate into a certain position. The actual value of these pulses varies
 depending on the servo controller and servos you actually have.
 
-So in the MPF config for each servo, you need to configure ``servo_min:`` and
-``servo_max`` values which tell MPF what numerical values it should actually
-send to the servo for its minimum and maximum positions.
+You may also set servo_min and servo_max if the servo is trying to move beyond its
+(hardware) limits when setting it to position 0.0 or 1.0. Those two values will
+be applied to all positions. For instance, if you move it to 0.0 it will actually
+move to servo_min (0.2 in the example) and to servo_max for 1.0 (0.8 in the example).
+Everything in between will be interpolated.
 
-The only way you can know what these values are is to read the documentation that
-comes with your servo controller. If you're using Windows, the Pololu Maestro
-driver setup includes an app called the Maestro Control Center you can use
-to send different values to the servo in real time, so you can use this to
-figure out what min and max values you should use.
-
-Since the actual vales you send to the servo are 0.0 to 1.0, MPF uses the min
-and max values, plus your 0.0-1.0 number, to calculate the actual value that's
-sent to the servo.
-
-For example, if you have ``servo_min: 500`` and ``servo_max: 2000``, then you
-send a value of ``0.4`` to the servo, the actual number sent will be 1100.
-(2000 - 500 = 1500, 1500 x .4 = 600, 500 + 600 = 1100)
-
-When you're figuring out your max and min values, you'll probably find that the
-values which represent the full range of motion of the servo itself are actually
-wider than the range of motion your servo has when it's installed in your machine.
-
-For example, you might find that a values of 3000 and 9000 give your servo a
-full 180-degree range of motion, but when installed in your machine, you might
-find that the servo should only ever move between 10 degrees and 80 degrees.
-
-In that case you'd specify ``servo_min: 3330`` and ``servo_max: 5640`` (since
-you don't want to accidentally move the servo further than it's limit and
-break something.) Then your MPF values of 0.0 to 1.0 will represent the actual
-usable range of motion (0.0 will be 10 degrees, 0.5 will be 45 degrees, 1.0 will
-be 80 degrees, etc.).
-
-Note that the Maestro Control Center can actually write min and max values for
-each servo channel to the controller itself. In that case those values will
-take precedent over anything you configure in MPF. (Though the range of motion
-will still be calculated based on the values in MPF.)
+The Pololu Maestro servo controllers can accept speed and acceleration settings
+which specify how fast the servo moves to the new position, and how (or whether)
+it accelerates and decelerates when starting and stopping. If you want to use these
+add the ``speed_limit:`` and ``acceleration_limit:`` settings to your config.
 
 5. Using the servo in your game
 -------------------------------
@@ -164,14 +150,7 @@ reference for details.
 6. Future enhancements
 ----------------------
 
-The Pololu Maestro servo controllers can accept speed and acceleration settings
-which specify how fast the servo moves to the new position, and how (or whether)
-it accelerates and decelerates when starting and stopping.
-
-These settings have not been implemented in MPF. (They're not hard, we just
-haven't done it.) So if you need them, contact us and we'll add them.)
-
-Also the multiple Pololu Maestro controllers can be chained together (via
-a single USB port). We also don't have support for that. (It requires adding
-and additional address setting to the servo config.) Again if you want that,
+Multiple Pololu Maestro controllers can be chained together (via
+a single USB port). We don't have support for that yet. (It requires adding
+and additional address setting to the servo config.) If you want that,
 let us know and we'll add it.

@@ -23,7 +23,7 @@ when it's fired.
 
 You can set the default pulse time for each coil in
 the coil's entry in the ``coils:`` section of your config file. If you
-don't specify a time for a particular coil, then MPF will a default
+don't specify a time for a particular coil, then MPF will use a default
 pulse time of 10ms.
 
 So in the last step, we got your flipper coils working, but as they are now,
@@ -50,37 +50,37 @@ using. Some machines have coil pulse times set really low, like 12 or
 14ms. Others might be 60 or 70ms. Our 1974 Big Shot machine has
 several coils with pulse times over 100ms. It all really depends.
 
-You adjust the pulse time for each coil by adding a ``pulse_ms:`` setting to
+You adjust the pulse time for each coil by adding a ``default_pulse_ms:`` setting to
 the coil's entry in the ``coils:`` section of your config file. (Notice
 that you make this change in the ``coils:`` section of your config, not
 the ``flippers:`` section.) So let's try changing your flipper coils
 from the default of 10ms to 20ms. Change your config file so it looks
 like this:
 
-::
+.. code-block:: mpf-config
 
     coils:
         c_flipper_left_main:
             number: 00
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_left_hold:
             number: 01
             allow_enable: true
         c_flipper_right_main:
             number: 02
-            pulse_ms: 20
+            default_pulse_ms: 20
         c_flipper_right_hold:
             number: 03
             allow_enable: true
 
-Notice that we only added ``pulse_ms:`` entries to the two main coils,
+Notice that we only added ``default_pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their
 pulse times are. Now play your game and see how it feels. Then keep on
-adjusting the ``pulse_ms:`` values up or down until your flippers
+adjusting the ``default_pulse_ms:`` values up or down until your flippers
 feel right. In the future we'll create a coil test tool that makes it
 easy to dial-in your settings without having to manually change the
 config file and re-run your game, but we don't have that yet. You
-might find that you have to adjust this ``pulse_ms:`` setting down the
+might find that you have to adjust this ``default_pulse_ms:`` setting down the
 road too. If you have a blank playfield then you might think that your
 coils are fine where they are, but once you add some ramps you might
 realize it's too hard to make a ramp shot and you have to increase the
@@ -91,18 +91,18 @@ these pulse settings to operators via the service menu.
 ---------------------------------
 
 If you're using single-wound flipper coils, you should also take a
-look at the ``hold_power:`` values. (Again, to be clear, you only have
+look at the ``default_hold_power:`` values. (Again, to be clear, you only have
 to do this if your flippers have a single winding. If you have dual-wound
 coils then the hold winding is designed to be held on for long
 periods of time so you can safely keep it on full strength solid and
 you can skip to the next step.)
 
 We don't have any good guidance for
-what your ``hold_power:`` values should be. Really you can just start
-with a value of 1 or 2 and then keep increasing it (whole numbers
-only) until your flipper holds are strong enough not to break their
-hold when a ball hits them. Each hardware platform has additional
-options for fine-turning the hold power if you find the values of 1-8
+what your ``default_hold_power:`` values should be. Really you can just start
+with a value of 0.125 or 0.25 and then keep increasing it (0.0 for 0% power to 1.0 for 100% power)
+until your flipper holds are strong enough not to break their
+hold when a ball hits them. Some hardware platform have additional
+options for fine-turning the hold power if this setting
 result in weird buzzing sounds or don't feel right. See the *coils:*
 section of each hardware platform's How To guide for details for your
 platform.
@@ -126,6 +126,6 @@ be at ``/mpf-examples/tutorial/config/step4.yaml``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
-::
+.. code-block:: doscon
 
    C:\mpf-examples\tutorial>mpf -c step4

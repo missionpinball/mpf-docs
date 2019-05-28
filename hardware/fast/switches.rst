@@ -21,12 +21,14 @@ number:
 When you're using FAST IO boards, switches plug into individual IO boards.
 Then the IO boards are connected together in a loop.
 
+.. image:: /hardware/images/fast-io-3208.png
+
 The ``number:`` setting for each switch is its board's position number in the
 chain, then the dash, then the switch input number. Note that the position
 number starts with zero, so the first IO board in the chain is 0, the second
 is 1, etc.
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
@@ -46,7 +48,7 @@ Notes:
 
 Also note that prior versions of MPF just numbered all the switches in one
 continuous sequence from the first board through the last, but that was
-confusing. You can still do that if you want (in either hex or integer format),
+confusing. You can still do that if you want (in integer format),
 but we feel the board-input format is much easier to understand.
 
 Debounce options
@@ -66,19 +68,19 @@ Specifying default debounce settings
 
 By default, MPF provides two debounce profiles for switches ("normal" and
 "quick"). When using FAST pinball controllers, the "normal" debounce profile
-is ``10ms`` for both the debounce open and debounce closed times, and the
+is ``4ms`` for both the debounce open and debounce closed times, and the
 "quick" debounce profile is ``2ms`` for both debounce open and closed times.
 
 You can change any of these in the ``fast:`` section of your machine-wide
 config, like this:
 
-::
+.. code-block:: mpf-config
 
    fast:
       default_quick_debounce_open: 2ms
       default_quick_debounce_close: 2ms
-      default_normal_debounce_open: 10ms
-      default_normal_debounce_close: 10ms
+      default_normal_debounce_open: 4ms
+      default_normal_debounce_close: 4ms
 
 (Note that other settings from the ``fast:`` section of your config have not
 been included here for clarity.)
@@ -91,13 +93,14 @@ debounce closed settings on a per-switch basis. To do that, just add a
 ``debounce_open:`` and/or ``debounce_close:`` setting to an individual switch,
 like this:
 
-::
+.. code-block:: mpf-config
 
    switches:
       my_switch:
          number: 1-0
-         debounce_open: 5ms
-         debounce_close: 20ms
+         platform_settings:
+            debounce_open: 5ms
+            debounce_close: 20ms
       some_other_switch:
          number: 3-24
 

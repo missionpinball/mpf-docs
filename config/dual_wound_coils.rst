@@ -17,7 +17,7 @@ be used anywhere in MPF.
 
 Here's an example:
 
-::
+.. code-block:: mpf-config
 
    coils:
        c_hold:
@@ -25,7 +25,7 @@ Here's an example:
            allow_enable: True
        c_power:
            number:
-           pulse_ms: 20
+           default_pulse_ms: 20
 
    switches:
        s_eos:
@@ -74,7 +74,7 @@ The name of the main (power) coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
 
 When this dual-wound coils is enabled, this coil will be pulsed for the
-number of milliseconds specified in the original coil's ``pulse_ms:``
+number of milliseconds specified in the original coil's ``default_pulse_ms:``
 setting.
 
 Optional settings

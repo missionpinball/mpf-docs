@@ -1,14 +1,23 @@
 How to use MPF with Stern SPIKE / SPIKE 2 machines
 ==================================================
 
-.. versionadded:: 0.33
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/hardware`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/spike`                                                         |
++------------------------------------------------------------------------------+
 
 If you haven't done so already, be sure to read the :doc:`/start/index` page
 to understand how MPF talks to physical pinball machines in general.
 
 Stern pinball machines from early 2015 (Wrestlemania) onwards use a control
-system called SPIKE (or SPIKE 2 from Batman 66 onwards). You can read all about
-how SPIKE works in the operators manuals for the games, but the important
+system called SPIKE (or SPIKE 2 from Batman 66 onwards). The complete list
+of SPIKE machines is available in IPDB (click here for `SPIKE <http://ipdb.org/search.pl?searchtype=advanced&mpu=61>`_
+and `SPIKE 2 <http://ipdb.org/search.pl?searchtype=advanced&mpu=65>`_ machines).
+
+You can read all about how SPIKE works in the operators manuals for the games, but the important
 thing to know here is that SPIKE machines essentially have a full linux
 computer inside them (the "SPIKE CPU Node") which runs the game code from an SD card.
 
@@ -58,11 +67,13 @@ swap out a board.
 Stern SPIKE features that work today
 ------------------------------------
 
-* Coils / drivers
-* Switches
-* LEDs & GIs
-* Backbox LEDs
+* :doc:`Coils / drivers <drivers>`
+* :doc:`Switches <switches>`
+* :doc:`LEDs & GIs <leds>`
+* :doc:`Backbox LEDs <leds>`
 * Hardware Rules (flippers, pop bumpers, slingshots, etc.)
+* :doc:`DMDs <dmds>`
+* :doc:`Steppers <steppers>`
 
 How does the MPF SPIKE interface work?
 --------------------------------------
@@ -81,6 +92,8 @@ the "MPF SPIKE Bridge" on the SD card (ideally you first make a copy of your exi
 SD card and keep the original in a safe place), and then when the machine powers on,
 instead of running the existing game code from the SD card, the CPU runs the MPF SPIKE
 bridge software.
+
+.. image:: /hardware/images/spike_bridge.png
 
 The MPF SPIKE bridge is fairly simple. Essentially all it does is relay messages from
 the SPIKE node bus to the debug port on the CPU node, and it also accepts commands
@@ -103,14 +116,6 @@ Stern and you're all set.
 Stern SPIKE features that do not work (yet)!
 --------------------------------------------
 
-DMD
-~~~
-
-We haven't added support for the red DMDs from SPIKE v1 machines. If
-you want a DMD today, you can add a standalone :doc:`RGB DMD </displays/display/physical_rgb_dmd>`
-which will fit right into the position of the old DMD, or you can
-replace the DMD/speaker panel in your SPIKE machine with an LCD display
-which you can run from the HDMI output of your computer running MPF.
 
 Sound
 ~~~~~
@@ -134,12 +139,6 @@ Servos
 Once we get access to a SPIKE machine with servos, we'll get
 support for them added.
 
-Stepper Motors
-~~~~~~~~~~~~~~
-
-Once we get access to a SPIKE machine with stepper motors, we'll get
-support for them added.
-
 Small LCD from WWE
 ~~~~~~~~~~~~~~~~~~
 
@@ -155,4 +154,6 @@ use any HDMI display connected to the machine running MPF.
    Configuring MPF for SPIKE <config>
    Coils & Drivers <drivers>
    LEDs, GI, & Backbox lights <leds>
+   DMDs <dmds>
    Switches <switches>
+   Steppers <steppers>
