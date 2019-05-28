@@ -1,5 +1,5 @@
 balls_per_game
-=============
+==============
 
 *MPF Game variable*
 
