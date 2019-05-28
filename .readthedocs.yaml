@@ -3,11 +3,6 @@ formats:
   - htmlzip
   - pdf
 python:
-  version: 3.7
-  install:
-     - requirements: requirements.txt
-build:
-  image: latest
 sphinx:
   builder: html
   configuration: conf.py
