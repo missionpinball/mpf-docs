@@ -23,6 +23,19 @@ During the runtime MPF periodically polls changed switches and sends a
 watchdog every 500ms.
 The platform is expected to disable all outputs after 1s without watchdog.
 
+Limitations
+-----------
+
+Let us know if you hit any of those and we can develop a plan forward.
+
+ - Max 127 switches are supported (because polling uses the upper bit as state)
+ - Max 256 hardware sounds (alternatively, you can use the MPF sound system)
+ - Max 256 simple lamps (on/off only)
+ - Max 256 lights (with fading and brightness)
+ - Max 256 coils
+ - Max 7 segment displays
+ - No error correction on the wire (your serial should be reliable)
+
 Protocol reference (v0.08)
 --------------------------
 
@@ -137,8 +150,8 @@ Example:
 
    "0", "1", "64", "Platform supports 64 simple lamps with numbers 0 to 63."
 
-MPF uses this number to refuse any lamps with a number larger or equal than
-``l``.
+MPF uses this number to refuse any lights with a number larger or equal than
+``l`` and subtype ``lamp``.
 Lamps in LISY are expected to be ``on/off`` type devices and do not support
 fading or dimming.
 Use this for older style lamps and GIs.
@@ -196,7 +209,7 @@ Returns one byte:
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "0", "1", "Sound count ``m`` (0 to 255). 0 if no sounds exist."
+   "0", "1", "Sound count ``o`` (0 to 255). 0 if no sounds exist."
 
 Example:
 
@@ -207,7 +220,7 @@ Example:
    "0", "1", "128", "Platform supports 128 sounds with numbers 0 to 127."
 
 MPF uses this number to refuse any sounds with a number larger or equal than
-``m``.
+``o``.
 This is used for older machines with a hardware soundcard.
 In :doc:`LISY <index>` it can be used to play sounds from the ROM of the
 original game.
@@ -233,7 +246,7 @@ Returns one byte:
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "0", "1", "Sound count ``m`` (0 to 255). 0 if no sounds exist."
+   "0", "1", "Segment display count ``sd`` (0 to 255). 0 if no sounds exist."
 
 Example:
 
@@ -247,19 +260,19 @@ MPF uses this number to refuse any segment display with a number larger or
 equal than ``sd``.
 Return ``0`` if you do not support displays in your platform.
 
-Get Display Details (0x07)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Get Segment Display Details (0x07)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Get type of segment displays.
 Does not have any payload.
 
 Example:
 
-.. csv-table:: Example Command 0x07 - Get Display Details
+.. csv-table:: Example Command 0x07 - Get Segment Display Details
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "7", "Command 7 - Get Display Details"
+   "0", "1", "7", "Command 7 - Get Segment Display Details"
 
 Returns null terminated string.
 Options are:
@@ -465,7 +478,7 @@ Example:
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "21", "Command 22 - Disable Solenoid"
+   "0", "1", "22", "Command 22 - Disable Solenoid"
    "1", "1", "25", "Disable solenoid 25"
 
 No response is expected.
@@ -488,7 +501,7 @@ Example:
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "21", "Command 23 - Pulse Solenoid"
+   "0", "1", "23", "Command 23 - Pulse Solenoid"
    "1", "1", "25", "Pulse solenoid 25"
 
 No response is expected.
@@ -500,30 +513,56 @@ Set Solenoid Pulse Time (0x18)
 Configure the pulse time of a solenoid in milliseconds.
 Payload is the solenoid index and pulse time.
 
-.. csv-table:: Payload of Command 0x18 - Pulse Solenoid
+.. csv-table:: Payload of Command 0x18 - Set Solenoid Pulse Time
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "1", "1", "Index ``c`` of the solenoid to pulse"
+   "1", "1", "Index ``c`` of the solenoid to configure"
    "2", "1", "Pulse time in ms (0-255)"
 
 Example:
 
-.. csv-table:: Example Command 0x18 - Pulse Solenoid
+.. csv-table:: Example Command 0x18 - Set Solenoid Pulse Time
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "21", "Command 23 - Pulse Solenoid"
-   "1", "1", "25", "Pulse solenoid 25"
+   "0", "1", "21", "Command 24 - Set Solenoid Pulse Time"
+   "1", "1", "25", "Configure solenoid 25"
    "2", "1", "50", "Set pulse time to 50ms"
 
 No response is expected.
 This will affect pulses in command 0x17.
 
-Displays
-^^^^^^^^
+Set Segment Display 0-6 (0x1E - 0x24)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO
+Set content of segment display ``d`` 0-6.
+Payload is a null terminated string.
+Content encoding depends on the type of the display (from command 0x7):
+
+* ``BCD`` - send one ascii char per number (basically plain ascii)
+* ``7-segment`` - send one byte with one bit per element (not implemented yet in MPF)
+* ``8-segment`` - send one byte with one bit per element (not implemented yet in MPF)
+* ``14-segment`` - send two byte with one bit per element (not implemented yet in MPF)
+* ``16-segment`` - send two byte with one bit per element (not implemented yet in MPF)
+
+.. csv-table:: Command 0x1E - 0x24 - Set Segment Display ``d``
+   :header: "Byte", "Length", "Value", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "30 + d", "Command byte for set segment depending on segment number ``d``"
+   "1 - n", "n - 1", "Encoded String", "Payload (n-1 bytes)"
+
+Example:
+
+.. csv-table:: Example Command 0x1E - 0x24 - Set Segment Display ``d``
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "31", "Command 31 - Set Segment display 1"
+   "1", "5", "1337 ", "Set display to 1337. The last char must be a null byte."
+
+No response is expected.
 
 Get Status of Switch (0x28)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -597,10 +636,122 @@ Example:
 
 MPF will poll this at 100 Hz by default.
 
-Sound
-^^^^^
+Play Sound (0x32)
+^^^^^^^^^^^^^^^^^
 
-TODO
+Play a sound on a hardware sound card.
+This is used to trigger sounds on existing sound interfaces on older machines.
+The behavior of sounds usually differs per sound number (looping/not looping/stop other sounds etc) and cannot be
+influenced by the CPU.
+
+Payload is the sound number.
+
+.. csv-table:: Payload of Command 0x32 - Play Sound
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index of sound to play"
+
+Example:
+
+.. csv-table:: Example Command 0x32 - Play Sound
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "50", "Command 50 - Play Sound"
+   "1", "1", "42", "Play sound 42"
+
+No response is expected.
+
+Stop Sound (0x33)
+^^^^^^^^^^^^^^^^^
+
+Stop the current playing sound.
+
+Payload is the sound number.
+
+.. csv-table:: Payload of Command 0x33 - Stop Sound
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index of sound to stop"
+
+Example:
+
+.. csv-table:: Example Command 0x33 - Stop Sound
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "51", "Command 51 - Stop Sound"
+
+No response is expected.
+
+
+Play Sound File (0x34)
+^^^^^^^^^^^^^^^^^^^^^^
+
+Play a sound file on external hardware.
+This is used to extend sound capabilities on older machines in LISY.
+Alternatively, you can use the MPF sound system.
+
+Payload is a null terminated string with the filename of the sound.
+
+Example:
+
+.. csv-table:: Example Command 0x34 - Play Sound File
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "52", "Command 52 - Play Sound File"
+   "1", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
+
+No response is expected.
+
+
+Text to speech (0x35)
+^^^^^^^^^^^^^^^^^^^^^
+
+This is used to extend sound capabilities on older machines in LISY.
+
+Payload is a null terminated string with the text to play.
+
+Example:
+
+.. csv-table:: Example Command 0x35 - Text to speech
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "53", "Command 53 - Text to speech"
+   "1", "6", "Hello ", "Play text 'hello'. Last character is null byte."
+
+No response is expected.
+
+
+Set Sound Volume (0x36)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Set volume of amplifier.
+This may be connected either to a hardware soundcard or to the output of the MPF sound system.
+
+Payload is the sound number.
+
+.. csv-table:: Payload of Command 0x36 - Set Sound Volume
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Volume in percent (0-100)"
+
+Example:
+
+.. csv-table:: Example Command 0x36 - Set Sound Volume
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "54", "Command 54 - Set Sound Volume"
+   "1", "1", "50", "Set volume to 50%"
+
+No response is expected.
+
 
 Init/Reset (0x36)
 ^^^^^^^^^^^^^^^^^
@@ -668,3 +819,209 @@ Example:
    "0", "1", "0", "Watchdog ok."
 
 This be send periodically at 2 Hz in MPF.
+
+
+Protocol reference (v0.09) - RFC
+--------------------------------
+
+This section contains a proposal for new methods.
+This is still in development.
+Requests and commends are welcome.
+All commands are considered in "Request for Comments (RFC)" state.
+They will likely end up in v0.09 in some way.
+
+
+Get Count of Modern Lights (0x09)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get count of modern lights available.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "5", "Command 9 - Get Count of Modern Lights "
+
+Returns one byte:
+
+.. csv-table:: Response to 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "Light count ``m`` (0 to 255). 0 if no modern lights exist."
+
+Example:
+
+.. csv-table:: Example Response to 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "128", "Platform supports 128 modern lights with numbers 0 to 127."
+
+MPF uses this number to refuse any lights with a number larger or equal than
+``m`` and subtype ``light``.
+Return ``0`` if you do not support modern lights in your platform.
+
+
+Get Count of Modern Lights (0x09)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get count of modern lights available.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "5", "Command 9 - Get Count of Modern Lights "
+
+Returns one byte:
+
+.. csv-table:: Response to 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "Light count ``m`` (0 to 255). 0 if no modern lights exist."
+
+Example:
+
+.. csv-table:: Example Response to 0x09 - Get Count of Modern Lights
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "128", "Platform supports 128 modern lights with numbers 0 to 127."
+
+MPF uses this number to refuse any lights with a number larger or equal than
+``m`` and subtype ``light``.
+Return ``0`` if you do not support modern lights in your platform.
+
+
+Set Solenoid Recycle Time (0x19)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Configure the recycle time of a solenoid in milliseconds.
+The platform will prevent any new pulse/enable until recycle time has passed after a pulse end or disable.
+This prevents overheating through "machine gunning" on pops, flaky switches or repeated pulses through bad code.
+By default MPF will set recycle to two times the pulse time but it can be changed.
+
+Payload is the solenoid index and recycle time.
+
+.. csv-table:: Payload of Command 0x19 - Set Solenoid Recycle Time
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to configure"
+   "2", "1", "Recycle time in ms (0-255)"
+
+Example:
+
+.. csv-table:: Example Command 0x19 - Set Solenoid Recycle Time
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "25", "Command 25 - Set Solenoid Recycle Time"
+   "1", "1", "25", "Configure solenoid 25"
+   "2", "1", "50", "Set recycle time to 100ms"
+
+No response is expected.
+This will affect pulses, enables and all hardware rules.
+
+
+Pulse and Enable Solenoid with PWM (0x1A)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Pulse solenoid and then enable solenoid with PWM.
+Payload is the solenoid index, pulse time, pulse power and hold power:
+
+.. csv-table:: Payload of Command 0x1A - Pulse and Enable Solenoid with PWM
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to enable"
+   "2", "1", "Pulse time in ms (0-255)"
+   "3", "1", "Pulse PWM power (0-255). 0=0% power. 255=100% power"
+   "4", "1", "Hold PWM power (0-255). 0=0% power. 255=100% power"
+
+Example:
+
+.. csv-table:: Example Command 0x15 - Pulse and Enable Solenoid with PWM
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "26", "Command 26 - Enable Solenoid with PWM and Pulse"
+   "1", "1", "25", "Enable solenoid 25"
+   "2", "1", "30", "30ms initial pulse"
+   "3", "1", "191", "191/255 = 75% pulse power"
+   "4", "1", "64", "25% hold power"
+
+No response is expected.
+This command can also be used to just pulse a coil with PWM if "Hold PWM power" is set to 0.
+
+
+Configure Hardware Rule for Solenoid (0x3C)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Program a hardware rule into the controller to control a solenoid based on one to three switches.
+This is used in modern machines to implement low latency responses (because responding to switch hits in software
+causes too much latency and jitter).
+There can be only one hardware rule per solenoid.
+A new rule will always overwrite an old one for the solenoid.
+
+Flags decide what the three switches do:
+
+.. csv-table:: Flags for Command 0x3C - Configure Hardware Rule for Solenoid
+   :header: "Bit", "Description"
+   :widths: 10, 30
+
+   "0", "When switch becomes active trigger the rule. Usually set on the first switch to trigger the rule.
+   Sometimes a second switch is used just to disable a rule (such as on EOS of a flipper)."
+   "1", "When switch becomes inactive disable the rule. This is what you want on flipper fingers but not on slings/pops."
+   "2", "reserved"
+   "3", "reserved"
+   "4", "reserved"
+   "5", "reserved"
+   "6", "reserved"
+   "7", "reserved"
+
+Payload is the solenoid index, one to three switches, pulse time, pulse power, hold power and some flags:
+
+.. csv-table:: Payload of Command 0x3C - Configure Hardware Rule for Solenoid
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``c`` of the solenoid to configure"
+   "2", "1", "Switch ``sw1``. Set bit 7 to invert the switch."
+   "3", "1", "Switch ``sw2``. Set bit 7 to invert the switch."
+   "4", "1", "Switch ``sw3``. Set bit 7 to invert the switch."
+   "5", "1", "Pulse time in ms (0-255)"
+   "6", "1", "Pulse PWM power (0-255). 0=0% power. 255=100% power"
+   "7", "1", "Hold PWM power (0-255). 0=0% power. 255=100% power"
+   "8", "1", "Flag for ``sw1``"
+   "9", "1", "Flag for ``sw2``"
+   "10", "1", "Flag for ``sw3``"
+
+Example:
+
+.. csv-table:: Example Command 0x3C - Configure Hardware Rule for Solenoid
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "60", "Command 60 - Configure Hardware Rule for Solenoid"
+   "1", "1", "25", "Configure rule for solenoid 25"
+   "2", "1", "5", "Use Switch 5 as ``sw1``"
+   "3", "1", "134", "Use inverted Switch 6 as ``sw2``"
+   "4", "1", "127", "No switch as ``sw3``"
+   "5", "1", "30", "30ms initial pulse"
+   "6", "1", "191", "191/255 = 75% pulse power"
+   "7", "1", "64", "25% hold power"
+   "8", "1", "3", "``sw1`` will enable the rule and disable it when released."
+   "9", "1", "2", "``sw2`` will disable the rule if it closes (because it is inverted)."
+   "10", "1", "0", "Do not use ``sw3``"
+
+No response is expected.
+To disable a rule just set all flags to 0.
