@@ -8,3 +8,4 @@ mpfmc_examples
 examples/
 events/*.rst
 /.vs
+/.vscode
