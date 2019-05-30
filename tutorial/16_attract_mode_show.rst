@@ -116,7 +116,7 @@ config_version in config files, except since this is a show file, it's "show_ver
 
 Next, notice that the show file is broken into steps, each beginning with a
 dash and then a ``duration:`` entry. The ``duration:`` entry controls how long each step is.
-The default value is seconds, though you can enter standard time strings like
+The default unit for this value is seconds, so ``duration: 3`` is valid, though you can enter standard time strings like
 ``duration: 3s`` or ``duration: 300ms``, etc.
 
 By the way, when you play back a show, you can set the playback speed. So even though
@@ -129,11 +129,9 @@ at some point for all sorts of details about show files, formats, etc.
 
 In addition to the ``duration:`` setting in each step, also notice that each step has a
 ``slides:`` setting. The format and content of the ``slides:`` section of a show is
-identical to the ``slide_player:`` section in a config file.
-
-So "slide_player: in config file" = "slides: in a show". (In the future you'll see this
-applies to other "players" like light_player: in a config file is the same as lights: in a show,
-sound_player: in a config file is the same as sounds: in a show, etc.
+identical to the ``slide_player:`` section in a config file. (In the future you'll see 
+this applies to other "players"; for example, ``light_player:`` in a config file is the same as 
+``lights:`` in a show, ``sound_player:`` in a config file is the same as ``sounds:`` in a show, etc.)
 
 Then in the ``slides:`` section of each step, we've added a slide name. These slides are named
 ``awesome_slide``, ``press_start``, and ``mission_pinball`` in the example above. The slide names
@@ -234,7 +232,7 @@ Plus, even if you don't remove this entry, the original "ATTRACT MODE" text from
 machine-wide config won't show up anymore. Why? Because the attract mode runs at
 Priority 10, and the machine-wide config is Priority 0. So the display show from the
 attract mode config will show on top of the slide from the machine-wide config, so we
-may as well remove the machine-wide won.
+may as well remove the machine-wide one.
 
 Now when you run your game via ``mpf both``, you should see the attract mode display show.
 Then when you press Start (or the ``S`` key), everything else should proceed as it did before.
