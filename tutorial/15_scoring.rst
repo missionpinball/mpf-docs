@@ -88,7 +88,7 @@ event in a lower-priority mode. So you could have a pop bumper that is
 worth 100 points in a base mode, but then you could also make it worth
 5,000 points in a super jets mode while blocking the 100 point score
 from the base mode since if the scoring from both modes was active, you'd get
-two scoring events--the 100 from the base mode and the 500 from the super jets mode.
+two scoring events--the 100 from the base mode and the 5,000 from the super jets mode.
 (More on that later.)
 
 Later on you can also configure *shots* which can control lights and
