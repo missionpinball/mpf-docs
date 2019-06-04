@@ -60,6 +60,7 @@
    Game Variable Reference </game_vars/index>
    Machine Variable Reference </machine_vars/index>
    Player Variable Reference </player_vars/index>
+   Log Reference </logs/index>
 
 .. toctree::
    :hidden:
