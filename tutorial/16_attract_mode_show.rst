@@ -164,7 +164,7 @@ The last slide deserves special mention - it displays the score of the previous 
 such as score are only valid during a game and lose their value once the game ends. To allow access to 
 the score of a previous game, MPF saves this player variable to a machine variable which can be 
 accessed outside the running game.  A discussion of this and other machine variables is found 
-:doc:`here </machine_vars/index.html>`
+:doc:`here </machine_vars/index>`.
 
 3. Configure your show to play automatically
 --------------------------------------------
