@@ -111,13 +111,29 @@ file you can use as a starting point:
             duration: 1s
             direction: top
 
+   - duration: 3
+     slides:
+       last_game_score_slide:
+         widgets:
+         - type: text
+           text: LAST GAME
+           font_size: 50
+           y: 60%
+         - type: text
+           text: (machine|player1_score)
+           number_grouping: true
+           min_digits: 2
+           font_size: 50
+           y: 40%
+
+
 First, notice the first line is ``#show_version=5``. This is similar to the
 config_version in config files, except since this is a show file, it's "show_version".
 
 Next, notice that the show file is broken into steps, each beginning with a
 dash and then a ``duration:`` entry. The ``duration:`` entry controls how long each step is.
-The default unit for this value is seconds, so ``duration: 3`` is valid, though you can enter standard time strings like
-``duration: 3s`` or ``duration: 300ms``, etc.
+The default unit for this value is seconds, so ``duration: 3`` is valid, though you can enter 
+standard time strings like ``duration: 3s`` or ``duration: 300ms``, etc.
 
 By the way, when you play back a show, you can set the playback speed. So even though
 all the steps are 3 seconds long in our example show, when you play the show, you could
@@ -143,6 +159,12 @@ removed from memory when the attract mode stops.)
 Also notice that we added ``transition:`` settings which control how one slide transitions
 to the next. Without transitions, the new slide appears instantly. But with transitions, we
 can make one slide move in from the side, or cross fade, etc.
+
+The last slide deserves special mention - it displays the score of the previous game. Player variables 
+such as score are only valid during a game and lose their value once the game ends. To allow access to 
+the score of a previous game, MPF saves this player variable to a machine variable which can be 
+accessed outside the running game.  A discussion of this and other machine variables is found 
+:doc:`here </machine_vars/index>`.
 
 3. Configure your show to play automatically
 --------------------------------------------
