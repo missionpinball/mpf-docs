@@ -336,8 +336,8 @@ To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: doscon
 
-  pip install mpf=x.yy.z
-  pip install mpf-mc=x.yy.z
+  pip install mpf==x.yy.z
+  pip install mpf-mc==x.yy.z
 
 Next steps!
 -----------
