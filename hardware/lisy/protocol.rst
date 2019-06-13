@@ -33,7 +33,7 @@ Let us know if you hit any of those and we can develop a plan forward.
  - Max 256 simple lamps (on/off only)
  - Max 256 lights (with fading and brightness)
  - Max 256 coils
- - Max 7 segment displays
+ - Max 7 alphanumeric displays (BCD, 7-segment or 14-segment displays)
  - No error correction on the wire (your serial should be reliable)
 
 Protocol reference (v0.08)
@@ -278,10 +278,8 @@ Returns null terminated string.
 Options are:
 
 * ``BCD`` - subset of 7-segment
-* ``7-segment``
-* ``8-segment`` - 7-segment with decimal point
-* ``14-segment`` - semi-alphanumeric
-* ``16-segment`` - full alphanumeric
+* ``7_1-segment`` - 7-segment with decimal point (7-segments + 1 dot)
+* ``14_2-segment`` - semi-alphanumeric with two decimal points (14-segments + 2 dots)
 
 Not yet used in MPF but will be added soon.
 
@@ -304,6 +302,41 @@ This is the internal Gottlieb number in LISY.
 MPF does not use the command at all (and we are not planning to).
 It is used in PinMAME on LISY.
 
+
+Get Switch Count (0x09)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Get count of switches available.
+Does not have any payload.
+
+Example:
+
+.. csv-table:: Example Command 0x09 - Get Switch Count
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "9", "Command 9 - Get Switch Count"
+
+Returns one byte:
+
+.. csv-table:: Response to 0x09 - Get Switch Count
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "Switch count ``sw`` (0 to 127)"
+
+Example:
+
+.. csv-table:: Example Response to 0x09 - Get Switch Count
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "70", "Platform supports 70 switches with numbers 0 to 69."
+
+MPF uses this number to refuse any switches with a number larger or
+equal than ``sw``.
+Please note that the procotol is currently limited to 127 switches since the
+upper byte is used to indicate inverted switches in commands.
 
 Get Status of Simple Lamp (0x0A)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -541,10 +574,8 @@ Payload is a null terminated string.
 Content encoding depends on the type of the display (from command 0x7):
 
 * ``BCD`` - send one ascii char per number (basically plain ascii)
-* ``7-segment`` - send one byte with one bit per element (not implemented yet in MPF)
-* ``8-segment`` - send one byte with one bit per element (not implemented yet in MPF)
-* ``14-segment`` - send two byte with one bit per element (not implemented yet in MPF)
-* ``16-segment`` - send two byte with one bit per element (not implemented yet in MPF)
+* ``7_1-segment`` - send one byte with one bit per element (not implemented yet in MPF)
+* ``14_2-segment`` - send two byte with one bit per element (not implemented yet in MPF)
 
 .. csv-table:: Command 0x1E - 0x24 - Set Segment Display ``d``
    :header: "Byte", "Length", "Value", "Comment"
@@ -616,7 +647,7 @@ Example:
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "40", "Command 41 - Get Changed Switches"
+   "0", "1", "41", "Command 41 - Get Changed Switches"
 
 Returns one byte:
 
@@ -703,7 +734,8 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "52", "Command 52 - Play Sound File"
-   "1", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
+   "1", "1", "0", "Track to use. Track 0 is the default track."
+   "2", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
 
 No response is expected.
 
@@ -723,32 +755,6 @@ Example:
 
    "0", "1", "53", "Command 53 - Text to speech"
    "1", "6", "Hello ", "Play text 'hello'. Last character is null byte."
-
-No response is expected.
-
-
-Set Sound Volume (0x36)
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Set volume of amplifier.
-This may be connected either to a hardware soundcard or to the output of the MPF sound system.
-
-Payload is the sound number.
-
-.. csv-table:: Payload of Command 0x36 - Set Sound Volume
-   :header: "Byte", "Length", "Description"
-   :widths: 10, 10, 30
-
-   "1", "1", "Volume in percent (0-100)"
-
-Example:
-
-.. csv-table:: Example Command 0x36 - Set Sound Volume
-   :header: "Byte", "Length", "Example", "Comment"
-   :widths: 10, 10, 10, 30
-
-   "0", "1", "54", "Command 54 - Set Sound Volume"
-   "1", "1", "50", "Set volume to 50%"
 
 No response is expected.
 
@@ -831,7 +837,7 @@ All commands are considered in "Request for Comments (RFC)" state.
 They will likely end up in v0.09 in some way.
 
 
-Get Count of Modern Lights (0x09)
+Get Count of Modern Lights (0x13)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Get count of modern lights available.
@@ -839,15 +845,15 @@ Does not have any payload.
 
 Example:
 
-.. csv-table:: Example Command 0x09 - Get Count of Modern Lights
+.. csv-table:: Example Command 0x13 - Get Count of Modern Lights
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "5", "Command 9 - Get Count of Modern Lights "
+   "0", "1", "19", "Command 19 - Get Count of Modern Lights "
 
 Returns one byte:
 
-.. csv-table:: Response to 0x09 - Get Count of Modern Lights
+.. csv-table:: Response to 0x13 - Get Count of Modern Lights
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
@@ -855,7 +861,7 @@ Returns one byte:
 
 Example:
 
-.. csv-table:: Example Response to 0x09 - Get Count of Modern Lights
+.. csv-table:: Example Response to 0x13 - Get Count of Modern Lights
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
@@ -1025,3 +1031,29 @@ Example:
 
 No response is expected.
 To disable a rule just set all flags to 0.
+
+
+Set Sound Volume (0x37)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Set volume of amplifier.
+This may be connected either to a hardware soundcard or to the output of the MPF sound system.
+
+Payload is the sound number.
+
+.. csv-table:: Payload of Command 0x37 - Set Sound Volume
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Volume in percent (0-100)"
+
+Example:
+
+.. csv-table:: Example Command 0x37 - Set Sound Volume
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "55", "Command 55 - Set Sound Volume"
+   "1", "1", "50", "Set volume to 50%"
+
+No response is expected.
