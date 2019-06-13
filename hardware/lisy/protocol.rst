@@ -875,7 +875,7 @@ Example:
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "19", "Command 19 - Get Count of Modern Lights "
+   "0", "1", "19", "Command 19 - Get Count of Modern Lights"
 
 Returns one byte:
 
@@ -896,6 +896,37 @@ Example:
 MPF uses this number to refuse any lights with a number larger or equal than
 ``m`` and subtype ``light``.
 Return ``0`` if you do not support modern lights in your platform.
+
+
+Fade Modern Light (0x0d)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fade a group of modern lights.
+
+.. csv-table:: Payload of Command 0x0d - Fade Modern Light
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``m`` of the first light"
+   "2", "2", "Fade time in ms (0-65535). Can be 0 to set the brightness instantly."
+   "4", "1", "Number ``n`` of lights to fade. Can be 1 to set or fade a single light."
+   "5", "``n``", "One byte of brightness per light (0-255). ``n`` bytes in total"
+
+Example:
+
+.. csv-table:: Example Command 0x0d - Fade Modern Light
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "19", "Command 13 - Fade Modern Light"
+   "1", "1", "42", "First light is 42"
+   "2", "2", "50", "Fade to color in 50ms."
+   "4", "1", "3", "Fade three lights (i.e. RGB in sync)"
+   "5", "1", "127", "Fade light 42 to 50% brightness"
+   "6", "1", "0", "Fade light 43 to 0% brightness"
+   "7", "1", "255", "Fade light 44 to 100% brightness"
+
+No response is expected.
 
 
 Set Solenoid Recycle Time (0x19)
