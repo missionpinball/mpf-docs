@@ -759,7 +759,33 @@ Example:
 No response is expected.
 
 
-Init/Reset (0x36)
+Set Sound Volume (0x36)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Set volume of amplifier.
+This may be connected either to a hardware soundcard or to the output of the MPF sound system.
+
+Payload is the sound number.
+
+.. csv-table:: Payload of Command 0x36 - Set Sound Volume
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Volume in percent (0-100)"
+
+Example:
+
+.. csv-table:: Example Command 0x36 - Set Sound Volume
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "54", "Command 54 - Set Sound Volume"
+   "1", "1", "50", "Set volume to 50%"
+
+No response is expected.
+
+
+Init/Reset (0x64)
 ^^^^^^^^^^^^^^^^^
 
 Reset and initialize the platform.
@@ -768,15 +794,15 @@ Does not have any payload.
 
 Example:
 
-.. csv-table:: Example Command 0x36 - Init/Reset
+.. csv-table:: Example Command 0x64 - Init/Reset
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
-   "0", "1", "54", "Command 54 - Init/Reset"
+   "0", "1", "100", "Command 100 - Init/Reset"
 
 Returns one byte:
 
-.. csv-table:: Response to 0x36 - Init/Reset
+.. csv-table:: Response to 0x64 - Init/Reset
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
@@ -784,7 +810,7 @@ Returns one byte:
 
 Example:
 
-.. csv-table:: Example Response to 0x36 - Init/Reset
+.. csv-table:: Example Response to 0x64 - Init/Reset
    :header: "Byte", "Length", "Example", "Comment"
    :widths: 10, 10, 10, 30
 
@@ -1032,28 +1058,3 @@ Example:
 No response is expected.
 To disable a rule just set all flags to 0.
 
-
-Set Sound Volume (0x37)
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Set volume of amplifier.
-This may be connected either to a hardware soundcard or to the output of the MPF sound system.
-
-Payload is the sound number.
-
-.. csv-table:: Payload of Command 0x37 - Set Sound Volume
-   :header: "Byte", "Length", "Description"
-   :widths: 10, 10, 30
-
-   "1", "1", "Volume in percent (0-100)"
-
-Example:
-
-.. csv-table:: Example Command 0x37 - Set Sound Volume
-   :header: "Byte", "Length", "Example", "Comment"
-   :widths: 10, 10, 10, 30
-
-   "0", "1", "55", "Command 55 - Set Sound Volume"
-   "1", "1", "50", "Set volume to 50%"
-
-No response is expected.
