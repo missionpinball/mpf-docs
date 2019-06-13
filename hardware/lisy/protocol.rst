@@ -898,41 +898,6 @@ MPF uses this number to refuse any lights with a number larger or equal than
 Return ``0`` if you do not support modern lights in your platform.
 
 
-Get Count of Modern Lights (0x09)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Get count of modern lights available.
-Does not have any payload.
-
-Example:
-
-.. csv-table:: Example Command 0x09 - Get Count of Modern Lights
-   :header: "Byte", "Length", "Example", "Comment"
-   :widths: 10, 10, 10, 30
-
-   "0", "1", "5", "Command 9 - Get Count of Modern Lights "
-
-Returns one byte:
-
-.. csv-table:: Response to 0x09 - Get Count of Modern Lights
-   :header: "Byte", "Length", "Description"
-   :widths: 10, 10, 30
-
-   "0", "1", "Light count ``m`` (0 to 255). 0 if no modern lights exist."
-
-Example:
-
-.. csv-table:: Example Response to 0x09 - Get Count of Modern Lights
-   :header: "Byte", "Length", "Example", "Comment"
-   :widths: 10, 10, 10, 30
-
-   "0", "1", "128", "Platform supports 128 modern lights with numbers 0 to 127."
-
-MPF uses this number to refuse any lights with a number larger or equal than
-``m`` and subtype ``light``.
-Return ``0`` if you do not support modern lights in your platform.
-
-
 Set Solenoid Recycle Time (0x19)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
