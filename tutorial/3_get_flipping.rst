@@ -84,7 +84,7 @@ Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
 here):
 
-* You you cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
+* You cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
   Most text editors can be configured to automatically insert spaces when you push the tab key, or you can just
   hit the space bar a bunch of times.
 * The exact number of spaces you use for the indents doesn't matter (most people use
