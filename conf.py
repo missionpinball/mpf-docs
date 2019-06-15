@@ -12,6 +12,9 @@ import git
 import sphinx_rtd_theme
 from sphinx.highlighting import lexers
 
+# for some reason sphinx needs this
+sys.setrecursionlimit(2000)
+
 sys.path.append(os.getcwd())
 from _doc_tools.mpf_lexer import MpfLexer
 from _doc_tools.build_events_reference_docs import EventDocParser
