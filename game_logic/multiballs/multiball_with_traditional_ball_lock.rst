@@ -145,3 +145,9 @@ True will instruct the multiball to eject the active ball **and** the additional
 
 With the above configuration, the final locked ball will start the multiball and the
 multiball will eject three balls from *lockdevice*.
+
+.. note::
+
+   Be careful with with *balls_to_replace* and *replace_balls_in_play*.
+   They will only work in exactly this combination.
+   Used in isolation they will likely lead to incorrect ball counts.
