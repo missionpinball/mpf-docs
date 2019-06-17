@@ -32,7 +32,7 @@ Let us know if you hit any of those and we can develop a plan forward.
  - Max 256 hardware sounds (alternatively, you can use the MPF sound system)
  - Max 256 simple lamps (on/off only)
  - Max 256 lights (with fading and brightness)
- - Max 256 coils
+ - Max 256 coils (MPF currently only supports 100 of them; let us know if you need more)
  - Max 7 alphanumeric displays (BCD, 7-segment or 14-segment displays)
  - No error correction on the wire (your serial should be reliable)
 
