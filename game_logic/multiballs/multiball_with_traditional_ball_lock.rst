@@ -61,9 +61,10 @@ multiball.
 
 .. code-block:: mpf-config
 
-
    #! switches:
    #!    s_ball1:
+   #!       number:
+   #!    s_ball2:
    #!       number:
    #! coils:
    #!    c_eject:
@@ -71,18 +72,60 @@ multiball.
    #! ball_devices:
    #!    lockdevice:
    #!       eject_coil: c_eject
-   #!       ball_switches: s_ball1
+   #!       ball_switches: s_ball1, s_ball2
    ##! mode: multiball_mode
    multiball_locks:
       madnesslock:
-        balls_to_lock: 3
-        lock_devices: lockdevice
+         debug: True
+         balls_to_lock: 2
+         lock_devices: lockdevice
+         reset_count_for_current_player_events: multiball_lock_madnesslock_full
 
    multiballs:
       madnessmball:
-        ball_count: 3
-        ball_locks: lockdevice
-        start_events: multiball_lock_madnesslock_full
+         ball_count: 3
+         ball_locks: lockdevice
+         start_events: multiball_lock_madnesslock_full
+
+   ##! test
+   #! start_game
+   #! mock_event multiball_lock_madnesslock_full
+   #! start_mode multiball_mode
+   #! # start mode and lock three balls. mb should start
+   #! add_ball_to_device lockdevice
+   #! advance_time_and_run 1
+   #! assert_int_condition 1 device.multiball_locks.madnesslock.locked_balls
+   #! assert_event_not_called multiball_lock_madnesslock_full
+   #! assert_balls_in_play 1
+   #! add_ball_to_device lockdevice
+   #! advance_time_and_run 1
+   #! assert_event_called multiball_lock_madnesslock_full
+   #! advance_time_and_run 40
+   #! assert_balls_in_play 3
+   #! drain_one_ball
+   #! drain_one_ball
+   #! advance_time_and_run 1
+   #! assert_balls_in_play 1
+   #! assert_int_condition 1 current_player.ball
+   #! assert_int_condition 0 device.multiball_locks.madnesslock.locked_balls
+   #! # second try. mb should start again
+   #! mock_event multiball_lock_madnesslock_full
+   #! add_ball_to_device lockdevice
+   #! advance_time_and_run 1
+   #! assert_int_condition 1 device.multiball_locks.madnesslock.locked_balls
+   #! assert_event_not_called multiball_lock_madnesslock_full
+   #! assert_balls_in_play 1
+   #! add_ball_to_device lockdevice
+   #! advance_time_and_run 1
+   #! assert_event_called multiball_lock_madnesslock_full
+   #! advance_time_and_run 40
+   #! assert_balls_in_play 3
+   #! drain_one_ball
+   #! drain_one_ball
+   #! advance_time_and_run 1
+   #! assert_balls_in_play 1
+   #! assert_int_condition 1 current_player.ball
+   #! assert_int_condition 0 device.multiball_locks.madnesslock.locked_balls
 
 In the above configuration, the multiball_lock will track the balls entering *lockdevice*
 and claim up to three. When the third ball is claimed the lock will post its "full"
