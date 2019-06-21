@@ -162,3 +162,47 @@ That's all there is to it.  Now whenever the ``my_video_is_playing`` MPF event i
 music track will be paused.  It will be resumed when the ``my_video_has_stopped`` MPF event
 is posted.
 
+When Two Drop Targets Are Hit Simultaneously How Do I Keep Two Sounds From Playing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A common scenario with drop targets is top play a sound when each target is hit.  Frequently a
+player will hit two targets with a single shot dropping them both virtually at the same time.  In
+this situation playing a sound for each target is not always desired. Instead, it would be nice
+to only have a single sound played when the targets are hit within a short time window.
+
+One possible way to solve this in MPF is to use :doc:`counters </game_logic/logic_blocks/counters>`.
+Counters have a :doc:`multiple_hit_window </config/counters>` setting that prevents accidental
+double hits within the configured time period. Instead of using the target hit event to trigger the
+sound, the target hit event will trigger the counter which in turn will post a hit event that can be
+used to trigger the sound. Here is an example:
+
+.. code-block:: mpf-config
+
+   drop_targets:
+      target_1:
+         switch: sw_drop_target_1
+         reset_coil: reset_drop_targets
+      target_2:
+         switch: sw_drop_target_2
+         reset_coil: reset_drop_targets
+      target_3:
+         switch: sw_drop_target_3
+         reset_coil: reset_drop_targets
+
+   counters:
+      drop_target_counter:
+         count_events: drop_target_target_1_hit, drop_target_target_2_hit, drop_target_target_2_hit
+         multiple_hit_window: 500ms
+         events_when_hit: drop_target_counter_hit
+
+   sounds:
+      drop_target_sound:
+         file: blip1.wav
+         track: sfx
+         volume: 0.75
+
+   sound_player:
+      drop_target_counter_hit:
+         drop_target_sound:
+            action: play
+
