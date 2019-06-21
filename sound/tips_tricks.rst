@@ -178,6 +178,10 @@ used to trigger the sound. Here is an example:
 
 .. code-block:: mpf-config
 
+   coils:
+      reset_drop_targets:
+         number: 1
+
    switches:
       sw_drop_target_1:
          number: 1
