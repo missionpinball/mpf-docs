@@ -43,3 +43,9 @@ Config looks like this:
 You can configure your serial port in `port`.
 See :doc:`segment_display </displays/display/alpha_numeric>` for more informations about how to drive segment display in your
 game.
+
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   Wiring 3rd-Party Segment Displays <wiring>
