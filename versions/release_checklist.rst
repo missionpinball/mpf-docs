@@ -21,6 +21,10 @@ What to do to make a MPF release?
 
 - Add ``a.bb`` to versions on readthedocs and wait until it finished building
 
+- Remove ``a.bb`` from redirects in readthedocs
+
+- Add ``a.bb + 1`` to redirects in readthedocs
+
 - Increase version to a.bb.0 on ``a.bb.x`` branch
 
    - ``mpf`` repository
