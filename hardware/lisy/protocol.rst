@@ -305,10 +305,10 @@ Returns null terminated string.
 Options are:
 
 .. csv-table:: Types in Response of 0x07 - Get Segment Display Details
-   :header: "Byte of segment type ``st``", "Name", "Description", "Bytes per Segment ``bs``"
+   :header: "Byte of segment type ``st``", "Name", "Description", "Bytes per Segment ``bs(st)``"
    :widths: 10, 10, 10, 30
 
-   "0", "Invalid", "Display index is invalid or does not exist in machine."
+   "0", "Invalid", "Display index is invalid or does not exist in machine.", "-"
    "1", "BCD7", "BCD Code for 7 Segment Displays without comma", "1 byte (4 bit BCD in the first four byte)"
    "2", "BCD8", "BCD Code for 8 Segment Displays (same as BCD7 but with comma)", "1 byte (4 bit BCD in the first four byte, 7th byte is the comma)"
    "3", "SEG7", "Fully addressable 7 Segment Display (with comma)", "1 byte (a-g encoded as bit 0 to 6 and bit 7 as comma)"
@@ -358,7 +358,7 @@ Returns one byte:
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "0", "1", "Switch count ``sw`` (0 to 127)"
+   "0", "1", "Switch count ``s`` (0 to 127)"
 
 Example:
 
@@ -369,7 +369,7 @@ Example:
    "0", "1", "70", "Platform supports 70 switches with numbers 0 to 69."
 
 MPF uses this number to refuse any switches with a number larger or
-equal than ``sw``.
+equal than ``s``.
 Please note that the procotol is currently limited to 127 switches since the
 upper byte is used to indicate inverted switches in commands.
 
