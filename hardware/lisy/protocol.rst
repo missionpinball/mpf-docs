@@ -301,7 +301,6 @@ Example:
    "0", "1", "1", "Segment display is a BCD7 display"
    "1", "1", "12", "Segment display is 12 segments wide"
 
-Returns null terminated string.
 Options are:
 
 .. csv-table:: Types in Response of 0x07 - Get Segment Display Details
