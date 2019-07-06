@@ -264,7 +264,13 @@ Get Segment Display Details (0x07)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Get type of segment displays.
-Does not have any payload.
+
+.. csv-table:: Payload of Command 0x07 - Get Segment Display Details
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Index ``sd`` of the segment display to query"
+
 
 Example:
 
@@ -273,13 +279,42 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "7", "Command 7 - Get Segment Display Details"
+   "1", "1", "0", "Query the first display"
+
+Returns two bytes:
+
+.. csv-table:: Response to 0x07 - Get Segment Display Details
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "0", "1", "Type of segment display (see list below)"
+   "1", "1", "Number of segments ``sw(sd)`` (0-255)"
+
+``sw(sd)`` is the segment width for display index ``sd``.
+
+Example:
+
+.. csv-table:: Example Response to 0x07 - Get Segment Display Details
+   :header: "Byte", "Length", "Example", "Comment"
+   :widths: 10, 10, 10, 30
+
+   "0", "1", "1", "Segment display is a BCD7 display"
+   "1", "1", "12", "Segment display is 12 segments wide"
 
 Returns null terminated string.
 Options are:
 
-* ``BCD`` - subset of 7-segment
-* ``7_1-segment`` - 7-segment with decimal point (7-segments + 1 dot)
-* ``14_2-segment`` - semi-alphanumeric with two decimal points (14-segments + 2 dots)
+.. csv-table:: Types in Response of 0x07 - Get Segment Display Details
+   :header: "Byte of segment type ``st``", "Name", "Description", "Bytes per Segment ``bs``"
+   :widths: 10, 10, 10, 30
+
+   "0", "Invalid", "Display index is invalid or does not exist in machine."
+   "1", "BCD7", "BCD Code for 7 Segment Displays without comma", "1 byte (4 bit BCD in the first four byte)"
+   "2", "BCD8", "BCD Code for 8 Segment Displays (same as BCD7 but with comma)", "1 byte (4 bit BCD in the first four byte, 7th byte is the comma)"
+   "3", "SEG7", "Fully addressable 7 Segment Display (with comma)", "1 byte (a-g encoded as bit 0 to 6 and bit 7 as comma)"
+   "4", "SEG14", "Fully addressable 14 Segment Display (with comma)", "2 bytes (a-g encoded as bit 0 to 6 in first byte. h to r encoded as bit 0 to 6 in second byte. comma as bit 7 in second byte)"
+   "5", "ASCII", "ASCII Code", "1 ascii byte per segment"
+   "6", "ASCII_DOT", "ASCII Code with comma (every segment has an additional comma)", "1 ascii byte per segment. Additionally bit 7 encodes the comma."
 
 Not yet used in MPF but will be added soon.
 
@@ -571,18 +606,14 @@ Set Segment Display 0-6 (0x1E - 0x24)
 
 Set content of segment display ``d`` 0-6.
 Payload is a null terminated string.
-Content encoding depends on the type of the display (from command 0x7):
-
-* ``BCD`` - send one ascii char per number (basically plain ascii)
-* ``7_1-segment`` - send one byte with one bit per element (not implemented yet in MPF)
-* ``14_2-segment`` - send two byte with one bit per element (not implemented yet in MPF)
+Content encoding depends on the type of the display (from command 0x7).
 
 .. csv-table:: Command 0x1E - 0x24 - Set Segment Display ``d``
    :header: "Byte", "Length", "Value", "Comment"
    :widths: 10, 10, 10, 30
 
    "0", "1", "30 + d", "Command byte for set segment depending on segment number ``d``"
-   "1 - n", "n - 1", "Encoded String", "Payload (n-1 bytes)"
+   "1", "``sw(sd) * bs(st)``", "Number of segments (0-255) multiplied by bytes per segment for this display (1 or 2 bytes)", "One or two bytes per segment for all segments. Encoding depends on segment type (see command 0x7)."
 
 Example:
 
@@ -591,7 +622,7 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "31", "Command 31 - Set Segment display 1"
-   "1", "5", "1337 ", "Set display to 1337. The last char must be a null byte."
+   "1", "12", "Hello World!", "Set display1 to hello world (ASCII type display)"
 
 No response is expected.
 
@@ -734,7 +765,7 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "52", "Command 52 - Play Sound File"
-   "1", "1", "0", "Track to use. Track 0 is the default track."
+   "1", "1", "1", "Track to use. Track 1 is the default track."
    "2", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
 
 No response is expected.
