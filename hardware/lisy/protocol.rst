@@ -612,7 +612,8 @@ Content encoding depends on the type of the display (from command 0x7).
    :widths: 10, 10, 10, 30
 
    "0", "1", "30 + d", "Command byte for set segment depending on segment number ``d``"
-   "1", "``sw(sd) * bs(st)``", "Number of segments (0-255) multiplied by bytes per segment for this display (1 or 2 bytes)", "One or two bytes per segment for all segments. Encoding depends on segment type (see command 0x7)."
+   "1", "1", "``sw(sd) * bs(st)``", "Bytes which will follow. Number of segments (0-127) multiplied by bytes per segment for this display (1 or 2 bytes)."
+   "2", "``sw(sd) * bs(st)``", "Number of segments (0-127) multiplied by bytes per segment for this display (1 or 2 bytes)", "One or two bytes per segment for all segments. Encoding depends on segment type (see command 0x7)."
 
 Example:
 
@@ -621,7 +622,8 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "31", "Command 31 - Set Segment display 1"
-   "1", "12", "Hello World!", "Set display1 to hello world (ASCII type display)"
+   "1", "1", "12", "12 Bytes will follow"
+   "2", "12", "Hello World!", "Set display1 to hello world (ASCII type display)"
 
 No response is expected.
 
