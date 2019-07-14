@@ -74,7 +74,7 @@ There are also a lot of very cheap no-name replacements for 100 mil KK which
 work just fine since there should not be any high current on those connectors.
 
 Wire-to-Wire Connections
------------------------
+------------------------
 
 While most of the wiring in a pinball machine involves Wire-to-Board connections as referenced above, you may also find yourself needing to make wire-to-wire connections with modular connectors. For this purpose, the standard size connector is the .093” Molex connector from the “Standard .093" Pin and Socket Connectors” series. These connectors and crimps are generally rated for 250V/14A. 
 
