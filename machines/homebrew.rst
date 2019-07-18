@@ -60,7 +60,7 @@ Additionally, assemblies are often cheaper.
 
 There are a few shops such as `Pinballlife <https://www.pinballlife.com/>`_
 which offer assemblies.
-They also got a homebrew section which is worth checking out.
+They also have a homebrew section which is worth checking out.
 Other shops such as
 `Marcos Specialities <https://www.marcospecialties.com/>`_ offer more parts
 but are less focused on homebrew.
