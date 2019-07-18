@@ -119,7 +119,7 @@ troubleshooting.
 
 Enables verbose logging to the console output.
 
-Note that on due to the way the command prompt console
+Note that due to the way the command prompt console
 works on Windows, enabling verbose logging on Windows will
 significantly affect MPF (in a bad way). Windows computers can run MPF
 no problem, but because of their weird console slowness we recommend
