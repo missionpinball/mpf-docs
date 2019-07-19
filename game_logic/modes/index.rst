@@ -193,7 +193,7 @@ Starting and stopping modes
 
 Modes stop and start based on standard MPF events. For example, if you want a
 mode to run whenever a ball is in play, you'd add ``ball_starting`` to the
-mode's start events list, and you wouldn't specific a stop event. If you want a
+mode's start events list, and you wouldn't specify a stop event. If you want a
 mode to automatically stop when a timer expires, you'd add the name of the event
 that's posted when the timer ends to the mode's stop events list.
 
