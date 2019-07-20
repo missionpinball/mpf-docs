@@ -141,7 +141,10 @@ USB interface on the P-ROC/P3-ROC boards. Mac OS comes with its own FTDI driver
 that's loaded by default and prevents other FTDI drivers from running.
 D2xxHelper adjusts the priorities of FTDI driver loading so that the FTDI
 driver we need loads first, preventing the Apple FTDI driver from loading. This
-is Apple Support's recommended method of solving the problem, so you're safe:
+is Apple Support's recommended method of solving the problem, so you're safe.
+You'll be prompted by Gatekeeper to enter your password to accept installation
+of the package- this is normal. You'll also be warned that this package may be
+incompatible with future versions of macOS.
 
 ::
 
