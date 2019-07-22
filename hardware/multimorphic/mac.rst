@@ -132,6 +132,10 @@ that we modified to work with Python 3:
     cd pypinproc
     python3 setup.py build
     sudo python3 setup.py install
+    
+(If you prefer to install pypinproc in a virtualenv, make sure it's activated
+before this step, and omit sudo from the last line.)
+
 
 8. Install D2xxHelper
 ~~~~~~~~~~~~~~~~~~~~~
