@@ -188,6 +188,28 @@ the name of the mode, and whether the mode has any custom Python code that goes
 with it. (Full details of this are in the ``mode:`` section of the configuration
 file reference.)
 
+Organizing modes in subfolders
+------------------------------
+
+Modes can also be organized in subfolders. So your modes folder structure could
+look like:
+
+::
+
+    modes
+      high_score
+      band_gb
+         gb_base
+         gb_rockfest
+      band
+         sq
+            first_avenue
+            release
+
+Each mode must include the ``config`` subfolder with the configuration file. Any
+folder that includes the ``config`` subfolder will not be scanned for further
+modes.
+
 Starting and stopping modes
 ---------------------------
 
