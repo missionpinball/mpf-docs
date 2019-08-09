@@ -38,7 +38,7 @@ The only vendor that has the USB to USB Null Modem Cable is the FDTI company.
 
 http://www.ftdichip.com/Products/Cables/USBtoUSB.htm
 
-This particular cable also provides faster data transfer rates up to 3 MBaud than Options 2 and 3.
+This particular cable also provides faster data transfer rates (up to 3 MBaud) than Options 2 and 3.
 
 OPTION 2: USB to Serial Adapter
 ===============================
