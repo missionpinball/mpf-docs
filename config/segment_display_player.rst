@@ -9,7 +9,7 @@ segment_display_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``segments:`` section of a step.
+.. note:: This section can also be used in a show file in the ``segment_displays:`` section of a step.
 
 .. overview
 
