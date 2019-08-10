@@ -61,6 +61,7 @@ Common parts include:
 
 * Williams: A-16809
 * Mantis Trough
+* Stern 500-9820-00
 
 If you have a modern trough with opto sensors, read the :doc:`modern_opto`
 guide to continue.
