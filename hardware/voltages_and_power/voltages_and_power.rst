@@ -183,7 +183,7 @@ Then run a separate ground for each power rail from the PSU to the playfield.
 Interferences on the ground of the HV rail might cause problems in other rails.
 Especially for serial LEDs and logic power.
 In case you run into those problems consult with an electric engineer.
-The right capacitors and the right wireing might help with this case for example.
+The right capacitors and the right wiring might help with this case for example.
 
 Common "ground" generally refers to the neutral wire of your PSU which should
 not be confused with ground/electric earth.
