@@ -40,7 +40,7 @@ Config
 
 Starting with MPF 0.50 flashers and lights have been unified. Depending on your
 platform flashers might be :doc:`/config/lights` or :doc:`/config/coils`. In most
-cases they are configures as :doc:`coil </config/coils>`:
+cases they are configured as :doc:`coil </config/coils>`:
 
 .. code-block:: mpf-config
 
