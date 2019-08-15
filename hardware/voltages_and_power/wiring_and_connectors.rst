@@ -108,7 +108,7 @@ Power Distribution Boards
 Your power rails will fan out below the playfield to various mechs and boards.
 The simplest solution to implement this are terminal blocks which work fine
 but make it hard to disconnect stuff temporarily.
-Luckily, various board exist to solve this issue:
+Luckily, various boards exist to solve this issue:
 
 * Spooky/PBL Power Distribution board (part number: PBL-600-0224-00)
 * FAST Playfield Interchange Board
