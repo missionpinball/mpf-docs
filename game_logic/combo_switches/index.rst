@@ -24,8 +24,8 @@ the same time, an MPF event called *flipper_cancel* will be posted.
 Combo switches are also used for things like different kinds of skill shots.
 For example, in *Attack From Mars*, if the player hits the launch button, the
 ball is launched into the pop bumper area, but if the player holds down the
-left flipper button while pressing the launch button, a pin in the upper
-playfield is lowered and the ball is delivered to the flippers for an attempt
+left flipper button while pressing the launch button, the ball gate (Bally part A-17796) in the upper
+playfield is raised and the ball is allowed to pass through and is delivered to the flippers for an attempt
 at a super skill shot. The left flipper + launch button combination is something
 you can enable with MPF's combo switches.
 
