@@ -769,7 +769,7 @@ Payload is a null terminated string containing track, flags and the filename of 
    "1", "1", "Track to play (default track is 1)"
    "2", "1", "Flags (bit 0=loop, 1=no cache)"
    "3", "``n``", "Filename (length ``n``)"
-   "3+``n``", "1", "Null terminator"
+   "3 + ``n``", "1", "Null terminator"
 
 Example:
 
@@ -799,7 +799,7 @@ Payload is a null terminated string containing track, flags and the text to play
    "1", "1", "Track to play (default track is 1)"
    "2", "1", "Flags (bit 0=loop, 1=no cache)"
    "3", "``n``", "Text to play (length ``n``)"
-   "3+``n``", "1", "Null terminator"
+   "3 + ``n``", "1", "Null terminator"
 
 Example:
 
