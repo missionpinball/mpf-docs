@@ -713,7 +713,8 @@ Payload is the sound number.
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "1", "1", "Index of sound to play"
+   "1", "1", "Track to play (default track is 1)"
+   "2", "1", "Index of sound to play"
 
 Example:
 
@@ -722,7 +723,8 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "50", "Command 50 - Play Sound"
-   "1", "1", "42", "Play sound 42"
+   "1", "1", "1", "Play on track 1"
+   "2", "1", "42", "Play sound 42"
 
 No response is expected.
 
@@ -737,7 +739,7 @@ Payload is the sound number.
    :header: "Byte", "Length", "Description"
    :widths: 10, 10, 30
 
-   "1", "1", "Index of sound to stop"
+   "1", "1", "Track to stop (default track is 1)"
 
 Example:
 
@@ -746,6 +748,7 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "51", "Command 51 - Stop Sound"
+   "1", "1", "1", "Stop all sounds on track 1"
 
 No response is expected.
 
@@ -757,7 +760,16 @@ Play a sound file on external hardware.
 This is used to extend sound capabilities on older machines in LISY.
 Alternatively, you can use the MPF sound system.
 
-Payload is a null terminated string with the filename of the sound.
+Payload is a null terminated string containing track, flags and the filename of the sound.
+
+.. csv-table:: Payload of Command 0x34 - Play Sound File
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Track to play (default track is 1)"
+   "2", "1", "Flags (bit 0=loop, 1=no cache)"
+   "3", "``n``", "Filename (length ``n``)"
+   "3+``n``", "1", "Null terminator"
 
 Example:
 
@@ -766,8 +778,9 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "52", "Command 52 - Play Sound File"
-   "1", "1", "1", "Track to use. Track 1 is the default track."
-   "2", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
+   "1", "1", "1", "Use Track 1"
+   "2", "1", "1", "Loop file"
+   "3", "9", "test.mp3 ", "Play sound test.mp3. Last character is null byte."
 
 No response is expected.
 
@@ -777,7 +790,16 @@ Text to speech (0x35)
 
 This is used to extend sound capabilities on older machines in LISY.
 
-Payload is a null terminated string with the text to play.
+Payload is a null terminated string containing track, flags and the text to play.
+
+.. csv-table:: Payload of Command 0x35 - Text to speech
+   :header: "Byte", "Length", "Description"
+   :widths: 10, 10, 30
+
+   "1", "1", "Track to play (default track is 1)"
+   "2", "1", "Flags (bit 0=loop, 1=no cache)"
+   "3", "``n``", "Text to play (length ``n``)"
+   "3+``n``", "1", "Null terminator"
 
 Example:
 
@@ -786,7 +808,9 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "53", "Command 53 - Text to speech"
-   "1", "6", "Hello ", "Play text 'hello'. Last character is null byte."
+   "1", "1", "Track to play (default track is 1)"
+   "2", "1", "1", "No loop. Use Cache."
+   "3", "6", "Hello ", "Play text 'hello'. Last character is null byte."
 
 No response is expected.
 
@@ -804,6 +828,7 @@ Payload is the sound number.
    :widths: 10, 10, 30
 
    "1", "1", "Volume in percent (0-100)"
+   "2", "1", "Track to change (default track is 1)"
 
 Example:
 
@@ -812,7 +837,8 @@ Example:
    :widths: 10, 10, 10, 30
 
    "0", "1", "54", "Command 54 - Set Sound Volume"
-   "1", "1", "50", "Set volume to 50%"
+   "1", "1", "Change track 1"
+   "2", "1", "50", "Set volume to 50%"
 
 No response is expected.
 
