@@ -13,6 +13,7 @@ follow the guides and instructions in the :doc:`/mechs/coils/index` docs.
 
 (If you're using a P-ROC with an existing machine's driver board, like a WPC
 machine, then see the :doc:`existing machine documentation </hardware/existing_machines/index>`.)
+If you are using the P-Roc with PDB drivers you can use the local drivers as number 0 to 31.
 
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
