@@ -74,8 +74,9 @@ your pinball machine.
 
 * :doc:`LISY <lisy/index>`
    * *New in MPF 0.50*
-   * Gottlieb System 1
-   * Gottlieb System 80
+   * Gottlieb System 1 (LISY1)
+   * Gottlieb System 80 (LISY80)
+   * Bally and Stern Games manufactured from 1977 to 1985 (LISY35) *New in MPF 0.53*
    * Segment displays
    * External sounds
    * Switches, rules and coils
@@ -164,7 +165,7 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
-   Gottlieb System 1 / System 80 (LISY) <lisy/index>
+   LISY platform <lisy/index>
    Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
