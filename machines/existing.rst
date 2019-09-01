@@ -10,20 +10,20 @@ controller interfaces with the existing machine's driver boards to control the
 coils, lights, and DMD, and it provides a "bridge" (via USB) to a host
 computer running Python and the Mission Pinball Framework.
 
-========================================================================= ===== ==== === ======
-Machine Type                                                              P-ROC LISY APC Direct
-========================================================================= ===== ==== === ======
-:doc:`Williams / Bally / Midway WPC </hardware/existing_machines/wpc>`    X     X
-:doc:`Williams / Bally System 11 </hardware/existing_machines/system11>`  X          X
-:doc:`Data East </hardware/existing_machines/data_east>`                  X
-:doc:`Stern S.A.M. </hardware/existing_machines/sam>`                     X
-:doc:`Stern Whitestar </hardware/existing_machines/whitestar>`            X
-:doc:`Pinball 2000 </hardware/existing_machines/pinball2000>`             X
-:doc:`Stern SPIKE / SPIKE 2  </hardware/existing_machines/spike>`                        X
-:doc:`Gottlieb System 1 </hardware/existing_machines/gottlieb_system1>`         X
-:doc:`Gottlieb System 80 </hardware/existing_machines/gottlieb_system80>`       X
-:doc:`Bally/Stern w/ AS-2518-17 or AS-2518-35 MPU <bally_stern_as_2518>`        X
-========================================================================= ===== ==== === ======
+==================================================================================================== ===== ==== === ======
+Machine Type                                                                                         P-ROC LISY APC Direct
+==================================================================================================== ===== ==== === ======
+:doc:`Williams / Bally / Midway WPC </hardware/existing_machines/wpc>`                               X     X
+:doc:`Williams / Bally System 11 </hardware/existing_machines/system11>`                             X          X
+:doc:`Data East </hardware/existing_machines/data_east>`                                             X
+:doc:`Stern S.A.M. </hardware/existing_machines/sam>`                                                X
+:doc:`Stern Whitestar </hardware/existing_machines/whitestar>`                                       X
+:doc:`Pinball 2000 </hardware/existing_machines/pinball2000>`                                        X
+:doc:`Stern SPIKE / SPIKE 2  </hardware/existing_machines/spike>`                                                   X
+:doc:`Gottlieb System 1 </hardware/existing_machines/gottlieb_system1>`                                    X
+:doc:`Gottlieb System 80 </hardware/existing_machines/gottlieb_system80>`                                  X
+:doc:`Bally/Stern w/ AS-2518-17 or AS-2518-35 MPU </hardware/existing_machines/bally_stern_as_2518>`       X
+==================================================================================================== ===== ==== === ======
 
 Notes:
 
