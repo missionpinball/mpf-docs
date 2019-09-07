@@ -32,6 +32,17 @@ configs:
    lisy_api_version <lisy_api_version>
    lisy_hardware <lisy_hardware>
    lisy_version <lisy_version>
+   mc_extended_version <mc_extended_version>
+   mc_version <mc_version>
+   mpf_extended_version <mpf_extended_version>
+   mpf_version <mpf_version>
+   p_roc_hardware_version <p_roc_hardware_version>
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
+   platform <platform>
+   platform_machine <platform_machine>
+   platform_release <platform_release>
+   platform_system <platform_system>
+   platform_version <platform_version>
    player(x)_score <playerx_score>
+   python_version <python_version>
