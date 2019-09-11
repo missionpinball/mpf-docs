@@ -176,7 +176,7 @@ Common Ground
    We cannot stress this enough.
    Not ensuring this will be very dangerous!
 
-In general, it is preferred to connect the ground at the PSUs then below
+In general, it is preferred to connect the ground at the PSUs than below
 the playfield.
 Then run a separate ground for each power rail from the PSU to the playfield.
 
