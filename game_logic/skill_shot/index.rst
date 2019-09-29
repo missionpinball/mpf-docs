@@ -51,15 +51,18 @@ A simple skill shot mode:
    shots:
        skill_l:
            switch: s_lane_l
-           advance_events: mode_skill_shot_started
+           profile: skill_shot_profile
+           advance_events: mode_skill_shot_started    # replace "skill_shot" with your mode name
            show_tokens:
                light: l_lane_l
        skill_m:
            switch: s_lane_m
+           profile: skill_shot_profile
            show_tokens:
                light: l_lane_m
        skill_r:
            switch: s_lane_r
+           profile: skill_shot_profile
            show_tokens:
                light: l_lane_r
 
@@ -69,6 +72,20 @@ A simple skill shot mode:
            rotate_left_events: s_left_flipper_active
            rotate_right_events: s_right_flipper_active
 
+   shot_profiles:
+       skill_shot_profile:
+           states:
+            - name: unlit
+              show: off
+            - name: flashing
+              show: flash_color
+              show_tokens:
+                color: red
+              speed: 4
+            - name: lit
+              show: on
+           loop: yes
+
    variable_player:
        skill_success:
            score: 42
@@ -76,13 +93,13 @@ A simple skill shot mode:
    timers:
      skill_shot_timeout:
        start_value: 0
-       end_value: 5
+       end_value: 5     # set the timeout of your skill shot here
        direction: up
        tick_interval: 1s
        start_running: no
        control_events:
          - action: start
-           event: balldevice_plunger_lane_ball_eject_success  # event which is posted when the ball leaves the plunger
+           event: balldevice_plunger_lane_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
 
    state_machines:
       skill_shot_success:
@@ -99,7 +116,7 @@ A simple skill shot mode:
            transitions:
                - source: start
                  target: success
-                 events: skill_shot_lit_hit
+                 events: skill_shot_flashing_hit
                - source: start
                  target: failed
                  events: skill_shot_unlit_hit, timer_skill_shot_timeout_complete
