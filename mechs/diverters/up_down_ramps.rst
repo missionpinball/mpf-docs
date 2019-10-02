@@ -13,7 +13,7 @@ Those mechanism typically act as a diverter and should be configured as such.
 Hardware
 --------
 
-:doc:`TODO: Add a picture of a up-down ramp </about/help_us_to_write_it>`
+.. image:: /mechs/images/up-down-ramp.jpg
 
 Up-Down ramps either work with one coil or two coils.
 Single-coil ramps use the coil to move the ramp up or down temporarily
