@@ -1,5 +1,5 @@
 text_ui:
-====
+========
 
 *Config file section*
 
