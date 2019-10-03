@@ -19,7 +19,9 @@ MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors instead
 of low-power lighting circuitry.
 
-:doc:`TODO: Add a picture of a flasher </about/help_us_to_write_it>`
+.. image:: /mechs/images/flasher1.jpg
+.. image:: /mechs/images/flasher2.jpg
+
 
 MPF's flasher devices are only used in older machines (WPC, Stern SAM, System 11)
 since modern LED-based machines typically use regular LED devices (or combinations
@@ -29,7 +31,7 @@ light that's connected to a driver output rather than a light output.
 Hardware
 --------
 
-#89 bulbs are commonly used as flashers in pinball machines.
+#89 and #906 bulbs are commonly used as flashers in pinball machines.
 Those are rated at 13V but typically driven at higher voltages for only a very
 short amount of time.
 Turning them on permanently will burn quickly in most machines.

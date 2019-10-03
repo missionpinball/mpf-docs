@@ -20,7 +20,7 @@ Additionally, some machines have tournament buttons to start a tournament.
 Hardware
 --------
 
-:doc:`TODO: Add a picture of button </about/help_us_to_write_it>`
+.. image:: /mechs/images/button.jpg
 
 Those buttons usually come with a :doc:`micro switch <mechanical_switches>` and
 a :doc:`#555 bulb </mechs/lights/matrix_lights>`.

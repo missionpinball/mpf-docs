@@ -13,7 +13,8 @@ Diverters
 In MPF, a diverter (sometimes spelled "divertor") is anything that alters
 the path of the ball based on the state it's in, including:
 
-:doc:`TODO: Add a picture of a diverter </about/help_us_to_write_it>`
+.. image:: /mechs/images/diverter1.jpg
+.. image:: /mechs/images/diverter2.jpg
 
 + A traditional diverter which is a metal flap at the end of a rod,
   typically used on ramps to "divert" the ball one way or the other.
