@@ -18,6 +18,12 @@ You can also add some more logging output:
 
   $ mpf game -t -v -V
 
+Start MPF-MC in a separate console:
+
+.. code-block:: console
+
+  $ mpf mc -v -V
+
 Scroll up in the console (or check the log file in the ``logs`` folder) to find
 the error which was emitted.
 
