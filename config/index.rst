@@ -163,6 +163,7 @@ indicated which type of config file it's valid in.
    switches: <switches>
    system11: <system11>
    text_strings: <text_strings>
+   text_ui: <text_ui>
    tilt: <tilt>
    timed_switches: <timed_switches>
    timers: <timers>
