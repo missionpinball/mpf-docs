@@ -52,8 +52,8 @@ class MpfDocsTestCase(MpfTestCase):
         self.create_temp_config_files()
         super().setUp()
 
-    def getOptions(self):
-        options = super().getOptions()
+    def get_options(self):
+        options = super().get_options()
         options['no_load_cache'] = True
         options['create_config_cache'] = False
 
