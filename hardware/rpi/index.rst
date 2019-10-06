@@ -23,6 +23,18 @@ the ``apigpio`` extension via pip to use it:
 .. code-block:: console
 
    pip3 install apigpio
+   
+The `pigpiod <http://abyz.me.uk/rpi/pigpio/pigpiod.html>`_ service needs to be running 
+(in this example on localhost port 8888,  which is the default setting). To install 
+it and enable is (on debian based systems) : 
+
+.. code-block:: console
+
+  apt install pigpiod
+  systemctl enable pigpiod.service 
+  systemctl start pigpiod.service 
+
+The `enable` step gets the service running at startup, thus it is optionnal. 
 
 This is an example config:
 
