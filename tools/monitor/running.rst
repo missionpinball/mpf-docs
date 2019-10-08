@@ -72,7 +72,7 @@ Resize switches and lights on your playfield
 Depending on your image dimensions switches and lights might be a little small
 or too large.
 You can change that using the ``device_size`` setting in your
-``moniitor/monitor.yaml``.
+``monitor/monitor.yaml``.
 The default ``device_size`` is ``0.02``.
-You might try ``device_size: 0.015`` as first line in ``moniitor/monitor.yaml``
+You might try ``device_size: 0.015`` as first line in ``monitor/monitor.yaml``
 to decrease the size of all switches and lights a bit.
