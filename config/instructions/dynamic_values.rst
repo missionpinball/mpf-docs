@@ -61,7 +61,7 @@ You would have this instead:
 
 .. code-block:: mpf-config
 
-   # in your maschine config
+   # in your machine config
    settings:
       warnings_to_tilt:
          label: Number of tilt warnings
