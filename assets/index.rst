@@ -1,7 +1,7 @@
 Assets
 ======
 
-Assets are files that your machine uses that are loaded from disk, such as
+Assets are files that your machine uses that are loaded from disks, such as
 show YAML files, images, and sound files. MPF has lots of flexibility for
 how assets are loaded and unloaded. (For example, if you're running MPF on a
 machine that doesn't have a lot of memory, you may not be able to load all the
@@ -32,7 +32,7 @@ to group multiple asset files into a single asset name that you use in MPF.
 This lets you add "variation" to assets during game play. For example, if you
 have a laser sound when a pop bumper is hit, you could actually have four
 different laser sound files that are each slightly different which you pool
-into the "laser" asset which is associate with the pop bumper, and then each
+into the "laser" asset which is associated with the pop bumper, and then each
 time the pop bumper is hit you get one of the four sounds played at random
 instead of the same sound over and over.
 

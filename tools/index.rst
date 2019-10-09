@@ -1,7 +1,7 @@
 Tools
 =====
 
-There are several tools which have been created to help you build your game in MPF.
+There are several tools that have been created to help you build your game in MPF.
 
 :doc:`MPF Monitor <monitor/index>`
 ----------------------------------
