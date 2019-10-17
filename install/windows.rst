@@ -81,7 +81,7 @@ That should print which version of Python is installed, like this:
 
 .. image:: images/windows_python_from_command_prompt.jpg
 
-Make sure the version is Python 3.4.something. If you see a version number that starts with 2,
+Make sure the version is Python 3.5.xx. If you see a version number that starts with 2,
 that means you also have Python version 2 installed. (This is ok. You can have Python 2
 and Python 3 installed at the same time.) However, if this is your case, you need to
 use a different command to start Python 3. See the :doc:`2_and_3` page for details.
@@ -120,14 +120,13 @@ That will print out something like this:
 .. code-block:: doscon
 
    C:\Users\BRIAN MADDEN>pip list
-   pip (9.0.1)
-   setuptools (35.5.1)
-
+   Package    Version
+   ---------- -------
+   pip        19.3
+   setuptools 41.4.0
    C:\Users\BRIAN MADDEN>
 
-Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
-this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to
-version 35.5.1 (or later).
+Notice that pip is now version 19.3 (as of October 2019)and not the older version that came with Python 3.6.8.  Setuptools has also been updated to version 41.4.0 (as of October 2019).
 
 3. Install MPF
 --------------
