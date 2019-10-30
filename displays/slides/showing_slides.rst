@@ -39,13 +39,26 @@ options for showing each slide. But instead of putting the
 slide name after the event name, you can also create a sub-entry with the
 slide name, then *another* sub-entry with additional options, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-        right_ramp_hit:
-            ramp_hit_slide:
-                expire: 2s
-                target: dmd
+   #! displays:
+   #!    dmd:
+   #!       width: 128
+   #!       height: 32
+   #! slides:
+   #!    ramp_hit_slide:
+   #!       - type: text
+   #!         text: Ramp has been hit
+   slide_player:
+      right_ramp_hit:
+         ramp_hit_slide:
+            expire: 2s
+            target: dmd
+
+   ##! test
+   ##! post_event right_ramp_hit
+   ##! advance_time_and_run .1
+   ##! assert_text_on_top_slide "Ramp has been hit" dmd
 
 You can mix-and-match all of these in a single config, like this:
 
