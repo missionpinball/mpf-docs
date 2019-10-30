@@ -1,13 +1,33 @@
+import os
 import unittest
 
+try:
+    import kivy     # this is needed for the env hack in the next lines
+except ImportError:
+    pass
+
+os.environ['KIVY_NO_FILELOG'] = '1'
+os.environ['KIVY_NO_CONSOLELOG'] = '1'
+os.environ["KIVY_NO_ARGS"] = "1"
+
+try:
+    del os.environ["KIVY_DOC"]
+    del os.environ["KIVY_DOC_INCLUDE"]
+except IndexError:
+    pass
+
 import docutils.nodes
-import docutils.parsers.rst
 import docutils.utils
 import logging
 try:
     from mpf.tests.MpfDocTestCase import MpfDocTestCase
 except ImportError:
     MpfDocTestCase = None
+
+try:
+    from mpf.tests.MpfIntegrationDocTestCase import MpfIntegrationDocTestCase
+except ImportError:
+    MpfIntegrationDocTestCase = None
 
 
 class ConfigSnippetTester(object):
@@ -33,20 +53,33 @@ class ConfigSnippetTester(object):
 
 class CodeBlockVisitor(docutils.nodes.NodeVisitor):
 
-    def __init__(self, document):
+    def __init__(self, document, app):
         super().__init__(document)
+        self.app = app
         self.unit_tests = []
 
-    def test_config(self, config_text, source):
+    def test_config(self, config_text, source, use_mc):
         if not MpfDocTestCase:
             raise AssertionError("mpf not loaded")
-        testcase = MpfDocTestCase(config_text)
+
+        if not self.app.config.use_mc and use_mc:
+            return
+
+        if use_mc and not MpfIntegrationDocTestCase:
+            raise AssertionError("mpf-mc not loaded")
+
+        if use_mc:
+            testcase = MpfIntegrationDocTestCase(config_text)
+        else:
+            testcase = MpfDocTestCase(config_text)
         testcase._testMethodDoc = source
         self.unit_tests.append(testcase)
 
     def visit_literal_block(self, node):
         if node.attributes.get("language") == "mpf-config":
-            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line))
+            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), False)
+        elif node.attributes.get("language") == "mpf-mc-config":
+            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), True)
 
     def unknown_visit(self, node: docutils.nodes.Node) -> None:
         """Called for all other node types."""

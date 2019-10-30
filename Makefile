@@ -183,6 +183,12 @@ unit:
 	@echo
 	@echo "Config test finished."
 
+.PHONY: unit-full
+unit-full:
+	$(SPHINXBUILD) -b dummy $(ALLSPHINXOPTS) $(BUILDDIR)/unit -D use_mc=1
+	@echo
+	@echo "Config test finished."
+
 .PHONY: gettext
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale

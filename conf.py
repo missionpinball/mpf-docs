@@ -178,7 +178,7 @@ def process_source(app, doctree, fromdocname):
     if app.builder.name != "dummy":
         return
 
-    visitor = CodeBlockVisitor(doctree)
+    visitor = CodeBlockVisitor(doctree, app)
     doctree.walk(visitor)
     unit_test.add_tests(visitor.unit_tests)
 
@@ -194,6 +194,7 @@ def run_tests(app, exception):
 
 def setup(app):
     app.add_stylesheet('mpf.css')
+    app.add_config_value('use_mc', False, False, [bool])
 
     app.connect('doctree-resolved', process_source)
     app.connect('build-finished', run_tests)
@@ -291,3 +292,5 @@ b = ExampleBuilder(source_dirs, examples_root)
 b.build()
 
 lexers['mpf-config'] = MpfLexer(startinline=True)
+lexers['mpf-mc-config'] = MpfLexer(startinline=True)
+
