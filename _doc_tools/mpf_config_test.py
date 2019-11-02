@@ -13,7 +13,7 @@ os.environ["KIVY_NO_ARGS"] = "1"
 try:
     del os.environ["KIVY_DOC"]
     del os.environ["KIVY_DOC_INCLUDE"]
-except IndexError:
+except KeyError:
     pass
 
 import docutils.nodes
