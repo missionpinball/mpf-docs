@@ -163,3 +163,16 @@ Related Events
    shot_group
    shot_profiles
    sequence_shots
+   integrate_shots_with_shows_lights_sounds_widgets_or_slides
+
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/tutorial/18_shots`                                                    |
++------------------------------------------------------------------------------+
+| :doc:`Shots on inlane/outlanes </mechs/switches/rollover_switches>`          |
++------------------------------------------------------------------------------+
+| :doc:`Shots in game modes </game_design/game_mode>`                          |
++------------------------------------------------------------------------------+
+| :doc:`Shots in other modes </game_design/other_modes>`                       |
++------------------------------------------------------------------------------+
