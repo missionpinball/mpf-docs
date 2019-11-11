@@ -131,12 +131,20 @@ Notice that pip is now version 19.3 (as of October 2019)and not the older versio
 3. Install MPF
 --------------
 
+In case you previously had MPF/MPF-MC 0.52 or earlier installed you need to
+uninstall some kivy dependencies because their naming changed with Kivy 1.11
+(you can skip this on a new install):
+
+.. code-block:: doscon
+
+   pip3 uninstall kivy.deps.sdl2 kivy.deps.sdl2_dev kivy.deps.glew kivy.deps.gstreamer
+
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
 To do this, run the following command from the command prompt:
 
 .. code-block:: doscon
 
-    pip install mpf mpf-mc --pre
+   pip install mpf mpf-mc --pre
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
