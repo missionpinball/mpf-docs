@@ -88,7 +88,7 @@ file you can use as a starting point:
                - property: opacity
                  value: 1
                  duration: .5s
-                 repeat: -1
+                 repeat: false
          - type: Text
            text: FREE PLAY
            color: green
