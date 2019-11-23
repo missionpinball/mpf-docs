@@ -80,10 +80,10 @@ In that case use the following line (notice that we added ``-h``):
 4. Edit /etc/rc2.d/S95game
 --------------------------
 
-Add the following line as the new second line in this file:
+Add the following two lines as the new second and third lines in this file:
 
 ::
-
+   /usr/local/bin/avrisp /usr/local/spike/netbridge.hex /usr/local/spike/netbridge.fuses
    exit 1
 
 This causes this script to exit instead of running the original
