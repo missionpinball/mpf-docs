@@ -215,3 +215,18 @@ the following configuration file snippet as an example:
 This keyboard entry will post the event *advance_reel_test* when the
 *4* key is pressed, and it will pass the parameters
 *reel_name=score_1p_10* and *direction=1*.
+
+What if it did not work?
+------------------------
+Make sure debug: true is set under keyboard as described above.
+
+Look at your log files to see what your key strokes are.
+
+It is possible that numlock key is on by default (especially with a laptop that does not have dedicated numlock key and running Windows).
+
+You might see something like this:
+
+Keyboard : Processing key stroke for key s-numlock
+Keyboard : Processing key stroke for key s-numlock
+
+If that is the case you may have to edit your computer's registry or run powershell to turn off numlock.
