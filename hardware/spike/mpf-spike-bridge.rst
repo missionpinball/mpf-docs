@@ -75,6 +75,7 @@ Furthermore, you might want to add this line to allow USB login
 Add the following two lines as the new second and third lines in this file:
 
 ::
+
    /usr/local/bin/avrisp /usr/local/spike/netbridge.hex /usr/local/spike/netbridge.fuses
    exit 1
 
