@@ -184,7 +184,7 @@ connect one of the 12V and GND pins). You don't need an additional resistor
 but you are also bound to 12V. They might work at 5V but the range will be much
 lower. Though the surface mount resistor on the transmitter board is designed to run 
 "hot," it still requires a surrounding air gap to dissipate heat. 3D printed parts 
-mounted against this reisitor will melt. 
+mounted against this resistor will melt. 
 
 Part numbers:
 
