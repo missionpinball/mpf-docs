@@ -189,6 +189,7 @@ footer p {
 .toggle .header {
     display: block;
     clear: both;
+    font-size: 70%;
 }
 
 .toggle .header p {
