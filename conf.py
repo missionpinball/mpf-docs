@@ -196,7 +196,7 @@ def run_tests(app, exception):
 
 def annotate_html(app, doctree, fromdocname):
     # only run on html builder
-    if app.builder.name != "html":
+    if app.builder.name not in ("html", "readthedocs"):
         return
 
     visitor = ExampleSliderVisitor(doctree, app)
