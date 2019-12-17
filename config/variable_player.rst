@@ -192,4 +192,21 @@ player:
 Lets you specify which player (by number) this variable_player entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
 effect the score or other player variables of players other than the current player.
 
+.. code-block:: mpf-config
+
+   ##! config: mode1
+   variable_player:
+      add_score_to_player_2:
+         score:
+            int: 1000
+            player: 2
+   ##! test
+   #! start_two_player_game
+   #! start_mode mode1
+   #! assert_player_variable 0 score
+   #! post add_score_to_player_2
+   #! assert_player_variable 0 score
+   #! drain_all_balls
+   #! assert_player_variable 1000 score
+
 If the ``player:`` setting is not used, then this variable_player entry will default to the current player.
