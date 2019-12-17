@@ -24,7 +24,7 @@ Let's take a look at an example ``mode:`` section from a multiball mode:
 
 .. code-block:: mpf-config
 
-    ##! config: mode1
+    ##! mode: mode1
     mode:
         start_events: ball_starting
         stop_events: timer_mode_timer_complete, shot_right_ramp
@@ -174,7 +174,7 @@ unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    mode:
       start_events: mode_terra_2_start
       stop_events: mode_complete, game_ending

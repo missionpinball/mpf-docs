@@ -61,7 +61,7 @@ those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND THEN* Step 2 (eve
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    sequences:
       my_sequence:
          events:
@@ -81,7 +81,7 @@ For example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    sequences:
       logic_block_1:
          events:

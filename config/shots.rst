@@ -54,7 +54,7 @@ Here's a sample *shots:* section from a config file:
     #!       number:
     #!    upper_standup:
     #!       number:
-    ##! config: mode1
+    ##! mode: mode1
     shots:
         lane_l:
             switch: lane_l
@@ -229,7 +229,7 @@ For example, consider the following shot config:
    #! switches:
    #!    switch1:
    #!       number:
-   ##! config: mode1
+   ##! mode: mode1
    shot_profiles:
        flash:
            states:

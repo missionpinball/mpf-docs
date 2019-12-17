@@ -23,7 +23,7 @@ related to the example in the achievements config documentation.)
 
 .. code-block:: mpf-config
 
-    ##! config: mode1
+    ##! mode: mode1
 
     #! # create some empty achievements for the group
     #! achievements:

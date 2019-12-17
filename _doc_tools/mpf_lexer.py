@@ -1,8 +1,59 @@
-import tempfile
+import re
 
 from pygments.lexer import include, bygroups
-from pygments.token import Comment, String, Text, Punctuation, Number, Keyword, Name, Literal
+from pygments.token import Comment, String, Text, Punctuation, Number, Keyword, Name, Literal, Other, STANDARD_TYPES, \
+    Token
 from pygments.lexers.data import YamlLexer
+from sphinx.util import docutils
+from docutils import nodes
+
+TestHeader = Token.Token.TestCode
+TestConfig = Token.Token.TestConfig
+
+STANDARD_TYPES[TestHeader] = 'test_header'
+STANDARD_TYPES[TestConfig] = 'test_config'
+
+
+class ExampleSliderVisitor(docutils.nodes.NodeVisitor):
+
+    def __init__(self, document, app):
+        super().__init__(document)
+        self.app = app
+        self.parent = None
+
+    def _add_test_toggle_to_node(self, node, config_type):
+        index = node.parent.children.index(node)
+
+        config = node.rawsource
+
+        text = "This example is tested to be valid {} config. ".format(config_type)
+        if "##! test" in config:
+            text += "Additionally, our integration test passed. Click to show the test and full config."
+        else:
+            text += "However, it is not integration tested."
+            if "\n#! " in config:
+                text += " Some parts are hidden. Click to show full config."
+
+        config = re.sub(r'^#! ([^\n]+)', '\\1', config, flags=re.MULTILINE)
+
+        new_node = nodes.container(
+            '',
+            nodes.container('', nodes.paragraph(text=text), classes=["header"]),
+            nodes.literal_block(language="test", rawsource=config, text=config),
+            classes=["toggle"]
+        )
+        node.parent.children = node.parent.children[:index + 1] + [new_node] + node.parent.children[index + 1:]
+
+    def visit_literal_block(self, node):
+        if node.attributes.get("language") == "mpf-config":
+            self._add_test_toggle_to_node(node, "MPF")
+        elif node.attributes.get("language") == "mpf-mc-config":
+            self._add_test_toggle_to_node(node, "MPF and MPF-MC")
+
+    def unknown_visit(self, node: docutils.nodes.Node) -> None:
+        """Called for all other node types."""
+        pass
+
 
 class MpfLexer(YamlLexer):
 
@@ -24,7 +75,7 @@ class MpfLexer(YamlLexer):
             (r'\n+', Text),
             # doc ignore comment
             (r'#![^\n]*\n', nothing(Text)),
-            (r'##![^\n]*\n', nothing(Text)),
+            (r'##! (?!mode:|show:)[^\n]*\n', nothing(Text)),
             # a comment
             (r'#[^\n]*', Comment.Single),
             # the '%YAML' directive

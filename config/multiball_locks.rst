@@ -51,7 +51,7 @@ Here's an example:
          eject_coil: c_eject
          ball_switches: s_ball1
 
-   ##! config: mode1
+   ##! mode: mode1
    multiball_locks:
       bunker:
          balls_to_lock: 3

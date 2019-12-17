@@ -6,7 +6,7 @@ defines their priority and when they start or stop:
 
 .. code-block:: mpf-config
 
-    ##! config: mode1
+    ##! mode: mode1
     mode:
         start_events: ball_starting
         stop_events: timer_mode_timer_complete, shot_right_ramp

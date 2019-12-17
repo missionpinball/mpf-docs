@@ -23,7 +23,7 @@ The structure of counter logic blocks is like this:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
 
   counters:
      the_name_of_this_counter:

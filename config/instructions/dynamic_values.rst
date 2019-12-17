@@ -16,7 +16,7 @@ Without dynamic values, your variable_player (scoring) section would be static, 
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       shot_jackpot_hit:
          score: 100000
@@ -180,7 +180,7 @@ Common device properties are:
 * ``device.accruals.magic_tokens.enabled``
 * ``device.sequences.world_tour.completed``
 
-MPF uses consistent names across devices, so for example any device that tracks a 
+MPF uses consistent names across devices, so for example any device that tracks a
 number will have a ``value`` property and any device that can be enabled/disabled will
 have an ``enabled`` property. The full list of properties available for a specific
 device are listed in the "Monitorable Properties" section of that device's

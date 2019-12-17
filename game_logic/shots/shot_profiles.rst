@@ -16,7 +16,7 @@ This is an example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    shot_profiles:
        my_default_profile:
            states:

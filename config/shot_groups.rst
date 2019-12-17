@@ -26,7 +26,7 @@ For example:
     #!       number:
     #!    upper_standup:
     #!       number:
-    ##! config: mode1
+    ##! mode: mode1
     #! shots:
     #!     lane_l:
     #!         switch: lane_l

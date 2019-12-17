@@ -10,13 +10,14 @@ import sys
 import tempfile
 import git
 import sphinx_rtd_theme
+from pygments.lexers.data import YamlLexer
 from sphinx.highlighting import lexers
 
 # for some reason sphinx needs this
 sys.setrecursionlimit(2000)
 
 sys.path.append(os.getcwd())
-from _doc_tools.mpf_lexer import MpfLexer
+from _doc_tools.mpf_lexer import MpfLexer, ExampleSliderVisitor
 from _doc_tools.build_events_reference_docs import EventDocParser
 from _doc_tools.build_examples import ExampleBuilder
 from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
@@ -192,11 +193,23 @@ def run_tests(app, exception):
     result = unit_test.run_tests()
     sys.exit(result)
 
+
+def annotate_html(app, doctree, fromdocname):
+    # only run on html builder
+    if app.builder.name != "html":
+        return
+
+    visitor = ExampleSliderVisitor(doctree, app)
+    doctree.walk(visitor)
+
+
 def setup(app):
     app.add_stylesheet('mpf.css')
     app.add_config_value('use_mc', False, False, [bool])
+    app.add_javascript('mpf.js')
 
     app.connect('doctree-resolved', process_source)
+    app.connect('doctree-resolved', annotate_html)
     app.connect('build-finished', run_tests)
 
     # We need to do this in the setup() function since ReadTheDocs will append
@@ -293,4 +306,4 @@ b.build()
 
 lexers['mpf-config'] = MpfLexer(startinline=True)
 lexers['mpf-mc-config'] = MpfLexer(startinline=True)
-
+lexers['test'] = YamlLexer(startinline=True)

@@ -14,7 +14,7 @@ Here's an example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       target_1_hit:
          score: 1000   # adds 1000 to the player's "score" variable

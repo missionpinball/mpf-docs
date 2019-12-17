@@ -21,7 +21,7 @@ Here's an example achievements section from Brooks & Dunn:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
 
    achievements:
      world_tour:
@@ -121,7 +121,7 @@ ball ended. This is useful if you want to restart a mode that was running when
 the ball ended.
 
 Note that this restart will also play the ``show_when_started:`` show, and it
-will also post the ``events_when_started:`` events. 
+will also post the ``events_when_started:`` events.
 
 If False/No, this achievement's state will change from "started" to "stopped"
 when the next ball starts. This will *not* play the ``show_when_stopped:`` show and
@@ -139,7 +139,7 @@ changed to "disabled" when the next ball starts.
 This is similar to the ``restart_on_next_ball_when_started:`` event from above,
 except it applies to the "enabled" state instead of the "started" state.
 
-This setting will also play the ``show_when_enabled:`` show and post the 
+This setting will also play the ``show_when_enabled:`` show and post the
 ``events_when_enabled:`` events when re-enabling, but will not play or post
 anything when disabling.
 

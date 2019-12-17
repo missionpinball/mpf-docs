@@ -23,7 +23,7 @@ Here's an example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
 
    extra_balls:
        my_mode_eb:

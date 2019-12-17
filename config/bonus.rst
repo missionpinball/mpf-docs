@@ -22,7 +22,7 @@ Here's an example from *Brooks 'n Dunn*:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
 
    mode_settings:
      display_delay_ms: 4000

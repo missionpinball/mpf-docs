@@ -20,7 +20,7 @@ Here's an example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       target_1_hit:
          score: 1000   # adds 1000 to the player's "score" variable
@@ -67,7 +67,7 @@ exist, it will set the player variable to that.) For example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       some_event:
          score: 1000
@@ -94,7 +94,7 @@ value, it would look like this:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       some_event:
          score: 1000
@@ -120,7 +120,7 @@ Note that when you use block, you also have to include the ``int:``, ``float:``,
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       ramp_1_hit:
          score:
@@ -131,7 +131,7 @@ There is also a shorthand way:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       ramp_1_hit:
          score: 5000|block
@@ -162,7 +162,7 @@ and conditional events to set the current name of the album value, like this:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       player_album_value{value==1}:
          album_name:
@@ -194,7 +194,7 @@ effect the score or other player variables of players other than the current pla
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
       add_score_to_player_2:
          score:

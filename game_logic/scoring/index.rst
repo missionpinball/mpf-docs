@@ -12,7 +12,7 @@ This event could be a switch hit (i.e. for `s_your_switch` use the event `s_your
 
 .. code-block:: mpf-config
 
-  ##! config: mode1
+  ##! mode: mode1
   variable_player:
     s_your_switch_active:
       score: 100
