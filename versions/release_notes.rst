@@ -14,7 +14,7 @@ We identified a few potential upgrade issues:
 - We fixed validation of animations. You might get a validation error with
   `repeat: -1`. Change it to `repeat: false`.
   See the `change in the docs <https://github.com/missionpinball/mpf-docs/commit/6a141ec4434a0904d92f05bcbce1fe345513c018>`__.
-- We changed of `active_time` of ball_save from ms to secs. In case you did not use a unit here this might change the time. `Details <https://github.com/missionpinball/mpf/pull/1463>`__.
+- We changed `active_time` of ball_save from ms to secs. In case you did not use a unit here this might change the time. `Details <https://github.com/missionpinball/mpf/pull/1463>`__.
 - `Machine variables changed <https://github.com/missionpinball/mpf/pull/1394>`__ if you accessed them from code (but not via config).
 - `Achievement state changed <https://github.com/missionpinball/mpf/pull/1429>`__ if you accessed it from code (but not via config or placeholders).
 
