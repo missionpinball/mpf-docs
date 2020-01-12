@@ -24,40 +24,40 @@ regular font that's made for a high-res display.
 Instead you can use these three styles. (Of course you can use your own fonts
 too, but sometimes it's hard to find ones that look good on a low-res DMD.)
 
-style: dmd_big
+style: big
 --------------
 
-dmd_big is 10 pixels tall.
+`big` is 10 pixels tall.
 
 .. code-block:: mpf-config
 
    slides:
        my_slide:
        - type: text
-         style: dmd_big
+         style: big
          text: MISSION
 
 .. image:: /displays/images/dmd_big.png
 
-style: dmd_med
+style: med
 --------------
 
-dmd_med is 7 pixels tall.
+`med` is 7 pixels tall.
 
 .. code-block:: mpf-config
 
    slides:
        my_slide:
        - type: text
-         style: dmd_med
+         style: med
          text: MISSION
 
 .. image:: /displays/images/dmd_med.png
 
-style: dmd_small
+style: small
 ----------------
 
-dmd_small is 5 pixels tall.
+`small` is 5 pixels tall.
 
 Notice that this font has a color set and we're using it with a Color DMD. All
 three of these fonts (like any font) can be used on a mono or color DMD.
@@ -67,7 +67,7 @@ three of these fonts (like any font) can be used on a mono or color DMD.
    slides:
        my_slide:
        - type: text
-         style: dmd_small
+         style: small
          text: MISSION
          color: 00ffcc
 
