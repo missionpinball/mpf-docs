@@ -124,7 +124,7 @@ support up to 64 RGB LEDs (for 512 RGB LEDs total). The connectors are
 numbered 0-7.
 
 The individual LED numbers are sequential across channels. The
-first LED on Connector 0is #0, the second is #1, etc., up #63 on
+first LED on Connector 0 is #0, the second is #1, etc., up #63 on
 Connector 0. Then Connector 1 picks up where Connector 0 leaves off, with
 the first LED on Connector 2 being #64, and so on. The FadeCandy
 doesn't actually know how many LEDs are connected to each connector,
@@ -147,35 +147,148 @@ Consider the following config:
       l_led2:
          number: 128  # first LED on connector 2
 
-6a. Numbering with more than one FadeCandy board
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6a. Numbering with muliple channels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have more than one FadeCandy board, you can specify the board number
-(starting with 0) along with the LED number, like this:
+You can also assign different channels to your connectors.
+This has certain performance advantages and allows nicer numbering.
+
+Start your fadecandy server with the following config:
+
+.. code-block:: json
+
+   {
+       "listen": ["127.0.0.1", 7890],
+       "verbose": true,
+       "color": {
+           "gamma": 2.5,
+           "whitepoint": [1.0, 1.0, 1.0]
+       },
+       "devices": [
+           {
+               "type": "fadecandy",
+               "serial": "YOUR_FADECANDY_SERIAL",
+               "map": [
+                   [ 0, 0, 0, 64 ],
+                   [ 1, 0, 64, 64 ],
+                   [ 2, 0, 128, 64 ],
+                   [ 3, 0, 192, 64 ],
+                   [ 4, 0, 256, 64 ],
+                   [ 5, 0, 320, 64 ],
+                   [ 6, 0, 384, 64 ],
+                   [ 7, 0, 448, 64 ]
+               ]
+           },
+       ]
+   }
+
+Replace `YOUR_FADECANDY_SERIAL` with the serial of your fadecandy.
+The serial will be shown on the console of `fcserver` when connecting your
+fadecandy.
+
+Then configure your lights as follows:
 
 .. code-block:: mpf-config
 
    lights:
-      l_led0:
-         number: 0  # first LED on connector 0 of the first board
-      l_led1:
-         number: 0-1  # second LED on connector 0 of the first board
-      l_led2:
-         number: 1-128  # first LED on connector 2 of the second board
-
-(If you only have one FadeCandy board, MPF automatically adds the ``0-``
-to the number, so you don't have to specify the board number if you only have
-one board.)
-
-Since MPF can support up to four FadeCandy boards, valid board numbers are 0-3.
+      l_led0_0:
+         number: 0-0  # first LED on connector 0
+      l_led1_0:
+         number: 1-0  # first LED on connector 1
+      l_led1_1:
+         number: 1-1  # second LED on connector 1
+      l_led7_20:
+         number: 7-20  # twentyth LED on connector 7
 
 (If you're familiar with the Open Pixel Control protocol, all of the LEDs on a
 single FadeCandy board are on the same OPC channel, which is technically what
 you're specifying with the number before the dash.)
 
-If you do add more than one FadeCandy board, see the FadeCandy documentation
-for instructions on how to configure the additional FadeCandy boards for the
-addresses with higher than 0.
+6b. Numbering with multiple Fadecandy Boards
+--------------------------------------------
+
+If you want to use multiple FadeCandy boards we suggest the following config:
+
+.. code-block:: json
+
+   {
+       "listen": ["127.0.0.1", 7890],
+       "verbose": true,
+       "color": {
+           "gamma": 2.5,
+           "whitepoint": [1.0, 1.0, 1.0]
+       },
+       "devices": [
+           {
+               "type": "fadecandy",
+               "serial": "YOUR_FADECANDY_SERIAL1",
+               "map": [
+                   [ 0, 0, 0, 64 ],
+                   [ 1, 0, 64, 64 ],
+                   [ 2, 0, 128, 64 ],
+                   [ 3, 0, 192, 64 ],
+                   [ 4, 0, 256, 64 ],
+                   [ 5, 0, 320, 64 ],
+                   [ 6, 0, 384, 64 ],
+                   [ 7, 0, 448, 64 ]
+               ]
+           },
+           {
+               "type": "fadecandy",
+               "serial": "YOUR_FADECANDY_SERIAL2",
+               "map": [
+                   [ 8, 0, 0, 64 ],
+                   [ 9, 0, 64, 64 ],
+                   [ 10, 0, 128, 64 ],
+                   [ 11, 0, 192, 64 ],
+                   [ 12, 0, 256, 64 ],
+                   [ 13, 0, 320, 64 ],
+                   [ 14, 0, 384, 64 ],
+                   [ 15, 0, 448, 64 ]
+               ]
+           },
+           {
+               "type": "fadecandy",
+               "serial": "YOUR_FADECANDY_SERIAL3",
+               "map": [
+                   [ 16, 0, 0, 64 ],
+                   [ 17, 0, 64, 64 ],
+                   [ 18, 0, 128, 64 ],
+                   [ 19, 0, 192, 64 ],
+                   [ 20, 0, 256, 64 ],
+                   [ 21, 0, 320, 64 ],
+                   [ 22, 0, 384, 64 ],
+                   [ 23, 0, 448, 64 ]
+               ]
+           }
+       ]
+   }
+
+Replace `YOUR_FADECANDY_SERIAL1`, `YOUR_FADECANDY_SERIAL2` and
+`YOUR_FADECANDY_SERIAL3` with the serials of your fadecandy boards
+(you can use more or less than three).
+The serial will be shown on the console of `fcserver` when connecting your
+fadecandy.
+
+Afterwards, configure your lights as follows:
+
+.. code-block:: mpf-config
+
+   lights:
+      l_led0_0:
+         number: 0-0  # first LED on connector 0 on board 0
+      l_led1_0:
+         number: 1-0  # first LED on connector 1 on board 0
+      l_led1_1:
+         number: 1-1  # second LED on connector 1 on board 0
+      l_led7_20:
+         number: 7-20  # twentyth LED on connector 7 on board 0
+      l_led8_0:
+         number: 8-0  # first LED on connector 0 on board 1
+      l_led8_1:
+         number: 8-63  # last LED on connector 1 on board 1
+      l_led17_1:
+         number: 17-1  # second LED on connector 1 on board 2
 
 7. Launch the fcserver
 ----------------------
