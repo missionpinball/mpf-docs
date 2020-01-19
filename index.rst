@@ -1,3 +1,6 @@
+.. meta::
+   :google-site-verification: 30GgciO6U7mMjTlBge9S62wdWhP7nN3Na9j0PXXNfXE
+
 .. toctree::
    :hidden:
    :caption: Overview
