@@ -147,6 +147,10 @@ Consider the following config:
       l_led2:
          number: 128  # first LED on connector 2
 
+(If you're familiar with the Open Pixel Control protocol, all of the LEDs on a
+single FadeCandy board are on the same OPC channel, which is technically what
+you're specifying with the number before the dash.)
+
 6a. Numbering with muliple channels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -199,10 +203,6 @@ Then configure your lights as follows:
          number: 1-1  # second LED on connector 1
       l_led7_20:
          number: 7-20  # twentyth LED on connector 7
-
-(If you're familiar with the Open Pixel Control protocol, all of the LEDs on a
-single FadeCandy board are on the same OPC channel, which is technically what
-you're specifying with the number before the dash.)
 
 6b. Numbering with multiple Fadecandy Boards
 --------------------------------------------
