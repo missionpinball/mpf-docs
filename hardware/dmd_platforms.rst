@@ -9,7 +9,8 @@ RGB DMDs
 * :doc:`SmartMatrix </hardware/smartmatrix/index>`
 * :doc:`RGB.DMD </hardware/eli_dmd/index>`
 * :doc:`FAST Pinball RGB DMD </hardware/fast/rgb_dmd>`
-* :doc:`Raspberry Pi DMD <rpi_dmd/index>`
+* :doc:`Raspberry Pi DMD </hardware/rpi_dmd/index>`
+* :doc:`PIN2DMD RGB DMD </hardware/pin2dmd/index>`
 
 Monochrome DMDs
 ---------------

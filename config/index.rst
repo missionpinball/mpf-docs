@@ -110,6 +110,7 @@ indicated which type of config file it's valid in.
    opp_coils: <opp_coils>
    p_roc: <p_roc>
    pd_led_boards <pd_led_boards>
+   pin2dmd: <pin2dmd>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>

@@ -140,6 +140,11 @@ to provide additional functionality.
    * All inputs and outputs
    * I2C and SPI
 
+* :doc:`PIN2DMD RGB DMD <pin2dmd/index>`
+   * *New in MPF 0.54*
+   * 128x32 or 192x64 RGB LED DMD
+   * Connected via USB
+
 * :doc:`Native I2C on Linux <smbus/index>`
    * *New in MPF 0.50*
    * I2C devices on any nativ I2C bus
@@ -173,6 +178,7 @@ MPF supports:
    Pololu Maestro <pololu_maestro/index>
    SmartMatrix RGB DMD <smartmatrix/index>
    RGB.DMD <eli_dmd/index>
+   PIN2DMD <pin2dmd/index>
    Raspberry Pi DMD <rpi_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
    Trinamics StepRocker <trinamics/index>

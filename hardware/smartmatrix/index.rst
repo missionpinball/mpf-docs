@@ -249,7 +249,7 @@ And on Mac or Linux, it will look something like:
 
     hardware:
         rgb_dmd: smartmatrix
-    
+
     smartmatrix:
         smartmatrix_1:
            port: "/dev/tty.usbmodem1448891"
@@ -284,16 +284,11 @@ To do this, create a section in your machine-wide config called
 
     rgb_dmds:
       smartmatrix_1:
-         platform: smartmatrix
          hardware_brightness: .17
          source_display: dmd
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
-for details.) The only one you need to have is ``platform: smartmatrix`` which
-tells MPF that this RGB DMD should use the SmartMatrix hardware interface you
-configured in the previous step. (Otherwise if you don't specify a platform, it
-will use the default platform which probably doesn't support RGB DMDs. See the
-:doc:`/hardware/platform` guide for details.)
+for details.)
 
 You'll probably also want to configure the brightness, which is a multiplier
 from 0.0 to 1.0 that's applied to every pixel that's sent to the DMD.
@@ -348,7 +343,10 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/rgb_dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
+
+    hardware:
+      rgb_dmd: smartmatrix
 
     displays:
       window:  # on screen window
@@ -374,7 +372,6 @@ on the window and slide settings used in this machine config.
     rgb_dmds:
       smartmatrix_1:
          brightness: .2
-         platform: smartmatrix
 
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
