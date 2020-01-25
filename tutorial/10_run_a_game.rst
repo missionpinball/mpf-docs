@@ -26,9 +26,9 @@ like this:
       init_done: welcome_slide
       mode_attract_started: attract_started
       ball_started:
-         widgets:
-            type: text
-            text: PLAYER (number) BALL (ball)
+        widgets:
+          type: text
+          text: PLAYER (number) BALL (ball)
 
 2. Change your flipper config so they don't automatically enable on machine boot
 --------------------------------------------------------------------------------
@@ -54,30 +54,30 @@ identical since you might have single-wound flipper coils and/or EOS switches.)
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
+    #!   s_left_flipper:
+    #!     number: 0
+    #!   s_right_flipper:
+    #!     number: 1
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
 
 3. Running your game with physical hardware
 -------------------------------------------

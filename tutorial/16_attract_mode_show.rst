@@ -70,9 +70,9 @@ file you can use as a starting point:
            text: YOU ARE AWESOME
            font_size: 50
          transition:
-            type: push
-            duration: 1s
-            direction: left
+           type: push
+           duration: 1s
+           direction: left
 
    - duration: 3s
      slides:
@@ -82,22 +82,22 @@ file you can use as a starting point:
            text: PRESS START
            animations:
              pre_show_slide:
-               - property: opacity
-                 value: 0
-                 duration: .5s
-               - property: opacity
-                 value: 1
-                 duration: .5s
-                 repeat: false
+             - property: opacity
+               value: 0
+               duration: .5s
+             - property: opacity
+               value: 1
+               duration: .5s
+               repeat: false
          - type: Text
            text: FREE PLAY
            color: green
            y: 10
            anchor_y: bottom
          transition:
-            type: move_in
-            duration: 1s
-            direction: right
+           type: move_in
+           duration: 1s
+           direction: right
 
    - duration: 3
      slides:
@@ -107,9 +107,9 @@ file you can use as a starting point:
            text: MISSION PINBALL
            color: red
          transition:
-            type: move_in
-            duration: 1s
-            direction: top
+           type: move_in
+           duration: 1s
+           direction: top
 
    - duration: 3
      slides:
@@ -132,7 +132,7 @@ config_version in config files, except since this is a show file, it's "show_ver
 
 Next, notice that the show file is broken into steps, each beginning with a
 dash and then a ``duration:`` entry. The ``duration:`` entry controls how long each step is.
-The default unit for this value is seconds, so ``duration: 3`` is valid, though you can enter 
+The default unit for this value is seconds, so ``duration: 3`` is valid, though you can enter
 standard time strings like ``duration: 3s`` or ``duration: 300ms``, etc.
 
 By the way, when you play back a show, you can set the playback speed. So even though
@@ -145,8 +145,8 @@ at some point for all sorts of details about show files, formats, etc.
 
 In addition to the ``duration:`` setting in each step, also notice that each step has a
 ``slides:`` setting. The format and content of the ``slides:`` section of a show is
-identical to the ``slide_player:`` section in a config file. (In the future you'll see 
-this applies to other "players"; for example, ``light_player:`` in a config file is the same as 
+identical to the ``slide_player:`` section in a config file. (In the future you'll see
+this applies to other "players"; for example, ``light_player:`` in a config file is the same as
 ``lights:`` in a show, ``sound_player:`` in a config file is the same as ``sounds:`` in a show, etc.)
 
 Then in the ``slides:`` section of each step, we've added a slide name. These slides are named
@@ -160,10 +160,10 @@ Also notice that we added ``transition:`` settings which control how one slide t
 to the next. Without transitions, the new slide appears instantly. But with transitions, we
 can make one slide move in from the side, or cross fade, etc.
 
-The last slide deserves special mention - it displays the score of the previous game. Player variables 
-such as score are only valid during a game and lose their value once the game ends. To allow access to 
-the score of a previous game, MPF saves this player variable to a machine variable which can be 
-accessed outside the running game.  A discussion of this and other machine variables is found 
+The last slide deserves special mention - it displays the score of the previous game. Player variables
+such as score are only valid during a game and lose their value once the game ends. To allow access to
+the score of a previous game, MPF saves this player variable to a machine variable which can be
+accessed outside the running game.  A discussion of this and other machine variables is found
 :doc:`here </machine_vars/index>`.
 
 3. Configure your show to play automatically
@@ -226,8 +226,8 @@ OLD machine-wide config (partial):
            type: text
 
    slide_player:
-      init_done: welcome_slide
-      mode_attract_started: attract_started
+     init_done: welcome_slide
+     mode_attract_started: attract_started
 
 NEW machine-wide config:
 
@@ -245,7 +245,7 @@ NEW machine-wide config:
            height: 60
 
    slide_player:
-      init_done: welcome_slide
+     init_done: welcome_slide
 
 The reason we remove this is because it's not necessary now that we have our new
 attract mode display show running.

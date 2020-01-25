@@ -13,8 +13,8 @@ For example, you can add a keyboard key ``d`` to do that:
 .. code-block:: mpf-config
 
    keyboard:
-      d:
-         event: debug_dump_stats
+     d:
+       event: debug_dump_stats
 
 The MPF log will contain something like this:
 

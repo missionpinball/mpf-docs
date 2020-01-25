@@ -37,8 +37,8 @@ Let's start by creating our first shot in the base mode's config file (base.yaml
 .. code-block:: mpf-config
 
     #! switches:
-    #!    s_right_inlane:
-    #!       number: 1
+    #!   s_right_inlane:
+    #!     number: 1
     ##! mode: base
     shots:
       my_first_shot:
@@ -60,13 +60,13 @@ like this:
 
    ##! mode: base
    variable_player:
-       my_first_shot_hit:  # this was s_right_inlane_active
-           score: 100
-       s_flipper_lower_left_active:
-           score: 1000
-           potato: 1
-       s_flipper_lower_right_active:
-           potato: -2
+     my_first_shot_hit:  # this was s_right_inlane_active
+       score: 100
+     s_flipper_lower_left_active:
+       score: 1000
+       potato: 1
+     s_flipper_lower_right_active:
+       potato: -2
 
 Do you understand what this is doing?
 
@@ -152,28 +152,28 @@ If you have LEDs in your machine, change it to this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_right_inlane:
-   #!       number: 1
+   #!   s_right_inlane:
+   #!     number: 1
    ##! mode: base
    shots:
-      my_first_shot:
-        switch: s_right_inlane
-        show_tokens:
-          led: led_1 # pick an LED that's valid in your machine
+     my_first_shot:
+       switch: s_right_inlane
+       show_tokens:
+         led: led_1 # pick an LED that's valid in your machine
 
 If you have a lamp matrix, change it to this:
 
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_right_inlane:
-   #!       number: 1
+   #!   s_right_inlane:
+   #!     number: 1
    ##! mode: base
    shots:
-      my_first_shot:
-        switch: s_right_inlane
-        show_tokens:
-          light: l_light_quick_freeze # pick a light that's valid in your machine
+     my_first_shot:
+       switch: s_right_inlane
+       show_tokens:
+         light: l_light_quick_freeze # pick a light that's valid in your machine
 
 In either case, be sure to pick an LED or light name that is a valid light
 in your machine.
@@ -207,15 +207,15 @@ profile called "my_first_profile" with the following settings:
 
    ##! mode: base
    shot_profiles:
-      my_first_profile:
-         states:
-            - name: unlit  # step 1
-              show: off
-            - name: flashing  # step 2
-              show: flash
-            - name: lit  # step 3
-              show: on
-         loop: yes
+     my_first_profile:
+       states:
+         - name: unlit  # step 1
+           show: off
+         - name: flashing  # step 2
+           show: flash
+         - name: lit  # step 3
+           show: on
+       loop: true
 
 Take a look at this shot profile to see what's happening.
 
@@ -244,7 +244,7 @@ The show called "unlit" will be stopped, and then the show called "flash"
 will be played. If the shot is hit again, it will advance to the "lit"
 state, the "flash" show will stop, and the show called "on" will be started.
 
-This shot profile also includes a ``loop: yes`` (this could be ``loop: true``)
+This shot profile also includes a ``loop: true``
 setting that means when a shot is hit that's in the last step of the profile,
 it will loop back to the first step. (So hitting the shot when it's lit means
 the shot will loop back to "unlit".)
@@ -262,25 +262,25 @@ just created by adding a ``profile:`` setting.
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_right_inlane:
-   #!       number: 1
+   #!   s_right_inlane:
+   #!     number: 1
    ##! mode: base
    #! shot_profiles:
-   #!    my_first_profile:
-   #!       states:
-   #!          - name: unlit  # step 1
-   #!            show: off
-   #!          - name: flashing  # step 2
-   #!            show: flash
-   #!          - name: lit  # step 3
-   #!            show: on
-   #!       loop: yes
+   #!   my_first_profile:
+   #!     states:
+   #!       - name: unlit  # step 1
+   #!         show: off
+   #!       - name: flashing  # step 2
+   #!         show: flash
+   #!       - name: lit  # step 3
+   #!         show: on
+   #!     loop: true
    shots:
-      my_first_shot:
-        switch: s_right_inlane
-        show_tokens:
-          led: led_1 # or use light: here, depending on your machine
-        profile: my_first_profile
+     my_first_shot:
+       switch: s_right_inlane
+       show_tokens:
+         led: led_1 # or use light: here, depending on your machine
+       profile: my_first_profile
 
 Save your config and re-run MPF. Once you start a game, the light or LED
 from your shot should be off. Hit the switch for the shot, and the light
@@ -343,13 +343,13 @@ Here's the existing variable_player section from the base mode config:
 
    ##! mode: base
    variable_player:
-       my_first_shot_hit:
-           score: 100
-       s_flipper_lower_left_active:
-           score: 1000
-           potato: 1
-       s_flipper_lower_right_active:
-           potato: -2
+     my_first_shot_hit:
+       score: 100
+     s_flipper_lower_left_active:
+       score: 1000
+       potato: 1
+     s_flipper_lower_right_active:
+       potato: -2
 
 Again, the player gets 100 points each time that shot is made regardless of what
 state it's in since the scoring event is the generic shot hit event which does
@@ -361,15 +361,15 @@ Now let's change the variable_player section to this:
 
    ##! mode: base
    variable_player:
-       my_first_shot_my_first_profile_unlit_hit:
-           score: 100
-       my_first_shot_my_first_profile_flashing_hit:
-           score: 1000
-       s_flipper_lower_left_active:
-           score: 1000
-           potato: 1
-       s_flipper_lower_right_active:
-           potato: -2
+     my_first_shot_my_first_profile_unlit_hit:
+       score: 100
+     my_first_shot_my_first_profile_flashing_hit:
+       score: 1000
+     s_flipper_lower_left_active:
+       score: 1000
+       potato: 1
+     s_flipper_lower_right_active:
+       potato: -2
 
 We changed the name of the event for the first variable_player entry from
 "my_first_shot_hit" to "my_first_shot_my_first_profile_unlit_hit". This means
@@ -411,25 +411,25 @@ them step-by-step next.)
    # mode2 config file
 
    mode:
-       start_events: mode2_start
-       stop_events: mode2_stop
-       priority: 200
+     start_events: mode2_start
+     stop_events: mode2_stop
+     priority: 200
 
    widgets:
-       mode2_start_banner:
-         type: text
-         text: MODE 2 STARTED
-         font_size: 50
-         color: lime
-         y: 80%
-         expire: 1s
+     mode2_start_banner:
+       type: text
+       text: MODE 2 STARTED
+       font_size: 50
+       color: lime
+       y: 80%
+       expire: 1s
 
    widget_player:
-       mode_mode2_started: mode2_start_banner
+     mode_mode2_started: mode2_start_banner
 
    variable_player:
-       my_first_shot_hit:
-          score: 1
+     my_first_shot_hit:
+       score: 1
 
 Remember that you also have to go back into your machine-wide config file to add the new
 ``- mode2`` entry to your ``modes:`` section. While we're in there, let's also add
@@ -442,16 +442,16 @@ Here are changes you'll make to the machine-wide config file:
    # from the machine-wide config.yaml file
 
    modes:
-    - base
-    - mode2
+     - base
+     - mode2
 
    ...
 
    keyboard:  # existing keyboard entries not shown.
-      n:
-        event: mode2_start
-      m:
-        event: mode2_stop
+     n:
+       event: mode2_start
+     m:
+       event: mode2_stop
 
 Now save your files and run your machine. Then press the following keys:
 
@@ -480,8 +480,8 @@ variable_player entry:
 
    ##! mode: mode2
    variable_player:
-       my_first_shot_hit:
-          score: 1
+     my_first_shot_hit:
+       score: 1
 
 Notice that that variable_player entry is just based on "my_first_shot" being hit. It
 does not contain any of the profile or state information in it, which means that
@@ -521,15 +521,15 @@ To illustrate this, open up your ``mode2.yaml`` file and:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_right_inlane:
-   #!       number: 1
+   #!   s_right_inlane:
+   #!     number: 1
    ##! mode: mode2
    # snippet from mode2.yaml
    variable_player:
-       my_first_shot_mode2_flashing_hit:
-         score: 10000
-       my_first_shot_mode2_lit_hit:
-         score: 100
+     my_first_shot_mode2_flashing_hit:
+       score: 10000
+     my_first_shot_mode2_lit_hit:
+       score: 100
 
    shots:
      my_first_shot_mode2:
@@ -538,14 +538,14 @@ To illustrate this, open up your ``mode2.yaml`` file and:
 
    shot_profiles:
      mode2:
-        states:
-           - name: flashing
-             show: flash
-             speed: 5
-           - name: lit
-             show: on
-        loop: no
-        block: yes
+       states:
+         - name: flashing
+           show: flash
+           speed: 5
+         - name: lit
+           show: on
+       loop: false
+       block: true
 
 Save your files and run your game again, pressing the following keys:
 
@@ -572,14 +572,14 @@ to it, like this:
    ##! mode: mode2
    #! shot_profiles:
    #!   mode2:
-   #!      states:
-   #!         - name: flashing
-   #!           show: flash
-   #!           speed: 5
-   #!         - name: lit
-   #!           show: on
-   #!      loop: no
-   #!      block: yes
+   #!     states:
+   #!       - name: flashing
+   #!         show: flash
+   #!         speed: 5
+   #!       - name: lit
+   #!         show: on
+   #!     loop: false
+   #!     block: true
    shots:
      my_first_shot:
        profile: mode2
@@ -600,14 +600,14 @@ Next, take a look at the ``shot_profiles:`` section:
    ##! mode: mode2
    shot_profiles:
      mode2:
-        states:
-           - name: flashing
-             show: flash
-             speed: 5
-           - name: lit
-             show: on
-        loop: no
-        block: yes
+       states:
+         - name: flashing
+           show: flash
+           speed: 5
+         - name: lit
+           show: on
+       loop: false
+       block: true
 
 In this case, we defined a profile called ``mode2`` which has two states: "flashing" and "lit". (These
 state names could be whatever you want, "incomplete" and "complete" or whatever.) Note also that we added
@@ -615,7 +615,7 @@ state names could be whatever you want, "incomplete" and "complete" or whatever.
 you can use any of the :doc:`/config/show_player` settings there. In this case that will play the show
 at 5x speed, so we'll see a very fast flashing.
 
-Also note that we added ``block: yes`` to this profile. That means that when this profile is active, any
+Also note that we added ``block: true`` to this profile. That means that when this profile is active, any
 shot profiles from lower priority modes will be disabled. Since mode2 runs at priority 200, the profile
 "my_first_profile" which we assigned in the base mode config (base.yaml) will be blocked.
 
@@ -624,7 +624,7 @@ applied, this is why when mode2 is running, we don't get the variable_player eve
 events are not posted because my_first_profile is not active because the higher priority profile attached
 to the shot in mode2 is blocking it.
 
-If you were to remove the ``block: yes`` from the mode2 profile in the mode2 config, then when you hit the
+If you were to remove the ``block: true`` from the mode2 profile in the mode2 config, then when you hit the
 shot while mode2 was active then you would get the scoring from both the base mode and mode2 mode applied.
 
 (not done writing yet...)

@@ -59,19 +59,19 @@ like this:
 
 .. code-block:: mpf-config
 
-    coils:
-        c_flipper_left_main:
-            number: 00
-            default_pulse_ms: 20
-        c_flipper_left_hold:
-            number: 01
-            allow_enable: true
-        c_flipper_right_main:
-            number: 02
-            default_pulse_ms: 20
-        c_flipper_right_hold:
-            number: 03
-            allow_enable: true
+   coils:
+     c_flipper_left_main:
+       number: 00
+       default_pulse_ms: 20
+     c_flipper_left_hold:
+       number: 01
+       allow_enable: true
+     c_flipper_right_main:
+       number: 02
+       default_pulse_ms: 20
+     c_flipper_right_hold:
+       number: 03
+       allow_enable: true
 
 Notice that we only added ``default_pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their

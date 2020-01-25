@@ -52,16 +52,16 @@ Tell the playfield to use the plunger for new balls:
 .. code-block:: mpf-config
 
    #! switches:
-   #!      s_plunger:
-   #!          number: 10
+   #!   s_plunger:
+   #!     number: 10
    #! ball_devices:
-   #!      bd_plunger:
-   #!          ball_switches: s_plunger
-   #!          mechanical_eject: true
+   #!   bd_plunger:
+   #!     ball_switches: s_plunger
+   #!     mechanical_eject: true
    playfields:
-       playfield:
-            tags: default
-            default_source_device: bd_plunger
+     playfield:
+       tags: default
+       default_source_device: bd_plunger
 
 
 Check out the complete config.yaml file so far

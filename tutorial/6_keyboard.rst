@@ -29,10 +29,10 @@ and the right flipper button to the ``?`` key:
 .. code-block:: mpf-config
 
     keyboard:
-        z:
-            switch: s_left_flipper
-        "?":
-            switch: s_right_flipper
+      z:
+        switch: s_left_flipper
+      '?':
+        switch: s_right_flipper
 
 Note that the question mark is in quotes since it's a non-standard
 character, and if you don't put it in quotes, it will confuse the

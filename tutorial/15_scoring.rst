@@ -36,7 +36,7 @@ configuration item called *variable_player:*, like this:
 
 .. code-block:: yaml
 
-    variable_player:
+   variable_player:
 
 3. Add point values for events
 ------------------------------
@@ -52,12 +52,12 @@ followed by "_active", like this:
 
 .. code-block:: mpf-config
 
-    ##! mode: base
-    variable_player:
-        s_right_inlane_active:
-            score: 100
-        s_left_flipper_active:
-            score: 1000
+   ##! mode: base
+   variable_player:
+     s_right_inlane_active:
+       score: 100
+     s_left_flipper_active:
+       score: 1000
 
 Now save your config, start a game (``S``), hit the ``L`` key to launch a ball,
 then hit the ``Q`` key to trigger the right inlane switch . You
@@ -108,15 +108,15 @@ For example, try changing your scoring section to this:
 
 .. code-block:: mpf-config
 
-    ##! mode: base
-    variable_player:
-        s_right_inlane_active:
-            score: 100
-        s_left_flipper_active:
-            score: 1000
-            potato: 1
-        s_right_flipper_active:
-            potato: -2
+   ##! mode: base
+   variable_player:
+     s_right_inlane_active:
+       score: 100
+     s_left_flipper_active:
+       score: 1000
+       potato: 1
+     s_right_flipper_active:
+       potato: -2
 
 We use the word "potato" here to illustrate that player variables can be anything. So now when the left flipper is
 active, the player variable called "score" will increase by 1000, and the player variable called "potato" will increase
@@ -162,10 +162,10 @@ again. Add the potato text entry, like this:
            anchor_y: bottom
            font_size: 50
          - type: text
-           text: "POTATO VALUE: (potato)"
+           text: 'POTATO VALUE: (potato)'
            y: 40%
 
-Notice that we put ``text: "POTATO VALUE: (potato)"`` in quotes. That's because we actually want to show the colon as part
+Notice that we put ``text: 'POTATO VALUE: (potato)'`` in quotes. That's because we actually want to show the colon as part
 of the text that's displayed on the screen. However colons are important in YAML files. So if we made our entry
 like this: ``text: POTATO VALUE: (potato)``, then we would get a YAML processing error because the YAML processor
 would freak out. "OH MY THERE ARE TWO COLONS?? WHAT'S THIS MEAN??? <crash>"

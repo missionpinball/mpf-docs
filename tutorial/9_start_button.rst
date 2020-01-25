@@ -14,8 +14,8 @@ tutorial we'll just call this button ``s_start`` and add it like this:
 .. code-block:: mpf-config
 
    switches:
-        s_start:
-            number: 10
+     s_start:
+       number: 10
 
 2. Add a "start" tag to your Start button
 -----------------------------------------
@@ -37,9 +37,9 @@ want act as the start button. So now your start switch in your
 .. code-block:: mpf-config
 
    switches:
-        s_start:
-            number: 10
-            tags: start
+     s_start:
+       number: 10
+       tags: start
 
 3. Add keyboard entries for your start switch
 ---------------------------------------------
@@ -58,8 +58,8 @@ your config file:
 .. code-block:: mpf-config
 
    keyboard:
-        s:
-            switch: s_start
+     s:
+       switch: s_start
 
 4. Add at least one playfield switch
 ------------------------------------
@@ -84,9 +84,9 @@ playfield switches, for example:
 .. code-block:: mpf-config
 
    switches:
-        s_right_inlane:
-            number: 12
-            tags: playfield_active
+     s_right_inlane:
+       number: 12
+       tags: playfield_active
 
 While you're at it, create a keyboard key mapping for this switch in
 the ``keyboard:`` section of your config, like this:
@@ -94,8 +94,8 @@ the ``keyboard:`` section of your config, like this:
 .. code-block:: mpf-config
 
    keyboard:
-        q:
-            switch: s_right_inlane
+     q:
+       switch: s_right_inlane
 
 If you want you can go ahead and add entries for all your playfield
 switches, though that will take awhile. For now just make sure you

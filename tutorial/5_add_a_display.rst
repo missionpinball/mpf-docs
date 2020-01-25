@@ -127,15 +127,15 @@ slide called "welcome_slide", like this:
 .. code-block:: mpf-config
 
    slides:
-      welcome_slide:
+     welcome_slide:
 
 Now let's add a ``widgets:`` section under that slide, then under that, we'll start creating some widgets.
 
 .. code-block:: mpf-config
 
    slides:
-      welcome_slide:
-         widgets:
+     welcome_slide:
+       widgets:
 
 You can add as many widgets as you want to a slide. (And it's pretty common for slides to be made up of lots of
 widgets). For now let's add a text widget that reads "PINBALL!". Do this by adding the following to your config:
@@ -143,10 +143,10 @@ widgets). For now let's add a text widget that reads "PINBALL!". Do this by addi
 .. code-block:: mpf-config
 
    slides:
-      welcome_slide:
-         widgets:
-           - type: text
-             text: PINBALL!
+     welcome_slide:
+       widgets:
+         - type: text
+           text: PINBALL!
 
 There are a few things going on there.
 
@@ -180,7 +180,7 @@ To see this in action, add the following section to your machine config:
 .. code-block:: mpf-config
 
    slide_player:
-      init_done: welcome_slide
+     init_done: welcome_slide
 
 What this is doing is saying, "When the event called *init_done* happens, play the slide called *welcome_slide*." The
 *init_done* is an event that's posted by MPF-MC at the earliest possible point when it is ready after it initially starts

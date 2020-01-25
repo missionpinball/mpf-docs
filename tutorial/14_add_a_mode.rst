@@ -94,11 +94,11 @@ like this:
 
 .. code-block:: mpf-config
 
-    ##! mode: my_mode
-    #config_version=5
-    mode:
-        start_events: ball_starting
-        priority: 100
+   ##! mode: my_mode
+   #config_version=5
+   mode:
+     start_events: ball_starting
+     priority: 100
 
 There are lots more settings besides ``start_events`` and ``priority``
 which you can set for a mode. See the :doc:`/config/mode` for details.
@@ -150,8 +150,8 @@ like this:
 
 .. code-block:: yaml
 
-    modes:
-      - base
+   modes:
+     - base
 
 Note that it's very important that you put dashes in front of each
 mode in this list? Why? Because with dashes, MPF will be able to
@@ -204,8 +204,8 @@ your complete ``base.yaml`` looks like this:
    ##! mode: base
    #config_version=5
    mode:
-       start_events: ball_starting
-       priority: 100
+     start_events: ball_starting
+     priority: 100
 
    slide_player:
      mode_base_started:
@@ -282,8 +282,8 @@ entry for ball_started:. So now the slide_player: in your machine-wide
 .. code-block:: mpf-config
 
    slide_player:
-      init_done: welcome_slide
-      mode_attract_started: attract_started
+     init_done: welcome_slide
+     mode_attract_started: attract_started
 
 What if it didn't work?
 -----------------------
