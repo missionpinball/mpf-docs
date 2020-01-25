@@ -46,7 +46,7 @@ class EventDocParser(object):
                             event = event.strip('.')
 
                         if rst:
-                            filename = self.create_file(event, rst)
+                            filename = self.create_file_if_changed(event, rst)
                             self.file_list.append((event, filename))
 
                         if config_section and rst:
@@ -119,8 +119,7 @@ Device Indexes
             for event in events:
                 rst += '* :doc:`{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
 
-            with open(os.path.join(self.rst_path, 'index_{}.rst'.format(config_section)), 'w') as f:
-                f.write(rst)
+            self.create_file_if_changed('index_{}'.format(config_section), rst)
 
             rst = ""
 
@@ -129,17 +128,23 @@ Device Indexes
 
             rst += "\n"
 
-            with open(os.path.join(self.rst_path, 'include_{}.rst'.format(config_section)), 'w') as f:
-                f.write(rst)
+            self.create_file_if_changed('include_{}'.format(config_section), rst)
 
+        self.create_file_if_changed('index', index)
 
-        with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
-            f.write(index)
-
-    def create_file(self, event, rst):
+    def create_file_if_changed(self, event, rst):
         filename = event.replace('(', '').replace(')', '') + '.rst'
+        file_path = os.path.join(self.rst_path, filename)
 
-        with open(os.path.join(self.rst_path, filename), 'w') as f:
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as f:
+                content = f.read()
+
+            if content == rst:
+                # file did not change
+                return filename
+
+        with open(file_path, 'w') as f:
             f.write(rst)
 
         return filename
