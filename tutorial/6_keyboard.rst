@@ -149,6 +149,8 @@ keys, there are a few things you can try to troubleshoot:
   hitting your keys again.
 + Remember that your physical flippers will not flip if you hit the
   keyboard keys for your flipper buttons.
++ Check if numlock is enabled. This seems to be common issue on Windows 10.
+  Disable numlock in this case.
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
