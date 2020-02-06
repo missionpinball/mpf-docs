@@ -19,28 +19,24 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-       s_transfer:
-           number:
-
+     s_transfer:
+       number:
    playfield_transfers:
-       transfer1:
-           ball_switch: s_transfer
-           captures_from: playfield1
-           eject_target: playfield2
-
-       transfer2:
-           transfer_events: transfer_ball
-           captures_from: playfield1
-           eject_target: playfield2
-
+     transfer1:
+       ball_switch: s_transfer
+       captures_from: playfield1
+       eject_target: playfield2
+     transfer2:
+       transfer_events: transfer_ball
+       captures_from: playfield1
+       eject_target: playfield2
    playfields:
-       playfield1:
-           label: Playfield 1
-           default_source_device: None
-       playfield2:
-           label: Playfield 2
-           default_source_device: None
-
+     playfield1:
+       label: Playfield 1
+       default_source_device: None
+     playfield2:
+       label: Playfield 2
+       default_source_device: None
 
 Required settings
 -----------------

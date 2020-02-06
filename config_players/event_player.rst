@@ -9,19 +9,19 @@ Basic Event Playing
 .. code-block:: mpf-config
 
     event_player:
-        ball_starting:
-            - cmd_flippers_enable
-            - cmd_autofire_coils_enable
-            - cmd_drop_targets_reset
-        ball_ending:
-            - cmd_flippers_disable
-            - cmd_autofire_coils_disable
-        tilt:
-            - cmd_flippers_disable
-            - cmd_autofire_coils_disable
-        slam_tilt:
-            - cmd_flippers_disable
-            - cmd_autofire_coils_disable
+      ball_starting:
+        - cmd_flippers_enable
+        - cmd_autofire_coils_enable
+        - cmd_drop_targets_reset
+      ball_ending:
+        - cmd_flippers_disable
+        - cmd_autofire_coils_disable
+      tilt:
+        - cmd_flippers_disable
+        - cmd_autofire_coils_disable
+      slam_tilt:
+        - cmd_flippers_disable
+        - cmd_autofire_coils_disable
 
 The event player settings above will post the events
 *cmd_flippers_enable*, *cmd_autofire_coils_enable*, and
@@ -45,8 +45,7 @@ shoot here mode's shoot_here.yaml mode configuration file:
 
     ##! mode: shoot_here
     event_player:
-      mode_shoot_here_started:
-        cmd_upper_target_reset
+      mode_shoot_here_started: cmd_upper_target_reset
 
 Conditional Event Playing
 -------------------------
@@ -58,13 +57,9 @@ when an event is played:
 
    ##! mode: base
    event_player:
-       mode_base_started{current_player.score>10000}:
-         start_mode_superbonusround
-         play_show_richy_rich
-       start_mode_battle{device.achievements.ironthrone.state!="completed"}:
-         start_mode_choose_battle
-       start_mode_battle{device.achievements.ironthrone.state=="completed"}:
-         start_mode_victory_lap
+     mode_base_started{current_player.score>10000}: start_mode_superbonusround play_show_richy_rich
+     start_mode_battle{device.achievements.ironthrone.state!="completed"}: start_mode_choose_battle
+     start_mode_battle{device.achievements.ironthrone.state=="completed"}: start_mode_victory_lap
 
 In the above example, both "start_mode_superbonusround" and "play_show_richy_rich" will
 only be posted if the player's score is over 10,000 when base mode starts. And if the
@@ -78,12 +73,12 @@ trigger a variable number of handlers:
 
    ##! mode: base
    event_player:
-      reenable_nonrecruit_modes:
-         - start_mode_shadowbroker_base
-         - start_mode_n7_assignments
-         - start_mode_overlordlight{device.achievements.collectorship.state!="complete"}
-         - start_mode_arrival{device.achievements.collectorship.state=="complete"}
-         - start_mode_shopping{current_player.cash>=1000}
+     reenable_nonrecruit_modes:
+       - start_mode_shadowbroker_base
+       - start_mode_n7_assignments
+       - start_mode_overlordlight{device.achievements.collectorship.state!="complete"}
+       - start_mode_arrival{device.achievements.collectorship.state=="complete"}
+       - start_mode_shopping{current_player.cash>=1000}
 
 In the above example, both "start_mode_shadowbroker_base" and "start_mode_n7_assignments" will
 be posted every time. One of either "start_mode_overlord" or "start_mode_arrival" will be posted,
@@ -140,7 +135,7 @@ the object properties as its arguments:
       set_environment_sounds:
         env_name: driving
       # Objects can be inline for brevity
-      set_initial_laps_count: { count: 10 }
+      set_initial_laps_count: {count: 10}
 
 You can go a step further and include dynamic values as the values for event
 arguments. To indicate that an argument's value is dynamic, use the ``value:``
@@ -151,7 +146,7 @@ property.
   event_player:
     mode_dynamo_started:
       set_dynamo_phase:
-        phase_name: { value: current_player.dynamo_phase }
+        phase_name: {value: current_player.dynamo_phase}
 
 In the above example, if the player variable ``dynamo_phase`` had the value
 "attackwave", the event would be posted as such:

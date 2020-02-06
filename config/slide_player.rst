@@ -19,9 +19,9 @@ This is an example:
 .. code-block:: mpf-config
 
    slide_player:
-      event1: slide1
-      event2: slide2
-      event3: slide3
+     event1: slide1
+     event2: slide2
+     event3: slide3
 
 See :doc:`/config_players/slide_player` for details.
 
@@ -56,19 +56,19 @@ For example, to remove *slide1* when the event *remove_slide_1* is posted:
 .. code-block:: mpf-config
 
    slide_player:
-      remove_slide_1:          # event name
-         slide1:               # slide name
-            action: remove
+     remove_slide_1:           # event name
+       slide1:                 # slide name
+         action: remove
 
 You can also specify a transition for the removal, like this:
 
 .. code-block:: mpf-config
 
    slide_player:
-      remove_slide_1:          # event name
-         slide1:               # slide name
-            action: remove
-            transition: fade
+     remove_slide_1:           # event name
+       slide1:                 # slide name
+         action: remove
+         transition: fade
 
 expire:
 ~~~~~~~

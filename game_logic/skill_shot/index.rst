@@ -27,100 +27,93 @@ A simple skill shot mode:
 .. code-block:: mpf-config
 
    #! switches:
-   #!     s_lane_l:
-   #!         number:
-   #!     s_lane_m:
-   #!         number:
-   #!     s_lane_r:
-   #!         number:
+   #!   s_lane_l:
+   #!     number:
+   #!   s_lane_m:
+   #!     number:
+   #!   s_lane_r:
+   #!     number:
    #! lights:
-   #!     l_lane_l:
-   #!         number:
-   #!     l_lane_m:
-   #!         number:
-   #!     l_lane_r:
-   #!         number:
+   #!   l_lane_l:
+   #!     number:
+   #!   l_lane_m:
+   #!     number:
+   #!   l_lane_r:
+   #!     number:
    ##! mode: skill_shot
    mode:
-       start_events: ball_started
-       stop_events:
-           - skill_success
-           - skill_failed
-       priority: 500
-
+     start_events: ball_started
+     stop_events:
+       - skill_success
+       - skill_failed
+     priority: 500
    shots:
-       skill_l:
-           switch: s_lane_l
-           profile: skill_shot_profile
-           advance_events: mode_skill_shot_started    # replace "skill_shot" with your mode name
-           show_tokens:
-               light: l_lane_l
-       skill_m:
-           switch: s_lane_m
-           profile: skill_shot_profile
-           show_tokens:
-               light: l_lane_m
-       skill_r:
-           switch: s_lane_r
-           profile: skill_shot_profile
-           show_tokens:
-               light: l_lane_r
-
+     skill_l:
+       switch: s_lane_l
+       profile: skill_shot_profile
+       advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+       show_tokens:
+         light: l_lane_l
+     skill_m:
+       switch: s_lane_m
+       profile: skill_shot_profile
+       show_tokens:
+         light: l_lane_m
+     skill_r:
+       switch: s_lane_r
+       profile: skill_shot_profile
+       show_tokens:
+         light: l_lane_r
    shot_groups:
-       skill_shot:
-           shots: skill_l, skill_m, skill_r
-           rotate_left_events: s_left_flipper_active
-           rotate_right_events: s_right_flipper_active
-
+     skill_shot:
+       shots: skill_l, skill_m, skill_r
+       rotate_left_events: s_left_flipper_active
+       rotate_right_events: s_right_flipper_active
    shot_profiles:
-       skill_shot_profile:
-           states:
-            - name: unlit
-              show: off
-            - name: flashing
-              show: flash_color
-              show_tokens:
-                color: red
-              speed: 4
-            - name: lit
-              show: on
-           loop: yes
-
+     skill_shot_profile:
+       states:
+         - name: unlit
+           show: off
+         - name: flashing
+           show: flash_color
+           show_tokens:
+             color: red
+           speed: 4
+         - name: lit
+           show: on
+       loop: true
    variable_player:
-       skill_success:
-           score: 42
-
+     skill_success:
+       score: 42
    timers:
      skill_shot_timeout:
        start_value: 0
        end_value: 5     # set the timeout of your skill shot here
        direction: up
        tick_interval: 1s
-       start_running: no
+       start_running: false
        control_events:
          - action: start
            event: balldevice_plunger_lane_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
-
    state_machines:
-      skill_shot_success:
-           debug: True
-           states:
-               start:
-                   label: Skill shot ready
-               success:
-                   label: Skill successful
-                   events_when_started: skill_success
-               failed:
-                   label: Skill failed
-                   events_when_started: skill_failed
-           transitions:
-               - source: start
-                 target: success
-                 events: skill_shot_flashing_hit
-               - source: start
-                 target: failed
-                 events: skill_shot_unlit_hit, timer_skill_shot_timeout_complete
-
+     skill_shot_success:
+       debug: true
+       states:
+         start:
+           label: Skill shot ready
+         success:
+           label: Skill successful
+           events_when_started: skill_success
+         failed:
+           label: Skill failed
+           events_when_started: skill_failed
+       transitions:
+         - source: start
+           target: success
+           events: skill_shot_flashing_hit
+         - source: start
+           target: failed
+           events: skill_shot_unlit_hit, timer_skill_shot_timeout_complete
    ##! test
    #! # failure
    #! start_game

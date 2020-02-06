@@ -19,12 +19,10 @@ This is an example:
 .. code-block:: mpf-config
 
     hardware:
-        platform: opp
-        driverboards: gen2
-
+      platform: opp
+      driverboards: gen2
     opp:
-        ports: COM7
-
+      ports: COM7
 
 Required settings
 -----------------
@@ -64,11 +62,10 @@ This is an example:
 .. code-block:: mpf-config
 
    opp:
-       ports: /dev/ttyOPP0, /dev/ttyOPP1
-       chains:
-           0: /dev/ttyOPP0
-           1: /dev/ttyOPP1
-
+     ports: /dev/ttyOPP0, /dev/ttyOPP1
+     chains:
+       0: /dev/ttyOPP0
+       1: /dev/ttyOPP1
 
 If you switch was number ``1-3`` before it will be ``0-1-3`` or ``1-1-3`` afterwards.
 

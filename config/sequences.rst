@@ -63,11 +63,11 @@ those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND THEN* Step 2 (eve
 
    ##! mode: mode1
    sequences:
-      my_sequence:
-         events:
-            - event1, event2
-            - event3
-            - event4, event5
+     my_sequence:
+       events:
+         - event1, event2
+         - event3
+         - event4, event5
 
 It might seem kind of confusing at first, but
 you can build this up bit-by-bit and figure them out as you go along.
@@ -83,20 +83,20 @@ For example:
 
    ##! mode: mode1
    sequences:
-      logic_block_1:
-         events:
-            - event1
-            - event2
-            - event3
-            - event4
-            - event5
-         events_when_complete: logic_block_1_done
-      logic_block_2:
-         events:
-            - event1, event2, event3
-            - event4
-            - event5
-         events_when_complete: logic_block_2_done
+     logic_block_1:
+       events:
+         - event1
+         - event2
+         - event3
+         - event4
+         - event5
+       events_when_complete: logic_block_1_done
+     logic_block_2:
+       events:
+         - event1, event2, event3
+         - event4
+         - event5
+       events_when_complete: logic_block_2_done
 
 In the example above, there are two logic blocks. The first one just has five
 steps that need to complete (in 1-2-3-4-5 exact order since we're dealing with

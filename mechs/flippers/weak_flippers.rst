@@ -11,23 +11,21 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-        s_left_flipper:
-            number: 1
-        s_right_flipper:
-            number: 2
-
+     s_left_flipper:
+       number: 1
+     s_right_flipper:
+       number: 2
    coils:
-        c_flipper_left:
-            number: 0
-            default_pulse_ms: 30
-            default_pulse_power: 0.5
-            default_hold_power: 0.125
-        c_flipper_right:
-            number: 1
-            default_pulse_ms: 30
-            default_pulse_power: 0.5
-            default_hold_power: 0.125
-
+     c_flipper_left:
+       number: 0
+       default_pulse_ms: 30
+       default_pulse_power: 0.5
+       default_hold_power: 0.125
+     c_flipper_right:
+       number: 1
+       default_pulse_ms: 30
+       default_pulse_power: 0.5
+       default_hold_power: 0.125
    flippers:
      left:
        main_coil: c_flipper_left
@@ -53,7 +51,6 @@ This is an example:
        activation_switch: s_right_flipper
        enable_events: weak_flipper_enable
        disable_events: normal_flippers_enable
-
    ##! test
    #! start_game
    #! assert_bool_condition True device.flippers.left.enabled

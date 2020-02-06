@@ -44,11 +44,11 @@ For example:
 .. code-block:: mpf-config
 
     images:
-        insert_coin:
-            load: preload
-        hello_face:
-            file: hello_face_300.jpg
-            load: None
+      insert_coin:
+        load: preload
+      hello_face:
+        file: hello_face_300.jpg
+        load: None
 
 So in the example above, if
 the asset manager found a file called ``insert_coin.jpg`` on disk, then

@@ -22,7 +22,6 @@ Here's an example achievements section from Brooks & Dunn:
 .. code-block:: mpf-config
 
    ##! mode: mode1
-
    achievements:
      world_tour:
        show_tokens:
@@ -35,7 +34,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: world_tour_success
        enable_events: world_tour_fail, ball_will_end
-
      money_bags:
        show_tokens:
          leds: l_money_bags
@@ -47,7 +45,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: money_bags_success
        enable_events: money_bags_fail, ball_will_end
-
      music_awards:
        show_tokens:
          leds: l_music_awards
@@ -59,7 +56,6 @@ Here's an example achievements section from Brooks & Dunn:
        complete_events: music_awards_success
        events_when_completed: rotate_mission_rotator, light_mission_select
        enable_events: music_awards_fail, ball_will_end
-
      jukebox:
        show_tokens:
          leds: l_jukebox_insert
@@ -71,7 +67,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: jukebox_success
        enable_events: jukebox_fail, ball_will_end
-
      play_poker:
        show_tokens:
          leds: l_play_poker

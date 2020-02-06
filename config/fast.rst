@@ -18,8 +18,7 @@ so be sure to read that if you have FAST hardware.
 .. code-block:: mpf-config
 
     fast:
-        ports: com3, com4, com5
-
+      ports: com3, com4, com5
 
 Required settings
 -----------------

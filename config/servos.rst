@@ -21,22 +21,22 @@ and *servo2*:
 .. code-block:: mpf-config
 
    servos:
-      servo1:
-         servo_min: 0.1
-         servo_max: 0.9
-         positions:
-             0.0: servo1_down
-             0.8: servo1_up
-         reset_position: 0.5
-         reset_events: reset_servo1
-         number: 1
-      servo2:
-         positions:
-             0.2: servo2_left
-             1.0: servo2_home
-         reset_position: 1.0
-         reset_events: reset_servo2
-         number: 2
+     servo1:
+       servo_min: 0.1
+       servo_max: 0.9
+       positions:
+         0.0: servo1_down
+         0.8: servo1_up
+       reset_position: 0.5
+       reset_events: reset_servo1
+       number: 1
+     servo2:
+       positions:
+         0.2: servo2_left
+         1.0: servo2_home
+       reset_position: 1.0
+       reset_events: reset_servo2
+       number: 2
 
 Then for each servo in your ``servos:`` section, the following settings apply:
 
@@ -94,12 +94,12 @@ This is a sub-section mapping of servo positions to MPF event names. For example
 .. code-block:: mpf-config
 
    #! servos:
-   #!    servo1:
-   #!       number: 1
-         positions:
-            0.1: servo1_down
-            0.9: servo1_up
-            0.45: servo1_mid
+   #!   servo1:
+   #!     number: 1
+       positions:
+         0.1: servo1_down
+         0.9: servo1_up
+         0.45: servo1_mid
 
 In MPF, servo ranges of motion are represented as numbers between 0.0 and 1.0.
 So 0.0 puts the servo at the extreme end of its range on one side as set by the servo_min:
@@ -139,9 +139,9 @@ the servo to reset on the start of each ball, you can override that like this:
 .. code-block:: mpf-config
 
    #! servos:
-   #!    servo1:
-   #!       number: 1
-         reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
+   #!   servo1:
+   #!     number: 1
+       reset_events: machine_reset_phase_3, ball_will_end, service_mode_entered
 
 reset_position:
 ~~~~~~~~~~~~~~~

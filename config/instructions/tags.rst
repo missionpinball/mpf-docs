@@ -75,7 +75,6 @@ Example with events:
     mygame_popbumper_right_active:
       score: 100
 
-
 Now with tags:
 
 .. code-block:: mpf-config
@@ -84,7 +83,6 @@ Now with tags:
   variable_player:
     sw_mygame_popbumper:
       score: 100
-
 
 As you can see, if you have a repeating event you can save yourself some time and coding by using tags.
 Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
@@ -119,7 +117,6 @@ All we need to do is add a tag:
        number: 56
        tags: playfield_active
 
-
 **Reserved Tags in MPF**
 ------------------------
 
@@ -142,7 +139,7 @@ MPF contains some reserved tags that are used for certain devices.  An example o
    ball_devices:
    #!   mygame_balldevice_shooter_lane:
    #!     ball_switches: s_test1
-   #!     mechanical_eject: True
+   #!     mechanical_eject: true
      mygame_balldevice_trough:
        ball_switches: mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3
        eject_coil: mygame_coil_trough_eject

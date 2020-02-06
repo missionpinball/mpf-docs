@@ -26,12 +26,12 @@ This is an example:
 .. code-block:: mpf-config
 
     coils:
-        c_coil_with_recycle:
-            number:
-            default_recycle: True
-        c_coil_without_recycle:
-            number:
-            default_recycle: False
+      c_coil_with_recycle:
+        number:
+        default_recycle: true
+      c_coil_without_recycle:
+        number:
+        default_recycle: false
 
 Some platforms allow you to fine tune the recycle time.
 

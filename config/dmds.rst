@@ -25,7 +25,6 @@ Note that there are no *height* and *width* settings here. The pixel size of you
       dmd:
         width: 128
         height: 32
-
     dmds:
       my_dmd:  # name of this DMD which can be whatever you want
         brightness: .5

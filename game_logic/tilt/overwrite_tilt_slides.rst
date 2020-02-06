@@ -12,25 +12,24 @@ You can overwrite them using the following config:
      _overwrite: true   # this is important to overwrite the existing slides
      tilt_warning_1:
        widgets:
-       - type: text
-         text: WARNING
+         - type: text
+           text: WARNING
        expire: 1s
      tilt_warning_2:
        widgets:
-       - type: text
-         text: WARNING
-         y: top-2
-         anchor_y: top
-       - type: text
-         text: WARNING
-         y: top-18
-         anchor_y: top
-         expire: 1s
+         - type: text
+           text: WARNING
+           y: top-2
+           anchor_y: top
+         - type: text
+           text: WARNING
+           y: top-18
+           anchor_y: top
+           expire: 1s
        expire: 2s
      tilt:
-     - type: text
-       text: TILT
-
+       - type: text
+         text: TILT
 
 By setting the ``_overwrite: true`` you will overwrite the complete ``slides:``
 section of the built-in tilt mode.

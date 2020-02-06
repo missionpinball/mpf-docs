@@ -42,7 +42,7 @@ In your ``config.yaml`` configure virtual_pinball as your platform:
 .. code-block:: mpf-config
 
    hardware:
-      platform: virtual_pinball
+     platform: virtual_pinball
 
 or if you already have physical hardware configured start MPF with the ``--vpx`` commandline option (similar to ``-X``):
 

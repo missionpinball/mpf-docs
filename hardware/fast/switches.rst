@@ -31,10 +31,10 @@ is 1, etc.
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 0-0  # first board, switch 0
-      some_other_switch:
-         number: 2-24  # third board, switch 24
+     my_switch:
+       number: 0-0    # first board, switch 0
+     some_other_switch:
+       number: 2-24    # third board, switch 24
 
 Notes:
 
@@ -77,10 +77,10 @@ config, like this:
 .. code-block:: mpf-config
 
    fast:
-      default_quick_debounce_open: 2ms
-      default_quick_debounce_close: 2ms
-      default_normal_debounce_open: 4ms
-      default_normal_debounce_close: 4ms
+     default_quick_debounce_open: 2ms
+     default_quick_debounce_close: 2ms
+     default_normal_debounce_open: 4ms
+     default_normal_debounce_close: 4ms
 
 (Note that other settings from the ``fast:`` section of your config have not
 been included here for clarity.)
@@ -96,12 +96,12 @@ like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 1-0
-         platform_settings:
-            debounce_open: 5ms
-            debounce_close: 20ms
-      some_other_switch:
-         number: 3-24
+     my_switch:
+       number: 1-0
+       platform_settings:
+         debounce_open: 5ms
+         debounce_close: 20ms
+     some_other_switch:
+       number: 3-24
 
 Valid values are 1 to 255 ms.

@@ -39,92 +39,81 @@ multiball mode will stop using the :doc:`/events/multiball_name_ended` event.
 .. code-block:: mpf-config
 
    coils:
-       eject_coil1:
-           number:
-       eject_coil2:
-           number:
-       eject_coil3:
-           number:
-
+     eject_coil1:
+       number:
+     eject_coil2:
+       number:
+     eject_coil3:
+       number:
    switches:
-       s_lock1:
-           number:
-       s_lock2:
-           number:
-       s_lock3:
-           number:
-       s_target1:
-           number:
-
+     s_lock1:
+       number:
+     s_lock2:
+       number:
+     s_lock3:
+       number:
+     s_target1:
+       number:
    ball_devices:
-       bd_lock1:
-           eject_coil: eject_coil1
-           ball_switches: s_lock1
-           eject_timeouts: 2s
-       bd_lock2:
-           eject_coil: eject_coil2
-           ball_switches: s_lock2
-           eject_timeouts: 2s
-       bd_lock3:
-           eject_coil: eject_coil3
-           ball_switches: s_lock3
-           eject_timeouts: 2s
-
+     bd_lock1:
+       eject_coil: eject_coil1
+       ball_switches: s_lock1
+       eject_timeouts: 2s
+     bd_lock2:
+       eject_coil: eject_coil2
+       ball_switches: s_lock2
+       eject_timeouts: 2s
+     bd_lock3:
+       eject_coil: eject_coil3
+       ball_switches: s_lock3
+       eject_timeouts: 2s
    # mode lock1
    ##! mode: lock1
    mode:
-       restart_on_next_ball: True
-       stop_events: multiball_my_multiball_started
-
+     restart_on_next_ball: true
+     stop_events: multiball_my_multiball_started
    multiball_locks:
-       lock1:
-           lock_devices: bd_lock1
-           balls_to_lock: 1
-           disable_events: mode_multiball_started
-           reset_count_for_current_player_events: multiball_my_multiball_started
-
+     lock1:
+       lock_devices: bd_lock1
+       balls_to_lock: 1
+       disable_events: mode_multiball_started
+       reset_count_for_current_player_events: multiball_my_multiball_started
    # mode lock2
    ##! mode: lock2
    mode:
-       restart_on_next_ball: True
-       start_events: multiball_lock_lock1_full
-       stop_events: multiball_my_multiball_started
-
+     restart_on_next_ball: true
+     start_events: multiball_lock_lock1_full
+     stop_events: multiball_my_multiball_started
    multiball_locks:
-       lock2:
-           lock_devices: bd_lock2
-           balls_to_lock: 1
-           disable_events: mode_multiball_started
-           reset_count_for_current_player_events: multiball_my_multiball_started
-
+     lock2:
+       lock_devices: bd_lock2
+       balls_to_lock: 1
+       disable_events: mode_multiball_started
+       reset_count_for_current_player_events: multiball_my_multiball_started
    # mode lock3
    ##! mode: lock3
    mode:
-       restart_on_next_ball: True
-       start_events: multiball_lock_lock2_full
-       stop_events: multiball_my_multiball_started
-
+     restart_on_next_ball: true
+     start_events: multiball_lock_lock2_full
+     stop_events: multiball_my_multiball_started
    multiball_locks:
-       lock3:
-           lock_devices: bd_lock3
-           balls_to_lock: 1
-           disable_events: mode_multiball_started
-           reset_count_for_current_player_events: multiball_my_multiball_started
-
+     lock3:
+       lock_devices: bd_lock3
+       balls_to_lock: 1
+       disable_events: mode_multiball_started
+       reset_count_for_current_player_events: multiball_my_multiball_started
    # mode multiball
    ##! mode: multiball
    mode:
-       start_events: multiball_lock_lock3_full
-       stop_events: multiball_my_multiball_ended
-
+     start_events: multiball_lock_lock3_full
+     stop_events: multiball_my_multiball_ended
    multiballs:
-       my_multiball:
-           ball_count: 4
-           ball_count_type: total
-           shoot_again: 2s
-           start_events: s_target1_active
-           ball_locks: bd_lock1, bd_lock2, bd_lock3
-
+     my_multiball:
+       ball_count: 4
+       ball_count_type: total
+       shoot_again: 2s
+       start_events: s_target1_active
+       ball_locks: bd_lock1, bd_lock2, bd_lock3
    ##! test
    #! start_game 5
    #! # there is one ball on playfield by default
@@ -170,3 +159,4 @@ multiball mode will stop using the :doc:`/events/multiball_name_ended` event.
    #! assert_mode_not_running lock2
    #! assert_mode_not_running lock3
    #! assert_mode_not_running multiball
+

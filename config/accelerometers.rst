@@ -20,17 +20,17 @@ configure additional settings. For example:
 .. code-block:: mpf-config
 
     accelerometers:
-       test_accelerometer:
-           number: 1
-           level_x: 0
-           level_y: 0
-           level_z: 1
-           hit_limits:
-               0.5: event_hit1
-               1.5: event_hit2
-           level_limits:
-               2: event_level1
-               5: event_level2
+      test_accelerometer:
+        number: 1
+        level_x: 0
+        level_y: 0
+        level_z: 1
+        hit_limits:
+          0.5: event_hit1
+          1.5: event_hit2
+        level_limits:
+          2: event_level1
+          5: event_level2
 
 Settings:
 ---------

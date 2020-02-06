@@ -19,47 +19,43 @@ This is an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    switches:
-       s_test1:
-           number:
-           x: 0.4
-           y: 0.5
-           z: 0
-       s_test2:
-           number:
-           x: 0.6
-           y: 0.7
-       s_test3:
-           number:
-
+     s_test1:
+       number:
+       x: 0.4
+       y: 0.5
+       z: 0
+     s_test2:
+       number:
+       x: 0.6
+       y: 0.7
+     s_test3:
+       number:
    plugins: switch_player
-
    switch_player:
-       start_event: test_start
-       steps:
-         - time: 100ms
-           switch: s_test1
-           action: activate
-         - time: 600ms
-           switch: s_test3
-           action: hit
-         - time: 100ms
-           switch: s_test1
-           action: deactivate
-         - time: 1s
-           switch: s_test2
-           action: activate
-         - time: 1s
-           switch: s_test3
-           action: hit
-         - time: 100ms
-           switch: s_test2
-           action: deactivate
-         - time: 1s
-           switch: s_test3
-           action: hit
-
+     start_event: test_start
+     steps:
+       - time: 100ms
+         switch: s_test1
+         action: activate
+       - time: 600ms
+         switch: s_test3
+         action: hit
+       - time: 100ms
+         switch: s_test1
+         action: deactivate
+       - time: 1s
+         switch: s_test2
+         action: activate
+       - time: 1s
+         switch: s_test3
+         action: hit
+       - time: 100ms
+         switch: s_test2
+         action: deactivate
+       - time: 1s
+         switch: s_test3
+         action: hit
 
 Optional settings
 -----------------

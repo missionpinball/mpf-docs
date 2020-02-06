@@ -19,11 +19,11 @@ as light) in LISY1 and LISY80:
 .. code-block:: mpf-config
 
    digital_outputs:
-       game_over_relay:
-           number: 1
-           type: light
-           enable_events: ball_started
-           disable_events: ball_will_end
+     game_over_relay:
+       number: 1
+       type: light
+       enable_events: ball_started
+       disable_events: ball_will_end
 
 In LISY35 the same relay is connected to a driver.
 You can use this example to enable flippers:
@@ -31,12 +31,11 @@ You can use this example to enable flippers:
 .. code-block:: mpf-config
 
    digital_outputs:
-       flipper_enabling_relay:
-           type: driver
-           number: 16
-           enable_events: ball_started
-           disable_events: ball_will_end
-
+     flipper_enabling_relay:
+       type: driver
+       number: 16
+       enable_events: ball_started
+       disable_events: ball_will_end
 
 This config will automatically enable the flippers on ball start and disable
 them on ball end. You can add more events to enable/disable them during the

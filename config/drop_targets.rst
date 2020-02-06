@@ -21,39 +21,38 @@ Here's an example from *Judge Dredd*, with five drop targets we've given names
 .. code-block:: mpf-config
 
    #! switches:
-   #!    drop_target_j:
-   #!       number:
-   #!    drop_target_u:
-   #!       number:
-   #!    drop_target_d:
-   #!       number:
-   #!    drop_target_g:
-   #!       number:
-   #!    drop_target_e:
-   #!       number:
+   #!   drop_target_j:
+   #!     number:
+   #!   drop_target_u:
+   #!     number:
+   #!   drop_target_d:
+   #!     number:
+   #!   drop_target_g:
+   #!     number:
+   #!   drop_target_e:
+   #!     number:
    #! coils:
-   #!    reset_drop_targets:
-   #!       number:
-   #!    trip_drop_target_d:
-   #!       number:
-
+   #!   reset_drop_targets:
+   #!     number:
+   #!   trip_drop_target_d:
+   #!     number:
    drop_targets:
-        j:
-            switch: drop_target_j
-            reset_coil: reset_drop_targets
-        u:
-            switch: drop_target_u
-            reset_coil: reset_drop_targets
-        d:
-            switch: drop_target_d
-            reset_coil: reset_drop_targets
-            knockdown_coil: trip_drop_target_d
-        g:
-            switch: drop_target_g
-            reset_coil: reset_drop_targets
-        e:
-            switch: drop_target_e
-            reset_coil: reset_drop_targets
+     j:
+       switch: drop_target_j
+       reset_coil: reset_drop_targets
+     u:
+       switch: drop_target_u
+       reset_coil: reset_drop_targets
+     d:
+       switch: drop_target_d
+       reset_coil: reset_drop_targets
+       knockdown_coil: trip_drop_target_d
+     g:
+       switch: drop_target_g
+       reset_coil: reset_drop_targets
+     e:
+       switch: drop_target_e
+       reset_coil: reset_drop_targets
 
 Important: Not all "drop targets" in your machine will be configured
 as "drop targets." Some machines have drop target mechanisms that

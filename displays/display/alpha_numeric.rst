@@ -47,7 +47,7 @@ using the following slides:
            anchor_x: right
            anchor_y: bottom
            z: 2
-
    # show slide on game start
    slide_player:
-      game_started: segment_displays
+     game_started: segment_displays
+

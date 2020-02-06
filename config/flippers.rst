@@ -37,65 +37,64 @@ options here.)
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_flipper_left:
-   #!       number:
-   #!    flipperLwL_EOS:
-   #!       number:
-   #!    s_flipper_right:
-   #!       number:
-   #!    flipperLwR_EOS:
-   #!       number:
-   #!    flipperUpL:
-   #!       number:
-   #!    flipperUpL_EOS:
-   #!       number:
-   #!    flipperUpR:
-   #!       number:
-   #!    flipperUpR_EOS:
-   #!       number:
+   #!   s_flipper_left:
+   #!     number:
+   #!   flipperLwL_EOS:
+   #!     number:
+   #!   s_flipper_right:
+   #!     number:
+   #!   flipperLwR_EOS:
+   #!     number:
+   #!   flipperUpL:
+   #!     number:
+   #!   flipperUpL_EOS:
+   #!     number:
+   #!   flipperUpR:
+   #!     number:
+   #!   flipperUpR_EOS:
+   #!     number:
    #! coils:
-   #!    c_flipper_lower_left_main:
-   #!       number:
-   #!    c_flipper_lower_left_hold:
-   #!       number:
-   #!    c_flipper_lower_right_main:
-   #!       number:
-   #!    c_flipper_lower_right_hold:
-   #!       number:
-   #!    flipperUpLMain:
-   #!       number:
-   #!    flipperUpLHold:
-   #!       number:
-   #!    flipperUpRMain:
-   #!       number:
-   #!    flipperUpRHold:
-   #!       number:
+   #!   c_flipper_lower_left_main:
+   #!     number:
+   #!   c_flipper_lower_left_hold:
+   #!     number:
+   #!   c_flipper_lower_right_main:
+   #!     number:
+   #!   c_flipper_lower_right_hold:
+   #!     number:
+   #!   flipperUpLMain:
+   #!     number:
+   #!   flipperUpLHold:
+   #!     number:
+   #!   flipperUpRMain:
+   #!     number:
+   #!   flipperUpRHold:
+   #!     number:
    flippers:
-      lower_left:
-          main_coil: c_flipper_lower_left_main
-          hold_coil: c_flipper_lower_left_hold
-          activation_switch: s_flipper_left
-          eos_switch: flipperLwL_EOS
-          label: Left Main Flipper
-      lower_right:
-          main_coil: c_flipper_lower_right_main
-          hold_coil: c_flipper_lower_right_hold
-          activation_switch: s_flipper_right
-          eos_switch: flipperLwR_EOS
-          label: Right Main Flipper
-      upper_left:
-          main_coil: flipperUpLMain
-          hold_coil: flipperUpLHold
-          activation_switch: flipperUpL
-          eos_switch: flipperUpL_EOS
-          label: Upper Left Flipper
-      upper_right:
-          main_coil: flipperUpRMain
-          hold_coil: flipperUpRHold
-          activation_switch: flipperUpR
-          eos_switch: flipperUpR_EOS
-          label: Upper Right Flipper
-
+     lower_left:
+       main_coil: c_flipper_lower_left_main
+       hold_coil: c_flipper_lower_left_hold
+       activation_switch: s_flipper_left
+       eos_switch: flipperLwL_EOS
+       label: Left Main Flipper
+     lower_right:
+       main_coil: c_flipper_lower_right_main
+       hold_coil: c_flipper_lower_right_hold
+       activation_switch: s_flipper_right
+       eos_switch: flipperLwR_EOS
+       label: Right Main Flipper
+     upper_left:
+       main_coil: flipperUpLMain
+       hold_coil: flipperUpLHold
+       activation_switch: flipperUpL
+       eos_switch: flipperUpL_EOS
+       label: Upper Left Flipper
+     upper_right:
+       main_coil: flipperUpRMain
+       hold_coil: flipperUpRHold
+       activation_switch: flipperUpR
+       eos_switch: flipperUpR_EOS
+       label: Upper Right Flipper
 
 Required settings
 -----------------
@@ -224,19 +223,17 @@ This is an example:
 .. code-block:: mpf-config
 
    coils:
-       c_flipper_main:
-           number:
-
+     c_flipper_main:
+       number:
    switches:
-       s_flipper:
-           number: 1
-           tags: left_flipper
-
+     s_flipper:
+       number: 1
+       tags: left_flipper
    flippers:
-       f_test_flippers_with_settings:
-           main_coil: c_flipper_main
-           power_setting_name: flipper_power
-           activation_switch: s_flipper
+     f_test_flippers_with_settings:
+       main_coil: c_flipper_main
+       power_setting_name: flipper_power
+       activation_switch: s_flipper
 
 MPF comes with a :doc:`setting </config/settings>` called ``flipper_power`` by
 default and you can add additional ones.

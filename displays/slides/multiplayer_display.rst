@@ -33,10 +33,8 @@ we have a large score for the current player, show the player's custom-variable
 
   slides:
     base_slide: []
-
   slide_player:
     single_player_ball_started: base_slide
-
   widgets:
     base_score_widget:
       - type: text
@@ -50,7 +48,6 @@ we have a large score for the current player, show the player's custom-variable
       - type: text
         text: BALL (ball)
         style: mp_player_4
-
   widget_player:
     # First event, before additional players have a chance to enter
     game_started:

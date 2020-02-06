@@ -22,10 +22,8 @@ Config looks like this:
 
    hardware:
      segment_displays: mypinballs
-
    mypinballs:
      port: /dev/ttyUSB0
-
    segment_displays:
      display1:
        number: 1

@@ -16,22 +16,20 @@ for scoring (to handle an event when the counter changes, consider the *(name)_h
 
   ##! mode: my_mode
   counters:
-      my_counter:
-          count_events: my_count_event
-          starting_count: 0
-          count_complete_value: 3
-
+    my_counter:
+      count_events: my_count_event
+      starting_count: 0
+      count_complete_value: 3
   show_player:
-   logicblock_my_counter_updated{value == 0}:
-     my_show_initial:
-       key: my_counter_show  # this is to remove the previous show from the same player
-   logicblock_my_counter_updated{value == 1}:
-     my_show_first_hit:
-       key: my_counter_show  # this is to remove the previous show from the same player
-   logicblock_my_counter_updated{value >= 2}:
-     my_show_final:
-       key: my_counter_show  # this is to remove the previous show from the same player
-
+    logicblock_my_counter_updated{value == 0}:
+      my_show_initial:
+        key: my_counter_show # this is to remove the previous show from the same player
+    logicblock_my_counter_updated{value == 1}:
+      my_show_first_hit:
+        key: my_counter_show # this is to remove the previous show from the same player
+    logicblock_my_counter_updated{value >= 2}:
+      my_show_final:
+        key: my_counter_show # this is to remove the previous show from the same player
 
 Every time ``my_counter`` is updated (or restored) it will post
 ``logicblock_my_counter_updated``. Depending on the value of ``my_counter``
@@ -48,11 +46,10 @@ You can even achieve this a bit simpler than in the example. Like this:
 
   ##! mode: my_mode
   counters:
-      my_counter:
-          count_events: my_count_event
-          starting_count: 0
-          count_complete_value: 3
-
+    my_counter:
+      count_events: my_count_event
+      starting_count: 0
+      count_complete_value: 3
   show_player:
     logicblock_my_counter_updated{enabled}:
       my_show:
@@ -97,7 +94,6 @@ Once the counter is disabled the show it stopped (but other behaviours are possi
        (led2): (color)
        (led3): (color)
 
-
 Actions which should only happen once
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -109,22 +105,20 @@ E.g. for a callout use this:
 
   ##! mode: my_mode
   counters:
-      my_counter:
-          count_events: my_count_event
-          starting_count: 0
-          count_complete_value: 10
-
+    my_counter:
+      count_events: my_count_event
+      starting_count: 0
+      count_complete_value: 10
   sound_player:
-   logicblock_my_counter_hit{remaining == 5}:
-     sound_just_5_remaining:
-      action: play
-   logicblock_my_counter_hit{remaining == 2}:
-     sound_just_2_remaining:
-      action: play
-   logicblock_my_counter_hit{remaining == 1}:
-     sound_just_1_remaining:
-      action: play
-
+    logicblock_my_counter_hit{remaining == 5}:
+      sound_just_5_remaining:
+        action: play
+    logicblock_my_counter_hit{remaining == 2}:
+      sound_just_2_remaining:
+        action: play
+    logicblock_my_counter_hit{remaining == 1}:
+      sound_just_1_remaining:
+        action: play
 
 Other Triggered Events
 ~~~~~~~~~~~~~~~~~~~~~~

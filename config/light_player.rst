@@ -32,20 +32,19 @@ in config or shows. Example in config:
 .. code-block:: mpf-config
 
    shows:
-      rainbow:
-         - lights:
-             (leds): red
-         - lights:
-             (leds): orange
-         - lights:
-             (leds): yellow
-         - lights:
-             (leds): green
-         - lights:
-             (leds): blue
-         - lights:
-             (leds): purple
-
+     rainbow:
+       - lights:
+           (leds): red
+       - lights:
+           (leds): orange
+       - lights:
+           (leds): yellow
+       - lights:
+           (leds): green
+       - lights:
+           (leds): blue
+       - lights:
+           (leds): purple
 
 Optional settings
 -----------------

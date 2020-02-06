@@ -46,7 +46,7 @@ To do this, create a section in your machine-wide config called
 
     dmds:
       my_dmd:
-         shades: 16
+        shades: 16
 
 You need to have at least one setting for this to be a valid YAML file, so we
 usually just pick the ``shades`` and add that with a value of ``16`` (which
@@ -107,10 +107,8 @@ on the window and slide settings used in this machine config.
     hardware:
       platform: fast
       driverboards: fast
-
     fast:
       ports: com3, com4, com5  # be sure to change this to your actual ports
-
     displays:
       window:  # on screen window
         width: 600
@@ -119,42 +117,39 @@ on the window and slide settings used in this machine config.
         width: 128
         height: 32
         default: true
-
     window:
       width: 600
       height: 200
       title: Mission Pinball Framework
       source_display: window
-
     dmds:
       my_dmd:
-         brightness: 1.0
-
+        brightness: 1.0
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: display
-        effects:
-         - type: dmd
-           dot_color: ff5500
-        width: 512
-        height: 128
-      - type: text
-        text: MISSION PINBALL FRAMEWORK
-        anchor_y: top
-        y: top-3
-        font_size: 30
-      - type: rectangle
-        width: 514
-        height: 130
-        color: 444444
+        - type: display
+          effects:
+            - type: dmd
+              dot_color: ff5500
+          width: 512
+          height: 128
+        - type: text
+          text: MISSION PINBALL FRAMEWORK
+          anchor_y: top
+          y: top-3
+          font_size: 30
+        - type: rectangle
+          width: 514
+          height: 130
+          color: 444444
       dmd_slide_1:  # slide we'll show on the physical DMD
-      - type: text
-        text: IT WORKS!
-        font_size: 25
-
+        - type: text
+          text: IT WORKS!
+          font_size: 25
     slide_player:
       init_done:
         window_slide_1:
           target: window
         dmd_slide_1:
           target: dmd
+

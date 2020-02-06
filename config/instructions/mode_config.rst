@@ -8,9 +8,9 @@ defines their priority and when they start or stop:
 
     ##! mode: mode1
     mode:
-        start_events: ball_starting
-        stop_events: timer_mode_timer_complete, shot_right_ramp
-        priority: 300
+      start_events: ball_starting
+      stop_events: timer_mode_timer_complete, shot_right_ramp
+      priority: 300
 
 Not all config sections can be used in your machine-wide config (see
 :doc:`machine_config <machine_config>`).

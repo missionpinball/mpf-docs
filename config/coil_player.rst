@@ -24,11 +24,11 @@ Example from a config file:
 .. code-block:: mpf-config
 
    coil_player:
-      some_event: coil_1
-      some_other_event:
-         coil_2:
-            action: enable
-            hold_power: .5
+     some_event: coil_1
+     some_other_event:
+       coil_2:
+         action: enable
+         hold_power: .5
 
 In the example above, when the event called ``some_event`` is posted, coil_1 will pulse.
 When the event ``some_other_event`` is posted, coil_2 will enable (be held on) at power

@@ -199,12 +199,11 @@ You can configure a normally closed opto like this:
 .. code-block:: mpf-config
 
    switches:
-      trough1:
-         number: 81	# number depends on your platform
-         type: 'NC'	# normally closed
-      orbit_opto:
-         number: 23	# number depends on your platform
-         type: 'NC'	# normally closed
-
+     trough1:
+       number: 81    # number depends on your platform
+       type: 'NC'    # normally closed
+     orbit_opto:
+       number: 23    # number depends on your platform
+       type: 'NC'    # normally closed
 
 See :doc:`/config/switches` for details about the config options.

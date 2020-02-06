@@ -56,18 +56,18 @@ For example, for coils used in dual-wound flippers:
 
     # random comment
     coils:
-        c_flipper_left_main:
-            number: 00
-            default_pulse_ms: 20
-        c_flipper_left_hold:
-            number: 01
-            allow_enable: true
-        c_flipper_right_main:
-            number: 02
-            default_pulse_ms: 20
-        c_flipper_right_hold:
-            number: 03
-            allow_enable: true
+      c_flipper_left_main:
+        number: 00
+        default_pulse_ms: 20
+      c_flipper_left_hold:
+        number: 01
+        allow_enable: true
+      c_flipper_right_main:
+        number: 02
+        default_pulse_ms: 20
+      c_flipper_right_hold:
+        number: 03
+        allow_enable: true
 
 Or for single-wound flipper coils:
 
@@ -75,16 +75,16 @@ Or for single-wound flipper coils:
 
     # random comment
     coils:
-        c_flipper_left:
-            number: 0
-            allow_enable: true
-            default_hold_power: 0.125
-            default_pulse_ms: 20
-        c_flipper_right:
-            number: 1
-            allow_enable: true
-            default_hold_power: 0.125
-            default_pulse_ms: 20
+      c_flipper_left:
+        number: 0
+        allow_enable: true
+        default_hold_power: 0.125
+        default_pulse_ms: 20
+      c_flipper_right:
+        number: 1
+        allow_enable: true
+        default_hold_power: 0.125
+        default_pulse_ms: 20
 
 Again, you just need to play your game and see how it feels. Then keep on
 adjusting the ``default_pulse_ms:`` values up or down until your flippers

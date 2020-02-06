@@ -11,11 +11,10 @@ If you want to implement your own game end mode use this template:
 
     ##! mode: custom_high_score
     #config_version=5
-
     mode:
       start_events: game_ending     # start on game ending process
       use_wait_queue: true          # delay ball ending
-      game_mode: False              # the game is no longer running at this point
+      game_mode: false              # the game is no longer running at this point
       priority: 500                 # determines the order of game end modes
       stop_events: stop_my_mode     # post this event to stop the mode and continue the game ending process
 
@@ -35,10 +34,10 @@ Put this into your base mode to start your custom mode on the end of ball three
 .. code-block:: mpf-config
 
     ##! mode: base
-   queue_relay_player:
-     ball_ending{current_player.ball==3}:
-       post: start_your_mode
-       wait_for: mode_your_mode_stopped
+    queue_relay_player:
+      ball_ending{current_player.ball==3}:
+        post: start_your_mode
+        wait_for: mode_your_mode_stopped
 
 Highscore Mode
 --------------

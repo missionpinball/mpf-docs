@@ -37,11 +37,9 @@ This is an example:
      score_three:
        enabled: true
        award_events: player_score{value>=300000}
-
    #! variable_player:
    #!   score_100000:
    #!     score: 100000
-
    ##! test
    #! # start game and score
    #! start_game

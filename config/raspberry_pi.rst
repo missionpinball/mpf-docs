@@ -19,9 +19,8 @@ This is an example:
 .. code-block:: mpf-config
 
    raspberry_pi:
-       ip: localhost
-       port: 8888
-
+     ip: localhost
+     port: 8888
 
 Required settings
 -----------------

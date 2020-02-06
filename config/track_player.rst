@@ -27,17 +27,17 @@ This is an example:
 .. code-block:: mpf-config
 
     track_player:
-        pause_music_track:
-            music:
-                action: pause
-                fade: 1 sec
-        resume_music_track:
-            music:
-                action: play
-        stop_sounds_on_all_tracks:
-            __all__:
-                action: stop_all_sounds
-                fade: 0.5 sec
+      pause_music_track:
+        music:
+          action: pause
+          fade: 1 sec
+      resume_music_track:
+        music:
+          action: play
+      stop_sounds_on_all_tracks:
+        __all__:
+          action: stop_all_sounds
+          fade: 0.5 sec
 
 See the :doc:`config player </config_players/index>` for more information on config players.
 

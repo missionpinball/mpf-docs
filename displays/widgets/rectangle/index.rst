@@ -10,10 +10,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
      mc_ready:
-        rectangle_example:
+       rectangle_example:
          - type: rectangle
            x: 200
            y: 200

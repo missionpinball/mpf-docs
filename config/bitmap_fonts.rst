@@ -42,7 +42,7 @@ Here's an example:
   bitmap_fonts:
     F1fuv:
       file: F1fuv.png
-      descriptor: [ ' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
+      descriptor: [' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
     example_font:
       file: example_font.png
       descriptor: example_font_descriptor.xml

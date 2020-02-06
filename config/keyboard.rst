@@ -24,28 +24,28 @@ Here's an example of it in action:
 .. code-block:: mpf-config
 
     keyboard:
-        z:
-            switch: left_flipper
-        slash:
-            switch: right_flipper
-        s:
-            switch: start
-        1:
-            switch: trough1
-            toggle: True
-        2:
-            switch: trough2
-            toggle: True
-        shift+p:
-            switch: lock_post
-            invert: True
-        q:
-            event: machine_reset
-        ctrl+shift+4:
-            event: advance_reel_test
-            params:
-                reel_name: score_1p_10
-                direction: 1
+      z:
+        switch: left_flipper
+      slash:
+        switch: right_flipper
+      s:
+        switch: start
+      1:
+        switch: trough1
+        toggle: true
+      2:
+        switch: trough2
+        toggle: true
+      shift+p:
+        switch: lock_post
+        invert: true
+      q:
+        event: machine_reset
+      ctrl+shift+4:
+        event: advance_reel_test
+        params:
+          reel_name: score_1p_10
+          direction: 1
 
 You can also read more about the ``keyboard:`` section in the :doc:`/tutorial/6_keyboard`
 documentation.

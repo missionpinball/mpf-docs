@@ -110,7 +110,8 @@ This is an example of switches in MPF:
 .. code-block:: mpf-config
 
    switches:
-      my_direct_switch:
-         number: 23    	# number depends on your platform
-      my_matrix_switch_row_1_column_3:
-         number: 1/3    # number depends on your platform
+     my_direct_switch:
+       number: 23        # number depends on your platform
+     my_matrix_switch_row_1_column_3:
+       number: 1/3       # number depends on your platform
+

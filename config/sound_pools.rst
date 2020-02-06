@@ -26,30 +26,30 @@ Here's an example of a typical sound_pool configuration.
 .. code-block:: mpf-config
 
     sound_pools:
-       drain_callout:
-          type: random_force_all
-          track: voice
-          sounds:
-             - drain_01
-             - drain_02
-             - drain_03
-             - drain_04
-       slingshot:
-          load: preload
-          type: random
-          track: sfx
-          sounds:
-             - slingshot_01|5
-             - slingshot_02|3
-             - slingshot_03|2
-       target_completion:
-          load: on_demand
-          type: sequence
-          track: sfx
-          sounds:
-             - target_completion_01
-             - target_completion_02
-             - target_completion_03
+      drain_callout:
+        type: random_force_all
+        track: voice
+        sounds:
+          - drain_01
+          - drain_02
+          - drain_03
+          - drain_04
+      slingshot:
+        load: preload
+        type: random
+        track: sfx
+        sounds:
+          - slingshot_01|5
+          - slingshot_02|3
+          - slingshot_03|2
+      target_completion:
+        load: on_demand
+        type: sequence
+        track: sfx
+        sounds:
+          - target_completion_01
+          - target_completion_02
+          - target_completion_03
 
 To create a sound pool, add a sub entry to the  ``sound_pools:`` section of your config which will
 be the name of that sound pool. The name must be unique among all sound pools *and* sound assets.

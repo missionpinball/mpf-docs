@@ -8,10 +8,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
      mc_ready:
-        bezier_example:
+       bezier_example:
          - type: quad
            points: 210, 110, 210, 150, 500, 200, 590, 190
            color: pink

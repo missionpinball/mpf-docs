@@ -69,7 +69,7 @@ On Linux or Mac, it will probably look like this:
 .. code-block:: mpf-config
 
    pololu_maestro:
-      port: /dev/ttyACM0
+     port: /dev/ttyACM0
 
 4. Add your servo devices
 -------------------------
@@ -84,24 +84,24 @@ For example:
 .. code-block:: mpf-config
 
    servos:
-      servo1:
-         servo_min: 0.2
-         servo_max: 0.8
-         positions:
-             0.1: servo1_down
-             0.9: servo1_up
-         reset_position: 0.5
-         reset_events: reset_servo1
-         speed_limit: 0.5
-         acceleration_limit: 0.5
-         number: 1
-      servo2:
-         positions:
-             0.2: servo2_left
-             1.0: servo2_home
-         reset_position: 1.0
-         reset_events: reset_servo2
-         number: 2
+     servo1:
+       servo_min: 0.2
+       servo_max: 0.8
+       positions:
+         0.1: servo1_down
+         0.9: servo1_up
+       reset_position: 0.5
+       reset_events: reset_servo1
+       speed_limit: 0.5
+       acceleration_limit: 0.5
+       number: 1
+     servo2:
+       positions:
+         0.2: servo2_left
+         1.0: servo2_home
+       reset_position: 1.0
+       reset_events: reset_servo2
+       number: 2
 
 Okay, there's a lot going on in there. Let's break it down.
 

@@ -106,7 +106,6 @@ machine/config/config.yaml:
   window:
     width: 1280
     height: 800
-
   kivy_config:
     graphics:
       fbo: force-hardware

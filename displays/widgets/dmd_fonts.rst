@@ -12,7 +12,7 @@ what the results look like:
 .. code-block:: mpf-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
          text: MISSION
 
@@ -32,7 +32,7 @@ dmd_big is 10 pixels tall.
 .. code-block:: mpf-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
          style: dmd_big
          text: MISSION
@@ -47,7 +47,7 @@ dmd_med is 7 pixels tall.
 .. code-block:: mpf-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
          style: dmd_med
          text: MISSION
@@ -65,7 +65,7 @@ three of these fonts (like any font) can be used on a mono or color DMD.
 .. code-block:: mpf-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
          style: dmd_small
          text: MISSION

@@ -30,7 +30,6 @@ Here is an example:
          - voiceAnnouncerNewsFlash1
          - voiceAnnouncerMessage1
          - voiceAnnouncerAliensAttack1
-
      playlistHighScore:
        shuffle: true
        repeat: true
@@ -41,7 +40,6 @@ Here is an example:
          - soundHighScore002
          - soundHighScore003
          - soundHighScore004
-
    # ---------------------
    # PLAYLIST::PLAYER
    # ---------------------
@@ -52,7 +50,6 @@ Here is an example:
        trackplaylist:
          playlist: playlistIntro
          action: play
-
      # -------------------
      # MUSIC DURING HIGH SCORE ENTRY
      high_score_enter_initials:
@@ -61,7 +58,6 @@ Here is an example:
          shuffle: true
          repeat: true
          action: play
-
      mode_attract_started:
        trackplaylist:
          action: stop

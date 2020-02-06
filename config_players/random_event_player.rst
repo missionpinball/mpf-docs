@@ -10,27 +10,26 @@ This is an example:
 
    # in your global config:
    random_event_player:
-       play_random_event_global:
-         scope: machine
-         events:
-           - event1
-           - event2
-           - event3
-
+     play_random_event_global:
+       scope: machine
+       events:
+         - event1
+         - event2
+         - event3
    ##! mode: base
    # in your mode:
    random_event_player:
-       play_random_event:
-         events:
-           - event1
-           - event2
-           - event3
-       play_random_event_with_weight:
-         events:
-           unlikely_event1: 2
-           unlikely_event2: 3
-           likely_event1: 45
-           likely_event2: 50
+     play_random_event:
+       events:
+         - event1
+         - event2
+         - event3
+     play_random_event_with_weight:
+       events:
+         unlikely_event1: 2
+         unlikely_event2: 3
+         likely_event1: 45
+         likely_event2: 50
 
 When `play_random_event` is posted a random event is posted out of the list `event1`, `event2` or `event3`.
 

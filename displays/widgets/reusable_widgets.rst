@@ -18,16 +18,16 @@ and when you define a slide, you can specify what widgets are on that slide, lik
 .. code-block:: mpf-config
 
    slides:
-      my_slide:
-         widgets:
-            - type: text
-              text: HELLO!
-            - type: text
-              x: 0
-              font_size: 5
-              text: YAY PINBALL
-            - type: image
-              image: background1
+     my_slide:
+       widgets:
+         - type: text
+           text: HELLO!
+         - type: text
+           x: 0
+           font_size: 5
+           text: YAY PINBALL
+         - type: image
+           image: background1
 
 In the example above, the slide called *my_slide* has three widgets--two text widgets and a background image. (Remember
 that the "z order" or "layer" of widgets is top-to-bottom, so the *HELLO!* widget is on top, then *YAY PINBALL* is next,
@@ -51,9 +51,9 @@ For example:
 .. code-block:: mpf-config
 
    widgets:
-      laughing_jackal:
-        - type: image
-          image: jackal
+     laughing_jackal:
+       - type: image
+         image: jackal
 
 Now you have a widget defined called *laughing_jackal* that you can add to any slide. (Note that this example is
 simple, but any widget type with any widget settings can be defined here, including positioning, colors, animations, etc.
@@ -83,8 +83,8 @@ config, like this:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event: laughing_jackal
-      some_other_event: another_widget
+     some_event: laughing_jackal
+     some_other_event: another_widget
 
 With the config above, when the event *some_event* is posted, the widget called *laughing_jackal* will be added to
 the current slide on the default display. Notice that you can add multiple entries here for different widgets and
@@ -108,7 +108,6 @@ by declaring ``widget:`` instead of ``type:``.
        - type: text
          text: (jackpot_total)
          style: body_med
-
    slides:
      hero_hurryup:
        - type: text
@@ -116,7 +115,6 @@ by declaring ``widget:`` instead of ``type:``.
        - type: text
          text: "Jackpot:"
        - widget: jackpot_value_widget
-
 
 Adding a widget to a specific slide (by event)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,9 +125,9 @@ can do so by specifying that slide name in the ``widget_player:``. For example:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:              # event that will trigger this widget to show
-         laughing_jackal:      # widget you want to show
-            slide: my_slide
+     some_event:               # event that will trigger this widget to show
+       laughing_jackal:        # widget you want to show
+         slide: my_slide
 
 In the example above, when the event *some_event* is posted, the widget *laughing_jackal* will be added to the slide
 called *my_slide*. If *my_slide* is the current active slide on the display, you'll see the widget appear. If that
@@ -141,10 +139,10 @@ can even mix-and-match formats, like this:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         laughing_jackal:
-            slide: my_slide
-      some_other_event: another_widget
+     some_event:
+       laughing_jackal:
+         slide: my_slide
+     some_other_event: another_widget
 
 Adding a widget to a specific display target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,9 +153,9 @@ widget will be added "on top" of whatever slide is currently being shown:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         laughing_jackal:
-            target: display1
+     some_event:
+       laughing_jackal:
+         target: display1
 
 Remember in MPF, display targets are the names of a display (dmd, window, etc.).
 
@@ -179,10 +177,10 @@ seconds, which you could do like this:
 .. code-block:: mpf-config
 
    widget_player:
-      tilt_warning:             # event
-         tilt_warning:          # widget name
-            widget_settings:    # additional settings to be added / updated
-              expire: 2s
+     tilt_warning:              # event
+       tilt_warning:            # widget name
+         widget_settings:       # additional settings to be added / updated
+           expire: 2s
 
 (Technically speaking, if you were going to show a tilt warning widget, you'd probably also want to play a sound and
 maybe flash all the lights on the playfield, so in your real game you're probably actually create a show to do this
@@ -203,10 +201,10 @@ just add an ``action: remove`` setting to the widget player, like this:
 .. code-block:: mpf-config
 
    widget_player:
-      show_jackal: laughing_jackal
-      hide_jackal:
-         laughing_jackal:
-            action: remove
+     show_jackal: laughing_jackal
+     hide_jackal:
+       laughing_jackal:
+         action: remove
 
 The config above will add the *laughing_jackal* to the current slide on the default display when the event *show_jackal*
 is posted, and then it will remove it when the event *hide_jackal* is posted.
@@ -221,18 +219,18 @@ widgets in a named widget (essentially meaning that your named widget is really 
 
    widgets:
      widget3:
-     - type: text
-       text: HI
-       color: ff0000
-       font_size: 100
-     - type: text
-       text: THERE
-       color: 00ff66
-       font_size: 100
-     - type: text
-       text: EVERYONE!
-       color: ff00ff
-       font_size: 100
+       - type: text
+         text: HI
+         color: ff0000
+         font_size: 100
+       - type: text
+         text: THERE
+         color: 00ff66
+         font_size: 100
+       - type: text
+         text: EVERYONE!
+         color: ff00ff
+         font_size: 100
 
 You play, show, or hide this "widget" in the same way as every other example in this guide, except in this case, playing
 *widget3* will actually add all three widgets to the slide. (Again you can play with z-order / layering, and
@@ -258,11 +256,11 @@ multiple displays or slides at the same time. For example:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         widget1:
-            target: dmd
-         widget2:
-            target: lcd
+     some_event:
+       widget1:
+         target: dmd
+       widget2:
+         target: lcd
 
 Note that if you do this, the structure of YAML requires that you have at least
 one setting under each widget name, so you can just add a ``target:`` or ``action: add``
@@ -291,7 +289,6 @@ For example, using the player variable "hero_class" to pick an image widget:
      hero_portrait_mage:
        - type: image
          image: portrait_mage
-
    slides:
      hero_slide:
        - type: text
@@ -308,14 +305,12 @@ from a game with different multiballs, the event `mball_lock_lit` might post wit
 
    slide_player:
      mball_lock_lit: mball_lock_slide
-
    slides:
      mball_lock_slide:
        widgets:
          - type: text
            text: Lock is Lit
          - widget: lock_lit_(mball_name)
-
    widgets:
      lock_lit_angel:
        - type: text
@@ -327,5 +322,4 @@ from a game with different multiballs, the event `mball_lock_lit` might post wit
          text: Demons Derby
        - type: image
          image: bg_locklit_demons
-
 

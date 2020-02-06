@@ -20,7 +20,7 @@ specific the first (lower numbered) port here. For example:
 .. code-block:: mpf-config
 
    pololu_maestro:
-      port: COM5
+     port: COM5
 
 Note that there are a few other settings you need to configure in other areas
 to use a Pololu Maestro servo controller. See the

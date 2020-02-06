@@ -27,7 +27,6 @@ Here is a minimal example:
     my_led:
       number: 7
 
-
 Optional settings
 -----------------
 
@@ -120,9 +119,8 @@ This is an example for a driver as light:
   coils:
     light_connected_to_a_driver:
       number: 42           # number depends on your platform
-      allow_enable: True   # this will allow 100% enable without pwm
-
-  lights:     
+      allow_enable: true   # this will allow 100% enable without pwm
+  lights:
     light_on_a_driver:
       number: light_connected_to_a_driver    # map this light to a driver
       platform: drivers

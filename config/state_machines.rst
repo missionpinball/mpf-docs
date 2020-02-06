@@ -87,7 +87,6 @@ List all your transitions here (we start with the same steps as above):
            target: start
            events: state_machine_reset
 
-
 Optional settings
 -----------------
 

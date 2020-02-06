@@ -22,35 +22,32 @@ This is a basic example:
    mode:
      start_events: start_my_mode
      stop_events: my_mode_succeeded
-
    timers:
-      t1:
-         start_value: 3
-         end_value: 0
-         direction: down
-         control_events:
-            - action: restart
-              event: timer1_start
-      t2:
-         start_value: 3
-         end_value: 0
-         direction: down
-         control_events:
-            - action: restart
-              event: timer2_start
-      t3:
-         start_value: 3
-         end_value: 0
-         direction: down
-         control_events:
-            - action: restart
-              event: timer3_start
-
+     t1:
+       start_value: 3
+       end_value: 0
+       direction: down
+       control_events:
+         - action: restart
+           event: timer1_start
+     t2:
+       start_value: 3
+       end_value: 0
+       direction: down
+       control_events:
+         - action: restart
+           event: timer2_start
+     t3:
+       start_value: 3
+       end_value: 0
+       direction: down
+       control_events:
+         - action: restart
+           event: timer3_start
    event_player:
-      timer_t1_started{device.timers.t2.running and device.timers.t3.running}: my_mode_succeeded
-      timer_t2_started{device.timers.t1.running and device.timers.t3.running}: my_mode_succeeded
-      timer_t3_started{device.timers.t1.running and device.timers.t2.running}: my_mode_succeeded
-
+     timer_t1_started{device.timers.t2.running and device.timers.t3.running}: my_mode_succeeded
+     timer_t2_started{device.timers.t1.running and device.timers.t3.running}: my_mode_succeeded
+     timer_t3_started{device.timers.t1.running and device.timers.t2.running}: my_mode_succeeded
    ##! test
    #! start_game
    #! mock_event my_mode_succeeded
@@ -70,8 +67,6 @@ This is a basic example:
    #! post timer1_start
    #! assert_mode_not_running my_mode
    #! assert_event_called my_mode_succeeded
-
-
 
 Light All Top Lanes to Increase Multiplier
 ------------------------------------------
@@ -123,13 +118,11 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
   #!     - duration: 1
   #!   Playfield_10x_on:
   #!     - duration: 1
-
   ##! mode: JAM_rollover
   # in modes/JAM_rollover
   mode:
     start_events: ball_started
     priority: 110
-
   counters:
     lb_JAM_complete_count:
       count_events: JAM_lanes_complete
@@ -137,7 +130,6 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
       starting_count: 1
       direction: up
       persist_state: false
-
   shots:
     top_lane_J:
       switch: s_top_lane_J
@@ -151,7 +143,6 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
       switch: s_top_lane_M
       show_tokens:
         light: l_jam_M
-
   shot_groups:
     JAM_lanes:
       shots: top_lane_J, top_lane_A, top_lane_M
@@ -159,7 +150,6 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
       rotate_right_events: s_right_flipper_active
       reset_events:
         JAM_lanes_lit_complete: 1s
-
   variable_player:
     mode_JAM_rollover_started:
       pf_multiplier:
@@ -187,7 +177,6 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
         action: set
     JAM_lanes_complete:
       score: 1000 * current_player.pf_multiplier
-
   show_player:
     JAM_lanes_lit_complete:
       flash:

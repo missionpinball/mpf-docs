@@ -28,24 +28,22 @@ posted (three times to open and three times to close):
 .. code-block:: mpf-config
 
    servos:
-      my_toy:
-         positions:
-             0.0: open_mouth
-             1.0: close_mouth
-         reset_position: 1.0
-         number: 1
-
+     my_toy:
+       positions:
+         0.0: open_mouth
+         1.0: close_mouth
+       reset_position: 1.0
+       number: 1
    shows:
-      toy_hit:
-         - duration: 1s
-           events: open_mouth
-         - duration: 2s
-           events: close_mouth
-
+     toy_hit:
+       - duration: 1s
+         events: open_mouth
+       - duration: 2s
+         events: close_mouth
    show_player:
-      my_toy_hit:
-         toy_hit:
-            loops: 2
+     my_toy_hit:
+       toy_hit:
+         loops: 2
 
 To see how this can be used in a real machine we recommend this
 `explanation video by the pinball amigos <https://www.youtube.com/watch?v=1QOOJNtsGxw&t=58>`_.

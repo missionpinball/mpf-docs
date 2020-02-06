@@ -24,7 +24,6 @@ Or standalone:
        your_source_display:
          lights: "*"
 
-
 Then map your lights to a position on the display:
 
 
@@ -39,7 +38,6 @@ Then map your lights to a position on the display:
        number: 2
        x: 0.34303657433971446
        y: 0.02873336964906857
-
 
 You can map those in the MPF monitor and then copy the locations using the
 script in ``tools/monitor_to_config.py`` or manually. You may need to adjust

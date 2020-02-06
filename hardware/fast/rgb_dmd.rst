@@ -15,10 +15,10 @@ You can copy the following example (and replace ``com12`` with your com port):
 .. code-block:: mpf-config
 
     hardware:
-        rgb_dmd: smartmatrix
-
+      rgb_dmd: smartmatrix
     smartmatrix:
-        smartmatrix_1:
-           port: com12
-           baud: 4000000
-           old_cookie: false
+      smartmatrix_1:
+        port: com12
+        baud: 4000000
+        old_cookie: false
+

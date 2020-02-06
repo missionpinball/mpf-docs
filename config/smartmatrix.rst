@@ -20,21 +20,17 @@ This is an example:
    #config_version=5
    hardware:
      rgb_dmd: smartmatrix
-   
    smartmatrix:
      my_smartmatrix:
        port: com4
        baud: 4000000
-   
    displays:
      dmd:
        width: 128
        height: 32
-   
    rgb_dmds:
      my_smartmatrix:
        hardware_brightness: .5
-
 
 Required settings
 -----------------

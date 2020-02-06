@@ -11,10 +11,9 @@ TODO This example just shows a blank slide in MPF 0.50?
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
      mc_ready:
-        bezier_example:
+       bezier_example:
          - type: bezier
            points: 10, 10, 150, 450, 300, 100, 790, 590
            color: lime

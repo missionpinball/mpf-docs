@@ -20,25 +20,24 @@ Here’s an example:
 .. code-block:: mpf-config
 
    switches:
-      s_left_sling:
-         number: 1
-      s_right_sling:
-         number: 2
+     s_left_sling:
+       number: 1
+     s_right_sling:
+       number: 2
    coils:
-      c_left_sling:
-         number: 1
-         default_pulse_ms: 10ms
-      c_right_sling:
-         number: 2
-         default_pulse_ms: 10ms
-
+     c_left_sling:
+       number: 1
+       default_pulse_ms: 10ms
+     c_right_sling:
+       number: 2
+       default_pulse_ms: 10ms
    autofire_coils:
-       left_sling:
-           coil: c_left_sling
-           switch: s_left_sling
-       right_sling:
-           coil: c_right_sling
-           switch: s_right_sling
+     left_sling:
+       coil: c_left_sling
+       switch: s_left_sling
+     right_sling:
+       coil: c_right_sling
+       switch: s_right_sling
 
 Note that autofire coils in MPF are 1-to-1 in terms of coils-to-
 switches, so a single entry is for one switch to control one coil. On
@@ -103,19 +102,18 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-      s_left_sling:
-         number: 1
+     s_left_sling:
+       number: 1
    coils:
-      c_left_sling:
-         number: 1
-         default_pulse_ms: 10ms
-
+     c_left_sling:
+       number: 1
+       default_pulse_ms: 10ms
    autofire_coils:
-       stronger_left_sling:
-           coil: c_left_sling
-           switch: s_left_sling
-           coil_overwrite:
-              pulse_ms: 20ms
+     stronger_left_sling:
+       coil: c_left_sling
+       switch: s_left_sling
+       coil_overwrite:
+         pulse_ms: 20ms
 
 In this example we increase ``pulse_ms`` of the slingshot.
 If you define multiple versions of a autofire_coil (here slingshot) make

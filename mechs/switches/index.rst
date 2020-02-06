@@ -61,8 +61,8 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 42	# number from your hardware platform
+     my_switch:
+       number: 42    # number from your hardware platform
 
 Switch Concepts
 ---------------

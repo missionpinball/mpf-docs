@@ -34,10 +34,10 @@ Consider the following example:
 .. code-block:: mpf-config
 
    coils:
-      some_coil:
-         number:
-         default_pulse_ms: 30
-         default_hold_power: 0.250
+     some_coil:
+       number:
+       default_pulse_ms: 30
+       default_hold_power: 0.250
 
 In the example from a machine config file, the if the coil called
 *some_coil* is enabled (turned on) then that coil will receive full (100%)

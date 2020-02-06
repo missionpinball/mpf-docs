@@ -20,17 +20,15 @@ This is an example:
 .. code-block:: mpf-config
 
    hardware_sound_systems:
-       default:
-           label: Default external sound system
-
+     default:
+       label: Default external sound system
    hardware_sound_player:
-       event_posted_elsewhere1:
-           2:
-               action: play
-       ball_started:
-           3: play
-       test_stop: stop
-
+     event_posted_elsewhere1:
+       2:
+         action: play
+     ball_started:
+       3: play
+     test_stop: stop
 
 Optional settings
 -----------------

@@ -42,10 +42,10 @@ number of balls added to those already in play). Consider the following example:
 
    ##! mode: multiball_mode
    multiballs:
-      my_multiball:
-         ball_count: 3
-         ball_count_type: total  # Default
-         shoot_again: 10s        # Default
+     my_multiball:
+       ball_count: 3
+       ball_count_type: total    # Default
+       shoot_again: 10s          # Default
 
 With no enable/disable and start/stop events configured, this multiball will
 begin as soon as its parent mode starts, and it will increase the number of
@@ -62,31 +62,29 @@ multiball.
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
-   #!    s_ball2:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
+   #!   s_ball2:
+   #!     number:
    #! coils:
-   #!    c_eject:
-   #!       number:
+   #!   c_eject:
+   #!     number:
    #! ball_devices:
-   #!    lockdevice:
-   #!       eject_coil: c_eject
-   #!       ball_switches: s_ball1, s_ball2
+   #!   lockdevice:
+   #!     eject_coil: c_eject
+   #!     ball_switches: s_ball1, s_ball2
    ##! mode: multiball_mode
    multiball_locks:
-      madnesslock:
-         debug: True
-         balls_to_lock: 2
-         lock_devices: lockdevice
-         reset_count_for_current_player_events: multiball_lock_madnesslock_full
-
+     madnesslock:
+       debug: true
+       balls_to_lock: 2
+       lock_devices: lockdevice
+       reset_count_for_current_player_events: multiball_lock_madnesslock_full
    multiballs:
-      madnessmball:
-         ball_count: 3
-         ball_locks: lockdevice
-         start_events: multiball_lock_madnesslock_full
-
+     madnessmball:
+       ball_count: 3
+       ball_locks: lockdevice
+       start_events: multiball_lock_madnesslock_full
    ##! test
    #! start_game
    #! mock_event multiball_lock_madnesslock_full
@@ -163,28 +161,27 @@ True will instruct the multiball to eject the active ball **and** the additional
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
    #! coils:
-   #!    c_eject:
-   #!       number:
+   #!   c_eject:
+   #!     number:
    #! ball_devices:
-   #!    lockdevice:
-   #!       eject_coil: c_eject
-   #!       ball_switches: s_ball1
+   #!   lockdevice:
+   #!     eject_coil: c_eject
+   #!     ball_switches: s_ball1
    ##! mode: multiball_mode
    multiball_locks:
-      madnesslock:
-        balls_to_lock: 3
-        balls_to_replace: 2
-        lock_devices: lockdevice
-
+     madnesslock:
+       balls_to_lock: 3
+       balls_to_replace: 2
+       lock_devices: lockdevice
    multiballs:
-      madnessmball:
-        ball_count: 3
-        ball_locks: lockdevice
-        start_events: multiball_lock_madnesslock_full
-        replace_balls_in_play: true
+     madnessmball:
+       ball_count: 3
+       ball_locks: lockdevice
+       start_events: multiball_lock_madnesslock_full
+       replace_balls_in_play: true
 
 With the above configuration, the final locked ball will start the multiball and the
 multiball will eject three balls from *lockdevice*.

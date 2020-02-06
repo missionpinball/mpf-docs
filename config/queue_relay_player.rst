@@ -18,9 +18,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    queue_relay_player:
-      game_ending:
-         post: start_my_mode
-         wait_for: my_mode_done
+     game_ending:
+       post: start_my_mode
+       wait_for: my_mode_done
 
 This entry will watch for the *game_ending* event to be posted. (*game_ending* is a
 queue event.) When it's posted, the queue relay player will pause the processing of

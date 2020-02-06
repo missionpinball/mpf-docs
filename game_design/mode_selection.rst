@@ -54,24 +54,19 @@ This is an example:
    mode:
      start_events: start_mode_left_ramp
      stop_events: stop_mode_left_ramp
-
    event_player:
      left_ramp_complete: stop_mode_left_ramp, enable_qualify
-
    ##! mode: right_ramp
    # mode: right_ramp
    mode:
      start_events: start_mode_right_ramp
      stop_events: stop_mode_right_ramp
-
    event_player:
      right_ramp_complete: stop_mode_right_ramp, enable_qualify
-
    ##! mode: qualify
    # mode: qualify
    mode:
      start_events: ball_started
-
    counters:
      left_ramp_qualify_counter:
        starting_count: 0
@@ -79,9 +74,9 @@ This is an example:
        events_when_complete: disable_qualify, start_mode_left_ramp
        enable_events: enable_qualify
        disable_events: disable_qualify
-       start_enabled: True
-       persist_state: True
-       reset_on_complete: False
+       start_enabled: true
+       persist_state: true
+       reset_on_complete: false
        restart_events: reset_qualify_modes
        count_events: left_ramp_hit
      right_ramp_qualify_counter:
@@ -90,12 +85,11 @@ This is an example:
        events_when_complete: disable_qualify, start_mode_right_ramp
        enable_events: enable_qualify
        disable_events: disable_qualify
-       start_enabled: True
-       persist_state: True
-       reset_on_complete: False
+       start_enabled: true
+       persist_state: true
+       reset_on_complete: false
        restart_events: reset_qualify_modes
        count_events: right_ramp_hit
-
    ##! test
    #! # start game hit both shots twice
    #! start_game
@@ -151,25 +145,22 @@ One way to achieve mode selection you use a carousel mode which looks like this:
      start_events: start_selection_mode
      stop_events: carousel_item_selected
      code: mpf.modes.carousel.code.carousel.Carousel
-
    mode_settings:
      selectable_items: character1, character2, character3
      select_item_events: s_start_active
      next_item_events: s_left_flipper_active
      previous_item_events: s_right_flipper_active
-
    # TODO: add some slides. If you have a nice example please send it to us (or create a PR).
-
    variable_player:
-      carousel_character1_selected:
-         selected_character:
-            string: "character1"
-      carousel_character2_selected:
-         selected_character:
-            string: "character2"
-      carousel_character3_selected:
-         selected_character:
-            string: "character3"
+     carousel_character1_selected:
+       selected_character:
+         string: "character1"
+     carousel_character2_selected:
+       selected_character:
+         string: "character2"
+     carousel_character3_selected:
+       selected_character:
+         string: "character3"
 
 A carousel will not currently track which modes are already completed.
 Also this in this example the carousel will stop after a selection was made.
@@ -189,8 +180,6 @@ For instance this might be combined with the example above by influencing the
        count_complete_value: 3
        count_events: left_ramp_hit
 
-
-
 Using Achivement Groups
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -200,64 +189,54 @@ You can define multiple :doc:`groups </config/achievement_groups>` of
 .. code-block:: mpf-config
 
    #! lights:
-   #!     l_left_ramp:
-   #!         number:
-   #!     l_right_ramp:
-   #!         number:
+   #!   l_left_ramp:
+   #!     number:
+   #!   l_right_ramp:
+   #!     number:
    ##! mode: left_ramp
    # mode: left_ramp
    mode:
      start_events: start_mode_left_ramp
      stop_events: stop_mode_left_ramp
-
    event_player:
      left_ramp_complete: stop_mode_left_ramp, enable_qualify
-
    ##! mode: right_ramp
    # mode: right_ramp
    mode:
      start_events: start_mode_right_ramp
      stop_events: stop_mode_right_ramp
-
    event_player:
      right_ramp_complete: stop_mode_right_ramp, enable_qualify
-
    ##! mode: qualify
    # mode: qualify
    mode:
      start_events: ball_started
-
    achievements:
-       left_ramp:
-   #!         select_events: select_first
-           show_tokens:
-               leds: l_left_ramp
-           show_when_enabled: off
-           show_when_selected: flash
-           show_when_completed: on
-           complete_events: stop_mode_left_ramp
-           events_when_started: start_mode_left_ramp
-
-       right_ramp:
-           show_tokens:
-               leds: l_right_ramp
-           show_when_enabled: off
-           show_when_selected: flash
-           show_when_completed: off
-           complete_events: stop_mode_right_ramp
-           events_when_started: start_mode_right_ramp
-
+     left_ramp:
+   #!     select_events: select_first
+       show_tokens:
+         leds: l_left_ramp
+       show_when_enabled: off
+       show_when_selected: flash
+       show_when_completed: on
+       complete_events: stop_mode_left_ramp
+       events_when_started: start_mode_left_ramp
+     right_ramp:
+       show_tokens:
+         leds: l_right_ramp
+       show_when_enabled: off
+       show_when_selected: flash
+       show_when_completed: off
+       complete_events: stop_mode_right_ramp
+       events_when_started: start_mode_right_ramp
    achievement_groups:
-       all_achievements:
-           achievements:
-               left_ramp
-               right_ramp
-           auto_select: yes
-           start_selected_events: hit_scoop
-           rotate_right_events: s_action_button_active
-           enable_events: enable_qualify, ball_started
-           debug: True
-
+     all_achievements:
+       achievements: left_ramp right_ramp
+       auto_select: true
+       start_selected_events: hit_scoop
+       rotate_right_events: s_action_button_active
+       enable_events: enable_qualify, ball_started
+       debug: true
    #! ##! test
    #! start_game
    #! post select_first
@@ -312,12 +291,10 @@ Use this to delay the start of a player's first ball until they select a mode:
      stop_events: ball_started
      priority: 100
      game_mode: false   # this is needed to interfere with game start
-
    queue_relay_player:
      player_turn_starting{player.ball==0}:
        post: show_mode_selection       # use this event to enable selection
        wait_for: selection_mode_ended  # make sure you post this event is posted when a selection was made
-
 
 You can replace ``player_turn_starting{player.ball==0}`` with just ``player_turn_starting`` to have the selection
 on every ball (but not on extra balls). If you also want to trigger it on extra balls use
@@ -334,19 +311,16 @@ To suppress this during mode selection you can do the following:
    # Add the following to the game section of your machine's config.yaml
    # This will disable the start button for adding players
    game:
-      add_player_switch_tag: add_player
-
+     add_player_switch_tag: add_player
    ##! mode: attract
    # Add this to your attract.yaml
    event_player:
-      s_start_active: sw_add_player
-
+     s_start_active: sw_add_player
    ##! mode: game_running
    # Have something in your base mode to trigger another mode (e.g. the carousel above)
    # and in that mode have the following (to reenable the start button):
    event_player:
-      s_start_active: sw_add_player
-
+     s_start_active: sw_add_player
    #! ##! test
    #! start_game
    #! assert_player_count 1
@@ -355,3 +329,4 @@ To suppress this during mode selection you can do the following:
    #! start_mode game_running
    #! hit_and_release_switch s_start
    #! assert_player_count 2
+

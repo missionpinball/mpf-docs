@@ -65,12 +65,11 @@ use the SmartMatrix platform.
 .. code-block:: mpf-config
 
    hardware:
-      rgb_dmd: pin2dmd
-
+     rgb_dmd: pin2dmd
    pin2dmd:
       # debug: True           # uncomment this if you experience any issues and need debug output
-      resolution: 128x32      # or 192x64 depending on your panel
-      panel: rgb              # or rbg if colors are swapped
+     resolution: 128x32       # or 192x64 depending on your panel
+     panel: rgb               # or rbg if colors are swapped
 
 3. Add a physical RGB DMD device entry
 --------------------------------------
@@ -94,8 +93,8 @@ To do this, create a section in your machine-wide config called
 
     rgb_dmds:
       default:  # your DMD
-         brightness: .2     # adjust the brightness of your display if it is too bright
-         fps: 30
+        brightness: .2      # adjust the brightness of your display if it is too bright
+        fps: 30
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
 for details.).
@@ -157,12 +156,10 @@ on the window and slide settings used in this machine config.
 
    hardware:
      rgb_dmd: pin2dmd
-
    pin2dmd:
      # debug: True           # uncomment this if you experience any issues and need debug output
      resolution: 128x32      # or 192x64 depending on your panel
      panel: rgb              # or rbg if colors are swapped
-
    displays:
      window:  # on screen window
        width: 600
@@ -172,43 +169,40 @@ on the window and slide settings used in this machine config.
        height: 32      # 64 if you got a 192x64 pin2dmd panel
        default: true
        round_anchor_x: left
-
    window:
      width: 600
      height: 200
      title: Mission Pinball Framework
-
    rgb_dmds:
      default:
-        brightness: .2
-        fps: 30
-
+       brightness: .2
+       fps: 30
    slides:
      window_slide_1:    # slide we'll show in the on-screen window
-     - type: display    # this widget shows the DMD content in this slide too
-       effects:
-        - type: color_dmd
-       width: 512
-       height: 128
-     - type: text
-       text: MISSION PINBALL FRAMEWORK
-       anchor_y: top
-       y: top-3
-       font_size: 30
-       color: white
-     - type: rectangle
-       width: 514
-       height: 130
-       color: 444444
+       - type: display  # this widget shows the DMD content in this slide too
+         effects:
+           - type: color_dmd
+         width: 512
+         height: 128
+       - type: text
+         text: MISSION PINBALL FRAMEWORK
+         anchor_y: top
+         y: top-3
+         font_size: 30
+         color: white
+       - type: rectangle
+         width: 514
+         height: 130
+         color: 444444
      dmd_slide_1:  # slide we'll show on the physical DMD
-     - type: text
-       text: IT WORKS!
-       font_size: 30
-       color: red
-
+       - type: text
+         text: IT WORKS!
+         font_size: 30
+         color: red
    slide_player:
      init_done:
        window_slide_1:
          target: window
        dmd_slide_1:
          target: dmd
+

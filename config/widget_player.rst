@@ -19,9 +19,9 @@ This is an example:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         widget_1:
-            slide: slide_2
+     some_event:
+       widget_1:
+         slide: slide_2
 
 It will add widget_1 to slide_2.
 

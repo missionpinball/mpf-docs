@@ -27,8 +27,8 @@ section of your machine config file.
 .. code-block:: mpf-config
 
     switches:
-        s_drain:
-            number: 01
+      s_drain:
+        number: 01
 
 Note that we configured this switches with number ``01``, but you should use the
 actual switch number for your control system that the switch is connected to.
@@ -44,9 +44,9 @@ like this:
 .. code-block:: mpf-config
 
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
 
 Again, the ``number:`` entry in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
@@ -89,19 +89,19 @@ Your drain device configuration should look now look like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    #!     s_plunger:
-    #!         number: 02
+    #!   s_drain:
+    #!     number: 01
+    #!   s_plunger:
+    #!     number: 02
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 03
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            tags: drain, home, trough
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        tags: drain, home, trough
 
 4. Add the trough als default_source_device
 -------------------------------------------
@@ -119,23 +119,23 @@ the default ``playfield``, like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    #!     s_plunger:
-    #!         number: 02
+    #!   s_drain:
+    #!     number: 01
+    #!   s_plunger:
+    #!     number: 02
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 03
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     #! ball_devices:
-    #!     bd_drain:
-    #!         ball_switches: s_drain
-    #!         eject_coil: c_drain_eject
-    #!         tags: drain, home, trough
+    #!   bd_drain:
+    #!     ball_switches: s_drain
+    #!     eject_coil: c_drain_eject
+    #!     tags: drain, home, trough
     playfields:
-       playfield:
-           default_source_device: bd_drain
-           tags: default
+      playfield:
+        default_source_device: bd_drain
+        tags: default
 
 Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set!
@@ -164,10 +164,9 @@ start active. For example:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    virtual_platform_start_active_switches:
-        s_drain
+    #!   s_drain:
+    #!     number: 01
+    virtual_platform_start_active_switches: s_drain
 
 Here's the complete config
 --------------------------
@@ -175,26 +174,21 @@ Here's the complete config
 .. code-block:: mpf-config
 
     #config_version=5
-
     switches:
-        s_drain:
-            number: 01
-
+      s_drain:
+        number: 01
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
-
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            tags: drain, home, trough
-
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        tags: drain, home, trough
     playfields:
-       playfield:
-           default_source_device: bd_drain
-           tags: default
+      playfield:
+        default_source_device: bd_drain
+        tags: default
+    virtual_platform_start_active_switches: s_drain
 
-    virtual_platform_start_active_switches:
-        s_drain

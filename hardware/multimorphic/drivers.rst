@@ -48,9 +48,9 @@ For example:
 .. code-block:: mpf-config
 
    coils:
-      some_coil:
-         number: A0-B1-6
-         default_pulse_ms: 30
+     some_coil:
+       number: A0-B1-6
+       default_pulse_ms: 30
 
 Burst Switches as Local Outputs (P3-Roc only)
 ---------------------------------------------
@@ -63,10 +63,10 @@ You can use those 64 output as direct outputs:
 .. code-block:: mpf-config
 
    coils:
-      local_output0:
-         number: direct-0  # direct driver 0
-      local_output20:
-         number: direct-20 # direct driver 20
+     local_output0:
+       number: direct-0    # direct driver 0
+     local_output20:
+       number: direct-20   # direct driver 20
 
 Make sure to assign IDs >= 2 to all PD-16 boards if you set DIP 1 (MPF cannot check this for you).
 Local outputs behave just like any other output on the P3-Roc.
@@ -77,12 +77,12 @@ You may also use outputs as ``digital_outputs``. For instance, to control a moto
 .. code-block:: mpf-config
 
    digital_outputs:
-      motor_left:
-         number: direct-5
-         type: driver
-      motor_rigth:
-         number: direct-6
-         type: driver
+     motor_left:
+       number: direct-5
+       type: driver
+     motor_rigth:
+       number: direct-6
+       type: driver
 
 .. note::
 
@@ -109,9 +109,9 @@ For example, consider the following configuration:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number:
-            default_pulse_ms: 30
+      some_coil:
+        number:
+        default_pulse_ms: 30
 
 When MPF sends this coil a pulse command, the coil will be fired for 30ms.
 
@@ -123,10 +123,10 @@ You can also set the power of pulses on your coil:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number:
-            default_pulse_ms: 30
-            default_pulse_power: 0.5
+      some_coil:
+        number:
+        default_pulse_ms: 30
+        default_pulse_power: 0.5
 
 See the hold power section below for internal details about PWM times.
 With the P-Roc it is not possible to use ``default_hold_power`` and
@@ -174,8 +174,9 @@ This is an example:
       some_coil_with_recycle:
         number:
         default_pulse_ms: 32
-        default_recycle: True
+        default_recycle: true
       some_coil_without_recycle:
         number:
         default_pulse_ms: 32
-        default_recycle: False
+        default_recycle: false
+

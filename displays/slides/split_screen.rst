@@ -16,7 +16,6 @@ four smaller ones that will each be used for one of the four smaller quadrant di
 .. code-block:: mpf-config
 
    #config_version=5
-
    window:
      width: 1280
      height: 720
@@ -24,7 +23,6 @@ four smaller ones that will each be used for one of the four smaller quadrant di
      fullscreen: false
      borderless: true
      exit_on_escape: true
-
    displays:
      window:
        width: 1280
@@ -99,7 +97,6 @@ widget will be set to the corresponding display name that we want to display in 
          - type: text
            text: Split Screen Layout Example
            y: 60
-
    slide_player:
      mc_ready:
        layout_4_mini:
@@ -121,7 +118,6 @@ four quadrants:
 .. code-block:: mpf-config
 
    #config_version=5
-
    window:
      width: 1280
      height: 720
@@ -129,7 +125,6 @@ four quadrants:
      fullscreen: false
      borderless: true
      exit_on_escape: true
-
    displays:
      window:
        width: 1280
@@ -146,7 +141,6 @@ four quadrants:
      lower_right:
        width: 580
        height: 260
-
    slides:
      layout_4_mini:
        background_color: red
@@ -214,7 +208,6 @@ four quadrants:
          - type: text
            text: lower right
            font_size: 40
-
    slide_player:
      mc_ready:
        layout_4_mini:

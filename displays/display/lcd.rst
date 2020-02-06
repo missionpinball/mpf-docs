@@ -13,7 +13,6 @@ file will look like. We'll step through everything one-by-one.
       window:
         height: 800
         width: 600
-
     window:
       width: 800
       height: 600

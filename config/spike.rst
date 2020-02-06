@@ -21,16 +21,14 @@ config file, so be sure to read that if you have a SPIKE machine.
 .. code-block:: mpf-config
 
    hardware:
-      platform: spike
-
+     platform: spike
    spike:
-      port: /dev/ttyUSB0
-      baud: 115200
-      runtime_baud: 3000000
-      flow_control: True
-      debug: False
-      nodes: 0, 1, 8, 9, 10, 11
-
+     port: /dev/ttyUSB0
+     baud: 115200
+     runtime_baud: 3000000
+     flow_control: true
+     debug: false
+     nodes: 0, 1, 8, 9, 10, 11
 
 Required settings
 -----------------

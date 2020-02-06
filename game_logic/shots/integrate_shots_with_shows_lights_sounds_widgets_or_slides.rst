@@ -50,161 +50,151 @@ is hit.
 .. code-block:: mpf-mc-config
 
    # this is in your machine-wide config
-
    # first we define some switches + lights
    switches:
-      s_outlane_left:
-         number: 0
-         tags: playfield_active
-      s_inlane_left:
-         number: 1
-         tags: playfield_active
-      s_inlane_right:
-         number: 6
-         tags: playfield_active
-      s_outlane_right:
-         number: 7
-         tags: playfield_active
-
+     s_outlane_left:
+       number: 0
+       tags: playfield_active
+     s_inlane_left:
+       number: 1
+       tags: playfield_active
+     s_inlane_right:
+       number: 6
+       tags: playfield_active
+     s_outlane_right:
+       number: 7
+       tags: playfield_active
    lights:
-      l_outlane_left:
-         number: 0
-      l_inlane_left:
-         number: 1
-      l_inlane_right:
-         number: 6
-      l_outlane_right:
-         number: 7
-      gi_left_sling:
-         number: 8
-      gi_right_sling:
-         number: 9
-
+     l_outlane_left:
+       number: 0
+     l_inlane_left:
+       number: 1
+     l_inlane_right:
+       number: 6
+     l_outlane_right:
+       number: 7
+     gi_left_sling:
+       number: 8
+     gi_right_sling:
+       number: 9
    ##! mode: my_mode
    # put this into a mode
-
    # shots each pass their led and widget to the show define in their shot_profile
    shots:
-      shot_outlane_left:
-        switches: s_outlane_left
-        profile: lane_profile
-        show_tokens:
-          leds: l_outlane_left
-          widget: outlane_left
-      shot_inlane_left:
-        switches: s_inlane_left
-        profile: lane_profile
-        show_tokens:
-          leds: l_inlane_left
-          widget: inlane_left
-      shot_inlane_right:
-        switches: s_inlane_right
-        profile: lane_profile
-        show_tokens:
-          leds: l_inlane_right
-          widget: inlane_right
-      shot_outlane_right:
-        switches: s_outlane_right
-        profile: lane_profile
-        show_tokens:
-          leds: l_outlane_right
-          widget: outlane_right
-
+     shot_outlane_left:
+       switches: s_outlane_left
+       profile: lane_profile
+       show_tokens:
+         leds: l_outlane_left
+         widget: outlane_left
+     shot_inlane_left:
+       switches: s_inlane_left
+       profile: lane_profile
+       show_tokens:
+         leds: l_inlane_left
+         widget: inlane_left
+     shot_inlane_right:
+       switches: s_inlane_right
+       profile: lane_profile
+       show_tokens:
+         leds: l_inlane_right
+         widget: inlane_right
+     shot_outlane_right:
+       switches: s_outlane_right
+       profile: lane_profile
+       show_tokens:
+         leds: l_outlane_right
+         widget: outlane_right
    # integrate shots with their show
    shot_profiles:
-       lane_profile:
-           states:
-             - name: unlit
-               show: "off"       # a default show to turn of the led. change if you want to do something on unlit shots
-             - name: lit
-               show: "shot_lit"  # our show to indicate an lit shot
+     lane_profile:
+       states:
+         - name: unlit
+           show: "off"           # a default show to turn of the led. change if you want to do something on unlit shots
+         - name: lit
+           show: "shot_lit"      # our show to indicate an lit shot
              # you can add more states here
-
    # to rotate shots and reset them when they are all lit
    shot_groups:
-      sg_lanes:
-         shots: shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right
-         rotate_left_events: s_flipper_left_active
-         rotate_right_events: s_flipper_right_active
-         reset_events:
-            sg_lanes_lit_complete: 1s
-
+     sg_lanes:
+       shots: shot_outlane_left, shot_inlane_left, shot_inlane_right, shot_outlane_right
+       rotate_left_events: s_flipper_left_active
+       rotate_right_events: s_flipper_right_active
+       reset_events:
+         sg_lanes_lit_complete: 1s
    # define a few widgets which show on screen. you can also use images or videos here
    widgets:
-      outlane_right:
-         - type: text
-           text: Outlane right lit
-      outlane_left:
-         - type: text
-           text: Outlane left lit
-      inlane_right:
-         - type: text
-           text: Inlane right lit
-      inlane_left:
-         - type: text
-           text: Inlane left lit
-
+     outlane_right:
+       - type: text
+         text: Outlane right lit
+     outlane_left:
+       - type: text
+         text: Outlane left lit
+     inlane_right:
+       - type: text
+         text: Inlane right lit
+     inlane_left:
+       - type: text
+         text: Inlane left lit
    shows:
-      shot_lit:   # define our show to indicate the state
-         - duration: -1    # this show step will run permanently
-           widgets:  # show the corresponding widget
-             (widget):
-               action: add
-           lights:   # turn the light purple
-              (leds): purple
-      shot_hit:   # define our show to communicate success to the player
-         - duration: 1s    # this show step lasts 1s
+     shot_lit:    # define our show to indicate the state
+       - duration: -1      # this show step will run permanently
+         widgets:    # show the corresponding widget
+           (widget):
+             action: add
+         lights:     # turn the light purple
+           (leds): purple
+     shot_hit:    # define our show to communicate success to the player
+       - duration: 1s      # this show step lasts 1s
            # add sounds here or videos
            # add scoring here
-           shows:    # run another (built-in) show to flash the light
-             flash_color:
-               show_tokens:
-                 color: red
-                 leds: (leds)
-               speed: 4
-      group_complete:   # define our show to communicate success on completing all shots
-         - duration: 1s
+         shows:      # run another (built-in) show to flash the light
+           flash_color:
+             show_tokens:
+               color: red
+               leds: (leds)
+             speed: 4
+     group_complete:    # define our show to communicate success on completing all shots
+       - duration: 1s
            # add scoring, sounds and video
-           shows:
-             flash_color:
-               priority: 10   # higher priority as the shots
-               show_tokens:
-                 color: green
-                 leds: l_outlane_left, l_inlane_left, l_inlane_right, l_outlane_right, gi_left_sling, gi_right_sling
-               speed: 4
-
+         shows:
+           flash_color:
+             priority: 10     # higher priority as the shots
+             show_tokens:
+               color: green
+               leds: l_outlane_left, l_inlane_left, l_inlane_right, l_outlane_right, gi_left_sling, gi_right_sling
+             speed: 4
    # on success flash the sling shot gi on the side of the lane hit and play a sound/video
    show_player:
       # play a show once a each shot is lit
-      shot_outlane_left_hit{state=="unlit"}:
-         shot_hit:
-            key: left
-            show_tokens:
-               leds: gi_left_sling
-            loops: 0
-      shot_inlane_left_hit{state=="unlit"}:
-         shot_hit:
-            key: left
-            show_tokens:
-               leds: gi_left_sling
-            loops: 0
-      shot_outlane_right_hit{state=="unlit"}:
-         shot_hit:
-            key: right
-            show_tokens:
-               leds: gi_right_sling
-            loops: 0
-      shot_inlane_right_hit{state=="unlit"}:
-         shot_hit:
-            key: right
-            show_tokens:
-               leds: gi_right_sling
-            loops: 0
+     shot_outlane_left_hit{state=="unlit"}:
+       shot_hit:
+         key: left
+         show_tokens:
+           leds: gi_left_sling
+         loops: 0
+     shot_inlane_left_hit{state=="unlit"}:
+       shot_hit:
+         key: left
+         show_tokens:
+           leds: gi_left_sling
+         loops: 0
+     shot_outlane_right_hit{state=="unlit"}:
+       shot_hit:
+         key: right
+         show_tokens:
+           leds: gi_right_sling
+         loops: 0
+     shot_inlane_right_hit{state=="unlit"}:
+       shot_hit:
+         key: right
+         show_tokens:
+           leds: gi_right_sling
+         loops: 0
       # play a show when the group completes
-      sg_lanes_complete{state=="lit"}:
-         group_complete:
-            loops: 0
-
+     sg_lanes_complete{state=="lit"}:
+       group_complete:
+         loops: 0
    ##! test
    #! start_game
    #! start_mode my_mode
@@ -257,3 +247,4 @@ is hit.
    #! assert_text_not_on_top_slide "Inlane right lit"
    #! assert_text_not_on_top_slide "Inlane left lit"
    #! assert_text_not_on_top_slide "Outlane right lit"
+

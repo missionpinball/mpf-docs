@@ -20,7 +20,6 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    displays:
      window:
        height: 200
@@ -29,7 +28,6 @@ Here's an example:
        width: 400
        height: 300
        default: true
-
    slides:
      base_slide:
        - type: display
@@ -47,7 +45,6 @@ Here's an example:
          - type: text
            text: this is a slide in the frame
        background_color: red
-
    slide_player:
      mc_ready.1: base_slide
      mc_ready.2:
@@ -111,7 +108,6 @@ An example of a display widget with a dmd effect:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slides:
      base_slide:
        - type: display
@@ -121,3 +117,4 @@ An example of a display widget with a dmd effect:
          effects:
            - type: dmd
              dot_color: ff5500
+

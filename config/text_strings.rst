@@ -20,8 +20,8 @@ This is an example:
 
    text_strings:
      greeting: HELLO PLAYER. THIS IS YOUR BALL (ball)
-
    slides:
      slides_with_text:
        - type: text
          text: $greeting
+

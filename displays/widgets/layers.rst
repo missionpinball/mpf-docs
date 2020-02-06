@@ -28,22 +28,22 @@ widget3.3:
 .. code-block:: mpf-config
 
    slides:
-      3_widgets:
-      - type: text
-        text: widget3.1
-        color: red
-        font_size: 80
-        y: 40%
-      - type: text
-        text: widget3.2
-        color: orange
-        font_size: 80
-        y: 50%
-      - type: text
-        text: widget3.3
-        color: violet
-        font_size: 80
-        y: 60%
+     3_widgets:
+       - type: text
+         text: widget3.1
+         color: red
+         font_size: 80
+         y: 40%
+       - type: text
+         text: widget3.2
+         color: orange
+         font_size: 80
+         y: 50%
+       - type: text
+         text: widget3.3
+         color: violet
+         font_size: 80
+         y: 60%
 
 The result is like this. Note that widget3.1 is on top of widget3.2, which is
 on top of widget3.3:
@@ -63,25 +63,25 @@ Here's the same example as before, but with ``z:`` values added:
 .. code-block:: mpf-config
 
    slides:
-      3_widgets:
-      - type: text
-        text: widget3.1
-        color: red
-        font_size: 80
-        y: 40%
-        z: 1
-      - type: text
-        text: widget3.2
-        color: orange
-        font_size: 80
-        y: 50%
-        z: 100
-      - type: text
-        text: widget3.3
-        color: violet
-        font_size: 80
-        y: 60%
-        z: 2
+     3_widgets:
+       - type: text
+         text: widget3.1
+         color: red
+         font_size: 80
+         y: 40%
+         z: 1
+       - type: text
+         text: widget3.2
+         color: orange
+         font_size: 80
+         y: 50%
+         z: 100
+       - type: text
+         text: widget3.3
+         color: violet
+         font_size: 80
+         y: 60%
+         z: 2
 
 And the results:
 

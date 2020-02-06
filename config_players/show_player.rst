@@ -9,8 +9,8 @@ This is an example:
 .. code-block:: mpf-config
 
    show_player:
-      some_event: your_show_name
-      some_other_event: another_show
+     some_event: your_show_name
+     some_other_event: another_show
 
 In the example above, when the event *some_event* is posted, the show called ``your_show_name`` will be played (started).
 When the event *some_other_event* is posted, the show called ``another_show`` will be played.
@@ -25,13 +25,13 @@ event, you can put the show name on a new line under the event, and then add add
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         your_show_name:
-            loops: 0
-      some_other_event:
-         another_show:
-            speed: 2
-            sync_ms: 500
+     some_event:
+       your_show_name:
+         loops: 0
+     some_other_event:
+       another_show:
+         speed: 2
+         sync_ms: 500
 
 In the example above, the show ``your_show_name`` will play when the event *some_event* is posted, but instead of playing
 with the default settings only, it will also play with the setting ``loops: 0`` (meaning it will not loop and just play
@@ -42,11 +42,11 @@ You can also mix-and-match formats, like this:
 .. code-block:: mpf-config
 
    show_player:
-      some_event: your_show_name
-      some_other_event:
-         another_show:
-            speed: 2
-            sync_ms: 500
+     some_event: your_show_name
+     some_other_event:
+       another_show:
+         speed: 2
+         sync_ms: 500
 
 Show keys
 ---------
@@ -58,10 +58,10 @@ This way it refences the show when starting or stopping it:
 .. code-block:: mpf-config
 
    show_player:
-      start_my_show:
-         your_show_name: play
-      stop_my_show:
-         your_show_name: stop
+     start_my_show:
+       your_show_name: play
+     stop_my_show:
+       your_show_name: stop
 
 In this example the event ``start_my_show`` will start ``your_show_name`` with key ``your_show_name``.
 The event ``stop_my_show`` will then stop the same show using the key ``your_show_name``.
@@ -74,23 +74,22 @@ That way you can also specifically stop them later:
 .. code-block:: mpf-config
 
    show_player:
-      start_my_show1:
-         your_show_name:
-           action: play
-           key: show1
-           show_tokens:
-             leds: my_led1
-      start_my_show2:
-         your_show_name:
-           action: play
-           key: show2
-           show_tokens:
-             leds: my_led2
-      stop_my_show1:
-         show1: stop
-      stop_my_show2:
-         show2: stop
-
+     start_my_show1:
+       your_show_name:
+         action: play
+         key: show1
+         show_tokens:
+           leds: my_led1
+     start_my_show2:
+       your_show_name:
+         action: play
+         key: show2
+         show_tokens:
+           leds: my_led2
+     stop_my_show1:
+       show1: stop
+     stop_my_show2:
+       show2: stop
 
 In this example ``start_my_show1`` and ``start_my_show2`` will start separate
 instances of ``your_show_name`` which can indendently be stopped using

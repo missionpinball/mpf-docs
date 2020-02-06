@@ -41,13 +41,13 @@ jets:
 
   ##! mode: my_mode
   counters:
-      super_jets:
-          count_events: sw_pop
-          events_when_hit: pop_hit
-          starting_count: 75
-          count_complete_value: 0
-          direction: down
-          events_when_complete: super_jets_start
+    super_jets:
+      count_events: sw_pop
+      events_when_hit: pop_hit
+      starting_count: 75
+      count_complete_value: 0
+      direction: down
+      events_when_complete: super_jets_start
 
 And here's the logic block we use for the :doc:`Addams Family mansion awards </cookbook/TAF_mansion_awards>`
 to make sure the mansions is initialized only once per game:
@@ -84,15 +84,13 @@ This is an example:
 
    ##! mode: my_mode
    counters:
-    test_counter:
-      count_events: count_up
-      reset_on_complete: False
-      count_complete_value: 3
-
+     test_counter:
+       count_events: count_up
+       reset_on_complete: false
+       count_complete_value: 3
    event_player:
-      test_event{device.counters.test_counter.value > 1}: count_above_one
-      test_event{device.counters.test_counter.completed}: count_completed
-
+     test_event{device.counters.test_counter.value > 1}: count_above_one
+     test_event{device.counters.test_counter.completed}: count_completed
    ##! test
    #! start_game
    #! start_mode my_mode

@@ -18,26 +18,22 @@ to implement this in MPF.
 .. code-block:: mpf-config
 
    coils:
-       c_chime_1000:
-           number:
-       c_chime_100:
-           number:
-       c_chime_10:
-           number:
-
+     c_chime_1000:
+       number:
+     c_chime_100:
+       number:
+     c_chime_10:
+       number:
    score_queues:
-       score:
-           chimes: c_chime_1000, c_chime_100, c_chime_10,  None
-
+     score:
+       chimes: c_chime_1000, c_chime_100, c_chime_10,  None
    ##! mode: my_mode
    # in your mode
-
    score_queue_player:
-       score_2k:
-           score: 2000
-       score_200:
-           score: 200
-
+     score_2k:
+       score: 2000
+     score_200:
+       score: 200
    ##! test
    #! start_game
    #! assert_player_variable 0 score
@@ -52,3 +48,4 @@ to implement this in MPF.
    #! assert_player_variable 2100 score
    #! advance_time_and_run .2
    #! assert_player_variable 2200 score
+

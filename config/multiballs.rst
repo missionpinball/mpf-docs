@@ -24,46 +24,42 @@ real world, you'd probably only have one multiball for each mode.)
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
    #! coils:
-   #!    c_eject:
-   #!       number:
+   #!   c_eject:
+   #!     number:
    #! ball_devices:
-   #!    bd_lock:
-   #!       eject_coil: c_eject
-   #!       ball_switches: s_ball1
+   #!   bd_lock:
+   #!     eject_coil: c_eject
+   #!     ball_switches: s_ball1
    multiballs:
-       add_a_ball:
-           ball_count: 1
-           ball_count_type: add
-           shoot_again: 30s
-           enable_events: mb4_enable
-           disable_events: mb4_disable
-           start_events: mb4_start
-           stop_events: mb4_stop
-
-       quick_2_ball:
-           ball_count: 2
-           ball_count_type: total
-           shoot_again: 20s
-           start_events: mb11_start
-           ball_locks: bd_lock
-
-       release_all_locked_balls:
-           ball_count: current_player.lock_mb6_locked_balls
-           ball_count_type: add
-           shoot_again: 20s
-           start_events: mb12_start
-           ball_locks: bd_lock
-
-       quick_add_2_ball:
-           ball_count: 2
-           ball_count_type: add
-           shoot_again: 0
-           start_events: mb6_start
-           ball_locks: bd_lock
-
+     add_a_ball:
+       ball_count: 1
+       ball_count_type: add
+       shoot_again: 30s
+       enable_events: mb4_enable
+       disable_events: mb4_disable
+       start_events: mb4_start
+       stop_events: mb4_stop
+     quick_2_ball:
+       ball_count: 2
+       ball_count_type: total
+       shoot_again: 20s
+       start_events: mb11_start
+       ball_locks: bd_lock
+     release_all_locked_balls:
+       ball_count: current_player.lock_mb6_locked_balls
+       ball_count_type: add
+       shoot_again: 20s
+       start_events: mb12_start
+       ball_locks: bd_lock
+     quick_add_2_ball:
+       ball_count: 2
+       ball_count_type: add
+       shoot_again: 0
+       start_events: mb6_start
+       ball_locks: bd_lock
 
 Required settings
 -----------------

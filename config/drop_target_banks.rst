@@ -18,44 +18,43 @@ config file. Here's an example from *Judge Dredd*:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    drop_target_j:
-   #!       number:
-   #!    drop_target_u:
-   #!       number:
-   #!    drop_target_d:
-   #!       number:
-   #!    drop_target_g:
-   #!       number:
-   #!    drop_target_e:
-   #!       number:
+   #!   drop_target_j:
+   #!     number:
+   #!   drop_target_u:
+   #!     number:
+   #!   drop_target_d:
+   #!     number:
+   #!   drop_target_g:
+   #!     number:
+   #!   drop_target_e:
+   #!     number:
    #! coils:
-   #!    reset_drop_targets:
-   #!       number:
-   #!    trip_drop_target_d:
-   #!       number:
+   #!   reset_drop_targets:
+   #!     number:
+   #!   trip_drop_target_d:
+   #!     number:
    #! drop_targets:
-   #!     j:
-   #!         switch: drop_target_j
-   #!         reset_coil: reset_drop_targets
-   #!     u:
-   #!         switch: drop_target_u
-   #!         reset_coil: reset_drop_targets
-   #!     d:
-   #!         switch: drop_target_d
-   #!         reset_coil: reset_drop_targets
-   #!         knockdown_coil: trip_drop_target_d
-   #!     g:
-   #!         switch: drop_target_g
-   #!         reset_coil: reset_drop_targets
-   #!     e:
-   #!         switch: drop_target_e
-   #!         reset_coil: reset_drop_targets
-
+   #!   j:
+   #!     switch: drop_target_j
+   #!     reset_coil: reset_drop_targets
+   #!   u:
+   #!     switch: drop_target_u
+   #!     reset_coil: reset_drop_targets
+   #!   d:
+   #!     switch: drop_target_d
+   #!     reset_coil: reset_drop_targets
+   #!     knockdown_coil: trip_drop_target_d
+   #!   g:
+   #!     switch: drop_target_g
+   #!     reset_coil: reset_drop_targets
+   #!   e:
+   #!     switch: drop_target_e
+   #!     reset_coil: reset_drop_targets
    drop_target_banks:
-        judge:
-            drop_targets: j, u, d, g, e
-            reset_coils: reset_drop_targets
-            reset_on_complete: 1s
+     judge:
+       drop_targets: j, u, d, g, e
+       reset_coils: reset_drop_targets
+       reset_on_complete: 1s
 
 Notice there are no settings to control lights associated with drop
 targets, but many machines (like *Judge Dredd* used in the example)

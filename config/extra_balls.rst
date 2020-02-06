@@ -24,10 +24,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    ##! mode: mode1
-
    extra_balls:
-       my_mode_eb:
-           award_events: alien_smashed
+     my_mode_eb:
+       award_events: alien_smashed
 
 In the above example, the extra ball called ``my_mode_eb`` will be
 given to the player when the event ``alien_smashed`` is posted. After that,

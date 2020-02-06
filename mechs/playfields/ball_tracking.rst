@@ -28,25 +28,24 @@ You do this in the ``switches:`` section of your machine config, like this:
 .. code-block:: mpf-config
 
    switches:
-
-      s_trough1:
-        number:
-      s_trough2:
-        number:
-      s_plunger_lane:
-        number:
-      s_standup_1:
-        number:
-        tags: playfield_active
-      s_upper_right_rollover:
-        number:
-        tags: playfield_active
-      s_ramp_enter:
-        number:
-        tags: playfield_active
-      s_ramp_made:
-        number:
-        tags: playfield_active
+     s_trough1:
+       number:
+     s_trough2:
+       number:
+     s_plunger_lane:
+       number:
+     s_standup_1:
+       number:
+       tags: playfield_active
+     s_upper_right_rollover:
+       number:
+       tags: playfield_active
+     s_ramp_enter:
+       number:
+       tags: playfield_active
+     s_ramp_made:
+       number:
+       tags: playfield_active
 
 Note that not every switch has the ``playfield_active`` tag, rather, it's just
 used for the switches that are hit when a ball is on the playfield.

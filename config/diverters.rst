@@ -17,97 +17,96 @@ your machine configuration file. Here's an example from *Star Trek: The Next Gen
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
-   #!    s_ball2:
-   #!       number:
-   #!    s_ball3:
-   #!       number:
-   #!    s_ball4:
-   #!       number:
-   #!    s_ball5:
-   #!       number:
-   #!    s_under_ueft_hole:
-   #!       number:
-   #!    s_under_borg_hole:
-   #!       number:
-   #!    s_under_top_hole:
-   #!       number:
-   #!    s_under_left_hole:
-   #!       number:
-   #!    s_enter_left_ramp:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
+   #!   s_ball2:
+   #!     number:
+   #!   s_ball3:
+   #!     number:
+   #!   s_ball4:
+   #!     number:
+   #!   s_ball5:
+   #!     number:
+   #!   s_under_ueft_hole:
+   #!     number:
+   #!   s_under_borg_hole:
+   #!     number:
+   #!   s_under_top_hole:
+   #!     number:
+   #!   s_under_left_hole:
+   #!     number:
+   #!   s_enter_left_ramp:
+   #!     number:
    #! coils:
-   #!    c_eject1:
-   #!       number:
-   #!    c_eject2:
-   #!       number:
-   #!    c_eject3:
-   #!       number:
-   #!    c_eject4:
-   #!       number:
-   #!    c_eject5:
-   #!       number:
-   #!    c_top_divertor:
-   #!       number:
-   #!    c_under_divertor_top:
-   #!       number:
-   #!    c_under_divertor_bottom:
-   #!       number:
-   #!    c_top_drop_down:
-   #!       number:
-   #!    c_top_drop_up:
-   #!       number:
+   #!   c_eject1:
+   #!     number:
+   #!   c_eject2:
+   #!     number:
+   #!   c_eject3:
+   #!     number:
+   #!   c_eject4:
+   #!     number:
+   #!   c_eject5:
+   #!     number:
+   #!   c_top_divertor:
+   #!     number:
+   #!   c_under_divertor_top:
+   #!     number:
+   #!   c_under_divertor_bottom:
+   #!     number:
+   #!   c_top_drop_down:
+   #!     number:
+   #!   c_top_drop_up:
+   #!     number:
    #! ball_devices:
-   #!    bd_borg_ship:
-   #!       eject_coil: c_eject1
-   #!       ball_switches: s_ball1
-   #!    bd_catapult:
-   #!       eject_coil: c_eject2
-   #!       ball_switches: s_ball2
-   #!    bd_left_vuk:
-   #!       eject_coil: c_eject3
-   #!       ball_switches: s_ball3
-   #!    bd_left_cannon_vuk:
-   #!       eject_coil: c_eject4
-   #!       ball_switches: s_ball4
-   #!    bd_right_cannon_vuk:
-   #!       eject_coil: c_eject5
-   #!       ball_switches: s_ball5
-
+   #!   bd_borg_ship:
+   #!     eject_coil: c_eject1
+   #!     ball_switches: s_ball1
+   #!   bd_catapult:
+   #!     eject_coil: c_eject2
+   #!     ball_switches: s_ball2
+   #!   bd_left_vuk:
+   #!     eject_coil: c_eject3
+   #!     ball_switches: s_ball3
+   #!   bd_left_cannon_vuk:
+   #!     eject_coil: c_eject4
+   #!     ball_switches: s_ball4
+   #!   bd_right_cannon_vuk:
+   #!     eject_coil: c_eject5
+   #!     ball_switches: s_ball5
    diverters:
-        top_diverter:
-            activation_coil: c_top_divertor # WMS uses the -tor spelling
-            type: hold
-            activation_time: 3s
-            activation_switches: s_enter_left_ramp
-            enable_events: ball_started
-            disable_events: ball_ended, borg_lock_Lit
-            targets_when_active: playfield
-            targets_when_inactive: bd_borg_ship
-        subway_top_diverter:
-            activation_coil: c_under_divertor_top
-            type: hold
-            activation_time: 3s
-            activation_switches: s_under_top_hole, s_under_left_hole, s_under_borg_hole
-            targets_when_active: bd_left_cannon_vuk
-            targets_when_inactive: bd_left_vuk
-            feeder_devices: bd_catapult
-        subway_bottom_diverter:
-            activation_coil: c_under_divertor_bottom
-            type: hold
-            activation_time: 3s
-            activation_switches: s_under_top_hole, s_under_ueft_hole, s_under_borg_hole
-            targets_when_active: bd_left_cannon_vuk
-            targets_when_inactive: bd_left_vuk
-            feeder_devices: bd_catapult
-        drop_target:
-            activation_coil: c_top_drop_down
-            deactivation_coil: c_top_drop_up
-            type: pulse
-            targets_when_active: bd_left_cannon_vuk, bd_right_cannon_vuk, bd_left_vuk
-            targets_when_inactive: playfield
-            feeder_devices: bd_catapult
+     top_diverter:
+       activation_coil: c_top_divertor      # WMS uses the -tor spelling
+       type: hold
+       activation_time: 3s
+       activation_switches: s_enter_left_ramp
+       enable_events: ball_started
+       disable_events: ball_ended, borg_lock_Lit
+       targets_when_active: playfield
+       targets_when_inactive: bd_borg_ship
+     subway_top_diverter:
+       activation_coil: c_under_divertor_top
+       type: hold
+       activation_time: 3s
+       activation_switches: s_under_top_hole, s_under_left_hole, s_under_borg_hole
+       targets_when_active: bd_left_cannon_vuk
+       targets_when_inactive: bd_left_vuk
+       feeder_devices: bd_catapult
+     subway_bottom_diverter:
+       activation_coil: c_under_divertor_bottom
+       type: hold
+       activation_time: 3s
+       activation_switches: s_under_top_hole, s_under_ueft_hole, s_under_borg_hole
+       targets_when_active: bd_left_cannon_vuk
+       targets_when_inactive: bd_left_vuk
+       feeder_devices: bd_catapult
+     drop_target:
+       activation_coil: c_top_drop_down
+       deactivation_coil: c_top_drop_up
+       type: pulse
+       targets_when_active: bd_left_cannon_vuk, bd_right_cannon_vuk, bd_left_vuk
+       targets_when_inactive: playfield
+       feeder_devices: bd_catapult
 
 Understanding the difference between "enabling" and "activating" diverters
 --------------------------------------------------------------------------

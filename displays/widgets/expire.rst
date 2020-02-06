@@ -11,10 +11,10 @@ Option 1: In the widget or slide definition
 .. code-block:: mpf-config
 
    widgets:
-      my_widget:
-         type: text
-         text: HELLO
-         expire: 2s
+     my_widget:
+       type: text
+       text: HELLO
+       expire: 2s
 
 In the example above, whenever you add that widget to a slide (via the widget_player or
 the widgets: section of a show), that widget will expire and disappear two seconds
@@ -31,15 +31,14 @@ Here's an example:
 .. code-block:: mpf-config
 
    widgets:
-      my_widget:
-         type: text
-         text: HELLO  # no expiration here
-
+     my_widget:
+       type: text
+       text: HELLO    # no expiration here
    widget_player:
-      some_event:
-         my_widget:
-            widget_settings:
-               expire: 2s
+     some_event:
+       my_widget:
+         widget_settings:
+           expire: 2s
 
 In the above example, the widget player dynamically adds the 2 second expiration time
 when the widget is shown after *some_event* is posted.
@@ -54,15 +53,14 @@ to show the widget and another event to remove it. For example:
 .. code-block:: mpf-config
 
    widgets:
-      my_widget:
-         type: text
-         text: HELLO  # no expiration here
-
+     my_widget:
+       type: text
+       text: HELLO    # no expiration here
    widget_player:
-      some_event: my_widget
-      some_other_event:
-         my_widget:
-            action: remove
+     some_event: my_widget
+     some_other_event:
+       my_widget:
+         action: remove
 
 In the example above, the event *some_event* will cause my_widget to be added to the
 current slide on the default display, and the event *some_other_event* will cause it

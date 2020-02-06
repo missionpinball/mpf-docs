@@ -22,16 +22,16 @@ For example, if you want to play a slide named "good_job" when the event
 .. code-block:: mpf-config
 
     slide_player:
-        left_lane_hit: good_job
+      left_lane_hit: good_job
 
 You can have as many event/slide combinations as you want, like this:
 
 .. code-block:: mpf-config
 
     slide_player:
-        left_lane_hit: good_job
-        right_lane_hit: good_job
-        left_ramp_hit: ramp_champ
+      left_lane_hit: good_job
+      right_lane_hit: good_job
+      left_ramp_hit: ramp_champ
 
 The above examples are what we call the "express" config option since each
 event specifies a slide name, but no other options. (It just uses the default
@@ -42,19 +42,18 @@ slide name, then *another* sub-entry with additional options, like this:
 .. code-block:: mpf-mc-config
 
    #! displays:
-   #!    dmd:
-   #!       width: 128
-   #!       height: 32
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
    #! slides:
-   #!    ramp_hit_slide:
-   #!       - type: text
-   #!         text: Ramp has been hit
+   #!   ramp_hit_slide:
+   #!     - type: text
+   #!       text: Ramp has been hit
    slide_player:
-      right_ramp_hit:
-         ramp_hit_slide:
-            expire: 2s
-            target: dmd
-
+     right_ramp_hit:
+       ramp_hit_slide:
+         expire: 2s
+         target: dmd
    ##! test
    ##! post_event right_ramp_hit
    ##! advance_time_and_run .1
@@ -65,13 +64,13 @@ You can mix-and-match all of these in a single config, like this:
 .. code-block:: mpf-config
 
     slide_player:
-         left_lane_hit: good_job
-         right_lane_hit: good_job
-         left_ramp_hit: ramp_champ
-         right_ramp_hit:
-             ramp_hit_slide:
-                 expire: 2s
-                 target: dmd
+      left_lane_hit: good_job
+      right_lane_hit: good_job
+      left_ramp_hit: ramp_champ
+      right_ramp_hit:
+        ramp_hit_slide:
+          expire: 2s
+          target: dmd
 
 In the example above, when the event "left_ramp_hit" happens, the slide
 "ramp_champ" is shown. When the event "right_ramp_hit" happens, the slide
@@ -107,8 +106,8 @@ Again, you can use the sub-entry format to specify additional options:
    ##! show: my_show
    - duration: 3s
      slides:
-        happy_face:
-          target: playfield_screen
+       happy_face:
+         target: playfield_screen
 
 Creating new slides in the slide_player
 ---------------------------------------

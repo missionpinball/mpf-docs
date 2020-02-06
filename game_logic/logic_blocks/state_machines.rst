@@ -56,7 +56,6 @@ This is an example:
          - source: step1, step2
            target: start
            events: state_machine_reset
-
    ##! test
    #! start_game
    #! start_mode my_mode

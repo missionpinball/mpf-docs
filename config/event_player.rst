@@ -30,12 +30,12 @@ This is an example:
 .. code-block:: mpf-config
 
     event_player:
-        ball_starting:
-            - show_ball_start_animation
-            - play_start_sound
-            - start_first_mode
-        ball_ending:
-            - show_ball_ending_animation
-            - play_drain_sound
+      ball_starting:
+        - show_ball_start_animation
+        - play_start_sound
+        - start_first_mode
+      ball_ending:
+        - show_ball_ending_animation
+        - play_drain_sound
 
 See :doc:`/config_players/event_player` for details.

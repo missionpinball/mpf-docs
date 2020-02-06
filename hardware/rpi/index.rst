@@ -41,33 +41,28 @@ This is an example config:
 .. code-block:: mpf-config
 
    hardware:
-       platform: rpi
-
+     platform: rpi
    raspberry_pi:
-       ip: localhost
-       port: 8888
-
+     ip: localhost
+     port: 8888
    switches:
-       s_switch_1:
-           number: 1
-       s_switch_7:
-           number: 7
-
+     s_switch_1:
+       number: 1
+     s_switch_7:
+       number: 7
    coils:
-       output_23:
-           number: 23
-           default_pulse_ms: 23
-       output_30:
-           number: 30
-           default_hold_power: 1.0
-       output_2:
-           number: 2
-           default_hold_power: 0.2
-
+     output_23:
+       number: 23
+       default_pulse_ms: 23
+     output_30:
+       number: 30
+       default_hold_power: 1.0
+     output_2:
+       number: 2
+       default_hold_power: 0.2
    servos:
-       servo_10:
-           number: 10
-
+     servo_10:
+       number: 10
 
 Configure the ip of your RaspberryPi in the ``raspberry_pi`` section.
 You may use localhost if you are running MPF on the RPi.

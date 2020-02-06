@@ -18,11 +18,10 @@ However, you can still choose the pulse length using ``pulse_ms``.
 .. code-block:: mpf-config
 
    coils:
-      c_some_coil:
-         number: 04
-         default_pulse_ms: 10
-         allow_enable: true
-
+     c_some_coil:
+       number: 04
+       default_pulse_ms: 10
+       allow_enable: true
 
 In some Gottlieb machines coils were connected to the lights bank.
 To address those you have to add 100 to their number from the manual.
@@ -32,7 +31,7 @@ use coil ``105``:
 .. code-block:: mpf-config
 
    coils:
-      c_coil_on_light_bank:
-         number: 107
-         default_pulse_ms: 10
+     c_coil_on_light_bank:
+       number: 107
+       default_pulse_ms: 10
 
