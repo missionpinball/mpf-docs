@@ -34,8 +34,8 @@ You can start with this config:
 .. code-block:: mpf-config
 
    switches:
-       tilt:
-           number: 57
+     tilt:
+       number: 57
 
 Then just add your switches according to the manual of your machine.
 See :doc:`/config/switches` for more details about switches.

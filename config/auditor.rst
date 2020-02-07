@@ -22,23 +22,11 @@ in the folder for each machine. (Check out the documentation on the Auditor to s
 .. code-block:: mpf-config
 
     auditor:
-        save_events:
-            ball_ended
-            game_ended
-        audit:
-            shots
-            switches
-            events
-            player
-        events:
-            ball_search_begin
-            machine_init_phase_1
-            game_started
-            game_ended
-            machine_reset
-        player:
-            score
-        num_player_top_records: 10
+      save_events: ball_ended game_ended
+      audit: shots switches events player
+      events: ball_search_begin machine_init_phase_1 game_started game_ended machine_reset
+      player: score
+      num_player_top_records: 10
 
 Optional settings
 -----------------

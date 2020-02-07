@@ -43,10 +43,10 @@ For example:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: A0-B0-0  # SW-16 board at address 0, Bank A, Switch 0
-      my_other_switch:
-         number: A2-B1-5  # SW-16 board at address 2, Bank B, Switch 5
+     my_switch:
+       number: A0-B0-0    # SW-16 board at address 0, Bank A, Switch 0
+     my_other_switch:
+       number: A2-B1-5    # SW-16 board at address 2, Bank B, Switch 5
 
 Direct Numbering
 ~~~~~~~~~~~~~~~~
@@ -65,10 +65,10 @@ For example:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 0   # SW-16 board at address 0, Bank A, Switch 0
-      my_other_switch:
-         number: 45  # SW-16 board at address 2, Bank B, Switch 5
+     my_switch:
+       number: 0     # SW-16 board at address 0, Bank A, Switch 0
+     my_other_switch:
+       number: 45    # SW-16 board at address 2, Bank B, Switch 5
 
 Burst Switch Inputs
 -------------------
@@ -90,12 +90,12 @@ You can configure burst optos using the following syntax:
 .. code-block:: mpf-config
 
    switches:
-      burst_opto_1_20:
-         number: burst-1-20   # burst input with switch 1 and driver 20
-      burst_opto_2_20:
-         number: burst-2-20   # burst input with switch 2 and driver 20
-      burst_opto_10_5:
-         number: burst-10-5   # burst input with switch 10 and driver 5
+     burst_opto_1_20:
+       number: burst-1-20     # burst input with switch 1 and driver 20
+     burst_opto_2_20:
+       number: burst-2-20     # burst input with switch 2 and driver 20
+     burst_opto_10_5:
+       number: burst-10-5     # burst input with switch 10 and driver 5
 
 Make sure to disable DIP switches 1 and 2 on the P3-Roc.
 You can configure up to five switches per driver.
@@ -126,10 +126,10 @@ You can use those 64 inputs as direct inputs:
 .. code-block:: mpf-config
 
    switches:
-      local_switch0:
-         number: direct-0     # local input 0
-      local_switch20:
-         number: direct-20    # local input 20
+     local_switch0:
+       number: direct-0       # local input 0
+     local_switch20:
+       number: direct-20      # local input 20
 
 Make sure to assign IDs >= 4 to all SW-16 boards if you set DIP 2.
 Local switches behave just like any other switch on the P3-Roc.
@@ -172,9 +172,9 @@ config, like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: A0-B0-0
-         debounce: quick
+     my_switch:
+       number: A0-B0-0
+       debounce: quick
 
 To force debouncing to always be used (which is also the default on the P-ROC,
 so not really needed), configure it like this:
@@ -182,7 +182,7 @@ so not really needed), configure it like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: A0-B0-0
-         debounce: normal
+     my_switch:
+       number: A0-B0-0
+       debounce: normal
 

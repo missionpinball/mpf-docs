@@ -127,12 +127,12 @@ config or the ``slides:`` section of a show config. For example:
 .. code-block:: mpf-config
 
     slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
+      left_ramp_hit:
+        slide1:
+          transition:
+            type: push
+            duration: 2s
+            direction: right
 
 Hopefully the above example is obvious by now. When the event "left_ramp_hit"
 happens, MPF will show the slide called "slide1:, using the push transition,
@@ -143,13 +143,13 @@ Transitions can be combined with other slide settings, like this:
 .. code-block:: mpf-config
 
     slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
-                target: dmd
+      left_ramp_hit:
+        slide1:
+          transition:
+            type: push
+            duration: 2s
+            direction: right
+          target: dmd
 
 You can also configure ``transition_out:`` settings which are transitions that
 will be applied to a slide when it is removed, like this:
@@ -157,14 +157,14 @@ will be applied to a slide when it is removed, like this:
 .. code-block:: mpf-config
 
     slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
-                transition_out:
-                    type: fade_away
+      left_ramp_hit:
+        slide1:
+          transition:
+            type: push
+            duration: 2s
+            direction: right
+          transition_out:
+            type: fade_away
 
 .. note::
    If the current slide has a ``transition_out:`` setting, and the new slide has

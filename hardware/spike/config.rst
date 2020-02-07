@@ -29,15 +29,14 @@ settings:
 .. code-block:: mpf-config
 
    hardware:
-      platform: spike
-
+     platform: spike
    spike:
-      port: /dev/ttyUSB0
-      baud: 115200
-      flow_control: False
-      debug: False
-      nodes: 0, 1, 8, 9, 10, 11
-      runtime_baud: 115200
+     port: /dev/ttyUSB0
+     baud: 115200
+     flow_control: false
+     debug: false
+     nodes: 0, 1, 8, 9, 10, 11
+     runtime_baud: 115200
 
 Some notes on the settings:
 
@@ -79,15 +78,14 @@ Once you got your game running you can increase the speed using ``runtime_baud``
 .. code-block:: mpf-config
 
    hardware:
-      platform: spike
-
+     platform: spike
    spike:
-      port: /dev/ttyUSB0
-      baud: 115200
-      runtime_baud: 2000000
-      flow_control: True
-      debug: False
-      nodes: 0, 1, 8, 9, 10, 11
+     port: /dev/ttyUSB0
+     baud: 115200
+     runtime_baud: 2000000
+     flow_control: true
+     debug: false
+     nodes: 0, 1, 8, 9, 10, 11
 
 This will increase the baudrate after the start of the mpf-spike-bridge.
 You do not have to change anything to use this setting.

@@ -29,50 +29,47 @@ This is an example:
 .. code-block:: mpf-config
 
    hardware:
-       platform: your_platform, spi_bit_bang    # add your platform first here
-
+     platform: your_platform, spi_bit_bang      # add your platform first here
    spi_bit_bang:
-       miso_pin: s_miso
-       cs_pin: o_cs
-       clock_pin: o_clock
-       bit_time: 50ms
-       inputs: 8
-
+     miso_pin: s_miso
+     cs_pin: o_cs
+     clock_pin: o_clock
+     bit_time: 50ms
+     inputs: 8
    digital_outputs:
-       o_cs:
-           number: 1
-           type: driver
-       o_clock:
-           number: 2
-           type: driver
-
+     o_cs:
+       number: 1
+       type: driver
+     o_clock:
+       number: 2
+       type: driver
    switches:
-       s_trough_0:
-           number: 0
-           platform: spi_bit_bang
-       s_trough_1:
-           number: 1
-           platform: spi_bit_bang
-       s_trough_2:
-           number: 2
-           platform: spi_bit_bang
-       s_trough_3:
-           number: 3
-           platform: spi_bit_bang
-       s_trough_4:
-           number: 4
-           platform: spi_bit_bang
-       s_trough_5:
-           number: 5
-           platform: spi_bit_bang
-       s_trough_6:
-           number: 6
-           platform: spi_bit_bang
-       s_trough_7:
-           number: 7
-           platform: spi_bit_bang
-       s_miso:
-           number: 10
+     s_trough_0:
+       number: 0
+       platform: spi_bit_bang
+     s_trough_1:
+       number: 1
+       platform: spi_bit_bang
+     s_trough_2:
+       number: 2
+       platform: spi_bit_bang
+     s_trough_3:
+       number: 3
+       platform: spi_bit_bang
+     s_trough_4:
+       number: 4
+       platform: spi_bit_bang
+     s_trough_5:
+       number: 5
+       platform: spi_bit_bang
+     s_trough_6:
+       number: 6
+       platform: spi_bit_bang
+     s_trough_7:
+       number: 7
+       platform: spi_bit_bang
+     s_miso:
+       number: 10
 
 The refresh rate of your platform will be ``bit_time / (inputs + 2)``.
 For instance 8 inputs with 50ms ``bit_time`` will result in 2Hz update rate

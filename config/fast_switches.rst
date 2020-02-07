@@ -18,11 +18,11 @@ specific details about switches when using
 .. code-block:: mpf-config
 
    switches:
-      some_switch:
-         number:
-         platform_settings:
-           debounce_close: 2ms
-           debounce_open: 4ms
+     some_switch:
+       number:
+       platform_settings:
+         debounce_close: 2ms
+         debounce_open: 4ms
 
 Please make sure to read :doc:`/mechs/switches/debounce` before changing those
 times.

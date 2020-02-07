@@ -25,7 +25,6 @@ To configure a stepper in Spike you can use the following example:
    switches:
      s_stepper_home:
        number: 11-4
-
    steppers:
      stepper0:
        number: 10-0

@@ -31,8 +31,8 @@ section of your machine config file.
 .. code-block:: mpf-config
 
     switches:
-        s_drain:
-            number: 01
+      s_drain:
+        number: 01
 
 Note that we configured this switches with number ``01``, but you should use the
 actual switch number for your control system that the switch is connected to.
@@ -48,9 +48,9 @@ like this:
 .. code-block:: mpf-config
 
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
 
 Again, the ``number:`` entry in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
@@ -98,23 +98,23 @@ Your drain device configuration should look now look like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    #!     s_plunger:
-    #!         number: 02
+    #!   s_drain:
+    #!     number: 01
+    #!   s_plunger:
+    #!     number: 02
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 03
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            eject_targets: bd_plunger_lane
-            tags: drain, home, trough
-    #!     bd_plunger_lane:
-    #!         ball_switches: s_drain
-    #!         eject_coil: c_drain_eject
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        eject_targets: bd_plunger_lane
+        tags: drain, home, trough
+    #!   bd_plunger_lane:
+    #!     ball_switches: s_drain
+    #!     eject_coil: c_drain_eject
 
 4. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
@@ -140,10 +140,9 @@ start active. For example:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    virtual_platform_start_active_switches:
-        s_drain
+    #!   s_drain:
+    #!     number: 01
+    virtual_platform_start_active_switches: s_drain
 
 Here's the complete config
 --------------------------
@@ -151,34 +150,28 @@ Here's the complete config
 .. code-block:: mpf-config
 
     #config_version=5
-
     switches:
-        s_drain:
-            number: 01
-        s_plunger:
-            number: 02
-
+      s_drain:
+        number: 01
+      s_plunger:
+        number: 02
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
-
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            eject_targets: bd_plunger_lane
-            tags: drain, home, trough
-
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        eject_targets: bd_plunger_lane
+        tags: drain, home, trough
         # bd_plunger is a placeholder just so the trough's eject_targets are valid
-        bd_plunger_lane:
-            ball_switches: s_plunger
-            mechanical_eject: true
-
+      bd_plunger_lane:
+        ball_switches: s_plunger
+        mechanical_eject: true
     playfields:
-       playfield:
-           default_source_device: bd_plunger_lane
-           tags: default
+      playfield:
+        default_source_device: bd_plunger_lane
+        tags: default
+    virtual_platform_start_active_switches: s_drain
 
-    virtual_platform_start_active_switches:
-        s_drain

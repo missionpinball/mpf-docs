@@ -24,16 +24,15 @@ The structure of counter logic blocks is like this:
 .. code-block:: mpf-config
 
    ##! mode: mode1
-
-  counters:
+   counters:
      the_name_of_this_counter:
-        count_events: my_count_event
-        count_complete_value: 10
+       count_events: my_count_event
+       count_complete_value: 10
      some_other_counter:
-        count_events: s_my_switch_active
-        starting_count: 50
-        count_interval: 10
-        count_complete_value: 100
+       count_events: s_my_switch_active
+       starting_count: 50
+       count_interval: 10
+       count_complete_value: 100
 
 Note that the actual name of the counter doesn't really matter. Mainly
 it's used in the logs and for event names.
@@ -47,11 +46,10 @@ the old behaviour:
 
    ##! mode: my_mode
    variable_player:
-      logicblock_YOUR_COUNTER_updated:
-          YOUR_COUNTER_count:
-              int: value
-              action: set
-
+     logicblock_YOUR_COUNTER_updated:
+       YOUR_COUNTER_count:
+         int: value
+         action: set
 
 Required settings
 -----------------

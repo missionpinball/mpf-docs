@@ -17,9 +17,8 @@ to the game play.
 .. code-block:: mpf-config
 
     game:
-        balls_per_game: 3
-        max_players: 4
-
+      balls_per_game: 3
+      max_players: 4
 
 Optional settings
 -----------------

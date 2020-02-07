@@ -22,12 +22,11 @@ This is an example:
      use_separate_thread: true
      pd_led_boards:
        6:
-          use_stepper_0: true
-          stepper_speed: 1352400000 # Determine empiricall. Increasing slows pulsesrate
-
+         use_stepper_0: true
+         stepper_speed: 1352400000  # Determine empiricall. Increasing slows pulsesrate
    switches:
-       s_stepper_home:
-           number: 4/0/5
+     s_stepper_home:
+       number: 4/0/5
    steppers:
      ramp_diverter:
        number: 6-0
@@ -43,26 +42,18 @@ This is an example:
          2: move_to_2
          25: move_to_25
          45: move_to_45
-
    ##! mode: base
    # base mode
    timers:
      test_diverter:
        start_value: 0
        end_value: 6
-       start_running: yes
+       start_running: true
        restart_on_complete: true
-
    event_player:
-     timer_test_diverter_tick{device.timers.test_diverter.ticks==1}:
-       move_to_2
-     timer_test_diverter_tick{device.timers.test_diverter.ticks==3}:
-       move_to_25
-     timer_test_diverter_tick{device.timers.test_diverter.ticks==5}:
-       move_to_45
-
-
-
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==1}: move_to_2
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==3}: move_to_25
+     timer_test_diverter_tick{device.timers.test_diverter.ticks==5}: move_to_45
 
 Required settings
 -----------------
@@ -140,12 +131,12 @@ This is a sub-section mapping of stepper positions to MPF event names. For examp
 .. code-block:: mpf-config
 
    #! steppers:
-   #!     my_stepper:
-   #!         number: 1
-           named_positions:
-               0: move_home
-               999: move_to_999
-               -500: move_to_-500 # Negative positions are behind home
+   #!   my_stepper:
+   #!     number: 1
+       named_positions:
+         0: move_home
+         999: move_to_999
+         -500: move_to_-500 # Negative positions are behind home
 
 The values in this ``named_positions:`` list represent MPF events that, when posted,
 tell this stepper to move to a certain position. So in the example above, when the

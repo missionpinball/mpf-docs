@@ -28,7 +28,7 @@ of about 40ms for LEDs on modern machines:
 .. code-block:: mpf-config
 
    light_settings:
-      default_fade_ms: 40
+     default_fade_ms: 40
 
 Depending on your hardware your color might look a bit off by default.
 Different color channels might achive different brightnesses and white might
@@ -38,13 +38,13 @@ You can set a color_correction_profile to compensate for that:
 .. code-block:: mpf-config
 
    light_settings:
-       default_color_correction_profile: correction_profile_less_red
-       color_correction_profiles:
-           correction_profile_less_red:
-               whitepoint: [0.9, 1.0, 1.0]
-               gamma: 2.5
-               linear_slope: 1.0
-               linear_cutoff: 0.0
+     default_color_correction_profile: correction_profile_less_red
+     color_correction_profiles:
+       correction_profile_less_red:
+         whitepoint: [0.9, 1.0, 1.0]
+         gamma: 2.5
+         linear_slope: 1.0
+         linear_cutoff: 0.0
 
 Human perception is also not linear. Therefore, ``linear_slope`` is used to
 translate perceived brightness to brightness (you can configure that). If you
@@ -58,24 +58,22 @@ This might be useful if you use different types of lights in your machine:
 .. code-block:: mpf-config
 
    light_settings:
-       default_color_correction_profile: correction_profile_less_red
-       color_correction_profiles:
-           correction_profile_less_red:
-               whitepoint: [0.9, 1.0, 1.0]
-               gamma: 2.5
-               linear_slope: 1.0
-               linear_cutoff: 0.0
-           correction_profile_less_blue:
-               whitepoint: [1.0, 1.0, 0.9]
-               gamma: 2.5
-               linear_slope: 0.8
-               linear_cutoff: 0.1
-
+     default_color_correction_profile: correction_profile_less_red
+     color_correction_profiles:
+       correction_profile_less_red:
+         whitepoint: [0.9, 1.0, 1.0]
+         gamma: 2.5
+         linear_slope: 1.0
+         linear_cutoff: 0.0
+       correction_profile_less_blue:
+         whitepoint: [1.0, 1.0, 0.9]
+         gamma: 2.5
+         linear_slope: 0.8
+         linear_cutoff: 0.1
    lights:
-      special_led:
-         number: 42
-         color_correction_profile: correction_profile_less_blue
-
+     special_led:
+       number: 42
+       color_correction_profile: correction_profile_less_blue
 
 Please note, that some hardware platforms (such as the
 :doc:`fadecandy </hardware/fadecandy/index>`) support color correction in

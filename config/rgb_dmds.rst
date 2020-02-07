@@ -32,7 +32,6 @@ Here's an example:
      dmd:
        width: 128
        height: 32
-
    rgb_dmds:
      smartmatrix:  # name of this DMD which can be whatever you want
        hardware_brightness: .5

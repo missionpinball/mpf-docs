@@ -227,20 +227,20 @@ Everything discussed here are just regular widget settings. So you can use them 
 .. code-block:: mpf-config
 
    slides:
-      slide1:
-         widgets:
-          - type: text
-            text: MY WIDGET
-            x: left+10%
-            y: top-10%
-            adjust_bottom: 2
+     slide1:
+       widgets:
+         - type: text
+           text: MY WIDGET
+           x: left+10%
+           y: top-10%
+           adjust_bottom: 2
 
 You can use them in :doc:`named widgets <reusable_widgets>`:
 
 .. code-block:: mpf-config
 
    widgets:
-      my_cool_widget:
+     my_cool_widget:
        - type: text
          text: MY WIDGET
          x: left+10%
@@ -252,12 +252,12 @@ You can use them in the widget player:
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         my_widget:
-            widget_settings:
-               x: left+10%
-               y: top-10%
-               adjust_bottom: 2
+     some_event:
+       my_widget:
+         widget_settings:
+           x: left+10%
+           y: top-10%
+           adjust_bottom: 2
 
 And you can use them in shows:
 
@@ -266,8 +266,9 @@ And you can use them in shows:
    ##! show: test_show
    - time: 1s
      widgets:
-        my_widget:
-           target: lcd
-           widget_settings:
-              x: top
-              y: right-15.4%
+       my_widget:
+         target: lcd
+         widget_settings:
+           x: top
+           y: right-15.4%
+

@@ -18,8 +18,8 @@ Without dynamic values, your variable_player (scoring) section would be static, 
 
    ##! mode: mode1
    variable_player:
-      shot_jackpot_hit:
-         score: 100000
+     shot_jackpot_hit:
+       score: 100000
 
 But let's say you have a player variable called "troll_hits" which
 holds the number of trolls hit that you want to multiply by 100,000
@@ -30,8 +30,8 @@ in your variable_player config like this:
 
    ##! mode: mode1
    variable_player:
-      shot_jackpot_hit:
-         score: current_player.troll_hits * 100000
+     shot_jackpot_hit:
+       score: current_player.troll_hits * 100000
 
 You can access other values dynamically as well, such as a timer ticking away
 a hurry-up or a counter to track how many times a multiplier switch has been hit
@@ -40,9 +40,8 @@ a hurry-up or a counter to track how many times a multiplier switch has been hit
 
    ##! mode: mode1
    variable_player:
-      collect_hurryup:
-         score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
-
+     collect_hurryup:
+       score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
 
 Another example might be operator settings. Rather than hard coding
 tilt warnings to 3, you might want to like the operator choose the
@@ -55,7 +54,7 @@ So instead of this:
    ##! mode: tilt
    # in your tilt mode
    tilt:
-      warnings_to_tilt: 3
+     warnings_to_tilt: 3
 
 You would have this instead:
 
@@ -63,23 +62,22 @@ You would have this instead:
 
    # in your machine config
    settings:
-      warnings_to_tilt:
-         label: Number of tilt warnings
-         values:
-            0: "no warnings"
-            1: "1"
-            2: "2"
-            3: "3"
-            5: "5"
-            10: "10"
-         default: 3
-         key_type: int
-         sort: 600
-
+     warnings_to_tilt:
+       label: Number of tilt warnings
+       values:
+         0: "no warnings"
+         1: "1"
+         2: "2"
+         3: "3"
+         5: "5"
+         10: "10"
+       default: 3
+       key_type: int
+       sort: 600
    ##! mode: tilt
    # in your tilt mode
    tilt:
-      warnings_to_tilt: settings.warnings_to_tilt
+     warnings_to_tilt: settings.warnings_to_tilt
 
 Note the example above requires that you have a ``settings:`` section
 in your machine config and that you've defined a setting called
@@ -203,6 +201,7 @@ Using if/else logic with dynamic values
 
    ##! mode: mode1
    counters:
-      my_counter:
-         count_events: count_up
-         count_complete_value: 5 if player.wizard_complete else 3
+     my_counter:
+       count_events: count_up
+       count_complete_value: 5 if player.wizard_complete else 3
+

@@ -36,16 +36,14 @@ To configure your start button you can use this config:
 
 .. code-block:: mpf-config
 
-   lights:     
-      l_start_button:
-         number: 3		   # number depends on your platform
-         subtype: matrix   # depends on your platform
-
+   lights:
+     l_start_button:
+       number: 3           # number depends on your platform
+       subtype: matrix     # depends on your platform
    switches:
-      s_start:
-         number: 23    	   # number depends on your platform
-         tags: start
-
+     s_start:
+       number: 23          # number depends on your platform
+       tags: start
 
 The tag ``start`` will hook the button into your game.
 See :doc:`/tutorial/9_start_button` for details.

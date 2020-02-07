@@ -14,8 +14,7 @@ Multiplier starts at 1 and goes up to 4.
 
    ##! mode: test
    mode:
-       start_events: ball_started
-
+     start_events: ball_started
    accruals:
      my_accrual:
        events:
@@ -24,11 +23,9 @@ Multiplier starts at 1 and goes up to 4.
          - event3_to_increase_multiplier
        events_when_complete: go_bumper
        reset_on_complete: false
-
    variable_player:
      some_score_event:
        score: 10000 * (device.accruals.my_accrual.value[0] + device.accruals.my_accrual.value[1] + device.accruals.my_accrual.value[2] + 1)
-
    ##! test
    #! # no progress
    #! start_game
@@ -79,8 +76,7 @@ Every event listed can increase the multiplier multiple times.
 
    ##! mode: test
    mode:
-       start_events: ball_started
-
+     start_events: ball_started
    counters:
      my_counter:
        count_events:
@@ -89,11 +85,9 @@ Every event listed can increase the multiplier multiple times.
          - event3_to_increase_multiplier
        events_when_complete: go_bumper
        reset_on_complete: false
-
    variable_player:
      some_score_event:
        score: 10000 * (device.counters.my_counter.value + 1)
-
    ##! test
    #! # no progress
    #! start_game
@@ -143,8 +137,7 @@ This also works with sequences.
 
    ##! mode: test
    mode:
-       start_events: ball_started
-
+     start_events: ball_started
    sequences:
      my_sequence:
        events:
@@ -153,11 +146,9 @@ This also works with sequences.
          - event3_to_increase_multiplier
        events_when_complete: go_bumper
        reset_on_complete: false
-
    variable_player:
      some_score_event:
        score: 10000 * (device.sequences.my_sequence.value + 1)
-
    ##! test
    #! # no progress
    #! start_game
@@ -196,7 +187,6 @@ This also works with sequences.
    #! post some_score_event
    #! assert_player_variable 40000 score
    #! stop_game
-
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |

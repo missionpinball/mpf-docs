@@ -15,37 +15,37 @@ configurations. Some examples:
 .. code-block:: mpf-config
 
    coils:
-      flipperLeft:
-        number: SD18
-        tags: flipper, player  # this is a list
+     flipperLeft:
+       number: SD18
+       tags: flipper, player   # this is a list
 
 .. code-block:: mpf-config
 
    #! switches:
-   #!    leftOutlane:
-   #!       number:
-   #!    rightOutlane:
-   #!       number:
+   #!   leftOutlane:
+   #!     number:
+   #!   rightOutlane:
+   #!     number:
    ##! mode: mode1
    shots:
-      outlane:
-         switch: leftOutlane, rightOutlane  #this is a list
+     outlane:
+       switch: leftOutlane, rightOutlane    #this is a list
 
 .. code-block:: mpf-config
 
    auditor:
-      save_events:  # This config wants a list
-         - game_started  # This is the first list item
-         - ball_ended  # This is the second list item
-         - game_ended  # This is the third list item
+     save_events:   # This config wants a list
+       - game_started    # This is the first list item
+       - ball_ended    # This is the second list item
+       - game_ended    # This is the third list item
 
 .. code-block:: mpf-config
 
    accruals:
-      my_accrual:
-         events:
-            - sw_eightball  # this is the first list item
-            - drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete  # 2nd list item, which itself has two items
+     my_accrual:
+       events:
+         - sw_eightball     # this is the first list item
+         - drop_targets_Solids_lit_complete, drop_targets_Stripes_lit_complete     # 2nd list item, which itself has two items
 
 Valid options for lists
 -----------------------

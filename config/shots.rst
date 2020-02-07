@@ -44,38 +44,38 @@ Here's a sample *shots:* section from a config file:
 .. code-block:: mpf-config
 
     #! switches:
-    #!    lane_l:
-    #!       number:
-    #!    lane_a:
-    #!       number:
-    #!    lane_n:
-    #!       number:
-    #!    lane_e:
-    #!       number:
-    #!    upper_standup:
-    #!       number:
+    #!   lane_l:
+    #!     number:
+    #!   lane_a:
+    #!     number:
+    #!   lane_n:
+    #!     number:
+    #!   lane_e:
+    #!     number:
+    #!   upper_standup:
+    #!     number:
     ##! mode: mode1
     shots:
-        lane_l:
-            switch: lane_l
-            show_tokens:
-                light: lane_l
-        lane_a:
-            switch: lane_a
-            show_tokens:
-                light: lane_a
-        lane_n:
-            switch: lane_n
-            show_tokens:
-                light: lane_n
-        lane_e:
-            switch: lane_e
-            show_tokens:
-                light: lane_e
-        upper_standup:
-            switch: upper_standup
-            show_tokens:
-                leds: led_17, led_19
+      lane_l:
+        switch: lane_l
+        show_tokens:
+          light: lane_l
+      lane_a:
+        switch: lane_a
+        show_tokens:
+          light: lane_a
+      lane_n:
+        switch: lane_n
+        show_tokens:
+          light: lane_n
+      lane_e:
+        switch: lane_e
+        show_tokens:
+          light: lane_e
+      upper_standup:
+        switch: upper_standup
+        show_tokens:
+          leds: led_17, led_19
 
 Create one entry in your ``shots:`` section for each shot in your
 machine. Don't worry about grouping shots here. (That's done in the
@@ -227,23 +227,22 @@ For example, consider the following shot config:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    switch1:
-   #!       number:
+   #!   switch1:
+   #!     number:
    ##! mode: mode1
    shot_profiles:
-       flash:
-           states:
-             - name: unlit
-               show: "off"
-             - name: lit
-               show: "flash"
-
+     flash:
+       states:
+         - name: unlit
+           show: "off"
+         - name: lit
+           show: "flash"
    shots:
-      shot1:
-         switch: switch1
-         profile: flash
-         show_tokens:
-            leds: led1
+     shot1:
+       switch: switch1
+       profile: flash
+       show_tokens:
+         leds: led1
 
 The shot above has a show token called *leds* which is set to *led1*. This means that when
 a show associated with this shot is played, if that show contains placeholder tokens for ``(leds)``,
@@ -257,13 +256,13 @@ For example, imagine if you wanted to create a shot to flash an LED between red 
 
   # show to flash an LED
   shows:
-   flash_light:
-    - time: 0
-      lights:
-        (leds): red
-    - time: 1
-      lights:
-        (leds): off
+    flash_light:
+      - time: 0
+        lights:
+          (leds): red
+      - time: 1
+        lights:
+          (leds): off
 
 Assuming the "flash" profile (as defined in the ``profile: flash`` in the above shot) was configured for the state
 that show was in, when the shot entered that state, it would replace the ``(leds):`` section of the show with ``led1``.

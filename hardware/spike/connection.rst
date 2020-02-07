@@ -31,7 +31,6 @@ configuration with the correct COM port (example, COM5).
   spike:
     port: COM5
 
-
 Null modem cables used to be a common way to connect two computers together.  This is
 the most expensive solution at about $50 USD.  However it looks just like a USB cable.
 The only vendor that has the USB to USB Null Modem Cable is the FDTI company.

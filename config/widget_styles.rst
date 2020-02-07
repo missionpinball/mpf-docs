@@ -40,7 +40,6 @@ example, the text "HELLO" will render at font size 100:
    widget_styles:
      big_style:
        font_size: 100
-
    slides:
      slide1:
        - type: text
@@ -63,7 +62,6 @@ the order given.
       y: 5
     hurryup:
       color: red
-
   widgets:
     timer_runout:
       - type: text

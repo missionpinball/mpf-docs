@@ -49,11 +49,9 @@ Example config
 .. code-block:: mpf-config
 
    #config_version=5
-
    switches:
      s_home:
        number:
-
    steppers:
      stepper1:
        number: 1              # depends on your hardware
@@ -63,7 +61,6 @@ Example config
          10: move_to_position_1
          20: move_to_position_2
          50: move_to_position_3
-
 
 When you post ``move_to_position_1`` the stepper will move to the position
 ``10``.

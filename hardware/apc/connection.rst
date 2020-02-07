@@ -33,12 +33,10 @@ Add/update the following sections in your machine config:
 
   hardware:
     platform: lisy
-
   lisy:
     connection: serial
     port: com1               # replace this with your com port
     baud: 115200
-
 
 Once connected to the host computer, it will (hopefully) identify a new serial device.
 This is usually ``COMx`` on windows or ``/dev/ttyUSBx`` on Linux.

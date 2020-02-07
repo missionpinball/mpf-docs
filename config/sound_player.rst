@@ -23,13 +23,13 @@ This is an example:
 .. code-block:: mpf-config
 
     sound_player:
-        mode_attract_started:
-            song_01:
-                action: play
-                loops: -1
-        mode_attract_stopped:
-            song_01:
-                action: stop
+      mode_attract_started:
+        song_01:
+          action: play
+          loops: -1
+      mode_attract_stopped:
+        song_01:
+          action: stop
 
 Additional information may be found in the
 :doc:`sound_player </config_players/sound_player>` documentation.

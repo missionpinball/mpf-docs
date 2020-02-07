@@ -149,14 +149,14 @@ your config file:
 .. code-block:: mpf-config
 
     track_player:
-        my_video_is_playing:
-            music:
-                action: pause
-                fade: 1 sec
-        my_video_has_stopped:
-            music:
-                action: play
-                fade: 1 sec
+      my_video_is_playing:
+        music:
+          action: pause
+          fade: 1 sec
+      my_video_has_stopped:
+        music:
+          action: play
+          fade: 1 sec
 
 That's all there is to it.  Now whenever the ``my_video_is_playing`` MPF event is posted, the
 music track will be paused.  It will be resumed when the ``my_video_has_stopped`` MPF event
@@ -179,42 +179,42 @@ used to trigger the sound. Here is an example:
 .. code-block:: mpf-config
 
    coils:
-      reset_drop_targets:
-         number: 1
+     reset_drop_targets:
+       number: 1
 
    switches:
-      sw_drop_target_1:
-         number: 1
-      sw_drop_target_2:
-         number: 2
-      sw_drop_target_3:
-         number: 3
+     sw_drop_target_1:
+       number: 1
+     sw_drop_target_2:
+       number: 2
+     sw_drop_target_3:
+       number: 3
 
    drop_targets:
-      target_1:
-         switch: sw_drop_target_1
-         reset_coil: reset_drop_targets
-      target_2:
-         switch: sw_drop_target_2
-         reset_coil: reset_drop_targets
-      target_3:
-         switch: sw_drop_target_3
-         reset_coil: reset_drop_targets
+     target_1:
+       switch: sw_drop_target_1
+       reset_coil: reset_drop_targets
+     target_2:
+       switch: sw_drop_target_2
+       reset_coil: reset_drop_targets
+     target_3:
+       switch: sw_drop_target_3
+       reset_coil: reset_drop_targets
 
    counters:
-      drop_target_counter:
-         count_events: drop_target_target_1_hit, drop_target_target_2_hit, drop_target_target_2_hit
-         multiple_hit_window: 500ms
-         events_when_hit: drop_target_counter_hit
+     drop_target_counter:
+       count_events: drop_target_target_1_hit, drop_target_target_2_hit, drop_target_target_2_hit
+       multiple_hit_window: 500ms
+       events_when_hit: drop_target_counter_hit
 
    sounds:
-      drop_target_sound:
-         file: blip1.wav
-         track: sfx
-         volume: 0.75
+     drop_target_sound:
+       file: blip1.wav
+       track: sfx
+       volume: 0.75
 
    sound_player:
-      drop_target_counter_hit:
-         drop_target_sound:
-            action: play
+     drop_target_counter_hit:
+       drop_target_sound:
+         action: play
 

@@ -26,9 +26,9 @@ Let's take a look at an example ``mode:`` section from a multiball mode:
 
     ##! mode: mode1
     mode:
-        start_events: ball_starting
-        stop_events: timer_mode_timer_complete, shot_right_ramp
-        priority: 300
+      start_events: ball_starting
+      stop_events: timer_mode_timer_complete, shot_right_ramp
+      priority: 300
 
 Optional settings
 -----------------
@@ -176,10 +176,10 @@ unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
 
    ##! mode: mode1
    mode:
-      start_events: mode_terra_2_start
-      stop_events: mode_complete, game_ending
-      stop_on_ball_end: False
-      game_mode: False
+     start_events: mode_terra_2_start
+     stop_events: mode_complete, game_ending
+     stop_on_ball_end: false
+     game_mode: false
 
 However, a mode with ``stop_on_ball_end: False`` set must be a non game mode
 (i.e. ``game_mode: False`` is also set).

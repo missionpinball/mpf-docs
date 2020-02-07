@@ -27,28 +27,28 @@ Here's an example section:
 .. code-block:: mpf-config
 
     coils:
-        flipper_right_main:
-            number: A0-B0-0
-            default_pulse_ms: 30
-            max_pulse_ms: 100
-            default_pulse_power: 0.7
-            max_pulse_power: 1.0
-        flipper_right_hold:
-            number: A0-B0-1
-            default_hold_power: 0.25
-            max_hold_power: 0.5
-        knocker:
-            number: A0-B1-0
-            default_pulse_ms: 20
-            max_pulse_ms: 100
-        pop_bumper_left:
-            number: A0-B1-1
-            default_pulse_ms: 18
-            max_pulse_ms: 100
-        ball_gate:
-            number: A0-B1-2
-            default_hold_power: 0.375
-            max_hold_power: 0.5
+      flipper_right_main:
+        number: A0-B0-0
+        default_pulse_ms: 30
+        max_pulse_ms: 100
+        default_pulse_power: 0.7
+        max_pulse_power: 1.0
+      flipper_right_hold:
+        number: A0-B0-1
+        default_hold_power: 0.25
+        max_hold_power: 0.5
+      knocker:
+        number: A0-B1-0
+        default_pulse_ms: 20
+        max_pulse_ms: 100
+      pop_bumper_left:
+        number: A0-B1-1
+        default_pulse_ms: 18
+        max_pulse_ms: 100
+      ball_gate:
+        number: A0-B1-2
+        default_hold_power: 0.375
+        max_hold_power: 0.5
 
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 

@@ -18,14 +18,12 @@ Configure using:
 
    hardware:
      accelerometers: mma8451
-
    accelerometers:
      my_accelerometer:
        level_x: 0
        level_y: 0
        level_z: 1
        number: 1-29
-
 
 This will configure an MMA8451 on I2C bus 1 with address 0x1D (29 decimal which
 is the default for this device). The exact numbering depends on your i2c platform.

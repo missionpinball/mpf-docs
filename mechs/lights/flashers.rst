@@ -49,7 +49,7 @@ cases they are configured as :doc:`coil </config/coils>`:
   coils:
     flasher_coil_4:
       number: 4
-      allow_enable: True
+      allow_enable: true
 
 Then add them as :doc:`light </config/lights>`:
 
@@ -57,13 +57,12 @@ Then add them as :doc:`light </config/lights>`:
 
   #! coils:
   #!   flasher_coil_4:
-  #!    number: 4
-  #!    allow_enable: True
-  lights:     
+  #!     number: 4
+  #!     allow_enable: true
+  lights:
     flasher_4:
       number: flasher_coil_4
       platform: drivers
-
 
 Now you can use them in :doc:`/config/flasher_player` (or also in
 :doc:`/config/light_player` if you want to enable the flasher permanently).

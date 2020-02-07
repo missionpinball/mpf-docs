@@ -40,14 +40,14 @@ single widget.
 .. code-block:: mpf-config
 
    slides:
-       my_slide_1:
-           type: text
-           text: THIS IS MY SLIDE
-       my_slide_2:
-           type: text
-           text: THIS IS ANOTHER SLIDE
-           color: lime
-           font_size: 25
+     my_slide_1:
+       type: text
+       text: THIS IS MY SLIDE
+     my_slide_2:
+       type: text
+       text: THIS IS ANOTHER SLIDE
+       color: lime
+       font_size: 25
 
 .. rubric:: Option 2: List of widgets
 
@@ -59,22 +59,21 @@ like this:
 .. code-block:: mpf-config
 
    slides:
-       my_slide_1:
-           - type: text
-             text: THIS IS MY SLIDE
-           - type: image
-             image: johnny_5
-       my_slide_2:
-           - type: text
-             text: THIS IS ANOTHER SLIDE
-           - type: text
-             y: 20%
-             text: IT HAS MORE THAN 1 WIDGET
-           - type: ellipse
-             color: red
-             width: 200
-             height: 100
-
+     my_slide_1:
+       - type: text
+         text: THIS IS MY SLIDE
+       - type: image
+         image: johnny_5
+     my_slide_2:
+       - type: text
+         text: THIS IS ANOTHER SLIDE
+       - type: text
+         y: 20%
+         text: IT HAS MORE THAN 1 WIDGET
+       - type: ellipse
+         color: red
+         width: 200
+         height: 100
 
 .. rubric:: Option 3: Widgets under "widgets:" section
 
@@ -90,26 +89,26 @@ dash in the widgets: section to separate the individual widgets.
 .. code-block:: mpf-config
 
    slides:
-       my_slide_1:
-           background_color: red
-           widgets:
-             type: text
-             text: THIS IS MY SLIDE
-       my_slide_2:
-           widgets:
-            - type: text
-              text: THIS IS ANOTHER SLIDE
-            - type: text
-              y: 20%
-              text: IT HAS MORE THAN 1 WIDGET
-            - type: ellipse
-              color: red
-              width: 200
-              height: 100
-           expire: 2s
-           transition:
-              type: move_in
-              direction: right
+     my_slide_1:
+       background_color: red
+       widgets:
+         type: text
+         text: THIS IS MY SLIDE
+     my_slide_2:
+       widgets:
+         - type: text
+           text: THIS IS ANOTHER SLIDE
+         - type: text
+           y: 20%
+           text: IT HAS MORE THAN 1 WIDGET
+         - type: ellipse
+           color: red
+           width: 200
+           height: 100
+       expire: 2s
+       transition:
+         type: move_in
+         direction: right
 
 You can mix-and-match the three options for entering widgets as needed within
 the same slides: section of your config.
@@ -128,16 +127,16 @@ You can use this format to create a blank slide with no options:
 .. code-block:: mpf-config
 
    slides:
-      my_blank_slide: []
+     my_blank_slide: []
 
 Or you can use it to create a blank slide with options, but no widgets, like this:
 
 .. code-block:: mpf-config
 
    slides:
-      my_blank_slide:
-         background_color: red
-         widgets: []
+     my_blank_slide:
+       background_color: red
+       widgets: []
 
 Settings
 --------

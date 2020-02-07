@@ -52,29 +52,28 @@ file should now look like this:
 
    # in your machine wide config
    switches:
-       s_coin_left:
-           number:
-       s_service_coin:
-           number:
-
+     s_coin_left:
+       number:
+     s_service_coin:
+       number:
    credits:
-       max_credits: 12
-       free_play: False
-       service_credits_switch: s_service_coin
-       switches:
-           - switch: s_coin_left
-             type: money
-             value: .25
-       pricing_tiers:
-           - price: .50
-             credits: 1
-           - price: 2
-             credits: 5
-       fractional_credit_expiration_time: 15m
-       credit_expiration_time: 2h
-       persist_credits_while_off_time: 1h
-       free_play_string: FREE PLAY
-       credits_string: CREDITS
+     max_credits: 12
+     free_play: false
+     service_credits_switch: s_service_coin
+     switches:
+       - switch: s_coin_left
+         type: money
+         value: .25
+     pricing_tiers:
+       - price: .50
+         credits: 1
+       - price: 2
+         credits: 5
+     fractional_credit_expiration_time: 15m
+     credit_expiration_time: 2h
+     persist_credits_while_off_time: 1h
+     free_play_string: FREE PLAY
+     credits_string: CREDITS
 
 Full details of what each of these settings does is outlined in the
 :doc:`/config/credits` of the configuration file reference, so check
@@ -218,65 +217,62 @@ your display. Here are some settings you can use as a starting point:
    # in modes/credits/config/credits.yaml
    # add some credits slides
    slide_player:
-       credits_added:
-           credit_added_slide:
-               expire: 2s
-       not_enough_credits:
-           not_enough_credits_slide:
-               expire: 2s
-       enabling_free_play:
-           enabling_free_play_slide:
-               expire: 2s
-       enabling_credit_play:
-           enabling_credit_play_slide:
-               expire: 2s
-       max_credits_reached:
-           max_credits_reached_slide:
-               expire: 2s
-       player_added:
-           player_added_slide:
-               expire: 1s
-
-   slides:
+     credits_added:
        credit_added_slide:
-           - type: text
-             text: (machine|credits_string)
+         expire: 2s
+     not_enough_credits:
        not_enough_credits_slide:
-           - type: text
-             text: (machine|credits_string)
-           - type: text
-             text: INSERT COINS
+         expire: 2s
+     enabling_free_play:
        enabling_free_play_slide:
-           - type: text
-             text: ENABLING FREE PLAY
+         expire: 2s
+     enabling_credit_play:
        enabling_credit_play_slide:
-           - type: text
-             text: ENABLING CREDIT PLAY
-           - type: text
-             text: (machine|credits_string)
+         expire: 2s
+     max_credits_reached:
        max_credits_reached_slide:
-           - type: text
-             text: MAX CREDITS REACHED
+         expire: 2s
+     player_added:
        player_added_slide:
-           - type: text
-             text: PLAYER ADDED
-             font_size: 12
-             color: white
-
+         expire: 1s
+   slides:
+     credit_added_slide:
+       - type: text
+         text: (machine|credits_string)
+     not_enough_credits_slide:
+       - type: text
+         text: (machine|credits_string)
+       - type: text
+         text: INSERT COINS
+     enabling_free_play_slide:
+       - type: text
+         text: ENABLING FREE PLAY
+     enabling_credit_play_slide:
+       - type: text
+         text: ENABLING CREDIT PLAY
+       - type: text
+         text: (machine|credits_string)
+     max_credits_reached_slide:
+       - type: text
+         text: MAX CREDITS REACHED
+     player_added_slide:
+       - type: text
+         text: PLAYER ADDED
+         font_size: 12
+         color: white
    sound_player:
-       credits_added:
-           credit_added_sound:
-               action: play
-               loops: 0
-       not_enough_credits:
-           need_more_money:
-               action: play
-               loops: 0
-       player_added:
-           player_added_sound:
-               action: play
-               loops: 0
-
+     credits_added:
+       credit_added_sound:
+         action: play
+         loops: 0
+     not_enough_credits:
+       need_more_money:
+         action: play
+         loops: 0
+     player_added:
+       player_added_sound:
+         action: play
+         loops: 0
 
 There are several events that the credit module will post which you
 can use to trigger slides:
@@ -409,75 +405,72 @@ Let us add two settings and use them in the credits config:
 
    # in your machine wide config
    switches:
-      s_coin_left:
-         number:
-      s_service_coin:
-         number:
-
+     s_coin_left:
+       number:
+     s_service_coin:
+       number:
    settings:
-      credits_price_one_credit:
-         label: Price for one credit
-         values:
-            .25: "25ct"
-            .5: "50ct"
-            .75: "75ct"
-            1: "1 dollar"
-            2: "2 dollar"
-            3: "3 dollar"
-            4: "4 dollar"
-            5: "5 dollar"
-         default: .5
-         key_type: float
-         sort: 500
-      credits_price_tier2:
-         label: Price for price tier 2
-         values:
-            .25: "25ct"
-            .5: "50ct"
-            .75: "75ct"
-            1: "1 dollar"
-            2: "2 dollar"
-            3: "3 dollar"
-            4: "4 dollar"
-            5: "5 dollar"
-         default: 2
-         key_type: float
-         sort: 510
-      credits_credits_tier2:
-         label: Number of credits for tier 2
-         values:
-            2: "2"
-            3: "3"
-            4: "4"
-            5: "5"
-            6: "6"
-            7: "7"
-            8: "8"
-            9: "9"
-            10: "10"
-         default: 5
-         key_type: int
-         sort: 520
-
+     credits_price_one_credit:
+       label: Price for one credit
+       values:
+         .25: "25ct"
+         .5: "50ct"
+         .75: "75ct"
+         1: "1 dollar"
+         2: "2 dollar"
+         3: "3 dollar"
+         4: "4 dollar"
+         5: "5 dollar"
+       default: .5
+       key_type: float
+       sort: 500
+     credits_price_tier2:
+       label: Price for price tier 2
+       values:
+         .25: "25ct"
+         .5: "50ct"
+         .75: "75ct"
+         1: "1 dollar"
+         2: "2 dollar"
+         3: "3 dollar"
+         4: "4 dollar"
+         5: "5 dollar"
+       default: 2
+       key_type: float
+       sort: 510
+     credits_credits_tier2:
+       label: Number of credits for tier 2
+       values:
+         2: "2"
+         3: "3"
+         4: "4"
+         5: "5"
+         6: "6"
+         7: "7"
+         8: "8"
+         9: "9"
+         10: "10"
+       default: 5
+       key_type: int
+       sort: 520
    credits:
-      max_credits: 12
-      free_play: False
-      service_credits_switch: s_service_coin
-      switches:
-         - switch: s_coin_left
-           type: money
-           value: .25
-      pricing_tiers:
-         - price: settings.credits_price_one_credit
-           credits: 1
-         - price: settings.credits_price_tier2
-           credits: settings.credits_credits_tier2
-      fractional_credit_expiration_time: 15m
-      credit_expiration_time: 2h
-      persist_credits_while_off_time: 1h
-      free_play_string: FREE PLAY
-      credits_string: CREDITS
-
+     max_credits: 12
+     free_play: false
+     service_credits_switch: s_service_coin
+     switches:
+       - switch: s_coin_left
+         type: money
+         value: .25
+     pricing_tiers:
+       - price: settings.credits_price_one_credit
+         credits: 1
+       - price: settings.credits_price_tier2
+         credits: settings.credits_credits_tier2
+     fractional_credit_expiration_time: 15m
+     credit_expiration_time: 2h
+     persist_credits_while_off_time: 1h
+     free_play_string: FREE PLAY
+     credits_string: CREDITS
 
 (H) Check out this complete credits config file
 -----------------------------------------------
@@ -492,169 +485,161 @@ This is an example:
 
    # in your machine wide config
    switches:
-       s_coin_left:
-           number:
-       s_service_coin:
-           number:
-
+     s_coin_left:
+       number:
+     s_service_coin:
+       number:
    settings:
-      credits_price_one_credit:
-         label: Price for one credit
-         values:
-            .25: "25ct"
-            .5: "50ct"
-            .75: "75ct"
-            1: "1 dollar"
-            2: "2 dollar"
-            3: "3 dollar"
-            4: "4 dollar"
-            5: "5 dollar"
-         default: .5
-         key_type: float
-         sort: 500
-      credits_price_tier2:
-         label: Price for price tier 2
-         values:
-            .25: "25ct"
-            .5: "50ct"
-            .75: "75ct"
-            1: "1 dollar"
-            2: "2 dollar"
-            3: "3 dollar"
-            4: "4 dollar"
-            5: "5 dollar"
-         default: 2
-         key_type: float
-         sort: 510
-      credits_credits_tier2:
-         label: Number of credits for tier 2
-         values:
-            2: "2"
-            3: "3"
-            4: "4"
-            5: "5"
-            6: "6"
-            7: "7"
-            8: "8"
-            9: "9"
-            10: "10"
-         default: 5
-         key_type: int
-         sort: 520
-
+     credits_price_one_credit:
+       label: Price for one credit
+       values:
+         .25: "25ct"
+         .5: "50ct"
+         .75: "75ct"
+         1: "1 dollar"
+         2: "2 dollar"
+         3: "3 dollar"
+         4: "4 dollar"
+         5: "5 dollar"
+       default: .5
+       key_type: float
+       sort: 500
+     credits_price_tier2:
+       label: Price for price tier 2
+       values:
+         .25: "25ct"
+         .5: "50ct"
+         .75: "75ct"
+         1: "1 dollar"
+         2: "2 dollar"
+         3: "3 dollar"
+         4: "4 dollar"
+         5: "5 dollar"
+       default: 2
+       key_type: float
+       sort: 510
+     credits_credits_tier2:
+       label: Number of credits for tier 2
+       values:
+         2: "2"
+         3: "3"
+         4: "4"
+         5: "5"
+         6: "6"
+         7: "7"
+         8: "8"
+         9: "9"
+         10: "10"
+       default: 5
+       key_type: int
+       sort: 520
    credits:
-      max_credits: 12
-      free_play: False
-      service_credits_switch: s_service_coin
-      switches:
-         - switch: s_coin_left
-           type: money
-           value: .25
-      pricing_tiers:
-         - price: settings.credits_price_one_credit
-           credits: 1
-         - price: settings.credits_price_tier2
-           credits: settings.credits_credits_tier2
-      fractional_credit_expiration_time: 15m
-      credit_expiration_time: 2h
-      persist_credits_while_off_time: 1h
-      free_play_string: FREE PLAY
-      credits_string: CREDITS
-
+     max_credits: 12
+     free_play: false
+     service_credits_switch: s_service_coin
+     switches:
+       - switch: s_coin_left
+         type: money
+         value: .25
+     pricing_tiers:
+       - price: settings.credits_price_one_credit
+         credits: 1
+       - price: settings.credits_price_tier2
+         credits: settings.credits_credits_tier2
+     fractional_credit_expiration_time: 15m
+     credit_expiration_time: 2h
+     persist_credits_while_off_time: 1h
+     free_play_string: FREE PLAY
+     credits_string: CREDITS
    ##! mode: attract
    # in modes/attract/config/attract.yaml
    # add credits string to your attract show
    show_player:
-       mode_attract_started:
-           attract_display_loop
+     mode_attract_started: attract_display_loop
    shows:
-       attract_display_loop:
-           - duration: 2s
-             slides:
-               press_start:
-                 target: dmd
-                 widgets:
-                 - type: Text
-                   text: PRESS START
-                 transition:
-                    type: move_in
-                    duration: 1s
-                    direction: top
-           - duration: 2s
-             slides:
-               credits_slide:
-                 target: dmd
-                 widgets:
-                 - type: text
-                   text: (machine|credits_string)
-                 transition:
-                    type: move_in
-                    duration: 1s
-                    direction: bottom
-
+     attract_display_loop:
+       - duration: 2s
+         slides:
+           press_start:
+             target: dmd
+             widgets:
+               - type: Text
+                 text: PRESS START
+             transition:
+               type: move_in
+               duration: 1s
+               direction: top
+       - duration: 2s
+         slides:
+           credits_slide:
+             target: dmd
+             widgets:
+               - type: text
+                 text: (machine|credits_string)
+             transition:
+               type: move_in
+               duration: 1s
+               direction: bottom
    ##! mode: credits
    # in modes/credits/config/credits.yaml
    # add some credits slides
    slide_player:
-       credits_added:
-           credit_added_slide:
-               expire: 2s
-       not_enough_credits:
-           not_enough_credits_slide:
-               expire: 2s
-       enabling_free_play:
-           enabling_free_play_slide:
-               expire: 2s
-       enabling_credit_play:
-           enabling_credit_play_slide:
-               expire: 2s
-       max_credits_reached:
-           max_credits_reached_slide:
-               expire: 2s
-       player_added:
-           player_added_slide:
-               expire: 1s
-
-   slides:
+     credits_added:
        credit_added_slide:
-           - type: text
-             text: (machine|credits_string)
+         expire: 2s
+     not_enough_credits:
        not_enough_credits_slide:
-           - type: text
-             text: (machine|credits_string)
-           - type: text
-             text: INSERT COINS
+         expire: 2s
+     enabling_free_play:
        enabling_free_play_slide:
-           - type: text
-             text: ENABLING FREE PLAY
+         expire: 2s
+     enabling_credit_play:
        enabling_credit_play_slide:
-           - type: text
-             text: ENABLING CREDIT PLAY
-           - type: text
-             text: (machine|credits_string)
+         expire: 2s
+     max_credits_reached:
        max_credits_reached_slide:
-           - type: text
-             text: MAX CREDITS REACHED
+         expire: 2s
+     player_added:
        player_added_slide:
-           - type: text
-             text: PLAYER ADDED
-             font_size: 12
-             color: white
-
+         expire: 1s
+   slides:
+     credit_added_slide:
+       - type: text
+         text: (machine|credits_string)
+     not_enough_credits_slide:
+       - type: text
+         text: (machine|credits_string)
+       - type: text
+         text: INSERT COINS
+     enabling_free_play_slide:
+       - type: text
+         text: ENABLING FREE PLAY
+     enabling_credit_play_slide:
+       - type: text
+         text: ENABLING CREDIT PLAY
+       - type: text
+         text: (machine|credits_string)
+     max_credits_reached_slide:
+       - type: text
+         text: MAX CREDITS REACHED
+     player_added_slide:
+       - type: text
+         text: PLAYER ADDED
+         font_size: 12
+         color: white
    sound_player:
-       credits_added:
-           credit_added_sound:
-               action: play
-               loops: 0
-       not_enough_credits:
-           need_more_money:
-               action: play
-               loops: 0
-       player_added:
-           player_added_sound:
-               action: play
-               loops: 0
-
+     credits_added:
+       credit_added_sound:
+         action: play
+         loops: 0
+     not_enough_credits:
+       need_more_money:
+         action: play
+         loops: 0
+     player_added:
+       player_added_sound:
+         action: play
+         loops: 0
    ##! test
    #! assert_machine_variable 0 credit_units
    #! hit_and_release_switch s_coin_left

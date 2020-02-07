@@ -39,8 +39,9 @@ Valid port numbers are anything between 1024 and 65535.
 
    bcp:
      connections:
-        local_display:
-           port: 1234
+       local_display:
+         port: 1234
 
    mpf-mc:
      bcp_port: 1234
+

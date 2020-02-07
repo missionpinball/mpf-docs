@@ -48,7 +48,6 @@ captured a castle (tracked by the player variable "castles_captured").
 
   ##! mode: bonus
   #config_version=5
-
   mode_settings:
     bonus_entries:
       - event: bonus_castles
@@ -62,7 +61,6 @@ For advanced score calculation, the *score* value can utilize all of MPF's
 
   ##! mode: bonus
   #config_version=5
-
   mode_settings:
     bonus_entries:
       - event: bonus_minerals
@@ -88,7 +86,6 @@ a final slide.
 .. code-block:: mpf-config
 
   #config_version=5
-
   slide_player:
     mode_bonus_started: bonus_start_slide
     bonus_minerals: bonus_minerals_slide

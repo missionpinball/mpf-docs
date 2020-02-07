@@ -42,7 +42,7 @@ The minimal example is to just load the default ``tilt`` mode:
 .. code-block:: mpf-config
 
    modes:
-      - tilt
+     - tilt
 
 Change defaults
 ---------------
@@ -54,8 +54,7 @@ mode folder (config would be in ``modes/tilt/config/tilt.yaml``):
 
    # in your machine config
    modes:
-      - tilt
-
+     - tilt
    ##! mode: tilt
    # in your tilt mode
    tilt:    # the following are the defaults only copy those if you want to change them
@@ -70,41 +69,39 @@ Add operator settings to service mode
 
    # in your machine config
    modes:
-      - tilt
-
+     - tilt
    settings:
      warnings_to_tilt:
-        label: Number of tilt warnings
-        values:
-           0: "no warnings"
-           1: "1"
-           2: "2"
-           3: "3"
-           5: "5"
-           10: "10"
-        default: 3
-        key_type: int
-        sort: 600
+       label: Number of tilt warnings
+       values:
+         0: "no warnings"
+         1: "1"
+         2: "2"
+         3: "3"
+         5: "5"
+         10: "10"
+       default: 3
+       key_type: int
+       sort: 600
      settle_time:
-        label: Time to wait on tilt to settle bob
-        values:
-           3000: "3s"
-           5000: "5s"
-           10000: "10s"
-        default: 5000
-        key_type: int
-        sort: 610
+       label: Time to wait on tilt to settle bob
+       values:
+         3000: "3s"
+         5000: "5s"
+         10000: "10s"
+       default: 5000
+       key_type: int
+       sort: 610
      multiple_hit_window:
-        label: Tilt sensitivity
-        values:
-           150: "sensitive"
-           300: "normal"
-           500: "insensitive"
-           1000: "very insensitive"
-        default: 300
-        key_type: int
-        sort: 620
-
+       label: Tilt sensitivity
+       values:
+         150: "sensitive"
+         300: "normal"
+         500: "insensitive"
+         1000: "very insensitive"
+       default: 300
+       key_type: int
+       sort: 620
    ##! mode: tilt
    # in your tilt mode
    tilt:

@@ -8,10 +8,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
-      mc_ready:
-         points_example:
+     mc_ready:
+       points_example:
          - type: points
            points: 50, 50, 75, 50, 100, 50
            pointsize: 2

@@ -48,19 +48,17 @@ This is an example:
 .. code-block:: mpf-config
 
     switches:
-        s_scoop:
-            number: 2
-
+      s_scoop:
+        number: 2
     coils:
-        c_scoop_eject:
-            number: 4
-            default_pulse_ms: 20
-
+      c_scoop_eject:
+        number: 4
+        default_pulse_ms: 20
     ball_devices:
-        bd_scoop:
-            ball_switches: s_scoop
-            eject_coil: c_scoop_eject
-            eject_timeouts: 1s
+      bd_scoop:
+        ball_switches: s_scoop
+        eject_coil: c_scoop_eject
+        eject_timeouts: 1s
 
 It is very common to delay the game when the ball is inside a scoop/VUK/saucer
 to show animations and play sounds.
@@ -72,39 +70,33 @@ certain condition match):
 .. code-block:: mpf-config
 
    switches:
-       s_scoop:
-           number: 2
-
+     s_scoop:
+       number: 2
    coils:
-       c_scoop_eject:
-           number: 4
-           default_pulse_ms: 20
-
+     c_scoop_eject:
+       number: 4
+       default_pulse_ms: 20
    ball_devices:
-       bd_scoop:
-           ball_switches: s_scoop
-           eject_coil: c_scoop_eject
-           eject_timeouts: 1s
-
+     bd_scoop:
+       ball_switches: s_scoop
+       eject_coil: c_scoop_eject
+       eject_timeouts: 1s
    ##! mode: my_mode
    # in your mode
    queue_relay_player:
-       balldevice_bd_scoop_ball_eject_attempt:
-           post: start_mode_success_show
-           wait_for: mode_success_show_ended
-
+     balldevice_bd_scoop_ball_eject_attempt:
+       post: start_mode_success_show
+       wait_for: mode_success_show_ended
    show_player:
-       start_mode_success_show:
-           success_show:
-               loops: 0
-               events_when_completed: mode_success_show_ended
-
-   shows:
+     start_mode_success_show:
        success_show:
-           - duration: 10
-   #!           events: test_event
-             # add lights/sounds/slides here
-
+         loops: 0
+         events_when_completed: mode_success_show_ended
+   shows:
+     success_show:
+       - duration: 10
+   #!       events: test_event
+         # add lights/sounds/slides here
    ##! test
    #! start_game
    #! mock_event test_event

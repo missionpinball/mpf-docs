@@ -35,23 +35,20 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-      s_popbumper_left:
-         number: 7               # depends on your platform
+     s_popbumper_left:
+       number: 7                 # depends on your platform
    coils:
-      c_popbumper_left:
-         number: 4               # depends on your platform
-         default_pulse_ms: 23    # tune this for your machine
-
+     c_popbumper_left:
+       number: 4                 # depends on your platform
+       default_pulse_ms: 23      # tune this for your machine
    lights:
-      l_popbumper_left:
-         number: 13              # depends on your platform
-         subtype: matrix         # might be differnt
-
+     l_popbumper_left:
+       number: 13                # depends on your platform
+       subtype: matrix           # might be differnt
    autofire_coils:
-       ac_popbumper_left:
-           coil: c_popbumper_left
-           switch: s_popbumper_left
-
+     ac_popbumper_left:
+       coil: c_popbumper_left
+       switch: s_popbumper_left
 
 Adjust ``default_pulse_ms`` and ``default_pulse_power`` in your coil
 to control the strength and sound of your popbumpers.

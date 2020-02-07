@@ -21,17 +21,15 @@ This is an example:
 .. code-block:: mpf-config
 
   named_colors:
-    custom_blue:      [24, 65, 226]
-    troll_green:      4a9b22
+    custom_blue: [24, 65, 226]
+    troll_green: 4a9b22
     troll_green_dark: 4a9b22%50
-
   lights:
     troll_target:
       number: 10
       default_on_color: troll_green
     l_jackpot:
       number: 20
-
   light_player:
     trolls_disabled:
       troll_target: troll_green_dark
@@ -39,5 +37,4 @@ This is an example:
       l_jackpot:
         color: custom_blue
         fade: 10
-
 

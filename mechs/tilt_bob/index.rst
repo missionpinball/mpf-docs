@@ -22,12 +22,11 @@ This is an example:
 .. code-block:: mpf-config
 
    modes:
-      - tilt
-
+     - tilt
    switches:
-      s_tilt:
-         number: 23    	# number depends on your platform
-         tags: tilt_warning
+     s_tilt:
+       number: 23    # number depends on your platform
+       tags: tilt_warning
 
 Part numbers:
 

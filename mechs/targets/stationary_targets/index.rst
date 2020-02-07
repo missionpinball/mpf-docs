@@ -16,10 +16,10 @@ associated with it. When the ball hits it the value is scored.
 .. code-block:: mpf-config
 
    switches:
-      s_target:
-         number: 5
-         debounce: quick
-         ignore_window_ms: 1000ms
+     s_target:
+       number: 5
+       debounce: quick
+       ignore_window_ms: 1000ms
 
 Most platforms support debouncing of switches for a few ms.
 Usually, you have to reduce debouncing to 1-2ms because a strong hit to a

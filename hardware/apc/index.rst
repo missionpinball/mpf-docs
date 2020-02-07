@@ -17,22 +17,18 @@ This is an example config:
 .. code-block:: mpf-config
 
    #config_version=5
-
    hardware:
-       platform: lisy
-
+     platform: lisy
    lisy:
-       connection: serial
-       port: com1    # change this for your setup
-       baud: 115200
-
+     connection: serial
+     port: com1      # change this for your setup
+     baud: 115200
    digital_outputs:
-       game_over_relay:
-           number: 1
-           type: light
-           enable_events: ball_started
-           disable_events: ball_will_end
-
+     game_over_relay:
+       number: 1
+       type: light
+       enable_events: ball_started
+       disable_events: ball_will_end
    segment_displays:
      info_display:
        number: 0
@@ -44,11 +40,9 @@ This is an example config:
        number: 3
      player4_display:
        number: 4
-
    hardware_sound_systems:
-       default:
-           label: APC
-
+     default:
+       label: APC
 
 .. toctree::
    :titlesonly:

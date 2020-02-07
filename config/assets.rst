@@ -23,16 +23,16 @@ Let's take a look at an example:
 .. code-block:: mpf-config
 
    assets:
-       images:
-           default:
-               load: preload
-           preload:
-               load: preload
-           on_demand:
-               load: on_demand
-           potato:
-               some_key: some_value
-               something_else: whatever
+     images:
+       default:
+         load: preload
+       preload:
+         load: preload
+       on_demand:
+         load: on_demand
+       potato:
+         some_key: some_value
+         something_else: whatever
 
 The above config contains the asset settings for *image* assets. Notice
 there are 4 entries under ``images:``: ``default``, ``preload``, ``on_demand``,

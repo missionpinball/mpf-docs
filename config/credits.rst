@@ -23,7 +23,7 @@ mode behaves. Here’s an example config:
 
     credits:
       max_credits: 12
-      free_play: no
+      free_play: false
       price_tier_template: "{{credits}} CREDITS ${{price}}"
       service_credits_switch: s_esc
       switches:
@@ -228,12 +228,11 @@ Here's an example:
 
    credits:
       # ...
-      pricing_tiers:
-        - price: .50
-          credits: 1
-        - price: 2
-          credits: 5
-
+     pricing_tiers:
+       - price: .50
+         credits: 1
+       - price: 2
+         credits: 5
 
 price:
 ~~~~~~
@@ -269,19 +268,19 @@ with a minus sign and a space.
 
    credits:
       # ...
-      events:
-        - event: special
-          type: special
-          credits: 1
-        - event: replay
-          type: replay
-          credits: 1
-        - event: high_score_credit
-          type: high_score
-          credits: 1
-        - event: match
-          type: match
-          credits: 1
+     events:
+       - event: special
+         type: special
+         credits: 1
+       - event: replay
+         type: replay
+         credits: 1
+       - event: high_score_credit
+         type: high_score
+         credits: 1
+       - event: match
+         type: match
+         credits: 1
 
 event:
 ~~~~~~

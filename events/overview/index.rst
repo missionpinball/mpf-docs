@@ -11,8 +11,8 @@ to the player's score, like this:
 
   ##! mode: base
   variable_player:
-      target1_hit:
-          score: 1000
+    target1_hit:
+      score: 1000
 
 What's really happening behind the scenes here is MPF's variable_player system tells
 the event system, "Hey, if you see an event called *target1_hit*, let me know
@@ -99,7 +99,7 @@ For example, in a config file:
 .. code-block:: mpf-config
 
    slide_player:
-      mpf_is_awesome: my_slide
+     mpf_is_awesome: my_slide
 
 The above config will show the slide called "my_slide" on the display when the
 event *mpf_is_awesome* is posted. Of course this could be any event, including
@@ -112,16 +112,16 @@ happen. For example, you may have a drop target configured like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_drop_target_1:
-   #!       number: 1
+   #!   s_drop_target_1:
+   #!     number: 1
    #! coils:
-   #!    c_drop_target_reset:
-   #!       number: 1
+   #!   c_drop_target_reset:
+   #!     number: 1
    drop_targets:
-      my_drop_target:
-         switch: s_drop_target_1
-         reset_coil: c_drop_target_reset
-         reset_events: mpf_is_awesome
+     my_drop_target:
+       switch: s_drop_target_1
+       reset_coil: c_drop_target_reset
+       reset_events: mpf_is_awesome
 
 In this case, when the event *mpf_is_awesome* is posted, that will cause that
 drop target to reset. Again, this is just one random example of the literally

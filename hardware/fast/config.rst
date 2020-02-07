@@ -43,8 +43,8 @@ machine-wide config file, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: fast
-        driverboards: fast
+      platform: fast
+      driverboards: fast
 
 You also need to configure the `driverboards:` entry for what kind of
 driver boards you’re controlling.

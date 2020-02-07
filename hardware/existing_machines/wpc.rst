@@ -47,16 +47,16 @@ If you're using a FAST WPC controller, it will look like this:
 .. code-block:: mpf-config
 
    hardware:
-      platform: fast
-      driverboards: wpc
+     platform: fast
+     driverboards: wpc
 
 And if you're using a P-ROC:
 
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
-      driverboards: wpc
+     platform: p_roc
+     driverboards: wpc
 
 Note that with the P-ROC, it is *very important* that you specify ``driverboards: wpc`` in your config if you're
 using a WPC machine. The reason for this is the P-ROC can be used to control either PD-16 (the P-ROC driver boards)
@@ -80,10 +80,10 @@ Matrix switches start with the letter ``S``, followed by the switch number. For 
 .. code-block:: mpf-config
 
    switches:
-      s_left_slingshot:
-         number: s41
-      s_right_jet:
-         number: S45
+     s_left_slingshot:
+       number: s41
+     s_right_jet:
+       number: S45
 
 Note that the "S" is not case-sensitive.
 
@@ -112,10 +112,10 @@ entered with the ``SD`` prefix, then the number, like this:
 .. code-block:: mpf-config
 
    switches:
-      s_left_coin:
-         number: sd1
-      s_enter:
-         number: SD8
+     s_left_coin:
+       number: sd1
+     s_enter:
+       number: SD8
 
 Again, case doesn't matter.
 

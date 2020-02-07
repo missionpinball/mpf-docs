@@ -206,7 +206,6 @@ We'll start off with the easier mode first as all the heavy lifting is handled b
    mode:
      start_events: Super_Jets_Go, Super_Jets_Resume_Go
      priority: 300
-
    variable_player:
      s_left_bumper_active:
        score: 3000000|block
@@ -214,6 +213,7 @@ We'll start off with the easier mode first as all the heavy lifting is handled b
        score: 3000000|block
      s_right_bumper_active:
        score: 3000000|block
+
  
    show_player:
      mode_super_jets_started:

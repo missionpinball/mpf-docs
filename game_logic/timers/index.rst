@@ -38,24 +38,22 @@ player variable first:
    ##! mode: your_mode
    # in your mode
    timers:
-       your_timer:
-           start_value: 0
-           end_value: 20
-           control_events:
-               - action: start
-                 event: mode_your_mode_started
-
+     your_timer:
+       start_value: 0
+       end_value: 20
+       control_events:
+         - action: start
+           event: mode_your_mode_started
    variable_player:
-      timer_your_timer_tick:
-         your_timer_variable_times_100:
-            int: device.your_timer.ticks * 100
-            action: set
-
+     timer_your_timer_tick:
+       your_timer_variable_times_100:
+         int: device.your_timer.ticks * 100
+         action: set
    slides:
-       show_timer:
-           widgets:
-           - type: Text
-             text: (player|your_timer_variable_times_100)
+     show_timer:
+       widgets:
+         - type: Text
+           text: (player|your_timer_variable_times_100)
 
 In this example we update the player variable ``timer_your_timer_tick``
 every time the timer changes based on the tick event.

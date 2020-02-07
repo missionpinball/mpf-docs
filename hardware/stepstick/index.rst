@@ -30,10 +30,8 @@ This is an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    hardware:
-       stepper_controllers: step_stick
-
+     stepper_controllers: step_stick
    digital_outputs:
      c_direction:
        number: 1
@@ -44,11 +42,9 @@ This is an example:
      c_enable:
        number: 3
        type: driver
-
    switches:
      s_home:
        number: 1
-
    steppers:
      stepper1:
        number: c_direction:c_step:c_enable   # enable is optional

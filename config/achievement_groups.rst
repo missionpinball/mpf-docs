@@ -24,20 +24,18 @@ related to the example in the achievements config documentation.)
 .. code-block:: mpf-config
 
     ##! mode: mode1
-
     #! # create some empty achievements for the group
     #! achievements:
-    #!  world_tour:
-    #!    enable_events: world_tour_fail, ball_will_end
-    #!  money_bags:
-    #!    enable_events: money_bags_fail, ball_will_end
-    #!  music_awards:
-    #!    enable_events: music_awards_fail, ball_will_end
-    #!  jukebox:
-    #!    enable_events: jukebox_fail, ball_will_end
-    #!  play_poker:
-    #!    enable_events: play_poker_fail, ball_will_end
-
+    #!   world_tour:
+    #!     enable_events: world_tour_fail, ball_will_end
+    #!   money_bags:
+    #!     enable_events: money_bags_fail, ball_will_end
+    #!   music_awards:
+    #!     enable_events: music_awards_fail, ball_will_end
+    #!   jukebox:
+    #!     enable_events: jukebox_fail, ball_will_end
+    #!   play_poker:
+    #!     enable_events: play_poker_fail, ball_will_end
     achievement_groups:
       my_group:
         achievements: world_tour, money_bags, music_awards, jukebox, play_poker
@@ -47,8 +45,7 @@ related to the example in the achievements config documentation.)
         events_when_enabled: mission_rotator_ready
         rotate_right_events: sw_toggle
         show_tokens:
-          leds:
-            l_begin_round
+          leds: l_begin_round
         show_when_enabled: flash
 
 More examples:

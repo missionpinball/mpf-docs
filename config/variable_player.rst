@@ -22,23 +22,22 @@ Here's an example:
 
    ##! mode: mode1
    variable_player:
-      target_1_hit:
-         score: 1000   # adds 1000 to the player's "score" variable
-      ramp_1_hit:
-         score: 10000  # adds 10,000 to the player's "score" variable
-         ramps: 1      # adds 1 to the player's "ramps" variable
-      ramp_1_timeout:
-         ramps:
-           int: 0        # sets the player's "ramps" variable to 0.
-           action: set   # means that this event will "set" (or reset) the variable to the value, rather than add to it
-      ramp_2_hit:
-         score:
-            int: 25000 * current_player.ramps  # multiplies the value of the current player's "ramps" variable by 25,000 and adds the result to the player's "score" variable
-            block: true   # "blocks" this event from being passed to variable player sections from lower-priority modes
-      counter_treasure_value_complete:
-         treasure_name:
-            string: RUBY  # Sets the player's "treasure_name" variable to a string called "RUBY"
-
+     target_1_hit:
+       score: 1000     # adds 1000 to the player's "score" variable
+     ramp_1_hit:
+       score: 10000    # adds 10,000 to the player's "score" variable
+       ramps: 1        # adds 1 to the player's "ramps" variable
+     ramp_1_timeout:
+       ramps:
+         int: 0          # sets the player's "ramps" variable to 0.
+         action: set     # means that this event will "set" (or reset) the variable to the value, rather than add to it
+     ramp_2_hit:
+       score:
+         int: 25000 * current_player.ramps     # multiplies the value of the current player's "ramps" variable by 25,000 and adds the result to the player's "score" variable
+         block: true      # "blocks" this event from being passed to variable player sections from lower-priority modes
+     counter_treasure_value_complete:
+       treasure_name:
+         string: RUBY     # Sets the player's "treasure_name" variable to a string called "RUBY"
 
 See :doc:`/config_players/variable_player` for details.
 
@@ -69,10 +68,10 @@ exist, it will set the player variable to that.) For example:
 
    ##! mode: mode1
    variable_player:
-      some_event:
-         score: 1000
-         aliens: 1
-         bonus: 10
+     some_event:
+       score: 1000
+       aliens: 1
+       bonus: 10
 
 The above config will add 1000 to the "score" player variable, 1 to the "aliens" player variable, and 20 to the "bonus"
 player variable when the event called *some_event* is posted. Note that you don't even need to include a "score" if you
@@ -96,12 +95,12 @@ value, it would look like this:
 
    ##! mode: mode1
    variable_player:
-      some_event:
-         score: 1000
-         aliens:         # the player var you want to reset
-            int: 1       # the integer value you're resetting this player var to
-            action: set  # means you're resetting it, rather than adding to it
-         bonus: 10
+     some_event:
+       score: 1000
+       aliens:           # the player var you want to reset
+         int: 1          # the integer value you're resetting this player var to
+         action: set     # means you're resetting it, rather than adding to it
+       bonus: 10
 
 Starting in MPF 0.33, you can also add and set machine variables, by specifying ``action: add_machine`` or
 ``action: set_machine``. In these cases the machine variable is specified just like the player variable in the "set" example above.
@@ -122,10 +121,10 @@ Note that when you use block, you also have to include the ``int:``, ``float:``,
 
    ##! mode: mode1
    variable_player:
-      ramp_1_hit:
-         score:
-            int: 5000
-            block: true
+     ramp_1_hit:
+       score:
+         int: 5000
+         block: true
 
 There is also a shorthand way:
 
@@ -133,8 +132,8 @@ There is also a shorthand way:
 
    ##! mode: mode1
    variable_player:
-      ramp_1_hit:
-         score: 5000|block
+     ramp_1_hit:
+       score: 5000|block
 
 int:
 ~~~~
@@ -164,24 +163,24 @@ and conditional events to set the current name of the album value, like this:
 
    ##! mode: mode1
    variable_player:
-      player_album_value{value==1}:
-         album_name:
-           string: SILVER
-      player_album_value{value==2}:
-         album_name:
-           string: GOLD
-      player_album_value{value==3}:
-         album_name:
-           string: PLATINUM
-      player_album_value{value==4}:
-         album_name:
-           string: DOUBLE PLATINUM
-      player_album_value{value==5}:
-         album_name:
-           string: QUINTUPLE PLATINUM
-      player_album_value{value>5}:
-         album_name:
-           string: OFF THE CHARTS!
+     player_album_value{value==1}:
+       album_name:
+         string: SILVER
+     player_album_value{value==2}:
+       album_name:
+         string: GOLD
+     player_album_value{value==3}:
+       album_name:
+         string: PLATINUM
+     player_album_value{value==4}:
+       album_name:
+         string: DOUBLE PLATINUM
+     player_album_value{value==5}:
+       album_name:
+         string: QUINTUPLE PLATINUM
+     player_album_value{value>5}:
+       album_name:
+         string: OFF THE CHARTS!
 
 The above config lets us always have a player var called "album_name" we can use in slides and widgets which matches
 the value of the album, and it's automatically updated whenever the player var "album_value" changes.
@@ -196,10 +195,10 @@ effect the score or other player variables of players other than the current pla
 
    ##! mode: mode1
    variable_player:
-      add_score_to_player_2:
-         score:
-            int: 1000
-            player: 2
+     add_score_to_player_2:
+       score:
+         int: 1000
+         player: 2
    ##! test
    #! start_two_player_game
    #! start_mode mode1

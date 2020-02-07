@@ -24,18 +24,18 @@ Here's an example of control events in action:
 
    ##! mode: mode1
    timers:
-      my_timer:
-         direction: down
-         start_value: 10
-         tick_interval: 125s
-         control_events:
-            - event: start_my_timer
-              action: start
-            - event: reset_my_timer
-              action: reset
-            - event: add_5_secs
-              action: add
-              value: 5
+     my_timer:
+       direction: down
+       start_value: 10
+       tick_interval: 125s
+       control_events:
+         - event: start_my_timer
+           action: start
+         - event: reset_my_timer
+           action: reset
+         - event: add_5_secs
+           action: add
+           value: 5
 
 In the example above, when the event *start_my_timer* is posted, the timer called "my_timer" will start
 running. When the event *add_5_secs* is posted, 5 seconds will be added to whatever the current value of "my_timer"

@@ -127,13 +127,13 @@ makes it look like a DMD:
 .. code-block:: mpf-config
 
    slides:
-      window_slide_1:
-         - type: display
-           effects:
-            - type: dmd
-              pixel_color: ff5500
-           width: 512
-           height: 128
+     window_slide_1:
+       - type: display
+         effects:
+           - type: dmd
+             pixel_color: ff5500
+         width: 512
+         height: 128
 
 Again, there are lots of options here. Note that we're adding a ``height:`` and
 ``width:`` of 512x128. This is the on-screen pixel size of the DMD as it will
@@ -165,21 +165,21 @@ to give it a nice border.
 .. code-block:: mpf-config
 
    slides:
-      window_slide_1:
-         - type: display
-           effects:
-            - type: dmd
-              pixel_color: ff5500
-           width: 512
-           height: 128
-         - type: text
-           text: MISSION PINBALL FRAMEWORK
-           anchor_y: top
-           y: top-3
-           font_size: 30
-         - type: rectangle
-           width: 514
-           height: 130
+     window_slide_1:
+       - type: display
+         effects:
+           - type: dmd
+             pixel_color: ff5500
+         width: 512
+         height: 128
+       - type: text
+         text: MISSION PINBALL FRAMEWORK
+         anchor_y: top
+         y: top-3
+         font_size: 30
+       - type: rectangle
+         width: 514
+         height: 130
 
 5. Configure the slide to show when MPF starts
 ----------------------------------------------

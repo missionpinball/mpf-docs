@@ -17,8 +17,8 @@ like this:
 .. code-block:: mpf-config
 
    accelerometers:
-       p3_roc_accelerometer:
-           number: 1
+     p3_roc_accelerometer:
+       number: 1
 
 The name (which is "p3_roc_accelerometer" in the example above) doesn't really
 matter.

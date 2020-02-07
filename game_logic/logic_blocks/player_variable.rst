@@ -25,7 +25,6 @@ text:
     counter_hit:
       score: 100 * device.counters.logic_block_1.value
                    # The logic block stores the count as the 'value' attribute
-
   widgets:
     counter_widget:
       - type: text

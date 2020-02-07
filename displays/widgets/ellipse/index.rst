@@ -13,39 +13,38 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
-    mc_ready:
+     mc_ready:
        ellipse_example:
-        - type: ellipse
-          x: 200
-          y: 200
-          width: 200
-          height: 200
-          color: blue
-          angle_start: 0
-          angle_end: 90
-        - type: ellipse
-          x: 400
-          y: 300
-          width: 400
-          height: 200
-          color: yellow
-          segments: 8
-        - type: ellipse
-          x: 600
-          y: 500
-          width: 400
-          height: 300
-          color: red
-          angle_start: 200
-          angle_end: 300
-        - type: ellipse
-          x: 700
-          y: 200
-          width: 90
-          height: 300
-          color: lime
+         - type: ellipse
+           x: 200
+           y: 200
+           width: 200
+           height: 200
+           color: blue
+           angle_start: 0
+           angle_end: 90
+         - type: ellipse
+           x: 400
+           y: 300
+           width: 400
+           height: 200
+           color: yellow
+           segments: 8
+         - type: ellipse
+           x: 600
+           y: 500
+           width: 400
+           height: 300
+           color: red
+           angle_start: 200
+           angle_end: 300
+         - type: ellipse
+           x: 700
+           y: 200
+           width: 90
+           height: 300
+           color: lime
 
 And the result:
 

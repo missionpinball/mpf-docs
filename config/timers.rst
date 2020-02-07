@@ -42,26 +42,26 @@ contains two timers:
 
    ##! mode: mode1
    timers:
-       mb_intro_timer:
-           start_value: 3
-           end_value: 0
-           direction: down
-           control_events:
-               - action: start
-                 event: mode_money_bags_started
-       money_bags_timer:
-           start_value: 15
-           end_value: 0
-           direction: down
-           tick_interval: 1.25s
-           control_events:
-               - action: start
-                 event: timer_mb_intro_timer_complete
-               - action: add
-                 event: money_bags_advertise_flashing_hit
-                 value: 5
-               - action: stop
-                 event: logicblock_money_bags_counter_complete
+     mb_intro_timer:
+       start_value: 3
+       end_value: 0
+       direction: down
+       control_events:
+         - action: start
+           event: mode_money_bags_started
+     money_bags_timer:
+       start_value: 15
+       end_value: 0
+       direction: down
+       tick_interval: 1.25s
+       control_events:
+         - action: start
+           event: timer_mb_intro_timer_complete
+         - action: add
+           event: money_bags_advertise_flashing_hit
+           value: 5
+         - action: stop
+           event: logicblock_money_bags_counter_complete
 
 In the example above, an intro timer which runs for 3 seconds is started by the event
 *mode_money_bags_started* (which means this timer starts when the mode starts).
@@ -82,8 +82,8 @@ Here's another example of timers from *Demo Man's* skillshot mode:
        direction: down
        tick_interval: 1s
        control_events:
-       - event: balldevice_playfield_ball_enter
-         action: start
+         - event: balldevice_playfield_ball_enter
+           action: start
        start_running: false
      target_rotator:
        start_running: true

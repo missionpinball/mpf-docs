@@ -56,11 +56,11 @@ Example track configuration:
        sfx:
          volume: 0.4
          simultaneous_sounds: 8
-         preload: yes
+         preload: true
        voice:
          volume: 0.6
          simultaneous_sounds: 1
-         preload: yes
+         preload: true
        loops:
          type: sound_loop
          volume: 0.6
@@ -68,3 +68,4 @@ Example track configuration:
          type: playlist
          volume: 0.6
          crossfade_time: 2s
+

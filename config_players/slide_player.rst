@@ -21,9 +21,9 @@ entries: "express" and "full" configs. Express configs will look like this:
 .. code-block:: mpf-config
 
    slide_player:
-      event1: slide1
-      event2: slide2
-      event3: slide3
+     event1: slide1
+     event2: slide2
+     event3: slide3
 
 Full configs will look like this:
 
@@ -54,10 +54,10 @@ will also override the default settings and show the slide on the display target
 .. code-block:: mpf-config
 
    slide_player:
-      some_event:
-         slide_1:
-            target: display1
-            priority: 200
+     some_event:
+       slide_1:
+         target: display1
+         priority: 200
 
 Showing dynamically-created slides
 ----------------------------------
@@ -77,15 +77,15 @@ will become *slide_1* and the old one will be gone.
 .. code-block:: mpf-config
 
    slide_player:
-      some_event:
-         slide_1:
-            widgets:
-            - type: text
-              text: I AM A TEXT WIDGET
-            - type: rectangle
-              width: 200
-              height: 100
-              color: red
+     some_event:
+       slide_1:
+         widgets:
+           - type: text
+             text: I AM A TEXT WIDGET
+           - type: rectangle
+             width: 200
+             height: 100
+             color: red
 
 You can also mix-and-match defining a slide in the slide player as well as adjusting
 properties of how the slide is shown. Just add multiple settings, like this:
@@ -93,17 +93,17 @@ properties of how the slide is shown. Just add multiple settings, like this:
 .. code-block:: mpf-config
 
    slide_player:
-      some_event:
-         slide_1:
-            target: display2
-            widgets:
-            - type: text
-              text: I AM A TEXT WIDGET
-            - type: rectangle
-              width: 200
-              height: 100
-              color: red
-            transition: wipe
+     some_event:
+       slide_1:
+         target: display2
+         widgets:
+           - type: text
+             text: I AM A TEXT WIDGET
+           - type: rectangle
+             width: 200
+             height: 100
+             color: red
+         transition: wipe
 
 Remember that these slide player settings can also be used in show steps (in a ``slides:``
 section). Any of the examples above apply, you just don't include the event name, like this:
@@ -112,7 +112,6 @@ section). Any of the examples above apply, you just don't include the event name
 
    ##! show: show1
    #show_version=5
-
    - time: 0
      slides: slide1
    - time: +3
@@ -121,9 +120,9 @@ section). Any of the examples above apply, you just don't include the event name
      slides:
        slide3:          # newly-defined slide here
          widgets:
-           - type: text
-             text: I AM SLIDE 3 IN THIS SHOW
-             color: lime
+         - type: text
+           text: I AM SLIDE 3 IN THIS SHOW
+           color: lime
    - time: +3
      slides:
        slide4:

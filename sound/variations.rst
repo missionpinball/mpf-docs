@@ -38,9 +38,9 @@ rename the file to *triangle_01.wav* and omit the *file:* setting):
 .. code-block:: mpf-config
 
    sounds:
-      triangle_01:
-         file: 13147__looppool__triangle1.wav
-         volume: 0.7
+     triangle_01:
+       file: 13147__looppool__triangle1.wav
+       volume: 0.7
 
 Now add a few variations of the sound. I used my favorite sound editor to slightly adjust the
 pitch and frequency content of the triangle sound file, creating three variations. You can also
@@ -52,15 +52,15 @@ section in the machine configuration file (I named the sound variations *triangl
 .. code-block:: mpf-config
 
    sounds:
-      triangle_01:
-         file: 13147__looppool__triangle1.wav
-         volume: 0.7
-      triangle_02:
-         volume: 0.7
-      triangle_03:
-         volume: 0.7
-      triangle_04:
-         volume: 0.7
+     triangle_01:
+       file: 13147__looppool__triangle1.wav
+       volume: 0.7
+     triangle_02:
+       volume: 0.7
+     triangle_03:
+       volume: 0.7
+     triangle_04:
+       volume: 0.7
 
 3. Configure the sound pool
 ---------------------------
@@ -72,13 +72,13 @@ sound pool object so we can treat them as a single sound.  To do so, we need to 
 .. code-block:: mpf-config
 
    sound_pools:
-      triangle:
-         type: random
-         sounds:
-            - triangle_01
-            - triangle_02
-            - triangle_03
-            - triangle_04
+     triangle:
+       type: random
+       sounds:
+         - triangle_01
+         - triangle_02
+         - triangle_03
+         - triangle_04
 
 We now have a sound pool asset called ``triangle`` that acts just like a sound asset, except that
 each time ``triangle`` is played, one of the 4 sound variations contained in the sound pool will
@@ -94,14 +94,14 @@ again:
 .. code-block:: mpf-config
 
    sound_pools:
-      triangle:
-         type: random
-         track: sfx
-         sounds:
-            - triangle_01|5
-            - triangle_02|2
-            - triangle_03|2
-            - triangle_04|1
+     triangle:
+       type: random
+       track: sfx
+       sounds:
+         - triangle_01|5
+         - triangle_02|2
+         - triangle_03|2
+         - triangle_04|1
 
 Notice we've added a pipe character (``|``) to the end of each sound followed by a numeric value.
 These values assign a relative weight to each sound that will be used in the random selection
@@ -118,14 +118,14 @@ If the selection is sequential, excluded events will simply be skipped.
 .. code-block:: mpf-config
 
    sound_pools:
-      triangle:
-         type: random
-         track: sfx
-         sounds:
-            - triangle_01
-            - triangle_02{current_player.triangles_found>1}|2
-            - triangle_03{current_player.triangles_found>2}
-            - triangle_04{device.achievements.supertriangle.state=="complete"}|5
+     triangle:
+       type: random
+       track: sfx
+       sounds:
+         - triangle_01
+         - triangle_02{current_player.triangles_found>1}|2
+         - triangle_03{current_player.triangles_found>2}
+         - triangle_04{device.achievements.supertriangle.state=="complete"}|5
 
 Sound conditions are formatted the same as all :doc:`conditional events </events/overview/conditional>`.
 Any sound in a pool can have a weight, a condition, both, or neither.

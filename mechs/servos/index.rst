@@ -21,23 +21,22 @@ This is an example:
 .. code-block:: mpf-config
 
    servos:
-      servo1:
-         servo_min: 0.1
-         servo_max: 0.9
-         positions:
-             0.0: servo1_down
-             0.8: servo1_up
-         reset_position: 0.5
-         reset_events: reset_servo1
-         number: 1
-      servo2:
-         positions:
-             0.2: servo2_left
-             1.0: servo2_home
-         reset_position: 1.0
-         reset_events: reset_servo2
-         number: 2
-
+     servo1:
+       servo_min: 0.1
+       servo_max: 0.9
+       positions:
+         0.0: servo1_down
+         0.8: servo1_up
+       reset_position: 0.5
+       reset_events: reset_servo1
+       number: 1
+     servo2:
+       positions:
+         0.2: servo2_left
+         1.0: servo2_home
+       reset_position: 1.0
+       reset_events: reset_servo2
+       number: 2
 
 .. contents::
    :local:

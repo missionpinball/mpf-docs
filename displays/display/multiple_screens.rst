@@ -32,42 +32,39 @@ This can be achieved using the following config:
 .. code-block:: mpf-config
 
    kivy_config:
-    kivy:
-      desktop: 1
-      exit_on_escape: true
-      pause_on_minimize: 0
-      log_dir:
-      window_icon:
-
-    graphics:
-      borderless: true
-      window_state: visible  # visible, hidden, maximized, minimized
-      fbo: hardware  # hardware, software, force-hardware
-      fullscreen: false
-      left: 0
-      top: 0
-      width: 3840    # width of display1 + display2
-      height: 1080   # common height (or the maximum of both)
-      maxfps: 30
-      multisamples: 2
-      position: custom  # auto, custom
-      show_cursor: true
-      resizable: false
-      rotation: 0
-
-    displays:
-      display1:
+     kivy:
+       desktop: 1
+       exit_on_escape: true
+       pause_on_minimize: 0
+       log_dir:
+       window_icon:
+     graphics:
+       borderless: true
+       window_state: visible # visible, hidden, maximized, minimized
+       fbo: hardware # hardware, software, force-hardware
+       fullscreen: false
+       left: 0
+       top: 0
+       width: 3840   # width of display1 + display2
+       height: 1080  # common height (or the maximum of both)
+       maxfps: 30
+       multisamples: 2
+       position: custom # auto, custom
+       show_cursor: true
+       resizable: false
+       rotation: 0
+     displays:
+       display1:
          width: 1920
          height: 1080
-      display2:
+       display2:
          width: 1920
          height: 1080
-      combined_display:
+       combined_display:
          width: 3840
          height: 1080
-
-    slides:
-      base_slide:
+     slides:
+       base_slide:
          - type: display
            source_display: display1
            width: 1920
@@ -80,11 +77,10 @@ This can be achieved using the following config:
            height: 1080
            x: right
            anchor_x: right
-
-    slide_player:
-      mc_ready:
+     slide_player:
+       mc_ready:
          base_slide:
-            target: combined_display
+           target: combined_display
 
 Use ``width`` and ``height`` to set the size of the window.
 ``left`` and ``top`` are used to position the window.

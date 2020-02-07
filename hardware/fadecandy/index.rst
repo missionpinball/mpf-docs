@@ -108,9 +108,9 @@ platform for your LEDs and to instead use the ``fadecandy`` platform, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: p_roc
-        driverboards: pdb
-        lights: fadecandy
+      platform: p_roc
+      driverboards: pdb
+      lights: fadecandy
 
 See the :doc:`/hardware/platform` guide for more information about setting
 device-specific default platforms versus overriding the platform for individual
@@ -140,12 +140,12 @@ Consider the following config:
 .. code-block:: mpf-config
 
    lights:
-      l_led0:
-         number: 0  # first LED on connector 0
-      l_led1:
-         number: 1  # second LED on connector 0
-      l_led2:
-         number: 128  # first LED on connector 2
+     l_led0:
+       number: 0    # first LED on connector 0
+     l_led1:
+       number: 1    # second LED on connector 0
+     l_led2:
+       number: 128    # first LED on connector 2
 
 (If you're familiar with the Open Pixel Control protocol, all of the LEDs on a
 single FadeCandy board are on the same OPC channel, which is technically what
@@ -195,14 +195,14 @@ Then configure your lights as follows:
 .. code-block:: mpf-config
 
    lights:
-      l_led0_0:
-         number: 0-0  # first LED on connector 0
-      l_led1_0:
-         number: 1-0  # first LED on connector 1
-      l_led1_1:
-         number: 1-1  # second LED on connector 1
-      l_led7_20:
-         number: 7-20  # twentyth LED on connector 7
+     l_led0_0:
+       number: 0-0    # first LED on connector 0
+     l_led1_0:
+       number: 1-0    # first LED on connector 1
+     l_led1_1:
+       number: 1-1    # second LED on connector 1
+     l_led7_20:
+       number: 7-20    # twentyth LED on connector 7
 
 6b. Numbering with multiple Fadecandy Boards
 --------------------------------------------
@@ -275,20 +275,20 @@ Afterwards, configure your lights as follows:
 .. code-block:: mpf-config
 
    lights:
-      l_led0_0:
-         number: 0-0  # first LED on connector 0 on board 0
-      l_led1_0:
-         number: 1-0  # first LED on connector 1 on board 0
-      l_led1_1:
-         number: 1-1  # second LED on connector 1 on board 0
-      l_led7_20:
-         number: 7-20  # twentyth LED on connector 7 on board 0
-      l_led8_0:
-         number: 8-0  # first LED on connector 0 on board 1
-      l_led8_1:
-         number: 8-63  # last LED on connector 1 on board 1
-      l_led17_1:
-         number: 17-1  # second LED on connector 1 on board 2
+     l_led0_0:
+       number: 0-0    # first LED on connector 0 on board 0
+     l_led1_0:
+       number: 1-0    # first LED on connector 1 on board 0
+     l_led1_1:
+       number: 1-1    # second LED on connector 1 on board 0
+     l_led7_20:
+       number: 7-20    # twentyth LED on connector 7 on board 0
+     l_led8_0:
+       number: 8-0    # first LED on connector 0 on board 1
+     l_led8_1:
+       number: 8-63    # last LED on connector 1 on board 1
+     l_led17_1:
+       number: 17-1    # second LED on connector 1 on board 2
 
 7. Launch the fcserver
 ----------------------

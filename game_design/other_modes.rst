@@ -69,62 +69,56 @@ This is an example:
 .. code-block:: mpf-config
 
    #! switches:
-   #!     s_lane_l:
-   #!         number:
-   #!     s_lane_m:
-   #!         number:
-   #!     s_lane_r:
-   #!         number:
+   #!   s_lane_l:
+   #!     number:
+   #!   s_lane_m:
+   #!     number:
+   #!   s_lane_r:
+   #!     number:
    #! lights:
-   #!     l_lane_l:
-   #!         number:
-   #!     l_lane_m:
-   #!         number:
-   #!     l_lane_r:
-   #!         number:
+   #!   l_lane_l:
+   #!     number:
+   #!   l_lane_m:
+   #!     number:
+   #!   l_lane_r:
+   #!     number:
    ##! mode: lanes
    #config_version=5
-
    mode:
-       start_events: ball_started
-       priority: 110
-
+     start_events: ball_started
+     priority: 110
    variable_player:
-       lanes_hit:
-           score: 50
-       lanes_lit_complete:
-           score: 300
-
+     lanes_hit:
+       score: 50
+     lanes_lit_complete:
+       score: 300
    shots:
-       lane_l:
-           switch: s_lane_l
-           show_tokens:
-               light: l_lane_l
-       lane_m:
-           switch: s_lane_m
-           show_tokens:
-               light: l_lane_m
-       lane_r:
-           switch: s_lane_r
-           show_tokens:
-               light: l_lane_r
-
+     lane_l:
+       switch: s_lane_l
+       show_tokens:
+         light: l_lane_l
+     lane_m:
+       switch: s_lane_m
+       show_tokens:
+         light: l_lane_m
+     lane_r:
+       switch: s_lane_r
+       show_tokens:
+         light: l_lane_r
    shot_groups:
-       lanes:
-           shots: lane_l, lane_m, lane_r
-           rotate_left_events: s_left_flipper_active
-           rotate_right_events: s_right_flipper_active
-           reset_events:
-               lanes_lit_complete: 1s
-
+     lanes:
+       shots: lane_l, lane_m, lane_r
+       rotate_left_events: s_left_flipper_active
+       rotate_right_events: s_right_flipper_active
+       reset_events:
+         lanes_lit_complete: 1s
    show_player:
-       shot_lanes_lit_complete:
-           flash:
-               loops: 4
-               speed: 4
-               show_tokens:
-                   lights: lanes
-
+     shot_lanes_lit_complete:
+       flash:
+         loops: 4
+         speed: 4
+         show_tokens:
+           lights: lanes
    ##! test
    #! start_game
    #! assert_mode_running lanes

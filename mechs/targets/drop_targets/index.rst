@@ -28,20 +28,18 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-      s_drop_target:
-         number:
+     s_drop_target:
+       number:
    coils:
-      c_reset_drop_target:
-         number:
-      c_knock_down_coil:
-         number:
-
+     c_reset_drop_target:
+       number:
+     c_knock_down_coil:
+       number:
    drop_targets:
-        d_drop_target:
-            switch: s_drop_target
-            reset_coil: c_reset_drop_target
-            knockdown_coil: c_knock_down_coil
-
+     d_drop_target:
+       switch: s_drop_target
+       reset_coil: c_reset_drop_target
+       knockdown_coil: c_knock_down_coil
 
 Monitorable Properties
 ----------------------

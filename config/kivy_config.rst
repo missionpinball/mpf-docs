@@ -34,3 +34,4 @@ This is an example:
        position: auto  # auto, custom
        show_cursor: true
        resizable: true
+

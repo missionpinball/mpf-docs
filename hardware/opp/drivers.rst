@@ -44,9 +44,9 @@ example, consider the following configuration:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number: 0-12
-            default_pulse_ms: 30
+      some_coil:
+        number: 0-12
+        default_pulse_ms: 30
 
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
@@ -90,6 +90,7 @@ This is an example:
       some_coil:
         number: 0-3
         default_pulse_ms: 10
-        default_recycle: True
+        default_recycle: true
         platform_settings:
           recycle_factor: 2
+

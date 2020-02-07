@@ -36,12 +36,12 @@ your shot is called ``your_sequence_shot``).
    #!   top_center_rollover:
    #!     number:
    sequence_shots:
-        left_orbit:
-            switch_sequence: left_rollover, top_right_opto
-            sequence_timeout: 3s
-        weak_right_orbit:
-            switch_sequence: top_right_opto, top_center_rollover
-            sequence_timeout: 3s
+     left_orbit:
+       switch_sequence: left_rollover, top_right_opto
+       sequence_timeout: 3s
+     weak_right_orbit:
+       switch_sequence: top_right_opto, top_center_rollover
+       sequence_timeout: 3s
 
 Notice in the example above that there are
 two different shots with the same switches, but the order of the
@@ -63,16 +63,15 @@ Here is an example with events:
 .. code-block:: mpf-config
 
    sequence_shots:
-       my_event_based_sequence_shot:
-           event_sequence:
-               - event1
-               - event2
-               - event3
-           cancel_events: cancel
-           delay_event_list:
-               delay1: 1s
-           sequence_timeout: 3s
-
+     my_event_based_sequence_shot:
+       event_sequence:
+         - event1
+         - event2
+         - event3
+       cancel_events: cancel
+       delay_event_list:
+         delay1: 1s
+       sequence_timeout: 3s
 
 And one with switches:
 
@@ -90,16 +89,15 @@ And one with switches:
    #!   seq2_delay:
    #!     number:
    sequence_shots:
-       my_switch_based_sequence_shot:
-           switch_sequence:
-               - seq2_1
-               - seq2_2
-               - seq2_3
-           cancel_switches: seq2_cancel
-           delay_switch_list:
-               seq2_delay: 1s
-           sequence_timeout: 3s
-
+     my_switch_based_sequence_shot:
+       switch_sequence:
+         - seq2_1
+         - seq2_2
+         - seq2_3
+       cancel_switches: seq2_cancel
+       delay_switch_list:
+         seq2_delay: 1s
+       sequence_timeout: 3s
 
 Optional settings
 -----------------

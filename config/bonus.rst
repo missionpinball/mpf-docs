@@ -23,17 +23,16 @@ Here's an example from *Brooks 'n Dunn*:
 .. code-block:: mpf-config
 
    ##! mode: mode1
-
    mode_settings:
      display_delay_ms: 4000
      hurry_up_delay_ms: 500
      hurry_up_event: flipper_cancel
      bonus_entries:
-         - event: quarter_bonus
-           score: current_player.quarters * current_player.album_value
-         - event: wizard_bonus
-           score: 25000
-           player_score_entry: num_albums
+       - event: quarter_bonus
+         score: current_player.quarters * current_player.album_value
+       - event: wizard_bonus
+         score: 25000
+         player_score_entry: num_albums
 
 Settings
 --------

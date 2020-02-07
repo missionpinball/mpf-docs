@@ -19,16 +19,15 @@ This is an example:
 .. code-block:: mpf-config
 
    settings:
-      replay_score:
-         label: Replay Score
-         values:
-            500000: "500000 (default)"
-            1000000: "1000000"
-            1500000: "1500000"
-         default: 500000
-         key_type: int
-         sort: 100
-
+     replay_score:
+       label: Replay Score
+       values:
+         500000: "500000 (default)"
+         1000000: "1000000"
+         1500000: "1500000"
+       default: 500000
+       key_type: int
+       sort: 100
 
 Required settings
 -----------------

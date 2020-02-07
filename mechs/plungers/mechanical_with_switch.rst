@@ -33,8 +33,8 @@ section of your machine config file. Here's an example:
 .. code-block:: mpf-config
 
    switches:
-      s_plunger_lane:
-         number: 2-6
+     s_plunger_lane:
+       number: 2-6
 
 Note that we configured this switches as number ``2-6``, but
 you should use the actual switch numbers for your control system that the switches
@@ -61,12 +61,12 @@ Here's an example. Note that in this case, we've left out the other ball devices
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
+   #!   s_plunger_lane:
+   #!     number: 2-6
    ball_devices:
-        bd_plunger:
-            ball_switches: s_plunger_lane
-            mechanical_eject: true
+     bd_plunger:
+       ball_switches: s_plunger_lane
+       mechanical_eject: true
 
 In the example above, we named the plunger device *bd_plunger*, but if course you can
 name it whatever you want. You might use *bd_right_plunger* and
@@ -93,12 +93,12 @@ To do that, add ``mechanical_eject: true`` to your plunger device, like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
+   #!   s_plunger_lane:
+   #!     number: 2-6
    ball_devices:
-        bd_plunger:
-            ball_switches: s_plunger_lane
-            mechanical_eject: true
+     bd_plunger:
+       ball_switches: s_plunger_lane
+       mechanical_eject: true
 
 4. Configure the eject confirmation, target & timeouts
 ------------------------------------------------------
@@ -154,14 +154,14 @@ directly to the playfield: (This is probably 99% of all cases)
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
+   #!   s_plunger_lane:
+   #!     number: 2-6
    ball_devices:
-        bd_plunger:
-   #!          ball_switches: s_plunger_lane
-   #!          mechanical_eject: true
-            # ...
-            eject_timeouts: 3s
+     bd_plunger:
+   #!     ball_switches: s_plunger_lane
+   #!     mechanical_eject: true
+       # ...
+       eject_timeouts: 3s
 
 Next, for a coil-fired plunger that has a switch at the exit of the plunger
 lane that is only hit if the ball has made it out of the plunger and cannot
@@ -170,18 +170,18 @@ be hit by a random ball on the playfield:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
-   #!    s_plunger_lane_exit:
-   #!       number: 2-7
+   #!   s_plunger_lane:
+   #!     number: 2-6
+   #!   s_plunger_lane_exit:
+   #!     number: 2-7
    ball_devices:
-        bd_plunger:
-   #!          ball_switches: s_plunger_lane
-   #!          mechanical_eject: true
-            # ...
-            confirm_eject_type: switch
-            confirm_eject_switch: s_plunger_lane_exit
-            eject_timeouts: 3s
+     bd_plunger:
+   #!     ball_switches: s_plunger_lane
+   #!     mechanical_eject: true
+       # ...
+       confirm_eject_type: switch
+       confirm_eject_switch: s_plunger_lane_exit
+       eject_timeouts: 3s
 
 Next, if your plunger lane ejects into another ball device (a cannon, in this
 case):
@@ -189,24 +189,24 @@ case):
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
-   #!    s_canon:
-   #!       number: 3-1
+   #!   s_plunger_lane:
+   #!     number: 2-6
+   #!   s_canon:
+   #!     number: 3-1
    #! coils:
-   #!    c_canon:
-   #!       number: 2-2
-   #!       default_pulse_ms: 20
+   #!   c_canon:
+   #!     number: 2-2
+   #!     default_pulse_ms: 20
    ball_devices:
-   #!      bd_cannon:
-   #!          ball_switches: s_canon
-   #!          eject_coil: c_canon
-        bd_plunger:
-   #!          ball_switches: s_plunger_lane
-   #!          mechanical_eject: true
-            # ...
-            eject_targets: bd_cannon
-            eject_timeouts: 2s
+   #!   bd_cannon:
+   #!     ball_switches: s_canon
+   #!     eject_coil: c_canon
+     bd_plunger:
+   #!     ball_switches: s_plunger_lane
+   #!     mechanical_eject: true
+       # ...
+       eject_targets: bd_cannon
+       eject_timeouts: 2s
 
 5. Set your trough/drain device eject_targets
 ---------------------------------------------
@@ -218,33 +218,33 @@ like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
-   #!    s_trough1:
-   #!       number: 3-1
-   #!    s_trough2:
-   #!       number: 3-2
-   #!    s_trough3:
-   #!       number: 3-3
-   #!    s_trough4:
-   #!       number: 3-4
-   #!    s_trough_jam:
-   #!       number: 3-5
+   #!   s_plunger_lane:
+   #!     number: 2-6
+   #!   s_trough1:
+   #!     number: 3-1
+   #!   s_trough2:
+   #!     number: 3-2
+   #!   s_trough3:
+   #!     number: 3-3
+   #!   s_trough4:
+   #!     number: 3-4
+   #!   s_trough_jam:
+   #!     number: 3-5
    #! coils:
-   #!    c_trough_eject:
-   #!       number: 2-2
-   #!       default_pulse_ms: 20
+   #!   c_trough_eject:
+   #!     number: 2-2
+   #!     default_pulse_ms: 20
    ball_devices:
-        bd_trough:
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
-            eject_coil: c_trough_eject
-            tags: trough, home, drain
-            jam_switch: s_trough_jam
-            eject_coil_jam_pulse: 15ms
-            eject_targets: bd_plunger
-   #!      bd_plunger:
-   #!          ball_switches: s_plunger_lane
-   #!          mechanical_eject: true
+     bd_trough:
+       ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
+       eject_coil: c_trough_eject
+       tags: trough, home, drain
+       jam_switch: s_trough_jam
+       eject_coil_jam_pulse: 15ms
+       eject_targets: bd_plunger
+   #!   bd_plunger:
+   #!     ball_switches: s_plunger_lane
+   #!     mechanical_eject: true
 
 Of course you'd add the name that you gave your plunger device, which could
 be something like "bd_catapult" or whatever you called it.
@@ -265,16 +265,16 @@ the default ``playfield``, like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_plunger_lane:
-   #!       number: 2-6
+   #!   s_plunger_lane:
+   #!     number: 2-6
    #! ball_devices:
-   #!     bd_plunger:
-   #!          ball_switches: s_plunger_lane
-   #!          mechanical_eject: true
+   #!   bd_plunger:
+   #!     ball_switches: s_plunger_lane
+   #!     mechanical_eject: true
    playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
+     playfield:
+       default_source_device: bd_plunger
+       tags: default
 
 7. Tag your playfield switches
 ------------------------------
@@ -297,42 +297,38 @@ This config is what probably 99% of machines with coil-fired plungers will use:
 .. code-block:: mpf-config
 
    switches:
-      s_plunger_lane:
-         number: 2-6
-      s_launch_button:
-         number: 1-5
-      s_trough1:
-         number: 3-1
-      s_trough2:
-         number: 3-2
-      s_trough3:
-         number: 3-3
-      s_trough4:
-         number: 3-4
-      s_trough_jam:
-         number: 3-5
-
+     s_plunger_lane:
+       number: 2-6
+     s_launch_button:
+       number: 1-5
+     s_trough1:
+       number: 3-1
+     s_trough2:
+       number: 3-2
+     s_trough3:
+       number: 3-3
+     s_trough4:
+       number: 3-4
+     s_trough_jam:
+       number: 3-5
    coils:
-        c_trough_eject:
-            number: 3-1
-            default_pulse_ms: 20
-
+     c_trough_eject:
+       number: 3-1
+       default_pulse_ms: 20
    ball_devices:
-
-        bd_trough:
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
-            eject_coil: c_trough_eject
-            tags: trough, home, drain
-            jam_switch: s_trough_jam
-            eject_coil_jam_pulse: 15ms
-            eject_targets: bd_plunger
-
-        bd_plunger:
-            ball_switches: s_plunger_lane
-            mechanical_eject: true
-            eject_timeouts: 3s
-
+     bd_trough:
+       ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
+       eject_coil: c_trough_eject
+       tags: trough, home, drain
+       jam_switch: s_trough_jam
+       eject_coil_jam_pulse: 15ms
+       eject_targets: bd_plunger
+     bd_plunger:
+       ball_switches: s_plunger_lane
+       mechanical_eject: true
+       eject_timeouts: 3s
    playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
+     playfield:
+       default_source_device: bd_plunger
+       tags: default
+

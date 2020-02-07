@@ -17,16 +17,16 @@ of the main on-screen window which is created by MPF-MC.
 .. code-block:: mpf-config
 
     window:
-        width: 800
-        height: 600
-        title: Mission Pinball Framework
-        resizable: yes
-        borderless: yes
-        fullscreen: no
-        exit_on_escape: True
-        source_display: window
-        effects:
-            - type: dmd
+      width: 800
+      height: 600
+      title: Mission Pinball Framework
+      resizable: true
+      borderless: true
+      fullscreen: false
+      exit_on_escape: true
+      source_display: window
+      effects:
+        - type: dmd
 
 .. note::
    If you do not add a ``window:`` section to your machine config, MPF will

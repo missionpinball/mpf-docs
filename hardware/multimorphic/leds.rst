@@ -58,9 +58,9 @@ like this:
 .. code-block:: mpf-config
 
    lights:
-      l_led0:
-         number: 8-0-1-2
-         subtype: led
+     l_led0:
+       number: 8-0-1-2
+       subtype: led
 
 The example above configures "l_led0” as the LED connected to PD-LED board at
 address 8, using outputs 0, 1, and 2 as its red, green, and blue connections.
@@ -74,36 +74,34 @@ For instance you might have only a red channel:
 .. code-block:: mpf-config
 
   lights:
-      my_red_only_insert:
-        channels:
-           red:
-              - number: 8-0   # board 8 and first channel
-
+    my_red_only_insert:
+      channels:
+        red:
+          - number: 8-0       # board 8 and first channel
 
 Alternatively, you can use the same syntax as for `l_led0` above:
 
 .. code-block:: mpf-config
 
   lights:
-      l_led0:
-        channels:
-           red:
-              - number: 8-0
-           green:
-              - number: 8-1
-           blue:
-              - number: 8-2
-
+    l_led0:
+      channels:
+        red:
+          - number: 8-0
+        green:
+          - number: 8-1
+        blue:
+          - number: 8-2
 
 Or you can configure a white LED:
 
 .. code-block:: mpf-config
 
   lights:
-      my_white_light:
-        channels:
-           white:
-              - number: 8-4
+    my_white_light:
+      channels:
+        white:
+          - number: 8-4
 
 You can also configure two red channel, green plus white or any other
 combination.
@@ -122,10 +120,10 @@ such as:
 .. code-block:: mpf-config
 
    lights:
-      l_shoot_again:
-         number: 8-60-61-62
-         platform_settings:
-            polarity: True
+     l_shoot_again:
+       number: 8-60-61-62
+       platform_settings:
+         polarity: true
 
 **True** = common cathode (or common ground),
 **False** = common anode (or common 3.3V)
@@ -183,26 +181,25 @@ all serial LEDs and and define a few:
    p_roc:
      pd_led_boards:
        4:
-         use_lpd880x_0: True
-         use_lpd880x_1: True
-         use_lpd880x_2: True
-         use_ws281x_0: True
-         use_ws281x_1: True
-         use_ws281x_2: True
-
+         use_lpd880x_0: true
+         use_lpd880x_1: true
+         use_lpd880x_2: true
+         use_ws281x_0: true
+         use_ws281x_1: true
+         use_ws281x_2: true
    lights:
-      l_serial_chain_0_first:
-         number: 8-100-101-102
-         subtype: led
-      l_serial_chain_0_second:
-         number: 8-103-104-105
-         subtype: led
-      l_serial_chain_1_first:
-         number: 8-250-251-252
-         subtype: led
-      l_serial_chain_2_first:
-         number: 8-400-401-402
-         subtype: led
+     l_serial_chain_0_first:
+       number: 8-100-101-102
+       subtype: led
+     l_serial_chain_0_second:
+       number: 8-103-104-105
+       subtype: led
+     l_serial_chain_1_first:
+       number: 8-250-251-252
+       subtype: led
+     l_serial_chain_2_first:
+       number: 8-400-401-402
+       subtype: led
 
 LED number:
 ^^^^^^^^^^^

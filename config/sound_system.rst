@@ -20,24 +20,24 @@ Here's an example of a typical sound configuration.
 .. code-block:: mpf-config
 
     sound_system:
-        buffer: 1024
-        channels: 1
-        enabled: True
-        frequency: 44100
-        master_volume: 0.75
-        tracks:
-           music:
-              type: standard
-              simultaneous_sounds: 1
-              volume: 0.5
-           voice:
-              type: standard
-              simultaneous_sounds: 1
-              volume: 0.7
-           sfx:
-              type: standard
-              simultaneous_sounds: 8
-              volume: 0.4
+      buffer: 1024
+      channels: 1
+      enabled: true
+      frequency: 44100
+      master_volume: 0.75
+      tracks:
+        music:
+          type: standard
+          simultaneous_sounds: 1
+          volume: 0.5
+        voice:
+          type: standard
+          simultaneous_sounds: 1
+          volume: 0.7
+        sfx:
+          type: standard
+          simultaneous_sounds: 8
+          volume: 0.4
 
 Optional settings
 -----------------

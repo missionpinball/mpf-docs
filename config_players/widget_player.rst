@@ -21,9 +21,9 @@ entries: "express" and "full" configs. Express configs will look like this:
 .. code-block:: mpf-config
 
    widget_player:
-      event1: widget1
-      event2: widget2
-      event3: widget3
+     event1: widget1
+     event2: widget2
+     event3: widget3
 
 Full configs will look like this:
 
@@ -55,9 +55,9 @@ if that's not the current slide that's showing.
 .. code-block:: mpf-config
 
    widget_player:
-      some_event:
-         widget_1:
-            slide: slide_2
+     some_event:
+       widget_1:
+         slide: slide_2
 
 Usage in config files
 ---------------------

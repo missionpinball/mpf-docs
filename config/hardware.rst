@@ -19,8 +19,8 @@ If you intend to use MPF with physical hardware, at a minimum you'll have a
 .. code-block:: mpf-config
 
    hardware:
-      platform: fast
-      driverboards: fast
+     platform: fast
+     driverboards: fast
 
 Primary Platform Settings
 -------------------------

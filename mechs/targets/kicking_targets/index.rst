@@ -20,13 +20,14 @@ hit they kick the back in the opposite direction much like a :doc:`slingshot </m
 .. code-block:: mpf-config
 
    switches:
-      s_kicking_target:
-         number: 1
+     s_kicking_target:
+       number: 1
    coils:
-      c_kicking_target:
-         number: 1
-         default_pulse_ms: 10ms
+     c_kicking_target:
+       number: 1
+       default_pulse_ms: 10ms
    kickbacks:
-       kicking_target:
-           coil: c_kicking_target
-           switch: s_kicking_target
+     kicking_target:
+       coil: c_kicking_target
+       switch: s_kicking_target
+

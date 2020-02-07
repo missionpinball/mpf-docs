@@ -19,8 +19,8 @@ Here is an example:
 .. code-block:: mpf-config
 
    show_player:
-      some_event: your_show_name
-      some_other_event: another_show
+     some_event: your_show_name
+     some_other_event: another_show
 
 In the example above, when the event *some_event* is posted, the show called ``your_show_name`` will be played (started).
 When the event *some_other_event* is posted, the show called ``another_show`` will be played.
@@ -73,9 +73,9 @@ following config:
 .. code-block:: mpf-config
 
    show_player:
-      mode_my_mode_stopping:
-         show_1:
-            block_queue: yes
+     mode_my_mode_stopping:
+       show_1:
+         block_queue: true
 
 In the example above, when the mode called *my_mode* posts its stopping
 event, show_1 will start playing. However because this show is set to block
@@ -129,12 +129,12 @@ For example:
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         show_1:
-            manual_advance: yes
-      some_advance_event:
-         show_1:
-            action: advance
+     some_event:
+       show_1:
+         manual_advance: true
+     some_advance_event:
+       show_1:
+         action: advance
 
 In the example above, the event *some_event* will start show_1, but that show
 will stay on its first step since it's set to manually advance. Then each
@@ -168,10 +168,10 @@ For example:
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         show1:
-            show_tokens:
-               led: right_inlane
+     some_event:
+       show1:
+         show_tokens:
+           led: right_inlane
 
 In the example above, the show called "show1" will be played, but the show token called "led" in the
 show will be replaced at runtime with the value "right_inlane".

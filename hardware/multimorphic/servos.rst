@@ -23,25 +23,24 @@ all servos and and define two of them:
    p_roc:
      pd_led_boards:
        4:
-         max_servo_value: 300 # rougly maps to 2ms.       
-         use_servo_0: True
-         use_servo_1: True
-         use_servo_2: True
-         use_servo_3: True
-         use_servo_4: True
-         use_servo_5: True
-         use_servo_6: True
-         use_servo_7: True
-         use_servo_8: True
-         use_servo_9: True
-         use_servo_10: True
-         use_servo_11: True
-
+         max_servo_value: 300 # rougly maps to 2ms.
+         use_servo_0: true
+         use_servo_1: true
+         use_servo_2: true
+         use_servo_3: true
+         use_servo_4: true
+         use_servo_5: true
+         use_servo_6: true
+         use_servo_7: true
+         use_servo_8: true
+         use_servo_9: true
+         use_servo_10: true
+         use_servo_11: true
    servos:
-      servos_4_0:
-         number: 4-0
-      servos_4_1:
-         number: 4-1
+     servos_4_0:
+       number: 4-0
+     servos_4_1:
+       number: 4-1
 
 The number of your servos has to be ``id_of_your_ped_led-number``.
 In this case ``4-0`` and ``4-1`` for the first and second servo on PD-LED 4.

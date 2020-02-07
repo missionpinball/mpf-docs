@@ -110,7 +110,6 @@ In the current version of MPF, this is primarily done in the ``variable_player:`
     bumper_1_active:
       bumper_hits: 1
 
-
 The example below shows a player variable of type string being updated.  A mode carousel (mode selection by the player)
 was used by the player to select a mode ladder (a set of modes played in a sequence similar to scenes in GhostBusters).
 The apostrophes are not required but allowed.
@@ -152,7 +151,6 @@ be a special way of expressing the current player and displaying an integer valu
       widgets:
         - type: text
           text: (current_ladder) > (current_mode) > (player|ladder_scene_1)
-
 
 |
 |

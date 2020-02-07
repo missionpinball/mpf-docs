@@ -13,7 +13,6 @@ with the following config:
 
     ##! mode: custom_bonus
     #config_version=5
-
     mode:
       start_events: ball_ending     # start on ball ending process
       use_wait_queue: true          # delay ball ending

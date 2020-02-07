@@ -68,7 +68,7 @@ platform for your I2C devices and to instead use the ``smbus2`` platform, like t
 .. code-block:: mpf-config
 
     hardware:
-        i2c: smbus2
+      i2c: smbus2
 
 See the :doc:`/hardware/platform` guide for more information about setting
 device-specific default platforms versus overriding the platform for individual

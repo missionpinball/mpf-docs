@@ -24,9 +24,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    queue_event_player:
-      some_event:
-         queue_event: my_queue
-         events_when_finished: my_queue_done
+     some_event:
+       queue_event: my_queue
+       events_when_finished: my_queue_done
 
 In the example above, when the regular event *some_event* is posted, a new queue event
 called *my_queue* will be posted. After all the handlers for *my_queue* are done, the

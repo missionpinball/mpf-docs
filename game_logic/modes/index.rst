@@ -80,8 +80,8 @@ following entry in that mode's config file:
 
    ##! mode: my_mode
    variable_player:
-        right_ramp_hit:
-            score: 50000
+     right_ramp_hit:
+       score: 50000
 
 In that case the *right_ramp_hit* shot event will only award the points when
 that multiball mode is running. When it stops, that variable_player/scoring

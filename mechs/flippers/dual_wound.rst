@@ -22,12 +22,12 @@ Here's an example ``config.yaml`` with two switches added:
 .. code-block:: mpf-config
 
     switches:
-        s_left_flipper:
-            number: 1
-            tags: left_flipper
-        s_right_flipper:
-            number: 2
-            tags: right_flipper
+      s_left_flipper:
+        number: 1
+        tags: left_flipper
+      s_right_flipper:
+        number: 2
+        tags: right_flipper
 
 You can pick whatever names you want for your switches. We chose
 ``s_left_flipper`` and ``s_right_flipper``.
@@ -57,16 +57,16 @@ the power (main) winding, and one for the hold winding.
 .. code-block:: mpf-config
 
     coils:
-        c_flipper_left_main:
-            number: 0
-        c_flipper_left_hold:
-            number: 1
-            allow_enable: true
-        c_flipper_right_main:
-            number: 2
-        c_flipper_right_hold:
-            number: 3
-            allow_enable: true
+      c_flipper_left_main:
+        number: 0
+      c_flipper_left_hold:
+        number: 1
+        allow_enable: true
+      c_flipper_right_main:
+        number: 2
+      c_flipper_right_hold:
+        number: 3
+        allow_enable: true
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever names you want for your coils.
@@ -100,32 +100,32 @@ Here's what you would create based on the switches and coils we've defined so fa
 .. code-block:: mpf-config
 
     #! switches:
-    #!    s_left_flipper:
-    #!        number: 1
-    #!        tags: left_flipper
-    #!    s_right_flipper:
-    #!        number: 2
-    #!        tags: right_flipper
+    #!   s_left_flipper:
+    #!     number: 1
+    #!     tags: left_flipper
+    #!   s_right_flipper:
+    #!     number: 2
+    #!     tags: right_flipper
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: true
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
 
 4. Enabling your flippers
 -------------------------
@@ -149,34 +149,34 @@ So now the ``flippers:`` section of your config file should look like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!    s_left_flipper:
-    #!        number: 1
-    #!        tags: left_flipper
-    #!    s_right_flipper:
-    #!        number: 2
-    #!        tags: right_flipper
+    #!   s_left_flipper:
+    #!     number: 1
+    #!     tags: left_flipper
+    #!   s_right_flipper:
+    #!     number: 2
+    #!     tags: right_flipper
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: true
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+        enable_events: machine_reset_phase_3
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
+        enable_events: machine_reset_phase_3
 
 5. Configure your control system hardware
 -----------------------------------------

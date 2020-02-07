@@ -8,10 +8,9 @@ Here's an example:
 .. code-block:: mpf-config
 
    #config_version=5
-
    slide_player:
      mc_ready:
-        triangle_example:
+       triangle_example:
          - type: triangle
            color: blue
            points: 0, 0, 100, 0, 100, 100

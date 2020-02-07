@@ -23,9 +23,9 @@ Here's an example:
         grace_period: 2s
         enable_events: mode_base_started
         timer_start_events: balldevice_plunger_lane_ball_eject_success
-        auto_launch: yes
+        auto_launch: true
         balls_to_save: 1
-        debug: yes
+        debug: true
 
 <name>:
 ~~~~~~~

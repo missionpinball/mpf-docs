@@ -22,17 +22,17 @@ Example:
 .. code-block:: mpf-config
 
     track_player:
-        pause_music_track:
-            music:
-                action: pause
-                fade: 1 sec
-        resume_music_track:
-            music:
-                action: play
-        stop_sounds_on_all_tracks:
-            __all__:
-                action: stop_all_sounds
-                fade: 0.5 sec
+      pause_music_track:
+        music:
+          action: pause
+          fade: 1 sec
+      resume_music_track:
+        music:
+          action: play
+      stop_sounds_on_all_tracks:
+        __all__:
+          action: stop_all_sounds
+          fade: 0.5 sec
 
 Usage in shows
 --------------
@@ -44,19 +44,19 @@ Example:
 .. code-block:: mpf-config
 
     shows:
-        my_show_with_sound:
-            - time: 0
-              tracks:
-                 music:
-                     action: set_volume
-                     volume: 0.3
-                     fade: 0.25 sec
-            - time: 3.5
-              tracks:
-                 music:
-                     action: set_volume
-                     volume: 0.5
-                     fade: 0.25 sec
+      my_show_with_sound:
+        - time: 0
+          tracks:
+            music:
+              action: set_volume
+              volume: 0.3
+              fade: 0.25 sec
+        - time: 3.5
+          tracks:
+            music:
+              action: set_volume
+              volume: 0.5
+              fade: 0.25 sec
 
 Config Options
 --------------

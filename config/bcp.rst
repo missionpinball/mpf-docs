@@ -21,21 +21,19 @@ it if needed for a specific situation:
 .. code-block:: mpf-config
 
    bcp:
-       connections:
-           local_display:
-               host: localhost
-               port: 5050
-               type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
-               required: True
-               exit_on_close: True
-
-       servers:
-           url_style:
-               ip: 127.0.0.1
-               port: 5051
-               type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
-
-       debug: false
+     connections:
+       local_display:
+         host: localhost
+         port: 5050
+         type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+         required: true
+         exit_on_close: true
+     servers:
+       url_style:
+         ip: 127.0.0.1
+         port: 5051
+         type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+     debug: false
 
 connections:
 ------------

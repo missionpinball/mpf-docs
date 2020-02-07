@@ -31,17 +31,14 @@ In shows, the light player is used via the ``lights:`` section of a step.
 .. code-block:: mpf-config
 
    lights:
-      l_light:
-         number:
-
+     l_light:
+       number:
    shows:
-      red_color:
-         - lights:
-             l_light: red
-
+     red_color:
+       - lights:
+           l_light: red
    show_player:
-      turn_light_red_event: red_color
-
+     turn_light_red_event: red_color
    ##! test
    #! post turn_light_red_event
    #! advance_time_and_run .1
@@ -53,33 +50,30 @@ Setting multiple lights
 .. code-block:: mpf-config
 
    lights:
-      l_target1:
-         number:
-      l_target2:
-         number:
-
+     l_target1:
+       number:
+     l_target2:
+       number:
    shows:
-      rainbow:
-         - lights:
-             (leds): red
-         - lights:
-             (leds): orange
-         - lights:
-             (leds): yellow
-         - lights:
-             (leds): green
-         - lights:
-             (leds): blue
-         - lights:
-             (leds): purple
-           duration: 3s
-
+     rainbow:
+       - lights:
+           (leds): red
+       - lights:
+           (leds): orange
+       - lights:
+           (leds): yellow
+       - lights:
+           (leds): green
+       - lights:
+           (leds): blue
+       - lights:
+           (leds): purple
+         duration: 3s
    show_player:
-      play_rainbow_show_on_targets:
-         rainbow:
-            show_tokens:
-               leds: l_target1, l_target2
-
+     play_rainbow_show_on_targets:
+       rainbow:
+         show_tokens:
+           leds: l_target1, l_target2
    ##! test
    #! post play_rainbow_show_on_targets
    #! advance_time_and_run .1
@@ -101,35 +95,32 @@ Setting lights via tags
 .. code-block:: mpf-config
 
    lights:
-      l_drop1:
-         number:
-         tags: drops
-      l_drop2:
-         number:
-         tags: drops
-
+     l_drop1:
+       number:
+       tags: drops
+     l_drop2:
+       number:
+       tags: drops
    shows:
-      rainbow:
-         - lights:
-             (tag): red
-         - lights:
-             (tag): orange
-         - lights:
-             (tag): yellow
-         - lights:
-             (tag): green
-         - lights:
-             (tag): blue
-         - lights:
-             (tag): purple
-           duration: 3s
-
+     rainbow:
+       - lights:
+           (tag): red
+       - lights:
+           (tag): orange
+       - lights:
+           (tag): yellow
+       - lights:
+           (tag): green
+       - lights:
+           (tag): blue
+       - lights:
+           (tag): purple
+         duration: 3s
    show_player:
-      play_rainbow_show_via_tag:
-         rainbow:
-            show_tokens:
-               tag: drops
-
+     play_rainbow_show_via_tag:
+       rainbow:
+         show_tokens:
+           tag: drops
    ##! test
    #! post play_rainbow_show_via_tag
    #! advance_time_and_run .1
@@ -138,7 +129,6 @@ Setting lights via tags
    #! advance_time_and_run 1
    #! assert_light_color l_drop1 orange
    #! assert_light_color l_drop2 orange
-
 
 In ``play_rainbow_show_via_tag`` we reference (two) lights via the tag
 ``drops``.

@@ -28,35 +28,34 @@ switches. Here’s an example section:
 .. code-block:: mpf-config
 
    switches:
-      flipper_lwr_eos:
-         number: SF1
-      flipper_lwr:
-         number: SF6
-      fire_r:
-         number: S12
-         tags: plunger
-      start:
-         number: S13
-         tags: start
-      plumbbob:
-         number: S14
-         tags: tilt
-      outlane_l:
-         number: S16
-         tags: playfield_active
-         debounce: normal
-      inlane_l:
-         number: S17
-         tags: playfield_active
-         debounce: quick
-      trough1:
-         number: S81
-         type: 'NC'
-      shooter_lane:
-         number: S82
-         events_when_activated: ball_in
-         events_when_deactivated: ball_out
-
+     flipper_lwr_eos:
+       number: SF1
+     flipper_lwr:
+       number: SF6
+     fire_r:
+       number: S12
+       tags: plunger
+     start:
+       number: S13
+       tags: start
+     plumbbob:
+       number: S14
+       tags: tilt
+     outlane_l:
+       number: S16
+       tags: playfield_active
+       debounce: normal
+     inlane_l:
+       number: S17
+       tags: playfield_active
+       debounce: quick
+     trough1:
+       number: S81
+       type: 'NC'
+     shooter_lane:
+       number: S82
+       events_when_activated: ball_in
+       events_when_deactivated: ball_out
 
 Each subsection of ``switches:`` is a switch name, which is how you
 refer to the switch in your game code. Then there are several

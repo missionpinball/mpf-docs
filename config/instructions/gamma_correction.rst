@@ -49,9 +49,9 @@ temporary addition to your machine config to add a slide player, like this:
 .. code-block:: mpf-config
 
    slide_player:
-      mode_attract_started:
-         dmd_gamma_test:
-            priority: 10000000
+     mode_attract_started:
+       dmd_gamma_test:
+         priority: 10000000
 
 This will just show the gamma test slide at a crazy high priority so it shows
 on top of everything else. (Remember if your DMD is not your default display,

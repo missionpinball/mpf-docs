@@ -25,18 +25,15 @@ One common approach for wizard modes is to have a counter that tracks shots to q
     winterhascome:
       enable_events: logicblock_winteriscoming_count_complete
       start_events: achievement_winterhascome_state_enabled
-
   counters:
     winteriscoming_count:
       starting_count: 0
       count_complete_value: 3
       count_events: winteriscoming_shot_hit
-
   ##! mode: winterhascome
   # mode: winterhascome
   mode:
     start_events: achievement_winterhascome_state_started
-
   ##! test
   #! start_game
   #! post mode_base_started

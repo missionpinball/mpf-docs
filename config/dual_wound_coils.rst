@@ -20,22 +20,20 @@ Here's an example:
 .. code-block:: mpf-config
 
    coils:
-       c_hold:
-           number:
-           allow_enable: True
-       c_power:
-           number:
-           default_pulse_ms: 20
-
+     c_hold:
+       number:
+       allow_enable: true
+     c_power:
+       number:
+       default_pulse_ms: 20
    switches:
-       s_eos:
-           number:
-
+     s_eos:
+       number:
    dual_wound_coils:
-       c_dual_wound:
-           hold_coil: c_hold
-           main_coil: c_power
-           eos_switch: s_eos
+     c_dual_wound:
+       hold_coil: c_hold
+       main_coil: c_power
+       eos_switch: s_eos
 
 In the configuration above, a new coil called ``c_dual_wound`` is created that,
 when enabled, would energize both the ``c_hold`` and ``c_power`` coils. Then when

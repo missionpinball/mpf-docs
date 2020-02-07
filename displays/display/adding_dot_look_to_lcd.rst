@@ -17,14 +17,13 @@ The final sections of the machine config to make this happen are here:
       dmd:
         width: 120
         height: 90
-        default: yes
-
+        default: true
     slides:
       window_slide:
         - type: display
           effects:
-           - type: color_dmd
-             pixel_size: .5
+            - type: color_dmd
+              pixel_size: .5
           width: 800
           height: 600
       dmd_slide:
@@ -42,7 +41,6 @@ The final sections of the machine config to make this happen are here:
           color: red
           y: top
           anchor_y: top
-
     slide_player:
       init_done:
         window_slide:
@@ -73,7 +71,7 @@ resolution of the monitor or LCD where it's being shown.
       dmd:
         width: 120
         height: 90
-        default: yes
+        default: true
 
 In the example above, this is 800x600, but on your actual machine, it will
 probably be something like 1024x768, 1280x1024, 1600x1200, etc.
@@ -118,8 +116,8 @@ render the virtual DMD into the window.
       window_slide:
         - type: display
           effects:
-           - type: color_dmd
-             pixel_size: .5
+            - type: color_dmd
+              pixel_size: .5
           width: 800
           height: 600
 
@@ -148,21 +146,21 @@ We're calling our first slide "dmd_slide":
 .. code-block:: mpf-config
 
    slides:
-      dmd_slide:
-        - type: text
-          text: DOTS!
-        - type: rectangle
-          width: 120
-          height: 30
-          color: orange
-          y: 0
-          anchor_y: bottom
-        - type: rectangle
-          width: 120
-          height: 30
-          color: red
-          y: top
-          anchor_y: top
+     dmd_slide:
+       - type: text
+         text: DOTS!
+       - type: rectangle
+         width: 120
+         height: 30
+         color: orange
+         y: 0
+         anchor_y: bottom
+       - type: rectangle
+         width: 120
+         height: 30
+         color: red
+         y: top
+         anchor_y: top
 
 There's nothing special about this slide. We just added a text widget and
 two colored rectangles.
