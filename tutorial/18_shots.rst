@@ -404,7 +404,7 @@ mode configuration file for that mode.
 Open up the ``mode2.yaml`` file and add the following lines. (We'll explain
 them step-by-step next.)
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: mode2
    #config_version=5
@@ -430,6 +430,11 @@ them step-by-step next.)
    variable_player:
      my_first_shot_hit:
        score: 1
+   ##! test
+   #! start_game
+   #! start_mode mode2
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MODE 2 STARTED"
 
 Remember that you also have to go back into your machine-wide config file to add the new
 ``- mode2`` entry to your ``modes:`` section. While we're in there, let's also add

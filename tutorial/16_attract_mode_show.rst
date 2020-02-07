@@ -57,7 +57,7 @@ that mode's ``/shows`` folder since it keeps everything from one mode together.
 Here's a complete sample ``attract_display_loop.yaml``
 file you can use as a starting point:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! show: attract_display_loop
    #show_version=5
@@ -126,6 +126,18 @@ file you can use as a starting point:
            font_size: 50
            y: 40%
 
+   ##! mode: attract
+   #! show_player:
+   #!   mode_attract_started: attract_display_loop
+   ##! test
+   #! assert_text_on_top_slide "YOU ARE AWESOME"
+   #! advance_time_and_run 3
+   #! assert_text_on_top_slide "PRESS START"
+   #! assert_text_on_top_slide "FREE PLAY"
+   #! advance_time_and_run 3
+   #! assert_text_on_top_slide "MISSION PINBALL"
+   #! advance_time_and_run 3
+   #! assert_text_on_top_slide "LAST GAME"
 
 First, notice the first line is ``#show_version=5``. This is similar to the
 config_version in config files, except since this is a show file, it's "show_version".
@@ -174,13 +186,20 @@ this show to play whenever the attract mode is running. To do this, go
 back to the config file for the attract mode (
 ``<your_machine>/modes/attract/config/attract.yaml``) and add the following:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    ##! mode: test_mode
-    #config_version=5
+   ##! show: attract_display_loop
+   #! - duration: .1
+   #!   events: ok_super
+   ##! mode: attract
+   #config_version=5
 
-    show_player:
-      mode_attract_started: attract_display_loop
+   show_player:
+     mode_attract_started: attract_display_loop
+   ##! test
+   #! mock_event ok_super
+   #! advance_time_and_run .1
+   #! assert_event_called ok_super
 
 Note that we don't need a ``mode:`` section here because those settings
 are already configured in the default attract mode settings folder
@@ -207,7 +226,7 @@ entry from your ``slide_player:`` section.
 
 OLD machine-wide config (partial):
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    # old
    slides:
@@ -228,10 +247,12 @@ OLD machine-wide config (partial):
    slide_player:
      init_done: welcome_slide
      mode_attract_started: attract_started
+   ##! test
+   #! assert_slide_on_top attract_started
 
 NEW machine-wide config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      welcome_slide:
@@ -246,6 +267,8 @@ NEW machine-wide config:
 
    slide_player:
      init_done: welcome_slide
+   ##! test
+   #! assert_slide_on_top welcome_slide
 
 The reason we remove this is because it's not necessary now that we have our new
 attract mode display show running.

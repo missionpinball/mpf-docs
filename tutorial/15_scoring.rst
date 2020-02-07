@@ -108,7 +108,13 @@ For example, try changing your scoring section to this:
 
 .. code-block:: mpf-config
 
+   # we will initially set the value to 0 when the machine starts up
+   player_vars:
+     potato:
+       initial_value: 0
+
    ##! mode: base
+   # in your base mode (modes/base/config/base.yaml)
    variable_player:
      s_right_inlane_active:
        score: 100
@@ -136,9 +142,13 @@ So now that we're tracking this potato variable, let's add it to the display. To
 the slide that is show when the base mode starts. (So we're going to be editing ``<your_machine>/modes/config/base.yaml``
 again. Add the potato text entry, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! player_vars:
+   #!   potato:
+   #!     initial_value: 0
    ##! mode: base
+   # in your base mode (modes/base/config/base.yaml)
    slide_player:
      mode_base_started:
        widgets:
@@ -164,6 +174,13 @@ again. Add the potato text entry, like this:
          - type: text
            text: 'POTATO VALUE: (potato)'
            y: 40%
+   ##! test
+   #! start_game
+   #! start_mode base
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "PLAYER 1"
+   #! assert_text_on_top_slide "BALL 1"
+   #! assert_text_on_top_slide "POTATO VALUE: 0"
 
 Notice that we put ``text: 'POTATO VALUE: (potato)'`` in quotes. That's because we actually want to show the colon as part
 of the text that's displayed on the screen. However colons are important in YAML files. So if we made our entry

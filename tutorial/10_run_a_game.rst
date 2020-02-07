@@ -12,23 +12,43 @@ once the game is over.
 We know that at this point, you just want to run your game. The
 problem is if we run it now, the display will continue to show "ATTRACT
 MODE" throughout the entire game since we haven't configured it for
-anything else. So let's make a quick addition to the ``slide_player:``
+anything else.
+So let's make a quick addition to the ``slide_player:``
 section of your config so it will show the player and ball number when
 a game is in progress. (Later in this tutorial we'll revisit this and
-explain what's actually going on. For now just make this change.) In
+explain what's actually going on. For now just make this change.)
+In
 your config file, add a ``ball_started:`` entry with the following
 information. Your complete ``slide_player:`` section should now look
 like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-      init_done: welcome_slide
-      mode_attract_started: attract_started
-      ball_started:
-        widgets:
-          type: text
-          text: PLAYER (number) BALL (ball)
+   #! slides:
+   #!   welcome_slide:
+   #!     widgets:
+   #!       - type: text
+   #!         text: PINBALL!
+   #!         font_size: 50
+   #!         color: red
+   #!       - type: rectangle
+   #!         width: 240
+   #!         height: 60
+   #!   attract_started:
+   #!     widgets:
+   #!       - text: ATTRACT MODE
+   #!         type: text
+   slide_player:
+     init_done: welcome_slide
+     mode_attract_started: attract_started
+     ball_started:
+       widgets:
+         type: text
+         text: PLAYER (number) BALL (ball)
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top attract_started
+   #! assert_text_on_top_slide "ATTRACT MODE"
 
 2. Change your flipper config so they don't automatically enable on machine boot
 --------------------------------------------------------------------------------
