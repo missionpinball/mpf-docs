@@ -18,18 +18,31 @@ which is an object with `enabled`, `completed`, and `value` attributes. Note the
 difference in accessing the logic block state as a dynamic value vs. placeholder
 text:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  ##! mode: my_mode
-  variable_player:
-    counter_hit:
-      score: 100 * device.counters.logic_block_1.value
-                   # The logic block stores the count as the 'value' attribute
-  widgets:
-    counter_widget:
-      - type: text
-        text: (logic_block_1_state) Hits!
-              # The player variable is the count value itself
+   ##! mode: my_mode
+   counters:
+     logic_block_1:
+       count_events: count_up_event
+
+   variable_player:
+     counter_logic_block_1_hit:  # this is triggered when the counter changes
+       my_widget_placeholder: 100 * device.counters.logic_block_1.value
+      # The logic block stores the count as the 'value' attribute
+   widgets:
+     counter_widget:
+       - type: text
+         text: (my_widget_placeholder) Hits!
+     # This placeholder is set by variable_player when the counter changes
+   #! widget_player:
+   #!   show_widget_event: counter_widget
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! post show_widget_event
+   #! post count_up_event
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "100 Hits!"
 
 In this example we persist the value of the counter in the player variable
 ``counter_hit`` to use it in a slide.

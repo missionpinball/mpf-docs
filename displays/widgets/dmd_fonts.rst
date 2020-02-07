@@ -9,12 +9,19 @@ widgets.
 If you don't use one of these fonts on your DMD and just show some text, here's
 what the results look like:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide:
        - type: text
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_default.png
 
@@ -40,7 +47,9 @@ style: big
    #!   show_slide_event: my_slide
    ##! test
    #! post show_slide_event
-   #! advance_time_and_run 1
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_big.png
 
@@ -60,7 +69,9 @@ style: med
    #!   show_slide_event: my_slide
    ##! test
    #! post show_slide_event
-   #! advance_time_and_run 1
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_med.png
 
@@ -84,6 +95,8 @@ three of these fonts (like any font) can be used on a mono or color DMD.
    #!   show_slide_event: my_slide
    ##! test
    #! post show_slide_event
-   #! advance_time_and_run 1
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_small.png

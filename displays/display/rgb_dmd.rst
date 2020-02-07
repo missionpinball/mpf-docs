@@ -44,16 +44,19 @@ this:
 Next, add the DMD display to your list of displays in your machine-wide config
 file:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    displays:
-      window:
-        width: 600
-        height: 200
-      dmd:
-        width: 128
-        height: 32
-        default: true
+   displays:
+     window:
+       width: 600
+       height: 200
+     dmd:
+       width: 128
+       height: 32
+       default: true
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
 
 The example above contains two displays. The first is named "window" and
 has a size of 600x200. This will be the display that shows up on the computer
@@ -81,12 +84,15 @@ You can make the width and height anything you want. In this case we're just
 configuring it to be 600x200 with a window title of "Mission Pinball
 Framework".
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    window:
-      width: 600
-      height: 200
-      title: Mission Pinball Framework
+   window:
+     width: 600
+     height: 200
+     title: Mission Pinball Framework
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
 
 Check out :doc:`Step 2. of the LCD guide <lcd>` for more details on this
 window section, and be sure to check out all the window options in the
@@ -113,10 +119,13 @@ one already), and then create an entry for the slide that we want to show. In
 this case, we've decided to name that slide "window_slide_1". (Of course you can
 call this slide whatever you want.)
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slides:
-      window_slide_1:
+   slides:
+     window_slide_1:
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
 
 Next we have to add some widgets to that slide. (Refer to the
 :doc:`documentation on widgets </displays/widgets/index>` if you're not familiar
@@ -127,8 +136,16 @@ with a :doc:`color_dmd effect </displays/widgets/display/effects>`
 which is a widget which renders a logical display onto a slide in a way that
 makes it look like a DMD:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     width: 600
+   #!     height: 200
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
    slides:
      window_slide_1:
        - type: display
@@ -136,6 +153,14 @@ makes it look like a DMD:
            - type: color_dmd
          width: 512
          height: 128
+   #! slide_player:
+   #!   show_slide_event:
+   #!     window_slide_1:
+   #!       target: window
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top window_slide_1 window
 
 Again, there are lots of options here. Note that we're adding a ``height:`` and
 ``width:`` of 512x128. This is the on-screen pixel size of the DMD as it will
@@ -159,8 +184,16 @@ Next, we also added two more widgets to this slide—a text widget with the
 title of the machine, and a gray rectangle that's slightly larger than the DMD
 to give it a nice border.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     width: 600
+   #!     height: 200
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
    slides:
      window_slide_1:
        - type: display
@@ -178,6 +211,14 @@ to give it a nice border.
          width: 514
          height: 130
          color: 444444
+   #! slide_player:
+   #!   show_slide_event:
+   #!     window_slide_1:
+   #!       target: window
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top window_slide_1 window
 
 4. Configure the slide to show when MPF starts
 ----------------------------------------------
@@ -186,12 +227,40 @@ Now we have a nice slide with the virtual DMD on it, but if you run MPF, you
 still won't see it because we didn't tell MPF to show that slide in the window.
 So that's what we're doing here:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-      init_done:
-        window_slide_1:
-          target: window
+   #! displays:
+   #!   window:
+   #!     width: 600
+   #!     height: 200
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
+   #! slides:
+   #!   window_slide_1:
+   #!     - type: display
+   #!       effects:
+   #!         - type: color_dmd
+   #!       width: 512
+   #!       height: 128
+   #!     - type: text
+   #!       text: MISSION PINBALL FRAMEWORK
+   #!       anchor_y: top
+   #!       y: top-3
+   #!       font_size: 30
+   #!       color: white
+   #!     - type: rectangle
+   #!       width: 514
+   #!       height: 130
+   #!       color: 444444
+   slide_player:
+     init_done:
+       window_slide_1:
+         target: window
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top window_slide_1 window
 
 If you don't have a slide_player: entry in your machine-wide config, go ahead
 and add it now. Then create an entry for the :doc:`/events/init_done` event.

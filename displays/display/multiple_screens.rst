@@ -29,7 +29,7 @@ The simplest solution to this problem is to extend the MC window to span both
 (or more) screens.
 This can be achieved using the following config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    kivy_config:
      kivy:
@@ -53,34 +53,37 @@ This can be achieved using the following config:
        show_cursor: true
        resizable: false
        rotation: 0
-     displays:
-       display1:
+   displays:
+     display1:
+       width: 1920
+       height: 1080
+     display2:
+       width: 1920
+       height: 1080
+     combined_display:
+       width: 3840
+       height: 1080
+   slides:
+     base_slide:
+       - type: display
+         source_display: display1
          width: 1920
          height: 1080
-       display2:
+         x: left
+         anchor_x: left
+       - type: display
+         source_display: display2
          width: 1920
          height: 1080
-       combined_display:
-         width: 3840
-         height: 1080
-     slides:
+         x: right
+         anchor_x: right
+   slide_player:
+     mc_ready:
        base_slide:
-         - type: display
-           source_display: display1
-           width: 1920
-           height: 1080
-           x: left
-           anchor_x: left
-         - type: display
-           source_display: display2
-           width: 1920
-           height: 1080
-           x: right
-           anchor_x: right
-     slide_player:
-       mc_ready:
-         base_slide:
-           target: combined_display
+         target: combined_display
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top base_slide combined_display
 
 Use ``width`` and ``height`` to set the size of the window.
 ``left`` and ``top`` are used to position the window.
