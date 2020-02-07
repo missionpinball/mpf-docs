@@ -230,11 +230,13 @@ for it by configuring
 Amplifying PD-LED channels with FETs
 ------------------------------------
 
-PD-LED drives LEDs with a current of 22mA.
-However, it cannot exceed its operating voltage and can only drive very few
-LEDs at once.
-If you want to drive more than a few LEDs on one channel (e.g. GIs or long
-strips) you can connect a FET (as stated in the manual).
+PD-LED drives LEDs with a current of 22mA. Also, it cannot exceed its 
+output voltage of 3.3 V effectively limmiting it to s a single LED
+per channel. If you want to drive more LEDs on a channel (e.g. GIs or long
+strips) you can connect a MOSFET (as stated in the manual). Choose a 
+logic-level N-Channel MOSFET with an Output Characteristics curve showing
+current saturation meeting the needs of the strip with a voltage 
+between the gate and source (VGS) of 3.3 V or less. 
 This is an example of such a circuit:
 
 .. image:: /hardware/images/FET-LEDs.png
