@@ -29,28 +29,38 @@ style: big
 
 `big` is 10 pixels tall.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide:
        - type: text
          style: big
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run 1
 
 .. image:: /displays/images/dmd_big.png
 
 style: med
 --------------
 
-`med` is 7 pixels tall.
+`medium` is 7 pixels tall.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide:
        - type: text
-         style: med
+         style: medium
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run 1
 
 .. image:: /displays/images/dmd_med.png
 
@@ -62,7 +72,7 @@ style: small
 Notice that this font has a color set and we're using it with a Color DMD. All
 three of these fonts (like any font) can be used on a mono or color DMD.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide:
@@ -70,5 +80,10 @@ three of these fonts (like any font) can be used on a mono or color DMD.
          style: small
          text: MISSION
          color: 00ffcc
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run 1
 
 .. image:: /displays/images/dmd_small.png
