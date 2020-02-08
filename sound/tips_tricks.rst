@@ -146,17 +146,19 @@ The basic concept is to add an event to the video that is triggered when the vid
 one when the video is stopped.  Those events are then added to the ``track_player`` section of
 your config file:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    track_player:
-      my_video_is_playing:
-        music:
-          action: pause
-          fade: 1 sec
-      my_video_has_stopped:
-        music:
-          action: play
-          fade: 1 sec
+   track_player:
+     my_video_is_playing:
+       music:
+         action: pause
+         fade: 1 sec
+     my_video_has_stopped:
+       music:
+         action: play
+         fade: 1 sec
+   ##! test
+   #! advance_time_and_run .1
 
 That's all there is to it.  Now whenever the ``my_video_is_playing`` MPF event is posted, the
 music track will be paused.  It will be resumed when the ``my_video_has_stopped`` MPF event
@@ -176,7 +178,7 @@ double hits within the configured time period. Instead of using the target hit e
 sound, the target hit event will trigger the counter which in turn will post a hit event that can be
 used to trigger the sound. Here is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    coils:
      reset_drop_targets:
@@ -209,12 +211,18 @@ used to trigger the sound. Here is an example:
 
    sounds:
      drop_target_sound:
-       file: blip1.wav
-       track: sfx
+       file: blip1.ogg
        volume: 0.75
 
    sound_player:
      drop_target_counter_hit:
        drop_target_sound:
          action: play
+   ##! asset: sounds/blip1.ogg=sounds/sound.ogg
+   ##! test
+   #! advance_time_and_run .1
 
+
+Alternatively, you could also define a separate track which allows only one
+concurrent sound at a time.
+See :doc:`tracks` for details.

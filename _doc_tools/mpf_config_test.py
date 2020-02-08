@@ -58,7 +58,7 @@ class CodeBlockVisitor(docutils.nodes.NodeVisitor):
         self.app = app
         self.unit_tests = []
 
-    def test_config(self, config_text, source, use_mc):
+    def test_config(self, config_text, source, use_mc, source_file):
         if not MpfDocTestCase:
             raise AssertionError("mpf not loaded")
 
@@ -68,21 +68,22 @@ class CodeBlockVisitor(docutils.nodes.NodeVisitor):
         if use_mc and not MpfIntegrationDocTestCase:
             raise AssertionError("mpf-mc not loaded")
 
+        base_dir = os.path.dirname(os.path.abspath(source_file))
         if use_mc:
-            testcase = MpfIntegrationDocTestCase(config_text)
+            testcase = MpfIntegrationDocTestCase(config_text, base_dir=base_dir)
         else:
             if "slides:" in config_text or "widgets:" in config_text or "window:" in config_text or \
                     "displays:" in config_text:
                 print("{} should use mpf-mc-config instead of mpf-config because it contains MC elements".format(source))
-            testcase = MpfDocTestCase(config_text)
+            testcase = MpfDocTestCase(config_text, base_dir=base_dir)
         testcase._testMethodDoc = source
         self.unit_tests.append(testcase)
 
     def visit_literal_block(self, node):
         if node.attributes.get("language") == "mpf-config":
-            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), False)
+            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), False, node.source)
         elif node.attributes.get("language") == "mpf-mc-config":
-            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), True)
+            self.test_config(node.rawsource, "File: {} Line: {}".format(node.source, node.line), True, node.source)
 
     def unknown_visit(self, node: docutils.nodes.Node) -> None:
         """Called for all other node types."""
