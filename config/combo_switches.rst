@@ -75,26 +75,42 @@ config file and it will overwrite this default config.
 
 Here is an example of using flipper_cancel to cancel a show:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  shows:
-    mode_intro:
-      - duration: 5
-        slides:
-          mode_intro_slide:
-            widgets:
-              - type: text
-                text: Hit 50 switches to light jackpot
-                color: white
-                font_size: 100
-  show_player:
-    start_mode_intro_show:
-      mode_intro:
-        loops: 0
-        events_when_stopped: mode_intro_show_ended
-    flipper_cancel:
-      mode_intro:
-        action: stop
+   switches:
+     s_flipper_left:
+       tags: left_flipper
+       number:
+     s_flipper_right:
+       tags: right_flipper
+       number:
+
+   shows:
+     mode_intro:
+       - duration: 5
+         slides:
+           mode_intro_slide:
+             widgets:
+               - type: text
+                 text: Hit 50 switches to light jackpot
+                 color: white
+                 font_size: 100
+   show_player:
+     start_mode_intro_show:
+       mode_intro:
+         loops: 0
+         events_when_stopped: mode_intro_show_ended
+     flipper_cancel:
+       mode_intro:
+         action: stop
+   ##! test
+   #! post start_mode_intro_show
+   #! advance_time_and_run .1
+   #! assert_slide_active mode_intro_slide
+   #! hit_switch s_flipper_left
+   #! hit_switch s_flipper_right
+   #! advance_time_and_run .1
+   #! assert_slide_not_active mode_intro_slide
 
 The start_mode_intro_show will play for 5 seconds unless both flipper buttons are pressed which will cancel the show.
 
