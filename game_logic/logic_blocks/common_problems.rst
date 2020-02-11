@@ -10,7 +10,7 @@ My block only works once. Why?
 This is the default configuration of all logic blocks.
 To change it you first need to set ``reset_when_complete`` to ``True``.
 As a result you blocks will reset when they reach the final step.
-However, that will not be enough in most cases because ``disable-on-complete``
+However, that will not be enough in most cases because ``disable_on_complete``
 is ``True`` by default.
 Unless you got some enable logic you probably want to set that to ``False``.
 
