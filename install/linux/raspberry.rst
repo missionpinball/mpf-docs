@@ -101,14 +101,16 @@ Now you find the contents of your stick in /mnt.
 To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have to put this in your
 machine/config/config.yaml:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  window:
-    width: 1280
-    height: 800
-  kivy_config:
-    graphics:
-      fbo: force-hardware
+   window:
+     width: 1280
+     height: 800
+   kivy_config:
+     graphics:
+       fbo: force-hardware
+   ##! test
+   #! advance_time_and_run .1
 
 More or less important last steps:
 ----------------------------------

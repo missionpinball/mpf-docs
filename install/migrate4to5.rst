@@ -231,8 +231,17 @@ Here is an example slide config from 0.33 using ``dmd`` and ``color_dmd`` widget
 
 In 0.50 the above example becomes:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     height: 200
+   #!     width: 600
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
+   #!     round_anchor_x: left
    slides:
      dmd_slide:
        - type: display
@@ -256,6 +265,17 @@ In 0.50 the above example becomes:
              dots_y: 32
              shades: 4
              gain: 1.5
+   #! slide_player:
+   #!   show_slide1:
+   #!     dmd_slide:
+   #!       target: window
+   #!   show_slide2:
+   #!     color_dmd_slide:
+   #!       target: window
+   ##! test
+   #! post show_slide1
+   #! post show_slide2
+   #! advance_time_and_run .1
 
 Be sure to specify the ``dots_x`` and ``dots_y`` settings in your new config (the number of dots that will
 be drawn in the dmd effects). These values used to be automatically set  based on the dimensions of the display
@@ -326,7 +346,7 @@ Example in MPF 0.33 using slide frames:
 
 Now the same configuration in MPF 0.50 becomes:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
      default:
@@ -380,6 +400,12 @@ Now the same configuration in MPF 0.50 becomes:
      show_frame_text2:
        frame1_text2:
          target: frame1
+   ##! test
+   #! post show_slide1
+   #! post show_slide2
+   #! post show_frame_text
+   #! post show_frame_text2
+   #! advance_time_and_run .1
 
 To modify your configs, do the following steps for each ``slide_frame`` widget:
 

@@ -4,8 +4,12 @@ Overwriting Tilt Slides
 The :doc:`tilt mode <index>` comes with very basic slides.
 You can overwrite them using the following config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! switches:
+   #!   s_tilt:
+   #!     number:
+   #!     tags: tilt_warning
    ##! mode: tilt
    # in your modes/config/tilt.yaml
    slides:
@@ -13,7 +17,7 @@ You can overwrite them using the following config:
      tilt_warning_1:
        widgets:
          - type: text
-           text: WARNING
+           text: "STOP IT"
        expire: 1s
      tilt_warning_2:
        widgets:
@@ -22,7 +26,7 @@ You can overwrite them using the following config:
            y: top-2
            anchor_y: top
          - type: text
-           text: WARNING
+           text: "SERIOUSLY STOP IT"
            y: top-18
            anchor_y: top
            expire: 1s
@@ -30,6 +34,19 @@ You can overwrite them using the following config:
      tilt:
        - type: text
          text: TILT
+   ##! test
+   #! start_game
+   #! post slam_tilt
+   #! advance_time_and_run .1
+   #! assert_mode_running tilt
+   #! hit_and_release_switch s_tilt
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "STOP IT"
+   #! advance_time_and_run 2
+   #! assert_text_not_on_top_slide "STOP IT"
+   #! hit_and_release_switch s_tilt
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "SERIOUSLY STOP IT"
 
 By setting the ``_overwrite: true`` you will overwrite the complete ``slides:``
 section of the built-in tilt mode.
