@@ -173,7 +173,7 @@ Serial LEDs on the PD-LED
 Starting with PD-LED v2 you can use the PD-LED to drive serial LEDs.
 To enable a serial LEDs you need to configure your PD-LED board in your
 ``p_roc`` section.
-Assuming your PD-LED has the ID 4 you can use the following config to enable
+Assuming your PD-LED has the address 4 you can use the following config to enable
 all serial LEDs and and define a few:
 
 .. code-block:: mpf-config
@@ -189,16 +189,16 @@ all serial LEDs and and define a few:
          use_ws281x_2: true
    lights:
      l_serial_chain_0_first:
-       number: 8-100-101-102
+       number: 4-100-101-102
        subtype: led
      l_serial_chain_0_second:
-       number: 8-103-104-105
+       number: 4-103-104-105
        subtype: led
      l_serial_chain_1_first:
-       number: 8-250-251-252
+       number: 4-250-251-252
        subtype: led
      l_serial_chain_2_first:
-       number: 8-400-401-402
+       number: 4-400-401-402
        subtype: led
 
 LED number:
