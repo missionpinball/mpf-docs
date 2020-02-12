@@ -44,6 +44,8 @@ machine-wide config file, like this:
 
     hardware:
       platform: fast
+
+    fast:
       driverboards: fast
 
 You also need to configure the `driverboards:` entry for what kind of

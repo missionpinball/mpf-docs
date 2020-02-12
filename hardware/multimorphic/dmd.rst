@@ -152,6 +152,7 @@ on the window and slide settings used in this machine config.
 
    hardware:
      platform: p_roc
+   p_roc:
      driverboards: pdb
    displays:
      window:  # on screen window

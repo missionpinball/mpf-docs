@@ -44,6 +44,8 @@ For the P-ROC:
 
    hardware:
      platform: p_roc
+
+   p_roc:
      driverboards: pdb
 
 For the P3-ROC:
@@ -52,6 +54,8 @@ For the P3-ROC:
 
    hardware:
      platform: p3_roc
+
+   p_roc:
      driverboards: pdb
 
 Note that if you're using a P-ROC with an existing machine, then your driver

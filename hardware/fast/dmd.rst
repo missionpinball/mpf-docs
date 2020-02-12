@@ -106,9 +106,9 @@ on the window and slide settings used in this machine config.
 
    hardware:
      platform: fast
-     driverboards: fast
    fast:
      ports: com3, com4, com5  # be sure to change this to your actual ports
+     driverboards: fast
    displays:
      window:  # on screen window
        width: 600
