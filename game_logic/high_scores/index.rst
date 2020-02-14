@@ -30,7 +30,7 @@ to use the high score mode without entering initials.
 
 This is an example (for machines with display):
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: my_mode
    #! variable_player:
@@ -83,14 +83,14 @@ This is an example (for machines with display):
      _overwrite: true
      high_score_enter_initials:
        - type: text
-         style: tall_title
+         style: big
          font_size: 18
          text: PLAYER (player_num)
          color: ffff00
          x: 105
          y: 90
        - type: text
-         style: tall_title
+         style: big
          font_size: 18
          text: (award)
          color: f0f0f0
@@ -100,7 +100,7 @@ This is an example (for machines with display):
          initial_char: A
          dynamic_x: false
          key: high_score
-         style: tall_title
+         style: big
          font_size: 18
          max_chars: 3
          x: 105
@@ -110,7 +110,7 @@ This is an example (for machines with display):
          select_event: sw_start
          color: ff0000
        - type: text
-         style: tall_title
+         style: big
          text: '<       >'
          font_size: 18
          x: 105
@@ -120,7 +120,7 @@ This is an example (for machines with display):
          text: ''
          key: high_score
          font_size: 18
-         style: tall_title
+         style: big
          x: 105
          y: 50
          color: ff00ff
@@ -139,7 +139,7 @@ This is an example (for machines with display):
        - type: text
          text: (player_name)
          font_size: 18
-         style: tall_title
+         style: big
          anchor_y: middle
          anchor_x: middle
          x: middle
@@ -157,13 +157,13 @@ This is an example (for machines with display):
        - type: text
          text: (award)
          font_size: 18
-         style: tall_title
+         style: big
          x: 105
          y: 110
          color: 0000ff
        - type: text
          text: (value)
-         style: tall_title
+         style: big
          x: 105
          y: 30
          color: 4040FF
@@ -218,7 +218,7 @@ Additionally, there will be ``loop1_label``, ``loop1_value`` and
 scores.
 This is an example of an attract mode which shows high scores:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    # in your machine wide config file
    widget_styles:
@@ -310,6 +310,8 @@ This is an example of an attract mode which shows high scores:
            text: (machine|loops1_value)
            style: attract_mode_high_score_display_score
            y: top-600
+   ##! test
+   #! assert_mode_running attract
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
