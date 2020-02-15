@@ -13,7 +13,7 @@ representation of a blank canvas that holds graphical content. They are logical 
 We will need to define and configure five displays for this layout: one that covers the entire window area, and
 four smaller ones that will each be used for one of the four smaller quadrant displays.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    window:
@@ -56,8 +56,24 @@ widget will be set to the corresponding display name that we want to display in 
    While the display widgets will automatically scale the display contents to fit in the widget boundaries, it is
    recommended you use the same size display widget as the source display for the best visual results.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     width: 1280
+   #!     height: 720
+   #!   upper_left:
+   #!     width: 580
+   #!     height: 260
+   #!   upper_right:
+   #!     width: 580
+   #!     height: 260
+   #!   lower_left:
+   #!     width: 580
+   #!     height: 260
+   #!   lower_right:
+   #!     width: 580
+   #!     height: 260
    slides:
      layout_4_mini:
        background_color: red
@@ -115,7 +131,7 @@ is just as simple as creating slides and setting their target value to the name 
 them. Here is our example from the previous steps that has now been extended to show a simple slide in each of the
 four quadrants:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    window:
