@@ -49,10 +49,24 @@ config files when you enter things that take action on events.
 For example, here's a section of a config file that would show a slide called
 "lets_go" when the *ball_started* event was posted:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   lets_go:
+   #!     - type: text
+   #!       text: "MPF IS AWESOME"
    slide_player:
      ball_started: lets_go
+     ball_ended:
+       lets_go:
+         action: remove
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MPF IS AWESOME"
+   #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MPF IS AWESOME"
 
 The example above will show that slide any time that the *ball_started* event
 was posted, regardless of what the values of the parameters are.
@@ -63,10 +77,24 @@ have certain values.
 
 For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   first_ball_intro:
+   #!     - type: text
+   #!       text: "FIRST BALL"
    slide_player:
      ball_started{ball==1}: first_ball_intro
+     ball_ended:
+       first_ball_intro:
+         action: remove
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "FIRST BALL"
+   #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_text_not_on_top_slide "FIRST BALL"
 
 In the above example, the slide "first_ball_intro" will only be posted when
 the *ball_started* AND when the value of ball is 1. (Since this entry doesn't
@@ -75,11 +103,30 @@ any player.)
 
 Of course you can use multiple entries with different values, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   first_ball_intro:
+   #!     - type: text
+   #!       text: "FIRST BALL"
+   #!   lets_go:
+   #!     - type: text
+   #!       text: "MPF IS AWESOME"
    slide_player:
      ball_started{ball==1}: first_ball_intro
      ball_started{ball>1}: lets_go
+     ball_ended:
+       first_ball_intro:
+         action: remove
+       lets_go:
+         action: remove
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "FIRST BALL"
+   #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MPF IS AWESOME"
 
 In this case, when the *ball_started* event is posted for Ball 1, the
 "first_ball_intro" slide will be shown. And if it's posted with a ball after
@@ -87,8 +134,10 @@ Ball 1, the "lets_go" slide will be posted.
 
 You can also combine things here using ``and`` or ``or``. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   special_slide: []
    slide_player:
      ball_started{ball==1 or ball==3}: special_slide
 
@@ -96,8 +145,10 @@ Now the "special_slide" will be shown for either ball 1 *or* ball 3.
 
 You can also combine with "and", for example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   special_slide: []
    slide_player:
      ball_started{ball==3 and player==1}: special_slide
 
@@ -112,8 +163,11 @@ can also use ``current_player.`` to access player variables,
 ``machine.`` to access machine variables, ``game.`` game attributes,
 and ``settings.`` to access operator settings.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   you_rule: []
+   #!   you_stink: []
    slide_player:
      ball_started{current_player.score > 1000000}: you_rule
      ball_started{current_player.score < 10000 and ball == 3}: you_stink
@@ -128,8 +182,10 @@ But wait, there's more!
 You can also use standard math operators (``+``, ``-``, ``*``, ``/``, etc.)
 to evaluate whether the action should take place:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   uh_oh: []
    slide_player:
      ball_started{ball > 1 and current_player.score < ((ball - 1) * 10000)}: uh_oh
 
@@ -149,8 +205,10 @@ For instance, to reference the ``value`` of a ``counter`` called
 In the following example we show a slide when the value of the counter is
 above ``5`` in ball ``3``
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   nearly_did_all_modes: []
    slide_player:
      ball_started{ball == 3 and device.counters.your_mode_counter.value > 5}: nearly_did_all_modes
 
@@ -171,6 +229,11 @@ This is an example:
 
 .. code-block:: mpf-config
 
+   #! lights:
+   #!   led4:
+   #!     number:
+   #!   led5:
+   #!     number:
    light_player:
      "{machine.test_machine_var == 23}":
        led4: red

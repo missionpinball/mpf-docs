@@ -108,6 +108,8 @@ You can mix-and-match all of these in a single config, like this:
    #! post right_ramp_hit
    #! advance_time_and_run .1
    #! assert_text_on_top_slide "Ramp has been hit" dmd
+   #! advance_time_and_run 3
+   #! assert_text_not_on_top_slide "Ramp has been hit" dmd
 
 In the example above, when the event "left_ramp_hit" happens, the slide
 "ramp_champ" is shown. When the event "right_ramp_hit" happens, the slide

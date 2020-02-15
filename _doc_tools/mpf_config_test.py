@@ -73,7 +73,7 @@ class CodeBlockVisitor(docutils.nodes.NodeVisitor):
             testcase = MpfIntegrationDocTestCase(config_text, base_dir=base_dir)
         else:
             if "slides:" in config_text or "widgets:" in config_text or "\nwindow:" in config_text or \
-                    "\ndisplays:" in config_text:
+                    "\ndisplays:" in config_text or "slide_player:" in config_text or "widget_player:" in config_text:
                 print("{} should use mpf-mc-config instead of mpf-config because it contains MC elements".format(source))
             testcase = MpfDocTestCase(config_text, base_dir=base_dir)
         testcase._testMethodDoc = source
