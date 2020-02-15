@@ -33,7 +33,7 @@ entry to show that slide on the *init_done* event which is posted by the media
 controller once it's ready to show slides. (That's why we don't need the MPF
 core engine to run this example.)
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     # config_version=5
     displays:
@@ -124,7 +124,7 @@ And here's the example where we animate the opacity:
 
 .. image:: /displays/images/easing_opacity.gif
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     # config_version=5
     displays:
