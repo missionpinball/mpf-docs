@@ -5,7 +5,7 @@ The points widget is used to draw points (individual square points) on a slide.
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    slide_player:
