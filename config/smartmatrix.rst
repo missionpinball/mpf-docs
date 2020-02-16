@@ -15,7 +15,7 @@ The ``smartmatrix:`` section of your config is where you configure RGB DMD devic
 
 This is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    hardware:

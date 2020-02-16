@@ -82,6 +82,9 @@ config, like this:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   laughing_jackal: []
+   #!   another_widget: []
    widget_player:
      some_event: laughing_jackal
      some_other_event: another_widget
@@ -131,6 +134,8 @@ can do so by specifying that slide name in the ``widget_player:``. For example:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   laughing_jackal: []
    widget_player:
      some_event:               # event that will trigger this widget to show
        laughing_jackal:        # widget you want to show
@@ -145,6 +150,9 @@ can even mix-and-match formats, like this:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   laughing_jackal: []
+   #!   another_widget: []
    widget_player:
      some_event:
        laughing_jackal:
@@ -159,6 +167,13 @@ widget will be added "on top" of whatever slide is currently being shown:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   laughing_jackal: []
+   #! displays:
+   #!   display1:
+   #!     width: 1366
+   #!     height: 768
+   #!     default: true
    widget_player:
      some_event:
        laughing_jackal:
@@ -183,6 +198,8 @@ seconds, which you could do like this:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   tilt_warning: []
    widget_player:
      tilt_warning:              # event
        tilt_warning:            # widget name
@@ -207,6 +224,8 @@ just add an ``action: remove`` setting to the widget player, like this:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   laughing_jackal: []
    widget_player:
      show_jackal: laughing_jackal
      hide_jackal:
@@ -262,6 +281,17 @@ multiple displays or slides at the same time. For example:
 
 .. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   widget1: []
+   #!   widget2: []
+   #! displays:
+   #!   lcd:
+   #!     width: 1366
+   #!     height: 768
+   #!     default: true
+   #!   dmd:
+   #!     width: 640
+   #!     height: 480
    widget_player:
      some_event:
        widget1:

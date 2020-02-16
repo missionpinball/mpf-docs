@@ -16,8 +16,12 @@ removed) based on events being posted.
 
 This is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
+   #!   slide2: []
+   #!   slide3: []
    slide_player:
      event1: slide1
      event2: slide2
@@ -53,8 +57,10 @@ Single value, type: one of the following options: play, remove. Default: ``play`
 
 For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
    slide_player:
      remove_slide_1:           # event name
        slide1:                 # slide name
@@ -62,8 +68,10 @@ For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
 You can also specify a transition for the removal, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
    slide_player:
      remove_slide_1:           # event name
        slide1:                 # slide name

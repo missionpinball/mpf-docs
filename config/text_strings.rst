@@ -16,7 +16,7 @@ which can be used in slides or widgets.
 
 This is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    text_strings:
      greeting: HELLO PLAYER. THIS IS YOUR BALL (ball)
@@ -24,4 +24,10 @@ This is an example:
      slides_with_text:
        - type: text
          text: $greeting
+   #! slide_player:
+   #!   game_started: slides_with_text
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "HELLO PLAYER. THIS IS YOUR BALL 1"
 

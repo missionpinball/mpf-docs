@@ -46,12 +46,15 @@ which you can use to dial-in your gamma setting.
 The easiest way to show this slide on your physical DMD is to make a
 temporary addition to your machine config to add a slide player, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slide_player:
      mode_attract_started:
        dmd_gamma_test:
          priority: 10000000
+   ##! test
+   #! start_game
+   #! assert_slide_on_top dmd_gamma_test
 
 This will just show the gamma test slide at a crazy high priority so it shows
 on top of everything else. (Remember if your DMD is not your default display,
