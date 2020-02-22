@@ -107,34 +107,64 @@ Dual Coil Diverter Example:
    
 First we need to define the coils in our hardware section: 
 
-coils:
-   c_diverter_upper_right_main:
+.. code-block:: mpf-config
+
+    coils:
+      c_diverter_upper_right_main:
         number: 25
         default_pulse_ms: 4
         default_hold_power: 0.2
-   c_diverter_upper_right_hold:
+      c_diverter_upper_right_hold:
         number: 26
         allow_enable: true
 
         
 Next we'll define the dual wound coil for the diverter to use:
 
-dual_wound_coils:
-    c_diverter_dualcoil:
+.. code-block:: mpf-config
+
+    #! coils:
+    #!   c_diverter_upper_right_main:
+    #!     number: 25
+    #!     default_pulse_ms: 4
+    #!     default_hold_power: 0.2
+    #!   c_diverter_upper_right_hold:
+    #!     number: 26
+    #!     allow_enable: true
+    dual_wound_coils:
+      c_diverter_dualcoil:
         hold_coil: c_diverter_upper_right_hold
         main_coil: c_diverter_upper_right_main
 
 Then we define the Diverter itself:
 
-diverters:
-    ramp_diverter:
+.. code-block:: mpf-config
+
+    #! coils:
+    #!   c_diverter_upper_right_main:
+    #!     number: 25
+    #!     default_pulse_ms: 4
+    #!     default_hold_power: 0.2
+    #!   c_diverter_upper_right_hold:
+    #!     number: 26
+    #!     allow_enable: true
+    #! switches:
+    #!   s_r_rampexit:
+    #!     number:
+    #!   s_l_rampexit:
+    #!     number:
+    #! dual_wound_coils:
+    #!   c_diverter_dualcoil:
+    #!     hold_coil: c_diverter_upper_right_hold
+    #!     main_coil: c_diverter_upper_right_main
+    diverters:
+      ramp_diverter:
         activation_coil: c_diverter_dualcoil
         type: hold
         activation_time: .5s
         activation_switches: s_r_rampexit, s_l_rampexit
         enable_events: ball_started
         disable_events: ball_ended
-        
         
  * :doc:`up_down_ramps`
 
