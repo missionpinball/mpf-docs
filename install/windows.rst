@@ -106,7 +106,7 @@ just run it.
 This command will upgrade pip and setuptools to the latest versions.
 
 Note that if you're running the command prompt *without* admin rights, you might get
-some red text and a permissions error, but that's ok.
+some red text and a permissions error. Launch the command prompt by right clicking and selecting "Run as administrator".
 
 You can run the following command to show the versions of pip and setuptools (and the other
 packages you have installed) like this:
