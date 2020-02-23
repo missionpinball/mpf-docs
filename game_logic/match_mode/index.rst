@@ -3,7 +3,7 @@ Match Mode
 
 To use the built-in MPF match mode add this config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: match
    # in modes/match/config/match.yaml
@@ -61,6 +61,20 @@ To use the built-in MPF match mode add this config:
          text: "Player 4: (match_number3)"
        - type: text
          text: "Match number: (winner_number)"
+
+   ##! test
+   #! start_game
+   #! advance_time_and_run 5
+   #! assert_mode_not_running match
+   #! drain_all_balls
+   #! advance_time_and_run 5
+   #! drain_all_balls
+   #! advance_time_and_run 5
+   #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_mode_running match
+   #! advance_time_and_run 5
+   #! assert_mode_not_running match
 
 You can extend the slides. See the two events below for available paramters.
 

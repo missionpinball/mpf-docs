@@ -19,10 +19,7 @@ like this:
 
     hardware:
       platform: opp
-      driverboards: gen2
 
-You also need to configure the ``driverboards:`` entry for what kind of
-driver boards you’re controlling: right now, only *gen2* is supported.
 
 2. Configure the OPP-specific hardware settings
 -----------------------------------------------

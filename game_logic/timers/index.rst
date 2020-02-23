@@ -33,7 +33,7 @@ Displaying the value of a timer on a slide
 If you want to use your timer in a slide you have to set the value to a
 player variable first:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: your_mode
    # in your mode
@@ -47,13 +47,22 @@ player variable first:
    variable_player:
      timer_your_timer_tick:
        your_timer_variable_times_100:
-         int: device.your_timer.ticks * 100
+         int: device.timers.your_timer.ticks * 100
          action: set
    slides:
      show_timer:
        widgets:
          - type: Text
            text: (player|your_timer_variable_times_100)
+   slide_player:
+     mode_your_mode_started: show_timer
+   ##! test
+   #! start_game
+   #! start_mode your_mode
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide 0
+   #! advance_time_and_run 1
+   #! assert_text_on_top_slide 100
 
 In this example we update the player variable ``timer_your_timer_tick``
 every time the timer changes based on the tick event.

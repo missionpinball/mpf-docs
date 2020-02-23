@@ -96,10 +96,18 @@ you create entries based on event names.
 
 For example, in a config file:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   my_slide:
+   #!     - type: text
+   #!       text: "MPF IS AWESOME"
    slide_player:
      mpf_is_awesome: my_slide
+   ##! test
+   #! post mpf_is_awesome
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MPF IS AWESOME"
 
 The above config will show the slide called "my_slide" on the display when the
 event *mpf_is_awesome* is posted. Of course this could be any event, including

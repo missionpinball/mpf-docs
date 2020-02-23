@@ -37,7 +37,7 @@ name. In the example below, we're defining two slides, one called
 *my_slide_1* and the other called *my_slide_2*, and they each only have a
 single widget.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide_1:
@@ -56,7 +56,7 @@ multiple widgets to a slide, just enter them like you entered a single
 widget, but use a dash (and a space) to dictate where a new widget starts,
 like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide_1:
@@ -86,7 +86,7 @@ under the slide along with the widgets.
 Here's an example. Note that the slide with multiple widgets is using the
 dash in the widgets: section to separate the individual widgets.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide_1:
@@ -124,14 +124,14 @@ it's not, like this: ``[]``.
 
 You can use this format to create a blank slide with no options:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_blank_slide: []
 
 Or you can use it to create a blank slide with options, but no widgets, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_blank_slide:

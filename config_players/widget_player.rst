@@ -18,8 +18,12 @@ You can test slides and widgets interactively using
 Generically-speaking, there are two formats you can use for widget_player
 entries: "express" and "full" configs. Express configs will look like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   widget1: []
+   #!   widget2: []
+   #!   widget3: []
    widget_player:
      event1: widget1
      event2: widget2
@@ -52,8 +56,10 @@ For example, the following config will add *widget_1* when *some_event* is poste
 will also override the default settings and add widget to the slide called *slide_2*, even
 if that's not the current slide that's showing.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   widget_1: []
    widget_player:
      some_event:
        widget_1:

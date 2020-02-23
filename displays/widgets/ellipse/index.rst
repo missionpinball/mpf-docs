@@ -10,7 +10,7 @@ use the :doc:`/displays/widgets/bezier/index`.
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    slide_player:

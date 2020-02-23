@@ -17,7 +17,7 @@ the logical display).
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
    displays:
@@ -46,10 +46,10 @@ Here's an example:
            text: this is a slide in the frame
        background_color: red
    slide_player:
-     mc_ready.1: base_slide
-     mc_ready.2:
-       frame_slide:
-         target: my_frame
+     mc_ready.1:
+       base_slide:
+         target: window
+     mc_ready.2: frame_slide
 
 And the result:
 
@@ -105,9 +105,17 @@ as well as other special effects.  For more information on effects, please revie
 
 An example of a display widget with a dmd effect:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
+   #! displays:
+   #!   window:
+   #!     height: 200
+   #!     width: 600
+   #!   dmd:
+   #!     width: 400
+   #!     height: 300
+   #!     default: true
    slides:
      base_slide:
        - type: display
@@ -117,4 +125,7 @@ An example of a display widget with a dmd effect:
          effects:
            - type: dmd
              dot_color: ff5500
-
+   #! slide_player:
+   #!   mc_ready:
+   #!     base_slide:
+   #!       target: window

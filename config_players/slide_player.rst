@@ -18,8 +18,12 @@ reference later.
 Generically-speaking, there are two formats you can use for slide_player
 entries: "express" and "full" configs. Express configs will look like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
+   #!   slide2: []
+   #!   slide3: []
    slide_player:
      event1: slide1
      event2: slide2
@@ -51,8 +55,15 @@ For example, the following config will show *slide_1* when *some_event* is poste
 will also override the default settings and show the slide on the display target called
 *display1* and at a priority that's 200 higher than the base priority.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide_1: []
+   #! displays:
+   #!   display1:
+   #!     width: 1366
+   #!     height: 768
+   #!     default: true
    slide_player:
      some_event:
        slide_1:
@@ -74,7 +85,7 @@ Note that slide names are global in MPF, so if you already had a slide defined c
 *slide_1* and you redefine it in your slide player like the example below, this new slide
 will become *slide_1* and the old one will be gone.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slide_player:
      some_event:
@@ -90,12 +101,11 @@ will become *slide_1* and the old one will be gone.
 You can also mix-and-match defining a slide in the slide player as well as adjusting
 properties of how the slide is shown. Just add multiple settings, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slide_player:
      some_event:
        slide_1:
-         target: display2
          widgets:
            - type: text
              text: I AM A TEXT WIDGET
@@ -108,7 +118,7 @@ properties of how the slide is shown. Just add multiple settings, like this:
 Remember that these slide player settings can also be used in show steps (in a ``slides:``
 section). Any of the examples above apply, you just don't include the event name, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! show: show1
    #show_version=5

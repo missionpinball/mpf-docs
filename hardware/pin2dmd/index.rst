@@ -113,17 +113,17 @@ Now that you have everything configured, the last step is to make sure the DMD
 knows what content to show. In MPF, you do this by mapping a physical DMD to
 an :doc:`MPF display </displays/display/index>`.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    displays:
-      window:  # on screen window - useful for debugging without real hardware
-        width: 600
-        height: 200
-      dmd:  # source display for the DMD
-        width: 128      # 192 if you got a 192x64 pin2dmd panel
-        height: 32      # 64 if you got a 192x64 pin2dmd panel
-        round_anchor_x: left
-        default: true
+   displays:
+     window:  # on screen window - useful for debugging without real hardware
+       width: 600
+       height: 200
+     dmd:  # source display for the DMD
+       width: 128      # 192 if you got a 192x64 pin2dmd panel
+       height: 32      # 64 if you got a 192x64 pin2dmd panel
+       round_anchor_x: left
+       default: true
 
 By default, the DMD will look for a display (in your :doc:`/config/displays`
 section called "dmd". However you can override this and configure the DMD to

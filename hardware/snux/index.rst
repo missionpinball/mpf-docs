@@ -335,6 +335,8 @@ configure it as *snux*, like this:
 
     hardware:
       platform: p_roc
+
+    p_roc:
       driverboards: snux
 
 Adding the *driverboards: snux* option automatically activates the
@@ -642,15 +644,20 @@ This is an example code block with the main Sys11 elements in.
 
    hardware:
      platform: virtual
-     driverboards: wpc
      coils: snux
+
+   p_roc:
+     driverboards: wpc
+
    system11:
      ac_relay_delay_ms: 75
      ac_relay_driver: c_ac_relay
+
    snux:
      flipper_enable_driver: c_flipper_enable_driver
      diag_led_driver: c_diag_led_driver
      platform:
+
    coils:
      c_diag_led_driver:
        number: c24

@@ -19,7 +19,7 @@ This How To guide will show you how to do all of that.
 
 MPF animations are properties of widgets. For example, here's a basic widget with no animations:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide_1:
@@ -31,7 +31,7 @@ MPF animations are properties of widgets. For example, here's a basic widget wit
 To add animations to a widget, you simply add an ``animations:`` setting to that widget, and then under there you add
 specific animation steps and settings. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide_1:
@@ -203,7 +203,7 @@ as the step before it. This means you can animate multiple properties at once.
 
 For example, to make the text grow and shrink while also fading on and off:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide_1:
@@ -263,7 +263,7 @@ animations to take place when different events occur. You can mix and match
 these as much as you want, including mixing the "special" animation
 trigger events with regular MPF events.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide1:
@@ -304,7 +304,7 @@ Again, you can use any combination of properties and any number of steps for eac
 You can also use a property from your event.
 For instance, you can move a widget based on a player variable:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide1:
@@ -327,7 +327,7 @@ will cause that animation to loop back to the beginning and keep repeating.
 
 Of course you can mix-and-match repeating animations with one time animations. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide1:
@@ -373,7 +373,7 @@ property is currently at. This is easy to do using a relative property value of 
 So you still have the step in the animation, it just isn't doing anything since the widget's property is already at
 the desired target value. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      slide1:
@@ -410,7 +410,7 @@ acceleration/deceleration) over time. Refer to the
 Much like :doc:`named widgets <reusable_widgets>`, you can also create pre-defined animations that you can easily
 apply to any widget. You do this by adding those animations to the ``animations:`` section of your config, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    animations:
      fade_in:
@@ -428,7 +428,7 @@ own animations.
 For example, to configure a widget to fade in (assuming the widget was
 initially created with ``opacity: 0``:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
      hello_widget:
@@ -440,7 +440,7 @@ initially created with ``opacity: 0``:
 Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out
 when the event "timer_hurry_up_complete" is posted, you can do it like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
      hello_widget:
@@ -456,14 +456,14 @@ when the event "timer_hurry_up_complete" is posted, you can do it like this:
 When working with named animations, you can chain together multiple named
 animations for a single event by specifying them as a list, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
      hello_widget:
        - type: text
          text: HELLO
-     animations:
-       some_event: anim1, anim2, anim3
+         animations:
+           some_event: fade_in, fade_out, pulse
 
 Any animation with ``timing: with_previous`` in the first step will run with
 the previous one, meaning you can create lots of little effects and
@@ -472,7 +472,7 @@ sub-animations and then combine them in reusable ways throughout your config.
 You can even use the same animation over and over in a sequence to repeat
 something a certain number of times. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
   animations:
     pulse:
@@ -501,7 +501,7 @@ In this example, we animate a progress bar based on the player variable
 ``progress`` by hooking the width of the bar to the event ``player_progress``
 which is posted when the value changes:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      green_slide:

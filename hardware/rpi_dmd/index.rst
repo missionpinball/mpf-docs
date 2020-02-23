@@ -44,7 +44,7 @@ command:
 
 This is an example config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    hardware:
      platform: rpi_dmd
@@ -68,7 +68,7 @@ This is an example config:
        round_anchor_x: left
    rgb_dmds:
      rpi_dmd:
-       label: RPi RGB DMD
+       source_display: dmd
    slides:
      window_slide_1:   # slide we'll show in the on-screen window
        - type: display   # this widget shows the DMD content in this slide too
@@ -97,6 +97,9 @@ This is an example config:
          target: window
        dmd_slide_1:
          target: dmd
+   ##! test
+   #! assert_text_on_top_slide "IT WORKS!" dmd
+   #! assert_text_on_top_slide "MISSION PINBALL FRAMEWORK" window
 
 The size of your dmd (32x32 pixel in the example) should match your physical
 matrix.

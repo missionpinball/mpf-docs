@@ -16,8 +16,10 @@ removed from, or updated on slides based on based on events being posted.
 
 This is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! widgets:
+   #!   widget_1: []
    widget_player:
      some_event:
        widget_1:

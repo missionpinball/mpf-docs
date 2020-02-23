@@ -177,14 +177,6 @@ sequences and delaying the game flow in the meantime:
    mode:
      start_events: ball_will_start     # in normal mode use ball_started instead
      priority: 200
-   slide_player:
-     ball_starting: ball_starting_slide
-     ball_ending: ball_ending_slide
-     ball_started:
-       main_display_slide:
-         action: play
-       ball_starting_slide:
-         action: remove
    queue_relay_player:
      ball_starting:
        post: start_ball_starting_show

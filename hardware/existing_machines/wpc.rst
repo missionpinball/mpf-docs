@@ -39,8 +39,8 @@ More technical information can be found in the
 2. Configuring MPF for WPC machines
 -----------------------------------
 
-In order to use MPF in a WPC machine, you need to configure the ``driverboards:`` section of your ``hardware:``
-config for MPF.
+In order to use MPF in a WPC machine, you need to configure the
+``driverboards:`` section of your hardware platform.
 
 If you're using a FAST WPC controller, it will look like this:
 
@@ -48,6 +48,7 @@ If you're using a FAST WPC controller, it will look like this:
 
    hardware:
      platform: fast
+   fast:
      driverboards: wpc
 
 And if you're using a P-ROC:
@@ -56,6 +57,7 @@ And if you're using a P-ROC:
 
    hardware:
      platform: p_roc
+   p_roc:
      driverboards: wpc
 
 Note that with the P-ROC, it is *very important* that you specify ``driverboards: wpc`` in your config if you're

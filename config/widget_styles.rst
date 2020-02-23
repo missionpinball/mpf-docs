@@ -22,7 +22,7 @@ A widget will use the style ``(name)_default`` if no other style is specified.
 For instance, a default style for all
 :doc:`text widgets </displays/widgets/text/index>` would look like:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widget_styles:
      text_default:
@@ -35,7 +35,7 @@ Specifying widget styles
 You can also specify re-usable styles and apply them to widgets. In the following
 example, the text "HELLO" will render at font size 100:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widget_styles:
      big_style:
@@ -49,7 +49,7 @@ example, the text "HELLO" will render at font size 100:
 You can supply multiple styles to a single widget, and they will be applied in
 the order given.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
   widget_styles:
     warning_text:

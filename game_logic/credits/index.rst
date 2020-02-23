@@ -211,7 +211,31 @@ Since this file is totally blank, add the required
 There are several credit-related things you need to show the player on
 your display. Here are some settings you can use as a starting point:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
+
+   switches:
+     s_coin_left:
+       number:
+     s_service_coin:
+       number:
+   credits:
+     max_credits: 12
+     free_play: false
+     service_credits_switch: s_service_coin
+     switches:
+       - switch: s_coin_left
+         type: money
+         value: .25
+     pricing_tiers:
+       - price: .50
+         credits: 1
+       - price: 2
+         credits: 5
+     fractional_credit_expiration_time: 15m
+     credit_expiration_time: 2h
+     persist_credits_while_off_time: 1h
+     free_play_string: FREE PLAY
+     credits_string: CREDITS
 
    ##! mode: credits
    # in modes/credits/config/credits.yaml
@@ -273,6 +297,13 @@ your display. Here are some settings you can use as a starting point:
        player_added_sound:
          action: play
          loops: 0
+   ##! test
+   #! assert_machine_variable 0 credit_units
+   #! hit_and_release_switch s_coin_left
+   #! hit_and_release_switch s_coin_left
+   #! assert_machine_variable 2 credit_units
+   #! start_game
+   #! assert_machine_variable 0 credit_units
 
 There are several events that the credit module will post which you
 can use to trigger slides:
@@ -481,9 +512,17 @@ Here's the complete credits config file from the Demo Man sample game.
 
 This is an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    # in your machine wide config
+   #! displays:
+   #!   window:
+   #!     width: 600
+   #!     height: 200
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
    switches:
      s_coin_left:
        number:

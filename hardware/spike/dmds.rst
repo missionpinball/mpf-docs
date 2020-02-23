@@ -28,7 +28,7 @@ This can be configured using ``runtime_baud`` (as described in :doc:`config`):
 
 Then configure your dmd like in this example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
      window:  # on screen window
@@ -68,6 +68,9 @@ Then configure your dmd like in this example:
          target: window
        dmd_slide_1:
          target: dmd
+   ##! test
+   #! assert_text_on_top_slide MPF dmd
+   #! assert_text_on_top_slide MPF window
 
 Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.

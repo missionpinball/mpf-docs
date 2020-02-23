@@ -19,10 +19,11 @@ This is an example:
 
    hardware:
      platform: virtual
-     driverboards: virtual
      stepper_controllers: trinamics_steprocker
+
    trinamics_steprocker:
      port: /dev/ttyACM0
+
    steppers:
        # Scenario: 1.8 degree stepper attached to a 7:1 gear ratio with homing flag that you want to control in units of revolutions
      positionStepper:

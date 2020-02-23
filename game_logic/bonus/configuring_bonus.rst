@@ -95,7 +95,7 @@ Use a :doc:`/config/variable_player` to count some bonuses:
 Now go back into your bonus mode folder open up ``bonus.yaml`` config file
 (which should be empty at this point), and enter a basic config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: bonus
    #config_version=5
@@ -141,7 +141,15 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
    #! start_game
    #! advance_time_and_run 1
    #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "Ramps 0"
+   #! assert_text_on_top_slide "400"
    #! advance_time_and_run 1
+   #! assert_text_on_top_slide "Some variable 0"
+   #! assert_text_on_top_slide "2400"
+   #! advance_time_and_run 1
+   #! assert_text_on_top_slide "Total Bonus"
+   #! assert_text_on_top_slide "2800"
    #! stop_game 10
    #! advance_time_and_run 1
 
