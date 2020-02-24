@@ -136,7 +136,7 @@ This is an example:
    #! assert_player_variable 900 score
 
 Mystery Awards
-~~~~~~~~~~~
+~~~~~~~~~~~~~~
 Mystery awards provide a random bonus or feature and hold the ball during a display animation.
 
 See :doc:`/game_logic/mystery_award/index`.

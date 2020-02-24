@@ -31,7 +31,7 @@ At the end of the mystery award, the ball_hold is disabled and releases a ball.
 
 
 Providing Random Awards
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Once mystery has been lit and the ball enters the device, you can use :doc:`random_event_player </config_players/random_event_player>`  to control which awards are chosen.
 
@@ -51,7 +51,7 @@ In the below example, there are four possible awards and the game will make sure
 A random award will only be selected after a ball has been held in the scoop.
 
 Displaying Awards
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 You can use anything to display an award such as a slide or video. In the below example, a video is used for each award and the scoop will eject the ball after the video has completed.
 
