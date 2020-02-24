@@ -24,7 +24,7 @@ which is set in ``default_source_device`` of your playfield unless the device
 that just locked it is full,
 in which case it will eject a ball from the full device. The events that
 control the ball ejections are queue events, so you can interrupt the delivery
-of a new ball with the :doc: `/config/queue_relay_player` (for example, to have
+of a new ball with the :doc:`/config/queue_relay_player` (for example, to have
 a mode selection screen before returning to play).
 
 Whenever a new ball is locked, the event *multiball_lock_<name>_locked_ball*
