@@ -16,7 +16,7 @@ The ``ball_holds:`` section of your config is used to list and configure
 
 Note that ball holds are used to temporarily hold a ball while the game is doing something
 else. (Starting a video mode, playing an intro show, etc.) If you want to hold and lock
-a ball towards multiball, use the ``ball_locks:`` section instead.
+a ball towards multiball, use the ``multiball_locks:`` section instead.
 
 Ball holds do not affect the "balls in play" count, and they are not used
 to hold balls from ball-to-ball or between players.
