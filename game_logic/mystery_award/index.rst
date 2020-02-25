@@ -6,7 +6,7 @@ Mystery awards provide a random award from a list of options while holding the b
 Holding the Ball
 ----------------------------------------------
 
-Any :doc:`ball_device </mechs/ball_devices>` can be used to hold a ball while the mystery award display runs with :doc:`ball_holds </game_logic/ball_holds>`.
+Any :doc:`ball_device </mechs/ball_devices/index>` can be used to hold a ball while the mystery award display runs with :doc:`ball_holds </game_logic/ball_holds/index>`.
 
 Here is an example of how to use a scoop to hold a ball during a mystery award animation:
 
