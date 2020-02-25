@@ -53,6 +53,7 @@ and configuration
    Match Mode <match_mode/index>
    Modes <modes/index>
    Multiballs <multiballs/index>
+   Mystery Awards <mystery_award/index>
    Player Variables <players/index>
    Replays <replays/index>
    Timed Switches <timed_switches/index>

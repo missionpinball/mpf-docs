@@ -135,6 +135,13 @@ This is an example:
    #! hit_and_release_switch s_lane_r
    #! assert_player_variable 900 score
 
+Mystery Awards
+~~~~~~~~~~~~~~
+Mystery awards provide a random bonus or feature and hold the ball during a display animation.
+
+See :doc:`/game_logic/mystery_award/index`.
+
+
 Ball End Modes
 --------------
 
