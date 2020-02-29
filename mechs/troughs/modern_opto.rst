@@ -325,15 +325,39 @@ you're running with one of the virtual hardware interfaces. To use it,
 simply add the section along with a list of the switches you want to
 start active. For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!     type: NC
+    #!   s_trough2:
+    #!     number: 3
+    #!     type: NC
+    #!   s_trough3:
+    #!     number: 4
+    #!     type: NC
+    #!   s_trough4:
+    #!     number: 5
+    #!     type: NC
+    #!   s_trough5:
+    #!     number: 6
+    #!     type: NC
+    #!   s_trough6:
+    #!     number: 7
+    #!     type: NC
+    #!   s_trough_jam:
+    #!     number: 8
+    #!     type: NC
+    #!   s_plunger:
+    #!     number: 10
     virtual_platform_start_active_switches:
-        s_trough1
-        s_trough2
-        s_trough3
-        s_trough4
-        s_trough5
-        s_trough6
+      - s_trough1
+      - s_trough2
+      - s_trough3
+      - s_trough4
+      - s_trough5
+      - s_trough6
 
 5. Add your plunger lane
 ------------------------
@@ -414,7 +438,7 @@ Here's the complete config
       playfield:
         default_source_device: bd_plunger
         tags: default
-    virtual_platform_start_active_switches: s_trough1 s_trough2 s_trough3 s_trough4 s_trough5 s_trough6
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 What if it doesn't work?
 ------------------------

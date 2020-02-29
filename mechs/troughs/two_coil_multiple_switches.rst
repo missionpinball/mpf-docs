@@ -260,7 +260,7 @@ start active. For example:
     #!     number: 3
     #!   s_trough3:
     #!     number: 4
-    virtual_platform_start_active_switches: s_trough1 s_trough2 s_trough3
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 Here's the complete config
 --------------------------
@@ -307,6 +307,6 @@ Here's the complete config
       playfield:
         default_source_device: bd_plunger_lane
         tags: default
-    virtual_platform_start_active_switches: s_trough1 s_trough2 s_trough3
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 .. end_mpfdoctest

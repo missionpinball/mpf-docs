@@ -165,7 +165,10 @@ Then we define the Diverter itself:
         activation_switches: s_r_rampexit, s_l_rampexit
         enable_events: ball_started
         disable_events: ball_ended
-        
+
+
+More guides:
+
  * :doc:`up_down_ramps`
 
 Related Events
