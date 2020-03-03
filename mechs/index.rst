@@ -32,6 +32,7 @@ Pinball Mechs in MPF include (but are not limited to):
    Score Reels <score_reels/index>
    Scoops / Vertical Up Kickers (VUKs) / Saucer holes <scoops/index>
    Servos <servos/index>
+   Shakers <shaker/index>
    Slingshot <slingshots/index>
    Spinners <spinners/index>
    Stepper Motors <steppers/index>
