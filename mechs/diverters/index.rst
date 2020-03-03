@@ -116,3 +116,4 @@ Related Events
    up_down_ramps
    servo_as_diverter
    stepper_as_diverter
+   dual_coil_diverter
