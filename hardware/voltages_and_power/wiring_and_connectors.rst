@@ -76,7 +76,7 @@ work just fine since there should not be any high current on those connectors.
 Wire-to-Wire Connections
 ------------------------
 
-While most of the wiring in a pinball machine involves Wire-to-Board connections as referenced above, you may also find yourself needing to make wire-to-wire connections with modular connectors. For this purpose, the standard size connector is the .093” Molex connector from the “Standard .093" Pin and Socket Connectors” series. These connectors and crimps are generally rated for 250V/14A. 
+While most of the wiring in a pinball machine involves Wire-to-Board connections as referenced above, you may also find yourself needing to make wire-to-wire connections with modular connectors. For this purpose, the standard size connector is the .093” Molex connector from the “Standard .093" Pin and Socket Connectors” series. These connectors and crimps are generally rated for 250V/14A.
 
 For AWG 18-22 wires, use the following Molex parts (Note: there are not housings for 5, 7, 8, 10, 11, 13 or 14 circuit options):
 
@@ -90,7 +90,7 @@ For AWG 18-22 wires, use the following Molex parts (Note: there are not housings
 * 15 positions: 03-09-1157 (receptacle/female) / 03-09-2159 (plug/male)
 * Pin (male) crimp: 02-09-1118
 * Socket (female) crimp: 02-09-1119
-* Pin extractor: Molex 0011030006 or GC Electronics W-HT-2038 
+* Pin extractor: Molex 0011030006 or GC Electronics W-HT-2038
 * Recommended crimping tool: IWISS SN-28B
 
 Note: While you can purchase large quantities of the crimp pins above on a reel/tape for a slightly cheaper price, you then have to cut off the side wings on each pin while being careful not to cut too much off or the pins will not lock inside the housings. For people new to crimping, this can be a frustrating experience so the “loose/bag” option listed above (02-09-1118 and 02-09-1119) is generally worth the extra .02 or .03 per crimp terminal.
@@ -110,6 +110,6 @@ The simplest solution to implement this are terminal blocks which work fine
 but make it hard to disconnect stuff temporarily.
 Luckily, various boards exist to solve this issue:
 
-* Spooky/PBL Power Distribution board (part number: PBL-600-0224-00)
+* Spooky/PBL Power Distribution board (part number: #600-0224-00)
 * FAST Playfield Interchange Board
 * Multimorphic Power Distribution board (part number: unknown)

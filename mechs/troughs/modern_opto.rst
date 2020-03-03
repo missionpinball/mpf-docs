@@ -47,9 +47,9 @@ Bally/Williams Trough Opto Boards:
 
 Part numbers:
 
- * Transmitter: #A-18617-1 or 5768-14121-02 or PBL-600-0035-00 or PBL-600-0005-00
- * Receiver: #A-18618-1 or 5768-14122-02 or PBL-600-0036-00 or PBL-600-0006-00
- * Transmitter/Receiver: PBL-600-0054-00 or PBL-600-0055-00
+ * Transmitter: #A-18617-1 or 5768-14121-02 or #600-0035-00 or #600-0005-00
+ * Receiver: #A-18618-1 or 5768-14122-02 or #600-0036-00 or #600-0006-00
+ * Transmitter/Receiver: #600-0054-00 or #600-0055-00
 
 Those boards need an additional current limiting resistor on the transmitter.
 Read the :doc:`Opto section </mechs/switches/optos>` for details if in doubt.

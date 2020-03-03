@@ -9,6 +9,9 @@ Slingshots
 
 Slingshots are configured as :doc:`autofire_coils </config/autofire_coils>` in MPF.
 
+Hardware
+--------
+
 .. image:: /mechs/images/slingshot_side.jpg
 .. image:: /mechs/images/slingshot_front.jpg
 
@@ -18,6 +21,15 @@ one :doc:`coil </config/coils>`.
 Those switches are wired in parallel because it does not matter which switch
 was closed to fire to slingshot. Connect one side of each switch to ground and
 the other side of both switches to the same input.
+
+Part numbers:
+
+* Data East/Sega/Stern: #500-5849-00
+* Spooky/American Pinball/Suncoast: PBL-5849-01
+
+
+Config
+------
 
 This is an example:
 

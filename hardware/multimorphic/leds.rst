@@ -134,8 +134,8 @@ turn on or turn off when the board is reset. Which position does what is
 dependent on whether you’re controlling the anode or the cathode with your
 outputs, so basically if you turn on your PD-LED and all your LEDs turn on,
 then flip DIP switch 6 on the PD-LED to the opposite position and power cycle
-the board. Note: If servos are connected to a PD-LED board, DIP switch 6 also 
-effects servo signal on power up. See :doc:`/hardware/multimorphic/servos` for 
+the board. Note: If servos are connected to a PD-LED board, DIP switch 6 also
+effects servo signal on power up. See :doc:`/hardware/multimorphic/servos` for
 additional information.
 
 Breakout boards for parallel LEDs
@@ -151,15 +151,15 @@ Breakout boards:
 
 * Four LEDs breakout (Multimorphic) - PCBA-0025-0002
 * Five equally spaced LEDs + three LEDs breakout (Multimorphic) - PCBA-0030-0001
-* Breakout wire harness (PBL) for four LEDs - PBL-600-0274-00
+* Breakout wire harness (PBL) for four LEDs - #600-0274-00
 
 Part numbers of lights and flashers:
 
-* GI RGB LED (PBL) - PBL-600-0230-00
-* RGB Insert LED (PBL) - PBL-600-0220-01
+* GI RGB LED (PBL) - #600-0230-00
+* RGB Insert LED (PBL) - #600-0220-01
 * RGB Insert LED (Multimorphic) - PCBA-0004-0001
 * Flasher (Multimorphic) - PCBA-0024-0001
-* Pop bumber RGB LED (PBL) - PBL-600-0258-00
+* Pop bumber RGB LED (PBL) - #600-0258-00
 
 Additionally, they got a PCB with five equally spaced LEDs which breaks out
 another three LEDs (part number: ).
@@ -227,13 +227,13 @@ for it by configuring
 Amplifying PD-LED channels with FETs
 ------------------------------------
 
-PD-LED drives LEDs with a current of 22mA. Also, it cannot exceed its 
+PD-LED drives LEDs with a current of 22mA. Also, it cannot exceed its
 output voltage of 3.3 V effectively limmiting it to a single LED
 per channel. If you want to drive more LEDs on a channel (e.g. GIs or long
-strips) you can connect a MOSFET (as stated in the manual). Choose a 
+strips) you can connect a MOSFET (as stated in the manual). Choose a
 logic-level N-Channel MOSFET with an Output Characteristics curve showing
-current saturation meeting the needs of the strip with a voltage 
-between the gate and source (VGS) of 3.3 V or less. 
+current saturation meeting the needs of the strip with a voltage
+between the gate and source (VGS) of 3.3 V or less.
 This is an example of such a circuit:
 
 .. image:: /hardware/images/FET-LEDs.png

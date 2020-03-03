@@ -9,7 +9,17 @@ Spinners
 
 Spinners are rotating metal plates which close a switch once per rotation.
 
+Hardware
+--------
+
 .. image:: /mechs/images/spinner.jpg
+
+Part numbers:
+
+ * Stern: #511-5113-00 or #100-0014-00
+
+Config
+------
 
 In MPF spinners are configured just like normal switches:
 
