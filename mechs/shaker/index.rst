@@ -72,7 +72,7 @@ Alternatively, you can use it inside a show:
        - duration: 1s
          coils:
            c_shaker: enable
-         #! events: test_event
+   #!       events: test_event
          # add some slides, lights or sounds here
        - duration: 1s
          coils:
