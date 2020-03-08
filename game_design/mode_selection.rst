@@ -231,7 +231,7 @@ You can define multiple :doc:`groups </config/achievement_groups>` of
        events_when_started: start_mode_right_ramp
    achievement_groups:
      all_achievements:
-       achievements: left_ramp right_ramp
+       achievements: left_ramp, right_ramp
        auto_select: true
        start_selected_events: hit_scoop
        rotate_right_events: s_action_button_active
