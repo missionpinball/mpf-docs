@@ -64,8 +64,8 @@ Tell the playfield to use the plunger for new balls:
        default_source_device: bd_plunger
 
 
-Check out the complete config.yaml file so far
-----------------------------------------------
+3. Check out the complete config.yaml file so far
+-------------------------------------------------
 
 Again, our example config will probably diverge from yours since you might have different types
 of drain and plunger devices, but we do have a complete machine conform for Demolition Man
