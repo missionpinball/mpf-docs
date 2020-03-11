@@ -225,6 +225,26 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
   #! hit_and_release_switch s_top_lane_M
   #! assert_player_variable 2 pf_multiplier
 
+Ending the Current Game by Long-pressing Start
+----------------------------------------------
+
+The following snippet will end a running game by long-pressing the start
+button:
+
+.. code-block:: mpf-config
+
+   timed_switches:
+     game_cancel:
+       switch_tags: start
+       time: 5s
+       events_when_active: game_ended
+
+
+Please note that this will also work on ball one and will not inhibit bonus
+nor high_score mode.
+Let us know in the forum if you need this.
+
+
 Delay Ball Start/Stop to Show Slides/Sounds
 -------------------------------------------
 
