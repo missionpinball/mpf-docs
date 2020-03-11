@@ -197,6 +197,8 @@ The configuration is pretty straightforward:
   there are lots of different types of plungers.
 * Add ``tags: home, trough`` which tells MPF that it's ok to store unused balls
   here and that it's ok for balls to be here when games start.
+* Set ``eject_timeouts`` to the maximum time the ball can take to return if the
+  eject fails.
 
 Your trough device configuration should look now look like this:
 
@@ -226,6 +228,7 @@ Your trough device configuration should look now look like this:
         eject_coil: c_trough_release
         eject_targets: bd_plunger_lane
         tags: home, trough
+        eject_timeouts: 3s
     #!   bd_plunger_lane:
     #!     ball_switches: s_plunger
     #!     mechanical_eject: true
@@ -299,10 +302,11 @@ Here's the complete config
         eject_coil: c_trough_release
         eject_targets: bd_plunger_lane
         tags: home, trough
-      # bd_plunger is a placeholder just so the trough's eject_targets are valid
+        eject_timeouts: 3s
       bd_plunger_lane:
         ball_switches: s_plunger
         mechanical_eject: true
+        eject_timeouts: 5s
     playfields:
       playfield:
         default_source_device: bd_plunger_lane

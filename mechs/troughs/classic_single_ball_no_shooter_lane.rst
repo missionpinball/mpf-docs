@@ -70,8 +70,8 @@ section add it now.)
     ball_devices:
         bd_drain:
 
-This means that you're creating a ball device called *bd_drain*.
-We use the preface *bd_* to indicate that this is a ball device
+This means that you're creating a ball device called ``bd_drain``.
+We use the preface ``bd_`` to indicate that this is a ball device
 which makes it easier when we're referencing them later. Then under
 your ``bd_drain:`` entry, you'll start entering the
 configuration settings for your drain ball device.
@@ -83,6 +83,8 @@ configuration settings for your drain ball device.
 * Add ``tags: drain, home, trough`` which tells MPF that balls entering this
   device mean that a ball has drained from the playfield, that it's ok to start
   a game with a ball here, and that this device is used to store unused balls.
+* Set ``eject_timeouts`` to the maximum time the ball can take to return if the
+  eject fails.
 
 Your drain device configuration should look now look like this:
 
@@ -91,8 +93,6 @@ Your drain device configuration should look now look like this:
     #! switches:
     #!   s_drain:
     #!     number: 01
-    #!   s_plunger:
-    #!     number: 02
     #! coils:
     #!   c_drain_eject:
     #!     number: 03
@@ -102,6 +102,7 @@ Your drain device configuration should look now look like this:
         ball_switches: s_drain
         eject_coil: c_drain_eject
         tags: drain, home, trough
+        eject_timeouts: 3s
 
 4. Add the trough als default_source_device
 -------------------------------------------
@@ -121,8 +122,6 @@ the default ``playfield``, like this:
     #! switches:
     #!   s_drain:
     #!     number: 01
-    #!   s_plunger:
-    #!     number: 02
     #! coils:
     #!   c_drain_eject:
     #!     number: 03
@@ -132,6 +131,7 @@ the default ``playfield``, like this:
     #!     ball_switches: s_drain
     #!     eject_coil: c_drain_eject
     #!     tags: drain, home, trough
+    #!     eject_timeouts: 3s
     playfields:
       playfield:
         default_source_device: bd_drain
@@ -186,6 +186,7 @@ Here's the complete config
         ball_switches: s_drain
         eject_coil: c_drain_eject
         tags: drain, home, trough
+        eject_timeouts: 3s
     playfields:
       playfield:
         default_source_device: bd_drain

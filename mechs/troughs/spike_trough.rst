@@ -100,10 +100,11 @@ switches of your trough:
        jam_switch: s_trough_jam
        eject_coil_jam_pulse: 15ms
        eject_targets: bd_plunger
-       # bd_plunger is a placeholder just so the trough's eject_targets are valid
+       eject_timeouts: 3s
      bd_plunger:
        ball_switches: s_plunger
        mechanical_eject: true
+       eject_timeouts: 5s
    playfields:
      playfield:
        default_source_device: bd_plunger

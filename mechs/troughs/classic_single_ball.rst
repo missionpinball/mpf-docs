@@ -22,10 +22,13 @@ And here's a diagram which shows this a bit more clearly: (This is a side view)
 
 .. image:: /mechs/images/classic_single_ball.png
 
-1. Add the drain switch
------------------------
+We assume that your machine has a shooter lane switch.
+If that is not the case see :doc:`classic_single_ball_no_shooter_lane`.
 
-The first step is to add the drain switch to the ``switches:``
+1. Add the drain and plunger switch
+-----------------------------------
+
+The first step is to add the drain and plunger switches to the ``switches:``
 section of your machine config file.
 
 .. code-block:: mpf-config
@@ -33,9 +36,12 @@ section of your machine config file.
     switches:
       s_drain:
         number: 01
+      s_plunger:
+        number: 02
 
-Note that we configured this switches with number ``01``, but you should use the
-actual switch number for your control system that the switch is connected to.
+Note that we configured those switches with number ``01`` and ``02``,
+but you should use the actual switch number for your control system that the
+switch is connected to.
 (See :doc:`/hardware/numbers` for instructions for each type of control system.)
 
 2. Add the eject coil
@@ -92,6 +98,8 @@ configuration settings for your drain ball device.
 * Add ``tags: drain, home, trough`` which tells MPF that balls entering this
   device mean that a ball has drained from the playfield, that it's ok to start
   a game with a ball here, and that this device is used to store unused balls.
+* Set `eject_timeouts` to the maximum time the ball can take to return if the
+  eject fails.
 
 Your drain device configuration should look now look like this:
 
@@ -112,11 +120,41 @@ Your drain device configuration should look now look like this:
         eject_coil: c_drain_eject
         eject_targets: bd_plunger_lane
         tags: drain, home, trough
+        eject_timeouts: 3s
     #!   bd_plunger_lane:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+
+4. Add your "plunger" ball device
+---------------------------------
+
+We also add the plunger as ball_device ``bd_plunger_lane``:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!   s_drain:
+    #!     number: 01
+    #!   s_plunger:
+    #!     number: 02
+    #! coils:
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
+    ball_devices:
+    #!   bd_drain:
     #!     ball_switches: s_drain
     #!     eject_coil: c_drain_eject
+    #!     eject_targets: bd_plunger_lane
+    #!     tags: drain, home, trough
+    #!     eject_timeouts: 3s
+      bd_plunger_lane:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_timeouts: 5s
 
-4. Configure your virtual hardware to start with balls in the trough
+5. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
 
 While we're talking about the trough, it's probably a good idea to configure
@@ -165,10 +203,11 @@ Here's the complete config
         eject_coil: c_drain_eject
         eject_targets: bd_plunger_lane
         tags: drain, home, trough
-        # bd_plunger is a placeholder just so the trough's eject_targets are valid
+        eject_timeouts: 3s
       bd_plunger_lane:
         ball_switches: s_plunger
         mechanical_eject: true
+        eject_timeouts: 5s
     playfields:
       playfield:
         default_source_device: bd_plunger_lane

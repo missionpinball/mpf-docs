@@ -133,6 +133,9 @@ configuration settings for your drain ball device.
   device in the next step.)
 * Add ``tags: drain`` which tells MPF that balls entering this device mean that
   a ball has drained from the playfield.
+* Set ``eject_timeouts`` to the maximum time the ball can take to return if the
+  eject fails.
+
 
 Your drain device configuration should look now look like this:
 
@@ -156,12 +159,14 @@ Your drain device configuration should look now look like this:
         eject_coil: c_drain_eject
         eject_targets: bd_trough
         tags: drain
+        eject_timeouts: 4s
     #!   bd_trough:
     #!     entrance_switch: s_trough_enter
     #!     entrance_switch_full_timeout: 500ms
     #!     ball_capacity: 3
     #!     eject_coil: c_trough_release
     #!     tags: trough, home
+    #!     eject_timeouts: 3s
 
 4. Add your "trough" ball device
 --------------------------------
@@ -196,15 +201,26 @@ Your trough device configuration should look now look like this:
 .. code-block:: mpf-config
 
     #! switches:
+    #!   s_drain:
+    #!     number: 01
     #!   s_trough_enter:
-    #!     number: 2
+    #!     number: 02
     #!   s_plunger:
     #!     number: 10
     #! coils:
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     #!   c_trough_release:
-    #!     number: 4
+    #!     number: 04
     #!     default_pulse_ms: 20
     ball_devices:
+    #!   bd_drain:
+    #!     ball_switches: s_drain
+    #!     eject_coil: c_drain_eject
+    #!     eject_targets: bd_trough
+    #!     tags: drain
+    #!     eject_timeouts: 4s
       bd_trough:
         entrance_switch: s_trough_enter
         entrance_switch_full_timeout: 500ms
@@ -212,25 +228,37 @@ Your trough device configuration should look now look like this:
         eject_coil: c_trough_release
         eject_targets: bd_plunger_lane
         tags: trough, home
+        eject_timeouts: 3s
     #!   bd_plunger_lane:
     #!     ball_switches: s_plunger
     #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
 
 If you need to enable ``c_trough_release`` for 1s (more than a few ms) it would look like this:
 
 .. code-block:: mpf-config
 
     #! switches:
+    #!   s_drain:
+    #!     number: 01
     #!   s_trough_enter:
-    #!     number: 2
+    #!     number: 02
     #!   s_plunger:
     #!     number: 10
-    coils:
-      c_trough_release:
-        number: 4
-        default_pulse_ms: 20ms
-        default_hold_power: 0.25
+    #! coils:
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
+    #!   c_trough_release:
+    #!     number: 04
+    #!     default_pulse_ms: 20
     ball_devices:
+    #!   bd_drain:
+    #!     ball_switches: s_drain
+    #!     eject_coil: c_drain_eject
+    #!     eject_targets: bd_trough
+    #!     tags: drain
+    #!     eject_timeouts: 4s
       bd_trough:
         entrance_switch: s_trough_enter
         entrance_switch_full_timeout: 500ms
@@ -239,9 +267,11 @@ If you need to enable ``c_trough_release`` for 1s (more than a few ms) it would 
         eject_coil_enable_time: 100ms
         eject_targets: bd_plunger_lane
         tags: trough, home
+        eject_timeouts: 3s
     #!   bd_plunger_lane:
     #!     ball_switches: s_plunger
     #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
 
 5. Configure the balls installed
 --------------------------------
@@ -324,6 +354,7 @@ Here's the complete config
         eject_coil: c_drain_eject
         eject_targets: bd_trough
         tags: drain
+        eject_timeouts: 4s
       bd_trough:
         entrance_switch: s_trough_enter
         entrance_switch_full_timeout: 500ms
@@ -331,10 +362,11 @@ Here's the complete config
         eject_coil: c_trough_release
         eject_targets: bd_plunger
         tags: trough, home
-      # bd_plunger is a placeholder just so the trough's eject_targets are valid
+        eject_timeouts: 3s
       bd_plunger:
         ball_switches: s_plunger
         mechanical_eject: true
+        eject_timeouts: 5s
     playfields:
       playfield:
         default_source_device: bd_plunger
