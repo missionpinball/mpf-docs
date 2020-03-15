@@ -28,7 +28,15 @@ You will see something like this in the log:
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall_active'====== Args={}
 
-Both events are prefixed with ``sw_`` as a default.  You can override this with the :doc:`/config/mpf` section.
+Both events are prefixed with ``sw_`` as a default.
+You can override this with the :doc:`/config/mpf` section.
+
+.. note::
+
+   Please note that those events will only show up if either a handler for them
+   exists (i.e. an event_player) or when you set ``debug: True`` to your switch.
+   This is purely a performance optimization and also will safe you a lot of
+   log lines.
 
 
 **Power of Tags**
