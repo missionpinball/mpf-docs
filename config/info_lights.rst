@@ -20,45 +20,84 @@ Here's an example ``info_lights:`` section from a machine configuration file:
 
 .. code-block:: mpf-config
 
-    info_lights:
-      match_00:
-        light: match00
-      match_10:
-        light: match10
-      match_20:
-        light: match20
-      match_30:
-        light: match30
-      match_40:
-        light: match40
-      match_50:
-        light: match50
-      match_60:
-        light: match60
-      match_70:
-        light: match70
-      match_80:
-        light: match80
-      match_90:
-        light: match90
-      ball_1:
-        light: bip1
-      ball_2:
-        light: bip2
-      ball_3:
-        light: bip3
-      ball_4:
-        light: bip4
-      ball_5:
-        light: bip5
-      player_1:
-        light: player1
-      player_2:
-        light: player2
-      tilt:
-        light: tilt
-      game_over:
-        light: gameOver
+   #! lights:
+   #!   match00:
+   #!     number:
+   #!   match10:
+   #!     number:
+   #!   match20:
+   #!     number:
+   #!   match30:
+   #!     number:
+   #!   match40:
+   #!     number:
+   #!   match50:
+   #!     number:
+   #!   match60:
+   #!     number:
+   #!   match70:
+   #!     number:
+   #!   match80:
+   #!     number:
+   #!   match90:
+   #!     number:
+   #!   bip1:
+   #!     number:
+   #!   bip2:
+   #!     number:
+   #!   bip3:
+   #!     number:
+   #!   bip4:
+   #!     number:
+   #!   bip5:
+   #!     number:
+   #!   player1:
+   #!     number:
+   #!   player2:
+   #!     number:
+   #!   tilt:
+   #!     number:
+   #!   gameOver:
+   #!     number:
+   info_lights:
+     match_00:
+       light: match00
+     match_10:
+       light: match10
+     match_20:
+       light: match20
+     match_30:
+       light: match30
+     match_40:
+       light: match40
+     match_50:
+       light: match50
+     match_60:
+       light: match60
+     match_70:
+       light: match70
+     match_80:
+       light: match80
+     match_90:
+       light: match90
+     ball_1:
+       light: bip1
+     ball_2:
+       light: bip2
+     ball_3:
+       light: bip3
+     ball_4:
+       light: bip4
+     ball_5:
+       light: bip5
+     player_1:
+       light: player1
+     player_2:
+       light: player2
+     tilt:
+       light: tilt
+     game_over:
+       light: gameOver
 
 The way info lights work is pretty simple. There are sub-sections that
 represent different lights that may be in your machine, and then under
