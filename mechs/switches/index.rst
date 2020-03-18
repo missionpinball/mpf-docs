@@ -23,8 +23,8 @@ There are two switch types most commonly seen in pinball machines (read those fo
 
 And an additional two types used in a handful of machines (read those for details):
 
-* :doc: 'Proximity switches <Proxy_switches>'
-* :doc: 'Reed switches <Reed_switches>'
+* :doc:`Proximity switches <Proxy_switches>`
+* :doc:`Reed switches <Reed_switches>`
 
 
 Typical switch applications in pinball machines are:
