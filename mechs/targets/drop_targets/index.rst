@@ -55,6 +55,7 @@ Related How To guides
 ---------------------
 
 * :doc:`drop_target_bank`
+* :doc:`fixing_drop_target_reset_issues`
 
 Related Events
 --------------
@@ -64,3 +65,4 @@ Related Events
 .. toctree::
 
    drop_target_bank
+   fixing_drop_target_reset_issues
