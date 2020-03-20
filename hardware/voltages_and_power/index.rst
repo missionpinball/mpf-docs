@@ -7,3 +7,4 @@ This section is about some general electric details in pinball machines.
    voltages_and_power
    wiring_and_connectors
    ground_and_appliance_classes
+   power_management
