@@ -67,6 +67,7 @@ Related How To guides
 ---------------------
 
 * :doc:`index`
+* :doc:`fixing_drop_target_reset_issues`
 
 Related Events
 --------------
