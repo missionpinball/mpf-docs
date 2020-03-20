@@ -141,7 +141,6 @@ your machine-wide config, a mode-specific config, or both.
         if type == "device":
             spec = self.config_specs[name]
             device_spec = self.all_specs["device"]
-            del device_spec["valid_in"]
             spec = Util.dict_merge(spec, device_spec)
 
             self._create_rst(name, spec, True)
@@ -201,6 +200,8 @@ your machine-wide config, a mode-specific config, or both.
         final_text += '\n\n\n'
 
         final_text += self.build_sections(name, spec, existing_settings)
+
+        final_text +=
         for setting in existing_settings:
             if setting[1].endswith(":"):
                 print("WARNING: Removing setting {} from {}".format(setting[0], name))
@@ -228,7 +229,6 @@ your machine-wide config, a mode-specific config, or both.
         return final_text
 
     def add_required_section(self, required_list, name, existing_settings, level):
-
         if level == 1:
             sep = '-'
             sep2 = '~'
@@ -515,6 +515,9 @@ your machine-wide config, a mode-specific config, or both.
             return_string = 'Single value, '
         elif num == 'list' or num == 'set':
             return_string = 'List of one (or more) values, each is a '
+        elif num == 'event_list':
+            return_string = 'List of one (or more) events. '
+            return return_string
         elif num == 'dict':
             stype = tuple(stype.split(':'))
             return_string = 'One or more sub-entries, each in the format of {} : {}'.format(
