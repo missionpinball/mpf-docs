@@ -210,15 +210,14 @@ your machine-wide config, a mode-specific config, or both.
         final_text += self.build_sections(name, spec, existing_settings)
 
         howtos = ""
-        for section, section_content in dict(existing_settings).items():
-            if section == "Related How To guides":
-                del existing_settings[section]
-                howtos = section_content.full_body
+        if "Related How To guides" in existing_settings:
+            howtos = existing_settings["Related How To guides"].full_body
+            del existing_settings["Related How To guides"]
 
         final_text += self.build_howtos(howtos)
 
-        for setting in existing_settings:
-            print('WARNING: Removing setting "{}" from {}'.format(setting, name))
+        for setting, content in existing_settings.items():
+            print('WARNING: Removing setting "{}" from {}: {}'.format(setting, name, content.full_body))
 
         #print(final_text)
         self.create_file(name, final_text)
@@ -237,8 +236,8 @@ your machine-wide config, a mode-specific config, or both.
     def build_sections(self, name, spec, existing_settings: Dict[str, RstSection], level=1):
         final_text = ''
 
-        existing_settings.pop("Required settings")
-        existing_settings.pop("Optional settings")
+        existing_settings.pop("Required settings", None)
+        existing_settings.pop("Optional settings", None)
 
         if spec['required']:
             final_text += self.add_required_section(spec['required'], name,
@@ -412,10 +411,13 @@ your machine-wide config, a mode-specific config, or both.
 
             sections.append((name, heading, level, parent))
 
-        try:
-            beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
-        except (IndexError, ValueError):
-            beginning = ''
+        if not sections:
+            beginning = doc
+        else:
+            try:
+                beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
+            except (IndexError, ValueError):
+                beginning = ""
 
         beginning = beginning.strip('\n')
 
@@ -440,7 +442,7 @@ your machine-wide config, a mode-specific config, or both.
             # strip out the old spec string so the latest replaces it
             if level:
                 try:
-                    header, body = full_body.split('\n', 1)
+                    header, body = full_body.split('\n\n', 1)
                     header = header.strip('\n')
                     body = body.strip('\n')
                 except ValueError:
@@ -450,8 +452,8 @@ your machine-wide config, a mode-specific config, or both.
                 header = ""
                 body = full_body
 
-            if name in settings_dict:
-                raise AssertionError("Duplicate section {}".format(name))
+            if name in settings_dict and name not in ("Optional settings", "Required settings"):
+                raise AssertionError("Duplicate section {} in {}".format(name, filename))
             settings_dict[name] = RstSection(header, body, full_body, level, parent)
 
         return beginning, settings_dict
@@ -546,7 +548,7 @@ your machine-wide config, a mode-specific config, or both.
                     stype.replace('machine(', '')[:-1])
 
         elif ':' in stype:
-            raise AssertionError("Should be catched earlier.")
+            raise AssertionError("Should be catched earlier: {}.".format(stype))
 
         else:
             ftype = stype
@@ -562,13 +564,15 @@ your machine-wide config, a mode-specific config, or both.
             return_string = 'List of one (or more) events.\n'
             return return_string
         elif num == 'dict':
-            stype = tuple(stype.split(':'))
-            return_string = 'One or more sub-entries, each in the format of {} : {}'.format(
+            stype = stype.split(':')
+            return_string = 'One or more sub-entries. Each in the format of {} : {}\n'.format(
                 self._get_type_desc(stype[0]), self._get_type_desc(stype[1]))
             return return_string
         elif num == 'omap':
-            return_string = ('Ordered list for one (or more) sub-settings. '
-                             'Each sub-setting is a ')
+            stype = stype.split(':')
+            return_string = 'Ordered list for one (or more) sub-settings. Each in the format of {} : {}\n'.format(
+                self._get_type_desc(stype[0]), self._get_type_desc(stype[1]))
+            return return_string
         elif num == 'event_handler':
             return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
                     'device control events </config/instructions/device_control_events>`).'
@@ -594,6 +598,7 @@ your machine-wide config, a mode-specific config, or both.
 
 if __name__ == '__main__':
     parser = ConfigDocParser()
+
     parser.create_rst(sys.argv[1])
     #parser.create_rsts()
     #parser.write_index()
