@@ -30,12 +30,7 @@ Behind the scenes MPF performs
 The default should be fine for most machine but if your PSU is very weak try
 this config:
 
-.. code-block:: mpf-config
 
-   psus:
-     default:
-       voltage: 48
-       release_wait_ms: 50    # defaults to 10ms
 
 
 Configuring Pulse Times
@@ -54,13 +49,6 @@ Also reduces the sound caused by the reset.
 
 You can try something like this:
 
-.. code-block:: mpf-config
-
-   coils:
-     c_drop_reset:
-       number:
-       default_pulse_ms: 100
-       default_pulse_power: .5
 
 
 Resetting a Drop Target Multiple Times
@@ -101,8 +89,8 @@ times on ball start:
        reset_on_complete: 1s
        reset_events:
          ball_started.1: 0
-         ball_started.2: 500ms
-         ball_started.3: 1s
+         ball_started.2: 1s
+         ball_started.3: 2s
          machine_reset_phase_3: 0
    ##! test
    #! start_game
