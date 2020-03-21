@@ -1,14 +1,19 @@
 import os
+from collections import namedtuple
+
 import re
 import sys
 
-from mpf._version import __version__
 import mpf
 
 import ruamel.yaml as yaml
 from mpf.core.utility_functions import Util
+from typing import Dict, Tuple
 
 rst_path = '../config'
+
+
+RstSection = namedtuple("RstSection", ["header", "body", "full_body", "level", "parent"])
 
 
 class ConfigDocParser(object):
@@ -88,6 +93,8 @@ your machine-wide config, a mode-specific config, or both.
 
             if setting_name == '__valid_in__':
                 final_dict['valid_in'] = setting_spec
+            if setting_name == '__type__':
+                final_dict['__type__'] = setting_spec
 
             if isinstance(setting_spec, dict):
 
@@ -127,17 +134,18 @@ your machine-wide config, a mode-specific config, or both.
             "console_log": "Log level for the console log for this device.",
             "file_log": "Log level for the file log for this device.",
         }
-        # if it is already there remove it
-        for section in existing_settings:
-            if section[0] in texts:
-                del texts[section[0]]
 
         # add the remaining
         for section, text in texts.items():
-            existing_settings[(section, section + ":", 2, "Optional settings")] = text
+            if section not in existing_settings:
+                existing_settings[section] = RstSection("", text, text, 2, "Optional settings")
 
-    def create_rst(self, name, type):
-        assert type in ("device", "other")
+    def create_rst(self, name):
+        type = self.all_specs[name].get("__type__")
+
+        if not type:
+            raise AssertionError("Could not find type for {}".format(name))
+
         if type == "device":
             spec = self.config_specs[name]
             device_spec = self.all_specs["device"]
@@ -159,7 +167,7 @@ your machine-wide config, a mode-specific config, or both.
 
         else:
             existing_intro = ''
-            existing_settings = dict()
+            existing_settings = dict()      # type: Dict[str, RstSection]
 
         if device:
             self._prepare_default_texts(existing_settings)
@@ -201,15 +209,36 @@ your machine-wide config, a mode-specific config, or both.
 
         final_text += self.build_sections(name, spec, existing_settings)
 
-        final_text +=
-        for setting in existing_settings:
-            if setting[1].endswith(":"):
-                print("WARNING: Removing setting {} from {}".format(setting[0], name))
+        howtos = ""
+        for section, section_content in dict(existing_settings).items():
+            if section == "Related How To guides":
+                del existing_settings[section]
+                howtos = section_content.full_body
 
+        final_text += self.build_howtos(howtos)
+
+        for setting in existing_settings:
+            print('WARNING: Removing setting "{}" from {}'.format(setting, name))
+
+        #print(final_text)
         self.create_file(name, final_text)
 
-    def build_sections(self, name, spec, existing_settings, level=1):
+    def build_howtos(self, howtos):
+        final_text = "Related How To guides\n"
+        final_text += "---------------------\n\n"
+
+        if not howtos:
+            final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
+        else:
+            final_text += howtos
+
+        return final_text
+
+    def build_sections(self, name, spec, existing_settings: Dict[str, RstSection], level=1):
         final_text = ''
+
+        existing_settings.pop("Required settings")
+        existing_settings.pop("Optional settings")
 
         if spec['required']:
             final_text += self.add_required_section(spec['required'], name,
@@ -228,7 +257,7 @@ your machine-wide config, a mode-specific config, or both.
 
         return final_text
 
-    def add_required_section(self, required_list, name, existing_settings, level):
+    def add_required_section(self, required_list, name, existing_settings: Dict[str, RstSection], level):
         if level == 1:
             sep = '-'
             sep2 = '~'
@@ -253,12 +282,13 @@ your machine-wide config, a mode-specific config, or both.
 
             found = False
 
-            for k1, v1 in existing_settings.items():
-                if k1[0] == setting[0] and k1[2] == level + 1:
-                    final_text += v1
+            if setting[0] in existing_settings:
+                if existing_settings[setting[0]].level == level + 1:
                     found = True
-                    del existing_settings[k1]
-                    break
+                    final_text += existing_settings[setting[0]].body
+                    del existing_settings[setting[0]]
+                else:
+                    print("WARNING: Setting {} is at the wrong level".format(setting[0]))
 
             if not found:
                 final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
@@ -295,12 +325,13 @@ your machine-wide config, a mode-specific config, or both.
 
             found = False
 
-            for k1, v1 in existing_settings.items():
-                if k1[0] == setting[0] and k1[2] == level + 1:
-                    final_text += v1
+            if setting[0] in existing_settings:
+                if existing_settings[setting[0]].level == level + 1:
                     found = True
-                    del existing_settings[k1]
-                    break
+                    final_text += existing_settings[setting[0]].body
+                    del existing_settings[setting[0]]
+                else:
+                    print("WARNING: Setting {} is at the wrong level".format(setting[0]))
 
             if not found:
                 final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
@@ -346,7 +377,8 @@ your machine-wide config, a mode-specific config, or both.
 
         return final_text
 
-    def tokenize_existing_rst(self, filename):
+    @staticmethod
+    def tokenize_existing_rst(filename) -> Tuple[str, Dict[str, RstSection]]:
         with open(filename, 'r') as f:
             doc = f.read()
 
@@ -366,7 +398,7 @@ your machine-wide config, a mode-specific config, or both.
         last_parents = [None, None, None, None]
         sections = list()  # tuple (name, level, parent)
 
-        for x in re.findall('([^\n]+)\n([~\-\^]+)', doc):
+        for x in re.findall('([^\n]+)\n([~\-^]+)', doc):
 
             level = levels.index(x[1][0])
             name = x[0].strip(':')
@@ -396,20 +428,31 @@ your machine-wide config, a mode-specific config, or both.
                 end = None
 
             try:
-                body = doc[doc.index(start):doc.index(end)].replace(start, '').strip('\n')
+                full_body = doc[doc.index(start):doc.index(end)].replace(start, '').strip('\n')
             except TypeError:
-                body = doc[doc.index(start):].replace(start, '').strip('\n')
+                full_body = doc[doc.index(start):].replace(start, '').strip('\n')
             except ValueError:
                 print("Could not process {}. Skipping...".format(filename))
-                body = ''
+                full_body = ''
+
+            full_body = full_body.strip('\n')
 
             # strip out the old spec string so the latest replaces it
             if level:
-                body = body.strip('\n')
-                body = '\n'.join(body.split('\n')[1:])
-                body = body.strip('\n')
+                try:
+                    header, body = full_body.split('\n', 1)
+                    header = header.strip('\n')
+                    body = body.strip('\n')
+                except ValueError:
+                    body = full_body
+                    header = ""
+            else:
+                header = ""
+                body = full_body
 
-            settings_dict[(name, heading, level, parent)] = body
+            if name in settings_dict:
+                raise AssertionError("Duplicate section {}".format(name))
+            settings_dict[name] = RstSection(header, body, full_body, level, parent)
 
         return beginning, settings_dict
 
@@ -516,7 +559,7 @@ your machine-wide config, a mode-specific config, or both.
         elif num == 'list' or num == 'set':
             return_string = 'List of one (or more) values, each is a '
         elif num == 'event_list':
-            return_string = 'List of one (or more) events. '
+            return_string = 'List of one (or more) events.\n'
             return return_string
         elif num == 'dict':
             stype = tuple(stype.split(':'))
@@ -551,6 +594,6 @@ your machine-wide config, a mode-specific config, or both.
 
 if __name__ == '__main__':
     parser = ConfigDocParser()
-    parser.create_rst(sys.argv[1], sys.argv[2])
+    parser.create_rst(sys.argv[1])
     #parser.create_rsts()
     #parser.write_index()
