@@ -31,11 +31,6 @@ magnet_coil:
 ~~~~~~~~~~~~
 Single value, type: string name of a :doc:`coils <coils>` device.
 
-be a coil listed in the :doc:`/config/coils` section of your machine config
-file.
-
-This setting is required.
-
 Note that is any of the magnet activation times are longer than 255ms and the
 magnet pulse power is 100%, then you will need to add ``allow_enable: true``
 to the coil's entry in the ``coils:`` section of the machine config.
@@ -149,7 +144,12 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) events. 
+List of one (or more) events.
+
 A list of tags. Not used for any logic.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/magnets/index`
