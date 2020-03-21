@@ -42,7 +42,7 @@ The following sections are required in the ``accruals:`` section of your config:
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 The events section of an accrual logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -113,6 +113,7 @@ those two logic blocks, if the events were posted in the order event2, event3, e
 then event5, that would complete logic block 2. Then later if event1 was posted, that
 would complete logic block 1.
 
+
 Optional settings
 -----------------
 
@@ -144,7 +145,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 Currently unused.
 
@@ -152,3 +153,9 @@ Currently unused.
 .. include:: /game_logic/logic_blocks/player_variable.rst
 
 .. include:: /game_logic/logic_blocks/common.rst
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/accruals`
