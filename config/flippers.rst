@@ -308,3 +308,7 @@ Special / reserved tags for flippers: *None*
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/flippers/index`
