@@ -123,9 +123,15 @@ your machine-wide config, a mode-specific config, or both.
 
         return final_dict
 
-    def create_rsts(self):
+    def create_rsts(self, dangerous_changes):
         for k, v in self.config_specs.items():
-            self._create_rst(k, v)
+            # skip config players for now as they cause havoc
+            if v.get("type", None) == "config_player":
+                continue
+            try:
+                self.create_rst(k, dangerous_changes)
+            except AssertionError:
+                print("FAILED TO UPDATE {}. Skipping.".format(k))
 
     def _prepare_default_texts(self, existing_settings):
         texts = {
@@ -140,25 +146,22 @@ your machine-wide config, a mode-specific config, or both.
             if section not in existing_settings:
                 existing_settings[section] = RstSection("", text, text, 2, "Optional settings")
 
-    def create_rst(self, name):
+    def create_rst(self, name, dangerous_changes):
         type = self.all_specs[name].get("__type__")
-
-        if not type:
-            raise AssertionError("Could not find type for {}".format(name))
 
         if type == "device":
             spec = self.config_specs[name]
             device_spec = self.all_specs["device"]
             spec = Util.dict_merge(spec, device_spec)
 
-            self._create_rst(name, spec, True)
+            self._create_rst(name, spec, True, dangerous_changes)
         else:
             spec = self.all_specs[name]
             if "valid_in" not in spec:
                 spec["valid_in"] = ""
-            self._create_rst(name, spec, False)
+            self._create_rst(name, spec, False, dangerous_changes)
 
-    def _create_rst(self, name, spec, device=False):
+    def _create_rst(self, name, spec, device=False, dangerous_changes=False):
 
         if name in self.existing_rsts:
             existing_intro, existing_settings = (
@@ -205,7 +208,7 @@ your machine-wide config, a mode-specific config, or both.
                           'you...\n\n'.format(name)
             final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
 
-        final_text += '\n\n\n'
+        final_text += '\n\n.. config\n\n\n'
 
         final_text += self.build_sections(name, spec, existing_settings)
 
@@ -216,11 +219,18 @@ your machine-wide config, a mode-specific config, or both.
 
         final_text += self.build_howtos(howtos)
 
+        would_remove_sections = False
         for setting, content in existing_settings.items():
-            print('WARNING: Removing setting "{}" from {}: {}'.format(setting, name, content.full_body))
+            would_remove_sections = True
+            print('WARNING: Removing setting "{}" from {}:\n{}\n\n-----------\n'.format(
+                setting, name, content.full_body))
 
-        #print(final_text)
-        self.create_file(name, final_text)
+        if would_remove_sections and not dangerous_changes:
+            print('WILL NOT WRITE {} because we would remove text. Add "--yes" to your commandline to process.'.format(
+                name
+            ))
+        else:
+            self.create_file(name, final_text)
 
     def build_howtos(self, howtos):
         final_text = "Related How To guides\n"
@@ -384,14 +394,19 @@ your machine-wide config, a mode-specific config, or both.
         settings_dict = dict()
 
         # trim off the header info
-        parts = doc.split('.. overview\n\n')
+        parts = doc.split('.. overview\n\n', 1)
         if len(parts) == 2:
             doc = parts[1]
         else:
             doc = parts[0]
 
-        # split the doc into a list of lines
-        # doc = doc.split['\n']
+        parts = doc.split('.. config\n\n', 1)
+        if len(parts) == 2:
+            doc = parts[1]
+            beginning = parts[0]
+        else:
+            doc = parts[0]
+            beginning = None
 
         levels = ['=', '-', '~', '^']
         last_parents = [None, None, None, None]
@@ -411,13 +426,14 @@ your machine-wide config, a mode-specific config, or both.
 
             sections.append((name, heading, level, parent))
 
-        if not sections:
-            beginning = doc
-        else:
-            try:
-                beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
-            except (IndexError, ValueError):
-                beginning = ""
+        if not beginning:
+            if not sections:
+                beginning = doc
+            else:
+                try:
+                    beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
+                except (IndexError, ValueError):
+                    beginning = ""
 
         beginning = beginning.strip('\n')
 
@@ -599,6 +615,14 @@ your machine-wide config, a mode-specific config, or both.
 if __name__ == '__main__':
     parser = ConfigDocParser()
 
-    parser.create_rst(sys.argv[1])
+    if len(sys.argv) <= 1:
+        print("Usage: {} config_section_name/all".format(sys.argv[0]))
+
+    dangerous_changes = sys.argv[2] == "--yes" if len(sys.argv) > 2 else False
+
+    if sys.argv[1] == "all":
+        parser.create_rsts(dangerous_changes)
+    else:
+        parser.create_rst(sys.argv[1], dangerous_changes)
     #parser.create_rsts()
     #parser.write_index()
