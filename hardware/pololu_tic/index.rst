@@ -1,5 +1,5 @@
-How to use Step Stick Steppers in MPF
-=====================================
+How to use Pololu Tic in MPF
+============================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
