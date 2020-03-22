@@ -41,6 +41,8 @@ configure additional settings. For example:
           2: event_level1
           5: event_level2
 
+.. config
+
 
 Required settings
 -----------------

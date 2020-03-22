@@ -55,6 +55,9 @@ More examples:
 * :doc:`/cookbook/TAF_mansion_awards`
 * :doc:`/examples/achievement/index`
 
+.. config
+
+
 Required settings
 -----------------
 

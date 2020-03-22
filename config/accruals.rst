@@ -11,14 +11,6 @@ accruals:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
-+------------------------------------------------------------------------------+
-
-See also :doc:`accruals </game_logic/logic_blocks/accruals>`.
-
 The structure of accrual logic blocks are like this:
 
 .. code-block:: yaml
@@ -33,6 +25,8 @@ The structure of accrual logic blocks are like this:
 
 Note that the actual name of the logic block doesn't really matter. Mainly
 they're used in the logs.
+
+.. config
 
 
 Required settings
@@ -159,3 +153,4 @@ Related How To guides
 ---------------------
 
 * :doc:`/game_logic/logic_blocks/accruals`
+* :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`
