@@ -13,6 +13,8 @@ pin2dmd:
 
 The ``pin2dmd:`` section of your config is where you configure your :doc:`PIN2DMD RGB DMD display </hardware/pin2dmd/index>`.
 
+.. config
+
 
 Optional settings
 -----------------

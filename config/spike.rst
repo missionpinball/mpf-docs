@@ -30,6 +30,9 @@ config file, so be sure to read that if you have a SPIKE machine.
      debug: false
      nodes: 0, 1, 8, 9, 10, 11
 
+.. config
+
+
 Required settings
 -----------------
 

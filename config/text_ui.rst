@@ -19,14 +19,17 @@ default, it displays all machine variables and player variables.
 Depending on the complexity of your game and the mode you're working on, you may not want the Text UI to display *every* variable.
 In that case, you can use the ``text_ui:`` section to specify which player and machine variables you want to see.
 
+.. config
+
+
 Optional settings
 -----------------
 
-The following sections are optional in the ``mpf:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``text_ui:`` section of your config. (If you don't include them, the default will be used).
 
 machine_vars:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of all of the machine variables to display and update in the Text UI.
 If the list is empty, no machine variables will be displayed.
@@ -36,7 +39,7 @@ If the ``machine_vars:`` setting is not included in your config,
 
 player_vars:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of all of the player variables to display and update in the Text UI.
 

@@ -61,6 +61,8 @@ Each subsection of ``switches:`` is a switch name, which is how you
 refer to the switch in your game code. Then there are several
 parameters for each switch:
 
+.. config
+
 
 Required settings
 -----------------
@@ -119,7 +121,7 @@ See :doc:`/mechs/switches/debounce` for details.
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this
 switch goes active. These events are posted exactly as they're entered, in addition to any
@@ -127,14 +129,14 @@ events that are posted based on the switch's tags.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this
 switch goes inactive.
 
 ignore_window_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 Specifies a duration of time during which additional switch activations will
 be ignored.

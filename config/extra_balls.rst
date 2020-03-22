@@ -41,6 +41,8 @@ This is all tracked per-player in a player variable dictionary called "extra_bal
 | :doc:`/game_logic/extra_balls/index`                                         |
 +------------------------------------------------------------------------------+
 
+.. config
+
 
 Optional settings
 -----------------

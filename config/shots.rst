@@ -87,6 +87,9 @@ loops... You will have lots of shots in your game.
 
 Each shot in your ``shots:`` section can have the following config options set:
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -94,10 +97,7 @@ The following sections are optional in the ``shots:`` section of your config. (I
 
 advance_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -134,10 +134,7 @@ in whatever state it's in.)
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -147,10 +144,7 @@ remain in whatever state it's in.)
 
 hit_events:
 ~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -192,10 +186,7 @@ play though.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -205,10 +196,7 @@ profile* is active at that time.
 
 restart_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -217,7 +205,7 @@ equivalent to resetting and then enabling the shot, done with a single event.
 
 show_tokens:
 ~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : template_str
 
 A subsection containing key-value pairs that are passed to the show that's
 run when this shot is in a certain state.
@@ -271,7 +259,7 @@ More information about :doc:`show tokens </shows/tokens>`
 
 switch:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
 
 The name of the switch (or a list of switches) for this shot. You can
 use multiple switches if the shot happens to have multiple switches,
@@ -291,7 +279,7 @@ hit to count as that shot being hit.
 
 switches:
 ~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
 
 This setting is the same as the ``switch:`` setting above. You can technically
 enter a single switch or a list of switches in either the ``switch:`` setting

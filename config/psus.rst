@@ -21,6 +21,9 @@ from your PSU.
 :doc:`Ball devices <ball_devices>` and :doc:`drop target <drop_targets>` do
 this by default to ensure more consistent pulses.
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -34,7 +37,7 @@ Maximum ampers which can be provided by this PSU. Currently not used.
 
 release_wait_ms:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``10``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``10``
 
 Time to wait after a coil pulse.
 

@@ -57,6 +57,9 @@ This is an example:
          switch: s_test3
          action: hit
 
+.. config
+
+
 Optional settings
 -----------------
 

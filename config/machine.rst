@@ -13,6 +13,9 @@ machine:
 
 The ``machine:`` section of your config is where you configure defails about the number of balls in your machine.
 
+.. config
+
+
 Optional settings
 -----------------
 

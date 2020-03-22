@@ -16,6 +16,9 @@ This is usually used together with the :doc:`snux platform </hardware/snux/index
 
 See :doc:`snux` or :doc:`/hardware/snux/index` for an example.
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -23,9 +26,10 @@ The following sections are required in the ``system11:`` section of your config:
 
 ac_relay_driver:
 ~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device.
+Single value, type: string name of a :doc:`coils <coils>` device.
 
 The driver to use to drive the AC relay which switches between A and C side drivers.
+
 
 Optional settings
 -----------------

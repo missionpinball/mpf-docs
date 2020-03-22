@@ -35,6 +35,8 @@ The structure of sequence logic blocks is like this:
 Note that the actual name of the logic block doesn't really matter. Mainly
 they're just used in the logs.
 
+.. config
+
 
 Required settings
 -----------------
@@ -43,7 +45,7 @@ The following sections are required in the ``sequences:`` section of your config
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 The events section of a sequence logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -112,6 +114,7 @@ and that will lead to *logic_block_2_done* being posted.
 
 Note that you can have two logic blocks with the same events at the same time, and
 MPF will track the state of each logic block separately.
+
 
 Optional settings
 -----------------

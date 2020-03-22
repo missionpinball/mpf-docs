@@ -40,6 +40,9 @@ and *servo2*:
 
 Then for each servo in your ``servos:`` section, the following settings apply:
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -87,7 +90,7 @@ See the :doc:`/hardware/platform` guide for details.
 
 positions:
 ~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``float``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``number`` (will be converted to floating point) : ``string``
 
 This is a sub-section mapping of servo positions to MPF event names. For example:
 
@@ -119,10 +122,7 @@ for multiple servos.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered
 
 Default: ``None``
 

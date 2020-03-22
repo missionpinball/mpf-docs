@@ -14,6 +14,8 @@ p_roc:
 The ``p_roc:`` section of your config is where you configure hardware specific bits about the P-Roc or P3-Roc.
 In most cases you can omit this config and stick with the defaults.
 
+.. config
+
 
 Optional settings
 -----------------
@@ -59,7 +61,7 @@ Log level for the file log for this device.
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``100ms``
 
 Default: ``100ms``
 
@@ -67,7 +69,7 @@ The column strobe time for your lamp matrix. See :doc:`/hardware/multimorphic/li
 
 pd_led_boards:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``int``:``subconfig(pd_led_boards)``. Default: ``none``
+One or more sub-entries. Each in the format of ``integer`` : :doc:`pd_led_boards <pd_led_boards>`
 
 A map of PD-LED boards with their ID as key and a :doc:`configuration map <pd_led_boards>` as value.
 This can be used to configure indivdual features per board.
@@ -83,6 +85,6 @@ Enable or disable the watchdog. Usually you want to keep this enabled.
 
 watchdog_time:
 ~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1s``
 
 Watchdog timeout. The P/P3-Roc will disable all coils when the watchdog expires.

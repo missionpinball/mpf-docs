@@ -96,6 +96,9 @@ options here.)
        eos_switch: flipperUpR_EOS
        label: Upper Right Flipper
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -164,6 +167,8 @@ EOS switch on this flipper (if there is one).
 
 eos_switch_overwrite:
 ~~~~~~~~~~~~~~~~~~~~~
+One or more sub-entries. Each in the format of ``string`` : ``string``
+
 One or more sub-entries, each in the format of ``string`` : ``string``
 If you're using an end of stroke switch with this flipper, enter the
 switch name here.
@@ -255,6 +260,8 @@ Disables a flipper from software. Use this together with ``sw_flip_events``.
 
 switch_overwrite:
 ~~~~~~~~~~~~~~~~~
+One or more sub-entries. Each in the format of ``string`` : ``string``
+
 One or more sub-entries, each in the format of ``string`` : ``string``
 Overwrites settings on the activation_switch.
 See :doc:`switch_overwrites` for details.

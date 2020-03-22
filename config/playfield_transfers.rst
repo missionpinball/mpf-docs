@@ -38,6 +38,9 @@ This is an example:
        label: Playfield 2
        default_source_device: None
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -45,15 +48,16 @@ The following sections are required in the ``playfield_transfers:`` section of y
 
 captures_from:
 ~~~~~~~~~~~~~~
-Single value, type: string name of a ``playfields:`` device.
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device.
 
 Source playfield for the transfer.
 
 eject_target:
 ~~~~~~~~~~~~~
-Single value, type: string name of a ``playfields:`` device.
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device.
 
 Target playfield for the transfer.
+
 
 Optional settings
 -----------------
@@ -81,7 +85,7 @@ Name in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Tags of the device. Not used currently.
 

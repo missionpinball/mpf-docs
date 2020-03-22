@@ -21,6 +21,8 @@ The only difference between :doc:`light_stripes </config/light_stripes>`  and
 .. literalinclude:: /mpf_examples/light/config/light_groups.yaml
    :language: yaml
 
+.. config
+
 
 Required settings
 -----------------

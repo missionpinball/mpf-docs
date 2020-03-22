@@ -14,6 +14,9 @@ spi_bit_bang:
 The ``spi_bit_bang:`` section of your config is where you configure the
 :doc:`/hardware/spi_bit_bang/index` platform.
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -46,7 +49,7 @@ The following sections are optional in the ``spi_bit_bang:`` section of your con
 
 bit_time:
 ~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``50ms``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``50ms``
 
 How long should the platform wait until reading the ``miso_pin``.
 Depending on your platform it might need a while to settle.
@@ -55,7 +58,7 @@ If your inputs are local (i.e. on a RPi) this might be very short compared.
 
 clock_time:
 ~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``1ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1ms``
 
 How long should the clock pulse be?
 1ms is the lower limit for most platforms and more than long enough for any

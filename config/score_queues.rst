@@ -35,6 +35,9 @@ This is an example:
      score_200:
        score: 200
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -49,6 +52,7 @@ Start from the left the right on your digits.
 You might use None if a certain digit does not have a chime.
 Example: ``c_chime_1000, c_chime_100, c_chime_10, None``
 
+
 Optional settings
 -----------------
 
@@ -56,7 +60,7 @@ The following sections are optional in the ``score_queues:`` section of your con
 
 delay:
 ~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``200ms``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``200ms``
 
 The delay between adding scores (and pulsing a chime).
 

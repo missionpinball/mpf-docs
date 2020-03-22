@@ -55,6 +55,9 @@ This is an example:
      timer_test_diverter_tick{device.timers.test_diverter.ticks==3}: move_to_25
      timer_test_diverter_tick{device.timers.test_diverter.ticks==5}: move_to_45
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -92,7 +95,7 @@ During ball search the stepper will move between ``ball_search_min`` and ``ball_
 
 ball_search_wait:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``5s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
 
 How long should the stepper wait after moving to ``ball_search_min`` before moving to ``ball_search_max``.
 
@@ -124,7 +127,7 @@ Set to true to enable ball search on this stepper.
 
 named_positions:
 ~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``float``:``str``.
+One or more sub-entries. Each in the format of ``number`` (will be converted to floating point) : ``string``
 
 This is a sub-section mapping of stepper positions to MPF event names. For example:
 
@@ -141,7 +144,6 @@ This is a sub-section mapping of stepper positions to MPF event names. For examp
 The values in this ``named_positions:`` list represent MPF events that, when posted,
 tell this stepper to move to a certain position. So in the example above, when the
 *move_to_999* event is posted, this stepper will move to position 999.
-
 
 platform:
 ~~~~~~~~~

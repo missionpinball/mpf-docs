@@ -17,6 +17,9 @@ The ``segment_display_player:`` section of your config is a :doc:`/config_player
 which controls :doc:`segment_displays`.
 See :doc:`/displays/display/alpha_numeric` for details.
 
+.. config
+
+
 Optional settings
 -----------------
 

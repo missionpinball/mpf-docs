@@ -16,6 +16,8 @@ The ``segment_displays:`` section of your config is where you define your
 This can be 7-segment or alphanumeric displays which are typically
 used in older machines.
 
+.. config
+
 
 Required settings
 -----------------

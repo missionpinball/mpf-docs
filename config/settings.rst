@@ -29,6 +29,9 @@ This is an example:
        key_type: int
        sort: 100
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -54,11 +57,12 @@ Sort in service mode.
 
 values:
 ~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``.
+One or more sub-entries. Each in the format of ``string`` : ``string``
 
 Values for this setting in the format ``value: label``.
 ``value`` will be assigned to the ``machine_var`` and ``label`` will be shown
 in service mode.
+
 
 Optional settings
 -----------------
@@ -74,7 +78,7 @@ Type of the key. If you want to do math with the variable you need either
 
 machine_var:
 ~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Name of the machine variable to use. If this is not set it will use the name
 of this setting as machine variable.

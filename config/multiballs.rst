@@ -61,6 +61,9 @@ real world, you'd probably only have one multiball for each mode.)
        start_events: mb6_start
        ball_locks: bd_lock
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -68,7 +71,7 @@ The following sections are required in the ``multiballs:`` section of your confi
 
 ball_count:
 ~~~~~~~~~~~
-Single value, type: template_int.
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
 
 The number of balls this multiball should eject (and maintain during shoot again period).
 This is a template so you can use :doc:`dynamic values </config/instructions/dynamic_values>`
@@ -163,7 +166,7 @@ disabling shoot again and resetting the ball add counts to 0.
 
 shoot_again:
 ~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``10s``
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``10s``
 
 Specifies a time period for "shoot again" which is a sort of automatic ball save for
 multiballs. The timer will start when this multiball starts, and any balls that

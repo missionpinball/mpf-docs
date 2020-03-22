@@ -14,6 +14,8 @@ smart_virtual:
 The ``smart_virtual:`` section of your config is where you configure the
 :doc:`smart virtual platform </hardware/virtual/smart_virtual>`.
 
+.. config
+
 
 Optional settings
 -----------------
@@ -42,7 +44,7 @@ eject after ``simulate_manual_plunger_timeout`` ms.
 
 simulate_manual_plunger_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``10s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``10s``
 
 When ``simulate_manual_plunger`` is set to ``True`` the smart_virtual platform
 will automatically plunge balls in devices with mechanical

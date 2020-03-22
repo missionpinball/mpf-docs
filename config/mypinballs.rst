@@ -14,6 +14,8 @@ mypinballs:
 The ``mypinballs:`` section of your config is where your mypinballs segment display controller.
 See :doc:`/hardware/mypinballs/index` for details.
 
+.. config
+
 
 Required settings
 -----------------

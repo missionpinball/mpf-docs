@@ -16,6 +16,8 @@ All settings are directly passed to the
 `rpi-rgb-led-matrix library <https://github.com/hzeller/rpi-rgb-led-matrix>`_.
 Read their documentation (or the source) if in doubt.
 
+.. config
+
 
 Optional settings
 -----------------

@@ -82,6 +82,7 @@ Single value, type: ``string``.
 When should the asset loader load this file?
 One out of ``mode_start``, ``on_demand`` or ``preload``.
 
+
 Related How To guides
 ---------------------
 

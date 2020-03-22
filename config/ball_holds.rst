@@ -156,7 +156,7 @@ A descriptive label.
 
 tags:
 ~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for ball holds: *None*
 

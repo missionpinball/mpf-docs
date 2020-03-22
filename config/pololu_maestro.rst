@@ -26,6 +26,9 @@ Note that there are a few other settings you need to configure in other areas
 to use a Pololu Maestro servo controller. See the
 :doc:`How To guide </hardware/pololu_maestro/index>` for details.
 
+.. config
+
+
 Required settings
 -----------------
 

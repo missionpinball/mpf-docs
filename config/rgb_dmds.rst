@@ -46,6 +46,9 @@ you add a ``rgb_dmds:`` section to your config, then under that you
 add an entry for a specific DMD (which can be whatever you want), and then
 you enter one or more of the following settings:
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -95,7 +98,7 @@ want to adjust both of them together.
 
 hardware_brightness:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: template_float. Default: ``1.0``
+Single value, type: ``number`` or ``template`` (will be converted to floating point; :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``1.0``
 
 A brightness multiplier for the DMD (because RGB DMDs are crazy bright).
 Note that brightness is closely related to gamma (see above). You'll probably

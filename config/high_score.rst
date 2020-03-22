@@ -15,6 +15,9 @@ The ``high_score:`` section of your config is where you configure the built-in
 high score mode.
 See :doc:`/game_logic/high_scores/index` for details.
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -22,10 +25,11 @@ The following sections are required in the ``high_score:`` section of your confi
 
 categories:
 ~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``list``.
+Ordered list for one (or more) sub-settings. Each in the format of ``string`` : ``list`` (:doc:`Instructions </config/instructions/lists>` for entering lists)
 
 An ordered map of categories which contain a list of awards.
 See :doc:`/game_logic/high_scores/index` for an example.
+
 
 Optional settings
 -----------------

@@ -14,6 +14,8 @@ hardware_sound_systems:
 The ``hardware_sound_systems:`` section of your config is where you configure external sound systems.
 For instance, this is used in the :doc:`LISY platform </hardware/lisy/index>`.
 
+.. config
+
 
 Optional settings
 -----------------

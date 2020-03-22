@@ -99,6 +99,9 @@ once a second. That tick event is used to rotate the lit skillshot.
 
 See :doc:`timer_control_events` for more details about all the actions available in a timer.
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -131,7 +134,7 @@ If true/yes, adds additional logging information to the verbose log for this tim
 
 direction:
 ~~~~~~~~~~
-Single value, type: ``string``. Default: ``up``
+Single value, type: one of the following options: up, down. Default: ``up``
 
 Controls which direction this timer runs in. Options are ``up`` or ``down``.
 

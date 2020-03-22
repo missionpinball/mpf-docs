@@ -21,6 +21,8 @@ Example:
    :caption: `/config/config.yaml </mpf_examples/magnet/config/config.yaml>`_
    :language: yaml
 
+.. config
+
 
 Required settings
 -----------------
@@ -144,7 +146,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``.
 
 A list of tags. Not used for any logic.
 

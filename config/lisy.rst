@@ -14,6 +14,9 @@ lisy:
 The ``lisy:`` section of your config is where your lisy platform.
 See :doc:`/hardware/lisy/index` for details.
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -21,7 +24,7 @@ The following sections are optional in the ``lisy:`` section of your config. (If
 
 baud:
 ~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: ``integer``.
 
 Baudrate when connecting to LISY using a serial port.
 

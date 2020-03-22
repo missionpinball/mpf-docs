@@ -92,8 +92,7 @@ set to ``True``).
 Optional settings
 -----------------
 
-The following sections are optional in the ``playlists:`` section of your config. (If you don't include
-them, the default will be used).
+The following sections are optional in the ``playlists:`` section of your config. (If you don't include them, the default will be used).
 
 crossfade_mode:
 ~~~~~~~~~~~~~~~
@@ -107,15 +106,14 @@ setting or the ``crossfade_time`` specified in the playlist.  Options for ``cros
 
 crossfade_time:
 ~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 The number of seconds over which to crossfade between sounds in the playlist. This value is ignored when
 ``crossfade_mode:`` is set to ``use_track_setting``.
 
 events_when_looping:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this playlist loops back to the
 beginning while playing. The playlist will only loop if ``repeat:`` is set to ``True``. Enter the
@@ -123,14 +121,14 @@ list in the MPF config list format. These events are posted exactly as they’re
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this playlist is played. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_sound_changed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when a new sound is played while the playlist
 is played. Enter the list in the MPF config list format. These events are posted exactly as they’re

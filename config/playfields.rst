@@ -31,7 +31,7 @@ will end the game.
 
 ball_search_interval:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``150ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``150ms``
 
 The delay after each fired coil/searched device.
 

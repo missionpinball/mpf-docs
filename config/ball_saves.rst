@@ -155,7 +155,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for ball saves: *None*
 

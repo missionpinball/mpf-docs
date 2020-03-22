@@ -19,6 +19,8 @@ state_machines:
 
 The ``state_machines:`` section of your config is where you configure generic :doc:`state machines </game_logic/logic_blocks/state_machines>`.
 
+.. config
+
 
 Required settings
 -----------------
@@ -27,8 +29,7 @@ The following sections are required in the ``state_machines:`` section of your c
 
 states:
 ~~~~~~~
-One or more sub-entries, each in the format of ``string`` : :doc:`state_machine_states <state_machine_states>`
-List all of your states here. For examples:
+One or more sub-entries. Each in the format of ``string`` : :doc:`state_machine_states <state_machine_states>`
 
 .. code-block:: mpf-config
 
@@ -86,6 +87,7 @@ List all your transitions here (we start with the same steps as above):
          - source: step1, step2
            target: start
            events: state_machine_reset
+
 
 Optional settings
 -----------------

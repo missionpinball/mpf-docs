@@ -14,6 +14,9 @@ score_reels:
 The ``score_reels:`` section of your config is where you configure your score reels.
 See :doc:`/mechs/score_reels/index` for more details.
 
+.. config
+
+
 Optional settings
 -----------------
 

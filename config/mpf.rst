@@ -13,6 +13,9 @@ mpf:
 
 The ``mpf:`` section of your config is where you configure global MPF settings.
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -30,15 +33,33 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
 MPF will post switch_event_active and switch_event_inactive (see below) when this is enabled.
 
-default_pulse_ms:
-~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``10``
+config_players:
+~~~~~~~~~~~~~~~
+Unknown type. See description below.
 
-Default default_pulse_ms for all coils when not overwritten. This will be used when you do not specify any pulse_ms in your coil.
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+core_modules:
+~~~~~~~~~~~~~
+Unknown type. See description below.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+default_ball_search:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+default_light_hw_update_hz:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``50``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 default_platform_hz:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``100.0``
+Single value, type: ``number`` (will be converted to floating point). Default: ``100``
 
 For all non-tickless platforms we poll this often.
 This usually means how often we will read switches.

@@ -24,6 +24,9 @@ This is an example:
     opp:
       ports: COM7
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -31,9 +34,10 @@ The following sections are required in the ``opp:`` section of your config:
 
 ports:
 ~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 Serial ports to use.
+
 
 Optional settings
 -----------------

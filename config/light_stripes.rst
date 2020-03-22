@@ -22,6 +22,8 @@ Here's an example:
 .. literalinclude:: /mpf_examples/light/config/light_groups.yaml
    :language: yaml
 
+.. config
+
 
 Required settings
 -----------------

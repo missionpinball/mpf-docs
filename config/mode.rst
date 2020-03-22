@@ -30,6 +30,9 @@ Let's take a look at an example ``mode:`` section from a multiball mode:
       stop_events: timer_mode_timer_complete, shot_right_ramp
       priority: 300
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -37,7 +40,7 @@ The following sections are optional in the ``mode:`` section of your config. (If
 
 code:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 If you want to write some custom Python code for this mode, you can
 specify the name of your file as well as the class (a child class of
@@ -84,10 +87,7 @@ which maintains a list of the modes to be restarted.
 
 start_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -124,10 +124,7 @@ modes that are set to start on the same event.
 
 stop_events:
 ~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 

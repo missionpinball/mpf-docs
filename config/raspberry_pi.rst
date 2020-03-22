@@ -22,6 +22,9 @@ This is an example:
      ip: localhost
      port: 8888
 
+.. config
+
+
 Required settings
 -----------------
 

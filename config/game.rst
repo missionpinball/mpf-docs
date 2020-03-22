@@ -20,6 +20,9 @@ to the game play.
       balls_per_game: 3
       max_players: 4
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -32,7 +35,6 @@ Single value, type: ``string``.
 An event name which will request to add a player.
 Same as ``add_player_switch_tag`` but using an event instead oa switch tag
 (see below).
-
 
 add_player_switch_tag:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +66,7 @@ in ball devices tagged with ``home``.
 
 balls_per_game:
 ~~~~~~~~~~~~~~~
-Single value, type: template_int. Default: ``3``
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``3``
 
 How many balls the game is. Typically it's 3 or 5 but it can be
 anything. MPF doesn't care.
@@ -73,7 +75,7 @@ anything. MPF doesn't care.
 
 max_players:
 ~~~~~~~~~~~~
-Single value, type: template_int. Default: ``4``
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``4``
 
 Controls the maximum number of players that can play a game.
 

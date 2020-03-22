@@ -532,7 +532,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``.
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 

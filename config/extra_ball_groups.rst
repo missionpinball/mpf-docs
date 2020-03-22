@@ -15,6 +15,8 @@ The ``extra_ball_groups:`` section of your config is where you...
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
+.. config
+
 
 Optional settings
 -----------------

@@ -15,6 +15,8 @@ The ``score_reel_groups:`` section of your config is where you configure groups 
 Every reel only displays one digits so they have to be grouped to display longer scores.
 See :doc:`/mechs/score_reels/index` for more details.
 
+.. config
+
 
 Required settings
 -----------------
@@ -23,11 +25,12 @@ The following sections are required in the ``score_reel_groups:`` section of you
 
 reels:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a ``score_reels:`` device.
+List of one (or more) values, each is a type: string name of a :doc:`score_reels <score_reels>` device.
 
 List the :doc:`score reels <score_reels>` which make up this group.
 Start with the highest digit. The last entry will be the right most digit.
 You may use None if there is no reel for a digit.
+
 
 Optional settings
 -----------------
@@ -36,7 +39,7 @@ The following sections are optional in the ``score_reel_groups:`` section of you
 
 chimes:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a ``coils:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device.
 
 List the :doc:`coils <coils>` driving the chime which are rung when the reel overflows.
 Start with the highest digit. The last entry will be the right most digit.
