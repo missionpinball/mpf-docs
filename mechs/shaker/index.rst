@@ -14,7 +14,7 @@ Shaker motors cause vibrations to give the player tactile feedback.
 Hardware
 --------
 
-:doc:`TODO: Add a picture of a kickback </about/help_us_to_write_it>`
+:doc:`TODO: Add a picture of a shaker </about/help_us_to_write_it>`
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 

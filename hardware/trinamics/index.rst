@@ -13,6 +13,8 @@ Trinamic's StepRocker
 
 Connect the StepRocker to USB and MPF can control any steppers connected to it.
 
+:doc:`TODO: Add a picture of a StepRocker </about/help_us_to_write_it>`
+
 This is an example:
 
 .. code-block:: mpf-config
