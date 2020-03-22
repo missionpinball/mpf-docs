@@ -96,6 +96,8 @@ indicated which type of config file it's valid in.
    machine_vars: <machine_vars>
    magnets: <magnets>
    matrix_lights: <matrix_lights>
+   mc_custom_code: <mc_custom_code>
+   mc_scriptlets: <mc_scriptlets>
    mode: <mode>
    mode_settings: <mode_settings>
    modes: <modes>

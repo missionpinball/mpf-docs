@@ -1,5 +1,5 @@
-scriptlets:
-===========
+mc_custom_code:
+===============
 
 *Config file section*
 
@@ -11,9 +11,8 @@ scriptlets:
 
 .. overview
 
-The ``scriptlets:`` section of your config is where you list you custom code scriptlets.
-This has been deprecated with 0.50+. Use :doc:`custom_code` instead.
-Scriptlets still work but will be removed eventually.
+The ``mc_custom_code:`` section of your config is a list where you register
+your custom code classes for MC.
 
 .. config
 
