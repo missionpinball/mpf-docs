@@ -34,4 +34,10 @@ For example:
 The above example defines animations named ``fade_in`` and ``fade_out`` that you can use, by name, in any widget or
 widget_player config where you would ordinarily define your own animations.
 
-See the :doc:`/displays/widgets/animation` for more details.
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/widgets/animation`
