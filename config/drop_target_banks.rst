@@ -69,6 +69,8 @@ Create a subsection under *drop_target_banks:* for each bank of drop
 targets you have. The name of each section is the name you'll refer to
 the drop target as in your game code. ("judge", in this example.)
 
+.. config
+
 
 Required settings
 -----------------
@@ -97,7 +99,7 @@ The following sections are optional in the ``drop_target_banks:`` section of you
 
 ignore_switch_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
 
 How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
 coils will set switches that could add to the score, start modes, etc.
@@ -110,7 +112,7 @@ The name of the coil that is fired to reset this bank of drop targets.
 
 reset_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``100ms``
 
 Max time allowed to delay the pulse of the reset coil.
 This is used to prevent excess power usage.
@@ -134,7 +136,7 @@ Resets this drop target bank by pulsing this bank's ``reset_coil`` or ``reset_co
 
 reset_on_complete:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 By default, when a drop target bank completes, it does not automatically reset.
 If you want it to reset, then use this setting along with a time delay for when you
@@ -181,3 +183,7 @@ Special / reserved tags for drop target banks: *None*
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/targets/drop_targets/drop_target_bank`
