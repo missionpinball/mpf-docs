@@ -44,6 +44,8 @@ Each sub-entry under the ``ball_holds:`` section is the name of the logical ball
 hold ("bunker") in the example above. Then each named ball hold has the
 following settings:
 
+.. config
+
 
 Required settings
 -----------------
@@ -85,6 +87,14 @@ enable_events:
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Event(s) which enable this ball hold.
+
+priority:
+~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+Relative priority when claiming balls entering a device.
+This can be used to give one :doc:`ball_hold <ball_holds>` or
+:doc:`multiball_lock <multiball_locks>` preference when claiming balls.
 
 release_all_events:
 ~~~~~~~~~~~~~~~~~~~
@@ -146,10 +156,17 @@ A descriptive label.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 Special / reserved tags for ball holds: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/ball_holds/index`
+* :doc:`/game_logic/mystery_award/index`
+* :doc:`/game_logic/ball_locks/index`
+* :doc:`/mechs/scoops/index`
