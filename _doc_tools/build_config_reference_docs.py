@@ -102,17 +102,19 @@ your machine-wide config, a mode-specific config, or both.
                     self._create_subsection_config_spec(setting_spec))
 
             elif isinstance(setting_spec, str):
+                if setting_spec == "ignore":
+                    final_dict['optional'].append((setting_name, "ignored", "ignored", "None"))
+                else:
+                    try:
+                        num, stype, default = setting_spec.split('|')
 
-                try:
-                    num, stype, default = setting_spec.split('|')
-
-                    if default:
-                        final_dict['optional'].append((setting_name, num,
-                                                       stype, default))
-                    else:
-                        final_dict['required'].append((setting_name, num, stype))
-                except ValueError:
-                    final_dict['ignored'].append((setting_name, setting_spec))
+                        if default:
+                            final_dict['optional'].append((setting_name, num,
+                                                           stype, default))
+                        else:
+                            final_dict['required'].append((setting_name, num, stype))
+                    except ValueError:
+                        final_dict['ignored'].append((setting_name, setting_spec))
 
             elif setting_name == '__allow_others__':
                 final_dict['allow_others'] = True
@@ -240,6 +242,8 @@ your machine-wide config, a mode-specific config, or both.
             final_text += '.. todo:: :doc:`/about/help_us_to_write_it`'
         else:
             final_text += howtos
+
+        final_text += '\n'
 
         return final_text
 
@@ -411,12 +415,14 @@ your machine-wide config, a mode-specific config, or both.
         levels = ['=', '-', '~', '^']
         last_parents = [None, None, None, None]
         sections = list()  # tuple (name, level, parent)
+        first_section_start = None
 
-        for x in re.findall('([^\n]+)\n([~\-^]+)', doc):
-
-            level = levels.index(x[1][0])
-            name = x[0].strip(':')
-            heading = x[0]
+        for x in re.finditer('([^\n]+)\n([~\-^]+)', doc):
+            if not first_section_start:
+                first_section_start = x.start(1)
+            level = levels.index(x.group(2)[0])
+            name = x.group(1).strip(':')
+            heading = x.group(1)
             last_parents[level] = name
 
             if level:
@@ -427,13 +433,10 @@ your machine-wide config, a mode-specific config, or both.
             sections.append((name, heading, level, parent))
 
         if not beginning:
-            if not sections:
+            if not first_section_start:
                 beginning = doc
             else:
-                try:
-                    beginning = doc[:doc.index(sections[0][1] + '\n' + ('-' * len(sections[0][1])))]
-                except (IndexError, ValueError):
-                    beginning = ""
+                beginning = doc[:first_section_start]
 
         beginning = beginning.strip('\n')
 
@@ -596,7 +599,8 @@ your machine-wide config, a mode-specific config, or both.
                 return_string += " Default: " + default
             return_string += '\n'
             return return_string
-
+        elif num == "ignored":
+            return "Unknown type. See description below.\n"
         else:
             raise AssertionError("Invalid config spec num: {}".format(num))
 
