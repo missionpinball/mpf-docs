@@ -35,12 +35,6 @@ future ``alien_smashed`` events will not lead to additional extra balls. (The
 
 This is all tracked per-player in a player variable dictionary called "extra_balls_awarded"
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/game_logic/extra_balls/index`                                         |
-+------------------------------------------------------------------------------+
-
 .. config
 
 
@@ -119,3 +113,7 @@ Special / reserved tags for extra balls: *None*
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/extra_balls/index`

@@ -27,13 +27,36 @@ award_events:
 ~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Immediately awards an extra ball.
+
+This event first checks to make sure the limits of the max extra
+balls have not been exceeded and that this group is enabled.
+
+Note that this method will work even if this group does not have any
+extra balls or extra balls lit.
+You can use this to directly award an extra ball.
+
+award_lit_events:
+~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events to award a lit extra ball.
+If the player does not have any lit extra balls, this method does nothing.
 
 enabled:
 ~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Whether this ball group is enabled.
+
+light_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Light the extra ball for possible collection by the player.
+This method checks that the group is enabled and that the max lit
+value has not been exceeded.
+If so, this method will post the extra ball disabled events.
 
 lit_memory:
 ~~~~~~~~~~~
@@ -45,19 +68,19 @@ max_lit:
 ~~~~~~~~
 Single value, type: ``integer``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Max concurrent lit extra balls.
 
 max_per_ball:
 ~~~~~~~~~~~~~
 Single value, type: ``integer``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Maximum number of extra balls per ball.
 
 max_per_game:
 ~~~~~~~~~~~~~
 Single value, type: ``integer``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Maximum number of extra balls per game.
 
 console_log:
 ~~~~~~~~~~~~
@@ -87,6 +110,10 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Not used.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/extra_balls/index`
