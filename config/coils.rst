@@ -11,12 +11,6 @@ coils:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/mechs/coils/index`                                                    |
-+------------------------------------------------------------------------------+
-
 The ``coils:`` section of your config is used to map coil
 (solenoid) names to driver board outputs. You can also set the
 default pulse times, set tags, and specify power levels for coils that
@@ -53,6 +47,8 @@ Here's an example section:
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 The options are as follows:
+
+.. config
 
 
 Required settings
@@ -118,7 +114,7 @@ might call enable with a different power setting.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
@@ -151,21 +147,11 @@ disable_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
 Disables this coil (meaning that if it's active, it's shut off).
 
 enable_events:
 ~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
 
 Enables (holds on) this coil. This requires that *allow_enable* is true
 or that a *default_hold_power* or *max_hold_power* setting is configured.
@@ -181,7 +167,7 @@ Usually you can omit this setting.
 
 max_pulse_ms:
 ~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 Maximum allowed pulse time for this coil.
 If set, MPF will raise an error if any code tries to pulse the coil for more
@@ -260,10 +246,14 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 Special / reserved tags for coils: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/coils/index`
