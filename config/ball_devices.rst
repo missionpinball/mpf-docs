@@ -324,6 +324,39 @@ then the default value of *10 seconds* is used.
 
 See :doc:`/finalization/ball_devices` for details about thouse timeouts.
 
+ejector:
+~~~~~~~~
+Unknown type. See description below.
+
+You ejector implemententation and settings.
+By default MPF will select an implementation based on the settings and
+configure it accordingly.
+
+Default ejectors (you can use those via the ball device config):
+
+* mpf.devices.ball_device.pulse_coil_ejector.PulseCoilEjector
+* mpf.devices.ball_device.enable_coil_ejector.EnableCoilEjector
+* mpf.devices.ball_device.hold_coil_ejector.HoldCoilEjector
+
+Additional ejectors:
+
+* mpf.devices.ball_device.event_ejector.EventEjector
+
+.. code-block:: mpf-config
+
+   #! switches:
+   #!   s_ball_switch1:
+   #!     number:
+   #!   s_ball_switch2:
+   #!     number:
+   ball_devices:
+     device_with_eject_event:
+       ejector:
+         class: mpf.devices.ball_device.event_ejector.EventEjector
+         events_when_eject_try: my_ball_device_eject
+       ball_switches: s_ball_switch1, s_ball_switch2
+
+
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
