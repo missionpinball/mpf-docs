@@ -3,7 +3,7 @@ Layering Modes Example
 
 One of the major difficulties in designing a new game is managing the interrelationship between different game modes. When considering how to structure your game, it can be helpful to categorize your modes based on how much they "take over" the playfield. When your modes are categorized, you can create helper modes to manage the starting and stopping of game modes.
 
-For the purposes of demonstration and to help you start thinking about how you might layer your own game, let's look at a breakdown of one approach to mode layering. 
+For the purposes of demonstration and to help you start thinking about how you might layer your own game, let's look at a breakdown of one approach to mode layering.
 
 Gameplay Modes
 --------------
@@ -68,8 +68,9 @@ For a successful layering, each helper mode depends on some particular coding.
 
 **Field modes** always run together, so the simplest way to manage them is to separate the various field mode behaviors into different yaml files and import all of them into the field helper mode. This keeps each file small while giving just a single mode to start and stop.
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: field
   # modes/field/config/field.yaml
 
   mode:
@@ -77,15 +78,17 @@ For a successful layering, each helper mode depends on some particular coding.
     stop_events: stop_mode_field
 
   config:
-    - field_mission_qualifier_shots.yaml
-    - field_miniwizard_qualifier_shots.yaml
-    - field_chase_advancement.yaml
-    - field_dropbank_special.yaml
+    # add your mode parts here. For instance:
+    # - field_mission_qualifier_shots.yaml
+    # - field_miniwizard_qualifier_shots.yaml
+    # - field_chase_advancement.yaml
+    # - field_dropbank_special.yaml
 
 **Mission modes** replace field mode, usually on their own but you may want to allow two or more missions to run concurrently. Giving every mission mode a few common event handlers allows the global mode to easily manage the transitions into and out of mission modes.
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: trolls
   # modes/trolls/config/trolls.yaml
 
   mode:
@@ -94,10 +97,11 @@ For a successful layering, each helper mode depends on some particular coding.
     events_when_started: mode_type_mission_started
     events_when_stopped: mode_type_mission_stopped
 
-**Global mode** can import global-specific config files to consolidate all persistent behavior (just like field mode), and uses special events to handle transitioning between field mode and mission modes. Global will automatically attempt to restart field when a mission mode stops, so we add a special handler: stop global mode when the ball ends, and only restart field mode if global isn't stopping. 
+**Global mode** can import global-specific config files to consolidate all persistent behavior (just like field mode), and uses special events to handle transitioning between field mode and mission modes. Global will automatically attempt to restart field when a mission mode stops, so we add a special handler: stop global mode when the ball ends, and only restart field mode if global isn't stopping.
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: global
   # modes/global/config/global.yaml
 
   mode:
@@ -105,25 +109,27 @@ For a successful layering, each helper mode depends on some particular coding.
     stop_events: stop_mode_global, ball_will_end
 
   config:
-    - global_multiball_madness_light_and_lock.yaml
-    - global_pop_bumpers.yaml
-    - global_wizard_qualifier.yaml
+    # add your configs here. For instance:
+    # - global_multiball_madness_light_and_lock.yaml
+    # - global_pop_bumpers.yaml
+    # - global_wizard_qualifier.yaml
 
   event_player:
-    mode_global_started: 
+    mode_global_started:
       - start_mode_field
-    mode_global_will_stop: 
+    mode_global_will_stop:
       - stop_mode_field
       - stop_missions
-    mode_type_mission_started: 
+    mode_type_mission_started:
       - stop_mode_field
     mode_type_mission_stopped{not mode["global"].stopping}:
       - start_mode_field
 
 **Wizard modes** replace global, and use a special set of event handlers just like the mission modes.
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: madness
   # modes/madness/config/madness.yaml
 
   mode:
@@ -134,10 +140,10 @@ For a successful layering, each helper mode depends on some particular coding.
 
 **Base mode** runs for the player's entire turn and includes special handlers to manage the transition between global mode and wizard modes. Just like with global restarting field, base mode restarts global mode when a wizard mode stops (unless base mode itself is stopping).
 
-::
+.. code-block:: mpf-config
 
+  ##! mode: base
   # modes/base/config/base.yaml
-
   event_player:
     mode_base_started:
       - start_mode_global
