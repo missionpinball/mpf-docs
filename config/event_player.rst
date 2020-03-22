@@ -8,8 +8,6 @@ event_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`shows </shows/index>`                                       | **YES** |
-+----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``events:`` section of a step.
 
@@ -39,3 +37,11 @@ This is an example:
         - play_drain_sound
 
 See :doc:`/config_players/event_player` for details.
+
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/event_player`
