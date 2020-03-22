@@ -48,6 +48,7 @@ indicated which type of config file it's valid in.
    combo_switches: <combo_switches>
    config: <config>
    counters: <counters>
+   counter_control_events: <counter_control_events>
    credits: <credits>
    custom_code: <custom_code>
    display_light_player: <display_light_player>
