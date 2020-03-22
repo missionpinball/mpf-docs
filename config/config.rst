@@ -53,3 +53,11 @@ are any conflicting settings then the last file on the list will
 the current working directory (containing the config file that ``config:``
 entry is from. If that fails then it will try the last
 known good directory that worked for a config file.
+
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_design/mode_layering`
