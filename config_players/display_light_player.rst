@@ -46,12 +46,12 @@ config names in the script (improvements welcome).
 Usage in config files
 ---------------------
 
-In config files, the coil player is used via the ``display_light_player:`` section.
+In config files, the display light player is used via the ``display_light_player:`` section.
 
 Usage in shows
 --------------
 
-In shows, the coil player is used via the ``display_lights:`` section of a step.
+In shows, the display light player is used via the ``display_lights:`` section of a step.
 
 Config Options
 --------------

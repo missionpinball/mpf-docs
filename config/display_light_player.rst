@@ -16,6 +16,8 @@ display_light_player:
 The ``display_light_player:`` section of your config is where you use your lights as a display.
 See :doc:`/config_players/display_light_player` for details.
 
+.. config
+
 
 Optional settings
 -----------------
@@ -37,7 +39,7 @@ You can usually leave this at the default.
 
 lights:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 Which LEDs should receive the updates.
 You usually use a tag here or '*' for all of them.
@@ -67,3 +69,7 @@ Single value, type: ``integer``. Default: ``0``
 Unused.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/config_players/display_light_player`
