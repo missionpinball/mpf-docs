@@ -35,3 +35,10 @@ This is an example:
        show_cursor: true
        resizable: true
 
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/display/multiple_screens`
