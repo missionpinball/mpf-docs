@@ -50,9 +50,11 @@ the right of the colon after ``switch:``. At first you might think it's
 a bit tedious to have to write the word "switch" for each line. After
 all, why can't you just enter them as ``z: s_left_flipper``? This is
 because the MPF keyboard interface can actually be used to control
-`a lot more than just keys </config/keyboard>`_. The details of that
+:doc:`a lot more than just keys </hardware/virtual/keyboard>`.
+The details of that
 are not important now, so for now just make sure your ``keyboard:``
 section looks like the example above.
+
 
 2. Test your new keyboard interface
 -----------------------------------

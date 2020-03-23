@@ -18,3 +18,4 @@ mechs in MPF which works nicely with the smart virtual platform.
    smart_virtual
    virtual
    virtual_pinball_vpx
+   keyboard

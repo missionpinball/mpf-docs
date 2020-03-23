@@ -31,3 +31,11 @@ This is an example:
      - s_ball_switch1
      - s_ball_switch2
 
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/virtual/index`
+* :doc:`/mechs/troughs/index`
