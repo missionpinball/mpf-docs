@@ -9,7 +9,7 @@ hardware_sound_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``hardwares:`` section of a step.
+.. note:: This section can also be used in a show file in the ``hardware_sounds:`` section of a step.
 
 .. overview
 
@@ -30,6 +30,9 @@ This is an example:
        3: play
      test_stop: stop
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -37,23 +40,42 @@ The following sections are optional in the ``hardware_sound_player:`` section of
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: play, stop. Default: ``play``
+Single value, type: one of the following options: play, play_file, text_to_speech, set_volume, increase_volume, decrease_volume, stop. Default: ``play``
 
 ``play`` will play a sound. Depending on the hardware this might stop previous sounds.
 Also loop behaviour depends on the hardware and might be different per sound.
 
 ``stop`` will stop all sounds.
 
-sound:
-~~~~~~
-Single value, type: ``integer``. Default: ``None``
+platform_options:
+~~~~~~~~~~~~~~~~~
+Single value, type: dict.
 
-The number of your sound.
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 sound_system:
 ~~~~~~~~~~~~~
-Single value, type: string name of a ``hardware_sound_systems:`` device. Default: ``default``
+Single value, type: string name of a :doc:`hardware_sound_systems <hardware_sound_systems>` device. Default: ``default``
 
 In case you got multiple hardware_sound platforms you can expliticly select one here.
 
+track:
+~~~~~~
+Single value, type: ``integer``. Default: ``1``
 
+The track number to play this sound on.
+What this means depends on your hardware.
+Usually, there are one or two tracks.
+
+value:
+~~~~~~
+Single value, type: ``string``.
+
+The number of your sound.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/apc/index`
+* :doc:`/hardware/lisy/index`
