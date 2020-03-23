@@ -18,8 +18,9 @@ a video mode is going on. Ball holds do not affect the balls in play count, and
 if all other balls drain while a ball hold is in progress, the players ball does
 not end.
 
-Ball holds are *not* used to lock balls for multiball. (See the ``ball_locks:``
-device for that.
+Ball holds are *not* used to lock balls for multiball.
+(See the :doc:`multiball_locks </game_logic/multiballs/multiball_locks>`
+device for that).
 
 You can have lots of different ball holds in your game, typically configured
 per mode.
