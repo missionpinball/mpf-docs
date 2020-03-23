@@ -78,6 +78,7 @@ Boolean True/False or Yes/No. Default is ``False``.
 Controls whether the bonus_multiplier player variable should be reset (to 1) when the bonus mode is over. Default is
 ``False`` which will not keep the bonus. (e.g. default is to reset it)
 
+.. include:: template_setting.rst
 
 bonus_entries:
 ~~~~~~~~~~~~~~
