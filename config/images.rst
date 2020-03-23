@@ -23,15 +23,6 @@ using MPF-MC for your media controller.)
 More information on working with assets is in the :doc:`/assets/index` section
 of the documentation.
 
-Optional settings
------------------
-
-The following sections are optional in the ``images:`` section of your config.
-(If you don't include them, the default will be used).
-
-<name>:
-~~~~~~~
-
 Each sub-entry in your ``image:`` section is the name that MPF will use to
 refer to that asset. (In other words it's how you specify that asset
 in other areas of your config files.) The asset manager works by first
@@ -59,9 +50,17 @@ file name without the extension, so the settings entry for
 other words, don't name two files with the same name if you want to
 keep them straight.)
 
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``images:`` section of your config. (If you don't include them, the default will be used).
+
 file:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Sometimes you might want to name a file one thing on disk but refer to
 it as another thing in your game and config files. In this case, you
@@ -83,7 +82,7 @@ without having to update your display code.) That said, we expect that
 
 load:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Specifies when this asset should be loaded. (See the
 :doc:`/assets/index` documentation for an explanation on loading.)
@@ -109,3 +108,9 @@ loading in the background. (Of course you could also create a
 subfolder for the assets that you want to preload and specific an
 ``assets:`` entry for that folder rather than specifying entries
 in your config for specific assets. The choice is up to you.)
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/widgets/image/index`
