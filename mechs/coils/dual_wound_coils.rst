@@ -6,6 +6,8 @@ Dual-wound Coils
 +==============================================================================+
 | :doc:`/config/dual_wound_coils`                                              |
 +------------------------------------------------------------------------------+
+| :doc:`/config/flippers`                                                      |
++------------------------------------------------------------------------------+
 
 A *dual-wound coil* is a coil (solenoid) with two windings--one "strong"
 power (or "main") winding for moving the coil, and a second weaker / lower-power

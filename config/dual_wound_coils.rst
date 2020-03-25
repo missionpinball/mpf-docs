@@ -41,32 +41,31 @@ the ``s_eos`` switch is activated, the ``c_power`` coil would be de-energized, l
 just the ``c_hold`` coil active until the ``c_dual_wound`` coil is
 deactivated.
 
+.. note::
+
+   Note: Dual-wound flipper coils are configured in the ``flippers:``
+   section of the config, so you don't have to define them here. Other
+   dual-wound coils (like for diverters, etc.) should be defined here since
+   other MPF devices do not have explicit support for dual-wound coils.
+
+.. config
+
+
 Required settings
 -----------------
 
 The following sections are required in the ``dual_wound_coils:`` section of your config:
 
-<name>:
-~~~~~~~
-
-Create a sub-entry in your ``dual_wound_coils:`` section for each
-dual-wound coil you want to define.
-
-Note: Dual-wound flipper coils are configured in the ``flippers:``
-section of the config, so you don't have to define them here. Other
-dual-wound coils (like for diverters, etc.) should be defined here since
-other MPF devices do not have explicit support for dual-wound coils.
-
 hold_coil:
 ~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device.
+Single value, type: string name of a :doc:`coils <coils>` device.
 
 The name of the hold coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
 
 main_coil:
 ~~~~~~~~~~
-Single value, type: string name of a ``coils:`` device.
+Single value, type: string name of a :doc:`coils <coils>` device.
 
 The name of the main (power) coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
@@ -75,10 +74,28 @@ When this dual-wound coils is enabled, this coil will be pulsed for the
 number of milliseconds specified in the original coil's ``default_pulse_ms:``
 setting.
 
+
 Optional settings
 -----------------
 
 The following sections are optional in the ``dual_wound_coils:`` section of your config. (If you don't include them, the default will be used).
+
+eos_switch:
+~~~~~~~~~~~
+Single value, type: string name of a :doc:`switches <switches>` device.
+
+The name of a switch which, when activated, will disable the power to the main
+coil winding.
+
+.. todo::
+
+   Verify whether this has been implemented?
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
 
 debug:
 ~~~~~~
@@ -87,16 +104,11 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
 
-eos_switch:
-~~~~~~~~~~~
-Single value, type: string name of a ``switches:`` device. Default: ``None``
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-The name of a switch which, when activated, will disable the power to the main
-coil winding.
-
-.. todo::
-
-   Verify whether this has been implemented?
+Log level for the file log for this device.
 
 label:
 ~~~~~~
@@ -107,8 +119,14 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Special / reserved tags for dual-wound coils: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/coils/dual_wound_coils`
