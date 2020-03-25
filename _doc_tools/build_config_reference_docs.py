@@ -130,6 +130,10 @@ your machine-wide config, a mode-specific config, or both.
             # skip config players for now as they cause havoc
             if v.get("type", None) == "config_player":
                 continue
+            if not v["required"] and not v["optional"]:
+                # no specs at all
+                continue
+
             try:
                 self.create_rst(k, dangerous_changes)
             except AssertionError:
