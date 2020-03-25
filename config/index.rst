@@ -65,6 +65,7 @@ indicated which type of config file it's valid in.
    fadecandy: <fadecandy>
    fast: <fast>
    fast_coils: <fast_coils>
+   fast_firmware_update: <fast_firmware_update>
    fast_switches: <fast_switches>
    flasher_player: <flasher_player>
    flashers: <flashers>
