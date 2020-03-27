@@ -17,6 +17,8 @@ Transitions will only be available if the state machine is in one of the states 
 In that case the machine will transition to the state listed in ``target``.
 See :doc:`state machines </game_logic/logic_blocks/state_machines>` for details.
 
+.. config
+
 
 Required settings
 -----------------
@@ -25,7 +27,7 @@ The following sections are required in the ``state_machine_transitions:`` sectio
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 If the state machine is in one of the states listed in ``source`` this event
 will transition the machine to the state listed in ``target``.
@@ -51,6 +53,12 @@ The following sections are optional in the ``state_machine_transitions:`` sectio
 
 events_when_transitioning:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 This event will be posted when the transition is triggered.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/state_machines`

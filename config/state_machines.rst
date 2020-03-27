@@ -11,12 +11,6 @@ state_machines:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
-+------------------------------------------------------------------------------+
-
 The ``state_machines:`` section of your config is where you configure generic :doc:`state machines </game_logic/logic_blocks/state_machines>`.
 
 .. config
@@ -100,6 +94,12 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 If set to true MPF will restore the state of a logic_block on mode restart.
 
+starting_state:
+~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``start``
+
+The start state of your state machine.
+
 console_log:
 ~~~~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``basic``
@@ -139,3 +139,7 @@ Not used.
    state_machine_states: <state_machine_states>
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/state_machines`

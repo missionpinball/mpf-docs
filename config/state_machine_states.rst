@@ -15,6 +15,8 @@ The ``state_machine_states:`` section of your config is where you configure the 
 
 See :doc:`state machines </game_logic/logic_blocks/state_machines>` for details.
 
+.. config
+
 
 Optional settings
 -----------------
@@ -23,14 +25,14 @@ The following sections are optional in the ``state_machine_states:`` section of 
 
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 The event will be posted when the state machine enters this state.
 This is the entry action for this state in your finite state machine.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 The event will be posted when the state machine leaves this state.
 This is the exit action for this state in your finite state machine.
@@ -49,3 +51,9 @@ A show which is played when the state machine is in this state.
 This is kind of an entry action as you could use ``events_when_started`` and
 a :doc:`show_player` to achieve the same.
 It is meant as a helper because it is common to play one show per step.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/state_machines`
