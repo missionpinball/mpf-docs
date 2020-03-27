@@ -161,6 +161,7 @@ indicated which type of config file it's valid in.
    sounds: <sounds>
    spi_bit_bang <spi_bit_bang>
    spike: <spike>
+   spike_node: <spike_node>
    state_machines: <state_machines>
    steppers: <steppers>
    step_stick_stepper_settings: <step_stick_stepper_settings>
