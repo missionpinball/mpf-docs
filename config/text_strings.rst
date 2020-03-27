@@ -31,3 +31,10 @@ This is an example:
    #! advance_time_and_run .1
    #! assert_text_on_top_slide "HELLO PLAYER. THIS IS YOUR BALL 1"
 
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/widgets/text/index`

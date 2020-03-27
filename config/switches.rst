@@ -11,16 +11,6 @@ switches:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/mechs/switches/index`                                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/switches/optos`                                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/switches/mechanical_switches`                                   |
-+------------------------------------------------------------------------------+
-
 The *switches:* section of the config files is used to map switch names
 to controller board inputs. You can map both direct and matrix
 switches. Here’s an example section:
@@ -251,3 +241,9 @@ tags on its own, including:
   to perform alternate game start actions.)
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/switches/index`
+* :doc:`/mechs/switches/optos`
+* :doc:`/mechs/switches/mechanical_switches`
