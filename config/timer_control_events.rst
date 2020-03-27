@@ -41,6 +41,8 @@ In the example above, when the event *start_my_timer* is posted, the timer calle
 running. When the event *add_5_secs* is posted, 5 seconds will be added to whatever the current value of "my_timer"
 is, etc.
 
+.. config
+
 
 Required settings
 -----------------
@@ -123,3 +125,7 @@ Not all actions require a value (i.e. ``start`` and ``stop`` do not).
 You can use placeholders here to calculate it during runtime.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/timers/index`

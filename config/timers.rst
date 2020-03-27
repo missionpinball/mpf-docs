@@ -11,12 +11,6 @@ timers:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/timers/index`                                              |
-+------------------------------------------------------------------------------+
-
 The ``timers:`` section of your config is where configure
 :doc:`timers </game_logic/timers/index>` that can "tick" up or down.
 Timers post events with each tick which you can use to update slides, etc. You can set the
@@ -113,24 +107,12 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
 
-console_log:
-~~~~~~~~~~~~
-Single value, type: one of the following options: none, basic, full. Default: ``none``
-
-Log level for the console log for this device.
-
 control_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: :doc:`timer_control_events <timer_control_events>`.
 
 Timer control events is where you specify what happens to this timer when other events are posted.
 See :doc:`timer_control_events` for more details.
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-If true/yes, adds additional logging information to the verbose log for this timer.
 
 direction:
 ~~~~~~~~~~
@@ -149,12 +131,6 @@ back to its ``start_value:`` and started again.)
 
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
-
-file_log:
-~~~~~~~~~
-Single value, type: one of the following options: none, basic, full. Default: ``basic``
-
-Log level for the file log for this device.
 
 max_value:
 ~~~~~~~~~~
@@ -202,3 +178,39 @@ really short if you want a hurry up, maybe every 100ms removed 77,000 worth of p
    :hidden:
 
    timer_control_events: <timer_control_events>
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+If true/yes, adds additional logging information to the verbose log for this timer.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/timers/index`
