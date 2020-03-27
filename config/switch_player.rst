@@ -13,6 +13,8 @@ switch_player:
 
 The ``switch_player:`` section of your config is where you can replay a series
 of switches for testing purposes.
+Also have a look at the :doc:`MPF monitor </tools/monitor/index>` for
+interactive testing purposes.
 
 This is an example:
 
@@ -71,3 +73,15 @@ Single value, type: ``string``. Default: ``machine_reset_phase_3``
 
 Event to trigger the start of the switch player.
 
+steps:
+~~~~~~
+Unknown type. See description below.
+
+The steps of the switch_player.
+See the example above.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config/plugins`
