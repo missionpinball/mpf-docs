@@ -108,3 +108,9 @@ Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering
 Number of warnings until the machine tilts.
 
 .. include:: template_setting.rst
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/tilt/index`

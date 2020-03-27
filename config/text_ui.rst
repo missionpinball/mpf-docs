@@ -47,3 +47,9 @@ While a game is active, MPF will always show three player variables: player numb
 
 If the ``player_vars:`` setting is not included in your config,
 *all* player variables will be displayed.
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`
