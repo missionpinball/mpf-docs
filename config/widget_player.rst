@@ -8,8 +8,11 @@ widget_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`shows </shows/index>`                                       | **YES** |
-+----------------------------------------------------------------------------+---------+
+
+.. note:: This section can also be used in a show file in the ``widgets:`` section of a step.
+
+.. overview
+
 
 The ``widget_player:`` section of your config is where you configure widgets to be added to,
 removed from, or updated on slides based on based on events being posted.
@@ -65,11 +68,17 @@ And the format in a show file would be:
 
 Here are the settings you can use:
 
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``widget_player:`` section of your config. (If you don't include them, the default will be used).
+
 action:
 ~~~~~~~
-Single value, type: one of the following options: *add*, *remove*, *update*. Default: ``add``
-
-Specifies what action will take place when this event is posted.
+Single value, type: one of the following options: add, remove, update. Default: ``add``
 
 ``add``
    The widget or widget group is added to the slide or display target.
@@ -82,7 +91,7 @@ Specifies what action will take place when this event is posted.
 
 key:
 ~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Used to uniquely identify a widget. With "add" actions, this sets the key name,
 and with "remove" or "update" actions, the key is used to identify which widget
@@ -97,7 +106,7 @@ See the :doc:`/displays/widgets/keys` guide for details.
 
 slide:
 ~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 The name of the slide you want to add this widget to. If this is not specified,
 then the widget will be added to whichever slide is currently active on the
@@ -105,7 +114,7 @@ default display.
 
 target:
 ~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 The name of the display or slide frame this widget will be added to. When this
 setting is used, the widget is not added to a slide, rather, it's added "on top"
@@ -118,5 +127,12 @@ used and the ``slide:`` value will be ignored.
 
 widget_settings:
 ~~~~~~~~~~~~~~~~
+Unknown type. See description below.
 
 Used to override and/or update
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/widget_player`

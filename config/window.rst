@@ -164,3 +164,10 @@ Single value, type: ``integer``. Default: ``800``
 
 The initial width of the popup window, specified in pixels.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/display/lcd`
+* :doc:`/displays/display/multiple_screens`
+* :doc:`/displays/display/adding_dot_look_to_lcd`
