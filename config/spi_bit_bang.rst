@@ -77,3 +77,9 @@ Single value, type: ``integer``. Default: ``8``
 How many inputs should the platform read?
 Reading less inputs will result in faster updates.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/spi_bit_bang/index`
+* :doc:`/mechs/troughs/spike_trough`
