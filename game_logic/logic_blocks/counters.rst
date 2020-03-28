@@ -16,6 +16,8 @@ Counter Logic Blocks
 +------------------------------------------------------------------------------+
 | :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_lights`          |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_block_and_slides`           |
++------------------------------------------------------------------------------+
 
 "Counters" are :doc:`logic blocks </game_logic/logic_blocks/index>`
 that track the number of times a certain event happens towards the
