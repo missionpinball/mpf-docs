@@ -53,3 +53,4 @@ You should also read about :doc:`integration of show and logic blocks <integrati
    State Machines <state_machines>
    integrating_logic_blocks_and_shows
    scoring_based_on_logic_blocks
+   integrating_logic_blocks_and_lights
