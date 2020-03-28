@@ -81,9 +81,9 @@ the following configuration file snippet as an example:
     keyboard:
       4:
         event: advance_reel_test
-          params:
-            reel_name: score_1p_10
-            direction: 1
+        params:
+          reel_name: score_1p_10
+          direction: 1
 
 This keyboard entry will post the event *advance_reel_test* when the
 *4* key is pressed, and it will pass the parameters
@@ -114,7 +114,7 @@ for the same switch for different key combinations. For example:
        switch: trough1
      shift+1:
        switch: trough1
-       toggle: True
+       toggle: true
 
 In the above code, you can momentarily "tap" the *trough1* switch by
 hitting the *1* key, but if you want to lock that switch on, then you
