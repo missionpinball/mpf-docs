@@ -47,14 +47,44 @@ You may use None if there is no chime for a digit.
 
 lights_tag:
 ~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Lights to turn on when this group is active.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Tag groups with the player which uses it.
 Add ``player1`` to use this reel for player 1. Use ``player2`` for player 2 and so on.
 A reel can be used for more than one player.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/score_reels/index`
