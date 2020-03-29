@@ -39,6 +39,11 @@ Put this into your base mode to start your custom mode on the end of ball three
         post: start_your_mode
         wait_for: mode_your_mode_stopped
 
+Ending the Game by Long-Pressing Start
+--------------------------------------
+
+See :doc:`game_modes/long_presssing_start_to_end_game`.
+
 Highscore Mode
 --------------
 
