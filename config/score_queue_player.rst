@@ -51,3 +51,7 @@ Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering
 Score value to add to the queue.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/scoring/ss_style_score_queues`

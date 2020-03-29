@@ -95,3 +95,7 @@ List of one (or more) values, each is a type: ``string``.
 Not used.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/scoring/ss_style_score_queues`
