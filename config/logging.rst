@@ -1,6 +1,19 @@
 logging:
 ========
 
+*Config file section*
+
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
++----------------------------------------------------------------------------+---------+
+
+.. overview
+
+In the logging section you can configure which how verbose parts of MPFs should
+log.
+
 .. code-block:: mpf-config
 
    logging:
@@ -63,58 +76,11 @@ logging:
        switch_controller: full
        timers: none
 
-asset_manager:
 
-ball_controller:
+.. config
 
-ball_search:
 
-bcp:
+Related How To guides
+---------------------
 
-bcp_client:
-
-bcp_interface:
-
-bcp_server:
-
-clock:
-
-config_players:
-
-data_manager:
-
-delay_manager:
-
-device_manager:
-
-event_manager:
-
-file_manager:
-
-logic_blocks:
-
-machine_controller:
-
-mode_controller:
-
-placeholder_manager:
-
-platforms:
-
-players:
-
-plugins:
-
-score_reel_controller:
-
-scriptlets:
-
-service_controller:
-
-settings_controller:
-
-show_controller:
-
-switch_controller:
-
-timers:
+.. todo:: :doc:`/about/help_us_to_write_it`

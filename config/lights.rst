@@ -77,7 +77,7 @@ For multi-color LEDs, the color defined here will be used when the light is enab
 
 Color values may be a hex string (e.g. `22FFCC`), a list of RGB values (e.g. `[50, 128, 206]`),
 or a color name (e.g. `turquoise`). MPF knows 140+ standard web color names, and you can define your
-own custom colors in the :doc:`/config/named_colors` section of your config. 
+own custom colors in the :doc:`/config/named_colors` section of your config.
 
 fade_ms:
 ~~~~~~~~
@@ -209,3 +209,7 @@ Lights can be referenced by their tags in light_players.
 Typical tags are `gi` for all GIs or `playfield_inserts` for all inserts on the playfield.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/lights/index`
