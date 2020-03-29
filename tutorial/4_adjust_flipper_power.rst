@@ -23,7 +23,7 @@ when it's fired.
 
 You can set the default pulse time for each coil in
 the coil's entry in the ``coils:`` section of your config file. If you
-don't specify a time for a particular coil, then MPF will a default
+don't specify a time for a particular coil, then MPF will use a default
 pulse time of 10ms.
 
 So in the last step, we got your flipper coils working, but as they are now,
@@ -59,19 +59,19 @@ like this:
 
 .. code-block:: mpf-config
 
-    coils:
-        c_flipper_left_main:
-            number: 00
-            default_pulse_ms: 20
-        c_flipper_left_hold:
-            number: 01
-            allow_enable: true
-        c_flipper_right_main:
-            number: 02
-            default_pulse_ms: 20
-        c_flipper_right_hold:
-            number: 03
-            allow_enable: true
+   coils:
+     c_flipper_left_main:
+       number: 00
+       default_pulse_ms: 20
+     c_flipper_left_hold:
+       number: 01
+       allow_enable: true
+     c_flipper_right_main:
+       number: 02
+       default_pulse_ms: 20
+     c_flipper_right_hold:
+       number: 03
+       allow_enable: true
 
 Notice that we only added ``default_pulse_ms:`` entries to the two main coils,
 since the hold coils are never pulsed so it doesn't matter what their

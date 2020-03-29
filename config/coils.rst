@@ -11,12 +11,6 @@ coils:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/mechs/coils/index`                                                    |
-+------------------------------------------------------------------------------+
-
 The ``coils:`` section of your config is used to map coil
 (solenoid) names to driver board outputs. You can also set the
 default pulse times, set tags, and specify power levels for coils that
@@ -27,31 +21,34 @@ Here's an example section:
 .. code-block:: mpf-config
 
     coils:
-        flipper_right_main:
-            number: A0-B0-0
-            default_pulse_ms: 30
-            max_pulse_ms: 100
-            default_pulse_power: 0.7
-            max_pulse_power: 1.0
-        flipper_right_hold:
-            number: A0-B0-1
-            default_hold_power: 0.25
-            max_hold_power: 0.5
-        knocker:
-            number: A0-B1-0
-            default_pulse_ms: 20
-            max_pulse_ms: 100
-        pop_bumper_left:
-            number: A0-B1-1
-            default_pulse_ms: 18
-            max_pulse_ms: 100
-        ball_gate:
-            number: A0-B1-2
-            default_hold_power: 0.375
-            max_hold_power: 0.5
+      flipper_right_main:
+        number: A0-B0-0
+        default_pulse_ms: 30
+        max_pulse_ms: 100
+        default_pulse_power: 0.7
+        max_pulse_power: 1.0
+      flipper_right_hold:
+        number: A0-B0-1
+        default_hold_power: 0.25
+        max_hold_power: 0.5
+      knocker:
+        number: A0-B1-0
+        default_pulse_ms: 20
+        max_pulse_ms: 100
+      pop_bumper_left:
+        number: A0-B1-1
+        default_pulse_ms: 18
+        max_pulse_ms: 100
+      ball_gate:
+        number: A0-B1-2
+        default_hold_power: 0.375
+        max_hold_power: 0.5
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 The options are as follows:
+
+.. config
 
 
 Required settings
@@ -113,11 +110,11 @@ coil is just pulsed (which is most of them), then you don't need to
 worry about this section.
 
 This provides the default value for any enable calls on the coil. Devices
-might call enable with a differnt power setting.
+might call enable with a different power setting.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
@@ -150,21 +147,11 @@ disable_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
 Disables this coil (meaning that if it's active, it's shut off).
 
 enable_events:
 ~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
 
 Enables (holds on) this coil. This requires that *allow_enable* is true
 or that a *default_hold_power* or *max_hold_power* setting is configured.
@@ -180,7 +167,7 @@ Usually you can omit this setting.
 
 max_pulse_ms:
 ~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 Maximum allowed pulse time for this coil.
 If set, MPF will raise an error if any code tries to pulse the coil for more
@@ -266,3 +253,7 @@ Special / reserved tags for coils: *None*
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/coils/index`

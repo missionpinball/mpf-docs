@@ -1,6 +1,8 @@
 import ast
 import os
 import re
+from collections import defaultdict
+
 
 class EventDocParser(object):
 
@@ -8,25 +10,48 @@ class EventDocParser(object):
         self.file = None
         self.file_list = list()
         self.rst_path = rst_path
+        self.device_labels = {}
+        self.device_events = defaultdict(list)
 
     def parse_file(self, file_name):
 
         self.file = file_name
+        class_label = None
+        config_section = None
 
-        with open(file_name) as f:
-            my_ast = ast.parse(f.read())
+        try:
+            with open(file_name) as f:
+                my_ast = ast.parse(f.read())
+        except:
+            raise AssertionError("Error while parsing {}".format(file_name))
 
         for x in ast.walk(my_ast):
-            if isinstance(x, ast.Str) and (x.s.strip().lower().startswith(
-                    'event:')):
-                event, rst = self.parse_string(x)
+            if isinstance(x, ast.ClassDef):
+                class_label = None
+                config_section = None
+                for statement in x.body:
+                    if isinstance(statement, ast.Assign) and len(statement.targets) == 1 and \
+                       isinstance(statement.targets[0], ast.Name) and isinstance(statement.value, ast.Str):
+                            #print('class: %s, %s=%s' % (str(x.name), str(statement.targets[0].id), str(statement.value)))
+                            if statement.targets[0].id == "class_label":
+                                class_label = str(statement.value.s)
+                            elif statement.targets[0].id == "config_section":
+                                config_section = str(statement.value.s)
 
-                if event:
-                    event = event.strip('.')
+                for y in ast.walk(x):
+                    if isinstance(y, ast.Str) and (y.s.strip().lower().startswith('event:')):
+                        event, rst = self.parse_string(y)
 
-                if rst:
-                    filename = self.create_file(event, rst)
-                    self.file_list.append((event, filename))
+                        if event:
+                            event = event.strip('.')
+
+                        if rst:
+                            filename = self.create_file_if_changed(event, rst)
+                            self.file_list.append((event, filename))
+
+                        if config_section and rst:
+                            self.device_events[config_section].append(event)
+                            self.device_labels[config_section] = class_label
 
     def write_index(self):
 
@@ -46,7 +71,6 @@ understand:
 
    overview/index
    overview/conditional
-   overview/multiple_things_from_one_event
    overview/priorities
    overview/event_types
 
@@ -77,13 +101,50 @@ an event called *switch_s_left_slingshot_active*.
         for file_name in self.file_list:
             index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
 
-        with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
-            f.write(index)
+        index += '''
+Device Indexes
+--------------
+        
+.. toctree::
+   :maxdepth: 1
 
-    def create_file(self, event, rst):
+'''
+        for config_section, events in sorted(self.device_events.items()):
+            index += '   {} <index_{}>\n'.format(self.device_labels[config_section], config_section)
+
+            rst = self.device_labels[config_section] + "\n"
+            rst += "=" * (len(self.device_labels[config_section])) + "\n\n"
+            rst += "See: :doc:`/config/{}`".format(config_section) + "\n\n"
+
+            for event in events:
+                rst += '* :doc:`{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+
+            self.create_file_if_changed('index_{}'.format(config_section), rst)
+
+            rst = ""
+
+            for event in events:
+                rst += '* :doc:`/events/{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+
+            rst += "\n"
+
+            self.create_file_if_changed('include_{}'.format(config_section), rst)
+
+        self.create_file_if_changed('index', index)
+
+    def create_file_if_changed(self, event, rst):
         filename = event.replace('(', '').replace(')', '') + '.rst'
+        file_path = os.path.join(self.rst_path, filename)
 
-        with open(os.path.join(self.rst_path, filename), 'w') as f:
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as f:
+                content = f.read()
+
+            if content == rst:
+                # file did not change
+                return filename
+
+        with open(file_path, 'w') as f:
             f.write(rst)
 
         return filename

@@ -94,11 +94,11 @@ like this:
 
 .. code-block:: mpf-config
 
-    ##! mode: my_mode
-    #config_version=5
-    mode:
-        start_events: ball_starting
-        priority: 100
+   ##! mode: my_mode
+   #config_version=5
+   mode:
+     start_events: ball_starting
+     priority: 100
 
 There are lots more settings besides ``start_events`` and ``priority``
 which you can set for a mode. See the :doc:`/config/mode` for details.
@@ -150,8 +150,8 @@ like this:
 
 .. code-block:: yaml
 
-    modes:
-      - base
+   modes:
+     - base
 
 Note that it's very important that you put dashes in front of each
 mode in this list? Why? Because with dashes, MPF will be able to
@@ -199,13 +199,13 @@ To do this, go back to your base mode's config file (``<your_machine>/modes/base
 and add a section called ``slide_player:``. Then add the following subsections so
 your complete ``base.yaml`` looks like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: base
    #config_version=5
    mode:
-       start_events: ball_starting
-       priority: 100
+     start_events: ball_starting
+     priority: 100
 
    slide_player:
      mode_base_started:
@@ -229,6 +229,12 @@ your complete ``base.yaml`` looks like this:
            anchor_x: right
            anchor_y: bottom
            font_size: 50
+   ##! test
+   #! start_game
+   #! assert_mode_running base
+   #! assert_text_on_top_slide "00"
+   #! assert_text_on_top_slide "PLAYER 1"
+   #! assert_text_on_top_slide "BALL 1"
 
 We briefly touched on the ``slide_player:`` functionality earlier in
 this tutorial and how you can configure it to show certain slides when
@@ -279,11 +285,27 @@ can go into your machine-wide ``config.yaml`` and remove the slide_player:
 entry for ball_started:. So now the slide_player: in your machine-wide
 ``config.yaml`` should just look like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   welcome_slide:
+   #!     widgets:
+   #!       - type: text
+   #!         text: PINBALL!
+   #!         font_size: 50
+   #!         color: red
+   #!       - type: rectangle
+   #!         width: 240
+   #!         height: 60
+   #!   attract_started:
+   #!     widgets:
+   #!       - text: ATTRACT MODE
+   #!         type: text
    slide_player:
-      init_done: welcome_slide
-      mode_attract_started: attract_started
+     init_done: welcome_slide
+     mode_attract_started: attract_started
+   ##! test
+   #! advance_time_and_run .1
 
 What if it didn't work?
 -----------------------

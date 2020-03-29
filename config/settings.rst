@@ -19,15 +19,17 @@ This is an example:
 .. code-block:: mpf-config
 
    settings:
-      replay_score:
-         label: Replay Score
-         values:
-            500000: "500000 (default)"
-            1000000: "1000000"
-            1500000: "1500000"
-         default: 500000
-         key_type: int
-         sort: 100
+     replay_score:
+       label: Replay Score
+       values:
+         500000: "500000 (default)"
+         1000000: "1000000"
+         1500000: "1500000"
+       default: 500000
+       key_type: int
+       sort: 100
+
+.. config
 
 
 Required settings
@@ -55,11 +57,12 @@ Sort in service mode.
 
 values:
 ~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``.
+One or more sub-entries. Each in the format of ``string`` : ``string``
 
 Values for this setting in the format ``value: label``.
 ``value`` will be assigned to the ``machine_var`` and ``label`` will be shown
 in service mode.
+
 
 Optional settings
 -----------------
@@ -75,9 +78,14 @@ Type of the key. If you want to do math with the variable you need either
 
 machine_var:
 ~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Name of the machine variable to use. If this is not set it will use the name
 of this setting as machine variable.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/machine_management/service_mode/index`
+* :doc:`/game_logic/service_mode/index`

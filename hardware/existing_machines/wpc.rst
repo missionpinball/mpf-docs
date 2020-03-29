@@ -8,12 +8,10 @@ You can use MPF to control existing Williams / Bally / Midway WPC, WPC-S, and WP
 
 The main options for pinball controller hardware is the :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
 (not the P3-ROC). FAST has a WPC controller too but it never hit general availability.
-The people who created the :doc:`LISY boards </hardware/lisy/index>` are also working on a "LISY35" board for
-Bally/WPC machines with AS-2518-17 or AS-2518-35 CPU boards.
 
-In both cases, you remove the existing MPU board from the backbox of your machine and replace it with the
+In all cases, you remove the existing MPU board from the backbox of your machine and replace it with the
 new controller. You then connect up all the existing cables and connectors to the new controller, so in
-effect the P-ROC or FAST WPC controller becomes the new MPU of your machine.
+effect the new WPC controller becomes the new MPU of your machine.
 
 A few notes:
 
@@ -41,24 +39,26 @@ More technical information can be found in the
 2. Configuring MPF for WPC machines
 -----------------------------------
 
-In order to use MPF in a WPC machine, you need to configure the ``driverboards:`` section of your ``hardware:``
-config for MPF.
+In order to use MPF in a WPC machine, you need to configure the
+``driverboards:`` section of your hardware platform.
 
 If you're using a FAST WPC controller, it will look like this:
 
 .. code-block:: mpf-config
 
    hardware:
-      platform: fast
-      driverboards: wpc
+     platform: fast
+   fast:
+     driverboards: wpc
 
 And if you're using a P-ROC:
 
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
-      driverboards: wpc
+     platform: p_roc
+   p_roc:
+     driverboards: wpc
 
 Note that with the P-ROC, it is *very important* that you specify ``driverboards: wpc`` in your config if you're
 using a WPC machine. The reason for this is the P-ROC can be used to control either PD-16 (the P-ROC driver boards)
@@ -82,10 +82,10 @@ Matrix switches start with the letter ``S``, followed by the switch number. For 
 .. code-block:: mpf-config
 
    switches:
-      s_left_slingshot:
-         number: s41
-      s_right_jet:
-         number: S45
+     s_left_slingshot:
+       number: s41
+     s_right_jet:
+       number: S45
 
 Note that the "S" is not case-sensitive.
 
@@ -114,10 +114,10 @@ entered with the ``SD`` prefix, then the number, like this:
 .. code-block:: mpf-config
 
    switches:
-      s_left_coin:
-         number: sd1
-      s_enter:
-         number: SD8
+     s_left_coin:
+       number: sd1
+     s_enter:
+       number: SD8
 
 Again, case doesn't matter.
 

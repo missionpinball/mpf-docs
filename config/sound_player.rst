@@ -16,7 +16,22 @@ sound_player:
 .. overview
 
 The ``sound_player:`` section of your config is where you specify actions to perform on sounds
-when MPF events are received.  Additional information may be found in the
+when MPF events are received.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+    sound_player:
+      mode_attract_started:
+        song_01:
+          action: play
+          loops: -1
+      mode_attract_stopped:
+        song_01:
+          action: stop
+
+Additional information may be found in the
 :doc:`sound_player </config_players/sound_player>` documentation.
 
 Optional settings

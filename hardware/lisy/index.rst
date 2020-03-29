@@ -1,5 +1,5 @@
-How to use MPF with Gottlieb System 1 or 80 machines
-====================================================
+How to use MPF with the LISY platform
+=====================================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
@@ -15,6 +15,8 @@ How to use MPF with Gottlieb System 1 or 80 machines
 
 MPF can directly control Gottlieb System 1 or System 80 machines via the
 LISY1 or LISY80 controller boards (with firmware 4.02+).
+Additionally, `LISY35 <https://lisy.dev/lisy35.html>`_ can control Bally and
+Stern Games manufactured from 1977 to 1985 with MPU AS-2518-17 or AS-2518-35.
 
 .. note:: For general installation instruction and some background information on
    the LISY hardware platform, visit `www.lisy80.com <http://www.lisy80.com/>`_.
@@ -61,3 +63,4 @@ This includes:
    lights
    segment_displays
    sound
+   protocol

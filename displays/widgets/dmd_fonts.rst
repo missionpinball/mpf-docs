@@ -9,12 +9,19 @@ widgets.
 If you don't use one of these fonts on your DMD and just show some text, here's
 what the results look like:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_default.png
 
@@ -24,51 +31,72 @@ regular font that's made for a high-res display.
 Instead you can use these three styles. (Of course you can use your own fonts
 too, but sometimes it's hard to find ones that look good on a low-res DMD.)
 
-style: dmd_big
+style: big
 --------------
 
-dmd_big is 10 pixels tall.
+`big` is 10 pixels tall.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
-         style: dmd_big
+         style: big
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_big.png
 
-style: dmd_med
+style: med
 --------------
 
-dmd_med is 7 pixels tall.
+`medium` is 7 pixels tall.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
-         style: dmd_med
+         style: medium
          text: MISSION
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_med.png
 
-style: dmd_small
+style: small
 ----------------
 
-dmd_small is 5 pixels tall.
+`small` is 5 pixels tall.
 
 Notice that this font has a color set and we're using it with a Color DMD. All
 three of these fonts (like any font) can be used on a mono or color DMD.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide:
+     my_slide:
        - type: text
-         style: dmd_small
+         style: small
          text: MISSION
          color: 00ffcc
+   #! slide_player:
+   #!   show_slide_event: my_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top my_slide
+   #! assert_text_on_top_slide MISSION
 
 .. image:: /displays/images/dmd_small.png

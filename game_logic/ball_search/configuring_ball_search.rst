@@ -6,21 +6,21 @@ To enable ball search set `enable_ball_search` to True for your playfield(s). In
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_flipper_left:
-   #!       number:
+   #!   s_flipper_left:
+   #!     number:
    #! coils:
-   #!    c_flipper_left:
-   #!       number:
-   #!       allow_enable: True
+   #!   c_flipper_left:
+   #!     number:
+   #!     allow_enable: true
    #! flippers:
    #!   f_upper_flipper_left:
    #!     ball_search_order: 15
-   #!     include_in_ball_search: True
+   #!     include_in_ball_search: true
    #!     main_coil: c_flipper_left
    #!     activation_switch: s_flipper_left
    playfields:
      playfield:
-       enable_ball_search: True
+       enable_ball_search: true
 
 Ball search will run in multiple phases with increasing intensity (phase 1 to 3) and give up afterwards.
 To change the timeout before ball search starts when no ball was seen by MPF, change `ball-search-timeout`.
@@ -35,16 +35,16 @@ However, you might want to enable it for upper playfield flippers:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_flipper_left:
-   #!       number:
+   #!   s_flipper_left:
+   #!     number:
    #! coils:
-   #!    c_flipper_left:
-   #!       number:
-   #!       allow_enable: True
+   #!   c_flipper_left:
+   #!     number:
+   #!     allow_enable: true
    flippers:
      f_upper_flipper_left:
        ball_search_order: 15
-       include_in_ball_search: True
+       include_in_ball_search: true
        main_coil: c_flipper_left
        activation_switch: s_flipper_left
 

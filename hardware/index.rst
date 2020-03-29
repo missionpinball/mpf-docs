@@ -74,8 +74,17 @@ your pinball machine.
 
 * :doc:`LISY <lisy/index>`
    * *New in MPF 0.50*
-   * Gottlieb System 1
-   * Gottlieb System 80
+   * Gottlieb System 1 (LISY1)
+   * Gottlieb System 80 (LISY80)
+   * Bally and Stern Games manufactured from 1977 to 1985 (LISY35) *New in MPF 0.53*
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
+
+* :doc:`Arduino Pinball Controller (APC) <apc/index>`
+   * *New in MPF 0.53*
+   * System 3 to System 11c
    * Segment displays
    * External sounds
    * Switches, rules and coils
@@ -131,6 +140,11 @@ to provide additional functionality.
    * All inputs and outputs
    * I2C and SPI
 
+* :doc:`PIN2DMD RGB DMD <pin2dmd/index>`
+   * *New in MPF 0.54*
+   * 128x32 or 192x64 RGB LED DMD
+   * Connected via USB
+
 * :doc:`Native I2C on Linux <smbus/index>`
    * *New in MPF 0.50*
    * I2C devices on any nativ I2C bus
@@ -138,6 +152,10 @@ to provide additional functionality.
 * :doc:`MMA8451-based accelerometers <mma8451/index>`
    * *New in MPF 0.50*
    * Connected to I2C
+
+* :doc:`Pololu Tic <pololu_tic/index>`
+   * *New in MPF 0.52*
+   * Stepper controller connected to USB
 
 There is a :doc:`hardware roadmap <roadmap>` for other hardware which we want
 to support in the future.
@@ -156,19 +174,25 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
-   Gottlieb System 1 / System 80 (LISY) <lisy/index>
+   LISY platform <lisy/index>
+   Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
    Pololu Maestro <pololu_maestro/index>
+   Pololu Tic <pololu_tic/index>
    SmartMatrix RGB DMD <smartmatrix/index>
    RGB.DMD <eli_dmd/index>
+   PIN2DMD <pin2dmd/index>
+   Raspberry Pi DMD <rpi_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
    Trinamics StepRocker <trinamics/index>
+   StepStick Steppers <stepstick/index>
    Computer Requirements <computer/index>
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>
    MMA8451-based accelerometer <mma8451/index>
+   SPI Big Bang Switches <spi_bit_bang/index>
    Virtual Hardware <virtual/index>
    Existing Machines <existing_machines/index>
    Voltages and Power <voltages_and_power/index>
@@ -188,3 +212,6 @@ Browse Platforms by Capabilites
 
    i2c_platforms
    servo_platforms
+   stepper_platforms
+   segment_display_platforms
+   dmd_platforms

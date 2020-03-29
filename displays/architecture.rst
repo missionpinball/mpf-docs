@@ -115,3 +115,5 @@ So if the MPF display system seems kind of complex, just think of it like
 a giant PowerPoint presentation and it should all hopefully make sense. Now
 let's start digging into some of the details of each of the parts of the display
 system.
+
+You can read more about the :doc:`internals  of the media controller <mc/index>`.

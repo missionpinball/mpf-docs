@@ -19,8 +19,10 @@ This is an example:
 .. code-block:: mpf-config
 
    raspberry_pi:
-       ip: localhost
-       port: 8888
+     ip: localhost
+     port: 8888
+
+.. config
 
 
 Required settings
@@ -40,6 +42,24 @@ Optional settings
 
 The following sections are optional in the ``raspberry_pi:`` section of your config. (If you don't include them, the default will be used).
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``none``
+
+Log level for the console log for this platform.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this platform.
+
 port:
 ~~~~~
 Single value, type: ``integer``. Default: ``8888``
@@ -47,3 +67,7 @@ Single value, type: ``integer``. Default: ``8888``
 Port of the pigpio daemon on your Raspberry Pi (in case you change it).
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/rpi/index`

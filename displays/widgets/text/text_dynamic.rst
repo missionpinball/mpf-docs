@@ -6,7 +6,9 @@ Dynamically Updating Text
 +==============================================================================+
 | :doc:`text widgets </displays/widgets/text/index>`                           |
 +------------------------------------------------------------------------------+
-| :doc:`segment displays </segment_displays/index>`                            |
+| :doc:`segment displays </config/segment_displays>`                           |
++------------------------------------------------------------------------------+
+| :doc:`segment display players </config/segment_display_player>`              |
 +------------------------------------------------------------------------------+
 
 Your text can contain placeholders which will be replaced and updated when the text is shown.

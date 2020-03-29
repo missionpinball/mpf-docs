@@ -13,6 +13,8 @@ To configure coils, drivers, motors, and/or magnets (basically anything connecte
 IO board's driver outputs) with FAST Pinball hardware, you can follow the guides
 and instructions in the :doc:`/mechs/coils/index` docs.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 However there are a few things to know and some additional options you get
 with FAST hardware that are discussed here.
 
@@ -32,10 +34,10 @@ is 1, etc.
 .. code-block:: mpf-config
 
    coils:
-      my_coil:
-         number: 0-0  # first board, driver 0
-      some_other_coil:
-         number: 2-14  # third board, driver 14
+     my_coil:
+       number: 0-0    # first board, driver 0
+     some_other_coil:
+       number: 2-14    # third board, driver 14
 
 Notes:
 
@@ -74,10 +76,10 @@ For example, consider the following configuration:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number: 1-3
-            default_pulse_ms: 30
-            default_pulse_power: 0.5
+      some_coil:
+        number: 1-3
+        default_pulse_ms: 30
+        default_pulse_power: 0.5
 
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms at 50% power. You can even combine default_pulse_power and
@@ -86,11 +88,11 @@ default_hold_power, like this:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number: 1-3
-            default_pulse_ms: 30
-            default_pulse_power: 0.5
-            default_hold_power: 0.25
+      some_coil:
+        number: 1-3
+        default_pulse_ms: 30
+        default_pulse_power: 0.5
+        default_hold_power: 0.25
 
 In this case, if MPF enables this coil, the coil will be fired at 50%
 power for 30ms, then drop down to 25% power for the remainder of the
@@ -114,11 +116,11 @@ time by adding a ``recycle_ms:`` setting, like this:
 .. code-block:: mpf-config
 
    coils:
-      slingshot_r:
-         number: 1-4
-         default_pulse_ms: 30
-         platform_settings:
-            recycle_ms: 100
+     slingshot_r:
+       number: 1-4
+       default_pulse_ms: 30
+       platform_settings:
+         recycle_ms: 100
 
 If you manually specify a recycle_ms value, then that's the value that's used
 and the coil's ``recycle:`` (true/false) setting is ignored.

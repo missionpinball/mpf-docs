@@ -52,20 +52,20 @@ Tell the playfield to use the plunger for new balls:
 .. code-block:: mpf-config
 
    #! switches:
-   #!      s_plunger:
-   #!          number: 10
+   #!   s_plunger:
+   #!     number: 10
    #! ball_devices:
-   #!      bd_plunger:
-   #!          ball_switches: s_plunger
-   #!          mechanical_eject: true
+   #!   bd_plunger:
+   #!     ball_switches: s_plunger
+   #!     mechanical_eject: true
    playfields:
-       playfield:
-            tags: default
-            default_source_device: bd_plunger
+     playfield:
+       tags: default
+       default_source_device: bd_plunger
 
 
-Check out the complete config.yaml file so far
-----------------------------------------------
+3. Check out the complete config.yaml file so far
+-------------------------------------------------
 
 Again, our example config will probably diverge from yours since you might have different types
 of drain and plunger devices, but we do have a complete machine conform for Demolition Man
@@ -89,13 +89,16 @@ shows the verbose information in the log file, like this:
 
 .. code-block:: doscon
 
-    C:\pinball\your_machine>mpf -vb
+    C:\pinball\your_machine>mpf -vbt
 
 You don't have to launch the media controller this time since we're
 just looking at the console output of the MPF game engine, which is
 why we added the ``b`` command line option too. (The ``b`` option
 tells the MPF game engine not to use the BCP protocol and not to
 try to connect to the MC.)
+You also have to add ``t`` to disable the text ui to see the verbose log.
+Otherwise, you would only see the verbose output in the logfile in the ``logs``
+directory of your machine.
 
 Once your game is running, drop a ball into your trough and you
 should see a whole bunch of trough switches changing between active
@@ -166,5 +169,7 @@ letters, numbers, and the underscore, and that none of your names start with a n
 Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons.
+See our :doc:`/troubleshooting/debugging_yaml_parse_errors` guide if you
+got YAML errors.
 At this point your trough is ready to go! Next we have to configure
 your plunger lane.

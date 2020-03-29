@@ -19,11 +19,15 @@ MPF includes support for GI (general illumination) light strings which are
 common in existing Williams and Stern machines. You can specify GI
 strings which you can then enable, disable, or (if the hardware supports it)
 dim.
+Typically, there are one to four GI strings.
 
 .. note::
 
    In MPF 0.50 GIs became :doc:`/config/lights` with ``subtype`` gi. They behave
    like any other lights in MPF.
+
+Hardware
+--------
 
 :doc:`TODO: Add a picture of a GI string </about/help_us_to_write_it>`
 :doc:`TODO: Add a picture of GI LEDs </about/help_us_to_write_it>`
@@ -35,6 +39,15 @@ sync their dimming commands with the AC current wave. Later Williams WPC
 machines split their GI into non-dimmable (which used still used AC) and
 switched their dimmable to DC. Some machines also have "enable" relays that
 must be activated first before certain GI strings will work.
+In general those bulbs are the same models as used for inserts (#44 and #47
+for EM and early SS; #444/#555/#249 for later SS; #906 for later machines).
+
+GI string might also be
+:doc:`connected to a driver <coils_as_lights>` and not part of a light matrix.
+In recent machines LEDs are used but still driven in strings.
+
+Config
+------
 
 MPF hides all this complexity from you. You just define your GI strings in
 your machine :doc:`/config/lights` section and then you can enable, disable, and
@@ -44,9 +57,9 @@ This is an example for a :doc:`light </config/lights>` with ``subtype: gi``:
 
 .. code-block:: mpf-config
 
-  lights:     
+  lights:
     gi_string_left:
-      number: 3		# number depends on your platform
+      number: 3    # number depends on your platform
       subtype: gi
 
 In modern machines (such as Spike) your GIs might just be handled as lights.
@@ -57,10 +70,10 @@ This is an example for a :doc:`light </config/lights>` in Spike:
 
 .. code-block:: mpf-config
 
-  lights:     
+  lights:
     gi_string_left:
-      number: 3		# number depends on your platform
-      subtype: led	# might be matrix in some platforms
+      number: 3    # number depends on your platform
+      subtype: led  # might be matrix in some platforms
 
 In some cases GIs are connected to normal drivers on your driver board
 (e.g. on a PD-16 on the P3-Roc).
@@ -71,12 +84,11 @@ Then add them as :doc:`light </config/lights>` with ``platform: drivers``:
 
   coils:
     gi_string_left:
-      number: A1-B1-3		# number depends on your platform
-      allow_enable: True	# this will allow 100% enable without pwm
-
-  lights:     
+      number: A1-B1-3    # number depends on your platform
+      allow_enable: true  # this will allow 100% enable without pwm
+  lights:
     gi_string_left:
-      number: gi_string_left	# map this light to a driver
+      number: gi_string_left  # map this light to a driver
       platform: drivers
 
 Alternatively, you could also use :doc:`coil_player </config/coil_player>`

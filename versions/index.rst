@@ -14,5 +14,6 @@ is valid for MPF versions |version|.
    :titlesonly:
 
    understanding
-   history
+   release_notes
    roadmap
+   release_checklist

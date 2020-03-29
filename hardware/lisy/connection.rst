@@ -110,7 +110,6 @@ If you want to use the serial port, add/update the following sections in your ma
 
   hardware:
     platform: lisy
-
   lisy:
     connection: serial
     port: com1               # replace this with your com port
@@ -149,7 +148,6 @@ in your machine config:
 
   hardware:
     platform: lisy
-
   lisy:
     connection: network
     network_port: 5963

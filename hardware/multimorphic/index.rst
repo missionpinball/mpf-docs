@@ -43,3 +43,5 @@ the P-ROC or P3-ROC.
    Accelerometer (P3-ROC) <accelerometer>
    I2C (P3-ROC) <i2c>
    Power Entry Board <power_entry>
+   Servos on PD-LED <servos>
+   Steppers on PD-LED <steppers>

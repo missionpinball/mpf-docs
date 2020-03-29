@@ -30,7 +30,7 @@ If your show is 200ms on / 200ms off, set sync_ms to 400. If your show is 400ms 
 sync_ms to 650. Etc.
 
 If you're wondering whether sync_ms is bad because it delays a show start, and you don't want a
-show to be delayed, don't worry about it. The man use for sync_ms is when you have lights or LEDs
+show to be delayed, don't worry about it. The main use for sync_ms is when you have lights or LEDs
 that are flashing repeatedly, and in those cases, there's so much other stuff happening when they
 start flashing that no one is going to notice a delay of a fraction of a second when the show starts.
 (This is how is has to work anyway since you want the lights to be in sync.)

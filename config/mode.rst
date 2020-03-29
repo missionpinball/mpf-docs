@@ -24,11 +24,14 @@ Let's take a look at an example ``mode:`` section from a multiball mode:
 
 .. code-block:: mpf-config
 
-    ##! config: mode1
+    ##! mode: mode1
     mode:
-        start_events: ball_starting
-        stop_events: timer_mode_timer_complete, shot_right_ramp
-        priority: 300
+      start_events: ball_starting
+      stop_events: timer_mode_timer_complete, shot_right_ramp
+      priority: 300
+
+.. config
+
 
 Optional settings
 -----------------
@@ -37,7 +40,7 @@ The following sections are optional in the ``mode:`` section of your config. (If
 
 code:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 If you want to write some custom Python code for this mode, you can
 specify the name of your file as well as the class (a child class of
@@ -84,10 +87,7 @@ which maintains a list of the modes to be restarted.
 
 start_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -124,10 +124,7 @@ modes that are set to start on the same event.
 
 stop_events:
 ~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -174,12 +171,17 @@ unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    mode:
-      start_events: mode_terra_2_start
-      stop_events: mode_complete, game_ending
-      stop_on_ball_end: false
+     start_events: mode_terra_2_start
+     stop_events: mode_complete, game_ending
+     stop_on_ball_end: false
+     game_mode: false
 
+However, a mode with ``stop_on_ball_end: False`` set must be a non game mode
+(i.e. ``game_mode: False`` is also set).
+To prevent crashes you cannot use all player functionality (such as accessing
+player variable) in this mode.
 
 stop_priority:
 ~~~~~~~~~~~~~~

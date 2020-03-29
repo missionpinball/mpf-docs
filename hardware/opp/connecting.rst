@@ -45,3 +45,16 @@ an asterisk and add an udev rules like this in ``/etc/udev/rules.d/opp.rules``:
 
 After a reboot you should get a ``/dev/ttyOPP1`` device if you connect an OPP
 device to that specific USB port. You can use that port in your config.
+
+On Ubuntu: Stop ModemManager
+----------------------------
+
+ModemManager tries to initialise all ``/dev/ttyACMxx`` devices as modem.
+That might cause delays after attaching OPP hardware and might also leave the
+hardware in a weird state with garbage on the bus.
+If you do not use any modems just disable and stop ModemManager:
+
+.. code-block:: shell
+
+   sudo systemctl disable ModemManager
+   sudo systemctl stop ModemManager

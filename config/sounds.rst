@@ -21,27 +21,27 @@ MPF-MC currently supports 16-bit Wave (.wav), Ogg Vorbis (.ogg), and FLAC (.flac
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     sounds:
-        extra_ball:
-            file: extra_ball_12753.wav
-            events_when_stopped: extra_ball_callout_finished
-            streaming: False
-            track: voice
-            volume: -4.5 db
-            priority: 50
-            max_queue_time: None
-            ducking:
-                target: music
-                delay: 0
-                attack: 0.3 sec
-                attenuation: -18db
-                release_point: 2.0 sec
-                release: 1.0 sec
-        slingshot_01:
-            volume: 0.5
-            max_queue_time: 0
+      extra_ball:
+        file: extra_ball_12753.wav
+        events_when_stopped: extra_ball_callout_finished
+        streaming: false
+        track: voice
+        volume: -4.5 db
+        priority: 50
+        max_queue_time: None
+        ducking:
+          target: music
+          delay: 0
+          attack: 0.3 sec
+          attenuation: -18db
+          release_point: 2.0 sec
+          release: 1.0 sec
+      slingshot_01:
+        volume: 0.5
+        max_queue_time: 0
 
 Optional settings
 -----------------
@@ -323,13 +323,13 @@ Here's a simple example utilizing markers:
 .. code-block:: mpf-config
 
     sounds:
-        long_sound_1:
-            volume: 0.8
-            markers:
-                - time: 2.534 sec
-                  events: send_this_event, also_this_event
-                - time: 6.712 sec
-                  events: almost_finished_playing
+      long_sound_1:
+        volume: 0.8
+        markers:
+          - time: 2.534 sec
+            events: send_this_event, also_this_event
+          - time: 6.712 sec
+            events: almost_finished_playing
 
 The ``markers:`` section contains the following settings:
 

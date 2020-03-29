@@ -16,7 +16,7 @@ The ``ball_holds:`` section of your config is used to list and configure
 
 Note that ball holds are used to temporarily hold a ball while the game is doing something
 else. (Starting a video mode, playing an intro show, etc.) If you want to hold and lock
-a ball towards multiball, use the ``ball_locks:`` section instead.
+a ball towards multiball, use the ``multiball_locks:`` section instead.
 
 Ball holds do not affect the "balls in play" count, and they are not used
 to hold balls from ball-to-ball or between players.
@@ -26,25 +26,25 @@ Here's an example
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
    #! coils:
-   #!    c_eject:
-   #!       number:
-
+   #!   c_eject:
+   #!     number:
    ball_devices:
-      bd_bunker:
-         eject_coil: c_eject
-         ball_switches: s_ball1
-
+     bd_bunker:
+       eject_coil: c_eject
+       ball_switches: s_ball1
    ball_holds:
-      bunker:
-         balls_to_hold: 1
-         hold_devices: bd_bunker
+     bunker:
+       balls_to_hold: 1
+       hold_devices: bd_bunker
 
 Each sub-entry under the ``ball_holds:`` section is the name of the logical ball
 hold ("bunker") in the example above. Then each named ball hold has the
 following settings:
+
+.. config
 
 
 Required settings
@@ -87,6 +87,14 @@ enable_events:
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Event(s) which enable this ball hold.
+
+priority:
+~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+Relative priority when claiming balls entering a device.
+This can be used to give one :doc:`ball_hold <ball_holds>` or
+:doc:`multiball_lock <multiball_locks>` preference when claiming balls.
 
 release_all_events:
 ~~~~~~~~~~~~~~~~~~~
@@ -155,3 +163,10 @@ Special / reserved tags for ball holds: *None*
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/ball_holds/index`
+* :doc:`/game_design/game_modes/mystery_award`
+* :doc:`/game_logic/ball_locks/index`
+* :doc:`/mechs/scoops/index`

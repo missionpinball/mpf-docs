@@ -58,12 +58,14 @@ The only setting for each display we need to worry about now is the height and w
 number of pixels. So for now, create a single display called "window" set to 800x600 pixels. To do this, add
 the following to your ``config.yaml`` file:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
      window:
        width: 800
        height: 600
+   ##! test
+   #! advance_time_and_run .1
 
 Make sure that the word ``displays:`` has no spaces in front of it, since it's a top-level config item.
 
@@ -124,29 +126,40 @@ here and then you can read the full documentation on :doc:`slide </displays/slid
 In MPF, all slides have names. You can define slides in the ``slides:`` section of the config. So let's create a
 slide called "welcome_slide", like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      welcome_slide:
+     welcome_slide:
+   ##! test
+   #! advance_time_and_run .1
 
 Now let's add a ``widgets:`` section under that slide, then under that, we'll start creating some widgets.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      welcome_slide:
-         widgets:
+     welcome_slide:
+       widgets:
+   ##! test
+   #! advance_time_and_run .1
 
 You can add as many widgets as you want to a slide. (And it's pretty common for slides to be made up of lots of
 widgets). For now let's add a text widget that reads "PINBALL!". Do this by adding the following to your config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      welcome_slide:
-         widgets:
-           - type: text
-             text: PINBALL!
+     welcome_slide:
+       widgets:
+         - type: text
+           text: PINBALL!
+   #! slide_player:
+   #!   show_slide_event: welcome_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top welcome_slide
+   #! assert_text_on_top_slide PINBALL!
 
 There are a few things going on there.
 
@@ -177,10 +190,19 @@ occur, and when they do, it "plays" a slide.
 
 To see this in action, add the following section to your machine config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   welcome_slide:
+   #!     widgets:
+   #!       - type: text
+   #!         text: PINBALL!
    slide_player:
-      init_done: welcome_slide
+     init_done: welcome_slide
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top welcome_slide
+   #! assert_text_on_top_slide PINBALL!
 
 What this is doing is saying, "When the event called *init_done* happens, play the slide called *welcome_slide*." The
 *init_done* is an event that's posted by MPF-MC at the earliest possible point when it is ready after it initially starts
@@ -205,7 +227,7 @@ can look at the :doc:`documentation for text widgets </displays/widgets/text/ind
 
 For example, let's change the font size and the color, by adding ``font_size:`` and ``color:`` lines:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      welcome_slide:
@@ -214,6 +236,13 @@ For example, let's change the font size and the color, by adding ``font_size:`` 
            text: PINBALL!
            font_size: 50
            color: red
+   #! slide_player:
+   #!   show_slide_event: welcome_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top welcome_slide
+   #! assert_text_on_top_slide PINBALL!
 
 Now when you run ``mpf mc`` again, you should see this:
 
@@ -229,7 +258,7 @@ We already mentioned that you can add as many widgets as you want to a slide and
 of different kinds of widgets. Let's add a second widget to your welcome slide. This one will be a
 rectangle which appears behind the word "PINBALL!".
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      welcome_slide:
@@ -241,6 +270,13 @@ rectangle which appears behind the word "PINBALL!".
          - type: rectangle
            width: 240
            height: 60
+   #! slide_player:
+   #!   show_slide_event: welcome_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top welcome_slide
+   #! assert_text_on_top_slide PINBALL!
 
 Again, note that you use a dash followed by a space to denote the start of the second widget. This
 widget's type is "rectangle", with its height and width specified. Since we're not specifying any
@@ -271,7 +307,7 @@ we'll make that slide play on a different event.
 
 So in your ``slides:`` section, add another slide called ``attract_started``, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      welcome_slide:
@@ -287,6 +323,13 @@ So in your ``slides:`` section, add another slide called ``attract_started``, li
        widgets:
          - text: ATTRACT MODE
            type: text
+   #! slide_player:
+   #!   show_slide_event: welcome_slide
+   ##! test
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_on_top welcome_slide
+   #! assert_text_on_top_slide PINBALL!
 
 Note that ``attract_started:`` is indented the same number of spaces as ``welcome_slide:``. Also
 note that in the attract_started slide, we switched the order of ``text:`` and ``type:``. We did that
@@ -306,11 +349,33 @@ they're posted. You can use any of these as triggers for your slides via the ``s
 
 Anyway, add the ``mode_attract_started`` to your ``slide_player:`` like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   welcome_slide:
+   #!     widgets:
+   #!       - type: text
+   #!         text: PINBALL!
+   #!         font_size: 50
+   #!         color: red
+   #!       - type: rectangle
+   #!         width: 240
+   #!         height: 60
+   #!   attract_started:
+   #!     widgets:
+   #!       - text: ATTRACT MODE
+   #!         type: text
    slide_player:
      init_done: welcome_slide
      mode_attract_started: attract_started
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top attract_started
+   #! assert_text_on_top_slide "ATTRACT MODE"
+   #! start_game
+   #! post show_slide_event
+   #! advance_time_and_run .1
+   #! assert_slide_active welcome_slide
 
 Again, this is saying you want the slide called "attract_started" to play when the event called
 "mode_attract_started" happens.
@@ -403,6 +468,9 @@ exist, so make sure the slide's entry in the ``slides:`` section matches the sli
 If the welcome slide works but you never see the attract slide, make sure you have the
 ``mode_attract_started:`` event name spelled properly. Also make sure you do *NOT* run MPF with the
 ``-b`` option since that tells it not to connect to the MC.
+
+If you get YAML errors either copy the complete example below or read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
 
 Most of the other errors should be pretty self-explanatory. If you get stuck, feel free to post
 to the `mpf-users Google group <https://groups.google.com/forum/#!forum/mpf-users>`_.

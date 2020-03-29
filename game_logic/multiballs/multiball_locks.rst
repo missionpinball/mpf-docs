@@ -17,7 +17,7 @@ To use a multiball lock, you configure it for the ball device (or devices) that 
 be used to lock balls, and then when a ball enters one of those devices, the lock
 count is increased by one.
 
-Multiball locks cab be configured in one of four modes of operation:
+Multiball locks can be configured in one of four modes of operation:
 
 ``virtual_only``
    When a new ball is locked, the lock count is increased. Period. It does not matter
@@ -91,8 +91,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/multiball_name_ended`
-* :doc:`/events/multiball_name_lost_ball`
-* :doc:`/events/multiball_name_shoot_again`
-* :doc:`/events/multiball_name_shoot_again_ended`
-* :doc:`/events/multiball_name_started`
+.. include:: /events/include_multiball_locks.rst

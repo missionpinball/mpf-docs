@@ -6,15 +6,16 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python (3.4, 3.5, or 3.6)
+1. Install Python (3.5, or 3.6)
 ---------------------------------------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.4, Python 3.5, or Python 3.6 (Python 3.7
-and newer are not currently supported). While MPF will run on Python 3.4, it is recommended
+On Windows platforms, MPF requires Python 3.5, or Python 3.6 (Python 3.7
+and newer are not currently supported). While MPF will run on Python 3.4, some of our
+depenencies dropped support for 3.4 and can no longer be installed. It is recommended
 you use the newest supported version of Python available when you are setting up your PC
 (Python 3.6 as of the time this document was last updated). You can download and install it
 from the Python website. (Keep reading for links)
@@ -53,8 +54,6 @@ number is the "patch" number, so 3.6.4 is a version of Python 3.6.) Or use the d
 + `Python 3.6 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
 + `Python 3.5 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe>`_
 + `Python 3.5 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe>`_
-+ `Python 3.4 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi>`_
-+ `Python 3.4 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi>`_
 
 Installing Python is pretty straightforward. It's a normal Windows installer.
 
@@ -82,7 +81,7 @@ That should print which version of Python is installed, like this:
 
 .. image:: images/windows_python_from_command_prompt.jpg
 
-Make sure the version is Python 3.4.something. If you see a version number that starts with 2,
+Make sure the version is Python 3.5.xx. If you see a version number that starts with 2,
 that means you also have Python version 2 installed. (This is ok. You can have Python 2
 and Python 3 installed at the same time.) However, if this is your case, you need to
 use a different command to start Python 3. See the :doc:`2_and_3` page for details.
@@ -107,7 +106,7 @@ just run it.
 This command will upgrade pip and setuptools to the latest versions.
 
 Note that if you're running the command prompt *without* admin rights, you might get
-some red text and a permissions error, but that's ok.
+some red text and a permissions error. Launch the command prompt by right clicking and selecting "Run as administrator".
 
 You can run the following command to show the versions of pip and setuptools (and the other
 packages you have installed) like this:
@@ -121,24 +120,31 @@ That will print out something like this:
 .. code-block:: doscon
 
    C:\Users\BRIAN MADDEN>pip list
-   pip (9.0.1)
-   setuptools (35.5.1)
-
+   Package    Version
+   ---------- -------
+   pip        19.3
+   setuptools 41.4.0
    C:\Users\BRIAN MADDEN>
 
-Notice that pip is now version 9.0.1 (or later, depending on the latest version when you're doing
-this), and not the 7.x version that came with Python 3.4.4.  Setuptools has also been updated to
-version 35.5.1 (or later).
+Notice that pip is now version 19.3 (as of October 2019)and not the older version that came with Python 3.6.8.  Setuptools has also been updated to version 41.4.0 (as of October 2019).
 
 3. Install MPF
 --------------
+
+In case you previously had MPF/MPF-MC 0.52 or earlier installed you need to
+uninstall some kivy dependencies because their naming changed with Kivy 1.11
+(you can skip this on a new install):
+
+.. code-block:: doscon
+
+   pip3 uninstall kivy.deps.sdl2 kivy.deps.sdl2_dev kivy.deps.glew kivy.deps.gstreamer
 
 Now that Python is installed and pip is up-to-date, it's time to install MPF!
 To do this, run the following command from the command prompt:
 
 .. code-block:: doscon
 
-    pip install mpf-mc --pre
+   pip install mpf mpf-mc --pre
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
@@ -147,11 +153,11 @@ and install it onto your computer.
 
 .. note::
 
-   Since MPF 0.50 is not yet released, the pip command you run has a **--pre**
+   Since MPF 0.51 is not yet released, the pip command you run has a **--pre**
    at the end which tells it to get the latest "pre-release" version. Once MPF
    0.50 is released, you won't need the **--pre**. If you run pip without the
-   **--pre** now, you will get MPF 0.33, which is fine, but then you need to
-   read the 0.33 documentation, not this 0.50 documentation.
+   **--pre** now, you will get MPF 0.50, which is fine, but then you need to
+   read the 0.50 documentation, not this 0.51/dev documentation.
 
 Pip packages can include dependencies, which means that when you run this
 command, you'll see a bunch (like 20 or so) packages get downloaded and installed. The
@@ -166,7 +172,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN>pip install mpf-mc --pre
+   C:\Users\BRIAN MADDEN>pip install mpf mpf-mc --pre
    Collecting mpf-mc
      Downloading mpf_mc-0.50.0.dev5-cp34-none-win32.whl (6.4MB)
        100% |################################| 6.4MB 176kB/s
@@ -270,7 +276,7 @@ this:
 .. code-block:: doscon
 
    C:\Users\BRIAN MADDEN> mpf --version
-   MPF v0.50.0
+   MPF v0.51.0
 
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
@@ -324,6 +330,9 @@ will download and install them.
    work in MPF 0.50. Please refer to :doc:`Migrating from config version 4 to 5 of MPF </install/migrate4to5>`
    for step-by-step instructions.
 
+Install the dev version
+-----------------------
+
 To install the latest dev release (not generally recommended) which allows you to try bleeding-edge features run:
 
 .. code-block:: doscon
@@ -334,8 +343,8 @@ To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: doscon
 
-  pip install mpf=x.yy.z
-  pip install mpf-mc=x.yy.z
+  pip install mpf==x.yy.z
+  pip install mpf-mc==x.yy.z
 
 Next steps!
 -----------
@@ -343,3 +352,32 @@ Next steps!
 Now that MPF is installed, you can follow our
 :doc:`step-by-step tutorial </tutorial/index>` which will show you how to start
 building your own game in MPF!
+
+.. include:: /install/common_problems_and_solutions.rst
+
+Permission errors on update
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you installed Python as Administrator you might get permissions error when
+upgrading packages using pip:
+
+.. code-block:: doscon
+
+   pip install pip setuptools --upgrade
+   Collecting pip
+     Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
+   Collecting setuptools
+     Using cached https://files.pythonhosted.org/packages/d1/6a/4b2fcefd2ea0868810e92d519dacac1ddc64a2e53ba9e3422c3b62b378a6/setuptools-40.8.0-py2.py3-none-any.whl
+   Installing collected packages: pip, setuptools
+     Found existing installation: pip 9.0.1
+       Uninstalling pip-9.0.1:
+   Exception:
+   Traceback (most recent call last):
+     File "c:\program files\python36\lib\shutil.py", line 544, in move
+       os.rename(src, real_dst)
+   PermissionError: [WinError 5] Access is denied: 'c:\\program files\\python36\\lib\\site-packages\\pip-9.0.1.dist-info\\description.rst' -> 'C:\\Users\\XXX\\AppData\\Local\\Temp\\pip-81ah1j9u-uninstall\\program files\\python36\\lib\\site-packages\\pip-9.0.1.dist-info\\description.rst'
+
+Run your console as Administrator to fix this.
+This can be done by right clicking on the console (in the start menu) and selecting "Start as Administrator".
+Re-run the command and it should work.
+If not let us know!

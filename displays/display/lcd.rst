@@ -7,13 +7,12 @@ display. This would be like what Jersey Jack does in Wizard of Oz or The Hobbit.
 Here's what the final version of the relevant sections of your machine config
 file will look like. We'll step through everything one-by-one.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     displays:
       window:
         height: 800
         width: 600
-
     window:
       width: 800
       height: 600
@@ -30,7 +29,7 @@ file will look like. We'll step through everything one-by-one.
 The first part of the config file is where you create your display called
 "window" and set its size:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     displays:
       window:
@@ -80,3 +79,5 @@ documentation to see how you can add slides and widgets to your display.
 Also, if you want to make the content on your window look like dots, or if you
 want to show a "virtual" DMD in your window, check out the other guides in this
 section.
+
+See :doc:`multiple_screens` for informations about using two or more LCDs.

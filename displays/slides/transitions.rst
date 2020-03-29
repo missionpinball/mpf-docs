@@ -124,15 +124,23 @@ Configuring Transitions
 Transitions are specified as an additional property of a ``slide_player:``
 config or the ``slides:`` section of a show config. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
+   #! slides:
+   #!   slide1:
+   #!     - type: text
+   #!       text: "SLIDE 1"
+   slide_player:
+     left_ramp_hit:
+       slide1:
+         transition:
+           type: push
+           duration: 2s
+           direction: right
+   ##! test
+   #! post left_ramp_hit
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "SLIDE 1"
 
 Hopefully the above example is obvious by now. When the event "left_ramp_hit"
 happens, MPF will show the slide called "slide1:, using the push transition,
@@ -140,31 +148,46 @@ with a transition time of 2 seconds, pushing the new slide in from the right.
 
 Transitions can be combined with other slide settings, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
-                target: dmd
+   #! slides:
+   #!   slide1:
+   #!     - type: text
+   #!       text: "SLIDE 1"
+   slide_player:
+     left_ramp_hit:
+       slide1:
+         transition:
+           type: push
+           duration: 2s
+           direction: right
+   ##! test
+   #! post left_ramp_hit
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "SLIDE 1"
 
 You can also configure ``transition_out:`` settings which are transitions that
 will be applied to a slide when it is removed, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-        left_ramp_hit:
-            slide1:
-                transition:
-                    type: push
-                    duration: 2s
-                    direction: right
-                transition_out:
-                    type: fade_away
+   #! slides:
+   #!   slide1:
+   #!     - type: text
+   #!       text: "SLIDE 1"
+   slide_player:
+     left_ramp_hit:
+       slide1:
+         transition:
+           type: push
+           duration: 2s
+           direction: right
+         transition_out:
+           type: fade_back
+   ##! test
+   #! post left_ramp_hit
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "SLIDE 1"
 
 .. note::
    If the current slide has a ``transition_out:`` setting, and the new slide has

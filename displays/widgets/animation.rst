@@ -19,35 +19,35 @@ This How To guide will show you how to do all of that.
 
 MPF animations are properties of widgets. For example, here's a basic widget with no animations:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide_1:
-         widgets:
-            - type: text
-              text: MY TEXT
-              color: red
+     slide_1:
+       widgets:
+         - type: text
+           text: MY TEXT
+           color: red
 
 To add animations to a widget, you simply add an ``animations:`` setting to that widget, and then under there you add
 specific animation steps and settings. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide_1:
-         widgets:
-            - type: text
-              text: MY TEXT
-              color: red
-              animations:
-                show_slide:                # animation trigger event
-                  - property: opacity      # name of the widget property we're animating
-                    value: 1               # target value of that property for this step
-                    duration: .5s          # duration for this step (how long it takes to get there)
-                  - property: opacity      # second step in the animation (starts with a hyphen)
-                    value: 0
-                    duration: .5s
-                    repeat: true           # added to the final step, tells this animation to repeat (loop)
+     slide_1:
+       widgets:
+         - type: text
+           text: MY TEXT
+           color: red
+           animations:
+             show_slide:                   # animation trigger event
+               - property: opacity         # name of the widget property we're animating
+                 value: 1                  # target value of that property for this step
+                 duration: .5s             # duration for this step (how long it takes to get there)
+               - property: opacity         # second step in the animation (starts with a hyphen)
+                 value: 0
+                 duration: .5s
+                 repeat: true              # added to the final step, tells this animation to repeat (loop)
 
 In the example above, an ``animations:`` setting has been added to the widget. Then under there, you add
 the name of the event you want to use to trigger this animation to start.
@@ -70,10 +70,7 @@ In this example, there are three settings for the first step:
 The **property** setting is the name of the widget's property that you want to animate. This can be almost any
 numerical property of the widget, including ``x:``, ``y:``, ``opacity``, etc. (Different widget types have
 different types of animatable properties. For example, on text widgets you can animate the ``font_size:``, on
-various shape widgets you can animate the ``height:`` and ``width:``, etc.)
-
-Pretty much the only thing you can't animate at this point is rotation (since MPF doesn't currently
-support widget rotation. That's a future feature we'll have to add).
+various shape widgets you can animate the ``height:``, ``width:`` and ``rotation:``, etc.)
 
 2. Relative animation values
 ----------------------------
@@ -84,8 +81,8 @@ an absolute target value.  This can be done using ``relative: True``.  With the 
 value when the animation starts.  When ``relative:`` is set to ``False``, the animation target uses the actual
 ``value:`` property value as its destination.
 
-The following example animates a widget 50 pixels in the ``x`` direction over one second from its current location
-and then -50 pixels in the ``y`` direction over another second:
+The following example animates a widget 50 pixels in the ``x`` direction over one second from its current location,
+ then -50 pixels in the ``y`` direction over another second followed by a 45 degree rotation over 500 ms:
 
 ::
 
@@ -97,6 +94,10 @@ and then -50 pixels in the ``y`` direction over another second:
                     value: -50
                     relative: True
                     duration: 1s
+                  - property: rotation
+                    value: 45
+                    relative: True
+                    duration: 500ms
 
 3. Animation trigger events
 ---------------------------
@@ -202,31 +203,31 @@ as the step before it. This means you can animate multiple properties at once.
 
 For example, to make the text grow and shrink while also fading on and off:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide_1:
-         widgets:
-            - type: text
-              text: MY TEXT
-              color: red
-              font_size: 50
-              animations:
-                show_slide:
-                  - property: opacity
-                    value: 1
-                    duration: .5s
-                  - property: font_size
-                    value: 100
-                    timing: with_previous      # makes this step run at the same time as the previous one
-                    duration: .5s              # specify a duration for each step, even when with_previous
-                  - property: opacity
-                    value: 0
-                    duration: .5s
-                    repeat: true
-                  - property: font_size
-                    value: 50
-                    duration: .5s
+     slide_1:
+       widgets:
+         - type: text
+           text: MY TEXT
+           color: red
+           font_size: 50
+           animations:
+             show_slide:
+               - property: opacity
+                 value: 1
+                 duration: .5s
+               - property: font_size
+                 value: 100
+                 timing: with_previous         # makes this step run at the same time as the previous one
+                 duration: .5s                 # specify a duration for each step, even when with_previous
+               - property: opacity
+                 value: 0
+                 duration: .5s
+                 repeat: true
+               - property: font_size
+                 value: 50
+                 duration: .5s
 
 Notice that the animation in the example above has 4 steps, but steps #2 and #4 have the setting ``timing: with_previous``.
 You can chain together as many ``with_previous`` steps as you want. (The default setting for one step to run after the
@@ -243,12 +244,12 @@ etc.)
 
 It is also possible to animate multiple properties in a single animation step by using a list in both the ``property:``
 and ``value:`` parameters (there must be the same number of items in both lists).  The following example moves a widget
-diagonally to the coordinate (10, 20) over 5 seconds:
+diagonally to the coordinate (10, 20) while rotating it 180 degrees over 5 seconds:
 
 ::
 
-                  - property: x, y
-                    value: 10, 20
+                  - property: x, y, rotation
+                    value: 10, 20, 180
                     duration: 5s
 
 5. Multi-step animations with different trigger events
@@ -262,34 +263,34 @@ animations to take place when different events occur. You can mix and match
 these as much as you want, including mixing the "special" animation
 trigger events with regular MPF events.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide1:
-         widgets:
-            - type: text
-              text: I'M GOING TO MOVE
-              x: 50
-              y: 50
-         animations:
-            move_up:
-               property: y      # if there's just one animation step, we don't need the hyphen
-               value: 100
-            move_down:
-               property: y
-               value: 0
-            move_right:
-               property: x
-               value: 100
-            move_left:
-               property: x
-               value: 0
-            move_home:
-             - property: x
-               value: 50
-             - property: y
-               value: 50
-               timing: with_previous
+     slide1:
+       widgets:
+         - type: text
+           text: I'M GOING TO MOVE
+           x: 50
+           y: 50
+       animations:
+         move_up:
+           property: y          # if there's just one animation step, we don't need the hyphen
+           value: 100
+         move_down:
+           property: y
+           value: 0
+         move_right:
+           property: x
+           value: 100
+         move_left:
+           property: x
+           value: 0
+         move_home:
+           - property: x
+             value: 50
+           - property: y
+             value: 50
+             timing: with_previous
 
 In the above example, we have five different animation events configured. These are just regular MPF events which you
 can use from logic blocks, shots, switch events, etc. When the event ``move_up`` is posted, this widget will move to the
@@ -303,19 +304,19 @@ Again, you can use any combination of properties and any number of steps for eac
 You can also use a property from your event.
 For instance, you can move a widget based on a player variable:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide1:
-         widgets:
-            - type: text
-              text: I'M GOING TO MOVE
-              x: 50
-              y: 50
-         animations:
-            player_loops:        # this is posted when the player variable "loops" changes
-               property: y
-               value: (value)    # this is the value of loops
+     slide1:
+       widgets:
+         - type: text
+           text: I'M GOING TO MOVE
+           x: 50
+           y: 50
+       animations:
+         player_loops:           # this is posted when the player variable "loops" changes
+           property: y
+           value: (value)        # this is the value of loops
 
 6. Looping and repeating animations
 -----------------------------------
@@ -326,34 +327,34 @@ will cause that animation to loop back to the beginning and keep repeating.
 
 Of course you can mix-and-match repeating animations with one time animations. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide1:
-         widgets:
-          - type: text
-            text: BOO!
-            y: -50
-            font_size: 90
-            animations:
-               show_slide:
-                  property: y
-                  value: 50
-                  duration: 500ms
-               pulse_boo:
-                - property: font_size
-                  value: 100
-                  duration: 250ms
-                - property: font_size
-                  value: 90
-                  duration: 250ms
-                  repeat: true
-               bye_boo:
-                - property: y
-                  value: 100
-                - property: x
-                  value: 150
-                  timing: with_previous
+     slide1:
+       widgets:
+         - type: text
+           text: BOO!
+           y: -50
+           font_size: 90
+           animations:
+             show_slide:
+               property: y
+               value: 50
+               duration: 500ms
+             pulse_boo:
+               - property: font_size
+                 value: 100
+                 duration: 250ms
+               - property: font_size
+                 value: 90
+                 duration: 250ms
+                 repeat: true
+             bye_boo:
+               - property: y
+                 value: 100
+               - property: x
+                 value: 150
+                 timing: with_previous
 
 In the example above, when the slide is shown (or when the widget is added if this config was in your ``widgets:``
 section and you added it via a ``widget_player:`` entry), the widget will fly into the slide from the bottom (since the
@@ -372,25 +373,25 @@ property is currently at. This is easy to do using a relative property value of 
 So you still have the step in the animation, it just isn't doing anything since the widget's property is already at
 the desired target value. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide1:
-         widgets:
-            - type: image
-              image: flying_toaster
-              y: -50
-         animations:
-            show_slide:
-             - property: y
-               value: 50
-               duration: 1s
-             - property: y
-               value: 0
-               relative: True
-               duration: 2s
-             - property: y
-               value: 200
+     slide1:
+       widgets:
+         - type: image
+           image: flying_toaster
+           y: -50
+       animations:
+         show_slide:
+           - property: y
+             value: 50
+             duration: 1s
+           - property: y
+             value: 0
+             relative: true
+             duration: 2s
+           - property: y
+             value: 200
 
 The the example above, the ``flying_toaster`` image will move in from the bottom of the screen (to ``y:50``) in 1 second,
 then pause for 2 seconds (since ``y: 50`` again), then move out of the top of the screen in 1 second.
@@ -409,7 +410,7 @@ acceleration/deceleration) over time. Refer to the
 Much like :doc:`named widgets <reusable_widgets>`, you can also create pre-defined animations that you can easily
 apply to any widget. You do this by adding those animations to the ``animations:`` section of your config, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    animations:
      fade_in:
@@ -427,27 +428,27 @@ own animations.
 For example, to configure a widget to fade in (assuming the widget was
 initially created with ``opacity: 0``:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
-      hello_widget:
-         - type: text
-           text: HELLO
-           animations:
-             show_slide: fade_in
+     hello_widget:
+       - type: text
+         text: HELLO
+         animations:
+           show_slide: fade_in
 
 Again remember this can be done anywhere you configure an animation. So if you later wanted to fade that text out
 when the event "timer_hurry_up_complete" is posted, you can do it like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
-      hello_widget:
-         - type: text
-           text: HELLO
-           animations:
-             show_slide: fade_in
-             timer_hurry_up_complete: fade_out
+     hello_widget:
+       - type: text
+         text: HELLO
+         animations:
+           show_slide: fade_in
+           timer_hurry_up_complete: fade_out
 
 10. Chaining multiple named animations together
 -----------------------------------------------
@@ -455,14 +456,14 @@ when the event "timer_hurry_up_complete" is posted, you can do it like this:
 When working with named animations, you can chain together multiple named
 animations for a single event by specifying them as a list, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
-      hello_widget:
-         - type: text
-           text: HELLO
-      animations:
-        some_event: anim1, anim2, anim3
+     hello_widget:
+       - type: text
+         text: HELLO
+         animations:
+           some_event: fade_in, fade_out, pulse
 
 Any animation with ``timing: with_previous`` in the first step will run with
 the previous one, meaning you can create lots of little effects and
@@ -471,24 +472,52 @@ sub-animations and then combine them in reusable ways throughout your config.
 You can even use the same animation over and over in a sequence to repeat
 something a certain number of times. For example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
   animations:
-      pulse:
-          - property: opacity
-            value: 0
-            duration: 100ms
-          - property: opacity
-            value: 1
-            duration: 100ms
-            timing: after_previous
-
+    pulse:
+      - property: opacity
+        value: 0
+        duration: 100ms
+      - property: opacity
+        value: 1
+        duration: 100ms
+        timing: after_previous
   widgets:
-      widget1:
-         - type: text
-           text: HELLO
-           animations:
-              flash_3x: pulse, pulse, pulse
+    widget1:
+      - type: text
+        text: HELLO
+        animations:
+          flash_3x: pulse, pulse, pulse
 
 In the example above, when the MPF event "flash_3x" is posted, it will cause
 widget1 to pulse three times.
+
+11. Animating a progress bar
+----------------------------
+
+MPF can also animate progress bars or similar things.
+In this example, we animate a progress bar based on the player variable
+``progress`` by hooking the width of the bar to the event ``player_progress``
+which is posted when the value changes:
+
+.. code-block:: mpf-mc-config
+
+   slides:
+     green_slide:
+       widgets:
+         - type: rectangle
+           y: 50
+           z: 20
+           anchor_x: left
+           anchor_y: center
+           width: 0
+           height: 16
+           corner_radius: 3
+           corner_segments: 3
+           color: 00FF00
+           animations:
+             player_progress:
+               - property: width
+                 value: (value)
+

@@ -25,20 +25,20 @@ Example:
 .. code-block:: mpf-config
 
     sound_system:
-        master_volume: 0.75
-        tracks:
-           music:
-              type: standard
-              simultaneous_sounds: 1
-              volume: 0.5
-           voice:
-              type: standard
-              simultaneous_sounds: 1
-              volume: 0.7
-           sfx:
-              type: standard
-              simultaneous_sounds: 8
-              volume: 0.4
+      master_volume: 0.75
+      tracks:
+        music:
+          type: standard
+          simultaneous_sounds: 1
+          volume: 0.5
+        voice:
+          type: standard
+          simultaneous_sounds: 1
+          volume: 0.7
+        sfx:
+          type: standard
+          simultaneous_sounds: 8
+          volume: 0.4
 
 2. Configuring your sound asset folders
 ---------------------------------------
@@ -76,15 +76,15 @@ respective tracks (*music*, *sfx*, and *voice*) so we set the ``track:`` setting
 .. code-block:: mpf-config
 
     assets:
-        sounds:
-            default:
-                load: on_demand
-            music:
-                track: music
-            sfx:
-                track: sfx
-            voice:
-                track: voice
+      sounds:
+        default:
+          load: on_demand
+        music:
+          track: music
+        sfx:
+          track: sfx
+        voice:
+          track: voice
 
 When your machine launches, the asset manager will now search for supported audio files in the
 specified directories and assign the proper settings to each file it finds.  We're well on our
@@ -131,8 +131,8 @@ text:
 .. code-block:: mpf-config
 
     sounds:
-        triangle:
-            file: 22783__franciscopadilla__80-mute-triangle.wav
+      triangle:
+        file: 22783__franciscopadilla__80-mute-triangle.wav
 
 That simple configuration change will allow the sound as to be referred to as ``triangle`` wherever
 you refer to that sound in other configuration locations. *Note*: be sure to include the complete
@@ -149,9 +149,9 @@ set the volume of the *triangle* sound in our config file:
 .. code-block:: mpf-config
 
     sounds:
-        triangle:
-            file: 22783__franciscopadilla__80-mute-triangle.wav
-            volume: 0.85
+      triangle:
+        file: 22783__franciscopadilla__80-mute-triangle.wav
+        volume: 0.85
 
 ``volume:`` controls the volume of the sound and works in conjunction with the track volume and the
 master volume.  Volume can either be entered as a number between 0.0 and 1.0 or as a decibel level
@@ -184,36 +184,36 @@ Example ``sounds:`` configuration demonstrating most common settings:
 .. code-block:: mpf-config
 
     sounds:
-        triangle:
-            file: 22783__franciscopadilla__80-mute-triangle.wav
-            volume: 0.85
-            max_queue_time: 0
-        laser:
-            volume: 0.5
-            loops: 3
-            max_queue_time: 0
-        extra_ball:
-            file: extra_ball_12753.wav
-            events_when_started: extra_ball_callout_started
-            events_when_stopped: extra_ball_callout_finished
-            volume: 0.8
-            priority: 50
-            max_queue_time: None
-            ducking:
-                target: music
-                delay: 0
-                attack: 0.3 sec
-                attenuation: 0.45
-                release_point: 2.0 sec
-                release: 1.0 sec
-        slingshot_01:
-            volume: 0.5
-            max_queue_time: 0
-        song_01:
-            volume: 1.0
-            priority: 100
-            about_to_finish_time: 2s
-            events_when_about_to_finish: song_01_about_to_finish
+      triangle:
+        file: 22783__franciscopadilla__80-mute-triangle.wav
+        volume: 0.85
+        max_queue_time: 0
+      laser:
+        volume: 0.5
+        loops: 3
+        max_queue_time: 0
+      extra_ball:
+        file: extra_ball_12753.wav
+        events_when_started: extra_ball_callout_started
+        events_when_stopped: extra_ball_callout_finished
+        volume: 0.8
+        priority: 50
+        max_queue_time: None
+        ducking:
+          target: music
+          delay: 0
+          attack: 0.3 sec
+          attenuation: 0.45
+          release_point: 2.0 sec
+          release: 1.0 sec
+      slingshot_01:
+        volume: 0.5
+        max_queue_time: 0
+      song_01:
+        volume: 1.0
+        priority: 100
+        about_to_finish_time: 2s
+        events_when_about_to_finish: song_01_about_to_finish
 
 5. Hooking up an MPF event to play a sound
 ------------------------------------------
@@ -232,13 +232,13 @@ following entries in the ``sound_player:`` section of the machine config file:
 .. code-block:: mpf-config
 
     sound_player:
-        mode_attract_started:
-            song_01:
-                action: play
-                loops: -1
-        mode_attract_stopped:
-            song_01:
-                action: stop
+      mode_attract_started:
+        song_01:
+          action: play
+          loops: -1
+      mode_attract_stopped:
+        song_01:
+          action: stop
 
 That's it.  The ``song_01`` sound will be played on the music track whenever *attract* mode is
 started and will stop whenever *attract* mode is stopped.  The ``mode_attract_started``

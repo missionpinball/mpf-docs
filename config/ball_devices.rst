@@ -19,6 +19,8 @@ You can find examples here:
 * :doc:`Plungers </mechs/plungers/index>`
 * :doc:`Scoops/Vertical UP Kickers (VUKs)/Saucer Holes </mechs/scoops/index>`
 
+.. config
+
 
 Optional settings
 -----------------
@@ -63,7 +65,7 @@ multiple playfields, you can set that target here. Default is
 
 ball_missing_timeouts:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 A list of timeouts that correspond to
 how much time after a ball goes missing passes before MPF assumes that
@@ -166,11 +168,6 @@ eject_all_events:
 ~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
-
 Causes this device to eject all its balls.
 
 eject_coil:
@@ -183,7 +180,7 @@ the playfield) don't have eject coils. Default is *None*.
 
 eject_coil_enable_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 When using an ``eject_coil`` and specifying ``eject_coil_enable_time`` MPF
 will enable to ``eject_coil`` for ``eject_coil_enable_time`` instead of
@@ -191,7 +188,7 @@ pulsing that coil.
 
 eject_coil_jam_pulse:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 This is the pulse time, in ms, that the eject coil will use if the jam
 switch is active and the first eject attempt failed to eject the ball.
@@ -203,14 +200,14 @@ attempts.
 
 eject_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``200ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``200ms``
 
 MPF might delay the eject by ``eject_coil_max_wait_ms`` to ensure consistent
 pulses. See :doc:`psus` for details.
 
 eject_coil_reorder_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 Pulse duration to use to reorder balls. If the ball device assumes that the
 balls are not settled properly it will pulse the ``eject_coil`` for
@@ -219,7 +216,7 @@ if multiple balls disappear or the ``jam_switch`` is active.
 
 eject_coil_retry_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 The new pulse time, in ms, that the eject coil will use if the eject
 has failed too many times. This pulse time is used up until the device stops trying.
@@ -231,11 +228,6 @@ the pulse time is controlled in the ``retries_before_increasing_pulse:`` setting
 eject_events:
 ~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
 
 Causes this device to eject one ball.
 
@@ -311,7 +303,7 @@ really ever happen.)
 
 eject_timeouts:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 This is an optional list of one or more MPF time strings that
 specify how long the device should wait for an ejected ball to be
@@ -330,9 +322,44 @@ is *2 seconds*, etc. If you don't specify a list of eject timeouts, or
 if the length of the list is less than the number of eject targets,
 then the default value of *10 seconds* is used.
 
+See :doc:`/finalization/ball_devices` for details about thouse timeouts.
+
+ejector:
+~~~~~~~~
+Unknown type. See description below.
+
+You ejector implemententation and settings.
+By default MPF will select an implementation based on the settings and
+configure it accordingly.
+
+Default ejectors (you can use those via the ball device config):
+
+* mpf.devices.ball_device.pulse_coil_ejector.PulseCoilEjector
+* mpf.devices.ball_device.enable_coil_ejector.EnableCoilEjector
+* mpf.devices.ball_device.hold_coil_ejector.HoldCoilEjector
+
+Additional ejectors:
+
+* mpf.devices.ball_device.event_ejector.EventEjector
+
+.. code-block:: mpf-config
+
+   #! switches:
+   #!   s_ball_switch1:
+   #!     number:
+   #!   s_ball_switch2:
+   #!     number:
+   ball_devices:
+     device_with_eject_event:
+       ejector:
+         class: mpf.devices.ball_device.event_ejector.EventEjector
+         events_when_eject_try: my_ball_device_eject
+       ball_switches: s_ball_switch1, s_ball_switch2
+
+
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
 
 This is the time delay (in MPF time string format) that this ball
 device will wait before counting the balls after any of the
@@ -343,7 +370,7 @@ is *500ms*.
 
 entrance_event_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``5s``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
 
 How long does the ball need after an ``entrance_event`` to settle in
 the ball device? This is used for some heuristics to determine if this is
@@ -373,16 +400,22 @@ your ball device has *ball_switches*. Default is *None*.
 
 entrance_switch_full_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 When using an ``entrance_switch`` and setting this to anything except 0,
 the device will be considered to be full after ``entrance_switch_full_timeout``
 ms. This is used in some troughs where the last ball sits on the entrance
 switch (see :doc:`/mechs/troughs/two_coil_one_switch`).
 
+entrance_switch_ignore_window_ms:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
+
+How long should another entrance switch be ignored after a previous activation?
+
 exit_count_delay:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
 
 This is the time delay that the device will wait before counting the
 balls after any after it attempts to eject a ball if the device is
@@ -399,7 +432,7 @@ Disabling the hold coil releases a ball. Default is *None*.
 
 hold_coil_release_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``1s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1s``
 
 This is the time (in MPF time string format) that devices with
 *hold_coils* will hold their coil open to release a ball. Default is
@@ -408,11 +441,6 @@ This is the time (in MPF time string format) that devices with
 hold_events:
 ~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
 
 These events cause this device to enable its hold coil.
 
@@ -425,7 +453,7 @@ be captured by a *hold_coil*. Default is *None*.
 
 idle_missing_ball_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``5s``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
 
 How long should the device wait before declaring a ball missing if it
 disappeared outside of an eject? Usually balls do not disappear when the
@@ -489,11 +517,6 @@ ball.
 request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
-
-:doc:`device control events </config/instructions/device_control_events>` format.
-
-Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
-also want the default value(s) to apply, add them too.)
 
 These events cause this device to request a ball to be sent to it.
 
@@ -560,8 +583,15 @@ Special-purpose tags for ball devices include:
   have two devices under the apron, with a "drain" device receiving
   balls from the playfield which it then immediately kicks over to a
   "trough" device which holds the balls that are not in play.
+  + ``no-eject-on-ballsearch`` - Specifies that this device should never
+  attempt to eject a ball as a result of ball search, even when idle and
+  containing no balls.
 
 The use of ``ball_add_live`` is discontinued. Use ``default_source_device`` in
 your :doc:`playfield </config/playfields>` instead.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/ball_devices/index`

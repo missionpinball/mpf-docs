@@ -61,8 +61,8 @@ This is an example:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 42	# number from your hardware platform
+     my_switch:
+       number: 42    # number from your hardware platform
 
 Switch Concepts
 ---------------
@@ -92,6 +92,7 @@ Related How To guides
 * :doc:`mechanical_switches`
 * :doc:`rollover_switches`
 * :doc:`service_and_door_switches`
+* :doc:`start_tournament_and_launcher_buttons`
 
 Related Events
 --------------
@@ -109,3 +110,5 @@ Related Events
    mechanical_switches
    service_and_door_switches
    rollover_switches
+   start_tournament_and_launcher_buttons
+   breakout_boards

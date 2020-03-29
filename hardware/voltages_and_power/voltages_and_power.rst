@@ -4,6 +4,8 @@ Voltages and Power
 A pinball machine uses multiple different voltages for different purposes.
 You need at least one power supply unit (PSU) to transform the AC power
 to multiple DC rails.
+See :doc:`wiring_and_connectors` for more details on the wire thickness and
+connectors to use for the different power rails below.
 
 .. warning::
 
@@ -49,11 +51,19 @@ Those are more expensive, heavier and harder to get nowadays.
 They are generally not recommended for new designs.
 If you want to produce a machine this will also be harder to certify in most
 countries.
+Some people use 24V supplies which technically works but is not recommended
+because coils tend to be quite weak and unreliable in those settings.
 
 A large capacitor might help to keep this rail stable since pulsing and PWMing
 coil causes large electric and magnetic spikes.
 In some cases a PSU might turn off while driving coils without a capacitor on
 this rail.
+In other cases pulses might be unstable because the voltage will drop too much
+during the pulse (seems to be common with 24V supplies).
+If you are increasing pulse times and there seems to be no change in the power
+of the coil you are likely experiencing the second issue.
+Adding large capacitors or using a power entry board (see below) is recommended
+in those cases.
 
 You want to use at least one fuse on the HV rail to prevent coils from burning.
 Most coils will start burning after a while if you enable them permanently
@@ -129,6 +139,14 @@ Common power supplies (for 12V):
 * Standard ATX power supplies
 * Meanwell RD65A - A cheap 5V and 12V supply
 
+PC Power
+--------
+
+Most machines run embedded PCs which come with their own PSU.
+Sometimes they run off 5V (such as the Raspberry Pi).
+Others use standard ATX power supplies.
+See :doc:`/finalization/power` for details about power on/off.
+
 Electromagnetic Compatibility EMC/EMI
 -------------------------------------
 
@@ -158,15 +176,18 @@ Common Ground
    We cannot stress this enough.
    Not ensuring this will be very dangerous!
 
-In general, it is preferred to connect the ground at the PSUs then below
+In general, it is preferred to connect the ground at the PSUs than below
 the playfield.
 Then run a separate ground for each power rail from the PSU to the playfield.
 
 Interferences on the ground of the HV rail might cause problems in other rails.
 Especially for serial LEDs and logic power.
 In case you run into those problems consult with an electric engineer.
-The right capacitors and the right wireing might help with this case for example.
+The right capacitors and the right wiring might help with this case for example.
 
+Common "ground" generally refers to the neutral wire of your PSU which should
+not be confused with ground/electric earth.
+See :doc:`ground_and_appliance_classes` for details about ground vs neutral.
 
 Power Filter Boards
 -------------------
@@ -181,5 +202,6 @@ Some common boards:
 
 * :doc:`Multimorphic Power Entry Board </hardware/multimorphic/power_entry>`
 * :doc:`FAST Power Filter Board </hardware/fast/power_filter>`
+* Spooky/PBL Power Entry Board (part number: #600-0253-00)
 * `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
-* Stern Spike Power Distribution Board (part number 520-5343-01)
+* Stern Spike Power Distribution Board (part number: 520-5343-01)

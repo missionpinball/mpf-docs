@@ -235,31 +235,28 @@ So on Windows, you'll end up with something like:
 .. code-block:: mpf-config
 
     hardware:
-        rgb_dmd: smartmatrix
-
+      rgb_dmd: smartmatrix
     smartmatrix:
-        smartmatrix_1:
-           port: com12
-           baud: 2500000
-           old_cookie: true
+      smartmatrix_1:
+        port: com12
+        baud: 2500000
+        old_cookie: false
 
 And on Mac or Linux, it will look something like:
 
 .. code-block:: mpf-config
 
     hardware:
-        rgb_dmd: smartmatrix
-    
+      rgb_dmd: smartmatrix
     smartmatrix:
-        smartmatrix_1:
-           port: "/dev/tty.usbmodem1448891"
-           baud: 2500000
-           old_cookie: true
-
+      smartmatrix_1:
+        port: "/dev/tty.usbmodem1448891"
+        baud: 2500000
+        old_cookie: false
 
 Just enter the ``baud:`` and ``old_cookie:`` settings like they are in the
 example above. These are the settings that are needed for the SmartMatrix.
-If you are using the FAST DMD board set ``old_cookie`` to false and baud to
+If you are using the FAST DMD board set baud to
 `3000000`.
 
 3. Add a physical RGB DMD device entry
@@ -284,16 +281,11 @@ To do this, create a section in your machine-wide config called
 
     rgb_dmds:
       smartmatrix_1:
-         platform: smartmatrix
-         hardware_brightness: .17
-         source_display: dmd
+        hardware_brightness: .17
+        source_display: dmd
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
-for details.) The only one you need to have is ``platform: smartmatrix`` which
-tells MPF that this RGB DMD should use the SmartMatrix hardware interface you
-configured in the previous step. (Otherwise if you don't specify a platform, it
-will use the default platform which probably doesn't support RGB DMDs. See the
-:doc:`/hardware/platform` guide for details.)
+for details.)
 
 You'll probably also want to configure the brightness, which is a multiplier
 from 0.0 to 1.0 that's applied to every pixel that's sent to the DMD.
@@ -348,8 +340,10 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/rgb_dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+    hardware:
+      rgb_dmd: smartmatrix
     displays:
       window:  # on screen window
         width: 600
@@ -359,49 +353,44 @@ on the window and slide settings used in this machine config.
         height: 32
         default: true
         round_anchor_x: left
-
     window:
       width: 600
       height: 200
       title: Mission Pinball Framework
-
     smartmatrix:
       smartmatrix_1:
         port: com5  # this will most likely be a different port for you
         baud: 2500000
-        old_cookie: true
-
+        old_cookie: false
     rgb_dmds:
       smartmatrix_1:
-         brightness: .2
-         platform: smartmatrix
-
+        brightness: .2
     slides:
       window_slide_1:  # slide we'll show in the on-screen window
-      - type: display    # this widget shows the DMD content in this slide too
-        effects:
-         - type: color_dmd
-        width: 512
-        height: 128
-      - type: text
-        text: MISSION PINBALL FRAMEWORK
-        anchor_y: top
-        y: top-3
-        font_size: 30
-        color: white
-      - type: rectangle
-        width: 514
-        height: 130
-        color: 444444
+        - type: display  # this widget shows the DMD content in this slide too
+          effects:
+            - type: color_dmd
+          width: 512
+          height: 128
+        - type: text
+          text: MISSION PINBALL FRAMEWORK
+          anchor_y: top
+          y: top-3
+          font_size: 30
+          color: white
+        - type: rectangle
+          width: 514
+          height: 130
+          color: 444444
       dmd_slide_1:  # slide we'll show on the physical DMD
-      - type: text
-        text: IT WORKS!
-        font_size: 30
-        color: red
-
+        - type: text
+          text: IT WORKS!
+          font_size: 30
+          color: red
     slide_player:
       init_done:
         window_slide_1:
           target: window
         dmd_slide_1:
           target: dmd
+

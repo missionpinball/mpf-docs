@@ -27,6 +27,18 @@ The default playfield ball device (called
 one playfield, though if you have a mini-playfield or a head-to-head
 machine then you can configure additional playfield devices.
 
+Ball tracking and ball search is performed per playfield in MPF.
+Therefore, most devices in MPF belong to one playfield and mark it as active
+when they see a ball.
+You should configure the exact playfield for every device as soon as you have
+more than one playfield in your machine.
+Otherwise, MPF will complain about unexpected balls (e.g. you will see
+:doc:`/events/unexpected_ball_on_playfield` events), ball search might
+at the wrong time and ball tracking might go haywire.
+To transfer balls you can use :doc:`playfield transfer <playfield_transfer>`
+or :doc:`ball devices </mechs/ball_devices/index>`.
+A ball device might capture from one playfield and eject to another.
+
 Playfields are configured in the :doc:`playfields: section </config/playfields>`
 of the configuration file.
 
@@ -47,11 +59,7 @@ the prefix for playfields is ``device.playfields.<name>``.
 Related Events
 --------------
 
-* :doc:`/events/sw_playfield_active`                                           |
-* :doc:`/events/unexpected_ball_on_playfield`                                  |
-* :doc:`/events/playfield_active`                                              |
-* :doc:`/events/playfield_ball_count_change`                                   |
-* :doc:`/events/playfield_transfer_playfield_transfer_ball_transferred`        |
+.. include:: /events/include_playfields.rst
 
 Other playfield concepts
 ------------------------

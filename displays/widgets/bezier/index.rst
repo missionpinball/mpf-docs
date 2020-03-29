@@ -8,13 +8,12 @@ Here's an example:
 
 TODO This example just shows a blank slide in MPF 0.50?
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    slide_player:
      mc_ready:
-        bezier_example:
+       bezier_example:
          - type: bezier
            points: 10, 10, 150, 450, 300, 100, 790, 590
            color: lime
@@ -53,6 +52,10 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following bezier widget settings may be :doc:`animated </displays/widgets/animation>`: ``color:``,
+``thickness:``, ``opacity:``, ``points:``, ``rotation:``, and ``scale:``.
+
 
 type: bezier
 ~~~~~~~~~~~~

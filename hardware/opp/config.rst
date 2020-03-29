@@ -18,11 +18,8 @@ like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: opp
-        driverboards: gen2
+      platform: opp
 
-You also need to configure the ``driverboards:`` entry for what kind of
-driver boards you’re controlling: right now, only *gen2* is supported.
 
 2. Configure the OPP-specific hardware settings
 -----------------------------------------------
@@ -60,7 +57,7 @@ such as *COM7* appear, you'd set your config like this:
 .. code-block:: mpf-config
 
     opp:
-        ports: COM7
+      ports: COM7
 
 Full details of the port options as well as the other options
 available here are in the ``opp:`` section of the configuration
@@ -82,9 +79,8 @@ This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
 .. code-block:: mpf-config
 
     opp:
-        ports: COM7
-        poll_hz: 50
-
+      ports: COM7
+      poll_hz: 50
 
 .. note::
 

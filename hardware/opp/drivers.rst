@@ -11,6 +11,8 @@ OPP coils / drivers
 There are a few things to know about controlling drivers and coils
 with OPP hardware.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 Number
 ~~~~~~
 
@@ -42,9 +44,9 @@ example, consider the following configuration:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number: 0-12
-            default_pulse_ms: 30
+      some_coil:
+        number: 0-12
+        default_pulse_ms: 30
 
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
@@ -68,3 +70,27 @@ default_hold_power to .25 and OPP will use 4ms/16ms = 25%.
 
 This will configure OPP card 0, solenoid wing 0, last solenoid to
 have an initial pulse of 32 ms, and then be held on at 50% power.
+
+
+Recycle Factor
+~~~~~~~~~~~~~~
+
+OPP allows you to fine tune the
+:doc:`recycle time of your coils </mechs/coils/recycle>`.
+If you add ``recycle: True`` to your coil you can set ``recycle_factor``
+in the ``platform_settings`` secton of your coil to set the recycle time.
+The time will be ``default_pulse_ms * recycle_factor``.
+For instance, if you set a pulse time of ``10ms`` and a recycle_factor of two
+the coil will cool down for at least ``20ms``.
+This is an example:
+
+.. code-block:: mpf-config
+
+    coils:
+      some_coil:
+        number: 0-3
+        default_pulse_ms: 10
+        default_recycle: true
+        platform_settings:
+          recycle_factor: 2
+

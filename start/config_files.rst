@@ -30,15 +30,15 @@ will contain your config files. A super-simple snippet might look like this:
 
 .. code-block:: mpf-config
 
-    game:
-        balls_per_game: 3
+   game:
+     balls_per_game: 3
 
 Want a 5-ball game instead? Simple! Just change it:
 
 .. code-block:: mpf-config
 
-    game:
-        balls_per_game: 5
+   game:
+     balls_per_game: 5
 
 Ultimately your config files will be thousands of lines long (though you can
 break them up into multiple files to help your sanity), but again, don't be

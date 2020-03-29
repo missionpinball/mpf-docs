@@ -19,3 +19,4 @@ LEDs work similar to matrix lights (board 1, LED 1):
       some_led:
         number: 1-1
         subtype: led
+

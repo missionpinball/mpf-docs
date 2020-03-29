@@ -1,6 +1,14 @@
 Plunger lanes with no ball switch
 =================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 Modern pinball machines have a switch in the plunger lane that tells
 the software that a ball is sitting in the plunger lane waiting to
 be plunged.
@@ -60,16 +68,16 @@ the default ``playfield``, like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_trough:
-   #!       number: 2-6
+   #!   s_trough:
+   #!     number: 2-6
    #! ball_devices:
-   #!     bd_trough:
-   #!          ball_switches: s_trough
-   #!          mechanical_eject: true
+   #!   bd_trough:
+   #!     ball_switches: s_trough
+   #!     mechanical_eject: true
    playfields:
-       playfield:
-           default_source_device: bd_trough
-           tags: default
+     playfield:
+       default_source_device: bd_trough
+       tags: default
 
 Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set!

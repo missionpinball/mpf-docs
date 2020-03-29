@@ -38,7 +38,7 @@ consecutive reads" to be considered debounced, while other platforms
 "a switch must be in a new state for X milliseconds before it's considered
 debounced." In practise, there is not much difference between those two.
 
-When considering switch debounce, the swtich usually is supposed to be active
+When considering switch debounce, the switch usually is supposed to be active
 for the whole debounce time. So this could also be called "minimum active
 time". Usually this time is in the range of two to four milliseconds.
 The reason for that is that waiting for a minimum active time induces some

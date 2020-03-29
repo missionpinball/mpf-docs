@@ -11,16 +11,6 @@ switches:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/mechs/switches/index`                                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/switches/optos`                                                 |
-+------------------------------------------------------------------------------+
-| :doc:`/mechs/switches/mechanical_switches`                                   |
-+------------------------------------------------------------------------------+
-
 The *switches:* section of the config files is used to map switch names
 to controller board inputs. You can map both direct and matrix
 switches. Here’s an example section:
@@ -28,39 +18,40 @@ switches. Here’s an example section:
 .. code-block:: mpf-config
 
    switches:
-      flipper_lwr_eos:
-         number: SF1
-      flipper_lwr:
-         number: SF6
-      fire_r:
-         number: S12
-         tags: plunger
-      start:
-         number: S13
-         tags: start
-      plumbbob:
-         number: S14
-         tags: tilt
-      outlane_l:
-         number: S16
-         tags: playfield_active
-         debounce: normal
-      inlane_l:
-         number: S17
-         tags: playfield_active
-         debounce: quick
-      trough1:
-         number: S81
-         type: 'NC'
-      shooter_lane:
-         number: S82
-         events_when_activated: ball_in
-         events_when_deactivated: ball_out
-
+     flipper_lwr_eos:
+       number: SF1
+     flipper_lwr:
+       number: SF6
+     fire_r:
+       number: S12
+       tags: plunger
+     start:
+       number: S13
+       tags: start
+     plumbbob:
+       number: S14
+       tags: tilt
+     outlane_l:
+       number: S16
+       tags: playfield_active
+       debounce: normal
+     inlane_l:
+       number: S17
+       tags: playfield_active
+       debounce: quick
+     trough1:
+       number: S81
+       type: 'NC'
+     shooter_lane:
+       number: S82
+       events_when_activated: ball_in
+       events_when_deactivated: ball_out
 
 Each subsection of ``switches:`` is a switch name, which is how you
 refer to the switch in your game code. Then there are several
 parameters for each switch:
+
+.. config
 
 
 Required settings
@@ -120,7 +111,7 @@ See :doc:`/mechs/switches/debounce` for details.
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this
 switch goes active. These events are posted exactly as they're entered, in addition to any
@@ -128,14 +119,14 @@ events that are posted based on the switch's tags.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this
 switch goes inactive.
 
 ignore_window_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 Specifies a duration of time during which additional switch activations will
 be ignored.
@@ -151,7 +142,7 @@ Single value, type: ``string``.
 
 Name of the platform this switch is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
-multiple different hardware platforms in use and this coil is not connected
+multiple different hardware platforms in use and this switch is not connected
 to the default platform.
 
 See the :doc:`/hardware/platform` guide for details.
@@ -250,3 +241,9 @@ tags on its own, including:
   to perform alternate game start actions.)
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/switches/index`
+* :doc:`/mechs/switches/optos`
+* :doc:`/mechs/switches/mechanical_switches`

@@ -35,12 +35,12 @@ channel and output, like this:
 .. code-block:: mpf-config
 
    lights:
-       l_led0:
-           number: 0-0
-           type: grb
-       l_right_ramp:
-           number: 2-28
-           type: grb
+     l_led0:
+       number: 0-0
+       type: grb
+     l_right_ramp:
+       number: 2-28
+       type: grb
 
 In the example above, RGB LED *l_led0* is LED #0 on channel 0, and
 *l_right_ramp* is LED #28 on channel 2. Note both the channel and LED
@@ -70,10 +70,9 @@ To help combat this, there are two settings you can adjust:
 .. code-block:: mpf-config
 
    mpf:
-      default_light_hw_update_hz: 50
-
+     default_light_hw_update_hz: 50
    fast:
-      rgb_buffer: 3
+     rgb_buffer: 3
 
 If you notice that your LEDs seem to be getting behind, you can adjust the
 ``default_led_hw_update_hz:`` setting to be lower. (Frankly the 50hz by

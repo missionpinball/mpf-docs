@@ -27,6 +27,8 @@ Here is a minimal example:
     my_led:
       number: 7
 
+.. config
+
 
 Optional settings
 -----------------
@@ -55,6 +57,8 @@ contain any of the ``lights`` parameters listed on this page, but at least ``num
           number: 9-31
 
 Note that a light must have either ``channels`` or ``number`` defined, but cannot have both.
+See :doc:`/mechs/lights/leds` for more details about how to configure channels
+for different types of LEDs.
 
 color_correction_profile:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,9 +75,13 @@ Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*)
 For multi-color LEDs, the color defined here will be used when the light is enabled via "on"
 (as opposed to being enabled with a specific color). Not intended for single-color lights.
 
+Color values may be a hex string (e.g. `22FFCC`), a list of RGB values (e.g. `[50, 128, 206]`),
+or a color name (e.g. `turquoise`). MPF knows 140+ standard web color names, and you can define your
+own custom colors in the :doc:`/config/named_colors` section of your config.
+
 fade_ms:
 ~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
 
 When this light receives instructions to change color, it can interpolate from its current value to the
 new value over a fade time. If no value is provided, the machine default will be used. If this light is
@@ -114,9 +122,8 @@ This is an example for a driver as light:
   coils:
     light_connected_to_a_driver:
       number: 42           # number depends on your platform
-      allow_enable: True   # this will allow 100% enable without pwm
-
-  lights:     
+      allow_enable: true   # this will allow 100% enable without pwm
+  lights:
     light_on_a_driver:
       number: light_connected_to_a_driver    # map this light to a driver
       platform: drivers
@@ -168,8 +175,7 @@ z:
 ~~
 Single value, type: ``number`` (will be converted to floating point).
 
-.. todo::
-   *No longer used?*
+Currently not used anywhere.
 
 console_log:
 ~~~~~~~~~~~~
@@ -203,3 +209,7 @@ Lights can be referenced by their tags in light_players.
 Typical tags are `gi` for all GIs or `playfield_inserts` for all inserts on the playfield.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/lights/index`

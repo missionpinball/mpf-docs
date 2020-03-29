@@ -69,13 +69,22 @@ Furthermore, you might want to add this line to allow USB login
 
    USB0:2345:respawn:/sbin/getty 115200 ttyUSB0 -n -l /bin/sh
 
-4. Edit /etc/rc2.d/S95game
---------------------------
-
-Add the following line as the new second line in this file:
+If your USB to serial adapter has a "RTS" and "CTS" pin or if you are using
+a null-modem cabel you can enable hardware flow control.
+In that case use the following line (notice that we added ``-h``):
 
 ::
 
+   USB0:2345:respawn:/sbin/getty 115200 ttyUSB0 -h -n -l /bin/sh
+
+4. Edit /etc/rc2.d/S95game
+--------------------------
+
+Add the following two lines as the new second and third lines in this file:
+
+::
+
+   /usr/local/bin/avrisp /usr/local/spike/netbridge.hex /usr/local/spike/netbridge.fuses
    exit 1
 
 This causes this script to exit instead of running the original
@@ -89,9 +98,9 @@ Add mpf-spike-bridge to /bin/bridge and mark it as executable.
 
 On Linux this can be done with `chmod +x bridge` from within the folder.
 
-Get the bridge from https://github.com/missionpinball/mpf-spike-bridge
+Get the bridge from https://github.com/missionpinball/mpf-spike
 
-Note that we have a precompiled binary in there (as well as the C source code).
+Note that we have a precompiled binary in there (as well as the Rust source code).
 
 
 .. note:: It might be hard to mark the bridge binary as executable on Windows

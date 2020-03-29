@@ -55,9 +55,9 @@ command:
 
    mpf --version
 
-That command should print something like ``MPF v0.33.12``. Note that the version is three numbers, ``x.y.z``.
+That command should print something like ``MPF v0.51.3``. Note that the version is three numbers, ``x.y.z``.
 The last number (the "z") is the patch number and doesn't have any functional changes. (In other words, MPF
-0.30.0 and 0.30.2 and 0.30.56 have the same functions and features.)
+0.51.0 and 0.51.2 and 0.51.56 have the same functions and features.)
 
 .. tip::
 

@@ -11,14 +11,6 @@ accruals:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
-+------------------------------------------------------------------------------+
-
-See also :doc:`accruals </game_logic/logic_blocks/accruals>`.
-
 The structure of accrual logic blocks are like this:
 
 .. code-block:: yaml
@@ -34,6 +26,8 @@ The structure of accrual logic blocks are like this:
 Note that the actual name of the logic block doesn't really matter. Mainly
 they're used in the logs.
 
+.. config
+
 
 Required settings
 -----------------
@@ -42,7 +36,7 @@ The following sections are required in the ``accruals:`` section of your config:
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events.
 
 The events section of an accrual logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -61,11 +55,11 @@ those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND* Step 2 (event3)
 .. code-block:: mpf-config
 
    accruals:
-      my_accrual:
-         events:
-           - event1, event2
-           - event3
-           - event4, event5
+     my_accrual:
+       events:
+         - event1, event2
+         - event3
+         - event4, event5
 
 It might seem kind of confusing at first, but
 you can build this up bit-by-bit and figure them out as you go along.
@@ -80,20 +74,20 @@ For example:
 .. code-block:: mpf-config
 
   accruals:
-     logic_block_1:
-        events:
-           - event1
-           - event2
-           - event3
-           - event4
-           - event5
-        events_when_complete: logic_block_1_done
-     logic_block_2:
-        events:
-           - event1, event2, event3
-           - event4
-           - event5
-        events_when_complete: logic_block_2_done
+    logic_block_1:
+      events:
+        - event1
+        - event2
+        - event3
+        - event4
+        - event5
+      events_when_complete: logic_block_1_done
+    logic_block_2:
+      events:
+        - event1, event2, event3
+        - event4
+        - event5
+      events_when_complete: logic_block_2_done
 
 In the example above, there are two logic blocks. The first one just has five
 steps that need to complete (in any order since we're dealing with accrual logic
@@ -112,6 +106,7 @@ MPF will track the state of each logic block separately. So in the above config 
 those two logic blocks, if the events were posted in the order event2, event3, event4,
 then event5, that would complete logic block 2. Then later if event1 was posted, that
 would complete logic block 1.
+
 
 Optional settings
 -----------------
@@ -149,4 +144,13 @@ List of one (or more) values, each is a type: ``string``.
 Currently unused.
 
 
+.. include:: /game_logic/logic_blocks/player_variable.rst
+
 .. include:: /game_logic/logic_blocks/common.rst
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/accruals`
+* :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`

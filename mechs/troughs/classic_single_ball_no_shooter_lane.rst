@@ -1,6 +1,14 @@
 How to configure a classic single-ball trough without shooter lane
 ==================================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/ball_devices`                                                  |
++------------------------------------------------------------------------------+
+| :doc:`/config/playfields`                                                    |
++------------------------------------------------------------------------------+
+
 This guide will show you how to configure MPF to use an older-style single
 ball drain without shooter lane. This is the type of configuration that some single-ball
 machines use, from EM machines of the 1950s through electronic single ball
@@ -19,8 +27,8 @@ section of your machine config file.
 .. code-block:: mpf-config
 
     switches:
-        s_drain:
-            number: 01
+      s_drain:
+        number: 01
 
 Note that we configured this switches with number ``01``, but you should use the
 actual switch number for your control system that the switch is connected to.
@@ -36,9 +44,9 @@ like this:
 .. code-block:: mpf-config
 
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
 
 Again, the ``number:`` entry in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
@@ -62,8 +70,8 @@ section add it now.)
     ball_devices:
         bd_drain:
 
-This means that you're creating a ball device called *bd_drain*.
-We use the preface *bd_* to indicate that this is a ball device
+This means that you're creating a ball device called ``bd_drain``.
+We use the preface ``bd_`` to indicate that this is a ball device
 which makes it easier when we're referencing them later. Then under
 your ``bd_drain:`` entry, you'll start entering the
 configuration settings for your drain ball device.
@@ -75,25 +83,26 @@ configuration settings for your drain ball device.
 * Add ``tags: drain, home, trough`` which tells MPF that balls entering this
   device mean that a ball has drained from the playfield, that it's ok to start
   a game with a ball here, and that this device is used to store unused balls.
+* Set ``eject_timeouts`` to the maximum time the ball can take to return if the
+  eject fails.
 
 Your drain device configuration should look now look like this:
 
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    #!     s_plunger:
-    #!         number: 02
+    #!   s_drain:
+    #!     number: 01
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 03
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            tags: drain, home, trough
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        tags: drain, home, trough
+        eject_timeouts: 3s
 
 4. Add the trough als default_source_device
 -------------------------------------------
@@ -111,23 +120,22 @@ the default ``playfield``, like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    #!     s_plunger:
-    #!         number: 02
+    #!   s_drain:
+    #!     number: 01
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 03
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 03
+    #!     default_pulse_ms: 20
     #! ball_devices:
-    #!     bd_drain:
-    #!         ball_switches: s_drain
-    #!         eject_coil: c_drain_eject
-    #!         tags: drain, home, trough
+    #!   bd_drain:
+    #!     ball_switches: s_drain
+    #!     eject_coil: c_drain_eject
+    #!     tags: drain, home, trough
+    #!     eject_timeouts: 3s
     playfields:
-       playfield:
-           default_source_device: bd_drain
-           tags: default
+      playfield:
+        default_source_device: bd_drain
+        tags: default
 
 Then when MPF needs to add a live ball into play, it will eject a ball
 from the trough and you're all set!
@@ -156,10 +164,9 @@ start active. For example:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 01
-    virtual_platform_start_active_switches:
-        s_drain
+    #!   s_drain:
+    #!     number: 01
+    virtual_platform_start_active_switches: s_drain
 
 Here's the complete config
 --------------------------
@@ -167,26 +174,22 @@ Here's the complete config
 .. code-block:: mpf-config
 
     #config_version=5
-
     switches:
-        s_drain:
-            number: 01
-
+      s_drain:
+        number: 01
     coils:
-        c_drain_eject:
-            number: 03
-            default_pulse_ms: 20
-
+      c_drain_eject:
+        number: 03
+        default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            tags: drain, home, trough
-
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        tags: drain, home, trough
+        eject_timeouts: 3s
     playfields:
-       playfield:
-           default_source_device: bd_drain
-           tags: default
+      playfield:
+        default_source_device: bd_drain
+        tags: default
+    virtual_platform_start_active_switches: s_drain
 
-    virtual_platform_start_active_switches:
-        s_drain

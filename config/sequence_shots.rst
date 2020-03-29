@@ -36,12 +36,12 @@ your shot is called ``your_sequence_shot``).
    #!   top_center_rollover:
    #!     number:
    sequence_shots:
-        left_orbit:
-            switch_sequence: left_rollover, top_right_opto
-            sequence_timeout: 3s
-        weak_right_orbit:
-            switch_sequence: top_right_opto, top_center_rollover
-            sequence_timeout: 3s
+     left_orbit:
+       switch_sequence: left_rollover, top_right_opto
+       sequence_timeout: 3s
+     weak_right_orbit:
+       switch_sequence: top_right_opto, top_center_rollover
+       sequence_timeout: 3s
 
 Notice in the example above that there are
 two different shots with the same switches, but the order of the
@@ -63,16 +63,15 @@ Here is an example with events:
 .. code-block:: mpf-config
 
    sequence_shots:
-       sequence_events:
-           event_sequence:
-               - event1
-               - event2
-               - event3
-           cancel_events: cancel
-           delay_event_list:
-               delay1: 1s
-           sequence_timeout: 3s
-
+     my_event_based_sequence_shot:
+       event_sequence:
+         - event1
+         - event2
+         - event3
+       cancel_events: cancel
+       delay_event_list:
+         delay1: 1s
+       sequence_timeout: 3s
 
 And one with switches:
 
@@ -90,32 +89,33 @@ And one with switches:
    #!   seq2_delay:
    #!     number:
    sequence_shots:
-       sequence_switches:
-           switch_sequence:
-               - seq2_1
-               - seq2_2
-               - seq2_3
-           cancel_switches: seq2_cancel
-           delay_switch_list:
-               seq2_delay: 1s
-           sequence_timeout: 3s
+     my_switch_based_sequence_shot:
+       switch_sequence:
+         - seq2_1
+         - seq2_2
+         - seq2_3
+       cancel_switches: seq2_cancel
+       delay_switch_list:
+         seq2_delay: 1s
+       sequence_timeout: 3s
+
+.. config
 
 
 Optional settings
 -----------------
 
-The following sections are optional in the ``sequence_shots:`` section of your config.
-(If you don't include them, the default will be used).
+The following sections are optional in the ``sequence_shots:`` section of your config. (If you don't include them, the default will be used).
 
 cancel_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Those events will cancel the current sequence. Same as ``cancel_switches`` but with events.
 
 cancel_switches:
 ~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
 
 A switch (or list of switches) that will cause any in-progress switch
 sequence tracking to be canceled. (Think of it like a cancel "abort"
@@ -126,13 +126,13 @@ cancel all of them.
 
 delay_event_list:
 ~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
 
 Events which will temporarily prevent new sequences from starting. Same as ``delay_switch_list`` but with events.
 
 delay_switch_list:
 ~~~~~~~~~~~~~~~~~~
-Parent setting for one (or more) sub-settings. Each sub-setting is a type: string name of a ``switches):m:`` device. Default: ``None``
+One or more sub-entries. Each in the format of string name of a :doc:`switches <switches>` device : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
 
 Switches which will temporarily prevent new sequences from starting.
 This lets you specify a switch along with a time value that will
@@ -142,19 +142,19 @@ specified.
 
 event_sequence:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A sequence of events which will complete the sequence.
 
 playfield:
 ~~~~~~~~~~
-Single value, type: string name of a ``playfields:`` device. Default: ``playfield``
+Single value, type: string name of a :doc:`playfields <playfields>` device. Default: ``playfield``
 
 The playfield this sequence is on.
 
 sequence_timeout:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 Timeout starting when the sequence starts (e.g. after the first switch was hit).
 This is the time limit the switches in the ``switch_sequence:`` section have to
@@ -168,8 +168,43 @@ switch activations and the shot would count.)
 
 switch_sequence:
 ~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
 
 A sequence of switches which will complete the sequence.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/shots/sequence_shots`
+* :doc:`/mechs/loops/index`

@@ -8,8 +8,6 @@ light_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`shows </shows/index>`                                       | **YES** |
-+----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``lights:`` section of a step.
 
@@ -32,19 +30,21 @@ in config or shows. Example in config:
 .. code-block:: mpf-config
 
    shows:
-      rainbow:
-         - lights:
-             (leds): red
-         - lights:
-             (leds): orange
-         - lights:
-             (leds): yellow
-         - lights:
-             (leds): green
-         - lights:
-             (leds): blue
-         - lights:
-             (leds): purple
+     rainbow:
+       - lights:
+           (leds): red
+       - lights:
+           (leds): orange
+       - lights:
+           (leds): yellow
+       - lights:
+           (leds): green
+       - lights:
+           (leds): blue
+       - lights:
+           (leds): purple
+
+.. config
 
 
 Optional settings
@@ -52,24 +52,37 @@ Optional settings
 
 The following sections are optional in the ``light_player:`` section of your config. (If you don't include them, the default will be used).
 
-brightness:
-~~~~~~~~~~~
-Single value, type: 2-byte hex value (``00`` to ``ff``). Default: ``ff``
-
-Set a brightness to a light. If you use brightness on an RGB light MPF will
-use the brightness for every channel. For instance brigness ``AA`` will
-result in color ``AAAAAA``.
-
 color:
 ~~~~~~
 Single value, type: ``string``. Default: ``white``
 
-Set a color to this light. If you apply a color to a non-RGB light it will use
-the maximum brightness of any channel.
+Set a color to this light. Color values may be a hex string (e.g. ``22FFCC``),
+a list of RGB values (e.g. ``[50, 128, 206]``), a color name (e.g.
+``turquoise``), or a brightness value (i.e. ``AA`` or ``120``).
+MPF knows 140+ standard web color names, and you can define your own custom
+colors in the :doc:`/config/named_colors` section of your config.
+If you use brightness on an RGB light MPF will use the brightness for every
+channel.
+For instance brigness ``AA`` will result in color ``AAAAAA``.
+
+There is a special color ``stop`` which will remove the current light entry
+from the light stack and the current show will become transparent to
+underlying shows as if the light has never been used in this show.
 
 fade:
 ~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``0``
+Single value, type: ms_or_token.
 
 Time to fade this light in ms. Use this to achieve smooth transitions between colors.
 
+priority:
+~~~~~~~~~
+Single value, type: int_or_token. Default: ``0``
+
+Relative priority of this entry in the light stack.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/light_player`

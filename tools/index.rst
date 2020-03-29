@@ -1,7 +1,7 @@
 Tools
 =====
 
-There are several tools which have been created to help you build your game in MPF.
+There are several tools that have been created to help you build your game in MPF.
 
 :doc:`MPF Monitor <monitor/index>`
 ----------------------------------
@@ -21,16 +21,16 @@ on a display. This is great for fine tuning and tweaking your slides.
 The MPF service cli is a fast way to debug or troubleshoot your machine during
 development and operation.
 
+:doc:`Lightshow Creator <showcreator/index>`
+--------------------------------------------
+
+A lightshow generator for MPF.
+
 Machine Fuzzer
 --------------
 
 Fuzz your machine using afl to find crashes in MPF, your config or your code.
 Currently not documented. Let us know if you want to use it.
-
-Show Creator
-------------
-
-* `Simple light show generator for MPF <https://github.com/missionpinball/showcreator>`_
 
 Hardware Debugger
 -----------------
@@ -58,3 +58,4 @@ Future Tools
    monitor/index
    imc/index
    service_cli/index
+   showcreator/index

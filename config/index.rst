@@ -48,8 +48,10 @@ indicated which type of config file it's valid in.
    combo_switches: <combo_switches>
    config: <config>
    counters: <counters>
+   counter_control_events: <counter_control_events>
    credits: <credits>
    custom_code: <custom_code>
+   display_light_player: <display_light_player>
    displays: <displays>
    digital_outputs: <digital_outputs>
    diverters: <diverters>
@@ -59,9 +61,11 @@ indicated which type of config file it's valid in.
    dual_wound_coils: <dual_wound_coils>
    event_player: <event_player>
    extra_balls: <extra_balls>
+   extra_ball_groups: <extra_ball_groups>
    fadecandy: <fadecandy>
    fast: <fast>
    fast_coils: <fast_coils>
+   fast_firmware_update: <fast_firmware_update>
    fast_switches: <fast_switches>
    flasher_player: <flasher_player>
    flashers: <flashers>
@@ -93,6 +97,8 @@ indicated which type of config file it's valid in.
    machine_vars: <machine_vars>
    magnets: <magnets>
    matrix_lights: <matrix_lights>
+   mc_custom_code: <mc_custom_code>
+   mc_scriptlets: <mc_scriptlets>
    mode: <mode>
    mode_settings: <mode_settings>
    modes: <modes>
@@ -102,10 +108,13 @@ indicated which type of config file it's valid in.
    multiball_locks: <multiball_locks>
    multiballs: <multiballs>
    mypinballs: <mypinballs>
+   named_colors: <named_colors>
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
    p_roc: <p_roc>
+   pd_led_boards <pd_led_boards>
+   pin2dmd: <pin2dmd>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
@@ -113,12 +122,16 @@ indicated which type of config file it's valid in.
    playlists: <playlists>
    plugins: <plugins>
    pololu_maestro: <pololu_maestro>
+   pololu_tic: <pololu_tic>
    psus: <psus>
    queue_event_player: <queue_event_player>
    queue_relay_player: <queue_relay_player>
    random_event_player: <random_event_player>
    raspberry_pi: <raspberry_pi>
    rgb_dmds: <rgb_dmds>
+   rpi_dmd: <rpi_dmd>
+   score_queue_player: <score_queue_player>
+   score_queues: <score_queues>
    score_reel_groups: <score_reel_groups>
    score_reels: <score_reels>
    scriptlets: <scriptlets>
@@ -146,14 +159,19 @@ indicated which type of config file it's valid in.
    sound_pools: <sound_pools>
    sound_system: <sound_system>
    sounds: <sounds>
+   spi_bit_bang <spi_bit_bang>
    spike: <spike>
+   spike_node: <spike_node>
    state_machines: <state_machines>
    steppers: <steppers>
+   step_stick_stepper_settings: <step_stick_stepper_settings>
    switch_overwrites: <switch_overwrites>
    switch_player: <switch_player>
    switches: <switches>
    system11: <system11>
    text_strings: <text_strings>
+   text_ui: <text_ui>
+   tic_stepper_settings: <tic_stepper_settings>
    tilt: <tilt>
    timed_switches: <timed_switches>
    timers: <timers>

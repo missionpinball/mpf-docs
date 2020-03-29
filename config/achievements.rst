@@ -9,6 +9,8 @@ achievements:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``achievements:`` section of your config is where you configure
 :doc:`player-based "achievement" tracking </game_logic/achievements/index>`.
 
@@ -21,8 +23,7 @@ Here's an example achievements section from Brooks & Dunn:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
-
+   ##! mode: mode1
    achievements:
      world_tour:
        show_tokens:
@@ -35,7 +36,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: world_tour_success
        enable_events: world_tour_fail, ball_will_end
-
      money_bags:
        show_tokens:
          leds: l_money_bags
@@ -47,7 +47,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: money_bags_success
        enable_events: money_bags_fail, ball_will_end
-
      music_awards:
        show_tokens:
          leds: l_music_awards
@@ -59,7 +58,6 @@ Here's an example achievements section from Brooks & Dunn:
        complete_events: music_awards_success
        events_when_completed: rotate_mission_rotator, light_mission_select
        enable_events: music_awards_fail, ball_will_end
-
      jukebox:
        show_tokens:
          leds: l_jukebox_insert
@@ -71,7 +69,6 @@ Here's an example achievements section from Brooks & Dunn:
        events_when_completed: rotate_mission_rotator, light_mission_select
        complete_events: jukebox_success
        enable_events: jukebox_fail, ball_will_end
-
      play_poker:
        show_tokens:
          leds: l_play_poker
@@ -89,44 +86,66 @@ More examples:
 * :doc:`/cookbook/TAF_mansion_awards`
 * :doc:`/examples/achievement/index`
 
-General Settings
-----------------
+Shows
+-----
 
-The following settings are used to configure each achievement. Since
-achievements are so flexible, these are all optional, though you need to use
-some of them or your achievement won't do anything. :)
+The ``show_when_xxx`` settings control which show is played when this achievement
+switches to a new state.
 
-show_tokens:
-~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+Note that whatever show was playing from the previous state will be stopped.
 
-This is an indented list of key/value pairs for the
-:doc:`show tokens </shows/tokens>` that will be sent to the shows that are
-played when this achievement changes state. (See the settings called
-"show_when_XXX" further down in this documentation.)
+Also, any tokens configured in the ``show_tokens:`` section will be passed to
+the show here.
 
-restart_after_stop_possible:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Events posted by achievements
+-----------------------------
 
-Is it possible to restart this achievement after it's been stopped?
+You can configure achievements to post certain events when they change state.
 
-restart_on_next_ball_when_started:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Note that all achievements will by default post events in the form
+:doc:`/events/achievement_name_state_state` when they change state. The events
+listed below as ``events_when_xxx``, if defined, will replace the default event.
 
-If True/Yes, then this achievement will stay in the "started" state when the
-player's next ball starts if it was in the "started" state when the previous
-ball ended. This is useful if you want to restart a mode that was running when
-the ball ended.
+Control Events
+--------------
 
-Note that this restart will also play the ``show_when_started:`` show, and it
-will also post the ``events_when_started:`` events. 
+The following ``xxx_events`` settings specify which MPF events cause this
+achievement to move to a new state.
 
-If False/No, this achievement's state will change from "started" to "stopped"
-when the next ball starts. This will *not* play the ``show_when_stopped:`` show and
-it will *not* post the ``events_when_stopped:`` events.
+.. config
 
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``achievements:`` section of your config. (If you don't include them, the default will be used).
+
+complete_events:
+~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, cause this achievement to switch to its
+"completed" state. These events will also cause the achievement to play the
+show defined in the ``show_when_completed:`` setting and to emit (post) events
+in the ``events_when_completed:`` setting.
+
+disable_events:
+~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, cause this achievement to switch to its
+"disabled" state. These events will also cause the achievement to play the
+show defined in the ``show_when_disabled:`` setting and to emit (post) events
+in the ``events_when_disabled:`` setting.
+
+enable_events:
+~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, cause this achievement to switch to its
+"enabled" state. These events will also cause the achievement to play the
+show defined in the ``show_when_enabled:`` setting and to emit (post) events
+in the ``events_when_enabled:`` setting.
 
 enable_on_next_ball_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,46 +158,81 @@ changed to "disabled" when the next ball starts.
 This is similar to the ``restart_on_next_ball_when_started:`` event from above,
 except it applies to the "enabled" state instead of the "started" state.
 
-This setting will also play the ``show_when_enabled:`` show and post the 
+This setting will also play the ``show_when_enabled:`` show and post the
 ``events_when_enabled:`` events when re-enabling, but will not play or post
 anything when disabling.
 
-debug:
-~~~~~~
+events_when_completed:
+~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this achievement is complete.
+
+events_when_disabled:
+~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this achievement is disabled.
+
+events_when_enabled:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this achievement
+is enabled.
+
+events_when_selected:
+~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this
+achievement is selected.
+
+events_when_started:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this achievement is started.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+A single event, or a list of events, that will be posted when this achievement is stopped.
+
+reset_events:
+~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+Events in this list, when posted, cause this achievement to reset back to its
+default state (which will either be "disabled" or, if you have
+``start_enabled: true``, "enabled")
+
+restart_after_stop_possible:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+Is it possible to restart this achievement after it's been stopped?
+
+restart_on_next_ball_when_started:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
-Enables debug logging.
+If True/Yes, then this achievement will stay in the "started" state when the
+player's next ball starts if it was in the "started" state when the previous
+ball ended. This is useful if you want to restart a mode that was running when
+the ball ended.
 
-Control Events
---------------
+Note that this restart will also play the ``show_when_started:`` show, and it
+will also post the ``events_when_started:`` events.
 
-The following settings specify which MPF events cause this achievement to move
-to a new state.
-
-enable_events:
-~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause this achievement to switch to its
-"enabled" state. These events will also cause the achievement to play the
-show defined in the ``show_when_enabled:`` setting and to emit (post) events
-in the ``events_when_enabled:`` setting.
+If False/No, this achievement's state will change from "started" to "stopped"
+when the next ball starts. This will *not* play the ``show_when_stopped:`` show and
+it will *not* post the ``events_when_stopped:`` events.
 
 select_events:
 ~~~~~~~~~~~~~~
-
-
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Events in this list, when posted, cause this achievement to switch to its
 "selected" state. These events will also cause the achievement to play the
@@ -190,12 +244,60 @@ that is currently selected ("highlighted" or "lit") and available to be
 started. This would typically be tied to a show (via the
 ``show_when_selected:`` setting) that causes a light or LED to flash.
 
+show_tokens:
+~~~~~~~~~~~~
+One or more sub-entries. Each in the format of ``string`` : ``string``
+
+This is an indented list of key/value pairs for the
+:doc:`show tokens </shows/tokens>` that will be sent to the shows that are
+played when this achievement changes state. (See the settings called
+"show_when_XXX" further down in this documentation.)
+
+show_when_completed:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been completed.
+
+show_when_disabled:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been disabled.
+
+show_when_enabled:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been enabled.
+
+show_when_selected:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been selected.
+
+show_when_started:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been started.
+
+show_when_stopped:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``.
+
+Name of the show that will be started when this achievement has been stopped.
+
+start_enabled:
+~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False).
+
+Whether this achievment is enabled or disabled when it is first loaded.
+
 start_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -204,40 +306,9 @@ Events in this list, when posted, cause this achievement to switch to its
 show defined in the ``show_when_started:`` setting and to emit (post) events
 in the ``events_when_started:`` setting.
 
-complete_events:
-~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause this achievement to switch to its
-"completed" state. These events will also cause the achievement to play the
-show defined in the ``show_when_completed:`` setting and to emit (post) events
-in the ``events_when_completed:`` setting.
-
-disable_events:
-~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause this achievement to switch to its
-"disabled" state. These events will also cause the achievement to play the
-show defined in the ``show_when_disabled:`` setting and to emit (post) events
-in the ``events_when_disabled:`` setting.
-
 stop_events:
 ~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -246,123 +317,52 @@ Events in this list, when posted, cause this achievement to switch to its
 show defined in the ``show_when_stopped:`` setting and to emit (post) events
 in the ``events_when_stopped:`` setting.
 
-reset_events:
-~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted, cause this achievement to reset back to its
-default state (which will either be "disabled" or, if you have
-``start_enabled: true``, "enabled")
-
-Events posted by achievements
------------------------------
-
-You can configure achievements to post certain events when they change state.
-
-Note that all achievements will by default post events in the form
-:doc:`/events/achievement_name_state_state` when they change state. The events
-listed below, if defined, will replace the default event.
-
-events_when_enabled:
-~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_enabled``.
-
-A single event, or a list of events, that will be posted when this achievement
-is enabled.
-
-events_when_selected:
-~~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_selected``.
-
-A single event, or a list of events, that will be posted when this
-achievement is selected.
-
-events_when_started:
-~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_started``.
-
-A single event, or a list of events, that will be posted when this achievement is started.
-
-events_when_completed:
-~~~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_completed``.
-
-A single event, or a list of events, that will be posted when this achievement is complete.
-
-events_when_disabled:
-~~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_disabled``.
-
-A single event, or a list of events, that will be posted when this achievement is disabled.
-
-events_when_stopped:
-~~~~~~~~~~~~~~~~~~~~
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``achievement_(name)_state_stopped``.
-
-A single event, or a list of events, that will be posted when this achievement is stopped.
-
-Shows
------
-
-The following settings control which show is played when this achievement
-switches to a new state.
-
-Note that whatever show was playing from the previous state will be stopped.
-
-Also, any tokens configured in the ``show_tokens:`` section will be passed to
-the show here.
-
-show_when_enabled:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been enabled.
-
-show_when_selected:
-~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been selected.
-
-show_when_started:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been started.
-
-show_when_completed:
-~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been completed.
-
-show_when_disabled:
-~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been disabled.
-
-show_when_stopped:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
-
-Name of the show that will be started when this achievement has been stopped.
-
 sync_ms:
 ~~~~~~~~
-
-Single value, type: number. Default: ``None``
+Single value, type: ``integer``.
 
 A sync_ms value used for any shows which are started by this achievement. See the
 :doc:`full sync_ms documentation for details </shows/sync_ms>`.
+
+unselect_events:
+~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Enables debug logging.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/achievements/achievement_groups`
+* :doc:`/game_logic/achievements/index`

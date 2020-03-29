@@ -6,7 +6,7 @@ have a "working" pinball machine since you can't start or play games.
 
 So the next two steps in this tutorial, we're going to get your first two
 *ball devices* set up—your trough and plunger lane.
-(A ball device is anything in MPF that holds a ball.
+(A ball device is anything in MPF that holds a ball).
 
 1. Read about ball devices
 --------------------------
@@ -45,7 +45,7 @@ set up, add one more setting to that device:
 
 .. code-block:: yaml
 
-   debug: yes
+   debug: true
 
 This setting causes MPF to write detailed debugging information about this
 ball device to the log file. You have to run MPF with the ``-v`` (verbose)
@@ -62,30 +62,31 @@ add the debug setting like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_trough1:
-    #!         number: 1
-    #!     s_trough2:
-    #!         number: 2
-    #!     s_trough3:
-    #!         number: 3
-    #!     s_trough4:
-    #!         number: 4
-    #!     s_trough5:
-    #!         number: 5
-    #!     s_trough6:
-    #!         number: 6
-    #!     s_trough_jam:
-    #!         number: 7
+    #!   s_trough1:
+    #!     number: 1
+    #!   s_trough2:
+    #!     number: 2
+    #!   s_trough3:
+    #!     number: 3
+    #!   s_trough4:
+    #!     number: 4
+    #!   s_trough5:
+    #!     number: 5
+    #!   s_trough6:
+    #!     number: 6
+    #!   s_trough_jam:
+    #!     number: 7
     #! coils:
-    #!     c_trough_eject:
-    #!         number: 3
+    #!   c_trough_eject:
+    #!     number: 3
     ball_devices:
-       bd_trough:
-           ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
-           eject_coil: c_trough_eject
-           tags: trough, home, drain
-           jam_switch: s_trough_jam
-           eject_coil_jam_pulse: 15ms
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms
+        debug: true
 
 4. Don't test yet
 -----------------

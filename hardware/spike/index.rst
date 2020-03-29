@@ -73,6 +73,7 @@ Stern SPIKE features that work today
 * :doc:`Backbox LEDs <leds>`
 * Hardware Rules (flippers, pop bumpers, slingshots, etc.)
 * :doc:`DMDs <dmds>`
+* :doc:`Steppers <steppers>`
 
 How does the MPF SPIKE interface work?
 --------------------------------------
@@ -91,6 +92,8 @@ the "MPF SPIKE Bridge" on the SD card (ideally you first make a copy of your exi
 SD card and keep the original in a safe place), and then when the machine powers on,
 instead of running the existing game code from the SD card, the CPU runs the MPF SPIKE
 bridge software.
+
+.. image:: /hardware/images/spike_bridge.png
 
 The MPF SPIKE bridge is fairly simple. Essentially all it does is relay messages from
 the SPIKE node bus to the debug port on the CPU node, and it also accepts commands
@@ -136,12 +139,6 @@ Servos
 Once we get access to a SPIKE machine with servos, we'll get
 support for them added.
 
-Stepper Motors
-~~~~~~~~~~~~~~
-
-Once we get access to a SPIKE machine with stepper motors, we'll get
-support for them added.
-
 Small LCD from WWE
 ~~~~~~~~~~~~~~~~~~
 
@@ -159,3 +156,4 @@ use any HDMI display connected to the machine running MPF.
    LEDs, GI, & Backbox lights <leds>
    DMDs <dmds>
    Switches <switches>
+   Steppers <steppers>

@@ -15,14 +15,16 @@ your own pinball machine. In fact when most people get their own hardware and
 start drilling holes in a piece of plywood, the first visible thing they do is
 to get their flippers flipping.
 
-:doc:`TODO: Add a picture of flippers </about/help_us_to_write_it>`
+.. image:: /mechs/images/flippers.png
+  :width: 400
+  :alt: Pinball flippers
 
 MPF has support for lots of different kinds of flippers (as there are many
 different ways they've been wired over the years), as well as a lot of different
 options for how flippers are fine tuned.
 
 MPF also has support for various "novelty" flipper modes (no-hold flippers,
-reversed flipper buttons, weak flippers, etc.)
+reversed flipper buttons, :doc:`weak flippers <weak_flippers>`, etc.)
 
 We recommend you read the :doc:`/mechs/coils/dual_vs_single_wound`
 guide to understand the difference between "dual wound" and "single wound"
@@ -67,6 +69,7 @@ Related How To guides
    single_wound
    disabled_flippers
    enabling_secondary_flippers
+   weak_flippers
 
 Related Events
 --------------

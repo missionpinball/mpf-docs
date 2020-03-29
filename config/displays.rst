@@ -50,6 +50,9 @@ without specifying a target.
 
 Each display in your ``displays:`` section can have the following settings:
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -95,3 +98,38 @@ Single value, type: ``integer``. Default: ``800``
 
 The width of the display, in pixels.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Unused.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/index`

@@ -29,15 +29,15 @@ So now your ``config.yaml`` file should look like this:
 
 .. code-block:: mpf-config
 
-    #config_version=5
+   #config_version=5
 
-    switches:
-        s_left_flipper:
-            number:
-            tags: left_flipper
-        s_right_flipper:
-            number:
-            tags: right_flipper
+   switches:
+     s_left_flipper:
+       number:
+       tags: left_flipper
+     s_right_flipper:
+       number:
+       tags: right_flipper
 
 In case you're wondering why we preface each switch name with "s\_",
 that's a little trick we learned that makes things easier as you get
@@ -75,16 +75,16 @@ service menu, you can create plain-English labels with spaces and
 capitalization everything. But that comes later.
 
 In pre-0.50 versions, MPF was not case-sensitive and would internally convert most
-things to lowercase before comparison. This proved to be problematic, so MPF is 
+things to lowercase before comparison. This proved to be problematic, so MPF is
 now case-sensitive for all elements of your config files. Our configuration directives
-use only lowercase letters, underscores, and numbers. While you are free to format 
+use only lowercase letters, underscores, and numbers. While you are free to format
 your tags as you wish, be aware that case-consistency is now required.
 
 Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
 here):
 
-* You you cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
+* You cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
   Most text editors can be configured to automatically insert spaces when you push the tab key, or you can just
   hit the space bar a bunch of times.
 * The exact number of spaces you use for the indents doesn't matter (most people use
@@ -120,11 +120,11 @@ ones we use below.
 
 .. code-block:: mpf-config
 
-    switches:
-        s_left_flipper:
-            number: 0  # this can be blank if you don't have physical hw yet
-        s_right_flipper:
-            number: 1  # if you do have physical hw, most likely your number will be different
+   switches:
+     s_left_flipper:
+       number: 0  # this can be blank if you don't have physical hw yet
+     s_right_flipper:
+       number: 1  # if you do have physical hw, most likely your number will be different
 
 3. Add your flipper coils
 -------------------------
@@ -149,17 +149,17 @@ examples of how to configure them.
 
 .. code-block:: mpf-config
 
-    coils:
-        c_flipper_left_main:
-            number: 0  # again, these numbers will probably be different for you
-        c_flipper_left_hold:
-            number: 1  # check your platform-specific documentation for the actual numbers
-            allow_enable: true
-        c_flipper_right_main:
-            number: 2
-        c_flipper_right_hold:
-            number: 3
-            allow_enable: yes
+   coils:
+     c_flipper_left_main:
+       number: 0  # again, these numbers will probably be different for you
+     c_flipper_left_hold:
+       number: 1  # check your platform-specific documentation for the actual numbers
+       allow_enable: true
+     c_flipper_right_main:
+       number: 2
+     c_flipper_right_hold:
+       number: 3
+       allow_enable: true
 
 Again, note each coil name is indented four spaces, and each "number"
 listed under them is indented eight spaces, there's no space before
@@ -168,10 +168,7 @@ numbers, the ``number:`` entry under each coil is the number that the
 pinball hardware controller uses for this coil. The exact number will
 depend on what type of controller hardware and driver boards you're using.
 
-Also note that the two hold coils have ``allow_enable:`` entries added, with values of "yes" and "true". (In MPF config
-files, values of "yes" and "true" are the same, so we use one of each just to demonstrate to you that they're
-interchangeable.)
-
+Also note that the two hold coils have ``allow_enable:`` entries added, with values of "true".
 Anyway, the purpose of the ``allow_enable:`` setting is that as a safety precaution, MPF does not allow you to enable
 (that is, to hold a coil in its "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
 This will help to prevent some errant config from enabling a coil that you didn't mean to enable and burning it up or
@@ -194,40 +191,41 @@ by combining other devices.
 
 You create your flipper devices by adding a ``flippers:`` section to
 your config file, and then specifying the switch and coil(s) for each flipper.
+Since the flippers belong to a playfield we also create this now.
 Here's what you would create based on the switches and coils we've defined so far:
 
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
+    #!   s_left_flipper:
+    #!     number: 0
+    #!   s_right_flipper:
+    #!     number: 1
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     playfields:
-        playfield:
-            tags: default
-            default_source_device: None  # use None in steps before 8
+      playfield:
+        tags: default
+        default_source_device: None  # use None in steps before 8
 
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
 
 5. Try running MPF to make sure your config file is ok
 ------------------------------------------------------
@@ -318,6 +316,9 @@ Again, recapping the rules of YAML:
 + Make sure you *do* have a space *after* each colon.
 + Make sure you have the ``#config_version=5`` as the first line in your file.
 
+If you struggle to spot the problem read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
+
 6. Enabling your flippers
 -------------------------
 
@@ -335,7 +336,7 @@ file:
 
 .. code-block:: yaml
 
-    enable_events: machine_reset_phase_3
+   enable_events: machine_reset_phase_3
 
 We'll cover exactly what this means later on. (Basically it's telling
 each of your flippers that they should enable themselves when MPF is booting up, rather than them waiting for a
@@ -344,37 +345,37 @@ coils, then you won't have the ``hold_coil:`` entries here.)
 
 .. code-block:: mpf-config
 
-    #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
-    #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
-    #! playfields:
-    #!     playfield:
-    #!         tags: default
-    #!         default_source_device: None  # use None in steps before 8
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
+   #! switches:
+   #!   s_left_flipper:
+   #!     number: 0
+   #!   s_right_flipper:
+   #!     number: 1
+   #! coils:
+   #!   c_flipper_left_main:
+   #!     number: 0
+   #!   c_flipper_left_hold:
+   #!     number: 1
+   #!     allow_enable: true
+   #!   c_flipper_right_main:
+   #!     number: 2
+   #!   c_flipper_right_hold:
+   #!     number: 3
+   #!     allow_enable: true
+   #! playfields:
+   #!   playfield:
+   #!     tags: default
+   #!     default_source_device: None  # use None in steps before 8
+   flippers:
+     left_flipper:
+       main_coil: c_flipper_left_main
+       hold_coil: c_flipper_left_hold
+       activation_switch: s_left_flipper
+       enable_events: machine_reset_phase_3
+     right_flipper:
+       main_coil: c_flipper_right_main
+       hold_coil: c_flipper_right_hold
+       activation_switch: s_right_flipper
+       enable_events: machine_reset_phase_3
 
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
@@ -412,40 +413,40 @@ FAST Pinball with FAST IO driver boards:
 
 .. code-block:: mpf-config
 
-    hardware:
-        platform: fast
-        driverboards: fast
+   hardware:
+     platform: fast
+     driverboards: fast
 
-    fast:
-        ports: com4, com5
+   fast:
+     ports: com4, com5
 
-    switches:
-        s_left_flipper:
-            number: 00
+   switches:
+     s_left_flipper:
+       number: 00
 
 P-ROC installed in an existing WPC machine:
 
 .. code-block:: mpf-config
 
-    hardware:
-        platform: p_roc
-        driverboards: wpc
+   hardware:
+     platform: p_roc
+     driverboards: wpc
 
-    switches:
-        s_left_flipper:
-            number: SF2
+   switches:
+     s_left_flipper:
+       number: SF2
 
 P3-ROC with P-ROC driver & switch boards:
 
 .. code-block:: mpf-config
 
-    hardware:
-        platform: p3_roc
-        driverboards: pdb
+   hardware:
+     platform: p3_roc
+     driverboards: pdb
 
-    switches:
-        s_left_flipper:
-            number: 0-0
+   switches:
+     s_left_flipper:
+       number: 0-0
 
 See? They're all different.
 
@@ -475,46 +476,46 @@ existing *Demolition Man* machine.)
 
 .. code-block:: mpf-config
 
-    #config_version=5
+   #config_version=5
 
-    hardware:
-        platform: fast
-        driverboards: wpc
+   hardware:
+     platform: fast
+     driverboards: wpc
 
-    switches:
-        s_left_flipper:
-            number: SF4
-        s_right_flipper:
-            number: SF6
+   switches:
+     s_left_flipper:
+       number: SF4
+     s_right_flipper:
+       number: SF6
 
-    coils:
-        c_flipper_left_main:
-            number: FLLM
-        c_flipper_left_hold:
-            number: FLLH
-            allow_enable: true
-        c_flipper_right_main:
-            number: FLRM
-        c_flipper_right_hold:
-            number: FLRH
-            allow_enable: yes
+   coils:
+     c_flipper_left_main:
+       number: FLLM
+     c_flipper_left_hold:
+       number: FLLH
+       allow_enable: true
+     c_flipper_right_main:
+       number: FLRM
+     c_flipper_right_hold:
+       number: FLRH
+       allow_enable: true
 
-    playfields:
-        playfield:
-            tags: default
-            default_source_device: None  # use None in steps before 8
+   playfields:
+     playfield:
+       tags: default
+       default_source_device: None  # use None in steps before 8
 
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
+   flippers:
+     left_flipper:
+       main_coil: c_flipper_left_main
+       hold_coil: c_flipper_left_hold
+       activation_switch: s_left_flipper
+       enable_events: machine_reset_phase_3
+     right_flipper:
+       main_coil: c_flipper_right_main
+       hold_coil: c_flipper_right_hold
+       activation_switch: s_right_flipper
+       enable_events: machine_reset_phase_3
 
 Note that the individual sections of the config file can be in any
 order. We put the ``hardware:`` section at the top, but that's just our
@@ -610,6 +611,9 @@ If a flipper gets stuck on:
 If you're still running into trouble, feel free to post to the mpf-users
 Google group. We'll incorporate your issues into this tutorial to
 make it easier for everyone in the future!
+
+If you get YAML errors either copy the complete example below or read our
+:doc:`/troubleshooting/debugging_yaml_parse_errors` guide.
 
 Check out the complete config.yaml file so far
 ----------------------------------------------

@@ -16,6 +16,7 @@ Write the ISO (Win/Mac/Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use `UNetbootin <https://unetbootin.github.io/>`_
+
 * Select LUbuntu or XUbuntu
 * Select your USB Stick
 
@@ -23,9 +24,9 @@ Use `UNetbootin <https://unetbootin.github.io/>`_
 --------------------------
 
 Boot from the installation media (you may need to change something in your BIOS to enable booting from USB).
-It should be a fairly straight-forward linux installation. When it asks about partioning, choose the 
-"Guided - entire hard disk" option (unless you have a specific reason not to). You will be asked to create a 
-user account. When doing so, it's important that you: **DO NOT ELECT TO ENCRYPT THE HOME FOLDER**. If you encrypt 
+It should be a fairly straight-forward linux installation. When it asks about partioning, choose the
+"Guided - entire hard disk" option (unless you have a specific reason not to). You will be asked to create a
+user account. When doing so, it's important that you: **DO NOT ELECT TO ENCRYPT THE HOME FOLDER**. If you encrypt
 the home folder, the auto login will not work and will have to reinstall to fix.
 
 3. Configure Xubuntu/Lubuntu
@@ -135,3 +136,5 @@ user running your game to the ``dialout`` group.
 .. code-block:: console
 
    sudo usermod -a -G dialout your_username
+
+.. include:: /install/common_problems_and_solutions.rst

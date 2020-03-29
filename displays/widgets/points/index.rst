@@ -5,13 +5,12 @@ The points widget is used to draw points (individual square points) on a slide.
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    slide_player:
-      mc_ready:
-         points_example:
+     mc_ready:
+       points_example:
          - type: points
            points: 50, 50, 75, 50, 100, 50
            pointsize: 2
@@ -41,6 +40,9 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following points widget settings may be :doc:`animated </displays/widgets/animation>`: ``color:``,
+``points:``, ``pointsize:``, ``opacity:``, ``rotation:``, and ``scale:``.
 
 type: points
 ~~~~~~~~~~~~

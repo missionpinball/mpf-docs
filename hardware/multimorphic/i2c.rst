@@ -4,7 +4,7 @@ How to use I2C on the P3-ROC
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
 +==============================================================================+
-| :doc:`/config/servos`                                                        |
+| :doc:`/config/hardware`                                                      |
 +------------------------------------------------------------------------------+
 
 The P3-ROC contains an I2C port (J17) which is accessible to MPF. You can use
@@ -20,31 +20,9 @@ get directly from your power supply), but again that depends on the board.
 I2C Servo Controller
 --------------------
 
-For instance you can connect a servo controller via I2c.
-(You can't plug the servo directly into the P3-ROC, rather, you can buy an
-I2C-based servo controller and plug it into the P3-ROC.)
+For instance you can connect a :doc:`servo controller via I2c </hardware/i2c_servo/index>`.
+You can't plug the servo directly into the P3-ROC, rather, you can buy an
+I2C-based servo controller and plug it into the P3-ROC.
+However, a better option would be to use a :doc:`servo on a PD-LED <servos>`.
 
-See the :doc:`/hardware/i2c_servo/index` documentation for details on how to
-configure this.
-
-If you want to use this with a P3-ROC, you can configure it in your machine
-config it similar to this:
-
-.. code-block:: mpf-config
-
-   hardware:
-       driverboards: pdb
-       platform: p3_roc
-       servo_controllers: i2c_servo_controller
-
-   servo_controllers:
-       address: 0x40
-
-   servos:
-       servo1:
-           number: 3
-
-The address and number of your servo and servo controller can be found in the
-documentation of your controller and are most likely configurable. You can also
-connect multiple I2C servo controllers to the P3-ROC by configuring them with
-unique I2C addresses.
+See :doc:`/hardware/i2c_platforms` for other I2C hardware in MPF.

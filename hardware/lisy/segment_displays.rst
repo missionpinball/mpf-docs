@@ -26,5 +26,5 @@ Configure them like this:
      player4_display:
        number: 4
 
-
-See :doc:`/segment_displays/index` for details on how to use them.
+Note that the :doc:`/displays/display/alpha_numeric` guide has more details
+on using alpha numeric and segment displays.

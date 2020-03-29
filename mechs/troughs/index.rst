@@ -59,8 +59,9 @@ beam is broken, meaning a ball is sitting there blocking the path.
 
 Common parts include:
 
-* Williams: A-16809
+* Williams: #A-16809
 * Mantis Trough
+* Stern #500-9820-00
 
 If you have a modern trough with opto sensors, read the :doc:`modern_opto`
 guide to continue.
@@ -80,8 +81,8 @@ boards, then read the :doc:`modern_mechanical` guide to continue.
 
 Common parts include:
 
-* Stern: 500-6318-24 (trough assembly), 535-8393-00 (center drain ball guide), 535-7329-01 (entry/exit scoop)
-* Pinball Life/Spooky: PBL-100-0015-00 (4 balls) or PBL-100-0016-00 (8 balls), PBL-100-0002-00 (drain guide + enter exit scoop)
+* Stern: #500-6318-24 (trough assembly), #535-8393-00 (center drain ball guide), #535-7329-01 (entry/exit scoop)
+* Spooky: #100-0015-00 (4 balls) or #100-0016-00 (8 balls), #100-0002-00 (drain guide + enter exit scoop)
 
 Option 3: Older style with two coils and switches for each ball
 ---------------------------------------------------------------
@@ -218,3 +219,4 @@ post a photo of it to `MPF Users Google Group
    two_coil_one_switch
    classic_single_ball
    classic_single_ball_no_shooter_lane
+   spike_trough

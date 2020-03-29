@@ -9,6 +9,8 @@ hardware:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **NO**  |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``hardware:`` section of your machine config file is where you configure
 the options for the :doc:`physical hardware controller boards </hardware/index>`
 that MPF will use.
@@ -19,39 +21,62 @@ If you intend to use MPF with physical hardware, at a minimum you'll have a
 .. code-block:: mpf-config
 
    hardware:
-      platform: fast
-      driverboards: fast
-
-Primary Platform Settings
--------------------------
+     platform: fast
+     driverboards: fast
 
 
-platform:
-~~~~~~~~~
-Single value, type: ``string``. Default: ``smart_virtual``
+Device-specific defaults
+------------------------
 
-Specifies the default platform that will be used by all devices in the config.
-We say this is the "default" platform, because it's possible to use more than
-one platform at time. (Maybe you use a P-ROC for coils and switches and a
-FadeCandy for RGB LEDs, etc.) See the :doc:`/hardware/platform` for more
-details on this.
+The following optional settings can be used to set default platforms for a
+specific class of devices. Note that ``virtual`` and ``smart_virtual`` are
+valid options for all of these, though they are not included in the lists
+below. Also note that those lists are not exhaustive.
 
-Valid platform options include: (Click on them for direct links to the
-configuration guide for that platform.)
+.. note::
 
-+ ``p_roc`` :doc:`Multimorphic P-ROC </hardware/multimorphic/index>`
-+ ``p3_roc`` :doc:`Multimorphic P3-ROC </hardware/multimorphic/index>`
-+ ``fast`` :doc:`FAST Pinball </hardware/fast/index>` (any controller)
-+ ``opp`` :doc:`Open Pinball Project </hardware/opp/index>` open source hardware
-+ ``spike`` :doc:`Stern SPIKE / SPIKE 2 </hardware/spike/index>`
-+ ``smart_virtual`` :doc:`Virtual (software only) </hardware/virtual/smart_virtual>`
-  that simulates switch changes based on coil actions.
-+ ``virtual`` :doc:`Virtual software-only </hardware/virtual/index>`, with no
-  "smart" simulation.
+  The list of platforms is incomplete here.
+  See the :doc:`/hardware/index` for details which platforms are supported
+  by MPF.
+
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``hardware:`` section of your config. (If you don't include them, the default will be used).
+
+accelerometers:
+~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
+
+See :doc:`/hardware/dmd_platforms` for supported platforms.
+
+coils:
+~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
+
+For instance:
+
++ ``p_roc``
++ ``p3_roc``
++ ``fast``
++ ``opp``
++ ``apc``
++ ``snux``
+
+Almost all platforms in :doc:`/hardware/index` are supported here.
+
+dmd:
+~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
+
+See :doc:`/hardware/dmd_platforms` for supported platforms.
 
 driverboards:
 ~~~~~~~~~~~~~
-Single value, type: ``string``.
+List of one (or more) values, each is a type: ``string``.
 
 Specifies the default type of driver boards you're using. If you have a home
 brew machine, this will probably match your platform. If you're using an
@@ -68,97 +93,68 @@ in the machine.
 + ``sternSAM`` Stern SAM
 + ``sternWhitestar`` Stern Whitestar
 
-Device-specific defaults
-------------------------
+hardware_sound_system:
+~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-The following optional settings can be used to set default platforms for a
-specific class of devices. Note that ``virtual`` and ``smart_virtual`` are
-valid options for all of these, though they are not included in the lists
-below. Also note that those lists are not exhaustive.
-
-See the :doc:`/hardware/index` section for details of how to use and setup
-each of these different types of platforms and hardware.
-
-accelerometers:
-~~~~~~~~~~~~~~~
-Single value, type: ``string``.
-
-+ ``p3_roc``
-
-coils:
-~~~~~~
-Single value, type: ``string``. Default: ``default``
-
-+ ``p_roc``
-+ ``p3_roc``
-+ ``fast``
-+ ``opp``
-+ ``snux``
-
-dmd:
-~~~~
-Single value, type: ``string``. Default: ``default``
-
-``p_roc``
-``fast``
-
-
-
-flashers:
-~~~~~~~~~
-Single value, type: ``string``. Default: ``default``
-
-+ ``p_roc``
-+ ``p3_roc``
-+ ``fast``
-+ ``opp``
-+ ``snux``
-
-gis:
-~~~~
-Single value, type: ``string``. Default: ``default``
-
-+ ``fast``
-+ ``opp``
-+ ``p_roc``
+See :doc:`/hardware/index` for supported platforms.
 
 i2c:
 ~~~~
-Single value, type: ``string``.
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-+ ``i2c``
+See :doc:`/hardware/i2c_platforms` for supported platforms.
 
 lights:
 ~~~~~~~
-Single value, type: ``string``. Default: ``default``
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-+ ``p_roc``
-+ ``p3_roc``
-+ ``fast``
-+ ``fadecandy``
-+ ``opp``
-+ ``openpixel``
-+ ``spike``
+Almost all platforms in :doc:`/hardware/index` are supported here.
+
+platform:
+~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``virtual``
+
+Specifies the default platform that will be used by all devices in the config.
+We say this is the "default" platform, because it's possible to use more than
+one platform at time. (Maybe you use a P-ROC for coils and switches and a
+FadeCandy for RGB LEDs, etc.) See the :doc:`/hardware/platform` for more
+details on this.
+
+See :doc:`/hardware/index` for a complete list.
 
 rgb_dmd:
 ~~~~~~~~
-Single value, type: ``string``. Default: ``default``
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-+ ``smartmatrix``
+See :doc:`/hardware/dmd_platforms` for supported platforms.
+
+segment_displays:
+~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
+
+See :doc:`/hardware/segment_display_platforms` for supported platforms.
 
 servo_controllers:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-+ ``i2c``
+See :doc:`/hardware/servo_platforms` for supported platforms.
+
+stepper_controllers:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``default``
+
+See :doc:`/hardware/stepper_platforms` for supported platforms.
 
 switches:
 ~~~~~~~~~
-Single value, type: ``string``. Default: ``default``
+List of one (or more) values, each is a type: ``string``. Default: ``default``
 
-+ ``p_roc``
-+ ``p3_roc``
-+ ``fast``
-+ ``opp``
-+ ``snux``
+Almost all platforms in :doc:`/hardware/index` are supported here.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/index`

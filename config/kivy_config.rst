@@ -34,3 +34,11 @@ This is an example:
        position: auto  # auto, custom
        show_cursor: true
        resizable: true
+
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/display/multiple_screens`

@@ -21,6 +21,9 @@ The only difference between :doc:`light_stripes </config/light_stripes>`  and
 .. literalinclude:: /mpf_examples/light/config/light_groups.yaml
    :language: yaml
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -34,7 +37,7 @@ The integer value for how many LEDs are in the ring.
 
 light_template:
 ~~~~~~~~~~~~~~~
-Single value, type: sub-configurating containing lights,device settings.
+Single value, type: :doc:`lights <lights>`.
 
 This is a list of sub-settings (indented) that are regular settings from the
 :doc:`lights` section of your machine config. Any settings that are valid there

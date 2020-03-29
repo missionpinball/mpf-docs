@@ -110,7 +110,6 @@ In the current version of MPF, this is primarily done in the ``variable_player:`
     bumper_1_active:
       bumper_hits: 1
 
-
 The example below shows a player variable of type string being updated.  A mode carousel (mode selection by the player)
 was used by the player to select a mode ladder (a set of modes played in a sequence similar to scenes in GhostBusters).
 The apostrophes are not required but allowed.
@@ -139,24 +138,36 @@ progress towards completing the mode.
 ---------------------------
 Displaying Custom Variables
 ---------------------------
-Displaying your custom player variables on a slide can be confusing in the current version of MPF (0.33). The example below
+Displaying your custom player variables on a slide can be confusing in the current version of MPF. The example below
 shows a text widget that is displaying 3 variables on the main scoring screen of the base mode.  The first
-two variables are of type "str" and the last variable is of type "int".  The "player" keyword seems to
-be a special way of expressing the current player and displaying an integer value.
+two variables are of type "str" and the last variable is of type "int".
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  ##! mode: base
-  slide_player:
-    mode_base_started:
-      widgets:
-        - type: text
-          text: (current_ladder) > (current_mode) > (player|ladder_scene_1)
+   player_vars:
+     current_ladder:
+       initial_value: "Initial Ladder"
+       value_type: str
+     current_mode:
+       initial_value: "No Mode"
+       value_type: str
+     ladder_scene_1:
+       initial_value: 1
+       value_type: int
+
+   ##! mode: base
+   slide_player:
+     mode_base_started:
+       widgets:
+         - type: text
+           text: (current_ladder) > (current_mode) > (ladder_scene_1)
+   ##! test
+   #! start_game
+   #! start_mode base
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "Initial Ladder > No Mode > 1"
 
 
-|
-|
-|
 
 
 +------------------------------------------------------------------------------+

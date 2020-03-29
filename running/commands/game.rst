@@ -119,7 +119,7 @@ troubleshooting.
 
 Enables verbose logging to the console output.
 
-Note that on due to the way the command prompt console
+Note that due to the way the command prompt console
 works on Windows, enabling verbose logging on Windows will
 significantly affect MPF (in a bad way). Windows computers can run MPF
 no problem, but because of their weird console slowness we recommend
@@ -130,11 +130,17 @@ computer.
 ~~~~~~~~~~~~~~
 
 Ignores all ``platform:`` settings in your config files and forces MPF to run
-using the *virtual* platform interface. This is nice for testing when you don't
-have your physical hardware attached.
+using the :doc:`virtual platform </hardware/virtual/smart_virtual>` interface.
+This is nice for testing when you don't have your physical hardware attached.
 
 -X (uppercase)
 ~~~~~~~~~~~~~~
 
-Like `-x`, except it forces the *smart virtual* platform.
+Like `-x`, except it forces the
+:doc:`smart virtual platform </hardware/virtual/smart_virtual>`.
 
+--vpx
+~~~~~
+
+Like `-x`, except it forces the
+:doc:`Virtual Pinball (VPX) platform </hardware/virtual/virtual_pinball_vpx>`.

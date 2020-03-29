@@ -10,10 +10,14 @@ import sys
 import tempfile
 import git
 import sphinx_rtd_theme
+from pygments.lexers.data import YamlLexer
 from sphinx.highlighting import lexers
 
+# for some reason sphinx needs this
+sys.setrecursionlimit(2000)
+
 sys.path.append(os.getcwd())
-from _doc_tools.mpf_lexer import MpfLexer
+from _doc_tools.mpf_lexer import MpfLexer, ExampleSliderVisitor
 from _doc_tools.build_events_reference_docs import EventDocParser
 from _doc_tools.build_examples import ExampleBuilder
 from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
@@ -25,8 +29,8 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.51+'  # all versions these docs cover
-release = '0.51.x'  # latest release
+version = '0.54+'  # all versions these docs cover
+release = '0.54.x'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
@@ -65,7 +69,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # html_logo = None
 html_favicon = '_static/images/icons/favicon.ico'
-html_static_path = ['_static', 'examples']
+html_static_path = ['_static']
 
 # html_extra_path = []  # will be copied to root
 
@@ -175,7 +179,7 @@ def process_source(app, doctree, fromdocname):
     if app.builder.name != "dummy":
         return
 
-    visitor = CodeBlockVisitor(doctree)
+    visitor = CodeBlockVisitor(doctree, app)
     doctree.walk(visitor)
     unit_test.add_tests(visitor.unit_tests)
 
@@ -189,10 +193,23 @@ def run_tests(app, exception):
     result = unit_test.run_tests()
     sys.exit(result)
 
+
+def annotate_html(app, doctree, fromdocname):
+    # only run on html builder
+    if app.builder.name not in ("html", "readthedocs"):
+        return
+
+    visitor = ExampleSliderVisitor(doctree, app)
+    doctree.walk(visitor)
+
+
 def setup(app):
     app.add_stylesheet('mpf.css')
+    app.add_config_value('use_mc', False, False, [bool])
+    app.add_javascript('mpf.js')
 
     app.connect('doctree-resolved', process_source)
+    app.connect('doctree-resolved', annotate_html)
     app.connect('build-finished', run_tests)
 
     # We need to do this in the setup() function since ReadTheDocs will append
@@ -280,10 +297,13 @@ setup_tests_link(mpf_examples, 'mpf', 'mpf')
 setup_tests_link(mpfmc_examples, 'mpf-mc', 'mpfmc')
 
 build_event_references()
-source_dirs = {"mpf_examples": "/mpf_examples", "mpfmc_examples": "/mpfmc_examples"}
-examples_root = 'examples'
+source_dirs = {os.path.join(os.getcwd(), "mpf_examples"): "/mpf_examples",
+               os.path.join(os.getcwd(), "mpfmc_examples"): "/mpfmc_examples"}
+examples_root = os.path.join(os.getcwd(), 'examples')
 
 b = ExampleBuilder(source_dirs, examples_root)
 b.build()
 
 lexers['mpf-config'] = MpfLexer(startinline=True)
+lexers['mpf-mc-config'] = MpfLexer(startinline=True)
+lexers['test'] = YamlLexer(startinline=True)

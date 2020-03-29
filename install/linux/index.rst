@@ -69,7 +69,7 @@ To downgrade (or install a specific release x.yy.z) run:
   pip3 install mpf==x.yy.z
   pip3 install mpf-mc==x.yy.z
 
-Uninstalling MPF 
+Uninstalling MPF
 ----------------------
 
 To remove MPF either because it is no longer needed or to perform a clean install run:
@@ -103,6 +103,4 @@ Specifics about certain linux distributions.
 
    Xubuntu Linux <xubuntu>
 
-Specific Linux Distributions
-----------------------------
-
+.. include:: /install/common_problems_and_solutions.rst

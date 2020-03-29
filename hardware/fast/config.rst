@@ -43,8 +43,10 @@ machine-wide config file, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: fast
-        driverboards: fast
+      platform: fast
+
+    fast:
+      driverboards: fast
 
 You also need to configure the `driverboards:` entry for what kind of
 driver boards you’re controlling.
@@ -86,7 +88,7 @@ popup menu.
 Then expand the "Ports (COM & LPT)" menu section to see which ports the FAST
 Controller is using. The easiest way to do this is to open the Device Manager
 to that section, then plug your FAST Controller in (or power it on) and just
-see which for port names appear.
+see which four port names appear.
 
 The port names will start with "COM" and then be a number, and there will be
 four consecutive numbers to represent the four FAST ports.

@@ -28,3 +28,9 @@ You can completely customize and extend the attract mode. In most
 cases that's as simple as adding a config file for the attract mode
 to your game folder and then configuring light and display shows to
 play. See the tutorial for details on how to do this.
+
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`high score in attract </game_logic/high_scores/index>`                 |
++------------------------------------------------------------------------------+

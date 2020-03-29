@@ -24,7 +24,7 @@ which is set in ``default_source_device`` of your playfield unless the device
 that just locked it is full,
 in which case it will eject a ball from the full device. The events that
 control the ball ejections are queue events, so you can interrupt the delivery
-of a new ball with the :doc: `/config/queue_relay_player` (for example, to have
+of a new ball with the :doc:`/config/queue_relay_player` (for example, to have
 a mode selection screen before returning to play).
 
 Whenever a new ball is locked, the event *multiball_lock_<name>_locked_ball*
@@ -41,21 +41,20 @@ Here's an example:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    s_ball1:
-   #!       number:
+   #!   s_ball1:
+   #!     number:
    #! coils:
-   #!    c_eject:
-   #!       number:
+   #!   c_eject:
+   #!     number:
    ball_devices:
-      bd_bunker:
-         eject_coil: c_eject
-         ball_switches: s_ball1
-
-   ##! config: mode1
+     bd_bunker:
+       eject_coil: c_eject
+       ball_switches: s_ball1
+   ##! mode: mode1
    multiball_locks:
-      bunker:
-         balls_to_lock: 3
-         lock_devices: bd_bunker
+     bunker:
+       balls_to_lock: 3
+       lock_devices: bd_bunker
 
 Each sub-entry under the ``multiball_locks:`` section is the name of the multiball
 lock ("bunker") in the example above. Then each named ball lock has the

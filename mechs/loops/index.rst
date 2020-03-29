@@ -23,11 +23,10 @@ To detect only shots where both switches were hit in order you can use
        number: 1
      s_ramp_success:
        number: 2
-
    sequence_shots:
-        ramp:
-            switch_sequence: s_ramp_entry, s_ramp_success
-            sequence_timeout: 3s
+     ramp:
+       switch_sequence: s_ramp_entry, s_ramp_success
+       sequence_timeout: 3s
 
 Additionally, most machines usually play a sound once the entry is hit to
 signal the player that he hit the ramp and another sound on success to
@@ -41,3 +40,4 @@ achieve that. In this example you would use the events
    sound_player:
      s_ramp_entry_active: indicate_ramp
      s_ramp_success: indicate_ramp_success
+

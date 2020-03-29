@@ -42,24 +42,22 @@ Here's an example:
   bitmap_fonts:
     F1fuv:
       file: F1fuv.png
-      descriptor: [ ' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
+      descriptor: [' !"#$%&,()*+`-./', '0123456789:;<=>?', '@ABCDEFGHIJKLMNO', 'PQRSTUVWXYZ[\]^_', '''abcdefghijklmno', 'pqrstuvwxyz{|}~ ']
     example_font:
       file: example_font.png
       descriptor: example_font_descriptor.xml
 
+.. config
+
+
 Optional settings
 -----------------
 
-The following sections are optional in the ``sounds:`` section of your config. (If you don't include
-them, the default will be used).
+The following sections are optional in the ``bitmap_fonts:`` section of your config. (If you don't include them, the default will be used).
 
 descriptor:
 ~~~~~~~~~~~
-
-The `descriptor:` setting may contain either a font descriptor file name or a list that contains the descriptor
-information. Only monospaced bitmap fonts are supported when providing the descriptor in a list format. The list
-should contain one string for each row of characters in the bitmap. The string in each row should contain the
-characters in the order they appear in the row in the bitmap image.
+Unknown type. See description below.
 
 Here is an example of a descriptor list for a bitmap image that contains three rows of 15 characters and the
 specific characters mapped to each position in each row:
@@ -70,3 +68,22 @@ specific characters mapped to each position in each row:
 
 Remember the descriptor list only works for monospaced characters (characters that are all the same width and
 height).
+
+file:
+~~~~~
+Single value, type: ``string``.
+
+The file to load when using this bitmap font.
+
+load:
+~~~~~
+Single value, type: ``string``.
+
+When should the asset loader load this file?
+One out of ``mode_start``, ``on_demand`` or ``preload``.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/assets/bitmap_fonts`

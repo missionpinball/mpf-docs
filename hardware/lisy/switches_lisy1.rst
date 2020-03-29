@@ -32,12 +32,12 @@ You can start with this config:
 .. code-block:: mpf-config
 
    switches:
-       slam:
-           number: 76
-       outhole:
-           number: 66
-       reset:
-           number: 56
+     slam:
+       number: 76
+     outhole:
+       number: 66
+     reset:
+       number: 56
 
 Then just add your switches according to the manual of your machine.
 See :doc:`/config/switches` for more details about switches.

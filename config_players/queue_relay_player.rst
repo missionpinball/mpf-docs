@@ -12,3 +12,8 @@ Usage in shows
 --------------
 
 None. (It's not valid in shows since it doesn't make sense in shows.)
+
+Config Options
+--------------
+
+See :doc:`/config/queue_relay_player` for config details.

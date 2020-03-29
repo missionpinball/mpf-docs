@@ -49,5 +49,4 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/flipper_cradle`
-* :doc:`/events/flipper_cradle_release`
+.. include:: /events/include_timed_switches.rst

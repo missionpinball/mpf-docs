@@ -29,8 +29,9 @@ their machine, they install a dedicated computer (or even a Raspberry Pi) in the
 What Python version can I use with MPF?
 ---------------------------------------
 
-On Windows, you need Python 3.4. Mac and Linux can use Python 3.4 or 3.5. Python 3.6 and newer are not
-supported. We walk you through getting Python installed in our :doc:`installation documentation </install/index>`.
+Your need Python 3.5 or 3.6. Python 3.4 is end of life and will no longer be supported.
+Python 3.7 and newer are not yet supported.
+We walk you through getting Python installed in our :doc:`installation documentation </install/index>`.
 
 Should I use the stable version or development version?
 -------------------------------------------------------

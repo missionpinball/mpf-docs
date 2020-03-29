@@ -11,14 +11,13 @@ sound_loop_player:
 | Valid in :doc:`shows </shows/index>`                                       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``sound_loop_sets:`` section
+.. note:: This section can also be used in a show file in the ``sound_loops:`` section
           of a step.
 
 .. overview
 
 The ``sound_loop_player:`` section of your config is where you specify actions to perform
-on sound loop sets when MPF events are received.  Additional information may be found in the
-:doc:`sound_player </config_players/sound_loop_player>` documentation.
+on :doc:`sound loop sets <sound_loop_sets>` when MPF events are received.
 
 Examples:
 
@@ -51,20 +50,8 @@ Examples:
          layer: 3
          timing: loop_end
 
-Basic usage:
-
-.. code-block:: yaml
-
-   sound_loop_player:
-     <triggering_event_name>:
-       <sound_loop track name>:
-         action: <action name>
-         <optional settings>
-     <triggering_event_name>:
-       <sound_loop track name>:
-         action: <action name>
-         <optional settings>
-
+Additional information may be found in the
+:doc:`sound_player </config_players/sound_loop_player>` documentation.
 
 Express configuration
 ---------------------
