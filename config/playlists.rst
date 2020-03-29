@@ -62,19 +62,17 @@ Here is an example:
        trackplaylist:
          action: stop
 
+.. config
+
+
 Required settings
 -----------------
 
-The following sections are required for each named sound loop set in your config:
+The following sections are required in the ``playlists:`` section of your config:
 
 sounds:
 ~~~~~~~
-
-The ``sounds:`` section contains an indented list of existing sound assets (one per line) that will
-be contained in the playlist. It is suggested you use block sequence notation for this list (begin
-each line with a dash followed by a space). Alternatively, you can enter the sound asset names
-in a comma-separated list. The sounds will be played in the order specfied (unless ``shuffle:`` is
-set to ``True``).
+List of one (or more) events.
 
 .. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
    in quotes:
@@ -136,28 +134,40 @@ entered.
 
 events_when_sound_stopped:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when a playlist sound has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events.
 
 A list of one or more names of events that MPF will post when this playlist has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
 
 repeat:
 ~~~~~~~
-Single value, type: ``bool``. Default: ``False``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Flag indicating whether or not the playlist will repeat when all sounds have been played or just
 stop.
 
+scope:
+~~~~~~
+Single value, type: one of the following options: machine, player. Default: ``machine``
+
+Whatever this playlist should be persisted per player or machine-wide.
+
 shuffle:
 ~~~~~~~~
-Single value, type: ``bool``. Default: ``False``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 Flag indicating whether or not the playlist will be played in order (``shuffle: True`` or randomized
 (``shuffle: False``) for playback.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/playlist_player`
