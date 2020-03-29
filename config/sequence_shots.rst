@@ -168,8 +168,43 @@ switch activations and the shot would count.)
 
 switch_sequence:
 ~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
 
 A sequence of switches which will complete the sequence.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/shots/sequence_shots`
+* :doc:`/mechs/loops/index`

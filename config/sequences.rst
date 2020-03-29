@@ -11,13 +11,6 @@ sequences:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
-+------------------------------------------------------------------------------+
-
-
 See also :doc:`sequences </game_logic/logic_blocks/sequences>`.
 
 The structure of sequence logic blocks is like this:
@@ -154,3 +147,10 @@ Currently unused.
 .. include:: /game_logic/logic_blocks/player_variable.rst
 
 .. include:: /game_logic/logic_blocks/common.rst
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/sequences`
+* :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`
