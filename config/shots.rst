@@ -9,6 +9,8 @@ shots:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The *shots:* section of your config file is where you define
 the shots in your machine. A *shot* is a switch, a series of
 switches that have to be hit in order, or an event or series of events.
@@ -111,20 +113,51 @@ post hit events and therefore do not trigger scoring or other events
 related to a shot hit. They are useful if you need to move a shot to a
 starting state (like selecting a shot to be active for skill shot).
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+delay_switch:
+~~~~~~~~~~~~~
+One or more sub-entries. Each in the format of string name of a :doc:`switches <switches>` device : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
 
-Set this to *true* to add lots of logging information about this shot
-to the debug log. This is helpful when you’re trying to troubleshoot
-problems with this shot.
+A dictionary of switches and times which prevent hits for a certain time.
+You can use this if you got another lane feeding into your shot and you want to
+prevent it from hitting this shot.
+Use this with care as it might cause issues during multiball.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!   s_my_shot:
+    #!     number:
+    #!   s_other_lane:
+    #!     number:
+    ##! mode: mode1
+    shots:
+      my_shot:
+        switch: s_my_shot
+        delay_switch:
+          s_other_lane: 2s
+    ##! test
+    #! start_game
+    #! start_mode mode1
+    #! mock_event my_shot_hit
+    #! hit_and_release_switch s_other_lane
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_not_called my_shot_hit
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_not_called my_shot_hit
+    #! advance_time_and_run 2
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_called my_shot_hit
+
+In this example an activation of ``s_other_lane`` will prevent the shot from being hit for two seconds.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Default: ``None``
 
@@ -154,16 +187,25 @@ associated with this shot, (or that the entire switch sequence has
 been completed), except it comes in via an event instead of from a
 switch activity.
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
+persist_enable:
+~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-The plain-English name for this device that will show up in operator
-menus and trouble reports.
+Whether this shot should persist its enable state in a player variable.
+If set to ``True`` this will also persist the state into the next ball
+of the same player.
+
+playfield:
+~~~~~~~~~~
+Single value, type: string name of a :doc:`playfields <playfields>` device. Default: ``playfield``
+
+On which playfield is this shot?
+This is only relevant when you have multiple playfields.
+It is used mostly for ball search.
 
 profile:
 ~~~~~~~~
-Single value, type: ``string``. Default: ``profile``
+Single value, type: string name of a :doc:`shot_profiles <shot_profiles>` device. Default: ``default``
 
 The name of the *shot profile* that will be applied to this shot.
 
@@ -257,6 +299,15 @@ that show was in, when the shot entered that state, it would replace the ``(leds
 
 More information about :doc:`show tokens </shows/tokens>`
 
+start_enabled:
+~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False).
+
+Whether the shot starts as enabled (if you set this to ``True``) or as
+disabled (if you set this to ``False``).
+If you do not set this, MPF will check if there are ``enable_events``.
+The shot will start disabled in that case or enabled otherwise.
+
 switch:
 ~~~~~~~
 List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
@@ -287,9 +338,42 @@ or the ``switches:`` setting, but we include both since it was confusing to
 be able to enter multiple switches for a singlular "switch" setting and vice
 versa.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to *true* to add lots of logging information about this shot
+to the debug log. This is helpful when you’re trying to troubleshoot
+problems with this shot.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+The plain-English name for this device that will show up in operator
+menus and trouble reports.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/shots/index`
