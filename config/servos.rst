@@ -58,28 +58,49 @@ depend on which control system you're using and how the servo is connected.
 
 See the :doc:`/hardware/numbers` guide for details.
 
+
 Optional settings
 -----------------
 
 The following sections are optional in the ``servos:`` section of your config. (If you don't include them, the default will be used).
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+acceleration_limit:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``-1.0``
 
-Enables more detailed debug information to be added to the log (when verbose
-logging is enabled).
+Acceleration limit for your servo.
+The unit of this value depends on your platform.
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
+ball_search_max:
+~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
 
-A friendly name for this servo that will be used in reports and the service
-menu.
+The value of the second position that this servo will go to in ball search.
+
+ball_search_min:
+~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
+
+The value of the initial position that this servo will go to in ball search.
+
+First position in ball search
+
+ball_search_wait:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
+
+How long this servo will pause in each position (min and max) before moving to the other position while ball
+search is active.
+
+include_in_ball_search:
+~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+Controls whether this servo is included in ball search.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``.
 
 Name of the platform this servo is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -173,35 +194,48 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 Like ``servo_max:`` above, except the minimum lower-end setting for values that
 are sent to the servo controller.
 
+speed_limit:
+~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``-1.0``
+
+The maximum speed of this servo.
+The unit of this value depends on your platform.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Enables more detailed debug information to be added to the log (when verbose
+logging is enabled).
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+A friendly name for this servo that will be used in reports and the service
+menu.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 Tags work like tags for any device. Nothing special here.
 
-include_in_ball_search:
-~~~~~~~~~~~~~~~~~~~~~~~
-Boolean (True/False or Yes/No). Default is ``True``.
 
-Controls whether this servo is included in ball search.
+Related How To guides
+---------------------
 
-ball_search_min:
-~~~~~~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``0.0``
-
-The value of the initial position that this servo will go to in ball search.
-
-First position in ball search
-
-ball_search_max:
-~~~~~~~~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
-
-The value of the second position that this servo will go to in ball search.
-
-ball_search_wait:
-~~~~~~~~~~~~~~~~~
-Time value. Default ``5s``.
-
-How long this servo will pause in each position (min and max) before moving to the other position while ball
-search is active.
+* :doc:`/hardware/servo_platforms`
+* :doc:`/mechs/servos/index`

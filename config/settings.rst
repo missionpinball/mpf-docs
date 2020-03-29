@@ -84,3 +84,8 @@ Name of the machine variable to use. If this is not set it will use the name
 of this setting as machine variable.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/machine_management/service_mode/index`
+* :doc:`/game_logic/service_mode/index`
