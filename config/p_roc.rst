@@ -26,7 +26,7 @@ console_log:
 ~~~~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``none``
 
-Log level for the console log for this device.
+Log level for the console log for this platform.
 
 debug:
 ~~~~~~
@@ -65,7 +65,7 @@ file_log:
 ~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-Log level for the file log for this device.
+Log level for the file log for this platform.
 
 lamp_matrix_strobe_time:
 ~~~~~~~~~~~~~~~~~~~~~~~~
