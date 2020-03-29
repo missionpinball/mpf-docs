@@ -54,3 +54,7 @@ The resolution of your panel.
 PIN2DMD XL is ``192x64`` and the standard PIN2DMD is ``128x32``.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/pin2dmd/index`

@@ -47,11 +47,19 @@ See :doc:`/hardware/multimorphic/dmd` for details.
 
 dmd_update_interval:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``33ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``33ms``
 
 Only P-Roc (not P3-Roc).
 
 The update interval of your DMD. Usually you do not have to change this.
+
+driverboards:
+~~~~~~~~~~~~~
+Single value, type: one of the following options: wpc, wpcAlphanumeric, wpc95, sternSAM, sternWhitestar, pdb, custom, None.
+
+Similar to ``driverboards`` in the :doc:`/config/hardware` section.
+Use this setting if you use multiple playforms (i.e. FAST and P3-Roc) in one
+machine.
 
 file_log:
 ~~~~~~~~~
@@ -77,6 +85,21 @@ This can be used to configure indivdual features per board.
 See :doc:`/hardware/multimorphic/servos`, :doc:`/hardware/multimorphic/steppers` or
 :doc:`/hardware/multimorphic/leds` for details.
 
+trace_bus:
+~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+use_separate_thread:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+Whether MPF should spawn a separate thread to talk to the P/P3-Roc or not.
+If you set this to ``False`` any IO to the P/P3-Roc will block the game loop
+which might cause lags unrelated to the hardware.
+This has a small overhead but should be enabled in most cases.
+
 use_watchdog:
 ~~~~~~~~~~~~~
 Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
@@ -88,3 +111,9 @@ watchdog_time:
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1s``
 
 Watchdog timeout. The P/P3-Roc will disable all coils when the watchdog expires.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/multimorphic/index`
