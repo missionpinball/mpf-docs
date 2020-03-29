@@ -41,39 +41,42 @@ event out of a list based on an event.
          likely_event1: 45
          likely_event2: 50
 
-Required settings
+.. config
+
+
+Optional settings
 -----------------
 
-The following sections are required in the ``random_event_player:`` section of your config:
+The following sections are optional in the ``random_event_player:`` section of your config. (If you don't include them, the default will be used).
+
+disable_random:
+~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+
+Disable random.
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string`` or dict of type ``string:int``.
+Unknown type. See description below.
 
 List the events to choose from.
 If you use a list all events will be equiprobable.
 You can also use a dict with ``eventname: probablity``.
 See the example above.
 
+force_all:
+~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+
+Enforce that all events are posted once before a event is posted a second time.
+
 force_different:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
 
 If set to true it will enforce that the same entry will never appear twice in a
 row. When setting ``force_all`` to true this will prevent that the last event
 is the same as the first of the next iteration.
-
-force_all:
-~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
-
-Enforce that all events are posted once before a event is posted a second time.
-
-disable_random:
-~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-Disable random.
 
 scope:
 ~~~~~~
@@ -84,4 +87,8 @@ When setting to ``player`` this is enforced per player and persisted between
 balls.
 
 
+Related How To guides
+---------------------
 
+* :doc:`/config_players/random_event_player`
+* :doc:`/game_design/game_modes/mystery_award`
