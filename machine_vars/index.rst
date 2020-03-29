@@ -3,10 +3,9 @@ Machine Variables
 
 MPF uses the concept of *machine variables* to track dynamically-
 created variables that apply on a machine-wide basis. Machine
-variables are similar in concept to `tracked player variables`_,
+variables are similar in concept to :doc:`player variables </game_logic/players/index>`,
 except machine variables are machine-wide instead of per-player.
 Examples of things that are stored in machine variables include:
-
 
 * The number of credits on the machine (if you're using the credits
   mode and not set to free play)
@@ -25,12 +24,6 @@ Machine variables that are saved to disk can optionally be written
 with an expiration time which means they're cleared out if MPF boots
 after the time has passed. (For example, the number of credits on the
 machine might only persist for a few hours.)
-
-Machine variables are similar to
-:doc:`player variables </game_logic/players/index>`, except that
-machine variables are machine-wide and persist between games. (In fact,
-machine variables can be configured to be saved to disk so they also persist
-between reboots of MPF.)
 
 Like player variables, you can use machine variables in your config files,
 particularly in text display widgets, to show things on your display.
