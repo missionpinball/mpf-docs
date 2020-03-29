@@ -161,3 +161,9 @@ List of one (or more) values, each is a type: ``string``.
 
 Not used currently.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/dmd_platforms`
+* :doc:`/displays/display/rgb_dmd`

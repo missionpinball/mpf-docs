@@ -141,3 +141,7 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Print refresh rate on terminal.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/rpi_dmd/index`
