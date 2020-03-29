@@ -40,12 +40,30 @@ Single value, type: ``string``.
 
 The name of the serial port.
 
+
 Optional settings
 -----------------
 
 The following sections are optional in the ``pololu_maestro:`` section of your config. (If you don't include them, the default will be used).
 
-NOTE: The Pololu Maestro control center software and typical servo specifications work in units of microseconds.  The values used here are in quarter-microseconds, so to make them correspond multiply your servo specs by 4.  eg a servo with range of 600-2400 microsecods would be servo_min: 2400 and servo_max: 9600 for the full range.
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``none``
+
+Log level for the console log for this platform.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+See the :doc:`documentation on the debug setting </config/instructions/debug>`
+for details.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this platform.
 
 servo_max:
 ~~~~~~~~~~
@@ -61,3 +79,8 @@ Single value, type: ``integer``. Default: ``3000``
 Quarter-microseconds to use for the max servo value.
 The default (3000) translates to 750 microseconds or 0.75ms.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/pololu_maestro/index`

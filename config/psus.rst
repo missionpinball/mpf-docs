@@ -78,3 +78,7 @@ List of one (or more) values, each is a type: ``string``.
 Currently unused.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/voltages_and_power/power_management.rst`
