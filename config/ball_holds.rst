@@ -167,6 +167,6 @@ Related How To guides
 ---------------------
 
 * :doc:`/game_logic/ball_holds/index`
-* :doc:`/game_logic/mystery_award/index`
+* :doc:`/game_design/game_modes/mystery_award`
 * :doc:`/game_logic/ball_locks/index`
 * :doc:`/mechs/scoops/index`

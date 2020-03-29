@@ -41,7 +41,7 @@ the prefix for ball holds is ``device.ball_holds.<name>``.
 Related How To guides
 ---------------------
 
-:doc:`Using ball_holds for a mystery award </game_logic/mystery_award/index>`
+* :doc:`Using ball_holds for a mystery award </game_design/game_modes/mystery_award>`
 
 Related Events
 --------------

@@ -5,7 +5,7 @@ In most machines there are multiple modes which can start but you need to shoot 
 This usually serves multiple purposes:
 First, it gives the player options and allows different play styles.
 Second, it prevents all modes from starting at once.
-We will create a selection/qualification mode which then starts a :doc:`game mode <game_mode>` (or sometimes two).
+We will create a selection/qualification mode which then starts a :doc:`game mode <game_modes/index>` (or sometimes two).
 This selection mode usually runs all the time and provides the following functionality:
 
 * Track whether a mode can be qualified/selected or not.
@@ -37,6 +37,13 @@ Please let us know if you got a snippet which might be useful for other users an
 We would be very happy to :doc:`include it </about/help_us_to_write_it>`.
 
 Common types of selection modes:
+
+Skill shot at ball start
+------------------------
+
+Skill shots typically run on ball start only.
+See :doc:`/game_logic/skill_shot/index`.
+
 
 Select by hitting shot X times
 ------------------------------

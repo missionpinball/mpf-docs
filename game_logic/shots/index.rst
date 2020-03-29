@@ -170,7 +170,9 @@ Related Events
 +------------------------------------------------------------------------------+
 | :doc:`Shots on inlane/outlanes </mechs/switches/rollover_switches>`          |
 +------------------------------------------------------------------------------+
-| :doc:`Shots in game modes </game_design/game_mode>`                          |
+| :doc:`Shots in game modes </game_design/game_modes/multiple_timed_shots>`    |
++------------------------------------------------------------------------------+
+| :doc:`/game_design/game_modes/top_lanes_with_multiplier`                     |
 +------------------------------------------------------------------------------+
 | :doc:`Shots in other modes </game_design/other_modes>`                       |
 +------------------------------------------------------------------------------+

@@ -10,11 +10,13 @@ This section is about laying out your modes and actually designing your game log
 It is structured into the following subsections:
 
 
-Mode Selection
---------------
+Mode Selection and Game Startup
+-------------------------------
 
 Questions answered in this section:
 
+* How to select modes/players during start?
+* How to implement a (timed) skill shot?
 * How does a player qualify for a mode?
 * How to start the mode?
 * Can multiple modes run at once?
@@ -36,18 +38,14 @@ Questions answered in this section:
 * Can it restart if it failed?
 * Where will it contine on restart?
 
-Game Startup
-------------
-
-Questions answered in this section:
-
-* How to select modes/players during start?
-* How to implement a (timed) skill shot?
+* How to implement roll over lanes in a mode?
+* How to implement a mystery award mode?
+* How to implement a standup target bank mode?
 
 .. toctree::
    :titlesonly:
 
-   Game Mode <game_mode>
+   Game Mode <game_modes/index>
 
 Wizard Modes
 ------------
@@ -62,20 +60,6 @@ Questions answered in this section:
    :titlesonly:
 
    Wizard Modes <wizard_modes>
-
-Other modes
------------
-
-Questions answered in this section:
-
-* How to implement roll over lanes in a mode?
-* How to implement a mystery award mode?
-* How to implement a standup target bank mode?
-
-.. toctree::
-   :titlesonly:
-
-   Other Game Modes <other_modes>
 
 Ball End Modes
 --------------
@@ -103,6 +87,22 @@ Questions answered in this section:
    :titlesonly:
 
    Game End Modes <game_end_modes>
+
+Other modes
+-----------
+
+Questions answered in this section:
+
+* Which modes run outside of a game?
+* How to control attract?
+* How do credits work?
+* How does tilt work?
+* What is the service mode?
+
+.. toctree::
+   :titlesonly:
+
+   Other Modes <other_modes>
 
 Layering Modes Example
 ----------------------
