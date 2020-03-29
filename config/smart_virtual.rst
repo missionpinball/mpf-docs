@@ -49,3 +49,9 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 When ``simulate_manual_plunger`` is set to ``True`` the smart_virtual platform
 will automatically plunge balls in devices with mechanical
 eject after ``simulate_manual_plunger_timeout`` ms.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/virtual/smart_virtual`
