@@ -12,6 +12,7 @@ Here is a selection of game modes:
 * :doc:`Provide a Random Mystery Award <mystery_award>`.
 * :doc:`Skill Shot Mode at Ball Start </game_logic/skill_shot/index>`
 * :doc:`Carousel Mode <carousel>`
+* :doc:`Drain all balls on the playfield and serve one back without ending the current ball <fake_ball_save>`
 
 If you created a unique game mode in your machine which is missing here please
 consider :doc:`contributing a tutorial or example </about/help_us_to_write_it>`.
@@ -25,3 +26,4 @@ consider :doc:`contributing a tutorial or example </about/help_us_to_write_it>`.
    mystery_award
    lanes_mode
    carousel
+   fake_ball_save
