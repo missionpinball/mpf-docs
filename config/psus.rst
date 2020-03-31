@@ -81,4 +81,4 @@ Currently unused.
 Related How To guides
 ---------------------
 
-* :doc:`/hardware/voltages_and_power/power_management.rst`
+* :doc:`/hardware/voltages_and_power/power_management`
