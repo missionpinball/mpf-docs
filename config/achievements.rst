@@ -125,9 +125,10 @@ complete_events:
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Events in this list, when posted, cause this achievement to switch to its
-"completed" state. These events will also cause the achievement to play the
-show defined in the ``show_when_completed:`` setting and to emit (post) events
-in the ``events_when_completed:`` setting.
+"completed" state. This must be in the "started" state in order to be moved
+to the "completed" state when these events post.   These events will also
+cause the achievement to play the show defined in the ``show_when_completed:``
+setting and to emit (post) events in the ``events_when_completed:`` setting.
 
 disable_events:
 ~~~~~~~~~~~~~~~
