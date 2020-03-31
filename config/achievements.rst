@@ -214,9 +214,10 @@ on how to enter settings here.
 Default: ``None``
 
 Events in this list, when posted, cause this achievement to switch to its
-"completed" state. These events will also cause the achievement to play the
-show defined in the ``show_when_completed:`` setting and to emit (post) events
-in the ``events_when_completed:`` setting.
+"completed" state. This must be in the "started" state in order to be moved
+to the "completed" state when these events post.   These events will also
+cause the achievement to play the show defined in the ``show_when_completed:``
+setting and to emit (post) events in the ``events_when_completed:`` setting.
 
 disable_events:
 ~~~~~~~~~~~~~~~
