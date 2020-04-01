@@ -13,7 +13,6 @@ widget_player:
 
 .. overview
 
-
 The ``widget_player:`` section of your config is where you configure widgets to be added to,
 removed from, or updated on slides based on based on events being posted.
 

@@ -356,7 +356,6 @@ Additional ejectors:
          events_when_eject_try: my_ball_device_eject
        ball_switches: s_ball_switch1, s_ball_switch2
 
-
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
