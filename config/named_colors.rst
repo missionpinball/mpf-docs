@@ -14,7 +14,7 @@ named_colors:
 The ``named_colors:`` section of your config is where you define color names that
 can be used for RGB lights throughout your machine code. Anywhere in lights: or light_player: where a color can be specified, named colors can be used.
 
-Your named colors can be an array of R/G/B values or a hex string of hex values (which can also include a brightness percentage, like all hex color strings). 
+Your named colors can be an array of R/G/B values or a hex string of hex values (which can also include a brightness percentage, like all hex color strings).
 
 This is an example:
 
@@ -38,3 +38,10 @@ This is an example:
         color: custom_blue
         fade: 10
 
+.. config
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`

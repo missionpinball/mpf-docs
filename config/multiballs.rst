@@ -236,3 +236,7 @@ List of one (or more) values, each is a type: ``string``.
 Unused.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/multiballs/index`

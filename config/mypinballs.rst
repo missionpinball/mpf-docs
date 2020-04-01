@@ -47,3 +47,7 @@ Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 Set to true to see more debug output.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/mypinballs/index`
