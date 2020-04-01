@@ -128,6 +128,9 @@ driverboards:
 Single value, type: one of the following options: fast, wpc, None.
 
 Which driverboards are you using? Most likely ``fast``.
+Similar to ``driverboards`` in the :doc:`/config/hardware` section.
+Use this setting if you use multiple playforms (i.e. FAST and P3-Roc) in one
+machine.
 
 file_log:
 ~~~~~~~~~
