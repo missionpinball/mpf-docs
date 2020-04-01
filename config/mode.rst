@@ -49,6 +49,39 @@ custom Python code for this mode (i.e. if you can do everything you
 need to do with config files which will probably be the case 90% of
 the time, then you can skip this setting.)
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this mode.
+
+events_when_started:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+Events which will be posted when this mode has been started.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events.
+
+Events which will be posted when this mode has been stopped.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this mode.
+
+game_mode:
+~~~~~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+
+A mode can only access player state if ``game_mode`` is set to ``True``.
+You can set this to ``False`` to allow a mode to run outside of a game.
+On example for such a mode is the attract mode.
+Game modes are automatically stopped at the end of a game.
+
 priority:
 ~~~~~~~~~
 Single value, type: ``integer``. Default: ``100``
@@ -225,11 +258,10 @@ finish before the game flow moves on with the next player's turn, or modes
 like match or high score entry where you want those to finish before the
 attract mode starts again.
 
-game_mode:
-~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-A mode can only access player state if ``game_mode`` is set to ``True``.
-You can set this to ``False`` to allow a mode to run outside of a game.
-On example for such a mode is the attract mode.
-Game modes are automatically stopped at the end of a game.
+Related How To guides
+---------------------
+
+* :doc:`/game_design/index`
+* :doc:`/tutorial/14_add_a_mode`
+* :doc:`/game_logic/modes/index`
