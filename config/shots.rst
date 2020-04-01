@@ -36,11 +36,6 @@ of shots to the left or right based on certain events happening
 (slingshot hits, flipper button pushes, etc.). A shot can be a member of
 multiple groups at the same time.
 
-Typically you'd define your shots in your machine-wide config (since the
-actual physical shots in your machine are defined by hardware and never
-change), and then you apply different profiles to the shots in various
-modes.
-
 Here's a sample *shots:* section from a config file:
 
 .. code-block:: mpf-config
