@@ -38,7 +38,7 @@ The integer value for how many LEDs are in the stripe.
 
 light_template:
 ~~~~~~~~~~~~~~~
-Single value, type: :doc:`lights <lights>`.
+Single value, type: :doc:`lights <lights>`, :doc:`device <device>`.
 
 This is a list of sub-settings (indented) that are regular settings from the
 :doc:`lights` section of your machine config. Any settings that are valid there
@@ -133,3 +133,7 @@ List of one (or more) values, each is a type: ``string``.
 Unused.
 
 
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`
