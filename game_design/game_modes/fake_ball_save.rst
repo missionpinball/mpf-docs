@@ -109,7 +109,7 @@ The queue_relay_player will hold the ball until the show is over.
 When this mode is ending you should enable the coils you disabled.
 
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     ##! mode: your_mode
     mode:
