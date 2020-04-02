@@ -144,6 +144,10 @@ keys, there are a few things you can try to troubleshoot:
   machine than keys on a keyboard, MPF lets you add modified keys to
   your ``keyboard:`` map. This means that MPF will see ``Z``, ``SHIFT+Z``,
   ``CRTL+Z``, ``SHIFT+CTRL+Z``, etc. all as different switches.
++ Make sure no "lock keys" are turned on (caps lock, num lock, scroll lock).
+  Having these locks on also count as modified keys to your ``keyboard:``
+  map.  This means that MPF will see ``Z``, ``Caps Lock+Z``,  ``Num Lock+Z``,
+  ``Scroll Lock+Z``, etc. all as different switches.
 + Remember that the media controller's pop-up window has to be in
   focus. Make sure it's the active window on your desktop and try
   hitting your keys again.
