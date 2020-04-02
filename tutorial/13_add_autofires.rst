@@ -71,11 +71,11 @@ your config.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step13.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_13``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 ::
 
-   C:\mpf-examples\tutorial>mpf both -c step13
+   C:\mpf-examples\tutorial>mpf both

@@ -200,7 +200,7 @@ properly initialize variables, but the main thing for now is to see how the scor
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_15``
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_15``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
 .. code-block:: doscon

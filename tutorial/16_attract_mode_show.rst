@@ -288,8 +288,8 @@ attract mode display show start up again.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_16``
-folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_16``
+folder. You can run it be switching to that folder and running ``mpf both``:
 
 .. code-block:: doscon
 

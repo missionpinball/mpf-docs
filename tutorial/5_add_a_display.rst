@@ -390,12 +390,13 @@ Now open a second terminal window and switch into your game folder and launch th
 Remember from prior steps that we ran MPF with the ``-b`` option which told MPF to *not* try to
 connect to the MPF-MC. But now we have the MC running, so we want to run MPF without ``-b`` so it connects.
 
-So this time, just run ``mpf``, like this:
+So this time, just run ``mpf -t``, like this:
 
 .. code-block:: doscon
 
-    C:\pinball\your_machine>mpf
+    C:\pinball\your_machine>mpf -t
 
+We added ``-t`` to disable the text ui on MPF because it might hide errors.
 When you run MPF, after some stuff scrolls by, you should see the *attract_started* slide replace
 the *welcome_slide*, like this:
 
@@ -439,6 +440,10 @@ flip over to the *attract_started* slide. Here's a screen shot:
 
 .. image:: images/5_mpf_both.jpg
 
+This time we omitted ``-t`` and you will see the text ui again instead of the
+console log.
+You can also use ``mpf both -t`` if you prefer the log.
+
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
@@ -447,13 +452,13 @@ it’s available in the "tutorials" folder of the mpf-examples
 package that you should have downloaded in Step 1 of this tutorial.
 
 There are config files for each step, so the config for Step 5 should
-be at ``/mpf-examples/tutorial/config/step5.yaml``.
+be at ``/mpf-examples/tutorial/step_5``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf -c step5
+   C:\mpf-examples\tutorial>mpf both
 
 What if it doesn't work?
 ------------------------

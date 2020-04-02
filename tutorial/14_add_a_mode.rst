@@ -97,7 +97,7 @@ like this:
    ##! mode: my_mode
    #config_version=5
    mode:
-     start_events: ball_starting
+     start_events: ball_started
      priority: 100
 
 There are lots more settings besides ``start_events`` and ``priority``
@@ -169,8 +169,8 @@ credits, etc.)
 Be sure to save the changes to ``base.yaml`` and ``config.yaml``, and then
 run your game again. For this test, you do not need to use verbose
 logging since mode information is reported in the basic level of
-logging. Once MPFis running, start a game and you should see something
-like on the console and/or the log file:
+logging. Once MPF is running, start a game and you should see something
+like on the console and/or the log file when you run ``mpf both -t``:
 
 ::
 
@@ -323,13 +323,10 @@ What if it didn't work?
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_14``
-folder with the name ``config.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_14``
+folder.
 
-Note that this is a different folder than the previous steps. Since we now have subfolders in the machine folder, steps
-14+ now each have their own folder in the ``mpf-examples`` folder. So switch out of the ``mpf-examples/tutorial``
-folder and to the ``mpf-examples/tutorial_step_14`` folder, then run ``mpf both``. (You don't need the ``-c`` option
-since we're back to using ``config.yaml`` instead of a custom config file name.)
+You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 

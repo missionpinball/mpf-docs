@@ -279,7 +279,7 @@ just created by adding a ``profile:`` setting.
      my_first_shot:
        switch: s_right_inlane
        show_tokens:
-         led: led_1 # or use light: here, depending on your machine
+         led: l_led1 # or use light: here, depending on your machine
        profile: my_first_profile
 
 Save your config and re-run MPF. Once you start a game, the light or LED
@@ -644,8 +644,8 @@ Next steps to write
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_18``
-folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_18``
+folder. You can run it be switching to that folder and running ``mpf both``:
 
 .. code-block:: doscon
 

@@ -234,11 +234,14 @@ At this point you should run your game to make sure it runs okay. Your
 flippers aren't going to work yet, but mainly we want to make sure MPF
 can read your config files and that there aren't any errors. Open a
 command prompt, switch to your machine folder, and run MPF again (like
-Step 2), also with the ``-b`` option:
+Step 2), also with the ``-b`` option.
+Additionally, we will add the ``-t`` option to disable the text UI and show
+the log on the console instead (you can also see it inside the ``logs`` folder
+inside your machine):
 
 .. code-block:: doscon
 
-    C:\your_machine\mpf -b
+    $ mpf -t -b
 
 The console output will look similar to Step 2 as well, and it won't
 look like much is happening here. The main thing is to make sure that
@@ -247,13 +250,47 @@ you setup in your config file is ok.
 
 .. code-block:: doscon
 
-   C:\pinball\your_machine>mpf -b
-   INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
-   INFO : Machine : Loading config from original files
-   INFO : Machine : Machine config file #1: C:\your_machine\config\config
-   INFO : Machine : Config file cache created: C:\Windows\temp\6454c58ed3dcbe5687dd7b0c0b112e00config
-   INFO : Machine : Starting clock at 30.0Hz
-   INFO : Mode.attract : Mode Starting. Priority: 10
+   $ mpf -t -b
+   INFO : root : Loading config.
+   INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+   INFO : ConfigProcessor : Loading config from cache: /tmp/7146c817793475fbeb8d22f907d7bbbc.mpf_cache
+   INFO : ConfigProcessor : Loading config from cache: /tmp/49091ea856e626b51c4160f53a2ef744.mpf_cache
+   INFO : ConfigProcessor : Loading config from cache: /tmp/4cc7d3d11df84bb81fda7943558aba56.mpf_cache
+   INFO : Machine : Mission Pinball Framework Core Engine v0.54.0-dev.18
+   INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs/2020-04-01-21-45-55-mpf.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+   INFO : Machine : MPF path: /pinball/src/mpf/mpf
+   INFO : Machine : Machine path: /mpf-examples/tutorial/step_3
+   INFO : Machine : Platform: linux
+   INFO : Machine : Python executable location: /usr/bin/python3
+   INFO : Machine : Python version: 3.6.9 (64-bit)
+   INFO : Machine : Initialise MPF.
+   INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.54.0-dev.18', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.54.0-dev.18, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.6.9', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Linux-4.15.0-72-generic-x86_64-with-Ubuntu-18.04-bionic', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Linux', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '4.15.0-72-generic', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '#81-Ubuntu SMP Tue Nov 26 12:20:02 UTC 2019', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+   INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+   INFO : EventManager : Event: ======'init_done'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+   INFO : EventManager : Event: ======'reset_complete'====== Args={}
+   INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+   INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+   INFO : Mode.attract : Started. Priority: 10
+   INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+   INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+   INFO : Machine : Starting the main run loop.
 
 At this point you can stop it by making sure your console window has
 focus and then hitting ``CTRL+C``.
@@ -529,7 +566,7 @@ flip your flippers! Run your game with the following command:
 
 .. code-block:: doscon
 
-    C:\your_machine\mpf -b
+    C:\your_machine\mpf -t -b
 
 Watch the console log for the entry about the attract mode starting.
 Once you see that then you should be able to hit your flipper buttons
@@ -622,26 +659,10 @@ If you want to see a complete ``config.yaml`` file up to this point, there's a "
 machine in the mpf-examples repo that you downloaded in Step 1. (This is the same
 repo that contains the Demo Man game that you ran in Step 1.)
 
-The tutorial files are in the ``tutorial`` folder. If you just run MPF by itself
-from the tutorial game folder, you'll get an error:
+The complete machine config is in the ``mpf-examples/tutorial/step_3``
+folder.
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf
-   OSError: Could not find file Z:\git\mpf-examples\tutorial\config\config
+   C:\mpf-examples\tutorial>mpf -t
 
-This is because if you look in the ``tutorial\config`` folder, you see that there
-are lots of config files in there with names like ``step3.yaml``, ``step4.yaml``,
-etc., but there is not a file called ``config.yaml``. Since MPF looks for ``config.yaml``
-by default, it can't start because it can't find it.
-
-However, you can use the ``-c`` command line option to specify the name of the config
-file that MPF should load instead of ``config.yaml``. So if you want to run the
-example game from the tutorial associated with Step 3, it would just be this:
-
-.. code-block:: doscon
-
-   C:\mpf-examples\tutorial>mpf -c step3
-
-That's telling MPF to start, using the file ``C:\mpf-examples\tutorial\config\step3.yaml``
-as its config file.

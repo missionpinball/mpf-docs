@@ -64,7 +64,7 @@ run your game again. (Seriously, we can't tell you how many times
 things don't work only to realize we didn't save our config after
 changing it!). So now run your game, starting both the media
 controller and the MPF core. Again you can either do this by running
-both commands manually in separate windows or by running ``mpf both``.
+both commands manually in separate windows or by running ``mpf both -t``.
 
 Note that if you have a physical machine connected, *your physical
 flippers will not flip with the keyboard keys*.
@@ -153,16 +153,18 @@ keys, there are a few things you can try to troubleshoot:
   keyboard keys for your flipper buttons.
 + Check if numlock is enabled. This seems to be common issue on Windows 10.
   Disable numlock in this case.
++ Make sure you started ``mpf both -t`` and did not omit ``-t`` as this would
+  hide the log and show the text ui instead.
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step6.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_6``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 ::
 
-   C:\mpf-examples\tutorial>mpf both -c step6
+   C:\mpf-examples\tutorial>mpf both -t
 

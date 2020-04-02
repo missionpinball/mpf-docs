@@ -69,13 +69,13 @@ Tell the playfield to use the plunger for new balls:
 
 Again, our example config will probably diverge from yours since you might have different types
 of drain and plunger devices, but we do have a complete machine conform for Demolition Man
-for this step which you can view in the ``mpf-examples/tutorial`` folder with the name ``step8.yaml``.
+for this step which you can view in the ``mpf-examples/tutorial/step_8`` folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step8
+   C:\mpf-examples\tutorial>mpf both
 
 4. Fire up your game and test
 -----------------------------

@@ -122,10 +122,10 @@ it’s available in the "tutorials" folder of the mpf-examples
 package that you should have downloaded in Step 1 of this tutorial.
 
 There are config files for each step, so the config for Step 4 should
-be at ``/mpf-examples/tutorial/config/step4.yaml``.
+be at ``/mpf-examples/tutorial/config/step_4``.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf -c step4
+   C:\mpf-examples\tutorial>mpf

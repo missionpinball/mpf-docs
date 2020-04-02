@@ -108,11 +108,11 @@ they use the "virtual" platform which doesn't connect to real hardware. So
 you can run them and follow along, but just be aware that they might not
 match your own files exactly.
 
-The complete machine config is in the ``mpf-examples/tutorial``
-folder with the name ``step7.yaml``.
+The complete machine config is in the ``mpf-examples/tutorial/step_7``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step7
+   C:\mpf-examples\tutorial>mpf both
