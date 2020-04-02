@@ -131,6 +131,9 @@ It has more position switches but the mechanics are similar:
          go_pos4: pos4
          go_pos5: pos5
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -138,7 +141,7 @@ The following sections are required in the ``motors:`` section of your config:
 
 position_switches:
 ~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``machine(switches)``.
+Ordered list for one (or more) sub-settings. Each in the format of ``string`` : string name of a :doc:`switches <switches>` device
 
 Ordered map of name of the position and the switch which becomes active once this position is reached.
 
@@ -161,7 +164,6 @@ If it is not at any position and also does not know its previous position it wil
 a known position and may then change its direction again (usually this should not happen since it will move to a known
 position during reset).
 
-
 reset_position:
 ~~~~~~~~~~~~~~~
 Single value, type: ``string``.
@@ -176,7 +178,7 @@ The following sections are optional in the ``motors:`` section of your config. (
 
 go_to_position:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : ``string``
 
 A mapping of events to positions.
 Once an event in the mapping is posted the motor will move to the corresponding position.
@@ -200,7 +202,7 @@ Whether the motor should be included in ball search.
 
 motor_left_output:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``digital_outputs:`` device. Default: ``None``
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor left.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -208,7 +210,7 @@ direction or both if it can move in both directions.
 
 motor_right_output:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``digital_outputs:`` device. Default: ``None``
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor right.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -216,8 +218,43 @@ direction or both if it can move in both directions.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting
 
 Events on which the motor should move to its ``reset_position``.
 You usually do not have to configure this.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/motors/index`
