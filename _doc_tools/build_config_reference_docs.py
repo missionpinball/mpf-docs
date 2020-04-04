@@ -227,9 +227,10 @@ your machine-wide config, a mode-specific config, or both.
 
         would_remove_sections = False
         for setting, content in existing_settings.items():
-            would_remove_sections = True
-            print('WARNING: Removing setting "{}" from {}:\n{}\n\n-----------\n'.format(
-                setting, name, content.full_body))
+            if content.full_body.strip():
+                would_remove_sections = True
+                print('WARNING: Removing setting "{}" from {}:\n{}\n\n-----------\n'.format(
+                    setting, name, content.full_body))
 
         if would_remove_sections and not dangerous_changes:
             print('WILL NOT WRITE {} because we would remove text. Add "--yes" to your commandline to process.'.format(
@@ -434,7 +435,7 @@ your machine-wide config, a mode-specific config, or both.
             else:
                 parent = None
 
-            sections.append((name, heading, level, parent))
+            sections.append((name, heading, level, parent, x.start(1), x.end(2)))
 
         if not beginning:
             if not first_section_start:
@@ -444,21 +445,21 @@ your machine-wide config, a mode-specific config, or both.
 
         beginning = beginning.strip('\n')
 
-        for i, (name, heading, level, parent) in enumerate(sections):
+        for i, (name, heading, level, parent, start, start_body) in enumerate(sections):
             start = '\n' + heading + '\n' + (levels[level] * (len(heading)))
 
             try:
-                end = '\n' + sections[i+1][1] + '\n' + (levels[sections[i+1][2]] * (len(sections[i+1][1])))
+                end = sections[i+1][4]
             except IndexError:
                 end = None
 
-            try:
-                full_body = doc[doc.index(start):doc.index(end)].replace(start, '').strip('\n')
-            except TypeError:
-                full_body = doc[doc.index(start):].replace(start, '').strip('\n')
-            except ValueError:
-                print("Could not process {}. Skipping...".format(filename))
-                full_body = ''
+            if end:
+                try:
+                    full_body = doc[start_body:end]
+                except ValueError:
+                    raise AssertionError("Could not process section: {}".format(name))
+            else:
+                full_body = doc[start_body:]
 
             full_body = full_body.strip('\n')
 
@@ -558,17 +559,21 @@ your machine-wide config, a mode-specific config, or both.
             ftype = '``gain setting`` (-inf, db, or float between 0.0 and 1.0)'
 
         elif stype.startswith('subconfig'):
-            config = stype.replace('subconfig(', '')[:-1]
-            ftype = ':doc:`{} <{}>`'.format(config, config)
+            configs = stype.replace('subconfig(', '')[:-1].split(",")
+            try:
+                configs.remove("device")
+            except ValueError:
+                pass
+            ftype = "".join(':doc:`{} <{}>`, '.format(config, config) for config in configs)[:-2]
 
         elif stype.startswith('enum'):
             ftype = 'one of the following options: {}'.format(
                 stype.replace('enum(', '').replace(',', ', ')[:-1])
 
         elif stype.startswith('machine'):
+            device_name = stype.replace('machine(', '')[:-1]
             ftype = "string name of a :doc:`{} <{}>` device".format(
-                    stype.replace('machine(', '')[:-1],
-                    stype.replace('machine(', '')[:-1])
+                    device_name, device_name)
 
         elif ':' in stype:
             raise AssertionError("Should be catched earlier: {}.".format(stype))
