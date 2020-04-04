@@ -9,6 +9,16 @@ This should not usually happen but might be ok in a few cases.
 Links in MPF Config Errors
 --------------------------
 
+Did you reached this page by clicking a link in a config error?
+
+.. code-block:: doscon
+
+   mpf.exceptions.config_file_error.ConfigFileError: Config File Error in show:
+   Show test_show2: Show test_show2 does not appear to be a valid show config.
+   It should be a list of steps. Did you forget the hyphen at the start of your
+   step? Context: test_show2 Error Code: CFE-show-1
+   (https://docs.missionpinball.org/en/dev/logs/CFE-show-1.html)
+
 MPF automatically generates links to the docs for config errors.
 We plan to document common pitfalls and hints on how to solve this
 particular error on that page.
