@@ -23,7 +23,8 @@ from _doc_tools.build_examples import ExampleBuilder
 from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
 
 extensions = ['sphinx.ext.todo',
-              'sphinx.ext.ifconfig']
+              'sphinx.ext.ifconfig',
+              'notfound.extension']
 
 source_suffix = '.rst'
 
