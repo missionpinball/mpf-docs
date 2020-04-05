@@ -7,10 +7,11 @@ Unfortunately, the page you opened does not exist (yet).
 This should not usually happen but might be ok in a few cases.
 
 
-Links in MPF Config Errors
---------------------------
+Links in MPF Config Errors or Log Warnings
+------------------------------------------
 
-Did you reached this page by clicking a link in a config error?
+Did you reached this page by clicking a link in a config error or
+log warning?
 
 .. code-block:: doscon
 

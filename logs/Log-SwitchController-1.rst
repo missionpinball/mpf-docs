@@ -1,6 +1,12 @@
 Log-SwitchController-1 - Received duplicate switch state for switch
 ===================================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/switches`                                                      |
++------------------------------------------------------------------------------+
+
 MPF expects to get only state changes from platforms.
 That is part of the platform interface contract.
 This warning indicates that the contract is violated (i.e. because MPF got a
