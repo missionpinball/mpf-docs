@@ -29,3 +29,5 @@ That could be any two of a hardware platform, MPF monitor or keyboard mappings.
 Lastly, the P-Roc is known for sending switches twice when using debounced
 switches.
 This has to do with its internal state machine and is usually harmless.
+
+.. include:: config_error_footer.rst

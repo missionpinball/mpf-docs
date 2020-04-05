@@ -26,6 +26,11 @@ development and operation.
 
 A lightshow generator for MPF.
 
+:doc:`Language Server in Your IDE <language_server/index>`
+----------------------------------------------------------
+
+IDE support for your editor to support auto-complete for MPF configs.
+
 Machine Fuzzer
 --------------
 
@@ -59,3 +64,4 @@ Future Tools
    imc/index
    service_cli/index
    showcreator/index
+   language_server/index

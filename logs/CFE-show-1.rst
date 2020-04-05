@@ -99,3 +99,5 @@ Related How To guides
 ---------------------
 
 * :doc:`/shows/index`
+
+.. include:: config_error_footer.rst

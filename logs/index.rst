@@ -6,3 +6,6 @@ Log and Error Descriptions
 
    Log-SwitchController-1
    CFE-show-1
+   CFE-Smart_Virtual_Platform-1
+   CFE-Virtual_Platform-1
+   CFE-ConfigValidator-9
