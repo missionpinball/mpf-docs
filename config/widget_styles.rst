@@ -73,3 +73,26 @@ the display and rendered at size 12 and color red. Notice that the color from
 the *hurryup* style overwrites the color from *warning_text* style, because of
 the order the styles are listed in the widget.
 
+
+The config reference below is incomplete.
+You can use all settings of your widget.
+
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``widget_styles:`` section of your config. (If you don't include them, the default will be used).
+
+color:
+~~~~~~
+Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``ffffffff``
+
+The color of the widget.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/displays/widgets/fonts`
