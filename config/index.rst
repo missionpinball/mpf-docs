@@ -40,6 +40,8 @@ indicated which type of config file it's valid in.
    ball_locks: <ball_locks>
    ball_saves: <ball_saves>
    bcp: <bcp>
+   bcp_connection: <bcp_connection>
+   bcp_server: <bcp_server>
    bitmap_fonts: <bitmap_fonts>
    bonus (mode_settings:) <bonus>
    coil_overwrites: <coil_overwrites>
