@@ -13,6 +13,16 @@ state_machines:
 
 The ``state_machines:`` section of your config is where you configure generic :doc:`state machines </game_logic/logic_blocks/state_machines>`.
 
+Settings in Machine Config Files
+--------------------------------
+
+If the ``state_machines:`` section is placed in a config file, it will retain its state across games.  When the game is started, the value is initialized, and it will retain in its state until the game is turned off.  So to reset this, a transition would need to happen upon game end.
+
+Settings in Mode Config Files
+-----------------------------
+
+If the ``state_machines:`` section is placed in a mode file, it will retain its state across balls, but will be reset to its base mode for each game.  It is player specific, and will retain the correct value fo each player in a given game.
+
 .. config
 
 
@@ -24,6 +34,10 @@ The following sections are required in the ``state_machines:`` section of your c
 states:
 ~~~~~~~
 One or more sub-entries. Each in the format of ``string`` : :doc:`state_machine_states <state_machine_states>`
+
+List all of your states here, with their applicable settings.
+Go to :doc:`state_machine_states <state_machine_states>` to see a full list of all settings under ``states:``.
+For example:
 
 .. code-block:: mpf-config
 
@@ -44,9 +58,15 @@ One or more sub-entries. Each in the format of ``string`` : :doc:`state_machine_
            label: Step 2
        transitions:
 
+The first state must be ``start:`` or MPF will throw errors when trying to
+initialize this value (you can change this using ``starting_state`` setting).
+All other states can be any string as defined by the user.
+
 transitions:
 ~~~~~~~~~~~~
 List of one (or more) values, each is a type: :doc:`state_machine_transitions <state_machine_transitions>`.
+
+These move from any state to another state, including backward or back to the first step, when a given event is posted.
 
 List all your transitions here (we start with the same steps as above):
 
@@ -143,3 +163,4 @@ Related How To guides
 ---------------------
 
 * :doc:`/game_logic/logic_blocks/state_machines`
+* :doc:`/game_logic/skill_shot/index`
