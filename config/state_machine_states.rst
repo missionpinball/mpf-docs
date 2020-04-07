@@ -11,7 +11,7 @@ state_machine_states:
 
 .. overview
 
-The ``state_machine_states:`` section of your config is where you configure the states of your :doc:`state machine <state_machines>`.
+The ``state_machine_states:`` section of your config is where you configure the states of your :doc:`state machine <state_machines>`.  Note that the first state must be ``start:``.
 
 See :doc:`state machines </game_logic/logic_blocks/state_machines>` for details.
 
