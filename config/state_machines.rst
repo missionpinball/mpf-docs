@@ -39,6 +39,7 @@ The following sections are required in the ``state_machines:`` section of your c
 states:
 ~~~~~~~
 One or more sub-entries, each in the format of ``string``. List all of your states here, with their applicable settings.
+
 Go to :doc:`state_machine_states <state_machine_states>` to see a full list of all settings under ``states:``.
 For example:
 
@@ -65,7 +66,9 @@ The first state must be ``start:`` or the system will throw errors when trying t
 
 transitions:
 ~~~~~~~~~~~~
-List of one (or more) values, with the applicable settings, which can be found here: :doc:`state_machine_transitions <state_machine_transitions>`.  These move from any state to another state, including backward or back to the first step, when a given event is posted.
+List of one (or more) values, with the applicable settings, which can be found here: :doc:`state_machine_transitions <state_machine_transitions>`.
+
+These move from any state to another state, including backward or back to the first step, when a given event is posted.
 
 List all your transitions here (we start with the same steps as above):
 
