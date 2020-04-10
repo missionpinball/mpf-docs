@@ -92,6 +92,7 @@ indicated which type of config file it's valid in.
    lisy: <lisy>
    leds: <leds>
    lights: <lights>
+   light_segment_displays: <light_segment_displays>
    light_settings: <light_settings>
    light_player: <light_player>
    logic_blocks: <logic_blocks>

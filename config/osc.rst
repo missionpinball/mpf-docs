@@ -11,9 +11,8 @@ osc:
 
 .. overview
 
-The ``osc:`` section of your config is where you...
-
-.. todo:: :doc:`/about/help_us_to_write_it`
+The ``osc:`` section of your config is where you configure the
+:doc:`osc platform </hardware/osc/index>`.
 
 .. config
 

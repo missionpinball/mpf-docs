@@ -47,7 +47,8 @@ platform_settings:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: dict.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Platform specific settings.
+See your :doc:`segment platform documentation </hardware/segment_display_platforms>`.
 
 console_log:
 ~~~~~~~~~~~~

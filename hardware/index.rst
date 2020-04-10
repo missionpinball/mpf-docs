@@ -133,6 +133,14 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * Alphanumeric segment displays
 
+* :doc:`Light Segment Displays <light_segment_displays/index>`
+   * Control segment displays via light outputs or driver on another platform
+   * BCD segment displays
+   * 7-segment displays
+   * Serial driven displays
+   * RGB segment displays
+   * Other formats and custom built displays
+
 * :doc:`Trinamics StepRocker <trinamics/index>`
    * *New in MPF 0.50*
    * StepRocker stepper controller
@@ -195,6 +203,7 @@ MPF supports:
    PIN2DMD <pin2dmd/index>
    Raspberry Pi DMD <rpi_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
+   Light Segment Displays <light_segment_displays/index>
    Trinamics StepRocker <trinamics/index>
    StepStick Steppers <stepstick/index>
    Computer Requirements <computer/index>
