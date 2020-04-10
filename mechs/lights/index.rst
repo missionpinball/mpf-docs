@@ -108,3 +108,4 @@ None
    matrix_lights
    flashers
    coils_as_lights
+   ws2812
