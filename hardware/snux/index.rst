@@ -355,18 +355,21 @@ but we're including them here just for completeness:
 
 .. code-block:: mpf-config
 
-    snux:
-      flipper_enable_driver_number: c23
-      diag_led_driver_number: c24
+   coils:
+     c_diag_led_driver:
+       number: c24
+       default_hold_power: 1.0
 
-The Snux board maps driver 23 to the flipper enable relay, and it maps
-driver 24 to the "diag" LED on the board. When you power on your
+   snux:
+     diag_led_driver: c_diag_led_driver
+
+The Snux board maps driver ``c_diag_led_driver`` which is driver 24
+to the "diag" LED on the board.
+When you power on your
 machine, the diag LED is off. Then when MPF connects to the board,
 this LED turns on solid. Finally when MPF is done loading and it
 starts the main machine loop, this LED flashes twice per second. If
 this LED stops flashing, that means MPF crashed. :)
-
-
 
 3. Configure system11 options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -415,8 +418,25 @@ called the "A/C Select Relay," and in the *Pin*Bot* manual it's called
 the "Solenoid Select Relay."
 
 
+4. Enable flippers
+~~~~~~~~~~~~~~~~~~
 
-4. Configuring driver numbers
+The Snux board uses driver 23 to enable the flippers:
+
+.. code-block:: mpf-config
+
+   digital_outputs:
+     flipper_enable_relay:
+       number: c23
+       type: driver
+       enable_events: ball_started
+       disable_events: ball_will_end
+
+You can change the events when the flipper should enable and disable.
+By default we will enable the flippers on ball start and disable them on
+ball end.
+
+5. Configuring driver numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
@@ -472,7 +492,7 @@ logic for those devices!
 
 
 
-5. Configure lamps
+6. Configure lamps
 ~~~~~~~~~~~~~~~~~~
 
 Configuring the numbers for matrix lamps is pretty straightforward and
@@ -521,7 +541,7 @@ manual.
 
 
 
-6. Configure switches
+7. Configure switches
 ~~~~~~~~~~~~~~~~~~~~~
 
 Switch numbering in System 11 machines is the same as lamp numbering,
@@ -568,7 +588,7 @@ second switch in the flipper EOS stack under the playfield or perhaps
 a second switch in the stack behind the flipper button.
 
 
-7. Create your System 11-style trough
+8. Create your System 11-style trough
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Troughs in System 11 machines are not like troughs in modern machines.
@@ -654,16 +674,18 @@ This is an example code block with the main Sys11 elements in.
      ac_relay_driver: c_ac_relay
 
    snux:
-     flipper_enable_driver: c_flipper_enable_driver
      diag_led_driver: c_diag_led_driver
-     platform:
+
+   digital_outputs:
+     flipper_enable_relay:
+       number: c23
+       type: driver
+       enable_events: ball_started
+       disable_events: ball_will_end
 
    coils:
      c_diag_led_driver:
        number: c24
-       default_hold_power: 1.0
-     c_flipper_enable_driver:
-       number: c23
        default_hold_power: 1.0
      c_ac_relay:
        number: c25
