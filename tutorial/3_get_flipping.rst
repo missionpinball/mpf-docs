@@ -485,6 +485,27 @@ P3-ROC with P-ROC driver & switch boards:
      s_left_flipper:
        number: 0-0
 
+In case you are using :doc:`the Virtual Pinball (VPX) Platform </hardware/virtual/virtual_pinball_vpx>` the config file will look like:
+
+.. code-block:: mpf-config
+
+    hardware:
+      platform: virtual_pinball
+
+    switches:
+      s_sling:
+        number: 0
+      s_flipper:
+        number: 3
+
+    coils:
+      c_sling:
+        number: 0
+      c_flipper:
+        number: 1
+        allow_enable: true
+
+
 See? They're all different.
 
 7a. Understand the "virtual" hardware
