@@ -570,10 +570,16 @@ your machine-wide config, a mode-specific config, or both.
             ftype = 'one of the following options: {}'.format(
                 stype.replace('enum(', '').replace(',', ', ')[:-1])
 
-        elif stype.startswith('machine'):
+        elif stype.startswith('machine('):
             device_name = stype.replace('machine(', '')[:-1]
             ftype = "string name of a :doc:`{} <{}>` device".format(
                     device_name, device_name)
+
+        elif stype.startswith('dict('):
+            stype = stype.replace('dict(', '')[:-1]
+            stype = stype.split(':')
+            ftype = 'dictionary consisting of {} : {}'.format(
+                self._get_type_desc(stype[0]), self._get_type_desc(stype[1]))
 
         elif ':' in stype:
             raise AssertionError("Should be catched earlier: {}.".format(stype))
