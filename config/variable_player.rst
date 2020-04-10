@@ -11,17 +11,6 @@ variable_player:
 
 .. overview
 
-variable_player:
-================
-
-*Config file section*
-
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
-+----------------------------------------------------------------------------+---------+
-
 The ``variable_player:`` section of your mode config lets you add, subtract, or replace player
 variables based on events that are posted.
 
