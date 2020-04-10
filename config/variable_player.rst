@@ -9,6 +9,19 @@ variable_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
+variable_player:
+================
+
+*Config file section*
+
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
++----------------------------------------------------------------------------+---------+
+| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
++----------------------------------------------------------------------------+---------+
+
 The ``variable_player:`` section of your mode config lets you add, subtract, or replace player
 variables based on events that are posted.
 
@@ -58,8 +71,8 @@ Like many sections of MPF configs, the ``variable_player:`` section format is ge
 
 The following settings can be used with each event section listed in your variable_player section:
 
-<any_player_variable>:
-~~~~~~~~~~~~~~~~~~~~~~
+Example
+~~~~~~~
 
 You can include any player variable under an event to add numeric value to that variable. (If the variable doesn't
 exist, it will set the player variable to that.) For example:
@@ -80,10 +93,17 @@ just want to add to other player vars.
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>` for this setting too, which means
 you can pull in values from other player variables, device states, etc. and do math on them.
 
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``variable_player:`` section of your config. (If you don't include them, the default will be used).
+
 action:
 ~~~~~~~
-
-One of the following settings: ``add``, ``set``, ``add_machine``, ``set_machine``. Default is ``add``.
+Single value, type: one of the following options: add, set, add_machine, set_machine. Default: ``add``
 
 By default, the variable player entries will be added to the existing value of a player variable. If you want to replace
 or reset the value of the player var, you can add ``action: set`` to the entry. However to do this, you have to
@@ -107,9 +127,7 @@ Starting in MPF 0.33, you can also add and set machine variables, by specifying 
 
 block:
 ~~~~~~
-
-Adding ``block: True`` to a variable_player entry means that MPF will "block" this scoring entry from being sent down to
-variable_player entries in lower priority modes.
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
 
 This is useful if you have a shot in a base mode that scores 500 points, but then in some timed mode you want that shot
 to be 5,000 points but you don't also want the base mode to score the 500 points on top of the 5,000 from the higher
@@ -135,25 +153,48 @@ There is also a shorthand way:
      ramp_1_hit:
        score: 5000|block
 
-int:
-~~~~
-
-Adds or sets a player or machine variable to the specified integer value (this is the most common use of the variable_player).
-The ``int:`` setting takes priority over the ``float:`` setting so if both are present only the ``int:`` will be used.
-You can use :doc:`placeholders </config/instructions/dynamic_values>` which evalute to int as well.
-
 float:
 ~~~~~~
+Single value, type: ``number`` or ``template`` (will be converted to floating point; :doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
 
 Adds or sets a player or machine variable to the specified float value.  The ``int:`` setting takes priority over the ``float:``
 setting so if both are present only the ``int:`` will be used.
 You can use :doc:`placeholders </config/instructions/dynamic_values>` which evalute to float as well.
 
+int:
+~~~~
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+
+Adds or sets a player or machine variable to the specified integer value (this is the most common use of the variable_player).
+The ``int:`` setting takes priority over the ``float:`` setting so if both are present only the ``int:`` will be used.
+You can use :doc:`placeholders </config/instructions/dynamic_values>` which evalute to int as well.
+
+player:
+~~~~~~~
+Single value, type: ``integer``.
+
+.. code-block:: mpf-config
+
+   ##! mode: mode1
+   variable_player:
+     add_score_to_player_2:
+       score:
+         int: 1000
+         player: 2
+   ##! test
+   #! start_two_player_game
+   #! start_mode mode1
+   #! assert_player_variable 0 score
+   #! post add_score_to_player_2
+   #! assert_player_variable 0 score
+   #! drain_all_balls
+   #! assert_player_variable 1000 score
+
+If the ``player:`` setting is not used, then this variable_player entry will default to the current player.
+
 string:
 ~~~~~~~
-
-Lets you set a player or machine variable to a string value (text characters) rather than adding numeric value. This is useful
-for when you want to make slides that show some value and you need to "translate" some numeric value to words.
+Single value, type: ``string``.
 
 Here's an example from *Brooks 'n Dunn* where there is a player variable (set via a counter) which tracks the
 player's current album value. We use the variable_player section tied to the events posted when the player variable changes
@@ -185,27 +226,10 @@ and conditional events to set the current name of the album value, like this:
 The above config lets us always have a player var called "album_name" we can use in slides and widgets which matches
 the value of the album, and it's automatically updated whenever the player var "album_value" changes.
 
-player:
-~~~~~~~
 
-Lets you specify which player (by number) this variable_player entry will affect. (Player 1 is would be ``player: 1`` etc. This lets you
-effect the score or other player variables of players other than the current player.
+Related How To guides
+---------------------
 
-.. code-block:: mpf-config
-
-   ##! mode: mode1
-   variable_player:
-     add_score_to_player_2:
-       score:
-         int: 1000
-         player: 2
-   ##! test
-   #! start_two_player_game
-   #! start_mode mode1
-   #! assert_player_variable 0 score
-   #! post add_score_to_player_2
-   #! assert_player_variable 0 score
-   #! drain_all_balls
-   #! assert_player_variable 1000 score
-
-If the ``player:`` setting is not used, then this variable_player entry will default to the current player.
+* :doc:`/config_players/variable_player`
+* :doc:`/game_logic/scoring/index`
+* :doc:`/tutorial/15_scoring`
