@@ -115,6 +115,7 @@ indicated which type of config file it's valid in.
    open_pixel_control: <open_pixel_control>
    opp: <opp>
    opp_coils: <opp_coils>
+   osc: <osc>
    p_roc: <p_roc>
    pd_led_boards <pd_led_boards>
    pin2dmd: <pin2dmd>

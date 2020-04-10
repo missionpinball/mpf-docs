@@ -41,7 +41,7 @@ individual modules talk to the switches directly? Lots of reasons:
   switches, it can "inject" switch events from any source. For example,
   MPF includes functionality to simulate switch events with a computer
   keyboard (for testing and debugging), as well as switch events from a
-  mobile phone or tablet (via the OSC plug-in). We also have a plug-in to
+  mobile phone or table. We also have a plug-in to
   read and playback switch events from log files from games that already
   ran, as well as the ability to write scripts that simulate games. All
   this is done by interfacing to the switch controller—-your actual game
