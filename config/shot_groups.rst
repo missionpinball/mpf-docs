@@ -9,6 +9,8 @@ shot_groups:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 You can group shots together via the ``shot_groups:`` section of your config file.
 
 For example:
@@ -94,12 +96,7 @@ group called *lanes* with a profile called *skill* and a profile state
 This lets you dial-in on the amount of precision you need when you're
 tying game logic to shots and shot groups.
 
-<name>:
-~~~~~~~
-
-Create one entry in your *shot_groups:* section for each group of
-shots in your machine. This name can be whatever you want, and it will
-be the name for this shot group which is used throughout your machine.
+.. config
 
 
 Optional settings
@@ -107,42 +104,9 @@ Optional settings
 
 The following sections are optional in the ``shot_groups:`` section of your config. (If you don't include them, the default will be used).
 
-advance_events:
-~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
-
-A list of one or more events that will advance all the shots in this
-shot group one step in the active profile. This can be a simple list
-of events or a time-delayed list. Advancing a shot does not post
-hit events and therefore does not trigger scoring or other events
-related to a shot hit. They are useful if you need to move a shot to a
-starting state.
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-Set this to *true* to add lots of logging information about this shot
-to the debug log. This is helpful when you’re trying to troubleshoot
-problems with this shot. Default is *False*.
-
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will disable all the shots in this shot group. This
 can be a simple list of events or a time-delayed list. If you do
@@ -153,14 +117,7 @@ default that's *ball_ended*.)
 
 disable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will disable rotation, meaning the
 states of the shots in this group will not be rotated if one of the
@@ -169,14 +126,7 @@ posted. This can be a simple list of events or a time-delayed list.
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will enable all of the individual shots
 in this shot group. (The shot group itself has no enabled/disabled state
@@ -192,14 +142,7 @@ a subsequent group enable/disable events will also affect that individual shot.
 
 enable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will allow the states of the shots
 in this group to be rotated (based on the *rotate_left_events*,
@@ -208,16 +151,9 @@ can be a simple list of events or a time-delayed list. If rotation
 is not enabled, rotation events being posted will have no effect.
 (Rotation is enabled by default.)
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
-
-The plain-English name for this device that will show up in operator
-menus and trouble reports.
-
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will reset all the shots in this
 shot group. This can be a simple list of events or a time-delayed list.
@@ -227,12 +163,7 @@ that time.
 
 restart_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 A list of one or more events that will restart all the shots in this shot group.
 A restart is the same as calling reset and enable, so restarting a shot group
@@ -241,25 +172,13 @@ immediately enable all the shots.
 
 rotate_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 Same as ``rotate_right_events:``.
 
 rotate_left_events:
 ~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 This list of events that, when posted, will rotate the current state
 of each shot to the shot to its left. The state of left-most (i.e.
@@ -269,14 +188,7 @@ that time.
 
 rotate_right_events:
 ~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
-
-Default: ``None``
-
-Events in this list, when posted,
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
 
 This list of events that, when posted, will rotate the current lit and
 unlit shot states to the right. This can be a simple list of events or
@@ -285,7 +197,7 @@ your `shots:` list will rotate over to the left-most shot.
 
 shots:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a ``shots:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`shots <shots>` device.
 
 The list of shots (from the ``shots:`` section of your config file) that
 make up this shot group. Order is important here if you want
@@ -297,10 +209,44 @@ that will be triggered when the individual bank is complete, and then
 you can create a fourth shot group with all nine targets in it which
 could post different events when all nine targets have been hit.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+
+Set this to *true* to add lots of logging information about this shot
+to the debug log. This is helpful when you’re trying to troubleshoot
+problems with this shot. Default is *False*.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+The plain-English name for this device that will show up in operator
+menus and trouble reports.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``.
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/shots/shot_group`
+* :doc:`/game_logic/skill_shot/index`
+* :doc:`/game_logic/shots/sequence_shots`
