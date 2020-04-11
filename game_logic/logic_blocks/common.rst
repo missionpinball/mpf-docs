@@ -6,9 +6,9 @@ remembers where it was from ball-to-ball. If ``False``, then this logic block wi
 reset itself whenever a new ball starts. If ``True``, then this logic block will
 be saved to the player variable *<logic_block_name>_state*.
 
-
-Note that logic block state is always maintained on a per-player basis,
-regardless of what this setting is configured for.
+Note that logic block state is reset on mode end when this is ``False`` and, as
+normal modes stop at the end of a ball, the state is always maintained on a
+per-player basis, regardless of what this setting is configured for.
 
 Default is ``False``.
 
