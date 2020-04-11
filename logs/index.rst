@@ -8,5 +8,6 @@ Log and Error Descriptions
    CFE-show-1
    CFE-Smart_Virtual_Platform-1
    CFE-Virtual_Platform-1
+   CFE-ConfigValidator-4
    CFE-ConfigValidator-6
    CFE-ConfigValidator-9
