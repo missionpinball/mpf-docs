@@ -32,8 +32,8 @@ and ``activation_switch`` references a :doc:`switch </config/switches>`.
 Common Pitfalls
 ---------------
 
-Typos or Copy and Paste
-^^^^^^^^^^^^^^^^^^^^^^^
+Typos
+^^^^^
 
 The most common source for this kind of error are typos.
 Check the name of your referenced device with the setting.
