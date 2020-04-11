@@ -64,10 +64,11 @@ This can sometimes be a bit tricky.
 Using an :doc:`IDE with the MPF language server </tools/language_server/index>`
 can help here.
 
+.. include:: config_error_footer.rst
+
+
 Related How To guides
 ---------------------
 
 * :doc:`config reference </config/index>`
 
-
-.. include:: config_error_footer.rst

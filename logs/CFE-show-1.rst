@@ -95,9 +95,9 @@ The same can happen in config shows:
 This often happens with one step shows.
 See above for working examples.
 
+.. include:: config_error_footer.rst
+
 Related How To guides
 ---------------------
 
 * :doc:`/shows/index`
-
-.. include:: config_error_footer.rst

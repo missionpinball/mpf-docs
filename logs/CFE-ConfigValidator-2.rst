@@ -56,10 +56,10 @@ Check if your MPF version fits the config.
 If in doubt check the :doc:`config reference </config/index>`
 for your device.
 
+.. include:: config_error_footer.rst
+
 Related How To guides
 ---------------------
 
 * :doc:`config reference </config/index>`
 
-
-.. include:: config_error_footer.rst

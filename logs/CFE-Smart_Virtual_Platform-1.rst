@@ -65,12 +65,10 @@ This was also used in previous versions of the documentation and the tutorial.
 To fix this turn it into one of the two syntaxes above.
 See :doc:`/config/instructions/lists` for details.
 
+.. include:: config_error_footer.rst
 
 Related How To guides
 ---------------------
 
 * :doc:`/config/virtual_platform_start_active_switches`
 * :doc:`/config/instructions/lists`
-
-
-.. include:: config_error_footer.rst

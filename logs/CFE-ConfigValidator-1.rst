@@ -72,11 +72,11 @@ not game end) instead (i.e. the bonus mode).
 Alternatively, you might want to use machine variables instead of player
 variables.
 
+.. include:: config_error_footer.rst
+
 Related How To guides
 ---------------------
 
 * :doc:`/game_logic/logic_blocks/index`
 * :doc:`config reference </config/index>`
 
-
-.. include:: config_error_footer.rst

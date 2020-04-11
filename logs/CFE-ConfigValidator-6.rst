@@ -72,11 +72,9 @@ Check the :doc:`config reference </config/index>` of your device to see which
 device is expected or setup your
 :doc:`IDE with the MPF language server </tools/language_server/index>`.
 
+.. include:: config_error_footer.rst
 
 Related How To guides
 ---------------------
 
 * :doc:`config reference </config/index>`
-
-
-.. include:: config_error_footer.rst

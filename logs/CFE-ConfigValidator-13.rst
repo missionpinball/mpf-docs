@@ -39,11 +39,10 @@ If you use ``debug: "false"`` (with quotes around ``false``) MPF will not
 recognize ``false`` as a boolean but as a string.
 Remove the quotes to fix this.
 
+.. include:: config_error_footer.rst
+
 
 Related How To guides
 ---------------------
 
 * :doc:`config reference </config/index>`
-
-
-.. include:: config_error_footer.rst

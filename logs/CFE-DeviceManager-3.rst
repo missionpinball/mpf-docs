@@ -42,11 +42,12 @@ YAML Formatting Issues
 
 See :doc:`CFE-ConfigValidator-12` for more general common pitfalls.
 
+
+.. include:: config_error_footer.rst
+
+
 Related How To guides
 ---------------------
 
 * :doc:`CFE-ConfigValidator-12`
 * :doc:`config reference </config/index>`
-
-
-.. include:: config_error_footer.rst
