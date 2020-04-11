@@ -517,10 +517,10 @@ your machine-wide config, a mode-specific config, or both.
             ftype = '``number`` (can be integer or floating point)'
 
         elif stype == 'bool' or stype == 'boolean' or stype == 'bool_int':
-            ftype = '``boolean`` (Yes/No or True/False)'
+            ftype = '``boolean`` (``true``/``false``)'
 
         elif stype == 'template_bool':
-            ftype = '``boolean`` or ``template`` (Yes/No or True/False; :doc:`Instructions for entering templates ' \
+            ftype = '``boolean`` or ``template`` (``true/false``; :doc:`Instructions for entering templates ' \
                     '</config/instructions/dynamic_values>`)'
 
         elif stype == 'secs':
