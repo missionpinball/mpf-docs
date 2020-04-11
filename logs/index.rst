@@ -4,10 +4,6 @@ Log and Error Descriptions
 .. toctree::
    :maxdepth: 1
 
-   Log-SwitchController-1
-   CFE-show-1
-   CFE-Smart_Virtual_Platform-1
-   CFE-Virtual_Platform-1
    CFE-ConfigValidator-1
    CFE-ConfigValidator-2
    CFE-ConfigValidator-4
@@ -15,3 +11,8 @@ Log and Error Descriptions
    CFE-ConfigValidator-9
    CFE-ConfigValidator-12
    CFE-ConfigValidator-13
+   CFE-DeviceManager-3
+   CFE-show-1
+   CFE-Smart_Virtual_Platform-1
+   CFE-Virtual_Platform-1
+   Log-SwitchController-1
