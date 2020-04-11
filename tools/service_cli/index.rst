@@ -11,6 +11,9 @@ Your game will go into service mode and you can run diagnostics commands.
 Once you are done the game will continue and exit service mode.
 You can use tab to complete commands and arguments.
 
+Commands
+--------
+
 list_coils
 ~~~~~~~~~~
 

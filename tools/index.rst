@@ -21,6 +21,11 @@ on a display. This is great for fine tuning and tweaking your slides.
 The MPF service cli is a fast way to debug or troubleshoot your machine during
 development and operation.
 
+:doc:`Build Production Configs <build/index>`
+---------------------------------------------
+
+A command to prepare production config bundles.
+
 :doc:`Lightshow Creator <showcreator/index>`
 --------------------------------------------
 
@@ -65,3 +70,4 @@ Future Tools
    service_cli/index
    showcreator/index
    language_server/index
+   build/index

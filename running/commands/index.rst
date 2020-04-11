@@ -55,3 +55,4 @@ To update the firmware of your hardware controllers (if supported by your platfo
    mpf monitor <monitor>
    mpf hardware <hardware>
    mpf service <service>
+   mpf build <build>
