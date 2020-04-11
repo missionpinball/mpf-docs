@@ -151,15 +151,16 @@ the credits mode to the list of modes that are used in your machine.
 To do this, add ``- credits`` to the modes: section in your machine-wide
 config, like this:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-    modes:
-      - base
-      - some_existing_mode
-      - another_mode_you_might_have
-      - bonus
-      - credits
-
+   modes:
+     - base
+     - bonus
+     - credits
+   ##! mode: base
+   ##! mode: bonus
+   #! mode_settings:
+   #!   bonus_entries:
 
 The order doesn’t matter here since the priority each mode runs at is
 configured in its own mode configuration file. All you’re doing now is
@@ -175,16 +176,15 @@ you look at the built-in ``credits`` mode's config (at
 ``mpf/modes/credits/config/credits.yaml``), you'll see it has the
 following ``mode:`` section:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
-    #! mode: credits
+    ##! mode: credits
     mode:
       code: mpf.modes.credits.code.credits.Credits
       priority: 1000010
       start_events: reset_complete
-      game_mode: False
-      stop_on_ball_end: False
-
+      game_mode: false
+      stop_on_ball_end: false
 
 First is that the priority of this mode is really high, 11000 by
 default. That's because we want this mode to run "on top" of any other
