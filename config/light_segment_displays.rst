@@ -93,10 +93,10 @@ This is used to calculate the mapping from text to segment.
 
 The mapping is different per type:
 
-For 7segment your segments are: a, b, c, d, e, f, g and dp (see: `7-Segment Displays in Wikipedia https://en.wikipedia.org/wiki/Seven-segment_display_character_representations>`_ for details)
+For 7segment your segments are: a, b, c, d, e, f, g and dp (see: `7-Segment Displays in Wikipedia <https://en.wikipedia.org/wiki/Seven-segment_display_character_representations>`_ for details)
 For BCD your segments are: x0, x1, x2, x3 and dp (see: `Binary Coded Decimal in Wikipedia <https://en.wikipedia.org/wiki/Binary-coded_decimal>`_ for details)
 For 14segment your segments are: l, m, n, k, j, h, g2, g1, f, e, d, c, b, a and dp (see: `14 Segment Displays in Wikipedia <https://en.wikipedia.org/wiki/Fourteen-segment_display>`_ for details)
-For 14segment your segments are: u, t, s, r, p, n, m, k, h, g, f, e, d, c, b, a and dp (see: `16 Segment Displays in Wikipedia <https://en.wikipedia.org/wiki/Sixteen-segment_display>`_ for details)
+For 16segment your segments are: u, t, s, r, p, n, m, k, h, g, f, e, d, c, b, a and dp (see: `16 Segment Displays in Wikipedia <https://en.wikipedia.org/wiki/Sixteen-segment_display>`_ for details)
 
 dp is an optional decimal point per display.
 

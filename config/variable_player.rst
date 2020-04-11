@@ -222,3 +222,4 @@ Related How To guides
 * :doc:`/config_players/variable_player`
 * :doc:`/game_logic/scoring/index`
 * :doc:`/tutorial/15_scoring`
+* :doc:`/game_logic/logic_blocks/persisting_state_in_a_player_variable`

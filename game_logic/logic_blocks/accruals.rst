@@ -18,6 +18,8 @@ Accrual Logic Blocks
 +------------------------------------------------------------------------------+
 | :doc:`/game_logic/logic_blocks/integrating_logic_block_and_slides`           |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/persisting_state_in_a_player_variable`        |
++------------------------------------------------------------------------------+
 
 "Accruals" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events.
