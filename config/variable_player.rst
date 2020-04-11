@@ -116,7 +116,7 @@ Starting in MPF 0.33, you can also add and set machine variables, by specifying 
 
 block:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 This is useful if you have a shot in a base mode that scores 500 points, but then in some timed mode you want that shot
 to be 5,000 points but you don't also want the base mode to score the 500 points on top of the 5,000 from the higher

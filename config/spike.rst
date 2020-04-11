@@ -66,7 +66,7 @@ The following sections are optional in the ``spike:`` section of your config. (I
 
 bridge_debug:
 ~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to True if you want to debug your MPF Spike bridge.
 
@@ -92,7 +92,7 @@ Log level to console.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to true for troubleshooting to print more details in the log.
 
@@ -116,7 +116,7 @@ Log level to file.
 
 flow_control:
 ~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to ``True`` to enable serial RTS/CTS flow control between MPF and the Spike bridge. May
 help improve responsiveness and reduce latency when streaming display data to the DMD.
@@ -146,7 +146,7 @@ We believe this is the time over which spike averages the value.
 
 periodically_query_nodes:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Whether to periodically query nodes.
 The spike game does this but we do not use the values so it is probably
@@ -182,14 +182,14 @@ The spike version you are using.
 
 use_send_key:
 ~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Send some magic commands like Spike does.
 Not needed as far as we know.
 
 verify_checksums_on_readback:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether to verify checksums on readback from commands.
 This should be always on unless you are debugging something.

@@ -188,7 +188,7 @@ See :doc:`coil_overwrites` for details.
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether this flipper is included in ball search.
 
@@ -268,7 +268,7 @@ See :doc:`switch_overwrites` for details.
 
 use_eos:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether an EOS switch is used to disable the main winding or to switch
 to lower-power pwm mode.
@@ -281,7 +281,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.

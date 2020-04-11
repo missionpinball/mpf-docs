@@ -42,7 +42,7 @@ The following sections are optional in the ``machine_vars:`` section of your con
 
 persist:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 True/False value which controls whether this machine variable will be persisted
 to when MPF shuts down.

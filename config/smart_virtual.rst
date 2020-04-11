@@ -36,7 +36,7 @@ File level for the console log for this platform.
 
 simulate_manual_plunger:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 When ``simulate_manual_plunger`` is set to ``True`` the smart_virtual platform
 will automatically plunge balls in devices with mechanical

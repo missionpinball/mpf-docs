@@ -112,7 +112,7 @@ Log level for the console log for this platform.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
@@ -163,7 +163,7 @@ fade style reminiscent of incandescent bulbs.
 
 ignore_rgb_crash:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Ignore if the RGB CPU crashes.
 It will restart and the light will mostly recovery within a few seconds.

@@ -30,7 +30,7 @@ Log level for the console log for this platform.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to ``True`` if you want to know what is going on under the hood.
 We will usually ask you to set this if you experience any hardware related problems
@@ -87,13 +87,13 @@ See :doc:`/hardware/multimorphic/servos`, :doc:`/hardware/multimorphic/steppers`
 
 trace_bus:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
 use_separate_thread:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether MPF should spawn a separate thread to talk to the P/P3-Roc or not.
 If you set this to ``False`` any IO to the P/P3-Roc will block the game loop
@@ -102,7 +102,7 @@ This has a small overhead but should be enabled in most cases.
 
 use_watchdog:
 ~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Enable or disable the watchdog. Usually you want to keep this enabled.
 

@@ -115,7 +115,7 @@ Extra delay after each iteration.
 
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False).
+Single value, type: ``boolean`` (``true``/``false``).
 
 Enable ball_search by default. Use with care during development
 since coils may hurt you. Should be enabled in any production
@@ -129,7 +129,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Turn on/off debugging.
 

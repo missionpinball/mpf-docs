@@ -150,7 +150,7 @@ in the ``events_when_enabled:`` setting.
 
 enable_on_next_ball_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If True/Yes, this achievement will stay "enabled" when the next ball starts if
 it was enabled when the last ball ended. If False/No, this achivement will be
@@ -211,13 +211,13 @@ default state (which will either be "disabled" or, if you have
 
 restart_after_stop_possible:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Is it possible to restart this achievement after it's been stopped?
 
 restart_on_next_ball_when_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If True/Yes, then this achievement will stay in the "started" state when the
 player's next ball starts if it was in the "started" state when the previous
@@ -292,7 +292,7 @@ Name of the show that will be started when this achievement has been stopped.
 
 start_enabled:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False).
+Single value, type: ``boolean`` (``true``/``false``).
 
 Whether this achievment is enabled or disabled when it is first loaded.
 
@@ -339,7 +339,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Enables debug logging.
 

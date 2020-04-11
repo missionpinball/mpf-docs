@@ -103,7 +103,7 @@ The following sections are optional in the ``timers:`` section of your config. (
 
 bcp:
 ~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether the various timer events (count, start, stop, complete, etc.) are sent to the MPF-MC via BCP.
 
@@ -141,14 +141,14 @@ to this value.
 
 restart_on_complete:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls what should happen when this timer completes. If you have ``restart_on_complete: true``, then
 this timer will reset back to the start_value and start again after it completes.
 
 start_running:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether this timer starts running ("started"), or whether it needs to be started with one of the
 start control events.
@@ -187,7 +187,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If true/yes, adds additional logging information to the verbose log for this timer.
 

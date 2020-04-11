@@ -23,13 +23,13 @@ The following sections are optional in the ``mpf:`` section of your config. (If 
 
 allow_invalid_config_sections:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 MPF will not raise a fatal error when on invalid section when you set this to true. This might be useful when you are developing a new feature and do not want to constantly update config_spec (the file which describes allowed sections).
 
 auto_create_switch_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 MPF will post switch_event_active and switch_event_inactive (see below) when this is enabled.
 
@@ -47,7 +47,7 @@ A list of core modules which will be loaded.
 
 default_ball_search:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Default value for whether ball search is enabled or disabled on all playfields
 (unless you overwrite it on that playfield).
@@ -108,7 +108,7 @@ A list of plugins which will be loaded.
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If set to true MPF will persist machine_vars to disk in a background writer.
 

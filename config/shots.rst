@@ -184,7 +184,7 @@ switch activity.
 
 persist_enable:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether this shot should persist its enable state in a player variable.
 If set to ``True`` this will also persist the state into the next ball
@@ -296,7 +296,7 @@ More information about :doc:`show tokens </shows/tokens>`
 
 start_enabled:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False).
+Single value, type: ``boolean`` (``true``/``false``).
 
 Whether the shot starts as enabled (if you set this to ``True``) or as
 disabled (if you set this to ``False``).
@@ -341,7 +341,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to *true* to add lots of logging information about this shot
 to the debug log. This is helpful when you’re trying to troubleshoot

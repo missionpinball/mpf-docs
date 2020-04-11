@@ -42,14 +42,14 @@ Log level for the console log for this platform.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
 
 disable_dtr:
 ~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If set to ``True`` MPF will try to prevent your operating system from toggling
 the DTR line of your serial.
@@ -103,7 +103,7 @@ Serial port when connecting to LISY using serial.
 
 send_length_after_command:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Some controllers require an additional length byte after the command.
 

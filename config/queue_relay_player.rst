@@ -82,7 +82,7 @@ is optional.
 
 pass_args:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If ``True`` pass on the arguments from the event in ``wait_for`` to the event
 posted in ``post``.

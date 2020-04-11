@@ -63,7 +63,7 @@ Log level for the console log for this platform.
 
 dithering:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Enabled temporal dithering for 16bit color precision.
 You want to leave this enabled since it looks much nicer (especially at low
@@ -84,7 +84,7 @@ The default is 2.5.
 
 keyframe_interpolation:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whatever the fadecandy should fade between keyframes.
 You usually want to leave this at true since it looks much nicer.

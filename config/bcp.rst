@@ -54,7 +54,7 @@ is why you can add multiple entries here.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see more debug messages in the log.
 

@@ -80,7 +80,7 @@ The following sections are optional in the ``achievement_groups:`` section of yo
 
 allow_selection_change_while_disabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether the currently selected achievement can be changed when the
 achievement group is disabled. If False/No, then the rotate and select
@@ -88,7 +88,7 @@ random events will have no effect when the group is disabled.
 
 auto_select:
 ~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If True, this achievement group will automatically ensure that one of its member
 achievements is always selected. The selected achievement will be chosen at random
@@ -106,7 +106,7 @@ and to emit (post) events in their ``events_when_disabled:`` settings.
 
 disable_while_achievement_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If True, this achievement will automatically disable itself when any of its
 member achievements are in the "started" states. This is the default behavior
@@ -132,7 +132,7 @@ then that is done via the group's "enable" functionality.
 
 enable_while_no_achievement_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If True, this achievement will automatically enable itself when none of its
 member achievements are in the "started" states. This is the default behavior
@@ -301,7 +301,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 

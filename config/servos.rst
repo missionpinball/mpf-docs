@@ -94,7 +94,7 @@ search is active.
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Controls whether this servo is included in ball search.
 
@@ -209,7 +209,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Enables more detailed debug information to be added to the log (when verbose
 logging is enabled).

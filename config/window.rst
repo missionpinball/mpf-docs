@@ -42,7 +42,7 @@ The following sections are optional in the ``window:`` section of your config. (
 
 borderless:
 ~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether the pop-up window has a border (the "frame") around it.
 
@@ -57,13 +57,13 @@ as well as other special effects.  For more information on effects, please revie
 
 exit_on_escape:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Controls whether the MPF MC shuts down when the ``Esc`` key is pressed.
 
 fullscreen:
 ~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether the pop-up window should be a full screen window (if the
 value is "true") or whether it should be a regular window.
@@ -116,13 +116,13 @@ can be resized to.
 
 no_window:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether the pop up window is used.
 
 resizable:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Specifies whether the pop-up window can be resized (by dragging an edge with
 the mouse). If your window is full screen, then this setting will have no
@@ -130,7 +130,7 @@ effect.
 
 show_cursor:
 ~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Specifies whether the mouse cursor should be drawn when the pointer is moved
 over the window. If you set this to False/No, then when you drag the pointer

@@ -74,7 +74,7 @@ Single value, type: one of the following options: none, basic, full. Default: ``
 
 old_cookie:
 ~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to true to use the old cookie. Will use the new cookie by default.
 

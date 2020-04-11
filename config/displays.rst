@@ -60,7 +60,7 @@ The following sections are optional in the ``displays:`` section of your config.
 
 default:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Specifies that this display is the default, meaning it's the display that's used if you show a slide without specifying
 a target for that slide. If you only have one display, it will be the default automatically.
@@ -106,7 +106,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 

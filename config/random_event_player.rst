@@ -51,7 +51,7 @@ The following sections are optional in the ``random_event_player:`` section of y
 
 disable_random:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Disable random.
 
@@ -66,13 +66,13 @@ See the example above.
 
 force_all:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Enforce that all events are posted once before a event is posted a second time.
 
 force_different:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``true``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If set to true it will enforce that the same entry will never appear twice in a
 row. When setting ``force_all`` to true this will prevent that the last event

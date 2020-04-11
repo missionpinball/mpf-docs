@@ -45,7 +45,7 @@ If the player does not have any lit extra balls, this method does nothing.
 
 enabled:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether this ball group is enabled.
 
@@ -60,7 +60,7 @@ If so, this method will post the extra ball disabled events.
 
 lit_memory:
 ~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -90,7 +90,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 

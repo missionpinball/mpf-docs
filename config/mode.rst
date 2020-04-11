@@ -75,7 +75,7 @@ Log level for the file log for this mode.
 
 game_mode:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 A mode can only access player state if ``game_mode`` is set to ``True``.
 You can set this to ``False`` to allow a mode to run outside of a game.
@@ -110,7 +110,7 @@ without the risk of those things affecting other modes.
 
 restart_on_next_ball:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If you set this to *true*, a mode that was running when the ball ended
 that was also configured to stop on ball end will automatically start
@@ -179,7 +179,7 @@ ok. The mode will remain stopped.
 
 stop_on_ball_end:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 The default behavior for modes in MPF is that they're automatically
 stopped when the ball ends. Some modes (like the built-in *game* and
@@ -245,7 +245,7 @@ are set to end on the same stop_event.
 
 use_wait_queue:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Specifies whether this mode should "pause"
 the flow of MPF while this mode is running. This only works if the

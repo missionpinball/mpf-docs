@@ -29,7 +29,7 @@ The following sections are optional in the ``ball_devices:`` section of your con
 
 auto_fire_on_unexpected_ball:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 If a ball randomly shows up in this device, should it be automatically ejected?
 
@@ -488,7 +488,7 @@ just keep trying to eject the ball forever.)
 
 mechanical_eject:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Boolean setting which is used to specify whether this ball device has
 a mechanical eject option. In MPF, a *mechanical eject* is what
@@ -544,7 +544,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.

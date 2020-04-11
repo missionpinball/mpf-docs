@@ -36,7 +36,7 @@ The following sections are optional in the ``keyboard:`` section of your config.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -54,7 +54,7 @@ process.
 
 invert:
 ~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If True, then this key is inverted, meaning the associated switch is
 active when you're not pushing the key down, and it's inactive when
@@ -98,7 +98,7 @@ key combination) to control.
 
 toggle:
 ~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If True, then the key acts like a "push on / push off" key, where you
 just have to tap it once to hold the switch active. This is useful for

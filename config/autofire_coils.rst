@@ -158,7 +158,7 @@ change this value if you have more than one playfield and you're managing them s
 
 reverse_switch:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Boolean which controls whether this autofire device fires when the
 switch is active or inactive. The default behavior is that the coil is
@@ -211,7 +211,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.

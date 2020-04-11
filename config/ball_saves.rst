@@ -46,7 +46,7 @@ to 0) for unlimited time. Default is *0*.
 
 auto_launch:
 ~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 True/False which controls whether the ball save should auto launch the
 saved ball or wait for the player to launch it.
@@ -111,7 +111,7 @@ Default is *0*.
 
 only_last_ball:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Only save the last ball.
 In case two balls are in play and only one drains it will not be saved.
@@ -136,7 +136,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see more debug output.
 

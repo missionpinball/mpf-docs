@@ -74,7 +74,7 @@ The following sections are optional in the ``coils:`` section of your config. (I
 
 allow_enable:
 ~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 MPF will not enable any coil at 100% power unless you also add an
 ``allow_enable: true`` entry to that coils' settings. We include this as
@@ -132,7 +132,7 @@ details. It will also used in rules.
 
 default_recycle:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether this coil should add a small delay before it's allowed to
 be fired again. (This is used on things like pop bumpers and slingshots to
@@ -226,7 +226,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.

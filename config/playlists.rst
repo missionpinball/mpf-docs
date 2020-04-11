@@ -148,7 +148,7 @@ Enter the list in the MPF config list format. These events are posted exactly as
 
 repeat:
 ~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Flag indicating whether or not the playlist will repeat when all sounds have been played or just
 stop.
@@ -161,7 +161,7 @@ Whatever this playlist should be persisted per player or machine-wide.
 
 shuffle:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Flag indicating whether or not the playlist will be played in order (``shuffle: True`` or randomized
 (``shuffle: False``) for playback.

@@ -154,7 +154,7 @@ active until it's disabled or you manually deactivate it.
 
 allow_multiple_concurrent_ejects_to_same_side:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -341,7 +341,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to ``True`` to see more debug output.
 

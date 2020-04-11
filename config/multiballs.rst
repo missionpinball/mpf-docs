@@ -146,7 +146,7 @@ multiball will be automatically enabled when the mode it's in starts.
 
 replace_balls_in_play:
 ~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 This setting controls whether the multiball should include existing balls in play
 when counting the number of balls to add to the playfield. Specifically for
@@ -212,7 +212,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.

@@ -50,7 +50,7 @@ This is the name of the tag in the ``tags:`` section of one of your switches.
 
 allow_start_with_ball_in_drain:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether it's possible to start a game when a ball is in a ball device
 that's tagged with ``drain`` but not ``home`` or ``trough``. (This is needed
@@ -59,7 +59,7 @@ configurations.
 
 allow_start_with_loose_balls:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Controls whether it's possible to start a game when balls are not all
 in ball devices tagged with ``home``.
