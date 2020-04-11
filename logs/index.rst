@@ -14,3 +14,4 @@ Log and Error Descriptions
    CFE-ConfigValidator-6
    CFE-ConfigValidator-9
    CFE-ConfigValidator-12
+   CFE-ConfigValidator-13
