@@ -4,6 +4,15 @@ Tuning Software for Production
 Run MPF in production mode
 --------------------------
 
+YAML is quite slow to parse and reading configs dominates the startup time
+of MPF and MPF-MC.
+This is mostly fine during development and we can partially mitigate the costs
+by caching.
+However, things are different when running a production machine as caching
+will not work on a cold boot with a typical read-only setup.
+Usually production machine setups use less beefy computers with slower disks
+which makes thinks even worse.
+
 Starting with version 0.54 MPF has a production mode which will use
 pre-compiled config bundles for much faster start-up times.
 Additionally, this will disable some expensive config and runtime validations
@@ -15,7 +24,6 @@ First run ``mpf build production_bundle`` which will create
 You have to recreate those files after every config, mode or show change.
 Those bundles include all yaml files but not any other assets (such as
 videos or sounds).
-
 Second, add the ``-P`` flag to the commandline to run MPF in production mode.
 
 MPF will also try to keep running in some cases instead of exiting the game.
