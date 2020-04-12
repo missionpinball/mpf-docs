@@ -428,6 +428,9 @@ The name of a coil that is held in the enabled position to hold a
 ball. This is used in place of an *eject_coil*, and it's for devices
 that have to hold (like a post) to keep a ball in the device.
 Disabling the hold coil releases a ball. Default is *None*.
+An example for such a hold coil is the lock that comes up below Magneto 
+in X-Men. A further lock of this kind is in Avatar below Jake Sully 
+in the transporter link.
 
 hold_coil_release_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -483,8 +486,8 @@ Single value, type: ``integer``. Default: ``0``
 
 Defines how many times this ball device will attempt to eject a ball
 before deciding that the eject permanently failed. A value of zero
-Default is *0* which means there's no limit. (e.g. the device will
-just keep trying to eject the ball forever.)
+means there's no limit. (e.g. the device will just keep trying to eject 
+the ball forever.)
 
 mechanical_eject:
 ~~~~~~~~~~~~~~~~~
@@ -510,8 +513,8 @@ player_controlled_eject_event:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``string``.
 
-When using player controlled eject wait for this eject to autofire the
-ball.
+When using player controlled eject wait for this event to autofire the
+ball. (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`)
 
 request_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
