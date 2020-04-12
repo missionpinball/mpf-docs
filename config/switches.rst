@@ -101,7 +101,7 @@ or sling shots.
 when rules are configured. Therefore, you usually can leave this at ``auto``.
 
 Switch debouncing is somewhat different from debouncing in other domains since
-the switch has to be active for the whole period of debouncing (ot at least
+the switch has to be active for the whole period of debouncing (at least
 during sampling).
 It could also be referred as "minimum activation time" (as one discipline of
 debouncing).
