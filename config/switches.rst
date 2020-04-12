@@ -67,6 +67,10 @@ This is the number of the switch which specifies which switch input the
 switch is physically connected to. The exact format used here will
 depend on which control system you're using and how the switch is connected.
 
+Note: In a virtual environment with :doc:`/config/keyboard` section you don't 
+have to fill in a switch number. With a keyboard section the switch is activated
+by a defined keyboards key.
+
 See the :doc:`/hardware/numbers` guide for details.
 
 
