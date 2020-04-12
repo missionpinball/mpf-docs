@@ -158,8 +158,10 @@ indicated which type of config file it's valid in.
    smart_virtual: <smart_virtual>
    smartmatrix: <smartmatrix>
    snux: <snux>
+   sound_ducking: <sound_ducking>
    sound_loop_player: <sound_loop_player>
    sound_loop_sets: <sound_loop_sets>
+   sound_marker: <sound_marker>
    sound_player: <sound_player>
    sound_pools: <sound_pools>
    sound_system: <sound_system>
