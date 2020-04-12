@@ -11,18 +11,6 @@ multiball_locks:
 
 .. overview
 
-multiball_locks:
-================
-
-*Config file section*
-
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
-+----------------------------------------------------------------------------+---------+
-| Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
-+----------------------------------------------------------------------------+---------+
-
-
 The ``multiball_locks:`` section of your config is used to configure ball locks
 which will lock balls for multiball. Note that if you only want to hold a ball
 temporarily (like to play a show for an award) and then release it, use the
