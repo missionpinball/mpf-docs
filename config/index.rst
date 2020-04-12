@@ -164,6 +164,7 @@ indicated which type of config file it's valid in.
    sound_marker: <sound_marker>
    sound_player: <sound_player>
    sound_pools: <sound_pools>
+   sound_system_tracks: <sound_system_tracks>
    sound_system: <sound_system>
    sounds: <sounds>
    spi_bit_bang <spi_bit_bang>

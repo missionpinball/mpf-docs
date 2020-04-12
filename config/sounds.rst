@@ -64,8 +64,7 @@ ducking:
 ~~~~~~~~
 Single value, type: :doc:`sound_ducking <sound_ducking>`.
 
-The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.  It contains the
-following nested sub-settings:
+The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.
 
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
