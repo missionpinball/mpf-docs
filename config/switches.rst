@@ -67,7 +67,7 @@ This is the number of the switch which specifies which switch input the
 switch is physically connected to. The exact format used here will
 depend on which control system you're using and how the switch is connected.
 
-Note: In a virtual environment with :doc:`/config/keyboard` section you don't 
+Note: In a virtual environment with :doc:`/config/keyboard` section you don't
 have to fill in a switch number. With a keyboard section the switch is activated
 by a defined keyboards key.
 
@@ -156,7 +156,7 @@ platform_settings:
 Single value, type: dict.
 
 Dict of platform specific settings.
-See your platform documentation about this.
+See your :doc:`platform documentation </hardware/index>` about this.
 
 type:
 ~~~~~
