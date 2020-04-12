@@ -136,8 +136,8 @@ your machine-wide config, a mode-specific config, or both.
 
             try:
                 self.create_rst(k, dangerous_changes)
-            except AssertionError:
-                print("FAILED TO UPDATE {}. Skipping.".format(k))
+            except AssertionError as e:
+                print("FAILED TO UPDATE {}. Skipping. ({})".format(k, e))
 
     def _prepare_default_texts(self, existing_settings):
         texts = {
