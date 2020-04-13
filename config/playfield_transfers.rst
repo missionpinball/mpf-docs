@@ -48,13 +48,13 @@ The following sections are required in the ``playfield_transfers:`` section of y
 
 captures_from:
 ~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`ball_devices <ball_devices>` device.
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
 
 Source playfield for the transfer.
 
 eject_target:
 ~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`ball_devices <ball_devices>` device.
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
 
 Target playfield for the transfer.
 
@@ -66,13 +66,13 @@ The following sections are optional in the ``playfield_transfers:`` section of y
 
 ball_switch:
 ~~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 Ball switch which triggers the transfer.
 
 transfer_events:
 ~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -104,7 +104,7 @@ Name in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Tags of the device. Not used currently.
 

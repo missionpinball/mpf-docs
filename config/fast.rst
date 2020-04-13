@@ -32,7 +32,7 @@ The following sections are required in the ``fast:`` section of your config:
 
 default_normal_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: normal`` when they close.
@@ -46,7 +46,7 @@ it for any switch in that switch's config.
 
 default_normal_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: normal`` when they open.
@@ -60,7 +60,7 @@ it for any switch in that switch's config.
 
 default_quick_debounce_close:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: quick`` when they close.
@@ -74,7 +74,7 @@ it for any switch in that switch's config.
 
 default_quick_debounce_open:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies the default value for the debounce time for switches that are
 configured with ``debounce: quick`` when they open.
@@ -88,7 +88,7 @@ it for any switch in that switch's config.
 
 ports:
 ~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A comma-separated list of the serial port names your FAST controller uses.
 
@@ -125,7 +125,7 @@ Max backlog for the DMD port to prevent overflows in the FAST CPU.
 
 driverboards:
 ~~~~~~~~~~~~~
-Single value, type: one of the following options: fast, wpc, None.
+Single value, type: one of the following options: fast, wpc, None. Defaults to empty.
 
 Which driverboards are you using? Most likely ``fast``.
 Similar to ``driverboards`` in the :doc:`/config/hardware` section.
@@ -140,7 +140,7 @@ Log level for the file log for this platform.
 
 firmware_updates:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: :doc:`fast_firmware_update <fast_firmware_update>`.
+List of one (or more) values, each is a type: :doc:`fast_firmware_update <fast_firmware_update>`. Defaults to empty.
 
 A list of firmware versions which can be installed using :doc:`/running/commands/hardware`.
 

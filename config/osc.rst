@@ -24,7 +24,7 @@ The following sections are optional in the ``osc:`` section of your config. (If 
 
 events_to_send:
 ~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. The device will add handlers for those events. Defaults to empty.
 
 You can list all events which you want to be forwarded to your OSC remote.
 This is an example:

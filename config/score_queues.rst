@@ -45,7 +45,7 @@ The following sections are required in the ``score_queues:`` section of your con
 
 chimes:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device.
+List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 A list of chimes to pulse when adding score via the score queue.
 Start from the left the right on your digits.
@@ -90,7 +90,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

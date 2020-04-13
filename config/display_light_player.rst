@@ -39,20 +39,20 @@ You can usually leave this at the default.
 
 lights:
 ~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Which LEDs should receive the updates.
 You usually use a tag here or '*' for all of them.
 
 max_x:
 ~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Unused.
 
 max_y:
 ~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Unused.
 

@@ -58,14 +58,14 @@ The following sections are required in the ``dual_wound_coils:`` section of your
 
 hold_coil:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the hold coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
 
 main_coil:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the main (power) coil winding. This coil must be a valid coil
 defined in your ``coils:`` section.
@@ -82,7 +82,7 @@ The following sections are optional in the ``dual_wound_coils:`` section of your
 
 eos_switch:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of a switch which, when activated, will disable the power to the main
 coil winding.
@@ -119,7 +119,7 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for dual-wound coils: *None*
 

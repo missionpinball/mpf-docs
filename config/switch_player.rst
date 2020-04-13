@@ -69,7 +69,7 @@ The following sections are optional in the ``switch_player:`` section of your co
 
 start_event:
 ~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``machine_reset_phase_3``
+Single event. The device will add an handler for this event. Default: ``machine_reset_phase_3``
 
 Event to trigger the start of the switch player.
 

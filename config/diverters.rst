@@ -118,7 +118,7 @@ The following sections are optional in the ``diverters:`` section of your config
 
 activate_events:
 ~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -126,13 +126,13 @@ Events in this list, when posted, cause this diverter to activate.
 
 activation_coil:
 ~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil that is used to activate your diverter.
 
 activation_switches:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A list of one or more switches that trigger the diverter to activate.
 This switch only activates the diverter if the diverter has been
@@ -181,13 +181,13 @@ into the diverter?
 
 deactivate_events:
 ~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this diverter to deactivate.
 
 deactivation_coil:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil that's used to deactivate your diverter. You only
 need to specify this coil if it's a different coil from from
@@ -211,7 +211,7 @@ to be in the inactive state, and set up your targets accordingly.
 
 deactivation_switches:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A list of one or more switches that will deactivate a diverter. (For
 example, this might be a switch that's "after" the diverter in a
@@ -220,7 +220,7 @@ it through the diverter and it can deactivate it.)
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, disable this diverter. Typically it's *ball_ending* (which is posted
 when a ball is in the process of ending), meaning this diverter will
@@ -229,7 +229,7 @@ disable event to occur based on the event posted from a mode ending.
 
 disable_switches:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A list of one more more switches that will automatically disable this
 diverter. It's optional, since the diverter will also be disabled
@@ -237,7 +237,7 @@ based on one of your *disable_events* being posted.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, enable this diverter. (Remember that enabling a diverter is not the
 same as activating it.)
@@ -270,7 +270,7 @@ change this value if you have more than one playfield and you're managing them s
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3``
 
 Reset will disable the diverter.
 
@@ -359,7 +359,7 @@ Name in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Tags are currently unused.
 

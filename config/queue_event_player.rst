@@ -42,7 +42,7 @@ The following sections are required in the ``queue_event_player:`` section of yo
 
 queue_event:
 ~~~~~~~~~~~~
-Single value, type: ``string``.
+Single event. The device will add an handler for this event. Defaults to empty.
 
 The name of the queue event that will be posted when the parent event is posted. (required)
 
@@ -61,7 +61,7 @@ is optional.
 
 events_when_finished:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single event. This device will be posted by the device. Defaults to empty.
 
 The event name that will be posted when all the handlers of this queue event are done
 processing it. This setting is optional.

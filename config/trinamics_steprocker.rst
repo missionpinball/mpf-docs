@@ -24,7 +24,7 @@ The following sections are required in the ``trinamics_steprocker:`` section of 
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Serial port to use to connect to the steprocker.
 

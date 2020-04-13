@@ -40,21 +40,21 @@ The following sections are required in the ``spike:`` section of your config:
 
 baud:
 ~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 This needs to match the value from Step 3 in the MPF SPIKE bridge
 instructions.
 
 nodes:
 ~~~~~~
-List of one (or more) values, each is a type: ``integer``.
+List of one (or more) values, each is a type: ``integer``. Defaults to empty.
 
 Configure the nodes from your manual. Note that there should
 always be a node 0 and 1.
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 on the RPi.
 

@@ -68,7 +68,7 @@ The following sections are required in the ``autofire_coils:`` section of your c
 
 coil:
 ~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil you want to fire. (Actually, perhaps we should
 phrase it as the name of the coil you want to change the state on,
@@ -77,7 +77,7 @@ stop firing based on a switch change.)
 
 switch:
 ~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of the switch which will trigger the autofire coil.
 More precisely, this switch is used together with the ``coil`` in the hardware
@@ -99,7 +99,7 @@ See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 coil_overwrite:
 ~~~~~~~~~~~~~~~
-Single value, type: :doc:`coil_overwrites <coil_overwrites>`.
+Single value, type: :doc:`coil_overwrites <coil_overwrites>`. Defaults to empty.
 
 You can overwrite ``recycle``, ``pulse_ms``, ``pulse_power`` or ``hold_power``
 of the coil for this device.
@@ -137,14 +137,14 @@ all platforms do that.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_will_end, service_mode_entered``
 
 Disables this autofire coil by clearing the hardware rule from the
 pinball controller hardware.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_started
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_started``
 
 Enables this autofire coil by writing the hardware rule to the pinball
 controller hardware.
@@ -231,7 +231,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for autofire coils: *None*
 

@@ -36,7 +36,7 @@ The following sections are required in the ``accruals:`` section of your config:
 
 events:
 ~~~~~~~
-List of one (or more) events.
+List of one (or more) events. The device will add handlers for those events. Defaults to empty.
 
 The events section of an accrual logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -139,7 +139,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Currently unused.
 

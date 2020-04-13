@@ -61,7 +61,7 @@ The following sections are required in the ``switches:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the number of the switch which specifies which switch input the
 switch is physically connected to. The exact format used here will
@@ -115,7 +115,7 @@ See :doc:`/mechs/switches/debounce` for details.
 
 events_when_activated:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this
 switch goes active. These events are posted exactly as they're entered, in addition to any
@@ -123,7 +123,7 @@ events that are posted based on the switch's tags.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this
 switch goes inactive.
@@ -142,7 +142,7 @@ after the first (which would be 55ms after the second), it will also count.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this switch is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -153,7 +153,7 @@ See the :doc:`/hardware/platform` guide for details.
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Dict of platform specific settings.
 See your :doc:`platform documentation </hardware/index>` about this.
@@ -175,21 +175,21 @@ inversion anywhere else in your game code.
 
 x:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 X Position of this switch on the playfield.
 Currently unused.
 
 y:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 Y Position of this switch on the playfield.
 Currently unused.
 
 z:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 Z Position of this switch on the playfield.
 Currently unused.
@@ -220,7 +220,7 @@ Name of this switch in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 You can add tags to switches to logically group them in your game code
 to make it easier to do things. (Like "if all the switches tagged with

@@ -36,7 +36,7 @@ The following sections are required in the ``pololu_maestro:`` section of your c
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the serial port.
 

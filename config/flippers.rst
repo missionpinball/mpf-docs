@@ -106,7 +106,7 @@ The following sections are required in the ``flippers:`` section of your config:
 
 main_coil:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the main flipper coil. For flippers that only have single-
 wound coils, this is where you specify that coil. In that case you
@@ -121,7 +121,7 @@ The following sections are optional in the ``flippers:`` section of your config.
 
 activation_switch:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The switch that controls this flipper (i.e. the flipper button).
 This setting is optional because you can also use ``sw_flip_enable`` below but
@@ -142,7 +142,7 @@ checked first. See the :doc:`/game_logic/ball_search/index` documentation for de
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_will_end, service_mode_entered``
 
 (Note that if you add an entry here, it will replace the default.
 So if you also want the default value(s) to apply, add them too.)
@@ -152,7 +152,7 @@ the flipper).
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_started
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_started``
 
 (Note that if you add an entry here, it will replace the default.
 So if you also want the default value(s) to apply, add them too.)
@@ -161,7 +161,7 @@ Enables this flipper.
 
 eos_switch:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 EOS switch on this flipper (if there is one).
 
@@ -175,13 +175,13 @@ switch name here.
 
 hold_coil:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the hold coil winding for dual-wound flipper coils.
 
 hold_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: :doc:`coil_overwrites <coil_overwrites>`.
+Single value, type: :doc:`coil_overwrites <coil_overwrites>`. Defaults to empty.
 
 Overwrites settings on the hold_coil.
 See :doc:`coil_overwrites` for details.
@@ -205,7 +205,7 @@ to include an option for flippers in ball search. :)
 
 main_coil_overwrite:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: :doc:`coil_overwrites <coil_overwrites>`.
+Single value, type: :doc:`coil_overwrites <coil_overwrites>`. Defaults to empty.
 
 Overwrites settings on the main_coil.
 See :doc:`coil_overwrites` for details.
@@ -218,7 +218,7 @@ change this value if you have more than one playfield and you're managing them s
 
 power_setting_name:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 A :doc:`machine setting </config/settings>` to use to adjust the (relative) power.
 It can be used to allow the operator to adjust the power in service mode.
@@ -245,7 +245,7 @@ default and you can add additional ones.
 
 sw_flip_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 If the flipper is enabled this will flip the flipper from software.
 This will usually have some delay and jitter so use with care.
@@ -254,7 +254,7 @@ use hardware rules internally to flip the flipper.
 
 sw_release_events:
 ~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Disables a flipper from software. Use this together with ``sw_flip_events``.
 
@@ -301,7 +301,7 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for flippers: *None*
 

@@ -34,7 +34,7 @@ The following sections are required in the ``opp:`` section of your config:
 
 ports:
 ~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Serial ports to use.
 

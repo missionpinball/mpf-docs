@@ -71,7 +71,7 @@ The following sections are required in the ``multiball_locks:`` section of your 
 
 balls_to_lock:
 ~~~~~~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 The number of balls this ball lock should hold. If one of the
 associated lock devices receives a ball and this logical ball lock is
@@ -79,7 +79,7 @@ full, then the ball device will just release the ball again.
 
 lock_devices:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device.
+List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
 
 A list of one (or more) ball devices that will collect balls which
 will count towards this lock.
@@ -112,7 +112,7 @@ and examples.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
@@ -125,7 +125,7 @@ other shot that re-enables the lock as an enable event.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None`` (Note that if you add an entry here, it will replace the default. So if you
 also want the default value(s) to apply, add them too.)
@@ -153,13 +153,13 @@ This can be used to give one :doc:`ball_hold <ball_holds>` or
 
 reset_all_counts_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event(s) which reset the locked ball counts for all players.
 
 reset_count_for_current_player_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event(s) which reset the locked ball count for the current player.
 
@@ -198,7 +198,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

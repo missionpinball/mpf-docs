@@ -94,7 +94,7 @@ The following sections are optional in the ``shots:`` section of your config. (I
 
 advance_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -152,7 +152,7 @@ In this example an activation of ``s_other_lane`` will prevent the shot from bei
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -162,7 +162,7 @@ in whatever state it's in.)
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -172,7 +172,7 @@ remain in whatever state it's in.)
 
 hit_events:
 ~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -223,7 +223,7 @@ play though.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -233,7 +233,7 @@ profile* is active at that time.
 
 restart_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -296,7 +296,7 @@ More information about :doc:`show tokens </shows/tokens>`
 
 start_enabled:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (``true``/``false``).
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
 
 Whether the shot starts as enabled (if you set this to ``True``) or as
 disabled (if you set this to ``False``).
@@ -305,7 +305,7 @@ The shot will start disabled in that case or enabled otherwise.
 
 switch:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of the switch (or a list of switches) for this shot. You can
 use multiple switches if the shot happens to have multiple switches,
@@ -325,7 +325,7 @@ hit to count as that shot being hit.
 
 switches:
 ~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 This setting is the same as the ``switch:`` setting above. You can technically
 enter a single switch or a list of switches in either the ``switch:`` setting
@@ -362,7 +362,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.

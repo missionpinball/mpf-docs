@@ -30,7 +30,7 @@ The following sections are optional in the ``game:`` section of your config. (If
 
 add_player_event:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single event. The device will add an handler for this event. Defaults to empty.
 
 An event name which will request to add a player.
 Same as ``add_player_switch_tag`` but using an event instead oa switch tag
@@ -83,7 +83,7 @@ Controls the maximum number of players that can play a game.
 
 start_game_event:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single event. The device will add an handler for this event. Defaults to empty.
 
 Event to request to start a game.
 Same as ``start_game_switch_tag`` but using an event instead of a switch tag

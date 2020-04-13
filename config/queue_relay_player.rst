@@ -55,14 +55,14 @@ The following sections are required in the ``queue_relay_player:`` section of yo
 
 post:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the event to post to trigger your action once the queue event
 has been posted. (required)
 
 wait_for:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the event this queue will wait for to continue. In other words,
 this is the event you need to post for the queue event to continue. (required)

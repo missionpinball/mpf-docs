@@ -106,7 +106,7 @@ The following sections are optional in the ``shot_groups:`` section of your conf
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will disable all the shots in this shot group. This
 can be a simple list of events or a time-delayed list. If you do
@@ -117,7 +117,7 @@ default that's *ball_ended*.)
 
 disable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will disable rotation, meaning the
 states of the shots in this group will not be rotated if one of the
@@ -126,7 +126,7 @@ posted. This can be a simple list of events or a time-delayed list.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will enable all of the individual shots
 in this shot group. (The shot group itself has no enabled/disabled state
@@ -142,7 +142,7 @@ a subsequent group enable/disable events will also affect that individual shot.
 
 enable_rotation_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will allow the states of the shots
 in this group to be rotated (based on the *rotate_left_events*,
@@ -153,7 +153,7 @@ is not enabled, rotation events being posted will have no effect.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will reset all the shots in this
 shot group. This can be a simple list of events or a time-delayed list.
@@ -163,7 +163,7 @@ that time.
 
 restart_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 A list of one or more events that will restart all the shots in this shot group.
 A restart is the same as calling reset and enable, so restarting a shot group
@@ -172,13 +172,13 @@ immediately enable all the shots.
 
 rotate_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Same as ``rotate_right_events:``.
 
 rotate_left_events:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 This list of events that, when posted, will rotate the current state
 of each shot to the shot to its left. The state of left-most (i.e.
@@ -188,7 +188,7 @@ that time.
 
 rotate_right_events:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 This list of events that, when posted, will rotate the current lit and
 unlit shot states to the right. This can be a simple list of events or
@@ -197,7 +197,7 @@ your `shots:` list will rotate over to the left-most shot.
 
 shots:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`shots <shots>` device.
+List of one (or more) values, each is a type: string name of a :doc:`shots <shots>` device. Defaults to empty.
 
 The list of shots (from the ``shots:`` section of your config file) that
 make up this shot group. Order is important here if you want
@@ -238,7 +238,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.

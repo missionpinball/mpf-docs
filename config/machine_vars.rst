@@ -29,7 +29,7 @@ The following sections are required in the ``machine_vars:`` section of your con
 
 initial_value:
 ~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The initial value of this machine variable that you're setting. This
 is set when MPF starts.

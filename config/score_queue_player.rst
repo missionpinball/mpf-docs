@@ -46,7 +46,7 @@ The following sections are optional in the ``score_queue_player:`` section of yo
 
 int:
 ~~~~
-Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 Score value to add to the queue.
 

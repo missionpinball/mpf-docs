@@ -42,7 +42,7 @@ Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 event:
 ~~~~~~
-Single value, type: ``string``.
+Single event. This device will be posted by the device. Defaults to empty.
 
 You can specify an event name to be posted when this key is pressed.
 This is useful for testing when you want to test some part of your
@@ -62,7 +62,7 @@ you're holding the key.
 
 mc_event:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single event. This device will be posted by the device. Defaults to empty.
 
 This is similar to the *event:* entry, except an *mc_event* is posted
 as events in the media controller process, rather than in the MPF
@@ -91,7 +91,7 @@ This keyboard entry will post the event *advance_reel_test* when the
 
 switch:
 ~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The switch name of the pinball machine switch you want this key (or
 key combination) to control.

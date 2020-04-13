@@ -60,14 +60,14 @@ The following sections are optional in the ``videos:`` section of your config. (
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this video is played. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this video stops playing. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.  These events can
@@ -75,7 +75,7 @@ be useful to trigger some action when a video has finished playing (like remove 
 
 file:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Sometimes you might want to name a file one thing on disk but refer to
 it as another thing in your game and config files. In this case, you
@@ -97,7 +97,7 @@ without having to update your display code.) That said, we expect that
 
 height:
 ~~~~~~~
-Single value, type: ``number`` (can be integer or floating point).
+Single value, type: ``number`` (can be integer or floating point). Defaults to empty.
 
 The height of this video, in pixels.
 
@@ -116,7 +116,7 @@ Loading priority of this asset.
 
 width:
 ~~~~~~
-Single value, type: ``number`` (can be integer or floating point).
+Single value, type: ``number`` (can be integer or floating point). Defaults to empty.
 
 The width of this video, in pixels.
 

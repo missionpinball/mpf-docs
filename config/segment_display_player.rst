@@ -36,13 +36,13 @@ Single value, type: one of the following options: add, remove, flash, no_flash. 
 
 expire:
 ~~~~~~~
-Single value, type: ms_or_token.
+Single value, type: ms_or_token. Defaults to empty.
 
 Only used with ``action`` ``add``. Text will be removed after ``exire`` ms.
 
 key:
 ~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Key to use with ``action`` ``add`` and ``remove`` to reference a text on the
 segment display.
@@ -56,7 +56,7 @@ The segment display will maintain a stack and show the text on top.
 
 text:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Text to show. You can use :doc:`/config/instructions/text_templates`.
 

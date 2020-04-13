@@ -55,7 +55,7 @@ The following sections are required in the ``track_player:`` section of your con
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: play, stop, pause, set_volume, stop_all_sounds.
+Single value, type: one of the following options: play, stop, pause, set_volume, stop_all_sounds. Defaults to empty.
 
 The ``action:`` setting controls what action will be performed on the specified track. Options for
 ``action:`` are:
@@ -88,7 +88,7 @@ actions.
 
 volume:
 ~~~~~~~
-Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0).
+Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0). Defaults to empty.
 
 The new volume setting for the track.  As with all volume parameters in MPF, this item can be
 represented as a number between 0.0 and 1.0 (1.0 is max volume, 0.0 is off, 0.9 is 90%, etc.)

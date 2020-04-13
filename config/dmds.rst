@@ -99,7 +99,7 @@ Specifies whether every frame is sent to the DMD, or only changed frames.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this DMD is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -148,7 +148,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

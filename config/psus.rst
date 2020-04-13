@@ -31,7 +31,7 @@ The following sections are optional in the ``psus:`` section of your config. (If
 
 max_amps:
 ~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Maximum ampers which can be provided by this PSU. Currently not used.
 
@@ -43,7 +43,7 @@ Time to wait after a coil pulse.
 
 voltage:
 ~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Voltage of your PSU. Only informal.
 
@@ -73,7 +73,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Currently unused.
 

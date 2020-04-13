@@ -144,7 +144,7 @@ There is also a shorthand way:
 
 float:
 ~~~~~~
-Single value, type: ``number`` or ``template`` (will be converted to floating point; :doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+Single value, type: ``number`` or ``template`` (will be converted to floating point; :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 Adds or sets a player or machine variable to the specified float value.  The ``int:`` setting takes priority over the ``float:``
 setting so if both are present only the ``int:`` will be used.
@@ -152,7 +152,7 @@ You can use :doc:`placeholders </config/instructions/dynamic_values>` which eval
 
 int:
 ~~~~
-Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 Adds or sets a player or machine variable to the specified integer value (this is the most common use of the variable_player).
 The ``int:`` setting takes priority over the ``float:`` setting so if both are present only the ``int:`` will be used.
@@ -160,7 +160,7 @@ You can use :doc:`placeholders </config/instructions/dynamic_values>` which eval
 
 player:
 ~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 .. code-block:: mpf-config
 
@@ -183,7 +183,7 @@ If the ``player:`` setting is not used, then this variable_player entry will def
 
 string:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Here's an example from *Brooks 'n Dunn* where there is a player variable (set via a counter) which tracks the
 player's current album value. We use the variable_player section tied to the events posted when the player variable changes

@@ -50,7 +50,7 @@ The following sections are required in the ``servos:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the number of the servo which specifies which driver output the
 servo is physically connected to. The exact format used here will
@@ -100,7 +100,7 @@ Controls whether this servo is included in ball search.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this servo is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -143,7 +143,7 @@ for multiple servos.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered``
 
 Default: ``None``
 
@@ -229,7 +229,7 @@ menu.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Tags work like tags for any device. Nothing special here.
 

@@ -71,7 +71,7 @@ underlying shows as if the light has never been used in this show.
 
 fade:
 ~~~~~
-Single value, type: ms_or_token.
+Single value, type: ms_or_token. Defaults to empty.
 
 Time to fade this light in ms. Use this to achieve smooth transitions between colors.
 

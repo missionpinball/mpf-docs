@@ -65,7 +65,7 @@ The following sections are required in the ``achievement_groups:`` section of yo
 
 achievements:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`achievements <achievements>` device.
+List of one (or more) values, each is a type: string name of a :doc:`achievements <achievements>` device. Defaults to empty.
 
 This is a list of the achievements (from the ``achievements:`` section of your
 mode config) that make up this group. The order here defines the order
@@ -97,7 +97,7 @@ from all the achievements in the "enabled" states (and the "stopped" states if
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, disable this achievement group.
 These events will also cause the
@@ -116,7 +116,7 @@ process for the next achievement.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will enable this achievement group. This
 will play the ``show_when_enabled:`` and will post events in the
@@ -142,7 +142,7 @@ achievement can be selected.
 
 events_when_all_completed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when all the
 achievements in this group are in the "completed" state. This is useful for
@@ -150,14 +150,14 @@ posting events to start a wizard mode, for example.
 
 events_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement
 group is enabled.
 
 events_when_no_more_enabled:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when one of the events
 in the ``select_random_achievement:`` is posted but there are no more available
@@ -165,7 +165,7 @@ achievements to be selected.
 
 rotate_left_events:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -174,7 +174,7 @@ opposite direction.
 
 rotate_right_events:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -227,7 +227,7 @@ on the list, you can use a ``select_random_achievement_events:`` event instead.
 
 select_random_achievement_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will randomly pick one of the available
 achievements and change it to its "selected" state. This is useful when a game
@@ -269,7 +269,7 @@ you'd just configure the show tokens in one place.
 
 show_when_enabled:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement group has been
 enabled.
@@ -278,7 +278,7 @@ the show here.
 
 start_selected_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -319,7 +319,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used
 

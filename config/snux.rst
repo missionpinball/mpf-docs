@@ -58,7 +58,7 @@ The following sections are required in the ``snux:`` section of your config:
 
 diag_led_driver:
 ~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The coil to use to drive the diag LED on the snux board.
 This is usually driver 23 on the Snux board.

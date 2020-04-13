@@ -24,7 +24,7 @@ The following sections are optional in the ``hardware_sound_systems:`` section o
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Overwrite the default platform.
 
@@ -54,7 +54,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

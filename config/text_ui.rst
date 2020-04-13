@@ -29,7 +29,7 @@ The following sections are optional in the ``text_ui:`` section of your config. 
 
 machine_vars:
 ~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of all of the machine variables to display and update in the Text UI.
 If the list is empty, no machine variables will be displayed.
@@ -39,7 +39,7 @@ If the ``machine_vars:`` setting is not included in your config,
 
 player_vars:
 ~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of all of the player variables to display and update in the Text UI.
 

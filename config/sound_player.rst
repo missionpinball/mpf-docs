@@ -92,42 +92,42 @@ The ``action:`` setting controls what action will be performed on the specified 
 
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Default: ``use_sound_setting``
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 events_when_looping:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Default: ``use_sound_setting``
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Default: ``use_sound_setting``
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Default: ``use_sound_setting``
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 fade_in:
 ~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 fade_out:
 ~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
@@ -140,7 +140,7 @@ Used to reference this sound entry when stopping/pausing/resuming it.
 
 loops:
 ~~~~~~
-Single value, type: int_or_token.
+Single value, type: int_or_token. Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
@@ -161,35 +161,35 @@ about this setting as it just overwrites the setting in your sound.
 
 pan:
 ~~~~
-Single value, type: float_or_token.
+Single value, type: float_or_token. Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 priority:
 ~~~~~~~~~
-Single value, type: int_or_token.
+Single value, type: int_or_token. Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 start_at:
 ~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 track:
 ~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.
 
 volume:
 ~~~~~~~
-Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0).
+Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0). Defaults to empty.
 
 Please refer to the :doc:`sounds: </config/sounds>` documentation for details
 about this setting as it just overwrites the setting in your sound.

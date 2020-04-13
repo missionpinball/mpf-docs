@@ -45,7 +45,7 @@ The following sections are required in the ``show_pools:`` section of your confi
 
 shows:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`shows <shows>` device.
+List of one (or more) values, each is a type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 A list of shows which are part of the show pool
 

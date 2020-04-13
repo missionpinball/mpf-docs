@@ -47,7 +47,7 @@ The following sections are required in the ``timed_switches:`` section of your c
 
 time:
 ~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 How long a switch must be continuously active before the ``events_when_active`` are posted.
 
@@ -59,7 +59,7 @@ The following sections are optional in the ``timed_switches:`` section of your c
 
 events_when_active:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 If you don't enter any events here, an event will automatically be posted in the format
 *<name_of_this_timed_switch>_active*. In other words, in the example at the top of this
@@ -70,7 +70,7 @@ event would be called *flipper_cradle_active*, but since that config has an
 
 events_when_released:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 If you've defined multiple switches and two switches go active, the release event will
 not be posted until all the switches are released.
@@ -85,14 +85,14 @@ is ``inactive`` for the time amount.
 
 switch_tags:
 ~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of switch tags (or a single tag) that will be used to set which switches are
 used with these timed switch settings. Each switch with these tags will be added.
 
 switches:
 ~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A list of switches (or a single switch) that will be used for these timed switch
 settings. Note that you can use ``switch_tags:`` instead of ``switches:``.
@@ -123,7 +123,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

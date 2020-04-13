@@ -31,7 +31,7 @@ The following sections are required in the ``magnets:`` section of your config:
 
 magnet_coil:
 ~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 Note that is any of the magnet activation times are longer than 255ms and the
 magnet pulse power is 100%, then you will need to add ``allow_enable: true``
@@ -45,21 +45,21 @@ The following sections are optional in the ``magnets:`` section of your config. 
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_will_end, service_mode_entered``
 
 These events mean the magnet will no longer try to grab a ball if the
 ``grab_switch:`` is activated.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_started
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_started``
 
 These events enable the magnet to grab a ball based on the ``grab_switch:``
 being activated.
 
 fling_ball_events:
 ~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events to trigger flinging a ball.
 
@@ -79,14 +79,14 @@ after its dropped it.
 
 grab_ball_events:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 These events cause the magnet to immediately attempt to grab a ball. The
 magnet will be activated for the ``grab_time:``.
 
 grab_switch:
 ~~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The switch which activates grabbing a ball.
 
@@ -104,7 +104,7 @@ The playfield on which this magnet is.
 
 release_ball_events:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 These events cause the magnet to deactivate for the ``release_time:`` setting.
 
@@ -116,7 +116,7 @@ How long the magnet disables to release a ball.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting``
 
 These events release a grabbed ball and disable the magnet.
 
@@ -146,7 +146,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of tags. Not used for any logic.
 

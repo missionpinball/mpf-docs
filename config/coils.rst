@@ -58,7 +58,7 @@ The following sections are required in the ``coils:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the number of the coil which specifies which driver output the
 coil is physically connected to. The exact format used here will
@@ -93,7 +93,7 @@ enabled and you'll get an error in your log file.
 
 default_hold_power:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: float(0,1).
+Single value, type: float(0,1). Defaults to empty.
 
 This setting lets you control how much power is sent to the coil when
 it's "held" in the on position. This is an float value from 0-1 (i.e.
@@ -114,7 +114,7 @@ might call enable with a different power setting.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
@@ -123,7 +123,7 @@ extremely weak, but set low for safety purposes.
 
 default_pulse_power:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: float(0,1).
+Single value, type: float(0,1). Defaults to empty.
 
 The power factor which controls how much power is applied during the initial
 pulse phase of the coil's activation. (Note that not all hardware platforms
@@ -145,20 +145,20 @@ on/off settings.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Disables this coil (meaning that if it's active, it's shut off).
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Enables (holds on) this coil. This requires that *allow_enable* is true
 or that a *default_hold_power* or *max_hold_power* setting is configured.
 
 max_hold_power:
 ~~~~~~~~~~~~~~~
-Single value, type: float(0,1).
+Single value, type: float(0,1). Defaults to empty.
 
 This controlls the maximum allowed hold power for this this coil. While
 *default_hold_power* sets the default for all enable calls on the coil
@@ -167,7 +167,7 @@ Usually you can omit this setting.
 
 max_pulse_ms:
 ~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Maximum allowed pulse time for this coil.
 If set, MPF will raise an error if any code tries to pulse the coil for more
@@ -182,7 +182,7 @@ Set the maxium pulse power. If pulse is called on the coil without any parameter
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this coil is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -193,7 +193,7 @@ See the :doc:`/hardware/platform` guide for details.
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Dict of platform specific settings.
 Consult your platform documentation for those settings.
@@ -209,7 +209,7 @@ from your PSU.
 
 pulse_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 :doc:`device control events </config/instructions/device_control_events>` format.
 
@@ -246,7 +246,7 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for coils: *None*
 

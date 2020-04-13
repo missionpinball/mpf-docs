@@ -122,7 +122,7 @@ The following sections are optional in the ``achievements:`` section of your con
 
 complete_events:
 ~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this achievement to switch to its
 "completed" state. This must be in the "started" state in order to be moved
@@ -132,7 +132,7 @@ setting and to emit (post) events in the ``events_when_completed:`` setting.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this achievement to switch to its
 "disabled" state. These events will also cause the achievement to play the
@@ -141,7 +141,7 @@ in the ``events_when_disabled:`` setting.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this achievement to switch to its
 "enabled" state. These events will also cause the achievement to play the
@@ -165,45 +165,45 @@ anything when disabling.
 
 events_when_completed:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement is complete.
 
 events_when_disabled:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement is disabled.
 
 events_when_enabled:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement
 is enabled.
 
 events_when_selected:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this
 achievement is selected.
 
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement is started.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A single event, or a list of events, that will be posted when this achievement is stopped.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this achievement to reset back to its
 default state (which will either be "disabled" or, if you have
@@ -233,7 +233,7 @@ it will *not* post the ``events_when_stopped:`` events.
 
 select_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, cause this achievement to switch to its
 "selected" state. These events will also cause the achievement to play the
@@ -256,49 +256,49 @@ played when this achievement changes state. (See the settings called
 
 show_when_completed:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been completed.
 
 show_when_disabled:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been disabled.
 
 show_when_enabled:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been enabled.
 
 show_when_selected:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been selected.
 
 show_when_started:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been started.
 
 show_when_stopped:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`shows <shows>` device.
+Single value, type: string name of a :doc:`shows <shows>` device. Defaults to empty.
 
 Name of the show that will be started when this achievement has been stopped.
 
 start_enabled:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (``true``/``false``).
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
 
 Whether this achievment is enabled or disabled when it is first loaded.
 
 start_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -309,7 +309,7 @@ in the ``events_when_started:`` setting.
 
 stop_events:
 ~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -320,14 +320,14 @@ in the ``events_when_stopped:`` setting.
 
 sync_ms:
 ~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 A sync_ms value used for any shows which are started by this achievement. See the
 :doc:`full sync_ms documentation for details </shows/sync_ms>`.
 
 unselect_events:
 ~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -357,7 +357,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

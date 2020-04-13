@@ -38,7 +38,7 @@ The following sections are optional in the ``auditor:`` section of your config. 
 
 audit:
 ~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 This is a list of the various types of things you want to include in
 your audit file. There are currently four options:
@@ -52,7 +52,7 @@ your audit file. There are currently four options:
 
 events:
 ~~~~~~~
-List of one (or more) events.
+List of one (or more) events. The device will add handlers for those events. Defaults to empty.
 
 A list of which events you want to audit. These are the names of any
 events you want.
@@ -68,7 +68,7 @@ total count and the overall average.
 
 player:
 ~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of player variables you want to audit. The auditor will
 save a certain number (configurable via the
@@ -77,7 +77,7 @@ entries and the current average.
 
 save_events:
 ~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_ended
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_ended``
 
 Default: ``ball_ended``
 

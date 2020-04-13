@@ -76,13 +76,13 @@ The initial height of the popup window, specified in pixels.
 
 icon:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The icon for the window which will be shown in the title bar.
 
 left:
 ~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Used to position a non-fullscreen window in a precise location on the screen.
 (This is useful if you're using an LCD display in your machine and your
@@ -152,7 +152,7 @@ not full screen and not borderless).
 
 top:
 ~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Used to position the pop up window in a fixed position when MPF MC starts.
 

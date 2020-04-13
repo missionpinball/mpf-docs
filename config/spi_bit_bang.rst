@@ -24,20 +24,20 @@ The following sections are required in the ``spi_bit_bang:`` section of your con
 
 clock_pin:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 This output is used to clock the SPI chip.
 
 cs_pin:
 ~~~~~~~
-Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 This output is used to chip select the SPI chip.
 It usually also triggers the parallel read of the chip.
 
 miso_pin:
 ~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 This input is read serially to determine the state of your inputs.
 

@@ -24,7 +24,7 @@ The following sections are required in the ``mypinballs:`` section of your confi
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Serial port to use.
 

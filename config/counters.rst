@@ -55,7 +55,7 @@ The following sections are required in the ``counters:`` section of your config:
 
 count_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 This is an event (or a :doc:`list of events </config/instructions/lists>`) that, when posted, will
 increment or decrement the count for this Counter.
@@ -75,7 +75,7 @@ The following sections are optional in the ``counters:`` section of your config.
 
 control_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: :doc:`counter_control_events <counter_control_events>`.
+List of one (or more) values, each is a type: :doc:`counter_control_events <counter_control_events>`. Defaults to empty.
 
 Control events to change the value of this counter.
 MPF currently supports adding/substracting from the count or jumping to a
@@ -96,7 +96,7 @@ the counter:
 
 count_complete_value:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 When the Counter exceeds (or gets below if you're counting down) this
 value, it will post its "complete" event and be considered complete.
@@ -183,7 +183,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Currently unused.
 

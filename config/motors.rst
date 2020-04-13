@@ -166,7 +166,7 @@ position during reset).
 
 reset_position:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The position the device should move to on reset (as defined in ``position_switches``).
 
@@ -202,7 +202,7 @@ Whether the motor should be included in ball search.
 
 motor_left_output:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor left.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -210,7 +210,7 @@ direction or both if it can move in both directions.
 
 motor_right_output:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device.
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor right.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -218,7 +218,7 @@ direction or both if it can move in both directions.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting``
 
 Events on which the motor should move to its ``reset_position``.
 You usually do not have to configure this.
@@ -249,7 +249,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

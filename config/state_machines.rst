@@ -64,7 +64,7 @@ All other states can be any string as defined by the user.
 
 transitions:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: :doc:`state_machine_transitions <state_machine_transitions>`.
+List of one (or more) values, each is a type: :doc:`state_machine_transitions <state_machine_transitions>`. Defaults to empty.
 
 These move from any state to another state, including backward or back to the first step, when a given event is posted.
 
@@ -146,7 +146,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

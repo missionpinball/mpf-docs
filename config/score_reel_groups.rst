@@ -25,7 +25,7 @@ The following sections are required in the ``score_reel_groups:`` section of you
 
 reels:
 ~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`score_reels <score_reels>` device.
+List of one (or more) values, each is a type: string name of a :doc:`score_reels <score_reels>` device. Defaults to empty.
 
 List the :doc:`score reels <score_reels>` which make up this group.
 Start with the highest digit. The last entry will be the right most digit.
@@ -39,7 +39,7 @@ The following sections are optional in the ``score_reel_groups:`` section of you
 
 chimes:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device.
+List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 List the :doc:`coils <coils>` driving the chime which are rung when the reel overflows.
 Start with the highest digit. The last entry will be the right most digit.
@@ -47,7 +47,7 @@ You may use None if there is no chime for a digit.
 
 lights_tag:
 ~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Lights to turn on when this group is active.
 
@@ -77,7 +77,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Tag groups with the player which uses it.
 Add ``player1`` to use this reel for player 1. Use ``player2`` for player 2 and so on.

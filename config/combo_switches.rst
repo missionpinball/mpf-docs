@@ -61,7 +61,7 @@ The following sections are optional in the ``combo_switches:`` section of your c
 
 events_when_both:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 This is an event (or a list of events) that will be posted when both switches
 are held in. If you have a ``max_offset_time:`` configured, then both switches
@@ -77,7 +77,7 @@ combo plus ``_both`` will be used.
 
 events_when_inactive:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 This is an event (or list of events) that will be posted when the player
 releases both of the buttons, essentially "releasing" the combo.
@@ -87,7 +87,7 @@ combo plus ``_inactive`` will be used.
 
 events_when_one:
 ~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 This is an event (or list of events) that will be posted when the player
 releases one switch after both switches have been pressed together. (In other
@@ -99,14 +99,14 @@ combo plus ``_one`` will be used.
 
 events_when_switches_1:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 This is event (or list of events) will be posted when only switches from
 ``switches_1`` were active for ``max_offset_time``.
 
 events_when_switches_2:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 This is event (or list of events) will be posted when only switches from
 ``switches_2`` were active for ``max_offset_time``.
@@ -149,21 +149,21 @@ released.
 
 switches_1:
 ~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A switch name (or a list of switches) that will be used for the group 1 of the
 combo. You can use this setting or the ``tag_1:`` setting above.
 
 switches_2:
 ~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A switch name (or a list of switches) that will be used for the group 1 of the
 combo. You can use this setting or the ``tag_2:`` setting above.
 
 tag_1:
 ~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A tag (or list of tags) of switches (in the ``switches:`` section of your
 machine config that will be used for switches for group 1 of the combo. You
@@ -171,7 +171,7 @@ can either use a tag, or use the ``switches_1:`` setting (or both, really).
 
 tag_2:
 ~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A tag (or list of tags) of switches (in the ``switches:`` section of your
 machine config that will be used for switches for group 2 of the combo. You
@@ -203,7 +203,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

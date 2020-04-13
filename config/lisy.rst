@@ -24,7 +24,7 @@ The following sections are optional in the ``lisy:`` section of your config. (If
 
 baud:
 ~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Baudrate when connecting to LISY using a serial port.
 
@@ -79,13 +79,13 @@ If in doubt check the documentation of your controller.
 
 network_host:
 ~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Host to connect when connecting to LISY via network.
 
 network_port:
 ~~~~~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Port to connect when connecting to LISY via network.
 
@@ -97,7 +97,7 @@ How fast should MPF poll LISY for switch changes? Defaults to 1000Hz
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Serial port when connecting to LISY using serial.
 

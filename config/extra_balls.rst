@@ -45,7 +45,7 @@ The following sections are optional in the ``extra_balls:`` section of your conf
 
 award_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, award this extra ball to the current player.
 
@@ -57,14 +57,14 @@ Whether the device starts enabled or disabled.
 
 group:
 ~~~~~~
-Single value, type: string name of a :doc:`extra_ball_groups <extra_ball_groups>` device.
+Single value, type: string name of a :doc:`extra_ball_groups <extra_ball_groups>` device. Defaults to empty.
 
 The extra ball group which this ball belongs to which can further limit the
 maximum number of balls and enable/disable the device.
 
 light_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event to light the extra ball (if enabled).
 
@@ -106,7 +106,7 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for extra balls: *None*
 

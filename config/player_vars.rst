@@ -30,7 +30,7 @@ The following sections are required in the ``player_vars:`` section of your conf
 
 initial_value:
 ~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The initial value of this player variable that you're setting. This
 is set when the player is created.

@@ -71,13 +71,13 @@ height).
 
 file:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The file to load when using this bitmap font.
 
 load:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 When should the asset loader load this file?
 One out of ``mode_start``, ``on_demand`` or ``preload``.

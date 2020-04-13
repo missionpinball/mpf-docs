@@ -57,7 +57,7 @@ Timeout for the player to enter his/her initials.
 
 reverse_sort:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of categories where the sort should be inverted.
 Usually the highest score is the best but sometimes you want the shortest time

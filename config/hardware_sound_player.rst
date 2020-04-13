@@ -49,7 +49,7 @@ Also loop behaviour depends on the hardware and might be different per sound.
 
 platform_options:
 ~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -69,7 +69,7 @@ Usually, there are one or two tracks.
 
 value:
 ~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The number of your sound.
 

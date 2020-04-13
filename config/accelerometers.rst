@@ -51,7 +51,7 @@ The following sections are required in the ``accelerometers:`` section of your c
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Number of this device in your hardware platform. The actual meaning of this number depends on your hardware platform.
 
@@ -111,7 +111,7 @@ is laying straight on the ground. If you mount it in the cab you want about
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this accelerometer is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -152,7 +152,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 

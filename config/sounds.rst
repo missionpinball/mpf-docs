@@ -53,7 +53,7 @@ The following sections are optional in the ``sounds:`` section of your config. (
 
 about_to_finish_time:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 The point relative to the end of the sound at which to post the ``events_when_about_to_finish`` event(s).
 A value of 0.5 seconds means to post the event(s) prior to the end of the sound. When set to ``None``, no events will be
@@ -62,13 +62,13 @@ the sound begins playback. This value is specified as a :doc:`time string </conf
 
 ducking:
 ~~~~~~~~
-Single value, type: :doc:`sound_ducking <sound_ducking>`.
+Single value, type: :doc:`sound_ducking <sound_ducking>`. Defaults to empty.
 
 The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.
 
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this sound is about to finish playing.
 The exact timing of this event is determined by the ``about_to_finish_time`` setting for this sound.
@@ -76,7 +76,7 @@ Enter the list in the MPF config list format. These events are posted exactly as
 
 events_when_looping:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this sound loops back to the
 beginning while playing. Enter the list in the MPF config list format. These events are posted
@@ -84,14 +84,14 @@ exactly as they’re entered.
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this sound is played. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this sound stops playing. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.  These events can
@@ -114,7 +114,7 @@ by an event.
 
 file:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Sometimes you might want to name a file one thing on disk but refer to it as another thing in your
 game and config files. In this case, you can create an ``file:`` setting in an asset entry. (Note
@@ -131,7 +131,7 @@ having to update your display code.) That said, we expect that 99% of people won
 
 key:
 ~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -148,7 +148,7 @@ should play again after the first time through.
 
 markers:
 ~~~~~~~~
-List of one (or more) values, each is a type: :doc:`sound_marker <sound_marker>`.
+List of one (or more) values, each is a type: :doc:`sound_marker <sound_marker>`. Defaults to empty.
 
 The ``markers:`` section establishes a list of markers and their associated events at specific
 times in the sound.  When a marker is reached during playback, the associated events will be
@@ -172,7 +172,7 @@ Here's a simple example utilizing markers:
 
 max_queue_time:
 ~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies the maximum time this sound can be queued before it's played. If the time between when
 this sound is requested and when MPF can actually play it is longer than this queue time, then
@@ -218,7 +218,7 @@ queued for playback and will have to wait to be played.
 
 simultaneous_limit:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 The numeric value indicating the maximum number of instances of this sound that may be played
 at the same time (up to the limit of the track).  Once the maximum number of instances has
@@ -265,7 +265,7 @@ setting is ignored and a value of 1 is used.
 
 track:
 ~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the name of the track this sound will play on. (You configure tracks and track names in the
 :doc:`sound_system: </config/sound_system>` section of your machine config files.)

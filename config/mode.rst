@@ -40,7 +40,7 @@ The following sections are optional in the ``mode:`` section of your config. (If
 
 code:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 If you want to write some custom Python code for this mode, you can
 specify the name of your file as well as the class (a child class of
@@ -57,13 +57,13 @@ Log level for the console log for this mode.
 
 events_when_started:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 Events which will be posted when this mode has been started.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 Events which will be posted when this mode has been stopped.
 
@@ -120,7 +120,7 @@ which maintains a list of the modes to be restarted.
 
 start_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -157,7 +157,7 @@ modes that are set to start on the same event.
 
 stop_events:
 ~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 

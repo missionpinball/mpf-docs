@@ -93,7 +93,7 @@ The following sections are required in the ``drop_targets:`` section of your con
 
 switch:
 ~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of the switch that's activated when this drop target is down.
 (Note that active switch = target down, so if your drop target uses
@@ -118,14 +118,14 @@ See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 disable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
 disabling the "keep up".
 
 enable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will send enable the drop target's reset coil which
 means that balls that hit it do not cause the drop target to fall since the reset
@@ -145,7 +145,7 @@ coils will set switches that could add to the score, start modes, etc. Default i
 
 knockdown_coil:
 ~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 This is an optional coil that's used to knock down a drop target. Most
 drop targets do not have these. (In the *Judge Dredd* example above,
@@ -161,7 +161,7 @@ See :doc:`psus` for details.
 
 knockdown_events:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
@@ -175,7 +175,7 @@ change this value if you have more than one playfield and you're managing them s
 
 reset_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil that is pulsed to reset this drop target. The
 pulse time will be whatever you configure as the default pulse time
@@ -199,7 +199,7 @@ See :doc:`psus` for details.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_starting, machine_reset_phase_3
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_starting, machine_reset_phase_3``
 
 Default: ``ball_starting, machine_reset_phase_3``
 
@@ -237,7 +237,7 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for drop targets: *None*
 

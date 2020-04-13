@@ -60,7 +60,7 @@ Set it to -1 for unlimited.
 
 delayed_eject_events:
 ~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Delay the eject until a event from ``delayed_eject_events`` is posted.
 For instance, this can be used in combination with ``only_last_ball`` at the
@@ -68,14 +68,14 @@ end of a wizard mode to drain all balls and continue the game later.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_will_end, service_mode_entered``
 
 Event(s) which disable this ball save, meaning a drained ball will no longer
 be saved.
 
 early_ball_save_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event(s) which will trigger a ball save to take place before the current ball has drained. A typical example of this might be switch
 activation events from outlane switches which can be used to trigger a ball save as soon as the ball hits the outlane.
@@ -89,7 +89,7 @@ This might be useful if you want to play a show or some sounds first for dramati
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event(s) which enable this ball save.
 
@@ -124,7 +124,7 @@ Playfield to eject the saved balls to.
 
 timer_start_events:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, start this ball saver's countdown timer.
 
@@ -155,7 +155,7 @@ menus and trouble reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for ball saves: *None*
 

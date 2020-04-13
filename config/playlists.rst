@@ -72,7 +72,7 @@ The following sections are required in the ``playlists:`` section of your config
 
 sounds:
 ~~~~~~~
-List of one (or more) events.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 .. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
    in quotes:
@@ -111,7 +111,7 @@ The number of seconds over which to crossfade between sounds in the playlist. Th
 
 events_when_looping:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist loops back to the
 beginning while playing. The playlist will only loop if ``repeat:`` is set to ``True``. Enter the
@@ -119,14 +119,14 @@ list in the MPF config list format. These events are posted exactly as they’re
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist is played. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_sound_changed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when a new sound is played while the playlist
 is played. Enter the list in the MPF config list format. These events are posted exactly as they’re
@@ -134,14 +134,14 @@ entered.
 
 events_when_sound_stopped:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when a playlist sound has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.

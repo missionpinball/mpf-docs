@@ -32,7 +32,7 @@ The following sections are required in the ``raspberry_pi:`` section of your con
 
 ip:
 ~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 IP of your Raspberry Pi. MPF will connect to this IP. Hostname does not work here.
 

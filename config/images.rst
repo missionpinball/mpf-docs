@@ -60,7 +60,7 @@ The following sections are optional in the ``images:`` section of your config. (
 
 file:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Sometimes you might want to name a file one thing on disk but refer to
 it as another thing in your game and config files. In this case, you
@@ -82,7 +82,7 @@ without having to update your display code.) That said, we expect that
 
 load:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Specifies when this asset should be loaded. (See the
 :doc:`/assets/index` documentation for an explanation on loading.)

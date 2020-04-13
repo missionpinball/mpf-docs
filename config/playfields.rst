@@ -26,7 +26,7 @@ The following sections are required in the ``playfields:`` section of your confi
 
 default_source_device:
 ~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`ball_devices <ball_devices>` device.
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
 
 The source ball device to use to feed balls to this playfield.
 This source device must be able to eject directly to the playfield.
@@ -41,19 +41,19 @@ The following sections are optional in the ``playfields:`` section of your confi
 
 ball_search_block_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: flipper_cradle
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``flipper_cradle``
 
 Event to block ball search. Used by flipper cradle.
 
 ball_search_disable_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event to disable ball search.
 
 ball_search_enable_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event to enable ball search.
 
@@ -103,7 +103,7 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 
 ball_search_unblock_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: flipper_cradle_release
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``flipper_cradle_release``
 
 Event to unblock ball search. Used by flipper cradle.
 
@@ -115,7 +115,7 @@ Extra delay after each iteration.
 
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (``true``/``false``).
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
 
 Enable ball_search by default. Use with care during development
 since coils may hurt you. Should be enabled in any production
@@ -147,7 +147,7 @@ Label for service menu.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Set tag `default` to your default playfield. The game will use
 the default playfield to eject balls.

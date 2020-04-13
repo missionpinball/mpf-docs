@@ -90,7 +90,7 @@ Single value, type: one of the following options: add, remove, update. Default: 
 
 key:
 ~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Used to uniquely identify a widget. With "add" actions, this sets the key name,
 and with "remove" or "update" actions, the key is used to identify which widget
@@ -105,7 +105,7 @@ See the :doc:`/displays/widgets/keys` guide for details.
 
 slide:
 ~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the slide you want to add this widget to. If this is not specified,
 then the widget will be added to whichever slide is currently active on the
@@ -113,7 +113,7 @@ default display.
 
 target:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the display or slide frame this widget will be added to. When this
 setting is used, the widget is not added to a slide, rather, it's added "on top"

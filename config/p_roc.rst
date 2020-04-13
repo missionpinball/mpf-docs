@@ -38,7 +38,7 @@ and send us your log.
 
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``integer``.
+List of one (or more) values, each is a type: ``integer``. Defaults to empty.
 
 Only P-Roc (not P3-Roc).
 
@@ -55,7 +55,7 @@ The update interval of your DMD. Usually you do not have to change this.
 
 driverboards:
 ~~~~~~~~~~~~~
-Single value, type: one of the following options: wpc, wpcAlphanumeric, wpc95, sternSAM, sternWhitestar, pdb, custom, None.
+Single value, type: one of the following options: wpc, wpcAlphanumeric, wpc95, sternSAM, sternWhitestar, pdb, custom, None. Defaults to empty.
 
 Similar to ``driverboards`` in the :doc:`/config/hardware` section.
 Use this setting if you use multiple playforms (i.e. FAST and P3-Roc) in one

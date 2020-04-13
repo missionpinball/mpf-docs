@@ -65,7 +65,7 @@ The following sections are required in the ``steppers:`` section of your config:
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the number of the stepper which specifies which stepper the
 it is physically connected to. The exact format used here will
@@ -115,7 +115,7 @@ whether the stepper is at the home position.
 
 homing_switch:
 ~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 Switch to check if the stepper is at the home position when ``homing_mode`` is set to ``switch``.
 
@@ -147,7 +147,7 @@ tell this stepper to move to a certain position. So in the example above, when t
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this stepper is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -158,7 +158,7 @@ See the :doc:`/hardware/platform` guide for details.
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Platform specific stepper settings for this stepper.
 Check the :doc:`documentation of your platform </hardware/platform>` for details.
@@ -178,7 +178,7 @@ Negative values are left of the home position.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting, ball_will_end, service_mode_entered``
 
 Events to reset the position of the stepper.
 
@@ -215,7 +215,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used currently.
 

@@ -45,7 +45,7 @@ The following sections are optional in the ``bcp:`` section of your config. (If 
 
 connections:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: :doc:`bcp_connection <bcp_connection>`.
+List of one (or more) values, each is a type: :doc:`bcp_connection <bcp_connection>`. Defaults to empty.
 
 The `connections:` section is where you can specify the connections
 the MPF core engine will make to standalone media controllers. MPF
@@ -60,7 +60,7 @@ Set this to true to see more debug messages in the log.
 
 servers:
 ~~~~~~~~
-List of one (or more) values, each is a type: :doc:`bcp_server <bcp_server>`.
+List of one (or more) values, each is a type: :doc:`bcp_server <bcp_server>`. Defaults to empty.
 
 The `servers:` section is where you can specify bcp server instances
 which can be connected from other processes.

@@ -31,14 +31,14 @@ The following sections are required in the ``digital_outputs:`` section of your 
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The number of your light or driver. The exact meaning of this number depends on your platform but is exactly
 the same as if this was a light or driver (depending on the ``type`` setting).
 
 type:
 ~~~~~
-Single value, type: one of the following options: light, driver.
+Single value, type: one of the following options: light, driver. Defaults to empty.
 
 Whether this output is mapped as light or driver.
 
@@ -50,19 +50,19 @@ The following sections are optional in the ``digital_outputs:`` section of your 
 
 disable_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Those events will disable this output when posted.
 
 enable_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Those events will enable this output when posted.
 
 light_subtype:
 ~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 If this is mapped as light (``type: light``) you can set the ``subtype`` here
 (see :doc:`lights </config/lights>` for details about ``subtype``).
@@ -70,7 +70,7 @@ The exact meaning depends on your platform.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 In case you want to overwrite the default platform (as defined in ``hardware:``),
 you can choose a platform for this output.
@@ -101,7 +101,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

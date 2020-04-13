@@ -76,7 +76,7 @@ See :doc:`/hardware/dmd_platforms` for supported platforms.
 
 driverboards:
 ~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Specifies the default type of driver boards you're using. If you have a home
 brew machine, this will probably match your platform. If you're using an

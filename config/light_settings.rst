@@ -94,7 +94,7 @@ ones for different groups of lights.
 
 default_color_correction_profile:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The name of the color correction profile that applies to an light by default if
 that light doesn't have a profile configured for it.

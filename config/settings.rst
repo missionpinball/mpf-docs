@@ -39,19 +39,19 @@ The following sections are required in the ``settings:`` section of your config:
 
 default:
 ~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Default value to use if not changed or on reset. Must be included in ``values``.
 
 label:
 ~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Label to use in service mode for this setting.
 
 sort:
 ~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Sort in service mode.
 
@@ -78,7 +78,7 @@ Type of the key. If you want to do math with the variable you need either
 
 machine_var:
 ~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the machine variable to use. If this is not set it will use the name
 of this setting as machine variable.

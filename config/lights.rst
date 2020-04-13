@@ -37,7 +37,7 @@ The following sections are optional in the ``lights:`` section of your config. (
 
 channels:
 ~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Instead of a single ``number`` address for a light, you can enter channels
 corresponding to the multi-color channels of an RGB or RGBW LED. Each channel entry can
@@ -62,7 +62,7 @@ for different types of LEDs.
 
 color_correction_profile:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 If provided, a color correction profile will be applied to all color settings this light receives.
 By order of operations, the light will be set to the requested color first and then the color
@@ -81,7 +81,7 @@ own custom colors in the :doc:`/config/named_colors` section of your config.
 
 fade_ms:
 ~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 When this light receives instructions to change color, it can interpolate from its current value to the
 new value over a fade time. If no value is provided, the machine default will be used. If this light is
@@ -89,7 +89,7 @@ part of a show that defines a fade time, the show's value will supercede this li
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the number of the light which specifies which output the
 hardware bulb or LED is physically connected to. The exact format used here will
@@ -101,7 +101,7 @@ Note that a light must have either ``channels`` or ``number`` defined, but canno
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this LED is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -130,14 +130,14 @@ This is an example for a driver as light:
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Platform-specific light settings.
 Consult your platform documentation for details.
 
 subtype:
 ~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 If you hardware platform supports multiple types of lights you need to set
 a ``subtype`` to tell your platform how to address this light (to prevent
@@ -147,7 +147,7 @@ Consult your platform documentation for details.
 
 type:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Default value is ``rgb``.
 
@@ -159,21 +159,21 @@ When using serial LEDs (e.g. with FAST or Fadecandy), use `rgb` for WS2812 and `
 
 x:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 This is used for display_light_player to determine the position of this light on the playfield and
 use it as a huge display.
 
 y:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 This is used for display_light_player to determine the position of this light on the playfield and
 use it as a huge display.
 
 z:
 ~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 Currently not used anywhere.
 
@@ -203,7 +203,7 @@ Name of the light in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Lights can be referenced by their tags in light_players.
 Typical tags are `gi` for all GIs or `playfield_inserts` for all inserts on the playfield.

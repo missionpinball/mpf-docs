@@ -109,7 +109,7 @@ Controls whether the various timer events (count, start, stop, complete, etc.) a
 
 control_events:
 ~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: :doc:`timer_control_events <timer_control_events>`.
+List of one (or more) values, each is a type: :doc:`timer_control_events <timer_control_events>`. Defaults to empty.
 
 Timer control events is where you specify what happens to this timer when other events are posted.
 See :doc:`timer_control_events` for more details.
@@ -122,7 +122,7 @@ Controls which direction this timer runs in. Options are ``up`` or ``down``.
 
 end_value:
 ~~~~~~~~~~
-Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`).
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 Specifies what the final value for this timer will be. When the timer value equals or exceeds this (for timers counting
 up), or when it equals or is lower than this (for timers counting down), the *timer_<name>_complete* event is
@@ -134,7 +134,7 @@ for this setting.
 
 max_value:
 ~~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 The maximum value this timer can be. If you try to add value above this, the timer's value will be reset
 to this value.
@@ -205,7 +205,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

@@ -42,13 +42,13 @@ The following sections are required in the ``smartmatrix:`` section of your conf
 
 baud:
 ~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 Baud rate of your serial port. Depends on the smartmatrix firmware.
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the serial port of your smartmatrix device. This will be `comX` on Windows.
 On Linux and Mac it depends on the usb-serial chip (usually /dev/ttyUSBX on

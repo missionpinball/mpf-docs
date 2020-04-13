@@ -51,7 +51,7 @@ Log level for the file log for this platform.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this servo controller is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have

@@ -26,7 +26,7 @@ The following sections are required in the ``segment_displays:`` section of your
 
 number:
 ~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The number of the display. The meaning depends on the hardware platform.
 
@@ -38,14 +38,14 @@ The following sections are optional in the ``segment_displays:`` section of your
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This can be used to overwrite the platform which is defined in the *hardware*
 section for segment_displays.
 
 platform_settings:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: dict.
+Single value, type: dict. Defaults to empty.
 
 Platform specific settings.
 See your :doc:`segment platform documentation </hardware/segment_display_platforms>`.
@@ -76,7 +76,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 

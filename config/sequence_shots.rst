@@ -109,13 +109,13 @@ The following sections are optional in the ``sequence_shots:`` section of your c
 
 cancel_events:
 ~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Those events will cancel the current sequence. Same as ``cancel_switches`` but with events.
 
 cancel_switches:
 ~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A switch (or list of switches) that will cause any in-progress switch
 sequence tracking to be canceled. (Think of it like a cancel "abort"
@@ -126,7 +126,7 @@ cancel all of them.
 
 delay_event_list:
 ~~~~~~~~~~~~~~~~~
-One or more sub-entries. Each in the format of ``string`` : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events which will temporarily prevent new sequences from starting. Same as ``delay_switch_list`` but with events.
 
@@ -142,7 +142,7 @@ specified.
 
 event_sequence:
 ~~~~~~~~~~~~~~~
-List of one (or more) events.
+List of one (or more) events. The device will add handlers for those events. Defaults to empty.
 
 A sequence of events which will complete the sequence.
 
@@ -168,7 +168,7 @@ switch activations and the shot would count.)
 
 switch_sequence:
 ~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device.
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 A sequence of switches which will complete the sequence.
 
@@ -198,7 +198,7 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 
