@@ -100,6 +100,9 @@ You also have to add ``t`` to disable the text ui to see the verbose log.
 Otherwise, you would only see the verbose output in the logfile in the ``logs``
 directory of your machine.
 
+Note: For more information about command line options take a look at 
+:doc:`/running/commands/index` and :doc:`/running/commands/game`.
+
 Once your game is running, drop a ball into your trough and you
 should see a whole bunch of trough switches changing between active
 (State: 1) and inactive (State: 0).
