@@ -44,12 +44,12 @@ want.
 
 Throughout this tutorial we'll refer to this as "your machine folder".
 
-Next create a subfolder in your new machine folder called ``/config``. This is where your machine
+Next create a subfolder in your new machine folder called ``\config``. This is where your machine
 configuration files will live. This folder should be inside your machine folder, like this:
 
 .. code-block:: doscon
 
-   C:\pinball\your_machine\config\
+   C:\pinball\your_machine\config
 
 3. Create your machine config file
 ----------------------------------
@@ -77,7 +77,7 @@ should look like this:
 
    #config_version=5
 
-So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_ or `Sublime <https://www.sublimetext.com/>`_)
+So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_, `Sublime <https://www.sublimetext.com/>`_, or  `Notepad++ <https://notepad-plus-plus.org/>`_)
 and then add that to the top of the file and save it.
 
 Be sure to enter this exactly as it's shown here, with no spaces around the equal sign.
@@ -98,7 +98,7 @@ contents of that file.
 5. Run your game!
 -----------------
 
-Believe it your not, it's time to run your game! Simply open a console window and change to your machine
+Believe it our not, it's time to run your game! Simply open a console window and change to your machine
 folder, and run ``mpf -b``, like this:
 
 .. code-block:: doscon
