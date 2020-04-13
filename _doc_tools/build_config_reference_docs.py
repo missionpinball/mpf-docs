@@ -589,14 +589,33 @@ your machine-wide config, a mode-specific config, or both.
 
         return ftype
 
+    def _layout_attribute_defaults(self, default_settings):
+        if default_settings == "None" or default_settings is None:
+            return "Defaults to empty."
+        elif default_settings == "":
+            return "Required attribute."
+        else:
+            return "Default: ``{}``".format(default_settings)
+
     def _get_spec_string(self, num, stype, default=None):
         if num == 'single':
+            if stype == 'event_posted':
+                return 'Single event. This device will be posted by the device. {}\n'.format(
+                    self._layout_attribute_defaults(default))
+            elif stype == 'event_handler':
+                return 'Single event. The device will add an handler for this event. {}\n'.format(
+                    self._layout_attribute_defaults(default))
+
             return_string = 'Single value, '
         elif num == 'list' or num == 'set':
+            if stype == 'event_posted':
+                return 'List of one (or more) events. Those will be posted by the device. {}\n'.format(
+                    self._layout_attribute_defaults(default))
+            elif stype == 'event_handler':
+                return 'List of one (or more) events. The device will add handlers for those events. {}\n'.format(
+                    self._layout_attribute_defaults(default))
+
             return_string = 'List of one (or more) values, each is a '
-        elif num == 'event_list':
-            return_string = 'List of one (or more) events.\n'
-            return return_string
         elif num == 'dict':
             stype = stype.split(':')
             return_string = 'One or more sub-entries. Each in the format of {} : {}\n'.format(
@@ -608,12 +627,10 @@ your machine-wide config, a mode-specific config, or both.
                 self._get_type_desc(stype[0]), self._get_type_desc(stype[1]))
             return return_string
         elif num == 'event_handler':
-            return_string = 'List of one (or more) device control events (:doc:`Instructions for entering '\
-                    'device control events </config/instructions/device_control_events>`).'
-            if default is not None and default != "None":
-                return_string += " Default: " + default
-            return_string += '\n'
-            return return_string
+            return 'List of one (or more) device control events (:doc:`Instructions for entering '\
+                    'device control events </config/instructions/device_control_events>`). {}\n'.format(
+                self._layout_attribute_defaults(default))
+
         elif num == "ignored":
             return "Unknown type. See description below.\n"
         else:
@@ -621,12 +638,7 @@ your machine-wide config, a mode-specific config, or both.
 
         ftype = self._get_type_desc(stype)
 
-        return_string += 'type: {}.'.format(ftype)
-
-        if default is not None and default != "None":
-            return_string += ' Default: ``{}``'.format(default)
-
-        return_string += '\n'
+        return_string += 'type: {}. {}\n'.format(ftype, self._layout_attribute_defaults(default))
 
         return return_string
 
