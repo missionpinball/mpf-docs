@@ -383,7 +383,7 @@ this:
 .. code-block:: console
 
    My-Mac:~ $ mpf --version
-   MPF v0.51.3
+   MPF v0.54.0
 
 (Note that the actual version number of your MPF installation will be whatever
 version is the latest.)
