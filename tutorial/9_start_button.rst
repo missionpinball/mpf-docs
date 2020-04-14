@@ -21,7 +21,7 @@ tutorial we'll just call this button ``s_start`` and add it like this:
 -----------------------------------------
 
 Just like the special-purpose tags we used when configuring the ball
-devices, MPF uses some special purpose tags for switches, too. One of
+devices, MPF uses some :doc:`special purpose tags for switches </config/switches>`, too. One of
 them is ``start``, as MPF watches for switches tagged with "start" to
 start games and add players to running games.
 
@@ -87,6 +87,9 @@ playfield switches, for example:
      s_right_inlane:
        number: 12
        tags: playfield_active
+
+Note: The tags playfield_active and above the start tag are :doc:`special 
+purpose tags for switches </config/switches>`.
 
 While you're at it, create a keyboard key mapping for this switch in
 the ``keyboard:`` section of your config, like this:
