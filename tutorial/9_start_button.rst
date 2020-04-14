@@ -89,7 +89,7 @@ playfield switches, for example:
             tags: playfield_active
 
 Note: The tags playfield_active and above the start tag are :doc:`special 
-purpose tags for switches </config/switches#tags>`.
+purpose tags for switches </config/switches>`.
 
 While you're at it, create a keyboard key mapping for this switch in
 the ``keyboard:`` section of your config, like this:
