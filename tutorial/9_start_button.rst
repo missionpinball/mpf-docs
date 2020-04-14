@@ -21,7 +21,7 @@ tutorial we'll just call this button ``s_start`` and add it like this:
 -----------------------------------------
 
 Just like the special-purpose tags we used when configuring the ball
-devices, MPF uses some :doc:`special purpose tags for switches </config/switches#tags>`, too. One of
+devices, MPF uses some :doc:`special purpose tags for switches </config/switches>`, too. One of
 them is ``start``, as MPF watches for switches tagged with "start" to
 start games and add players to running games.
 
