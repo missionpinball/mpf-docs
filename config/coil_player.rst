@@ -32,7 +32,7 @@ Example from a config file:
 
 In the example above, when the event called ``some_event`` is posted, coil_1 will pulse.
 When the event ``some_other_event`` is posted, coil_2 will enable (be held on) at power
-level 4.
+level 0.5 (means 50% of maximum power).
 
 Note that the ``some_event: coil_1`` is entered in a different way than the ``some_other_event:``.
 The first one has a simple key/value pair, whereas the second has a complete nested sub-configuration.
@@ -85,6 +85,8 @@ If not set it will use ``default_pulse_power`` of the :doc:`/config/coils`.
 
 pulse_ms:
 ~~~~~~~~~
+Single value, type: float(0,1).
+
 The number of milliseconds you'd like this coil to pulse for. This setting
 overrides the coil's *default_pulse_ms* setting. Note that this setting
 only affects pulse actions. Make sure you are not exceeding the coil's
