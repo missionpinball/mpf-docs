@@ -11,8 +11,8 @@ file will look like. We'll step through everything one-by-one.
 
     displays:
       window:
-        height: 800
-        width: 600
+        width: 800
+        height: 600
 
     window:
       width: 800
@@ -34,8 +34,8 @@ The first part of the config file is where you create your display called
 
     displays:
       window:
-        height: 800
-        width: 600
+        width: 800
+        height: 600
 
 This is just like we covered in the :doc:`index` section.
 
