@@ -231,7 +231,9 @@ switch tagged with "hello", then every time that switch is activated,
 it will post the event ``sw_hello``. If you have a switch tagged with
 "hello" and "yo", then every time that switch is activated it will
 post the events ``sw_hello`` and ``sw_yo``. MPF also makes use of several
-tags on its own, including:
+tags on its own.
+
+Special-purpose tags for switches include:
 
 + ``playfield_active`` - This tag should be used for all switches on the
   playfield that indicate a ball is loose on the playfield. This tag is used
