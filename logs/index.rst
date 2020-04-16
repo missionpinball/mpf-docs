@@ -16,3 +16,5 @@ Log and Error Descriptions
    CFE-Smart_Virtual_Platform-1
    CFE-Virtual_Platform-1
    Log-SwitchController-1
+   RE-MPF-MC_BCP_Server-1
+   RE-MPF_BCP_Server-1
