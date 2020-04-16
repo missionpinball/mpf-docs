@@ -147,6 +147,8 @@ complete game on your computer keyboard. Here's how you do it:
 #. If you do not have a coil-fired plunger, push the "P" key (or
    whatever key you mapped to your plunger lane switch) to un-toggle that
    switch which simulates the ball leaving the plunger lane.
+   Note: The toggle option in teh :doc:`/config/keyboard` section is useful for testing 
+   your game from your computer when you’re not around your physical machine.
 #. Now you can "flip" with the "Z" and "?" keys.
 #. After you get bored of this, push the "1" key to activate a trough
    ball switch. At this point MPF will think a ball drained and you
