@@ -96,8 +96,11 @@ Related How To guides
 
 Related Events
 --------------
+
 * :doc:`/events/switch_name_active`
 * :doc:`/events/switch_name_inactive`
+
+.. include:: /events/include_switches.rst
 
 
 .. toctree::
