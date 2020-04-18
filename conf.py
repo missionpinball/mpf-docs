@@ -205,9 +205,9 @@ def annotate_html(app, doctree, fromdocname):
 
 
 def setup(app):
-    app.add_stylesheet('mpf.css')
+    app.add_css_file('mpf.css')
     app.add_config_value('use_mc', False, False, [bool])
-    app.add_javascript('mpf.js')
+    app.add_js_file('mpf.js')
 
     app.connect('doctree-resolved', process_source)
     app.connect('doctree-resolved', annotate_html)
