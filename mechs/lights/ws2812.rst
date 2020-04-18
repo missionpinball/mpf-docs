@@ -13,6 +13,8 @@ Config
 MPF tries to make this right for you and your can configure those LEDs
 as follows:
 
+.. code-block:: mpf-config
+
   lights:
     my_ws2811:
       number: 0         # first LED in chain (with three channels)
@@ -125,11 +127,36 @@ The datasheet is inconsistent here.
 Absolute maximum rating are 6-7V but they also talk about 12V and 24V.
 So take care about that voltage when buying those PCBs.
 
-RGBW
-~~~~
+WS2814 or SK6812
+~~~~~~~~~~~~~~~~
 
 There is not much known about the inner working of those chips.
-But they are believed to work similar to the chips above but
+But they work similar to the chips above but
 at ``18.5mA * 4 = 74mA`` total power.
 
-:doc:`TODO: Add a picture of a RGBW </about/help_us_to_write_it>`
+:doc:`TODO: Add a picture of a RGBW WS2814 and/or SK6812 </about/help_us_to_write_it>`
+
+WS2813
+~~~~~~
+
+Those chips are similar to the WS2812 chips but they got an additional fallback
+input which connects to the output of the second last LED.
+If the previous LED in the chain breaks the chain will continue to work which
+is very convenient.
+
+:doc:`TODO: Add a picture of a WS2813 </about/help_us_to_write_it>`
+
+There exist four versions:
+* A and B run at ``18mA * 3 = 53mA`` (similar to WS2812)
+* C and D are low power version und run at ``5mA * 3 = 15mA``
+
+WS2815
+~~~~~~
+
+WS2815 is a 5050 chip similar to WS2813 but it runs at 12V instead of 5V which
+is pretty interesting for pinball machines.
+This allows longer chains and thinner wires which is a huge improvement.
+Additionally, it has the handy fallback pin of WS2813 so one broken chip will
+not bring down the whole chain.
+
+:doc:`TODO: Add a picture of a WS2815 </about/help_us_to_write_it>`
