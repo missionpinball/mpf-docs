@@ -62,6 +62,13 @@ Additionally, we add keyboard bindings for ball switches to the numbers
 
 .. code-block:: mpf-mc-config
 
+  #! switches:
+  #!   s_trough1:
+  #!     number:
+  #!   s_trough2:
+  #!     number:
+  #!   s_trough3:
+  #!     number:
   virtual_platform_start_active_switches:
     - s_trough1
     - s_trough2
@@ -207,7 +214,7 @@ complete game on your computer keyboard. Here's how you do it:
 #. If you do not have a coil-fired plunger, push the "P" key (or
    whatever key you mapped to your plunger lane switch) to un-toggle that
    switch which simulates the ball leaving the plunger lane.
-   Note: The toggle option in teh :doc:`/config/keyboard` section is useful for testing 
+   Note: The toggle option in the :doc:`/config/keyboard` section is useful for testing
    your game from your computer when you’re not around your physical machine.
 #. Now you can "flip" with the "Z" and "?" keys.
 #. After you get bored of this, push the "1" key to activate a trough

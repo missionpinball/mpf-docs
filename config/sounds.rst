@@ -23,13 +23,34 @@ Here's an example:
 
 .. code-block:: mpf-mc-config
 
+    ##! asset: sounds/extra_ball_12753.wav=../sound/sounds/sound.ogg
+    ##! asset: sounds/slingshot_01.ogg=../sound/sounds/sound.ogg
+    #! sound_system:
+    #!   buffer: 1024
+    #!   channels: 1
+    #!   enabled: true
+    #!   frequency: 44100
+    #!   master_volume: 0.75
+    #!   tracks:
+    #!     music:
+    #!       type: standard
+    #!       simultaneous_sounds: 1
+    #!       volume: 0.5
+    #!     voice:
+    #!       type: standard
+    #!       simultaneous_sounds: 1
+    #!       volume: 0.7
+    #!     sfx:
+    #!       type: standard
+    #!       simultaneous_sounds: 8
+    #!       volume: 0.4
     sounds:
       extra_ball:
         file: extra_ball_12753.wav
         events_when_stopped: extra_ball_callout_finished
         streaming: false
         track: voice
-        volume: -4.5 db
+        volume: 0.5
         priority: 50
         max_queue_time: None
         ducking:

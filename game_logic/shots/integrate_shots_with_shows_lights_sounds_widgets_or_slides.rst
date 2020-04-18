@@ -54,16 +54,12 @@ is hit.
    switches:
      s_outlane_left:
        number: 0
-       tags: playfield_active
      s_inlane_left:
        number: 1
-       tags: playfield_active
      s_inlane_right:
        number: 6
-       tags: playfield_active
      s_outlane_right:
        number: 7
-       tags: playfield_active
    lights:
      l_outlane_left:
        number: 0
