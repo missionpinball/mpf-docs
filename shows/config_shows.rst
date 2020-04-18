@@ -1,7 +1,7 @@
 Creating shows in config files
 ==============================
 
-In addition to being able to `create standalone show files <files>`_, MPF also lets you define your shows right
+In addition to being able to :doc:`create standalone show files </shows/file_shows>`, MPF also lets you define your shows right
 in-line in your config files.
 
 You can do this in the ``shows:`` section of a config file. (This can be done in a mode-based config or in your
