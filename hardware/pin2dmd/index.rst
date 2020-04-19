@@ -28,18 +28,19 @@ options that MPF supports is available in the
 
 This is how a 128x32 pixel PIN2DMD looks in action:
 
-![128x32 pixel PIN2DMD with MPF](https://pin2dmd.com/wp-content/uploads/2020/01/mpf-test.jpg "128x32 pixel PIN2DMD with MPF")
+.. image:: https://pin2dmd.com/wp-content/uploads/2020/01/mpf-test.jpg
+    :alt: 128x32 pixel PIN2DMD with MPF
 
 And this is how a 192x64 pixel PIN2DMD looks:
 
-![192x64 pixel PIN2DMD with MPF](https://pin2dmd.com/wp-content/uploads/2020/01/mpf192x64.jpg "192x64 pixel PIN2DMD with MPF")
-
+.. image:: https://pin2dmd.com/wp-content/uploads/2020/01/mpf192x64.jpg
+    :alt: 192x64 pixel PIN2DMD with MPF
 
 1. Buy and Assemble your PIN2DMD
 --------------------------------
 
 To use PIN2DMD in MPF you should first install your panel as described on the
-[PIN2DMD homepage](https://pin2dmd.com/) (steps hardware and firmware).
+`PIN2DMD homepage <https://pin2dmd.com/>`_ (steps hardware and firmware).
 
 2. Install pyusb
 ----------------
