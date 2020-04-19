@@ -306,25 +306,25 @@ Settings for *glow* effect:
 ----------------------------
 
 blur_size:
-^^^^^^
+^^^^^^^^^^
 Single value, type: ``float``. Default: ``0.5``
 
 The blur width in pixels
 
 intensity:
-^^^^^^
+^^^^^^^^^^
 Single value, type: ``float``. Default: ``0.5``
 
 The base intensity of the glow effect
 
 glow_amplitude:
-^^^^^^
+^^^^^^^^^^^^^^^
 Single value, type: ``float``. Default: ``1.0``
 
 The amplitude of the pulsing glow.  Set to 0 if you want to disable the pulse.
 
 glow_speed:
-^^^^^^
+^^^^^^^^^^^
 Single value, type: ``float``. Default: ``1.0``
 
 The frequency of the glow effect in Hz.
