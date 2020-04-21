@@ -22,19 +22,19 @@ playfield.
 To use multiple locks in one multiball you need to combine those:
 Define locks to lock balls in your lock ball devices.
 Additionally, define a multiball device with your lock ball devices as source.
-Then, use the :doc:`/events/multiball_lock_name_full` events to enable/start
+Then, use the :doc:`/events/multiball_lock_multiball_lock_full` events to enable/start
 your multiball mode.
 When the multiball starts reset counters of your locks.
 
 In the following example, you have to lock balls sequentially in your three
 locks.
 Every lock will enable the next lock using the
-:doc:`/events/multiball_lock_name_full` event.
+:doc:`/events/multiball_lock_multiball_lock_full` event.
 The last lock will start the `multiball` mode.
 If you hit `s_target1` the multiball will start which will reset and disable
-all locks using the :doc:`/events/multiball_name_started` event.
+all locks using the :doc:`/events/multiball_multiball_started` event.
 After all the balls from the multiball drained all lock modes and the
-multiball mode will stop using the :doc:`/events/multiball_name_ended` event.
+multiball mode will stop using the :doc:`/events/multiball_multiball_ended` event.
 
 .. code-block:: mpf-config
 

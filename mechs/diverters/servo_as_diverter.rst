@@ -11,8 +11,8 @@ Using a Servo as Diverter
 
 
 You can use a servo as a diverter by tying it into a diverter using events.
-Specifically, we are using :doc:`/events/diverter_name_deactivating` and
-:doc:`/events/diverter_name_activating`.
+Specifically, we are using :doc:`/events/diverter_diverter_deactivating` and
+:doc:`/events/diverter_diverter_activating`.
 This is an example:
 
 .. code-block:: mpf-config

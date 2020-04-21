@@ -934,7 +934,7 @@ Released: Dec 1, 2016
 * You can :doc:`set starting values for player variables </config/player_vars>`
 * Fixed the :doc:`physical mono DMD </displays/display/dmd>` and
   :doc:`physical RGB (color) DMD </displays/display/rgb_dmd>`
-* Added :doc:`multiball lost event </events/multiball_name_lost_ball>`
+* Added :doc:`multiball lost event </events/multiball_multiball_lost_ball>`
 * Allow devices to have inline config specs
 * Added shots with events
 * Better OPP platform parsing

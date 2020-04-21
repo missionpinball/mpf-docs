@@ -31,7 +31,7 @@ This is an example:
    #! assert_event_called ramp_hit
 
 When both switches are hit in sequence ``ramp_hit``
-(:doc:`/events/sequence_shot__hit`) will be posted.
+(:doc:`/events/sequence_shot_hit`) will be posted.
 You can use that event to trigger further logic/shows/etc.
 
 Using Sequence Shots in Shot Groups
@@ -41,7 +41,7 @@ Sequence shots got shots in their name but they cannot be used in
 :doc:`shot_groups <shot_group>`.
 If you want to use them in a shot groups create a
 :doc:`shot </config/shots>` which is triggerd on the
-:doc:`/events/sequence_shot__hit` event.
+:doc:`/events/sequence_shot_hit` event.
 
 This is an example:
 

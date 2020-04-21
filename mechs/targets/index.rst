@@ -39,13 +39,13 @@ in others they may require a coil to be fired to reset or fire the ball back at 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
 +==============================================================================+
-| :doc:`/events/drop_target_name_down`                                         |
+| :doc:`/events/drop_target_drop_target_down`                                  |
 +------------------------------------------------------------------------------+
-| :doc:`/events/drop_target_name_up`                                           |
+| :doc:`/events/drop_target_drop_target_up`                                    |
 +------------------------------------------------------------------------------+
-| :doc:`/events/drop_target_bank_name_down`                                    |
+| :doc:`/events/drop_target_bank_drop_target_bank_down`                        |
 +------------------------------------------------------------------------------+
-| :doc:`/events/drop_target_bank_name_mixed`                                   |
+| :doc:`/events/drop_target_bank_drop_target_bank_mixed`                       |
 +------------------------------------------------------------------------------+
-| :doc:`/events/drop_target_bank_name_up`                                      |
+| :doc:`/events/drop_target_bank_drop_target_bank_up`                          |
 +------------------------------------------------------------------------------+

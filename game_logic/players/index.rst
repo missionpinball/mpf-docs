@@ -191,7 +191,7 @@ two variables are of type "str" and the last variable is of type "int".
 +------------------------------------------------------------------------------+
 | :doc:`/events/player_turn_started`                                           |
 +------------------------------------------------------------------------------+
-| :doc:`/events/ball_save_name_saving_ball`                                    |
+| :doc:`/events/ball_save_ball_save_saving_ball`                               |
 +------------------------------------------------------------------------------+
 | :doc:`/events/player_turn_will_end`                                          |
 +------------------------------------------------------------------------------+

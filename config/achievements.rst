@@ -103,7 +103,7 @@ Events posted by achievements
 You can configure achievements to post certain events when they change state.
 
 Note that all achievements will by default post events in the form
-:doc:`/events/achievement_name_state_state` when they change state. The events
+:doc:`/events/achievement_achievement_state_state` when they change state. The events
 listed below as ``events_when_xxx``, if defined, will replace the default event.
 
 Control Events
