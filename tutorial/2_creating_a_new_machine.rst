@@ -70,15 +70,20 @@ so you actually create a file called ``config.yaml`` and not ``config.yaml.txt``
 -------------------------------------------------------
 
 The first thing you need to do when you create any new config file for MPF is to add an entry on the very top line that
-tells MPF what “version” of the MPF config spec you’re using for the file you’re creating. For MPF |version|, that
-should look like this:
+tells MPF what “version” of the MPF config spec you’re using for the file you’re creating.
+
+So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_, `Sublime <https://www.sublimetext.com/>`_, or  `Notepad++ <https://notepad-plus-plus.org/>`_)
+and then add that to the top of the file and save it.
+If you are familiar with an IDE such as VSCode or PyCharm/IntelliJ we suggest
+that you install the :doc:`MPF language server </tools/language_server/index>`
+which supports auto-completion, syntax and error highlighting, context help,
+go to definition and more.
+
+For MPF |version|, that should look like this:
 
 .. code-block:: yaml
 
    #config_version=5
-
-So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_, `Sublime <https://www.sublimetext.com/>`_, or  `Notepad++ <https://notepad-plus-plus.org/>`_)
-and then add that to the top of the file and save it.
 
 Be sure to enter this exactly as it's shown here, with no spaces around the equal sign.
 
