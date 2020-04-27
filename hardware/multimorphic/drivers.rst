@@ -180,3 +180,24 @@ This is an example:
         default_pulse_ms: 32
         default_recycle: false
 
+Common Issues
+-------------
+
+All Coils Turn On When I Power Up My Machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If this happens and MPF is not yet running you likely do not have common ground
+between high voltage and logic power.
+Turn your machine off and only turn it back on when you have fixed and verified
+common ground.
+Read the section about :doc:`common ground </hardware/voltages_and_power/voltages_and_power>`
+for details or consult a professional electrician.
+
+If this happens shortly after MPF started and you are using a P-Roc this might
+to do with the polarity of your coils.
+Check the ``polarity`` setting and make sure you configured the correct machine
+type as there are different defaults in different machine types.
+
+In any case we recommend that you test this with either less voltage (i.e. 12V
+instead of 48V) or by using lamps instead of coils on your outputs as that
+will prevent hardware damage due to overcurrent.
