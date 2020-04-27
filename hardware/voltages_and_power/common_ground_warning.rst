@@ -7,3 +7,11 @@
    We are serious, floating grounds are dangerous.
    If you are not an professional electrician read the
    :doc:`guide about voltages and power </hardware/voltages_and_power/index>`.
+   In a nutshell: You need to connect your logic ground (5V/12V) and your high
+   voltage ground (48V or 80V).
+
+   IF YOU DID NOT UNDERSTAND WHAT THIS WARNING MEANS STOP NOW AND TRY TO
+   UNDERSTAND IT.
+   OTHERWISE YOU HARDWARE WILL LIKELY BURST INTO FLAMES AND YOU NEED TO WAIT A
+   FEW DAYS FOR A REPLACEMENT OR EVEN WORSE IT MIGHT KILL YOU.
+   IGNORING THIS IS THE MOST COMMON CAUSE FOR BROKEN DRIVER BOARDS.
