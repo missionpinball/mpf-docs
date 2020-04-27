@@ -11,7 +11,7 @@
    In a nutshell: You need to connect your logic ground (5V/12V) and your high
    voltage ground (48V or 80V).
    A :doc:`power entry or power filter board </hardware/voltages_and_power/index>`
-   is be a convenient solution to solve this (and more) issues.
+   is a convenient solution to solve this (and more) issues.
 
    IF YOU DID NOT UNDERSTAND WHAT THIS WARNING MEANS STOP NOW AND TRY TO
    UNDERSTAND IT.
