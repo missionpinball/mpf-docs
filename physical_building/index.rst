@@ -17,4 +17,4 @@ If you want to create a custom layout read our
 .. toctree::
    :titlesonly:
 
-   layout_considerations
+   Layout Considerations <layout_considerations>
