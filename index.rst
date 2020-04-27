@@ -44,6 +44,14 @@
 
 .. toctree::
    :hidden:
+   :caption: Building Machines
+   :titlesonly:
+   :numbered: 0
+
+   Physically Building Pinball Machines </physical_building/index>
+
+.. toctree::
+   :hidden:
    :caption: Examples
    :titlesonly:
    :numbered: 0
