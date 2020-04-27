@@ -97,8 +97,8 @@ Related How To guides
 Related Events
 --------------
 
-* :doc:`/events/switch_name_active`
-* :doc:`/events/switch_name_inactive`
+* :doc:`/events/switch_active`
+* :doc:`/events/switch_inactive`
 
 .. include:: /events/include_switches.rst
 

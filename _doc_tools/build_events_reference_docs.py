@@ -105,7 +105,7 @@ Every event in MPF is just a string of text. You'll see that in many cases,
 the actual event that's posted has a slight variation of the event text, typically
 incorporating something about which mechanism or logic device posted the event.
 
-For example, the event called :doc:`switch_(name)_active <switch_name_active>`
+For example, the switch event called :doc:`(name)_active <switch_active>`
 will replace the "(name)" part of the event text with the actual switch name.
 So the when a switch called ``s_left_slingshot`` is activated, it will posted
 an event called *switch_s_left_slingshot_active*.
@@ -278,13 +278,12 @@ the arguments below.)\n\n'''
 
         return output
 
-if __name__ == '__main__':
-    rst_path = '../events'
+def run(rst_path, mpf_path, mc_path):
     dont_delete_files = []
 
     parser = EventReferenceParser()
-    mpf_events = parser.get_events_from_path(['../../mpf/mpf'])
-    mpfmc_events = parser.get_events_from_path(['../../mpf-mc/mpfmc'])
+    mpf_events = parser.get_events_from_path([mpf_path])
+    mpfmc_events = parser.get_events_from_path([mc_path])
 
     # delete existing files
     for path, _, files in os.walk(rst_path):
@@ -298,3 +297,7 @@ if __name__ == '__main__':
     file_list.extend(creator.create_files(mpf_events, "MPF Event"))
     file_list.extend(creator.create_files(mpfmc_events, "MPF-MC Event"))
     creator.write_index(file_list, mpf_events + mpfmc_events)
+
+if __name__ == '__main__':
+    rst_path = '../events'
+    run(rst_path, "../../mpf/mpf", "../../mpf-mc/mpfmc")

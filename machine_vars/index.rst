@@ -64,3 +64,9 @@ configs:
    platform_version <platform_version>
    player(x)_score <playerx_score>
    python_version <python_version>
+
+
+Related Events
+--------------
+
+.. include:: /events/include_machine_vars.rst
