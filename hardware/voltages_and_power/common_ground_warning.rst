@@ -5,10 +5,13 @@
    before turning on high voltage on your coils (especially on homebrew machines).
    Ignoring this might lock on your coils, overheat them, burn down your house or kill you.
    We are serious, floating grounds are dangerous.
-   If you are not an professional electrician read the
+   If you are not an electrical engineer read the
    :doc:`guide about voltages and power </hardware/voltages_and_power/index>`.
+
    In a nutshell: You need to connect your logic ground (5V/12V) and your high
    voltage ground (48V or 80V).
+   A :doc:`power entry or power filter board </hardware/voltages_and_power/index>`
+   is be a convenient solution to solve this (and more) issues.
 
    IF YOU DID NOT UNDERSTAND WHAT THIS WARNING MEANS STOP NOW AND TRY TO
    UNDERSTAND IT.

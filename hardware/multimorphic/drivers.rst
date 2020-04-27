@@ -191,7 +191,7 @@ between high voltage and logic power.
 Turn your machine off and only turn it back on when you have fixed and verified
 common ground.
 Read the section about :doc:`common ground </hardware/voltages_and_power/voltages_and_power>`
-for details or consult a professional electrician.
+for details or consult an electrical engineer.
 
 If this happens shortly after MPF started and you are using a P-Roc this might
 to do with the polarity of your coils.
