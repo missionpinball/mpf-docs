@@ -23,6 +23,8 @@ You can build the docs using **Sphinx**. You will first need to install
     pip install sphinx
     pip install gitpython
     pip install sphinx_rtd_theme
+    pip install sphinx-notfound-page
+    pip install ruamel.yaml==0.15.100
 
 ### Running Unit Tests
 
