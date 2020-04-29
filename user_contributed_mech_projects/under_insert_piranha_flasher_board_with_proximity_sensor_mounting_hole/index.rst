@@ -1,6 +1,3 @@
-User Contributed Project
-============================
-
 Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole
 ---------------------------------
 
