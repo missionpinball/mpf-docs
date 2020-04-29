@@ -62,7 +62,7 @@ Every shot from the flipper generally leaves in a straight line. Take your playf
 
 Shot lines are also a great tool to see which shots are able to be back handed off the flipper on the same side.
 
-
+<img align="center" height="146" src="shotlines.gif"/>
 
 Anything missing?
 -----------------
