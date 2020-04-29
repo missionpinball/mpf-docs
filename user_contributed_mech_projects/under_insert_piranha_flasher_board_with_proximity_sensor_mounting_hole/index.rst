@@ -37,6 +37,9 @@ Bill Of Materials - Common
 | 5mm - Piranha, Frosted Lens  | LED                       | LED1,LED2,LED3,LED4 | 4               |
 +------------------------------+---------------------------+---------------------+-----------------+
 
+.. note::
+   If the you are planning on driving these from 5V you need these bill of materials.
+
 Bill Of Materials (5V) - In addition to Common Bill of Materials
 ---------------------------------
 
@@ -50,6 +53,24 @@ Bill Of Materials (5V) - In addition to Common Bill of Materials
 | Resistor - 68Ω 1/4W          | Green                     | R6,R9,R12,R15       | 4               |
 +------------------------------+---------------------------+---------------------+-----------------+
 | Resistor - 220Ω 1/4W         | Transistor                | R1,R2,R3            | 3               |
++------------------------------+---------------------------+---------------------+-----------------+
+
+.. note::
+   If the you are planning on driving these from 3.3V from a PD-LED you need these bill of materials.
+
+Bill Of Materials (3.3V) - In addition to Common Bill of Materials
+---------------------------------
+
++------------------------------+---------------------------+---------------------+-----------------+
+| Name                         | Purpose                   | PCB Legend          | Qty             |
++------------------------------+---------------------------+---------------------+-----------------+
+| Resistor                     | Red                       | R5,R8,R11,R14       | 4               |
++------------------------------+---------------------------+---------------------+-----------------+
+| Resistor                     | Blue                      | R4,R7,R10,R13       | 4               |
++------------------------------+---------------------------+---------------------+-----------------+
+| Resistor                     | Green                     | R6,R9,R12,R15       | 4               |
++------------------------------+---------------------------+---------------------+-----------------+
+| Resistor                     | Transistor                | R1,R2,R3            | 3               |
 +------------------------------+---------------------------+---------------------+-----------------+
 
 Assembly Instructions
