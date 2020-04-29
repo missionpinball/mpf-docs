@@ -39,6 +39,7 @@ Lower inserts will generally be "mode specific".
 You can look at the ramp/orbit shots on Demolition Man to get an idea for the
 insert layout.
 The arrows are generic, everything else is specific.
+.. image:: inserts.png
 
 Ball Guides and Posts
 --------------------
@@ -62,7 +63,9 @@ Every shot from the flipper generally leaves in a straight line. Take your playf
 
 Shot lines are also a great tool to see which shots are able to be back handed off the flipper on the same side.
 
-<img align="center" height="146" src="shotlines.gif"/>
+Here's an example of shot lines on Demolition Man:
+
+.. image:: shotlines.gif
 
 Anything missing?
 -----------------
