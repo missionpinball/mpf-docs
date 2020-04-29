@@ -11,5 +11,4 @@ Projects
 .. toctree::
    :maxdepth: 1
 
-   Project 1 <project_1/index>
-   Project 2 <project_2/index>
+   Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole <under_insert_piranha_flasher_board_with_proximity_sensor_mounting_hole/index>
