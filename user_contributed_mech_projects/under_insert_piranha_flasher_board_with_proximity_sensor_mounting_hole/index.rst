@@ -1,5 +1,5 @@
 Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole
----------------------------------
+===========================================================================
 
 +--------------------+-------------------------------------------------------------------------+
 | Name               | Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole  |
