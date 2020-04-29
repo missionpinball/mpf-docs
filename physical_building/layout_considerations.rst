@@ -25,6 +25,14 @@ Pop bumpers are great for randomizing the action of the ball. They can also offe
 
 Surrounding pop bumpers with steel (like ball guides, for instance) is a quick way to kill the action (and the fun).
 
+Below is a picture of pop bumpers surrounded by steel, with large gaps to the lower playfield. Action here will be very limited:
+
+.. image:: bumpers_bad.png
+
+Below is a picture of pop bumpers surrounded by rubber, with a defined exit to the lower playfield. Action here will be very high:
+
+.. image:: bumpers_good.png
+
 Upper Flippers
 --------------
 Upper flippers are a great way to add a second dimension to the shot flow of a game. For example, if you have an upper right flipper, you can incorporate shots on the middle/upper left of the playfield behind other objects. These are generally harder shots on their own.  With that said, you should at least have a feed to the upper flipper (from a ramp, an orbit, or some other shot).  Generally its a good idea to make the access to the flipper easier, because the shots off of the flipper will be more difficult.
