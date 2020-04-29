@@ -20,7 +20,7 @@ will really immerse the player, and can then incorporate them into your own game
 Some notes from people in our community (:doc:`please tell </about/contributing_to_mpf_docs>` us if you have more):
 
 Pop Bumpers
-----------
+-----------
 Pop bumpers are great for randomizing the action of the ball. They can also offer the player a bit of pause to consider where the ball is coming from. When designing your pop bumper area, it's generally good advice to have rubber surrounding the area to keep the ball action high.
 
 Surrounding pop bumpers with steel (like ball guides, for instance) is a quick way to kill the action (and the fun).
@@ -51,7 +51,7 @@ The arrows are generic, everything else is specific.
 .. image:: inserts.png
 
 Ball Guides and Posts
---------------------
+---------------------
 
 The ball should never ever ever hit metal directly unless its a ball guide.
 Even then, the end of the ball guide should have a rubber post (positioned such that the edge of the guide is covered, but a ball rolling down the guide wont hit it and have its trajectory altered).
@@ -62,7 +62,7 @@ It causes the whole game to play like a big clunky metal piece of garbage.)
 Also, when positioning ball guides for an orbit shot, it is generally a pleasing experience to the player to have the ball come off the orbit right toward the flipper. Some designs have placed orbits such that they hit the tip of the slingshot and bounce the ball out of control. This makes for a more difficult game, and if orbit shots are key to certain modes, this could be rather frustrating for a player who's trying to control the ball.
 
 Shot Lines
---------------------
+----------
 
 It goes without saying that any shot you place on a playfield should be makeable from one or multiple flippers. Fan layouts are a common occurence in playfield design (think of No Fear or Monster Bash), typically arranged into a fan of 7 or 8 shots.
 
