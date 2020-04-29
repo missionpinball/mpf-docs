@@ -60,3 +60,13 @@ Place resistors 1, 14, 5 and 9 on back side of board before Piranha LEDs.
 Transistors and header plug are also mounted on the back side of the board.
 Warning: silkscreen orientation icon for transistors is incorrect but Base, Collector, Emitter designations are correct. Align transistors according to BCE.
 
+The Result
+---------------------------------
+
+.. image:: images/lanes_1.jpg
+  :width: 400
+  :alt: Proximity Sensor with insert flasher
+
+.. image:: images/lanes_2.jpg
+  :width: 400
+  :alt: Proximity Sensor with insert flasher
