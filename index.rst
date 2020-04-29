@@ -52,6 +52,14 @@
 
 .. toctree::
    :hidden:
+   :caption: User Contributed Mechanisms/Hardware
+   :titlesonly:
+   :numbered: 0
+
+   User Contributed Projects </user_contributed_mech_projects/index>
+
+.. toctree::
+   :hidden:
    :caption: Examples
    :titlesonly:
    :numbered: 0

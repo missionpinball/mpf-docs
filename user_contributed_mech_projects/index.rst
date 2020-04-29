@@ -1,4 +1,4 @@
-User Contributed Projects
+User Contributed Mechanisms/Projects
 ============================
 
 This area is for user contributed projects that can help our pinball community out.
