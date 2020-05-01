@@ -16,7 +16,7 @@ button:
      game_cancel:
        switch_tags: start
        time: 5s
-       events_when_active: game_ended
+       events_when_active: end_game
 
 
 Please note that this will also work on ball one and will not inhibit bonus
