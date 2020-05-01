@@ -10,6 +10,8 @@ Flippers
 .. contents::
    :local:
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 Flippers are probably the first thing you think of when you think about building
 your own pinball machine. In fact when most people get their own hardware and
 start drilling holes in a piece of plywood, the first visible thing they do is
@@ -32,6 +34,9 @@ coils, as flippers in pinball machines can be either type.
 
 You should also probably read the EOS Switches guide if your machine has flipper
 EOS switches. (In general EOS switches are not needed for flippers with MPF.)
+
+See :doc:`coil hardware </mechs/coils/index>` for more details about the
+current, resistance, number of windings and the strength of coils.
 
 Default Events
 --------------

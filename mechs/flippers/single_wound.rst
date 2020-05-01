@@ -1,6 +1,8 @@
 How to configure single-wound flippers
 ======================================
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 This guide shows you how to configure single-wound flippers in MPF. If you don't
 know what "single-wound" flippers are, or whether you have them, take a look at
 the coil that your flipper uses. If it has two wires (or two tabs to
@@ -10,6 +12,9 @@ If it has three wires (or three tabs), then read the :doc:`dual_wound` guide.
 
 Read more about "dual wound" versus "single wound" coils in the
 :doc:`/mechs/coils/dual_vs_single_wound` guide.
+
+See :doc:`coil hardware </mechs/coils/index>` for more details about the
+current, resistance, number of windings and the strength of coils.
 
 1. Add your flipper buttons
 ---------------------------

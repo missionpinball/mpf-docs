@@ -1,6 +1,8 @@
 Dual-Wound versus Single-Wound coils
 ====================================
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 It's common for pinball machines to include coils that are "held on" for
 periods of time longer than the maximum pulse time of 255ms. The obvious
 example of this is for flipper coils, though other types of devices use these
