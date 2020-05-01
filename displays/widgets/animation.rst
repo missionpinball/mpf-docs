@@ -189,9 +189,9 @@ there are three standard MPF events which are posted when slides are created,
 when they become active, and when they're removed. See the events reference
 for details on when these three events are posted.
 
-* :doc:`slide_(slide_name)_created </events/slide_name_created>`
-* :doc:`slide_(slide_name)_active </events/slide_name_active>`
-* :doc:`slide_(slide_name)_removed </events/slide_name_removed>`
+* :doc:`slide_(slide_name)_created </events/slide_slide_created>`
+* :doc:`slide_(slide_name)_active </events/slide_slide_active>`
+* :doc:`slide_(slide_name)_removed </events/slide_slide_removed>`
 
 4. Animating multiple properties at once
 ----------------------------------------
