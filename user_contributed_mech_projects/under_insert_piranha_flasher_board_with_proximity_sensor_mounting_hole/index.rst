@@ -1,5 +1,5 @@
 Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole
-===========================================================================
+======================================================================
 
 +--------------------+-------------------------------------------------------------------------+
 | Name               | Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole  |
@@ -20,12 +20,12 @@ Under Insert Piranha Flasher Board with Proximity Sensor Mounting Hole
 +----------------------------------------------------------------------------------------------+
 
 Description
----------------------------------
+-----------
 
 Transistors drive 4 RGB Piranha LEDs using PD-LED power or 5V power. Transistors are switched by 3.3v logic level input from PD-LED or other microcontroller. Piranha LEDs surround a 18mm mounting hole which incorporate a proximity sensor.
 
 Bill Of Materials - Common
----------------------------------
+--------------------------
 
 +------------------------------+---------------------------+---------------------+-----------------+
 | Name                         | Purpose                   | PCB Legend          | Qty             |
@@ -41,7 +41,7 @@ Bill Of Materials - Common
    If the you are planning on driving these from 5V you need these bill of materials.
 
 Bill Of Materials (5V) - In addition to Common Bill of Materials
----------------------------------
+----------------------------------------------------------------
 
 +------------------------------+---------------------------+---------------------+-----------------+
 | Name                         | Purpose                   | PCB Legend          | Qty             |
@@ -59,7 +59,7 @@ Bill Of Materials (5V) - In addition to Common Bill of Materials
    If the you are planning on driving these from 3.3V from a PD-LED you need these bill of materials.
 
 Bill Of Materials (3.3V) - In addition to Common Bill of Materials
----------------------------------
+------------------------------------------------------------------
 
 +------------------------------+---------------------------+---------------------+-----------------+
 | Name                         | Purpose                   | PCB Legend          | Qty             |
@@ -74,7 +74,7 @@ Bill Of Materials (3.3V) - In addition to Common Bill of Materials
 +------------------------------+---------------------------+---------------------+-----------------+
 
 Assembly Instructions
----------------------------------
+---------------------
 Assembly instructions/tips:
 Through hole soldering.
 Place resistors 1, 14, 5 and 9 on back side of board before Piranha LEDs.
@@ -82,7 +82,7 @@ Transistors and header plug are also mounted on the back side of the board.
 Warning: silkscreen orientation icon for transistors is incorrect but Base, Collector, Emitter designations are correct. Align transistors according to BCE.
 
 The Result
----------------------------------
+----------
 
 .. image:: images/lanes_1.jpg
   :width: 400
