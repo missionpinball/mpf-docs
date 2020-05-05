@@ -43,3 +43,5 @@ would be entered into the MPF config as ``8-0``, etc.
      c_flipper:
        number: 8-1    # Node 8, coil 1
 
+
+.. include:: ../driver_related_howto_guides.rst

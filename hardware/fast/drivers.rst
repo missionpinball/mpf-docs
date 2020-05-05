@@ -124,3 +124,5 @@ time by adding a ``recycle_ms:`` setting, like this:
 
 If you manually specify a recycle_ms value, then that's the value that's used
 and the coil's ``recycle:`` (true/false) setting is ignored.
+
+.. include:: ../driver_related_howto_guides.rst

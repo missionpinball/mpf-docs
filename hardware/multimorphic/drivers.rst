@@ -194,10 +194,12 @@ Read the section about :doc:`common ground </hardware/voltages_and_power/voltage
 for details or consult an electrical engineer.
 
 If this happens shortly after MPF started and you are using a P-Roc this might
-to do with the polarity of your coils.
+have to do with the polarity of your coils.
 Check the ``polarity`` setting and make sure you configured the correct machine
 type as there are different defaults in different machine types.
 
 In any case we recommend that you test this with either less voltage (i.e. 12V
 instead of 48V) or by using lamps instead of coils on your outputs as that
 will prevent hardware damage due to overcurrent.
+
+.. include:: ../driver_related_howto_guides.rst

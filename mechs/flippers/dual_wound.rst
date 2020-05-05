@@ -220,3 +220,9 @@ we created in this How To guide:
    :caption: `/config/config.yaml </mpf_examples/flippers/config/hold_no_eos.yaml>`_
    :language: yaml
    :emphasize-lines: 4-5,9,11,15,18,21,24
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/coils/dual_wound_coils`
+* :doc:`/mechs/coils/dual_vs_single_wound`

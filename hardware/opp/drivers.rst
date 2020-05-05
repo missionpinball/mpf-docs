@@ -94,3 +94,5 @@ This is an example:
         platform_settings:
           recycle_factor: 2
 
+
+.. include:: ../driver_related_howto_guides.rst
