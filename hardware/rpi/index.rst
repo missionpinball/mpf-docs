@@ -17,8 +17,12 @@ Raspberry PI (pigpio)
 
 
 The rpi platform can be used to control inputs (switches), outputs (coils), I2C
-and servos on the RPi remotely (or locally) using pigpio. You need to install
-the ``apigpio`` extension via pip to use it:
+and servos on the RPi remotely (or locally) using pigpio.
+
+Installation
+------------
+
+You need to install the ``apigpio`` extension via pip to use it:
 
 .. code-block:: console
 
@@ -34,7 +38,10 @@ it and enable is (on debian based systems) :
   systemctl enable pigpiod.service
   systemctl start pigpiod.service
 
-The `enable` step gets the service running at startup, thus it is optionnal.
+The `enable` step gets the service running at startup, thus it is optional.
+
+Config
+------
 
 This is an example config:
 
@@ -68,3 +75,32 @@ Configure the ip of your RaspberryPi in the ``raspberry_pi`` section.
 You may use localhost if you are running MPF on the RPi.
 Any pin on the RPi can be used as either input or output.
 Additionally, you may use servos on any pin.
+
+Is this a real pinball controller?
+----------------------------------
+
+No. The RPi is not a pinball controller for various reasons:
+
+ * Drivers are missing to drive coils
+ * Inputs are unprotected and any error current will fry the CPU
+ * Hardware rules are not supported by the pigpio
+ * A watchdog is missing
+
+This platform is meant as a cheap interface for peripherals such as DMDs,
+segent displays lights, servos, steppers and more.
+You can also use it for inputs to some extend.
+
+Can this be turned into a pinball controller?
+---------------------------------------------
+
+Sure it can. We just did not do that here. Have a look at
+:doc:`/hardware/apc/index` which is kind of that already.
+
+If you want to do it with pigpio you would have to do the following (and
+probably more):
+
+ * Build a PCB with FETs to drive outputs. Add proper protection.
+ * Protect your inputs agains high and negative voltage.
+ * Implement hardware rules in pigpio (might be possible with callbacks)
+ * Run a realtime linux for proper timing of your rules
+ * Add a some watchdog (either in Linux or in hardware)
