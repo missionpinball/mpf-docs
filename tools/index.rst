@@ -69,5 +69,5 @@ Future Tools
    imc/index
    service_cli/index
    showcreator/index
-   language_server/index
+   IDE Support <language_server/index>
    build/index
