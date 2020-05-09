@@ -30,7 +30,6 @@ What kind of issue are you having?
    debugging_yaml_parse_errors
    debugging_segfaults
    debugging_mpf_install
-   reading_errors
 
 * :doc:`/hardware/troubleshooting_hardware`
 
@@ -133,5 +132,5 @@ More Howtos
 .. toctree::
    :maxdepth: 1
 
-   general_debugging
+   General Debugging <general_debugging>
    reading_errors
