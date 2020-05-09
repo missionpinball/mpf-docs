@@ -34,7 +34,7 @@ Then run ``udevadm info`` on your port:
 
 .. code-block:: shell
 
-   udevadm inf /dev/ttyACM0
+   udevadm info /dev/ttyACM0
 
 This will show you the ``DEVPATH``. Now replace the last part ``ttyACMX`` with
 an asterisk and add an udev rules like this in ``/etc/udev/rules.d/opp.rules``:
