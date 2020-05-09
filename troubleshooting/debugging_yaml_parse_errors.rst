@@ -12,6 +12,12 @@ This means that the error might be at line 22, just before it or shortly after i
 Sometimes it is tricky to tell whats wrong when one space is off.
 A good editor might help but it might be still hard to spot the exact point.
 
+Install an IDE
+--------------
+
+We recommend the :doc:`MPF language server </tools/language_server/index>` with
+a supported IDE for that.
+
 Install the extension
 ---------------------
 
@@ -49,6 +55,12 @@ If that looks alright perform them by adding the ``--save`` flag:
 
 This will keep comments but reformat all your indents to two spaces per level.
 It should be easier now to spot the problem.
+
+Reformat Your Config Using MPF format
+-------------------------------------
+
+Run ``mpf format`` on your config.
+See :doc:`/tools/format/index` for details.
 
 What if it did not help?
 ------------------------

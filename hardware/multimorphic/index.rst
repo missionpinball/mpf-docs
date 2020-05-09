@@ -45,3 +45,4 @@ the P-ROC or P3-ROC.
    Power Entry Board <power_entry>
    Servos on PD-LED <servos>
    Steppers on PD-LED <steppers>
+   Troubleshooting <troubleshooting>

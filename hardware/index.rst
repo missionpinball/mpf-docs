@@ -222,6 +222,7 @@ MPF supports:
    numbers
    platform
    roadmap
+   troubleshooting_hardware
 
 Browse Platforms by Capabilites
 -------------------------------

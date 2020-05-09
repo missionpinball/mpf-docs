@@ -36,6 +36,17 @@ A lightshow generator for MPF.
 
 IDE support for your editor to support auto-complete for MPF configs.
 
+:doc:`MPF format <format/index>`
+--------------------------------
+
+Reformat your MPF config files.
+
+:doc:`MPF test <test/index>`
+--------------------------------
+
+Run single file tests to reproduce problems or verify behaviour.
+
+
 Machine Fuzzer
 --------------
 
@@ -71,3 +82,5 @@ Future Tools
    showcreator/index
    IDE Support <language_server/index>
    build/index
+   format/index
+   test/index
