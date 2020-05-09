@@ -78,3 +78,8 @@ For the P-ROC or P3-Roc:
      use_watchdog: true
      watchdog_time: 1s
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

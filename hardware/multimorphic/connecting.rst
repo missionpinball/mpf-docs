@@ -88,3 +88,9 @@ See :doc:`leds` for how to configure those boards.
 
 MPF and the P3-Roc do not know if those boards are connected as the
 communication is one-way only.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

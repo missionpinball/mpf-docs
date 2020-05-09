@@ -93,3 +93,9 @@ you can play with this value to see how it affects your lights or LEDs.
 
 This is a system-wide setting, so if you have multiple lamp matrices on
 multiple PD-8x8 boards, then this setting will be used for all of them.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

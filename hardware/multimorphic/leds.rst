@@ -242,3 +242,8 @@ Please make sure to connect your PD-LED and the FET to the same
 :doc:`common ground </hardware/voltages_and_power/voltages_and_power>` or
 your FET will smoke when connecting power.
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

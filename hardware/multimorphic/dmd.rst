@@ -201,3 +201,8 @@ on the window and slide settings used in this machine config.
    #! assert_text_on_top_slide "MISSION PINBALL FRAMEWORK" window
    #! assert_text_on_top_slide "IT WORKS!" dmd
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

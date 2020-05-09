@@ -60,3 +60,9 @@ However, make sure to connect the ground of your power supply.
 See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.
 Connect those stepper drivers as described in
 :doc:`/hardware/stepstick/index` (but use the PD-LED outputs).
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

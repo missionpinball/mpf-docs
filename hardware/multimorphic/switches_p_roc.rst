@@ -147,3 +147,8 @@ so not really needed), configure it like this:
        number: 0/0
        debounce: normal
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

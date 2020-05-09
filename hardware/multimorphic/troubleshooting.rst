@@ -36,7 +36,13 @@ As described in the
 :doc:`general debugging section </troubleshooting/general_debugging>`
 of our :doc:`troubleshooting guide </troubleshooting/index>`
 this is done by
-adding ``debug: true`` to your platform config section.
+adding ``debug: true`` to your ``p_roc`` config section:
+
+.. code-block:: mpf-config
+
+   p_roc:
+     debug: true
+
 This will add a lot more debugging and might slow down MPF a bit.
 We recommend to disable/remove it after finishing debugging.
 
@@ -58,10 +64,42 @@ This will cause a lot of additional log lines and might considerably slow down
 MPF.
 Definitely disable this after you finished debugging.
 
-Issues With Coils
+All Coils Turn On When I Power Up My Machine
+--------------------------------------------
+
+If this happens and MPF is not yet running you likely do not have common ground
+between high voltage and logic power.
+Turn your machine off and only turn it back on when you have fixed and verified
+common ground.
+Read the section about :doc:`common ground </hardware/voltages_and_power/voltages_and_power>`
+for details or consult an electrical engineer.
+
+If this happens shortly after MPF started and you are using a P-Roc this might
+have to do with the polarity of your coils.
+Check the ``polarity`` setting and make sure you configured the correct machine
+type as there are different defaults in different machine types.
+
+In any case we recommend that you test this with either less voltage (i.e. 12V
+instead of 48V) or by using lamps instead of coils on your outputs as that
+will prevent hardware damage due to overcurrent.
+
+Serial Bus Issues
 -----------------
 
-See the :doc:`common coil issues section <drivers>`.
+Bad Cables/Interference
+~~~~~~~~~~~~~~~~~~~~~~~
+
+:doc:`/about/help_us_to_write_it`
+
+Termination
+~~~~~~~~~~~
+
+:doc:`/about/help_us_to_write_it`
+
+Correct Addressing
+------------------
+
+:doc:`/about/help_us_to_write_it`
 
 
 .. include:: ../include_troubleshooting.rst

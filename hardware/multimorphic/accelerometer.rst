@@ -26,3 +26,9 @@ matter.
 Other than that, use it like you would any accelerometer in MPF, by following
 the docs and guides in the :doc:`/mechs/accelerometers/index` section of the
 documentation.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.
