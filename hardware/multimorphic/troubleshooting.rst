@@ -5,6 +5,28 @@ If you got problems with your hardware platform we first recommend to read our
 :doc:`troubleshooting guide </troubleshooting/index>`.
 Here are some hardware platform specific steps:
 
+
+Run Hardware Scan
+-----------------
+
+Using ``mpf hardware scan`` you can find out if your P/P3-Roc is talking
+properly to MPF using USB.
+Additionally, it will show you which ``SW-16`` are connected:
+
+.. code-block:: console
+
+   $ mpf hardware scan
+
+   Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1
+   SW-16 boards found:
+    - Board: 0 Switches: 16 Device Type: A3 Board ID: 0
+    - Board: 1 Switches: 16 Device Type: A3 Board ID: 1
+    - Board: 2 Switches: 16 Device Type: A4 Board ID: 2
+
+
+Unfortunately, MPF cannot know which ``PD-16`` or ``PD-LED`` are connected
+as this information is not available.
+
 Enable Debugging
 ----------------
 
@@ -34,7 +56,5 @@ This logs all calls to libpinproc.
 This will cause a lot of additional log lines and might considerably slow down
 MPF.
 Definitely disable this after you finished debugging.
-
-
 
 .. include:: ../include_troubleshooting.rst

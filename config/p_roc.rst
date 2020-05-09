@@ -89,7 +89,10 @@ trace_bus:
 ~~~~~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Log all calls to libpinproc.
+This will cause a lot of additional log lines and might considerably slow down
+MPF.
+Use only during debugging.
 
 use_separate_thread:
 ~~~~~~~~~~~~~~~~~~~~
