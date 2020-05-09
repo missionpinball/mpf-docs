@@ -4,6 +4,8 @@ Add debugging to related devices
 If you got problems with some switches also add ``debug: true`` to those as
 it will give to more insights into the intentions of those devices.
 Same will work for flippers, coils, lights, servos, steppers and more.
+See :doc:`general debugging section </troubleshooting/general_debugging>`
+for details.
 
 Run MPF with verbose flag
 -------------------------

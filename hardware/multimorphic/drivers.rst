@@ -183,6 +183,10 @@ This is an example:
 Common Issues
 -------------
 
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.
+Here are some driver specific things:
+
 All Coils Turn On When I Power Up My Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

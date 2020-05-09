@@ -26,6 +26,7 @@ Additionally, it will show you which ``SW-16`` are connected:
 
 Unfortunately, MPF cannot know which ``PD-16`` or ``PD-LED`` are connected
 as this information is not available.
+See :doc:`/running/commands/hardware` for details.
 
 Enable Debugging
 ----------------
@@ -56,5 +57,11 @@ This logs all calls to libpinproc.
 This will cause a lot of additional log lines and might considerably slow down
 MPF.
 Definitely disable this after you finished debugging.
+
+Issues With Coils
+-----------------
+
+See the :doc:`common coil issues section <drivers>`.
+
 
 .. include:: ../include_troubleshooting.rst
