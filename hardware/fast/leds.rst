@@ -97,3 +97,8 @@ them on. They might be pinkish or blueish instead depending on the brand of
 the LED. To a certain extend this is normal/expected and you can compensate
 for it by configuring
 :doc:`color_correction profiles in light_settings </config/light_settings>`.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

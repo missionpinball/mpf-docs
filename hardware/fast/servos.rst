@@ -63,3 +63,8 @@ Regular Hex
 If you don't want to mess with all this hex stuff, you can set the config
 number format to "int" via the ``fast: config_number_format:`` setting. See
 the :doc:`/config/fast` section of the config file reference for details.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

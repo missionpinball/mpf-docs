@@ -22,3 +22,7 @@ You can copy the following example (and replace ``com12`` with your com port):
         baud: 4000000
         old_cookie: false
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

@@ -206,3 +206,8 @@ The ``watchdog:`` setting is the timeout in milliseconds. Use 0 to disable it.
 Note that at this time, FAST Pinball controllers only use the watch dog for
 the NET processor (which controls stuff on the IO boards, like coils). The
 watch dog is not used for the DMD or LEDs.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

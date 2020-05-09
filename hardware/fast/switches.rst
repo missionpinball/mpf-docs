@@ -105,3 +105,8 @@ like this:
        number: 3-24
 
 Valid values are 1 to 255 ms.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

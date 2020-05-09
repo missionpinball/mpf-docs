@@ -21,3 +21,4 @@ update speeds, etc.)
    RGB DMDs <rgb_dmd>
    Servos <servos>
    Power Filter Board <power_filter>
+   Troubleshooting <troubleshooting>
