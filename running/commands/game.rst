@@ -89,6 +89,14 @@ some assets can be loaded only when modes start or based on other events).
 This is useful during development to ensure that all assets are valid and
 loadable.
 
+-t
+~~
+
+Disable Text UI.
+This can be helpful while debugging and is also recommended when running the
+machine in production.
+
+
 -l (lowercase "L")
 ~~~~~~~~~~~~~~~~~~
 
