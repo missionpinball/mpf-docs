@@ -5,6 +5,38 @@ Connect the OPP board to your computer via USB.
 Make sure that your OPP chains do not get too long since the serial throughput
 is limited per chain. You can connect multiple chains.
 
+Verify Connected Boards via mpf hardware scan
+---------------------------------------------
+
+You can run :doc:`mpf hardware scan </running/commands/hardware>` to see all
+connected node boards:
+
+.. code-block:: console
+
+   $ mpf hardware scan
+
+   Connected CPUs:
+    - Port: com1 at 115200 baud
+    -> Board: 0x20 Firmware: 0x10100
+    -> Board: 0x21 Firmware: 0x10100
+
+   Incand cards:
+    - CPU: com1 Board: 0x20 Card: 0 Numbers: [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+
+   Input cards:
+    - CPU: com1 Board: 0x20 Card: 0 Numbers: [0, 1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15]
+    - CPU: com1 Board: 0x21 Card: 1 Numbers: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+
+   Solenoid cards:
+    - CPU: com1 Board: 0x20 Card: 0 Numbers: [0, 1, 2, 3]
+    - CPU: com1 Board: 0x21 Card: 1 Numbers: [12, 13, 14, 15]
+
+   LEDs:
+    - CPU: com1 Board: 0x21 Card: 1
+
+If your boards do not show up checkout our
+:doc:`OPP troubleshooting guide <troubleshooting>`.
+
 On Linux: Blacklist cytherm module
 ----------------------------------
 
