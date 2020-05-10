@@ -87,6 +87,10 @@ Make sure you enabled ``debug`` on the relevant devices and/or platforms.
 See :doc:`how to turn on debugging and increase log verbosity <general_debugging>`
 for details.
 
+A link to your machine config also help.
+Ideally this would be some git repository which can be checked out and browsed
+online.
+
 Prepare the Error Message
 --------------------------
 
@@ -98,8 +102,26 @@ Please check the relevant device or platform documentation for any mentions of
 that error.
 Often we already documented how to solve it.
 
+Tell Us How to Reproduce Your Problem
+-------------------------------------
+
+It might be hard for us to help you if we cannot reproduce your issue.
+Is there a way you can provide a minimal config which shows your problem?
+Try to remove everything unrelated to your problem and bring it to its bare
+minimum.
+Sometimes you will find the root of the issue while doing this.
+You would be surprised how often issues are caused by seemingly unrelated
+devices or configs.
+
+Ideally you can provide a :doc:`single file test </tools/test/index>` which
+fails or shows your issue in its log.
+This allows us to verify the issue quickly and provide a quick fix.
+But don't worry if this not possible.
+Just a minimal machine config is also fine.
+In that case please tell us how to run your machine to experience the issue.
+
 Ask In the Forum
-~~~~~~~~~~~~~~~~
+----------------
 
 With all this information ask in our `support forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
 Please keep in mind that MPF is an open source project and we are doing this
@@ -109,10 +131,14 @@ If you provide more relevant information it is likely that somebody can help you
 More is not always better if it is not relevant to your problem.
 But missing information will just delay the overall process.
 
-#. If you got a problem with a device (e.g. a ball_lock) or a platform (e.g. P-Roc or FAST) add `debug: True` to the relevant config section to enable extra debug output.
-#. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and grab the latest MPF and MC log from the log folder in your machine.
+#. If you got a problem with a device (e.g. a ball_lock) or a platform
+   (e.g. P-ROC or FAST) add ``debug: True`` to the relevant config section to
+   enable extra debug output.
+#. Add a log of your game. Therefore, run your game with ``mpf both -v -V`` and
+   grab the latest MPF and MC log from the log folder in your machine.
 #. Describe how to reproduce your problem.
-#. Provide relevant config snippets or, if possible, a link to download/checkout your machine config so we can reproduce the issue.
+#. Provide relevant config snippets or, if possible, a link to
+   download/checkout your machine config so we can reproduce the issue.
 
 
 Consider Improving the Documentation
