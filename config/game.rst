@@ -73,6 +73,21 @@ anything. MPF doesn't care.
 
 .. include:: template_setting.rst
 
+end_ball_event:
+~~~~~~~~~~~~~~~
+Single event. The device will add an handler for this event. Default: ``end_ball``
+
+When this event is handled by the game it will end the current ball.
+This is similar to the last ball draining.
+Use with care if there are still balls in play.
+
+end_game_event:
+~~~~~~~~~~~~~~~
+Single event. The device will add an handler for this event. Default: ``end_game``
+
+When this event is handled by the game it will end the game.
+This is similar to slam tilt but bonus mode, match mode etc will still run.
+
 max_players:
 ~~~~~~~~~~~~
 Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``4``
