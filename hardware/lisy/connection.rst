@@ -169,3 +169,8 @@ Power up your system and enjoy.
 ----------------------------------------------
 
 Start MPF on you PC. Optionally start MPF-MC (if you want to use an additional DMD or LCD).
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

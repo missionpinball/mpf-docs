@@ -44,6 +44,11 @@ This is an example config:
      default:
        label: APC
 
+
+See the :doc:`LISY platform </hardware/lisy/index>` for more details on
+configuring hardware.
+
+
 .. toctree::
    :titlesonly:
 

@@ -64,3 +64,4 @@ This includes:
    segment_displays
    sound
    protocol
+   troubleshooting

@@ -35,4 +35,9 @@ use coil ``105``:
        number: 107
        default_pulse_ms: 10
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.
+
 .. include:: ../driver_related_howto_guides.rst

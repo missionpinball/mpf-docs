@@ -138,3 +138,8 @@ You can also use any of the actions above in a show instead of in a standalone
            no_cache: true
      duration: 2s
 
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

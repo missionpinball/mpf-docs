@@ -40,3 +40,8 @@ You can use this example to enable flippers:
 This config will automatically enable the flippers on ball start and disable
 them on ball end. You can add more events to enable/disable them during the
 game.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

@@ -58,8 +58,4 @@ Start MPF and MPF-MC on you PC:
 What if it does not work?
 -------------------------
 
-If it does not work disable text ui and increase verbosity to get more debug output:
-
-.. code-block:: shell
-
-   mpf both -t -v -V
+Have a look at the :doc:`LISY troubleshooting guide </hardware/lisy/troubleshooting>`.
