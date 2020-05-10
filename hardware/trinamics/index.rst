@@ -47,3 +47,7 @@ This is an example:
          velocity_limit: 0.5                   # user units/sec   (so, 0.8 RPS of output gear )
          acceleration_limit: 2.0               # user units/sec^2  (so, 2 RPS^S of output gear)
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

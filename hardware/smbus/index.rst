@@ -95,7 +95,7 @@ Then run ``udevadm info`` on your port:
 
 .. code-block:: shell
 
-   udevadm inf /dev/i2c0
+   udevadm info /dev/i2c0
 
 This will show you the ``DEVPATH``. Now replace the last part ``i2cX`` with
 an asterisk and add an udev rules like this in ``/etc/udev/rules.d/i2c.rules``:
@@ -106,3 +106,8 @@ an asterisk and add an udev rules like this in ``/etc/udev/rules.d/i2c.rules``:
 
 After a reboot you should get a ``/dev/i2c-front`` device if you connect an i2c
 device to that specific USB port. You can use that port in your config.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

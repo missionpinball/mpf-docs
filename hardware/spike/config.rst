@@ -106,3 +106,8 @@ Depending on your hardware setup they might or might not work.
 Most setups communicate reliably up to something beween 1Mbaud and 2.5Mbaud.
 To stream full 30fps to your DMD you need about 2Mbaud.
 You need flow_control at rates higher than about 0.5MBaud.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

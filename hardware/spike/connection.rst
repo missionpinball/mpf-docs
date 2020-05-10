@@ -115,3 +115,8 @@ The following diagram illustrates how everything fits together:
 
 You've essentially created a null modem cable as described in Option 1.  This option may be a little
 cheaper but the solution is far less elegant and stable.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

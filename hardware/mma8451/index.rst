@@ -32,3 +32,8 @@ is the default for this device). The exact numbering depends on your i2c platfor
 
 The device in the picture is using :doc:`smbus on linux </hardware/smbus/index>` as i2c platform with
 an Atiny85-based I2C-USB adapter.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

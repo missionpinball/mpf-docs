@@ -47,3 +47,8 @@ game.
    :hidden:
 
    Wiring 3rd-Party Segment Displays <wiring>
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

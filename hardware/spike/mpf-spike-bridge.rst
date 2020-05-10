@@ -148,3 +148,8 @@ Now when you power up the pinball machine, instead of running the
 original game code, it will run the spike bridge which will listen
 for commands from the CN2 connector and will send out information
 about the state of the machine via that connector.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

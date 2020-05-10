@@ -70,3 +70,8 @@ This would result in the following switch entries:
 
 Note that optos (highlighted in green) need to have the ``type: NO`` added
 to them.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

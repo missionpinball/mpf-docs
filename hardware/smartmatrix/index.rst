@@ -394,3 +394,7 @@ on the window and slide settings used in this machine config.
         dmd_slide_1:
           target: dmd
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

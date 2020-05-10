@@ -59,3 +59,8 @@ We configure is as ``s_stepper_home`` in this example.
 You can change ``speed`` and ``homing_speed`` to configure how fast the
 stepper will move.
 See :doc:`/mechs/steppers/index` for more details about steppers.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

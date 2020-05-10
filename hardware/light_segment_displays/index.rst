@@ -130,3 +130,8 @@ This is an example:
              f: segment2_f
              g: segment2_g
          type: 7segment
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

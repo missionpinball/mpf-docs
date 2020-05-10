@@ -74,3 +74,8 @@ You need to install python-osc to use the OSC platform:
 .. code-block:: doscon
 
    pip3 install python-osc
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

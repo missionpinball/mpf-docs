@@ -119,3 +119,8 @@ For this library to work you need to start MPF as root like this:
 
 This is needed for the matrix to access the hardware and it will drop
 privileges after it started.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

@@ -157,3 +157,4 @@ use any HDMI display connected to the machine running MPF.
    DMDs <dmds>
    Switches <switches>
    Steppers <steppers>
+   troubleshooting

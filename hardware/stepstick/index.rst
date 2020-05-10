@@ -83,3 +83,8 @@ Your stepper will connect to ``1A``, ``1B``, ``2A`` and ``2B``.
 Connect power to ``VMOT`` (do not forget to also connect ground of your stepper
 power supply; see :doc:`/hardware/voltages_and_power/voltages_and_power`).
 See the datasheet for details about your driver.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

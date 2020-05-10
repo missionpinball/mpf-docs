@@ -43,5 +43,9 @@ would be entered into the MPF config as ``8-0``, etc.
      c_flipper:
        number: 8-1    # Node 8, coil 1
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.
 
 .. include:: ../driver_related_howto_guides.rst

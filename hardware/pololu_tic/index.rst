@@ -62,3 +62,8 @@ This is an example:
 
 You can set certain pololu-specific settings in ``platform_settings``.
 See :doc:`/config/tic_stepper_settings` for details.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

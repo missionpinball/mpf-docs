@@ -56,3 +56,7 @@ Can copy the following example (and replace ``com12`` with your com port):
         platform: smartmatrix
         source_display: dmd
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

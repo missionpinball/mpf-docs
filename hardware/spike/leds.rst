@@ -114,3 +114,7 @@ channels into the RGB LED. Then you can use it like any light.
          blue:
            number: 1-12
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

@@ -74,3 +74,8 @@ Then configure your dmd like in this example:
 
 Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

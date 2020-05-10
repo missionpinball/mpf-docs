@@ -133,3 +133,8 @@ To run a game
 3. start VPX table
 
 To exit a game shut down the VPX table first
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

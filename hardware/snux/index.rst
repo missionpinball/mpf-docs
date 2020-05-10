@@ -703,3 +703,7 @@ This is an example code block with the main Sys11 elements in.
      c_virtual:
        number:
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

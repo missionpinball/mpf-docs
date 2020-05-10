@@ -7,3 +7,8 @@ Arduino board (provided by MyPinballs) to 3rd-party, Bally-compatible
 
 .. image:: /hardware/images/mypinballs-7segment-wiring.jpg
    :target: ../../_images/mypinballs-7segment-wiring.jpg
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

@@ -52,3 +52,7 @@ You can also provide an I2C address per servo:
      servo_on_controller_63_1:
        number: 63-1  # second servo on board with ID 0x3F / 63
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

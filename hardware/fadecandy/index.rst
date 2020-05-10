@@ -331,3 +331,8 @@ If you need more than one correction profile (e.g. for multiple LED models)
 you need to fall back to
 :doc:`software color_correction profiles in light_settings </config/light_settings>`.
 Hardware correction should be preferred and give you much more dynamic range.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

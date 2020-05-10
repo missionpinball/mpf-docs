@@ -104,3 +104,8 @@ probably more):
  * Implement hardware rules in pigpio (might be possible with callbacks)
  * Run a realtime linux for proper timing of your rules
  * Add a some watchdog (either in Linux or in hardware)
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

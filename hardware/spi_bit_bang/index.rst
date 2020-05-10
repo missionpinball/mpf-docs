@@ -84,4 +84,9 @@ If your inputs are local (i.e. on a RPi) this might be very short compared
 and you might be able to achieve 50Hz.
 At the default 2Hz you will wait in average 250ms for a switch change
 and 500ms in the worst case.
-Take that in mind.
+Have that in mind.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

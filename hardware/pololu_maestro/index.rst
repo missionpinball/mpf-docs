@@ -154,3 +154,8 @@ Multiple Pololu Maestro controllers can be chained together (via
 a single USB port). We don't have support for that yet. (It requires adding
 and additional address setting to the servo config.) If you want that,
 let us know and we'll add it.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.
