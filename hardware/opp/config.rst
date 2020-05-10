@@ -70,19 +70,7 @@ that first and then try the alternate format if it doesn't work.
 On Linux, the port usually is ``/dev/ttyACM0`` or ``/dev/ttyACM1``.
 On Mac, look for some ``/dev/cu.modemXXXX`` device.
 
-Changing the polling rate
-~~~~~~~~~~~~~~~~~~~~~~~~~
+What if it did not work?
+------------------------
 
-If you encounter issues with the polling rate (in other words: Your OPP processor boards can't answer MPF's polls fast enough) you may want to change it. (Default: 100Hz)
-This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
-
-.. code-block:: mpf-config
-
-    opp:
-      ports: COM7
-      poll_hz: 50
-
-.. note::
-
-   You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
-   Depending on the number of processor boards in your chain you could possibly miss some fast balls
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.

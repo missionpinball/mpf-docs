@@ -94,5 +94,10 @@ This is an example:
         platform_settings:
           recycle_factor: 2
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.
+
 
 .. include:: ../driver_related_howto_guides.rst

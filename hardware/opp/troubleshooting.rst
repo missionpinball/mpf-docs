@@ -55,4 +55,22 @@ adding ``debug: true`` to your ``opp`` config section:
 This will add a lot more debugging and might slow down MPF a bit.
 We recommend to disable/remove it after finishing debugging.
 
+Changing the polling rate
+-------------------------
+
+If you encounter issues with the polling rate (in other words: Your OPP
+processor boards can't answer MPF's polls fast enough) you may want to change it.
+This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
+
+.. code-block:: mpf-config
+
+    opp:
+      ports: COM7
+      poll_hz: 50
+
+.. note::
+
+   You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
+   Depending on the number of processor boards in your chain you could possibly miss some fast balls
+
 .. include:: ../include_troubleshooting.rst

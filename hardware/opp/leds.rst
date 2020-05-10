@@ -20,3 +20,7 @@ LEDs work similar to matrix lights (board 1, LED 1):
         number: 1-1
         subtype: led
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.
