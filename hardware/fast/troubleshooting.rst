@@ -1,5 +1,5 @@
-Troubleshooting P-Roc/P3-Roc
-============================
+Troubleshooting FAST
+====================
 
 If you got problems with your hardware platform we first recommend to read our
 :doc:`troubleshooting guide </troubleshooting/index>`.
