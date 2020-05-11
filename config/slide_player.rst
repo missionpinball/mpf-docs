@@ -89,7 +89,30 @@ The expiration timer starts immediately, so if the slide you're displaying here 
 end up being shown because it's not the highest-priority slide, the timer is still running
 in the background, and the slide will still be removed when the timer expires.
 
-If a ``transition_out:`` is specified, it will be applied when the slide expires.
+If a ``transition_out:`` is specified, it will be applied when the slide expires:
+
+.. code-block:: mpf-mc-config
+
+   slides:
+     base:
+       widgets:
+         - type: text
+           text: BASE SLIDE
+           color: ff0000
+           font_size: 100
+     expire_slide:
+       widgets:
+         - type: text
+           text: EXPIRE 5s
+           color: purple
+           y: 66%
+       expire: 5s
+       transition_out:
+         type: wipe
+         duration: 5s
+   slide_player:
+     mc_reset_complete.1: expire_slide
+     mc_reset_complete.2: base
 
 force:
 ~~~~~~
@@ -181,6 +204,32 @@ Note that you can add a transition out to the slide player when a slide
 is shown, and it will be "attached" to the slide and used when that slide
 is removed (either with the slide player or when a new slide is created with
 a higher priority than it).
+
+.. code-block:: mpf-mc-config
+
+   slides:
+     base:
+       widgets:
+         - type: text
+           text: BASE SLIDE
+           color: ff0000
+           font_size: 100
+     top_slide:
+       widgets:
+         - type: text
+           text: TOP SLIDE
+           color: purple
+           y: 66%
+
+   slide_player:
+     mc_reset_complete.1: top_slide
+     mc_reset_complete.2: base
+     mc_reset_complete.3:
+       top_slide:
+         action: remove
+         transition:
+           type: fade
+           duration: 3s
 
 Or you can specify a transition out when you remove the slide (with
 ``action: remove``).
