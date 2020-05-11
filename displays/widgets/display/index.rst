@@ -22,24 +22,26 @@ Here's an example:
    #config_version=5
    displays:
      window:
-       height: 200
-       width: 600
+       height: 600
+       width: 800
      my_frame:
        width: 400
        height: 300
        default: true
+
    slides:
      base_slide:
-       - type: display
-         source_display: my_frame
-         width: 400
-         height: 300
-         x: 300
-         y: 200
-       - type: text
-         text: this is the base slide
-         x: 600
-         y: 400
+       widgets:
+         - type: display
+           source_display: my_frame
+           width: 400
+           height: 300
+           x: 300
+           y: 200
+         - type: text
+           text: this is the base slide
+           x: 600
+           y: 400
      frame_slide:
        widgets:
          - type: text
