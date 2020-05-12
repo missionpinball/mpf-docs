@@ -26,6 +26,24 @@ shutdowns.
 However, with modern operating systems and journalling filesystems (such as
 ext4 or ReFS) this became less of an issue.
 
+Make it work on Linux
+~~~~~~~~~~~~~~~~~~~~~
+
+If you use a Linux distribution with systemd set ``HandlePowerKey=ignore``
+in ``/etc/systemd/logind.conf``.
+
+To handle power button events install ``acpid``.
+Add ``/etc/acpi/events/powerbtn`` with the following content (or change it if
+if already exists):
+
+.. code-block:: bash
+
+   event=button[ /]power
+   action=/sbin/poweroff
+
+Restart ``acpid`` (or your computer) and you should be good to go.
+
+
 Read-only Filsystems
 --------------------
 
