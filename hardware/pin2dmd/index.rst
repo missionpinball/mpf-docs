@@ -94,7 +94,7 @@ To do this, create a section in your machine-wide config called
 
     rgb_dmds:
       default:  # your DMD
-        brightness: .2      # adjust the brightness of your display if it is too bright
+        brightness: .8      # adjust the brightness of your display if it is too bright
         fps: 30
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
@@ -210,4 +210,10 @@ on the window and slide settings used in this machine config.
 What if it did not work?
 ------------------------
 
-Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.
+Have a look at our :doc:`Pin2DMD hardware troubleshooting guide <troubleshooting>`.
+
+
+.. toctree::
+   :titlesonly:
+
+   troubleshooting
