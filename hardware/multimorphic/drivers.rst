@@ -129,7 +129,7 @@ You can also set the power of pulses on your coil:
         default_pulse_power: 0.5
 
 See the hold power section below for internal details about PWM times.
-With the P-Roc it is not possible to use ``default_hold_power`` and
+With the P-Roc and P3-Roc it is not possible to use ``default_hold_power`` and
 ``default_pulse_power`` at the same time.
 
 Hold Power
