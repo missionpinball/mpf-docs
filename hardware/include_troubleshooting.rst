@@ -1,3 +1,15 @@
+Make sure you removed -X and -x from the command line
+-----------------------------------------------------
+
+If your hardware is not working at all make sure that you removed the
+options ``-X``, ``-x`` and ``--vpx`` from your ``mpf both`` or
+``mpf game`` command line.
+Those options will overwrite the settings in your ``hardware`` section and
+MPF will not even try to connect to your hardware.
+If you got config errors we suggest you add ``-X`` to figure things out without
+interfacing real hardware all the time.
+Just keep that option in mind.
+
 Add debugging to related devices
 --------------------------------
 
@@ -6,20 +18,6 @@ it will give to more insights into the intentions of those devices.
 Same will work for flippers, coils, lights, servos, steppers and more.
 See :doc:`general debugging section </troubleshooting/general_debugging>`
 for details.
-
-Reducing light update rate
---------------------------
-
-If you got a lot of lights you might run into bus contention issues.
-You can reduce the light update rate in MPF:
-
-.. code-block:: mpf-config
-
-    mpf:
-      default_light_hw_update_hz: 30   # defaults to 50
-
-If you set this too low fades will be less smooth but otherwise it should not
-affect your game.
 
 Run MPF with verbose flag
 -------------------------

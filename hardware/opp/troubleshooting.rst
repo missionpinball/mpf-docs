@@ -73,4 +73,5 @@ This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
    You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
    If you set this too log you could miss hits if multiple hits happened between two polls.
 
+.. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst

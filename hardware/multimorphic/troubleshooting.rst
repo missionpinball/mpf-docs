@@ -94,9 +94,9 @@ Each serial bus connector has a + and a - pin.  The serial cables connect from b
 Termination
 ~~~~~~~~~~~
 
-The P3-ROC interfaces to the playfield through two serial busses. The switches serial bus connects SW-16 boards through J11  and/or J14. The driver serial bus connects PD-16 and PD-LED boards through J12 and J15. The serial busses are designed to allow boards to be connected in a daisy chain fashion to each plug.  A sourse of unreliable communication on the buses is improper termination.  The last board on each chain (not to be confused with the board with the highest address) should have dipswitch 8 set to ON. For example is the switches serial bus has 6 boards with J11 connecting to board A B and C and J14 connecting to boards D, E and F, dipswitch 8 should be set to ON on boards C and F and set to OFF on all other SW 16 boards. (Terminating board B would prevent communication from board C on that side of the chain.)  The same termination strategy also applies to driver boards. For example if a mix of PD-LED and PD-16 boards connect through J15 as A, B, C, D, and E with E being the last board, board E would have dipswitch 8 set to ON.  
+The P3-ROC interfaces to the playfield through two serial busses. The switches serial bus connects SW-16 boards through J11  and/or J14. The driver serial bus connects PD-16 and PD-LED boards through J12 and J15. The serial busses are designed to allow boards to be connected in a daisy chain fashion to each plug.  A sourse of unreliable communication on the buses is improper termination.  The last board on each chain (not to be confused with the board with the highest address) should have dipswitch 8 set to ON. For example is the switches serial bus has 6 boards with J11 connecting to board A B and C and J14 connecting to boards D, E and F, dipswitch 8 should be set to ON on boards C and F and set to OFF on all other SW 16 boards. (Terminating board B would prevent communication from board C on that side of the chain.)  The same termination strategy also applies to driver boards. For example if a mix of PD-LED and PD-16 boards connect through J15 as A, B, C, D, and E with E being the last board, board E would have dipswitch 8 set to ON.
 
-Additionally, the P3-ROC board itself also has termination dip switches (7 and 8) for the switches serial bus plugs. These should be set to ON. There are no termination dip switches for the driver bus on the P3-ROC board. 
+Additionally, the P3-ROC board itself also has termination dip switches (7 and 8) for the switches serial bus plugs. These should be set to ON. There are no termination dip switches for the driver bus on the P3-ROC board.
 
 Correct Addressing
 ------------------
@@ -107,4 +107,5 @@ Similarly, the PD-16 and PD-LED driver boards also each require an unique addres
 
 On the SW-16, PD-16 and PD-LED boards themselves dipswitch addressing is somewhat counterintuitive. Switch one is the lowest  address bit and on the SW-16 switch 6 is the highest. Reading the switch block from left (starting at switch 1) to right, binary address zero would be 000000, address one through four would be 100000, 010000, 110000 and 001000, respectively. The PD-LED sets addresses on dipswitches 1 through 5 and the PD-16 uses dipswitches 1 through 4 giving these boards fewer address possibilities than the SW-16 which uses switches 1 through 6.
 
+.. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst
