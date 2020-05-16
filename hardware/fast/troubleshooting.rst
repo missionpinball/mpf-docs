@@ -50,5 +50,16 @@ adding ``debug: true`` to your ``fast`` config section:
 This will add a lot more debugging and might slow down MPF a bit.
 We recommend to disable/remove it after finishing debugging.
 
+Firmware Upgrade
+----------------
+
+MPF generally works with the latest firmware for FAST.
+There have been some protocol changes between firmware and we do not usually
+test our software with older firmware version.
+Consider upgrading to the latest firmware.
+You can find out your current firmware version using ``mpf hardware scan``
+(see above).
+
+
 .. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst
