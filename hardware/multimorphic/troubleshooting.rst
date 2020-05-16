@@ -64,6 +64,17 @@ This will cause a lot of additional log lines and might considerably slow down
 MPF.
 Definitely disable this after you finished debugging.
 
+Upgrade the Firmware of Your P/P3-Roc
+-------------------------------------
+
+If you experience problems around hardware rules or such consider upgrading
+your P/P3-Roc firmware.
+Sometimes bugs in the firmware get fixed or stuff becomes more robust.
+For some known cases MPF will crash intentionally and tell you to upgrade but
+there might be cases which we do not know.
+You can find out your current firmware version using ``mpf hardware scan``
+(see above).
+
 All Coils Turn On When I Power Up My Machine
 --------------------------------------------
 
