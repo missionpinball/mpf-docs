@@ -335,4 +335,9 @@ Hardware correction should be preferred and give you much more dynamic range.
 What if it did not work?
 ------------------------
 
-Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.
+Have a look at our :doc:`fadecandy hardware troubleshooting guide <troubleshooting>`.
+
+.. toctree::
+   :titlesonly:
+
+   troubleshooting
