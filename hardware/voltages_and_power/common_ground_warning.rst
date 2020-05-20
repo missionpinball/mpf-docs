@@ -13,6 +13,11 @@
    A :doc:`power entry or power filter board </hardware/voltages_and_power/index>`
    is a convenient solution to solve this (and more) issues.
 
+   Always turn all PSUs off when connecting power or you might fry all boards
+   at once.
+   This is generally a good idea but even more important when connecting more
+   than one power supply to a board.
+
    IF YOU DID NOT UNDERSTAND WHAT THIS WARNING MEANS STOP NOW AND TRY TO
    UNDERSTAND IT.
    OTHERWISE YOU HARDWARE WILL LIKELY BURST INTO FLAMES AND YOU NEED TO WAIT A
