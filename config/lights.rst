@@ -19,13 +19,95 @@ hardware platform.
    ``lights`` configuration. If you are using 0.33 or earlier, please see
    :doc:`/config/matrix_lights` for incandescent bulbs and :doc:`/config/leds` for LEDs.
 
-Here is a minimal example:
+Concepts
+--------
+
+MPF supports white, single-color or multi-color lights.
+Traditional GIs are single white.
+Similar, single-color red lights are possible (i.e. red inserts).
+RGBW lights are possible as well.
+They maintain an additional white channel for better color reproduction.
+
+To support all those different kinds of lights with a single interface for
+various hardware generations MPF abstracts two concepts:
+Light numbers and channel numbers.
+
+Light Numbers
+~~~~~~~~~~~~~
+
+Configuring the ``number`` of a light is often the simplest way.
+Internally, your hardware platform will turn this into one or multiple
+channels (see below) depending on the ``subtype`` configured.
+For instance, if lights are usually RGB the platform will parse the number
+into three channels.
+
+This is an example:
 
 .. code-block:: mpf-config
 
   lights:
     my_led:
-      number: 7
+      number: 7   # might also be 8-7 or 8-1-0 depending on your platform
+
+This is often the easiest way to start and will work in most cases.
+
+Channel Numbers
+~~~~~~~~~~~~~~~
+
+Channel numbers can be configured in ``channels``
+and describe the number for a single light channel each.
+This channel number is then used when the talking to the hardware.
+For single-color or white light this can be the same as ``number``.
+However, for some serial LED platforms this might be also ``number * 3`` or
+a more complex conversion.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+  lights:
+    rainbow_star:
+      type: rgb
+      channels:
+        red:
+          number: 9-29
+        green:
+          number: 9-30
+        blue:
+          number: 9-40     # this light is not sequential to the previous
+
+This syntax allows the greatest flexibility but is also the most verbose one.
+
+You can either use ``channels`` to arbitrarily map channels to colors or you can
+use ``start_channel`` + ``type`` (color order) to define the first channel and
+then map colors sequentially to the following channels as defined in the color
+order.
+Instead of ``start_channel`` you can also chain lights by configuring the
+``previous`` light and let MPF (with help by the hardware platform) figure out
+the channel number.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+  lights:
+    rainbow_star:    # this will use red: 9-29, green: 9-30 and blue: 9-31
+      type: rgb
+      start_channel: 9-29
+
+    rainbow_star2:   # this will use red: 9-33, green: 9-32 and blue: 9-34
+      type: grb      # notice the changed order here
+      previous: rainbow_star
+
+This syntax covers almost all practical cases and is beneficial with serial
+LEDs as the above channels syntax is very verbose.
+It allows the service mode to disable broken LEDs if they were removed from a
+serial chain.
+Numbers will then be recalculated omitting disabled LEDs.
+The syntax also works for parallel LEDs and other types of lights.
+
+See the :doc:`documentation page of your hardware platform </hardware/index>`
+for more details about numbers and channels.
 
 .. config
 

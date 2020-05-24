@@ -151,10 +151,10 @@ Consider the following config:
 single FadeCandy board are on the same OPC channel, which is technically what
 you're specifying with the number before the dash.)
 
-6a. Numbering with muliple channels
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6a. Numbering with multiple channels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also assign different channels to your connectors.
+You can also assign different OSC channels to your connectors.
 This has certain performance advantages and allows nicer numbering.
 
 Start your fadecandy server with the following config:
@@ -290,7 +290,58 @@ Afterwards, configure your lights as follows:
      l_led17_1:
        number: 17-1    # second LED on connector 1 on board 2
 
-7. Launch the fcserver
+7. Unterstanding MPF light numbers and channels
+-----------------------------------------------
+
+.. include:: /mechs/lights/include_channels_numbers.rst
+
+Fadecandy assumes RGB lights by default.
+For everything else (i.e. RGBW) you have to use channels.
+
+Light Numbers
+~~~~~~~~~~~~~
+
+Fadecandy numbers use the format: ``osc_channel``-``number``
+
+If you mapped OSC channels as described in (6b/c) set them as
+``osc_channel``.
+``number`` is the index of your light in the chain.
+
+Internally, Fadecandy assumes three channels per LED (RGB/GRB
+:doc:`WS2811/WS2812 LEDs </mechs/lights/ws2812>`).
+
+Channels
+~~~~~~~~
+
+Fadecandy channels use the format: ``osc_channel``-``channel_index``
+
+``channel_index`` is ``number * 3``.
+This is because serial LEDs are traditionally RGB (or GRB) LEDs with exactly
+three channels.
+However, this is not true for RGBW or similar LEDs which do not work with this
+style of numbering.
+Luckily, you can chain them instead and have MPF calculate the internal
+channels for you:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+
+See :doc:`/mechs/lights/ws2812` for details.
+
+8. Launch the fcserver
 ----------------------
 
 In order for MPF to communicate with the FadeCandy, the fcserver has to be
@@ -310,7 +361,7 @@ being written to the console. (I think it's something to do with the P-ROC's
 FTDI driver? It only comes up when the P-ROC is on.)
 
 
-8. Additional FadeCandy LED options
+9. Additional FadeCandy LED options
 -----------------------------------
 
 The FadeCandy hardware supports some advanced options which are configured in
@@ -319,8 +370,8 @@ Specifically, you can set the keyframe interpolation, dithering, gamma, white
 point, linear slope, and linear cutoff. The defaults should be fine for almost
 everyone, though you can go nuts if you want.
 
-9. Color Correction
--------------------
+10. Color Correction
+--------------------
 
 If you are using RGB LEDs, they might not be perfectly white when you turn
 them on. They might be pinkish or blueish instead depending on the brand of

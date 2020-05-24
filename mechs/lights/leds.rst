@@ -79,7 +79,7 @@ You can define serial LEDS in MPF as :doc:`/config/lights`:
   lights:
     my_ws2811:
       number: 0         # first LED in chain (with three channels)
-      type: rgb         # redundant
+      type: rgb
     my_ws2812:
       number: 1         # second LED in chain (with three channels)
       type: grb
@@ -143,6 +143,24 @@ The RGBW shifts all the channels by one internally. As you can see this can
 quickly become confusing so it might be wise to run RGBW LEDs (or any
 non-three-channel LEDs) as a separate chain.
 
+Starting with MPF 0.54 there is a new syntax to chain lights:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0    # the exact number format depends on your platform
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+
 Parallel LEDs
 -------------
 
@@ -184,6 +202,23 @@ You can also have multiple channels per color (if you do not want to make them d
           - number: 5
           - number: 6
           - number: 7
+
+With parallel LED you can also use ``start_channel`` to define the color
+(starting from MPF 0.54):
+
+.. code-block:: mpf-config
+
+    lights:
+      my_red_only_insert:
+        start_channel: 0    # the exact number format depends on your platform
+        type: r    # will use red: 0
+      my_rgb_insert:
+        start_channel: 1    # the exact number format depends on your platform
+        type: rbg   # will use red: 1, green: 3, blue: 2
+      my_white_light:
+        previous: my_rgb_insert     # you can also chain those if you want
+        type: w   # will use white: 4
+
 
 Serial vs Parallel LEDs
 -----------------------

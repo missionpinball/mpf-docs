@@ -17,8 +17,8 @@ as follows:
 
   lights:
     my_ws2811:
-      number: 0         # first LED in chain (with three channels)
-      type: rgb         # redundant
+      number: 0         # first LED in chain (with three channels) - exact number format depends on your platform
+      type: rgb
     my_ws2812:
       number: 1         # second LED in chain (with three channels)
       type: grb
@@ -39,6 +39,24 @@ They can be used like this:
           - number: 3-2
         white:
           - number: 4-0
+
+Starting with MPF 0.54 there is a new syntax to chain LEDs:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0    # the exact number format depends on your platform
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
 
 Hardware
 --------

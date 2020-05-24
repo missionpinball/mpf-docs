@@ -24,37 +24,57 @@ Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LE
 connected to FAST Pinball controllers, however there are a few FAST-specific
 things to know.
 
-number:
--------
+Channel and Number Syntax
+-------------------------
 
-There are two ways you can configure RGB LEDs for your FAST
-controller: by channel & output number, or directly with the FAST
-hardware number. It's more straightforward to configure them by
-channel and output, like this:
+.. include:: /mechs/lights/include_channels_numbers.rst
+
+FAST assumes RGB lights by default.
+For everything else (i.e. RGBW) you have to use channels.
+
+The FAST Nano supports 256 LEDs on four chains.
+LEDs 0-63 are on chain 0, 64-127 on chain 1, 128-195 on chain 2 and 196-255 on chain 3.
+
+Light Numbers
+~~~~~~~~~~~~~
+
+FAST numbers use the format: ``number``
+
+This is as easy as it gets.
+Just provide the number of you LED in the chain.
+Internally, FAST assumes three channels per LED (RGB/GRB
+:doc:`WS2811/WS2812 LEDs </mechs/lights/ws2812>`).
+
+Channels
+~~~~~~~~
+
+FAST channels use the format: ``number``-``index``
+
+``number`` is the same as above and ``index`` is a an index from 0 to 2.
+This is because serial LEDs are traditionally RGB (or GRB) LEDs with exactly
+three channels.
+However, this is not true for RGBW or similar LEDs which do not work with this
+style of numbering.
+Luckily, you can chain them instead and have MPF calculate the internal
+channels for you:
 
 .. code-block:: mpf-config
 
-   lights:
-     l_led0:
-       number: 0-0
-       type: grb
-     l_right_ramp:
-       number: 2-28
-       type: grb
+    lights:
+      led_0:
+        start_channel: 0      # you could also use number: 0
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 1-0, green: 1-2, blue: 1-3, white: 2-0
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 2-1, green: 2-2, blue: 3-0, white: 3-1
 
-In the example above, RGB LED *l_led0* is LED #0 on channel 0, and
-*l_right_ramp* is LED #28 on channel 2. Note both the channel and LED
-numbers start with 0, so your channel options for a FAST controller
-are 0-3, and your LED number options are 0-63. Also note that when you
-enter your FAST LED numbers with a dash like this, the values are
-integers, even if the rest of your FAST settings are in hex.
-Type `grb` configures the LED as WS2812 (such as the FAST LEDs) but it
-might be different for other types of LEDs. See :doc:`/config/lights`
-for details.
-
-If you know the actual hex numbers of your LEDs, you can enter the numbers like
-that, ranging from 00 to FF. If you don't know what this means, then just
-ignore it and use the channel and LED number format with the dash. :)
+See :doc:`/mechs/lights/ws2812` for details.
 
 RGB LED buffering
 -----------------
