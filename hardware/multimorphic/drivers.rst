@@ -166,6 +166,8 @@ You can set :doc:`recycle time </mechs/coils/recycle>`
 to your coil to prevent it from overheating by repeated pulses.
 The recycle time is not configurable on the P-Roc but you can turn it on or
 off (default on).
+Default recycle time (called reload in the P/P3-Roc) is ``64ms``.
+
 This is an example:
 
 .. code-block:: mpf-config
