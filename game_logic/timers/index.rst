@@ -48,7 +48,7 @@ player variable first:
    variable_player:
       timer_your_timer_tick:
          your_timer_variable_times_100:
-            int: device.your_timer.ticks * 100
+            int: device.timers.your_timer.ticks * 100
             action: set
 
    slides:
