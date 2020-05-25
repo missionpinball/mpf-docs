@@ -32,6 +32,26 @@ In the example above the NET CPU has firmware 1.03 but the nodes still run on
 1.00 which indicates an issue.
 See :doc:`/running/commands/hardware` for details about the command.
 
+Permission Denied on Linux
+--------------------------
+
+If you see an error such as:
+
+.. code-block:: console
+
+   serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB1: [Errno 13] Permission denied: '/dev/ttyUSB1'
+
+Your user does not have sufficient permissions to access that port.
+You could run MPF as root but we do not recommend that.
+Alternatively, you can create a udev rule or add your user to the dialout group:
+
+.. code-block:: console
+
+   sudo usermod -a -G dialout $USER
+
+After a restart of your PC MPF should be able to access that serial port.
+
+
 Enable Debugging
 ----------------
 
