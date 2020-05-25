@@ -24,13 +24,13 @@ coil_pulse <name>
 
 Pulse coil <name>.
 
-enable_pulse <name>
-~~~~~~~~~~~~~~~~~~~
+coil_enable <name>
+~~~~~~~~~~~~~~~~~~
 
 Enable coil <name>. This only works if enable is allowed for this coil.
 
-disable_pulse <name>
-~~~~~~~~~~~~~~~~~~~~
+coil_disable <name>
+~~~~~~~~~~~~~~~~~~~
 
 Disable coil <name>.
 
