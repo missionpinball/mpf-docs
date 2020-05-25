@@ -118,5 +118,6 @@ Similarly, the PD-16 and PD-LED driver boards also each require an unique addres
 
 On the SW-16, PD-16 and PD-LED boards themselves dipswitch addressing is somewhat counterintuitive. Switch one is the lowest  address bit and on the SW-16 switch 6 is the highest. Reading the switch block from left (starting at switch 1) to right, binary address zero would be 000000, address one through four would be 100000, 010000, 110000 and 001000, respectively. The PD-LED sets addresses on dipswitches 1 through 5 and the PD-16 uses dipswitches 1 through 4 giving these boards fewer address possibilities than the SW-16 which uses switches 1 through 6.
 
+.. include:: ../include_troubleshooting_coils.rst
 .. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst

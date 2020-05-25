@@ -1,5 +1,5 @@
-Make sure you removed -X and -x from the command line
------------------------------------------------------
+Your hardware is not working at all
+-----------------------------------
 
 If your hardware is not working at all make sure that you removed the
 options ``-X``, ``-x`` and ``--vpx`` from your ``mpf both`` or
@@ -9,6 +9,10 @@ MPF will not even try to connect to your hardware.
 If you got config errors we suggest you add ``-X`` to figure things out without
 interfacing real hardware all the time.
 Just keep that option in mind.
+
+Another stupid thing to check:
+Is your hardware connected to your PC?
+We know it is stupid but a loose USB connector has happened to most of us.
 
 Add debugging to related devices
 --------------------------------

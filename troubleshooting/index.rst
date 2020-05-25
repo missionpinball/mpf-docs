@@ -31,7 +31,10 @@ What kind of issue are you having?
    debugging_segfaults
    debugging_mpf_install
 
-* :doc:`/hardware/troubleshooting_hardware`
+
+If you coils are not firing, switches are not working or hardware is behaving
+weirdly in general read our
+:doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.
 
 Step 2: Prepare a Report and Ask in the Forum
 ---------------------------------------------

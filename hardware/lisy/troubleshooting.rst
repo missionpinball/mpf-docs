@@ -44,5 +44,6 @@ adding ``debug: true`` to your ``lisy`` config section:
 This will add a lot more debugging and might slow down MPF a bit.
 We recommend to disable/remove it after finishing debugging.
 
+.. include:: ../include_troubleshooting_coils.rst
 .. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst

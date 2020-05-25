@@ -60,6 +60,6 @@ Consider upgrading to the latest firmware.
 You can find out your current firmware version using ``mpf hardware scan``
 (see above).
 
-
+.. include:: ../include_troubleshooting_coils.rst
 .. include:: ../include_troubleshooting_lights.rst
 .. include:: ../include_troubleshooting.rst
