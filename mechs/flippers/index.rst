@@ -38,6 +38,22 @@ EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 See :doc:`coil hardware </mechs/coils/index>` for more details about the
 current, resistance, number of windings and the strength of coils.
 
+Debounce and Recycle on Flipper Coils
+-------------------------------------
+
+In MPF you can :doc:`configure debounce for each switch </mechs/switches/debounce>`
+and :doc:`recycle for each coil </mechs/coils/recycle>`.
+However, both will be overwritten when you enable flippers.
+Debounce will be set to ``quick`` and ``recycle`` will be disabled.
+In some platforms MPF might reconfigure your switch debounce settings when
+activating the hardware rules (if the platform does not allow separate
+settings) which might lead to more switch events when flippers are active.
+
+Generally, this is how flipper work in most machines and this is how players
+will expect flippers to behave.
+If you want to change this let us know in the forum (or you could change it in
+by overloading the flipper device class).
+
 Default Events
 --------------
 
