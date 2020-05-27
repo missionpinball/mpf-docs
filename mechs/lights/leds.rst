@@ -248,6 +248,33 @@ However, you might take some risks in a homebrew machine because serial LEDs
 are quite cheap and easy to replace once broken.
 In practise they seem to work just fine for all homebrew machines we know.
 
+Can I used RGB LEDs below colored inserts?
+------------------------------------------
+
+There is no point to use RGB LEDs below colored inserts.
+That simply does not work physically.
+Those colored inserts act as filter and any other color simply shall not pass.
+
+We recommend white LEDs below colored inserts.
+Then define them as red or whatever color your insert is.
+If you use parallel LEDs below colored inserts just buy plain white ones.
+For serial LEDs you can buy bulk WS2811 PCBs from china and connect white LEDs
+to any of the channels.
+
+Which LED Types Are Supported in MPF?
+-------------------------------------
+
+MPF supports any white, single-color or multi-color LED.
+This includes RGB, RGBW or any other combination you can imagine.
+The ``type`` parameter just reads the channels and maps them without thinking
+too much of it.
+For instance you can use GRBW LEDs with a green, red, blue and white channel.
+Similarly, RRBRGWBGWWR or even more crazy combinations work fine.
+
+Currently, MPF support red, blue, gree and white channels.
+White it calculated as the minimum brightness of all channels.
+If you need other channels such as orange let us know in the forum.
+
 Color Correction
 ----------------
 
