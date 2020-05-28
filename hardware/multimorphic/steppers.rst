@@ -27,25 +27,23 @@ and define two steppers:
    p_roc:
      pd_led_boards:
        4:
-         use_stepper_0: True
-         use_stepper_1: True
+         use_stepper_0: true
+         use_stepper_1: true
          # stepper_speed: 13524    # uncomment to tune the speed
-
    switches:
-      s_stepper_4_0_home:
-         number: A4-B0-0
-      s_stepper_4_1_home:
-         number: A4-B0-1
-
+     s_stepper_4_0_home:
+       number: A4-B0-0
+     s_stepper_4_1_home:
+       number: A4-B0-1
    steppers:
-      stepper_4_0:
-         number: 4-0
-         homing_mode: switch
-         homing_switch: s_stepper_4_0_home
-      stepper_4_1:
-         number: 4-1
-         homing_mode: switch
-         homing_switch: s_stepper_4_1_home
+     stepper_4_0:
+       number: 4-0
+       homing_mode: switch
+       homing_switch: s_stepper_4_0_home
+     stepper_4_1:
+       number: 4-1
+       homing_mode: switch
+       homing_switch: s_stepper_4_1_home
 
 The number of your stepper has to be ``id_of_your_ped_led-number``.
 In this case ``4-0`` and ``4-1`` for the first and second stepper on PD-LED 4.
@@ -62,3 +60,9 @@ However, make sure to connect the ground of your power supply.
 See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.
 Connect those stepper drivers as described in
 :doc:`/hardware/stepstick/index` (but use the PD-LED outputs).
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

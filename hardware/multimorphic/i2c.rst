@@ -26,3 +26,9 @@ I2C-based servo controller and plug it into the P3-ROC.
 However, a better option would be to use a :doc:`servo on a PD-LED <servos>`.
 
 See :doc:`/hardware/i2c_platforms` for other I2C hardware in MPF.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

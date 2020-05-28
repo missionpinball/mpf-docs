@@ -18,44 +18,43 @@ config file. Here's an example from *Judge Dredd*:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    drop_target_j:
-   #!       number:
-   #!    drop_target_u:
-   #!       number:
-   #!    drop_target_d:
-   #!       number:
-   #!    drop_target_g:
-   #!       number:
-   #!    drop_target_e:
-   #!       number:
+   #!   drop_target_j:
+   #!     number:
+   #!   drop_target_u:
+   #!     number:
+   #!   drop_target_d:
+   #!     number:
+   #!   drop_target_g:
+   #!     number:
+   #!   drop_target_e:
+   #!     number:
    #! coils:
-   #!    reset_drop_targets:
-   #!       number:
-   #!    trip_drop_target_d:
-   #!       number:
+   #!   reset_drop_targets:
+   #!     number:
+   #!   trip_drop_target_d:
+   #!     number:
    #! drop_targets:
-   #!     j:
-   #!         switch: drop_target_j
-   #!         reset_coil: reset_drop_targets
-   #!     u:
-   #!         switch: drop_target_u
-   #!         reset_coil: reset_drop_targets
-   #!     d:
-   #!         switch: drop_target_d
-   #!         reset_coil: reset_drop_targets
-   #!         knockdown_coil: trip_drop_target_d
-   #!     g:
-   #!         switch: drop_target_g
-   #!         reset_coil: reset_drop_targets
-   #!     e:
-   #!         switch: drop_target_e
-   #!         reset_coil: reset_drop_targets
-
+   #!   j:
+   #!     switch: drop_target_j
+   #!     reset_coil: reset_drop_targets
+   #!   u:
+   #!     switch: drop_target_u
+   #!     reset_coil: reset_drop_targets
+   #!   d:
+   #!     switch: drop_target_d
+   #!     reset_coil: reset_drop_targets
+   #!     knockdown_coil: trip_drop_target_d
+   #!   g:
+   #!     switch: drop_target_g
+   #!     reset_coil: reset_drop_targets
+   #!   e:
+   #!     switch: drop_target_e
+   #!     reset_coil: reset_drop_targets
    drop_target_banks:
-        judge:
-            drop_targets: j, u, d, g, e
-            reset_coils: reset_drop_targets
-            reset_on_complete: 1s
+     judge:
+       drop_targets: j, u, d, g, e
+       reset_coils: reset_drop_targets
+       reset_on_complete: 1s
 
 Notice there are no settings to control lights associated with drop
 targets, but many machines (like *Judge Dredd* used in the example)
@@ -70,6 +69,8 @@ Create a subsection under *drop_target_banks:* for each bank of drop
 targets you have. The name of each section is the name you'll refer to
 the drop target as in your game code. ("judge", in this example.)
 
+.. config
+
 
 Required settings
 -----------------
@@ -78,7 +79,7 @@ The following sections are required in the ``drop_target_banks:`` section of you
 
 drop_targets:
 ~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`drop_targets <drop_targets>` device.
+List of one (or more) values, each is a type: string name of a :doc:`drop_targets <drop_targets>` device. Defaults to empty.
 
 A list of the names of the individual drop targets (from the names you
 chose in the *drop_targets:* section of your config file) that are
@@ -98,20 +99,20 @@ The following sections are optional in the ``drop_target_banks:`` section of you
 
 ignore_switch_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
 
 How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
 coils will set switches that could add to the score, start modes, etc.
 
 reset_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil that is fired to reset this bank of drop targets.
 
 reset_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``100ms``
 
 Max time allowed to delay the pulse of the reset coil.
 This is used to prevent excess power usage.
@@ -119,7 +120,7 @@ See :doc:`psus` for details.
 
 reset_coils:
 ~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device.
+List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 If your drop target bank has two reset coils (as was common in older
 machines which huge banks of drop targets), you can add a
@@ -129,13 +130,13 @@ reset the bank of drop targets.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: machine_reset_phase_3, ball_starting
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting``
 
 Resets this drop target bank by pulsing this bank's ``reset_coil`` or ``reset_coils``.
 
 reset_on_complete:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) .
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 By default, when a drop target bank completes, it does not automatically reset.
 If you want it to reset, then use this setting along with a time delay for when you
@@ -155,7 +156,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
@@ -175,10 +176,14 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for drop target banks: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/targets/drop_targets/drop_target_bank`

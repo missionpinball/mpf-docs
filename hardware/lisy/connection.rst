@@ -110,7 +110,6 @@ If you want to use the serial port, add/update the following sections in your ma
 
   hardware:
     platform: lisy
-
   lisy:
     connection: serial
     port: com1               # replace this with your com port
@@ -149,7 +148,6 @@ in your machine config:
 
   hardware:
     platform: lisy
-
   lisy:
     connection: network
     network_port: 5963
@@ -171,3 +169,8 @@ Power up your system and enjoy.
 ----------------------------------------------
 
 Start MPF on you PC. Optionally start MPF-MC (if you want to use an additional DMD or LCD).
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

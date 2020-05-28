@@ -60,6 +60,11 @@ Both physically and virtually.
 Another type of displays are :doc:`score reels </mechs/score_reels/index>`
 which can also be controlled.
 
+Related Events
+--------------
+
+.. include:: /events/include_displays.rst
+
 .. toctree::
    :maxdepth: 2
 

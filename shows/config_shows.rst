@@ -1,7 +1,7 @@
 Creating shows in config files
 ==============================
 
-In addition to being able to `create standalone show files <files>`_, MPF also lets you define your shows right
+In addition to being able to :doc:`create standalone show files </shows/file_shows>`, MPF also lets you define your shows right
 in-line in your config files.
 
 You can do this in the ``shows:`` section of a config file. (This can be done in a mode-based config or in your
@@ -14,22 +14,22 @@ show items to the config. For example:
 .. code-block:: mpf-config
 
    shows:
-      flash_red:
-         - time: 0
-           lights:
-             led1: red
-         - time: +1
-           lights:
-             led1: off
-         - time: +1
-      blue_green_cycle:
-         - time: 0
-           lights:
-             led2: blue
-         - time: +1
-           lights:
-             led2: green
-         - time: +1
+     flash_red:
+       - time: 0
+         lights:
+           led1: red
+       - time: +1
+         lights:
+           led1: off
+       - time: +1
+     blue_green_cycle:
+       - time: 0
+         lights:
+           led2: blue
+       - time: +1
+         lights:
+           led2: green
+       - time: +1
 
 The section above contains two shows: *flash_red* and *blue_green_cycle*.
 

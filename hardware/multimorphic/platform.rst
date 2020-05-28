@@ -22,14 +22,14 @@ For the P-ROC:
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
+     platform: p_roc
 
 For the P3-ROC:
 
 .. code-block:: mpf-config
 
    hardware:
-      platform: p3_roc
+     platform: p3_roc
 
 2. Set your driver boards:
 --------------------------
@@ -43,16 +43,20 @@ For the P-ROC:
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
-      driverboards: pdb
+     platform: p_roc
+
+   p_roc:
+     driverboards: pdb
 
 For the P3-ROC:
 
 .. code-block:: mpf-config
 
    hardware:
-      platform: p3_roc
-      driverboards: pdb
+     platform: p3_roc
+
+   p_roc:
+     driverboards: pdb
 
 Note that if you're using a P-ROC with an existing machine, then your driver
 boards will be either wpc, stern, etc. See the documentation on
@@ -71,5 +75,11 @@ For the P-ROC or P3-Roc:
 .. code-block:: mpf-config
 
    p_roc:
-      use_watchdog: true
-      watchdog_time: 1s
+     use_watchdog: true
+     watchdog_time: 1s
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

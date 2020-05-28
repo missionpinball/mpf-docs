@@ -1,3 +1,6 @@
+.. meta::
+   :google-site-verification: f4o9D2NqwIt3z5YA_P41woqvYXOhXNjYp223Xq3I5ik
+
 .. toctree::
    :hidden:
    :caption: Overview
@@ -41,6 +44,14 @@
 
 .. toctree::
    :hidden:
+   :caption: Building Machines
+   :titlesonly:
+   :numbered: 0
+
+   Physically Building Pinball Machines </physical_building/index>
+
+.. toctree::
+   :hidden:
    :caption: Examples
    :titlesonly:
    :numbered: 0
@@ -57,8 +68,10 @@
 
    Config File Reference </config/index>
    Events Reference </events/index>
-   Player Variable Reference </player_vars/index>
+   Game Variable Reference </game_vars/index>
    Machine Variable Reference </machine_vars/index>
+   Player Variable Reference </player_vars/index>
+   Log Reference </logs/index>
 
 .. toctree::
    :hidden:
@@ -122,10 +135,11 @@ Examples
 
 Reference Guides
 ----------------
-* :doc:`/events/index`: All the standard events MPF has, and how to use them.
 * :doc:`/config/index`: Lists every config setting and all the options.
-* :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
+* :doc:`/events/index`: All the standard events MPF has, and how to use them.
+* :doc:`/game_vars/index`: Lists all the built-in game variables and parameters.
 * :doc:`/machine_vars/index`: Lists all the standard machine variables.
+* :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
 
 Developer Documentation
 -----------------------

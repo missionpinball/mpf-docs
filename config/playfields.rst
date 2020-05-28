@@ -16,10 +16,46 @@ The ``playfields:`` section of your config is where you configure your
 You can have multiple playfields and MPF will track balls per playfield.
 One playfield should contain the tag `default` so that the game knows which playfield to use.
 
+.. config
+
+
+Required settings
+-----------------
+
+The following sections are required in the ``playfields:`` section of your config:
+
+default_source_device:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
+
+The source ball device to use to feed balls to this playfield.
+This source device must be able to eject directly to the playfield.
+Usually this is your launcher ball device.
+If you do not have a launcher use the trough device.
+
+
 Optional settings
 -----------------
 
 The following sections are optional in the ``playfields:`` section of your config. (If you don't include them, the default will be used).
+
+ball_search_block_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``flipper_cradle``
+
+Event to block ball search. Used by flipper cradle.
+
+ball_search_disable_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
+
+Event to disable ball search.
+
+ball_search_enable_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
+
+Event to enable ball search.
 
 ball_search_failed_action:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,7 +67,7 @@ will end the game.
 
 ball_search_interval:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``150ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``150ms``
 
 The delay after each fired coil/searched device.
 
@@ -61,62 +97,47 @@ This defines how many time phase 3 is repeated until ball search gives up.
 
 ball_search_timeout:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``15s``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``15s``
 
 `ball_search_timeout` configures the time of inactivity which has to pass until ball search starts.
 
-ball_search_wait_after_iteration:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
-
-Extra delay after each iteration.
-
-ball_search_block_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Default: ``flipper_cradle``
-
-Event to block ball search. Used by flipper cradle.
-
 ball_search_unblock_events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Default: ``flipper_cradle_release``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``flipper_cradle_release``
 
 Event to unblock ball search. Used by flipper cradle.
 
-ball_search_enable_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-Default: None
+ball_search_wait_after_iteration:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
 
-Event to enable ball search.
-
-ball_search_disable_events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Default: None
-
-Event to disable ball search.
-
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
-Turn on/off debugging.
-
-default_source_device:
-~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``BallDevice``. Default: ``None``
-
-The source ball device to use to feed balls to this playfield.
-This source device must be able to eject directly to the playfield.
-Usually this is your launcher ball device.
-If you do not have a launcher use the trough device.
+Extra delay after each iteration.
 
 enable_ball_search:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``None``
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
 
 Enable ball_search by default. Use with care during development
 since coils may hurt you. Should be enabled in any production
 machine.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Turn on/off debugging.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
 
 label:
 ~~~~~~
@@ -126,8 +147,13 @@ Label for service menu.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Set tag `default` to your default playfield. The game will use
 the default playfield to eject balls.
 
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/playfields/index`

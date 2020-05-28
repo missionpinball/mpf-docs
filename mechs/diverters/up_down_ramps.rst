@@ -13,7 +13,7 @@ Those mechanism typically act as a diverter and should be configured as such.
 Hardware
 --------
 
-:doc:`TODO: Add a picture of a up-down ramp </about/help_us_to_write_it>`
+.. image:: /mechs/images/up-down-ramp.jpg
 
 Up-Down ramps either work with one coil or two coils.
 Single-coil ramps use the coil to move the ramp up or down temporarily
@@ -41,20 +41,20 @@ Up-Down ramps are configured like a normal diverter:
 .. code-block:: mpf-config
 
    #! coils:
-   #!    c_ramp1_up:
-   #!       number:
-   #!    c_ramp2_up:
-   #!       number:
-   #!    c_ramp2_down:
-   #!       number:
+   #!   c_ramp1_up:
+   #!     number:
+   #!   c_ramp2_up:
+   #!     number:
+   #!   c_ramp2_down:
+   #!     number:
    diverters:
-        up_down_one_coil:
-            activation_coil: c_ramp1_up
-            type: hold
-        up_down_two_coils:
-            activation_coil: c_ramp2_up
-            deactivation_coil: c_ramp2_down
-            type: pulse
+     up_down_one_coil:
+       activation_coil: c_ramp1_up
+       type: hold
+     up_down_two_coils:
+       activation_coil: c_ramp2_up
+       deactivation_coil: c_ramp2_down
+       type: pulse
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |

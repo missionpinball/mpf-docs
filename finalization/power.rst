@@ -14,7 +14,7 @@ Computer Start-up and Shutdown Controller
 Scott Danesi sells a board called
 `Computer Start-up and Shutdown Controller (CSSC) <http://www.danesidesigns.com/products/cssc/>`_
 which will trigger a shutdown of your PC when the main power supply of your
-machine is turned of.
+machine is turned of (part number: #600-0322-00).
 However, you need to make sure that the PC still has power until shutdown is
 complete.
 You can either use a separate outlet (and make sure not to disconnect it early)
@@ -25,6 +25,24 @@ Especially if you are using (older) Windows which very much dislikes unclean
 shutdowns.
 However, with modern operating systems and journalling filesystems (such as
 ext4 or ReFS) this became less of an issue.
+
+Make it work on Linux
+~~~~~~~~~~~~~~~~~~~~~
+
+If you use a Linux distribution with systemd set ``HandlePowerKey=ignore``
+in ``/etc/systemd/logind.conf``.
+
+To handle power button events install ``acpid``.
+Add ``/etc/acpi/events/powerbtn`` with the following content (or change it if
+if already exists):
+
+.. code-block:: bash
+
+   event=button[ /]power
+   action=/sbin/poweroff
+
+Restart ``acpid`` (or your computer) and you should be good to go.
+
 
 Read-only Filsystems
 --------------------

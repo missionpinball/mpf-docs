@@ -101,15 +101,16 @@ Now you find the contents of your stick in /mnt.
 To tell mpf-mc and the underlying kivy to use the framebuffer via SDL2 you have to put this in your
 machine/config/config.yaml:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  window:
-    width: 1280
-    height: 800
-
-  kivy_config:
-    graphics:
-      fbo: force-hardware
+   window:
+     width: 1280
+     height: 800
+   kivy_config:
+     graphics:
+       fbo: force-hardware
+   ##! test
+   #! advance_time_and_run .1
 
 More or less important last steps:
 ----------------------------------
@@ -194,7 +195,7 @@ If you have trouble getting sound out of your speakers or monitor have a look he
 
 https://www.raspberrypi.org/documentation/configuration/audio-config.md
 
-If sound plays via omxplayer but not in MPF, set use_sdl_mixer_loader: False in your MPF configuration file. 
+If sound plays via omxplayer but not in MPF, set use_sdl_mixer_loader: False in your MPF configuration file.
 
 Do a reboot:
 ------------
@@ -241,3 +242,5 @@ Login and start mpf-mc inside your machine folder with
   mpf mc
 
 Enjoy!
+
+.. include:: /install/common_problems_and_solutions.rst

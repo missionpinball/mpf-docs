@@ -16,33 +16,42 @@ PCA9685/PCA9635-based I2C servo controllers.
 See :doc:`/hardware/i2c_servo/index` for details.
 
 
+I2C Address
+~~~~~~~~~~~
+When you configure an I2C servo controller you have to address it on the I2C
+bus.
+The default of the chip is ``0x40`` which is ``64`` in decimal.
+There might be some prefix depending on your I2C interface.
+
+.. config
+
+
 Optional settings
 -----------------
 
 The following sections are optional in the ``servo_controllers:`` section of your config. (If you don't include them, the default will be used).
 
-address:
-~~~~~~~~
-Single value, type: ``integer``. Default: ``64``
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``none``
 
-I2C address of your controller. The default of the chip is ``0x40`` which is
-``64`` in decimal. There might be some prefix depending on your I2C interface.
+Log level for the console log for this platform.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see more debug output.
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
-Label of the controller in service mode.
+Log level for the file log for this platform.
 
 platform:
 ~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Name of the platform this servo controller is connected to. The default value of ``None`` means the
 default hardware platform will be used. You only need to change this if you have
@@ -66,8 +75,7 @@ The controller is driving the servo using PWM. ``servo_min`` defines thes the
 lower PWM limit. It will use a duty cycle of ``value/4096`` at 50Hz.
 
 
-tags:
-~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+Related How To guides
+---------------------
 
-List of tags for this controller. Currently not used.
+* :doc:`/hardware/i2c_servo/index`

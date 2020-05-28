@@ -29,10 +29,10 @@ and the right flipper button to the ``?`` key:
 .. code-block:: mpf-config
 
     keyboard:
-        z:
-            switch: s_left_flipper
-        "?":
-            switch: s_right_flipper
+      z:
+        switch: s_left_flipper
+      '?':
+        switch: s_right_flipper
 
 Note that the question mark is in quotes since it's a non-standard
 character, and if you don't put it in quotes, it will confuse the
@@ -50,9 +50,11 @@ the right of the colon after ``switch:``. At first you might think it's
 a bit tedious to have to write the word "switch" for each line. After
 all, why can't you just enter them as ``z: s_left_flipper``? This is
 because the MPF keyboard interface can actually be used to control
-`a lot more than just keys </config/keyboard>`_. The details of that
+:doc:`a lot more than just keys </hardware/virtual/keyboard>`.
+The details of that
 are not important now, so for now just make sure your ``keyboard:``
 section looks like the example above.
+
 
 2. Test your new keyboard interface
 -----------------------------------
@@ -62,7 +64,7 @@ run your game again. (Seriously, we can't tell you how many times
 things don't work only to realize we didn't save our config after
 changing it!). So now run your game, starting both the media
 controller and the MPF core. Again you can either do this by running
-both commands manually in separate windows or by running ``mpf both``.
+both commands manually in separate windows or by running ``mpf both -t``.
 
 Note that if you have a physical machine connected, *your physical
 flippers will not flip with the keyboard keys*.
@@ -149,16 +151,20 @@ keys, there are a few things you can try to troubleshoot:
   hitting your keys again.
 + Remember that your physical flippers will not flip if you hit the
   keyboard keys for your flipper buttons.
++ Check if numlock is enabled. This seems to be common issue on Windows 10.
+  Disable numlock in this case.
++ Make sure you started ``mpf both -t`` and did not omit ``-t`` as this would
+  hide the log and show the text ui instead.
 
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step6.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_6``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 ::
 
-   C:\mpf-examples\tutorial>mpf both -c step6
+   C:\mpf-examples\tutorial>mpf both -t
 

@@ -92,7 +92,7 @@ What kind of rules does MPF use?
 1. Pulse + Cancel: This means that we pulse a coil when a switch becomes active and cancel the pulse when the switch becomes inactive.
 2. Pulse + Cancel + Hold: This means that we pulse and then enable a coil with pwm when a switch becomes active and cancel the pulse when the switch becomes inactive.
 3. Just Pulse: This means that we pulse a coil when a switch becomes active but never cancel the pulse.
-4. Pulse + Cancel + Hold + EOS: This means that we pulse and then enable a coil with pwm when a switch becomes active and cancel the pulse when the switch becomes inactive. Additionally, the pulse is changed to pwm when EOS becomes inactive (its usually normally closed).
+4. Pulse + Cancel + Hold + EOS: This means that we pulse and then enable a coil with pwm when a switch becomes active and cancel the pulse when the switch becomes inactive. Additionally, the pulse is changed to pwm when EOS becomes inactive (it's usually normally closed).
 
 For most platforms 1 and 2 is basically the same rule (e.g. rule 1 is rule 2 with ``hold power = 0``).
 

@@ -30,7 +30,6 @@ Here is an example:
          - voiceAnnouncerNewsFlash1
          - voiceAnnouncerMessage1
          - voiceAnnouncerAliensAttack1
-
      playlistHighScore:
        shuffle: true
        repeat: true
@@ -41,7 +40,6 @@ Here is an example:
          - soundHighScore002
          - soundHighScore003
          - soundHighScore004
-
    # ---------------------
    # PLAYLIST::PLAYER
    # ---------------------
@@ -52,7 +50,6 @@ Here is an example:
        trackplaylist:
          playlist: playlistIntro
          action: play
-
      # -------------------
      # MUSIC DURING HIGH SCORE ENTRY
      high_score_enter_initials:
@@ -61,24 +58,21 @@ Here is an example:
          shuffle: true
          repeat: true
          action: play
-
      mode_attract_started:
        trackplaylist:
          action: stop
 
+.. config
+
+
 Required settings
 -----------------
 
-The following sections are required for each named sound loop set in your config:
+The following sections are required in the ``playlists:`` section of your config:
 
 sounds:
 ~~~~~~~
-
-The ``sounds:`` section contains an indented list of existing sound assets (one per line) that will
-be contained in the playlist. It is suggested you use block sequence notation for this list (begin
-each line with a dash followed by a space). Alternatively, you can enter the sound asset names
-in a comma-separated list. The sounds will be played in the order specfied (unless ``shuffle:`` is
-set to ``True``).
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 .. note:: If you want to use a sound that has spaces in its name, the name of the sound must be
    in quotes:
@@ -96,8 +90,7 @@ set to ``True``).
 Optional settings
 -----------------
 
-The following sections are optional in the ``playlists:`` section of your config. (If you don't include
-them, the default will be used).
+The following sections are optional in the ``playlists:`` section of your config. (If you don't include them, the default will be used).
 
 crossfade_mode:
 ~~~~~~~~~~~~~~~
@@ -111,15 +104,14 @@ setting or the ``crossfade_time`` specified in the playlist.  Options for ``cros
 
 crossfade_time:
 ~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
 
 The number of seconds over which to crossfade between sounds in the playlist. This value is ignored when
 ``crossfade_mode:`` is set to ``use_track_setting``.
 
 events_when_looping:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist loops back to the
 beginning while playing. The playlist will only loop if ``repeat:`` is set to ``True``. Enter the
@@ -127,14 +119,14 @@ list in the MPF config list format. These events are posted exactly as they’re
 
 events_when_played:
 ~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist is played. Enter the list
 in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_sound_changed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when a new sound is played while the playlist
 is played. Enter the list in the MPF config list format. These events are posted exactly as they’re
@@ -142,28 +134,40 @@ entered.
 
 events_when_sound_stopped:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when a playlist sound has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
 
 events_when_stopped:
 ~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this playlist has finished playing.
 Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
 
 repeat:
 ~~~~~~~
-Single value, type: ``bool``. Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Flag indicating whether or not the playlist will repeat when all sounds have been played or just
 stop.
 
+scope:
+~~~~~~
+Single value, type: one of the following options: machine, player. Default: ``machine``
+
+Whatever this playlist should be persisted per player or machine-wide.
+
 shuffle:
 ~~~~~~~~
-Single value, type: ``bool``. Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Flag indicating whether or not the playlist will be played in order (``shuffle: True`` or randomized
 (``shuffle: False``) for playback.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/playlist_player`

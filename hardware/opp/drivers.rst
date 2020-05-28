@@ -11,6 +11,8 @@ OPP coils / drivers
 There are a few things to know about controlling drivers and coils
 with OPP hardware.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 Number
 ~~~~~~
 
@@ -42,9 +44,9 @@ example, consider the following configuration:
 .. code-block:: mpf-config
 
     coils:
-        some_coil:
-            number: 0-12
-            default_pulse_ms: 30
+      some_coil:
+        number: 0-12
+        default_pulse_ms: 30
 
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
@@ -88,6 +90,14 @@ This is an example:
       some_coil:
         number: 0-3
         default_pulse_ms: 10
-        default_recycle: True
+        default_recycle: true
         platform_settings:
           recycle_factor: 2
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.
+
+
+.. include:: ../driver_related_howto_guides.rst

@@ -15,3 +15,10 @@ The ``scriptlets:`` section of your config is where you list you custom code scr
 This has been deprecated with 0.50+. Use :doc:`custom_code` instead.
 Scriptlets still work but will be removed eventually.
 
+.. config
+
+
+Related How To guides
+---------------------
+
+* `MPF developer documentation <http://developer.missionpinball.org/en/dev/code/machine_code.html>`_.

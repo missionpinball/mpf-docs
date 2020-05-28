@@ -75,11 +75,8 @@ slide_1 - but what triggers slide_2 and slide_3?
 The slide_player: can be used to sequence the playing of additional slides using the
 slide_slide_1_removed event to trigger the next slide to be played.
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/slide_name_active`                                             |
-+------------------------------------------------------------------------------+
-| :doc:`/events/slide_name_removed`                                            |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+.. include:: /events/include_slides.rst
 

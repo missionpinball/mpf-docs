@@ -3,12 +3,436 @@ MPF Release Notes
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.53
+----
+
+Released: January 11, 2020
+
+This is a 0.52 maintenance release with cleanups and some refactorings.
+We identified a few potential upgrade issues:
+
+- We fixed validation of animations. You might get a validation error with
+  `repeat: -1`. Change it to `repeat: false`.
+  See the `change in the docs <https://github.com/missionpinball/mpf-docs/commit/6a141ec4434a0904d92f05bcbce1fe345513c018>`__.
+- We changed `active_time` of ball_save from ms to secs. In case you did not use a unit here this might change the time. `Details <https://github.com/missionpinball/mpf/pull/1463>`__.
+- `Machine variables changed <https://github.com/missionpinball/mpf/pull/1394>`__ if you accessed them from code (but not via config).
+- `Achievement state changed <https://github.com/missionpinball/mpf/pull/1429>`__ if you accessed it from code (but not via config or placeholders).
+
+.. rubric:: MPF and MPF-MC
+
+New Features
+^^^^^^^^^^^^
+
+-  `Support segment displays connected to normal light of a platform <https://github.com/missionpinball/mpf/pull/1305>`__ - jab
+-  `Batch LED updates for PD-LED and P/P3-Roc to prevent bus overflows <https://github.com/missionpinball/mpf/pull/1310>`__ - jab
+-  `Make separate thread configurable in P/P3-Roc and reduce IPC overhead <https://github.com/missionpinball/mpf/pull/1311>`__ - jab
+-  `Highlight settings in service mode <https://github.com/missionpinball/mpf/pull/1309>`__ - avanwinkle
+-  `Spike-MPF bridge in Rust <https://github.com/missionpinball/mpf-spike/commit/529ac6d7d047ef8d74ce2e4555a910a4ddf190c5>`__ - jab
+-  `Use new Spike-MPF bridge in MPF <https://github.com/missionpinball/mpf/commit/089f7e48008ab0e82d3d8712ef812ea636975933>`__ - jab
+-  `Use a better default for max\_servo\_value on PD-LEDs <https://github.com/missionpinball/mpf/commit/9fbbd9bbe1367566e5defda0a2914f75db1635d2>`__ - jab
+-  `Allow reverse sorted highscore categories <https://github.com/missionpinball/mpf/pull/1296>`__ - yensho
+-  `Light batching in Spike for better light sync <https://github.com/missionpinball/mpf/pull/1313>`__ - jab based on `request by Dave <https://groups.google.com/forum/#!topic/mpf-users/WHRLH0lGZL0>`__
+-  `Read ticks\_per\_second per node for Spike <https://groups.google.com/forum/#!topic/mpf-users/WHRLH0lGZL0>`__ - jab
+-  `Reliable speed/flow control in Spike <https://github.com/missionpinball/mpf/pull/1314>`__ - jab
+-  `Initial Spike 2 support for the mpf-spike bridge <https://github.com/missionpinball/mpf-spike/commit/e234336f504c40a5050220e00b5baa049d659819>`__ - jab
+-  `Limit light batch size in Spike to prevent bus desync <https://github.com/missionpinball/mpf/commit/f64d46689235bb1e4d5abaa63de6d5cf39a4c661>`__ - jab
+-  `Ignore duplicate handler warnings during init <https://github.com/missionpinball/mpf/pull/1316>`__ - avanwinkle
+-  `Add support for steppers in Spike <https://github.com/missionpinball/mpf/pull/1317>`__ - jab
+-  `Support Spike 2 backlight <https://github.com/missionpinball/mpf/commit/3bd30788613c687674d4e3c8bbace77691e0d1f5>`__ - jab
+-  `Support Spike 1 and Spike 2 backlight in bridge <https://github.com/missionpinball/mpf-spike/commit/9ee733992c127050cb31fe79d8ab0f8d89871467>`__ - jab
+-  `Servo and Steppers as Diverters <https://github.com/missionpinball/mpf/pull/1321>`__ - jab
+-  `Separate event handlers and code to catch incorrect arguments in custom code <https://github.com/missionpinball/mpf/pull/1327>`__ - jab
+-  `Auto launch when machine is tilted <https://github.com/missionpinball/mpf/pull/1330>`__ - jab based on `question from Philip D <https://groups.google.com/forum/#!topic/mpf-users/rjDghM-2XXk>`__
+-  `Show player and machine variables in the Text UI <https://github.com/missionpinball/mpf/pull/1328>`__ - woosle1234
+-  `Allow dynamic values in timer control events <https://github.com/missionpinball/mpf/pull/1337>`__ - avanwinkle based on report by wilder
+-  `Reduce default batch size for Spike LEDs <https://github.com/missionpinball/mpf/commit/e3ad5dded06c820db2ec38cbccdc3ed8f683480a>`__ - jab based on tests by Dave
+-  `Custom events\_when\_added and events\_when\_removed for widgets <https://github.com/missionpinball/mpf-mc/pull/372>`__ `[2] <https://github.com/missionpinball/mpf/pull/1338>`__ - qcapen based on `feature request by cfbenn <https://github.com/missionpinball/mpf/issues/1332>`__
+-  `Better cache invalidation of config\_spec cache <https://github.com/missionpinball/mpf/commit/d806ceecb0a53e61d3726471008611b229fb4fd7>`__ - jab
+-  `Refactor Text UI to prevent text clutter <https://github.com/missionpinball/mpf/pull/1339>`__ - jab
+-  `Allow user to disable ball search in a ball device <https://github.com/missionpinball/mpf/pull/1341>`__ - dziedada
+-  `Better signal handlers and shutdown logging during crashes <https://github.com/missionpinball/mpf/pull/1347>`__ - jab to fix `some exit issues <https://groups.google.com/forum/#!topic/mpf-users/98apwhX_rMo>`__
+-  `Improve show and lights performance <https://github.com/missionpinball/mpf/pull/1346>`__ - jab
+-  `Refactor DelayManager <https://github.com/missionpinball/mpf/pull/1344>`__ - jab
+-  `Exit MPF when the FAST Nano reboots/crashes during a game <https://github.com/missionpinball/mpf/pull/1343>`__ - jab
+-  `Add a setting for free play to service mode when credits mode is loaded <https://github.com/missionpinball/mpf/pull/1354>`__ - jab based on `request by Greg <https://groups.google.com/forum/#!topic/mpf-users/Q18AvoEaVRw>`__
+-  `Allow newer FAST firmware versions <https://github.com/missionpinball/mpf/pull/1356>`__ - jab based on problems with Firmware 1.05 by Brian Cox
+-  `Support inverted switches and non-numeric drivers in Virtual Pinball <https://github.com/missionpinball/mpf/pull/1360>`__ - mfuegemann
+-  `Extend README and add hardware rules to VPX Bridge <https://github.com/missionpinball/mpf-vpcom-bridge/pull/1>`__ and `Test <https://github.com/missionpinball/mpf-vpcom-bridge/pull/2>`__- mfuegemann
+-  `Placeholders in credits mode <https://github.com/missionpinball/mpf/pull/1357>`__ - jab
+-  `Placeholders in tilt mode <https://github.com/missionpinball/mpf/pull/1358>`__ - jab
+-  `RGB LEDs and flashers in Virtal Pinball <https://github.com/missionpinball/mpf/pull/1363>`__ - mfuegemann
+-  `Update asciimatics <https://github.com/missionpinball/mpf/pull/1362>`__ - jab
+-  `Add --vpx commandline option to mpf <https://github.com/missionpinball/mpf/pull/1364>`__ and `mc <https://github.com/missionpinball/mpf-mc/pull/373>`__- jab
+-  `Add VPX demo table with MPF config <https://github.com/missionpinball/mpf-vpcom-bridge/pull/3>`__ - mfuegemann
+-  `Placeholders for StateMachine devices <https://github.com/missionpinball/mpf/pull/1365>`__ - jab
+-  `Initial support for the Arduino Pinball Platform <https://github.com/missionpinball/mpf/commit/0021aa4c80c3f5c4db02c7ed0e797f0f2419340e>`__ - jab, bontango and blackknight
+-  `More debug in FAST platform <https://github.com/missionpinball/mpf/commit/c79a36b312d33c5cc546e4d9637f51ccef3ddcaf>`__ and `longer wait times <https://github.com/missionpinball/mpf/commit/e031cb047dcecaaeb9eb37fc11422ea657e2ed71>`__ - jab to support more FAST firmwares
+-  `Generic System 11 A/C Relay handling (for APC and Snux) <https://github.com/missionpinball/mpf/pull/1370>`__ - jab
+-  `Improve duplicate event handler message <https://github.com/missionpinball/mpf/commit/bebf593f97b068f07b3af69e93f48b3c8e595974>`__ - jab as it `caused confusion for Sepp <https://groups.google.com/forum/#!topic/mpf-users/epVKlaU9Yo8>`__
+-  `Better error message when number is empty <https://github.com/missionpinball/mpf/pull/1376>`__ - jab based on `report by Sepp <https://groups.google.com/forum/#!msg/mpf-users/oHsUeEJr2yI/Y1hg21iNBAAJ>`__
+-  `Placeholders in show\_tokens in show\_player <https://github.com/missionpinball/mpf/pull/1379>`__ - jab to `allow dynamic values in all widgets <https://groups.google.com/forum/#!topic/mpf-users/lUd6Z2lU_eo>`__
+-  `More useful and accurate validation errors in dicts <https://github.com/missionpinball/mpf/commit/240c4f9faabd58b8e96b3509b9a7d28ad0fc13fc>`__ - jab
+-  `Add links to the docs to warnings and errors <https://github.com/missionpinball/mpf/pull/1380>`__ - jab
+-  `Improve fake game in tests to handle multiball drains <https://github.com/missionpinball/mpf/commit/458927fca909510ef5df643e6947a886862a2aa9>`__ - jab
+-  `Remove Windows Python 3.4 build of MPF-MC <https://github.com/missionpinball/mpf-mc/commit/ad6e0fdb5bcd4bdad142b1ac563696f61b60733d>`__ - qcapen
+-  `Improve sound\_loop\_player design <https://github.com/missionpinball/mpf-mc/pull/374>`__ - qcapen
+-  `Python 3.7 support for Windows in MPF-MC <https://github.com/missionpinball/mpf-mc/commit/4dda4261fe527fec829e9e3e3488af8e407a7daf>`__ - qcapen
+-  `Add placeholder conditions for items in carousel mode <https://github.com/missionpinball/mpf/pull/1381>`__ - avanwinkle
+-  `Add control events to counters <https://github.com/missionpinball/mpf/pull/1342>`__ - dziedada
+-  `Support for the APC platform <https://github.com/missionpinball/mpf/issues/1345>`__ - jab, bontango and blackknight
+-  `Validate switch numbers in LISY/APC <https://github.com/missionpinball/mpf/commit/b39bc2759eb83bb1160ca0b3a70247ddeb4aa7a9>`__ - jab
+-  `Set DTS to low on connect for APC <https://github.com/missionpinball/mpf/commit/43f0585fcc75535435085189ec1f66128c308db5>`__ and `clear serial after reset <https://github.com/missionpinball/mpf/commit/4f1198fd3302ebd1fe8aefa2455056975ac1d065>`__ - jab
+-  `Modern lights for LISY/APC <https://github.com/missionpinball/mpf/commit/39642c7b3540005e8a4f775805302a8e4dadb484>`__ - jab
+-  `Refactor sound loop <https://github.com/missionpinball/mpf-mc/pull/374>`__ - qcapen
+-  `Allow tokens for widgets in shows <https://github.com/missionpinball/mpf/commit/4782dde5fca0f57603d0c82d221a1947887a6cd6>`__ - jab based on `request from Sean-Paul <https://groups.google.com/forum/#!topic/mpf-users/lUd6Z2lU_eo>`__
+-  `Don't activate diverter if activate\_event present <https://github.com/missionpinball/mpf/pull/1386>`__ - GabeKnuth
+-  `Add enabled and rotation\_enabled to placeholders for shots/shot\_groups <https://github.com/missionpinball/mpf/pull/1387>`__ - jab based on `request from Mike <https://groups.google.com/forum/#!topic/mpf-users/_EBF2tkfabI>`__
+-  `Throws Error when attempting to define more than one default display <https://github.com/missionpinball/mpf-mc/pull/376>`__ - GranolaDaniel
+-  `Update unity-bcp-server to latest version <https://github.com/missionpinball/unity-bcp-server/commit/61a827fcf6136bd9237678f6b9ccebecc8356737>`__ - qcapen
+-  `Segment display support for APC <https://github.com/missionpinball/mpf/pull/1388>`__ - jab
+-  `Add token to slide\_player to pass variables <https://github.com/missionpinball/mpf/pull/1389>`__ and `MC <https://github.com/missionpinball/mpf-mc/pull/377>`__ - jab based on `request in the forum by Greg <https://groups.google.com/forum/#!topic/mpf-users/ln2y_qxGRg4>`__
+-  `Increased light update throughput <https://github.com/missionpinball/mpf/pull/1390>`__ - jab
+-  `Add express syntax for sound\_player <https://github.com/missionpinball/mpf-mc/pull/378>`__ - jab
+-  `Refactor machine variables <https://github.com/missionpinball/mpf/pull/1394>`__ - pmansukhani
+-  `Tune shows and events <https://github.com/missionpinball/mpf/pull/1392>`__ - jab
+-  `Setup improvements and wheels for OSX <https://github.com/missionpinball/mpf-mc/pull/379>`__ - qcapen
+-  `Nicer errors on syntax errors in conditions <https://github.com/missionpinball/mpf/commit/5ce27ba9d7c2392d47fd1598790a89fdd43d9063>`__ - jab
+-  `Improve debug log of early messages in OPP <https://github.com/missionpinball/mpf/commit/9262983dd8b207aa5ae546cd6d9e7672b1b9d64c>`__ - jab
+-  `Option to send length bytes in LISY protocol <https://github.com/missionpinball/mpf/commit/e61c548efd3f2bfdc3af70338f4016f1ceab28ea>`__ - jab
+-  `Better error message on invalid displays in LISY <https://github.com/missionpinball/mpf/commit/2bbc750cfc27df04b83f57680fe27003484b1ef1>`__ - jab
+-  `Load modes from subfolders <https://github.com/missionpinball/mpf/pull/1396>`__ - pmansukhani
+-  `Move code out of the hot path for light updates <https://github.com/missionpinball/mpf/pull/1397>`__ - jab
+-  `Reserve all show\_player options in show\_tokens to prevent indent mistakes <https://github.com/missionpinball/mpf/pull/1399>`__ - jab based on `bug report by Alex <https://groups.google.com/forum/#!topic/mpf-users/J0UBP81ppfg>`__
+-  `Improve linter and remove previously undetected unused imports <https://github.com/missionpinball/mpf/pull/1400>`__ - jab
+-  `Better debug output for LISY platform <https://github.com/missionpinball/mpf/commit/b28c83fdcf860a3da90e3791d6ae82e1211db1b2>`__ - jab
+-  `Fix segment display mapping for APC <https://github.com/missionpinball/mpf/commit/d8232883fc614177b188bc33f6794bc1fb72ce81>`__ - jab
+-  `Configuration setting for player\_vars and machine\_vars to show in text ui <https://github.com/missionpinball/mpf/pull/1406>`__ - avanwinkle
+-  `Better command logging for the P/P3-Roc <https://github.com/missionpinball/mpf/commit/163e769fa63bc745ffecce1497458942339212e6>`__ - jab
+-  `Support daisy chaining in the Pololu Maestro <https://github.com/missionpinball/mpf/pull/1410>`__ - jab
+-  `Expose P-Roc hardware version as machine variable <https://github.com/missionpinball/mpf/commit/7be95d1cc79dfee12d44ff25b0972444121ff6bc>`__ - jab
+-  `Placeholders for shoot\_again in multiball <https://github.com/missionpinball/mpf/pull/1404>`__ - pmansukhani
+-  `Support show\_tokens with placeholders in shot\_profiles <https://github.com/missionpinball/mpf/pull/1414>`__ - jab
+-  `Regression Test for Diverters (for a bug which was fixed during refactoring) <https://github.com/missionpinball/mpf/commit/4a9251b819e470b2072dbf634e26d1b4c1e5daec>`__ - jab
+-  `Expose MPF and MC version in MPF-MC on connect <https://github.com/missionpinball/mpf-mc/commit/732cf02e5aefedbba4e9af72d7c0c7f1aa8b93a5>`__ - jab
+-  `Support pulse power in P/P3-Roc <https://github.com/missionpinball/mpf/pull/1418>`__ - jab
+-  `Add Scaffolding CLI to MPF <https://github.com/missionpinball/mpf/pull/1419>`__ - jab
+-  `Optimized Service Mode for LCDs <https://github.com/missionpinball/mpf/commit/6e09beca89f18f718402f3780cd42fb624b3d948>`__ - jab
+-  `Suggestions on config typos <https://github.com/missionpinball/mpf/pull/1424>`__ - jab
+-  `Copy light positions in scaffolding CLI from monitor to MPF for display\_light\_player <https://github.com/missionpinball/mpf/pull/1423>`__ - jab
+-  `Add start\_enabled to achievements and refactor code <https://github.com/missionpinball/mpf/pull/1426>`__ - jab
+-  `Add unselect\_events to achievements and more cleanup <https://github.com/missionpinball/mpf/pull/1429>`__ - jab
+-  `More achievement refactoring <https://github.com/missionpinball/mpf/pull/1431>`__ - jab
+-  `Refactored test cases <https://github.com/missionpinball/mpf/pull/1432>`__ - jab
+-  `Drop Python 3.4 support <https://github.com/missionpinball/mpf/pull/1433>`__ - jab
+-  `Turn device collections into native dicts <https://github.com/missionpinball/mpf/pull/1435>`__ - jab
+-  `Led\_color default show now supports all default show\_tokens <https://github.com/missionpinball/mpf/pull/1441>`__ - jab
+-  `Log asset loading times for tuning <https://github.com/missionpinball/mpf/pull/1442>`__ - jab
+-  `Show shot state in MPF-monitor <https://github.com/missionpinball/mpf/pull/1446>`__ - jab
+-  `Validate transitions in state\_machines <https://github.com/missionpinball/mpf/pull/1445>`__ - jab
+-  `Improve config parsing/validation <https://github.com/missionpinball/mpf/pull/1452>`__ - jab
+-  `Nicer errors and suggestions in shows <https://github.com/missionpinball/mpf/pull/1453>`__ - jab
+-  `Improve install and dependency manangement for Max and Linux <https://github.com/missionpinball/mpf-mc/pull/387>`__ - jab
+-  `Improve build and install on Windows <https://github.com/missionpinball/mpf-mc/pull/388>`__ - jab
+-  `Lazy loading for zipped image sequences to speed up game startup <https://github.com/missionpinball/mpf-mc/pull/389>`__ - jab
+-  `New experimental language server support for IDEs <https://github.com/missionpinball/mpf-ls/>`__ - jab
+-  `Generic high score mode which works for DMD and LCD <https://github.com/missionpinball/mpf/pull/1447>`__, `2 <https://github.com/missionpinball/mpf-mc/commit/efb6bfe5e58826e6545998a0ae9d7108e51ca1e3>`__ - jab
+-  `Improve correctness, speed and error messages of config validation <https://github.com/missionpinball/mpf/pull/1455>`__ - jab
+-  `Option to ignore checksum errors in Spike <https://github.com/missionpinball/mpf/pull/1456>`__ - jab
+-  `Support new input command for Spike FW 0.49+ <https://github.com/missionpinball/mpf/pull/1457>`__ - jab
+-  `Implement over current detection for Spike <https://github.com/missionpinball/mpf/commit/f8da2cf9b063a342f9ca15c7d84090f853a3465c>`__ - jab
+-  `Arbitrary start state for state\_machines <https://github.com/missionpinball/mpf/pull/1458>`__ - avanwinkle
+-  `Configurable debounce times and FW 0.49+ for Spike <https://github.com/missionpinball/mpf/pull/1460>`__ - jab
+-  `Coil priorities in hw rules for Spike FW 0.49+ <https://github.com/missionpinball/mpf/pull/1462>`__ - densminger and jab
+-  `Placeholders in ball save active\_time <https://github.com/missionpinball/mpf/pull/1463>`__ - avanwinkle
+-  `Autodetect FAST ports <https://github.com/missionpinball/mpf/pull/1464>`__ - avanwinkle
+-  `Improve robustness of LISY protocol <https://github.com/missionpinball/mpf/pull/1466>`__ - jab
+-  `Emacs instructions <https://github.com/missionpinball/mpf-ls/pull/6>`__ - seanirby
+-  `Support goto definition and hover + mode support <https://github.com/missionpinball/mpf-ls/pull/7>`__ - jab
+-  `Basic diagnostics <https://github.com/missionpinball/mpf-ls/pull/8>`__ - jab
+-  `Improve placeholder performance by evaluating them only when needed <https://github.com/missionpinball/mpf/pull/1469>`__ - jab
+-  `Update ruamel.yaml to improve the install experience on Windows <https://github.com/missionpinball/mpf/pull/1476>`__ - jab
+-  `Benchmark and tune/cache placeholder parsing <https://github.com/missionpinball/mpf/pull/1478>`__ - jab
+-  `Priorities in ball\_holds and ball\_locks <https://github.com/missionpinball/mpf/pull/1479>`__ - avanwinkle
+-  `Batch light for PD-LED <https://github.com/missionpinball/mpf/pull/1481>`__ - jab
+-  `Benchmark and tune event performance <https://github.com/missionpinball/mpf/pull/1483>`__ - jab
+-  `Extend combo\_switches to include the triggering switch in the event <https://github.com/missionpinball/mpf/pull/1480>`__ - avanwinkle
+-  `Initial Pin2DMD support (not yet working) <https://github.com/missionpinball/mpf/pull/1484>`__ - jab
+-  `Option to ignore FAST RGB CPU crashes <https://github.com/missionpinball/mpf/pull/1482>`__ - avanwinkle
+-  `Tracing for libpinproc calls <https://github.com/missionpinball/mpf/commit/9c7f3af27d4bdb91a67d80f6f0b43550d4607a3b>`__ - jab
+-  `Software update via Service mode <https://github.com/missionpinball/mpf/pull/1487>`__ - jab
+-  `Add tests for accrual restarts <https://github.com/missionpinball/mpf/pull/1470>`__ - jab
+
+Bug fixes & code improvements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  `Fix some yaml parsing errors <https://github.com/missionpinball/mpf/pull/1303>`__ - jab
+-  `Fix error with Python 3.7 <https://github.com/missionpinball/mpf-mc/pull/370>`__ - avanwinkle
+-  `Fix driver stuck on in rules in P/P3-Roc <https://github.com/missionpinball/mpf/pull/1308>`__ - jab
+-  `Do not crash in service cli when playing invalid shows <https://github.com/missionpinball/mpf/pull/1312>`__ - jab
+-  `Fix crash in debug message for duplicate priorities <https://github.com/missionpinball/mpf/commit/7a3dad3ef3366b33f4fa77e45abfa54026faa76c>`__ - jab based on report from Dave
+-  `Fix crash after config error <https://github.com/missionpinball/mpf/commit/4613cfe3b0c3d8199eaaf633f3626c228714faab>`__ - jab based on report by Wilder
+-  `Properly use priority in widget\_player when the slide is not active and becomes active later <https://github.com/missionpinball/mpf-mc/pull/371>`__ - avanwinkle
+-  `Do not crash when failing to read stepper position in Spike <https://github.com/missionpinball/mpf/pull/1323>`__ - jab
+-  `Allow carousel mode during attract <https://github.com/missionpinball/mpf/pull/1325>`__ - avanwinkle
+-  `Do not start highscore mode without a game <https://github.com/missionpinball/mpf/pull/1331>`__ - jab based on report by wilder
+-  `Properly save window positions in MPF Monitor <https://github.com/missionpinball/mpf-monitor/commit/79bb049101b62bf846c4451ac462b0d0a4a7acaf>`__ - jab based on `report by Greg <https://groups.google.com/forum/#!topic/mpf-users/JXB5Pv26Ces>`__
+-  `Lock with physical\_only strategy would never be full and count is off by one <https://github.com/missionpinball/mpf/pull/1350>`__ - jab based on `report by Coleman <https://groups.google.com/forum/#!topic/mpf-users/SVCfuA5jll8>`__
+-  `Do not keep ball in outhole after tilt <https://github.com/missionpinball/mpf/pull/1351>`__ - jab based on `report by Matt <https://groups.google.com/forum/#!topic/mpf-users/0FTPmHuB734>`__
+-  `Fix crash in bonus mode with uvloop <https://github.com/missionpinball/mpf/pull/1352>`__ - jab based on `report by Matt <https://groups.google.com/forum/#!topic/mpf-users/OwL2cT3lGq4>`__
+-  `Prevent shutdown glitches in FAST <https://github.com/missionpinball/mpf/commit/90acd6c60da1c0b4a4922edbeaca247228a54d41>`__ - jab with the help of Dave
+-  `Prevent crash during early errors in P-Roc <https://github.com/missionpinball/mpf/commit/95ac7c6eb8cd60712fa1c3cad557fcd9ffaa529a>`__ - jab based on report by Coleman
+-  `Preserve curly brakets in string\_to\_list <https://github.com/missionpinball/mpf/pull/1361>`__ - avanwinkle
+-  `Fix bug preventing access to settings in custom code <https://github.com/missionpinball/mpf/pull/1369>`__ - avanwinkle
+-  `Properly implement disable\_random event in random\_event\_player <https://github.com/missionpinball/mpf/pull/1374>`__ - avanwinkle
+-  `Fix enable attribute for placeholders in devices <https://github.com/missionpinball/mpf/pull/1372>`__ - avanwinkle
+-  `Fix regression in multiball counting <https://github.com/missionpinball/mpf/pull/1377>`__ - avanwinkle
+-  `Fix sound\_loop\_player bugs <https://github.com/missionpinball/mpf-mc/commit/f14b5214246188e3cd61d9eef2193f17ff9548e5>`__ - qcapen
+-  `Fix Mac build <https://github.com/missionpinball/mpf-mc/commit/2bd209465b6b599f2ae937892e909cf1470fd5fd>`__ - qcapen
+-  `Fix Kivy recursion erros in Kivy 1.11 <https://github.com/missionpinball/mpf-mc/commit/2fb90742c458d45be17388b0932d29569ba472c3>`__ - qcapen
+-  `Fix events\_when\_xxx on sounds <https://github.com/missionpinball/mpf-mc/pull/378>`__ and `2 <https://github.com/missionpinball/mpf/pull/1393>`__ - qcapen and jab based on `report by Greg <https://groups.google.com/forum/#!topic/mpf-users/B8PF2WqFpYo>`__
+-  `Fix parsing regression in OPP with matrix input cards <https://github.com/missionpinball/mpf/commit/42d893f93f95c87f54c8c2ec7aed07de02533740>`__ and `more <https://github.com/missionpinball/mpf/commit/de7dc636ee23007c36a4f3df6a0cd3d25cca9b6f>`__ - jab
+-  `Fix sound about to finish notification bug <https://github.com/missionpinball/mpf-mc/commit/3b4df51a9ed5776456d6b2c9e7e7a6e42d60f76e>`__ - qcapen
+-  `Fixes for latest Spike Firmware <https://github.com/missionpinball/mpf/commit/f235b9a70f8d81d38e4e77c0571690aef7bd35b0>`__ and `bridge <https://github.com/missionpinball/mpf-spike/commit/dde2bd367e7dcbdc84e5e7433e900dee4f652810>`__ - jab
+-  `Always send a multiple of three LEDs to the Fadecandy to fix RGBW <https://github.com/missionpinball/mpf/commit/bae40db64e1496506f44596d24b58dbe85241b09>`__ - jab based on `bug report by Cadrion <https://groups.google.com/forum/#!topic/mpf-users/inJzJVlWVWU>`__
+-  `Fix polarity issue on P-Roc with WPC hardware <https://github.com/missionpinball/mpf/commit/2aafe828656d09921e959f4c2f0208ac70f6a23e>`__ - jab
+-  `LISY command fixes in protocol v0.9 <https://github.com/missionpinball/mpf/commit/3bf547d0bf18005b56a1387b73cae013cd9d8774>`__ and `2 <https://github.com/missionpinball/mpf/commit/3058fc6c599ca2db8cd088520327493160480752>`__ - jab
+-  `Fix image unload crash in MC <https://github.com/missionpinball/mpf-mc/pull/384>`__ - avanwinkle
+-  `Fix inverted condition on show player conditions <https://github.com/missionpinball/mpf/pull/1407>`__ - avanwinkle
+-  `Prevent false positive duplicate numbers in virtual platform <https://github.com/missionpinball/mpf/pull/1409>`__ - jab
+-  `Prevent crash in Text UI <https://github.com/missionpinball/mpf/commit/b121d1e91245e99a88ef68463a67dfcb9f8a154a>`__ - jab
+-  `Scaffolding from any path (just like other commands) <https://github.com/missionpinball/mpf/pull/1421>`__ - jab
+-  `Set default enable/disable\_event for magnets <https://github.com/missionpinball/mpf/pull/1422>`__ - jab
+-  `Bring back state\_names\_to\_not\_rotate in shot\_profiles <https://github.com/missionpinball/mpf/pull/1430>`__ - jab to fix `bug reported by Greg <https://groups.google.com/forum/#!searchin/mpf-users/state_names_to_not_rotate%7Csort:date/mpf-users/kpFWgW2QgBM/3_Q0CIIfDAAJ>`__
+-  `Prevent false positive duplicate events handlers <https://github.com/missionpinball/mpf/pull/1436>`__ - jab based on `report from Greg <https://groups.google.com/forum/#!topic/mpf-users/bLnPsXiBrTI>`__
+-  `Fix crash in show player <https://github.com/missionpinball/mpf/pull/1440>`__ - jab
+-  `Fix config validation <https://github.com/missionpinball/mpf/pull/1448>`__ - kevinleedrum
+-  `Fix reenabling of achievement\_groups <https://github.com/missionpinball/mpf/pull/1443>`__ - jab
+-  `Improve error urls <https://github.com/missionpinball/mpf/pull/1444>`__ - jab
+-  `Fix call to libpinproc for pulse\_power <https://github.com/missionpinball/mpf/commit/f32606bf8722fe501190be4ff3619924970821c1>`__ - jab
+-  `Do not crash on headless display\_light\_player <https://github.com/missionpinball/mpf-mc/commit/04c1963bbdc17e63d92598de1b5caf37506059fc>`__ - jab
+-  `Fix setting number of LEDs per node in Spike FW 0.49+ <https://github.com/missionpinball/mpf/pull/1461>`__ - densminger and jab
+-  `High score mode should run before match mode <https://github.com/missionpinball/mpf/pull/1467>`__ - jab
+-  `Prevent crash in text ui on unknown switch event <https://github.com/missionpinball/mpf/pull/1468>`__ - jab
+-  `Also advance score reels for non-active players <https://github.com/missionpinball/mpf/pull/1471>`__ - jab
+-  `Consider OPP firmware version per chain instead of globally <https://github.com/missionpinball/mpf/pull/1474>`__ - jab
+-  `Fix sequence\_shots with a single switch and delay <https://github.com/missionpinball/mpf/pull/1473>`__ - jab
+-  `Fix crash in score reels <https://github.com/missionpinball/mpf/pull/1475>`__ - jab
+-  `Prevent crash in variable player when adding a variable for a non-exising player <https://github.com/missionpinball/mpf/pull/1477>`__ - jab
+-  `Prevent duplicate BCP messages which could trigger duplicate sounds or widgets <https://github.com/missionpinball/mpf/pull/1485>`__ - jab
+
+.. rubric:: MPF Documentation
+
+-  `Extend Multimorphic PowerEntry board documentation <https://github.com/missionpinball/mpf-docs/pull/203>`__ - colemanomartin
+-  `Center Post Ball Save Example <https://github.com/missionpinball/mpf-docs/commit/aaef1046b6d3f4443fa21e61decb333aa91d4605>`__ - mwiz
+-  `Part numbers for trough opto boards <https://github.com/missionpinball/mpf-docs/commit/f4f66e49a6946a9e24ae1636d3f7d6a5faa961bc>`__ - jab
+-  `Image for Center Post <https://github.com/missionpinball/mpf-docs/commit/908995a8e7a0e941dd461dfbc1c1bfbabc5d0f81>`__ - swizzlefish
+-  `Improve game mode example <https://github.com/missionpinball/mpf-docs/pull/204>`__ - gregsealby
+-  `Fix typos <https://github.com/missionpinball/mpf-docs/pull/205>`__, `fix2 <https://github.com/missionpinball/mpf-docs/pull/206>`__ - densminger
+-  `Extend documentation for multiple screens <https://github.com/missionpinball/mpf-docs/commit/793d1652c308bb7dfce2daaa5f7774db9071394b>`__ - jab based on `question by Haggis and solution by Snux <https://groups.google.com/forum/#!topic/mpf-users/vs62guaHNE4>`__
+-  `Fix tutorial step 18 <https://github.com/missionpinball/mpf-docs/commit/05aa704487a1117a14c3ff201809081f5a67a9fa>`__ - jab based on `question by Pablo <https://groups.google.com/forum/#!topic/mpf-users/czoLprd5pL8>`__
+-  `Document new Spike bridge <https://github.com/missionpinball/mpf-docs/commit/6be23912212478beaa35356226ef86d37cd2cf49>`__ - jab
+-  `Document steppers and add images <https://github.com/missionpinball/mpf-docs/pull/208>`__ - colemanomartin
+-  `Image an image of a servo <https://github.com/missionpinball/mpf-docs/commit/4da3b0a4ca6a0910d2ed89065d61411f92a91f90>`__ - colemanomartin
+-  `Better stepper example code <https://github.com/missionpinball/mpf-docs/pull/211>`__ - colemanomartin
+-  `Details about PD-LED servo fine tuning <https://github.com/missionpinball/mpf-docs/pull/210>`__ - colemanomartin
+-  `Clarify monitorable servo properties <https://github.com/missionpinball/mpf-docs/pull/209>`__ - colemanomartin
+-  `Document showcreator <https://github.com/missionpinball/mpf-docs/commit/29f7312c4efff3ace0ed4d77f9ec255e18aa166f>`__ - jab
+-  `Fix typo <https://github.com/missionpinball/mpf-docs/pull/212>`__ - cfbenn
+-  `Docs for named\_colors and example for dynamic widgets <https://github.com/missionpinball/mpf-docs/pull/213>`__ - avanwinkle based on `request by Philip <https://groups.google.com/forum/#!topic/mpf-users/_WCjW4_9Hic>`__
+-  `Better examples for sequence\_shots <https://github.com/missionpinball/mpf-docs/pull/214>`__ - colemanomartin
+-  `More text for the showcreator <https://github.com/missionpinball/mpf-docs/commit/7a3aeb1c30ea19474b9815e55ada5e287572086f>`__ - jab
+-  `Light\_player examples <https://github.com/missionpinball/mpf-docs/commit/639dbe2276e9404d4307d497ff7a065795050dbe>`__ - jab
+-  `How to use shows in shows <https://github.com/missionpinball/mpf-docs/commit/70b2d0498a1c121e8d0f7b4f0fe2885630505ab0>`__ - jab
+-  `Windows install error and fix <https://github.com/missionpinball/mpf-docs/commit/2d855b79ba24ef8492e20020d7f6dac861a50b34>`__ - jab based on error from Jordan
+-  `Document common logic block questions <https://github.com/missionpinball/mpf-docs/commit/03f60656b795a775e538ea97a693960e4bcaae0b>`__ - jab based on `question in forum from iizi <https://groups.google.com/forum/#!topic/mpf-users/X5HYU60gjoc>`__
+-  `Document servos and steppers as diverters <https://github.com/missionpinball/mpf-docs/commit/17651d0902b1a09d6d9ff91b890b851518cc2ad3>`__ - jab based on `question in forum <https://groups.google.com/forum/#!topic/mpf-users/YZlYmkEzAkw>`__
+-  `Document parameters of extra ball events <https://github.com/missionpinball/mpf/pull/1322>`__ - avanwinkle
+-  `Document start\_game\_event and add\_player\_event <https://github.com/missionpinball/mpf-docs/commit/49b4bd34e1a8d675115c99bac1a05c9054921928>`__ - jab
+-  `Add warnings about common ground to all coils <https://github.com/missionpinball/mpf-docs/commit/13efc1612aff5308239972383b7403bede0f8f3a>`__ - jab
+-  `More tags vs tokens in shows <https://github.com/missionpinball/mpf-docs/commit/3441c61471772745c299389481ff7d03945e5872>`__ - jab
+-  `How to embed high score in attract mode <https://github.com/missionpinball/mpf-docs/commit/aa7fb941fbd39ab9d10c66735f4bb5de7493a94a>`__ - jab based on `example by Greg <https://groups.google.com/forum/#!topic/mpf-users/TGp86erLGKc>`__
+-  `How to display a timer on a slide <https://github.com/missionpinball/mpf-docs/commit/5f9b640d36af055051adf15dba0ea2a0735f1dcd>`__ - jab based on example from Coleman
+-  `Common pitfall with accruals <https://github.com/missionpinball/mpf-docs/pull/215>`__ - colemanomartin
+-  `Enable of StepStick needs to be low not high <https://github.com/missionpinball/mpf-docs/pull/207>`__ - colemanomartin
+-  `Add Multimorphic part numbers for breakout boards and LEDs <https://github.com/missionpinball/mpf-docs/commit/3482321d29872d1555399d345e2cc9e5c62f08c7>`__ - jab
+-  `Document breakout boards for switches <https://github.com/missionpinball/mpf-docs/commit/7a6afed328a0ebfbe61bdafcd4cc5d7a9f51edef>`__ - jab
+-  `More homebrew part numbers <https://github.com/missionpinball/mpf-docs/commit/49b398350341a8f781cbcf1e96647f8684c34cc8>`__ - jab
+-  `Thermal considerations about resistors on Optos <https://github.com/missionpinball/mpf-docs/pull/216>`__ - colemanomartin
+-  `Document rotation on widgets <https://github.com/missionpinball/mpf-docs/pull/218>`__ - colemanomartin based on `question in forum <https://groups.google.com/forum/#!topic/mpf-users/v2uAIPbz8nA>`__
+-  `Update notes on rotation of widgets <https://github.com/missionpinball/mpf-docs/pull/217>`__ - colemanomartin
+-  `Document custom widget events <https://github.com/missionpinball/mpf-docs/commit/497a4f53cf174bb2814680a1ded7875194ca9d0a>`__ - qcapen
+-  `How to configure tilt and change tilt slides <https://github.com/missionpinball/mpf-docs/commit/ec47267b2ace174480f7e90dc6875bafcc863203>`__ - jab based on `example/question in the forum <https://groups.google.com/forum/#!topic/mpf-users/iHZxy9_eHPk>`__
+-  `Stern Spike Steppers <https://github.com/missionpinball/mpf-docs/commit/3aa75dc6c3bc47b5b56d32ee89f18b900b135e68>`__ - jab
+-  `More examples for delaying game/ball ending <https://github.com/missionpinball/mpf-docs/commit/5477f6f2313507aa0f992bc56cffa7a60f1eec81>`__ - jab based on `question by Coleman <https://groups.google.com/forum/#!topic/mpf-users/3FZqX4w_ROM>`__
+-  `DIP 6 and Servos on the PD-LED <https://github.com/missionpinball/mpf-docs/pull/220>`__ - colemanomartin
+-  `How to add a slam\_tilt slide <https://github.com/missionpinball/mpf-docs/commit/817a3cbca08b1b9f9fd5284f11ebf0ade2d8d5ee>`__ - jab based on `suggestion in forum <https://groups.google.com/forum/#!topic/mpf-users/iHZxy9_eHPk>`__
+-  `How to use sequence\_shots in shot\_groups <https://github.com/missionpinball/mpf-docs/commit/6916cab9dd1650d6ae7749adb70c4947432721c9>`__ - jab based on `example by Greg <https://groups.google.com/forum/#!topic/mpf-users/FUephO5O-TE>`__
+-  `Document shot\_profiles <https://github.com/missionpinball/mpf-docs/commit/b228792be0f2244ea316b8ce5e5d2fa11e780bdf>`__ - jab based on `question by Jordy <https://groups.google.com/forum/#!topic/mpf-users/UQHGAJ-hips>`__
+-  `How to use virtual env on Mac with Kivy <https://github.com/missionpinball/mpf/pull/1355>`__ - driskel
+-  `Improve dynamic values example <https://github.com/missionpinball/mpf-docs/pull/223>`__ - MarkInc666
+-  `How to add credits settings to service mode <https://github.com/missionpinball/mpf-docs/commit/744f29f861a243d9e6c95a9d81aa56fa7f32feec>`__ - jab
+-  `How to add tilt settings to service mode <https://github.com/missionpinball/mpf-docs/commit/8e05a161cfc21141a1e961f2a65ad8fa5b214d4c>`__ - jab
+-  `Document placeholders for StateMachine devices <https://github.com/missionpinball/mpf-docs/pull/224>`__ - jab
+-  `Document state machine configs <https://github.com/missionpinball/mpf-docs/commit/aadea2392c08c0d79ee96a8bc23b4d6639f6ae5e>`__ - jab
+-  `Add more config links and document timer transitions <https://github.com/missionpinball/mpf-docs/commit/e797a5fc8457d521bfd4263908a0c226171ff2f7>`__ - jab
+-  `Fixes in the tutorial <https://github.com/missionpinball/mpf-docs/pull/227>`__ and `more <https://github.com/missionpinball/mpf-docs/pull/228>`__ - ironspider
+-  `Document LISY protocol <https://github.com/missionpinball/mpf-docs/commit/cbb65ff49253befb1fb116d8d72d2f67a945f090>`__ - jab
+-  `Update example links <https://github.com/missionpinball/mpf-docs/commit/8e0f5334f6df40733810c2627e71fc0db063808b>`__ - GabeKnuth
+-  `Fix Mac install instructions <https://github.com/missionpinball/mpf-docs/commit/8016c8daf9c83ba2dafcde5ffef1244a02219a69>`__ - GabeKnuth
+-  `Typos <https://github.com/missionpinball/mpf-docs/pull/232>`__, `Bad English <https://github.com/missionpinball/mpf-docs/pull/230>`__ and `more <https://github.com/missionpinball/mpf-docs/pull/229>`__ - ironspider
+-  `Rotation is counter-clock wise not clockwise <https://github.com/missionpinball/mpf-docs/pull/231>`__ - colemanomartin
+-  `Document game variables <https://github.com/missionpinball/mpf-docs/pull/233>`__ - cfbenn
+-  `Improve tutorial <https://github.com/missionpinball/mpf-docs/pull/235>`__ and `fix typos <https://github.com/missionpinball/mpf-docs/pull/236>`__ - soraxxo
+-  `Log mesage reference section <https://github.com/missionpinball/mpf-docs/commit/30258abce59ea1d810827fdcc178938073394f26>`__ - jab
+-  `Add score slide to tutorial step 17 <https://github.com/missionpinball/mpf-docs/pull/237>`__ - Coleman
+-  `Fix instructions on how to install a specific MPF version <https://github.com/missionpinball/mpf-docs/pull/238>`__ `2 <https://github.com/missionpinball/mpf-docs/pull/239>`__ - mfulleratlassian
+-  `Improved and test multiball example <https://github.com/missionpinball/mpf-docs/commit/c5fef8549bd30a2287fe6ef4fb6a31bf4205e27b>`__ - jab based on `question by Sepp <https://groups.google.com/forum/#!topic/mpf-users/bn-U8Q91K0U>`__
+-  `Fix typos <https://github.com/missionpinball/mpf-docs/pull/240>`__ - nhardt
+-  `Document wire-to-wire connectors <https://github.com/missionpinball/mpf-docs/pull/242>`__ - ironspider
+-  `Add wiresheet for 7-segment displays with mypinballs controller <https://github.com/missionpinball/mpf-docs/pull/241>`__ - unRARed
+-  `When Two Drop Targets Are Hit Simultaneously How Do I Keep Two Sounds From Playing <https://github.com/missionpinball/mpf-docs/commit/7909751f5f0b09727e0c68e8b561d76b3e4e4ef3>`__ - qcapen
+-  `Typos <https://github.com/missionpinball/mpf-docs/pull/243>`__, `2 <https://github.com/missionpinball/mpf-docs/pull/244>`__, `3 <https://github.com/missionpinball/mpf-docs/pull/245>`__ - ironspider
+-  `Notes on Mac install <https://github.com/missionpinball/mpf-docs/pull/246>`__ - bowilliams
+-  `Remind users about venv when installing pypinproc <https://github.com/missionpinball/mpf-docs/pull/248>`__ - bowilliams
+-  `Document modes in subfolders <https://github.com/missionpinball/mpf-docs/pull/249>`__ - pmansukhani
+-  `Wording improvments <https://github.com/missionpinball/mpf-docs/pull/250>`__, `grammar fixes <https://github.com/missionpinball/mpf-docs/pull/253>`__, `typos <https://github.com/missionpinball/mpf-docs/pull/254>`__, `more typos <https://github.com/missionpinball/mpf-docs/pull/255>`__, `more
+   grammar <https://github.com/missionpinball/mpf-docs/pull/256>`__, `simple past <https://github.com/missionpinball/mpf-docs/pull/257>`__, `proper count <https://github.com/missionpinball/mpf-docs/pull/259>`__ - ironspider (a lot of fixes)
+-  `More precise description <https://github.com/missionpinball/mpf-docs/pull/258>`__ - ironspider
+-  `Add modern Stern Opto Trough <https://github.com/missionpinball/mpf-docs/pull/251>`__ - ironspider
+-  `Fix segment\_displays in shows <https://github.com/missionpinball/mpf-docs/pull/252>`__ - snux
+-  `Document LISY35 flipper enable <https://github.com/missionpinball/mpf-docs/commit/8472924c3d19eca3079e62ac24f32db865cca31d>`__ - jab based on `question by Dave <https://groups.google.com/forum/#!topic/mpf-users/bHj-Tvh2KhY>`__
+-  `Document local outputs on the P-Roc when using PDB boards <https://github.com/missionpinball/mpf-docs/commit/e3e83bc19ebb6ffa314560c3d05a7cd2dad63e3b>`__ - jab
+-  `Update LISY procotol <https://github.com/missionpinball/mpf-docs/commit/8ff96dd5ece1e8112079f814b645d3a56691adca>`__ - jab
+-  `Add LISY35 to WPC section <https://github.com/missionpinball/mpf-docs/commit/865bd788752b4f2f56c9695d4d49c6901ae37e69>`__ - jab
+-  `Document machine variables <https://github.com/missionpinball/mpf/commit/a433f72cee16101f37b66f81dcb5c944888a7571>`__ and `more <https://github.com/missionpinball/mpf-docs/commit/dcb0364e4cfa409567c3e3315f432d774e9cbf4a>`__ - jab
+-  `Add images for coils, buttons, flasher, up-down-ramps and diverters <https://github.com/missionpinball/mpf-docs/pull/261>`__ - kevinleedrum
+-  `Improve skill shot documentation <https://github.com/missionpinball/mpf-docs/commit/6a93a3d8b08028418911ad485b50f07cffc4952a>`__ - jab
+-  `Improve service mode documentation <https://github.com/missionpinball/mpf-docs/commit/ce3373e970bb5c7461ebceb1375bb804041c2031>`__ - jab
+-  `Document text\_ui section <https://github.com/missionpinball/mpf-docs/pull/260>`__ - avanwinkle
+-  `Fix typos <https://github.com/missionpinball/mpf-docs/pull/264>`__ and `grammar <https://github.com/missionpinball/mpf-docs/pull/266>`__ - catrinaisahuman
+-  `Fix typo in path <https://github.com/missionpinball/mpf-docs/pull/265>`__ - arthurlutz
+-  `Added flipper image <https://github.com/missionpinball/mpf-docs/pull/267>`__ - tpilewicz
+-  `Documentation (integration) tests with MC to make sure examples always work <https://github.com/missionpinball/mpf-docs/pull/269>`__ - jab
+-  `Integration test for shots and widgets <https://github.com/missionpinball/mpf-docs/commit/9e952c2d55c7b20880fe7016b9ed9756b39b0519>`__ - jab
+-  `Remove Python 3.4 references from docs <https://github.com/missionpinball/mpf-docs/pull/268>`__ - cfbenn
+-  `Upgrade instructions for old to new kivy version <https://github.com/missionpinball/mpf-docs/commit/14736abf223f252d41b9bdaf65826afbbf92740d>`__ - jab
+-  `Document numlock keyboard issue <https://github.com/missionpinball/mpf-docs/pull/271>`__ - mwiz
+-  `Document common problems with OPP on Ubuntu <https://github.com/missionpinball/mpf-docs/commit/2e0bdf0fcb4641a6d3fc08fb2503dec2da0e29f5>`__ - jab
+-  `Extend APC documentation <https://github.com/missionpinball/mpf-docs/commit/f70701129cdee00a36e65e07afd875205ce9bb11>`__ - jab
+-  `Document how to install MPF Spike bridge with FW 0.49+ <https://github.com/missionpinball/mpf-docs/pull/270>`__ - densminger
+-  `Improve OPP docs <https://github.com/missionpinball/mpf-docs/commit/2e0bdf0fcb4641a6d3fc08fb2503dec2da0e29f5>`__ - jab
+-  `APC documentation <https://github.com/missionpinball/mpf-docs/commit/f70701129cdee00a36e65e07afd875205ce9bb11>`__ - jab
+-  `Document how to use newer Spike 1 firmwares with MPF <https://github.com/missionpinball/mpf-docs/pull/270>`__ - densminger
+-  `Typo <https://github.com/missionpinball/mpf-docs/commit/8a16696104fad7d1de030ea04788bbc62f8c8ee9>`__ - jab
+-  `Show config tests in docs <https://github.com/missionpinball/mpf-docs/commit/4bb13cbf915ff687a780b6477c453c95035b2c8a>`__ - jab
+-  `Example for other player scoring <https://github.com/missionpinball/mpf-docs/commit/987de22b1fa4db47bf3a1b2c273983ae4b3311af>`__ - jab
+
+
+0.52
+----
+
+Released: February 02, 2019
+
+This is a 0.51 maintenance release with cleanups and some refactorings.
+There should not be any breaking changes but a lot of bug fixes.
+
+.. rubric:: MPF
+
+New Features
+^^^^^^^^^^^^
+
+-  `OSC platform to control external lights <https://github.com/missionpinball/mpf/pull/1260>`__ - jab based on `request in forum <https://groups.google.com/forum/#!topic/mpf-users/8JZbb_X__Rc>`__
+-  `Validate variables in variable\_player <https://github.com/missionpinball/mpf/pull/1261>`__ - jab based on `config in example <https://groups.google.com/forum/#!topic/mpf-users/v4b75FEQU70>`__
+-  `Placeholders for shots and shot\_groups <https://github.com/missionpinball/mpf/pull/1262>`__ - jab based on `question from mike wiz <https://groups.google.com/forum/#!topic/mpf-users/_EBF2tkfabI>`__
+-  `Better error messages for placeholders <https://github.com/missionpinball/mpf/commit/418b210e0e2bf847dcd66dbec5950d277828080c>`__ - jab
+-  `Show proper error when fadecandy server is not running <https://github.com/missionpinball/mpf/pull/1263>`__ - jab based on request from Brian Cox
+-  `Nicer output on startup errors <https://github.com/missionpinball/mpf/commit/55f449407d832e0bfa6f3403c19a3572ea621ee2>`__ - jab
+-  `Show shutdown reason on exit of MPF <https://github.com/missionpinball/mpf/pull/1265>`__ - jab
+-  `Show import error for pinproc <https://github.com/missionpinball/mpf/pull/1267>`__ - jab
+-  `Upstream Raspberry Pi DMD support <https://github.com/missionpinball/mpf/pull/1269>`__ - jab based on `external platform from Michael Betz <https://github.com/yetifrisstlama/Fan-Tas-Tic-platform>`__
+-  `Support for Spike Trough via SPI Bit Bang <https://github.com/missionpinball/mpf/pull/1270>`__ - jab
+-  `Move libpinproc to a separate thread <https://github.com/missionpinball/mpf/pull/1195>`__ - jab
+-  `Score Queues for SS style scoring <https://github.com/missionpinball/mpf/pull/1273>`__ - jab based on `request in forum <https://groups.google.com/forum/#!topic/mpf-users/4Ecj6xtveHo>`__
+-  `Check for OPP firmware mismatch on start <https://github.com/missionpinball/mpf/pull/1276>`__ - jab based on `bug report in forum <https://groups.google.com/forum/#!topic/mpf-users/umg2ZmDElog>`__
+-  `Evaluate placeholders from service cli <https://github.com/missionpinball/mpf/pull/1277>`__ - jab
+-  `Improve USB latency for I2C in pypinproc <https://github.com/missionpinball/pypinproc/pull/5>`__ - jab based on suggestion by rosh
+-  `Only enable AC relay by default during the game. Keep it off in attract <https://github.com/missionpinball/mpf/pull/1289>`__ - snux
+-  `Ball Routing device to route balls to certain devices <https://github.com/missionpinball/mpf/pull/1291>`__ - jab
+-  `Support for the Pololu Tic stepper controller <https://github.com/missionpinball/mpf/pull/1293>`__ - wolfmarsh
+-  `Update Smartmatrix Teensy Code Example for New Cookie <https://github.com/missionpinball/mpf/pull/1295>`__ - aaronmatthies and eli
+-  `Placeholders in event\_player based on event parameters <https://github.com/missionpinball/mpf/pull/1297>`__ - avanwinkle
+-  `Update ruamel yaml parser <https://github.com/missionpinball/mpf/pull/1298>`__ - jab
+-  `Use newer cython to support Python 3.7 <https://github.com/missionpinball/mpf-debian-installer/commit/532d8757c078ef568b6a9d3473a1db63d35e84ef>`__ - jab
+-  `Add Python 3.7 support to MPF <https://github.com/missionpinball/mpf/pull/1300>`__ - jab
+
+Bug fixes & code improvements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  `Fix audio problems <https://github.com/missionpinball/mpf-mc/commit/7751cef626cae7fe0eeba2c4138f7ab6bb7d8982>`__ - jab (based on `0.50 fix <https://github.com/missionpinball/mpf-mc/commit/e9d7f3aac92489ba8f987807aad5584938d77891#diff-b1084838e78cf0dc54bddd5026e1f747>`__)
+-  `Fix name clashes between multiple anonymous slides <https://github.com/missionpinball/mpf-mc/pull/359>`__ - jab based on bug report by pinballpeople
+-  `Properly support external platforms in MC <https://github.com/missionpinball/mpf-mc/pull/361>`__ - jab based on `report by TheLegoMoviePinball <https://groups.google.com/forum/#!topic/mpf-users/okl8PjXrlWI>`__
+-  `Honour -a and -A option when loading config\_spec in MPF <https://github.com/missionpinball/mpf/pull/1280>`__ and `MC <https://github.com/missionpinball/mpf-mc/pull/362>`__ - jab based on `report by TheLegoMoviePinball <https://groups.google.com/forum/#!topic/mpf-users/okl8PjXrlWI>`__
+-  `Honour slide parameter in inactive slides <https://github.com/missionpinball/mpf-mc/pull/363>`__ - avanwinkle
+-  `Fix iMC startup crash <https://github.com/missionpinball/mpf-mc/pull/364>`__ - jab based on `report by snux <https://groups.google.com/forum/#!topic/mpf-users/YLrh6RKlx0s>`__
+-  `Remove use\_sound\_setting from default options <https://github.com/missionpinball/mpf-mc/pull/367>`__ - avanwinkle
+
+.. rubric:: MPF-MC
+
+New Features
+^^^^^^^^^^^^
+
+-  `Add a segment display font <https://github.com/missionpinball/mpf-mc/commit/0dadad10eeaf01188e92016c90006ebb8b5b5933>`__ - jab based on `example from BorgDog <https://groups.google.com/forum/#!topic/mpf-users/1wzjCo5pL0U>`__
+-  `Conditionals on add\_to\_slide animations <https://github.com/missionpinball/mpf-mc/pull/357>`__ - avanwinkle
+
+Bug fixes & code improvements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  `Fix audio problems <https://github.com/missionpinball/mpf-mc/commit/7751cef626cae7fe0eeba2c4138f7ab6bb7d8982>`__ - jab (based on `0.50 fix <https://github.com/missionpinball/mpf-mc/commit/e9d7f3aac92489ba8f987807aad5584938d77891#diff-b1084838e78cf0dc54bddd5026e1f747>`__)
+-  `Fix name clashes between multiple anonymous slides <https://github.com/missionpinball/mpf-mc/pull/359>`__ - jab based on bug report by pinballpeople
+-  `Properly support external platforms in MC <https://github.com/missionpinball/mpf-mc/pull/361>`__ - jab based on `report by TheLegoMoviePinball <https://groups.google.com/forum/#!topic/mpf-users/okl8PjXrlWI>`__
+-  `Honour -a and -A option when loading config\_spec in MPF <https://github.com/missionpinball/mpf/pull/1280>`__ and `MC <https://github.com/missionpinball/mpf-mc/pull/362>`__ - jab based on `report by TheLegoMoviePinball <https://groups.google.com/forum/#!topic/mpf-users/okl8PjXrlWI>`__
+-  `Honour slide parameter in inactive slides <https://github.com/missionpinball/mpf-mc/pull/363>`__ - avanwinkle
+-  `Fix iMC startup crash <https://github.com/missionpinball/mpf-mc/pull/364>`__ - jab based on `report by snux <https://groups.google.com/forum/#!topic/mpf-users/YLrh6RKlx0s>`__
+-  `Remove use\_sound\_setting from default options <https://github.com/missionpinball/mpf-mc/pull/367>`__ - avanwinkle
+
+
+.. rubric:: MPF Documentation
+
+-  `How to change the size of switches and light in the MPF monitor <https://github.com/missionpinball/mpf-docs/commit/78bcd64254da3710423d5791ce6a067857c9c348>`__ - jab based on questions from Jack Danger and Dan
+-  `Document StepStick stepper drivers in MPF <https://github.com/missionpinball/mpf-docs/commit/5f6b117f9e0cdae26514dc0e4d5846b83277a9e8>`__ - jab based on `request from Tom <https://groups.google.com/forum/#!topic/mpf-users/ZgssCKBzvnA>`__
+-  `How to show virtual segment displays in MC <https://github.com/missionpinball/mpf-docs/commit/bda3bb1c11dbe3ea63c5d151299ab81f6c9ea7be>`__ - jab based on `example from BorgDog <https://groups.google.com/forum/#!topic/mpf-users/1wzjCo5pL0U>`__
+-  `How to use multiple displays <https://github.com/missionpinball/mpf-docs/commit/a608639b21ff9cd62692fc12c7b05b8dc1ff5ee5>`__ - jab based on `question in forum by Chris B and Snux <https://groups.google.com/forum/#!topic/mpf-users/2kjoLF_q9KA>`__
+-  `Credits mode tutorial <https://github.com/missionpinball/mpf-docs/commit/2df9021bd09fae9b6023ff9113c344ced45f5a22>`__ - jab based on old tutorial
+-  `Tutorial on debugging memory leaks <https://github.com/missionpinball/mpf-docs/commit/e49caefff47f8b1af3642f946c1cc4d4c43f3a74>`__ - jab based on question from Brian Cox
+-  `Document RPi DMD platform <https://github.com/missionpinball/mpf-docs/commit/d075be91f5592ead66469227186b0495b32d975d>`__ - jab
+-  `How to subscribe variables in config players <https://github.com/missionpinball/mpf-docs/commit/b3c95c884cc2e622a6c017421216bb8ab4fa85c5>`__ - jab based on `question <https://groups.google.com/forum/#!topic/mpf-users/nLnz5rM3Uus>`__
+-  `Documenting the snux platform <https://github.com/missionpinball/mpf-docs/pull/193>`__ - snux
+-  `How to use a Stern Spike Trough in other platforms than Stern Spike <https://github.com/missionpinball/mpf-docs/commit/e285f58d46253262f54d10ab7837a835ad3cd608>`__ - jab
+-  `How to use Solid State Style Score Queues <https://github.com/missionpinball/mpf-docs/commit/e1bd78aa1e2b4b13de609134f141e1fea44d69a6>`__ - jab based on `request in forum <https://groups.google.com/forum/#!topic/mpf-users/4Ecj6xtveHo>`__
+-  `Document event handler priorities <https://github.com/missionpinball/mpf-docs/commit/b2b8e270d0dfb9b862190b60fa8e744e8e524905>`__ - jab
+-  `How to use multiple locks in a multiball <https://github.com/missionpinball/mpf-docs/commit/6ddb559e013c5a187dba99d293d2df88a74bf223>`__ - jab
+-  Monitorable properties for `shots <https://github.com/missionpinball/mpf/pull/1287>`__ and `shot\_groups <https://github.com/missionpinball/mpf-docs/commit/f2b1833153fb391d6316ed8afb18761eaa580854>`__ - jab based on `question by snux <https://groups.google.com/forum/#!topic/mpf-users/cVnmhJIN1tM>`__
+-  `Document recycle settings for more platforms <https://github.com/missionpinball/mpf-docs/commit/cec753171700165814d0853684e6ac9c6357df76>`__ - jab based on `question by Cole M <https://groups.google.com/forum/#!topic/mpf-users/qGVVwTbYnrA>`__
+-  `Explain logic and modes in MPF <https://github.com/missionpinball/mpf-docs/pull/197>`__ - colemanomartin
+-  `Notes on case-sensitivity <https://github.com/missionpinball/mpf-docs/pull/195>`__ - colemanomartin
+-  `Explain A and C side preference in System11/Snux <https://github.com/missionpinball/mpf-docs/pull/194>`__ - snux
+-  `Fix typos <https://github.com/missionpinball/mpf-docs/pull/196>`__ - travisbmartin
+-  `Document monitorable properties and event in logic blocks <https://github.com/missionpinball/mpf-docs/commit/7a03143a5ebf571f6092ebf4b28a7b7282420584>`__ - jab
+-  `Example for conditionals in log <https://github.com/missionpinball/mpf-docs/commit/34e8403e29d3292d82ff768bac95c400f16191c4>`__ - jab
+-  `Update Smartmatrix documentation for new cookie <https://github.com/missionpinball/mpf-docs/pull/198>`__ - aaronmatthies
+-  `Document start/launcher/tournament buttons <https://github.com/missionpinball/mpf-docs/commit/1073eb379d827037f094123d73d4180ab433d8e3>`__ - jab
+-  Document part numbers and voltages for `bulbs, flashers <https://github.com/missionpinball/mpf-docs/commit/59c62c471e8c9237b33bfa424f192eb332d8d500>`__, `GIs and popbumpers <https://github.com/missionpinball/mpf-docs/commit/ddfa77cfbfd6fa37ecf2b36f911d4220f84a9d8f>`__ and `LEDs <https://github.com/missionpinball/mpf-docs/commit/24bbc32b25a75580d9407a12676d12cd14af9136>`__ - jab
+-  `Up-Down ramps <https://github.com/missionpinball/mpf-docs/commit/79166be8691b92e2c8f3a77c0f76ce299ad56759>`__ - jab
+-  `Updated Mac Install Instructions <https://github.com/missionpinball/mpf-docs/pull/200>`__ - avanwinkle
+-  `Image for WS2812 LEDs <https://github.com/missionpinball/mpf-docs/pull/199>`__ - kylenahas
+
+
 0.51
 ----
 
 Released: November 24, 2018
 
-This is a 0.50 maintainence release with cleanups and some refactorings.
+This is a 0.50 maintenance release with cleanups and some refactorings.
 Breaking changes in common features are minimal but some minor changes might be
 required in some cases (e.g. we removed some defunctional options).
 It comes with lots of performance improvements and new settings for
@@ -510,7 +934,7 @@ Released: Dec 1, 2016
 * You can :doc:`set starting values for player variables </config/player_vars>`
 * Fixed the :doc:`physical mono DMD </displays/display/dmd>` and
   :doc:`physical RGB (color) DMD </displays/display/rgb_dmd>`
-* Added :doc:`multiball lost event </events/multiball_name_lost_ball>`
+* Added :doc:`multiball lost event </events/multiball_multiball_lost_ball>`
 * Allow devices to have inline config specs
 * Added shots with events
 * Better OPP platform parsing

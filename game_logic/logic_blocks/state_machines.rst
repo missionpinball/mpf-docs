@@ -6,6 +6,10 @@ State Machine Logic Block
 +==============================================================================+
 | :doc:`/config/state_machines`                                                |
 +------------------------------------------------------------------------------+
+| :doc:`/config/state_machine_states`                                          |
++------------------------------------------------------------------------------+
+| :doc:`/config/state_machine_transitions`                                     |
++------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
@@ -15,6 +19,9 @@ State Machine Logic Block
 
 "State machines" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger state transitions based on the current state and an event.
+
+Technically, this is a `finite state machine <https://en.wikipedia.org/wiki/Finite-state_machine>`_
+as known from CS class.
 
 This is an example:
 
@@ -49,5 +56,25 @@ This is an example:
          - source: step1, step2
            target: start
            events: state_machine_reset
+   ##! test
+   #! start_game
+   #! start_mode my_mode
+   #! mock_event going_to_step2
+   #! assert_str_condition start device.state_machines.my_state.state
+   #! post state_machine_proceed
+   #! assert_str_condition step1 device.state_machines.my_state.state
+   #! assert_event_not_called going_to_step2
+   #! post state_machine_proceed2
+   #! assert_str_condition step2 device.state_machines.my_state.state
+   #! assert_event_called going_to_step2
 
+Monitorable Properties
+----------------------
 
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for state machines is ``device.state_machines.<name>``.
+
+*state*
+   The state of this state machine as string.
+   This will be one of your entries in your states section.

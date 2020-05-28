@@ -30,7 +30,7 @@ hardware).
 If you don't have or want phyiscal segment displays you can also emulate them
 using the following slides:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      segment_displays:
@@ -39,7 +39,7 @@ using the following slides:
            text: (player1|score)
            number_grouping: true
            min_digits: 2
-           font_name: Ten_segment
+           font_name: ten_segment
            color: blue
            x: 620
            y: 724
@@ -47,7 +47,10 @@ using the following slides:
            anchor_x: right
            anchor_y: bottom
            z: 2
-
    # show slide on game start
    slide_player:
-      game_started: segment_displays
+     game_started: segment_displays
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_slide_on_top segment_displays

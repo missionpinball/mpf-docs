@@ -134,8 +134,3 @@ Related Events
 --------------
 
 .. include:: /events/include_ball_devices.rst
-
-* :doc:`/events/balldevice_name_ball_eject_attempt`
-* :doc:`/events/balldevice_name_ball_eject_failed`
-* :doc:`/events/balldevice_name_ball_eject_success`
-* :doc:`/events/balldevice_name_ejecting_ball`

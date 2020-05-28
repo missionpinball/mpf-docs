@@ -8,47 +8,49 @@ like this:
 
 The final sections of the machine config to make this happen are here:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    displays:
-      window:
-        width: 800
-        height: 600
-      dmd:
-        width: 120
-        height: 90
-        default: yes
-
-    slides:
-      window_slide:
-        - type: display
-          effects:
+   displays:
+     window:
+       width: 800
+       height: 600
+     dmd:
+       width: 120
+       height: 90
+       default: true
+   slides:
+     window_slide:
+       - type: display
+         effects:
            - type: color_dmd
-             pixel_size: .5
-          width: 800
-          height: 600
-      dmd_slide:
-        - type: text
-          text: DOTS!
-        - type: rectangle
-          width: 120
-          height: 30
-          color: orange
-          y: 0
-          anchor_y: bottom
-        - type: rectangle
-          width: 120
-          height: 30
-          color: red
-          y: top
-          anchor_y: top
-
-    slide_player:
-      init_done:
-        window_slide:
-          target: window
-        dmd_slide:
-          target: dmd
+             dot_size: .5
+         width: 800
+         height: 600
+     dmd_slide:
+       - type: text
+         text: DOTS!
+       - type: rectangle
+         width: 120
+         height: 30
+         color: orange
+         y: 0
+         anchor_y: bottom
+       - type: rectangle
+         width: 120
+         height: 30
+         color: red
+         y: top
+         anchor_y: top
+   slide_player:
+     init_done:
+       window_slide:
+         target: window
+       dmd_slide:
+         target: dmd
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top window_slide window
+   #! assert_slide_on_top dmd_slide dmd
 
 Let's step through this step-by-step.
 
@@ -64,16 +66,19 @@ The first is the "window", which is the display that represents your on-screen
 window. This should be set to the size of the screen window at the native
 resolution of the monitor or LCD where it's being shown.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    displays:
-      window:
-        width: 800
-        height: 600
-      dmd:
-        width: 120
-        height: 90
-        default: yes
+   displays:
+     window:
+       width: 800
+       height: 600
+     dmd:
+       width: 120
+       height: 90
+       default: true
+   ##! test
+   #! advance_time_and_run .1
+
 
 In the example above, this is 800x600, but on your actual machine, it will
 probably be something like 1024x768, 1280x1024, 1600x1200, etc.
@@ -112,16 +117,18 @@ that will be shown in the window. In this case, the slide will only have a
 single widget, and that widget will be the Color DMD widget which will be used
 render the virtual DMD into the window.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slides:
-      window_slide:
-        - type: display
-          effects:
+   slides:
+     window_slide:
+       - type: display
+         effects:
            - type: color_dmd
-             pixel_size: .5
-          width: 800
-          height: 600
+             dot_size: .5
+         width: 800
+         height: 600
+   ##! test
+   #! advance_time_and_run .001
 
 We decided to name this slide "window_slide", though you can name it
 whatever you want.
@@ -145,24 +152,26 @@ will be ever changing and will reflect what's happening in your machine.
 
 We're calling our first slide "dmd_slide":
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      dmd_slide:
-        - type: text
-          text: DOTS!
-        - type: rectangle
-          width: 120
-          height: 30
-          color: orange
-          y: 0
-          anchor_y: bottom
-        - type: rectangle
-          width: 120
-          height: 30
-          color: red
-          y: top
-          anchor_y: top
+     dmd_slide:
+       - type: text
+         text: DOTS!
+       - type: rectangle
+         width: 120
+         height: 30
+         color: orange
+         y: 0
+         anchor_y: bottom
+       - type: rectangle
+         width: 120
+         height: 30
+         color: red
+         y: top
+         anchor_y: top
+   ##! test
+   #! advance_time_and_run .1
 
 There's nothing special about this slide. We just added a text widget and
 two colored rectangles.
@@ -175,14 +184,49 @@ we just created to be shown. In this example, we're using the
 :doc:`init_done event </events/init_done>` since that's the event that's posted
 by the media controller once it's been initialized and ready to go.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-      init_done:
-        window_slide:
-          target: window
-        dmd_slide:
-          target: dmd
+   #! displays:
+   #!   window:
+   #!     width: 800
+   #!     height: 600
+   #!   dmd:
+   #!     width: 120
+   #!     height: 90
+   #!     default: true
+   #! slides:
+   #!   window_slide:
+   #!     - type: display
+   #!       effects:
+   #!         - type: color_dmd
+   #!           dot_size: .5
+   #!       width: 800
+   #!       height: 600
+   #!   dmd_slide:
+   #!     - type: text
+   #!       text: DOTS!
+   #!     - type: rectangle
+   #!       width: 120
+   #!       height: 30
+   #!       color: orange
+   #!       y: 0
+   #!       anchor_y: bottom
+   #!     - type: rectangle
+   #!       width: 120
+   #!       height: 30
+   #!       color: red
+   #!       y: top
+   #!       anchor_y: top
+   slide_player:
+     init_done:
+       window_slide:
+         target: window
+       dmd_slide:
+         target: dmd
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top window_slide window
+   #! assert_slide_on_top dmd_slide dmd
 
 Since the DMD display is configured to be the default, when you use the
 slide_player in the rest of your game, you won't have to specify

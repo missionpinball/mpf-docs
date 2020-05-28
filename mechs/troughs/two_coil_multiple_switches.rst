@@ -44,14 +44,14 @@ example has three switches in the trough. Yours may have more or less.)
 .. code-block:: mpf-config
 
     switches:
-        s_drain:
-            number: 1
-        s_trough1:
-            number: 2
-        s_trough2:
-            number: 3
-        s_trough3:
-            number: 4
+      s_drain:
+        number: 1
+      s_trough1:
+        number: 2
+      s_trough2:
+        number: 3
+      s_trough3:
+        number: 4
 
 Note that we configured this switches with numbers ``01`` through ``04``, but
 you should use the actual switch numbers for your control system that the trough
@@ -73,12 +73,12 @@ them *c_drain_eject* and *c_trough_release* and enter them like this:
 .. code-block:: mpf-config
 
     coils:
-        c_drain_eject:
-            number: 3
-            default_pulse_ms: 20
-        c_trough_release:
-            number: 4
-            default_pulse_ms: 20
+      c_drain_eject:
+        number: 3
+        default_pulse_ms: 20
+      c_trough_release:
+        number: 4
+        default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
@@ -103,10 +103,10 @@ In other words, a trough release time of 1s would look like this:
 .. code-block:: mpf-config
 
    coils:
-        c_trough_release:
-            number: 4
-            default_pulse_ms: 1000
-            allow_enable: true
+     c_trough_release:
+       number: 4
+       default_pulse_ms: 1000
+       allow_enable: true
 
 3. Add your "drain" ball device
 -------------------------------
@@ -148,33 +148,33 @@ Your drain device configuration should look now look like this:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 1
-    #!     s_trough1:
-    #!         number: 2
-    #!     s_trough2:
-    #!         number: 3
-    #!     s_trough3:
-    #!         number: 4
-    #!     s_plunger:
-    #!         number: 10
+    #!   s_drain:
+    #!     number: 1
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_plunger:
+    #!     number: 10
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 3
-    #!         default_pulse_ms: 20
-    #!     c_trough_release:
-    #!         number: 4
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 3
+    #!     default_pulse_ms: 20
+    #!   c_trough_release:
+    #!     number: 4
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            eject_targets: bd_trough
-            tags: drain
-    #!     bd_trough:
-    #!         ball_switches: s_trough1, s_trough2, s_trough3
-    #!         eject_coil: c_trough_release
-    #!         tags: home, trough
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        eject_targets: bd_trough
+        tags: drain
+    #!   bd_trough:
+    #!     ball_switches: s_trough1, s_trough2, s_trough3
+    #!     eject_coil: c_trough_release
+    #!     tags: home, trough
 
 4. Add your "trough" ball device
 --------------------------------
@@ -197,38 +197,41 @@ The configuration is pretty straightforward:
   there are lots of different types of plungers.
 * Add ``tags: home, trough`` which tells MPF that it's ok to store unused balls
   here and that it's ok for balls to be here when games start.
+* Set ``eject_timeouts`` to the maximum time the ball can take to return if the
+  eject fails.
 
 Your trough device configuration should look now look like this:
 
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_drain:
-    #!         number: 1
-    #!     s_trough1:
-    #!         number: 2
-    #!     s_trough2:
-    #!         number: 3
-    #!     s_trough3:
-    #!         number: 4
-    #!     s_plunger:
-    #!         number: 10
+    #!   s_drain:
+    #!     number: 1
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_plunger:
+    #!     number: 10
     #! coils:
-    #!     c_drain_eject:
-    #!         number: 3
-    #!         default_pulse_ms: 20
-    #!     c_trough_release:
-    #!         number: 4
-    #!         default_pulse_ms: 20
+    #!   c_drain_eject:
+    #!     number: 3
+    #!     default_pulse_ms: 20
+    #!   c_trough_release:
+    #!     number: 4
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_trough:
-            ball_switches: s_trough1, s_trough2, s_trough3
-            eject_coil: c_trough_release
-            eject_targets: bd_plunger_lane
-            tags: home, trough
-    #!     bd_plunger_lane:
-    #!         ball_switches: s_plunger
-    #!         mechanical_eject: true
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3
+        eject_coil: c_trough_release
+        eject_targets: bd_plunger_lane
+        tags: home, trough
+        eject_timeouts: 3s
+    #!   bd_plunger_lane:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
 
 5. Configure your virtual hardware to start with balls in the trough
 --------------------------------------------------------------------
@@ -254,16 +257,13 @@ start active. For example:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_trough1:
-    #!         number: 2
-    #!     s_trough2:
-    #!         number: 3
-    #!     s_trough3:
-    #!         number: 4
-    virtual_platform_start_active_switches:
-        s_trough1
-        s_trough2
-        s_trough3
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 Here's the complete config
 --------------------------
@@ -273,52 +273,44 @@ Here's the complete config
 .. code-block:: mpf-config
 
     #config_version=5
-
     switches:
-        s_drain:
-            number: 1
-        s_trough1:
-            number: 2
-        s_trough2:
-            number: 3
-        s_trough3:
-            number: 4
-        s_plunger:
-            number: 10
-
+      s_drain:
+        number: 1
+      s_trough1:
+        number: 2
+      s_trough2:
+        number: 3
+      s_trough3:
+        number: 4
+      s_plunger:
+        number: 10
     coils:
-        c_drain_eject:
-            number: 3
-            default_pulse_ms: 20
-        c_trough_release:
-            number: 4
-            default_pulse_ms: 20
-
+      c_drain_eject:
+        number: 3
+        default_pulse_ms: 20
+      c_trough_release:
+        number: 4
+        default_pulse_ms: 20
     ball_devices:
-        bd_drain:
-            ball_switches: s_drain
-            eject_coil: c_drain_eject
-            eject_targets: bd_trough
-            tags: drain
-        bd_trough:
-            ball_switches: s_trough1, s_trough2, s_trough3
-            eject_coil: c_trough_release
-            eject_targets: bd_plunger_lane
-            tags: home, trough
-
-        # bd_plunger is a placeholder just so the trough's eject_targets are valid
-        bd_plunger_lane:
-            ball_switches: s_plunger
-            mechanical_eject: true
-
+      bd_drain:
+        ball_switches: s_drain
+        eject_coil: c_drain_eject
+        eject_targets: bd_trough
+        tags: drain
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3
+        eject_coil: c_trough_release
+        eject_targets: bd_plunger_lane
+        tags: home, trough
+        eject_timeouts: 3s
+      bd_plunger_lane:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_timeouts: 5s
     playfields:
-       playfield:
-           default_source_device: bd_plunger_lane
-           tags: default
-
-    virtual_platform_start_active_switches:
-        s_trough1
-        s_trough2
-        s_trough3
+      playfield:
+        default_source_device: bd_plunger_lane
+        tags: default
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 .. end_mpfdoctest

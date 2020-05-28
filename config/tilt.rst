@@ -4,7 +4,7 @@ tilt:
 *Config file section*
 
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`machine config files </config/instructions/machine_config>` | **YES** |
+| Valid in :doc:`machine config files </config/instructions/machine_config>` | **NO**  |
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
@@ -12,6 +12,8 @@ tilt:
 .. overview
 
 The ``tilt:`` section of your config is where you configure a tilt mode.
+
+.. config
 
 
 Optional settings
@@ -21,16 +23,13 @@ The following sections are optional in the ``tilt:`` section of your config. (If
 
 multiple_hit_window:
 ~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``300ms``
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``300ms``
 
 Window in which hits are ignored after a tilt hit.
 
 reset_warnings_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_will_end``
 
 Default: ``ball_will_end``
 
@@ -39,7 +38,7 @@ to zero.
 
 settle_time:
 ~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``5s``
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``5s``
 
 Time to wait after the machine is tilted before a new ball can be started.
 This prevents that a player can tilt his ball and the first ball of the next
@@ -53,22 +52,18 @@ Switch tags which will cause a slam tilt.
 
 tilt_events:
 ~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
 Events in this list, when posted, cause a :doc:`/events/tilt` to occur
 which will end the current ball in progress with no end of ball bonus.
+You usually want to use tilt_warning_events because this one will instantly
+tilt the machine on the first event.
 
 tilt_slam_tilt_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -86,10 +81,7 @@ in most cases.
 
 tilt_warning_events:
 ~~~~~~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -111,8 +103,14 @@ Player var to use to store tilt warnings.
 
 warnings_to_tilt:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``3``
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``3``
 
 Number of warnings until the machine tilts.
 
 .. include:: template_setting.rst
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/tilt/index`

@@ -224,50 +224,81 @@ See the How To guide on widget styles for details.
 So now you've seen all the options for positioning and placement of widgets. But how do you actually use them? Simple.
 Everything discussed here are just regular widget settings. So you can use them in slides:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      slide1:
-         widgets:
-          - type: text
-            text: MY WIDGET
-            x: left+10%
-            y: top-10%
-            adjust_bottom: 2
+     slide1:
+       widgets:
+         - type: text
+           text: MY WIDGET
+           x: left+10%
+           y: top-10%
+           adjust_bottom: 2
+   #! slide_player:
+   #!   show_slide: slide1
+   ##! test
+   #! post show_slide
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MY WIDGET"
 
 You can use them in :doc:`named widgets <reusable_widgets>`:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    widgets:
-      my_cool_widget:
+     my_cool_widget:
        - type: text
          text: MY WIDGET
          x: left+10%
          y: top-10%
          adjust_bottom: 2
+   #! widget_player:
+   #!   show_widget: my_cool_widget
+   ##! test
+   #! post show_widget
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MY WIDGET"
 
 You can use them in the widget player:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   widgets:
+     my_widget:
+       - type: text
+         text: "MY WIDGET"
    widget_player:
-      some_event:
-         my_widget:
-            widget_settings:
-               x: left+10%
-               y: top-10%
-               adjust_bottom: 2
+     some_event:
+       my_widget:
+         widget_settings:
+           x: left+10%
+           y: top-10%
+           adjust_bottom: 2
+   ##! test
+   #! post some_event
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MY WIDGET"
 
 And you can use them in shows:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   # in your machine config
+   widgets:
+     my_widget:
+       - type: text
+         text: "MY WIDGET"
+   #! show_player:
+   #!   start_show: test_show
    ##! show: test_show
-   - time: 1s
+   # in your show
+   - duration: 1
      widgets:
-        my_widget:
-           target: lcd
-           widget_settings:
-              x: top
-              y: right-15.4%
+       my_widget:
+         widget_settings:
+           x: right-15.4%
+           y: top
+   ##! test
+   #! post start_show
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MY WIDGET"

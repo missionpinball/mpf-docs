@@ -31,14 +31,13 @@ configuration with the correct COM port (example, COM5).
   spike:
     port: COM5
 
-
 Null modem cables used to be a common way to connect two computers together.  This is
 the most expensive solution at about $50 USD.  However it looks just like a USB cable.
 The only vendor that has the USB to USB Null Modem Cable is the FDTI company.
 
 http://www.ftdichip.com/Products/Cables/USBtoUSB.htm
 
-This particular cable also provides faster data transfer rates up to 3 MBaud than Options 2 and 3.
+This particular cable also provides faster data transfer rates (up to 3 MBaud) than Options 2 and 3.
 
 OPTION 2: USB to Serial Adapter
 ===============================
@@ -76,6 +75,11 @@ Pins are marked GND, RX, TX. You do not need more than these.
 
 .. todo:: Add a photo and more detailed pinout instructions (:doc:`/about/help_us_to_write_it`).
 
+Unfortunately, this header seems to be missing on some revisions of Spike.
+You can solder it in though.
+However, it does not contain any flow-control pins to it will not work at
+higher baud rates (up to 400k roughly).
+
 
 OPTION 3: Connect using two USB-Serial Adapters
 -----------------------------------------------
@@ -101,9 +105,18 @@ Connect the "RX" (receive) from one to the "TX" (transmit) on the other and vice
 connect the grounds (possible labeled "GND") together. It's probably a good idea to twist the
 wires together to reduce interference, especially if your wires are more than a few inches long.
 
+In addition to above you should also "CTS" to "DTS" and "DTS" to "CTS".
+This will allow you to enable hardware flow control which is essential at
+higher baud rates (up to 3M).
+
 The following diagram illustrates how everything fits together:
 
 .. image:: /hardware/images/spike_usb_to_usb.jpg
 
 You've essentially created a null modem cable as described in Option 1.  This option may be a little
 cheaper but the solution is far less elegant and stable.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

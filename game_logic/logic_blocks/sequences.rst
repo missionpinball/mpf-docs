@@ -14,6 +14,12 @@ Sequence Logic Blocks
 +------------------------------------------------------------------------------+
 | :doc:`/game_logic/logic_blocks/scoring_based_on_logic_blocks`                |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_lights`          |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_block_and_slides`           |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/persisting_state_in_a_player_variable`        |
++------------------------------------------------------------------------------+
 
 "Sequences" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events
@@ -32,13 +38,13 @@ a mode, like this example from the World Tour mode of *Brooks 'n Dunn*:
 
   ##! mode: my_mode
   sequences:
-      finish_world_tour:
-         events:
-           - shot_north_america_hit
-           - shot_south_america_hit
-           - shot_europe_hit
-           - shot_australia_hit
-         events_when_complete: wt_done
+    finish_world_tour:
+      events:
+        - shot_north_america_hit
+        - shot_south_america_hit
+        - shot_europe_hit
+        - shot_australia_hit
+      events_when_complete: wt_done
 
 The example above has a single sequence logic block called "finish_world_tour". When
 it's enabled, it starts watching for the event *shot_north_america_hit* to be posted.
@@ -97,19 +103,17 @@ This is an example:
 
    ##! mode: my_mode
    sequences:
-      test_sequence:
-         events:
-            - shot1_hit
-            - shot2_hit
-            - shot3_hit
-         reset_on_complete: False
-
+     test_sequence:
+       events:
+         - shot1_hit
+         - shot2_hit
+         - shot3_hit
+       reset_on_complete: false
    event_player:
-      test_event{device.sequences.test_sequence.value == 1}: shot1_was_hit
-      test_event{device.sequences.test_sequence.value == 2}: shot2_was_hit
-      test_event{device.sequences.test_sequence.value == 3}: shot3_was_hit
-      test_event{device.sequences.test_sequence.completed}: sequence_completed
-
+     test_event{device.sequences.test_sequence.value == 1}: shot1_was_hit
+     test_event{device.sequences.test_sequence.value == 2}: shot2_was_hit
+     test_event{device.sequences.test_sequence.value == 3}: shot3_was_hit
+     test_event{device.sequences.test_sequence.completed}: sequence_completed
    ##! test
    #! start_game
    #! start_mode my_mode
@@ -148,10 +152,11 @@ This is an example:
    #! assert_int_condition 3 device.sequences.test_sequence.value
    #! assert_bool_condition True device.sequences.test_sequence.completed
 
-
 Related Events
 --------------
 
 * :doc:`/events/logicblock_name_complete`
 * :doc:`/events/logicblock_name_hit`
 * :doc:`/events/logicblock_name_updated`
+
+.. include:: common_problems.rst

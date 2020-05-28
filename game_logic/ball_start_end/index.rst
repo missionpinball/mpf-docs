@@ -22,18 +22,16 @@ lights or start background shows:
    ##! mode: my_mode
    # in your mode
    mode:
-      start_events: ball_started
-
+     start_events: ball_started
    show_player:
-      mode_my_mode_started:
-        short_start_show:
-          loops: 0
-
+     mode_my_mode_started:
+       short_start_show:
+         loops: 0
    shows:
-      short_start_show:
-          - duration: .5s
-   #!          events: test_start
-            # add your show here
+     short_start_show:
+       - duration: .5s
+   #!       events: test_start
+         # add your show here
    ##! test
    #! mock_event test_start
    #! start_game
@@ -52,57 +50,49 @@ It is also very common to start a ball save on eject:
    playfields:
      playfield:
        default_source_device: bd_plunger
-   
    lights:
      l_ball_save:
        number:
-   
    switches:
      s_plunger:
        number:
-   
    coils:
      c_eject:
        number:
-   
    ball_devices:
      bd_plunger:
        eject_coil: c_eject
        ball_switches: s_plunger
        tags: home, trough, drain
        eject_timeouts: 1s
-   
    ##! mode: my_mode
    # in your mode
    mode:
-      start_events: ball_started
-   
+     start_events: ball_started
    ball_saves:
      ball_save_ball_save:
        active_time: 10s
        hurry_up_time: 3s
        timer_start_events: balldevice_bd_plunger_ejecting_ball
-       auto_launch: yes
+       auto_launch: true
        balls_to_save: 1
-   
    show_player:
-      ball_save_ball_save_ball_save_timer_start:
-        flash_color:
-          key: ball_save
-          speed: 2
-          show_tokens:
-            lights: l_ball_save
-            color: orange
-      ball_save_ball_save_ball_save_hurry_up:
-        flash_color:
-          key: ball_save
-          speed: 4
-          show_tokens:
-            lights: l_ball_save
-            color: orange
-      ball_save_ball_save_ball_save_disabled:
-        ball_save: stop
-   
+     ball_save_ball_save_ball_save_timer_start:
+       flash_color:
+         key: ball_save
+         speed: 2
+         show_tokens:
+           lights: l_ball_save
+           color: orange
+     ball_save_ball_save_ball_save_hurry_up:
+       flash_color:
+         key: ball_save
+         speed: 4
+         show_tokens:
+           lights: l_ball_save
+           color: orange
+     ball_save_ball_save_ball_save_disabled:
+       ball_save: stop
    ##! test
    #! hit_switch s_plunger
    #! advance_time_and_run 1
@@ -148,21 +138,19 @@ meantime. Use it for very short sounds or light flashes:
    ##! mode: my_mode
    # in your mode
    mode:
-      start_events: ball_ending
-      stop_events: end_show_done
-      game_mode: False
-
+     start_events: ball_ending
+     stop_events: end_show_done
+     game_mode: false
    show_player:
-      mode_my_mode_started:
-        short_stop_show:
-          loops: 0
-          events_when_completed: end_show_done
-
+     mode_my_mode_started:
+       short_stop_show:
+         loops: 0
+         events_when_completed: end_show_done
    shows:
-      short_stop_show:
-          - duration: 2s
-   #!          events: test_stop
-            # add your show here
+     short_stop_show:
+       - duration: 2s
+   #!       events: test_stop
+         # add your show here
    ##! test
    #! mock_event test_stop
    #! start_game
@@ -187,44 +175,34 @@ sequences and delaying the game flow in the meantime:
    ##! mode: my_mode
    # in your mode
    mode:
-       start_events: ball_will_start   # in normal mode use ball_started instead
-       priority: 200
-   
-   slide_player:
-       ball_starting: ball_starting_slide
-       ball_ending: ball_ending_slide
-       ball_started:
-         main_display_slide:
-           action: play
-         ball_starting_slide:
-           action: remove
+     start_events: ball_will_start     # in normal mode use ball_started instead
+     priority: 200
    queue_relay_player:
-      ball_starting:
-          post: start_ball_starting_show
-          wait_for: mode_ball_starting_show_ended
-      ball_ending:
-          post: start_ball_ending_show
-          wait_for: mode_ball_ending_show_ended
-   
+     ball_starting:
+       post: start_ball_starting_show
+       wait_for: mode_ball_starting_show_ended
+     ball_ending:
+       post: start_ball_ending_show
+       wait_for: mode_ball_ending_show_ended
    show_player:
-       flipper_cancel:
-           ball_starting_show: stop
-           ball_ending_show: stop
-       start_ball_starting_show:
-           ball_starting_show:
-               loops: 0
-               events_when_stopped: mode_ball_starting_show_ended
-       start_ball_ending_show:
-           ball_ending_show:
-               loops: 0
-               events_when_stopped: mode_ball_ending_show_ended
+     flipper_cancel:
+       ball_starting_show: stop
+       ball_ending_show: stop
+     start_ball_starting_show:
+       ball_starting_show:
+         loops: 0
+         events_when_stopped: mode_ball_starting_show_ended
+     start_ball_ending_show:
+       ball_ending_show:
+         loops: 0
+         events_when_stopped: mode_ball_ending_show_ended
    shows:
-      ball_starting_show:
-          - duration: 5s
-   #!          events: test_start
-      ball_ending_show:
-          - duration: 5s
-   #!          events: test_stop
+     ball_starting_show:
+       - duration: 5s
+   #!       events: test_start
+     ball_ending_show:
+       - duration: 5s
+   #!       events: test_stop
    ##! test
    #! mock_event test_start
    #! mock_event mode_ball_starting_show_ended
@@ -265,3 +243,8 @@ E.g. use ``ball_starting{ball==1 and not is_extra_ball}`` to only delay the
 first ball (excluding extra balls). Similarly, you can use
 ``ball_starting{is_extra_ball}`` to delay any extra ball start and show some
 animations there.
+
+More examples
+-------------
+
+See :doc:`/game_design/index` and :doc:`/game_design/game_end_modes` in particular for more examples.

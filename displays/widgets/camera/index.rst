@@ -5,17 +5,15 @@ The camera widget is used to show live video from an attached camera a :doc:`sli
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    mpf-mc:
      widgets:
        camera: mpfmc.widgets.camera
-
    slide_player:
      mc_ready:
-        camera_example:
+       camera_example:
          - type: camera
            width: 800
            height: 600

@@ -334,9 +334,10 @@ configure it as *snux*, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: p_roc
-        driverboards: snux
+      platform: p_roc
 
+    p_roc:
+      driverboards: snux
 
 Adding the *driverboards: snux* option automatically activates the
 Snux platform overlay.
@@ -354,19 +355,21 @@ but we're including them here just for completeness:
 
 .. code-block:: mpf-config
 
-    snux:
-        flipper_enable_driver_number: c23
-        diag_led_driver_number: c24
+   coils:
+     c_diag_led_driver:
+       number: c24
+       default_hold_power: 1.0
 
+   snux:
+     diag_led_driver: c_diag_led_driver
 
-The Snux board maps driver 23 to the flipper enable relay, and it maps
-driver 24 to the "diag" LED on the board. When you power on your
+The Snux board maps driver ``c_diag_led_driver`` which is driver 24
+to the "diag" LED on the board.
+When you power on your
 machine, the diag LED is off. Then when MPF connects to the board,
 this LED turns on solid. Finally when MPF is done loading and it
 starts the main machine loop, this LED flashes twice per second. If
 this LED stops flashing, that means MPF crashed. :)
-
-
 
 3. Configure system11 options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -386,9 +389,8 @@ configuration section from Pin*Bot:
 .. code-block:: mpf-config
 
     system11:
-        ac_relay_delay_ms: 75
-        ac_relay_driver_number: c14
-
+      ac_relay_delay_ms: 75
+      ac_relay_driver_number: c14
 
 The *ac_relay_delay_ms* is the number of milliseconds MPF waits before
 and after flipping the A/C select relay to allow for it to fully
@@ -416,9 +418,28 @@ called the "A/C Select Relay," and in the *Pin*Bot* manual it's called
 the "Solenoid Select Relay."
 
 
+4. Enable flippers
+~~~~~~~~~~~~~~~~~~
 
-4. Configuring driver numbers
+The Snux board uses driver 23 to enable the flippers:
+
+.. code-block:: mpf-config
+
+   digital_outputs:
+     flipper_enable_relay:
+       number: c23
+       type: driver
+       enable_events: ball_started
+       disable_events: ball_will_end
+
+You can change the events when the flipper should enable and disable.
+By default we will enable the flippers on ball start and disable them on
+ball end.
+
+5. Configuring driver numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 When you configure coils, flashers, and gis in your MPF hardware
 config, you can enter the numbers straight out of the operators
@@ -465,14 +486,13 @@ snippet (incomplete) from the *Pin*Bot* machine-wide config file:
       topper_4:
         number: c16
 
-
 Again, don't forgot the "a" or the "c" at the end of the switched
 solenoids, since that's how MPF knows it needs to use the A/C relay
 logic for those devices!
 
 
 
-5. Configure lamps
+6. Configure lamps
 ~~~~~~~~~~~~~~~~~~
 
 Configuring the numbers for matrix lamps is pretty straightforward and
@@ -494,27 +514,26 @@ your lamp numbers. Here's a snippet of the configuration from Pin*Bot:
 .. code-block:: mpf-config
 
     lights:
-        game_over_backbox:
-            number: L11
-        match_backbox:
-            number: L12
-        bip_backbox:
-            number: L13
-        mouth1_backbox:
-            number: L14
-        mouth2_backbox:
-            number: L15
-        mouth3_backbox:
-            number: L16
-        mouth4_backbox:
-            number: L17
-        mouth5_backbox:
-            number: L18
-        bonus_2x:
-            number: L21
-        bonus_3x:
-            number: L22
-
+      game_over_backbox:
+        number: L11
+      match_backbox:
+        number: L12
+      bip_backbox:
+        number: L13
+      mouth1_backbox:
+        number: L14
+      mouth2_backbox:
+        number: L15
+      mouth3_backbox:
+        number: L16
+      mouth4_backbox:
+        number: L17
+      mouth5_backbox:
+        number: L18
+      bonus_2x:
+        number: L21
+      bonus_3x:
+        number: L22
 
 Again, don't forget that they should all start with "L", and they're
 based on the positions in the matrix, not on the numbers from the
@@ -522,7 +541,7 @@ manual.
 
 
 
-6. Configure switches
+7. Configure switches
 ~~~~~~~~~~~~~~~~~~~~~
 
 Switch numbering in System 11 machines is the same as lamp numbering,
@@ -536,23 +555,22 @@ from *Pin*Bot*:
 .. code-block:: mpf-config
 
    switches:
-        left_outlane:
-            number: S24
-            label: Left Outlane
-            tags: playfield_active
-        left_inlane:
-            number: S25
-            label: Left Inlane
-            tags: playfield_active
-        right_inlane:
-            number: S26
-            label: Right Inlane
-            tags: playfield_active
-        right_outlane:
-            number: S27
-            label: Right Outlane
-            tags: playfield_active
-
+     left_outlane:
+       number: S24
+       label: Left Outlane
+       tags: playfield_active
+     left_inlane:
+       number: S25
+       label: Left Inlane
+       tags: playfield_active
+     right_inlane:
+       number: S26
+       label: Right Inlane
+       tags: playfield_active
+     right_outlane:
+       number: S27
+       label: Right Outlane
+       tags: playfield_active
 
 You might have to do some detective work to figure out where the
 switches are and how they work. For example, remember that switches
@@ -570,7 +588,7 @@ second switch in the flipper EOS stack under the playfield or perhaps
 a second switch in the stack behind the flipper button.
 
 
-7. Create your System 11-style trough
+8. Create your System 11-style trough
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Troughs in System 11 machines are not like troughs in modern machines.
@@ -589,36 +607,35 @@ look something like this:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    outhole:
-   #!       number: 1
-   #!    trough1:
-   #!       number: 2
-   #!    trough2:
-   #!       number: 3
-   #!    plunger_lane:
-   #!       number: 4
+   #!   outhole:
+   #!     number: 1
+   #!   trough1:
+   #!     number: 2
+   #!   trough2:
+   #!     number: 3
+   #!   plunger_lane:
+   #!     number: 4
    #! coils:
-   #!    outhole:
-   #!       number: 1
-   #!    trough:
-   #!       number: 2
+   #!   outhole:
+   #!     number: 1
+   #!   trough:
+   #!     number: 2
    ball_devices:
-        outhole:
-            ball_switches: outhole
-            eject_coil: outhole
-            confirm_eject_type: target
-            eject_targets: trough
-            tags: drain
-        trough:
-            ball_switches: trough1, trough2
-            eject_coil: trough
-            eject_targets: plunger_lane
-            tags: home, trough
-        plunger_lane:
-            ball_switches:  plunger_lane
-            mechanical_eject: true
-            eject_timeouts: 3s
-
+     outhole:
+       ball_switches: outhole
+       eject_coil: outhole
+       confirm_eject_type: target
+       eject_targets: trough
+       tags: drain
+     trough:
+       ball_switches: trough1, trough2
+       eject_coil: trough
+       eject_targets: plunger_lane
+       tags: home, trough
+     plunger_lane:
+       ball_switches: plunger_lane
+       mechanical_eject: true
+       eject_timeouts: 3s
 
 The key is that you're setting up a "chain" of devices (from *outhole*
 to *trough* to *plunger lane*), and you're breaking up the special
@@ -646,38 +663,47 @@ This is an example code block with the main Sys11 elements in.
 .. code-block:: mpf-config
 
    hardware:
-       platform: virtual
-       driverboards: wpc
-       coils: snux
+     platform: virtual
+     coils: snux
+
+   p_roc:
+     driverboards: wpc
 
    system11:
-       ac_relay_delay_ms: 75
-       ac_relay_driver: c_ac_relay
+     ac_relay_delay_ms: 75
+     ac_relay_driver: c_ac_relay
 
    snux:
-       flipper_enable_driver: c_flipper_enable_driver
-       diag_led_driver: c_diag_led_driver
-       platform:
+     diag_led_driver: c_diag_led_driver
+
+   digital_outputs:
+     flipper_enable_relay:
+       number: c23
+       type: driver
+       enable_events: ball_started
+       disable_events: ball_will_end
 
    coils:
-       c_diag_led_driver:
-           number: c24
-           default_hold_power: 1.0
-       c_flipper_enable_driver:
-           number: c23
-           default_hold_power: 1.0
-       c_ac_relay:
-           number: c25
-           default_hold_power: 1.0
-       c_side_a1:
-           number: c11a
-       c_side_a2:
-           number: c12a
-           default_hold_power: 0.5
-       c_side_c1:
-           number: c11c
-       c_side_c2:
-           number: c12c
-           default_hold_power: 0.5
-       c_virtual:
-           number:
+     c_diag_led_driver:
+       number: c24
+       default_hold_power: 1.0
+     c_ac_relay:
+       number: c25
+       default_hold_power: 1.0
+     c_side_a1:
+       number: c11a
+     c_side_a2:
+       number: c12a
+       default_hold_power: 0.5
+     c_side_c1:
+       number: c11c
+     c_side_c2:
+       number: c12c
+       default_hold_power: 0.5
+     c_virtual:
+       number:
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

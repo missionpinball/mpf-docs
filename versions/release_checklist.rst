@@ -17,9 +17,13 @@ What to do to make a MPF release?
 
    - ``mpf-examples`` repository
 
-- Create a.bb branch (e.g. 0.50) and push it based on latest branch in ``mpf-docs`` repository
+- Create a.bb branch (e.g. 0.50) and push it based on ``latest`` branch in ``mpf-docs`` repository
 
 - Add ``a.bb`` to versions on readthedocs and wait until it finished building
+
+- Remove ``a.bb`` from redirects in readthedocs
+
+- Add ``a.bb + 1`` to redirects in readthedocs
 
 - Increase version to a.bb.0 on ``a.bb.x`` branch
 
@@ -45,19 +49,19 @@ What to do to make a MPF release?
 
    - Remove branch protection
 
-   - Push dev branch to latest (hard push)
-
    - Set ``current_branch`` to ``a.bb.x`` in ``conf.py``
 
    - Set branch in ``.travis.yml`` to ``a.bb.x``
 
    - Remove ``--pre`` from install notes
 
-   - Readd branch protection
+   - Push dev branch to latest (hard push)
+
+   - Re-add branch protection
 
 - Update ``dev`` branch on ``mpf-docs``
 
-  - Update version to next release
+  - Update version to next release in ``conf.py``
 
 - Protect branches
 

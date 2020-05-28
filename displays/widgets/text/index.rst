@@ -44,6 +44,9 @@ Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
 
+The following text widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:``, ``y:``, ``font_size:``,
+``color:``, ``opacity:``, ``rotation:``, and ``scale:``.
+
 type: text
 ~~~~~~~~~~
 

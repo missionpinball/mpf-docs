@@ -7,31 +7,30 @@ curved line, you can use the :doc:`/displays/widgets/bezier/index`.)
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    slide_player:
-    mc_ready:
+     mc_ready:
        line_example:
-        - type: line
-          points: 0, 300, 800, 300
-        - type: line
-          points: 0, 100, 800, 100
-        - type: line
-          points: 400, 95, 400, 0
-          color: red
-          thickness: 5
-          cap: square
-        - type: line
-          points: 100, 500, 150, 550, 200, 450
-          color: lime
-          thickness: 2
-        - type: line
-          points: 500, 150, 600, 350, 650, 200
-          color: blue
-          close: yes
-          thickness: 3
+         - type: line
+           points: 0, 300, 800, 300
+         - type: line
+           points: 0, 100, 800, 100
+         - type: line
+           points: 400, 95, 400, 0
+           color: red
+           thickness: 5
+           cap: square
+         - type: line
+           points: 100, 500, 150, 550, 200, 450
+           color: lime
+           thickness: 2
+         - type: line
+           points: 500, 150, 600, 350, 650, 200
+           color: blue
+           close: true
+           thickness: 3
 
 And the results:
 
@@ -58,6 +57,9 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following line widget settings may be :doc:`animated </displays/widgets/animation>`: ``color:``,
+``thickness:``, ``opacity:``, ``points:``, ``rotation:``, and ``scale:``.
 
 type: line
 ~~~~~~~~~~

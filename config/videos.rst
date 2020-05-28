@@ -23,14 +23,6 @@ using MPF-MC for your media controller.)
 More information on working with assets is in the :doc:`/assets/index` section
 of the documentation.
 
-Optional settings
------------------
-
-The following sections are optional in the ``videos:`` section of your config.
-(If you don't include them, the default will be used).
-
-<name>:
-~~~~~~~
 
 Each sub-entry in your ``videos:`` section is the name that MPF will use to
 refer to that asset. (In other words it's how you specify that asset
@@ -58,15 +50,32 @@ file name without the extension, so the settings entry for
 In other words, don't name two files with the same name if you want to
 keep them straight.)
 
-auto_play:
-~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+.. config
 
-Whether this video should start playing automatically when it's loaded.
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``videos:`` section of your config. (If you don't include them, the default will be used).
+
+events_when_played:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+A list of one or more names of events that MPF will post when this video is played. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+A list of one or more names of events that MPF will post when this video stops playing. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.  These events can
+be useful to trigger some action when a video has finished playing (like remove a slide).
 
 file:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Sometimes you might want to name a file one thing on disk but refer to
 it as another thing in your game and config files. In this case, you
@@ -86,38 +95,33 @@ words, you could swap out assets for different physical machine types
 without having to update your display code.) That said, we expect that
 99% of people won't use this ``file:`` setting, which is fine.
 
+height:
+~~~~~~~
+Single value, type: ``number`` (can be integer or floating point). Defaults to empty.
+
+The height of this video, in pixels.
+
 load:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Default: ``preload``
 
 Videos are always streamed from disk (rather than preloaded into memory), so
 this setting has no effect with video assets.
 
-height:
-~~~~~~~
-Single value, type: ``number``. Default: ``None``
+priority:
+~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
 
-The height of this video, in pixels.
+Loading priority of this asset.
 
 width:
 ~~~~~~
-Single value, type: ``number``. Default: ``None``
+Single value, type: ``number`` (can be integer or floating point). Defaults to empty.
 
 The width of this video, in pixels.
 
-events_when_played:
-~~~~~~~~~~~~~~~~~~~
 
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+Related How To guides
+---------------------
 
-A list of one or more names of events that MPF will post when this video is played. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.
-
-events_when_stopped:
-~~~~~~~~~~~~~~~~~~~~
-
-List of one (or more) values, each is a type: ``string``. Default: ``None``
-
-A list of one or more names of events that MPF will post when this video stops playing. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.  These events can
-be useful to trigger some action when a video has finished playing (like remove a slide).
+.. todo:: :doc:`/about/help_us_to_write_it`

@@ -26,3 +26,8 @@ That said, here's a list of the "built in" player variables and how they work:
    restart_modes_on_next_ball <restart_modes_on_next_ball>
    score <score>
    (shot)_(profile) <shot_profile>
+
+Related Events
+--------------
+
+.. include:: /events/include_player_vars.rst

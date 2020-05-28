@@ -44,14 +44,14 @@ coils added.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step11.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_11``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step11
+   C:\mpf-examples\tutorial>mpf both -X
 
 Note that starting with this step, the actual coil, switch, and ball_device names don't 100% match
 with what we have in the tutorial. This shows you that there are lots of different options when it

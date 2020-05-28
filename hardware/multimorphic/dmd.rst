@@ -48,7 +48,7 @@ To do this, create a section in your machine-wide config called
 
     dmds:
       my_dmd:
-         shades: 16
+        shades: 16
 
 You need to have at least one setting for this to be a valid YAML file, so we
 usually just pick the ``shades`` and add that with a value of ``16`` (which
@@ -115,7 +115,7 @@ your machine-wide config, like this:
 .. code-block:: mpf-config
 
    p_roc:
-      dmd_timing_cycles: 90, 190, 50, 377
+     dmd_timing_cycles: 90, 190, 50, 377
 
 Note that we do not have specific recommendations for values here and based on
 our experience, we haven't found a need to change this. However, if you do have
@@ -148,56 +148,61 @@ connect to the Teensy.
 Note that the :doc:`/displays/display/dmd` guide has more details
 on the window and slide settings used in this machine config.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    hardware:
-      platform: p_roc
-      driverboards: pdb
+   hardware:
+     platform: p_roc
+   p_roc:
+     driverboards: pdb
+   displays:
+     window:  # on screen window
+       width: 600
+       height: 200
+     dmd:  # source display for the DMD
+       width: 128
+       height: 32
+       default: true
+   window:
+     width: 600
+     height: 200
+     title: Mission Pinball Framework
+     source_display: window
+   dmds:
+     my_dmd:
+       brightness: 1.0
+   slides:
+     window_slide_1:  # slide we'll show in the on-screen window
+       - type: display
+         effects:
+           - type: dmd
+             dot_color: ff5500
+         width: 512
+         height: 128
+       - type: text
+         text: MISSION PINBALL FRAMEWORK
+         anchor_y: top
+         y: top-3
+         font_size: 30
+       - type: rectangle
+         width: 514
+         height: 130
+         color: 444444
+     dmd_slide_1:  # slide we'll show on the physical DMD
+       - type: text
+         text: IT WORKS!
+         font_size: 25
+   slide_player:
+     init_done:
+       window_slide_1:
+         target: window
+       dmd_slide_1:
+         target: dmd
+   ##! test
+   #! assert_text_on_top_slide "MISSION PINBALL FRAMEWORK" window
+   #! assert_text_on_top_slide "IT WORKS!" dmd
 
-    displays:
-      window:  # on screen window
-        width: 600
-        height: 200
-      dmd:  # source display for the DMD
-        width: 128
-        height: 32
-        default: true
+What if it did not work?
+------------------------
 
-    window:
-      width: 600
-      height: 200
-      title: Mission Pinball Framework
-      source_display: window
-
-    dmds:
-      my_dmd:
-         brightness: 1.0
-
-    slides:
-      window_slide_1:  # slide we'll show in the on-screen window
-      - type: display
-        effects:
-         - type: dmd
-           dot_color: ff5500
-        width: 512
-        height: 128
-      - type: text
-        text: MISSION PINBALL FRAMEWORK
-        anchor_y: top
-        y: top-3
-        font_size: 30
-      - type: rectangle
-        width: 514
-        height: 130
-        color: 444444
-      dmd_slide_1:  # slide we'll show on the physical DMD
-      - type: text
-        text: IT WORKS!
-        font_size: 25
-
-    slide_player:
-      init_done:
-        window_slide_1:
-          target: window
-        dmd_slide_1:
-          target: dmd
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

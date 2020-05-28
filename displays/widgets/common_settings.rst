@@ -12,6 +12,7 @@ The following settings are "common" settings that apply to all :doc:`types of wi
    anchor_y:
    opacity:
    z:
+   rotation:
    animations:
    reset_animations_events:
    color:
@@ -22,6 +23,8 @@ The following settings are "common" settings that apply to all :doc:`types of wi
    adjust_right:
    expire:
    key:
+   events_when_added:
+   events_when_removed:
 
 type:
 ~~~~~
@@ -126,6 +129,13 @@ The default z value is ``0``.
 
 If you do want to add a widget with a particular z order to an existing slide,
 you'll probably have to set those existing widgets to a z value other than 0.
+
+rotation:
+~~~~~~~~~
+
+Specifies the rotation of the widget. Values are entered in degrees. For example,
+90 = one quarter rotation counter clockwise. May be used to rotate images and GIFs.
+
 
 animations:
 ~~~~~~~~~~~
@@ -251,3 +261,18 @@ ones that you want to target later.
 
 See the :doc:`documentation on widget keys </displays/widgets/keys>` for
 details.
+
+events_when_added:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this widget is added to a slide. Enter the list
+in the MPF config list format. These events are posted exactly as they’re entered.
+
+events_when_removed:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Default: ``None``
+
+A list of one or more names of events that MPF will post when this widget is removed from a slide (or when the
+slide it is on is removed). Enter the list in the MPF config list format. These events are posted exactly as
+they’re entered.

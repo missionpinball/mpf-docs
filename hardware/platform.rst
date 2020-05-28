@@ -20,8 +20,8 @@ For example:
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
-      driverboards: pdb
+     platform: p_roc
+     driverboards: pdb
 
 In the above config, the P-ROC platform will be the default for everything.
 (switches, coils, lights, LEDs, DMDs, servos, etc.)
@@ -40,9 +40,9 @@ for LEDs, which you want to be FadeCandy, you would do it like this:
 .. code-block:: mpf-config
 
    hardware:
-      platform: p_roc
-      driverboards: pdb
-      lights: fadecandy
+     platform: p_roc
+     driverboards: pdb
+     lights: fadecandy
 
 You can enter a device-specific default for the following types of devices
 here:
@@ -72,14 +72,13 @@ FadeCandy, you could set up your config like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: fast
-
+      platform: fast
     lights:
-        led00:
-            number: 0-0
-        led01:
-            number: 0
-            platform: fadecandy
+      led00:
+        number: 0-0
+      led01:
+        number: 0
+        platform: fadecandy
 
 In this example, *led00* will use the FAST platform (and the number 0-0 is a
 FAST configuration number), and *led01* will use the FadeCandy platform (and
@@ -90,15 +89,14 @@ You could also invert this, like so:
 .. code-block:: mpf-config
 
     hardware:
-        platform: fast
-        lights: fadecandy
-
+      platform: fast
+      lights: fadecandy
     lights:
-        led00:
-            number: 0-0
-            platform: fast
-        led01:
-            number: 0
+      led00:
+        number: 0-0
+        platform: fast
+      led01:
+        number: 0
 
 In the example above, *led00* is still a FAST LED and *led01* is still a
 FadeCandy LED, but the difference is that while the default platform is FAST,

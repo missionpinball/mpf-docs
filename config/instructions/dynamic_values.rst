@@ -16,10 +16,10 @@ Without dynamic values, your variable_player (scoring) section would be static, 
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    variable_player:
-      shot_jackpot_hit:
-         score: 100000
+     shot_jackpot_hit:
+       score: 100000
 
 But let's say you have a player variable called "troll_hits" which
 holds the number of trolls hit that you want to multiply by 100,000
@@ -30,8 +30,8 @@ in your variable_player config like this:
 
    ##! mode: mode1
    variable_player:
-      shot_jackpot_hit:
-         score: current_player.troll_hits * 100000
+     shot_jackpot_hit:
+       score: current_player.troll_hits * 100000
 
 You can access other values dynamically as well, such as a timer ticking away
 a hurry-up or a counter to track how many times a multiplier switch has been hit
@@ -40,9 +40,8 @@ a hurry-up or a counter to track how many times a multiplier switch has been hit
 
    ##! mode: mode1
    variable_player:
-      collect_hurryup:
-         score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
-
+     collect_hurryup:
+       score: 1000 * device.timers.hurryup_clock.ticks_remaining * device.counters.hurryup_multiplier.value
 
 Another example might be operator settings. Rather than hard coding
 tilt warnings to 3, you might want to like the operator choose the
@@ -52,19 +51,37 @@ So instead of this:
 
 .. code-block:: mpf-config
 
+   ##! mode: tilt
+   # in your tilt mode
    tilt:
-      warnings_to_tilt: 3
+     warnings_to_tilt: 3
 
 You would have this instead:
 
 .. code-block:: mpf-config
 
+   # in your machine config
+   settings:
+     warnings_to_tilt:
+       label: Number of tilt warnings
+       values:
+         0: "no warnings"
+         1: "1"
+         2: "2"
+         3: "3"
+         5: "5"
+         10: "10"
+       default: 3
+       key_type: int
+       sort: 600
+   ##! mode: tilt
+   # in your tilt mode
    tilt:
-      warnings_to_tilt: settings.tilt_warnings
+     warnings_to_tilt: settings.warnings_to_tilt
 
-(Note the example above requires that you have a ``settings:`` section
+Note the example above requires that you have a ``settings:`` section
 in your machine config and that you've defined a setting called
-"tilt_warnings").
+"tilt_warnings". See :doc:`/game_logic/tilt/index` for more details.
 
 You can also use dynamic values in :doc:`conditional events </events/overview/conditional>`.
 
@@ -92,8 +109,8 @@ Player Variables of Specific Player
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can access a player variable ``X`` of a specific player ``P`` using
-``players[X].P``.
-``X`` starts at 0. So player 1 will be ``players[0].P``.
+``players[P].X``.
+``P`` starts at 0. So player 1 will be ``players[0].P``.
 For instance, ``players[1].my_player_var`` will access ``my_player_var``
 for player 2. ``players[0].my_player_var`` will access player 1.
 This placeholder is only available when a game is active.
@@ -161,7 +178,7 @@ Common device properties are:
 * ``device.accruals.magic_tokens.enabled``
 * ``device.sequences.world_tour.completed``
 
-MPF uses consistent names across devices, so for example any device that tracks a 
+MPF uses consistent names across devices, so for example any device that tracks a
 number will have a ``value`` property and any device that can be enabled/disabled will
 have an ``enabled`` property. The full list of properties available for a specific
 device are listed in the "Monitorable Properties" section of that device's
@@ -184,6 +201,7 @@ Using if/else logic with dynamic values
 
    ##! mode: mode1
    counters:
-      my_counter:
-         count_events: count_up
-         count_complete_value: 5 if player.wizard_complete else 3
+     my_counter:
+       count_events: count_up
+       count_complete_value: 5 if player.wizard_complete else 3
+

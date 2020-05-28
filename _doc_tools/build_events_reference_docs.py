@@ -3,8 +3,11 @@ import os
 import re
 from collections import defaultdict
 
+from mpf.parsers.event_reference_parser import EventReferenceParser, EventReference
+from typing import List, Dict
 
-class EventDocParser(object):
+
+class EventDocCreator(object):
 
     def __init__(self, rst_path):
         self.file = None
@@ -13,14 +16,34 @@ class EventDocParser(object):
         self.device_labels = {}
         self.device_events = defaultdict(list)
 
+    def _format_event_name(self, event: EventReference):
+        if event.class_label:
+            return event.event_name.replace("(name)", "({})".format(event.class_label))
+
+        return event.event_name
+
+    def create_files(self, events: List[EventReference], event_type):
+        """Create files for events and return a list of the file names."""
+        file_list = []
+        for event in events:
+            rst = self.build_rst_entry(event, event_type)
+            event_name = self._format_event_name(event)
+            filename = self.create_file_if_changed(event_name, rst)
+            file_list.append((event, filename))
+
+        return file_list
+
     def parse_file(self, file_name):
 
         self.file = file_name
         class_label = None
         config_section = None
 
-        with open(file_name) as f:
-            my_ast = ast.parse(f.read())
+        try:
+            with open(file_name) as f:
+                my_ast = ast.parse(f.read())
+        except:
+            raise AssertionError("Error while parsing {}".format(file_name))
 
         for x in ast.walk(my_ast):
             if isinstance(x, ast.ClassDef):
@@ -43,14 +66,14 @@ class EventDocParser(object):
                             event = event.strip('.')
 
                         if rst:
-                            filename = self.create_file(event, rst)
+                            filename = self.create_file_if_changed(event, rst)
                             self.file_list.append((event, filename))
 
                         if config_section and rst:
                             self.device_events[config_section].append(event)
                             self.device_labels[config_section] = class_label
 
-    def write_index(self):
+    def write_index(self, file_list, events: List[EventReference]):
 
         index = '''Events
 ======
@@ -82,7 +105,7 @@ Every event in MPF is just a string of text. You'll see that in many cases,
 the actual event that's posted has a slight variation of the event text, typically
 incorporating something about which mechanism or logic device posted the event.
 
-For example, the event called :doc:`switch_(name)_active <switch_name_active>`
+For example, the switch event called :doc:`(name)_active <switch_active>`
 will replace the "(name)" part of the event text with the actual switch name.
 So the when a switch called ``s_left_slingshot`` is activated, it will posted
 an event called *switch_s_left_slingshot_active*.
@@ -93,10 +116,10 @@ an event called *switch_s_left_slingshot_active*.
 '''
         # sort based on the file name, rather than the event name, since that
         # has the special chars stripped.
-        self.file_list.sort(key=lambda x: x[1])
+        file_list.sort(key=lambda x: x[1])
 
-        for file_name in self.file_list:
-            index += '   {} <{}>\n'.format(file_name[0], file_name[1][:-4])
+        for file_name in file_list:
+            index += '   {} <{}>\n'.format(file_name[0].event_name, file_name[1][:-4])
 
         index += '''
 Device Indexes
@@ -106,37 +129,51 @@ Device Indexes
    :maxdepth: 1
 
 '''
-        for config_section, events in sorted(self.device_events.items()):
-            index += '   {} <index_{}>\n'.format(self.device_labels[config_section], config_section)
+        devices = {}
+        for event in events:
+            if event.class_label and event.config_section:
+                if event.config_section not in devices:
+                    devices[event.config_section] = []
+                devices[event.config_section].append(event)
 
-            rst = self.device_labels[config_section] + "\n"
-            rst += "=" * (len(self.device_labels[config_section])) + "\n\n"
+        for config_section, events in sorted(devices.items()):
+            index += '   {} <index_{}>\n'.format(events[0].class_label, config_section)
+
+            rst = events[0].class_label + "\n"
+            rst += "=" * (len(events[0].class_label)) + "\n\n"
             rst += "See: :doc:`/config/{}`".format(config_section) + "\n\n"
 
             for event in events:
-                rst += '* :doc:`{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+                event_name = self._format_event_name(event)
+                rst += '* :doc:`{}`'.format(event_name.replace('(', '').replace(')', '')) + "\n"
 
-            with open(os.path.join(self.rst_path, 'index_{}.rst'.format(config_section)), 'w') as f:
-                f.write(rst)
+            self.create_file_if_changed('index_{}'.format(config_section), rst)
 
             rst = ""
 
             for event in events:
-                rst += '* :doc:`/events/{}`'.format(event.replace('(', '').replace(')', '')) + "\n"
+                event_name = self._format_event_name(event)
+                rst += '* :doc:`/events/{}`'.format(event_name.replace('(', '').replace(')', '')) + "\n"
 
             rst += "\n"
 
-            with open(os.path.join(self.rst_path, 'include_{}.rst'.format(config_section)), 'w') as f:
-                f.write(rst)
+            self.create_file_if_changed('include_{}'.format(config_section), rst)
 
+        self.create_file_if_changed('index', index)
 
-        with open(os.path.join(self.rst_path, 'index.rst'), 'w') as f:
-            f.write(index)
-
-    def create_file(self, event, rst):
+    def create_file_if_changed(self, event, rst):
         filename = event.replace('(', '').replace(')', '') + '.rst'
+        file_path = os.path.join(self.rst_path, filename)
 
-        with open(os.path.join(self.rst_path, filename), 'w') as f:
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as f:
+                content = f.read()
+
+            if content == rst:
+                # file did not change
+                return filename
+
+        with open(file_path, 'w') as f:
             f.write(rst)
 
         return filename
@@ -190,22 +227,19 @@ Device Indexes
 
         return final_dict
 
-    def build_rst_entry(self, final_dict):
+    def build_rst_entry(self, event: EventReference, event_type):
         rst_output = str()
 
         # write the title
-        try:
-            rst_output += final_dict['event']+ '\n'
-        except KeyError:
-            print("Events entry missing from: {}".format(self.file))
+        rst_output += event.event_name + '\n'
 
-        rst_output += ('=' * len(final_dict['event'])) + '\n\n'
-        rst_output += '*MPF Event*\n\n'
+        rst_output += ('=' * len(event.event_name)) + '\n\n'
+        rst_output += '*{}*\n\n'.format(event_type)
 
         # add the description
-        rst_output += final_dict['desc'] + '\n\n'
+        rst_output += event.desc + '\n\n'
 
-        if 'args' in final_dict:
+        if event.args:
 
             rst_output += 'Keyword arguments\n'
             rst_output += '-----------------\n'
@@ -214,22 +248,25 @@ Device Indexes
 (See the :doc:`/events/overview/conditional` guide for details for how to
 create entries in your config file that only respond to certain combinations of
 the arguments below.)\n\n'''
-            rst_output += self.parse_args(final_dict['args'])
+            rst_output += self.build_args(event.args)
         else:
             rst_output += '*This event does not have any keyword arguments*\n'
 
-        return final_dict['event'], rst_output
 
-    def parse_args(self, args_string):
+        rst_output += "\n"
 
-        args = list()
-        output = str()
+        if event.config_section and event.class_label:
+            rst_output += 'Event is posted by the :doc:`{} device </config/{}>`\n\n'.format(
+                event.class_label, event.config_section)
 
-        for x in re.findall('\\b(\w*)\\b(?=\:)', args_string):
-            if x:
-                args.append(x)
+            if event.config_attribute:
+                rst_output += "The event name can be changed by using the \"{}:\" attribute.\n\n".format(
+                    event.config_attribute)
 
-        args_dict = self.string_to_args_dict(args_string, args)
+        return rst_output
+
+    def build_args(self, args_dict: Dict[str, str]):
+        output = ""
 
         for k, v in sorted(args_dict.items()):
 
@@ -241,12 +278,12 @@ the arguments below.)\n\n'''
 
         return output
 
-if __name__ == '__main__':
-    paths = ['../../mpf/mpf', '../../mpf-mc/mpfmc']
-    rst_path = '../events'
+def run(rst_path, mpf_path, mc_path):
     dont_delete_files = []
 
-    a = EventDocParser(rst_path)
+    parser = EventReferenceParser()
+    mpf_events = parser.get_events_from_path([mpf_path])
+    mpfmc_events = parser.get_events_from_path([mc_path])
 
     # delete existing files
     for path, _, files in os.walk(rst_path):
@@ -255,11 +292,12 @@ if __name__ == '__main__':
             if path == rst_path and file not in dont_delete_files:
                 os.remove(os.path.join(path, file))
 
-    # walk through the folders to scan
-    for path in paths:
-        for root, _, files in os.walk(path):
-            for file in [x for x in files if x.endswith('.py')]:
-                a.parse_file(os.path.join(root, file))
+    creator = EventDocCreator(rst_path)
+    file_list = []
+    file_list.extend(creator.create_files(mpf_events, "MPF Event"))
+    file_list.extend(creator.create_files(mpfmc_events, "MPF-MC Event"))
+    creator.write_index(file_list, mpf_events + mpfmc_events)
 
-    # create the index.rst based on everything that was found
-    a.write_index()
+if __name__ == '__main__':
+    rst_path = '../events'
+    run(rst_path, "../../mpf/mpf", "../../mpf-mc/mpfmc")

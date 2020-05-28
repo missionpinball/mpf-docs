@@ -36,7 +36,7 @@ configuration item called *variable_player:*, like this:
 
 .. code-block:: yaml
 
-    variable_player:
+   variable_player:
 
 3. Add point values for events
 ------------------------------
@@ -52,12 +52,12 @@ followed by "_active", like this:
 
 .. code-block:: mpf-config
 
-    ##! mode: base
-    variable_player:
-        s_right_inlane_active:
-            score: 100
-        s_left_flipper_active:
-            score: 1000
+   ##! mode: base
+   variable_player:
+     s_right_inlane_active:
+       score: 100
+     s_left_flipper_active:
+       score: 1000
 
 Now save your config, start a game (``S``), hit the ``L`` key to launch a ball,
 then hit the ``Q`` key to trigger the right inlane switch . You
@@ -88,7 +88,7 @@ event in a lower-priority mode. So you could have a pop bumper that is
 worth 100 points in a base mode, but then you could also make it worth
 5,000 points in a super jets mode while blocking the 100 point score
 from the base mode since if the scoring from both modes was active, you'd get
-two scoring events--the 100 from the base mode and the 500 from the super jets mode.
+two scoring events--the 100 from the base mode and the 5,000 from the super jets mode.
 (More on that later.)
 
 Later on you can also configure *shots* which can control lights and
@@ -108,15 +108,21 @@ For example, try changing your scoring section to this:
 
 .. code-block:: mpf-config
 
-    ##! mode: base
-    variable_player:
-        s_right_inlane_active:
-            score: 100
-        s_left_flipper_active:
-            score: 1000
-            potato: 1
-        s_right_flipper_active:
-            potato: -2
+   # we will initially set the value to 0 when the machine starts up
+   player_vars:
+     potato:
+       initial_value: 0
+
+   ##! mode: base
+   # in your base mode (modes/base/config/base.yaml)
+   variable_player:
+     s_right_inlane_active:
+       score: 100
+     s_left_flipper_active:
+       score: 1000
+       potato: 1
+     s_right_flipper_active:
+       potato: -2
 
 We use the word "potato" here to illustrate that player variables can be anything. So now when the left flipper is
 active, the player variable called "score" will increase by 1000, and the player variable called "potato" will increase
@@ -127,7 +133,7 @@ Also notice that when the right flipper is hit, the player variable called "pota
 from it.
 
 Player variables exist and are tracked even if they're not displayed anywhere. So if you run your game now and start
-flipping, the potato value will change. Again, player variables are stored on a per-player basis, so if you start add
+flipping, the potato value will change. Again, player variables are stored on a per-player basis, so if you start adding
 additional players to the game, they'll each have their own copies of their own player variables. Also the player
 variables are destroyed when the game ends. (It is possible to save certain variables from game-to-game, but we'll
 discuss those later, as those are not player variables.)
@@ -136,9 +142,13 @@ So now that we're tracking this potato variable, let's add it to the display. To
 the slide that is show when the base mode starts. (So we're going to be editing ``<your_machine>/modes/config/base.yaml``
 again. Add the potato text entry, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! player_vars:
+   #!   potato:
+   #!     initial_value: 0
    ##! mode: base
+   # in your base mode (modes/base/config/base.yaml)
    slide_player:
      mode_base_started:
        widgets:
@@ -162,10 +172,17 @@ again. Add the potato text entry, like this:
            anchor_y: bottom
            font_size: 50
          - type: text
-           text: "POTATO VALUE: (potato)"
+           text: 'POTATO VALUE: (potato)'
            y: 40%
+   ##! test
+   #! start_game
+   #! start_mode base
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "PLAYER 1"
+   #! assert_text_on_top_slide "BALL 1"
+   #! assert_text_on_top_slide "POTATO VALUE: 0"
 
-Notice that we put ``text: "POTATO VALUE: (potato)"`` in quotes. That's because we actually want to show the colon as part
+Notice that we put ``text: 'POTATO VALUE: (potato)'`` in quotes. That's because we actually want to show the colon as part
 of the text that's displayed on the screen. However colons are important in YAML files. So if we made our entry
 like this: ``text: POTATO VALUE: (potato)``, then we would get a YAML processing error because the YAML processor
 would freak out. "OH MY THERE ARE TWO COLONS?? WHAT'S THIS MEAN??? <crash>"
@@ -183,7 +200,7 @@ properly initialize variables, but the main thing for now is to see how the scor
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_15``
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_15``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
 .. code-block:: doscon

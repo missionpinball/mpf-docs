@@ -13,6 +13,8 @@ To configure coils, drivers, motors, and/or magnets (basically anything connecte
 node's driver outputs) for Stern SPIKE machines, you can follow the guides
 and instructions in the :doc:`/mechs/coils/index` docs.
 
+.. include:: /hardware/voltages_and_power/common_ground_warning.rst
+
 However there are a few things to know and some additional options you get
 with SPIKE hardware that are discussed here.
 
@@ -34,9 +36,16 @@ would be entered into the MPF config as ``8-0``, etc.
 .. code-block:: mpf-config
 
    coils:
-      c_shaker:
-         number: 1-10  # Node 1, coil 10
-         default_pulse_ms: 100
-         allow_enable: true
-      c_flipper:
-         number: 8-1  # Node 8, coil 1
+     c_shaker:
+       number: 1-10    # Node 1, coil 10
+       default_pulse_ms: 100
+       allow_enable: true
+     c_flipper:
+       number: 8-1    # Node 8, coil 1
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.
+
+.. include:: ../driver_related_howto_guides.rst

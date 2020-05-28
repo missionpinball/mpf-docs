@@ -23,3 +23,13 @@ This is an example:
     - my_mode2
 
 See :doc:`/game_logic/modes/index` and :doc:`/game_design/index` for details about modes.
+
+.. config
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_design/index`
+* :doc:`/tutorial/14_add_a_mode`
+* :doc:`/game_logic/modes/index`

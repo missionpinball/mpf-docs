@@ -82,7 +82,7 @@ Use a :doc:`/config/variable_player` to count some bonuses:
 
 .. code-block:: mpf-config
 
-  ##! config: mode1
+  ##! mode: mode1
   variable_player:
     ramp_shot_hit:
       bonus_ramps: 1
@@ -95,26 +95,23 @@ Use a :doc:`/config/variable_player` to count some bonuses:
 Now go back into your bonus mode folder open up ``bonus.yaml`` config file
 (which should be empty at this point), and enter a basic config:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    ##! mode: bonus
    #config_version=5
-
    mode_settings:
-      display_delay_ms: 1s
-      hurry_up_delay_ms: 0
-      bonus_entries:
+     display_delay_ms: 1s
+     hurry_up_delay_ms: 0
+     bonus_entries:
        - event: bonus_ramps
          score: 400
        - event: bonus_math
          score: 1200 * (current_player.some_variable + 2)
-
    slide_player:
-      mode_bonus_started: bonus_start_slide
-      bonus_ramps: bonus_ramp_slide
-      bonus_math: bonus_math_slide
-      bonus_total: bonus_total_slide
-
+     mode_bonus_started: bonus_start_slide
+     bonus_ramps: bonus_ramp_slide
+     bonus_math: bonus_math_slide
+     bonus_total: bonus_total_slide
    slides:
      bonus_start_slide:
        widgets:
@@ -144,7 +141,15 @@ Now go back into your bonus mode folder open up ``bonus.yaml`` config file
    #! start_game
    #! advance_time_and_run 1
    #! drain_all_balls
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "Ramps 0"
+   #! assert_text_on_top_slide "400"
    #! advance_time_and_run 1
+   #! assert_text_on_top_slide "Some variable 0"
+   #! assert_text_on_top_slide "2400"
+   #! advance_time_and_run 1
+   #! assert_text_on_top_slide "Total Bonus"
+   #! assert_text_on_top_slide "2800"
    #! stop_game 10
    #! advance_time_and_run 1
 

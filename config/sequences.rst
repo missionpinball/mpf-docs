@@ -11,13 +11,6 @@ sequences:
 
 .. overview
 
-+------------------------------------------------------------------------------+
-| Related Tutorial                                                             |
-+==============================================================================+
-| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`           |
-+------------------------------------------------------------------------------+
-
-
 See also :doc:`sequences </game_logic/logic_blocks/sequences>`.
 
 The structure of sequence logic blocks is like this:
@@ -35,6 +28,8 @@ The structure of sequence logic blocks is like this:
 Note that the actual name of the logic block doesn't really matter. Mainly
 they're just used in the logs.
 
+.. config
+
 
 Required settings
 -----------------
@@ -43,7 +38,7 @@ The following sections are required in the ``sequences:`` section of your config
 
 events:
 ~~~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) events. The device will add handlers for those events. Defaults to empty.
 
 The events section of a sequence logic block is where you define the
 events this logic block will watch for in order to make progress towards
@@ -61,13 +56,13 @@ those like *OR*s. So you have Step 1 (event1 *OR* event2) *AND THEN* Step 2 (eve
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    sequences:
-      my_sequence:
-         events:
-            - event1, event2
-            - event3
-            - event4, event5
+     my_sequence:
+       events:
+         - event1, event2
+         - event3
+         - event4, event5
 
 It might seem kind of confusing at first, but
 you can build this up bit-by-bit and figure them out as you go along.
@@ -81,22 +76,22 @@ For example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    sequences:
-      logic_block_1:
-         events:
-            - event1
-            - event2
-            - event3
-            - event4
-            - event5
-         events_when_complete: logic_block_1_done
-      logic_block_2:
-         events:
-            - event1, event2, event3
-            - event4
-            - event5
-         events_when_complete: logic_block_2_done
+     logic_block_1:
+       events:
+         - event1
+         - event2
+         - event3
+         - event4
+         - event5
+       events_when_complete: logic_block_1_done
+     logic_block_2:
+       events:
+         - event1, event2, event3
+         - event4
+         - event5
+       events_when_complete: logic_block_2_done
 
 In the example above, there are two logic blocks. The first one just has five
 steps that need to complete (in 1-2-3-4-5 exact order since we're dealing with
@@ -113,6 +108,7 @@ and that will lead to *logic_block_2_done* being posted.
 Note that you can have two logic blocks with the same events at the same time, and
 MPF will track the state of each logic block separately.
 
+
 Optional settings
 -----------------
 
@@ -126,7 +122,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 
@@ -144,10 +140,15 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Currently unused.
 
-.. include:: /game_logic/logic_blocks/player_variable.rst
+.. include:: /config/logic_blocks_common.rst
 
-.. include:: /game_logic/logic_blocks/common.rst
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/logic_blocks/sequences`
+* :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_shows`

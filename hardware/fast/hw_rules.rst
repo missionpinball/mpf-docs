@@ -42,3 +42,8 @@ the main flippers. In that case, no problem, but make sure the IO board that
 has your flipper buttons connected to it is the first one in the chain, and
 make sure your flipper buttons are connected to one of the 0-7 positions on
 that IO board, and then everything will be fine.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

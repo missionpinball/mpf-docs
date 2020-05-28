@@ -21,6 +21,9 @@ The only difference between :doc:`light_stripes </config/light_stripes>`  and
 .. literalinclude:: /mpf_examples/light/config/light_groups.yaml
    :language: yaml
 
+.. config
+
+
 Required settings
 -----------------
 
@@ -28,13 +31,13 @@ The following sections are required in the ``light_rings:`` section of your conf
 
 count:
 ~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 The integer value for how many LEDs are in the ring.
 
 light_template:
 ~~~~~~~~~~~~~~~
-Single value, type: sub-configurating containing lights,device settings.
+Single value, type: :doc:`lights <lights>`. Defaults to empty.
 
 This is a list of sub-settings (indented) that are regular settings from the
 :doc:`lights` section of your machine config. Any settings that are valid there
@@ -42,7 +45,7 @@ are valid here, and they're applied to all the LEDs in the ring.
 
 number_start:
 ~~~~~~~~~~~~~
-Single value, type: ``integer``.
+Single value, type: ``integer``. Defaults to empty.
 
 The integer value for the number for the first LED in the ring. (MPF assumes
 that all the LEDs in the ring are numbered sequentially.)
@@ -55,19 +58,19 @@ The following sections are optional in the ``light_rings:`` section of your conf
 
 center_x:
 ~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 The "x" position of the center of the ring. (This is not used in MPF yet.)
 
 center_y:
 ~~~~~~~~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 The "y" position of the center of the ring.
 
 number_template:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 MPF automatically configures the LEDs in a ring. The first one uses the
 ``number_start:`` value, and then it counts up from there up through the
@@ -84,7 +87,7 @@ The example config with a number template of ``7-{}`` with a number start of
 
 radius:
 ~~~~~~~
-Single value, type: ``number`` (will be converted to floating point).
+Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
 
 The radius of the ring (in relative size to the x/y coordinates of the
 ``center_x:`` and ``center_y:`` positions. This is used for
@@ -105,7 +108,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 
@@ -123,6 +126,12 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`

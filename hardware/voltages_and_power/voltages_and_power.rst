@@ -176,14 +176,14 @@ Common Ground
    We cannot stress this enough.
    Not ensuring this will be very dangerous!
 
-In general, it is preferred to connect the ground at the PSUs then below
+In general, it is preferred to connect the ground at the PSUs than below
 the playfield.
 Then run a separate ground for each power rail from the PSU to the playfield.
 
 Interferences on the ground of the HV rail might cause problems in other rails.
 Especially for serial LEDs and logic power.
 In case you run into those problems consult with an electric engineer.
-The right capacitors and the right wireing might help with this case for example.
+The right capacitors and the right wiring might help with this case for example.
 
 Common "ground" generally refers to the neutral wire of your PSU which should
 not be confused with ground/electric earth.
@@ -202,5 +202,6 @@ Some common boards:
 
 * :doc:`Multimorphic Power Entry Board </hardware/multimorphic/power_entry>`
 * :doc:`FAST Power Filter Board </hardware/fast/power_filter>`
+* Spooky/PBL Power Entry Board (part number: #600-0253-00)
 * `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
-* Stern Spike Power Distribution Board (part number 520-5343-01)
+* Stern Spike Power Distribution Board (part number: 520-5343-01)

@@ -13,6 +13,15 @@ machine:
 
 The ``machine:`` section of your config is where you configure defails about the number of balls in your machine.
 
+.. code-block:: mpf-config
+
+   machine:
+     balls_installed: 6
+     min_balls: 3
+
+.. config
+
+
 Optional settings
 -----------------
 
@@ -31,3 +40,14 @@ Single value, type: ``integer``. Default: ``1``
 The minimum number of balls required to start a game.
 If less than ``min_balls`` are present MPF will refuse to stat a game.
 
+It's super annoying if you walk up to a pinball machine on location
+and can't start a game because it's missing a ball. So this setting
+lets you specify the minimum number of balls that need to be installed
+in order for a game to start. Note that it's up to you to make sure
+your game code can handle fewer balls than you might be expecting.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/troughs/two_coil_one_switch`

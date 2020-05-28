@@ -27,6 +27,7 @@ Here is the list of available effect types (the settings for each type are found
 - ``flip_vertical`` vertically flips the contents
 - ``gain`` applies a gain (brightness) adjustment
 - ``gamma`` applies a gamma correction
+- ``glow`` applies a pulsing glow effect
 - ``horizontal_blur`` Gaussian blurs horizontally
 - ``invert_colors`` inverts the colors
 - ``monochrome`` converts the image to monochrome/grayscale
@@ -300,6 +301,33 @@ gamma:
 Single value, type: ``float``. Default: ``1.0``
 
 Sets the gamma factor of the effect.
+
+Settings for *glow* effect:
+----------------------------
+
+blur_size:
+^^^^^^^^^^
+Single value, type: ``float``. Default: ``0.5``
+
+The blur width in pixels
+
+intensity:
+^^^^^^^^^^
+Single value, type: ``float``. Default: ``0.5``
+
+The base intensity of the glow effect
+
+glow_amplitude:
+^^^^^^^^^^^^^^^
+Single value, type: ``float``. Default: ``1.0``
+
+The amplitude of the pulsing glow.  Set to 0 if you want to disable the pulse.
+
+glow_speed:
+^^^^^^^^^^^
+Single value, type: ``float``. Default: ``1.0``
+
+The frequency of the glow effect in Hz.
 
 
 Settings for *horizontal_blur* effect:

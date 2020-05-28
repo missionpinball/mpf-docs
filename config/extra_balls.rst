@@ -23,11 +23,10 @@ Here's an example:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
-
+   ##! mode: mode1
    extra_balls:
-       my_mode_eb:
-           award_events: alien_smashed
+     my_mode_eb:
+       award_events: alien_smashed
 
 In the above example, the extra ball called ``my_mode_eb`` will be
 given to the player when the event ``alien_smashed`` is posted. After that,
@@ -36,11 +35,7 @@ future ``alien_smashed`` events will not lead to additional extra balls. (The
 
 This is all tracked per-player in a player variable dictionary called "extra_balls_awarded"
 
-+------------------------------------------------------------------------------+
-| Related How To Guides                                                        |
-+==============================================================================+
-| :doc:`/game_logic/extra_balls/index`                                         |
-+------------------------------------------------------------------------------+
+.. config
 
 
 Optional settings
@@ -50,26 +45,26 @@ The following sections are optional in the ``extra_balls:`` section of your conf
 
 award_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, award this extra ball to the current player.
 
 enabled:
 ~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether the device starts enabled or disabled.
 
 group:
 ~~~~~~
-Single value, type: string name of a :doc:`extra_ball_groups <extra_ball_groups>` device.
+Single value, type: string name of a :doc:`extra_ball_groups <extra_ball_groups>` device. Defaults to empty.
 
 The extra ball group which this ball belongs to which can further limit the
 maximum number of balls and enable/disable the device.
 
 light_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Event to light the extra ball (if enabled).
 
@@ -91,7 +86,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
@@ -111,10 +106,14 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for extra balls: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/extra_balls/index`

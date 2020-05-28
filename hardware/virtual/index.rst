@@ -17,3 +17,5 @@ mechs in MPF which works nicely with the smart virtual platform.
 .. toctree::
    smart_virtual
    virtual
+   virtual_pinball_vpx
+   keyboard

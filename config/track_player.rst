@@ -8,8 +8,6 @@ track_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`shows </shows/index>`                                       | **YES** |
-+----------------------------------------------------------------------------+---------+
 
 .. note:: This section can also be used in a show file in the ``tracks:`` section of a step.
 
@@ -22,67 +20,42 @@ sounds currently playing on a track can be stopped (again with an optional fade
 out time). (This player is part of the MPF media controller and only available if you're
 using MPF-MC for your media controller.)
 
-See the :doc:`config player </config_players/index>` for more information on config players.
-
-
-Usage in config files
----------------------
-
-In config files, the track player is used via the ``track_player:`` section.  Event names that
-will trigger track actions are nested sub-headings and track names are listed as nested
-sub-headings below that.  ``__all__`` can be used in place of a track name to apply the action
-to all audio tracks in the sound system.
-
-Example:
+This is an example:
 
 .. code-block:: mpf-config
 
     track_player:
-        pause_music_track:
-            music:
-                action: pause
-                fade: 1 sec
-        resume_music_track:
-            music:
-                action: play
-        stop_sounds_on_all_tracks:
-            __all__:
-                action: stop_all_sounds
-                fade: 0.5 sec
+      pause_music_track:
+        music:
+          action: pause
+          fade: 1 sec
+      resume_music_track:
+        music:
+          action: play
+      stop_sounds_on_all_tracks:
+        __all__:
+          action: stop_all_sounds
+          fade: 0.5 sec
 
-Usage in shows
---------------
+See the :doc:`config player </config_players/index>` for more information on config players.
 
-In shows, the track player is used via the ``tracks:`` section of a step.
+Express configuration
+---------------------
 
-Example:
+There is no express (one line) configuration for the track player.  You must specify the ``action``
+setting every time.
 
-.. code-block:: mpf-config
+.. config
 
-    shows:
-        my_show_with_sound:
-            - time: 0
-              tracks:
-                 music:
-                     action: set_volume
-                     volume: 0.3
-                     fade: 0.25 sec
-            - time: 3.5
-              tracks:
-                 music:
-                     action: set_volume
-                     volume: 0.5
-                     fade: 0.25 sec
 
 Required settings
 -----------------
 
-The following sections are required for each named sound pool in your config:
+The following sections are required in the ``track_player:`` section of your config:
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: play, stop, pause, set_volume, stop_all_sounds.
-Default: None
+Single value, type: one of the following options: play, stop, pause, set_volume, stop_all_sounds. Defaults to empty.
 
 The ``action:`` setting controls what action will be performed on the specified track. Options for
 ``action:`` are:
@@ -100,30 +73,31 @@ The ``action:`` setting controls what action will be performed on the specified 
   time) and cancels any pending sounds in the track sound queue. The ``fade_out`` setting for
   any playing sounds will be ignored. The track will continue to process new sound events.
 
+
 Optional settings
 -----------------
 
+The following sections are optional in the ``track_player:`` section of your config. (If you don't include them, the default will be used).
+
+fade:
+~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0.1sec``
+
+The number of seconds over which to fade the specified track action.  Applies to all track player
+actions.
+
 volume:
 ~~~~~~~
-Single value, type: ``gain setting`` (:doc:`Instructions for entering gain values </config/instructions/gain_values>`)
--inf, db, or float between 0.0 and 1.0. Default: ``0.5``
+Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0). Defaults to empty.
 
 The new volume setting for the track.  As with all volume parameters in MPF, this item can be
 represented as a number between 0.0 and 1.0 (1.0 is max volume, 0.0 is off, 0.9 is 90%, etc.)
 It also can be represented as a decibel string from -inf to 0.0 db (ex: ``-3.0 db``). This
 setting only applies to the ``set_volume`` action and will be ignored for all others.
 
-fade:
-~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`).
-Default: ``0``
 
-The number of seconds over which to fade the specified track action.  Applies to all track player
-actions.
-
-Express configuration
+Related How To guides
 ---------------------
 
-There is no express (one line) configuration for the track player.  You must specify the ``action``
-setting every time.
-
+* :doc:`/config_players/track_player`
+* :doc:`/sound/tips_tricks`

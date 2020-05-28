@@ -33,15 +33,13 @@ entry to show that slide on the *init_done* event which is posted by the media
 controller once it's ready to show slides. (That's why we don't need the MPF
 core engine to run this example.)
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     # config_version=5
-
     displays:
       default:
         width: 400
         height: 300
-
     slides:
       slide1:
         - type: text
@@ -50,76 +48,75 @@ core engine to run this example.)
           font_size: 35
           animations:
             show_slide:
-            - property: x
-              value: 205
-              duration: 1s
-              easing: linear
-            - property: x
-              value: 0
-              duration: 1s
-              easing: linear
-              repeat: yes
+              - property: x
+                value: 205
+                duration: 1s
+                easing: linear
+              - property: x
+                value: 0
+                duration: 1s
+                easing: linear
+                repeat: true
         - type: text
           text: in_out_quad
           y: 70%
           font_size: 35
           animations:
             show_slide:
-            - property: x
-              value: 215
-              duration: 1s
-              easing: in_out_quad
-            - property: x
-              value: 0
-              duration: 1s
-              easing: in_out_quad
-              repeat: yes
+              - property: x
+                value: 215
+                duration: 1s
+                easing: in_out_quad
+              - property: x
+                value: 0
+                duration: 1s
+                easing: in_out_quad
+                repeat: true
         - type: text
           text: in_out_elastic
           y: 50%
           font_size: 35
           animations:
             show_slide:
-            - property: x
-              value: 185
-              duration: 1s
-              easing: in_out_elastic
-            - property: x
-              value: 0
-              duration: 1s
-              easing: in_out_elastic
-              repeat: yes
+              - property: x
+                value: 185
+                duration: 1s
+                easing: in_out_elastic
+              - property: x
+                value: 0
+                duration: 1s
+                easing: in_out_elastic
+                repeat: true
         - type: text
           text: out_bounce
           y: 30%
           font_size: 35
           animations:
             show_slide:
-            - property: x
-              value: 220
-              duration: 1s
-              easing: out_bounce
-            - property: x
-              value: 0
-              duration: 1s
-              easing: out_bounce
-              repeat: yes
+              - property: x
+                value: 220
+                duration: 1s
+                easing: out_bounce
+              - property: x
+                value: 0
+                duration: 1s
+                easing: out_bounce
+                repeat: true
         - type: text
           text: in_quint
           y: 10%
           font_size: 35
           animations:
             show_slide:
-            - property: x
-              value: 275
-              duration: 1s
-              easing: in_quint
-            - property: x
-              value: 0
-              duration: 1s
-              easing: in_quint
-              repeat: yes
-
+              - property: x
+                value: 275
+                duration: 1s
+                easing: in_quint
+              - property: x
+                value: 0
+                duration: 1s
+                easing: in_quint
+                repeat: true
     slide_player:
       init_done: slide1
 
@@ -127,15 +124,13 @@ And here's the example where we animate the opacity:
 
 .. image:: /displays/images/easing_opacity.gif
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     # config_version=5
-
     displays:
       default:
         width: 400
         height: 300
-
     slides:
       slide1:
         - type: text
@@ -144,75 +139,75 @@ And here's the example where we animate the opacity:
           font_size: 35
           animations:
             show_slide:
-            - property: opacity
-              value: 1
-              duration: 1s
-              easing: linear
-            - property: opacity
-              value: 0
-              duration: 1s
-              easing: linear
-              repeat: yes
+              - property: opacity
+                value: 1
+                duration: 1s
+                easing: linear
+              - property: opacity
+                value: 0
+                duration: 1s
+                easing: linear
+                repeat: true
         - type: text
           text: in_out_quad
           y: 70%
           font_size: 35
           animations:
             show_slide:
-            - property: opacity
-              value: 1
-              duration: 1s
-              easing: in_out_quad
-            - property: opacity
-              value: 0
-              duration: 1s
-              easing: in_out_quad
-              repeat: yes
+              - property: opacity
+                value: 1
+                duration: 1s
+                easing: in_out_quad
+              - property: opacity
+                value: 0
+                duration: 1s
+                easing: in_out_quad
+                repeat: true
         - type: text
           text: in_out_elastic
           y: 50%
           font_size: 35
           animations:
             show_slide:
-            - property: opacity
-              value: 1
-              duration: 1s
-              easing: in_out_elastic
-            - property: opacity
-              value: 0
-              duration: 1s
-              easing: in_out_elastic
-              repeat: yes
+              - property: opacity
+                value: 1
+                duration: 1s
+                easing: in_out_elastic
+              - property: opacity
+                value: 0
+                duration: 1s
+                easing: in_out_elastic
+                repeat: true
         - type: text
           text: out_bounce
           y: 30%
           font_size: 35
           animations:
             show_slide:
-            - property: opacity
-              value: 1
-              duration: 1s
-              easing: out_bounce
-            - property: opacity
-              value: 0
-              duration: 1s
-              easing: out_bounce
-              repeat: yes
+              - property: opacity
+                value: 1
+                duration: 1s
+                easing: out_bounce
+              - property: opacity
+                value: 0
+                duration: 1s
+                easing: out_bounce
+                repeat: true
         - type: text
           text: in_quint
           y: 10%
           font_size: 35
           animations:
             show_slide:
-            - property: opacity
-              value: 1
-              duration: 1s
-              easing: in_quint
-            - property: opacity
-              value: 0
-              duration: 1s
-              easing: in_quint
-              repeat: yes
-
+              - property: opacity
+                value: 1
+                duration: 1s
+                easing: in_quint
+              - property: opacity
+                value: 0
+                duration: 1s
+                easing: in_quint
+                repeat: true
     slide_player:
       init_done: slide1
+

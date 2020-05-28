@@ -79,17 +79,17 @@ This is an example of a shot in a mode:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    lane_l:
-   #!       number:
+   #!   lane_l:
+   #!     number:
    #! lights:
-   #!    lane_l:
-   #!       number:
+   #!   lane_l:
+   #!     number:
    ##! mode: inlanes
    shots:
      my_shot:
-         switch: lane_l
-         show_tokens:
-             light: lane_l
+       switch: lane_l
+       show_tokens:
+         light: lane_l
 
 The shot will use the default profile which has the states ``unlit`` and ``lit``.
 It will start ``unlit`` and go to ``lit`` after the first hit.
@@ -120,23 +120,21 @@ This is an example:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    lane_l:
-   #!       number:
-   #!    s_target:
-   #!       number:
+   #!   lane_l:
+   #!     number:
+   #!   s_target:
+   #!     number:
    #! lights:
-   #!    lane_l:
-   #!       number:
+   #!   lane_l:
+   #!     number:
    ##! mode: inlanes
    shots:
      my_shot:
-         switch: lane_l
-         show_tokens:
-             light: lane_l
-
+       switch: lane_l
+       show_tokens:
+         light: lane_l
    event_player:
      s_target_active{device.shots.my_shot.state_name=='lit'}: start_multiball
-
    ##! test
    #! start_game
    #! start_mode inlanes
@@ -163,3 +161,18 @@ Related Events
    shot_group
    shot_profiles
    sequence_shots
+   integrate_shots_with_shows_lights_sounds_widgets_or_slides
+
++------------------------------------------------------------------------------+
+| Related How To Guides                                                        |
++==============================================================================+
+| :doc:`/tutorial/18_shots`                                                    |
++------------------------------------------------------------------------------+
+| :doc:`Shots on inlane/outlanes </mechs/switches/rollover_switches>`          |
++------------------------------------------------------------------------------+
+| :doc:`Shots in game modes </game_design/game_modes/multiple_timed_shots>`    |
++------------------------------------------------------------------------------+
+| :doc:`/game_design/game_modes/top_lanes_with_multiplier`                     |
++------------------------------------------------------------------------------+
+| :doc:`Shots in other modes </game_design/other_modes>`                       |
++------------------------------------------------------------------------------+

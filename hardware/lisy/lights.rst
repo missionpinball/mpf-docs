@@ -23,3 +23,8 @@ are not real lights. Those can be configured as
 :doc:`digital outputs </config/digital_outputs>`.
 See :doc:`flippers_slings_popbumpers` for details about the
 ``game_over_relay``.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

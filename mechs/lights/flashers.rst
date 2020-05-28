@@ -19,7 +19,9 @@ MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors instead
 of low-power lighting circuitry.
 
-:doc:`TODO: Add a picture of a flasher </about/help_us_to_write_it>`
+.. image:: /mechs/images/flasher1.jpg
+.. image:: /mechs/images/flasher2.jpg
+
 
 MPF's flasher devices are only used in older machines (WPC, Stern SAM, System 11)
 since modern LED-based machines typically use regular LED devices (or combinations
@@ -29,7 +31,7 @@ light that's connected to a driver output rather than a light output.
 Hardware
 --------
 
-#89 bulbs are commonly used as flashers in pinball machines.
+#89 and #906 bulbs are commonly used as flashers in pinball machines.
 Those are rated at 13V but typically driven at higher voltages for only a very
 short amount of time.
 Turning them on permanently will burn quickly in most machines.
@@ -40,14 +42,14 @@ Config
 
 Starting with MPF 0.50 flashers and lights have been unified. Depending on your
 platform flashers might be :doc:`/config/lights` or :doc:`/config/coils`. In most
-cases they are configures as :doc:`coil </config/coils>`:
+cases they are configured as :doc:`coil </config/coils>`:
 
 .. code-block:: mpf-config
 
   coils:
     flasher_coil_4:
       number: 4
-      allow_enable: True
+      allow_enable: true
 
 Then add them as :doc:`light </config/lights>`:
 
@@ -55,13 +57,12 @@ Then add them as :doc:`light </config/lights>`:
 
   #! coils:
   #!   flasher_coil_4:
-  #!    number: 4
-  #!    allow_enable: True
-  lights:     
+  #!     number: 4
+  #!     allow_enable: true
+  lights:
     flasher_4:
       number: flasher_coil_4
       platform: drivers
-
 
 Now you can use them in :doc:`/config/flasher_player` (or also in
 :doc:`/config/light_player` if you want to enable the flasher permanently).

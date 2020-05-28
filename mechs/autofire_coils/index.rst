@@ -188,6 +188,30 @@ You can also configure autofire coils manually for simpler things like
 pop bumpers and slingshots. See the `autofire_coils: section of the
 configuration file reference </config/autofire_coils>`_ for details.
 
+Debounce and Recycle in Autofire Coils
+--------------------------------------
+
+In MPF you can :doc:`configure debounce for each switch </mechs/switches/debounce>`
+and :doc:`recycle for each coil </mechs/coils/recycle>`.
+If you do that MPF will respect that configuration for autofire hardware rules.
+However, if you do not configure it (or set debounce to ``auto``) MPF will try
+to select a reasonable default.
+For autofire coils it selects debounce ``quick`` if you either did not specify
+debounce or set it to ``auto``.
+Recycle will be set to ``true`` if you do not specify it.
+
+In some platforms MPF might reconfigure your switch debounce settings when
+activating the hardware rules (if the platform does not allow separate
+settings).
+This happens when debounce is set to ``auto`` (or unspecified) as switches
+are then automatically configured as debounce ``normal`` and then reconfigured
+as ``quick`` when the rule is send to the hardware (if the platform only
+supports one configuration at a time).
+
+You can overwrite both settings using ``switch_overwrite`` and/or
+``coil_overwrite`` in your ``autofire_coils`` section.
+
+
 Monitorable Properties
 ----------------------
 

@@ -26,6 +26,10 @@ Configure them like this:
      player4_display:
        number: 4
 
-
 Note that the :doc:`/displays/display/alpha_numeric` guide has more details
 on using alpha numeric and segment displays.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`LISY troubleshooting guide <troubleshooting>`.

@@ -16,6 +16,8 @@ All settings are directly passed to the
 `rpi-rgb-led-matrix library <https://github.com/hzeller/rpi-rgb-led-matrix>`_.
 Read their documentation (or the source) if in doubt.
 
+.. config
+
 
 Optional settings
 -----------------
@@ -42,19 +44,19 @@ How many columns of LEDs does your matrix have?
 
 daemon:
 ~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Leave this at ``False`` of thing will go wrong.
 
 disable_hardware_pulsing:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Disable hardware pulsing. Only useful for debugging.
 
 drop_privileges:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Drop root rights after opening the hardware.
 It is highly recommended to leave it this way.
@@ -74,7 +76,7 @@ Consult manual if in doubt.
 
 inverse_colors:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Inverse colors. You know it if you see it.
 
@@ -134,8 +136,12 @@ Scan mode. 0 = progressive; 1 = interlaced. Consult manual.
 
 show_refresh_rate:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Print refresh rate on terminal.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/rpi_dmd/index`

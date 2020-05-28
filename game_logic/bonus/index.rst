@@ -48,7 +48,6 @@ captured a castle (tracked by the player variable "castles_captured").
 
   ##! mode: bonus
   #config_version=5
-
   mode_settings:
     bonus_entries:
       - event: bonus_castles
@@ -62,7 +61,6 @@ For advanced score calculation, the *score* value can utilize all of MPF's
 
   ##! mode: bonus
   #config_version=5
-
   mode_settings:
     bonus_entries:
       - event: bonus_minerals
@@ -85,15 +83,19 @@ After all awards in the entries list have been posted, a final *bonus_total* eve
 will post with the total amount awarded as bonus. This event can be used to show
 a final slide.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  #config_version=5
-
-  slide_player:
-    mode_bonus_started: bonus_start_slide
-    bonus_minerals: bonus_minerals_slide
-    bonus_dropbanks: bonus_dropbanks_slide
-    bonus_total: bonus_total_slide
+   #config_version=5
+   #! slides:
+   #!   bonus_start_slide: []
+   #!   bonus_minerals_slide: []
+   #!   bonus_dropbanks_slide: []
+   #!   bonus_total_slide: []
+   slide_player:
+     mode_bonus_started: bonus_start_slide
+     bonus_minerals: bonus_minerals_slide
+     bonus_dropbanks: bonus_dropbanks_slide
+     bonus_total: bonus_total_slide
 
 Bonus Multipliers
 -----------------

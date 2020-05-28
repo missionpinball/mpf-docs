@@ -32,27 +32,24 @@ Two position switches are used to detect the current position.
 .. code-block:: mpf-config
 
    switches:
-       s_motorized_drop_target_bank_position_up:
-           number:
-       s_motorized_drop_target_bank_position_down:
-           number:
-
+     s_motorized_drop_target_bank_position_up:
+       number:
+     s_motorized_drop_target_bank_position_down:
+       number:
    digital_outputs:
-       c_motorized_drop_target_bank_run:
-           number:
-           type: driver
-
+     c_motorized_drop_target_bank_run:
+       number:
+       type: driver
    motors:
-       motorized_drop_target_bank:
-           motor_left_output: c_motorized_drop_target_bank_run
-           position_switches:  !!omap
-               - up: s_motorized_drop_target_bank_position_up
-               - down: s_motorized_drop_target_bank_position_down
-           reset_position: down
-           go_to_position:
-               move_bank_up: up
-               move_bank_down: down
-
+     motorized_drop_target_bank:
+       motor_left_output: c_motorized_drop_target_bank_run
+       position_switches: !!omap
+         - up: s_motorized_drop_target_bank_position_up
+         - down: s_motorized_drop_target_bank_position_down
+       reset_position: down
+       go_to_position:
+         move_bank_up: up
+         move_bank_down: down
 
 Device which can move in two directions
 ---------------------------------------
@@ -66,30 +63,28 @@ once it hit one of them.
 .. code-block:: mpf-config
 
    switches:
-       s_slimer_home:
-           number: 8-1
-       s_slimer_away:
-           number: 8-2
-
+     s_slimer_home:
+       number: 8-1
+     s_slimer_away:
+       number: 8-2
    digital_outputs:
-       c_slimer_motor_forward:
-           number: 8-3
-           type: light
-       c_slimer_motor_backward:
-           number: 8-4
-           type: light
-
+     c_slimer_motor_forward:
+       number: 8-3
+       type: light
+     c_slimer_motor_backward:
+       number: 8-4
+       type: light
    motors:
-       ghostbusters_slimer:
-           motor_left_output: c_slimer_motor_forward
-           motor_right_output: c_slimer_motor_backward
-           position_switches:  !!omap
-               - home: s_slimer_home
-               - away: s_slimer_away
-           reset_position: home
-           go_to_position:
-               slimer_home: home
-               slimer_away: away
+     ghostbusters_slimer:
+       motor_left_output: c_slimer_motor_forward
+       motor_right_output: c_slimer_motor_backward
+       position_switches: !!omap
+         - home: s_slimer_home
+         - away: s_slimer_away
+       reset_position: home
+       go_to_position:
+         slimer_home: home
+         slimer_away: away
 
 Another example of such a device would be the claw in Stern Batman DK (or also Stern Batman 66).
 It has more position switches but the mechanics are similar:
@@ -97,46 +92,46 @@ It has more position switches but the mechanics are similar:
 .. code-block:: mpf-config
 
    switches:
-       s_claw_home:
-           number:
-       s_claw_position1:
-           number:
-       s_claw_position2:
-           number:
-       s_claw_position3:
-           number:
-       s_claw_position4:
-           number:
-       s_claw_position5:
-           number:
-
+     s_claw_home:
+       number:
+     s_claw_position1:
+       number:
+     s_claw_position2:
+       number:
+     s_claw_position3:
+       number:
+     s_claw_position4:
+       number:
+     s_claw_position5:
+       number:
    digital_outputs:
-       c_claw_forward:
-           number:
-           type: driver
-       c_claw_backward:
-           number:
-           type: driver
-
+     c_claw_forward:
+       number:
+       type: driver
+     c_claw_backward:
+       number:
+       type: driver
    motors:
-       batman_claw:
-           motor_left_output: c_claw_forward
-           motor_right_output: c_claw_backward
-           position_switches:  !!omap
-               - home: s_claw_home
-               - pos1: s_claw_position1
-               - pos2: s_claw_position2
-               - pos3: s_claw_position3
-               - pos4: s_claw_position4
-               - pos5: s_claw_position5
-           reset_position: home
-           go_to_position:
-               stop_claw: home
-               go_pos1: pos1
-               go_pos2: pos2
-               go_pos3: pos3
-               go_pos4: pos4
-               go_pos5: pos5
+     batman_claw:
+       motor_left_output: c_claw_forward
+       motor_right_output: c_claw_backward
+       position_switches: !!omap
+         - home: s_claw_home
+         - pos1: s_claw_position1
+         - pos2: s_claw_position2
+         - pos3: s_claw_position3
+         - pos4: s_claw_position4
+         - pos5: s_claw_position5
+       reset_position: home
+       go_to_position:
+         stop_claw: home
+         go_pos1: pos1
+         go_pos2: pos2
+         go_pos3: pos3
+         go_pos4: pos4
+         go_pos5: pos5
+
+.. config
 
 
 Required settings
@@ -146,7 +141,7 @@ The following sections are required in the ``motors:`` section of your config:
 
 position_switches:
 ~~~~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``machine(switches)``.
+Ordered list for one (or more) sub-settings. Each in the format of ``string`` : string name of a :doc:`switches <switches>` device
 
 Ordered map of name of the position and the switch which becomes active once this position is reached.
 
@@ -169,10 +164,9 @@ If it is not at any position and also does not know its previous position it wil
 a known position and may then change its direction again (usually this should not happen since it will move to a known
 position during reset).
 
-
 reset_position:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 The position the device should move to on reset (as defined in ``position_switches``).
 
@@ -184,7 +178,7 @@ The following sections are optional in the ``motors:`` section of your config. (
 
 go_to_position:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : ``string``
 
 A mapping of events to positions.
 Once an event in the mapping is posted the motor will move to the corresponding position.
@@ -202,13 +196,13 @@ If you post ``stop_claw`` the motor will move to the position called ``home`` (a
 
 include_in_ball_search:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether the motor should be included in ball search.
 
 motor_left_output:
 ~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``digital_outputs:`` device. Default: ``None``
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor left.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -216,7 +210,7 @@ direction or both if it can move in both directions.
 
 motor_right_output:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: string name of a ``digital_outputs:`` device. Default: ``None``
+Single value, type: string name of a :doc:`digital_outputs <digital_outputs>` device. Defaults to empty.
 
 :doc:`Digital output </config/digital_outputs>` to enable to move the motor right.
 You need to configure at least ``motor_left_output`` or ``motor_right_output`` if you motor can only move in one
@@ -224,8 +218,43 @@ direction or both if it can move in both directions.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``ms``. Default: ``machine_reset_phase_3, ball_starting``
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``machine_reset_phase_3, ball_starting``
 
 Events on which the motor should move to its ``reset_position``.
 You usually do not have to configure this.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/mechs/motors/index`

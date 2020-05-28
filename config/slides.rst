@@ -37,17 +37,17 @@ name. In the example below, we're defining two slides, one called
 *my_slide_1* and the other called *my_slide_2*, and they each only have a
 single widget.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide_1:
-           type: text
-           text: THIS IS MY SLIDE
-       my_slide_2:
-           type: text
-           text: THIS IS ANOTHER SLIDE
-           color: lime
-           font_size: 25
+     my_slide_1:
+       type: text
+       text: THIS IS MY SLIDE
+     my_slide_2:
+       type: text
+       text: THIS IS ANOTHER SLIDE
+       color: lime
+       font_size: 25
 
 .. rubric:: Option 2: List of widgets
 
@@ -56,25 +56,24 @@ multiple widgets to a slide, just enter them like you entered a single
 widget, but use a dash (and a space) to dictate where a new widget starts,
 like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide_1:
-           - type: text
-             text: THIS IS MY SLIDE
-           - type: image
-             image: johnny_5
-       my_slide_2:
-           - type: text
-             text: THIS IS ANOTHER SLIDE
-           - type: text
-             y: 20%
-             text: IT HAS MORE THAN 1 WIDGET
-           - type: ellipse
-             color: red
-             width: 200
-             height: 100
-
+     my_slide_1:
+       - type: text
+         text: THIS IS MY SLIDE
+       - type: image
+         image: johnny_5
+     my_slide_2:
+       - type: text
+         text: THIS IS ANOTHER SLIDE
+       - type: text
+         y: 20%
+         text: IT HAS MORE THAN 1 WIDGET
+       - type: ellipse
+         color: red
+         width: 200
+         height: 100
 
 .. rubric:: Option 3: Widgets under "widgets:" section
 
@@ -87,29 +86,29 @@ under the slide along with the widgets.
 Here's an example. Note that the slide with multiple widgets is using the
 dash in the widgets: section to separate the individual widgets.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-       my_slide_1:
-           background_color: red
-           widgets:
-             type: text
-             text: THIS IS MY SLIDE
-       my_slide_2:
-           widgets:
-            - type: text
-              text: THIS IS ANOTHER SLIDE
-            - type: text
-              y: 20%
-              text: IT HAS MORE THAN 1 WIDGET
-            - type: ellipse
-              color: red
-              width: 200
-              height: 100
-           expire: 2s
-           transition:
-              type: move_in
-              direction: right
+     my_slide_1:
+       background_color: red
+       widgets:
+         type: text
+         text: THIS IS MY SLIDE
+     my_slide_2:
+       widgets:
+         - type: text
+           text: THIS IS ANOTHER SLIDE
+         - type: text
+           y: 20%
+           text: IT HAS MORE THAN 1 WIDGET
+         - type: ellipse
+           color: red
+           width: 200
+           height: 100
+       expire: 2s
+       transition:
+         type: move_in
+         direction: right
 
 You can mix-and-match the three options for entering widgets as needed within
 the same slides: section of your config.
@@ -125,19 +124,19 @@ it's not, like this: ``[]``.
 
 You can use this format to create a blank slide with no options:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      my_blank_slide: []
+     my_blank_slide: []
 
 Or you can use it to create a blank slide with options, but no widgets, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      my_blank_slide:
-         background_color: red
-         widgets: []
+     my_blank_slide:
+       background_color: red
+       widgets: []
 
 Settings
 --------

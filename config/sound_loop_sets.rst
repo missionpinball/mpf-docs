@@ -27,8 +27,8 @@ the sound asset definition.
 .. code-block:: mpf-config
 
    sound_loop_sets:
-       basic_beat:
-           sound: kick
+     basic_beat:
+       sound: kick
 
 .. rubric:: Option 2: Sound Loop Set With Multiple Layers
 
@@ -38,42 +38,40 @@ like this:
 .. code-block:: mpf-config
 
    sound_loop_sets:
-       basic_beat:
-           sound: kick
+     basic_beat:
+       sound: kick
+       volume: 0.5
+       tempo: 130.0
+       layers:
+         - sound: hihat
+           volume: 0.7
+           initial_state: stop
+         - sound: snare
+           volume: 0.6
+           initial_state: stop
+         - sound: clap
+           volume: 0.45
+           initial_state: stop
+       events_when_played: basic_beat_played
+       events_when_stopped: basic_beat_stopped
+       events_when_looping: basic_beat_looped
+       fade_out: 1s
+     basic_beat2:
+       sound: kick2
+       volume: 0.5
+       tempo: 130.0
+       layers:
+         - sound: hihat
+           volume: 0.7
+         - sound: snare
+           volume: 0.6
+         - sound: clap
+           volume: 0.4
+           initial_state: stop
+         - sound: bass_synth
            volume: 0.5
-           tempo: 130.0
-           layers:
-             - sound: hihat
-               volume: 0.7
-               initial_state: stop
-             - sound: snare
-               volume: 0.6
-               initial_state: stop
-             - sound: clap
-               volume: 0.45
-               initial_state: stop
-           events_when_played: basic_beat_played
-           events_when_stopped: basic_beat_stopped
-           events_when_looping: basic_beat_looped
-           fade_out: 1s
-
-       basic_beat2:
-           sound: kick2
-           volume: 0.5
-           tempo: 130.0
-           layers:
-             - sound: hihat
-               volume: 0.7
-             - sound: snare
-               volume: 0.6
-             - sound: clap
-               volume: 0.4
-               initial_state: stop
-             - sound: bass_synth
-               volume: 0.5
-               initial_state: play
-           fade_out: 1s
-
+           initial_state: play
+       fade_out: 1s
 
 Required settings
 -----------------

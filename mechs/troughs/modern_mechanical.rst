@@ -45,20 +45,20 @@ jam switch. Yours may have more or less.)
 .. code-block:: mpf-config
 
     switches:
-        s_trough1:
-            number: 2
-        s_trough2:
-            number: 3
-        s_trough3:
-            number: 4
-        s_trough4:
-            number: 5
-        s_trough5:
-            number: 6
-        s_trough6:
-            number: 7
-        s_trough_jam:
-            number: 8
+      s_trough1:
+        number: 2
+      s_trough2:
+        number: 3
+      s_trough3:
+        number: 4
+      s_trough4:
+        number: 5
+      s_trough5:
+        number: 6
+      s_trough6:
+        number: 7
+      s_trough_jam:
+        number: 8
 
 Note that we configured this switches with numbers ``02`` through ``08``, but
 you should use the actual switch numbers for your control system that the trough
@@ -89,9 +89,9 @@ and enter it like this:
 .. code-block:: mpf-config
 
     coils:
-        c_trough_eject:
-            number: 4
-            default_pulse_ms: 20
+      c_trough_eject:
+        number: 4
+        default_pulse_ms: 20
 
 Again, the ``number:`` entries in your config will vary depending on your actual
 hardware, and again, you can pick whatever name you want for your coil.
@@ -112,10 +112,48 @@ machine config. (If you don't have that section add it now.)
 Then in your ``ball_devices:`` section, create an entry called ``bd_trough:``,
 like this:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
     ball_devices:
-        bd_trough:
+      bd_trough:
+    #!     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    #!     eject_coil: c_trough_eject
+    #!     tags: trough, home, drain
+    #!     jam_switch: s_trough_jam
+    #!     eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 This means that you're creating a ball device called *bd_trough*.
 We use the preface *bd_* to indicate that this is a ball device
@@ -130,9 +168,48 @@ Indented under ``bd_trough:``, create an entry called ``ball_switches:``
 and then add a comma-separated list of all the switches in your trough, like
 this:
 
-::
+.. code-block:: mpf-config
 
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    #!     eject_coil: c_trough_eject
+    #!     tags: trough, home, drain
+    #!     jam_switch: s_trough_jam
+    #!     eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 So this is eight spaces, followed by the word "ball_switches", then a
 colon, then a space, then the name of your first switch, comma, then
@@ -159,9 +236,48 @@ the coil that MPF should fire when it wants to eject a ball from the trough.
 This should be the name of the coil you added in Step 2,
 *c_trough_eject* in our case:
 
-::
+.. code-block:: mpf-config
 
-            eject_coil: c_trough_eject
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+    #!     tags: trough, home, drain
+    #!     jam_switch: s_trough_jam
+    #!     eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 Note that MPF will simply pulse the eject coil at its default pulse time
 when it wants to eject a ball from the trough.
@@ -205,9 +321,48 @@ that for now you have to add ``trough``, ``home``, and ``drain`` tags to
 your trough. You can specify the tags in any order, and your ``tags:``
 entry should look something like this:
 
-::
+.. code-block:: mpf-config
 
-            tags: trough, home, drain
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+    #!     jam_switch: s_trough_jam
+    #!     eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 3d. Add & configure your jam switch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,9 +370,48 @@ entry should look something like this:
 If you have a jam switch, add a setting called ``jam_switch:`` and add it there,
 like this:
 
-::
+.. code-block:: mpf-config
 
-            jam_switch: s_trough_jam
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+    #!     eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 You can also configure an eject pulse time (in ms) that will be used when the
 trough wants to eject a ball but the jam switch is active. You'll have to play
@@ -228,9 +422,48 @@ below it).
 
 So for our example, we'll set the jam pulse time to 15ms.
 
-::
+.. code-block:: mpf-config
 
-            eject_coil_jam_pulse: 15ms
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms
+    #!     eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+    #!     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 (Note that this setting is a time string, so you can include the "ms" in the
 setting value.)
@@ -256,15 +489,30 @@ you're running with one of the virtual hardware interfaces. To use it,
 simply add the section along with a list of the switches you want to
 start active. For example:
 
-::
+.. code-block:: mpf-config
 
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
     virtual_platform_start_active_switches:
-        s_trough1
-        s_trough2
-        s_trough3
-        s_trough4
-        s_trough5
-        s_trough6
+      - s_trough1
+      - s_trough2
+      - s_trough3
+      - s_trough4
+      - s_trough5
+      - s_trough6
 
 5. Add your plunger lane
 ------------------------
@@ -282,9 +530,47 @@ are lots of different types of plungers.
 
 You add an eject target via the ``eject_targets:`` section, like this:
 
-::
+.. code-block:: mpf-config
 
-            eject_targets: bd_plunger
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms
+        eject_targets: bd_plunger
+    #!     eject_timeouts: 3s
+      bd_plunger:
+        ball_switches: s_plunger
+        mechanical_eject: true
+    #!     eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 Of course you should enter the name of your actual plunger lane / ball launcher
 device.
@@ -296,60 +582,110 @@ to pathways with diverters which can direct the ball to multiple different
 places, so that's the scenario where you'd enter more than one target. But for
 the trough, it's just the one.
 
+6. Configure eject timeouts
+---------------------------
+
+Your trough will try to eject as fast as possible (i.e. during a multiball)
+but it has to wait that ball cannot return and stack up.
+By default MPF will wait ``10s`` after a ball to make sure that it settled
+in the shooter lane or returned (in the latter case the trough will retry
+the eject).
+For the trough this works fine if the ball actually settles in the shooter
+lane but sometimes a player might as well launch the ball without hitting
+the plunger switch.
+For that reason it is important to set ``eject_timeouts`` to your shooter
+lane and your trough.
+You should measure how long the maximum time is until a ball cannot possibly
+return to your trough and plunger (with some safty margin).
+Usually this is about ``2s - 4s`` for a trough and ``3s - 5s`` for a plunger.
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!   s_trough1:
+    #!     number: 2
+    #!   s_trough2:
+    #!     number: 3
+    #!   s_trough3:
+    #!     number: 4
+    #!   s_trough4:
+    #!     number: 5
+    #!   s_trough5:
+    #!     number: 6
+    #!   s_trough6:
+    #!     number: 7
+    #!   s_trough_jam:
+    #!     number: 8
+    #!   s_plunger:
+    #!     number: 10
+    #! coils:
+    #!   c_trough_eject:
+    #!     number: 4
+    #!     default_pulse_ms: 20
+    ball_devices:
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms
+        eject_targets: bd_plunger
+        eject_timeouts: 3s
+      bd_plunger:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_timeouts: 5s
+    #! playfields:
+    #!   playfield:
+    #!     default_source_device: bd_plunger
+    #!     tags: default
+    #! virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
+
+
 Here's the complete config
 --------------------------
 
 .. code-block:: mpf-config
 
     switches:
-        s_trough1:
-            number: 2
-        s_trough2:
-            number: 3
-        s_trough3:
-            number: 4
-        s_trough4:
-            number: 5
-        s_trough5:
-            number: 6
-        s_trough6:
-            number: 7
-        s_trough_jam:
-            number: 8
-        s_plunger:
-            number: 10
-
+      s_trough1:
+        number: 2
+      s_trough2:
+        number: 3
+      s_trough3:
+        number: 4
+      s_trough4:
+        number: 5
+      s_trough5:
+        number: 6
+      s_trough6:
+        number: 7
+      s_trough_jam:
+        number: 8
+      s_plunger:
+        number: 10
     coils:
-        c_trough_eject:
-            number: 4
-            default_pulse_ms: 20
-
+      c_trough_eject:
+        number: 4
+        default_pulse_ms: 20
     ball_devices:
-        bd_trough:
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
-            eject_coil: c_trough_eject
-            tags: trough, home, drain
-            jam_switch: s_trough_jam
-            eject_coil_jam_pulse: 15ms
-            eject_targets: bd_plunger
-
-        # bd_plunger is a placeholder just so the trough's eject_targets are valid
-        bd_plunger:
-            ball_switches: s_plunger
-            mechanical_eject: true
-
+      bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms
+        eject_targets: bd_plunger
+        eject_timeouts: 3s
+      bd_plunger:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_timeouts: 5s
     playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
-
-    virtual_platform_start_active_switches:
-        s_trough1
-        s_trough2
-        s_trough3
-        s_trough4
-        s_trough5
-        s_trough6
+      playfield:
+        default_source_device: bd_plunger
+        tags: default
+    virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 What if it doesn't work?
 ------------------------

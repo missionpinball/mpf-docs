@@ -20,6 +20,8 @@ There are a few common choices:
 * :doc:`Multimorphic P3-Roc </hardware/multimorphic/index>`
 * :doc:`FAST Pinball </hardware/fast/index>`
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
+* :doc:`LISY Home (custom pinball version of LISY) </hardware/lisy/index>`
+* :doc:`Arduino Pinball Controller </hardware/apc/index>`
 
 P3-Roc and FAST are both commercial systems at a similar price point but
 features vary slightly so compare them wisely.
@@ -37,7 +39,7 @@ See the :doc:`Hardware Section </hardware/index>` for all hardware supported by
 MPF.
 
 
-Power and Wireing
+Power and Wiring
 -----------------
 
 You should invest some time into at the beginning of your custom pinball
@@ -58,7 +60,7 @@ Additionally, assemblies are often cheaper.
 
 There are a few shops such as `Pinballlife <https://www.pinballlife.com/>`_
 which offer assemblies.
-They also got a homebrew section which is worth checking out.
+They also have a homebrew section which is worth checking out.
 Other shops such as
 `Marcos Specialities <https://www.marcospecialties.com/>`_ offer more parts
 but are less focused on homebrew.

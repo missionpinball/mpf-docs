@@ -20,7 +20,7 @@ Additionally, some machines have tournament buttons to start a tournament.
 Hardware
 --------
 
-:doc:`TODO: Add a picture of button </about/help_us_to_write_it>`
+.. image:: /mechs/images/button.jpg
 
 Those buttons usually come with a :doc:`micro switch <mechanical_switches>` and
 a :doc:`#555 bulb </mechs/lights/matrix_lights>`.
@@ -36,16 +36,14 @@ To configure your start button you can use this config:
 
 .. code-block:: mpf-config
 
-   lights:     
-      l_start_button:
-         number: 3		   # number depends on your platform
-         subtype: matrix   # depends on your platform
-
+   lights:
+     l_start_button:
+       number: 3           # number depends on your platform
+       subtype: matrix     # depends on your platform
    switches:
-      s_start:
-         number: 23    	   # number depends on your platform
-         tags: start
-
+     s_start:
+       number: 23          # number depends on your platform
+       tags: start
 
 The tag ``start`` will hook the button into your game.
 See :doc:`/tutorial/9_start_button` for details.

@@ -18,25 +18,24 @@ This is an example:
 .. code-block:: mpf-config
 
    coils:
-       c_chime_1000:
-           number:
-       c_chime_100:
-           number:
-       c_chime_10:
-           number:
-
+     c_chime_1000:
+       number:
+     c_chime_100:
+       number:
+     c_chime_10:
+       number:
    score_queues:
-       score:
-           chimes: c_chime_1000, c_chime_100, c_chime_10,  None
-
+     score:
+       chimes: c_chime_1000, c_chime_100, c_chime_10,  None
    ##! mode: my_mode
    # in your mode
-
    score_queue_player:
-       score_2k:
-           score: 2000
-       score_200:
-           score: 200
+     score_2k:
+       score: 2000
+     score_200:
+       score: 200
+
+.. config
 
 
 Required settings
@@ -46,12 +45,13 @@ The following sections are required in the ``score_queues:`` section of your con
 
 chimes:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device.
+List of one (or more) values, each is a type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 A list of chimes to pulse when adding score via the score queue.
 Start from the left the right on your digits.
 You might use None if a certain digit does not have a chime.
 Example: ``c_chime_1000, c_chime_100, c_chime_10, None``
+
 
 Optional settings
 -----------------
@@ -60,7 +60,7 @@ The following sections are optional in the ``score_queues:`` section of your con
 
 delay:
 ~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``200ms``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``200ms``
 
 The delay between adding scores (and pulsing a chime).
 
@@ -72,7 +72,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set this to true to see additional debug output. This might impact the performance of MPF.
 
@@ -90,8 +90,12 @@ Name of this device in service mode.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Not used.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/scoring/ss_style_score_queues`

@@ -29,15 +29,15 @@ So now your ``config.yaml`` file should look like this:
 
 .. code-block:: mpf-config
 
-    #config_version=5
+   #config_version=5
 
-    switches:
-        s_left_flipper:
-            number:
-            tags: left_flipper
-        s_right_flipper:
-            number:
-            tags: right_flipper
+   switches:
+     s_left_flipper:
+       number:
+       tags: left_flipper
+     s_right_flipper:
+       number:
+       tags: right_flipper
 
 In case you're wondering why we preface each switch name with "s\_",
 that's a little trick we learned that makes things easier as you get
@@ -84,7 +84,7 @@ Speaking of formatting files, let's look at a few important things
 to know about YAML files (which is the format of the file we're creating
 here):
 
-* You you cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
+* You cannot use tabs to indent in YAML. (It is `literally not allowed <http://www.yaml.org/faq.html>`_.)
   Most text editors can be configured to automatically insert spaces when you push the tab key, or you can just
   hit the space bar a bunch of times.
 * The exact number of spaces you use for the indents doesn't matter (most people use
@@ -120,11 +120,11 @@ ones we use below.
 
 .. code-block:: mpf-config
 
-    switches:
-        s_left_flipper:
-            number: 0  # this can be blank if you don't have physical hw yet
-        s_right_flipper:
-            number: 1  # if you do have physical hw, most likely your number will be different
+   switches:
+     s_left_flipper:
+       number: 0  # this can be blank if you don't have physical hw yet
+     s_right_flipper:
+       number: 1  # if you do have physical hw, most likely your number will be different
 
 3. Add your flipper coils
 -------------------------
@@ -149,17 +149,17 @@ examples of how to configure them.
 
 .. code-block:: mpf-config
 
-    coils:
-        c_flipper_left_main:
-            number: 0  # again, these numbers will probably be different for you
-        c_flipper_left_hold:
-            number: 1  # check your platform-specific documentation for the actual numbers
-            allow_enable: true
-        c_flipper_right_main:
-            number: 2
-        c_flipper_right_hold:
-            number: 3
-            allow_enable: yes
+   coils:
+     c_flipper_left_main:
+       number: 0  # again, these numbers will probably be different for you
+     c_flipper_left_hold:
+       number: 1  # check your platform-specific documentation for the actual numbers
+       allow_enable: true
+     c_flipper_right_main:
+       number: 2
+     c_flipper_right_hold:
+       number: 3
+       allow_enable: true
 
 Again, note each coil name is indented four spaces, and each "number"
 listed under them is indented eight spaces, there's no space before
@@ -168,10 +168,7 @@ numbers, the ``number:`` entry under each coil is the number that the
 pinball hardware controller uses for this coil. The exact number will
 depend on what type of controller hardware and driver boards you're using.
 
-Also note that the two hold coils have ``allow_enable:`` entries added, with values of "yes" and "true". (In MPF config
-files, values of "yes" and "true" are the same, so we use one of each just to demonstrate to you that they're
-interchangeable.)
-
+Also note that the two hold coils have ``allow_enable:`` entries added, with values of "true".
 Anyway, the purpose of the ``allow_enable:`` setting is that as a safety precaution, MPF does not allow you to enable
 (that is, to hold a coil in its "on" position) unless you specifically add ``allow_enable: true`` to that coil's config.
 This will help to prevent some errant config from enabling a coil that you didn't mean to enable and burning it up or
@@ -200,35 +197,35 @@ Here's what you would create based on the switches and coils we've defined so fa
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
+    #!   s_left_flipper:
+    #!     number: 0
+    #!   s_right_flipper:
+    #!     number: 1
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     playfields:
-        playfield:
-            tags: default
-            default_source_device: None  # use None in steps before 8
+      playfield:
+        tags: default
+        default_source_device: None  # use None in steps before 8
 
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
 
 5. Try running MPF to make sure your config file is ok
 ------------------------------------------------------
@@ -237,11 +234,14 @@ At this point you should run your game to make sure it runs okay. Your
 flippers aren't going to work yet, but mainly we want to make sure MPF
 can read your config files and that there aren't any errors. Open a
 command prompt, switch to your machine folder, and run MPF again (like
-Step 2), also with the ``-b`` option:
+Step 2), also with the ``-b`` option.
+Additionally, we will add the ``-t`` option to disable the text UI and show
+the log on the console instead (you can also see it inside the ``logs`` folder
+inside your machine):
 
 .. code-block:: doscon
 
-    C:\your_machine\mpf -b
+    $ mpf -t -b
 
 The console output will look similar to Step 2 as well, and it won't
 look like much is happening here. The main thing is to make sure that
@@ -250,13 +250,47 @@ you setup in your config file is ok.
 
 .. code-block:: doscon
 
-   C:\pinball\your_machine>mpf -b
-   INFO : Machine : Mission Pinball Framework Core Engine v0.30.0
-   INFO : Machine : Loading config from original files
-   INFO : Machine : Machine config file #1: C:\your_machine\config\config
-   INFO : Machine : Config file cache created: C:\Windows\temp\6454c58ed3dcbe5687dd7b0c0b112e00config
-   INFO : Machine : Starting clock at 30.0Hz
-   INFO : Mode.attract : Mode Starting. Priority: 10
+   $ mpf -t -b
+   INFO : root : Loading config.
+   INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+   INFO : ConfigProcessor : Loading config from cache: /tmp/7146c817793475fbeb8d22f907d7bbbc.mpf_cache
+   INFO : ConfigProcessor : Loading config from cache: /tmp/49091ea856e626b51c4160f53a2ef744.mpf_cache
+   INFO : ConfigProcessor : Loading config from cache: /tmp/4cc7d3d11df84bb81fda7943558aba56.mpf_cache
+   INFO : Machine : Mission Pinball Framework Core Engine v0.54.0-dev.18
+   INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs/2020-04-01-21-45-55-mpf.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+   INFO : Machine : MPF path: /pinball/src/mpf/mpf
+   INFO : Machine : Machine path: /mpf-examples/tutorial/step_3
+   INFO : Machine : Platform: linux
+   INFO : Machine : Python executable location: /usr/bin/python3
+   INFO : Machine : Python version: 3.6.9 (64-bit)
+   INFO : Machine : Initialise MPF.
+   INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.54.0-dev.18', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.54.0-dev.18, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.6.9', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Linux-4.15.0-72-generic-x86_64-with-Ubuntu-18.04-bionic', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Linux', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '4.15.0-72-generic', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '#81-Ubuntu SMP Tue Nov 26 12:20:02 UTC 2019', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+   INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+   INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+   INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+   INFO : EventManager : Event: ======'init_done'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+   INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+   INFO : EventManager : Event: ======'reset_complete'====== Args={}
+   INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+   INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+   INFO : Mode.attract : Started. Priority: 10
+   INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+   INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+   INFO : Machine : Starting the main run loop.
 
 At this point you can stop it by making sure your console window has
 focus and then hitting ``CTRL+C``.
@@ -339,7 +373,7 @@ file:
 
 .. code-block:: yaml
 
-    enable_events: machine_reset_phase_3
+   enable_events: machine_reset_phase_3
 
 We'll cover exactly what this means later on. (Basically it's telling
 each of your flippers that they should enable themselves when MPF is booting up, rather than them waiting for a
@@ -348,37 +382,37 @@ coils, then you won't have the ``hold_coil:`` entries here.)
 
 .. code-block:: mpf-config
 
-    #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
-    #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
-    #! playfields:
-    #!     playfield:
-    #!         tags: default
-    #!         default_source_device: None  # use None in steps before 8
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
+   #! switches:
+   #!   s_left_flipper:
+   #!     number: 0
+   #!   s_right_flipper:
+   #!     number: 1
+   #! coils:
+   #!   c_flipper_left_main:
+   #!     number: 0
+   #!   c_flipper_left_hold:
+   #!     number: 1
+   #!     allow_enable: true
+   #!   c_flipper_right_main:
+   #!     number: 2
+   #!   c_flipper_right_hold:
+   #!     number: 3
+   #!     allow_enable: true
+   #! playfields:
+   #!   playfield:
+   #!     tags: default
+   #!     default_source_device: None  # use None in steps before 8
+   flippers:
+     left_flipper:
+       main_coil: c_flipper_left_main
+       hold_coil: c_flipper_left_hold
+       activation_switch: s_left_flipper
+       enable_events: machine_reset_phase_3
+     right_flipper:
+       main_coil: c_flipper_right_main
+       hold_coil: c_flipper_right_hold
+       activation_switch: s_right_flipper
+       enable_events: machine_reset_phase_3
 
 At this point the rest of the steps on this page are for getting your
 physical machine connected to your pinball controller. If you don't
@@ -416,40 +450,61 @@ FAST Pinball with FAST IO driver boards:
 
 .. code-block:: mpf-config
 
-    hardware:
-        platform: fast
-        driverboards: fast
+   hardware:
+     platform: fast
+     driverboards: fast
 
-    fast:
-        ports: com4, com5
+   fast:
+     ports: com4, com5
 
-    switches:
-        s_left_flipper:
-            number: 00
+   switches:
+     s_left_flipper:
+       number: 00
 
 P-ROC installed in an existing WPC machine:
 
 .. code-block:: mpf-config
 
-    hardware:
-        platform: p_roc
-        driverboards: wpc
+   hardware:
+     platform: p_roc
+     driverboards: wpc
 
-    switches:
-        s_left_flipper:
-            number: SF2
+   switches:
+     s_left_flipper:
+       number: SF2
 
 P3-ROC with P-ROC driver & switch boards:
 
 .. code-block:: mpf-config
 
+   hardware:
+     platform: p3_roc
+     driverboards: pdb
+
+   switches:
+     s_left_flipper:
+       number: 0-0
+
+In case you are using :doc:`the Virtual Pinball (VPX) Platform </hardware/virtual/virtual_pinball_vpx>` the config file will look like:
+
+.. code-block:: mpf-config
+
     hardware:
-        platform: p3_roc
-        driverboards: pdb
+      platform: virtual_pinball
 
     switches:
-        s_left_flipper:
-            number: 0-0
+      s_sling:
+        number: 0
+      s_flipper:
+        number: 3
+
+    coils:
+      c_sling:
+        number: 0
+      c_flipper:
+        number: 1
+        allow_enable: true
+
 
 See? They're all different.
 
@@ -479,46 +534,46 @@ existing *Demolition Man* machine.)
 
 .. code-block:: mpf-config
 
-    #config_version=5
+   #config_version=5
 
-    hardware:
-        platform: fast
-        driverboards: wpc
+   hardware:
+     platform: fast
+     driverboards: wpc
 
-    switches:
-        s_left_flipper:
-            number: SF4
-        s_right_flipper:
-            number: SF6
+   switches:
+     s_left_flipper:
+       number: SF4
+     s_right_flipper:
+       number: SF6
 
-    coils:
-        c_flipper_left_main:
-            number: FLLM
-        c_flipper_left_hold:
-            number: FLLH
-            allow_enable: true
-        c_flipper_right_main:
-            number: FLRM
-        c_flipper_right_hold:
-            number: FLRH
-            allow_enable: yes
+   coils:
+     c_flipper_left_main:
+       number: FLLM
+     c_flipper_left_hold:
+       number: FLLH
+       allow_enable: true
+     c_flipper_right_main:
+       number: FLRM
+     c_flipper_right_hold:
+       number: FLRH
+       allow_enable: true
 
-    playfields:
-        playfield:
-            tags: default
-            default_source_device: None  # use None in steps before 8
+   playfields:
+     playfield:
+       tags: default
+       default_source_device: None  # use None in steps before 8
 
-    flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-            enable_events: machine_reset_phase_3
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
-            enable_events: machine_reset_phase_3
+   flippers:
+     left_flipper:
+       main_coil: c_flipper_left_main
+       hold_coil: c_flipper_left_hold
+       activation_switch: s_left_flipper
+       enable_events: machine_reset_phase_3
+     right_flipper:
+       main_coil: c_flipper_right_main
+       hold_coil: c_flipper_right_hold
+       activation_switch: s_right_flipper
+       enable_events: machine_reset_phase_3
 
 Note that the individual sections of the config file can be in any
 order. We put the ``hardware:`` section at the top, but that's just our
@@ -532,7 +587,7 @@ flip your flippers! Run your game with the following command:
 
 .. code-block:: doscon
 
-    C:\your_machine\mpf -b
+    C:\your_machine\mpf -t -b
 
 Watch the console log for the entry about the attract mode starting.
 Once you see that then you should be able to hit your flipper buttons
@@ -625,26 +680,10 @@ If you want to see a complete ``config.yaml`` file up to this point, there's a "
 machine in the mpf-examples repo that you downloaded in Step 1. (This is the same
 repo that contains the Demo Man game that you ran in Step 1.)
 
-The tutorial files are in the ``tutorial`` folder. If you just run MPF by itself
-from the tutorial game folder, you'll get an error:
+The complete machine config is in the ``mpf-examples/tutorial/step_3``
+folder.
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf
-   OSError: Could not find file Z:\git\mpf-examples\tutorial\config\config
+   C:\mpf-examples\tutorial>mpf -t
 
-This is because if you look in the ``tutorial\config`` folder, you see that there
-are lots of config files in there with names like ``step3.yaml``, ``step4.yaml``,
-etc., but there is not a file called ``config.yaml``. Since MPF looks for ``config.yaml``
-by default, it can't start because it can't find it.
-
-However, you can use the ``-c`` command line option to specify the name of the config
-file that MPF should load instead of ``config.yaml``. So if you want to run the
-example game from the tutorial associated with Step 3, it would just be this:
-
-.. code-block:: doscon
-
-   C:\mpf-examples\tutorial>mpf -c step3
-
-That's telling MPF to start, using the file ``C:\mpf-examples\tutorial\config\step3.yaml``
-as its config file.

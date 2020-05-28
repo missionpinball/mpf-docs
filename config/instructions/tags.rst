@@ -28,7 +28,15 @@ You will see something like this in the log:
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall'====== Args={}
    2018-09-26 20:32:14,215 : INFO : EventManager : Event: ======'sw_skyfall_active'====== Args={}
 
-Both events are prefixed with ``sw_`` as a default.  You can override this with the :doc:`/config/mpf` section.
+Both events are prefixed with ``sw_`` as a default.
+You can override this with the :doc:`/config/mpf` section.
+
+.. note::
+
+   Please note that those events will only show up if either a handler for them
+   exists (i.e. an event_player) or when you set ``debug: True`` to your switch.
+   This is purely a performance optimization and also will safe you a lot of
+   log lines.
 
 
 **Power of Tags**
@@ -75,7 +83,6 @@ Example with events:
     mygame_popbumper_right_active:
       score: 100
 
-
 Now with tags:
 
 .. code-block:: mpf-config
@@ -84,7 +91,6 @@ Now with tags:
   variable_player:
     sw_mygame_popbumper:
       score: 100
-
 
 As you can see, if you have a repeating event you can save yourself some time and coding by using tags.
 Any switch tagged as *mygame_popbumper* will echo a *sw_mygame_popbumper* event.
@@ -119,7 +125,6 @@ All we need to do is add a tag:
        number: 56
        tags: playfield_active
 
-
 **Reserved Tags in MPF**
 ------------------------
 
@@ -142,7 +147,7 @@ MPF contains some reserved tags that are used for certain devices.  An example o
    ball_devices:
    #!   mygame_balldevice_shooter_lane:
    #!     ball_switches: s_test1
-   #!     mechanical_eject: True
+   #!     mechanical_eject: true
      mygame_balldevice_trough:
        ball_switches: mygame_switch_trough_1, mygame_switch_trough_2, mygame_switch_trough_3
        eject_coil: mygame_coil_trough_eject

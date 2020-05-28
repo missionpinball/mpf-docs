@@ -7,6 +7,7 @@ import uuid
 
 from mpf.tests.MpfTestCase import MpfTestCase
 
+
 class MpfDocsTestCase(MpfTestCase):
 
     """Allows unittests to extract configs from .rst files in mpf-docs and
@@ -52,8 +53,8 @@ class MpfDocsTestCase(MpfTestCase):
         self.create_temp_config_files()
         super().setUp()
 
-    def getOptions(self):
-        options = super().getOptions()
+    def get_options(self):
+        options = super().get_options()
         options['no_load_cache'] = True
         options['create_config_cache'] = False
 
@@ -61,13 +62,13 @@ class MpfDocsTestCase(MpfTestCase):
 
     def tearDown(self):
         super().tearDown()
-        shutil.rmtree(self.getMachinePath())
+        shutil.rmtree(self.get_machine_path())
         self._temp_machine_folder = None
 
-    def getConfigFile(self):
+    def get_config_file(self):
         return 'config.yaml'
 
-    def getMachinePath(self):
+    def get_machine_path(self):
         return self._temp_machine_folder
 
     def create_temp_config_files(self):

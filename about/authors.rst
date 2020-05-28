@@ -16,5 +16,9 @@ This MPF documentation was written by:
 * Chris Benn
 * Tim Wendt
 * Travis Martin (travisbmartin@gmail.com)
+* Coleman O Martin (colemanomartin@hotmail.com)
+* Kevin Lee Drum (kevinleedrum@gmail.com)
+* Aaron Matthies
+* Jimmy Lipham
 
 Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!

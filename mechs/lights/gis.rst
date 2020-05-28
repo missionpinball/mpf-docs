@@ -57,9 +57,9 @@ This is an example for a :doc:`light </config/lights>` with ``subtype: gi``:
 
 .. code-block:: mpf-config
 
-  lights:     
+  lights:
     gi_string_left:
-      number: 3		# number depends on your platform
+      number: 3    # number depends on your platform
       subtype: gi
 
 In modern machines (such as Spike) your GIs might just be handled as lights.
@@ -70,10 +70,10 @@ This is an example for a :doc:`light </config/lights>` in Spike:
 
 .. code-block:: mpf-config
 
-  lights:     
+  lights:
     gi_string_left:
-      number: 3		# number depends on your platform
-      subtype: led	# might be matrix in some platforms
+      number: 3    # number depends on your platform
+      subtype: led  # might be matrix in some platforms
 
 In some cases GIs are connected to normal drivers on your driver board
 (e.g. on a PD-16 on the P3-Roc).
@@ -84,12 +84,11 @@ Then add them as :doc:`light </config/lights>` with ``platform: drivers``:
 
   coils:
     gi_string_left:
-      number: A1-B1-3		# number depends on your platform
-      allow_enable: True	# this will allow 100% enable without pwm
-
-  lights:     
+      number: A1-B1-3    # number depends on your platform
+      allow_enable: true  # this will allow 100% enable without pwm
+  lights:
     gi_string_left:
-      number: gi_string_left	# map this light to a driver
+      number: gi_string_left  # map this light to a driver
       platform: drivers
 
 Alternatively, you could also use :doc:`coil_player </config/coil_player>`

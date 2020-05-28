@@ -18,44 +18,42 @@ Example config for lane changing lights.
 .. code-block:: mpf-config
 
     #! switches:
-    #!    lane_l:
-    #!       number:
-    #!    lane_a:
-    #!       number:
-    #!    lane_n:
-    #!       number:
-    #!    lane_e:
-    #!       number:
-    #!    upper_standup:
-    #!       number:
+    #!   lane_l:
+    #!     number:
+    #!   lane_a:
+    #!     number:
+    #!   lane_n:
+    #!     number:
+    #!   lane_e:
+    #!     number:
+    #!   upper_standup:
+    #!     number:
     ##! mode: inlanes
     shots:
-        shot_l_outlane:
-            switch: lane_l
-            show_tokens:
-                light: lane_l
-        shot_l_inlane:
-            switch: lane_a
-            show_tokens:
-                light: lane_a
-        shot_r_inlane:
-            switch: lane_n
-            show_tokens:
-                light: lane_n
-        shot_r_outlane:
-            switch: lane_e
-            show_tokens:
-                light: lane_e
-
+      shot_l_outlane:
+        switch: lane_l
+        show_tokens:
+          light: lane_l
+      shot_l_inlane:
+        switch: lane_a
+        show_tokens:
+          light: lane_a
+      shot_r_inlane:
+        switch: lane_n
+        show_tokens:
+          light: lane_n
+      shot_r_outlane:
+        switch: lane_e
+        show_tokens:
+          light: lane_e
     shot_groups:
-       outlanes:
-           shots: shot_l_outlane, shot_l_inlane, shot_r_inlane, shot_r_outlane
-           rotate_left_events: s_flipper_left_active
-           rotate_right_events: s_flipper_right_active
-           reset_events: outlanes_profile_hit_lit_complete
-           enable_events: ball_started
-           disable_events: ball_ending
-
+      outlanes:
+        shots: shot_l_outlane, shot_l_inlane, shot_r_inlane, shot_r_outlane
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        reset_events: outlanes_profile_hit_lit_complete
+        enable_events: ball_started
+        disable_events: ball_ending
 
 Monitorable Properties
 ----------------------

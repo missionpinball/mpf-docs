@@ -9,13 +9,16 @@ segment_display_player:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
-.. note:: This section can also be used in a show file in the ``segments:`` section of a step.
+.. note:: This section can also be used in a show file in the ``segment_displays:`` section of a step.
 
 .. overview
 
 The ``segment_display_player:`` section of your config is a :doc:`/config_players/index`
 which controls :doc:`segment_displays`.
 See :doc:`/displays/display/alpha_numeric` for details.
+
+.. config
+
 
 Optional settings
 -----------------
@@ -33,28 +36,33 @@ Single value, type: one of the following options: add, remove, flash, no_flash. 
 
 expire:
 ~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+Single value, type: ms_or_token. Defaults to empty.
 
 Only used with ``action`` ``add``. Text will be removed after ``exire`` ms.
 
 key:
 ~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Key to use with ``action`` ``add`` and ``remove`` to reference a text on the
 segment display.
 
 priority:
 ~~~~~~~~~
-Single value, type: ``integer``. Default: ``0``
+Single value, type: int_or_token. Default: ``0``
 
 Priority of this text.
 The segment display will maintain a stack and show the text on top.
 
 text:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Text to show. You can use :doc:`/config/instructions/text_templates`.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/displays/display/alpha_numeric`
+* :doc:`/hardware/segment_display_platforms`

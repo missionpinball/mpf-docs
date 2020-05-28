@@ -105,6 +105,10 @@ forward current).
 For 12V you need a 220ohm at 1 watt which will get very hot (do not use a
 standard 1/2watt resistor).
 
+Common parts:
+
+* 4x Opto board - #600-0256-00
+
 
 Common Parts in Pinball Machines
 --------------------------------
@@ -178,7 +182,9 @@ Multimorphic produces and sells optos with a JST connector.
 The transmitter contains a current limiting resistor for 12V (you only have to
 connect one of the 12V and GND pins). You don't need an additional resistor
 but you are also bound to 12V. They might work at 5V but the range will be much
-lower.
+lower. Though the surface mount resistor on the transmitter board is designed to run
+"hot," it still requires a surrounding air gap to dissipate heat. 3D printed parts
+mounted against this resistor will melt.
 
 Part numbers:
 
@@ -193,12 +199,11 @@ You can configure a normally closed opto like this:
 .. code-block:: mpf-config
 
    switches:
-      trough1:
-         number: 81	# number depends on your platform
-         type: 'NC'	# normally closed
-      orbit_opto:
-         number: 23	# number depends on your platform
-         type: 'NC'	# normally closed
-
+     trough1:
+       number: 81    # number depends on your platform
+       type: 'NC'    # normally closed
+     orbit_opto:
+       number: 23    # number depends on your platform
+       type: 'NC'    # normally closed
 
 See :doc:`/config/switches` for details about the config options.

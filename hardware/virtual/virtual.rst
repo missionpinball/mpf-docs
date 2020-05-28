@@ -33,7 +33,7 @@ You can manually specify the virtual platform in the machine config, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: virtual
+      platform: virtual
 
 3. Via the command line
 ~~~~~~~~~~~~~~~~~~~~~~~

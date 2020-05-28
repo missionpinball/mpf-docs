@@ -14,6 +14,12 @@ Accrual Logic Blocks
 +------------------------------------------------------------------------------+
 | :doc:`/game_logic/logic_blocks/scoring_based_on_logic_blocks`                |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_lights`          |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_block_and_slides`           |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/persisting_state_in_a_player_variable`        |
++------------------------------------------------------------------------------+
 
 "Accruals" are a type of :doc:`Logic Block </game_logic/logic_blocks/index>`
 where you can trigger a new event based on a series of one or more other events.
@@ -40,12 +46,12 @@ an accrual logic block like this:
 
   ##! mode: my_mode
   accruals:
-     name_of_my_logic_block:
-        events:
-           - shot1_hit
-           - shot2_hit
-           - shot3_hit
-        events_when_complete: enable_winning_shot
+    name_of_my_logic_block:
+      events:
+        - shot1_hit
+        - shot2_hit
+        - shot3_hit
+      events_when_complete: enable_winning_shot
 
 There are much more settings (as you'll see below), but the basic logic block
 above (which is called "name_of_my_logic_block") will watch for the events
@@ -84,19 +90,19 @@ This is an example:
 
    ##! mode: my_mode
    accruals:
-      test_accrual:
-         events:
-            - shot1_hit
-            - shot2_hit
-            - shot3_hit
-         reset_on_complete: False
-
+     test_accrual:
+       events:
+         - shot1_hit
+         - shot2_hit
+         - shot3_hit
+       reset_on_complete: false     # this is needed for the last event player
    event_player:
-      test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
-      test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
-      test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
-      test_event{device.accruals.test_accrual.completed}: accrual_completed
-
+     test_event{device.accruals.test_accrual.value[0]}: shot1_was_hit
+     test_event{device.accruals.test_accrual.value[1]}: shot2_was_hit
+     test_event{device.accruals.test_accrual.value[2]}: shot3_was_hit
+     test_event{device.accruals.test_accrual.completed}: accrual_completed
+   # Note: For this last conditional logic to be able to evaluate as true, the accrual setting
+   # reset_on_complete must be set to No/False. Otherwise the accrual will reset instantly and this will never be true.
    ##! test
    #! start_game
    #! start_mode my_mode
@@ -139,3 +145,5 @@ Related Events
 * :doc:`/events/logicblock_name_complete`
 * :doc:`/events/logicblock_name_hit`
 * :doc:`/events/logicblock_name_updated`
+
+.. include:: common_problems.rst

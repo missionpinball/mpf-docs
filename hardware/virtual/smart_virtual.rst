@@ -22,56 +22,52 @@ simulate their switches:
 .. code-block:: mpf-config
 
     switches:
-        s_trough1:
-            number: s31
-        s_trough2:
-            number: s32
-        s_trough3:
-            number: s33
-        s_trough4:
-            number: s34
-        s_plunger_lane:
-            number: s27
-
+      s_trough1:
+        number: s31
+      s_trough2:
+        number: s32
+      s_trough3:
+        number: s33
+      s_trough4:
+        number: s34
+      s_plunger_lane:
+        number: s27
     coils:
-        c_trough_eject:
-            number: c01
-            default_pulse_ms: 25
-        c_plunger_eject:
-            number: c03
-            default_pulse_ms: 25
-
+      c_trough_eject:
+        number: c01
+        default_pulse_ms: 25
+      c_plunger_eject:
+        number: c03
+        default_pulse_ms: 25
     ball_devices:
-        bd_trough:
-            tags: trough, home, drain
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
-            eject_coil: c_trough_eject
-            eject_targets: bd_plunger
-        bd_plunger:
-            ball_switches: s_plunger_lane
-            eject_coil: c_plunger_eject
-
+      bd_trough:
+        tags: trough, home, drain
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
+        eject_coil: c_trough_eject
+        eject_targets: bd_plunger
+      bd_plunger:
+        ball_switches: s_plunger_lane
+        eject_coil: c_plunger_eject
     playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
-
+      playfield:
+        default_source_device: bd_plunger
+        tags: default
     keyboard:
-        1:
-            switch: s_trough1
-            toggle: true
-        2:
-            switch: s_trough2
-            toggle: true
-        3:
-            switch: s_trough3
-            toggle: true
-        4:
-            switch: s_trough4
-            toggle: true
-        p:
-            switch: s_plunger_lane
-            toggle: true
+      1:
+        switch: s_trough1
+        toggle: true
+      2:
+        switch: s_trough2
+        toggle: true
+      3:
+        switch: s_trough3
+        toggle: true
+      4:
+        switch: s_trough4
+        toggle: true
+      p:
+        switch: s_plunger_lane
+        toggle: true
 
 MPF's regular virtual platform interface is "dumb" in the sense that
 all switch actions need to be controlled externally (either via keyboard
@@ -137,7 +133,7 @@ in the machine config, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: smart_virtual
+      platform: smart_virtual
 
 3. Via the command line
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -99,12 +99,10 @@ then you'll probably have a lot more than this in your machine config file.)
 .. code-block:: mpf-config
 
    #config_version=5
-
    modes:
      - mansion_awards
      - chair_lit
      - chair_lit_3s
-
    switches:
      start:
        number: S13
@@ -144,9 +142,7 @@ then you'll probably have a lot more than this in your machine config file.)
      lower_jet:
        number: S35
        tags: jet
-
    virtual_platform_start_active_switches: trough1, trough2, trough3
-
    coils:
      drain:
        number: "05"
@@ -156,7 +152,6 @@ then you'll probably have a lot more than this in your machine config file.)
        number: "08"
      electric_chair:
        number: "01"
-
    lights:
      9_mil:
        number: L66
@@ -203,40 +198,32 @@ then you'll probably have a lot more than this in your machine config file.)
      electric_chair_red:
        number: L47
        subtype: matrix
-
    ball_devices:
-
      drain:
        ball_switches: drain
        eject_coil: drain
        eject_targets: trough
        tags: drain
-
      trough:
        ball_switches: trough1, trough2, trough3
        eject_coil: trough
        eject_targets: plunger_lane
        tags: trough, home
-
      plunger_lane:
        ball_switches: plunger_lane
        mechanical_eject: true
        eject_timeouts: 3s
        tags: home
-
      electric_chair:
        ball_switches: electric_chair
        eject_coil: electric_chair
-
      swamp_kickout:
        ball_switches: swamp_kickout
        eject_coil: swamp_kickout
-
    playfields:
-       playfield:
-           default_source_device: plunger_lane
-           tags: default
-
+     playfield:
+       default_source_device: plunger_lane
+       tags: default
    ##! mode: mansion_awards
    # mode will be defined below
    ##! mode: chair_lit
@@ -266,15 +253,15 @@ example, here's the entry for Thing Multiball:
 
    ##! mode: mansion_awards
    achievements:
-      thing_multiball:
-         show_tokens:
-            lights: thing
-         show_when_selected: flash
-         show_when_completed: on
-         events_when_started: award_thing_multiball  # starts thing_multiball mode
-         enable_events: initialize_mansion, reset_mansion
-         complete_events: award_thing_multiball
-         reset_events: reset_mansion
+     thing_multiball:
+       show_tokens:
+         lights: thing
+       show_when_selected: flash
+       show_when_completed: on
+       events_when_started: award_thing_multiball    # starts thing_multiball mode
+       enable_events: initialize_mansion, reset_mansion
+       complete_events: award_thing_multiball
+       reset_events: reset_mansion
 
 Stepping through how we're using each setting:
 
@@ -329,53 +316,53 @@ group the 12 mansion achievements together. That will look like this:
    ##! mode: mansion_awards
    #! achievements:
    #!   9_mil:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   6_mil:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   3_mil:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   thing_multiball:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   quick_multiball:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   graveyard_at_max:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   raise_the_dead:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   festers_tunnel_hunt:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   lite_extra_ball:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   seance:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   hit_cousin_it:
-   #!      show_tokens:
+   #!     show_tokens:
    #!   mamushka:
-   #!      show_tokens:
+   #!     show_tokens:
    achievement_groups:
      mansion_awards:
        achievements:
-           - 9_mil
-           - 6_mil
-           - 3_mil
-           - thing_multiball
-           - quick_multiball
-           - graveyard_at_max
-           - raise_the_dead
-           - festers_tunnel_hunt
-           - lite_extra_ball
-           - seance
-           - hit_cousin_it
-           - mamushka
+         - 9_mil
+         - 6_mil
+         - 3_mil
+         - thing_multiball
+         - quick_multiball
+         - graveyard_at_max
+         - raise_the_dead
+         - festers_tunnel_hunt
+         - lite_extra_ball
+         - seance
+         - hit_cousin_it
+         - mamushka
        show_tokens:
          lights: electric_chair_yellow, electric_chair_red
-       auto_select: yes
+       auto_select: true
        events_when_all_completed: select_tour_mansion
-       enable_while_no_achievement_started: no
+       enable_while_no_achievement_started: false
        show_when_enabled: on
        select_random_achievement_events: sw_jet
-       allow_selection_change_while_disabled: yes
-       disable_while_achievement_started: no
+       allow_selection_change_while_disabled: true
+       disable_while_achievement_started: false
        start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear
        enable_events: light_chair
        disable_events: unlight_chair
@@ -484,24 +471,17 @@ Let's look at the config for the "chair_lit_3s" mode:
 
    ##! mode: chair_lit_3s
    #config_version=5
-
    mode:
      priority: 101
      start_events: right_inlane_active
-     stop_events:
-       unlight_chair
-       balldevice_electric_chair_ball_enter
-       balldevice_swamp_kickout_ball_enter
-       cancel_chair_timer
-
+     stop_events: unlight_chair balldevice_electric_chair_ball_enter balldevice_swamp_kickout_ball_enter cancel_chair_timer
    event_player:
      mode_chair_lit_3s_started: light_chair
      timer_unlight_chair_complete: unlight_chair
-
    timers:
      unlight_chair:
        end_value: 3
-       start_running: yes
+       start_running: true
 
 Notice that this mode started when the *right_inlane_active* switch is hit,
 which means it starts when the right inlane is hit. Pretty simple.
@@ -557,25 +537,20 @@ Here's the config for this mode:
 
    ##! mode: chair_lit
    #config_version=5
-
    mode:
      priority: 102
      start_events: center_ramp_active, ball_starting
-     stop_events:
-       balldevice_electric_chair_ball_enter
-       balldevice_swamp_kickout_ball_enter
-
+     stop_events: balldevice_electric_chair_ball_enter balldevice_swamp_kickout_ball_enter
    event_player:
      mode_chair_lit_stopping: unlight_chair
      mode_chair_lit_started: light_chair, cancel_chair_timer
      mode_chair_lit_3s_started: cancel_chair_timer
-
    counters:
-      initialize_mansion:
-         count_events: mode_chair_lit_started
-         events_when_complete: initialize_mansion
-         count_complete_value: 1
-         persist_state: true
+     initialize_mansion:
+       count_events: mode_chair_lit_started
+       events_when_complete: initialize_mansion
+       count_complete_value: 1
+       persist_state: true
 
 The ``start_events:`` are pretty straightforward. We start the mode when the
 center ramp is hit, and also on *ball_starting* since the Addams Family rules
@@ -622,23 +597,22 @@ First, take a look at the Hit Cousin It and Mamuska achievements:
 
    ##! mode: mansion_awards
    achievements:
-      hit_cousin_it:
-        show_tokens:
-          lights: hit_cousin_it
-        show_when_selected: flash
-        show_when_completed: on
-        events_when_started: award_hit_cousin_it # starts hit_cousin_it mode
-        complete_events: award_hit_cousin_it
-        reset_events: reset_mansion
-
-      mamushka:
-        show_tokens:
-          lights: mamushka
-        show_when_selected: flash
-        show_when_completed: on
-        events_when_started: award_mamushka  # starts mamushka mode
-        complete_events: award_mamushka
-        reset_events: reset_mansion
+     hit_cousin_it:
+       show_tokens:
+         lights: hit_cousin_it
+       show_when_selected: flash
+       show_when_completed: on
+       events_when_started: award_hit_cousin_it  # starts hit_cousin_it mode
+       complete_events: award_hit_cousin_it
+       reset_events: reset_mansion
+     mamushka:
+       show_tokens:
+         lights: mamushka
+       show_when_selected: flash
+       show_when_completed: on
+       events_when_started: award_mamushka   # starts mamushka mode
+       complete_events: award_mamushka
+       reset_events: reset_mansion
 
 Notice that they're slightly different than the other 10 mansion awards in that
 they do NOT have enable events.
@@ -665,13 +639,12 @@ remaining 10 mansion awards. For this we'll use a counter logic block:
 
    ##! mode: chair_lit
    # This is in the chair_lit mode config, NOT machine-wide config
-
    counters:
-      initialize_mansion:
-         count_events: mode_chair_lit_started
-         events_when_complete: initialize_mansion
-         count_complete_value: 1
-         persist_state: true
+     initialize_mansion:
+       count_events: mode_chair_lit_started
+       events_when_complete: initialize_mansion
+       count_complete_value: 1
+       persist_state: true
 
 This is a simple counter that "counts" the *mode_chair_lit_started*
 event (which is posted by this mode once it's fully started and done
@@ -731,25 +704,24 @@ started to the complete events for the other. Here are the examples:
 
    ##! mode: mansion_awards
    achievements:
-      6_mil:
-         show_tokens:
-            lights: 6_mil
-         show_when_selected: flash
-         show_when_completed: on
-         events_when_started: award_6_mil  # instant points award & plays shows, also spots 3 mil
-         enable_events: initialize_mansion, reset_mansion
-         complete_events: award_6_mil, award_3_mil
-         reset_events: reset_mansion
-
-      3_mil:
-         show_tokens:
-            lights: 3_mil
-         show_when_selected: flash
-         show_when_completed: on
-         events_when_started: award_3_mil  # instant points award & plays shows, also spots 6 mil
-         enable_events: initialize_mansion, reset_mansion
-         complete_events: award_3_mil, award_6_mil
-         reset_events: reset_mansion
+     6_mil:
+       show_tokens:
+         lights: 6_mil
+       show_when_selected: flash
+       show_when_completed: on
+       events_when_started: award_6_mil    # instant points award & plays shows, also spots 3 mil
+       enable_events: initialize_mansion, reset_mansion
+       complete_events: award_6_mil, award_3_mil
+       reset_events: reset_mansion
+     3_mil:
+       show_tokens:
+         lights: 3_mil
+       show_when_selected: flash
+       show_when_completed: on
+       events_when_started: award_3_mil    # instant points award & plays shows, also spots 6 mil
+       enable_events: initialize_mansion, reset_mansion
+       complete_events: award_3_mil, award_6_mil
+       reset_events: reset_mansion
 
 Notice that the 6_mil's ``complete_events:`` includes *award_3_mil* and vice-versa.
 

@@ -160,7 +160,6 @@ Here is the same show example after modification in 0.50:
            loops:
              int: 10
 
-
 4. Rename physical dmd sections
 -------------------------------
 
@@ -232,8 +231,17 @@ Here is an example slide config from 0.33 using ``dmd`` and ``color_dmd`` widget
 
 In 0.50 the above example becomes:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     height: 200
+   #!     width: 600
+   #!   dmd:
+   #!     width: 128
+   #!     height: 32
+   #!     default: true
+   #!     round_anchor_x: left
    slides:
      dmd_slide:
        - type: display
@@ -257,6 +265,17 @@ In 0.50 the above example becomes:
              dots_y: 32
              shades: 4
              gain: 1.5
+   #! slide_player:
+   #!   show_slide1:
+   #!     dmd_slide:
+   #!       target: window
+   #!   show_slide2:
+   #!     color_dmd_slide:
+   #!       target: window
+   ##! test
+   #! post show_slide1
+   #! post show_slide2
+   #! advance_time_and_run .1
 
 Be sure to specify the ``dots_x`` and ``dots_y`` settings in your new config (the number of dots that will
 be drawn in the dmd effects). These values used to be automatically set  based on the dimensions of the display
@@ -327,7 +346,7 @@ Example in MPF 0.33 using slide frames:
 
 Now the same configuration in MPF 0.50 becomes:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
      default:
@@ -336,44 +355,42 @@ Now the same configuration in MPF 0.50 becomes:
      frame1:
        width: 200
        height: 100
-
    slides:
      slide1:
-     - type: display
-       width: 200
-       height: 100
-       source_display: frame1
-       y: 50
-       x: 50
-       anchor_y: bottom
-       anchor_x: left
-     - type: text
-       text: SLIDE FRAME IN SLIDE 1
-       font_size: 20
-       y: bottom
-       anchor_y: bottom
+       - type: display
+         width: 200
+         height: 100
+         source_display: frame1
+         y: 50
+         x: 50
+         anchor_y: bottom
+         anchor_x: left
+       - type: text
+         text: SLIDE FRAME IN SLIDE 1
+         font_size: 20
+         y: bottom
+         anchor_y: bottom
      slide2:
-     - type: text
-       text: slide2
+       - type: text
+         text: slide2
      frame1_text:
-     - type: text
-       text: SLIDE 1 IN FRAME
-       color: lime
-       font_size: 10
-     - type: rectangle
-       width: 200
-       height: 100
-       color: 550000
+       - type: text
+         text: SLIDE 1 IN FRAME
+         color: lime
+         font_size: 10
+       - type: rectangle
+         width: 200
+         height: 100
+         color: 550000
      frame1_text2:
-     - type: text
-       text: SLIDE 2 IN FRAME
-       color: black
-       font_size: 10
-     - type: rectangle
-       width: 200
-       height: 100
-       color: 00ff00
-
+       - type: text
+         text: SLIDE 2 IN FRAME
+         color: black
+         font_size: 10
+       - type: rectangle
+         width: 200
+         height: 100
+         color: 00ff00
    slide_player:
      show_slide1: slide1
      show_slide2: slide2
@@ -383,6 +400,12 @@ Now the same configuration in MPF 0.50 becomes:
      show_frame_text2:
        frame1_text2:
          target: frame1
+   ##! test
+   #! post show_slide1
+   #! post show_slide2
+   #! post show_frame_text
+   #! post show_frame_text2
+   #! advance_time_and_run .1
 
 To modify your configs, do the following steps for each ``slide_frame`` widget:
 
@@ -455,12 +478,12 @@ Your coil could look like this in 0.50:
 .. code-block:: mpf-config
 
     coils:
-        flipper_right_main:
-            number: A0-B0-0
-            default_pulse_ms: 10
-            max_pulse_ms: 100
-            default_pulse_power: 0.25
-            max_pulse_power: 0.5
+      flipper_right_main:
+        number: A0-B0-0
+        default_pulse_ms: 10
+        max_pulse_ms: 100
+        default_pulse_power: 0.25
+        max_pulse_power: 0.5
 
 See :doc:`coils </config/coils>` for details.
 
@@ -477,14 +500,14 @@ Lights look like this in MPF 0.50:
 
     lights:
       gi_01:
-         number: G01
-         subtype: gi
+        number: G01
+        subtype: gi
       led_01:
-         number: 7
-         subtype: led
+        number: 7
+        subtype: led
       matrix_light_01:
-         number: L66
-         subtype: matrix
+        number: L66
+        subtype: matrix
 
 You can use ``light_player`` for all types of lights. ``led_player`` and ``gi_player`` consequently have been removed.
 Furthermore you can use ``flasher_player`` on all types lights (e.g. to flash the whole playfield with all GIs).
@@ -500,16 +523,16 @@ to feed the playfield:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_plunger:
-    #!         number: 10
+    #!   s_plunger:
+    #!     number: 10
     #! ball_devices:
-    #!     bd_plunger:
-    #!         ball_switches: s_plunger
-    #!         mechanical_eject: true
+    #!   bd_plunger:
+    #!     ball_switches: s_plunger
+    #!     mechanical_eject: true
     playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
+      playfield:
+        default_source_device: bd_plunger
+        tags: default
 
 11. If you are using counters in your slides add a variable_player
 ------------------------------------------------------------------
@@ -523,10 +546,10 @@ the old behaviour:
 
    ##! mode: my_mode
    variable_player:
-      logicblock_YOUR_COUNTER_updated:
-          YOUR_COUNTER_count:
-              int: value
-              action: set
+     logicblock_YOUR_COUNTER_updated:
+       YOUR_COUNTER_count:
+         int: value
+         action: set
 
 12. Sequence shots became separate devices
 ------------------------------------------
@@ -556,24 +579,21 @@ New syntax:
 .. code-block:: mpf-config
 
    switches:
-      switch1:
-         number:
-      switch2:
-         number:
-      switch3:
-         number:
-
+     switch1:
+       number:
+     switch2:
+       number:
+     switch3:
+       number:
    sequence_shots:
-      left_orbit_sequence:
-         switch_sequence: switch1, switch2, switch3
-         sequence_timeout: 3s
-
+     left_orbit_sequence:
+       switch_sequence: switch1, switch2, switch3
+       sequence_timeout: 3s
    ##! mode: test
    # in case you still want the shot (does not do much anymore in this example):
    shots:
-      left_orbit:
-         hit_events: left_orbit_sequence_hit
-
+     left_orbit:
+       hit_events: left_orbit_sequence_hit
    ##! test
    start_game
    start_mode test
@@ -584,3 +604,4 @@ New syntax:
    hit_and_release_switch switch3
    assert_event_called left_orbit_sequence_hit
    assert_event_called left_orbit_hit
+

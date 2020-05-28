@@ -14,6 +14,12 @@ Counter Logic Blocks
 +------------------------------------------------------------------------------+
 | :doc:`/game_logic/logic_blocks/scoring_based_on_logic_blocks`                |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_blocks_and_lights`          |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/integrating_logic_block_and_slides`           |
++------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/persisting_state_in_a_player_variable`        |
++------------------------------------------------------------------------------+
 
 "Counters" are :doc:`logic blocks </game_logic/logic_blocks/index>`
 that track the number of times a certain event happens towards the
@@ -41,13 +47,13 @@ jets:
 
   ##! mode: my_mode
   counters:
-      super_jets:
-          count_events: sw_pop
-          events_when_hit: pop_hit
-          starting_count: 75
-          count_complete_value: 0
-          direction: down
-          events_when_complete: super_jets_start
+    super_jets:
+      count_events: sw_pop
+      events_when_hit: pop_hit
+      starting_count: 75
+      count_complete_value: 0
+      direction: down
+      events_when_complete: super_jets_start
 
 And here's the logic block we use for the :doc:`Addams Family mansion awards </cookbook/TAF_mansion_awards>`
 to make sure the mansions is initialized only once per game:
@@ -84,15 +90,13 @@ This is an example:
 
    ##! mode: my_mode
    counters:
-    test_counter:
-      count_events: count_up
-      reset_on_complete: False
-      count_complete_value: 3
-
+     test_counter:
+       count_events: count_up
+       reset_on_complete: false
+       count_complete_value: 3
    event_player:
-      test_event{device.counters.test_counter.value > 1}: count_above_one
-      test_event{device.counters.test_counter.completed}: count_completed
-
+     test_event{device.counters.test_counter.value > 1}: count_above_one
+     test_event{device.counters.test_counter.completed}: count_completed
    ##! test
    #! start_game
    #! start_mode my_mode
@@ -123,3 +127,4 @@ Related Events
 * :doc:`/events/logicblock_name_hit`
 * :doc:`/events/logicblock_name_updated`
 
+.. include:: common_problems.rst

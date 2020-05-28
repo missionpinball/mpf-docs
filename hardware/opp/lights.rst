@@ -27,3 +27,8 @@ finally the bulb number on the card.
 The above example configures a bulb on the second OPP card, and
 the third wing board, first bulb  On the microprocessor card, the
 input is marked as 2.0 (wing port 2, position 0).
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.

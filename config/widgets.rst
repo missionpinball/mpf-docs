@@ -9,6 +9,8 @@ widgets:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The ``widgets:`` section of your config is where you pre-define "named" widgets
 that you can then use later in shows and the widget_player section of a config
 file. See the :doc:`/displays/widgets/index` guide for details.
