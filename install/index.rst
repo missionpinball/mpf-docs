@@ -16,6 +16,7 @@ entire process. Select the OS you're using from the list below:
    Windows <windows>
    Mac <mac>
    Linux <linux/index>
+   Virtual Machine (Debian) <virtual-machine/index>
 
 .. note::
    These guides just show you how to get MPF up and running. If you're using
