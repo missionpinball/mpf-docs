@@ -1,9 +1,7 @@
-.. _header-n2:
-
 Why use a Virtual Machine
 =========================
 
-.. _header-n3:
+
 
 VM Benefits
 -----------
@@ -66,7 +64,7 @@ VM Benefits
       on simulated pinball machine using virtual serial port pass
       through or ``socat`` remote serial port device.
 
-.. _header-n65:
+
 
 VM Limitations
 --------------
@@ -85,7 +83,7 @@ VM Limitations
 
 -  Takes longer to set up
 
-.. _header-n83:
+
 
 Why VirtualBox
 --------------

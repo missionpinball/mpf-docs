@@ -1,9 +1,7 @@
-.. _header-n2:
-
 Basic Guide
 ===========
 
-.. _header-n3:
+
 
 Prerequisites
 -------------
@@ -16,7 +14,7 @@ Prerequisites
 
 -  Internet Connection (Only required for Debian install)
 
-.. _header-n14:
+
 
 Setting up new VirtualBox machine
 ---------------------------------
@@ -55,7 +53,7 @@ Tip: Check out the available options in the ⚙️ ``Settings`` tab of
 VirtualBox. The more accustomed you become to these options, the better
 you will understand the powerful tools of VirtualBox.
 
-.. _header-n51:
+
 
 Downloading Debian
 ------------------
@@ -70,7 +68,7 @@ Downloading Debian
 
 3. An ``.iso`` file of approximately 350 MB will be downloaded.
 
-.. _header-n61:
+
 
 Installing Debian
 -----------------
@@ -98,7 +96,7 @@ Installing Debian
 
 7. Make sure to set a root password and setup a new user of your choice.
 
-.. _header-n82:
+
 
 Setting up ``sudo``
 -------------------
@@ -143,7 +141,7 @@ To fix this:
 
    -  A reboot may be required for sudo access to take effect
 
-.. _header-n114:
+
 
 Setting up the VirtualBox Guest Additions CD 
 --------------------------------------------
@@ -188,7 +186,7 @@ An abbreviated version is listed below:
 
       lsmod | grep vboxguest
 
-.. _header-n140:
+
 
 Configuring network for SSH
 ---------------------------
@@ -268,7 +266,7 @@ virtual machine.
 
          ssh [your-user]@192.168.56.101
 
-.. _header-n195:
+
 
 Installing environment tools
 ----------------------------
@@ -290,7 +288,7 @@ Install pip3 and pkg-config (which MPF needs for mpf-mc):
 
    sudo apt-get install python3-pip pkg-config
 
-.. _header-n203:
+
 
 Installing Mission Pinball Framework
 ------------------------------------
@@ -355,7 +353,7 @@ Basic installation:
 	If mpf-mc shows only a blank screen inside your VM, please `open an
 	issue <https://github.com/missionpinball/mpf-mc/issues/new>`__.
 
-.. _header-n244:
+
 
 Installing and Running MPF-Monitor
 ----------------------------------
