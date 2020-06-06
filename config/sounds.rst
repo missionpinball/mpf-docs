@@ -276,7 +276,9 @@ when the sound is looped it will loop back to the beginning of the sound file. S
 something other than zero is particularly useful when you have a music sound that has an introduction
 section and want it to loop back to a verse and not the intro. This setting works in correlation with
 ``end_loop_at:`` and only applies to sounds loaded in memory and played on a standard audio track (not
-to any streaming sound or sound played on any other track type).
+to any streaming sound or sound played on any other track type). Be sure to use many decimal places in
+your times as precision is important when it comes to loop points. If you hear pops and clicks at the
+loop points, you may need to slightly adjust your start and end loop times to alleviate them.
 
 stealing_method:
 ~~~~~~~~~~~~~~~~
