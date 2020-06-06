@@ -87,6 +87,15 @@ Single value, type: :doc:`sound_ducking <sound_ducking>`. Defaults to empty.
 
 The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.
 
+end_loop_at:
+~~~~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``None``
+
+The position in the sound file (in seconds) at which to start looping and return to the start of the
+loop as determined by the ``start_loop_at:`` setting. By default (None) the sound will loop when it
+reaches the end of the sound. This setting only applies to sounds loaded in memory and played on a
+standard audio track (not to any streaming sound or sound played on any other track type).
+
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) events. Those will be posted by the device. Defaults to empty.
@@ -257,6 +266,19 @@ Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time
 
 The position in the sound file (in seconds) to start playback of the sound when it is played. When
 the sound is looped it will loop back to the beginning of the sound file.
+
+start_loop_at:
+~~~~~~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
+
+The position in the sound file (in seconds) to start playback of the sound after it is looped. By default
+when the sound is looped it will loop back to the beginning of the sound file. Setting this value to
+something other than zero is particularly useful when you have a music sound that has an introduction
+section and want it to loop back to a verse and not the intro. This setting works in correlation with
+``end_loop_at:`` and only applies to sounds loaded in memory and played on a standard audio track (not
+to any streaming sound or sound played on any other track type). Be sure to use many decimal places in
+your times as precision is important when it comes to loop points. If you hear pops and clicks at the
+loop points, you may need to slightly adjust your start and end loop times to alleviate them.
 
 stealing_method:
 ~~~~~~~~~~~~~~~~
