@@ -1,7 +1,7 @@
 Coils Are Not Firing
 --------------------
 
-What to do if you coils are not working?
+What to do if your coils are not working?
 
 Check if Your Hardware is Working at all
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9,7 +9,7 @@ Check if Your Hardware is Working at all
 Sounds stupid but this is a good start:
 Is the hardware working at all?
 Do you see switch hits in the logs?
-If not check our the section ``Your hardware is not working at all``.
+If not, check our section ``Your hardware is not working at all``.
 
 Check the Watchdog
 ~~~~~~~~~~~~~~~~~~
