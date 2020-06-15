@@ -364,9 +364,9 @@ is posted, the widget will fly off the screen to the upper right.
 
 There is something special to consider when workting with 360 degree rotations.  Setting the property rotation to 360
 results in a complete turn of a widget. However, attempting to repeat the 360 degree rotation appears to do nothing.
-This is because of how Kivi handles 0 and 360 degrees. When the rotation completes, the widget is at rotation 360 degrees. 
-Repeating the step fails to cause the widget to move because it is already at destination. To create continously
-rotating widgets, a two step process is required.  
+This is because of how Kivi handles 0 and 360 degrees. When the rotation completes, the widget is at rotation 360 
+degrees. Repeating the step fails to cause the widget to move because it is already at destination. To create 
+continously rotating widgets, a two step process is required.  
 
 ::
 
