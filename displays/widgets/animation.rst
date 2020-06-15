@@ -362,7 +362,7 @@ initial y value is -50, it will start off the screen). Then when the ``pulse_boo
 animation which makes the font size bigger and smaller will starting playing and repeat forever. Finally when ``bye_boo``
 is posted, the widget will fly off the screen to the upper right.
 
-There is something special to consider when workting with 360 degree rotations.  Setting the property rotation to 360
+There is something special to consider when working with 360 degree rotations.  Setting the property rotation to 360
 results in a complete turn of a widget. However, attempting to repeat the 360 degree rotation appears to do nothing.
 This is because of how Kivi handles 0 and 360 degrees. When the rotation completes, the widget is at rotation 360 
 degrees. Repeating the step fails to cause the widget to move because it is already at destination. To create 
