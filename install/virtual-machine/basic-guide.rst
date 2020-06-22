@@ -173,14 +173,14 @@ An abbreviated version is listed below:
       sudo mkdir -p /mnt/cdrom
       sudo mount /dev/cdrom /mnt/cdrom
 
-1. .. code-block:: console
+4. .. code-block:: console
 
       cd /mnt/cdrom
       sudo sh ./VBoxLinuxAdditions.run --nox11
 
-2. Reboot
+5. Reboot
 
-3. If necessary, confirm module is running after reboot:
+6. If necessary, confirm module is running after reboot:
 
    .. code-block:: console
 
