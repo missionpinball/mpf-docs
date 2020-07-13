@@ -30,6 +30,34 @@ section of a config file or via the ``coils:`` section of a
 Hardware
 --------
 
+Connecting Coils
+~~~~~~~~~~~~~~~~
+
+If you coil has more than two terminals please have a look at
+:doc:`dual_wound_coils` because you got a dual-wound coil-
+If your coil has two terminals it is a single wound coil.
+
+:doc:`TODO: Add a picture a single wound coil with diode </about/help_us_to_write_it>`
+:doc:`TODO: Add a electrical drawing a single wound coil with diode </about/help_us_to_write_it>`
+
+In general, polarity does not matter for a coil.
+However, there might be a diode between the terminals of your coil which needs
+to be inverse to the voltage.
+This means that at the side of the stripe of the diode is where you connect
+high voltage.
+Normally, diodes are in the opposite direction but in this case this is
+intentional to short the coil when it deactivates (because of self-induction).
+
+Most machines use a common color for high voltage and an individual color for
+the return terminal of the coil.
+The "output" of your driver board is usually considered ground for the coil
+and the other terminal is connected to high voltage.
+Check with the documentation of your hardware platform to confirm this but it
+should be the case for all modern machines.
+
+Strength and Current
+~~~~~~~~~~~~~~~~~~~~
+
 Coils vary in strength relative to the pulse time you use.
 The strength of the magnetic field of a coil is a product of some constant (u),
 the current (I) and the number of windings (N) divided by the length of the
@@ -63,6 +91,34 @@ Relative strength: ``s = U / R * N / L``.
 More is stronger.
 In most cases you can leave out ``L`` as this is not terribly scientific
 anyway (and there is slightly more to it but this should be a good start).
+
+Config
+------
+
+This is an example for a single-wound coil:
+
+.. code-block:: mpf-config
+
+    coils:
+      c_your_coil:
+        number: 00   # depends on your platform and hardware
+        default_pulse_ms: 20
+
+
+This is an example for dual-wound coils which are configured separately:
+
+.. code-block:: mpf-config
+
+    coils:
+      c_your_coil_main:
+        number: 00   # depends on your platform and hardware
+        default_pulse_ms: 20
+      c_your_coil_hold:
+        number: 01   # depends on your platform and hardware
+        default_pulse_ms: 10
+        default_hold_power: .2
+
+See :doc:`dual_wound_coils` for more details.
 
 
 Related How To guides

@@ -66,7 +66,8 @@ Terminal 2 and 3 would be connected to your driver board.
 
 .. warning::
 
-   Please make sure that any diodes on your coil are in reverse to the voltage.
+   Please make sure that any diodes on your coil are in reverse to the voltage
+   (i.e. the stripe needs to be at the HV side).
    This is often not the case for older coils as they have been connected
    differently in older machines.
    Ignoring this will fry the FET on your driver board.
@@ -75,7 +76,24 @@ Terminal 2 and 3 would be connected to your driver board.
 See :doc:`coil hardware </mechs/coils/index>` for more details about the
 current, resistance, number of windings and the strength of coils.
 
+Config
+------
 
+This is an example for dual-wound coils which are configured separately:
+
+.. code-block:: mpf-config
+
+    coils:
+      c_your_coil_main:
+        number: 00   # depends on your platform and hardware
+        default_pulse_ms: 20
+      c_your_coil_hold:
+        number: 01   # depends on your platform and hardware
+        default_pulse_ms: 10
+        default_hold_power: .2
+
+On top of that you can configure :doc:`/config/dual_wound_coils` or other
+devices such as :doc:`/config/flippers`.
 
 Related How To guides
 ---------------------

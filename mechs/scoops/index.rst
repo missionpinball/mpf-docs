@@ -6,6 +6,10 @@ Scoops / Vertical up Kickers (VUKs) / Saucer holes
 +==============================================================================+
 | :doc:`/config/ball_devices`                                                  |
 +------------------------------------------------------------------------------+
+| :doc:`/config/switches`                                                      |
++------------------------------------------------------------------------------+
+| :doc:`/config/coils`                                                         |
++------------------------------------------------------------------------------+
 
 .. contents::
    :local:
@@ -16,6 +20,10 @@ Saucer holes work like scoops but the ball stays visible all the time and they
 are sometimes used as a lock.
 Similarly, vertical up kickers (VUKs) capture from the playfield but they
 eject onto a ramp or a upper playfield.
+
+Electronical details
+--------------------
+
 Electronically, all of those mechs consist of a switch or opto and a coil to
 eject the ball.
 
@@ -39,6 +47,13 @@ eject the ball.
     <div style="clear: both;"></div>
 
 |clearfloat|
+
+Connect your switch according to :doc:`/mechs/switches/mechanical_switches`
+or :doc:`/mechs/switches/optos` depending on its type.
+Then connect your coil according to :doc:`/mechs/coils/index`.
+
+Config
+------
 
 In MPF, you configure them as :doc:`ball devices </mechs/ball_devices/index>`
 since they can count balls and choose to keep or eject it.
