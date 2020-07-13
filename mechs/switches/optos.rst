@@ -51,7 +51,7 @@ That means that at about 1.7V current will start to flow through the diode
 and it will emit (IR) light.
 Unfortunately, just connecting it to 1.7V is not sufficient because the current
 is non-linear for LEDs.
-Below the forward voltage (i.e. 1.7V) is 0 and above the forward voltage it
+Below the forward voltage (i.e. 1.7V) the currency is 0 and above the forward voltage it
 increases exponentially.
 According to the specifications most IR LEDs should use run at 20mA.
 However, in pinball machines 50-70mA is used because it allows larger distances.
