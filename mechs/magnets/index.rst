@@ -61,9 +61,14 @@ the prefix for magnets is ``device.magnets.<name>``.
 Related How To guides
 ---------------------
 
-:doc:`/about/help_us_to_write_it`
+:doc:`stern_magnet_pcb`
 
 Related Events
 --------------
 
 .. include:: /events/include_magnets.rst
+
+.. toctree::
+   :titlesonly:
+
+   stern_magnet_pcb
