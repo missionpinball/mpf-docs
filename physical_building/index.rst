@@ -18,3 +18,4 @@ If you want to create a custom layout read our
    :titlesonly:
 
    Layout Considerations <layout_considerations>
+   Planning Layout with CAD <planning_layout_with_cad>
