@@ -48,8 +48,8 @@ pinball game. We'll assume that the machine has switches defined in the
 top lanes, called ``s_top_lane_1`` through ``s_top_lane_4``.
 
 .. code-block:: mpf-config
-  #config_version=5
 
+  #config_version=5
   ##! mode: top_lanes
   mode:
     start_events: start_mode_top_lanes
@@ -85,10 +85,7 @@ light on, and turns it off after the shot is hit.
         - name: hit
           show: on
 
-.. note:: In common pinball parlance, a shot is "lit" if the player
-should try an hit it. In almost all cases this means the light for the
-shot is on (i.e. "lit"), but rollover lane shots are the opposite: 
-the light is **off** when the shot is lit, and **on** after the shot is hit. 
+.. note:: In common pinball parlance, a shot is "lit" if the player should try an hit it. In almost all cases this means the light for the shot is on (i.e. "lit"), but rollover lane shots are the opposite:  the light is **off** when the shot is lit, and **on** after the shot is hit. 
 
 We can apply our shot profile to each of the ``shots`` we 
 defined earlier. Each lane has its own light, which we can specify
