@@ -269,5 +269,5 @@ Related Docs
 
 * :doc:`/config/shots`
 * :doc:`/config/shot_groups`
-* :doc:`/config_shot_profiles`
+* :doc:`/config/shot_profiles`
 * :doc:`/config/variable_player`
