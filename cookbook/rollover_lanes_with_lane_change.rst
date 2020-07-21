@@ -208,7 +208,7 @@ also increase a the bonus multiplier for the end-of-game bonus.
       score: 10000
       bonus_multiplier: 1
 
-See :doc:`/game_logic/bonus` for details on *bonus_multiplier*.
+See :doc:`/game_logic/bonus/index` for details on *bonus_multiplier*.
 
 The full mode config code
 -------------------------
