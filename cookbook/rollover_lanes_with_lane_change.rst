@@ -9,7 +9,7 @@ What are Rollover Lanes?
 ------------------------------
 
 Rollover lanes are found where pinball machines
-have a series of parallel lanes the ball can roll through. These are 
+have a series of parallel lanes the ball can roll through. These are
 commonly found at the top of the playfield, often above pop bumpers and accessed via
 the outer orbit loop. Some games, like *Medieval Madness*, also use the
 outlanes and return lanes together as a group of rollover lanes
@@ -25,7 +25,7 @@ What is a Lane Change?
 Games that use rollover lanes usually incorporate a "lane change" feature
 to make the completion easier. Lane changes use the flipper buttons to
 rotate the lit and unlit lane shots, shifting them left and right according
-to which button is pressed. 
+to which button is pressed.
 
 If a ball is about to enter a lane that's already been lit, the player can
 use the flipper buttons to shift the lanes so that the lane with the ball
@@ -38,7 +38,7 @@ Step 1. Create a lane change mode
 
 Lane changes are typically available at all times during a game, so it's
 wise to create a separate mode for them. This mode can be run at the same
-time as other modes (but stopped any time, maybe during wizard modes if 
+time as other modes (but stopped any time, maybe during wizard modes if
 you want).
 
 The first thing our mode needs is :doc:`/config/shots`. Each lane will count as a shot,
@@ -70,7 +70,7 @@ Step 2. Creating a profile for the lanes
 ----------------------------------------
 
 
-We can create a :doc`shot_profile</config/shot_profiles>` for the top lanes that starts with the 
+We can create a :doc`shot_profile</config/shot_profiles>` for the top lanes that starts with the
 light on, and turns it off after the shot is hit.
 
 .. code-block:: mpf-config
@@ -80,16 +80,16 @@ light on, and turns it off after the shot is hit.
   shot_profiles:
     top_lane_profile:
       states:
-        - name: 
+        - name:
           show: off
         - name: hit
           show: on
 
-.. note:: In common pinball parlance, a shot is "lit" if the player should try an hit it. In almost all cases this means the light for the shot is on (i.e. "lit"), but rollover lane shots are the opposite:  the light is **off** when the shot is lit, and **on** after the shot is hit. 
+.. note:: In common pinball parlance, a shot is "lit" if the player should try an hit it. In almost all cases this means the light for the shot is on (i.e. "lit"), but rollover lane shots are the opposite:  the light is **off** when the shot is lit, and **on** after the shot is hit.
 
-We can apply our shot profile to each of the ``shots`` we 
+We can apply our shot profile to each of the ``shots`` we
 defined earlier. Each lane has its own light, which we can specify
-using ``show_tokens``. This tells MPF that when it plays the show (in this 
+using ``show_tokens``. This tells MPF that when it plays the show (in this
 case, the "on" show) for a specific shot, use the light that corresponds to
 that shot.
 
@@ -97,7 +97,7 @@ We'll assume the machine has four lights defined in the ``lights:``
 config section, called ``l_top_lane_1`` through ``l_top_lane_4``
 
 .. code-block:: mpf-config
-  
+
   #config_version=5
 
   shots:
@@ -121,7 +121,7 @@ config section, called ``l_top_lane_1`` through ``l_top_lane_4``
       profile: top_lane_profile
       show_tokens:
         led: l_top_lane_2
-    
+
 
 Step 3. Creating a shot_group for the lanes
 -------------------------------------------
@@ -132,7 +132,7 @@ To tell MPF that the four lane shots are related to each other, we create a
 Shot groups are powerful because they control behavior of all the
 shots together. In this case, we'll use our shot group to:
 
-* Rotate the lit and hit shots 
+* Rotate the lit and hit shots
 * Trigger an event when all the shots are hit
 * Reset all the shots to be lit
 
@@ -164,7 +164,7 @@ shots together. In this case, we'll use our shot group to:
   #! shot_profiles:
   #! top_lane_profile:
   #!   states:
-  #!     - name: 
+  #!     - name:
   #!       show: off
   #!     - name: hit
   #!       show: on
@@ -178,7 +178,7 @@ shots together. In this case, we'll use our shot group to:
 The ``rotate_left_events`` and ``rotate_right_events`` allow the
 lane changes based on the flipper events.
 
-A shot group tracks the profile state of each shot, and will post 
+A shot group tracks the profile state of each shot, and will post
 an event *(shot_group_name)_(state_name)_complete* event whenever
 all shots in the group are the same state. In the profile "top_lane_profile"
 we said that the second state is called "hit", so we can use the
@@ -194,12 +194,12 @@ Step 4. Rewards for rollover lane completion
 --------------------------------------------
 
 Presumably when the player completes the rollover lanes, they should get
-some reward: a bonus multiplier, a counter advance, some points... 
-it can be anything. 
+some reward: a bonus multiplier, a counter advance, some points...
+it can be anything.
 
-In this example, we'll use the :doc:`config/variable_player` to 
-award the player 10,000 points for completing the rollover lanes, and 
-also increase a the bonus multiplier for the end-of-game bonus. 
+In this example, we'll use the :doc:`/config/variable_player` to
+award the player 10,000 points for completing the rollover lanes, and
+also increase a the bonus multiplier for the end-of-game bonus.
 
 .. code-block:: yaml
 
@@ -213,7 +213,7 @@ See :doc:`/game_logic/bonus` for details on *bonus_multiplier*.
 The full mode config code
 -------------------------
 
-.. code-block:: mpf-config 
+.. code-block:: mpf-config
 
   #config_version=5
   ##! mode: top_lanes
@@ -242,7 +242,7 @@ The full mode config code
       profile: top_lane_profile
       show_tokens:
         led: l_top_lane_2
- 
+
   shot_groups:
     top_lane_group:
       shots: top_lane_i, top_lane_n, top_lane_d, top_lane_y
@@ -253,7 +253,7 @@ The full mode config code
   shot_profiles:
     top_lane_profile:
       states:
-        - name: 
+        - name:
           show: off
         - name: hit
           show: on
