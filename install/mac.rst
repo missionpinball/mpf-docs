@@ -114,7 +114,7 @@ Click the "Install" button here to get just the command line tools. The
 
 The download will be about 150 MB, and the total install will be about 1.1 GB.
 
-After the installation of the tools you may need to accept the license agreeement from Apple.
+After the installation of the tools you may need to accept the license agreement from Apple.
 The following command starts that process in the Terminal, just follow the instructions provided:
 
 ::
@@ -165,16 +165,16 @@ different between the two:
 
 .. image:: images/mac_python_versions.jpg
 
-4. Create a Virtual Environment (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Create a Virtual Environment (recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Python includes a utility call "virtual environment" that creates a safe,
 isolated place to install packages and configure python. It's strongly
 recommended to install MPF in a virtual environment, so that other Python
 programs can't interfere with it (and it can't interfere with others).
 
-To create a virtual enviroment, choose a folder where you want to install
-a copy of python and keep the enviroment's packages. For this example, we'll
+To create a virtual environment, choose a folder where you want to install
+a copy of python and keep the environment's packages. For this example, we'll
 call the environment "mpfenv" and put it in our home directory (known as "~").
 
 .. code-block:: console
@@ -200,7 +200,7 @@ environment is not recommended.
 5. Activate your Virtual Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To keep itself isolated from other programs, your virtual enviroment only activates when you tell it to.
+To keep itself isolated from other programs, your virtual environment only activates when you tell it to.
 You can enable the virtual environment with the dot command from the terminal:
 
 .. code-block:: console
@@ -314,7 +314,7 @@ Installing MPF & MC
 7. Install MPF & MC (Stable Release)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First, double-check that you've activated your virtual enviroment, if you set one up.
+First, double-check that you've activated your virtual environment, if you set one up.
 Next you can run pip to install MPF itself, along with MPF-MC (the
 `Mission Pinball Framework Media Controller <http://docs.missionpinball.org/en/latest/start/media_controller.html>`_).
 
@@ -505,7 +505,7 @@ Make sure to lookup mpf-monitor later, if you want to simulate and configure a m
 Import errors when starting MPF-MC
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you get import errors when starging MPF-MC the wheels we produced may be
+If you get import errors when starting MPF-MC the wheels we produced may be
 incompatible with your XCode version, your python version or something else on
 your Mac.
 
