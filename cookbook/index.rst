@@ -28,3 +28,4 @@ And here's what's on our to-do list:
 
    The Addams Family: Mansion Awards <TAF_mansion_awards>
    Attack From Mars: Super Jets <AFM_super_jets>
+   Indiana Jones: Rollover Lanes <rollover_lanes_with_lane_change>
