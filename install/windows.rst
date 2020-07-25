@@ -13,11 +13,11 @@ MPF is written in a computer language called "Python". This means you have to in
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.5, or Python 3.6 (Python 3.7
+On Windows platforms, MPF requires Python 3.5 through Python 3.7 (Python 3.8
 and newer are not currently supported). While MPF will run on Python 3.4, some of our
-depenencies dropped support for 3.4 and can no longer be installed. It is recommended
+dependencies dropped support for 3.4 and can no longer be installed. It is recommended
 you use the newest supported version of Python available when you are setting up your PC
-(Python 3.6 as of the time this document was last updated). You can download and install it
+(Python 3.7 as of the time this document was last updated). You can download and install it
 from the Python website. (Keep reading for links)
 
 .. note::
@@ -50,10 +50,10 @@ Here's an example of running this on a 64-bit Windows 10 machine:
 Then go to the Python website download the version you need. (Note that the final digit in the Python version
 number is the "patch" number, so 3.6.4 is a version of Python 3.6.) Or use the direct-download links here:
 
-+ `Python 3.6 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4.exe>`_
++ `Python 3.7 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.7.8/python-3.7.8-amd64.exe>`_
++ `Python 3.7 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.7.8/python-3.7.8.exe>`_
 + `Python 3.6 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
-+ `Python 3.5 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe>`_
-+ `Python 3.5 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe>`_
++ `Python 3.6 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4.exe>`_
 
 Installing Python is pretty straightforward. It's a normal Windows installer.
 
@@ -119,16 +119,96 @@ That will print out something like this:
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN>pip list
+   C:\Users\username> pip list
    Package    Version
    ---------- -------
    pip        19.3
    setuptools 41.4.0
-   C:\Users\BRIAN MADDEN>
+   C:\Users\username>
 
 Notice that pip is now version 19.3 (as of October 2019)and not the older version that came with Python 3.6.8.  Setuptools has also been updated to version 41.4.0 (as of October 2019).
 
-3. Install MPF
+3. Create a Virtual Environment for Python (recommended)
+--------------------------------------------------------
+
+Python includes a utility call "virtual environment" that creates a safe,
+isolated place to install packages and configure python. **It's strongly
+recommended to install MPF in a virtual environment**, so that other Python
+programs can't interfere with it (and it can't interfere with others).
+
+To create a virtual environment, choose a folder where you want to install
+a copy of python and keep the environment's packages. For this example, we'll
+call the environment "mpfenv" and put it in our home directory.
+
+.. code-block:: console
+
+  python3 -m venv C:\Users\username\mpfenv
+
+.. note::
+
+  If you have multiple versions of Python3 (say, 3.4 and 3.6), you can specify
+  which one to use in the virtual environment: ``python3.6 -m venv ~/mpfenv``
+
+A virtual environment is recommended for any general-use computer you'll be
+using MPF on, because it keeps the MPF packages separate from the rest of your
+machine. If you encounter any package issues while upgrading or reverting an
+MPF version, you can easily delete the old virtual environment and start a clean one.
+
+For a dedicated MPF machine that will have no other programs
+installed (for example, a computer inside a pinball cabinet), a virtual
+environment is not recommended.
+
+.. warning::
+
+  If you use a virtual environment you have to always activate it before
+  starting MPF.
+  Otherwise, you will encounter weird issues.
+
+4. Activate your Virtual Environment
+------------------------------------
+
+To keep itself isolated from other programs, your virtual environment only
+activates when you tell it to. You can enable the virtual environment with
+a batch command from the command prompt:
+
+.. code-block:: doscon
+
+  ## Command Prompt: use the bat file
+  C:\> C:\Users\username\mpfenv\scripts\activate.bat
+
+  ## PowerShell: use the ps1 script
+  C:\> C:\Users\username\mpfenv\scripts\activate.ps1
+
+.. note::
+
+  You may want to write this step down, as you'll run it every time you open up
+  a terminal window to work on MPF
+
+You'll know you're in the virtual environment because the console prompt will include
+the name of your venv in parenthesis.
+
+.. code-block:: doscon
+
+  C:\> python --version
+  Python 2.7.10
+  C:\> C:\Users\username\mpfenv\scripts\activate.bat
+
+  (mpfenv) C:\> python --version
+  Python 3.7.5
+  (mpfenv) C:\>
+
+.. warning::
+
+  By default, PowerShell is not allowed to execute scripts. If you encounter the error
+  `activate.ps1 cannot be loaded because the execution of scripts is disabled on this system`,
+  you need to enable scripts.
+
+  Open a PowerShell window as Administrator and run the following command:
+  ```
+  set-executionpolicy remotesigned
+  ```
+
+5. Install MPF
 --------------
 
 In case you previously had MPF/MPF-MC 0.52 or earlier installed you need to
@@ -171,7 +251,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN>pip install mpf mpf-mc
+   C:\Users\username>pip install mpf mpf-mc
    Collecting mpf-mc
      Downloading mpf_mc-0.50.0.dev5-cp34-none-win32.whl (6.4MB)
        100% |################################| 6.4MB 176kB/s
@@ -261,7 +341,7 @@ general idea. Also this may take a few minutes to run on your computer.)
      Running setup.py install for docutils ... done
    Successfully installed Kivy-Garden-0.1.4 Pillow-4.2.1 asciimatics-1.8.0 certifi-2017.4.17 chardet-3.0.4 docutils-0.14rc2 future-0.16.0 idna-2.5 kivy-1.10.0 kivy.deps.glew-0.1.9 kivy.deps.gstreamer-0.1.12 kivy.deps.sdl2-0.1.17 kivy.deps.sdl2-dev-0.1.17 mpf-0.50.0.dev11 mpf-mc-0.50.0.dev5 olefile-0.44 psutil-5.2.2 pyfiglet-0.7.5 pygments-2.2.0 pypiwin32-219 pyserial-3.3 pyserial-asyncio-0.4 requests-2.18.1 ruamel.base-1.0.0 ruamel.yaml-0.10.23 typing-3.6.1 urllib3-1.21.1 wcwidth-0.1.7
 
-   C:\Users\BRIAN MADDEN>
+   C:\Users\username>
 
 If you want to make sure that MPF was installed, you can run:
 
@@ -274,13 +354,13 @@ this:
 
 .. code-block:: doscon
 
-   C:\Users\BRIAN MADDEN> mpf --version
+   C:\Users\username> mpf --version
    MPF v0.54.0
 
 (Note that the actual version number of your MPF installation will be whatever
 version was the latest when you installed it and might not match the version above.)
 
-4. Download & run the "Demo Man" example game
+6. Download & run the "Demo Man" example game
 ---------------------------------------------
 
 Now that you have MPF installed, you probably want to see it in action. The easiest way to do that is
@@ -291,7 +371,7 @@ There's another example project you can also check out if you want called the "M
 that lets you step through a bunch of example display things (slides, widgets, sounds, videos, etc).
 Instructions for running the MC Demo are :doc:`here </example_games/mc_demo>`.
 
-5. Install whatever drivers your hardware controller needs
+7. Install whatever drivers your hardware controller needs
 ----------------------------------------------------------
 
 If you're using MPF with a physical machine, then there will be some specific

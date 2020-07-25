@@ -187,6 +187,16 @@ you don't actually need to include the setting.)
 If you want to play the show at 2x the speed, use ``speed: 2``. If you want to play it at half
 speed, use ``speed: .5``. Etc.
 
+start_running:
+~~~~~~~~~~~~~~
+Single value, type: ``boolean``. Default: ``True``
+
+Whether the show starts running immediately when it is played.
+
+By default, calling ``play`` on a show begins at the starting step and advances through the steps
+according to the show config. If ``start_running`` is false, the show will play the starting step
+and immediately pause. You can begin playing the show by calling show_player with ``action: resume``.
+
 start_step:
 ~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``

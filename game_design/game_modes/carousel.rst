@@ -61,19 +61,21 @@ Here is the process of configuring a carousel:
 
 .. code-block:: yaml
 
-   select_item_events: s_start_active
+   select_item_events: s_start_inactive
 
 * Select the event that moves to the next item in the list of items
 
 .. code-block:: yaml
 
-  next_item_events: s_right_flipper_active
+  next_item_events: s_right_flipper_inactive
 
 * Select the event that moves back to the previous item in the list of items
 
 .. code-block:: yaml
 
-   previous_item_events: s_left_flipper_active
+   previous_item_events: s_left_flipper_inactive
+
+.. note:: It is recommended to use the *flipper_inactive* events to rotate, rather than *flipper_active*. This allows the use of *flipper_cancel* to select items without accidentally rotating before the selection occurs.
 
 
 There are two events of importance here:
@@ -97,9 +99,9 @@ You can then use the carousel_<item>_selected event to start the mode that was s
      use_wait_queue: true
    mode_settings:
      selectable_items: terra, pyro, space, liquid
-     select_item_events: s_start_active
-     next_item_events: s_right_flipper_active
-     previous_item_events: s_left_flipper_active
+     select_item_events: s_start_inactive
+     next_item_events: s_right_flipper_inactive
+     previous_item_events: s_left_flipper_inactive
    slide_player:
      my_carousel_terra_highlighted: select_terra
      my_carousel_liquid_highlighted: select_liquid
@@ -147,10 +149,10 @@ You can then use the carousel_<item>_selected event to start the mode that was s
    #! advance_time_and_run .1
    #! assert_available_balls_on_playfield 0
    #! assert_text_on_top_slide TERAFORM
-   #! post s_right_flipper_active
+   #! post s_right_flipper_inactive
    #! advance_time_and_run .1
    #! assert_text_on_top_slide PYRO
-   #! post s_start_active
+   #! post s_start_inactive
    #! advance_time_and_run .1
    #! assert_available_balls_on_playfield 1
 
@@ -178,8 +180,8 @@ When the Launch Button is pressed, the game starts the mode selected by the play
    mode_settings:
      selectable_items: Doctor1, Doctor2, Doctor3, Doctor4, Doctor5, Doctor6, Doctor7, Doctor8
      select_item_events: sw_launch_active
-     next_item_events: sw_right_flipper_active
-     previous_item_events: sw_left_flipper_active
+     next_item_events: sw_right_flipper_inactive
+     previous_item_events: sw_left_flipper_inactive
    slide_player:
      carousel_Doctor1_highlighted: select_Doctor1
      carousel_Doctor2_highlighted: select_Doctor2
@@ -276,10 +278,10 @@ When the Launch Button is pressed, the game starts the mode selected by the play
    #! advance_time_and_run .1
    #! assert_available_balls_on_playfield 0
    #! assert_text_on_top_slide "Doctor 1"
-   #! post sw_right_flipper_active
+   #! post sw_right_flipper_inactive
    #! advance_time_and_run .1
    #! assert_text_on_top_slide "Doctor 2"
-   #! post sw_launch_active
+   #! post sw_launch_inactive
    #! advance_time_and_run .1
    #! assert_available_balls_on_playfield 1
 

@@ -11,10 +11,10 @@ Here are the recipes that are done:
 
 * :doc:`The Addams Family: Mansion Awards <TAF_mansion_awards>`
 * :doc:`Attack From Mars: Super Jets <AFM_super_jets>`
+* :doc:`Indiana Jones: Rollover Lanes (with Lane Change) <rollover_lanes_with_lane_change>`
 
 And here's what's on our to-do list:
 
-+ *Indiana Jones: The Pinball Adventure:* INDY rollover lanes and lane change
 + *Attack from Mars:* 5-Way Combo
 + *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
 + *Red & Ted's RoadShow:* City modes
@@ -28,3 +28,4 @@ And here's what's on our to-do list:
 
    The Addams Family: Mansion Awards <TAF_mansion_awards>
    Attack From Mars: Super Jets <AFM_super_jets>
+   Indiana Jones: Rollover Lanes <rollover_lanes_with_lane_change>
