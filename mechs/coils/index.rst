@@ -48,6 +48,15 @@ high voltage.
 Normally, diodes are in the opposite direction but in this case this is
 intentional to short the coil when it deactivates (because of self-induction).
 
+If you are unsure about the direction of your diode measure the resistance
+between the two terminals in both directions.
+You should get 1-300 ohms (depending on the coil) in on direction and almost
+zero in the other direction.
+Connect the coil in the direction with higher resistance.
+Plus/red plug of your multimeter would be where high voltage is connected.
+We recommend a diode on any coil to prevent interferences and damages to your
+driver boards.
+
 Most machines use a common color for high voltage and an individual color for
 the return terminal of the coil.
 The "output" of your driver board is usually considered ground for the coil
@@ -59,24 +68,24 @@ Strength and Current
 ~~~~~~~~~~~~~~~~~~~~
 
 Coils vary in strength relative to the pulse time you use.
-The strength of the magnetic field of a coil is a product of some constant (u),
-the current (I) and the number of windings (N) divided by the length of the
-coil (L): ``B = u * I * N / L``
+The strength of the magnetic field of a coil is a product of some constant ``u``,
+the current ``I`` and the number of windings ``N`` divided by the length of the
+coil ``L``: ``B = u * I * N / L``
 
-The length of coils in pinball is almost the same for most coils (so ignore
+The length of coils in pinball is almost the same for most coils (3.5cm; so ignore
 that).
 However, the number of windings is not.
 Additionally, the thickness of the wire differs between coils which influences
 how much current can flow though the coil.
 Thicker wires generally means stronger coils.
-Unfortunately, this is not generally true for windings even though the forumlar
+Unfortunately, this is not generally true for windings even though the formula
 above suggests it.
 The reason is for that more windings also mean longer wires which will result
 in higher resistance and less current.
-At least for typical coils in pinball more windings means slighly less
+At least for typical coils in pinball more windings means slightly less
 powerful.
 
-If you want to compare the strengh of different coils you can get the number of
+If you want to compare the strength of different coils you can get the number of
 windings and their resistance from one of the following pages:
 
 * `Pinball Medic Coil Chart <https://www.pinballmedic.net/coilchart.html>`_
@@ -91,6 +100,8 @@ Relative strength: ``s = U / R * N / L``.
 More is stronger.
 In most cases you can leave out ``L`` as this is not terribly scientific
 anyway (and there is slightly more to it but this should be a good start).
+In general, reducing resistance ``R`` (by using thicker wires) will give you
+more powerful coils.
 
 Config
 ------
