@@ -32,6 +32,12 @@ In the example above the NET CPU has firmware 1.03 but the nodes still run on
 1.00 which indicates an issue.
 See :doc:`/running/commands/hardware` for details about the command.
 
+Stuck on Drivers
+----------------
+
+See the section about :doc:`Replacing FETs on FAST Driver Boards <drivers>` if
+you suspect burned FETs.
+
 Permission Denied on Linux
 --------------------------
 
