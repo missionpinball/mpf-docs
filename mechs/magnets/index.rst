@@ -54,6 +54,13 @@ Coils:
 * 90-5064-02
 * A-15685
 
+Dedicated driver boards:
+
+You can use a board such as ``520-5068-01`` to connect up to
+three drivers to four logic level outputs (3 inputs + 1 clock).
+The board contains FETs with flyback diode and a logic buffer for further
+protection.
+
 Config
 ------
 
