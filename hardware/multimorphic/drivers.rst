@@ -100,7 +100,7 @@ You may also use outputs as ``digital_outputs``. For instance, to control a moto
    circuits (not directly).
 
 Pulse time
-~~~~~~~~~~
+^^^^^^^^^^
 
 The P-Roc, P3-Roc and/or PD-16 have the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time.
@@ -116,7 +116,7 @@ For example, consider the following configuration:
 When MPF sends this coil a pulse command, the coil will be fired for 30ms.
 
 Pulse Power
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 You can also set the power of pulses on your coil:
 
@@ -133,7 +133,7 @@ With the P-Roc and P3-Roc it is not possible to use ``default_hold_power`` and
 ``default_pulse_power`` at the same time.
 
 Hold Power
-~~~~~~~~~~
+^^^^^^^^^^
 
 If you want to hold a driver on at less than full power, MPF does this by using
 ``default_hold_power`` parameter which works for all platforms.
@@ -160,7 +160,7 @@ With the P-Roc it is not possible to use ``default_hold_power`` and
 
 
 Recycle
-~~~~~~~
+^^^^^^^
 
 You can set :doc:`recycle time </mechs/coils/recycle>`
 to your coil to prevent it from overheating by repeated pulses.

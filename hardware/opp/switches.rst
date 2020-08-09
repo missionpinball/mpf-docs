@@ -13,7 +13,7 @@ For switches, you can use most of the settings as outlined in the
 few things that are OPP-specific:
 
 Number:
-~~~~~~~
+^^^^^^^
 
 OPP switches are numbered sequentially depending on which wing board
 is the switch input.  Wing position 0 contains switch numbers 0 to 7.

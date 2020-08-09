@@ -102,7 +102,7 @@ Step 2 then you need to update your machine config file for MPF running on your 
 be able to connect to the LISY board.
 
 Serial mode
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 If you want to use the serial port, add/update the following sections in your machine config:
 
@@ -139,7 +139,7 @@ Or ``/dev/ttyACMX`` on Linux:
    cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
 
 Network mode
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 Alternatively, if you want to connect using WiFi or Ethernet, add/update the following sections
 in your machine config:

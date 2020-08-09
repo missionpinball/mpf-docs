@@ -29,7 +29,7 @@ format.
    of the documentation.
 
 Direct Switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 The P-ROC has 32 direct switch inputs (which are switches that are directly
 connected to the P-ROC that do not require a switch matrix). Direct switches
@@ -49,7 +49,7 @@ number with "SD", like this:
        number: SD12
 
 Matrix Switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 If you're using a switch matrix, then the switch numbers are entered using
 the column number, then a slash, then the row number.

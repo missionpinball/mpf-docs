@@ -31,7 +31,7 @@ together, then you're going to need a "real" computer to drive it
 and will not be happy with a small single-board computer.
 
 CPU
-~~~
+^^^
 
 The trend in computing these days (for both "real" computers and small
 single-board computers) is multi-core. Almost every computer these
@@ -47,7 +47,7 @@ everything above that will not help during normal games.
 However, during development, when using MPF Monitor and an IDE more cores will certainly help.
 
 Disk
-~~~~
+^^^^
 Disk space it not really an issue these days. The real question is disk
 performance in terms of SSD versus traditional spinning magnetic hard disks.
 SSD is fast, you can can get away with less memory since MPF can dynamically
@@ -59,7 +59,7 @@ Filesystems can become corrupted by unsafe shut downs, so consider running a
 journaling filesystem or even mount them read-only.
 
 Memory
-~~~~~~
+^^^^^^
 
 MPF itself doesn't require much memory. The real memory use comes from loading
 all the images, sounds, and videos into memory. MPF can load those on demand

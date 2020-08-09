@@ -32,7 +32,7 @@ running. The only thing you absolutely have to configure is your
 ports.
 
 Understanding OPP hardware ports
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Even though OPP controllers are USB devices, they use "virtual"
 COM ports to communicate with the host computer running MPF. On your
@@ -48,7 +48,7 @@ port converter, the "real" serial port will have less latency.  The
 real serial port must use 5V signal levels when talking to OPP hardware.
 
 Adding the port to your config file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you're using an OPP controller, you need to add the serial port to
 your MPF config. So if you plug in the OPP controller and see a port

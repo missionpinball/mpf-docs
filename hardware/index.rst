@@ -40,7 +40,7 @@ that you don't see on this list, please
 <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
 
 Primary control systems
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You'll need to pick one of these three as the main interface between MPF and
 your pinball machine.
@@ -103,7 +103,7 @@ your pinball machine.
      you're not using MPF with physical hardware.
 
 Additional supported hardware
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following hardware devices can be combined with primary control sytstems
 to provide additional functionality.

@@ -75,7 +75,7 @@ When using MPF with WPC machines, you can use the switch numbers from the machin
 format depends on the type of switch:
 
 Matrix switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Matrix switches start with the letter ``S``, followed by the switch number. For example:
 
@@ -106,7 +106,7 @@ don't get switch activities that you expect, check out neighboring switches to s
 if the numbers are wrong.
 
 Direct switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Direct switches (which are typically the coin and front door switches) are
 entered with the ``SD`` prefix, then the number, like this:
@@ -122,7 +122,7 @@ entered with the ``SD`` prefix, then the number, like this:
 Again, case doesn't matter.
 
 Fliptronics switches
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 Fliptronics switches (on machines that have them) are entered with the ``SF`` prefix.
 
@@ -166,7 +166,7 @@ motors in the ``coils:`` section of your config. Flashers go in the ``flashers:`
 section (discussed below).
 
 Configuring regular coils
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To configure the regular coils (from the "Solenoid / Flasher" table in your
 machine's operator's manual, enter the letter ``C`` followed by the solenoid
@@ -186,7 +186,7 @@ number, like this:
        default_pulse_ms: 25
 
 Fliptronics coils
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 You'll also see a section in the solenoid table in your ooperator's manual with "Flipper
 Circuits", like this:

@@ -31,7 +31,7 @@ To configure the ``number:`` of a switch connected to an SW-16 board and a
 P3-ROC, you have two options:
 
 Board Bank Switch Syntax
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first (and easier) option is to enter the number as a combination of the
 SW-16 ``board address`` (0-15, as configured by the DIP switches), then the
@@ -49,7 +49,7 @@ For example:
        number: A2-B1-5    # SW-16 board at address 2, Bank B, Switch 5
 
 Direct Numbering
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 You can also use the internal number.
 As mentioned in the SW-16 manual you can calculate those using:
@@ -83,7 +83,7 @@ Burst switch inputs (J3 to J10) on the P3-Roc can be used in two ways in MPF.
 .. image:: /hardware/images/multimorphic_p3_roc.png
 
 Burst Switches as Burst Optos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can configure burst optos using the following syntax:
 
@@ -118,7 +118,7 @@ Multimorphic sells them as single transmitter/receiver (part number:
 PCBA-0011-0002) and as bank of 8 (part number: PCBA-0003-0003).
 
 Burst Switches as Local Inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use burst switches as local inputs set DIP switch 2 to ``on`` on the P3-Roc.
 You can use those 64 inputs as direct inputs:
