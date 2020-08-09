@@ -118,7 +118,7 @@ Flashers
 Solenoids
 ^^^^^^^^^
 
-- add all normal solenoids to the ``Sub InitSolenoids``, to initialize them als ``False``
+- add all normal solenoids to the ``Sub InitSolenoids``, to initialize them as ``False``
 - in ``Sub UpdateSolenoids`` add a case for every MPF coil number, setting the state of the VPX solenoid. Use "" to include string type numbers
 
 Flippers

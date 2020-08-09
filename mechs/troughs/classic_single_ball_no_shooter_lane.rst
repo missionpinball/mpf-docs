@@ -104,8 +104,8 @@ Your drain device configuration should look now look like this:
         tags: drain, home, trough
         eject_timeouts: 3s
 
-4. Add the trough als default_source_device
--------------------------------------------
+4. Add the trough as default_source_device
+------------------------------------------
 
 Normally you would use your plunger device as source device for your playfield.
 But since there is no plunger lane, that means

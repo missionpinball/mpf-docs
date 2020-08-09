@@ -52,8 +52,8 @@ Instead the plunger lane area is considered part playfield, so a ball in the
 plunger lane that's not sitting on a switch is just like any other area of the
 playfield where the ball might be rolling around while it's not on a switch.
 
-3. Add the trough als default_source_device
--------------------------------------------
+3. Add the trough as default_source_device
+------------------------------------------
 
 Normally you would use your plunger device as source device for your playfield.
 But since your plunger lane with no switch is not a ball device, that means
