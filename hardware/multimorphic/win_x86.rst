@@ -30,8 +30,8 @@ Now MPF will be able to communicate with the P-ROC or P3-ROC.
 Continue on with the :doc:`platform` documentation to finish your MPF
 configuration for the P-ROC/P3-ROC.
 
-2. Install Visual C++ Redistributable for Visual Studio 2015
+2. Install Visual C++ Redistributable for Visual Studio 2019
 ------------------------------------------------------------
 
 You might already have those but in case you do not install
-`Visual C++ Redistributable for Visual Studio 2015 <https://www.microsoft.com/en-us/download/confirmation.aspx?id=48145>`_.
+`Visual C++ Redistributable for Visual Studio 2019 (32-bit) <https://aka.ms/vs/16/release/vc_redist.x86.exe>`_.
