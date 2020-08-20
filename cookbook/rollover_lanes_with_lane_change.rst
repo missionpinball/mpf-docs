@@ -49,7 +49,15 @@ top lanes, called ``s_top_lane_1`` through ``s_top_lane_4``.
 
 .. code-block:: mpf-config
 
-  #config_version=5
+  #! switches:
+  #!   s_top_lane_1:
+  #!     number: 1
+  #!   s_top_lane_2:
+  #!     number: 2
+  #!   s_top_lane_3:
+  #!     number: 3
+  #!   s_top_lane_4:
+  #!     number: 4
   ##! mode: top_lanes
   mode:
     start_events: start_mode_top_lanes
@@ -75,8 +83,7 @@ light on, and turns it off after the shot is hit.
 
 .. code-block:: mpf-config
 
-  #config_version=5
-
+  ##! mode: top_lanes
   shot_profiles:
     top_lane_profile:
       states:
@@ -98,8 +105,23 @@ config section, called ``l_top_lane_1`` through ``l_top_lane_4``
 
 .. code-block:: mpf-config
 
-  #config_version=5
-
+  #! switches:
+  #!   s_top_lane_1:
+  #!     number: 1
+  #!   s_top_lane_2:
+  #!     number: 2
+  #!   s_top_lane_3:
+  #!     number: 3
+  #!   s_top_lane_4:
+  #!     number: 4
+  ##! mode: top_lanes
+  #! shot_profiles:
+  #!   top_lane_profile:
+  #!     states:
+  #!       - name:
+  #!         show: off
+  #!       - name: hit
+  #!         show: on
   shots:
     top_lane_i:
       switch: s_top_lane_1
@@ -138,7 +160,16 @@ shots together. In this case, we'll use our shot group to:
 
 .. code-block:: mpf-config
 
-  #config_version=5
+  #! switches:
+  #!   s_top_lane_1:
+  #!     number: 1
+  #!   s_top_lane_2:
+  #!     number: 2
+  #!   s_top_lane_3:
+  #!     number: 3
+  #!   s_top_lane_4:
+  #!     number: 4
+  ##! mode: top_lanes
   #! shots:
   #!   top_lane_i:
   #!     switch: s_top_lane_1
@@ -162,12 +193,12 @@ shots together. In this case, we'll use our shot group to:
   #!       led: l_top_lane_2
   #!
   #! shot_profiles:
-  #! top_lane_profile:
-  #!   states:
-  #!     - name:
-  #!       show: off
-  #!     - name: hit
-  #!       show: on
+  #!   top_lane_profile:
+  #!     states:
+  #!       - name:
+  #!         show: off
+  #!       - name: hit
+  #!         show: on
   shot_groups:
     top_lane_group:
       shots: top_lane_i, top_lane_n, top_lane_d, top_lane_y
@@ -215,7 +246,15 @@ The full mode config code
 
 .. code-block:: mpf-config
 
-  #config_version=5
+  #! switches:
+  #!   s_top_lane_1:
+  #!     number: 1
+  #!   s_top_lane_2:
+  #!     number: 2
+  #!   s_top_lane_3:
+  #!     number: 3
+  #!   s_top_lane_4:
+  #!     number: 4
   ##! mode: top_lanes
   mode:
     start_events: start_mode_top_lanes
