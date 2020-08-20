@@ -112,4 +112,4 @@ Luckily, various boards exist to solve this issue:
 
 * Spooky/PBL Power Distribution board (part number: #600-0224-00)
 * FAST Playfield Interchange Board
-* Multimorphic Power Distribution board (part number: unknown)
+* Multimorphic Power Distribution board (part number: PCBA-0031-0003)
