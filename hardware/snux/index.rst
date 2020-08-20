@@ -333,11 +333,10 @@ configure it as *snux*, like this:
 
 .. code-block:: mpf-config
 
-    hardware:
-      platform: p_roc
-
-    p_roc:
-      driverboards: snux
+   hardware:
+     platform: virtual
+     driverboards: wpc
+     coils: snux
 
 Adding the *driverboards: snux* option automatically activates the
 Snux platform overlay.
@@ -664,10 +663,8 @@ This is an example code block with the main Sys11 elements in.
 
    hardware:
      platform: virtual
-     coils: snux
-
-   p_roc:
      driverboards: wpc
+     coils: snux
 
    system11:
      ac_relay_delay_ms: 75
