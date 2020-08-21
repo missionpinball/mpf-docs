@@ -11,8 +11,8 @@ with the running.
    tournament mode, or allow players to select a player profile. So the
    game start process doesn't actually begin until the start button is
    released.)
-#. The Attract mode posts the boolean event * request_to_start_gam
-   *e.See the section below about the "How the *request_to_start_game*
+#. The Attract mode posts the boolean event *request_to_start_game*.
+   See the section below about the "How the *request_to_start_game*
    event works."
 
     #. The ball controller makes sure there are enough balls and that they

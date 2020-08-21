@@ -252,7 +252,7 @@ be something like "bd_catapult" or whatever you called it.
 Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
 
-6. Add the plunger als default_source_device
+6. Add the plunger as default_source_device
 --------------------------------------------
 
 Next you need to add your plunger lane ball device as ``default_source_device`` to
