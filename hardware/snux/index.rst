@@ -337,11 +337,7 @@ configure it as *snux*, like this:
      platform: virtual
      driverboards: wpc
      coils: snux
-
-Adding the *driverboards: snux* option automatically activates the
-Snux platform overlay.
-
-
+     switches: snux
 
 2. Configure snux options
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -665,6 +661,7 @@ This is an example code block with the main Sys11 elements in.
      platform: virtual
      driverboards: wpc
      coils: snux
+     switches: snux
 
    system11:
      ac_relay_delay_ms: 75
@@ -697,8 +694,6 @@ This is an example code block with the main Sys11 elements in.
      c_side_c2:
        number: c12c
        default_hold_power: 0.5
-     c_virtual:
-       number:
 
 What if it did not work?
 ------------------------
