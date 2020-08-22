@@ -7,7 +7,7 @@ One of the base assumptions that the MPF system makes is that there is only one 
 
 Here's what the hardware configuration for two plungers (and troughs) would look like:
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
    #config_version=5
    switches:
@@ -80,16 +80,17 @@ It is the game mode that handles the ball start procedure and assumes a single l
 
 First, see how the default game mode works.  Within the MPF source library you’ll see a directory called mpf/modes/game.  This is just like the modes directory in your own game definitions.  Let’s look at the config file first (`mpf/modes/game/config/game.yaml <https://github.com/missionpinball/mpf/blob/dev/mpf/modes/game/config/game.yaml>`_):
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
+   ##! mode: game
    #config_version=5
    mode:
      start_events: game_start
      stop_events: game_ended, service_mode_entered
      priority: 20
      code: mpf.modes.game.code.game.Game
-     game_mode: False  # this is the game so it is started outside of a game
-     stop_on_ball_end: False
+     game_mode: false  # this is the game so it is started outside of a game
+     stop_on_ball_end: false
 
 This is pretty straight-forward. First the standard mode settings, and then it points to the source for a Python module that defines a class called Game. We can look at that code in ``mpf/modes/game/code/game.py``. While we won’t repost the full source, you can look at it `here <https://github.com/missionpinball/mpf/blob/dev/mpf/modes/game/code/game.py>`_. We won’t get into all that it does, because we don’t need to. Looking through the file, we really only need to know where this mode adds a ball to the playfield. That can be found as the last line of the ``_start_ball()`` method. It makes the following call:
 
@@ -129,6 +130,7 @@ Your ``game.yaml`` will look like this:
 
 .. code-block:: yaml
 
+   ##! mode: game
    #config_version=5
    mode:
      start_events: game_start
