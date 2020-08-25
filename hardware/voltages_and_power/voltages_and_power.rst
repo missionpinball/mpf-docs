@@ -87,7 +87,7 @@ Common power supplies for 70V - 80V (not recommended for new designs):
 Light Power
 -----------
 
-You lights will require a lot of power.
+Your lights will require a lot of power.
 Depending on the type of light the voltage might differ.
 Traditional incandescent bulbs need something around 12V to 24V.
 LEDs usually run at 5V (sometimes 12V).
