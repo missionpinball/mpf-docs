@@ -56,3 +56,14 @@ too much memory (certainly far less than sounds and images), so in most cases th
 One "gotcha" to keep in mind is that MPF maintains a global list of shows, so you can't have the same show name twice
 (even if one is loaded from a show file and one is in a config file). If you do this, then whichever show you load
 last will be overwrite the previous one, and you'll be confused.
+
+Referencing Slides/Widgets in Shows
+-----------------------------------
+
+You can add slides/widgets in shows.
+However, you cannot reference slides/widgets which were defined in show files
+or show sections from outside of the show.
+This worked in the past but it caused issues if this show hasn't been loaded
+yet.
+Nevertheless, you can reference (named) slides/widgets from slide/widget
+sections in any show.
