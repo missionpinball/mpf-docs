@@ -77,7 +77,7 @@ configs:
    twitch_last_chat_user <twitch_last_chat_user>
 
 
-   Related Events
-   --------------
+Related Events
+--------------
 
-   .. include:: /events/include_machine_vars.rst
+.. include:: /events/include_machine_vars.rst
