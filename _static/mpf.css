@@ -177,3 +177,21 @@ footer p {
 .wy-breadcrumbs li.wy-breadcrumbs-aside a {
     text-decoration: none;
 }
+
+.test_header {
+    display: none;
+}
+
+.test_config {
+    display: none;
+}
+
+.toggle .header {
+    display: block;
+    clear: both;
+    font-size: 70%;
+}
+
+.toggle .header p {
+    font-size: 70%;
+}

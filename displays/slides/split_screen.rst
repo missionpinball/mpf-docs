@@ -13,10 +13,9 @@ representation of a blank canvas that holds graphical content. They are logical 
 We will need to define and configure five displays for this layout: one that covers the entire window area, and
 four smaller ones that will each be used for one of the four smaller quadrant displays.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    window:
      width: 1280
      height: 720
@@ -24,7 +23,6 @@ four smaller ones that will each be used for one of the four smaller quadrant di
      fullscreen: false
      borderless: true
      exit_on_escape: true
-
    displays:
      window:
        width: 1280
@@ -58,8 +56,24 @@ widget will be set to the corresponding display name that we want to display in 
    While the display widgets will automatically scale the display contents to fit in the widget boundaries, it is
    recommended you use the same size display widget as the source display for the best visual results.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! displays:
+   #!   window:
+   #!     width: 1280
+   #!     height: 720
+   #!   upper_left:
+   #!     width: 580
+   #!     height: 260
+   #!   upper_right:
+   #!     width: 580
+   #!     height: 260
+   #!   lower_left:
+   #!     width: 580
+   #!     height: 260
+   #!   lower_right:
+   #!     width: 580
+   #!     height: 260
    slides:
      layout_4_mini:
        background_color: red
@@ -99,7 +113,6 @@ widget will be set to the corresponding display name that we want to display in 
          - type: text
            text: Split Screen Layout Example
            y: 60
-
    slide_player:
      mc_ready:
        layout_4_mini:
@@ -118,10 +131,9 @@ is just as simple as creating slides and setting their target value to the name 
 them. Here is our example from the previous steps that has now been extended to show a simple slide in each of the
 four quadrants:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    window:
      width: 1280
      height: 720
@@ -129,7 +141,6 @@ four quadrants:
      fullscreen: false
      borderless: true
      exit_on_escape: true
-
    displays:
      window:
        width: 1280
@@ -146,7 +157,6 @@ four quadrants:
      lower_right:
        width: 580
        height: 260
-
    slides:
      layout_4_mini:
        background_color: red
@@ -214,7 +224,6 @@ four quadrants:
          - type: text
            text: lower right
            font_size: 40
-
    slide_player:
      mc_ready:
        layout_4_mini:

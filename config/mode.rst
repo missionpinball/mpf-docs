@@ -24,11 +24,14 @@ Let's take a look at an example ``mode:`` section from a multiball mode:
 
 .. code-block:: mpf-config
 
-    ##! config: mode1
+    ##! mode: mode1
     mode:
-        start_events: ball_starting
-        stop_events: timer_mode_timer_complete, shot_right_ramp
-        priority: 300
+      start_events: ball_starting
+      stop_events: timer_mode_timer_complete, shot_right_ramp
+      priority: 300
+
+.. config
+
 
 Optional settings
 -----------------
@@ -37,7 +40,7 @@ The following sections are optional in the ``mode:`` section of your config. (If
 
 code:
 ~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 If you want to write some custom Python code for this mode, you can
 specify the name of your file as well as the class (a child class of
@@ -45,6 +48,39 @@ Mode). This entry is completely optional. If you don't need to write
 custom Python code for this mode (i.e. if you can do everything you
 need to do with config files which will probably be the case 90% of
 the time, then you can skip this setting.)
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this mode.
+
+events_when_started:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Events which will be posted when this mode has been started.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Events which will be posted when this mode has been stopped.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this mode.
+
+game_mode:
+~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
+
+A mode can only access player state if ``game_mode`` is set to ``True``.
+You can set this to ``False`` to allow a mode to run outside of a game.
+On example for such a mode is the attract mode.
+Game modes are automatically stopped at the end of a game.
 
 priority:
 ~~~~~~~~~
@@ -74,7 +110,7 @@ without the risk of those things affecting other modes.
 
 restart_on_next_ball:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If you set this to *true*, a mode that was running when the ball ended
 that was also configured to stop on ball end will automatically start
@@ -84,10 +120,7 @@ which maintains a list of the modes to be restarted.
 
 start_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -124,10 +157,7 @@ modes that are set to start on the same event.
 
 stop_events:
 ~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -149,18 +179,17 @@ ok. The mode will remain stopped.
 
 stop_on_ball_end:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 The default behavior for modes in MPF is that they're automatically
 stopped when the ball ends. Some modes (like the built-in *game* and
 *credit* modes) need to stay running even when the ball ends, so to
 support that you can add ``stop_on_ball_end: false``.
 
-Another use of this option is to retain each player's progress towards
-the mode's completion after draining a ball; allowing the player
-to start where they left off in the mode on the next ball. To retain
-the mode, you can use ``stop_on_ball_end: false`` to keep the state
-of the mode for each player between balls.
+Another use of this option is to retain the mode's progress towards
+completion after draining a ball; allowing the next player to start
+their ball where the previous player left off in the mode. To enable
+this behavior, you can add ``stop_on_ball_end: false``.
 
 However, it is very likely that a mode will be left unfinished (open)
 after the final ball, causing MPF to shutdown unexpectedly.  You will
@@ -175,12 +204,17 @@ unexpected crash of MPF, add ``game_ending`` to the ``stop_events:``
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
+   ##! mode: mode1
    mode:
-      start_events: mode_terra_2_start
-      stop_events: mode_complete, game_ending
-      stop_on_ball_end: false
+     start_events: mode_terra_2_start
+     stop_events: mode_complete, game_ending
+     stop_on_ball_end: false
+     game_mode: false
 
+However, a mode with ``stop_on_ball_end: False`` set must be a non game mode
+(i.e. ``game_mode: False`` is also set).
+To prevent crashes you cannot use all player functionality (such as accessing
+player variable) in this mode.
 
 stop_priority:
 ~~~~~~~~~~~~~~
@@ -211,7 +245,7 @@ are set to end on the same stop_event.
 
 use_wait_queue:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Specifies whether this mode should "pause"
 the flow of MPF while this mode is running. This only works if the
@@ -224,11 +258,10 @@ finish before the game flow moves on with the next player's turn, or modes
 like match or high score entry where you want those to finish before the
 attract mode starts again.
 
-game_mode:
-~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
 
-A mode can only access player state if ``game_mode`` is set to ``True``.
-You can set this to ``False`` to allow a mode to run outside of a game.
-On example for such a mode is the attract mode.
-Game modes are automatically stopped at the end of a game.
+Related How To guides
+---------------------
+
+* :doc:`/game_design/index`
+* :doc:`/tutorial/14_add_a_mode`
+* :doc:`/game_logic/modes/index`

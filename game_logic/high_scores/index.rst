@@ -25,9 +25,12 @@ names (or initials) when they've achieved a high score. Features include:
 + Events for high score awards and entry, so you can configure
   high score entry screens.
 
-This is an example:
+Don't have a display to enter initials? See :doc:`high_scores_in_ems` for how
+to use the high score mode without entering initials.
 
-.. code-block:: mpf-config
+This is an example (for machines with display):
+
+.. code-block:: mpf-mc-config
 
    ##! mode: my_mode
    #! variable_player:
@@ -39,27 +42,24 @@ This is an example:
      priority: 500
      start_events: game_ending, start_high_score
      use_wait_queue: true
-
    high_score:
-     _overwrite: True
+     _overwrite: true
      enter_initials_timeout: 60
      award_slide_display_time: 4s
-
      # define your high score categories and the awards
      categories: !!omap
-     - score:
-         - GRAND CHAMPION
-         - HIGH SCORE 1
-         - HIGH SCORE 2
-         - HIGH SCORE 3
-         - HIGH SCORE 4
-         - HIGH SCORE 5
-         - HIGH SCORE 6
-         - HIGH SCORE 7
-         - HIGH SCORE 8
-     - loops:
-         - LOOP CHAMP
-
+       - score:
+           - GRAND CHAMPION
+           - HIGH SCORE 1
+           - HIGH SCORE 2
+           - HIGH SCORE 3
+           - HIGH SCORE 4
+           - HIGH SCORE 5
+           - HIGH SCORE 6
+           - HIGH SCORE 7
+           - HIGH SCORE 8
+       - loops:
+           - LOOP CHAMP
      # set the defaults
      defaults:
        score:
@@ -74,111 +74,102 @@ This is an example:
          - ANT: 200000
        loops:
          - JAN: 42
-
    # optional: change the slides (you can omit all the following)
    slide_player:
-     _overwrite: True
+     _overwrite: true
      high_score_enter_initials: high_score_enter_initials
      high_score_award_display: high_score_award_display
-
    slides:
-     _overwrite: True
+     _overwrite: true
      high_score_enter_initials:
-     - type: text
-       style: tall_title
-       font_size: 18
-       text: PLAYER (player_num)
-       color: ffff00
-       x: 105
-       y: 90
-
-     - type: text
-       style: tall_title
-       font_size: 18
-       text: (award)
-       color: f0f0f0
-       x: 105
-       y: 70
-
-     - type: text_input
-       initial_char: A
-       dynamic_x: false
-       key: high_score
-       style: tall_title
-       font_size: 18
-       max_chars: 3
-       x: 105
-       y: 20
-       shift_left_event: sw_lower_left_flipper
-       shift_right_event: sw_lower_right_flipper
-       select_event: sw_start
-       color: ff0000
-
-     - type: text
-       style: tall_title
-       text: '<       >'
-       font_size: 18
-       x: 105
-       y: 20
-       color: ff0000
-
-
-     - type: text
-       text: ''
-       key: high_score
-       font_size: 18
-       style: tall_title
-       x: 105
-       y: 50
-       color: ff00ff
-       animations:
-         show_slide:
-         - property: opacity
-           value: 1
-           duration: 0.3s
-           easing: in_out_quint
-         - property: opacity
-           value: 0
-           duration: 0.3s
-           repeat: true
-           easing: in_out_quint
-
+       - type: text
+         style: big
+         font_size: 18
+         text: PLAYER (player_num)
+         color: ffff00
+         x: 105
+         y: 90
+       - type: text
+         style: big
+         font_size: 18
+         text: (award)
+         color: f0f0f0
+         x: 105
+         y: 70
+       - type: text_input
+         initial_char: A
+         dynamic_x: false
+         key: high_score
+         style: big
+         font_size: 18
+         max_chars: 3
+         x: 105
+         y: 20
+         shift_left_event: sw_lower_left_flipper
+         shift_right_event: sw_lower_right_flipper
+         select_event: sw_start
+         color: ff0000
+       - type: text
+         style: big
+         text: '<       >'
+         font_size: 18
+         x: 105
+         y: 20
+         color: ff0000
+       - type: text
+         text: ''
+         key: high_score
+         font_size: 18
+         style: big
+         x: 105
+         y: 50
+         color: ff00ff
+         animations:
+           show_slide:
+             - property: opacity
+               value: 1
+               duration: 0.3s
+               easing: in_out_quint
+             - property: opacity
+               value: 0
+               duration: 0.3s
+               repeat: true
+               easing: in_out_quint
      high_score_award_display:
-     - type: text
-       text: (player_name)
-       font_size: 18
-       style: tall_title
-       anchor_y: middle
-       anchor_x: middle
-       x: middle
-       y: middle
-       color: 00ff00
-       animations:
-         show_slide:
-         - property: opacity
-           value: 1
-           duration: 0.05s
-         - property: opacity
-           value: 0
-           duration: 0.05s
-           repeat: true
-     - type: text
-       text: (award)
-       font_size: 18
-       style: tall_title
-       x: 105
-       y: 110
-       color: 0000ff
-     - type: text
-       text: (value)
-       style: tall_title
-       x: 105
-       y: 30
-       color: 4040FF
-       font_size: 20
-       number_grouping: true
-       min_digits: 2
-
+       - type: text
+         text: (player_name)
+         font_size: 18
+         style: big
+         anchor_y: middle
+         anchor_x: middle
+         x: middle
+         y: middle
+         color: 00ff00
+         animations:
+           show_slide:
+             - property: opacity
+               value: 1
+               duration: 0.05s
+             - property: opacity
+               value: 0
+               duration: 0.05s
+               repeat: true
+       - type: text
+         text: (award)
+         font_size: 18
+         style: big
+         x: 105
+         y: 110
+         color: 0000ff
+       - type: text
+         text: (value)
+         style: big
+         x: 105
+         y: 30
+         color: 4040FF
+         font_size: 20
+         number_grouping: true
+         min_digits: 2
    ##! test
    #! assert_machine_variable 1000000 score1_value
    #! assert_machine_variable MPF score1_name
@@ -190,14 +181,14 @@ This is an example:
    #! start_mode my_mode
    #! post score_100
    #! assert_player_variable 2000000 score
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 2 ball
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 3 ball
    #! mock_event high_score_enter_initials
-   #! drain_ball
+   #! drain_all_balls
    #! advance_time_and_run 1
    #! assert_player_variable 3 ball
    #! assert_event_called high_score_enter_initials
@@ -225,6 +216,102 @@ In this case this will be ``score1_value``, ``score1_name`` and
 Additionally, there will be ``loop1_label``, ``loop1_value`` and
 ``loop1_name``. You can use those in your attract slides to show previous high
 scores.
+This is an example of an attract mode which shows high scores:
+
+.. code-block:: mpf-mc-config
+
+   # in your machine wide config file
+   widget_styles:
+     attract_mode_high_score_display_label:
+       font_size: 30
+       anchor_x: right
+       anchor_y: top
+       x: center-10
+       bold: true
+     attract_mode_high_score_display_name:
+       font_size: 30
+       anchor_x: right
+       anchor_y: top
+       x: center+70
+     attract_mode_high_score_display_score:
+       font_size: 30
+       anchor_x: left
+       anchor_y: top
+       x: center+90
+       number_grouping: true
+       min_digits: 1
+   ##! show: attract
+   # in your attract mode show file
+   - duration: 20s
+     slides:
+       show_high_scores:
+         widgets:
+         - type: Text
+           text: HIGH SCORES
+           font_size: 60
+           bold: true
+           anchor_x: center
+           anchor_y: center
+           x: center
+           y: top-100
+         - type: Text
+           text: (machine|score1_label)
+           style: attract_mode_high_score_display_label
+           y: top-200
+         - type: Text
+           text: (machine|score1_name)
+           style: attract_mode_high_score_display_name
+           y: top-200
+         - type: Text
+           text: (machine|score1_value)
+           style: attract_mode_high_score_display_score
+           y: top-200
+         - type: Text
+           text: (machine|score2_label)
+           style: attract_mode_high_score_display_label
+           y: top-240
+         - type: Text
+           text: (machine|score2_name)
+           style: attract_mode_high_score_display_name
+           y: top-240
+         - type: Text
+           text: (machine|score2_value)
+           style: attract_mode_high_score_display_score
+           y: top-240
+         - type: Text
+           text: (machine|score3_label)
+           style: attract_mode_high_score_display_label
+           y: top-280
+         - type: Text
+           text: (machine|score3_name)
+           style: attract_mode_high_score_display_name
+           y: top-280
+         - type: Text
+           text: (machine|score3_value)
+           style: attract_mode_high_score_display_score
+           y: top-280
+         - type: Text
+           text: LOOP CHAMPION
+           font_size: 60
+           bold: true
+           anchor_x: center
+           anchor_y: center
+           x: center
+           y: top-500
+         - type: Text
+           text: (machine|loops1_label)
+           style: attract_mode_high_score_display_label
+           y: top-600
+         - type: Text
+           text: (machine|loops1_name)
+           style: attract_mode_high_score_display_name
+           y: top-600
+         - type: Text
+           text: (machine|loops1_value)
+           style: attract_mode_high_score_display_score
+           y: top-600
+   ##! test
+   #! assert_mode_running attract
 
 +------------------------------------------------------------------------------+
 | Related How To Guides                                                        |
@@ -233,7 +320,8 @@ scores.
 +------------------------------------------------------------------------------+
 | :doc:`/game_design/index`                                                    |
 +------------------------------------------------------------------------------+
-
+| :doc:`high_scores_in_ems`                                                    |
++------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------+
 | Related Events                                                               |
@@ -242,3 +330,8 @@ scores.
 +------------------------------------------------------------------------------+
 | :doc:`mode_high_score_stopped </events/mode_name_stopped>`                   |
 +------------------------------------------------------------------------------+
+
+.. toctree::
+   :hidden:
+
+   high_scores_in_ems

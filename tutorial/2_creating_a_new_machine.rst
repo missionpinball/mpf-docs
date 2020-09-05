@@ -44,12 +44,12 @@ want.
 
 Throughout this tutorial we'll refer to this as "your machine folder".
 
-Next create a subfolder in your new machine folder called ``/config``. This is where your machine
+Next create a subfolder in your new machine folder called ``\config``. This is where your machine
 configuration files will live. This folder should be inside your machine folder, like this:
 
 .. code-block:: doscon
 
-   C:\pinball\your_machine\config\
+   C:\pinball\your_machine\config
 
 3. Create your machine config file
 ----------------------------------
@@ -70,15 +70,20 @@ so you actually create a file called ``config.yaml`` and not ``config.yaml.txt``
 -------------------------------------------------------
 
 The first thing you need to do when you create any new config file for MPF is to add an entry on the very top line that
-tells MPF what “version” of the MPF config spec you’re using for the file you’re creating. For MPF |version|, that
-should look like this:
+tells MPF what “version” of the MPF config spec you’re using for the file you’re creating.
+
+So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_, `Sublime <https://www.sublimetext.com/>`_, or  `Notepad++ <https://notepad-plus-plus.org/>`_)
+and then add that to the top of the file and save it.
+If you are familiar with an IDE such as VSCode or PyCharm/IntelliJ we suggest
+that you install the :doc:`MPF language server </tools/language_server/index>`
+which supports auto-completion, syntax and error highlighting, context help,
+go to definition and more.
+
+For MPF |version|, that should look like this:
 
 .. code-block:: yaml
 
    #config_version=5
-
-So just open the file (with a text editor or a free tool like `Atom <http://atom.io>`_ or `Sublime <https://www.sublimetext.com/>`_)
-and then add that to the top of the file and save it.
 
 Be sure to enter this exactly as it's shown here, with no spaces around the equal sign.
 
@@ -98,7 +103,7 @@ contents of that file.
 5. Run your game!
 -----------------
 
-Believe it your not, it's time to run your game! Simply open a console window and change to your machine
+Believe it our not, it's time to run your game! Simply open a console window and change to your machine
 folder, and run ``mpf -b``, like this:
 
 .. code-block:: doscon

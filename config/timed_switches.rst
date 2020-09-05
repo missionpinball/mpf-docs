@@ -9,6 +9,8 @@ timed_switches:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 Specifies :doc:`timed switches </game_logic/timed_switches/index>` which are used to
 post events when a switch is active for a continuous amount of time.
 
@@ -35,42 +37,29 @@ Like other devices in MPF, the format is:
       some_other_timed_switch:
          <settings>
 
-Settings
---------
+.. config
 
-The following settings can be used in each named timed switch section:
 
-switches:
-~~~~~~~~~
+Required settings
+-----------------
 
-A list of switches (or a single switch) that will be used for these timed switch
-settings. Note that you can use ``switch_tags:`` instead of ``switches:``.
+The following sections are required in the ``timed_switches:`` section of your config:
 
-switch_tags:
-~~~~~~~~~~~~
-
-A list of switch tags (or a single tag) that will be used to set which switches are
-used with these timed switch settings. Each switch with these tags will be added.
-
-time: (required)
-~~~~~~~~~~~~~~~~
-Single value, type: ``time string`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>`.
+time:
+~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 How long a switch must be continuously active before the ``events_when_active`` are posted.
 
-state:
-~~~~~~
-Single value, either ``active`` or ``inactive``. Default is ``active``.
 
-Controls whether the ``events_when_active:`` are posted when the switch is active for
-the ``time:`` amount, or whether it's flipped and the events are posted when the switch
-is ``inactive`` for the time amount.
+Optional settings
+-----------------
+
+The following sections are optional in the ``timed_switches:`` section of your config. (If you don't include them, the default will be used).
 
 events_when_active:
 ~~~~~~~~~~~~~~~~~~~
-A single event, or list of events, that's posted once a switch is continuously active for
-the ``time:`` setting. If you have multiple switches. this event will only be posted once,
-even if a second switch becomes active for that time while the first is still active.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 If you don't enter any events here, an event will automatically be posted in the format
 *<name_of_this_timed_switch>_active*. In other words, in the example at the top of this
@@ -81,9 +70,65 @@ event would be called *flipper_cradle_active*, but since that config has an
 
 events_when_released:
 ~~~~~~~~~~~~~~~~~~~~~
-A single event, or list of events, that will be posted when a timed switch is released.
-Unlike the active events which are only posted when the switch is continuously active
-for that period of time, the released events are posted immediately.
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 If you've defined multiple switches and two switches go active, the release event will
 not be posted until all the switches are released.
+
+state:
+~~~~~~
+Single value, type: one of the following options: active, inactive. Default: ``active``
+
+Controls whether the ``events_when_active:`` are posted when the switch is active for
+the ``time:`` amount, or whether it's flipped and the events are posted when the switch
+is ``inactive`` for the time amount.
+
+switch_tags:
+~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+A list of switch tags (or a single tag) that will be used to set which switches are
+used with these timed switch settings. Each switch with these tags will be added.
+
+switches:
+~~~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+
+A list of switches (or a single switch) that will be used for these timed switch
+settings. Note that you can use ``switch_tags:`` instead of ``switches:``.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+Not used.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/timed_switches/index`

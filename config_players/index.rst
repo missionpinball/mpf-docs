@@ -72,6 +72,31 @@ An example (show_player):
    show_player:
      event_which_is_posted_elsewhere: your_show
 
+Subscription syntax
+~~~~~~~~~~~~~~~~~~~
+This is not supported for all variables and all players.
+It will perform the action (i.e. play a show or enable a light) when the
+condition becomes true.
+Later it will remove/stop the action (i.e. stop the show or disable the light)
+when the condition becomes false.
+
+.. code-block:: yaml
+
+   example_player:
+     "{machine.test_machine_var == 23}":
+         <depends on the player>
+
+
+An example (light_player):
+
+.. code-block:: mpf-config
+
+   light_player:
+     "{current_player.score > 1000000}":
+       score_1M: white
+
+See :doc:`/events/overview/conditional` for details about conditionals.
+
 Config Player in a Show
 -----------------------
 

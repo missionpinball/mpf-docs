@@ -47,20 +47,33 @@ to 0x10000, which is just past the end of the 16-bit intensity space.
 Since MPF cannot do any better we suggest that you use this instead of our
 software color correction (which is limited to 8-bit resolution here).
 
+.. config
+
 
 Optional settings
 -----------------
 
-The following sections are optional in the ``fadecandy:`` section of your config.
-(If you don't include them, the default will be used).
+The following sections are optional in the ``fadecandy:`` section of your config. (If you don't include them, the default will be used).
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``none``
+
+Log level for the console log for this platform.
 
 dithering:
 ~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Enabled temporal dithering for 16bit color precision.
 You want to leave this enabled since it looks much nicer (especially at low
 brightness).
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this platform.
 
 gamma:
 ~~~~~~
@@ -71,7 +84,7 @@ The default is 2.5.
 
 keyframe_interpolation:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whatever the fadecandy should fade between keyframes.
 You usually want to leave this at true since it looks much nicer.
@@ -101,8 +114,7 @@ brightness curve for the lights. The default is 1.0.
 
 whitepoint:
 ~~~~~~~~~~~
-List of three values, each is a type: ``number`` (will be converted to floating point).
-Default: ``1.0, 1.0, 1.0``
+List of one (or more) values, each is a type: ``number`` (will be converted to floating point). Default: ``1.0, 1.0, 1.0``
 
 Specifies the white point (or white balance) of your lights. Enter it as
 a list of three floating point values that correspond to the red,
@@ -115,3 +127,9 @@ etc.
 You can use this to affect the overall brightness of lights (e.g. ``0.8, 0.8, 0.8``
 would be 80% brightness as every color would be multiplied by 0.8). You can
 also use this to affect the "tint" (lowering the blue, for example).
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/fadecandy/index`

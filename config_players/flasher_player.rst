@@ -12,3 +12,8 @@ Usage in shows
 --------------
 
 In shows, the slide flasher is used via the ``flashers:`` section of a step.
+
+Config Options
+--------------
+
+See :doc:`/config/flasher_player` for config details.

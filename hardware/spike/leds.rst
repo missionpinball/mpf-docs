@@ -56,14 +56,14 @@ as ``number: 8-47``.
 .. code-block:: mpf-config
 
    lights:
-      backlight:
-         number: 0-0  # 0-0 is the special address for the backlight
-      start_button:
-         number: 1-2
-      tourney_start_button:
-         number: 1-3
-      shoot_again:
-         number: 8-47
+     backlight:
+       number: 0-0    # 0-0 is the special address for the backlight
+     start_button:
+       number: 1-2
+     tourney_start_button:
+       number: 1-3
+     shoot_again:
+       number: 8-47
 
 The backbox backlight
    Stern SPIKE systems have controllable brightness for the white lights in the backbox
@@ -114,3 +114,7 @@ channels into the RGB LED. Then you can use it like any light.
          blue:
            number: 1-12
 
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`SPIKE troubleshooting guide <troubleshooting>`.

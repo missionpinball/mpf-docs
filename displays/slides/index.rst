@@ -8,7 +8,7 @@ or slides in an old-fashioned slide projector.
 You create multiple slides (each with its own content), and then you tell MPF
 when to activate certain slides. Every slide has a priority, so if multiple
 slides are active at the same time, the one with the highest priority will be
-shown. You acn also set "transitions" which control what visual effect is used
+shown. You can also set "transitions" which control what visual effect is used
 to transition from the current slide to the new slide. (Transitions are things like
 cross-fade, move in, push out, etc.)
 
@@ -75,11 +75,8 @@ slide_1 - but what triggers slide_2 and slide_3?
 The slide_player: can be used to sequence the playing of additional slides using the
 slide_slide_1_removed event to trigger the next slide to be played.
 
-+------------------------------------------------------------------------------+
-| Related Events                                                               |
-+==============================================================================+
-| :doc:`/events/slide_name_active`                                             |
-+------------------------------------------------------------------------------+
-| :doc:`/events/slide_name_removed`                                            |
-+------------------------------------------------------------------------------+
+Related Events
+--------------
+
+.. include:: /events/include_slides.rst
 

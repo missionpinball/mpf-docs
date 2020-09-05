@@ -25,25 +25,31 @@ drawn in the order they are in the config.
 For example, here's a slide that has widget3.1, then widget3.2, then
 widget3.3:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      3_widgets:
-      - type: text
-        text: widget3.1
-        color: red
-        font_size: 80
-        y: 40%
-      - type: text
-        text: widget3.2
-        color: orange
-        font_size: 80
-        y: 50%
-      - type: text
-        text: widget3.3
-        color: violet
-        font_size: 80
-        y: 60%
+     3_widgets:
+       - type: text
+         text: widget3.1
+         color: red
+         font_size: 80
+         y: 40%
+       - type: text
+         text: widget3.2
+         color: orange
+         font_size: 80
+         y: 50%
+       - type: text
+         text: widget3.3
+         color: violet
+         font_size: 80
+         y: 60%
+   #! slide_player:
+   #!   show_slide: 3_widgets
+   ##! test
+   #! post show_slide
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "widget3.1"
 
 The result is like this. Note that widget3.1 is on top of widget3.2, which is
 on top of widget3.3:
@@ -60,28 +66,34 @@ drawn on top of those with lower values.
 
 Here's the same example as before, but with ``z:`` values added:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
-      3_widgets:
-      - type: text
-        text: widget3.1
-        color: red
-        font_size: 80
-        y: 40%
-        z: 1
-      - type: text
-        text: widget3.2
-        color: orange
-        font_size: 80
-        y: 50%
-        z: 100
-      - type: text
-        text: widget3.3
-        color: violet
-        font_size: 80
-        y: 60%
-        z: 2
+     3_widgets:
+       - type: text
+         text: widget3.1
+         color: red
+         font_size: 80
+         y: 40%
+         z: 1
+       - type: text
+         text: widget3.2
+         color: orange
+         font_size: 80
+         y: 50%
+         z: 100
+       - type: text
+         text: widget3.3
+         color: violet
+         font_size: 80
+         y: 60%
+         z: 2
+   #! slide_player:
+   #!   show_slide: 3_widgets
+   ##! test
+   #! post show_slide
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "widget3.1"
 
 And the results:
 

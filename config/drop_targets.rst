@@ -21,39 +21,38 @@ Here's an example from *Judge Dredd*, with five drop targets we've given names
 .. code-block:: mpf-config
 
    #! switches:
-   #!    drop_target_j:
-   #!       number:
-   #!    drop_target_u:
-   #!       number:
-   #!    drop_target_d:
-   #!       number:
-   #!    drop_target_g:
-   #!       number:
-   #!    drop_target_e:
-   #!       number:
+   #!   drop_target_j:
+   #!     number:
+   #!   drop_target_u:
+   #!     number:
+   #!   drop_target_d:
+   #!     number:
+   #!   drop_target_g:
+   #!     number:
+   #!   drop_target_e:
+   #!     number:
    #! coils:
-   #!    reset_drop_targets:
-   #!       number:
-   #!    trip_drop_target_d:
-   #!       number:
-
+   #!   reset_drop_targets:
+   #!     number:
+   #!   trip_drop_target_d:
+   #!     number:
    drop_targets:
-        j:
-            switch: drop_target_j
-            reset_coil: reset_drop_targets
-        u:
-            switch: drop_target_u
-            reset_coil: reset_drop_targets
-        d:
-            switch: drop_target_d
-            reset_coil: reset_drop_targets
-            knockdown_coil: trip_drop_target_d
-        g:
-            switch: drop_target_g
-            reset_coil: reset_drop_targets
-        e:
-            switch: drop_target_e
-            reset_coil: reset_drop_targets
+     j:
+       switch: drop_target_j
+       reset_coil: reset_drop_targets
+     u:
+       switch: drop_target_u
+       reset_coil: reset_drop_targets
+     d:
+       switch: drop_target_d
+       reset_coil: reset_drop_targets
+       knockdown_coil: trip_drop_target_d
+     g:
+       switch: drop_target_g
+       reset_coil: reset_drop_targets
+     e:
+       switch: drop_target_e
+       reset_coil: reset_drop_targets
 
 Important: Not all "drop targets" in your machine will be configured
 as "drop targets." Some machines have drop target mechanisms that
@@ -84,6 +83,8 @@ here. (That’s done in the ``drop_target_banks:`` section.) The drop
 target name can be whatever you want, and it will be the name for this
 drop target which is used throughout your machine.
 
+.. config
+
 
 Required settings
 -----------------
@@ -92,7 +93,7 @@ The following sections are required in the ``drop_targets:`` section of your con
 
 switch:
 ~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device.
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of the switch that's activated when this drop target is down.
 (Note that active switch = target down, so if your drop target uses
@@ -117,14 +118,14 @@ See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 disable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will send a "disable" command to the drop target's reset coil,
 disabling the "keep up".
 
 enable_keep_up_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, will send enable the drop target's reset coil which
 means that balls that hit it do not cause the drop target to fall since the reset
@@ -137,14 +138,14 @@ you need to keep the drop target up.
 
 ignore_switch_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``500ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
 
 How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
 coils will set switches that could add to the score, start modes, etc. Default is ``500ms``.
 
 knockdown_coil:
 ~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 This is an optional coil that's used to knock down a drop target. Most
 drop targets do not have these. (In the *Judge Dredd* example above,
@@ -152,7 +153,7 @@ you'll notice that only the *D* target has a knockdown coil.
 
 knockdown_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``100ms``
 
 Max time allowed to delay the pulse of the knockdown coil.
 This is used to prevent excess power usage.
@@ -160,7 +161,7 @@ See :doc:`psus` for details.
 
 knockdown_events:
 ~~~~~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
@@ -174,7 +175,7 @@ change this value if you have more than one playfield and you're managing them s
 
 reset_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device.
+Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
 
 The name of the coil that is pulsed to reset this drop target. The
 pulse time will be whatever you configure as the default pulse time
@@ -190,7 +191,7 @@ reset.
 
 reset_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`) . Default: ``100ms``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``100ms``
 
 Max time allowed to delay the pulse of the reset coil.
 This is used to prevent excess power usage.
@@ -198,7 +199,7 @@ See :doc:`psus` for details.
 
 reset_events:
 ~~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ball_starting, machine_reset_phase_3
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_starting, machine_reset_phase_3``
 
 Default: ``ball_starting, machine_reset_phase_3``
 
@@ -216,7 +217,7 @@ Log level for the console log for this device.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 See the :doc:`documentation on the debug setting </config/instructions/debug>`
 for details.
@@ -236,10 +237,14 @@ and reports.
 
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``.
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 Special / reserved tags for drop targets: *None*
 
 See the :doc:`documentation on tags </config/instructions/tags>` for details.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/mechs/targets/drop_targets/index`

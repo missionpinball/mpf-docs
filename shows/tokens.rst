@@ -36,7 +36,7 @@ If you called this show *flash_red*, you could play it via the
 .. code-block:: mpf-config
 
    show_player:
-      some_event: flash_red
+     some_event: flash_red
 
 The problem with this show is that it's hard-coded. It only
 works for *led_01*, and it only cycles the colors between red
@@ -92,11 +92,11 @@ also add ``loops: -1`` which will cause the show to loop (repeat) indefinitely.
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         flash_red:
-            loops: -1
-            show_tokens:
-               led: led_02
+     some_event:
+       flash_red:
+         loops: -1
+         show_tokens:
+           led: led_02
 
 MPF can run multiple instances of a show at the same time, so you could run
 the above show multiple times (at the same time), passing different tokens to each
@@ -105,16 +105,16 @@ one, meaning you could use the same show to flash lots of lights at once:
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         flash_red:
-            loops: -1
-            show_tokens:
-               led: led_02
-      some_other_event:
-         flash_red:
-            loops: -1
-            show_tokens:
-               led: led_03
+     some_event:
+       flash_red:
+         loops: -1
+         show_tokens:
+           led: led_02
+     some_other_event:
+       flash_red:
+         loops: -1
+         show_tokens:
+           led: led_03
 
 Putting multiple values into a single token
 -------------------------------------------
@@ -126,11 +126,11 @@ consider the following section from your machine config:
 
    lights:
      led_01:
-         number: 00
-         tags: tag1
+       number: 00
+       tags: tag1
      led_02:
-         number: 01
-         tags: tag1
+       number: 01
+       tags: tag1
 
 You can see that both *led_01* and *led_02* have the *tag1* tag applied. So if you play the
 show above (with the *leds* token), you can actually pass the tag name to the token instead:
@@ -138,11 +138,11 @@ show above (with the *leds* token), you can actually pass the tag name to the to
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         flash_red:
-            loops: -1
-            show_tokens:
-               led: tag1
+     some_event:
+       flash_red:
+         loops: -1
+         show_tokens:
+           led: tag1
 
 This would result in a show that was equivalent to:
 
@@ -182,11 +182,11 @@ In this case, you'd just pass a value for the *corndog* token when you play the 
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         flash_red:
-            loops: -1
-            show_tokens:
-               corndog: led_02
+     some_event:
+       flash_red:
+         loops: -1
+         show_tokens:
+           corndog: led_02
 
 Tokens can be values too
 ------------------------
@@ -213,13 +213,21 @@ which you could then play like this:
 .. code-block:: mpf-config
 
    show_player:
-      some_event:
-         color_cycle:
-            loops: -1
-            show_tokens:
-               led: led_02
-               color1: green
-               color2: blue
+     some_event:
+       color_cycle:
+         loops: -1
+         show_tokens:
+           led: led_02
+           color1: green
+           color2: blue
+
+Tokens vs Tags
+--------------
+
+Almost all devices support tags.
+In :doc:`config players </config_players/index>` such as
+:doc:`light_player </config_players/light_player>` you can also reference
+multiple lights by their tags.
 
 The bottom line
 ---------------

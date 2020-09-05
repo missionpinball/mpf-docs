@@ -22,56 +22,52 @@ simulate their switches:
 .. code-block:: mpf-config
 
     switches:
-        s_trough1:
-            number: s31
-        s_trough2:
-            number: s32
-        s_trough3:
-            number: s33
-        s_trough4:
-            number: s34
-        s_plunger_lane:
-            number: s27
-
+      s_trough1:
+        number: s31
+      s_trough2:
+        number: s32
+      s_trough3:
+        number: s33
+      s_trough4:
+        number: s34
+      s_plunger_lane:
+        number: s27
     coils:
-        c_trough_eject:
-            number: c01
-            default_pulse_ms: 25
-        c_plunger_eject:
-            number: c03
-            default_pulse_ms: 25
-
+      c_trough_eject:
+        number: c01
+        default_pulse_ms: 25
+      c_plunger_eject:
+        number: c03
+        default_pulse_ms: 25
     ball_devices:
-        bd_trough:
-            tags: trough, home, drain
-            ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
-            eject_coil: c_trough_eject
-            eject_targets: bd_plunger
-        bd_plunger:
-            ball_switches: s_plunger_lane
-            eject_coil: c_plunger_eject
-
+      bd_trough:
+        tags: trough, home, drain
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
+        eject_coil: c_trough_eject
+        eject_targets: bd_plunger
+      bd_plunger:
+        ball_switches: s_plunger_lane
+        eject_coil: c_plunger_eject
     playfields:
-       playfield:
-           default_source_device: bd_plunger
-           tags: default
-
+      playfield:
+        default_source_device: bd_plunger
+        tags: default
     keyboard:
-        1:
-            switch: s_trough1
-            toggle: true
-        2:
-            switch: s_trough2
-            toggle: true
-        3:
-            switch: s_trough3
-            toggle: true
-        4:
-            switch: s_trough4
-            toggle: true
-        p:
-            switch: s_plunger_lane
-            toggle: true
+      1:
+        switch: s_trough1
+        toggle: true
+      2:
+        switch: s_trough2
+        toggle: true
+      3:
+        switch: s_trough3
+        toggle: true
+      4:
+        switch: s_trough4
+        toggle: true
+      p:
+        switch: s_plunger_lane
+        toggle: true
 
 MPF's regular virtual platform interface is "dumb" in the sense that
 all switch actions need to be controlled externally (either via keyboard
@@ -121,7 +117,7 @@ Using the smart virtual platform
 There are three ways you can use the smart virtual platform:
 
 1. No platform setting
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 If you do not have a ``platform:`` setting in your machine config's
 ``hardware:`` section (or if you don't have a ``hardware:``
@@ -129,7 +125,7 @@ section, then MPF will use the smart virtual platform anyone you
 run it.
 
 2. Manually setting the platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also manually specify the smart virtual interface
 in the machine config, like this:
@@ -137,10 +133,10 @@ in the machine config, like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: smart_virtual
+      platform: smart_virtual
 
 3. Via the command line
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also specify the smart virtual platform interface via the ``-X``
 (uppercase *X*) from the command line, like this:
@@ -165,7 +161,7 @@ You can configure some of them in the
 :doc:`smart_virtual section </config/smart_virtual>`.
 
 Ball Devices
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 If a ball device's eject coil is pulses, it will simulate a ball leaving that device
 (as long as that device has at least one ball). It is smart enough to know how many
@@ -177,7 +173,7 @@ It will also simulate a ball entering the target device when a ball is ejected, 
 again it knows how to work with various ball switch and entrance switch combinations.
 
 Drop Targets
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 The smart virtual platform will reset drop target switches if their associated
 reset coil is pulsed.

@@ -45,7 +45,7 @@ How does the layout work?
 The documentation uses reStructuredText (rst).
 You can read about possible elements in the `rst documentation <http://www.sphinx-doc.org/en/stable/rest.html>`_.
 
-Some excempts from the documentation above:
+Some excerpts from the documentation above:
 
 A list of item:
 
@@ -87,11 +87,11 @@ mpf-docs repo so you can work on it offline, do the following:
 #. Switch to the branch corresponding to the version of the docs you want to
    work with (usually *dev* or *latest*).
 #. Makes your changes.
-#. Add your name to the ``/authors/index.rst`` doc.
+#. Add your name to the ``/about/authors.rst`` doc.
 #. To test the docs locally, you'll need *sphinx* and *sphinx_bootstrap_theme*,
    both of which you can install via *pip*.
 #. Run ``make html`` to ensure everything builds properly without any
    additional warnings from whatever docs you added or changed. (The built docs
    will be in the ``_build/html`` folder. You can open *index.html* in your
-   local browser to preview your changes.
-#. Submit your pull request.
+   local browser to preview your changes.)
+#. `Submit your pull request <https://help.github.com/articles/creating-a-pull-request-from-a-fork/>`_

@@ -12,37 +12,37 @@ nitty-gritty details later.
 Here's a very simple example that creates a display called "window" with a
 height and width of 800x600:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
-      window:
-         width: 800
-         height: 600
+     window:
+       width: 800
+       height: 600
 
 You can name your display whatever you want. For example, here's a display called "potato" which is
 100x100:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
-      potato:
-         width: 100
-         height: 100
+     potato:
+       width: 100
+       height: 100
 
 You can add multiple displays to your config. Here's an example with a display
 called "lcd" which is 1366x768, and a second display called "playfield" which
 is 640x480:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    displays:
-      lcd:
-         width: 1366
-         height: 768
-         default: true
-      playfield:
-         width: 640
-         height: 480
+     lcd:
+       width: 1366
+       height: 768
+       default: true
+     playfield:
+       width: 640
+       height: 480
 
 The "lcd" display above also has a setting ``default: true``. As you
 can imagine, when you have more than one display, then when you are setting up
@@ -86,3 +86,22 @@ display type you want to use in your machine.
    rgb_dmd
    adding_dot_look_to_lcd
    alpha_numeric
+   multiple_screens
+
+.. rubric:: A note on performance with "displays" and "dmds"
+
+If you have a physical DMD defined (in the :doc:`dmds: </config/dmds>` or
+:doc:`rgb_dmds: </config/rgb_dmds>` of your machine config) and are emulating
+the DMD's slides and widgets in your window, be aware that the MPF media
+controller will process the graphics data for the physical DMD *even when MPF
+is running in "virtual" mode*.
+
+Although that graphics data will not be sent to a physical DMD, processing it
+provides a more realistic MPF experience because of the considerable CPU power
+required to convert on-screen graphics to DMD data.
+
+If you are planning to use a physical DMD at some point on your project, it's
+recommended to configure one *before* you start designing your slides and widgets.
+Especially if you will be running virtually for the bulk of your early game design:
+you don't want to spend time designing intricate slides and high-resolution
+graphics only to find your CPU crumble when you finally attach a physical DMD.

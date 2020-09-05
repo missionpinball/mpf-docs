@@ -6,10 +6,19 @@ See :doc:`/hardware/voltages_and_power/index` for details.
 
 .. image:: /hardware/images/multimorphic_Power_Entry.png
 
-The Multimorphic Power Filter board connects 230V/110V AC to all your PSUs
-using connectors J1, J2 or J3.
+The Multimorphic Power Filter board serves four purposes.
+1. It serves as a central connection point for 230V/110V AC 
+and all your PSUs using connectors J1, J2 or J3.
+2. It provides a bank of capacitors to buffer current surges
+on the high voltage rail.
+3. It provides safety relay control of the high voltage rail.
+4. It connects the ground (negative) terminals of each of
+the power supplies to prevent a differential in ground 
+levels between the coil supply and the logic supply which is 
+a common cause of unstable operation. 
 
-Additionally, it allows to connect up to four DC rails:
+The Multimorphic Power Entry Board allows connections for
+up to four DC rails:
 
 * 5V
 * 12V
@@ -24,3 +33,4 @@ J10 will turn on HV on the ouput.
 You should connect it to your door switch to cut high power when the door is
 opened.
 Make sure that J10 is closed during development or HV will be off.
+

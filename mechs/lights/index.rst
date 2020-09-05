@@ -34,7 +34,7 @@ This is an example of for a light:
 
   lights:
     my_led:
-      number: 7
+      number: 7   # the exact number format depends on your platform
 
 For WS2812 LEDs use ``type: grb`` (WS2811 does not need this):
 
@@ -42,7 +42,7 @@ For WS2812 LEDs use ``type: grb`` (WS2811 does not need this):
 
   lights:
     my_ws2812_led:
-      number: 23
+      number: 23  # the exact number format depends on your platform
       type: grb
 
 You can also map individual color channels:
@@ -54,7 +54,7 @@ You can also map individual color channels:
       type: rgb
       channels:
         red:
-          number: 9-29
+          number: 9-29     # the exact number format depends on your platform
         green:
           number: 9-30
         blue:
@@ -62,18 +62,35 @@ You can also map individual color channels:
         white:
           number: 9-32
 
+Starting with MPF 0.54 there is a new syntax to chain lights:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0    # the exact number format depends on your platform
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+
 If your light is connected to a driver use this example:
 
 .. code-block:: mpf-config
 
   coils:
     light_connected_to_a_driver:
-      number: 42           # number depends on your platform
-      allow_enable: True	# this will allow 100% enable without pwm
-
-  lights:     
+      number: 42          # number depends on your platform
+      allow_enable: true  # this will allow 100% enable without pwm
+  lights:
     light_on_a_driver:
-      number: light_connected_to_a_driver	# map this light to a driver
+      number: light_connected_to_a_driver  # map this light to a driver
       platform: drivers
 
 Monitorable Properties
@@ -109,3 +126,4 @@ None
    matrix_lights
    flashers
    coils_as_lights
+   ws2812

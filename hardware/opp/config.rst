@@ -18,11 +18,8 @@ like this:
 .. code-block:: mpf-config
 
     hardware:
-        platform: opp
-        driverboards: gen2
+      platform: opp
 
-You also need to configure the ``driverboards:`` entry for what kind of
-driver boards you’re controlling: right now, only *gen2* is supported.
 
 2. Configure the OPP-specific hardware settings
 -----------------------------------------------
@@ -35,7 +32,7 @@ running. The only thing you absolutely have to configure is your
 ports.
 
 Understanding OPP hardware ports
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Even though OPP controllers are USB devices, they use "virtual"
 COM ports to communicate with the host computer running MPF. On your
@@ -51,7 +48,7 @@ port converter, the "real" serial port will have less latency.  The
 real serial port must use 5V signal levels when talking to OPP hardware.
 
 Adding the port to your config file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you're using an OPP controller, you need to add the serial port to
 your MPF config. So if you plug in the OPP controller and see a port
@@ -60,7 +57,7 @@ such as *COM7* appear, you'd set your config like this:
 .. code-block:: mpf-config
 
     opp:
-        ports: COM7
+      ports: COM7
 
 Full details of the port options as well as the other options
 available here are in the ``opp:`` section of the configuration
@@ -73,20 +70,7 @@ that first and then try the alternate format if it doesn't work.
 On Linux, the port usually is ``/dev/ttyACM0`` or ``/dev/ttyACM1``.
 On Mac, look for some ``/dev/cu.modemXXXX`` device.
 
-Changing the polling rate
-~~~~~~~~~~~~~~~~~~~~~~~~~
+What if it did not work?
+------------------------
 
-If you encounter issues with the polling rate (in other words: Your OPP processor boards can't answer MPF's polls fast enough) you may want to change it. (Default: 100Hz)
-This can be done by simply adding the ``poll_hz:`` line to the ``opp:`` section:
-
-.. code-block:: mpf-config
-
-    opp:
-        ports: COM7
-        poll_hz: 50
-
-
-.. note::
-
-   You only want to do this if you encounter issues. This will increase the time between two switches beeing read.
-   Depending on the number of processor boards in your chain you could possibly miss some fast balls
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.

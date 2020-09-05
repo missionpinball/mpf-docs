@@ -12,25 +12,92 @@ once the game is over.
 We know that at this point, you just want to run your game. The
 problem is if we run it now, the display will continue to show "ATTRACT
 MODE" throughout the entire game since we haven't configured it for
-anything else. So let's make a quick addition to the ``slide_player:``
+anything else.
+So let's make a quick addition to the ``slide_player:``
 section of your config so it will show the player and ball number when
 a game is in progress. (Later in this tutorial we'll revisit this and
-explain what's actually going on. For now just make this change.) In
+explain what's actually going on. For now just make this change.)
+In
 your config file, add a ``ball_started:`` entry with the following
 information. Your complete ``slide_player:`` section should now look
 like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
+   #! slides:
+   #!   welcome_slide:
+   #!     widgets:
+   #!       - type: text
+   #!         text: PINBALL!
+   #!         font_size: 50
+   #!         color: red
+   #!       - type: rectangle
+   #!         width: 240
+   #!         height: 60
+   #!   attract_started:
+   #!     widgets:
+   #!       - text: ATTRACT MODE
+   #!         type: text
+   slide_player:
      init_done: welcome_slide
      mode_attract_started: attract_started
      ball_started:
-         widgets:
-            type: text
-            text: PLAYER (number) BALL (ball)
+       widgets:
+         type: text
+         text: PLAYER (number) BALL (ball)
+   ##! test
+   #! advance_time_and_run .1
+   #! assert_slide_on_top attract_started
+   #! assert_text_on_top_slide "ATTRACT MODE"
 
-2. Change your flipper config so they don't automatically enable on machine boot
+2. Add initial active switches and bind trough switches to your keyboard
+------------------------------------------------------------------------
+
+If you are not using physical hardware you need some way to control the
+ball inside your trough.
+We will first make sure that the trough switches will be active (as if there
+was a ball sitting on them) when your virtual machine starts up.
+Additionally, we add keyboard bindings for ball switches to the numbers
+``1`` to ``5`` and the plunger switch to ``p``.
+
+.. code-block:: mpf-mc-config
+
+  #! switches:
+  #!   s_trough1:
+  #!     number:
+  #!   s_trough2:
+  #!     number:
+  #!   s_trough3:
+  #!     number:
+  virtual_platform_start_active_switches:
+    - s_trough1
+    - s_trough2
+    - s_trough3
+
+  keyboard:
+    1:
+      switch: s_trough1
+      toggle: true
+    2:
+      switch: s_trough2
+      toggle: true
+    3:
+      switch: s_trough3
+      toggle: true
+    4:
+      switch: s_trough4
+      toggle: true
+    5:
+      switch: s_trough5
+      toggle: true
+    p:
+      switch: s_plunger
+      toggle: true
+
+This way you can drain balls by activating trough switches.
+
+
+3. Change your flipper config so they don't automatically enable on machine boot
 --------------------------------------------------------------------------------
 
 Almost there! The other quick change we need to make is to remove the
@@ -54,32 +121,32 @@ identical since you might have single-wound flipper coils and/or EOS switches.)
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_left_flipper:
-    #!         number: 0
-    #!     s_right_flipper:
-    #!         number: 1
+    #!   s_left_flipper:
+    #!     number: 0
+    #!   s_right_flipper:
+    #!     number: 1
     #! coils:
-    #!     c_flipper_left_main:
-    #!         number: 0
-    #!     c_flipper_left_hold:
-    #!         number: 1
-    #!         allow_enable: true
-    #!     c_flipper_right_main:
-    #!         number: 2
-    #!     c_flipper_right_hold:
-    #!         number: 3
-    #!         allow_enable: yes
+    #!   c_flipper_left_main:
+    #!     number: 0
+    #!   c_flipper_left_hold:
+    #!     number: 1
+    #!     allow_enable: true
+    #!   c_flipper_right_main:
+    #!     number: 2
+    #!   c_flipper_right_hold:
+    #!     number: 3
+    #!     allow_enable: true
     flippers:
-        left_flipper:
-            main_coil: c_flipper_left_main
-            hold_coil: c_flipper_left_hold
-            activation_switch: s_left_flipper
-        right_flipper:
-            main_coil: c_flipper_right_main
-            hold_coil: c_flipper_right_hold
-            activation_switch: s_right_flipper
+      left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+      right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
 
-3. Running your game with physical hardware
+4. Running your game with physical hardware
 -------------------------------------------
 
 If you have a physical machine attached, go ahead and run your game
@@ -89,7 +156,7 @@ skip to Step 4 below.)
 
 .. code-block:: doscon
 
-  C:\pinball\your_machine>mpf both -v
+  C:\pinball\your_machine>mpf both -X
 
 Make sure you have at least one ball in the trough and then run your
 game. The display should display "ATTRACT MODE." Hit the start button.
@@ -125,7 +192,7 @@ A few caveats to this early bare-bones game:
   game, with 3 balls per game. You can change this in the :doc:`/config/game`
   section of the machine config.
 
-4. "Playing" a game without a physical machine attached
+5. "Playing" a game without a physical machine attached
 -------------------------------------------------------
 
 If you've been adding keyboard switch map entries to your config file
@@ -147,6 +214,8 @@ complete game on your computer keyboard. Here's how you do it:
 #. If you do not have a coil-fired plunger, push the "P" key (or
    whatever key you mapped to your plunger lane switch) to un-toggle that
    switch which simulates the ball leaving the plunger lane.
+   Note: The toggle option in the :doc:`/config/keyboard` section is useful for testing
+   your game from your computer when you’re not around your physical machine.
 #. Now you can "flip" with the "Z" and "?" keys.
 #. After you get bored of this, push the "1" key to activate a trough
    ball switch. At this point MPF will think a ball drained and you
@@ -159,14 +228,18 @@ complete game on your computer keyboard. Here's how you do it:
 #. Congrats! You just played your first virtual pinball game. Yeah,
    it's boring, but you did it!
 
-5. What if your game won't start?
+6. What if your game won't start?
 ---------------------------------
 
 If your game doesn't start or doesn't work, hopefully we've given you
 enough information in this tutorial to work out what the problem is.
 That said, here's a list of things that could go wrong:
 
-+ No ball in the trough.
++ If you see a config error try running ``mpf both -t -v -V -X`` to disable
+  the text ui and add verbose logging.
++ No ball in the trough. (If you are using the smart_virtual platform with
+  ``-X`` press ``1`` and ``2`` to add balls to the trough via keyboard. Check
+  that you got ``virtual_platform_start_active_switches:`` set.)
 + Ball in the trough, but not activating the switch.
 + Trough switches are optos but you didn't add ``type: NC`` to your
   switch configurations. (Mechanical trough switches do not need a
@@ -185,14 +258,14 @@ Google group.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step10.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_10``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step10
+   C:\mpf-examples\tutorial>mpf both -X
 
 Remember though that unless you're following this tutorial with an actual *Demolition
 Man*, you'll have some differences in your config file.

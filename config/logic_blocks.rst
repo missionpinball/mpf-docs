@@ -18,7 +18,6 @@ just use:
       your_counter:
         count_events: count_it_up
 
-
 There are three type of logic blocks:
 
 * :doc:`accruals: </game_logic/logic_blocks/accruals>`

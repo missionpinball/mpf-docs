@@ -21,10 +21,10 @@ from the part that shows the graphics and plays the sounds.
 
 Here's a diagram that shows what each piece does:
 
-.. image:: /mc/images/mpf_game_engine_mc.png
+.. image:: /displays/mc/images/mpf_game_engine_mc.png
 
 More details about MPF's media controller architecture, as well as
 guides which show you how to run them on separate computers, or even
 to replace MPF's Media Controller with one based on Unity 3D or something
-you write yourself, are available in the :doc:`/mc/index` section of
+you write yourself, are available in the :doc:`/displays/index` section of
 the documentation.

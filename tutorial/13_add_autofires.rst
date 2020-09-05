@@ -17,44 +17,44 @@ to refer to as "jets" in this config):
 
 .. code-block:: mpf-config
 
-    #! switches:
-    #!     s_left_slingshot:
-    #!         number: 1
-    #!     s_right_slingshot:
-    #!         number: 2
-    #!     s_top_slingshot:
-    #!         number: 3
-    #!     s_left_jet:
-    #!         number: 4
-    #!     s_right_jet:
-    #!         number: 5
-    #! coils:
-    #!     c_left_slingshot:
-    #!         number: 0
-    #!     c_right_slingshot:
-    #!         number: 1
-    #!     c_top_slingshot:
-    #!         number: 2
-    #!     c_left_jet_bumper:
-    #!         number: 3
-    #!     c_right_jet_bumper:
-    #!         number: 4
-    autofire_coils:
-      left_slingshot:
-        coil: c_left_slingshot
-        switch: s_left_slingshot
-      right_slingshot:
-        coil: c_right_slingshot
-        switch: s_right_slingshot
-      upper_slingshot:
-        coil: c_top_slingshot
-        switch: s_top_slingshot
-      left_jet:
-        coil: c_left_jet_bumper
-        switch: s_left_jet
-      right_jet:
-        coil: c_right_jet_bumper
-        switch: s_right_jet
+   #! switches:
+   #!   s_left_slingshot:
+   #!     number: 1
+   #!   s_right_slingshot:
+   #!     number: 2
+   #!   s_top_slingshot:
+   #!     number: 3
+   #!   s_left_jet:
+   #!     number: 4
+   #!   s_right_jet:
+   #!     number: 5
+   #! coils:
+   #!   c_left_slingshot:
+   #!     number: 0
+   #!   c_right_slingshot:
+   #!     number: 1
+   #!   c_top_slingshot:
+   #!     number: 2
+   #!   c_left_jet_bumper:
+   #!     number: 3
+   #!   c_right_jet_bumper:
+   #!     number: 4
+   autofire_coils:
+     left_slingshot:
+       coil: c_left_slingshot
+       switch: s_left_slingshot
+     right_slingshot:
+       coil: c_right_slingshot
+       switch: s_right_slingshot
+     upper_slingshot:
+       coil: c_top_slingshot
+       switch: s_top_slingshot
+     left_jet:
+       coil: c_left_jet_bumper
+       switch: s_left_jet
+     right_jet:
+       coil: c_right_jet_bumper
+       switch: s_right_jet
 
 Autofire devices in MPF are somewhat intelligent. They will only be
 activated while a ball is in play during a game, which means they
@@ -71,11 +71,11 @@ your config.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step13.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_13``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 ::
 
-   C:\mpf-examples\tutorial>mpf both -c step13
+   C:\mpf-examples\tutorial>mpf both

@@ -6,7 +6,7 @@ logic when certain events occur. Logic blocks can be thought of as the "glue"
 that ties together all the different shows, shots, achievements, and other
 parts of your game logic.
 
-There are three types of logic blocks in MPF:
+There are four types of logic blocks in MPF:
 
 :doc:`counters <counters>`
    Count the number of times an event happens, and when a certain number is
@@ -52,3 +52,7 @@ You should also read about :doc:`integration of show and logic blocks <integrati
    Sequences <sequences>
    State Machines <state_machines>
    integrating_logic_blocks_and_shows
+   scoring_based_on_logic_blocks
+   integrating_logic_blocks_and_lights
+   integrating_logic_block_and_slides
+   persisting_state_in_a_player_variable

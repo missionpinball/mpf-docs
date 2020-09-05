@@ -1,3 +1,6 @@
+.. meta::
+   :google-site-verification: f4o9D2NqwIt3z5YA_P41woqvYXOhXNjYp223Xq3I5ik
+
 .. toctree::
    :hidden:
    :caption: Overview
@@ -27,9 +30,7 @@
    Pinball Mechanisms </mechs/index>
    Game Logic </game_logic/index>
    Game Design </game_design/index>
-   Media Controllers & MPF-MC </mc/index>
    Displays & Graphics</displays/index>
-   Segment Displays</segment_displays/index>
    Sound</sound/index>
    Shows </shows/index>
    Assets </assets/index>
@@ -40,6 +41,14 @@
    Finalizing Your Machine </finalization/index>
    Flowcharts </flowcharts/index>
    Troubleshooting </troubleshooting/index>
+
+.. toctree::
+   :hidden:
+   :caption: Building Machines
+   :titlesonly:
+   :numbered: 0
+
+   Physically Building Pinball Machines </physical_building/index>
 
 .. toctree::
    :hidden:
@@ -59,8 +68,10 @@
 
    Config File Reference </config/index>
    Events Reference </events/index>
-   Player Variable Reference </player_vars/index>
+   Game Variable Reference </game_vars/index>
    Machine Variable Reference </machine_vars/index>
+   Player Variable Reference </player_vars/index>
+   Log Reference </logs/index>
 
 .. toctree::
    :hidden:
@@ -111,8 +122,6 @@ MPF User Manual
 * :doc:`/mechs/index`: switches, coils, lights, troughs, flippers, etc.
 * :doc:`/game_logic/index`: modes, scoring, multiballs, ball saves, etc.
 * :doc:`/displays/index`: DMDs, LCDs, slides, widgets, animations, text, etc.
-* :doc:`/segment_displays/index`: 7-segment displays and other segment displays
-* :doc:`/mc/index`: The MPF Media Controller (MPF-MC), the Unity 3D Backbox Server, creating your own MC
 * :doc:`/sound/index`: sound tracks, music, volume, sound effects
 * :doc:`/shows/index`: sequences of lights, sounds, slides, etc.
 * :doc:`/assets/index`: videos, images, animations, sound files
@@ -126,10 +135,11 @@ Examples
 
 Reference Guides
 ----------------
-* :doc:`/events/index`: All the standard events MPF has, and how to use them.
 * :doc:`/config/index`: Lists every config setting and all the options.
-* :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
+* :doc:`/events/index`: All the standard events MPF has, and how to use them.
+* :doc:`/game_vars/index`: Lists all the built-in game variables and parameters.
 * :doc:`/machine_vars/index`: Lists all the standard machine variables.
+* :doc:`/player_vars/index`: Lists all the built-in player variables and parameters.
 
 Developer Documentation
 -----------------------

@@ -14,136 +14,20 @@ slide_player:
 The ``slide_player:`` section of your config is where you configure slides to be shown (or
 removed) based on events being posted.
 
-Note that the slide player is a :doc:`config_player </config_players/index>`, so everything
-mentioned below is valid in the ``slide_player:`` section of a config file *and* in the ``slides:``
-section of a show step. You can test slides and widgets interactively using
-:doc:`Interactive MC (iMC) </tools/imc/index>`.
+This is an example:
 
-Full instructions on how to use the slide_player are included in the
-:doc:`/displays/slides/showing_slides` guide. The documentation here is for
-reference later.
+.. code-block:: mpf-mc-config
 
-Generically-speaking, there are two formats you can use for slide_player
-entries: "express" and "full" configs. Express configs will look like this:
-
-.. code-block:: mpf-config
-
+   #! slides:
+   #!   slide1: []
+   #!   slide2: []
+   #!   slide3: []
    slide_player:
-      event1: slide1
-      event2: slide2
-      event3: slide3
+     event1: slide1
+     event2: slide2
+     event3: slide3
 
-Full configs will look like this:
-
-.. code-block:: yaml
-
-   slide_player:
-      event1:
-         slide1:
-            <settings>
-      event2:
-         slide2:
-            <settings>
-      event3:
-         slide3:
-            <settings>
-
-In both cases, these configurations are saying, "When *event1* is posted,
-show *slide1*. When *event2* is posted, show *slide2*. Etc."
-
-This "express" config is down-and-dirty, with no options, to just show slides.
-The full config lets you specify additional options (based on the settings
-detailed below).
-
-For example, the following config will show *slide_1* when *some_event* is posted, but it
-will also override the default settings and show the slide on the display target called
-*display1* and at a priority that's 200 higher than the base priority.
-
-.. code-block:: mpf-config
-
-   slide_player:
-      some_event:
-         slide_1:
-            target: display1
-            priority: 200
-
-Showing dynamically-created slides
-----------------------------------
-
-Both of the examples so far assumed that you were using the slide player to show a slide
-that had already been defined in the :doc:`/config/slides` section if your config.
-However you can also define slides right in-line in your slide player.
-
-The following config will show a slide called *slide_1* when the *some_event* is posted,
-but it assumes that *slide_1* does not yet exist, and it contains a list of widgets (one
-text widget and one rectangle widget) which will be added to that slide.
-
-Note that slide names are global in MPF, so if you already had a slide defined called
-*slide_1* and you redefine it in your slide player like the example below, this new slide
-will become *slide_1* and the old one will be gone.
-
-.. code-block:: mpf-config
-
-   slide_player:
-      some_event:
-         slide_1:
-            widgets:
-            - type: text
-              text: I AM A TEXT WIDGET
-            - type: rectangle
-              width: 200
-              height: 100
-              color: red
-
-You can also mix-and-match defining a slide in the slide player as well as adjusting
-properties of how the slide is shown. Just add multiple settings, like this:
-
-.. code-block:: mpf-config
-
-   slide_player:
-      some_event:
-         slide_1:
-            target: display2
-            widgets:
-            - type: text
-              text: I AM A TEXT WIDGET
-            - type: rectangle
-              width: 200
-              height: 100
-              color: red
-            transition: wipe
-
-Remember that these slide player settings can also be used in show steps (in a ``slides:``
-section). Any of the examples above apply, you just don't include the event name, like this:
-
-.. code-block:: mpf-config
-
-   ##! show: show1
-   #show_version=5
-
-   - time: 0
-     slides: slide1
-   - time: +3
-     slides: slide2
-   - time: +3
-     slides:
-       slide3:          # newly-defined slide here
-         widgets:
-           - type: text
-             text: I AM SLIDE 3 IN THIS SHOW
-             color: lime
-   - time: +3
-     slides:
-       slide4:
-         transition:
-           type: move_out
-           duration: 1s
-           direction: up
-
-Here's a list of all the valid settings for individual slides in the ``slide_player:``
-section of your config file or the ``slides:`` section of a show. Note that all of these
-are optional. Any that you do not include will be automatically added with the default
-values applied.
+See :doc:`/config_players/slide_player` for details.
 
 Settings
 --------
@@ -173,22 +57,26 @@ Single value, type: one of the following options: play, remove. Default: ``play`
 
 For example, to remove *slide1* when the event *remove_slide_1* is posted:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
    slide_player:
-      remove_slide_1:          # event name
-         slide1:               # slide name
-            action: remove
+     remove_slide_1:           # event name
+       slide1:                 # slide name
+         action: remove
 
 You can also specify a transition for the removal, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! slides:
+   #!   slide1: []
    slide_player:
-      remove_slide_1:          # event name
-         slide1:               # slide name
-            action: remove
-            transition: fade
+     remove_slide_1:           # event name
+       slide1:                 # slide name
+         action: remove
+         transition: fade
 
 expire:
 ~~~~~~~
@@ -201,7 +89,30 @@ The expiration timer starts immediately, so if the slide you're displaying here 
 end up being shown because it's not the highest-priority slide, the timer is still running
 in the background, and the slide will still be removed when the timer expires.
 
-If a ``transition_out:`` is specified, it will be applied when the slide expires.
+If a ``transition_out:`` is specified, it will be applied when the slide expires:
+
+.. code-block:: mpf-mc-config
+
+   slides:
+     base:
+       widgets:
+         - type: text
+           text: BASE SLIDE
+           color: ff0000
+           font_size: 100
+     expire_slide:
+       widgets:
+         - type: text
+           text: EXPIRE 5s
+           color: purple
+           y: 66%
+       expire: 5s
+       transition_out:
+         type: wipe
+         duration: 5s
+   slide_player:
+     mc_reset_complete.1: expire_slide
+     mc_reset_complete.2: base
 
 force:
 ~~~~~~
@@ -293,6 +204,32 @@ Note that you can add a transition out to the slide player when a slide
 is shown, and it will be "attached" to the slide and used when that slide
 is removed (either with the slide player or when a new slide is created with
 a higher priority than it).
+
+.. code-block:: mpf-mc-config
+
+   slides:
+     base:
+       widgets:
+         - type: text
+           text: BASE SLIDE
+           color: ff0000
+           font_size: 100
+     top_slide:
+       widgets:
+         - type: text
+           text: TOP SLIDE
+           color: purple
+           y: 66%
+
+   slide_player:
+     mc_reset_complete.1: top_slide
+     mc_reset_complete.2: base
+     mc_reset_complete.3:
+       top_slide:
+         action: remove
+         transition:
+           type: fade
+           duration: 3s
 
 Or you can specify a transition out when you remove the slide (with
 ``action: remove``).

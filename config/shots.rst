@@ -9,6 +9,8 @@ shots:
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
 
+.. overview
+
 The *shots:* section of your config file is where you define
 the shots in your machine. A *shot* is a switch, a series of
 switches that have to be hit in order, or an event or series of events.
@@ -34,48 +36,43 @@ of shots to the left or right based on certain events happening
 (slingshot hits, flipper button pushes, etc.). A shot can be a member of
 multiple groups at the same time.
 
-Typically you'd define your shots in your machine-wide config (since the
-actual physical shots in your machine are defined by hardware and never
-change), and then you apply different profiles to the shots in various
-modes.
-
 Here's a sample *shots:* section from a config file:
 
 .. code-block:: mpf-config
 
     #! switches:
-    #!    lane_l:
-    #!       number:
-    #!    lane_a:
-    #!       number:
-    #!    lane_n:
-    #!       number:
-    #!    lane_e:
-    #!       number:
-    #!    upper_standup:
-    #!       number:
-    ##! config: mode1
+    #!   lane_l:
+    #!     number:
+    #!   lane_a:
+    #!     number:
+    #!   lane_n:
+    #!     number:
+    #!   lane_e:
+    #!     number:
+    #!   upper_standup:
+    #!     number:
+    ##! mode: mode1
     shots:
-        lane_l:
-            switch: lane_l
-            show_tokens:
-                light: lane_l
-        lane_a:
-            switch: lane_a
-            show_tokens:
-                light: lane_a
-        lane_n:
-            switch: lane_n
-            show_tokens:
-                light: lane_n
-        lane_e:
-            switch: lane_e
-            show_tokens:
-                light: lane_e
-        upper_standup:
-            switch: upper_standup
-            show_tokens:
-                leds: led_17, led_19
+      lane_l:
+        switch: lane_l
+        show_tokens:
+          light: lane_l
+      lane_a:
+        switch: lane_a
+        show_tokens:
+          light: lane_a
+      lane_n:
+        switch: lane_n
+        show_tokens:
+          light: lane_n
+      lane_e:
+        switch: lane_e
+        show_tokens:
+          light: lane_e
+      upper_standup:
+        switch: upper_standup
+        show_tokens:
+          leds: led_17, led_19
 
 Create one entry in your ``shots:`` section for each shot in your
 machine. Don't worry about grouping shots here. (That's done in the
@@ -87,6 +84,9 @@ loops... You will have lots of shots in your game.
 
 Each shot in your ``shots:`` section can have the following config options set:
 
+.. config
+
+
 Optional settings
 -----------------
 
@@ -94,10 +94,7 @@ The following sections are optional in the ``shots:`` section of your config. (I
 
 advance_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -111,20 +108,51 @@ post hit events and therefore do not trigger scoring or other events
 related to a shot hit. They are useful if you need to move a shot to a
 starting state (like selecting a shot to be active for skill shot).
 
-debug:
-~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+delay_switch:
+~~~~~~~~~~~~~
+One or more sub-entries. Each in the format of string name of a :doc:`switches <switches>` device : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
 
-Set this to *true* to add lots of logging information about this shot
-to the debug log. This is helpful when you’re trying to troubleshoot
-problems with this shot.
+A dictionary of switches and times which prevent hits for a certain time.
+You can use this if you got another lane feeding into your shot and you want to
+prevent it from hitting this shot.
+Use this with care as it might cause issues during multiball.
+
+This is an example:
+
+.. code-block:: mpf-config
+
+    #! switches:
+    #!   s_my_shot:
+    #!     number:
+    #!   s_other_lane:
+    #!     number:
+    ##! mode: mode1
+    shots:
+      my_shot:
+        switch: s_my_shot
+        delay_switch:
+          s_other_lane: 2s
+    ##! test
+    #! start_game
+    #! start_mode mode1
+    #! mock_event my_shot_hit
+    #! hit_and_release_switch s_other_lane
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_not_called my_shot_hit
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_not_called my_shot_hit
+    #! advance_time_and_run 2
+    #! hit_and_release_switch s_my_shot
+    #! advance_time_and_run .1
+    #! assert_event_called my_shot_hit
+
+In this example an activation of ``s_other_lane`` will prevent the shot from being hit for two seconds.
 
 disable_events:
 ~~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -134,10 +162,7 @@ in whatever state it's in.)
 
 enable_events:
 ~~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -147,10 +172,7 @@ remain in whatever state it's in.)
 
 hit_events:
 ~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -160,16 +182,25 @@ associated with this shot, (or that the entire switch sequence has
 been completed), except it comes in via an event instead of from a
 switch activity.
 
-label:
-~~~~~~
-Single value, type: ``string``. Default: ``%``
+persist_enable:
+~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
-The plain-English name for this device that will show up in operator
-menus and trouble reports.
+Whether this shot should persist its enable state in a player variable.
+If set to ``True`` this will also persist the state into the next ball
+of the same player.
+
+playfield:
+~~~~~~~~~~
+Single value, type: string name of a :doc:`playfields <playfields>` device. Default: ``playfield``
+
+On which playfield is this shot?
+This is only relevant when you have multiple playfields.
+It is used mostly for ball search.
 
 profile:
 ~~~~~~~~
-Single value, type: ``string``. Default: ``profile``
+Single value, type: string name of a :doc:`shot_profiles <shot_profiles>` device. Default: ``default``
 
 The name of the *shot profile* that will be applied to this shot.
 
@@ -192,10 +223,7 @@ play though.
 
 reset_events:
 ~~~~~~~~~~~~~
-One or more sub-entries, either as a list of events, or key/value pairs of
-event names and delay times. (See the
-:doc:`/config/instructions/device_control_events` documentation for details
-on how to enter settings here.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 Default: ``None``
 
@@ -203,9 +231,18 @@ Events in this list, when posted, reset this shot. Resetting a
 shot means that it jumps back to the first state in whatever *shot
 profile* is active at that time.
 
+restart_events:
+~~~~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
+
+Default: ``None``
+
+Events in this list, when posted, restart this shot. Restarting a shot is
+equivalent to resetting and then enabling the shot, done with a single event.
+
 show_tokens:
 ~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : template_str
 
 A subsection containing key-value pairs that are passed to the show that's
 run when this shot is in a certain state.
@@ -215,23 +252,22 @@ For example, consider the following shot config:
 .. code-block:: mpf-config
 
    #! switches:
-   #!    switch1:
-   #!       number:
-   ##! config: mode1
+   #!   switch1:
+   #!     number:
+   ##! mode: mode1
    shot_profiles:
-       flash:
-           states:
-             - name: unlit
-               show: "off"
-             - name: lit
-               show: "flash"
-
+     flash:
+       states:
+         - name: unlit
+           show: "off"
+         - name: lit
+           show: "flash"
    shots:
-      shot1:
-         switch: switch1
-         profile: flash
-         show_tokens:
-            leds: led1
+     shot1:
+       switch: switch1
+       profile: flash
+       show_tokens:
+         leds: led1
 
 The shot above has a show token called *leds* which is set to *led1*. This means that when
 a show associated with this shot is played, if that show contains placeholder tokens for ``(leds)``,
@@ -245,22 +281,31 @@ For example, imagine if you wanted to create a shot to flash an LED between red 
 
   # show to flash an LED
   shows:
-   flash_light:
-    - time: 0
-      lights:
-        (leds): red
-    - time: 1
-      lights:
-        (leds): off
+    flash_light:
+      - time: 0
+        lights:
+          (leds): red
+      - time: 1
+        lights:
+          (leds): off
 
 Assuming the "flash" profile (as defined in the ``profile: flash`` in the above shot) was configured for the state
 that show was in, when the shot entered that state, it would replace the ``(leds):`` section of the show with ``led1``.
 
 More information about :doc:`show tokens </shows/tokens>`
 
+start_enabled:
+~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
+
+Whether the shot starts as enabled (if you set this to ``True``) or as
+disabled (if you set this to ``False``).
+If you do not set this, MPF will check if there are ``enable_events``.
+The shot will start disabled in that case or enabled otherwise.
+
 switch:
 ~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 The name of the switch (or a list of switches) for this shot. You can
 use multiple switches if the shot happens to have multiple switches,
@@ -280,7 +325,7 @@ hit to count as that shot being hit.
 
 switches:
 ~~~~~~~~~
-List of one (or more) values, each is a type: string name of a ``switches:`` device. Default: ``None``
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
 
 This setting is the same as the ``switch:`` setting above. You can technically
 enter a single switch or a list of switches in either the ``switch:`` setting
@@ -288,9 +333,42 @@ or the ``switches:`` setting, but we include both since it was confusing to
 be able to enter multiple switches for a singlular "switch" setting and vice
 versa.
 
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Set this to *true* to add lots of logging information about this shot
+to the debug log. This is helpful when you’re trying to troubleshoot
+problems with this shot.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+The plain-English name for this device that will show up in operator
+menus and trouble reports.
+
 tags:
 ~~~~~
-List of one (or more) values, each is a type: ``string``. Default: ``None``
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
 A list of one or more tags that apply to this device. Tags allow you
 to access groups of devices by tag name.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/game_logic/shots/index`

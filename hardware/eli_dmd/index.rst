@@ -45,15 +45,18 @@ Can copy the following example (and replace ``com12`` with your com port):
 .. code-block:: mpf-config
 
     hardware:
-        rgb_dmd: smartmatrix
-
+      rgb_dmd: smartmatrix
     smartmatrix:
-        smartmatrix_1:
-           port: com12
-           baud: 3000000
-           old_cookie: false
-
+      smartmatrix_1:
+        port: com12
+        baud: 3000000
+        old_cookie: false
     rgb_dmds:
       smartmatrix_1:
-         platform: smartmatrix
-         source_display: dmd
+        platform: smartmatrix
+        source_display: dmd
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`hardware troubleshooting guide </hardware/troubleshooting_hardware>`.

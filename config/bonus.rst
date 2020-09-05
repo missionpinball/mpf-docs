@@ -22,18 +22,17 @@ Here's an example from *Brooks 'n Dunn*:
 
 .. code-block:: mpf-config
 
-   ##! config: mode1
-
+   ##! mode: mode1
    mode_settings:
      display_delay_ms: 4000
      hurry_up_delay_ms: 500
      hurry_up_event: flipper_cancel
      bonus_entries:
-         - event: quarter_bonus
-           score: current_player.quarters * current_player.album_value
-         - event: wizard_bonus
-           score: 25000
-           player_score_entry: num_albums
+       - event: quarter_bonus
+         score: current_player.quarters * current_player.album_value
+       - event: wizard_bonus
+         score: 25000
+         player_score_entry: num_albums
 
 Settings
 --------
@@ -79,6 +78,7 @@ Boolean True/False or Yes/No. Default is ``False``.
 Controls whether the bonus_multiplier player variable should be reset (to 1) when the bonus mode is over. Default is
 ``False`` which will not keep the bonus. (e.g. default is to reset it)
 
+.. include:: template_setting.rst
 
 bonus_entries:
 ~~~~~~~~~~~~~~

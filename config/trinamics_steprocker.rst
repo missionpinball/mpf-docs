@@ -14,6 +14,8 @@ trinamics_steprocker:
 The ``trinamics_steprocker:`` section of your config is where you configure
 the :doc:`trinamics steprocker platform </hardware/trinamics/index>`.
 
+.. config
+
 
 Required settings
 -----------------
@@ -22,6 +24,12 @@ The following sections are required in the ``trinamics_steprocker:`` section of 
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Serial port to use to connect to the steprocker.
+
+
+Related How To guides
+---------------------
+
+* :doc:`/hardware/trinamics/index`

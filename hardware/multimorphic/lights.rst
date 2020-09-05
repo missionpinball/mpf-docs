@@ -34,9 +34,9 @@ example.
 .. code-block:: mpf-config
 
    lights:
-      some_light:
-         subtype: matrix
-         number: C-A2-B0-0:R-A2-B1-0
+     some_light:
+       subtype: matrix
+       number: C-A2-B0-0:R-A2-B1-0
 
 Notice there are two parts to the number, separated by a colon.
 
@@ -79,17 +79,23 @@ For P-ROC:
 .. code-block:: mpf-config
 
    p_roc:
-      lamp_matrix_strobe_time: 100ms
+     lamp_matrix_strobe_time: 100ms
 
 For P3-ROC:
 
 .. code-block:: mpf-config
 
    p_roc:
-      lamp_matrix_strobe_time: 100ms
+     lamp_matrix_strobe_time: 100ms
 
 100ms is the default setting (which is used if you don't add this entry), but
 you can play with this value to see how it affects your lights or LEDs.
 
 This is a system-wide setting, so if you have multiple lamp matrices on
 multiple PD-8x8 boards, then this setting will be used for all of them.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

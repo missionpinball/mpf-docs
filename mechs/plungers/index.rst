@@ -63,8 +63,7 @@ pull back on the plunger handle to launch the ball with spring power or
 whether the game should pulse a coil to eject the ball into play.
 
 Here are two examples of slightly different versions of these, the left
-from a Gottlieb Brooks 'n Dunn machine, and the right from a Stern Star
-Trek Premium:
+from a Stern Star Trek Premium, and the right from a Gottlieb Brooks 'n Dunn machine:
 
 .. image:: /mechs/images/auto_manual_plunger.jpg
 
@@ -108,17 +107,17 @@ guide to configure it in MPF.
 +------------------------------------------------------------------------------+
 | :doc:`/events/balldevice_balls_available`                                    |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_missing`                                  |
+| :doc:`/events/balldevice_ball_device_ball_missing`                           |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_captured_from_device`                               |
+| :doc:`/events/balldevice_captured_from_captures_from`                        |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_attempt`                            |
+| :doc:`/events/balldevice_ball_device_ball_eject_attempt`                     |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_failed`                             |
+| :doc:`/events/balldevice_ball_device_ball_eject_failed`                      |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ball_eject_success`                            |
+| :doc:`/events/balldevice_ball_device_ball_eject_success`                     |
 +------------------------------------------------------------------------------+
-| :doc:`/events/balldevice_name_ejecting_ball`                                 |
+| :doc:`/events/balldevice_ball_device_ejecting_ball`                          |
 +------------------------------------------------------------------------------+
 
 .. toctree::

@@ -40,41 +40,41 @@ config file:
 .. code-block:: mpf-config
 
     #! switches:
-    #!     s_trough1:
-    #!         number: 1
-    #!     s_trough2:
-    #!         number: 2
-    #!     s_trough3:
-    #!         number: 3
-    #!     s_trough4:
-    #!         number: 4
-    #!     s_trough5:
-    #!         number: 5
-    #!     s_trough6:
-    #!         number: 6
-    #!     s_trough_jam:
-    #!         number: 7
-    #!     s_plunger_lane:
-    #!         number: 8
-    #!     s_eject:
-    #!         number: 9
-    #!     s_bottom_popper:
-    #!         number: 10
-    #!     s_top_popper:
-    #!         number: 11
-    #!     s_elevator_hold:
-    #!         number: 12
+    #!   s_trough1:
+    #!     number: 1
+    #!   s_trough2:
+    #!     number: 2
+    #!   s_trough3:
+    #!     number: 3
+    #!   s_trough4:
+    #!     number: 4
+    #!   s_trough5:
+    #!     number: 5
+    #!   s_trough6:
+    #!     number: 6
+    #!   s_trough_jam:
+    #!     number: 7
+    #!   s_plunger_lane:
+    #!     number: 8
+    #!   s_eject:
+    #!     number: 9
+    #!   s_bottom_popper:
+    #!     number: 10
+    #!   s_top_popper:
+    #!     number: 11
+    #!   s_elevator_hold:
+    #!     number: 12
     #! coils:
-    #!     c_trough_eject:
-    #!         number: 0
-    #!     c_plunger_eject:
-    #!         number: 1
-    #!     c_retina_eject:
-    #!         number: 2
-    #!     c_bottom_popper:
-    #!         number: 3
-    #!     c_top_popper:
-    #!         number: 4
+    #!   c_trough_eject:
+    #!     number: 0
+    #!   c_plunger_eject:
+    #!     number: 1
+    #!   c_retina_eject:
+    #!     number: 2
+    #!   c_bottom_popper:
+    #!     number: 3
+    #!   c_top_popper:
+    #!     number: 4
     ball_devices:
       bd_trough:
         tags: trough, home, drain
@@ -83,7 +83,7 @@ config file:
         entrance_count_delay: 300ms
         jam_switch: s_trough_jam
         eject_targets: bd_plunger
-        debug: yes
+        debug: true
 
       bd_plunger:
         ball_switches: s_plunger_lane
@@ -113,9 +113,9 @@ config file:
         eject_timeouts: 500ms
 
     playfields:
-       playfield:
-            tags: default
-            default_source_device: bd_plunger
+      playfield:
+        tags: default
+        default_source_device: bd_plunger
 
 Remember that if you need to adjust the eject coil pulse time, you do
 that in the coil's property in the ``coils:`` section of your config
@@ -124,11 +124,11 @@ file, not in the ball device configuration.
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial``
-folder with the name ``step12.yaml``.
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_12``
+folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step12
+   C:\mpf-examples\tutorial>mpf both

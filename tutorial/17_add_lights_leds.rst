@@ -326,7 +326,7 @@ the real machine does one thing with the lights for a few seconds, then another,
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
-If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial_step_17``
+If you want to see a complete ``config.yaml`` file up to this point, it's in the ``mpf-examples/tutorial/step_17``
 folder with the name ``config.yaml``. You can run it be switching to that folder and running ``mpf both``:
 
 .. code-block:: doscon

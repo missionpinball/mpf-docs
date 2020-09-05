@@ -8,6 +8,7 @@ https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
 
 Unzip it, and from a terminal run ``chmod +x install && sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
 or P3-Roc also run ``chmod +x install-proc && ./install-proc`` (skip for other platforms). Consult the README for more information.
+At the moment, the script does not work out-of-the-box under Python3.8 (Ubuntu 20.04 is using this version).
 
 Download & run the "Demo Man" example game
 ------------------------------------------
@@ -69,7 +70,7 @@ To downgrade (or install a specific release x.yy.z) run:
   pip3 install mpf==x.yy.z
   pip3 install mpf-mc==x.yy.z
 
-Uninstalling MPF 
+Uninstalling MPF
 ----------------------
 
 To remove MPF either because it is no longer needed or to perform a clean install run:
@@ -103,6 +104,4 @@ Specifics about certain linux distributions.
 
    Xubuntu Linux <xubuntu>
 
-Specific Linux Distributions
-----------------------------
-
+.. include:: /install/common_problems_and_solutions.rst

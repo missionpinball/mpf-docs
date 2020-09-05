@@ -25,11 +25,10 @@ To map a coil as light you can use the following config:
   coils:
     your_light_coil:
       number: 42                 # number depends on your platform
-      allow_enable: True	      # this will allow 100% enable without pwm
-
-  lights:     
+      allow_enable: true        # this will allow 100% enable without pwm
+  lights:
     your_light_on_a_coil:
-      number: your_light_coil	   # map this light to a driver
+      number: your_light_coil     # map this light to a driver
       platform: drivers
 
 This is sometimes done for :doc:`gis` and :doc:`flashers`.

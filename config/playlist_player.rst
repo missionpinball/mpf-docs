@@ -28,11 +28,9 @@ Examples:
        playlist:
          playlist: attract_music
          action: play
-
      advance_playlist:
        playlist:
          action: advance
-
      stop_playlist:
        playlist:
          action: stop

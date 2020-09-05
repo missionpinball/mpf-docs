@@ -19,8 +19,9 @@ step is played.
 Shows are configured via the YAML formatting just like config files. You can add the definitions for simple shows
 into your config files directly, or you can create standalone shows files that you store in your machine's`shows` folder.
 
-At this time, it's only possible to create and edit shows by editing the YAML files by hand. At some point we'll create
-a graphical show editor, but that's probably a ways away. (Unless anyone wants to volunteer to write it?)
+It is totally viable to create simple shows but hand.
+However, there is a :doc:`/tools/showcreator/index` to create complex light
+shows.
 
 Read on for more info on how shows work:
 
@@ -34,3 +35,8 @@ Read on for more info on how shows work:
    tokens
    playing
    sync_ms
+   shows_in_shows
+
+You should have a look at :doc:`/config_players/index` to find more information
+about all the elements which are possible in shows (i.e. lights, slides,
+widgets or sounds).

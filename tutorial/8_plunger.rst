@@ -52,30 +52,30 @@ Tell the playfield to use the plunger for new balls:
 .. code-block:: mpf-config
 
    #! switches:
-   #!      s_plunger:
-   #!          number: 10
+   #!   s_plunger:
+   #!     number: 10
    #! ball_devices:
-   #!      bd_plunger:
-   #!          ball_switches: s_plunger
-   #!          mechanical_eject: true
+   #!   bd_plunger:
+   #!     ball_switches: s_plunger
+   #!     mechanical_eject: true
    playfields:
-       playfield:
-            tags: default
-            default_source_device: bd_plunger
+     playfield:
+       tags: default
+       default_source_device: bd_plunger
 
 
-Check out the complete config.yaml file so far
-----------------------------------------------
+3. Check out the complete config.yaml file so far
+-------------------------------------------------
 
 Again, our example config will probably diverge from yours since you might have different types
 of drain and plunger devices, but we do have a complete machine conform for Demolition Man
-for this step which you can view in the ``mpf-examples/tutorial`` folder with the name ``step8.yaml``.
+for this step which you can view in the ``mpf-examples/tutorial/step_8`` folder.
 
 You can run this file directly by switching to that folder and then running the following command:
 
 .. code-block:: doscon
 
-   C:\mpf-examples\tutorial>mpf both -c step8
+   C:\mpf-examples\tutorial>mpf both
 
 4. Fire up your game and test
 -----------------------------
@@ -89,13 +89,19 @@ shows the verbose information in the log file, like this:
 
 .. code-block:: doscon
 
-    C:\pinball\your_machine>mpf -vb
+    C:\pinball\your_machine>mpf -vbt
 
 You don't have to launch the media controller this time since we're
 just looking at the console output of the MPF game engine, which is
 why we added the ``b`` command line option too. (The ``b`` option
 tells the MPF game engine not to use the BCP protocol and not to
 try to connect to the MC.)
+You also have to add ``t`` to disable the text ui to see the verbose log.
+Otherwise, you would only see the verbose output in the logfile in the ``logs``
+directory of your machine.
+
+Note: For more information about command line options take a look at 
+:doc:`/running/commands/index` and :doc:`/running/commands/game`.
 
 Once your game is running, drop a ball into your trough and you
 should see a whole bunch of trough switches changing between active
@@ -166,5 +172,7 @@ letters, numbers, and the underscore, and that none of your names start with a n
 Finally, make sure your YAML file is formatted properly, with spaces
 (not tabs) and that you have no space to the left of your colons and
 that you do have a space to the right of your colons.
+See our :doc:`/troubleshooting/debugging_yaml_parse_errors` guide if you
+got YAML errors.
 At this point your trough is ready to go! Next we have to configure
 your plunger lane.

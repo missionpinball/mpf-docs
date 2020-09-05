@@ -101,6 +101,7 @@ Here's a list of valid MPF commands. Click on any one of them for full details a
 * :doc:`mpf migrate <commands/migrate>` (Migrates older config and show files to the current version)
 * :doc:`mpf hardware <commands/hardware>` (Scan, inspect and configure hardware)
 * :doc:`mpf service <commands/service>` (Service command line interface)
+* :doc:`mpf build <commands/build>` (Build production bundles)
 
 Specifying BCP ports
 --------------------

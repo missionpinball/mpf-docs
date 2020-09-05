@@ -37,7 +37,7 @@ This is an example:
         hurry_up_time: 2s
         grace_period: 2s
         enable_events: event_on_dangerous_action
-        auto_launch: yes
+        auto_launch: true
         balls_to_save: 1
 
 When ``event_on_dangerous_action`` is posted the ball save will be active for
@@ -69,11 +69,12 @@ Related How To guides
 
 * :doc:`Ball save at ball start </game_logic/ball_start_end/index>`
 
+.. toctree::
+   :hidden:
+
+   center_post
+
 Related Events
 --------------
-* :doc:`/events/ball_save_name_disabled`
-* :doc:`/events/ball_save_name_enabled`
-* :doc:`/events/ball_save_name_grace_period`
-* :doc:`/events/ball_save_name_hurry_up`
-* :doc:`/events/ball_save_name_saving_ball`
-* :doc:`/events/ball_save_name_timer_start`
+
+.. include:: /events/include_ball_saves.rst

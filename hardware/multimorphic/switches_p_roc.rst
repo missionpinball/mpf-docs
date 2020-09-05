@@ -29,7 +29,7 @@ format.
    of the documentation.
 
 Direct Switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 The P-ROC has 32 direct switch inputs (which are switches that are directly
 connected to the P-ROC that do not require a switch matrix). Direct switches
@@ -41,15 +41,15 @@ number with "SD", like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: SD0
-      my_other_switch:
-         number: SD1
-      another_switch:
-         number: SD12
+     my_switch:
+       number: SD0
+     my_other_switch:
+       number: SD1
+     another_switch:
+       number: SD12
 
 Matrix Switches
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 If you're using a switch matrix, then the switch numbers are entered using
 the column number, then a slash, then the row number.
@@ -57,12 +57,12 @@ the column number, then a slash, then the row number.
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 0/0  # column 0, row 0
-      my_other_switch:
-         number: 0/1  # column 0, row 1
-      another_switch:
-         number: 3/4  # column 3, row 4
+     my_switch:
+       number: 0/0    # column 0, row 0
+     my_other_switch:
+       number: 0/1    # column 0, row 1
+     another_switch:
+       number: 3/4    # column 3, row 4
 
 Mixing and matching direct and matrix switches
 ----------------------------------------------
@@ -133,9 +133,9 @@ config, like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 0/0
-         debounce: quick
+     my_switch:
+       number: 0/0
+       debounce: quick
 
 To force debouncing to always be used (which is also the default on the P-ROC,
 so not really needed), configure it like this:
@@ -143,7 +143,12 @@ so not really needed), configure it like this:
 .. code-block:: mpf-config
 
    switches:
-      my_switch:
-         number: 0/0
-         debounce: normal
+     my_switch:
+       number: 0/0
+       debounce: normal
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

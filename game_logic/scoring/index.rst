@@ -12,7 +12,7 @@ This event could be a switch hit (i.e. for `s_your_switch` use the event `s_your
 
 .. code-block:: mpf-config
 
-  ##! config: mode1
+  ##! mode: mode1
   variable_player:
     s_your_switch_active:
       score: 100
@@ -34,16 +34,13 @@ This is an example for simple scoring with multiplier:
      multiplier:
        value_type: int
        initial_value: 1
-   
    ##! mode: my_mode
    # in your mode:
-   
    variable_player:
      increment_multiplier:
        multiplier: 1
      score_something:
        score: 100 * current_player.multiplier
-   
    ##! test
    #! start_game
    #! assert_player_variable 1 multiplier
@@ -59,13 +56,12 @@ The multiplier will be tracked per player and carry over to the next ball.
 At start we set it to ``1`` using a :doc:``player_vars </config/player_vars>``
 entry in config for every player.
 
-You can also reset the multiplier on every ball if you want: 
+You can also reset the multiplier on every ball if you want:
 
 .. code-block:: mpf-config
 
    ##! mode: my_mode
    # in your mode:
-   
    variable_player:
      # set initial state on mode start of mode "my_mode"
      mode_my_mode_started:
@@ -74,10 +70,8 @@ You can also reset the multiplier on every ball if you want:
          action: set
      increment_multiplier:
        multiplier: 1
-      
      score_something:
        score: 100 * current_player.multiplier
-
    ##! test
    #! start_game
    #! assert_player_variable 0 multiplier
@@ -89,7 +83,6 @@ You can also reset the multiplier on every ball if you want:
    #! assert_player_variable 2 multiplier
    #! post score_something
    #! assert_player_variable 300 score
-
 
 Sometimes you want to increase your multipliers after multiple events were
 posted. For instance, you might want to increase the multiplier after
@@ -103,7 +96,6 @@ the player completed two shot_groups:
      multiplier:
        value_type: int
        initial_value: 1
-   
    ##! mode: my_mode
    # in your mode:
    accruals:
@@ -112,14 +104,12 @@ the player completed two shot_groups:
          - robo_lanes_shots_lit_complete
          - tech_lanes_shots_lit_complete
        events_when_complete: increment_multiplier, light_bonus_2x_led
-       start_enabled: True
-   
+       start_enabled: true
    variable_player:
      increment_multiplier:
        multiplier: 1
      score_something:
        score: 100 * current_player.multiplier
-   
    ##! test
    #! start_game
    #! assert_player_variable 1 multiplier
@@ -147,10 +137,8 @@ for details about other possible placeholders and math operators):
      mode_multiplier:
        value_type: int
        initial_value: 1
-   
    ##! mode: my_mode
    # in your mode:
-   
    variable_player:
      increment_multiplier:
        multiplier: 1
@@ -158,7 +146,6 @@ for details about other possible placeholders and math operators):
        mode_multiplier: 1
      score_something:
        score: 100 * current_player.multiplier * current_player.mode_multiplier
-   
    ##! test
    #! start_game
    #! assert_player_variable 1 multiplier
@@ -205,7 +192,6 @@ condition):
        value_type: int
        initial_value: 0
    ##! mode: super_extraball
- 
    ##! mode: my_mode
    # in your mode:
    variable_player:
@@ -215,7 +201,6 @@ condition):
        score: 100 * current_player.multiplier
      score_something{mode.super_extraball.active and current_player.loops_made > 2}:
        score: 1000000
-   
    ##! test
    #! start_game
    #! assert_player_variable 1 multiplier
@@ -240,4 +225,13 @@ condition):
 +==============================================================================+
 | :doc:`/game_logic/high_scores/index`                                         |
 +------------------------------------------------------------------------------+
+| :doc:`/game_logic/logic_blocks/scoring_based_on_logic_blocks`                |
++------------------------------------------------------------------------------+
+| :doc:`/game_design/game_modes/top_lanes_with_multiplier`                     |
++------------------------------------------------------------------------------+
+| :doc:`ss_style_score_queues`                                                 |
++------------------------------------------------------------------------------+
 
+.. toctree::
+
+   ss_style_score_queues

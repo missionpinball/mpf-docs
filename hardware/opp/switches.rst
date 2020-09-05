@@ -13,7 +13,7 @@ For switches, you can use most of the settings as outlined in the
 few things that are OPP-specific:
 
 Number:
-~~~~~~~
+^^^^^^^
 
 OPP switches are numbered sequentially depending on which wing board
 is the switch input.  Wing position 0 contains switch numbers 0 to 7.
@@ -50,3 +50,8 @@ numbered from 32 to 95.  Switches 32 - 39 are column 0, switches 40 -
 47 are column 1, switch 48 - 55 are column 2, switches 56 - 63 are
 column 3, switches 64 - 71 are column 4, switches 72 to 79 are column
 5, switches 80 to 87 are column 6, and switches 88 to 95 are column 7.
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`OPP troubleshooting guide <troubleshooting>`.

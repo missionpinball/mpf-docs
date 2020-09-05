@@ -8,65 +8,29 @@ widget_player:
 +----------------------------------------------------------------------------+---------+
 | Valid in :doc:`mode config files </config/instructions/mode_config>`       | **YES** |
 +----------------------------------------------------------------------------+---------+
-| Valid in :doc:`shows </shows/index>`                                       | **YES** |
-+----------------------------------------------------------------------------+---------+
+
+.. note:: This section can also be used in a show file in the ``widgets:`` section of a step.
+
+.. overview
 
 The ``widget_player:`` section of your config is where you configure widgets to be added to,
 removed from, or updated on slides based on based on events being posted.
 
-Note that the widget player is a :doc:`config_player </config_players/index>`, so everything
-mentioned below is valid in the ``widget_player:`` section of a config file *and* in the ``widgets:``
-section of a :doc:`show step </shows/content>`.
+This is an example:
 
-Full instructions on how to use the slide_player are included in the
-:doc:`/displays/widgets/index` section of the documentation. The stuff here
-in the config reference is for reference later.
-You can test slides and widgets interactively using
-:doc:`Interactive MC (iMC) </tools/imc/index>`.
+.. code-block:: mpf-mc-config
 
-Generically-speaking, there are two formats you can use for widget_player
-entries: "express" and "full" configs. Express configs will look like this:
-
-.. code-block:: mpf-config
-
+   #! widgets:
+   #!   widget_1: []
    widget_player:
-      event1: widget1
-      event2: widget2
-      event3: widget3
+     some_event:
+       widget_1:
+         slide: slide_2
 
-Full configs will look like this:
+It will add widget_1 to slide_2.
 
-.. code-block:: yaml
+See :doc:`/config_players/widget_player` for details.
 
-   widget_player:
-      event1:
-         widget1:
-            <settings>
-      event2:
-         widget2:
-            <settings>
-      event3:
-         widget3:
-            <settings>
-
-In both cases, these configurations are saying, "When *event1* is posted,
-add widget *widget1*. When *event2* is posted, add *widget2*. Etc."
-
-This "express" config is down-and-dirty, with no options, to just add widgets to
-the current slide on the default display.
-The full config lets you specify additional options (based on the settings
-detailed below).
-
-For example, the following config will add *widget_1* when *some_event* is posted, but it
-will also override the default settings and add widget to the slide called *slide_2*, even
-if that's not the current slide that's showing.
-
-.. code-block:: mpf-config
-
-   widget_player:
-      some_event:
-         widget_1:
-            slide: slide_2
 
 Settings
 --------
@@ -103,11 +67,17 @@ And the format in a show file would be:
 
 Here are the settings you can use:
 
+.. config
+
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``widget_player:`` section of your config. (If you don't include them, the default will be used).
+
 action:
 ~~~~~~~
-Single value, type: one of the following options: *add*, *remove*, *update*. Default: ``add``
-
-Specifies what action will take place when this event is posted.
+Single value, type: one of the following options: add, remove, update. Default: ``add``
 
 ``add``
    The widget or widget group is added to the slide or display target.
@@ -120,7 +90,7 @@ Specifies what action will take place when this event is posted.
 
 key:
 ~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Used to uniquely identify a widget. With "add" actions, this sets the key name,
 and with "remove" or "update" actions, the key is used to identify which widget
@@ -135,7 +105,7 @@ See the :doc:`/displays/widgets/keys` guide for details.
 
 slide:
 ~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 The name of the slide you want to add this widget to. If this is not specified,
 then the widget will be added to whichever slide is currently active on the
@@ -143,7 +113,7 @@ default display.
 
 target:
 ~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 The name of the display or slide frame this widget will be added to. When this
 setting is used, the widget is not added to a slide, rather, it's added "on top"
@@ -156,5 +126,12 @@ used and the ``slide:`` value will be ignored.
 
 widget_settings:
 ~~~~~~~~~~~~~~~~
+Unknown type. See description below.
 
 Used to override and/or update
+
+
+Related How To guides
+---------------------
+
+* :doc:`/config_players/widget_player`

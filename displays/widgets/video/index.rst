@@ -30,6 +30,9 @@ Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
 
+The following video widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:`` and ``y:``.
+
+
 type: video
 ~~~~~~~~~~~
 
@@ -129,7 +132,7 @@ when the event is posted, the action will be applied to the video.
 
 Consider the example below:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    slides:
      my_slide:

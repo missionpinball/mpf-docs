@@ -1,0 +1,180 @@
+WS2811 and WS2812 LEDs in Pinball
+=================================
+
+The most common serial LEDs use WS2811 or WS2812 controllers.
+Both controllers differ in the order of the channels.
+The WS2811 controller uses RGB and WS2812 uses GRB order.
+Unfortunately, some controller (i.e. Fadecandy) expect WS2812 by default
+and shuffle pixels internally for you.
+
+Config
+------
+
+MPF tries to make this right for you and your can configure those LEDs
+as follows:
+
+.. code-block:: mpf-config
+
+  lights:
+    my_ws2811:
+      number: 0         # first LED in chain (with three channels) - exact number format depends on your platform
+      type: rgb
+    my_ws2812:
+      number: 1         # second LED in chain (with three channels)
+      type: grb
+
+There are also RGBW LEDs which are compatible which usually use RGBW as order.
+They can be used like this:
+
+.. code-block:: mpf-config
+
+  lights:
+    my_rgbw_serial_led:
+      channels:
+        red:
+          - number: 3-0
+        green:
+          - number: 3-1
+        blue:
+          - number: 3-2
+        white:
+          - number: 4-0
+
+Starting with MPF 0.54 there is a new syntax to chain LEDs:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0    # the exact number format depends on your platform
+        subtype: led
+        type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw   # will use red: 0-3, green: 0-4, blue: 0-5, white: 0-6
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw   # will use red: 0-7, green: 0-8, blue: 0-9, white: 0-10
+
+Hardware
+--------
+
+Each pixel connects to the next pixel with three wires: VDD, signal, GND.
+According to the datasheet VDD should be 4.5V to 5.5V.
+This means two things:
+First, you can safely dial to power supply up to 5.5V
+for serial LEDs and we recommend you to do so.
+Secondly, you should make sure that at maximum brighness (i.e. maximum power
+consumption) the voltage should not drop below 4.5V.
+We urge you to actually test this by dialing the brightness up the maximum
+and measuring the voltage at the middle and the end of your chain.
+
+What if the voltage drops below 4.5V?
+From our experience serial WS2811/WS2812 work down to 3.5V but the whitepoint
+shifts to more blueish and the chain becomes much more susceptible to noise
+and flickering.
+If you see the voltage below 4.5V we strongly suggest that you fix your power
+setup.
+
+First step should be to connect power from both sides to your chains.
+That does not harm and practically halfs the length or your chain.
+Afterwards, measure the voltage in the middle of the chain.
+If that still does not help try using thicker wires or dialing up your power
+supply (especially if the voltage is also dropping at the beginning of your
+chain).
+
+If all this does not help try shorter chains.
+Most controllers support multiple chains and you should take advantage of that.
+
+Do not underestimate the currents which are needed to drive LEDs.
+As a rule of thumb you can calculate 60mA times the number of LEDs.
+If you got 100 LEDs that make it 6A.
+300 LEDs result in 18A which at 5V are 90W.
+Size your power supply accordingly.
+Also remember that the voltage drop in your wires is resistance times current
+``R * I`` so size the wire between your PSU and your lights accordingly.
+You can check this using the
+`Voltage Drop Calculator <https://www.calculator.net/voltage-drop-calculator.html?material=copper&wiresize=10.45&voltage=5.5&phase=dc&noofconductor=1&distance=2&distanceunit=meters&amperes=18>`_.
+Also note that standard .156 molex connectors are only rated for 7A and
+you do not want your board look like WPC boards with burned connectors.
+
+
+Types of LEDs
+-------------
+
+Single Chip LEDs
+~~~~~~~~~~~~~~~~
+
+Those while small LEDs are in a 5050 package and often used on PCBs.
+All those light rings, stripes or any PCBs are most likely WS2812.
+FAST pinball sells PCBs which can be mounted below an insert and there
+are numerous other designs to buy around the internet.
+
+:doc:`TODO: Add a picture of WS2812 PCB </about/help_us_to_write_it>`
+
+Christmas Lights
+~~~~~~~~~~~~~~~~
+
+"Christmas Light" chains are very well known.
+You can buy them for around 15 bucks with 50 lights.
+Those work well for GIs but you can also use them below inserts if you
+print or bend holders for this.
+
+:doc:`TODO: Add a picture of christmas lights WS2811 </about/help_us_to_write_it>`
+
+Those LEDs are WS2811 in most of the cases.
+You typically see the controller as a separate chip and a RGB LED soldered
+to it.
+
+Bulk WS2811
+~~~~~~~~~~~
+
+You can actually buy WS2811 in bulk from China.
+They are usually used to build christmas light chain but you can solder
+almost any LED to them.
+This could be flashers, custom playfield lights, segment displays or any other
+light you want to control.
+The chip will provide around 18.5mA per LED at full brightness.
+
+:doc:`TODO: Add a picture of a WS2811 PCB </about/help_us_to_write_it>`
+
+Some of those controllers also support 12V power supply.
+The datasheet is inconsistent here.
+Absolute maximum rating are 6-7V but they also talk about 12V and 24V.
+So take care about that voltage when buying those PCBs.
+
+WS2814 or SK6812
+~~~~~~~~~~~~~~~~
+
+There is not much known about the inner working of those chips.
+But they work similar to the chips above but
+at ``18.5mA * 4 = 74mA`` total power.
+
+:doc:`TODO: Add a picture of a RGBW WS2814 and/or SK6812 </about/help_us_to_write_it>`
+
+WS2813
+~~~~~~
+
+Those chips are similar to the WS2812 chips but they got an additional fallback
+input which connects to the output of the second last LED.
+If the previous LED in the chain breaks the chain will continue to work which
+is very convenient.
+
+:doc:`TODO: Add a picture of a WS2813 </about/help_us_to_write_it>`
+
+There exist four versions:
+* A and B run at ``18mA * 3 = 53mA`` (similar to WS2812)
+* C and D are low power version und run at ``5mA * 3 = 15mA``
+
+WS2815
+~~~~~~
+
+WS2815 is a 5050 chip similar to WS2813 but it runs at 12V instead of 5V which
+is pretty interesting for pinball machines.
+This allows longer chains and thinner wires which is a huge improvement.
+Additionally, it has the handy fallback pin of WS2813 so one broken chip will
+not bring down the whole chain.
+
+:doc:`TODO: Add a picture of a WS2815 </about/help_us_to_write_it>`

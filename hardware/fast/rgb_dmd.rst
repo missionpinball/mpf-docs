@@ -10,15 +10,19 @@ How to configure an RGB DMD (FAST Pinball)
 If you would like to use the FAST RGB LED DMD, follow the
 instructions for the :doc:`/hardware/smartmatrix/index`.
 
-Can copy the following example (and replace ``com12`` with your com port):
+You can copy the following example (and replace ``com12`` with your com port):
 
 .. code-block:: mpf-config
 
     hardware:
-        rgb_dmd: smartmatrix
-
+      rgb_dmd: smartmatrix
     smartmatrix:
-        smartmatrix_1:
-           port: com12
-           baud: 4000000
-           old_cookie: false
+      smartmatrix_1:
+        port: com12
+        baud: 4000000
+        old_cookie: false
+
+What if it did not work?
+------------------------
+
+Have a look at our :doc:`FAST troubleshooting guide <troubleshooting>`.

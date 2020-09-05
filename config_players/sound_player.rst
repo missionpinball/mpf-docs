@@ -5,6 +5,8 @@ The *sound player* is a :doc:`config player </config_players/index>` that's used
 sounds. (This player is part of the MPF media controller and only available if you're using MPF-MC
 for your media controller.)
 
+See :doc:`/sound/index` and :doc:`/sound/basic_setup` for details.
+
 Usage in config files
 ---------------------
 

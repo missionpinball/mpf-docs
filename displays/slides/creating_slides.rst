@@ -19,25 +19,25 @@ Defining slides in the slides: section of a config file
 
 The main way to do it is in the "slides" section of a config file, like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
     slides:
-        some_slide:
-            - type: text
-              text: THIS IS MY SLIDE
-        some_other_slide:
-            - type: text
-              text: THIS IS ANOTHER SLIDE
-            - type: text
-              text: WITH MORE WORDS
-              y: bottom
-              anchor_y: bottom
-        tilt_warning_1:
-            - type: text
-              text: WARNING
-        tilt_warning_2:
-            - type: text
-              text: WARNING WARNING
+      some_slide:
+        - type: text
+          text: THIS IS MY SLIDE
+      some_other_slide:
+        - type: text
+          text: THIS IS ANOTHER SLIDE
+        - type: text
+          text: WITH MORE WORDS
+          y: bottom
+          anchor_y: bottom
+      tilt_warning_1:
+        - type: text
+          text: WARNING
+      tilt_warning_2:
+        - type: text
+          text: WARNING WARNING
 
 In the example above, we have four main sub-entries in the slides section:
 
@@ -92,13 +92,17 @@ documentation for the slide_player is in the
 
 You can define slides in the slide_player like this:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-    slide_player:
-        some_event:
-            my_slide_1:
-                - type: text
-                  text: THIS IS MY SLIDE
+   slide_player:
+     some_event:
+       my_slide_1:
+         - type: text
+           text: THIS IS MY SLIDE
+   ##! test
+   #! post some_event
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "THIS IS MY SLIDE"
 
 In the above example, when the event *some_event* is posted, the slide player
 will respond and show the slide called *my_slide_1* which will include that
@@ -124,19 +128,25 @@ configuration section of a config file).
 So here's an example of a slide created within a show for use within a specific
 step in that show:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
+   #! show_player:
+   #!   start_show: my_show
    ##! show: my_show
    # show_version=5
    - time: 0
      slides:
-        my_show_slide_1:
-        - type: text
-          text: MISSION PINBALL
-          color: red
-        - type: rectangle
-          width: 128
-          height: 32
+       my_show_slide_1:
+       - type: text
+         text: MISSION PINBALL
+         color: red
+       - type: rectangle
+         width: 128
+         height: 32
+   ##! test
+   #! post start_show
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "MISSION PINBALL"
 
 Again, see the :doc:`show documentation </shows/index>` for details. Here we're
 just showing that it's also possible to define a slide in a show config.

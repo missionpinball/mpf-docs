@@ -80,8 +80,8 @@ following entry in that mode's config file:
 
    ##! mode: my_mode
    variable_player:
-        right_ramp_hit:
-            score: 50000
+     right_ramp_hit:
+       score: 50000
 
 In that case the *right_ramp_hit* shot event will only award the points when
 that multiball mode is running. When it stops, that variable_player/scoring
@@ -188,12 +188,34 @@ the name of the mode, and whether the mode has any custom Python code that goes
 with it. (Full details of this are in the ``mode:`` section of the configuration
 file reference.)
 
+Organizing modes in subfolders
+------------------------------
+
+Modes can also be organized in subfolders. So your modes folder structure could
+look like:
+
+::
+
+    modes
+      high_score
+      band_gb
+         gb_base
+         gb_rockfest
+      band
+         sq
+            first_avenue
+            release
+
+Each mode must include the ``config`` subfolder with the configuration file. Any
+folder that includes the ``config`` subfolder will not be scanned for further
+modes.
+
 Starting and stopping modes
 ---------------------------
 
 Modes stop and start based on standard MPF events. For example, if you want a
 mode to run whenever a ball is in play, you'd add ``ball_starting`` to the
-mode's start events list, and you wouldn't specific a stop event. If you want a
+mode's start events list, and you wouldn't specify a stop event. If you want a
 mode to automatically stop when a timer expires, you'd add the name of the event
 that's posted when the timer ends to the mode's stop events list.
 
@@ -222,7 +244,7 @@ The mode priorities also affect the priorities of things like all display
 widgets and slides. For example, your base mode might play an animation and a
 light show when a ramp shot is made in the base game mode, but when your special
 higher mode is running you might want to play a different slide and a different
-light show. So be specifying the special mode to run at a higher priority, it
+light show. So by specifying the special mode to run at a higher priority, it
 will get priority access to the display and lights. (Again you can configure
 this on a setting-by-setting basis, because there are plenty of times where you
 might actually want the lower-priority shows to play even when a higher priority

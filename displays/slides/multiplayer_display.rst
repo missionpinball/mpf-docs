@@ -29,37 +29,37 @@ different pieces one-by-one as the number of players increases. In this example,
 we have a large score for the current player, show the player's custom-variable
 "level" in the lower-left, and their current ball number in the lower-right
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  slides:
-    base_slide: []
-
-  slide_player:
-    single_player_ball_started: base_slide
-
-  widgets:
-    base_score_widget:
-      - type: text
-        text: (score)
-        style: score_style_singleplayer
-    base_level_widget:
-      - type: text
-        text: LVL (player|level)
-        style: mp_player_3
-    base_ball_widget:
-      - type: text
-        text: BALL (ball)
-        style: mp_player_4
-
-  widget_player:
-    # First event, before additional players have a chance to enter
-    game_started:
-      base_score_widget:
-        slide: base_slide
-      base_level_widget:
-        slide: base_slide
-      base_ball_widget:
-        slide: base_slide
+   slides:
+     base_slide: []
+   slide_player:
+     single_player_ball_started: base_slide
+   widgets:
+     base_score_widget:
+       - type: text
+         text: (score)
+     base_level_widget:
+       - type: text
+         text: LVL (player|level)
+     base_ball_widget:
+       - type: text
+         text: BALL (ball)
+   widget_player:
+     # First event, before additional players have a chance to enter
+     game_started:
+       base_score_widget:
+         slide: base_slide
+       base_level_widget:
+         slide: base_slide
+       base_ball_widget:
+         slide: base_slide
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "0"
+   #! assert_text_on_top_slide "LVL 0"
+   #! assert_text_on_top_slide "BALL 1"
 
 This is all we need to have a nice single-player slide that shows the score, the
 ball, and a custom game-specific player variable.
@@ -87,22 +87,36 @@ Because the "game" mode exists between player turns, its slides can interfere
 with other slide behavior (e.g. bonus slides and start/end of turn slides).
 We'll keep it clean and manually clear the score slide at the end of each ball.
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
-  slide_player:
-    single_player_ball_started: base_slide
-    multi_player_ball_started: multiplayer_slide
-    # If a second player joins during player1's turn, swap base_slide for multiplayer_slide
-    multiplayer_game:
-      base_slide:
-        action: remove
-      multiplayer_slide:
-        action: play
-    ball_will_end:
-      base_slide:
-        action: remove
-      multiplayer_slide:
-        action: remove
+   slides:
+     base_slide:
+       - type: text
+         text: "Single Player Game"
+     multiplayer_slide:
+       - type: text
+         text: "Multiplayer Player Game"
+   slide_player:
+     single_player_ball_started: base_slide
+     multi_player_ball_started: multiplayer_slide
+     # If a second player joins during player1's turn, swap base_slide for multiplayer_slide
+     multiplayer_game:
+       base_slide:
+         action: remove
+       multiplayer_slide:
+         action: play
+     ball_will_end:
+       base_slide:
+         action: remove
+       multiplayer_slide:
+         action: remove
+   ##! test
+   #! start_game
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "Single Player Game"
+   #! add_player
+   #! advance_time_and_run .1
+   #! assert_text_on_top_slide "Multiplayer Player Game"
 
 With only two players, we can keep the "level" and "ball" widgets in the bottom
 left and right corners. We want to add the player_1 and player_2 widgets in the

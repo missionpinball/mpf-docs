@@ -10,42 +10,41 @@ use the :doc:`/displays/widgets/bezier/index`.
 
 Here's an example:
 
-.. code-block:: mpf-config
+.. code-block:: mpf-mc-config
 
    #config_version=5
-
    slide_player:
-    mc_ready:
+     mc_ready:
        ellipse_example:
-        - type: ellipse
-          x: 200
-          y: 200
-          width: 200
-          height: 200
-          color: blue
-          angle_start: 0
-          angle_end: 90
-        - type: ellipse
-          x: 400
-          y: 300
-          width: 400
-          height: 200
-          color: yellow
-          segments: 8
-        - type: ellipse
-          x: 600
-          y: 500
-          width: 400
-          height: 300
-          color: red
-          angle_start: 200
-          angle_end: 300
-        - type: ellipse
-          x: 700
-          y: 200
-          width: 90
-          height: 300
-          color: lime
+         - type: ellipse
+           x: 200
+           y: 200
+           width: 200
+           height: 200
+           color: blue
+           angle_start: 0
+           angle_end: 90
+         - type: ellipse
+           x: 400
+           y: 300
+           width: 400
+           height: 200
+           color: yellow
+           segments: 8
+         - type: ellipse
+           x: 600
+           y: 500
+           width: 400
+           height: 300
+           color: red
+           angle_start: 200
+           angle_end: 300
+         - type: ellipse
+           x: 700
+           y: 200
+           width: 90
+           height: 300
+           color: lime
 
 And the result:
 
@@ -69,6 +68,9 @@ Settings
 Also remember that all widget settings can be controlled via
 :doc:`widget styles </displays/widgets/styles>`, rather than
 you having to set every setting on every widget.
+
+The following ellipse widget settings may be :doc:`animated </displays/widgets/animation>`: ``x:``, ``y:``, ``width:``,
+``position:``, ``height:``, ``size:``, ``color:``, ``angle_start:``, ``angle_end:``, ``opacity:``, ``rotation:``, and ``scale:``.
 
 type: ellipse
 ~~~~~~~~~~~~~

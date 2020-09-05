@@ -17,6 +17,9 @@ Then connect switches and driver according to the manual
 (see :doc:`/hardware/existing_machines/index` for specific machines).
 If you are using a PD-Master board see below for switches and drivers.
 
+:doc:`mpf hardware scan </running/commands/hardware>` will show the firmware
+version and revision of your P-Roc if it is connected correctly.
+
 P3-Roc
 ------
 
@@ -30,8 +33,11 @@ all nodes.
 
 .. image:: /hardware/images/multimorphic_p3_roc_wireing.jpg
 
+:doc:`mpf hardware scan </running/commands/hardware>` will show the firmware
+version and revision of your P3-Roc if it is connected correctly.
+
 SW-16
-~~~~~
+^^^^^
 
 .. image:: /hardware/images/multimorphic_SW-16.png
 
@@ -41,8 +47,20 @@ It does not matter on which of the two switch busses the boards are connected.
 Terminate the bus at the last board.
 See :doc:`switches_p3_roc` for how to configure those boards.
 
+You can list all SW-16 using :doc:`mpf hardware scan </running/commands/hardware>`:
+
+.. code-block:: console
+
+   $ mpf hardware scan
+
+   Firmware Version: 2 Firmware Revision: 6 Hardware Board ID: 1
+   SW-16 boards found:
+    - Board: 0 Switches: 16 Device Type: A3 Board ID: 0
+    - Board: 1 Switches: 16 Device Type: A3 Board ID: 1
+    - Board: 2 Switches: 16 Device Type: A4 Board ID: 2
+
 PD-16/PD-8x8
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. image:: /hardware/images/multimorphic_PD-16.png
 
@@ -53,8 +71,11 @@ It does not matter on which of the two driver busses the boards are connected.
 Terminate the bus at the last board.
 See :doc:`drivers` and :doc:`lights` for how to configure those boards.
 
+MPF and the P3-Roc do not know if those boards are connected as the
+communication is one-way only.
+
 PD-LED
-~~~~~~
+^^^^^^
 
 .. image:: /hardware/images/multimorphic_PD-LED.png
 
@@ -64,3 +85,12 @@ However, they overlap with the PD-16 addresses so plan accordingly.
 It does not matter on which of the two driver busses the boards are connected.
 Terminate the bus at the last board.
 See :doc:`leds` for how to configure those boards.
+
+MPF and the P3-Roc do not know if those boards are connected as the
+communication is one-way only.
+
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for the P/P3-Roc <troubleshooting>`.

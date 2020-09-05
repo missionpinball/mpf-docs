@@ -40,7 +40,7 @@ that you don't see on this list, please
 <https://groups.google.com/forum/#!forum/mpf-users>`_ and we'll go from there.
 
 Primary control systems
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You'll need to pick one of these three as the main interface between MPF and
 your pinball machine.
@@ -74,8 +74,17 @@ your pinball machine.
 
 * :doc:`LISY <lisy/index>`
    * *New in MPF 0.50*
-   * Gottlieb System 1
-   * Gottlieb System 80
+   * Gottlieb System 1 (LISY1)
+   * Gottlieb System 80 (LISY80)
+   * Bally and Stern Games manufactured from 1977 to 1985 (LISY35) *New in MPF 0.53*
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
+
+* :doc:`Arduino Pinball Controller (APC) <apc/index>`
+   * *New in MPF 0.53*
+   * System 3 to System 11c
    * Segment displays
    * External sounds
    * Switches, rules and coils
@@ -86,12 +95,15 @@ your pinball machine.
      it's not connected to physical hardware. (This is good for working on
      your game when you're not around your machine, or if you don't have
      real hardware yet.)
+   * You can also integrate MPF with a
+     :doc:`Virtual Pinball (VPX) <virtual/virtual_pinball_vpx>` table to play
+     your game with simulated hardware.
    * The :doc:`MPF Monitor </tools/monitor/index>` is a graphical tool you can
      also use to visually interact with MPF which is especially useful if
      you're not using MPF with physical hardware.
 
 Additional supported hardware
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following hardware devices can be combined with primary control sytstems
 to provide additional functionality.
@@ -121,6 +133,14 @@ to provide additional functionality.
    * *New in MPF 0.50*
    * Alphanumeric segment displays
 
+* :doc:`Light Segment Displays <light_segment_displays/index>`
+   * Control segment displays via light outputs or driver on another platform
+   * BCD segment displays
+   * 7-segment displays
+   * Serial driven displays
+   * RGB segment displays
+   * Other formats and custom built displays
+
 * :doc:`Trinamics StepRocker <trinamics/index>`
    * *New in MPF 0.50*
    * StepRocker stepper controller
@@ -131,6 +151,11 @@ to provide additional functionality.
    * All inputs and outputs
    * I2C and SPI
 
+* :doc:`PIN2DMD RGB DMD <pin2dmd/index>`
+   * *New in MPF 0.54*
+   * 128x32 or 192x64 RGB LED DMD
+   * Connected via USB
+
 * :doc:`Native I2C on Linux <smbus/index>`
    * *New in MPF 0.50*
    * I2C devices on any nativ I2C bus
@@ -138,6 +163,16 @@ to provide additional functionality.
 * :doc:`MMA8451-based accelerometers <mma8451/index>`
    * *New in MPF 0.50*
    * Connected to I2C
+
+* :doc:`Pololu Tic <pololu_tic/index>`
+   * *New in MPF 0.52*
+   * Stepper controller connected to USB
+
+* :doc:`Open Sound Control (OSC> <osc/index>`
+   * Control lights via OSC (i.e. your DMX controller)
+   * Receive incoming switch changes (i.e. from your MIDI keyboard)
+   * Receive incoming events (i.e. from your MIDI keyboard)
+   * Send events to OSC (to generate sounds or trigger actions)
 
 There is a :doc:`hardware roadmap <roadmap>` for other hardware which we want
 to support in the future.
@@ -156,19 +191,27 @@ MPF supports:
    P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
-   Gottlieb System 1 / System 80 (LISY) <lisy/index>
+   LISY platform <lisy/index>
+   Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
    Pololu Maestro <pololu_maestro/index>
+   Pololu Tic <pololu_tic/index>
    SmartMatrix RGB DMD <smartmatrix/index>
    RGB.DMD <eli_dmd/index>
+   PIN2DMD <pin2dmd/index>
+   Raspberry Pi DMD <rpi_dmd/index>
    MyPinballs Segment Displays <mypinballs/index>
+   Light Segment Displays <light_segment_displays/index>
    Trinamics StepRocker <trinamics/index>
+   StepStick Steppers <stepstick/index>
    Computer Requirements <computer/index>
    Native I2C <smbus/index>
    Raspberry Pi <rpi/index>
    MMA8451-based accelerometer <mma8451/index>
+   SPI Big Bang Switches <spi_bit_bang/index>
+   Open Sound Control (OSC) <osc/index>
    Virtual Hardware <virtual/index>
    Existing Machines <existing_machines/index>
    Voltages and Power <voltages_and_power/index>
@@ -179,6 +222,7 @@ MPF supports:
    numbers
    platform
    roadmap
+   troubleshooting_hardware
 
 Browse Platforms by Capabilites
 -------------------------------
@@ -188,3 +232,6 @@ Browse Platforms by Capabilites
 
    i2c_platforms
    servo_platforms
+   stepper_platforms
+   segment_display_platforms
+   dmd_platforms

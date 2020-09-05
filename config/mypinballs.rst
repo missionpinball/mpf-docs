@@ -14,6 +14,8 @@ mypinballs:
 The ``mypinballs:`` section of your config is where your mypinballs segment display controller.
 See :doc:`/hardware/mypinballs/index` for details.
 
+.. config
+
 
 Required settings
 -----------------
@@ -22,7 +24,7 @@ The following sections are required in the ``mypinballs:`` section of your confi
 
 port:
 ~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 Serial port to use.
 
@@ -40,8 +42,12 @@ Baud rate to use on the serial port.
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to true to see more debug output.
 
 
+Related How To guides
+---------------------
+
+* :doc:`/hardware/mypinballs/index`
