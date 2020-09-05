@@ -159,6 +159,7 @@ indicated which type of config file it's valid in.
    timers: <timers>
    track_player: <track_player>
    trinamics_steprocker: <trinamics_steprocker>
+   twitch_client: <twitch_client>
    variable_player: <variable_player>
    video_pools: <video_pools>
    videos: <videos>

@@ -35,3 +35,14 @@ configs:
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
    player(x)_score <playerx_score>
+   twitch_last_bits_amount <twitch_last_bits_amount>
+   twitch_last_bits_user <twitch_last_bits_user>
+   twitch_last_chat_message <twitch_last_chat_message>
+   twitch_last_chat_message_line_1 <twitch_last_chat_message_line_1>
+   twitch_last_chat_message_line_2 <twitch_last_chat_message_line_2>
+   twitch_last_chat_message_line_3 <twitch_last_chat_message_line_3>
+   twitch_last_chat_message_line_4 <twitch_last_chat_message_line_4>
+   twitch_last_chat_message_line_5 <twitch_last_chat_message_line_5>
+   twitch_last_chat_message_line_6 <twitch_last_chat_message_line_6>
+   twitch_last_chat_message_line_count <twitch_last_chat_message_line_count>
+   twitch_last_chat_user <twitch_last_chat_user>
