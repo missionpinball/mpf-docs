@@ -1,5 +1,5 @@
 twitch_client:
-=======
+==============
 
 *Config file section*
 
