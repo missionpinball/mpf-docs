@@ -32,21 +32,21 @@ Required settings
 The following sections are required in the ``twitch_client:`` section of your config:
 
 user:
-~~~~~~~
+~~~~~
 Single value, type: ``string``.
 
 This is the user that will connect to Twitch. You may want to create a separate
 bot account on Twitch to use for this purpose.
 
 password:
-~~~~~~~
+~~~~~~~~~
 Single value, type: ``string``.
 
 This is a Twitch OAuth token, not the actual password of the user. You can
 generate this token at https://twitchapps.com/tmi/
 
 channel:
-~~~~~~~
+~~~~~~~~
 Single value, type: ``string``.
 
 The channel on Twitch which will be monitored for messages.
