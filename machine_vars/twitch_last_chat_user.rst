@@ -1,5 +1,5 @@
 twitch_last_chat_user
-===============
+=====================
 
 *MPF machine variable*
 

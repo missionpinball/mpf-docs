@@ -1,5 +1,5 @@
 twitch_last_bits_user
-===============
+=====================
 
 *MPF machine variable*
 
