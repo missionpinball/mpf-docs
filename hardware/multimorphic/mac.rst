@@ -13,7 +13,7 @@ you will need to :doc:`go back and do that first </install/mac>`, since it has
 to be installed before you can build the P-ROC drivers.
 
 1. Install Brew
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Open a Terminal and paste in the following commands (and then press <Enter>
 after each one):
@@ -31,22 +31,22 @@ to continue and then enter your password.
 You'll see a bunch of stuff scroll by as things are downloaded and installed.
 
 2. Create a folder in your user folder called “proc"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From the same terminal window, run:
 
 ::
 
-  mkdir ~/proc
+  mkdir ^/proc
 
 3. Download osx-proc-support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Change to that new folder:
 
 ::
 
-  cd ~/proc
+  cd ^/proc
 
 And run the following command which will clone (download) the files you need
 to make the P-ROC run on the Mac. (Even though this is called "osx-proc-support",
@@ -57,7 +57,7 @@ it also works with MacOS Sierra.)
   git clone https://github.com/missionpinball/osx-proc-support
 
 4. Install prerequisites via Brew
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now run:
 
@@ -66,7 +66,7 @@ Now run:
   brew install libftdi libusb-compat cmake
 
 5. Install yaml-cpp
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 The P-ROC/P3-ROC requires a library called yaml-cpp. While there is a yaml-cpp
 package in brew, it's too new to use here. Adding to the fuss is that the
@@ -77,7 +77,7 @@ Run the following commands to compile it from scratch:
 
 ::
 
-    cd ~/proc/osx-proc-support
+    cd ^/proc/osx-proc-support
     tar -xzf yaml-cpp-0.2.5.tar.gz
     cd yaml-cpp-0.2.5
     mkdir bin
@@ -87,21 +87,21 @@ Run the following commands to compile it from scratch:
     sudo make install
 
 6. Download & install libpinproc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Libpinproc is the P-ROC/P3-ROC library that lets the host computer talk to the
 P-ROC/P3-ROC hardware. Run the following commands:
 
 ::
 
-    cd ~/proc
+    cd ^/proc
     git clone --branch=master https://github.com/missionpinball/libpinproc
 
 Copy the Mac version of CMakeLists.txt to the libpinproc folder:
 
 ::
 
-    cp -r ~/proc/osx-proc-support/CMakeLists.txt ~/proc/libpinproc
+    cp -r ^/proc/osx-proc-support/CMakeLists.txt ^/proc/libpinproc
 
 That avoids having to edit the file manually. It should work for nearly all
 situations, but if libpinproc won't compile in the next steps, you should make
@@ -117,7 +117,7 @@ sure the paths in ``include_dirs`` within CMakeLists.txt are correct.
     sudo make install
 
 7. Download & install pypinproc 2.1
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pypinproc is a wrapper library that allows Python apps (like MPF) to talk to
 the libpinproc that you installed in the previous step. Unfortunately the
@@ -127,18 +127,18 @@ that we modified to work with Python 3:
 
 ::
 
-    cd ~/proc
+    cd ^/proc
     git clone https://github.com/missionpinball/pypinproc
     cd pypinproc
     python3 setup.py build
     sudo python3 setup.py install
-    
+
 (If you prefer to install pypinproc in a virtualenv, make sure it's activated
 before this step, and omit sudo from the last line.)
 
 
 8. Install D2xxHelper
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 D2xxHelper is provided by FTDI Chips, the maker of the chip which acts as the
 USB interface on the P-ROC/P3-ROC boards. Mac OS comes with its own FTDI driver
@@ -152,11 +152,11 @@ incompatible with future versions of macOS.
 
 ::
 
- cd ~/proc/osx-proc-support
+ cd ^/proc/osx-proc-support
  sudo installer -pkg D2xxHelper_v2.0.0.pkg -target /
 
 9. Reboot
-~~~~~~~~~
+^^^^^^^^^
 
 You have to reboot in order to have the changes D2xxHelper made take effect.
 After that, you should be all set and can continue on with the :doc:`platform`

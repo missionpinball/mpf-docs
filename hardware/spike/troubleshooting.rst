@@ -72,6 +72,77 @@ To safely unmount your drive stop MPF, open the console again and type:
 
 You can now safely remove the USB drive and download the file on your PC.
 
+Capturing the Bus Traffic of Your Game Using Interceptty
+--------------------------------------------------------
+
+To understand what the game does it is sometimes helpful to capture what it
+sends and receives on netbus.
+Unfortunately, we don't know how to enable debugging or verbose mode in the
+game binary.
+(Please let us know if you find out.)
+
+Instead, we redirect the serial in Linux and capture the bus this way.
+Unfortunately, this is not perfect and at least on Spike 1 causes timing
+issues.
+Nevertheless, this shows us how things work and also sometimes teaches us
+how error recovery works in Spike.
+
+Get our `interceptty binary <https://github.com/missionpinball/interceptty/raw/master/bin/interceptty-arm>`_
+and put it on your USB drive.
+Mount the USB drive as above and run the following command:
+
+Spike 1
+^^^^^^^
+
+.. code-block:: console
+
+   cd /mnt && chmod +x interceptty-arm
+   mv /dev/ttyS4 /dev/ttyS4_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttyS4_real /dev/ttyS4 > /mnt/serial_dump &
+
+Spike 2
+^^^^^^^
+
+.. code-block:: console
+
+   cd /mnt && chmod +x interceptty-arm
+   mv /dev/ttymxc1 /dev/ttymxc1_real; interceptty-arm -s 'ispeed 460800 ospeed 460800' -l /dev/ttymxc1_real /dev/ttymxc1 > /mnt/serial_dump &
+
+This command should return instantly and run in the background.
+Now start the game binary in the foreground:
+
+.. code-block:: console
+
+   /games/game
+
+Some versions of some games give you a nice service CLI here.
+Play the game and make sure you activate all relevant features.
+Flippers might not work some times.
+Just try again as this unfortunately sometimes messes up timings.
+
+When you are done after a while stop the game using ``ctrl+c``.
+Then type ``fg`` to get interceptty in the foreground and stop it
+using ``ctrl+c``.
+
+Restore the serial:
+
+Spike 1
+^^^^^^^
+
+.. code-block:: console
+
+   mv /dev/ttyS4_real /dev/ttyS4
+
+Spike 2
+^^^^^^^
+
+.. code-block:: console
+
+   mv /dev/ttymxc1_real /dev/ttymxc1
+
+Now unmount the USB drive as above and you are done.
+Please share the capture on the MPF user forum.
+
+
 
 .. include:: ../include_troubleshooting_coils.rst
 .. include:: ../include_troubleshooting_lights.rst

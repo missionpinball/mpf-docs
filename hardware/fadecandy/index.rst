@@ -152,7 +152,7 @@ single FadeCandy board are on the same OPC channel, which is technically what
 you're specifying with the number before the dash.)
 
 6a. Numbering with multiple channels
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also assign different OSC channels to your connectors.
 This has certain performance advantages and allows nicer numbering.
@@ -299,7 +299,7 @@ Fadecandy assumes RGB lights by default.
 For everything else (i.e. RGBW) you have to use channels.
 
 Light Numbers
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 Fadecandy numbers use the format: ``osc_channel``-``number``
 
@@ -311,7 +311,7 @@ Internally, Fadecandy assumes three channels per LED (RGB/GRB
 :doc:`WS2811/WS2812 LEDs </mechs/lights/ws2812>`).
 
 Channels
-~~~~~~~~
+^^^^^^^^
 
 Fadecandy channels use the format: ``osc_channel``-``channel_index``
 

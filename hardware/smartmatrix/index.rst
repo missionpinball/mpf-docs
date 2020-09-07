@@ -50,7 +50,7 @@ is not currently listed on their website). If you go with this solution
 skip steps 1 to 3. You still need a power supply (step 4).
 
 (1) The Panels
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 We originally had to buy the panels directly from China via AliExpress,
 but now FAST Pinball sells a kit.
@@ -65,7 +65,7 @@ Also FAST tests the panels to make sure all the pixels work—a problem
 people were running into when buying from AliExpress.
 
 (2) The Teensy
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Once you have your panel, you need a way to talk to them via a
 computer. The panels use some kind of 16-pin signalling system which
@@ -92,7 +92,7 @@ and the Teensy has a USB port which you connect to your computer which
 MPF uses to send the display data to the panels.
 
 (3) The SmartMatrix Shield
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next you need a way for the Teensy to connect to the displays. That
 can be done with the SmartMatrix shield
@@ -112,7 +112,7 @@ the other.
 .. image:: /hardware/images/smartmatrix_shield_with_teensy.jpg
 
 (4) The Power Supply
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 These RGB LED displays require 5vdc for power. At first you might
 think, "Cool! I have 5v elsewhere in my machine, so I'll just tap into

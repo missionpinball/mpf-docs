@@ -22,6 +22,7 @@ This is an example:
      platform: virtual    # use your platform here
      driverboards: wpc
      coils: snux
+     switches: snux
    system11:
      ac_relay_delay_ms: 75
      ac_relay_driver: c_ac_relay
@@ -47,6 +48,23 @@ This is an example:
      c_side_c2:
        number: c12c
        default_hold_power: 0.5
+     c_flipper_left_main:
+       number: FLLM
+     c_flipper_left_hold:
+       number: FLLH
+       allow_enable: true
+
+   switches:
+     s_flipper_left:
+       number: sf01
+     s_test:
+       number: s77
+
+   flippers:
+     f_test_single:
+       main_coil: c_flipper_left_main
+       hold_coil: c_flipper_left_hold
+       activation_switch: s_flipper_left
 
 .. config
 

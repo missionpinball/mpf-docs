@@ -41,7 +41,7 @@ made part way through System 11B.) So technically-speaking there are
 actually five different types of System 11 machines out there!
 
 Flippers
-~~~~~~~~
+^^^^^^^^
 
 On modern WPC pinball machines, flipper buttons are just regular
 switches that send their inputs to the CPU, and flipper coils are just
@@ -79,7 +79,7 @@ one.
 
 
 "Special" Solenoids
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Flippers are not the only types of devices that require instant
 response in pinball machines. They also need instant response action
@@ -149,7 +149,7 @@ individually.
 
 
 The A/C Relay & Switched Solenoids
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 But wait! There's more! System 11 machines also have this concept of
 the A/C relay. This is not A/C in the terms of alternating current. It
@@ -182,7 +182,7 @@ milliseconds of delay.
 
 
 Controlled Solenoids
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 In addition to switched, controlled, and flipper solenoids, System 11
 machines also included what they called "controlled" solenoids which
@@ -194,7 +194,7 @@ solenoids.
 
 
 GI (General Illumination)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In WPC machines, GI strings are controlled via separate GI drivers
 (which are alternating current and which may or may not be dimmable).
@@ -210,7 +210,7 @@ machines, the GI is just always on until the CPU turns it off.
 
 
 Putting it all together
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 If you look at the solenoid table in the operators manual of a System
 11 machine, you'll see that all the drivers fall into these
@@ -271,7 +271,7 @@ contact Mark via PM (on Pinside as Snux). In addition to the board there are
 3 or 4 cables you'll need, Mark can advise.
 
 Displays
-~~~~~~~~
+^^^^^^^^
 
 All System 11 machines used various combinations of segment displays
 and these cannot be directly controlled via the P-ROC.  If you do want to use
@@ -323,7 +323,7 @@ do in your config file.
 
 
 1. Configure your hardware interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first thing to do is to configure your hardware options in the
 hardware section of your machine-wide config. You configure the main
@@ -333,19 +333,14 @@ configure it as *snux*, like this:
 
 .. code-block:: mpf-config
 
-    hardware:
-      platform: p_roc
-
-    p_roc:
-      driverboards: snux
-
-Adding the *driverboards: snux* option automatically activates the
-Snux platform overlay.
-
-
+   hardware:
+     platform: virtual
+     driverboards: wpc
+     coils: snux
+     switches: snux
 
 2. Configure snux options
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The MPF machine-wide config file contains a few options for the Snux
 driverboard. These options are set in the default *mpfconfig.yaml*
@@ -372,7 +367,7 @@ starts the main machine loop, this LED flashes twice per second. If
 this LED stops flashing, that means MPF crashed. :)
 
 3. Configure system11 options
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next you need to add a system11: section to your machine-wide config
 and specific some System 11 options. At this point you might be
@@ -419,7 +414,7 @@ the "Solenoid Select Relay."
 
 
 4. Enable flippers
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 The Snux board uses driver 23 to enable the flippers:
 
@@ -437,7 +432,7 @@ By default we will enable the flippers on ball start and disable them on
 ball end.
 
 5. Configuring driver numbers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
@@ -493,7 +488,7 @@ logic for those devices!
 
 
 6. Configure lamps
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Configuring the numbers for matrix lamps is pretty straightforward and
 something you can also use the manual for. The format for lamp number
@@ -542,7 +537,7 @@ manual.
 
 
 7. Configure switches
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Switch numbering in System 11 machines is the same as lamp numbering,
 except the numbers start with "S". Again the numeric portion of the
@@ -589,7 +584,7 @@ a second switch in the stack behind the flipper button.
 
 
 8. Create your System 11-style trough
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Troughs in System 11 machines are not like troughs in modern machines.
 Rather than a single ball device which acts as the drain as well as
@@ -664,10 +659,9 @@ This is an example code block with the main Sys11 elements in.
 
    hardware:
      platform: virtual
-     coils: snux
-
-   p_roc:
      driverboards: wpc
+     coils: snux
+     switches: snux
 
    system11:
      ac_relay_delay_ms: 75
@@ -700,8 +694,6 @@ This is an example code block with the main Sys11 elements in.
      c_side_c2:
        number: c12c
        default_hold_power: 0.5
-     c_virtual:
-       number:
 
 What if it did not work?
 ------------------------

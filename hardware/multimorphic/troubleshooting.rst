@@ -98,12 +98,12 @@ Serial Bus Issues
 -----------------
 
 Bad Cables/Interference
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Each serial bus connector has a + and a - pin.  The serial cables connect from board to board like jumper-cables + to + and - to -. Connecting ground pins on the serial bus is not required. A bad serial cable can be difficult to diagnose, particularly if it is the first serial cable in a chain as it will prevent signals to all boards downstream of the bad connection. One clue that a bad serial cable is present is if some of the boards function but others do not. Another clue which is sometimes present on the driver bus is discovered looking at the driver boards watchdog timer indicator. On the PD-LED the watchdog is indicated by a lit diode D3. On the PD-16 it is diode D11. The watchdog turns off when the board is receiving signal over the driver bus from the P3-ROC when MPF is running (including attract mode). If wiggling serial cables causes the watch dog to light, a loos connection or bad cable is present.  While the switches bus does not have an equivelent watchdog, the game's switch status screen can be monitored while wiggling cables looking for a loose connection.  It is possible for the vibration of a mechanism (notoriously from a pop bumper) to cause intermittent faults in a poorly connecting serial cable. Such intermittent faults are difficult to diagnose.
 
 Termination
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 The P3-ROC interfaces to the playfield through two serial busses. The switches serial bus connects SW-16 boards through J11  and/or J14. The driver serial bus connects PD-16 and PD-LED boards through J12 and J15. The serial busses are designed to allow boards to be connected in a daisy chain fashion to each plug.  A sourse of unreliable communication on the buses is improper termination.  The last board on each chain (not to be confused with the board with the highest address) should have dipswitch 8 set to ON. For example is the switches serial bus has 6 boards with J11 connecting to board A B and C and J14 connecting to boards D, E and F, dipswitch 8 should be set to ON on boards C and F and set to OFF on all other SW 16 boards. (Terminating board B would prevent communication from board C on that side of the chain.)  The same termination strategy also applies to driver boards. For example if a mix of PD-LED and PD-16 boards connect through J15 as A, B, C, D, and E with E being the last board, board E would have dipswitch 8 set to ON.
 

@@ -26,7 +26,7 @@ Using the virtual platform
 There are three ways you can use the virtual platform:
 
 1. Manually setting the platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can manually specify the virtual platform in the machine config, like this:
 
@@ -36,7 +36,7 @@ You can manually specify the virtual platform in the machine config, like this:
       platform: virtual
 
 3. Via the command line
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also specify the smart virtual platform interface via the ``-x``
 (lowercase *X*) from the command line, like this:

@@ -93,7 +93,7 @@ above, this is ``z``, ``s``, ``1``, ``2``, ``q``, and ``4``.)
 These entries are not case sensitive.
 
 Using special keys
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 For "special" keys, it's probably just easiest to enter the keys as
 words. Here are some examples of words that map to keys:
@@ -122,7 +122,7 @@ equals key, that is the equals key, or the equals key with a shift
 modifier.
 
 Adding SHIFT, CTRL, and ALT modifiers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Since there are probably more switches in your machine then there are
 keys on your keyboard, you can also specify key combinations along

@@ -20,9 +20,10 @@ import docutils.nodes
 import docutils.utils
 import logging
 try:
-    from mpf.tests.MpfDocTestCase import MpfDocTestCase
+    from mpf.tests.MpfDocTestCase import MpfDocTestCase, MpfDocTestCaseNoFakeGame
 except ImportError:
     MpfDocTestCase = None
+    MpfDocTestCaseNoFakeGame = None
 
 try:
     from mpf.tests.MpfIntegrationDocTestCase import MpfIntegrationDocTestCase
@@ -75,7 +76,10 @@ class CodeBlockVisitor(docutils.nodes.NodeVisitor):
             if "slides:" in config_text or "widgets:" in config_text or "\nwindow:" in config_text or \
                     "\ndisplays:" in config_text or "slide_player:" in config_text or "widget_player:" in config_text:
                 print("{} should use mpf-mc-config instead of mpf-config because it contains MC elements".format(source))
-            testcase = MpfDocTestCase(config_text, base_dir=base_dir)
+            if "##! no_fake_game" in config_text:
+                testcase = MpfDocTestCaseNoFakeGame(config_text, base_dir=base_dir)
+            else:
+                testcase = MpfDocTestCase(config_text, base_dir=base_dir)
         testcase._testMethodDoc = source
         self.unit_tests.append(testcase)
 

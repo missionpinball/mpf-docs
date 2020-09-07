@@ -31,7 +31,7 @@ To configure the ``number:`` of a switch connected to an SW-16 board and a
 P3-ROC, you have two options:
 
 Board Bank Switch Syntax
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first (and easier) option is to enter the number as a combination of the
 SW-16 ``board address`` (0-15, as configured by the DIP switches), then the
@@ -49,7 +49,7 @@ For example:
        number: A2-B1-5    # SW-16 board at address 2, Bank B, Switch 5
 
 Direct Numbering
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 You can also use the internal number.
 As mentioned in the SW-16 manual you can calculate those using:
@@ -83,7 +83,7 @@ Burst switch inputs (J3 to J10) on the P3-Roc can be used in two ways in MPF.
 .. image:: /hardware/images/multimorphic_p3_roc.png
 
 Burst Switches as Burst Optos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can configure burst optos using the following syntax:
 
@@ -111,14 +111,14 @@ You can configure up to five switches per driver.
 Burst Opto PCBs
 ^^^^^^^^^^^^^^^
 
-Burst optos are unlike normal :doc:`/mechs/switches/optos` and you cannot
-use normal optos.
+Burst optos are unlike normal :doc:`optos </mechs/switches/optos>` and you
+cannot use normal optos.
 Instead, they use 40kHz infrared transmitters and receivers.
 Multimorphic sells them as single transmitter/receiver (part number:
 PCBA-0011-0002) and as bank of 8 (part number: PCBA-0003-0003).
 
 Burst Switches as Local Inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use burst switches as local inputs set DIP switch 2 to ``on`` on the P3-Roc.
 You can use those 64 inputs as direct inputs:
@@ -145,7 +145,7 @@ Hardware rules, debouncing etc. will behave exactly the same way.
 
    There is no electronic protection on the P3-Roc for burst switches (neither as local inputs nor as burst optos).
    Do not use them without additional protection.
-   Any voltage above 3.3V or below 0V will irrevisibly damage the P3-Roc.
+   Any voltage above 3.3V or below 0V will irreversibly damage the P3-Roc.
    Make sure you know what you are doing before turning this on.
    We advise to use SW-16 for normal playfield/mech inputs and only use local inputs with additional
    circuits (not directly).

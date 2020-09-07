@@ -360,8 +360,8 @@ be something like "bd_catapult" or whatever you called it.
 Also, if you have a two-stage drain (like a System 11 machine), you'd add
 this to the second device (the one that feeds the plunger).
 
-7. Add the plunger als default_source_device
---------------------------------------------
+7. Add the plunger as default_source_device
+-------------------------------------------
 
 Next you need to your plunger lane ball device ``default_source_device`` to
 your playfield to tell MPF that this ball device is used to add a new ball

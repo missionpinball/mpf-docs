@@ -14,7 +14,7 @@ with OPP hardware.
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
 Number
-~~~~~~
+^^^^^^
 
 OPP coils are numbered sequentially depending on which wing board
 is the coil output.  Wing position 0 contains coil numbers 0 to 3.
@@ -35,7 +35,7 @@ the third wing board, first output.  On the microprocessor card, the
 output is marked as 3.4 (wing port 3, position 4).
 
 Pulse time
-~~~~~~~~~~
+^^^^^^^^^^
 
 The OPP hardware also has the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time. For
@@ -52,7 +52,7 @@ When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
 
 Hold Power
-~~~~~~~~~~
+^^^^^^^^^^
 If you want to hold a driver on at less than full power, MPF does this by using
 *default_hold_power* parameter which works for all platforms. It can range from
 0.0 to 1.0 and defines the time share the coil is on (0%-100%).
@@ -73,7 +73,7 @@ have an initial pulse of 32 ms, and then be held on at 50% power.
 
 
 Recycle Factor
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 OPP allows you to fine tune the
 :doc:`recycle time of your coils </mechs/coils/recycle>`.

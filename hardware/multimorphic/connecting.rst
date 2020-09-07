@@ -37,7 +37,7 @@ all nodes.
 version and revision of your P3-Roc if it is connected correctly.
 
 SW-16
-~~~~~
+^^^^^
 
 .. image:: /hardware/images/multimorphic_SW-16.png
 
@@ -60,7 +60,7 @@ You can list all SW-16 using :doc:`mpf hardware scan </running/commands/hardware
     - Board: 2 Switches: 16 Device Type: A4 Board ID: 2
 
 PD-16/PD-8x8
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. image:: /hardware/images/multimorphic_PD-16.png
 
@@ -75,7 +75,7 @@ MPF and the P3-Roc do not know if those boards are connected as the
 communication is one-way only.
 
 PD-LED
-~~~~~~
+^^^^^^
 
 .. image:: /hardware/images/multimorphic_PD-LED.png
 

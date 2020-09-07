@@ -125,6 +125,21 @@ time by adding a ``recycle_ms:`` setting, like this:
 If you manually specify a recycle_ms value, then that's the value that's used
 and the coil's ``recycle:`` (true/false) setting is ignored.
 
+Replacing FETs on FAST Driver Boards
+------------------------------------
+
+In case you burned one of your FETs on a FAST board those can be replaced.
+Usually, FETs will turn on permanently when burned.
+As a result your coils will be stuck on and your fuse should burn (if not your
+coil will).
+If you output does not activate at all a burned FET is rather unlikely the
+culprit.
+
+Consult the FAST support for an official repair.
+Alternatively, you can buy ``IRL540NSTRLPBF`` FETs from your electronics
+supplier and replace them yourself.
+Replacing SMD FETs is possible with a decent soldering iron and some practise.
+
 What if it did not work?
 ------------------------
 

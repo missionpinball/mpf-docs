@@ -23,7 +23,7 @@ Hardware
 --------
 
 BCD Seven Segment
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 Segment displays are readily available at most electronics suppliers.
 Most of them use some BCD encoder to save connectors.
@@ -33,7 +33,7 @@ Be a bit careful with current driven light controllers (i.e. the PD-LED) here.
 Those cannot be dimmed currently (let us know if you need that).
 
 Parallel Seven Segment
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 Those are not as common as BCD segment displays but still available.
 You can recognize them by more than 8 connectors.
@@ -49,7 +49,7 @@ However, they often are multiplexed and will not work without an additional
 chip.
 
 Serial Segment Displays
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Additionally, there are serial segment displays which use chips such as WS2811
 internally.
@@ -64,7 +64,7 @@ You can also buy WS2811 controller with PCB in China (bulk 100 pcs) for about
 ten bucks solder your own display.
 
 Color and Brightness
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 There is no color or brightness support for segment displays in MPF yet.
 Let us know if you need that.

@@ -64,6 +64,12 @@ configs:
    platform_version <platform_version>
    player(x)_score <playerx_score>
    python_version <python_version>
+   twitch_last_bits_amount <twitch_last_bits_amount>
+   twitch_last_bits_user <twitch_last_bits_user>
+   twitch_last_chat_message <twitch_last_chat_message>
+   twitch_last_chat_message_line_(x) <twitch_last_chat_message_line_x>
+   twitch_last_chat_message_line_count <twitch_last_chat_message_line_count>
+   twitch_last_chat_user <twitch_last_chat_user>
 
 
 Related Events

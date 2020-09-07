@@ -4,7 +4,7 @@ Coils Are Not Firing
 What to do if your coils are not working?
 
 Check if Your Hardware is Working at all
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sounds stupid but this is a good start:
 Is the hardware working at all?
@@ -12,7 +12,7 @@ Do you see switch hits in the logs?
 If not, check our section ``Your hardware is not working at all``.
 
 Check the Watchdog
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 If switches (or other features of the platform) are working but coils are not
 we have to dig deeper.
@@ -26,7 +26,7 @@ In most cases watchdog related problems indicate wiring problems.
 Check if your boards are properly wired.
 
 Test Your Coil Numbers using MPF Service CLI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Hardware is connected and generally working, watchdog is good but still your
 coils are not working?

@@ -36,7 +36,7 @@ The FAST Nano supports 256 LEDs on four chains.
 LEDs 0-63 are on chain 0, 64-127 on chain 1, 128-195 on chain 2 and 196-255 on chain 3.
 
 Light Numbers
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 FAST numbers use the format: ``number``
 
@@ -46,7 +46,7 @@ Internally, FAST assumes three channels per LED (RGB/GRB
 :doc:`WS2811/WS2812 LEDs </mechs/lights/ws2812>`).
 
 Channels
-~~~~~~~~
+^^^^^^^^
 
 FAST channels use the format: ``number``-``index``
 

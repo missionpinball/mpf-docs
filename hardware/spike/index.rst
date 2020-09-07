@@ -118,7 +118,7 @@ Stern SPIKE features that do not work (yet)!
 
 
 Sound
-~~~~~
+^^^^^
 
 Currently if you want to use sound (which of course you do), the way
 to do it is to use the sound card in the computer running MPF and
@@ -134,13 +134,13 @@ can find an easy way to connect the sound output from the computer
 to the SPIKE amp.
 
 Servos
-~~~~~~
+^^^^^^
 
 Once we get access to a SPIKE machine with servos, we'll get
 support for them added.
 
 Small LCD from WWE
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 WWE LEs have a small playfield LCD which is controlled via the SPIKE
 node bus. MPF does not yet support this, though of course you could

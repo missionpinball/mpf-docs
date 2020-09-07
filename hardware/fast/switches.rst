@@ -64,7 +64,7 @@ time that a switch must consistently be in a new state in both the open and
 close directions.
 
 Specifying default debounce settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, MPF provides two debounce profiles for switches ("normal" and
 "quick"). When using FAST pinball controllers, the "normal" debounce profile
@@ -86,7 +86,7 @@ config, like this:
 been included here for clarity.)
 
 Per-switch debounce settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When using FAST Pinball controllers, you can also specify the debounce open and
 debounce closed settings on a per-switch basis. To do that, just add a

@@ -117,7 +117,7 @@ Using the smart virtual platform
 There are three ways you can use the smart virtual platform:
 
 1. No platform setting
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 If you do not have a ``platform:`` setting in your machine config's
 ``hardware:`` section (or if you don't have a ``hardware:``
@@ -125,7 +125,7 @@ section, then MPF will use the smart virtual platform anyone you
 run it.
 
 2. Manually setting the platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also manually specify the smart virtual interface
 in the machine config, like this:
@@ -136,7 +136,7 @@ in the machine config, like this:
       platform: smart_virtual
 
 3. Via the command line
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also specify the smart virtual platform interface via the ``-X``
 (uppercase *X*) from the command line, like this:
@@ -161,7 +161,7 @@ You can configure some of them in the
 :doc:`smart_virtual section </config/smart_virtual>`.
 
 Ball Devices
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 If a ball device's eject coil is pulses, it will simulate a ball leaving that device
 (as long as that device has at least one ball). It is smart enough to know how many
@@ -173,7 +173,7 @@ It will also simulate a ball entering the target device when a ball is ejected, 
 again it knows how to work with various ball switch and entrance switch combinations.
 
 Drop Targets
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 The smart virtual platform will reset drop target switches if their associated
 reset coil is pulsed.

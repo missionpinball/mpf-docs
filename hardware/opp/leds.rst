@@ -30,7 +30,7 @@ OPP assumes RGB lights by default.
 For everything else (i.e. RGBW) you have to use channels.
 
 Light Numbers
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 OPP numbers use the format: ``serial_chain``-``card_num``-``index``
 
@@ -53,7 +53,7 @@ In this case you can also use ``0-0`` or ``0`` (channel ``0-2``).
 ``18-20``).
 
 Channels
-~~~~~~~~
+^^^^^^^^
 
 OPP channels use the format: ``serial_chain``-``card_num``-``internal_index``
 
