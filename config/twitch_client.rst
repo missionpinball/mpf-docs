@@ -14,6 +14,8 @@ twitch_client:
 The ``twitch_client:`` section of your config is where you configure the built-in
 Twitch chat monitor.
 
+Before using this plugin you must install the irc library with ``pip3 install irc``
+
 .. code-block:: mpf-config
 
     twitch_client:
@@ -86,6 +88,9 @@ Single value, type: ``string``.
 This is the machine variable name that contains the password to use when
 connecting to Twitch, This is a Twitch OAuth token, not the actual password of
 the user. You can generate this token at https://twitchapps.com/tmi/
+
+When you run ``mpf -b`` it may show your token in the machine variables
+portion of the window. Be careful what you share on stream.
 
 channel_var:
 ~~~~~~~~~~~~
