@@ -16,15 +16,22 @@ repo is for MPF 0.21, the 0.30 branch is for MPF 0.30, etc.
 Here are the direct links (to ZIP files) for the various branches of mpf-examples
 that you can download based on your version of MPF:
 
-* `0.21.x <https://github.com/missionpinball/mpf-examples/archive/0.21.zip>`_.
-* `0.30.x <https://github.com/missionpinball/mpf-examples/archive/0.30.zip>`_.
-* `0.31.x <https://github.com/missionpinball/mpf-examples/archive/0.31.zip>`_.
-* `0.32.x <https://github.com/missionpinball/mpf-examples/archive/0.32.x.zip>`_.
-* `0.33.x <https://github.com/missionpinball/mpf-examples/archive/0.33.x.zip>`_.
-* `0.50.x <https://github.com/missionpinball/mpf-examples/archive/0.50.x.zip>`_.
-* `0.51.x <https://github.com/missionpinball/mpf-examples/archive/0.51.x.zip>`_.
-* `0.52.x <https://github.com/missionpinball/mpf-examples/archive/0.52.x.zip>`_.
-* `dev <https://github.com/missionpinball/mpf-examples/archive/dev.zip>`_.
+* |link-pre|\ |branch|\ |link-middle|\ |version|\ |link-post|
+
+If you are looking for another version please switch to the documentation of
+that MPF version.
+
+.. |link-pre| raw:: html
+
+    <a href="https://github.com/missionpinball/mpf-examples/archive/
+
+.. |link-middle| raw:: html
+
+    .zip">
+
+.. |link-post| raw:: html
+
+    </a>
 
 Unzip the file to any location you want, and then browse the files to see what's there,
 or open a console window to launch MPF and/or MPF MC in each folder.
