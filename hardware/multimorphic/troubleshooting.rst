@@ -5,6 +5,21 @@ If you got problems with your hardware platform we first recommend to read our
 :doc:`troubleshooting guide </troubleshooting/index>`.
 Here are some hardware platform specific steps:
 
+Random Crashes of MPF
+---------------------
+
+You might see errors such as the following (usually in ``p_roc_common.py``):
+
+.. code-block:: console
+
+   OSError: Error in WriteData: wrote 0 of 8 bytes
+
+This error is triggered by communication issues with the P/P3-Roc.
+Often this is caused by an unreliable power supply or overload on the 5V rail
+of that supply.
+This might also be caused by a bad USB cable.
+In any case you should also find USB communication errors in your operating
+system which might give you further clues.
 
 Run Hardware Scan
 -----------------
