@@ -223,8 +223,6 @@ def setup(app):
 
         globals()['rst_prolog'] = '''
         
-        .. |branch| replace:: {}
-        
         .. only:: html
         
            .. warning::
@@ -238,7 +236,12 @@ def setup(app):
               MPF. That documentation is at
               `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
         
-        '''.format(branch)
+        '''
+
+    globals()['rst_prolog'] += '''
+
+        .. |branch| replace:: {}
+    '''.format(branch)
 
 def get_repo_path(repo_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):
