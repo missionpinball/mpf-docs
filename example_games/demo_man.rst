@@ -93,3 +93,27 @@ To summarize the instructions for "playing" a game from the paragraphs above:
    left and right flipper buttons to highlight a letter, and the ``S`` key
    (start) selects it.
 #. Press the ``Esc`` key to exit
+
+What if it did not work?
+------------------------
+
+In the following we list some common problems and solutions.
+If you got another problem please ask in our `MPF User Forum <https://groups.google.com/forum/#!forum/mpf-users>`_.
+
+Keyboard does not work
+^^^^^^^^^^^^^^^^^^^^^^
+
+If your keyboard does not work first make sure that the MC window has focus.
+Afterward, please check if numlock is enabled.
+This seems to be common issue on Windows 10.
+Disable numlock in this case.
+
+Game does not start with some error
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Make sure you are using the exact version of demo_man for your MPF, MPF-MC
+and MPF monitor (optional).
+For instance use ``0.30.x`` if you are on MPF ``0.30.2``.
+MPF-MC and (if installed) MPF monitor need to have the same major version
+(``0.30`` in this case).
+You can check installed versions using ``pip3 list``.
