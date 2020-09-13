@@ -118,6 +118,24 @@ Optional settings
 
 The following sections are optional in the ``accruals:`` section of your config. (If you don't include them, the default will be used).
 
+advance_random_events:
+~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: string.
+
+The advance_random_events section of an accrual logic block is where you define the event
+or events that this logic block will watch for in order to randomly complete one of the steps
+in the logic block.  As stated above, while there can be multiple steps that could complete
+this step of the logic block, this will act as one of the events as well that will complete
+the given step.
+
+This will not update any lights that are associated with the events that are required to
+complete this step.  For example, if you have a shot that could complete this step, and the
+step is completed by this event, the light will still remain on even though it will not
+progress this logic block any further.  To update the lights you will want to add a hit_event
+to the underlying shot.  This should be the event from the log logicblock_YOUR_ACCRUAL_hit
+{step == X} hwere YOUR_ACCRUAL is the name of your accrual, and X is the value of the step
+to which this shot is tied, which begins with 0.
+
 console_log:
 ~~~~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``basic``
