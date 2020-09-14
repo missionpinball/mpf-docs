@@ -243,6 +243,15 @@ This is an example:
 MPF comes with a :doc:`setting </config/settings>` called ``flipper_power`` by
 default and you can add additional ones.
 
+repulse_on_eos_open:
+~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Whether MPF should repulse the main coil of the flipper when the EOS reopens and the flipper buttons are still active.
+Not all platforms support this in hardware.
+MPF might emulate this in software for platforms which do not support this.
+Consult your platform manual if in doubt.
+
 sw_flip_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
