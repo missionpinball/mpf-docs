@@ -219,9 +219,14 @@ def setup(app):
         # no idea why there is an origin/ in there. breaks our edit on github links
         globals()['context']['github_version'] = globals()['context']['github_version'][7:]
 
+    globals()['rst_prolog'] = '''
+
+        .. |branch| replace:: {}
+    '''.format(branch)
+
     if globals()['context']['github_version'] in branches_for_dev_warning:
 
-        globals()['rst_prolog'] = '''
+        globals()['rst_prolog'] += '''
         
         .. only:: html
         
@@ -238,10 +243,6 @@ def setup(app):
         
         '''
 
-    globals()['rst_prolog'] += '''
-
-        .. |branch| replace:: {}
-    '''.format(branch)
 
 def get_repo_path(repo_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):
