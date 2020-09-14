@@ -75,6 +75,13 @@ save a certain number (configurable via the
 ``num_player_top_records:`` setting), as well as the total number of
 entries and the current average.
 
+reset_audit_events:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. The device will add handlers for those events. Default: ``auditor_reset,factory_reset``
+
+Events to reset audits in the machine.
+This is used by the service mode.
+
 save_events:
 ~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Default: ``ball_ended``
