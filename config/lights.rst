@@ -217,6 +217,51 @@ Single value, type: dict. Defaults to empty.
 Platform-specific light settings.
 Consult your platform documentation for details.
 
+previous:
+~~~~~~~~~
+Single value, type: string name of a :doc:`lights <lights>` device. Defaults to empty.
+
+Instead of specifying the number for each light in a chain you can also use the previous setting.
+To do this only specify the number of the first light in the chain and then link all consequent light using the previous setting:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        number: 0
+        subtype: led
+        type: rgb
+      led_1:
+        previous: led_0
+        subtype: led
+        type: rgbw
+      led_2:
+        previous: led_1
+        subtype: led
+        type: rgbw
+
+MPF will then calculate the number based on the light of the previous light.
+Make sure MPF knows how many channel each light has (i.e. by specifying the type parameter).
+This is not supported in all platforms but in most of them.
+
+start_channel:
+~~~~~~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+In most platforms MPF will calculate the internal address of a light and how many channels it has using the number parameter.
+If you got unusual types of lights (such as RGBW LEDs) you can instead provide this internal address and the number of channels (i.e. using type).
+This is an example:
+
+.. code-block:: mpf-config
+
+    lights:
+      led_0:
+        start_channel: 0-0
+        subtype: led
+        type: rgbw
+
+Consult the manual of your platform for details.
+
 subtype:
 ~~~~~~~~
 Single value, type: ``string``. Defaults to empty.
