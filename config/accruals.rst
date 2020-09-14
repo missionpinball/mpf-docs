@@ -115,7 +115,7 @@ The following sections are optional in the ``accruals:`` section of your config.
 
 advance_random_events:
 ~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string.
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
 The advance_random_events section of an accrual logic block is where you define the event
 or events that this logic block will watch for in order to randomly complete one of the steps
