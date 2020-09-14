@@ -46,44 +46,37 @@ DO NOT CHECK YOUR PASSWORD INTO SOURCE CONTROL. If you use a service like
 Github you should not check in your password. If this is stored publicly then
 someone could log in as you on Twitch.
 
+.. config
 
-Required settings
+
+Optional settings
 -----------------
 
-One set of credentials are required in the ``twitch_client:`` section of your config.
-They may be either hard coded or pulled from machine variables:
+The following sections are optional in the ``twitch_client:`` section of your config. (If you don't include them, the default will be used).
 
-user:
-~~~~~
-Single value, type: ``string``.
+channel:
+~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
 
-This is the user that will connect to Twitch. You may want to create a separate
-bot account on Twitch to use for this purpose.
+The channel on Twitch which will be monitored for messages.
+
+channel_var:
+~~~~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+his is the machine variable name that contains the channel on Twitch which will
+be monitored for messages.
 
 password:
 ~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is a Twitch OAuth token, not the actual password of the user. You can
 generate this token at https://twitchapps.com/tmi/
 
-channel:
-~~~~~~~~
-Single value, type: ``string``.
-
-The channel on Twitch which will be monitored for messages.
-
-user_var:
-~~~~~~~~~
-Single value, type: ``string``.
-
-This is the machine variable name that contains the user that will connect to
-Twitch. You may want to create a separate bot account on Twitch to use for this
-purpose.
-
 password_var:
 ~~~~~~~~~~~~~
-Single value, type: ``string``.
+Single value, type: ``string``. Defaults to empty.
 
 This is the machine variable name that contains the password to use when
 connecting to Twitch, This is a Twitch OAuth token, not the actual password of
@@ -92,9 +85,23 @@ the user. You can generate this token at https://twitchapps.com/tmi/
 When you run ``mpf -b`` it may show your token in the machine variables
 portion of the window. Be careful what you share on stream.
 
-channel_var:
-~~~~~~~~~~~~
-Single value, type: ``string``.
+user:
+~~~~~
+Single value, type: ``string``. Defaults to empty.
 
-his is the machine variable name that contains the channel on Twitch which will
-be monitored for messages.
+This is the user that will connect to Twitch. You may want to create a separate
+bot account on Twitch to use for this purpose.
+
+user_var:
+~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+This is the machine variable name that contains the user that will connect to
+Twitch. You may want to create a separate bot account on Twitch to use for this
+purpose.
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`
