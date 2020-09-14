@@ -183,7 +183,7 @@ If the ``player:`` setting is not used, then this variable_player entry will def
 
 string:
 ~~~~~~~
-Single value, type: ``string``. Defaults to empty.
+Single value, type: template_str. Defaults to empty.
 
 Here's an example from *Brooks 'n Dunn* where there is a player variable (set via a counter) which tracks the
 player's current album value. We use the variable_player section tied to the events posted when the player variable changes
