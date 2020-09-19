@@ -163,8 +163,18 @@ For example:
 ``s_claw_home``, ``s_claw_position1`` and ``s_claw_position2`` are the switches to detect the position.
 
 The order is important when the motor can move in two directions.
-For instance if the device is at ``home`` and should move to ``pos1`` it will more right.
+For instance, if the device is at ``home`` and should move to ``pos1`` it will move right.
 However, if it is at ``pos2`` it will move left.
+
+The same position logic applies when working with a motor that has a "home" position on the right instead of the left:  
+
+.. code-block:: yaml
+
+  position_switches:  !!omap
+      - pos2: s_claw_position2
+      - pos1: s_claw_position1      
+      - home: s_claw_home
+      
 If it is not at any position and also does not know its previous position it will move left until it reaches
 a known position and may then change its direction again (usually this should not happen since it will move to a known
 position during reset).
