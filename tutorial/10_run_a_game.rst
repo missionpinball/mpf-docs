@@ -168,7 +168,7 @@ If your game doesn't start or doesn't work, hopefully we've given you
 enough information in this tutorial to work out what the problem is.
 That said, here's a list of things that could go wrong:
 
-+ No ball in the trough
++ No ball in the trough.
 + Virtual games need balls too; add the ``virtual_platform_start_active_switches`` section of the complete config file.
 + Ball in the trough, but not activating the switch.
 + Trough switches are optos but you didn't add ``type: NC`` to your
