@@ -19,7 +19,7 @@ step is played.
 Shows are configured via the YAML formatting just like config files. You can add the definitions for simple shows
 into your config files directly, or you can create standalone shows files that you store in your machine's`shows` folder.
 
-It is totally viable to create simple shows but hand.
+It is totally viable to create simple shows by hand.
 However, there is a :doc:`/tools/showcreator/index` to create complex light
 shows.
 
