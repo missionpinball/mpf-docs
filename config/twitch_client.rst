@@ -19,9 +19,9 @@ Before using this plugin you must install the irc library with ``pip3 install ir
 .. code-block:: mpf-config
 
     twitch_client:
-        user: TwitchBotAccount
-        password: oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        channel: ChatChannel
+      user: TwitchBotAccount
+      password: oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      channel: ChatChannel
 
 .. code-block:: mpf-config
 
@@ -37,9 +37,9 @@ Before using this plugin you must install the irc library with ``pip3 install ir
         value_type: str
 
     twitch_client:
-        user_var: twitch_user
-        password_var: twitch_password
-        channel_var: twitch_channel
+      user_var: twitch_user
+      password_var: twitch_password
+      channel_var: twitch_channel
 
 
 DO NOT CHECK YOUR PASSWORD INTO SOURCE CONTROL. If you use a service like
