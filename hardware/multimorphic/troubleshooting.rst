@@ -5,6 +5,50 @@ If you got problems with your hardware platform we first recommend to read our
 :doc:`troubleshooting guide </troubleshooting/index>`.
 Here are some hardware platform specific steps:
 
+P/P3-Roc Does Not Show Up In Device Manager or dmesg Log
+--------------------------------------------------------
+
+If your P/P3-Roc does not show up in device manager (Windows) or creates a line
+in ``dmesg`` or ``lsusb`` (Linux/Mac) have a look at the USB cable and connection.
+Bad cables are a thing (especially for longer cables).
+Try removing USB hubs.
+
+Is the board powered up?
+Are the four blue LEDs circling?
+If not check your power supply.
+
+ImportError in MPF Log
+----------------------
+
+If you see something along this in your log:
+
+.. code-block:: console
+
+   in <module>
+      from mpf.platform.pinproc.x86.python36 import pinproc
+
+   ImportError: DLL load failed: The specified module could not be found
+
+
+This usually means that the FTDI libs are not installed in the correct version.
+On Linux pinproc might not be installed at all.
+On Windows ``Visual C++ Redistributable for Visual Studio`` might also be
+missing in the correct version.
+Have a look a the :doc:`install instructions for your OS <hardware_drivers>` to
+find and install the correct requirements.
+
+Failed to reset P/P3-Roc
+------------------------
+
+If you see this repeatedly in the log of MPF:
+
+.. code-block:: console
+
+   Failed to reset P/P3-Roc: OSError: Error in WriteData: wrote 0 of 8 bytes. Is your P/P3-Roc connected and powered up?
+   Will retry creating PinPROC and resetting it in 1s.
+
+This usually means that the P/P3-Roc is either not powered up or not connected.
+
 Random Crashes of MPF
 ---------------------
 

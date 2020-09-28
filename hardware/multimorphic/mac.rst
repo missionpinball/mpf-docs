@@ -161,3 +161,5 @@ incompatible with future versions of macOS.
 You have to reboot in order to have the changes D2xxHelper made take effect.
 After that, you should be all set and can continue on with the :doc:`platform`
 documentation to finish your MPF configuration for the P-ROC/P3-ROC.
+
+.. include:: include_troubleshooting_drivers.rst

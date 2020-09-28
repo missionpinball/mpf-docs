@@ -35,3 +35,5 @@ configuration for the P-ROC/P3-ROC.
 
 You might already have those but in case you do not install
 `Visual C++ Redistributable for Visual Studio 2019 (32-bit) <https://aka.ms/vs/16/release/vc_redist.x86.exe>`_.
+
+.. include:: include_troubleshooting_drivers.rst
