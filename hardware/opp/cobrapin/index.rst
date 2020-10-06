@@ -3,7 +3,7 @@ CobraPin Pinball Controller powered by OPP
 
 This page is under development...don't believe a word you read.
 
-.. image:: /hardware/images/CobraPinV0_2_isoSmall.PNG
+.. image:: /hardware/images/CobraPinV0_2_isoSmall.jpg
 
 Features:
     * 24 solenoid outputs broken into 3 banks
@@ -15,7 +15,7 @@ Features:
 Power Input and Filter
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_VIN.PNG
+.. image:: /hardware/images/CobraPinV0_2_VIN.jpg
 
 J9:
     Solenoid power input (24-50V).
@@ -27,7 +27,7 @@ The filter provides consistent power to solenoids while also protecting the powe
 Solenoid Outputs
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_solenoids.PNG
+.. image:: /hardware/images/CobraPinV0_2_solenoids.jpg
 
 J6, J7, J8:
     Solenoid outputs.
@@ -43,7 +43,7 @@ Each solenoid has an associated LED to indicate it is being driven by the proces
 Solenoid Power Output and Fuses
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_HVout.PNG
+.. image:: /hardware/images/CobraPinV0_2_HVout.jpg
 
 J13:
     Solenoid power outputs.
@@ -58,7 +58,7 @@ The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
 Switch Inputs
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_switches.PNG
+.. image:: /hardware/images/CobraPinV0_2_switches.jpg
 
 J1, J2, J3:
     Direct input switches.
@@ -72,7 +72,7 @@ Each connector also includes a logic ground pin. Use this for the direct input r
 Neopixel Support
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_NEO.PNG
+.. image:: /hardware/images/CobraPinV0_2_NEO.jpg
 
 J11, J12:
     Neopixel outputs
@@ -88,7 +88,7 @@ The J14 fused output can be used to provide additional power taps in a neopixel 
 Microcontrollers
 ---------------------------------------------------------------------------------------------------------------
 
-.. image:: /hardware/images/CobraPinV0_2_STM32.PNG
+.. image:: /hardware/images/CobraPinV0_2_STM32.jpg
 
 The brains of the CobraPin are two STM32 microcontroller boards programmed with OPP firmware. They are connected to the host computer via micro USB connectors.
 
