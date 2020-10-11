@@ -8,8 +8,9 @@ Here are some hardware platform specific steps:
 P/P3-Roc Does Not Show Up In Device Manager or dmesg Log
 --------------------------------------------------------
 
-If your P/P3-Roc does not show up in device manager (Windows) or creates a line
-in ``dmesg`` or ``lsusb`` (Linux/Mac) have a look at the USB cable and connection.
+If your P/P3-Roc does not show up in device manager (Windows) or does not
+create a line in ``dmesg`` or ``lsusb`` (Linux/Mac) have a look at the USB
+cable and connection.
 Bad cables are a thing (especially for longer cables).
 Try removing USB hubs.
 
@@ -109,7 +110,7 @@ Enable Bus Tracing
 ------------------
 
 If your hardware behaves different from the way you told it to in MPF or
-if you are seeing lags or delays it might be wise to turn on bug tracing.
+if you are seeing lags or delays it might be wise to turn on bus tracing.
 
 .. code-block:: mpf-config
 
@@ -131,8 +132,8 @@ your P/P3-Roc firmware.
 Sometimes bugs in the firmware get fixed or stuff becomes more robust.
 For some known cases MPF will crash intentionally and tell you to upgrade but
 there might be cases which we do not know.
-You can find out your current firmware version using ``mpf hardware scan``
-(see above).
+
+See :doc:`firmware_upgrade` for details about firmware upgrades.
 
 All Coils Turn On When I Power Up My Machine
 --------------------------------------------
