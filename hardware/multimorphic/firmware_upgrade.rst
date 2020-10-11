@@ -23,7 +23,7 @@ You can find out your current firmware version using ``mpf hardware scan``:
     - Board: 1 Switches: 16 Device Type: A3 Board ID: 1
     - Board: 2 Switches: 16 Device Type: A4 Board ID: 2
 
-In this example the P3-Roc is running firmwar ``2.6``.
+In this example the P3-Roc is running firmware ``2.6``.
 
 Upgrading the firmware of the P-Roc or P3-Roc
 ---------------------------------------------
