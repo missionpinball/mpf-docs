@@ -21,5 +21,6 @@ This MPF documentation was written by:
 * Aaron Matthies
 * Jimmy Lipham
 * Kyle Nahas
+* Thomas Fulenwider (cobra18t)
 
 Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!
