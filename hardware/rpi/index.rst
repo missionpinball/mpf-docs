@@ -83,11 +83,11 @@ No. The RPi is not a pinball controller for various reasons:
 
  * Drivers are missing to drive coils
  * Inputs are unprotected and any error current will fry the CPU
- * Hardware rules are not supported by the pigpio
+ * Hardware rules are not supported by the ``pigpio`` daemon
  * A watchdog is missing
 
 This platform is meant as a cheap interface for peripherals such as DMDs,
-segent displays lights, servos, steppers and more.
+segment displays lights, servos, steppers and more.
 You can also use it for inputs to some extend.
 
 Can this be turned into a pinball controller?
@@ -100,8 +100,8 @@ If you want to do it with pigpio you would have to do the following (and
 probably more):
 
  * Build a PCB with FETs to drive outputs. Add proper protection.
- * Protect your inputs agains high and negative voltage.
- * Implement hardware rules in pigpio (might be possible with callbacks)
+ * Protect your inputs against high and negative voltages.
+ * Implement hardware rules in ``pigpio`` (might be possible with callbacks)
  * Run a realtime linux for proper timing of your rules
  * Add a some watchdog (either in Linux or in hardware)
 

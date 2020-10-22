@@ -55,6 +55,13 @@ Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time
 
 Timeout for the player to enter his/her initials.
 
+reset_high_scores_events:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. The device will add handlers for those events. Default: ``high_scores_reset,factory_reset``
+
+Event to reset high scores.
+The default is used by the service mode.
+
 reverse_sort:
 ~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``string``. Defaults to empty.

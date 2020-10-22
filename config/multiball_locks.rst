@@ -163,6 +163,14 @@ List of one (or more) device control events (:doc:`Instructions for entering dev
 
 Event(s) which reset the locked ball count for the current player.
 
+source_devices:
+~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
+
+Select the source device to use when replacing balls.
+By default this will use the device defined in lock_devices.
+If this setting is defined and the defined device does not have a ball the lock will fall back to the default playfield source device.
+
 source_playfield:
 ~~~~~~~~~~~~~~~~~
 Single value, type: string name of a :doc:`ball_devices <ball_devices>` device. Default: ``playfield``

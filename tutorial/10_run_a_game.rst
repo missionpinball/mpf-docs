@@ -237,9 +237,9 @@ That said, here's a list of things that could go wrong:
 
 + If you see a config error try running ``mpf both -t -v -V -X`` to disable
   the text ui and add verbose logging.
-+ No ball in the trough. (If you are using the smart_virtual platform with
-  ``-X`` press ``1`` and ``2`` to add balls to the trough via keyboard. Check
-  that you got ``virtual_platform_start_active_switches:`` set.)
++ No ball in the trough.
++ Virtual games need balls too; add the ``virtual_platform_start_active_switches`` section of the complete config file. (Alternatively, if you are using the smart_virtual platform with
+  ``-X`` press ``1`` and ``2`` to add balls to the trough via keyboard)
 + Ball in the trough, but not activating the switch.
 + Trough switches are optos but you didn't add ``type: NC`` to your
   switch configurations. (Mechanical trough switches do not need a

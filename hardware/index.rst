@@ -65,6 +65,7 @@ your pinball machine.
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
      switches, switch matrix, LEDs & incandescent lights
+   * :doc:`CobraPin Pinball Controller <opp/cobrapin/index>`
 
 * :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
    * *New in MPF 0.33*

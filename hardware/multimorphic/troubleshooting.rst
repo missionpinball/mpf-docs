@@ -5,6 +5,66 @@ If you got problems with your hardware platform we first recommend to read our
 :doc:`troubleshooting guide </troubleshooting/index>`.
 Here are some hardware platform specific steps:
 
+P/P3-Roc Does Not Show Up In Device Manager or dmesg Log
+--------------------------------------------------------
+
+If your P/P3-Roc does not show up in device manager (Windows) or does not
+create a line in ``dmesg`` or ``lsusb`` (Linux/Mac) have a look at the USB
+cable and connection.
+Bad cables are a thing (especially for longer cables).
+Try removing USB hubs.
+
+Is the board powered up?
+Are the four blue LEDs circling?
+If not check your power supply.
+
+ImportError in MPF Log
+----------------------
+
+If you see something along this in your log:
+
+.. code-block:: console
+
+   in <module>
+      from mpf.platform.pinproc.x86.python36 import pinproc
+
+   ImportError: DLL load failed: The specified module could not be found
+
+
+This usually means that the FTDI libs are not installed in the correct version.
+On Linux pinproc might not be installed at all.
+On Windows ``Visual C++ Redistributable for Visual Studio`` might also be
+missing in the correct version.
+Have a look a the :doc:`install instructions for your OS <hardware_drivers>` to
+find and install the correct requirements.
+
+Failed to reset P/P3-Roc
+------------------------
+
+If you see this repeatedly in the log of MPF:
+
+.. code-block:: console
+
+   Failed to reset P/P3-Roc: OSError: Error in WriteData: wrote 0 of 8 bytes. Is your P/P3-Roc connected and powered up?
+   Will retry creating PinPROC and resetting it in 1s.
+
+This usually means that the P/P3-Roc is either not powered up or not connected.
+
+Random Crashes of MPF
+---------------------
+
+You might see errors such as the following (usually in ``p_roc_common.py``):
+
+.. code-block:: console
+
+   OSError: Error in WriteData: wrote 0 of 8 bytes
+
+This error is triggered by communication issues with the P/P3-Roc.
+Often this is caused by an unreliable power supply or overload on the 5V rail
+of that supply.
+This might also be caused by a bad USB cable.
+In any case you should also find USB communication errors in your operating
+system which might give you further clues.
 
 Run Hardware Scan
 -----------------
@@ -50,7 +110,7 @@ Enable Bus Tracing
 ------------------
 
 If your hardware behaves different from the way you told it to in MPF or
-if you are seeing lags or delays it might be wise to turn on bug tracing.
+if you are seeing lags or delays it might be wise to turn on bus tracing.
 
 .. code-block:: mpf-config
 
@@ -72,8 +132,8 @@ your P/P3-Roc firmware.
 Sometimes bugs in the firmware get fixed or stuff becomes more robust.
 For some known cases MPF will crash intentionally and tell you to upgrade but
 there might be cases which we do not know.
-You can find out your current firmware version using ``mpf hardware scan``
-(see above).
+
+See :doc:`firmware_upgrade` for details about firmware upgrades.
 
 All Coils Turn On When I Power Up My Machine
 --------------------------------------------

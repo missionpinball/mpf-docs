@@ -117,7 +117,7 @@ Default is ``1``.
 
 direction:
 ~~~~~~~~~~
-Single value, type: ``string``. Default: ``up``
+Single value, type: one of the following options: up, down. Default: ``up``
 
 This is either ``up`` or ``down`` and specifies whether this counter
 counts up or counts down.

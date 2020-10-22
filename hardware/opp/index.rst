@@ -16,4 +16,5 @@ Hardware and electrical engineering stuff is documented at the
    drivers
    lights
    leds
+   cobrapin/index
    troubleshooting

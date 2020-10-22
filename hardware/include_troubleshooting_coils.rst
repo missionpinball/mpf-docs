@@ -33,8 +33,11 @@ coils are not working?
 Maybe something with the numbering is odd.
 Lets tests that using the :doc:`MPF Service CLI </tools/service_cli/index>`.
 Alternatively, you can also use
-:doc:`service mode </game_logic/service_mode/index>` if you already configured.
+:doc:`service mode </game_logic/service_mode/index>` if you have already
+configured it.
 Both ways work similarly.
+
+To use service cli:
 
 1. Open two consoles
 2. Start your game (e.g. using ``mpf both``)

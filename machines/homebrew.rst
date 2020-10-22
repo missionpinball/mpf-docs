@@ -22,11 +22,12 @@ There are a few common choices:
 * :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
 * :doc:`LISY Home (custom pinball version of LISY) </hardware/lisy/index>`
 * :doc:`Arduino Pinball Controller </hardware/apc/index>`
+* :doc:`CobraPin Pinball Controller </hardware/opp/cobrapin/index>` 
 
 P3-Roc and FAST are both commercial systems at a similar price point but
 features vary slightly so compare them wisely.
 OPP is an open source/open hardware project and much cheaper but expect to
-invest some more time into the hardware itself.
+invest some more time into the hardware itself. CobraPin is based on OPP with the goal of making OPP more accessible and provides somewhat of an all-in-one solution.
 
 You might also want to some more control boards for servos, steppers and light.
 Common choices are:

@@ -27,8 +27,9 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.54+'  # all versions these docs cover
-release = '0.54.x'  # latest release
+version = '0.54+'   # all versions these docs cover
+branch  = 'dev'     # current branch
+release = '0.53.x'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
@@ -218,9 +219,14 @@ def setup(app):
         # no idea why there is an origin/ in there. breaks our edit on github links
         globals()['context']['github_version'] = globals()['context']['github_version'][7:]
 
+    globals()['rst_prolog'] = '''
+
+        .. |branch| replace:: {}
+    '''.format(branch)
+
     if globals()['context']['github_version'] in branches_for_dev_warning:
 
-        globals()['rst_prolog'] = '''
+        globals()['rst_prolog'] += '''
         
         .. only:: html
         
@@ -236,6 +242,7 @@ def setup(app):
               `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
         
         '''
+
 
 def get_repo_path(repo_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):

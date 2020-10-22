@@ -205,3 +205,4 @@ Some common boards:
 * Spooky/PBL Power Entry Board (part number: #600-0253-00)
 * `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
 * Stern Spike Power Distribution Board (part number: 520-5343-01)
+* :doc:`CobraPin Pinball Controller </hardware/opp/cobrapin/index>` has a built in power filter.

@@ -132,7 +132,7 @@ details. It will also used in rules.
 
 default_recycle:
 ~~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
 
 Controls whether this coil should add a small delay before it's allowed to
 be fired again. (This is used on things like pop bumpers and slingshots to

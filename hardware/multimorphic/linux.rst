@@ -12,3 +12,5 @@ work.
 
 After that, you can continue on with the :doc:`platform` documentation to
 finish your MPF configuration for the P-ROC/P3-ROC.
+
+.. include:: include_troubleshooting_drivers.rst
