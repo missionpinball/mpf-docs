@@ -77,6 +77,15 @@ Here is the process of configuring a carousel:
 
 .. note:: It is recommended to use the *flipper_inactive* events to rotate, rather than *flipper_active*. This allows the use of *flipper_cancel* to select items without accidentally rotating before the selection occurs.
 
+Depending on your situation, especially if you use *flipper_cancel* as the select event, you may notice that after 
+cancelling the subsequent *flipper_inactive* events still play sounds or change slides after selection has been made.
+The Carousel's ``block_events`` can be used to prevent carousel event handling until one of the ``release_events`` is posted. 
+If you don't need to do anything after selection, just specifying `block_events` without any `release_events` will help.
+
+.. code-block:: yaml
+
+   block_events: flipper_cancel
+   release_events: both_flippers_inactive
 
 There are two events of importance here:
 
