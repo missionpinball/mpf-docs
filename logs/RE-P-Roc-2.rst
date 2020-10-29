@@ -7,6 +7,12 @@ RE-P-Roc-2 - Communication with P/P3-Roc broke down
 | :doc:`/config/p_roc`                                                         |
 +------------------------------------------------------------------------------+
 
+In your log you will probably find a line such as:
+
+.. code-block:: doscon
+
+   OSError: Error in WriteData: wrote 0 of 8 bytes
+
 This error occurs when ``pinproc`` (the library MPF uses to talk to the
 P/P3-Roc) reports an error while talking to the P/P3-Roc via USB.
 This is most likely a bad cable or a power supply issue.

@@ -4,6 +4,7 @@ Log and Error Descriptions
 .. toctree::
    :maxdepth: 1
 
+   CFE-coils-1
    CFE-ConfigValidator-1
    CFE-ConfigValidator-2
    CFE-ConfigValidator-4

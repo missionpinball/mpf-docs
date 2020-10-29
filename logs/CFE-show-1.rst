@@ -1,6 +1,12 @@
 CFE-show-1: Show does not appear to be a valid show config
 ==========================================================
 
++------------------------------------------------------------------------------+
+| Related Config File Sections                                                 |
++==============================================================================+
+| :doc:`/config/shows`                                                         |
++------------------------------------------------------------------------------+
+
 This error occurs when MPF loads a show which is not a list of steps.
 There are two ways to add shows to your machine: either as file or inside your
 config.
