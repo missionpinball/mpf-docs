@@ -1,14 +1,52 @@
 Installing MPF on Linux
 =======================
 
-As part of our automated build process, we build and test MPF and MPF-MC against Ubuntu 14.04 & 16.04 and Debian jessie.
+As part of our automated build process, we build and test MPF and MPF-MC
+against Ubuntu 16.04 & 18.04 & 20.04 and Debian Stretch & Buster.
+
+Python 3.8 and Ubuntu 20.04
+---------------------------
+
+Up to MPF 0.54, we use Kivy 1.11 which does not work on Python 3.8+.
+Unfortunately, Ubuntu 20.04 (and similar distributions) ship Python 3.8 or
+newer.
+We hope to resolve this issue in the future when Kivy releases a newer version.
+
+For now you have to install Python 3.7 on Ubuntu 20.04:
+
+.. code-block:: console
+
+   sudo add-apt-repository ppa:deadsnakes/ppa
+   sudo apt update
+   sudo apt install python3.7-venv python3.7 python3.7-dev
+
+Create a venv for your python3.7 environment:
+
+.. code-block:: console
+
+  python3.7 -m venv ~/mpfenv
+
+Everytime you want to use MPF active your venv:
+
+.. code-block:: console
+
+  . ~/mpfenv/bin/activate
+
+.. warning::
+
+  If you use a virtual environment you have to always activate it before
+  starting MPF.
+  Otherwise, you will encounter weird issues.
+
+
+Installing MPF Using Our Installer
+----------------------------------
 
 Download the MPF Debian Installer (which is used for all of these) from
 https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
 
-Unzip it, and from a terminal run ``chmod +x install && sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
+Unzip it, and from a terminal run ``chmod +x install && ./install`` from the folder you unzipped the files to. If you are using a P-Roc
 or P3-Roc also run ``chmod +x install-proc && ./install-proc`` (skip for other platforms). Consult the README for more information.
-At the moment, the script does not work out-of-the-box under Python3.8 (Ubuntu 20.04 is using this version).
 
 Download & run the "Demo Man" example game
 ------------------------------------------
