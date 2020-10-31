@@ -113,3 +113,7 @@ Luckily, various boards exist to solve this issue:
 * Spooky/PBL Power Distribution board (part number: #600-0224-00)
 * FAST Playfield Interchange Board
 * Multimorphic Power Distribution board (part number: PCBA-0031-0003)
+
+Have a look at our
+`PCB section of hardware.missionpinball.org <https://hardware.missionpinball.org/pcbs.html>`_
+for DIY designs.

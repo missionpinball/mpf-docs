@@ -206,3 +206,7 @@ Some common boards:
 * `OPP Power Filter Board  <http://pinballmakers.com/wiki/index.php/OPP#Power_Filter_Board>`_
 * Stern Spike Power Distribution Board (part number: 520-5343-01)
 * :doc:`CobraPin Pinball Controller </hardware/opp/cobrapin/index>` has a built in power filter.
+
+Have a look at the
+`PCB section of hardware.missionpinball.org <https://hardware.missionpinball.org/pcbs.html>`_
+for DIY designs.

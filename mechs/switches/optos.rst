@@ -86,6 +86,10 @@ Common parts:
 * FAST 4-Channel 12v Constant Current Opto Emitter Driver
 * Stern Spike Opto Amplifier - 520-5239-01
 
+Have a look at our
+`PCB section of hardware.missionpinball.org <https://hardware.missionpinball.org/pcbs.html>`_
+for DIY designs.
+Have a look at :doc:`breakout_boards` for details about breakout boards.
 
 Current Limiting Resistor
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,6 +113,10 @@ Common parts:
 
 * 4x Opto board - #600-0256-00
 
+Have a look at our
+`PCB section of hardware.missionpinball.org <https://hardware.missionpinball.org/pcbs.html>`_
+for DIY designs.
+Have a look at :doc:`breakout_boards` for details about breakout boards.
 
 Common Parts in Pinball Machines
 --------------------------------
