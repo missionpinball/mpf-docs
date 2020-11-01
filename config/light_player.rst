@@ -75,6 +75,16 @@ Single value, type: ms_or_token. Defaults to empty.
 
 Time to fade this light in ms. Use this to achieve smooth transitions between colors.
 
+key:
+~~~~
+Single value, type ``string``.
+
+Like other players, a playing show can be given a unique key to identify it. When
+stopping a show, it should be stopped by its key name rather than the show name.
+
+This allows the playback of multiple copies of the same show with different keys,
+so one instance of the show can be stopped while the others continue.
+
 priority:
 ~~~~~~~~~
 Single value, type: int_or_token. Default: ``0``
