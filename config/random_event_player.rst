@@ -64,6 +64,16 @@ If you use a list all events will be equiprobable.
 You can also use a dict with ``eventname: probablity``.
 See the example above.
 
+You can also use :doc:`conditional events </events/overview/conditional>` here.
+
+fallback_event:
+~~~~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``None``
+
+If all of the events in the random_event_player are conditional and none of them
+are true, this event name will be posted instead. If not defined, no event will
+be posted.
+
 force_all:
 ~~~~~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Default: ``true``

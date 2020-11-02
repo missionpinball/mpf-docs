@@ -111,6 +111,21 @@ Integer value. Default is ``0``.
 If you're using the ``dynamic_x:`` setting above, this is the number of additional pixels that will be added to the
 total width of the widget to calculate the dynamic x position.
 
+block_events:
+~~~~~~~~~~~~~
+
+A list of events that, when posted, will prevent the text input from shifting or selecting input values. Useful for
+when a flipper cancel is used to select and the subsequent flipper inactive events shouldn't change the input.
+
+Used in conjucting with ``release_events`` setting below.
+
+release_events:
+~~~~~~~~~~~~~~~
+
+A list of events that, when posted, will unblock the text input from shifting or selecting input values.
+
+Used in conjuction with ``block_events`` setting above.
+
 shift_left_event:
 ~~~~~~~~~~~~~~~~~
 
