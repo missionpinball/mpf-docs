@@ -68,7 +68,7 @@ You can also use :doc:`conditional events </events/overview/conditional>` here.
 
 fallback_event:
 ~~~~~~~~~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 If all of the events in the random_event_player are conditional and none of them
 are true, this event name will be posted instead. If not defined, no event will
