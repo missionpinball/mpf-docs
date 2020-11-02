@@ -71,7 +71,7 @@ Log level for the file log for this platform.
 
 max_led_batch_size:
 ~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``3``
+Single value, type: ``integer``. Default: ``12``
 
 How many LEDs can be batched on your controller?
 This might differ on different controllers.
