@@ -158,7 +158,7 @@ Single value, type: ``string``. Defaults to empty.
 
 loop_end_at:
 ~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 The position in the sound file (in seconds) at which to start looping and return to the start of the
 loop as determined by the ``loop_start_at:`` setting. By default (None) the sound will loop when it
