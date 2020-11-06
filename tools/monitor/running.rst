@@ -67,7 +67,7 @@ MPF's :doc:`virtual platforms </hardware/virtual/index>`. Specifically the
 you're using MPF without physical hardware.
 
 Modifying switches and lights on your playfield
---------------------------------------------
+-----------------------------------------------
 
 More information on the usage of MPF Monitor (0.54+) can be found in 
 :doc:`Playfield Devices and Using Device Inspector <devices-and-using>`.
