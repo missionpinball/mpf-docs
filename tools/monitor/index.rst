@@ -93,3 +93,4 @@ Next Steps
 
    installation
    running
+   devices-and-using
