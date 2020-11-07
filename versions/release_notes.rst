@@ -11,14 +11,17 @@ Released: November 7, 2020
 This release contains incremental improvements and a lot of bugfixes.
 We identified a few potential upgrade issues:
 
-* Deprecated `ball_locks` device has been removed.
-  Use `multiball_locks` or `ball_holds` instead.
+* Deprecated ``ball_locks`` device has been removed.
+  Use ``multiball_locks`` or ``ball_holds`` instead.
 * Space-separated lists have been removed.
   Use comma-separated lists or yaml lists instead (with out without spaces).
   MPF sticks to YAML conventions here and allows all kinds of legal YAML lists (which does not include space-separated lists).
-* Deprecate `playfield_active` tags on shots.
+* Deprecate ``playfield_active`` tags on shots.
   Those tags are only required for switches which are not part of shots or devices (so almost none).
   MPF will complain and you might have to remove the tag in that case.
+* MPF will complain on event handlers with the same name as a switch.
+  This should not happen in practice and has been done to catch typical user error
+  (i.e. using the event ``s_my_switch`` instead of ``s_my_switch_active``).
 
 .. rubric:: MPF, MPF-MC, MPF-LS and MPF-Monitor
 
@@ -32,7 +35,7 @@ New Features
 * `Better default logging for ball devices <https://github.com/missionpinball/mpf/commit/22efb222f7b09a7dbd2d77590d444790d324b04e>`__ - jab
 * `Support event args in show_tokens <https://github.com/missionpinball/mpf/pull/1492>`__ - jab
 * `Log virtual time in unit tests <https://github.com/missionpinball/mpf/commit/5e3c61527607c863193410567385e78657e2755f>`__ - jab
-* `New ``mpf format`` command to format configs <https://github.com/missionpinball/mpf/pull/1499>`__ - jab
+* `New "mpf format" command to format configs <https://github.com/missionpinball/mpf/pull/1499>`__ - jab
 * `Refactor hardware fades for performance <https://github.com/missionpinball/mpf/pull/1489>`__ - jab
 * `Driverboards per platform to support FAST and P-Roc in parallel in one machine <https://github.com/missionpinball/mpf/commit/3372fdfcfa57029fcc2803090151e829066f7af9>`__ - jab
 * `Crash asset loader thread on exception <https://github.com/missionpinball/mpf-mc/commit/c3d3116846bfc20ba16e53df10a6bfba1360b6dc>`__ - jab
