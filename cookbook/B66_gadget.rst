@@ -16,7 +16,7 @@ This guide uses the following concepts in MPF:
 * :doc:`/game_logic/logic_blocks/accruals`
 * :doc:`/events/overview/conditional`
 * :doc:`/config_players/show_player`
-* :doc:`/config_players/shows`
+* :doc:`/shows/index`
 
 
 **TODO**
