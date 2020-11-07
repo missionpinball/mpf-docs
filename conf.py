@@ -28,8 +28,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 version = '0.54+'   # all versions these docs cover
-branch  = 'dev'     # current branch
-release = '0.53.x'  # latest release
+branch  = 'latest'  # current branch
+release = '0.54.x'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
@@ -254,7 +254,7 @@ def get_repo_path(repo_name):
     else:
         # clone repo
         print("Cloning {}".format(repo_name))
-        current_branch = "dev"
+        current_branch = "0.54.x"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(tempfile.gettempdir(), '_src', repo_name), branch=current_branch)
         return os.path.join(tempfile.gettempdir(), '_src', repo_name)
 
