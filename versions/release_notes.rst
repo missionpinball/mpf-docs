@@ -14,7 +14,7 @@ We identified a few potential upgrade issues:
 * Deprecated ``ball_locks`` device has been removed.
   Use ``multiball_locks`` or ``ball_holds`` instead.
 * Space-separated lists have been removed.
-  Use comma-separated lists or yaml lists instead (with out without spaces).
+  Use comma-separated lists or yaml lists instead (with or without spaces).
   MPF sticks to YAML conventions here and allows all kinds of legal YAML lists (which does not include space-separated lists).
 * Deprecate ``playfield_active`` tags on shots.
   Those tags are only required for switches which are not part of shots or devices (so almost none).
@@ -22,6 +22,7 @@ We identified a few potential upgrade issues:
 * MPF will complain on event handlers with the same name as a switch.
   This should not happen in practice and has been done to catch typical user error
   (i.e. using the event ``s_my_switch`` instead of ``s_my_switch_active``).
+* Diagnostics menu (switch, coil, light) is now a sub-menu in service mode.
 
 .. rubric:: MPF, MPF-MC, MPF-LS and MPF-Monitor
 
