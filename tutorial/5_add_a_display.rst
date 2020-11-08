@@ -7,7 +7,9 @@ planning to put an LCD display in the backbox of your machine, this is
 what we'll set up now. And if you want to use a physical DMD (whether it's
 an older-style mono DMD, or a newer full color LED-based DMD), you'll
 be able to use the screen window we set up in this step to show a software
-version of your DMD.
+version of your DMD. If you are looking to set up a Segment or Alphanumeric
+display, follow this guide to set up them up: 
+:doc:`Alpha-Numeric / Segment Displays </displays/display/alpha_numeric>`
 
 Regardless of what type of display you want to use in your final machine,
 follow this step in the tutorial and then you can set up your
