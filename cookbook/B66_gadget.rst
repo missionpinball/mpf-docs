@@ -36,7 +36,7 @@ Here are the specific rules we need to implement:
 
 * Each letter begin unlit
 * Letters become lit when hit individually
-* When an already-lit letter is hit, award if there is an unlit letter adjacent to the already-lit letter, award one adjacent letter. (Friendly Neighbor)
+* When an already-lit letter is hit, award one adjacent unlit letter. (Friendly Neighbor)
 * After all letters are hit, award a gadget and reset the letters to the beginning.
 * Players may earn multiple gadgets
 * Light the lockdown bar to indicate to the player that they have earned a gadget.
@@ -240,12 +240,12 @@ Also in our mode config folder, we will add ``logic_blocks.yaml`` to hold our mo
   accruals:
     gadget_accrual:
         events:
-          - gadget_g1_complete #index [0]
-          - gadget_a_complete #index [1]
-          - gadget_d_complete #index [2]
-          - gadget_g2_complete #index [3]
-          - gadget_e_complete #index [4]
-          - gadget_t_complete #index [5]
+          - gadget_g1_complete # index [0]
+          - gadget_a_complete # index [1]
+          - gadget_d_complete # index [2]
+          - gadget_g2_complete # index [3]
+          - gadget_e_complete # index [4]
+          - gadget_t_complete # index [5]
         reset_on_complete: True
         disable_on_complete: False
         reset_events: mode_gadget_started
@@ -264,8 +264,8 @@ These two lines simply tell MPF that we have an accrual and we've named it "gadg
 .. code-block:: yaml
 
         events:
-          - gadget_g1_complete #index [0]
-          - gadget_a_complete #index [1]
+          - gadget_g1_complete # index [0]
+          - gadget_a_complete # index [1]
 
 Next, we have a list of events for the accrual to track. Accruals behave like arrays, so I added a comment after each event to help me remember the index of each event. We'll need to reference these events and their index later.
 
