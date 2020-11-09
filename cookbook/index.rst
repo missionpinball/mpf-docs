@@ -12,6 +12,7 @@ Here are the recipes that are done:
 * :doc:`The Addams Family: Mansion Awards <TAF_mansion_awards>`
 * :doc:`Attack From Mars: Super Jets <AFM_super_jets>`
 * :doc:`Indiana Jones: Rollover Lanes (with Lane Change) <rollover_lanes_with_lane_change>`
+* :doc:`Batman '66: GADGET Targets with (Friendly Neighbor Behavior) <B66_gadget>
 
 And here's what's on our to-do list:
 
