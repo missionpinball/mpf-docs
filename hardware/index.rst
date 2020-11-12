@@ -133,6 +133,7 @@ to provide additional functionality.
 * :doc:`MyPinballs Segment Display Controller <mypinballs/index>`
    * *New in MPF 0.50*
    * Alphanumeric segment displays
+   * Also supports TNA Numeric Score Displays
 
 * :doc:`Light Segment Displays <light_segment_displays/index>`
    * Control segment displays via light outputs or driver on another platform
