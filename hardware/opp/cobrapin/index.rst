@@ -102,64 +102,65 @@ Example Config
 .. code-block:: mpf-config
 
     #config_version=5
-    
+
     hardware:
-        platform: opp
-        driverboards: gen2
+      platform: opp
+      driverboards: gen2
 
     opp:
-        ports: /dev/ttyACM0, /dev/ttyACM1
-        chains:
-            0: /dev/ttyACM1
-            1: /dev/ttyACM0
+      ports: /dev/ttyACM0, /dev/ttyACM1
+      chains:
+        0: /dev/ttyACM1
+        1: /dev/ttyACM0
 
     switches:
         #DIRECT
-        s_startButton:
-            number: 0-0-25
-            tags: start
-        s_slingshot_left:
-            number: 0-0-24 
-            tags: slings
-        s_slingshot_right:
-            number: 0-0-19  
-            tags: slings
+      s_startButton:
+        number: 0-0-25
+        tags: start
+      s_slingshot_left:
+        number: 0-0-24
+        tags: slings
+      s_slingshot_right:
+        number: 0-0-19
+        tags: slings
 
-        #MATRIX        
-        s_lowerDrop1:
-            number: 1-0-32
-        s_lowerDrop2:
-            number: 1-0-33
+        #MATRIX
+      s_lowerDrop1:
+        number: 1-0-32
+      s_lowerDrop2:
+        number: 1-0-33
 
     lights:
-        l_15000Rollunder:
-            number: 0-0-15
-            type: grb
-            subtype: led
-            tags: inserts
-        l_extraBall:
-            number: 0-0-16    
-            type: grb
-            subtype: led
-            tags: inserts
-        l_gi_17:
-            number: 1-0-24
-            subtype: led
-            tags: gi
-        l_gi_18:
-            number: 1-0-25
-            subtype: led
-            tags: gi
+      l_15000Rollunder:
+        number: 0-0-15
+        type: grb
+        subtype: led
+        tags: inserts
+      l_extraBall:
+        number: 0-0-16
+        type: grb
+        subtype: led
+        tags: inserts
+      l_gi_17:
+        number: 1-0-24
+        subtype: led
+        tags: gi
+      l_gi_18:
+        number: 1-0-25
+        subtype: led
+        tags: gi
 
     coils:
-        c_flipper_left:
-            number: 0-0-8           
-            allow_enable: true
-            default_hold_power: 1.0
-            default_pulse_ms: 50
-        c_slingshot_left:
-            number: 0-0-9
-            default_pulse_ms: 30
-            default_recycle: True
-            platform_settings:
-                recycle_factor: 4
+      c_flipper_left:
+        number: 0-0-8
+        allow_enable: true
+        default_hold_power: 1.0
+        default_pulse_ms: 50
+      c_slingshot_left:
+        number: 0-0-9
+        default_pulse_ms: 30
+        default_recycle: true
+        platform_settings:
+          recycle_factor: 4
+
