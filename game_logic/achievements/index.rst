@@ -63,9 +63,12 @@ the prefix for achievements is ``device.achievements.<name>``.
 
 *state*
    The string name of the state this achievement is in. Options will be one
-   of the following: *disabled*, *enabled*, *started*, *stopped*, *selected*,
+   of the following: *disabled*, *enabled*, *started*, *stopped*,
    or *completed*. If this achievement is in a mode that has not been started
    yet, then its state will be an empty string.
+  
+*selected*
+   boolean (*true* or *false*)
 
 Related How To guides
 ---------------------
