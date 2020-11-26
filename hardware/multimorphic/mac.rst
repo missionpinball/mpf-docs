@@ -95,7 +95,7 @@ P-ROC/P3-ROC hardware. Run the following commands:
 ::
 
     cd ^/proc
-    git clone --branch=master https://github.com/missionpinball/libpinproc
+    git clone --branch=dev https://github.com/missionpinball/libpinproc
 
 Copy the Mac version of CMakeLists.txt to the libpinproc folder:
 
