@@ -128,7 +128,7 @@ complete this step.  For example, if you have a shot that could complete this st
 step is completed by this event, the light will still remain on even though it will not
 progress this logic block any further.  To update the lights you will want to add a hit_event
 to the underlying shot.  This should be the event from the log logicblock_YOUR_ACCRUAL_hit
-{step == X} hwere YOUR_ACCRUAL is the name of your accrual, and X is the value of the step
+{step == X} where YOUR_ACCRUAL is the name of your accrual, and X is the value of the step
 to which this shot is tied, which begins with 0.
 
 console_log:
