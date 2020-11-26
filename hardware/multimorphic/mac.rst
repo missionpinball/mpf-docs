@@ -37,7 +37,7 @@ From the same terminal window, run:
 
 ::
 
-  mkdir ^/proc
+  mkdir ~/proc
 
 3. Download osx-proc-support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,7 +46,7 @@ Change to that new folder:
 
 ::
 
-  cd ^/proc
+  cd ~/proc
 
 And run the following command which will clone (download) the files you need
 to make the P-ROC run on the Mac. (Even though this is called "osx-proc-support",
@@ -77,7 +77,7 @@ Run the following commands to compile it from scratch:
 
 ::
 
-    cd ^/proc/osx-proc-support
+    cd ~/proc/osx-proc-support
     tar -xzf yaml-cpp-0.2.5.tar.gz
     cd yaml-cpp-0.2.5
     mkdir bin
@@ -94,14 +94,14 @@ P-ROC/P3-ROC hardware. Run the following commands:
 
 ::
 
-    cd ^/proc
+    cd ~/proc
     git clone --branch=dev https://github.com/missionpinball/libpinproc
 
 Copy the Mac version of CMakeLists.txt to the libpinproc folder:
 
 ::
 
-    cp -r ^/proc/osx-proc-support/CMakeLists.txt ^/proc/libpinproc
+    cp -r ~/proc/osx-proc-support/CMakeLists.txt ~/proc/libpinproc
 
 That avoids having to edit the file manually. It should work for nearly all
 situations, but if libpinproc won't compile in the next steps, you should make
@@ -127,7 +127,7 @@ that we modified to work with Python 3:
 
 ::
 
-    cd ^/proc
+    cd ~/proc
     git clone https://github.com/missionpinball/pypinproc
     cd pypinproc
     python3 setup.py build
@@ -152,7 +152,7 @@ incompatible with future versions of macOS.
 
 ::
 
- cd ^/proc/osx-proc-support
+ cd ~/proc/osx-proc-support
  sudo installer -pkg D2xxHelper_v2.0.0.pkg -target /
 
 9. Reboot
