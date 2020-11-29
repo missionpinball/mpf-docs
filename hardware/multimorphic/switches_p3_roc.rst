@@ -70,6 +70,17 @@ For example:
      my_other_switch:
        number: 45    # SW-16 board at address 2, Bank B, Switch 5
 
+Connecting Switches
+^^^^^^^^^^^^^^^^^^^
+
+Switches are connected between the input pin and ground.
+On SW-16 revision 1 those are pins 1, 3-9 for switch 0 to 7 on bank A (J2) and
+1, 2, 4-9 for switch 0 to 7 on bank B (J6).
+Ground is on 10 for both banks.
+On SW-16 revision 2 those are pins 2 to 9 for switch 0 to 7 and 10 for ground
+on headers J2 (Bank A) and J6 (Bank B).
+Revision two has an additional low current 12V output on pin 1.
+
 Burst Switch Inputs
 -------------------
 

@@ -135,6 +135,26 @@ there might be cases which we do not know.
 
 See :doc:`firmware_upgrade` for details about firmware upgrades.
 
+Switches Are Not Registering
+----------------------------
+
+If your coils are working but switches are not registering please check the
+following points:
+
+On the P-Roc
+^^^^^^^^^^^^
+
+- Is 12V power available? This will disable switches but not much else.
+- Is ground connected properly to your switches?
+
+On the P3-Roc
+^^^^^^^^^^^^^
+
+- Do your SW-16 show in `mpf hardware scan`? (see above)
+- If not: Is the SW-16 bus connected properly (and not twisted)?
+- Is ground connected properly to your switches?
+  Should be connected to pin 10 on J2 or J6 of SW-16.
+
 All Coils Turn On When I Power Up My Machine
 --------------------------------------------
 
