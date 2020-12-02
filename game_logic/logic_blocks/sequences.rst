@@ -57,8 +57,8 @@ then once it is, it moves on, and any posted before or after are just ignored.
 Once all four events have been posted in order, the event *wt_done* is posted which you
 can use to stop the mode or add a score or play a show or whatever you want.
 
-Monitorable Properties for Sequences
-------------------------------------
+Monitorable Properties
+----------------------
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
@@ -74,25 +74,6 @@ the prefix for sequences is ``device.sequences.<name>``.
 
 *enabled*
    Boolean (true/false) which shows whether this sequence is enabled.
-
-*completed*
-   True if the block is completed. Otherwise False.
-
-Monitorable Properties for Accruals
------------------------------------
-
-For :doc:`dynamic values </config/instructions/dynamic_values>` and
-:doc:`conditional events </events/overview/conditional>`,
-the prefix for accruals is ``device.accruals.<name>``.
-
-*value*
-   The state of this accrual as position.
-   In the beginning this will be ``0``.
-   Once the first step has been completed it will be ``1``.
-   Then ``2`` after the second and so on.
-
-*enabled*
-   Boolean (true/false) which shows whether this accrual is enabled.
 
 *completed*
    True if the block is completed. Otherwise False.
