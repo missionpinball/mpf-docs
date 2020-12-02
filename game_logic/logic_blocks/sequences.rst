@@ -57,12 +57,12 @@ then once it is, it moves on, and any posted before or after are just ignored.
 Once all four events have been posted in order, the event *wt_done* is posted which you
 can use to stop the mode or add a score or play a show or whatever you want.
 
-Monitorable Properties
-----------------------
+Monitorable Properties for Sequences
+------------------------------------
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.sequences.<name>``.
+the prefix for sequences is ``device.sequences.<name>``.
 
 *value*
    The state of this sequence as list.
@@ -78,12 +78,12 @@ the prefix for ball holds is ``device.sequences.<name>``.
 *completed*
    True if the block is completed. Otherwise False.
 
-Monitorable Properties
-----------------------
+Monitorable Properties for Accruals
+-----------------------------------
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.accruals.<name>``.
+the prefix for accruals is ``device.accruals.<name>``.
 
 *value*
    The state of this accrual as position.
