@@ -34,7 +34,9 @@ by MPF-MC. These settings include things such as whether or not the window has a
 is full screen, or whether special image processing is applied to the window using effects.
 These effects perform image processing to the source image of the window and can be used to
 get an old-school "DMD look" or "color DMD" look to your window as well as other special
-effects.
+effects.  Windows can be used in any monitor configuration (portait or landscape) and will
+attempt to center themselves left/right and top/bottom. Windows always use the left lower
+corner as the 0,0 location.
 
 Displays
 --------
@@ -50,7 +52,8 @@ ones to different physical displays. You can even create sub-displays where one 
 a small region which is another display (kind of like picture-in-picture). The most
 important setting for a display is its size (with, height) in pixels. If you do not specify
 any displays in your "displays:" section of your config files, a default display (800 x
-600 pixels) will be automatically created for you.
+600 pixels) will be automatically created for you.  It is important to remember that displays
+always use the left lower corner as the 0,0 location.
 
 Slides
 ------
