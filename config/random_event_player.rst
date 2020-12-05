@@ -40,7 +40,14 @@ event out of a list based on an event.
          unlikely_event2: 3
          likely_event1: 45
          likely_event2: 50
-
+     play_random_event_with_weight_and_conditional:
+       events:
+         event1{mode.field.active}: 25
+         event2{device.ball_devices.bd_ramp_lock.balls==2}: 25
+         event3{device.accruals.base_locking_engaged.completed}: 10
+         event4{device.counters.health.value>9}: 30
+         event5{current_player.hearts < current_player.hearts_max}: 10
+       fallback_event: event_posts_if_everything_above_false
 .. config
 
 
