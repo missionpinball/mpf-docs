@@ -235,15 +235,16 @@ select_events:
 ~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
-Events in this list, when posted, cause this achievement to switch to its
-"selected" state. These events will also cause the achievement to play the
+Events in this list, when posted, cause this achievement's selected property to 'true'. These events will also cause the achievement to play the
 show defined in the ``show_when_selected:`` setting and to emit (post) events
 in the ``events_when_selected:`` setting.
 
-Note that the "selected" state, in MPF, is used to describe an achievement
+Note that "selected" property, in MPF, is used to describe an achievement
 that is currently selected ("highlighted" or "lit") and available to be
 started. This would typically be tied to a show (via the
 ``show_when_selected:`` setting) that causes a light or LED to flash.
+
+Also, note that more than one achivement may be selected at a time; see ``unselect_events:`` to change the selected property to false.
 
 show_tokens:
 ~~~~~~~~~~~~
@@ -329,7 +330,7 @@ unselect_events:
 ~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
-.. todo:: :doc:`/about/help_us_to_write_it`
+Events in this list, when posted, cause this achievement's 'selected' property to become false.
 
 console_log:
 ~~~~~~~~~~~~
