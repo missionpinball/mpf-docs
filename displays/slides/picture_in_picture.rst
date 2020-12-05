@@ -3,7 +3,7 @@ How to do "Picture in Picture" display
 
 MPF uses a :doc:`window </config/window>` to define the area on a screen that
 can be used to display graphics.  This window and be further subdivided into
-:doc:`displays </displays/display>` that define areas of the window onto
+:doc:`displays </displays/display/index>` that define areas of the window onto
 which slides and their widgets can be projected.
 
 Here is an example of setting up a window and four displays in a config file.
