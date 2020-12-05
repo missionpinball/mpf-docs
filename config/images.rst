@@ -16,7 +16,7 @@ parameter values for any image assets you want to use in your game. Note: You
 do *not* have to have an entry for every
 single image you want to use, rather, you only need to add individual assets to
 your config file
-that have settings which different from other assets in that asset's folder.
+that have settings which are different from other assets in that asset's folder.
 (This section is part of the MPF media controller and only available if you're
 using MPF-MC for your media controller.)
 
