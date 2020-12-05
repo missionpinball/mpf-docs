@@ -91,7 +91,7 @@ enable_events:
 ~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
-Event(s) which enable this ball save.
+Event(s) which enable this ball save. This also starts the ball save timer running unless there are optional timer_start_events present, see below.
 
 grace_period:
 ~~~~~~~~~~~~~
@@ -126,7 +126,13 @@ timer_start_events:
 ~~~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
 
-Events in this list, when posted, start this ball saver's countdown timer.
+Events in this list, when posted, start this ball saver's countdown 
+timer provided the ball save has been enabled, above. This allows the 
+timer to be started separate from the save being enabled. For example, 
+a light might turn on when a the ball save is enabled at the beginning 
+of a players turn. To avoid the timer running out (if the player takes 
+a break before plunging a ball) the timer can be configured not to 
+start until an event in this list is posted. 
 
 console_log:
 ~~~~~~~~~~~~
