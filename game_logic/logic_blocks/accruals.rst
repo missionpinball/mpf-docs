@@ -68,7 +68,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.accruals.<name>``.
+the prefix for accruals is ``device.accruals.<name>``.
 
 *value*
    The state of this accrual as list.
