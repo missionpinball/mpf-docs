@@ -71,7 +71,7 @@ This is an example:
 Storing the State in a Player Variable
 --------------------------------------
 
-If you want to store the state of you state machine in a player variable your
+If you want to store the state of your state machine in a player variable your
 can use a :doc:`variable_player </config/variable_player>`.
 You can then use it on slides or in places where conditions do not work (yet).
 
