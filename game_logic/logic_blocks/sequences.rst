@@ -62,7 +62,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.sequences.<name>``.
+the prefix for sequences is ``device.sequences.<name>``.
 
 *value*
    The state of this sequence as list.
@@ -74,25 +74,6 @@ the prefix for ball holds is ``device.sequences.<name>``.
 
 *enabled*
    Boolean (true/false) which shows whether this sequence is enabled.
-
-*completed*
-   True if the block is completed. Otherwise False.
-
-Monitorable Properties
-----------------------
-
-For :doc:`dynamic values </config/instructions/dynamic_values>` and
-:doc:`conditional events </events/overview/conditional>`,
-the prefix for ball holds is ``device.accruals.<name>``.
-
-*value*
-   The state of this accrual as position.
-   In the beginning this will be ``0``.
-   Once the first step has been completed it will be ``1``.
-   Then ``2`` after the second and so on.
-
-*enabled*
-   Boolean (true/false) which shows whether this accrual is enabled.
 
 *completed*
    True if the block is completed. Otherwise False.
