@@ -155,6 +155,27 @@ On the P3-Roc
 - Is ground connected properly to your switches?
   Should be connected to pin 10 on J2 or J6 of SW-16.
 
+Some Drivers Are Not Working
+----------------------------
+
+If some drivers are working but other are not.
+
+On the P-Roc
+^^^^^^^^^^^^
+
+If you see the following message on your console (not log; you might have to
+use the ``-t`` commandline flag to see them):
+
+.. code-block:: mpf-config
+
+   Refusing to update driver #144; polarity differs on non-custom machine.
+
+This means that the polarity which is defined for your machine type (i.e. WPC)
+does not match your driver definition.
+If you see this please tell us in the MPF user forum and we will investigate
+this with you.
+
+
 All Coils Turn On When I Power Up My Machine
 --------------------------------------------
 
