@@ -110,3 +110,8 @@ switches of your trough:
        default_source_device: bd_plunger
        tags: default
 
+What if it doesn't work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.

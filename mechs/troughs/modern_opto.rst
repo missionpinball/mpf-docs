@@ -788,41 +788,5 @@ Here's the complete config
 What if it doesn't work?
 ------------------------
 
-If you've gotten this far and your trough isn't working right, there
-are a few things you can try (depending on what your problem is).
-
-First, add a ``debug: true`` entry into your trough config in the
-``ball_devices:`` section. Then when you run with verbose logging (``-v``),
-you'll get extra debugging information in the log.
-
-If your log file shows a number of balls contained in your trough that
-doesn't match how many balls you actually have, that could be:
-
-* You didn't add all the ball switches to the *ball_switches:*
-  section of the trough configuration
-* You're using a physical machine but a switch isn't adjusted
-  properly so the ball is not actually activating it. (Seriously, we
-  can't tell you how many times that's happened! We've also found that
-  on some machines, if you only have one ball in the trough that the
-  single ball isn't heavy enough to roll over the top of the eject coil
-  shaft. In that case we just add a few more balls to the machine and it
-  seems to take care of it.) Either way, if you have a ball in the
-  trough, the switch entry in your log should show that the switch is
-  active (*State:1*), like this:
-
-::
-
-    2014-10-27 20:05:29,891 : SwitchController : <<<<< switch: trough1, State:1 >>>>>
-
-If you see State:1 immediately followed by another entry with State:0,
-that means the ball isn't activating the switch even though it might
-be in the trough.
-
-If you get a YAML error, a "KeyError", or some other
-weird MPF error, make sure that all the switch and coil names you
-added to your trough configuration exactly match the switch and coil
-names in the ``switches:`` and ``coils:`` sections of your config file.
-
-Also make sure that all your names are allowable names, meaning they are only
-letters, numbers, and the underscore, and that none of your names start with a
-number.
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.

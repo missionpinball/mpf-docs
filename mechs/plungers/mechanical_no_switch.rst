@@ -108,3 +108,9 @@ confirmation, since you don't want the timer to start running when the ball is
 sitting in the plunger lane.
 
 See the :doc:`/game_logic/ball_saves/index` documentation for details.
+
+What if it doesn't work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.

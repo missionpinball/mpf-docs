@@ -375,3 +375,8 @@ Here's the complete config
       balls_installed: 4
     virtual_platform_start_active_switches: s_trough_enter
 
+What if it doesn't work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.

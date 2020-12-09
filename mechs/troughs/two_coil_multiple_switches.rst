@@ -314,3 +314,9 @@ Here's the complete config
     virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 .. end_mpfdoctest
+
+What if it doesn't work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.

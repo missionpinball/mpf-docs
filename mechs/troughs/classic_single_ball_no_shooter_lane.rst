@@ -193,3 +193,8 @@ Here's the complete config
         tags: default
     virtual_platform_start_active_switches: s_drain
 
+What if it did not work?
+------------------------
+
+Have a look at our
+:doc:`troubleshooting guide for ball_devices </mechs/ball_devices/troubleshooting>`.
