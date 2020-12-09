@@ -130,6 +130,11 @@ Related How To guides
 * :doc:`/mechs/troughs/two_coil_one_switch`
 * :doc:`/mechs/troughs/classic_single_ball`
 
+.. toctree::
+   :titlesonly:
+
+   troubleshooting
+
 Related Events
 --------------
 
