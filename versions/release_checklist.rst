@@ -17,6 +17,8 @@ What to do to make a MPF release?
 
    - ``mpf-examples`` repository
 
+   - ``mpf-debian-installer`` repository
+
 - Create a.bb branch (e.g. 0.50) and push it based on ``latest`` branch in ``mpf-docs`` repository
 
 - Add ``a.bb`` to versions on readthedocs and wait until it finished building
@@ -55,6 +57,8 @@ What to do to make a MPF release?
 
    - Remove ``--pre`` from install notes
 
+   - Update linux installer references to ``a.bb.x`` instead of dev
+
    - Push dev branch to latest (hard push)
 
    - Re-add branch protection
@@ -74,6 +78,8 @@ What to do to make a MPF release?
    - ``a.bb.x`` on ``mpf-examples`` repository
 
    - ``a.bb`` on ``mpf-docs`` repository
+
+   - ``a.bb`` on ``mpf-debian-installer`` repository
 
 - Publish release post on forum
 
