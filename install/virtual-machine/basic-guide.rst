@@ -308,7 +308,7 @@ Basic installation:
    -  .. code-block:: console
 
          cd ~
-         git clone https://github.com/missionpinball/mpf-debian-installer/
+         git clone --branch=0.54.x https://github.com/missionpinball/mpf-debian-installer/
          cd mpf-debian-installer/
          chmod +x install && sudo ./install
 

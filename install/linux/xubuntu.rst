@@ -62,11 +62,11 @@ the current versions of MPF and MPF-MC as well as each of their dependencies.
 .. code-block:: console
 
   cd ~
-  wget https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
-  unzip dev.zip
-  cd mpf-debian-installer-dev
+  wget https://github.com/missionpinball/mpf-debian-installer/archive/0.54.x.zip
+  unzip 0.54.x.zip
+  cd mpf-debian-installer-0.54.x
   sudo -H ./install
-  rm ~/dev.zip && rm -Rf ~/mpf-debian-installer-dev
+  rm ~/0.54.x.zip && rm -Rf ~/mpf-debian-installer-0.54.x
 
 If you want to make sure that MPF was installed, you can run:
 
