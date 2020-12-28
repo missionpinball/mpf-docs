@@ -3,7 +3,10 @@ Image Widget
 
 The image widget is used to display an image on a :doc:`slide </displays/slides/index>`.
 It's also used to display animated images, which can either be animated GIFs or a folder
-or zip file of sequentially-numbered images (of any type).
+or zip file of sequentially-numbered images (of any type).  The zipped folder must not 
+contain any hidden files in it.  The popular Windows app 7-Zip appears to insert hidden
+files that will cause MC to fail.  Uploading the folder to Google Drive and downloading
+it appears to make zipped files with no hidden files in them.
 
 Image types that support alpha channels (like PNGs) are supported.
 
