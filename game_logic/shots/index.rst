@@ -111,7 +111,7 @@ the prefix for multiballs is ``device.shots.<name>``.
    advances.
 
 *state_name*
-   String representation of the state of the shot. Might be ``lit``, ``unlit``
+   String representation of the state of the shot. Might be 'lit', 'unlit'
    or whatever is inside your shot_profile.
 
 
