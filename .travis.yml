@@ -8,7 +8,7 @@ matrix:
   fast_finish: true
   include:
    - os: linux
-     env: LINUX=ubuntu:16.04
+     env: LINUX=ubuntu:20.04
      sudo: required
 
 services:
