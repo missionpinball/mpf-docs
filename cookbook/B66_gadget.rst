@@ -220,9 +220,13 @@ Next, we can start setting up our gadget mode; below you see the contents of ``g
 
      priority: 500
    ##! config: modes/gadget/config/logic_blocks
+   #! # empty file
    ##! config: modes/gadget/config/event_player
+   #! # empty file
    ##! config: modes/gadget/config/show_player
+   #! # empty file
    ##! config: modes/gadget/config/variable_player
+   #! # empty file
 
 Stepping through how we're using each setting:
 
@@ -233,6 +237,7 @@ Stepping through how we're using each setting:
      - logic_blocks.yaml
 
    ##! config: modes/gadget/config/logic_blocks
+   #! # empty file
 
 The config section imports other config files; this is often easier to manage than on long config file.
 
