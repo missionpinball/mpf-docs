@@ -166,7 +166,7 @@ On the P-Roc
 If you see the following message on your console (not log; you might have to
 use the ``-t`` commandline flag to see them):
 
-.. code-block:: mpf-config
+.. code-block:: doscon
 
    Refusing to update driver #144; polarity differs on non-custom machine.
 
