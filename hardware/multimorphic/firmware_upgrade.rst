@@ -28,10 +28,20 @@ In this example the P3-Roc is running firmware ``2.6``.
 Upgrading the firmware of the P-Roc or P3-Roc
 ---------------------------------------------
 
-1. Go to the `Multimorphic Customer Support Site <https://www.multimorphic.com/support/projects/customer-support/wiki/Firmware>`_.
-2. If you do not yet have an account create one. Otherwise login.
-3. Download the firmware upgrade tool and the newest firmware for your controller.
-4. Perform the upgrade as described by Multimorphic
+.. warning::
+
+   DO NOT POWER DOWN THE P/P3-ROC OR YOUR PC DURING THIS PROCESS!
+
+1. Log on to your account on Multimorphic.com (or create one) and go to the
+   `Firmware page on the Multimorphic Wiki <https://www.multimorphic.com/support/projects/customer-support/wiki/Firmware>`_.
+2. Read the Multimorphic upgrade instructions (they know their boards better than we do)
+3. Download the firmware for your board (either P-Roc or P3-Roc)
+4. Get the Upgrade tool
+   * On Windows: Download the ``pinprocfw.exe`` from the Multimorphic site as well
+   * On Linux: Change to ``mpf-debian-installer/libpinproc/bin``
+   * On Mac: Change to ``libpinproc/bin`` (likely in ``~/proc/libpinproc/bin`` if you followed the installer)
+5. Run the upgrade tool: ``./pinprocfw path/to/the/firmware/file``
+
 
 What if it did not work?
 ------------------------
