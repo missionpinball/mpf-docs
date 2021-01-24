@@ -37,9 +37,11 @@ Upgrading the firmware of the P-Roc or P3-Roc
 2. Read the Multimorphic upgrade instructions (they know their boards better than we do)
 3. Download the firmware for your board (either P-Roc or P3-Roc)
 4. Get the Upgrade tool
+
    * On Windows: Download the ``pinprocfw.exe`` from the Multimorphic site as well
    * On Linux: Change to ``mpf-debian-installer/libpinproc/bin``
    * On Mac: Change to ``libpinproc/bin`` (likely in ``~/proc/libpinproc/bin`` if you followed the installer)
+
 5. Run the upgrade tool: ``./pinprocfw path/to/the/firmware/file``
 
 
