@@ -131,7 +131,6 @@ This is an example:
              g: segment2_g
          type: 7segment
 
-
 Here is another example for a monochrome serial 16-segment display using a WS2811 controller on OPP:
 
 .. code-block:: mpf-config
@@ -141,81 +140,81 @@ Here is another example for a monochrome serial 16-segment display using a WS281
 
    lights:
      l_neoseg_0_0_a:
-        start_channel: 0-0-60 #When using other RGB pixels in the chain before the display, 
+       start_channel: 0-0-60  #When using other RGB pixels in the chain before the display,
                               #             start_channel = 3 x start_pixel
                               #Using RGBW,  start_channel = 4 x start pixel
                               #Here, there are 20 RGB neopixels before the display
-        type: w
-        subtype: led
+       type: w
+       subtype: led
      l_neoseg_0_0_m:
-        previous: l_neoseg_0_0_a
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_a
+       type: w
+       subtype: led
      l_neoseg_0_0_k:
-        previous: l_neoseg_0_0_m
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_m
+       type: w
+       subtype: led
      l_neoseg_0_0_h:
-        previous: l_neoseg_0_0_k
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_k
+       type: w
+       subtype: led
      l_neoseg_0_0_u:
-        previous: l_neoseg_0_0_h
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_h
+       type: w
+       subtype: led
      l_neoseg_0_0_s:
-        previous: l_neoseg_0_0_u
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_u
+       type: w
+       subtype: led
      l_neoseg_0_0_t:
-        previous: l_neoseg_0_0_s
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_s
+       type: w
+       subtype: led
      l_neoseg_0_0_g:
-        previous: l_neoseg_0_0_t
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_t
+       type: w
+       subtype: led
      l_neoseg_0_0_f:
-        previous: l_neoseg_0_0_g
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_g
+       type: w
+       subtype: led
 
      l_neoseg_0_0_e:
-        previous: l_neoseg_0_0_f
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_f
+       type: w
+       subtype: led
      l_neoseg_0_0_dp:
-        previous: l_neoseg_0_0_e
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_e
+       type: w
+       subtype: led
      l_neoseg_0_0_d:
-        previous: l_neoseg_0_0_dp
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_dp
+       type: w
+       subtype: led
      l_neoseg_0_0_r:
-        previous: l_neoseg_0_0_d
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_d
+       type: w
+       subtype: led
      l_neoseg_0_0_p:
-        previous: l_neoseg_0_0_r
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_r
+       type: w
+       subtype: led
      l_neoseg_0_0_c:
-        previous: l_neoseg_0_0_p
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_p
+       type: w
+       subtype: led
      l_neoseg_0_0_n:
-        previous: l_neoseg_0_0_c
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_c
+       type: w
+       subtype: led
      l_neoseg_0_0_b:
-        previous: l_neoseg_0_0_n
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_n
+       type: w
+       subtype: led
      l_neoseg_0_0_na:
-        previous: l_neoseg_0_0_b
-        type: w
-        subtype: led
+       previous: l_neoseg_0_0_b
+       type: w
+       subtype: led
 
    segment_displays:
      display1:
