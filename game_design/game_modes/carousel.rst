@@ -290,7 +290,7 @@ When the Launch Button is pressed, the game starts the mode selected by the play
    #! post sw_right_flipper_inactive
    #! advance_time_and_run .1
    #! assert_text_on_top_slide "Doctor 2"
-   #! post sw_launch_inactive
+   #! post sw_launch_active
    #! advance_time_and_run .1
    #! assert_available_balls_on_playfield 1
 
