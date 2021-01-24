@@ -50,7 +50,7 @@ projected on top of the "lower" display.
      layout:
        background_color: blue
        widgets:
-         - type : display
+         - type: display
            width: 69
            height: 65
            x: 60

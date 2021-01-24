@@ -31,14 +31,14 @@ This is an example using priorities of the events, which will affect the priorit
          key: widget_1_1
          slide: slide_2
          widget_settings:
-            <list of settings below go here>
+            # <list of settings below go here>
      some_event.2:
        widget_1:
          key: widget_1_2
-         slide: slide_2    
+         slide: slide_2
          widget_settings:
-            <list of settings below go here>
-         
+            # <list of settings below go here>
+
 It will add widget_1 to slide_2 two different times.  In order to make this meaningful, you
 would want to add additional ``widget settings:``, such as position, rotation, color, opacity,
 etc.  This is important, otherwise it will add the widget with the same settings twice,
@@ -62,13 +62,13 @@ This is an example using unique conditional formatting for the same event:
          key: widget_1_1
          slide: slide_2
          widget_settings:
-            <list of settings below go here>
+            # <list of settings below go here>
      some_event{parameter_1 < 50}:
        widget_1:
          key: widget_1_2
-         slide: slide_2    
+         slide: slide_2
          widget_settings:
-            <list of settings below go here>
+            # <list of settings below go here>
 
 It will add widget_1 to slide_2 if the conditional criteria is met.  If the criteria is met for both
 of the events, they will both be played at the same time.  If they are both played at the same time,
@@ -92,8 +92,8 @@ when an event is posted.
          key: widget_1_1
          action: remove  #this could also be update
          widget_settings:
-            <list of settings below go here>
-            
+            # <list of settings below go here>
+
 The above block of code would listen for some_event to occur, and then remove the instance of widget_1
 with the key widget_1_1.  You can also use the ``action: update`` and a set of ``widget_settings:`` to update the
 widget with the new properties.
