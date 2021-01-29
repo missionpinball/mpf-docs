@@ -14,6 +14,11 @@ in config or shows. Example in config:
 
 .. code-block:: mpf-config
 
+   #! lights:
+   #!   led1:
+   #!     number:
+   #!   led2:
+   #!     number:
    light_player:
      some_event:
        led1:
@@ -30,9 +35,9 @@ In shows, the light player is used via the ``lights:`` section of a step.
 
 .. code-block:: mpf-config
 
-   lights:
-     l_light:
-       number:
+   #! lights:
+   #!   l_light:
+   #!     number:
    shows:
      red_color:
        - lights:
@@ -94,13 +99,13 @@ Setting lights via tags
 
 .. code-block:: mpf-config
 
-   lights:
-     l_drop1:
-       number:
-       tags: drops
-     l_drop2:
-       number:
-       tags: drops
+   #! lights:
+   #!   l_drop1:
+   #!     number:
+   #!     tags: drops
+   #!   l_drop2:
+   #!     number:
+   #!     tags: drops
    shows:
      rainbow:
        - lights:
@@ -143,7 +148,7 @@ Fade lights between steps
 
 There are two syntax to express fades.
 Short syntax which is ``(color)-f(time)(unit)`` (i.e. ``red-f200ms``) or
-extended syntax which is a dict with two entrie for ``color`` and ``fade``.
+extended syntax which is a dict with two entries for ``color`` and ``fade``.
 Here is an example for the short syntax:
 
 .. code-block:: mpf-config
