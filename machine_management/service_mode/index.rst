@@ -4,7 +4,8 @@ Service Mode
 **Service Mode** is an important part of a pinball machine that provides an interface that allows the user to perform a number of important operations to their machine.  MPF provides a comprehensive base set of service mode features, that can be extended if required.
 
 The structure of the built-in Service Mode is as follows:
-image:: MPF-ServiceMode-Structure.png  
+
+.. image:: /machine_management/service_mode/images/serice_mode_menu_map.png
 
 Utilities
 ---------
