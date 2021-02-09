@@ -88,16 +88,16 @@ time that it's on.
 Setting Recycle Times
 ---------------------
 
-FAST Pinball controllers allow you to precisely control the
+Penny K Pinball controllers allow you to precisely control the
 :doc:`recycle time </mechs/coils/recycle>` for coils or drivers.
 
 A coil's ``recycle:`` setting is a boolean (True/False), which is
-set to ``False`` by default. When using FAST Pinball hardware, if you set
+set to ``False`` by default. When using Penny K Pinball hardware, if you set
 ``recycle: true``, then the recycle time is automatically set to twice the
 coil's ``default_pulse_ms:`` setting. (e.g. a coil with a
 ``default_pulse_ms: 30`` and ``recycle: true`` will have a 60ms recycle time).
 
-However, with FAST Pinball hardware, you can manually set a coil's recycle
+With Penny K Pinball hardware, you can manually set a coil's recycle
 time by adding a ``recycle_ms:`` setting, like this:
 
 .. code-block:: mpf-config
