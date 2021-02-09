@@ -16,7 +16,6 @@ For additional information, please visit the `Penny K Pinball website <https://p
    Installing hardware drivers & configuring COM ports <config>
    Switches <switches>
    Coils/Drivers/Magnets/Motors <drivers>
-   Flippers, Slingshots, Pop Bumpers, and other "quick response" devices <hw_rules>
    LEDs <leds>
    Servos <servos>
    Power Filter Board <power_filter>
