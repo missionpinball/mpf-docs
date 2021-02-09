@@ -15,14 +15,14 @@ the guides and instructions in the :doc:`/mechs/coils/index` docs.
 
 .. include:: /hardware/voltages_and_power/common_ground_warning.rst
 
-However there are a few things to know and some additional options you get
+There are a few things to know about controlling drivers and coils
 with PKONE hardware that are discussed here.
 
 number:
 -------
 
 When you're using PKONE Extension boards, drivers plug into individual Extension boards.
-Then the Extension boards are connected together in a chain.
+Then the Extension boards are connected together in a chain to the controller.
 
 .. image:: /hardware/images/pkone-extension.png
 
@@ -35,7 +35,7 @@ PKONE chain, then the dash, then the driver output number.
      my_coil:
        number: 0-0    # Extension board with Address ID 0, driver 0
      some_other_coil:
-       number: 2-14    # Extension board with Address ID 2, driver 14
+       number: 2-10    # Extension board with Address ID 2, driver 10
 
 Notes:
 
@@ -49,7 +49,7 @@ In the :doc:`/mechs/coils/index` section of the documentation, we talked about
 Adjusting the coil's pulse times still assumes that 100% power will be applied
 to that coil during that pulse time.
 
-However, Penny K Pinball PKONE controllers allow you to specify the power that's applied
+Penny K Pinball PKONE controllers allow you to specify the power that's applied
 to the coil during the initial pulse time. This is similar to the
 :doc:`/mechs/coils/hold_power`, except it applies to the initial pulse time
 instead of the extended hold time.
@@ -111,21 +111,6 @@ time by adding a ``recycle_ms:`` setting, like this:
 
 If you manually specify a recycle_ms value, then that's the value that's used
 and the coil's ``recycle:`` (true/false) setting is ignored.
-
-Replacing FETs on FAST Driver Boards
-------------------------------------
-
-In case you burned one of your FETs on a FAST board those can be replaced.
-Usually, FETs will turn on permanently when burned.
-As a result your coils will be stuck on and your fuse should burn (if not your
-coil will).
-If you output does not activate at all a burned FET is rather unlikely the
-culprit.
-
-Consult the FAST support for an official repair.
-Alternatively, you can buy ``IRL540NSTRLPBF`` FETs from your electronics
-supplier and replace them yourself.
-Replacing SMD FETs is possible with a decent soldering iron and some practise.
 
 What if it did not work?
 ------------------------

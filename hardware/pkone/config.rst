@@ -19,15 +19,11 @@ PKONE Pinball controllers use a USB chip from STM. On most operating systems the
 driver is built-in (Windows 10, Linux, MacOS), so there is no need to download and
 install the STM driver.
 
-Once this is done, when you plug in and power on your FAST controller, you
+Once this is done, when you plug in and power on your PKONE controller, you
 should see some kind of notification that new hardware has been detected. What
-exactly you see will depend on which FAST controller you’re using and what OS
-you have. For example, here’s what happens when you plug a FAST WPC controller
-into Windows 10 for the first time (after you’ve installed the FTDI driver):
+exactly you see will depend on what OS you have.
 
-(This is just a progress bar which shows Windows configuring the drivers. You
-don’t have to click anything to get it started, and it should only take 5-10
-seconds. It will only happen the first time you plug in the hardware.)
+TODO: Finish this section
 
 2. Configure your hardware platform for PKONE
 ---------------------------------------------
@@ -41,8 +37,8 @@ as ``pkone`` in your machine-wide config file, like this:
       platform: pkone
 
 
-3. Find the PKONE COM ports
----------------------------
+3. Find the PKONE COM port
+--------------------------
 
 Even though the PKONE controllers are USB devices, they use "virtual" COM ports
 to communicate with the host computer running MPF. On your computer, if you
@@ -97,30 +93,13 @@ On linux it would look like this:
 
    /dev/ttyASM0
 
-If you have multiple PKONE controllers they will enumerate more or less randomly
-dependent on the order they are plugged in. Unfortunately, the USB devices
-do not contain any serial number. However, we can pin them based on the USB
-port they are plugged into. On linux this can be achieved using a UDEV rules
-such as this:
-
 ::
-
-   SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", ENV{ID_PATH_TAG}=="pci-0000_00_14_0-usb-0_12_1_0", SYMLINK+="ttyDMD1"
-
-The device will then be available as /dev/ttyDMD1. You can run the following
-command while plugging in the device to get the relevand ID_PATH_TAG (and
-also idVendor and idProduct in case they changed with other revisions):
-
-::
-
-   udevadm monitor --property
-
 
 4. Add the port to your config file
 -----------------------------------
 
 Next you need to add the port to your machine config file. To do this,
-create a new section called ``pkone:``, and then add a ``ports:`` setting under
+create a new section called ``pkone:``, and then add a ``port:`` setting under
 it.
 
 Then if you have a PKONE Nano controller, enter the name of the port.
@@ -130,14 +109,14 @@ So an example for Windows might look like this:
 ::
 
     pkone:
-        ports: com3
+        port: com3
 
 And an example for Mac or Linux might look like this:
 
 ::
 
    pkone:
-      ports: /dev/cu.usbmodem
+      port: /dev/cu.usbmodem
 
 Note that if you're using a version of Windows before Windows 10 and you have
 COM port numbers greater than 9, you will have to enter the port names like

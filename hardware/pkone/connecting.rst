@@ -20,4 +20,4 @@ Termination Jumper set to properly terminate the bus.
 The ``number:`` setting for each driver/switch is its board's Address ID number in the
 chain, then the dash, then the driver/switch number. Note that the addresses are numbered
 starting with zero (Extension boards have addresses 0 to 7 while Lightshow boards have addresses
-0 to 3).
+0 to 3). You cannot have two boards with the same Address ID.
