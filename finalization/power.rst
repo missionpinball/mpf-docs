@@ -77,7 +77,7 @@ Create a mode called ``shutdown_computer`` and create a ``/code`` subfolder and 
 
 Create a ``shutdown_computer.py`` file in the ``/code`` folder with the following code:
 
-.. code-block:: mpf-config
+.. code-block:: python
 
     from mpf.core.mode import Mode
     import os
@@ -108,6 +108,7 @@ Create a ``shutdown_computer.yaml`` file in the ``/config`` folder with the foll
 
 .. code-block:: mpf-config
 
+  ## mode: shutdown_computer
   #config_version=5
   mode:
     start_events: mode_base_started
