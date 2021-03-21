@@ -63,3 +63,71 @@ it gets corrupted (sometimes automatic in case it can no longer be mounted).
 
 We are happy to discuss those topics in our forum (and extend this section as
 a result of that).
+
+Using MPF to Shutdown a Computer
+--------------------------------
+
+While the above two methods are the best ways to power your computer on or off,
+there may be times when you want to use MPF to shutdown your computer. 
+
+For example, if you're developing a DMD-based game and don't have a computer
+monitor attached, you can use MPF to safely shutdown your computer.
+
+Create a mode called ``shutdown_computer`` and create a ``/code`` subfolder and a ``/config`` subfolder.
+
+Create a ``shutdown_computer.py`` file in the ``/code`` folder with the following code:
+
+.. code-block:: python
+
+    from mpf.core.mode import Mode
+    import os
+    import platform
+    class shutdown_computer(Mode):
+        def mode_init(self):
+            self.log.info('shutdown_computer mode_init')
+            self.OS_type = platform.system().lower()
+        def mode_start(self, **kwargs):
+            self.log.info('shutdown_computer mode_start')
+            self.add_mode_event_handler('shutdown_host_computer', self.shutdown_host)
+        def shutdown_host(self, **kwargs):
+            #shutdown the mpf game if it's running
+            #shutdown the computer
+            if self.OS_type == 'linux':
+                shutdown_str = 'shutdown -t 0'
+            elif self.OS_type == 'windows':
+                shutdown_str == 'shutdown -s -t 0'
+            else:
+                self.log.warning(f'Sorry this feature is not available in {self.os_type}')
+                return
+            os.system(shutdown_str)
+        def mode_stop(self, **kwargs):
+            self.machine.events.post('shutdown_computer mode_ended')
+            self.log.info('shutdown_computer mode_stop')
+            
+Create a ``shutdown_computer.yaml`` file in the ``/config`` folder with the following code:
+
+.. code-block:: mpf-config
+
+  ## mode: shutdown_computer
+  #config_version=5
+  mode:
+    start_events: mode_base_started
+    stop_events: shutdown_mode_cancel
+    priority: 400
+    code: shutdown_computer.shutdown_computer
+
+  combo_switches:
+    shutdown_hold:
+      switches_1: s_left_flipper
+      switches_2: s_start
+      hold_time: 5s
+      events_when_both: shutdown_host_computer
+      
+Enable the mode in your machine config file.
+
+The above config is an example on how you could shutdown the computer. This example
+requires you to hold down the left flipper and start button together for five seconds,
+then the computer will shutdown.
+
+You can change this and use the shutdown_host_computer event to shutdown your computer
+as you like.
