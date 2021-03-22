@@ -112,6 +112,19 @@ Add operator settings to service mode
 The tilt modes contains default slides but you can
 :doc:`change them <overwrite_tilt_slides>`.
 
+Monitorable Properties
+----------------------
+
+For :doc:`dynamic values </config/instructions/dynamic_values>` and
+:doc:`conditional events </events/overview/conditional>`,
+the prefix for ball devices is ``mode.tilt.<name>``.
+
+*tilt_settle_ms_remaining*
+   Milliseconds until the tilt bob is considered settled.
+
+*tilt_warnings_remaining*
+   Remaining warnings until the game is tilted.
+
 +------------------------------------------------------------------------------+
 | Related How To guides                                                        |
 +==============================================================================+
