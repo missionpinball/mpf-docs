@@ -3,42 +3,8 @@ Installing MPF on Linux
 
 As part of our automated build process, we build and test MPF and MPF-MC
 against Ubuntu 16.04 & 18.04 & 20.04 and Debian Stretch & Buster.
-
-Python 3.8 and Ubuntu 20.04
----------------------------
-
-Up to MPF 0.54, we use Kivy 1.11 which does not work on Python 3.8+.
-Unfortunately, Ubuntu 20.04 (and similar distributions) ship Python 3.8 or
-newer.
-We hope to resolve this issue in the future when Kivy releases a newer version.
-
-For now you have to install Python 3.7 on Ubuntu 20.04:
-
-.. code-block:: console
-
-   sudo apt-get install software-properties-common
-   sudo add-apt-repository ppa:deadsnakes/ppa
-   sudo apt update
-   sudo apt install python3.7-venv python3.7 python3.7-dev
-
-Create a venv for your python3.7 environment:
-
-.. code-block:: console
-
-  python3.7 -m venv ~/mpfenv
-
-Everytime you want to use MPF active your venv:
-
-.. code-block:: console
-
-  . ~/mpfenv/bin/activate
-
-.. warning::
-
-  If you use a virtual environment you have to always activate it before
-  starting MPF.
-  Otherwise, you will encounter weird issues.
-
+MPF 0.54 supports Python 3.5 to 3.7.
+MPF 0.55 supports Python 3.6 to 3.9.
 
 Installing MPF Using Our Installer
 ----------------------------------
