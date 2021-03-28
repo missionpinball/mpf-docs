@@ -27,8 +27,8 @@ To work on MPF you need to install it in developer/editable mode:
 #. Fork the `mpf-mc repo <https://github.com/missionpinball/mpf-mc/>`_ on GitHub
    (only needed for media controller changes - skip otherwise).  Do this by clicking on the Fork button in the top right corner.
 #. Clone your fork of the mpf repo to your local machine.  Determine the folder where you want this to reside.  Consider using a different
-    folder than where your personal MPF code resides. Then run the following command:
-    (``git clone https://github.com/YOUR_GITHUB_HANDLE/mpf/``)
+   folder than where your personal MPF code resides. Then run the following command:
+   (``git clone https://github.com/YOUR_GITHUB_HANDLE/mpf/``)
 #. Install MPF dependencies if you did not install mpf before. On linux you can
    run our installer `https://raw.githubusercontent.com/missionpinball/mpf-debian-installer/dev/install-mpf-dependencies`.
    On other platforms check the :doc:`installation instructions </install/index>` instructions.
