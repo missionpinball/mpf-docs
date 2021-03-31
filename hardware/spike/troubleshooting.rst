@@ -67,7 +67,7 @@ To safely unmount your drive stop MPF, open the console again and type:
 
 .. code-block:: console
 
-   unmount /mnt
+   umount /mnt
    sync
 
 You can now safely remove the USB drive and download the file on your PC.
