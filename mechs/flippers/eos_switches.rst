@@ -209,7 +209,7 @@ This is how you can enable it in MPF:
        repulse_on_eos_open: true
        eos_active_ms_before_repulse: 500
 
-To prevent repeated activations MPF will wait `eos_active_ms_before_repulse` ms
+To prevent repeated activations MPF will wait ``eos_active_ms_before_repulse`` ms
 before a repulse can happen.
 There are certain races between hardware rules and this mechanism which MPF
 tries to handle (but we might have missed cases - let us know if you find any
