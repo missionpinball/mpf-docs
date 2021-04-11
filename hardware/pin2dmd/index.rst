@@ -94,7 +94,7 @@ To do this, create a section in your machine-wide config called
 
     rgb_dmds:
       default:  # your DMD
-        brightness: .8      # adjust the brightness of your display if it is too bright
+        hardware_brightness: .5      # adjust the brightness of your display if it is too bright
         fps: 30
 
 There are several settings you can enter here. (See the :doc:`/config/rgb_dmds`
@@ -104,8 +104,8 @@ be only one PIN2DMD connected.
 
 You'll probably also want to configure the brightness, which is a multiplier
 from 0.0 to 1.0 that's applied to every pixel that's sent to the DMD.
-In other words, the example of ``brightness: .2`` means that each pixel will
-be shown at 20% brightness. (These things are crazy bright!)
+In other words, the example of ``hardware_brightness: .2`` means that each
+pixel will be shown at 20% brightness. (These things are crazy bright!)
 
 4. Set a source display
 -----------------------
@@ -176,7 +176,7 @@ on the window and slide settings used in this machine config.
      title: Mission Pinball Framework
    rgb_dmds:
      default:
-       brightness: .2
+       hardware_brightness: .2
        fps: 30
    slides:
      window_slide_1:    # slide we'll show in the on-screen window
