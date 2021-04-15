@@ -16,6 +16,7 @@ But also these:
 * Points
 * Quad
 * Rectangle
+* Segment Display Emulator
 * Text Input
 * Triangle
 * Common Settings (all widgets)
@@ -34,6 +35,7 @@ But also these:
    Points <points/index>
    Quad <quad/index>
    Rectangle <rectangle/index>
+   Segment Display Emulator <segment_display_emulator/index>
    Text Input <text_input/index>
    Triangle <triangle/index>
    Camera <camera/index>
