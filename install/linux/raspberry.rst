@@ -8,35 +8,26 @@ Installing MPF on a Raspberry Pi 3
    guide. We welcome your feedback or experience with other low-cost systems, though at this point if you're looking for
    a development platform, we'd probably recommend buying a more beefy x86 computer. For a "final" machine an
    inexpensive (<$200) Intel-based system running Linux or Windows might be better suited. However, it should be
-   possible to run your final game on a RPi3 if you tune your game accordingly. For example, this would include
-   transcoding your videos to a format which can be played hardware accelerated on the RPi.
+   possible to run your final game on a RPi3+ if you tune your game accordingly.
+   For example, this would include transcoding your videos to a format which can be played hardware accelerated on the RPi.
 
 
 One first word:
 Don't try to install mpf on a Raspberry Pi B+ or Raspberry zero, it just won't work or will be very slow.
 Get yourself at a Raspberry Pi 3, they have a quad-core processor running with more than 900MHz. RPi3 also has better
 audio than RPi 1 (still not perfect). An HDMI audio adapter may be worthy for better audio.
+If you want to try this get at least a RPi4 with 2GB of RAM.
 
-One nice thing we will have afterwards is a low-cost PC which will run fast enough for mpf-mc with audio, video,
-antialiazing and touchscreen support.
+We previously recommended KivyPI but it only works for MPF < 0.54 and only the RPi3.
+Instead, we propose you install Raspbian and install all other parts yourself:
 
-Let's start:
+- Get the latest Raspberry Pi Imager from here: https://www.raspberrypi.org/software/
 
-- get the latest Kivypie version (a minimal version without X-Server but preinstalled kivy) here:
-  http://kivypie.mitako.eu/kivy-download.html
-  Many Kudos to Albert Casals and their group, since normally its a pain to install kivy on a raspberry (compiling lasts
-  forever).
+- Install Raspbian Lite onto your SD card.
 
-- Unzip the image (do not copy .zip file to your SD card).
+- Boot your PI and connect keyboard + monitor
 
-- depending on your development os use Win32 Diskimager, dd, Imagewriter... to write your image to the sd-card (use at
-  least an 8 GB Card). You can find Instructions here:
-  https://www.raspberrypi.org/documentation/installation/installing-images/
-
-- insert the sd-card into your pi and boot it up (first boot does take some time since it sets some os specific
-  parameters)
-
-- login with user:sysop password:posys. You can do this either via network or a serial port.
+- Login with user:pi password:raspberry
 
 - now type this:
 
@@ -56,19 +47,16 @@ Now reboot, login and type:
 
 .. code-block:: shell
 
-    sudo apt-get update
+   sudo apt update
+   sudo apt upgrade
+   sudo apt install git
 
-to update the debian repositories links.
+   git clone https://github.com/missionpinball/mpf-debian-installer.git
+   cd mpf-debian-install
+   sudo ./install
 
-The standard /tmp "folder" is too small on pipaos, just type:
-
-.. code-block:: shell
-
-    sudo umount /tmp
-
-to get rid of it. (It will be created automatically if needed and will have the whole space afterwards)
-
-Now run the :doc:`MPF Linux Debian installer </install/linux/index>`. It will install MPF, MPF-MC and all dependencies for
+To checkout and run the :doc:`MPF Linux Debian installer </install/linux/index>`.
+It will install MPF, MPF-MC and all dependencies for
 you.
 
 This will take some time as it may compile some drivers mpf-mc needs like the audio driver.
@@ -76,7 +64,7 @@ Sometimes it looks like it hangs, but it does not. It will take up to half an ho
 you should not use). Compiling is really slow on the Raspi.
 
 Now copy your machine folder from your develop station or create a new one under your home directory
-(/home/sysop/your_machine)
+(/home/pi/your_machine)
 
 If you need a file-manager start mc (No, not the mpf mediacontroller, its the midnight commander ;-))
 

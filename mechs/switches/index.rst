@@ -16,10 +16,15 @@ MPF's *switch* device represents a switch in a pinball machine. This device is
 used for switches, including cabinet buttons, rollovers, targets, optos, trough
 switches, DIP switches, etc.
 
-There are two general switch types in pinball machines (read those for details):
+There are two switch types most commonly seen in pinball machines (read those for details):
 
 * :doc:`Mechanical switches <mechanical_switches>`
 * :doc:`Optical switches <optos>`
+
+And an additional two types used in a handful of machines (read those for details):
+
+* :doc:`Proximity switches <proximity_switches>`
+* :doc:`Reed switches <reed_switches>`
 
 Typical switch applications in pinball machines are:
 
@@ -115,3 +120,5 @@ Related Events
    rollover_switches
    start_tournament_and_launcher_buttons
    breakout_boards
+   proximity_switches
+   reed_switches

@@ -1,5 +1,5 @@
-RE-P-Roc-1 - Known Firmware Bug in P3-Roc
-=========================================
+RE-P-Roc-1 - Known Firmware Bug in P/P3-Roc
+===========================================
 
 +------------------------------------------------------------------------------+
 | Related Config File Sections                                                 |
@@ -14,6 +14,9 @@ This can be solved by either removing ``pulse_power`` from the coil in question
 or by upgrading the firmware.
 Firmware can be obtained from the Multimorphic Member Area.
 
+See :doc:`/hardware/multimorphic/firmware_upgrade` for details about the
+upgrade process.
+
 
 .. include:: config_error_footer.rst
 
@@ -22,4 +25,4 @@ Related How To guides
 
 * :doc:`/hardware/multimorphic/index`
 * :doc:`/hardware/multimorphic/troubleshooting`
-
+* :doc:`/hardware/multimorphic/firmware_upgrade`

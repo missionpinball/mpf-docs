@@ -159,6 +159,16 @@ So if you also want the default value(s) to apply, add them too.)
 
 Enables this flipper.
 
+eos_active_ms_before_repulse:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500``
+
+If you specify ``repulse_on_eos_open`` MPF will wait this many milliseconds
+until issuing an EOS repulse.
+The rational for this is that we do not want to stress the main coil too much.
+For instance if the hold coil break we do not want to continuously pulse the
+coil.
+
 eos_switch:
 ~~~~~~~~~~~
 Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.

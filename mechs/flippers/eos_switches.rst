@@ -26,9 +26,13 @@ stroke? There are a few reasons:
 + You can allow operators to change flipper strength via a service
   menu item, compensating for mismatched coils, coil age, machine slope,
   etc.
+  However, this could also be implemented using PWMed pulses with full stroke
+  and EOS cut-off.
 + Your software can change the strength as part of a game feature.
   (For example, Wizard of Oz has a "weak flippers" mode which makes the
   shots harder.)
+  This can also be implemented with EOS by reducing the pulse time below the
+  EOS (tpyical) cut-off time.
 
 Having said this, there's still a reason you might want to use the EOS
 switches today—-the EOS switch can be used to detect if a fast-moving
@@ -135,21 +139,83 @@ full power until that EOS switch is activated, fine, go for it.
 Design Decision 3: Will you use EOS switches to notify the game that a ball has "broken through" the hold?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, you have to decide whether you're going to use EOS switches
-to notify the machine when a flipper has lost its hold while the
-flipper button is still engaged. (And if so, what you're going to do
-about it.) We believe the chances of a ball breaking the hold are
-generally slim, and if it's something that happens often that
-indicates that your hold power is not strong enough. (Assuming you're
-holding the flipper with the pulse modulation to the power winding
-rather than using a dual-wound coil.) We also believe that if a ball
-breaks a flipper hold, automatically reapplying full power to restore
-the hold can be confusing to the player. That said, all machines are
-different, and tastes are different, so you should go with whatever
-you want. The nice thing about not using EOS switches is again, you
-can free up those switch inputs for other things if you're running
-low. But even if you don't use them to automatically correct for a
-broken holds, we like the idea of still connecting the EOS switches
-and using them for audit logging purposes. (e.g. using them to record
-any instances of a flipper hold being broken by a fast moving ball, a
-broken hold winding, or a broken flipper.)
+Modern machines use
+`pulse-width modulation (PWM) <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_
+to keep flipper bats up because most coils will
+instantly burst into flames if you enable them at 48V which are typically used
+in today's machines.
+PWM uses a so called duty-cycle which determines how much energy moves into
+the flippers.
+More energy strictly results in more power but that energy also turns into
+heat.
+Unfortunately, the resistance in copper wires in the coil increases with the
+temperature and, consequently, the less current and energy will flow through
+the coil.
+As a result the coil will become weaker of time when it heats up.
+Since we do not know the temperature in software this cannot easily be
+compensated as runtime (and the coil would probably become even hotter and burn
+if we would try).
+
+Finding the right spot where the coil is strong enough, knockdowns do not
+happen and the temperature stays low enough is not generally easy.
+Parts age over time, environment temperature differs between location and
+even the voltage might fluctuate.
+We have seen overheating of coils in some machines by newer manufacturers.
+
+So what can we do about this?
+We can detect when the EOS switch opens while the flipper button is active
+and repulse the flipper coil.
+Ideally, this should happen inside the pinball hardware but this is not
+supported by all hardware platform in MPF.
+For all remaining platforms, we mitigate this in software in MPF.
+This introduces a few milliseconds of delay but it should be fast enough that
+the player does not notice it.
+
+This is how you can enable it in MPF:
+
+.. code-block:: mpf-config
+
+   #! switches:
+   #!   s_flipper_single:
+   #!     number: 1
+   #!   s_flipper_single_eos:
+   #!     number: 2
+   #!   s_flipper_dual_wound:
+   #!     number: 3
+   #!   s_flipper_dual_wound_eos:
+   #!     number: 4
+   #! coils:
+   #!   c_flipper_single_main:
+   #!     number: 0
+   #!   c_flipper_dual_wound_main:
+   #!     number: 2
+   #!   c_flipper_dual_wound_hold:
+   #!     number: 3
+   #!     allow_enable: true
+   flippers:
+     single_wound_flipper:
+       main_coil: c_flipper_single_main
+       activation_switch: s_flipper_single
+       eos_switch: s_flipper_single_eos
+       use_eos: true
+       repulse_on_eos_open: true
+       eos_active_ms_before_repulse: 500
+     dual_wound_flipper:
+       main_coil: c_flipper_dual_wound_main
+       hold_coil: c_flipper_dual_wound_hold
+       activation_switch: s_flipper_dual_wound
+       eos_switch: s_flipper_dual_wound_eos
+       use_eos: true
+       repulse_on_eos_open: true
+       eos_active_ms_before_repulse: 500
+
+To prevent repeated activations MPF will wait ``eos_active_ms_before_repulse`` ms
+before a repulse can happen.
+There are certain races between hardware rules and this mechanism which MPF
+tries to handle (but we might have missed cases - let us know if you find any
+rough edges or weird behaviour with this).
+
+In general, this should allow you to reduce PWM power by a lot and instead
+use repulses in the rare case of knockdowns.
+This should work with all platforms and will use hardware rules if your
+platform supports them.

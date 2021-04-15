@@ -120,6 +120,13 @@ For this library to work you need to start MPF as root like this:
 This is needed for the matrix to access the hardware and it will drop
 privileges after it started.
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Related How To guides                                                                                                                               |
++=====================================================================================================================================================+
+| `Installing Fantastic with RPI DMD <https://github.com/yetifrisstlama/Fan-Tas-Tic-machine#installing-everything-on-the-raspberry-pi-from-scratch>`_ |
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 What if it did not work?
 ------------------------
 
