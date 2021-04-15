@@ -229,5 +229,8 @@ individual character. For more information on segment display character mappings
 This parameter is a dictionary with integer keys and values (key is the ascii character ordinal number, value is the segment bit mapping
 as an integer).
 
+.. toctree::
+   :hidden:
+   :titlesonly:
 
-
+   how_to
