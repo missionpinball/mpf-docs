@@ -192,20 +192,28 @@ created a single widget so we will only need one entry).
    segment_displays:
      display1:
        number: 1
-       platform: virtual
-       platform_settings:
-         post_update_events: true
 
 A couple of things to note in the above configuration. ``display1`` is the name we are
 assigning to the segment display. The ``number`` parameter value must match the one we
 assigned to the segment_display_emulator widget when it was created on the slide
 previously (we used a value of ``1``, although any value will work). Be sure these
 values match or the communications between MPF and MPF-MC will not update the segment
-display widget properly. The ``platform`` setting must be ``virtual``. Also, it is
-important to add the ``platform_settings`` setting as shown above or else the virtual
-hardware platform will not send update events to the MPF-MC.
+display widget properly.
 
 Repeat this process for each segment display emulator widget you configure.
+
+Now we need to let MPF know to send changes to the segment displays to the virtual
+segment display emulator in MPF-MC. This is accomplished using the
+:doc:`/config/virtual_segment_display_connector` plugin.
+
+.. code-block:: mpf-config
+
+   virtual_segment_display_connector:
+       segment_displays: display1
+
+The ``segment_displays`` parameter contains a list of all the segment display names
+you want to use in the connector to communicate with the segment display emulator
+widgets in MPF-MC.
 
 6. Update your virtual segment display using the segment_display_player
 -----------------------------------------------------------------------

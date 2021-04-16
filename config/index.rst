@@ -190,6 +190,7 @@ indicated which type of config file it's valid in.
    video_pools: <video_pools>
    videos: <videos>
    virtual_platform_start_active_switches: <virtual_platform_start_active_switches>
+   virtual_segment_display_connector: <virtual_segment_display_connector>
    widget_player: <widget_player>
    widget_styles: <widget_styles>
    widgets: <widgets>
