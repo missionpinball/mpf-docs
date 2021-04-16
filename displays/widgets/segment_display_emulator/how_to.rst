@@ -45,14 +45,6 @@ Framework".
    #! post show_slide_event
    #! advance_time_and_run .1
 
-Check out :doc:`Step 2. of the LCD guide <lcd>` for more details on this
-window section, and be sure to check out all the window options in the
-:doc:`/config/window` section of the config file reference.
-
-Notice that in this case, we did not add the ``source_display: window``
-setting to this section. That's because we have a logical display called
-"window", and when you have that, the on-screen window will automatically use
-that display as its source.
 
 3. Configure a window slide to show the on screen segment display
 -----------------------------------------------------------------
