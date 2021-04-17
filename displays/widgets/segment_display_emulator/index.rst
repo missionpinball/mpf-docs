@@ -12,7 +12,7 @@ Here's an example:
      mc_ready:
        display_slide:
          - type: segment_display_emulator
-           number: 1
+           name: display1
            character_count: 7
            character_slant_angle: 0
            character_spacing: 20
@@ -38,7 +38,7 @@ Settings
 .. code-block:: yaml
 
    type: segment_display_emulator
-   number:
+   name:
    text:
    flash_mode:
    flash_frequency:
@@ -79,11 +79,12 @@ type: segment_display_emulator
 
 Tells MPF that this is a segment display emulator widget.
 
-number:
-~~~~~~~
+name:
+~~~~~
 
-The segment display number. This value is used to uniquely identify the segment display emulator widget
-when updating it using the :doc:`/config_players/segment_display_player` in MPF. This value is required
+The segment display name. This value is used to uniquely identify the segment display emulator widget
+when updating it using the :doc:`/config_players/segment_display_player` in MPF. The value here must match
+the name assigned in the :doc:`/config/segment_displays` device section of your config. This value is only required
 if you wish to control the segment display emulator widget with the :doc:`/config_players/segment_display_player`.
 
 width:

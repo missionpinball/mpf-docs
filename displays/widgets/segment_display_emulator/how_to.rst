@@ -86,7 +86,7 @@ which is a widget which renders a emulation of a segment display:
    slides:
      window_slide_1:
      - type: segment_display_emulator
-       number: 1
+       name: display1
        character_count: 7
        character_slant_angle: 0
        character_spacing: 20
@@ -112,7 +112,9 @@ which is a widget which renders a emulation of a segment display:
    #! assert_slide_on_top window_slide_1 window
 
 As you can see there are a lot of configuration options to modify the rendering of the segment display
-segments/characters. This leads to a lot of very different looks for the resulting characters.
+segments/characters. This leads to a lot of very different looks for the resulting characters. One important
+item to note is the name parameter of the segment display emulator must match the name of the hardware
+segment display in MPF that we wish to connect to.
 
 4. Configure the slide to show when MPF starts
 ----------------------------------------------
@@ -130,7 +132,7 @@ So that's what we're doing here:
    #! slides:
    #!  window_slide_1:
    #!  - type: segment_display_emulator
-   #!    number: 1
+   #!    name: display1
    #!    character_count: 7
    #!    character_slant_angle: 0
    #!    character_spacing: 20
@@ -186,11 +188,11 @@ created a single widget so we will only need one entry).
        number: 1
 
 A couple of things to note in the above configuration. ``display1`` is the name we are
-assigning to the segment display. The ``number`` parameter value must match the one we
-assigned to the segment_display_emulator widget when it was created on the slide
-previously (we used a value of ``1``, although any value will work). Be sure these
-values match or the communications between MPF and MPF-MC will not update the segment
-display widget properly.
+assigning to the segment display. This parameter value must match the one we assigned
+to the``name`` parameter of the segment_display_emulator widget when it was created on
+the slide previously (we used a value of ``display1``). Be sure these values match or
+the communications between MPF and MPF-MC will not update the segment display widget
+properly.
 
 Repeat this process for each segment display emulator widget you configure.
 
