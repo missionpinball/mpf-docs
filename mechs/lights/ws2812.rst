@@ -7,6 +7,8 @@ The WS2811 controller uses RGB and WS2812 uses GRB order.
 Unfortunately, some controller (i.e. Fadecandy) expect WS2812 by default
 and shuffle pixels internally for you.
 
+Overview video about serial LEDs: https://youtu.be/Q9BG9T7Kj4A
+
 Config
 ------
 
