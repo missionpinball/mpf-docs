@@ -33,12 +33,13 @@ Single value, type: one of the following options: add, remove, flash, no_flash. 
 * ``remove`` - Add a text to the segment_display by key.
 * ``flash`` - Flash this segment display.
 * ``no_flash`` - Stop flashing this segment display.
+* ``set_color`` - Set the color of the characters in the segment display (for platforms that support it).
 
 expire:
 ~~~~~~~
 Single value, type: ms_or_token. Defaults to empty.
 
-Only used with ``action`` ``add``. Text will be removed after ``exire`` ms.
+Only used with ``action`` ``add``. Text will be removed after ``expire`` ms.
 
 key:
 ~~~~
@@ -59,6 +60,21 @@ text:
 Single value, type: ``string``. Defaults to empty.
 
 Text to show. You can use :doc:`/config/instructions/text_templates`.
+
+color:
+~~~~~~
+List of one (or more) color values, type: ``color``. Defaults to empty.
+
+The color for each character in the display (if the platform supports it). If a single color is supplied,
+all characters in the display will be set to that color. See :doc:`/config/instructions/colors` for more
+information on specifying colors in config files.
+
+platform_options:
+~~~~~~~~~~~~~~~~~
+Single value, type: dict. Defaults to empty.
+
+A dictionary of platform-specific options/settings when updating segment displays using the segment display
+player.
 
 
 Related How To guides

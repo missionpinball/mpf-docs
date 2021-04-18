@@ -19,3 +19,4 @@ mechs in MPF which works nicely with the smart virtual platform.
    virtual
    virtual_pinball_vpx
    keyboard
+   segment_display_emulator
