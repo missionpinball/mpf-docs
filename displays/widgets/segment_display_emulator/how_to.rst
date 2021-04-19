@@ -85,22 +85,23 @@ which is a widget which renders a emulation of a segment display:
    #!     height: 200
    slides:
      window_slide_1:
-     - type: segment_display_emulator
-       name: display1
-       character_count: 7
-       character_slant_angle: 0
-       character_spacing: 20
-       segment_width: 0.11
-       segment_interval: 0.04
-       segment_off_color: 4b4c4a30
-       segment_on_color: fe961bff
-       side_bevel_enabled: true
-       dot_enabled: true
-       comma_enabled: true
-       text: HELLO
-       width: 600
-       height: 150
-       y: 100
+       widgets:
+         - type: segment_display_emulator
+           name: display1
+           character_count: 7
+           character_slant_angle: 0
+           character_spacing: 20
+           segment_width: 0.11
+           segment_interval: 0.04
+           segment_off_color: 4b4c4a30
+           segment_on_color: fe961bff
+           side_bevel_enabled: true
+           dot_enabled: true
+           comma_enabled: true
+           text: HELLO
+           width: 600
+           height: 150
+           y: 100
 
    #! slide_player:
    #!   show_slide_event:
