@@ -170,7 +170,7 @@ to provide additional functionality.
    * *New in MPF 0.52*
    * Stepper controller connected to USB
 
-* :doc:`Open Sound Control (OSC> <osc/index>`
+* :doc:`Open Sound Control (OSC) <osc/index>`
    * Control lights via OSC (i.e. your DMX controller)
    * Receive incoming switch changes (i.e. from your MIDI keyboard)
    * Receive incoming events (i.e. from your MIDI keyboard)
