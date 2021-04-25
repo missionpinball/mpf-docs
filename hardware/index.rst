@@ -226,8 +226,8 @@ MPF supports:
    roadmap
    troubleshooting_hardware
 
-Browse Platforms by Capabilites
--------------------------------
+Browse Platforms by Capabilities
+--------------------------------
 
 .. toctree::
    :titlesonly:
@@ -237,3 +237,10 @@ Browse Platforms by Capabilites
    stepper_platforms
    segment_display_platforms
    dmd_platforms
+
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+
+   segment_display_transitions
