@@ -181,8 +181,10 @@ The color of a segment that is off, in rgba format. The default value is ``4b4c4
 segment_on_color:
 ~~~~~~~~~~~~~~~~~
 
-The color of a segment that is on (active), in rgba format. The default value is ``dd8217ff`` (orange). This
-parameter can be animated and also controlled using the :doc:`/config_players/segment_display_player`.
+The color of a segment that is on (active) for each character in the display in rgba format. If a single color
+is supplied, all characters in the display will be set to that color. This parameter can be animated and also
+controlled using the :doc:`/config_players/segment_display_player`.See :doc:`/config/instructions/colors` for
+more information on specifying colors in config files.
 
 segment_width:
 ~~~~~~~~~~~~~~
