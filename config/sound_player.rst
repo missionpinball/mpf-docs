@@ -28,6 +28,9 @@ This is an example:
       mode_attract_stopped:
         song_01:
           action: stop
+      slingshot_hit:
+        zap:
+          block: true  # "blocks" this event from being passed to sound player sections in lower-priority modes
 
 Additional information may be found in the
 :doc:`sound_player </config_players/sound_player>` documentation.
@@ -89,6 +92,31 @@ The ``action:`` setting controls what action will be performed on the specified 
 + ``unload`` - Unloads the specified sound or sound pool from memory.  All instances of the sound
   or sound pool will be immediately stopped. The request is ignored if the sound is not currently
   loaded.
+
+block:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+When set to ``true``, the triggering event is blocked from being passed to other sound_player sections in lower
+priority modes. This is useful if you have a switch in a base mode that plays a sound (like a jet bumper), but then in
+a special mode (like super jets) you want that switch to play a different sound but you don't also want the base mode to
+play the sound configured there (we don't want two simultaneous sounds for the jet bumper, just one).
+
+.. code-block:: mpf-config
+
+   ##! mode: mode1
+   sound_player:
+     sw_jet_bumper_active:
+       super_jet_bumper_sound:
+         block: true
+
+There is also a shorthand way (express config format):
+
+.. code-block:: mpf-config
+
+   ##! mode: mode1
+   sound_player:
+     sw_jet_bumper_active: super_jet_bumper_sound|block
 
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
