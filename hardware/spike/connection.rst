@@ -35,7 +35,7 @@ Null modem cables used to be a common way to connect two computers together.  Th
 the most expensive solution at about $50 USD.  However it looks just like a USB cable.
 The only vendor that has the USB to USB Null Modem Cable is the FDTI company.
 
-http://www.ftdichip.com/Products/Cables/USBtoUSB.htm
+https://ftdichip.com/products/usb-nmc-2-5m/
 
 This particular cable also provides faster data transfer rates (up to 3 MBaud) than Options 2 and 3.
 
