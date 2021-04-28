@@ -46,6 +46,11 @@ Some things to note:
 * The ASCII code for each character is defined by a starting position (x, y for
   the upper left corner) and a width and height value.
 
+4. Use the Font in Your Slide
+-----------------------------
+
+You can use the font in your config:
+
 .. code-block:: mpf-mc-config
 
    slides:
@@ -55,3 +60,5 @@ Some things to note:
          text: (player1|score)
          font_name: bitmapFontBallySevenSegment4
          bitmap_font: true
+
+Alternatively, you can also use bitmap fonts in :doc:`widget styles <styles>`.
