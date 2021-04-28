@@ -17,8 +17,8 @@ powerful functionality:
 * You can configure fonts and font styles to be automatically applied to text,
   and you can override them on a widget-by-widget basis.
 
-You can also use :doc:`bitmap fonts <bitmap_fonts>` to customize fonts
-for your machine.
+You can also use :doc:`bitmap fonts </displays/widgets/bitmap_fonts>` to
+customize fonts for your machine.
 
 Settings
 --------
@@ -227,9 +227,7 @@ The example config files section of the documentation contains
 :doc:`examples of text widgets </examples/text/index>`.
 
 .. toctree::
-   :hidden:
    :titlesonly:
 
    text_dynamic
    text_strings
-   bitmap_fonts

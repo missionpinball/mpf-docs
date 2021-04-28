@@ -86,5 +86,5 @@ One out of ``mode_start``, ``on_demand`` or ``preload``.
 Related How To guides
 ---------------------
 
-* :doc:`/displays/widgets/text/bitmap_fonts`
+* :doc:`/displays/widgets/bitmap_fonts`
 * :doc:`/assets/bitmap_fonts`
