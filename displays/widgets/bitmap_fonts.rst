@@ -56,9 +56,9 @@ You can use the font in your config:
    slides:
      slideBaseBackglass:
        widgets:
-       - type: text
-         text: (player1|score)
-         font_name: bitmapFontBallySevenSegment4
-         bitmap_font: true
+         - type: text
+           text: (player1|score)
+           font_name: bitmapFontBallySevenSegment4
+           bitmap_font: true
 
 Alternatively, you can also use bitmap fonts in :doc:`widget styles <styles>`.
