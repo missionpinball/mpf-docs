@@ -132,9 +132,10 @@ Device Indexes
         devices = {}
         for event in events:
             if event.class_label and event.config_section:
-                if event.config_section not in devices:
-                    devices[event.config_section] = []
-                devices[event.config_section].append(event)
+                for config_section in event.config_section:
+                    if config_section not in devices:
+                        devices[config_section] = []
+                    devices[config_section].append(event)
 
         for config_section, events in sorted(devices.items()):
             index += '   {} <index_{}>\n'.format(events[0].class_label, config_section)
@@ -252,12 +253,11 @@ the arguments below.)\n\n'''
         else:
             rst_output += '*This event does not have any keyword arguments*\n'
 
-
         rst_output += "\n"
 
-        if event.config_section and event.class_label:
-            rst_output += 'Event is posted by the :doc:`{} device </config/{}>`\n\n'.format(
-                event.class_label, event.config_section)
+        if event.config_section:
+            for config_section in event.config_section:
+                rst_output += 'Event is posted by :doc:`/config/{}`\n\n'.format(config_section)
 
             if event.config_attribute:
                 rst_output += "The event name can be changed by using the \"{}:\" attribute.\n\n".format(
