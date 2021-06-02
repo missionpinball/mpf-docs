@@ -83,5 +83,4 @@ Related Events
    multiball_with_traditional_ball_lock
    multiball_with_virtual_ball_lock
    add_a_ball_multiball
-   multiball_with_virtual_ball_lock
    multiball_with_multiple_lock_devices
