@@ -3,5 +3,5 @@ lisy_hardware
 
 *MPF machine variable*
 
-Connected LISY hardware. Either LISY1 or LISY80.
+Connected LISY hardware (I.e. LISY1, LISY80 or APC).
 

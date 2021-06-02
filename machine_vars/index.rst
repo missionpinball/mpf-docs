@@ -37,10 +37,10 @@ configs:
    :maxdepth: 1
 
    credit_units <credit_units>
+   credits_denominator <credits_denominator>
    credits_numerator <credits_numerator>
    credits_string <credits_string>
    credits_value <credits_value>
-   credits_whole_num <credits_whole_num>
    credits_whole_num <credits_whole_num>
    fast_(x)_firmware <fast_x_firmware>
    fast_(x)_model <fast_x_model>
