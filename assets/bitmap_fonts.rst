@@ -1,6 +1,4 @@
-:orphan:
-
 Bitmap Fonts (asset type)
 =========================
 
-:doc:`/about/help_us_to_write_it`
+See :doc:`/displays/widgets/bitmap_fonts` and :doc:`/config/bitmap_fonts`.

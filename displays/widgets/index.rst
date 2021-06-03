@@ -54,6 +54,7 @@ You can test slides and widgets interactively using
    Widget styles <styles>
    Opacity & transparency <opacity>
    Fonts <fonts>
+   Bitmap Fonts <bitmap_fonts>
    Creating reusable "named" widgets <reusable_widgets>
    Expiring & removing widgets <expire>
    Widget keys <keys>

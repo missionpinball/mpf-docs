@@ -1,6 +1,4 @@
-:orphan:
-
 Sounds (asset type)
 ===================
 
-:doc:`/about/help_us_to_write_it`
+See :doc:`/sound/index`.

@@ -8,6 +8,8 @@ This page is about the software side of things.
 Hardware and electrical engineering stuff is documented at the
 `OPP section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/OPP>`_.
 
+Overview video about OPP: https://youtu.be/WU98MRDeYeQ
+
 .. toctree::
 
    connecting

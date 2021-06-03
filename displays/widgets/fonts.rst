@@ -28,6 +28,9 @@ widget style and easily applied to new widgets with a single line.
 
    dmd_fonts
 
+MPF also supports :doc:`bitmap_fonts` if you want to create your own fonts
+for your machine.
+
 
 How to Set Fonts and Sizes Globally?
 ------------------------------------
