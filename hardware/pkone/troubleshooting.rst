@@ -27,7 +27,8 @@ properly to MPF using USB:
      -> Address ID: 1 (firmware v1.1, hardware rev 2)
 
    - Lightshow boards:
-     -> Address ID: 2 (firmware v1.0, hardware rev 1)
+     -> Address ID: 2 (RGB firmware v1.0, hardware rev 1)
+     -> Address ID: 3 (RGBW firmware v1.0, hardware rev 1)
 
 See :doc:`/running/commands/hardware` for details.
 

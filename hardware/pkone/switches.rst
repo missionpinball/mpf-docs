@@ -24,7 +24,7 @@ Then the Extension boards are connected together in a chain.
 .. image:: /hardware/images/pkone-extension.png
 
 The ``number:`` setting for each switch is its board's Address ID number in the
-PKONE chain, then the dash, then the switch input number.
+PKONE chain, then the dash, then the switch input number (1-35).
 
 .. code-block:: mpf-config
 
@@ -37,6 +37,9 @@ PKONE chain, then the dash, then the switch input number.
 Notes:
 
    * The PKONE Extension board Address ID switches can be set from 0 to 7.
+   * Switches 31-35 are setup in the hardware to support optos and other normally closed (NC) switches.
+Do not list them as NC switches in your configuration as the hardware already inverts the values before
+sending them to MPF.
 
 What if it did not work?
 ------------------------
