@@ -93,7 +93,6 @@ On linux it would look like this:
 
    /dev/ttyASM0
 
-::
 
 4. Add the port to your config file
 -----------------------------------
