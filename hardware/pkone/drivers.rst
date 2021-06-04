@@ -26,7 +26,7 @@ Then the Extension boards are connected together in a chain to the controller.
 
 .. image:: /hardware/images/pkone-extension.png
 
-The ``number:`` setting for each switch is its board's Address ID number in the
+The ``number:`` setting for each coil/driver is its board's Address ID number in the
 PKONE chain, then the dash, then the coil/driver output number (1-10).
 
 .. code-block:: mpf-config

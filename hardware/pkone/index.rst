@@ -18,5 +18,4 @@ For additional information, please visit the `Penny K Pinball website <https://p
    Coils/Drivers/Magnets/Motors <drivers>
    LEDs <leds>
    Servos <servos>
-   Power Filter Board <power_filter>
    Troubleshooting <troubleshooting>

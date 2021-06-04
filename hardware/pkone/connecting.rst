@@ -17,7 +17,11 @@ Be sure each Extension board or Lightshow board has a unique Address ID set usin
 switches on each board. Finally, be sure the last board in the chain has the CANBUS Protocol
 Termination Jumper set to properly terminate the bus.
 
-The ``number:`` setting for each driver/switch is its board's Address ID number in the
-chain, then the dash, then the driver/switch number. Note that the addresses are numbered
-starting with zero (Extension boards have addresses 0 to 7 while Lightshow boards have addresses
-0 to 3). You cannot have two boards with the same Address ID.
+Notes:
+
+   * Address ID values are numbered starting with zero (Extension boards have addresses 0 to 7 while
+     Lightshow boards have addresses 0 to 3).
+   * An Extension board cannot have the same Address ID number as a Lightshow board (all connected
+     boards must have unique Address ID values).
+   * You do not have to chain the boards in the same order as their Address ID numbers.
+
