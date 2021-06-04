@@ -83,6 +83,11 @@ your pinball machine.
    * Switches, rules and coils
    * Lights and enable triggers
 
+* :doc:`Penny K Pinball PKONE Platform <pkone/index>`
+   * Nano Controller
+   * PKONE Extension (switches, coils, rules, servos)
+   * PKONE Lightshow (simple LEDs, WS281x RGB/RGBW LEDs)
+
 * :doc:`Arduino Pinball Controller (APC) <apc/index>`
    * *New in MPF 0.53*
    * System 3 to System 11c
@@ -194,6 +199,7 @@ MPF supports:
    Open Pinball Project (OPP) <opp/index>
    Stern SPIKE / SPIKE 2 <spike/index>
    LISY platform <lisy/index>
+   Penny K Pinball PKONE Platform <pkone/index>
    Arduino Pinball Controller <apc/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>

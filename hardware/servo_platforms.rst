@@ -8,3 +8,4 @@ The following platforms allow controlling servos in MPF:
 * :doc:`Raspberry Pi <rpi/index>` - Remote via network or locally using pigpio
 * :doc:`Pololu Maestro <pololu_maestro/index>`
 * :doc:`P3-Roc and P-Roc via PD-LED <multimorphic/servos>`
+* :doc:`Penny K Pinball PKONE Extension boards <pkone/servos>`
