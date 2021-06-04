@@ -16,6 +16,7 @@ For additional information, please visit the `Penny K Pinball website <https://p
    Installing hardware drivers & configuring COM ports <config>
    Switches <switches>
    Coils/Drivers/Magnets/Motors <drivers>
-   LEDs <leds>
+   RGB/RGBW LEDs <leds>
+   Simple LEDs/Lights <lights>
    Servos <servos>
    Troubleshooting <troubleshooting>
