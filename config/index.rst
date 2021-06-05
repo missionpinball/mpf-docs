@@ -120,6 +120,7 @@ indicated which type of config file it's valid in.
    p_roc: <p_roc>
    pd_led_boards <pd_led_boards>
    pin2dmd: <pin2dmd>
+   pkone: <pkone>
    player_vars: <player_vars>
    playfield_transfers: <playfield_transfers>
    playfields: <playfields>
