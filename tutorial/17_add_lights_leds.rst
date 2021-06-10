@@ -30,6 +30,10 @@ to enter them:
 
 * :doc:`/mechs/lights/index`
 
+In the following we assume that ``l_light1`` and ``l_light2`` exist.
+If you do not have lights with that name make sure to adjust all examples
+accordingly or you will run into issues.
+
 3: Create an attract mode light/LED show
 ----------------------------------------
 
@@ -61,8 +65,8 @@ same time.
 There are all sorts of things you can do with a light show file that
 you'll become familiar with as you get deeper into your game
 configuration. For now we're just going to create a simple show that
-cycles through three lights. We'll call them *light1*, *light2*, and
-*light3*, though there's a good chance that you don't have lights with
+cycles through three lights. We'll call them ``l_light1``, ``l_light2``, and
+``l_light3``, though there's a good chance that you don't have lights with
 those names in your machine so you'll have to change them to names
 that actually exist for you. If you have matrix lights, add entries to
 your ``attract_light_show.yaml`` file so that it looks something like
