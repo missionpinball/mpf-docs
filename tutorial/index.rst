@@ -23,6 +23,9 @@ off the previous steps.) Once that's done, you can then move browse through the 
 to read specific "How To" guides for everything else you need. (These are in the Control Systems / Hardware,
 Pinball Mechanisms, Game Logic, Displays & Graphics, Sound, and Shows sections.)
 
+If you want to see us work through the tutorial you can also watch our
+`walk-through video <https://www.youtube.com/watch?v=R4WugGNiezc>`_.
+
 Now let's get started...
 
 .. toctree::
