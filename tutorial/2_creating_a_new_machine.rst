@@ -79,6 +79,9 @@ that you install the :doc:`MPF language server </tools/language_server/index>`
 which supports auto-completion, syntax and error highlighting, context help,
 go to definition and more.
 
+You can also follow our
+`video about the perfect IDE setup <https://www.youtube.com/watch?v=QdDHEe2aEJo>`_.
+
 For MPF |version|, that should look like this:
 
 .. code-block:: yaml
