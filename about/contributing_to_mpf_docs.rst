@@ -95,3 +95,8 @@ mpf-docs repo so you can work on it offline, do the following:
    will be in the ``_build/html`` folder. You can open *index.html* in your
    local browser to preview your changes.)
 #. `Submit your pull request <https://help.github.com/articles/creating-a-pull-request-from-a-fork/>`_
+
+Video Tutorial
+==============
+
+If parts are still unclear or you want to see it in action, you can watch `Improving the MPF Documentation <https://www.youtube.com/watch?v=jj8uM25B_yY>`_.
