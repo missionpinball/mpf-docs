@@ -30,7 +30,7 @@ You need to install the ``apigpio`` extension via pip to use it:
 
 The `pigpiod <http://abyz.me.uk/rpi/pigpio/pigpiod.html>`_ service needs to be running
 (in this example on localhost port 8888,  which is the default setting). To install
-it and enable is (on debian based systems) :
+it and enable is (on debian based systems):
 
 .. code-block:: console
 
@@ -39,6 +39,16 @@ it and enable is (on debian based systems) :
   systemctl start pigpiod.service
 
 The `enable` step gets the service running at startup, thus it is optional.
+
+Using pigpio via network
+------------------------
+
+If you want to use your RPi over ethernet you have to edit
+``/lib/systemd/system/pigpiod.service`` and change
+``ExecStart=/usr/bin/pigpiod -l`` to ``ExecStart=/usr/bin/pigpiod``.
+This is not needed if you run MPF on the RPi itself.
+Make sure your Raspberry PI is not accessible from the internet and
+the network is segmented properly.
 
 Config
 ------
@@ -53,28 +63,32 @@ This is an example config:
      ip: localhost
      port: 8888
    switches:
-     s_switch_1:
-       number: 1
+     s_switch_8:
+       number: 8
      s_switch_7:
        number: 7
    coils:
-     output_23:
-       number: 23
-       default_pulse_ms: 23
-     output_30:
-       number: 30
-       default_hold_power: 1.0
      output_2:
        number: 2
-       default_hold_power: 0.2
+       default_pulse_ms: 1000
    servos:
-     servo_10:
-       number: 10
+     servo_26:
+       number: 26
 
 Configure the ip of your RaspberryPi in the ``raspberry_pi`` section.
 You may use localhost if you are running MPF on the RPi.
 Any pin on the RPi can be used as either input or output.
 Additionally, you may use servos on any pin.
+
+Available GPIOs
+---------------
+
+You check GPIO locations on your RPi at `pinout.xyz <https://pinout.xyz/>`_.
+Please note that you have to use the Broadcom GPIO numbers instead of the
+pin numbers.
+Those slightly differ between different RPi models.
+If you get permission errors in your MPF log this is usually because you
+used a GPIO number which does not exist on your hardware.
 
 Is this a real pinball controller?
 ----------------------------------
