@@ -118,6 +118,14 @@ There is also a shorthand way (express config format):
    sound_player:
      sw_jet_bumper_active: super_jet_bumper_sound|block
 
+
+delay:
+~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+
+When the triggering event occurs, delay for a certain amount of time before playing
+the sound.
+
 events_when_about_to_finish:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) events. Those will be posted by the device. Default: ``use_sound_setting``
