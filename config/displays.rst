@@ -65,6 +65,14 @@ Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 Specifies that this display is the default, meaning it's the display that's used if you show a slide without specifying
 a target for that slide. If you only have one display, it will be the default automatically.
 
+enabled:
+~~~~~~~~
+
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
+
+Whether this display is enabled. If false, all slide and widget player calls
+targeting this display will be ignored.
+
 height:
 ~~~~~~~
 Single value, type: ``integer``. Default: ``600``

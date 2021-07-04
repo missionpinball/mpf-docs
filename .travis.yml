@@ -15,7 +15,9 @@ services:
   - docker
 
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin;
+  - if [ ! -z "${DOCKER_PASSWORD}" ]; then
+      echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin;
+    fi;
   - git clone --recursive --branch dev https://github.com/missionpinball/mpf.git _mpf;
   - git clone --recursive --branch dev https://github.com/missionpinball/mpf-mc.git _mpf-mc
   - git clone --branch dev https://github.com/missionpinball/mpf-debian-installer.git _mpf_installer;

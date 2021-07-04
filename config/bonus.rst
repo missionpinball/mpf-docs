@@ -144,6 +144,14 @@ If this is true/yes, then the bonus mode will reset the ``player_score_entry:`` 
 This is just a convenience thing for simpler bonus calculations that need to be reset per ball. You don't have to use
 it can could also reset the player variable some other way.
 
+skip_if_negative:
+~~~~~~~~~~~~~~~~~
+
+Boolean (True/False or Yes/No). Default is ``False``.
+
+If this is True/Yes and if the score calculation for this bonus entry is less than 0, the event for this
+bonus entry is not posted *and* the value is not subtracted from the player's score.
+
 skip_if_zero:
 ~~~~~~~~~~~~~
 

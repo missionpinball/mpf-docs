@@ -63,3 +63,14 @@ start_frame:
 Single value, type: ``integer``. Default: ``0``.
 
 Which start frame to use for animated images.
+
+persist_frame:
+~~~~~~~~~~~~~~
+
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+When true, the animated image widget will remember the frame the
+it was on when it was last used, and restore that frame when the widget is
+next used.
+
+By default, an animated image will reset itself each time it is added to a slide.

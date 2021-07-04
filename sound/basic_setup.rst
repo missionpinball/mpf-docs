@@ -103,7 +103,27 @@ voice callouts in the ``voice`` folder, and all other sound effects in the ``sfx
 are welcome to create any sub-folders you desire and put sounds in them to help keep things
 organized.
 
-4. Additional configuration for selected sounds
+4. Setting the default master volume level
+------------------------------------------
+
+The master volume (applied to all tracks in the sound system) can be adjusted from
+the service switches or custom events. MPF stores the master volume level as a machine
+variable, so the selected volume will persist each time the game boots up.
+
+The master volume ranges from 0.0 (silent) to 1.0 (full), and defaults to 0.5 (50%).
+You can set your own default volume by overriding the machine variable settings in
+your machine config file.
+
+.. code-block:: mpf-config
+
+    machine_vars:
+      master_volume:
+        initial_value: 0.25   # Set this to any value you want
+        value_type: float
+        persist: true         # If false, the volume will reset to default
+                              # each time the machine boots up
+
+5. Additional configuration for selected sounds
 -----------------------------------------------
 
 Now when you start your machine you will have some sounds available (assuming you placed some
@@ -138,8 +158,8 @@ That simple configuration change will allow the sound as to be referred to as ``
 you refer to that sound in other configuration locations. *Note*: be sure to include the complete
 file name, including the extension when using the ``file:`` setting.
 
-Setting the volume of a sound
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting the volume of a specific sound
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A very common adjustment to make is to set the volume for each and every sound you load in your
 machine.  This allows you to balance out sounds from various sources rather than trying to adjust
@@ -215,7 +235,7 @@ Example ``sounds:`` configuration demonstrating most common settings:
         about_to_finish_time: 2s
         events_when_about_to_finish: song_01_about_to_finish
 
-5. Hooking up an MPF event to play a sound
+6. Hooking up an MPF event to play a sound
 ------------------------------------------
 
 Now that your sounds have been setup and are available in your machine, the next step is to
