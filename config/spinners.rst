@@ -29,7 +29,7 @@ and post events based on timeouts after switch hits.
        active_ms: 500
      dual_spinner:
        switches: s_top_loop_left, s_top_loop_right
-       switch_tags: left, right
+       labels: left, right
        active_ms: 1200
        idle_ms: 2400
 
