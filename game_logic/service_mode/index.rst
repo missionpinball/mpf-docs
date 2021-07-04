@@ -60,7 +60,6 @@ This is an example:
        switch: s_service_down
    # you need to define a "sfx" sound track because the service mode brings some sounds (see the sound documentation for details)
    sound_system:
-     master_volume: 0.75
      tracks:
        music:
          type: standard

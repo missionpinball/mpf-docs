@@ -1,4 +1,5 @@
 Creating shows in config files
+
 ==============================
 
 In addition to being able to :doc:`create standalone show files </shows/file_shows>`, MPF also lets you define your shows right

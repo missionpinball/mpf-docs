@@ -30,7 +30,6 @@ Here's an example:
     #!   channels: 1
     #!   enabled: true
     #!   frequency: 44100
-    #!   master_volume: 0.75
     #!   tracks:
     #!     music:
     #!       type: standard

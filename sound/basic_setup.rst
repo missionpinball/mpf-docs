@@ -25,7 +25,6 @@ Example:
 .. code-block:: mpf-config
 
     sound_system:
-      master_volume: 0.75
       tracks:
         music:
           type: standard

@@ -45,7 +45,6 @@ Example track configuration:
      buffer: 2048
      frequency: 44100
      channels: 2
-     master_volume: 0.9
      tracks:
        music:
          volume: 0.5

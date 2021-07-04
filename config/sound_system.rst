@@ -19,12 +19,15 @@ Here's an example of a typical sound configuration.
 
 .. code-block:: mpf-config
 
+    machine_vars:
+      master_volume:
+        initial_value: 0.8
+
     sound_system:
       buffer: 1024
       channels: 1
       enabled: true
       frequency: 44100
-      master_volume: 0.75
       tracks:
         music:
           type: standard
@@ -105,11 +108,21 @@ files to match.)
 
 master_volume:
 ~~~~~~~~~~~~~~
-Single value, type: ``gain setting`` (-inf, db, or float between 0.0 and 1.0). Default: ``0.5``
+Unknown type. See description below.
 
-The overall volume of the MPF sound system. As with all volume parameters in MPF, this item can be represented
-as a number between 0.0 and 1.0 (1.0 is max volume, 0.0 is off, 0.9 is 90%, etc.) It also can be represented as
-a decibel string from -inf to 0.0 db (ex: ``-3.0 db``). Note that this only controls the volume of the MPF app,
+DEPRECATED! Will removed in future MPF versions.
+
+Master volume has been moved to the machine variable ``master_volume``.
+You can use the following snippet:
+
+
+.. code-block:: mpf-config
+
+    machine_vars:
+      master_volume:
+        initial_value: 0.8
+
+Note that this only controls the volume of the MPF app,
 not the host OS'es system volume. So you still need to make sure that the host OS is not on mute and that the
 volume is turned up.
 

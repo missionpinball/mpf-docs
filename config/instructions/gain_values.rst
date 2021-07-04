@@ -14,8 +14,6 @@ label string.  Some examples:
 
 .. code-block:: yaml
 
-   master_volume: 0.5
-
    volume: 0.1334
 
    volume: 1.0
@@ -37,8 +35,6 @@ numeric gain value between 0.0 and 1.0.
 Some examples:
 
 .. code-block:: yaml
-
-   master_volume: -6.0db
 
    volume: -17.5db
 
