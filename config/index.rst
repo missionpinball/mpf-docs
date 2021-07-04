@@ -156,6 +156,7 @@ indicated which type of config file it's valid in.
    shows: <shows>
    slide_player: <slide_player>
    slides: <slides>
+   spinners: <spinners>
    smart_virtual: <smart_virtual>
    smartmatrix: <smartmatrix>
    snux: <snux>
