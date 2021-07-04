@@ -6,6 +6,8 @@ Spinners
 +==============================================================================+
 | :doc:`/config/switches`                                                      |
 +------------------------------------------------------------------------------+
+| :doc:`/config/spinners`                                                      |
++------------------------------------------------------------------------------+
 
 Spinners are rotating metal plates which close a switch once per rotation.
 
@@ -21,7 +23,7 @@ Part numbers:
 Config
 ------
 
-In MPF spinners are configured just like normal switches:
+In MPF spinners are configured as follows:
 
 .. code-block:: mpf-config
 
@@ -29,15 +31,25 @@ In MPF spinners are configured just like normal switches:
      s_my_spinner:
        number: 42    # number depends on your platform
 
+   spinners:
+     basic_spinner:
+       switch: s_my_spinner
+       active_ms: 500
+
 It is very common to count the rotations of your spinner per player.
-You can eiher use a player variable or a counter for that.
+You can either use a player variable or a counter for that.
 This is an example:
 
 .. code-block:: mpf-config
 
    switches:
      s_my_spinner:
-       number: 42   # number depends on your platform
+       number: 42    # number depends on your platform
+
+   spinners:
+     basic_spinner:
+       switch: s_my_spinner
+       active_ms: 500
    ##! mode: my_mode
    # in your base mode add 1 for every rotation to a player variable which you can use in slides
    variable_player:
@@ -46,7 +58,7 @@ This is an example:
    # in a game mode the player needs to spin the spinner 10 times
    counters:
      spinner_rotations:
-       count_events: s_my_spinner_active
+       count_events: spinner_basic_spinner_hit
        count_complete_value: 10
        events_when_complete: mode_finished
    ##! test
@@ -68,3 +80,7 @@ This is an example:
    #! assert_event_called mode_finished
    #! assert_player_variable 10 spinner_rotations
 
+Related Events
+--------------
+
+.. include:: /events/include_spinners.rst
