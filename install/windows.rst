@@ -6,18 +6,18 @@ take a few minutes.
 
 Here are the steps:
 
-1. Install Python (3.5, or 3.6)
----------------------------------------------
+1. Install Python
+-----------------
 
 MPF is written in a computer language called "Python". This means you have to install Python
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.5 through Python 3.7 (Python 3.8
-and newer are not currently supported). While MPF will run on Python 3.4, some of our
-dependencies dropped support for 3.4 and can no longer be installed. It is recommended
-you use the newest supported version of Python available when you are setting up your PC
-(Python 3.7 as of the time this document was last updated). You can download and install it
+On Windows platforms, MPF requires Python 3.6 through Python 3.8.
+It is recommended you use the newest supported version of Python
+available when you are setting up your PC
+(Python 3.8 as of the time this document was last updated).
+You can download and install it
 from the Python website. (Keep reading for links)
 
 .. note::
@@ -224,7 +224,7 @@ To do this, run the following command from the command prompt:
 
 .. code-block:: doscon
 
-   pip install mpf mpf-mc
+   pip install mpf[all] mpf-mc
 
 This command is telling pip to install a package called "mpf-mc", which is the
 *Mission Pinball Framework - Media Controller* package. When you run this,
@@ -251,7 +251,7 @@ general idea. Also this may take a few minutes to run on your computer.)
 
 .. code-block:: doscon
 
-   C:\Users\username>pip install mpf mpf-mc
+   C:\Users\username>pip install mpf[all] mpf-mc
    Collecting mpf-mc
      Downloading mpf_mc-0.50.0.dev5-cp34-none-win32.whl (6.4MB)
        100% |################################| 6.4MB 176kB/s
@@ -396,7 +396,7 @@ To to this, run the following:
 .. code-block:: doscon
 
   pip install setuptools --upgrade
-  pip install mpf mpf-mc --upgrade
+  pip install mpf[all] mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
 MPF and MPF MC (and any new requirements). If newer versions are found, it
@@ -416,13 +416,13 @@ To install the latest dev release (not generally recommended) which allows you t
 
 .. code-block:: doscon
 
-  pip install mpf mpf-mc --pre --upgrade
+  pip install mpf[all] mpf-mc --pre --upgrade
 
 To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: doscon
 
-  pip install mpf==x.yy.z
+  pip install mpf[all]==x.yy.z
   pip install mpf-mc==x.yy.z
 
 Next steps!
@@ -442,7 +442,7 @@ upgrading packages using pip:
 
 .. code-block:: doscon
 
-   pip install pip setuptools --upgrade
+   pip install pip[all] setuptools --upgrade
    Collecting pip
      Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
    Collecting setuptools

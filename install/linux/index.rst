@@ -49,7 +49,7 @@ To to this, run the following:
 .. code-block:: console
 
   pip3 install pip setuptools --upgrade
-  pip3 install mpf mpf-mc --upgrade
+  pip3 install mpf[all] mpf-mc --upgrade
 
 This will cause *pip* to contact PyPI to see if there's a newer version of the
 MPF MC (and any of its requirements, like MPF). If newer versions are found, it
@@ -66,13 +66,13 @@ To install the latest dev release (not generally recommended) which allows you t
 
 .. code-block:: console
 
-  pip3 install mpf mpf-mc --pre --upgrade
+  pip3 install mpf[all] mpf-mc --pre --upgrade
 
 To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: console
 
-  pip3 install mpf==x.yy.z
+  pip3 install mpf[all]==x.yy.z
   pip3 install mpf-mc==x.yy.z
 
 Uninstalling MPF
@@ -82,7 +82,7 @@ To remove MPF either because it is no longer needed or to perform a clean instal
 
 .. code-block:: console
 
-  sudo pip3 unstall mpf-mc mpf
+  sudo pip3 uninstall mpf-mc mpf
 
 
 Specific Hardware Devices

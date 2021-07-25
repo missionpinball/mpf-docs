@@ -322,7 +322,7 @@ Install MPF and MC like this:
 
 .. code-block:: console
 
-   pip3 install mpf mpf-mc
+   pip3 install mpf[all] mpf-mc
 
 
 .. note::
@@ -407,14 +407,14 @@ The installation instructions are the same, except for including ``--pre`` in th
 
 .. code-block:: console
 
-   pip3 install --upgrade --pre mpf mpf-mc
+   pip3 install --upgrade --pre mpf[all] mpf-mc
 
 The prereleases will have "dev" in their version number to indicate that they are under development.
 
 .. code-block:: console
 
    $ mpf --version
-   MPF v0.54.0.dev3
+   MPF v0.56.0.dev3
 
 If you want to switch from the development build back to the stable release, uninstall
 and run the install command without ``--pre``.
@@ -422,7 +422,7 @@ and run the install command without ``--pre``.
 .. code-block:: console
 
   pip3 uninstall mpf mpf-mc
-  pip3 install mpf mpf-mc
+  pip3 install mpf[all] mpf-mc
 
 Running Pinball Games in MPF
 ----------------------------
@@ -462,7 +462,7 @@ To to this, run the following:
 
 .. code-block:: console
 
-  pip3 install --upgrade mpf mpf-mc
+  pip3 install --upgrade mpf[all] mpf-mc
 
 This will trigger *pip* to contact the PyPI servers to see if there's a newer version of MPF or MC
 (and any of their requirements). If newer versions are found, pip will download and install them.
@@ -480,13 +480,13 @@ also break or have new bugs), include "--pre" in your upgrade command:
 
 .. code-block:: console
 
-  pip3 install --upgrade --pre mpf mpf-mc
+  pip3 install --upgrade --pre mpf[all] mpf-mc
 
 To downgrade (or install a specific release x.yy.z) run:
 
 .. code-block:: console
 
-  pip3 install mpf==x.yy.z
+  pip3 install mpf[all]==x.yy.z
   pip3 install mpf-mc==x.yy.z
 
 
