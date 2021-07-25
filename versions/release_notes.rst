@@ -3,6 +3,77 @@ MPF Release Notes
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.55
+----
+Released: June 25, 2021
+
+Breaking changes in config
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Removed Python 3.5 support
+* Added Python 3.8 and 3.9 support (default in Ubuntu 20.04)
+
+New Features
+^^^^^^^^^^^^
+
+* Flashing Segment Displays in P-Roc
+* Segment Display Match Flashing
+* Visual Pinball Engine (VPE) Support
+* New argument "remaining" in counts
+* Initial support for auto-generating wire harnesses
+* Tilt improvements
+* New hardware: Initial PKONE support
+* Improved config validation
+* More Service Mode Features
+* Open Pinball Project 2.1 Firwmare (for Cobrapin)
+* State Machines in non-game modes
+* EOS repulse in software
+* Better EOS support in FAST and P/P3-Roc
+* Ball search only starts at boot when there is at least one ball
+* Allow updating speed and manual_advance of shows
+* Power management for enable on coils
+* Production bundles for config in production machines
+* RGB segment displays
+* New hardware: FAST segment displays
+* Segment displays emulator
+* Animations for segment displays
+* New command: "mpf hardware benchmark"
+* Improved servo support
+* Support switches in Pololu Tic
+* Add more subscriptions and placeholders
+* New spinner device
+* New crash reporter
+* More and better segment mappings
+* Better drop target event behaviour
+
+New Config Options
+^^^^^^^^^^^^^^^^^^
+
+* New delay setting for all config players to delay execution
+* New option enabled for displays
+* New option max_hold_duration for coils to prevent burning your coils by accident
+* Persist_frame on images
+* logic_block_timeout for all logic blocks (counters, accruals and sequences)
+* Added block in sound_player
+* New option stop_timeout_after_last_move in servos
+
+Bug Fixes
+^^^^^^^^^
+
+* Fixed color bugs during fading
+* Fix P-Roc driver_pulsed_patter
+* Fix bug where initial count of playfield has been wrong
+* Ball lock fixes when physical lock has been full
+* Highscore mode fix
+* Fixed bug on ball tracking during eject with plunger
+* Fixed crash on multiple returning balls in the trough
+* Fixed crash in bonus
+* Fixed crashes in service mode
+* Fix timer on step_back and advance in shows
+* Fix ball search behavior for diverters
+* Fixed bitmap font bugs
+
+
 0.54
 ----
 
