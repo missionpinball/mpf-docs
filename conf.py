@@ -254,7 +254,7 @@ def get_repo_path(repo_name):
     else:
         # clone repo
         print("Cloning {}".format(repo_name))
-        current_branch = "dev"
+        current_branch = "0.55.x"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(tempfile.gettempdir(), '_src', repo_name), branch=current_branch)
         return os.path.join(tempfile.gettempdir(), '_src', repo_name)
 

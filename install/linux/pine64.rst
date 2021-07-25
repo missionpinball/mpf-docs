@@ -138,7 +138,7 @@ Install MPF
 -----------
 
 Download the MPF Debian Installer from
-https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
+https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip
 
 To unzip the file navigate in your terminal to the location of the downloaded
 files.
