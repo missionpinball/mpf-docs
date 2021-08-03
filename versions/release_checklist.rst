@@ -96,3 +96,9 @@ What to do to make a MPF release?
    - ``mpf-mc``
 
    - ``mpf-monitor``
+
+- Tag Release on github
+
+   - ``mpf``
+
+   - ``mpf-mc``
