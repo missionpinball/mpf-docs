@@ -81,7 +81,7 @@ sequence like this: ``on`` ``off`` ``on`` ``off`` and so on.  When more than one
 color is added, however, you might not want the light to turn off at the end of
 each cycle.  For example, if your blinkenlight has two colors, red and green,
 you might want the cycle to be: ``red`` ``green`` ``off`` ``red`` ``green`` ``off``,
-of you might simply want it to be ``red`` ``green`` ``red`` ``green``.  You can
+or you might simply want it to be ``red`` ``green`` ``red`` ``green``.  You can
 control this behavior with the ``off_when_multiple`` setting of your blinkenlight.
 Setting this value to ``True`` will turn the light off at the end of each cycle.
 The default value is ``False``, which will not turn the light off when multiple
@@ -196,12 +196,12 @@ Example blinkenlight player from a show:
 Usage in config files
 ---------------------
 
-In config files, the coil player is used via the ``blinkenlight_player:`` section.
+In config files, the blinkenlight player is used via the ``blinkenlight_player:`` section.
 
 Usage in shows
 --------------
 
-In shows, the coil player is used via the ``blinkenlights:`` section of a step.
+In shows, the blinkenlight player is used via the ``blinkenlights:`` section of a step.
 
 Config Options
 --------------
