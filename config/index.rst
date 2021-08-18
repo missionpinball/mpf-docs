@@ -43,6 +43,8 @@ indicated which type of config file it's valid in.
    bcp_connection: <bcp_connection>
    bcp_server: <bcp_server>
    bitmap_fonts: <bitmap_fonts>
+   blinkenlight_player: <blinkenlight_player>
+   blinkenlights: <blinkenlights>
    bonus (mode_settings:) <bonus>
    coil_overwrites: <coil_overwrites>
    coil_player: <coil_player>
