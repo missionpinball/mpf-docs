@@ -27,7 +27,7 @@ Example from a config file:
           action: add
           color: red
           key: mykey1
-      mode_ended:
+      some_other_event:
         my_blinkenlight1:
           action: remove
           key: mykey1
@@ -37,7 +37,7 @@ the color red will be added to my_blinkenlight1's list of colors (this will
 cause the light to immediately start flashing if it wasn't already).  The new
 color will have the key ``mykey1``.  The key is used like a name of the color,
 so that it can be removed later.
-When the event ``mode_ended`` is posted, the red color (key ``mykey1``) will be
+When the event ``some_other_event`` is posted, the red color (key ``mykey1``) will be
 removed from the blinkenlight.
 
 Example blinkenlight player from a show:
