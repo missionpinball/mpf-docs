@@ -26,18 +26,18 @@ Example from a config file:
         my_blinkenlight1:
           action: add
           color: red
-          label: mykey1
+          key: mykey1
       mode_ended:
         my_blinkenlight1:
           action: remove
-          label: mykey1    
+          key: mykey1
 
 In the example above, when the event called ``some_event`` is posted,
 the color red will be added to my_blinkenlight1's list of colors (this will
 cause the light to immediately start flashing if it wasn't already).  The new
-color will have the label ``mykey1``.  The label is used like a name of the color,
+color will have the key ``mykey1``.  The key is used like a name of the color,
 so that it can be removed later.
-When the event ``mode_ended`` is posted, the red color (label ``mykey1``) will be
+When the event ``mode_ended`` is posted, the red color (key ``mykey1``) will be
 removed from the blinkenlight.
 
 Example blinkenlight player from a show:
@@ -50,14 +50,14 @@ Example blinkenlight player from a show:
         my_blinkenlight1:
           action: add
           color: blue
-          label: blue_color
+          key: blue_color
         my_blinkenlight2: purple
 
 The first example shows the full config, while the second shows the
 "express" config. (What's an "express config?" Details :doc:`here </config/instructions/express_config>`.
 
 The blinkenlight player's express config is the "add" action.  Note that the
-express config uses a random label, so there's no way for you to remove this
+express config uses a random key, so there's no way for you to remove this
 color with the ``remove`` action if you use this config. However, all colors added
 to a blinkenlight by any mode are removed automatically when the mode ends.
 
@@ -78,7 +78,7 @@ Single value, type: one of the following options: add, remove, remove_mode, remo
 Default: ``add``
 
 What action the blinkenlight should perform. The ``add`` and ``remove`` actions
-require a ``label`` to know which color to add or remove.  The ``remove_all``
+require a ``key`` to know which color to add or remove.  The ``remove_all``
 action will remove all the colors from the blinkenlight, effectively turning it
 off.  The ``remove_mode`` action will remove all the colors that were added by
 the mode that the ``remove_mode`` action is coming from (remember that a
@@ -87,7 +87,7 @@ whole purpose!).
 
 color:
 ~~~~~~
-Single value, type: ``string``. Default: ``ffffff``
+Single value, type: ``string``. Default: ``white``
 
 The only action that requires a color setting is the ``add`` action.  It sets
 the color to add to this blinkenlight. Color values may be a hex string
@@ -99,13 +99,13 @@ If you use brightness on an RGB light MPF will use the brightness for every
 channel.
 For instance brigness ``AA`` will result in color ``AAAAAA``.
 
-label:
-~~~~~~
+key:
+~~~~
 Single valid, type: ``string``. Defaults to empty.
 
 You can think of this value as a name for the color you're adding or removing
-from the blinkenlight.  If you add a color, then the label allows you to remove
-the color later using the label to specify which color to remove.
+from the blinkenlight.  If you add a color, then the key allows you to remove
+the color later using the key to specify which color to remove.
 
 Related How To guides
 ---------------------

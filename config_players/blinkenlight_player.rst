@@ -33,13 +33,13 @@ This is an example of a blinkenlight player:
       some_other_event:
         my_blinkenlight:
           action: add
-          label: blue_color
+          key: blue_color
           color: blue
 
 In the example above, when the event called ``some_event`` is posted, the color
 red will be added to the blinkenlight ``my_blinkenlight``.
 When the event ``some_other_event`` is posted, the color blue will be added to the
-same blinkenlight.  This color has the label ``blue_color``, which is useful if we
+same blinkenlight.  This color has the key ``blue_color``, which is useful if we
 want to remove the color later.
 
 Note that the ``some_event`` example has a shortened config than the ``some_other_event``
