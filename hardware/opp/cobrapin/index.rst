@@ -103,64 +103,161 @@ Example Config
 
     #config_version=5
 
+    #CobraPin Example Config
+
     hardware:
       platform: opp
       driverboards: gen2
 
+
     opp:
+      #Use the USB ports defined by your OS for the two STM32 boards
       ports: /dev/ttyACM0, /dev/ttyACM1
-      chains:
-        0: /dev/ttyACM1
-        1: /dev/ttyACM0
+      #USING SERIAL NUMBERS INSTEAD OF CHAINS
+      #  Board 0 has serial number 0, Board 1 has serial number 1.
+      #  This is convenient if your OS tends to reassign the serial port.
+      #  MPF will automatically address the correct board even if the ports
+      #     are swapped.
+
+      #For multiple CobraPin boards in a game, you will either have to give 
+      #  the STM32 boards on the second CobraPin board new serial numbers 
+      #  (10 and 11 are suggested for the 2nd board since 2 is used by the 
+      #  CobraPin Xpansion Board) 
+      #  <OR> Use the chains section to assign a port to a board number. 
+      #  Mixing these up could cause blown FETs, coils, and fuses. Proceed 
+      #  with caution. Test without coil power and use the yellow coil LEDs 
+      #  for feedback.
+      #chains:
+         #0: /dev/ttyACM0
+         #1: /dev/ttyACM1
+
+
+    psus:
+      default:
+        #Gives the capacitors extra time to recharge after firing a coil
+        #  and eases the load on the power supply. Doesn't affect autofire
+        #  devices like flippers, pops, slings.
+        release_wait_ms: 50   
+
+
+    #One giant config file can get difficult to manage. You can put any of 
+    #  these config sections in its own yaml file and link to it with the 
+    #  config section here      
+    config:
+      #- switches_config.yaml
+      #- lights_config.yaml
+      #- coils_config.yaml
+      # ...
+
 
     switches:
-        #DIRECT
+
+      #DIRECT SWITCHES
+      #switch numbers are labelled in silkscreen on the board
+      s_left_flipper:
+        number: 0-0-27
+        tags: left_flipper
+      s_right_flipper:
+        number: 0-0-26
+        tags: right_flipper
       s_startButton:
         number: 0-0-25
         tags: start
-      s_slingshot_left:
-        number: 0-0-24
-        tags: slings
-      s_slingshot_right:
-        number: 0-0-19
-        tags: slings
 
-        #MATRIX
+
+      #MATRIX SWITCHES
+      #valid numbers are 1-0-32 through 1-0-95
       s_lowerDrop1:
         number: 1-0-32
-      s_lowerDrop2:
-        number: 1-0-33
+
+      # ...    
+
+      s_topRollunder:
+        number: 1-0-95 
+        ignore_window_ms: 250ms    #tune to assist in debouncing
+
 
     lights:
-      l_15000Rollunder:
-        number: 0-0-15
-        type: grb
+
+      #SERIAL LEDS (neopixels)
+      #NEO0 output supports 256 LEDs numbered 0-0-0 to 0-0-255
+      l_shootAgain:
+        number: 0-0-0
         subtype: led
-        tags: inserts
-      l_extraBall:
-        number: 0-0-16
-        type: grb
+        type: grb   #Most WS2812-based LEDs are grb color order.
+                    #This line not required for rgb ordered LEDs like the
+                    #  WS2811 LEDs shown below
+
+      # ...
+
+      #NEO1 output supports 256 LEDs numbered 1-0-0 to 1-0-255
+      l_gi_1:
+        number: 1-0-0
         subtype: led
-        tags: inserts
-      l_gi_17:
-        number: 1-0-24
-        subtype: led
-        tags: gi
-      l_gi_18:
-        number: 1-0-25
+        tags: gi    #you can group similar LEDs with user defined tags
+      l_gi_2:
+        number: 1-0-255
         subtype: led
         tags: gi
 
+
     coils:
+      #coil numbers are labelled in silkscreen on the board
+
+      #There are multiple ways to configure flippers, use the one that
+      #  matches your hardware
       c_flipper_left:
-        number: 0-0-8
+        number: 0-0-8           
         allow_enable: true
         default_hold_power: 1.0
         default_pulse_ms: 50
-      c_slingshot_left:
-        number: 0-0-9
-        default_pulse_ms: 30
-        default_recycle: true
-        platform_settings:
-          recycle_factor: 4
+      c_flipper_right:
+        number: 0-0-4            
+        allow_enable: true
+        default_hold_power: 1.0
+        default_pulse_ms: 50     
+      c_ballRelease:
+        number: 1-0-1
+        default_hold_power: 0.15
+        default_pulse_ms: 30          
+
+
+    flippers:
+      #Add your flipper config
+
+
+    autofire_coils:
+      #Add your autofire cofigs for pops, slings, etc.
+
+
+    ball_devices:
+      #Add your ball devices
+
+
+    playfields:
+      #Define your playfields
+
+
+    machine:
+      balls_installed: 3 #How many balls are physically in your game
+      min_balls: 3 #How few balls can be accounted for before you can start a game
+
+
+    game:
+      balls_per_game: 3
+      max_players: 4
+
+
+    modes:
+      #Add all your mode names here
+      #- attract
+      #- base
+      #- etc
+
+
+    keyboard:   #use to drive your game from the computer for testing
+      z:
+        switch: s_left_flipper
+      "/":
+        switch: s_right_flipper
 
