@@ -180,7 +180,7 @@ Note that if you do not add any ``enable_events:`` (which is the default), this
 multiball will be automatically enabled when the mode it's in starts.
 
 grace_period:
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
 
 The “secret” time (in MPF time string format) the ball save is still active
@@ -188,7 +188,7 @@ after any shows or effects that are triggered end. This is added onto the
 shoot_again.
 
 hurry_up_time:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
 
 The time before the add-a-ball ball save ends (in MPF time string format)
