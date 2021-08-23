@@ -174,7 +174,7 @@ Example Config
 
        s_topRollunder:
           number: 1-0-95 
-             ignore_window_ms: 250ms    #tune to assist in debouncing
+          ignore_window_ms: 250ms    #tune to assist in debouncing
 
 
     lights:
