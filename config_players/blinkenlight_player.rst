@@ -46,7 +46,8 @@ Note that the ``some_event`` example has a shortened config than the ``some_othe
 example.  This shortened version is called an express config.  The blinkenlight's
 express config is the same thing as doing an "add" action with the color you
 specify.  It's just a shorter way to do the same thing.  You can read more about
-express configs :doc:`here </config/instructions/express_config>`.
+express configs :doc:`here </config/instructions/express_config>`.  Also, see the section
+below called Express Config for more information on the express config.
 
 To use a blinkenlight player, you first have to define a blinkenlight within your
 machine config (see the blinkenlight page :doc:`here </config/blinkenlights>`).  The blinkenlight's config will set which actual light in your pinball
@@ -202,6 +203,51 @@ Usage in shows
 --------------
 
 In shows, the blinkenlight player is used via the ``blinkenlights:`` section of a step.
+
+Express Config
+--------------
+
+As mentioned above, the express config for ``blinkenlight_player`` performs the ``add`` action. So,
+the color you specify as the express config value will be the color to add to
+the blinkenlight.  However, if you add a color this way, there is no ``key`` value for the
+color.  Or, more specifically, the ``key`` value will be empty.  We could refer
+to colors without a ``key`` value as a keyless color. If you later use the ``remove`` action and don't specify
+a ``key`` to remove, then the keyless color will be removed.
+
+This is better explained with an example.  Consider this ``blinkenlight_player``:
+
+.. code-block:: mpf-config
+
+    blinkenlight_player:
+      some_event:
+        my_blinkenlight: red
+      some_other_event:
+        my_blinkenlight:
+          action: remove
+
+In this case, the color ``red`` will be added to ``my_blinkenlight`` when the
+``some_event`` event is posted.  This color doesn't have a ``key`` value, so this
+color is keyless.  When
+the ``some_other_event`` event is posted, the ``remove``
+action is performed.  Since this ``remove`` action also didn't specify a ``key`` value, then
+MPF will look for a keyless color and remove that color from the blinkenlight.
+In this case, the color red will be removed.
+
+There's a special value you can use in the express config to remove a keyless
+color.  Instead of using the full config and specifying an ``action: remove`` as
+we did above, you can use the special color ``stop`` or ``remove`` in the express
+config to do the same thing.  The following is equivalent to the example above:
+
+.. code-block:: mpf-config
+
+    blinkenlight_player:
+      some_event:
+        my_blinkenlight: red
+      some_other_event:
+        my_blinkenlight: remove
+
+In this case, the red color is added to the blinkenlight when ``some_event`` is
+posted, and then removed when ``some_other_event`` is posted.
 
 Config Options
 --------------
