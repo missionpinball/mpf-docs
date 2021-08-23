@@ -157,7 +157,7 @@ start_value:
 ~~~~~~~~~~~~
 Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
 
-The initial value of the timer.
+The initial value of the timer.  When a timer is restarted, this is the value it will always start from.  If you ever need to change the value, you can use a jump control action to set it to whatever value you want.  See :doc:`timer_control_events` for more details.
 
 Note that you can use a :doc:`dynamic value </config/instructions/dynamic_values>`
 for this setting.
