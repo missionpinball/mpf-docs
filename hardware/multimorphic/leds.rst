@@ -224,6 +224,10 @@ them using ribbon cables.
 Serial LEDs on the PD-LED
 -------------------------
 
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
+
 Starting with PD-LED v2 you can use the PD-LED to drive serial LEDs.
 To enable a serial LEDs you need to configure your PD-LED board in your
 ``p_roc`` section.

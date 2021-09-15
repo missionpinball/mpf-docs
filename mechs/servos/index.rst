@@ -41,6 +41,10 @@ This is an example:
 .. contents::
    :local:
 
+Overview video about servos:
+
+.. youtube:: wA6KEODwQ5w
+
 Monitorable Properties
 ----------------------
 

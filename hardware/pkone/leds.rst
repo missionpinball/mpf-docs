@@ -25,6 +25,10 @@ Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LE
 connected to PKONE Lightshow boards, however there are a few PKONE-specific
 things to know.
 
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
+
 Channel and Number Syntax
 -------------------------
 

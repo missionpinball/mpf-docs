@@ -19,6 +19,10 @@ use to grab and release balls. It also includes the ability to set timings to
 .. image:: /mechs/images/magnet2.jpg
 .. image:: /mechs/images/magnet3.jpg
 
+Video about magnets:
+
+.. youtube:: XGnrfO3eJD0
+
 Hardware
 --------
 

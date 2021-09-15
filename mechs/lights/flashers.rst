@@ -36,6 +36,9 @@ Those are rated at 13V but typically driven at higher voltages for only a very
 short amount of time.
 Turning them on permanently will burn quickly in most machines.
 
+Video about wiring of lights:
+
+.. youtube:: C9GzkMduEKY
 
 Config
 ------

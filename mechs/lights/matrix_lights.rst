@@ -15,6 +15,10 @@ Those lights are usually bulbs and single color (white).
 Each of them is assigned to a unique column/row combination and driven
 sequentially by the platform.
 
+Video about wiring of lights:
+
+.. youtube:: C9GzkMduEKY
+
 Hardware
 --------
 

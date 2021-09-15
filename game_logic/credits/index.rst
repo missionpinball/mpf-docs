@@ -26,6 +26,10 @@ The credits system has several features and options, including:
 + Flexible events you can use to show display items based on credits
   being added, insert coin messages, max credits reached, etc.
 
+Video about credits:
+
+.. youtube:: jAQpZy5xYGc
+.. youtube:: w7LuHi7gLMs
 
 (A) Create your 'credits' mode folder
 -------------------------------------

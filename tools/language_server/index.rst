@@ -8,8 +8,9 @@ to bring syntax highlighting, auto completion, diagnostics and more to
 Your IDE most likely supports LSP either directly or via a plugin.
 Even some text editors (such as Sublime) support LSP.
 
-You can also follow our
-`video about the perfect IDE setup <https://www.youtube.com/watch?v=QdDHEe2aEJo>`_.
+You can also follow our video about the perfect IDE setup:
+
+.. youtube:: QdDHEe2aEJo
 
 Features
 --------

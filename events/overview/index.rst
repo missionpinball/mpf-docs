@@ -1,6 +1,10 @@
 Events Overview
 ===============
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 It's easiest to understand the concept of events by going through some examples.
 
 For example, you might have a ``variable_player:`` entry in your config which watches

@@ -12,9 +12,11 @@ hardware at any time without having to change any game code. You could
 even release a game code update that works on multiple platforms—all with the
 same code!
 
-`Here's a demo video <https://www.youtube.com/watch?v=_Zw_cHw2CXY>`_ of us
+Here's a demo video of us
 switching out a P-ROC controller for a FAST controller in 3 minutes and
-running the same game code on both.
+running the same game code on both:
+
+.. youtube:: _Zw_cHw2CXY
 
 It's possible to mix-and-match multiple types of hardware in a single
 MPF machine config. For example, you could combine the SmartMatrix RGB DMD with
@@ -183,6 +185,10 @@ to provide additional functionality.
 
 There is a :doc:`hardware roadmap <roadmap>` for other hardware which we want
 to support in the future.
+
+Video on how platforms work internally and how to implement them:
+
+.. youtube:: PvQVoUzL8Cc
 
 Configuration Guides
 --------------------

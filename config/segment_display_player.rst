@@ -17,9 +17,6 @@ The ``segment_display_player:`` section of your config is a :doc:`/config_player
 which controls :doc:`segment_displays`.
 See :doc:`/displays/display/alpha_numeric` for details.
 
-If you want to see segment_display_player in action have a look at our
-`video about using a playfield as display <https://www.youtube.com/watch?v=38hc7IIfVJI>`_.
-
 .. config
 
 

@@ -160,3 +160,6 @@ multiball mode will stop using the :doc:`/events/multiball_multiball_ended` even
    #! assert_mode_not_running lock3
    #! assert_mode_not_running multiball
 
+Video about ball locks and multiballs:
+
+.. youtube:: 2mFkgIlksC4

@@ -15,9 +15,14 @@ can control multiple servos, with models that control 6, 12, 18, or 24 servos.
 
 .. image:: /hardware/images/pololu_maestro.jpg
 
-Here is an
-`explanation video by the pinball amigos <https://www.youtube.com/watch?v=1QOOJNtsGxw&t=58>`_
-on how to setup a pololu maestro (and more).
+Here is an explanation video by the pinball amigos on how to setup a pololu
+maestro (and more):
+
+.. youtube:: 1QOOJNtsGxw
+
+Overview video about :doc:`servos </mechs/servos/index>`:
+
+.. youtube:: wA6KEODwQ5w
 
 
 1. Install the Pololu Maestro drivers

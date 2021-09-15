@@ -23,6 +23,14 @@ Some examples:
   scoring in your machine), and you set variables from a show step via the ``variables:`` setting of that step.
 * etc.
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
+Video about shows:
+
+.. youtube:: Ou5xqCAthZY
+
 
 Standalone Config Player
 ------------------------

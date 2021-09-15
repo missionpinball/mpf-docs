@@ -6,6 +6,19 @@ This section assumes that you already configured all your hardware devices
 If you did not configure your hardware please do that first.
 You can go through the :doc:`tutorial </tutorial/index>` or have a look a the :doc:`mechs section </mechs/index>`.
 
+Video about how to structure your modes:
+
+.. youtube:: JLgeGBc03bM
+
+Video about :doc:`state machines </game_logic/logic_blocks/state_machines>`
+(often used to implement logic in your mode):
+
+.. youtube:: qakxTF1H57E
+
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 This section is about laying out your modes and actually designing your game logic.
 It is structured into the following subsections:
 
@@ -36,11 +49,11 @@ Questions answered in this section:
 * Will it always succeed?
 * Can it timeout?
 * Can it restart if it failed?
-* Where will it contine on restart?
+* Where will it continue on restart?
 
 * How to implement roll over lanes in a mode?
 * How to implement a mystery award mode?
-* How to implement a standup target bank mode?
+* How to implement a stand-up target bank mode?
 
 .. toctree::
    :titlesonly:

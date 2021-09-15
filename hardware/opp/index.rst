@@ -8,7 +8,9 @@ This page is about the software side of things.
 Hardware and electrical engineering stuff is documented at the
 `OPP section in the pinballmakers.com Wiki <http://pinballmakers.com/wiki/index.php/OPP>`_.
 
-Overview video about OPP: https://youtu.be/WU98MRDeYeQ
+Overview video about OPP:
+
+.. youtube:: WU98MRDeYeQ
 
 .. toctree::
 
@@ -19,4 +21,5 @@ Overview video about OPP: https://youtu.be/WU98MRDeYeQ
    lights
    leds
    cobrapin/index
+   cobrapin/cobrapin_serial_segment_displays
    troubleshooting
