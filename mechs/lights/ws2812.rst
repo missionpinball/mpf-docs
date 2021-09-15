@@ -7,7 +7,9 @@ The WS2811 controller uses RGB and WS2812 uses GRB order.
 Unfortunately, some controller (i.e. Fadecandy) expect WS2812 by default
 and shuffle pixels internally for you.
 
-Overview video about serial LEDs: https://youtu.be/Q9BG9T7Kj4A
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
 
 Config
 ------
@@ -101,6 +103,14 @@ You can check this using the
 `Voltage Drop Calculator <https://www.calculator.net/voltage-drop-calculator.html?material=copper&wiresize=10.45&voltage=5.5&phase=dc&noofconductor=1&distance=2&distanceunit=meters&amperes=18>`_.
 Also note that standard .156 molex connectors are only rated for 7A and
 you do not want your board look like WPC boards with burned connectors.
+
+Video about electronics basics:
+
+.. youtube:: 8ByqYkYKnFc
+
+Video about wiring of lights:
+
+.. youtube:: C9GzkMduEKY
 
 
 Types of LEDs

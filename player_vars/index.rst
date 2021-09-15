@@ -11,6 +11,10 @@ Note that you can also create your own player variables in your configs, and
 most likely your machine will have several orders of magnitude more player
 variables than this list here.
 
+Video about player and machine variables:
+
+.. youtube:: PUxEsNUGXPY
+
 That said, here's a list of the "built in" player variables and how they work:
 
 .. toctree::

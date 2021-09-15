@@ -23,6 +23,10 @@ where you can trigger state transitions based on the current state and an event.
 Technically, this is a `finite state machine <https://en.wikipedia.org/wiki/Finite-state_machine>`_
 as known from CS class.
 
+Video about state machines:
+
+.. youtube:: qakxTF1H57E
+
 This is an example:
 
 .. code-block:: mpf-config

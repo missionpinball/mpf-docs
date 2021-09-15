@@ -24,6 +24,10 @@ Most of the settings in the :doc:`/mechs/lights/index` documentation apply to LE
 connected to FAST Pinball controllers, however there are a few FAST-specific
 things to know.
 
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
+
 Channel and Number Syntax
 -------------------------
 

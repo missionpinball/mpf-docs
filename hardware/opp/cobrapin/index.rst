@@ -12,6 +12,18 @@ Features:
     * 24-50V power filter. Board also provides the common ground for the supplies.
     * Fuses for solenoid banks and Neopixels
 
+Overview video about Cobrapin:
+
+.. youtube:: UQNMaLv3woo
+
+Overview video about OPP:
+
+.. youtube:: WU98MRDeYeQ
+
+Video about cobrapin extension board:
+
+.. youtube:: lfxKcaiZyMs
+
 Power Input and Filter
 ---------------------------------------------------------------------------------------------------------------
 
@@ -36,7 +48,7 @@ The 24 solenoids are broken up into 3 banks of 8 outputs. There is a ninth pin o
 
 The solenoid outputs are labeled in silkscreen with the MPF compatible numbers. :doc:`OPP coils / drivers </hardware/opp/drivers>`.
 
-Each bank has an LED next to it to indicate if that bank has power. Check these if you are concerned you have blown a fuse.  
+Each bank has an LED next to it to indicate if that bank has power. Check these if you are concerned you have blown a fuse.
 
 Each solenoid has an associated LED to indicate it is being driven by the processor. It is highly recommended to test a new setup without high voltage power or without the coils plugged in. Using these LEDs, you can verify that each output is being driven correctly.
 
@@ -50,7 +62,7 @@ J13:
 F1, F2, F3:
     Solenoid power bank fuses.
 
-The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids. 
+The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
 
 .. note:: Solenoids in bank A should only be powered by the HV_A pin, bank B should only be powered by HV_B, bank C should only be powered by HV_C. Failure to do so may confuse future troubleshooting and could eventually blow out a transistor.
 
@@ -119,13 +131,13 @@ Example Config
       #  MPF will automatically address the correct board even if the ports
       #     are swapped.
 
-      #For multiple CobraPin boards in a game, you will either have to give 
-      #  the STM32 boards on the second CobraPin board new serial numbers 
-      #  (10 and 11 are suggested for the 2nd board since 2 is used by the 
-      #  CobraPin Xpansion Board) 
-      #  <OR> Use the chains section to assign a port to a board number. 
-      #  Mixing these up could cause blown FETs, coils, and fuses. Proceed 
-      #  with caution. Test without coil power and use the yellow coil LEDs 
+      #For multiple CobraPin boards in a game, you will either have to give
+      #  the STM32 boards on the second CobraPin board new serial numbers
+      #  (10 and 11 are suggested for the 2nd board since 2 is used by the
+      #  CobraPin Xpansion Board)
+      #  <OR> Use the chains section to assign a port to a board number.
+      #  Mixing these up could cause blown FETs, coils, and fuses. Proceed
+      #  with caution. Test without coil power and use the yellow coil LEDs
       #  for feedback.
       #chains:
          #0: /dev/ttyACM0
@@ -137,12 +149,12 @@ Example Config
         #Gives the capacitors extra time to recharge after firing a coil
         #  and eases the load on the power supply. Doesn't affect autofire
         #  devices like flippers, pops, slings.
-        release_wait_ms: 50   
+        release_wait_ms: 50
 
 
-    #One giant config file can get difficult to manage. You can put any of 
-    #  these config sections in its own yaml file and link to it with the 
-    #  config section here      
+    #One giant config file can get difficult to manage. You can put any of
+    #  these config sections in its own yaml file and link to it with the
+    #  config section here
     config:
       #- switches_config.yaml
       #- lights_config.yaml
@@ -170,10 +182,10 @@ Example Config
       s_lowerDrop1:
         number: 1-0-32
 
-      # ...    
+      # ...
 
       s_topRollunder:
-        number: 1-0-95 
+        number: 1-0-95
         ignore_window_ms: 250ms    #tune to assist in debouncing
 
 
@@ -207,19 +219,19 @@ Example Config
       #There are multiple ways to configure flippers, use the one that
       #  matches your hardware
       c_flipper_left:
-        number: 0-0-8           
+        number: 0-0-8
         allow_enable: true
         default_hold_power: 1.0
         default_pulse_ms: 50
       c_flipper_right:
-        number: 0-0-4            
+        number: 0-0-4
         allow_enable: true
         default_hold_power: 1.0
-        default_pulse_ms: 50     
+        default_pulse_ms: 50
       c_ballRelease:
         number: 1-0-1
         default_hold_power: 0.15
-        default_pulse_ms: 30          
+        default_pulse_ms: 30
 
 
     flippers:

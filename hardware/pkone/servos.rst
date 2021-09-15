@@ -7,7 +7,12 @@ How to configure servos (Penny K Pinball PKONE)
 | :doc:`/config/servos`                                                        |
 +------------------------------------------------------------------------------+
 
-You can drive up to four servos from any PKONE Extension board
+You can drive up to four servos from any PKONE Extension board.
+
+Overview video about :doc:`servos </mechs/servos/index>`:
+
+.. youtube:: wA6KEODwQ5w
+
 
 number:
 -------

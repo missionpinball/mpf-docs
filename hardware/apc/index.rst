@@ -7,7 +7,9 @@ It contains CPU and drivers so it can also be used to build full custom
 machines.
 Uses the :doc:`LISY protocol </hardware/lisy/protocol>`.
 
-This is how APC generally works: https://www.youtube.com/watch?v=w4Po8OE5Zkw
+This is how APC generally works:
+
+.. youtube:: w4Po8OE5Zkw
 
 See `Arduino Pinball Controller Documentation <https://github.com/AmokSolderer/APC>`_
 on github for details.

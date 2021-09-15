@@ -3,6 +3,10 @@ Queue Relay player
 
 The *queue relay player* is a :doc:`config player </config_players/index>` that's used to block queue events.
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 Usage in config files
 ---------------------
 

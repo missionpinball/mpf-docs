@@ -191,3 +191,7 @@ multiball will eject three balls from *lockdevice*.
    Be careful with with *balls_to_replace* and *replace_balls_in_play*.
    They will only work in exactly this combination.
    Used in isolation they will likely lead to incorrect ball counts.
+
+Video about ball locks and multiballs:
+
+.. youtube:: 2mFkgIlksC4

@@ -22,6 +22,10 @@ to enable this.
 mpf hardware benchmark
 ----------------------
 
+Overview video about mpf hardware benchmark:
+
+.. youtube:: uRT--368J6A
+
 MPF will benchmark latency and jitter of inputs, outputs and rules for your
 hardware setup (i.e. your controller with your OS and hardware).
 This needs to be configured:

@@ -5,6 +5,9 @@ You can map any display to your playfield LEDs or any LEDs (e.g. a LED matrix)
 in your machine. This enables you to leverage any MC features and display
 them on any LEDs (or more specifically any lights) in your machine.
 
+Video about display_light_player:
+
+.. youtube:: 38hc7IIfVJI
 
 To use this in a show you can use this:
 

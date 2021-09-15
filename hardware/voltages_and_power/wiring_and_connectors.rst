@@ -15,6 +15,10 @@ power requirements.
    risk. Electricity can be dangerous and might kill you or burn down your
    house.
 
+Video about wiring in pinball:
+
+.. youtube:: 3ZdSLruAYM0
+
 High Current
 ------------
 

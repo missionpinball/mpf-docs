@@ -19,6 +19,10 @@ Raspberry PI (pigpio)
 The rpi platform can be used to control inputs (switches), outputs (coils), I2C
 and servos on the RPi remotely (or locally) using pigpio.
 
+Video about the Raspberry PI and MPF:
+
+.. youtube:: ihj5O0J-mD0
+
 Installation
 ------------
 

@@ -15,11 +15,15 @@ How to use Pololu Tic in MPF
 | :doc:`/config/steppers`                                                      |
 +------------------------------------------------------------------------------+
 
-The Pololu Tic is a stepper controller which can controll one stepper via USB.
+The Pololu Tic is a stepper controller which can control one stepper via USB.
 Multiple versions with different power rating exist but they all work the
 same from the perspective of MPF.
 
 :doc:`TODO: Add a picture of a Pololu Tic </about/help_us_to_write_it>`
+
+Overview video about :doc:`steppers </mechs/steppers/index>`:
+
+.. youtube:: YaRNBU0OHGc
 
 Installation
 ------------

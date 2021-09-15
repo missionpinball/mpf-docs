@@ -40,3 +40,9 @@ Read on for more info on how shows work:
 You should have a look at :doc:`/config_players/index` to find more information
 about all the elements which are possible in shows (i.e. lights, slides,
 widgets or sounds).
+
+Videos about shows:
+
+.. youtube:: Ou5xqCAthZY
+.. youtube:: bjDWm_pO9_I
+.. youtube:: 9hMsnGfUliM

@@ -21,6 +21,10 @@ Here is a simple example of what the display can be configured to look like:
 
 .. image:: /displays/images/widget_segment_display_emulator.png
 
+Video about segment displays:
+
+.. youtube:: Jyf3jxGXnTw
+
 For more information visit the following pages:
 * :doc:`/displays/widgets/segment_display_emulator/how_to`
 * :doc:`/displays/widgets/segment_display_emulator/index`

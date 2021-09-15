@@ -64,6 +64,10 @@ and the other terminal is connected to high voltage.
 Check with the documentation of your hardware platform to confirm this but it
 should be the case for all modern machines.
 
+Video about wiring coils:
+
+.. youtube:: peVNGqb2Wp8
+
 Strength and Current
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -102,6 +106,10 @@ In most cases you can leave out ``L`` as this is not terribly scientific
 anyway (and there is slightly more to it but this should be a good start).
 In general, reducing resistance ``R`` (by using thicker wires) will give you
 more powerful coils.
+
+Video about electronics basics:
+
+.. youtube:: 8ByqYkYKnFc
 
 Config
 ------

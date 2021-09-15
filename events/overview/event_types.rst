@@ -10,6 +10,10 @@ You can find the details of how to use each of these events by reading
 through the API documentation for the event manager, but here's a
 quick overview.
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 Basic Events
 ------------
 

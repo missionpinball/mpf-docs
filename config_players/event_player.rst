@@ -3,6 +3,10 @@ Event player
 
 The *event player* is a :doc:`config player </config_players/index>` that's used to post events.
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 Basic Event Playing
 -------------------
 

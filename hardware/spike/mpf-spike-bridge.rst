@@ -30,12 +30,12 @@ SanDisk Ultra Plus 16GB purchased from Best Buy
 
 One tool you can use to backup an image of your SD Card is HDD Raw Copy. This tool will back up a copy to your local
 drive and you can restore it to the new SD card. For a tutorial on backing up your Stern SD card using HDD Copy check
-out the following video.
+out the following video (starting from second 35):
 
-https://www.youtube.com/watch?v=KlKw8raWixI&t=35s
+.. youtube:: KlKw8raWixI
 
 .. note:: Save a copy of your SD card image in case you need to restore your SD card. If, at one point, your SD memory
-          card becames corrupted, restoring from the backed up image fixes the issue.
+          card becomes corrupted, restoring from the backed up image fixes the issue.
 
 2. Mount the SD card
 --------------------

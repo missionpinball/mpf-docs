@@ -24,7 +24,9 @@ to read specific "How To" guides for everything else you need. (These are in the
 Pinball Mechanisms, Game Logic, Displays & Graphics, Sound, and Shows sections.)
 
 If you want to see us work through the tutorial you can also watch our
-`walk-through video <https://www.youtube.com/watch?v=R4WugGNiezc>`_.
+walk-through video:
+
+.. youtube:: R4WugGNiezc
 
 Now let's get started...
 

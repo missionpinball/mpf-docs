@@ -26,6 +26,10 @@ The P-ROC includes support four alpha-numeric displays (0-3). You can configure 
 Note that the :doc:`/displays/display/alpha_numeric` guide has more details
 on using alpha numeric and segment displays.
 
+Video about segment displays:
+
+.. youtube:: Jyf3jxGXnTw
+
 What if it did not work?
 ------------------------
 

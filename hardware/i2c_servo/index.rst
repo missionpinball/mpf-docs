@@ -16,6 +16,10 @@ One example for such a controller is the
 `Adafruit 16-Channel 12-bit PWM/Servo Driver <https://www.adafruit.com/product/815>`_.
 You can use any I2C platform supported by MPF (see :doc:`/hardware/i2c_platforms`).
 
+Overview video about :doc:`servos </mechs/servos/index>`:
+
+.. youtube:: wA6KEODwQ5w
+
 1. Installing I2C Servo Controllers
 -----------------------------------
 

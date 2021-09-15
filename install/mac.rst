@@ -15,7 +15,9 @@ will require almost 2 GB of disk space. MPF itself it only about 12 MB, but
 there are a lot of supporting things that MPF needs as you'll see here.
 
 We have a video which shows this entire installation process in action
-which is available at `<https://www.youtube.com/watch?v=lJEfQGffXsA>`_
+which is available at (slightly outdated):
+
+.. youtube:: lJEfQGffXsA
 
 Here are the steps to install MPF on a Mac:
 

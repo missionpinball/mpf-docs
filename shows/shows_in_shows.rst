@@ -30,3 +30,7 @@ You would usually also add some sounds and slides which can be also in other
 shows.
 The organisation of your shows is up to you.
 This allows you to reuse shows with different parameters.
+
+Video about shows:
+
+.. youtube:: Ou5xqCAthZY

@@ -39,6 +39,10 @@ it will not break anything).
 
 :doc:`TODO: Add electronical drawing for sender and receiver. </about/help_us_to_write_it>`
 
+Video about wiring optos:
+
+.. youtube:: 7G8LFBbYNOY
+
 Brightness and Current
 ~~~~~~~~~~~~~~~~~~~~~~
 

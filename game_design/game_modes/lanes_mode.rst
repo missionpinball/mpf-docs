@@ -27,7 +27,9 @@ through which lanes are lit, and when they're all lit, you get a score
 use a Williams Indiana Jones machine. Here's a video that shows the
 final result of building everything we outline in this guide.
 
-`See it in action <https://www.youtube.com/watch?v=4Ip60PVe-oQ>`_.
+See it in action:
+
+.. youtube:: 4Ip60PVe-oQ
 
 Let's begin!
 

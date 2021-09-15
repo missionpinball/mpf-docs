@@ -7,6 +7,10 @@ specific entries in your config files to board and connector locations) as well
 as overall settings that affect how your FAST hardware performs. (Watch dogs,
 update speeds, etc.)
 
+Video about FAST:
+
+.. youtube:: uS_dNWOL8mw
+
 .. toctree::
    :titlesonly:
 

@@ -31,7 +31,9 @@ Here's an image of the SmartMatrix RGB DMD in action:
 
 .. image:: /hardware/images/display_rgb_dmd.jpg
 
-And a video which explains it all: https://www.youtube.com/watch?v=zbZQCByeXOU
+And a video which explains it all:
+
+.. youtube:: zbZQCByeXOU
 
 The following diagram shows how all the components fit together:
 

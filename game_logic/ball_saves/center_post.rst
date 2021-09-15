@@ -6,6 +6,10 @@ It pops up between the flippers and prevents the ball from draining.
 
 .. image:: /game_logic/images/center_post.jpg
 
+Video about center posts:
+
+.. youtube:: eR0C5ft546c
+
 To use it in MPF we reuse a diverter.
 A simple :doc:`/config/coil_player` would work as well but then we would have
 to reimplement ball search and service mode logic.

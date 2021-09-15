@@ -22,6 +22,10 @@ per second (like 50-200).
 
 :doc:`TODO: Add a picture of a step stick or DRV8825 </about/help_us_to_write_it>`
 
+Overview video about :doc:`steppers </mechs/steppers/index>`:
+
+.. youtube:: YaRNBU0OHGc
+
 Configuring your stepper
 ------------------------
 

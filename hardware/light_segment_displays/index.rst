@@ -19,6 +19,10 @@ You can select from multiple mappings (see
 :doc:`platform_settings </config/light_segment_displays>` for details).
 Let us know if you need another mapping.
 
+Video about segment displays:
+
+.. youtube:: Jyf3jxGXnTw
+
 Hardware
 --------
 

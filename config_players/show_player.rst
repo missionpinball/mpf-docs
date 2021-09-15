@@ -4,6 +4,10 @@ Show player
 The *show player* is a :doc:`config player </config_players/index>` that's used to start, stop, pause, resume, advance,
 and/or update shows.
 
+Video about shows:
+
+.. youtube:: Ou5xqCAthZY
+
 This is an example:
 
 .. code-block:: mpf-config
