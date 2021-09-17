@@ -13,8 +13,8 @@ blinkenlights:
 
 The ``blinkenlights:`` section of your config file is used
 to define lights on your pinball machine that can be shared by
-multiple different modes at the same time.  Blinkenlights must
-be RGB LEDs, because each mode that uses a blinkenlight can
+multiple different modes at the same time.  Blinkenlights work best with
+RGB LEDs, because each mode that uses a blinkenlight can
 specify a color that the blinkenlight should flash for that mode.
 The blinkenlight will then flash each of its colors in a cycle according to
 a given schedule.

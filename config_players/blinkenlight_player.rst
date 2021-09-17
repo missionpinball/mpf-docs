@@ -204,8 +204,8 @@ Usage in shows
 
 In shows, the blinkenlight player is used via the ``blinkenlights:`` section of a step.
 
-Express Config
---------------
+Express Config and Keyless Colors
+---------------------------------
 
 As mentioned above, the express config for ``blinkenlight_player`` performs the ``add`` action. So,
 the color you specify as the express config value will be the color to add to
@@ -232,6 +232,11 @@ the ``some_other_event`` event is posted, the ``remove``
 action is performed.  Since this ``remove`` action also didn't specify a ``key`` value, then
 MPF will look for a keyless color and remove that color from the blinkenlight.
 In this case, the color red will be removed.
+
+Note that keyless colors are only valid within the context of the mode or show
+that is performing the keyless action.  So, a ``remove`` action from ``mode1`` will
+not remove the keyless color that was added by ``mode2``.  It will only remove the 
+keyless color added by ``mode1``.
 
 There's a special value you can use in the express config to remove a keyless
 color.  Instead of using the full config and specifying an ``action: remove`` as

@@ -36,7 +36,7 @@ In the example above, when the event called ``some_event`` is posted,
 the color red will be added to my_blinkenlight1's list of colors (this will
 cause the light to immediately start flashing if it wasn't already).  The new
 color will have the key ``mykey1``.  The key is used like a name of the color,
-so that it can be removed later.
+so that it can be removed later using that key.
 When the event ``some_other_event`` is posted, the red color (key ``mykey1``) will be
 removed from the blinkenlight.
 
@@ -56,10 +56,7 @@ Example blinkenlight player from a show:
 The first example shows the full config, while the second shows the
 "express" config. (What's an "express config?" Details :doc:`here </config/instructions/express_config>`.
 
-The blinkenlight player's express config is the "add" action.  Note that the
-express config uses a random key, so there's no way for you to remove this
-color with the ``remove`` action if you use this config. However, all colors added
-to a blinkenlight by any mode are removed automatically when the mode ends.
+The blinkenlight player's express config is the "add" action.
 
 See :doc:`/config_players/blinkenlight_player` for details.
 
@@ -77,8 +74,7 @@ action:
 Single value, type: one of the following options: add, remove, remove_mode, remove_all.
 Default: ``add``
 
-What action the blinkenlight should perform. The ``add`` and ``remove`` actions
-require a ``key`` to know which color to add or remove.  The ``remove_all``
+What action the blinkenlight should perform. The ``remove_all``
 action will remove all the colors from the blinkenlight, effectively turning it
 off.  The ``remove_mode`` action will remove all the colors that were added by
 the mode that the ``remove_mode`` action is coming from (remember that a
@@ -105,7 +101,9 @@ Single valid, type: ``string``. Defaults to empty.
 
 You can think of this value as a name for the color you're adding or removing
 from the blinkenlight.  If you add a color, then the key allows you to remove
-the color later using the key to specify which color to remove.
+the color later using the key to specify which color to remove.  If you don't
+specify a key, then the color is considered "keyless" (see
+:doc:`/config_players/blinkenlight_player` for more information about keyless colors).
 
 Related How To guides
 ---------------------
