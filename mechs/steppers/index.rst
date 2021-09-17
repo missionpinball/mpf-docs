@@ -11,10 +11,14 @@ Stepper Motors
 
 .. image:: /mechs/images/stepper_with_switch.jpg
 
-Stepper motors offer digitally controlled precise movement of mechanisms. They reqire a separate
+Stepper motors offer digitally controlled precise movement of mechanisms. They require a separate
 driver board that interfaces with the host computer by USB or through the pinball machine
 controller. Steppers have a unique design with two or more sets of coils which when energized
-sequentually turn the armature a set distance, typically 1.8 degrees.
+sequentially turn the armature a set distance, typically 1.8 degrees.
+
+Overview video about steppers:
+
+.. youtube:: YaRNBU0OHGc
 
 Steppers vs Servos
 ------------------

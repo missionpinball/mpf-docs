@@ -45,5 +45,11 @@ posted (three times to open and three times to close):
        toy_hit:
          loops: 2
 
-To see how this can be used in a real machine we recommend this
-`explanation video by the pinball amigos <https://www.youtube.com/watch?v=1QOOJNtsGxw&t=58>`_.
+To see how this can be used in a real machine we recommend this explanation
+video by the pinball amigos:
+
+.. youtube:: 1QOOJNtsGxw
+
+You might also enjoy our video about servos in general:
+
+.. youtube:: wA6KEODwQ5w

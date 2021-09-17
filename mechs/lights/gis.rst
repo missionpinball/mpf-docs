@@ -46,6 +46,10 @@ GI string might also be
 :doc:`connected to a driver <coils_as_lights>` and not part of a light matrix.
 In recent machines LEDs are used but still driven in strings.
 
+Video about wiring of lights:
+
+.. youtube:: C9GzkMduEKY
+
 Config
 ------
 

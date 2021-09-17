@@ -103,6 +103,10 @@ as well as dozens of other options that allow MPF to support every
 known type of device in every pinball machine ever created.
 (Seriously.)
 
+Video on ball tracking in MPF:
+
+.. youtube:: Yh8ittsuWIc
+
 Monitorable Properties
 ----------------------
 

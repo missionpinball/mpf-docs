@@ -12,6 +12,10 @@ The `light show generator for MPF <https://github.com/missionpinball/showcreator
 loads your LED positions from the :doc:`/tools/monitor/index`
 config and lets you create show for transitions.
 
+Video about showcreator:
+
+.. youtube:: bjDWm_pO9_I
+
 :doc:`Shows </shows/index>` in MPF are
 written in YAML and can be used
 :doc:`universally </config_players/index>`

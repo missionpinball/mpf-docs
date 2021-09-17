@@ -19,6 +19,10 @@ The original MyPinball controller which can controll existing segments
 and the TNA segment displays sold by PBL which includes four segments.
 Both can be controlled using this platform.
 
+Video about segment displays:
+
+.. youtube:: Jyf3jxGXnTw
+
 Mypinballs Segment Displays Controller
 --------------------------------------
 

@@ -163,3 +163,4 @@ More Howtos
 
    General Debugging <general_debugging>
    reading_errors
+   attaching_a_debugger

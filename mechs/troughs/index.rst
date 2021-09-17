@@ -35,6 +35,10 @@ type of trough or ball drain system your machine has. So look at the following
 pictures to match up what you have, and then follow the specific links to see
 how to configure MPF to use it in your machine.
 
+Video on ball tracking in MPF:
+
+.. youtube:: Yh8ittsuWIc
+
 Option 1: Modern trough with opto sensors
 -----------------------------------------
 

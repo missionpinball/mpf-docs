@@ -43,6 +43,10 @@ Other serial LEDs contain three white LEDs (WWW order).
 If nothing is specified MPF assumes RGB order so you need to specify it for any
 LED with a different channel order.
 
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
+
 Hardware
 ~~~~~~~~
 
@@ -68,6 +72,10 @@ your PSU.
 We recommend you to connect the ground at the PSU and not below the playfield
 because coils will create a lot of spike in the ground line otherwise.
 However, make sure that you connect your grounds or you will be in danger!
+
+Video about wiring of lights:
+
+.. youtube:: C9GzkMduEKY
 
 Config in MPF
 ~~~~~~~~~~~~~

@@ -36,9 +36,12 @@ advanced light processing capabilities such as dithering and interpolation that
 are not available if you just control LEDs directly.
 
 If you're not familiar with the FadeCandy, check out this intro video from SparkFun:
-https://www.youtube.com/watch?v=-4AUBjV7Y-w
 
-Overview video about serial LEDs: https://youtu.be/Q9BG9T7Kj4A
+.. youtube:: -4AUBjV7Y-w
+
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
 
 1. Understanding all the parts and pieces
 -----------------------------------------

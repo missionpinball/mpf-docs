@@ -61,6 +61,10 @@ See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.
 Connect those stepper drivers as described in
 :doc:`/hardware/stepstick/index` (but use the PD-LED outputs).
 
+Overview video about :doc:`steppers </mechs/steppers/index>`:
+
+.. youtube:: YaRNBU0OHGc
+
 What if it did not work?
 ------------------------
 

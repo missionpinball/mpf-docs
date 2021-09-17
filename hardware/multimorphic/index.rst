@@ -7,6 +7,10 @@ These guides include the numbering format (how you map specific entries in your
 config files to board and connector locations) as well as overall settings that
 affect how your hardware performs.
 
+Overview video about the Multimorphic P3-Roc system:
+
+.. youtube:: rLKUrv4hWqI
+
 3 steps to using a P-ROC/P3-ROC
 -------------------------------
 

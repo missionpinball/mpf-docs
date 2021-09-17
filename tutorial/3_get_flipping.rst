@@ -429,14 +429,14 @@ talk to your hardware. To configure MPF to use a hardware pinball
 controller, you need to add a ``hardware:`` section to your config file,
 and then you add settings for ``platform:`` and ``driverboards:``.
 
-Remember earlier in this step, we provided links to the documentation for
-each platform. Here they are again:
+Don't worry if you do not have any hardware yet.
+You can run through the tutorial without hardware by using the
+`virtual` hardware platform.
 
-* :doc:`FAST Pinball </hardware/fast/index>`
-* :doc:`Multimorphic P-ROC/P3-ROC </hardware/multimorphic/index>`
-* :doc:`Open Pinball Project (OPP) </hardware/opp/index>`
-* :doc:`Stern SPIKE </hardware/spike/index>`
-* :doc:`LISY </hardware/lisy/index>`
+Remember earlier in this step, we provided links to the documentation for
+each platform. Here is
+:doc:`a list of supported hardware platforms </hardware/index>` and how
+to set them up.
 
 You only need look at those docs for the specifics parts of the config that
 vary depending on your hardware. The good news is that 99.9% of the MPF
@@ -444,7 +444,7 @@ config files are identical regardless of the hardware you're using.
 
 Here are some various examples of different types of hardware configs. Please
 understand that these are just some examples! Do not copy them for your own
-use, rather, follow the instructions from the bullet list above.
+use, rather, follow the instructions from the link to the list above.
 
 FAST Pinball with FAST IO driver boards:
 
@@ -505,6 +505,9 @@ In case you are using :doc:`the Virtual Pinball (VPX) Platform </hardware/virtua
         number: 1
         allow_enable: true
 
+Video about developing your game without hardware:
+
+.. youtube:: 7XmIIhzEREk
 
 See? They're all different.
 
@@ -611,7 +614,7 @@ in the tutorial based on the config file above: (Note that this
 companion video is showing *Judge Dredd*, and it's based on an older
 version of MPF, but the basic concepts are the same.)
 
-https://www.youtube.com/watch?v=SkxZxkHHmXw
+.. youtube:: SkxZxkHHmXw
 
 What if it doesn't work?
 ------------------------

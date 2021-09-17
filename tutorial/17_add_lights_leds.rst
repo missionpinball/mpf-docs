@@ -228,7 +228,7 @@ speed. Simple, just add a ``speed: 4`` to the show_player entry.
 If you try to run MPF with the config above, MPF will halt with the following error
 (scroll to the right to see it all):
 
-.. code-block:: python
+.. code-block:: console
 
    ValueError: YAML error found in file /mpf-examples/tutorial_step_17/modes/attract/config/attract.yaml. Line 6, Position 10
 
@@ -280,7 +280,9 @@ shows on real pinball machines are just lots of little shows all
 running at the same time.
 
 For example, look at how we can break down the attract mode light show
-of *Demolition Man*: https://www.youtube.com/watch?v=_h_rhHExmX4
+of *Demolition Man*:
+
+.. youtube:: _h_rhHExmX4
 
 So if we were creating the
 attract mode light show like this for MPF, we would actually create

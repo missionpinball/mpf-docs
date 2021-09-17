@@ -3,6 +3,10 @@ Queue Event player
 
 The *queue event player* is a :doc:`config player </config_players/index>` that's used to play queue events.
 
+Video about events in MPF:
+
+.. youtube:: G3UbVP8gFU0
+
 Usage in config files
 ---------------------
 

@@ -21,6 +21,10 @@ LEDs work similar to matrix lights (chain 0, board 1, LED 1):
         subtype: led
         type: rgb
 
+Overview video about serial LEDs:
+
+.. youtube:: Q9BG9T7Kj4A
+
 Channel and Number Syntax
 -------------------------
 

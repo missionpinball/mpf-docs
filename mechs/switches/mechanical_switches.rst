@@ -9,6 +9,11 @@ Mechanical Switches
 
 Most switches in pinball machines are mechanical switches which are open by
 default and close a circuit when pushed.
+
+Video about wiring switches:
+
+.. youtube:: 7G8LFBbYNOY
+
 There are two common types of mechanical switches:
 
 Leaf switches/Blade switches

@@ -63,6 +63,11 @@ not draw that power from the PD-LED.
 However, make sure to connect the ground of your power supply.
 See :doc:`/hardware/voltages_and_power/voltages_and_power` for details.
 
+Overview video about :doc:`servos </mechs/servos/index>`:
+
+.. youtube:: wA6KEODwQ5w
+
+
 What if it did not work?
 ------------------------
 

@@ -26,6 +26,10 @@ one of the options. More information about this type of display and other
 options that MPF supports is available in the
 :doc:`/displays/display/rgb_dmd` documentation.
 
+Overview video about Pin2DMD:
+
+.. youtube:: Q5fH-Q2umV4
+
 This is how a 128x32 pixel PIN2DMD looks in action:
 
 .. image:: https://pin2dmd.com/wp-content/uploads/2020/01/mpf-test.jpg
@@ -35,8 +39,6 @@ And this is how a 192x64 pixel PIN2DMD looks:
 
 .. image:: https://pin2dmd.com/wp-content/uploads/2020/01/mpf192x64.jpg
     :alt: 192x64 pixel PIN2DMD with MPF
-
-Overview video about Pin2DMD: https://youtu.be/Q5fH-Q2umV4
 
 1. Buy and Assemble your PIN2DMD
 --------------------------------

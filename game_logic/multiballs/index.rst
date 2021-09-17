@@ -26,6 +26,10 @@ MPF also supports stacking of multiple multiballs at the same time.
 Balls can be locked for multiball with the related :doc:`multiball_locks` config
 section.
 
+Video about ball locks and multiballs:
+
+.. youtube:: 2mFkgIlksC4
+
 Common Issues
 -------------
 

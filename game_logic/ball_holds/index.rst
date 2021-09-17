@@ -25,6 +25,10 @@ device for that).
 You can have lots of different ball holds in your game, typically configured
 per mode.
 
+Video about ball locks and multiballs:
+
+.. youtube:: 2mFkgIlksC4
+
 Monitorable Properties
 ----------------------
 

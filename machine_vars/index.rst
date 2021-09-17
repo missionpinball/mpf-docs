@@ -28,6 +28,10 @@ machine might only persist for a few hours.)
 Like player variables, you can use machine variables in your config files,
 particularly in text display widgets, to show things on your display.
 
+Video about player and machine variables:
+
+.. youtube:: PUxEsNUGXPY
+
 You can create your own machine variables in your configs. There are also
 several machine variables that are automatically created. Here's a list of
 the machine variables that are "built in" and available for use in your

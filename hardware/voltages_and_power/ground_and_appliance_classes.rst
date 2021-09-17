@@ -14,6 +14,10 @@ requirements need to be met for safe operations.
    risk. Electricity can be dangerous and might kill you or burn down your
    house.
 
+Video about ground:
+
+.. youtube:: cFdT7YdXGO0
+
 Class 1 appliances
 ------------------
 

@@ -7,6 +7,14 @@ Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 ----
 Released: June 25, 2021
 
+Video about some of the changes in 0.55:
+
+.. youtube:: 2rYxmdr3ZMU
+
+Video about release creation:
+
+.. youtube:: EilOwZV94_8
+
 Breaking changes in config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

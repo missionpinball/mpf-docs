@@ -9,6 +9,10 @@ machine.
 MPF achieves this through "virtual" platform interfaces, of which there are
 two options:
 
+Video about developing your game without hardware:
+
+.. youtube:: 7XmIIhzEREk
+
 Note that if you want to use MPF without a physical pinball machine, you
 probably also want to use the :doc:`MPF Monitor </tools/monitor/index>` which is
 a graphical tool that lets you interact with lights, switches, and pinball

@@ -21,7 +21,8 @@ from _doc_tools.mpf_config_test import CodeBlockVisitor, ConfigSnippetTester
 
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.ifconfig',
-              'notfound.extension']
+              'notfound.extension',
+              'sphinxcontrib.youtube']
 
 source_suffix = '.rst'
 

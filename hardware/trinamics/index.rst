@@ -47,6 +47,10 @@ This is an example:
          velocity_limit: 0.5                   # user units/sec   (so, 0.8 RPS of output gear )
          acceleration_limit: 2.0               # user units/sec^2  (so, 2 RPS^S of output gear)
 
+Overview video about :doc:`steppers </mechs/steppers/index>`:
+
+.. youtube:: YaRNBU0OHGc
+
 What if it did not work?
 ------------------------
 

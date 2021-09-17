@@ -30,3 +30,7 @@ know how to write tests) to verify that the config files you typed in are entere
 
 More information about writing unit tests for your machine, as well as the test writing tutorial, is available
 here: `<http://developer.missionpinball.org/en/dev/testing/writing_machine_tests.html>`_.
+
+Overview video about testing your machine:
+
+.. youtube:: DPX-1FbBaYM

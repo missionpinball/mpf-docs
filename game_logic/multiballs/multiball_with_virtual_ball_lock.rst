@@ -41,3 +41,6 @@ This is an example:
    #! advance_time_and_run 15
    #! assert_balls_in_play 3
 
+Video about ball locks and multiballs:
+
+.. youtube:: 2mFkgIlksC4

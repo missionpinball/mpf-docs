@@ -24,6 +24,10 @@ Here's a screen shot of it in action:
 
 .. image:: images/mpf-monitor.jpg
 
+Video about developing your game without hardware:
+
+.. youtube:: 7XmIIhzEREk
+
 Features
 --------
 

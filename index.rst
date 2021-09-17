@@ -162,7 +162,7 @@ Follow us
 ---------
 
 * `Twitter @missionpinball <https://twitter.com/missionpinball>`_
-* `YouTube <https://www.youtube.com/missionpinball>`_
+* `YouTube <https://www.youtube.com/jabdoa>`_
 * `Flickr <https://www.flickr.com/groups/missionpinball>`_
 * `GitHub <https://github.com/missionpinball>`_
 
