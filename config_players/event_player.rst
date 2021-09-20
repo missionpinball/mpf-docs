@@ -61,7 +61,9 @@ when an event is played:
 
    ##! mode: base
    event_player:
-     mode_base_started{current_player.score>10000}: start_mode_superbonusround play_show_richy_rich
+     mode_base_started{current_player.score>10000}:
+       - start_mode_superbonusround
+       - play_show_richy_rich
      start_mode_battle{device.achievements.ironthrone.state!="completed"}: start_mode_choose_battle
      start_mode_battle{device.achievements.ironthrone.state=="completed"}: start_mode_victory_lap
 
