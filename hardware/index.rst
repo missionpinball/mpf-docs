@@ -47,33 +47,18 @@ Primary control systems
 You'll need to pick one of these three as the main interface between MPF and
 your pinball machine.
 
-* :doc:`FAST Pinball <fast/index>`
-   * Core Controller, Nano Controller, WPC Controller
-   * 0804, 1616, 3208 I/O Boards
-   * Servo controller daughter board
-   * Power Filter Driver Board coin-door interconnect
-   * Plasma & LED mono DMDs (Core & WPC controllers)
-   * FAST RGB LED-based DMD
-
-* :doc:`Multimorphic <multimorphic/index>`
-   * P-ROC with PDB driver boards (PD-16, PD-8x8, PD-LED)
-   * P-ROC in all supported existing machines (Williams, Stern, etc.)
-   * P3-ROC with PDB driver boards (PD-16, SW-16, PD-LED)
-   * Plasma & LED mono DMDs (P-ROC)
-   * Accelerometer-based tilt (P3-ROC)
-   * I2C slave boards (see below for which I2C boards are supported) (P3-ROC)
-   * Alphanumeric displays via aux port (P-Roc)
-
 * :doc:`Open Pinball Project (OPP) controllers <opp/index>`
    * Gen 2 OPP hardware, with many combinations of wing boards for drivers,
      switches, switch matrix, LEDs & incandescent lights
    * :doc:`CobraPin Pinball Controller <opp/cobrapin/index>`
 
-* :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
-   * *New in MPF 0.33*
-   * A computer running MPF can directly connect to a SPIKE machine with
-     a simple "USB to serial" converter which you plug into the SPIKE
-     main board.
+* :doc:`Arduino Pinball Controller (APC) <apc/index>`
+   * *New in MPF 0.53*
+   * System 3 to System 11c
+   * Segment displays
+   * External sounds
+   * Switches, rules and coils
+   * Lights and enable triggers
 
 * :doc:`LISY <lisy/index>`
    * *New in MPF 0.50*
@@ -85,18 +70,33 @@ your pinball machine.
    * Switches, rules and coils
    * Lights and enable triggers
 
+* :doc:`Multimorphic <multimorphic/index>`
+   * P-ROC with PDB driver boards (PD-16, PD-8x8, PD-LED)
+   * P-ROC in all supported existing machines (Williams, Stern, etc.)
+   * P3-ROC with PDB driver boards (PD-16, SW-16, PD-LED)
+   * Plasma & LED mono DMDs (P-ROC)
+   * Accelerometer-based tilt (P3-ROC)
+   * I2C slave boards (see below for which I2C boards are supported) (P3-ROC)
+   * Alphanumeric displays via aux port (P-Roc)
+
+* :doc:`FAST Pinball <fast/index>`
+   * Core Controller, Nano Controller, WPC Controller
+   * 0804, 1616, 3208 I/O Boards
+   * Servo controller daughter board
+   * Power Filter Driver Board coin-door interconnect
+   * Plasma & LED mono DMDs (Core & WPC controllers)
+   * FAST RGB LED-based DMD
+
+* :doc:`Stern SPIKE / SPIKE 2 machines <spike/index>`
+   * *New in MPF 0.33*
+   * A computer running MPF can directly connect to a SPIKE machine with
+     a simple "USB to serial" converter which you plug into the SPIKE
+     main board.
+
 * :doc:`Penny K Pinball PKONE Platform <pkone/index>`
    * Nano Controller
    * PKONE Extension (switches, coils, rules, servos)
    * PKONE Lightshow (simple LEDs, WS281x RGB/RGBW LEDs)
-
-* :doc:`Arduino Pinball Controller (APC) <apc/index>`
-   * *New in MPF 0.53*
-   * System 3 to System 11c
-   * Segment displays
-   * External sounds
-   * Switches, rules and coils
-   * Lights and enable triggers
 
 * :doc:`Virtual (software-only) controllers <virtual/index>`
    * MPF includes virtual hardware interfaces you can use to run MPF when
@@ -200,13 +200,13 @@ MPF supports:
 .. toctree::
    :maxdepth: 2
 
-   FAST Pinball <fast/index>
-   P-ROC/P3-ROC <multimorphic/index>
    Open Pinball Project (OPP) <opp/index>
-   Stern SPIKE / SPIKE 2 <spike/index>
    LISY platform <lisy/index>
-   Penny K Pinball PKONE Platform <pkone/index>
    Arduino Pinball Controller <apc/index>
+   P-ROC/P3-ROC <multimorphic/index>
+   FAST Pinball <fast/index>
+   Stern SPIKE / SPIKE 2 <spike/index>
+   Penny K Pinball PKONE Platform <pkone/index>
    snux/index
    FadeCandy RGB LED controllers <fadecandy/index>
    i2c_servo/index
