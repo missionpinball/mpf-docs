@@ -10,11 +10,12 @@ light on, and flash the next target. Hitting an incorrect target will reset that
 target's coil and keep the light off.
 
 
-Step 1. Create a skillshot mode and lane shots
+Step 1. Create a sequential_drops mode and lane shots
 ----------------------------------------------
 
-We'll create a separate mode to manage the sequential drops, to keep the code
-clean and make it easy to turn the sequence on and off.
+We'll create a separate mode called *sequential_drops* to manage the game logic.
+Separate modes keep the code clean and make it easy to turn the drop sequence on
+and off as needed (e.g. during a multiball or wizard mode).
 
 The first thing our mode needs is :doc:`/config/shots`. Each drop target will be
 a shot (in this example, we'll have four). Each shot has a switch, a light, and
@@ -50,7 +51,7 @@ be reset after completion.
   #!   l_drop_4:
   #!     number: 4
   #! shot_profiles:
-  #!   skillshot_profile:
+  #!   drop_sequence:
   #!     states:
   #!       - name: off
   #!       - name: lit
@@ -104,7 +105,8 @@ when the shot is hit, but we don't want that here so we'll set
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: sequential_drops
+
   drop_sequence:
     advance_on_hit: false
     states:
