@@ -11,7 +11,7 @@ target's coil and keep the light off.
 
 
 Step 1. Create a sequential_drops mode and lane shots
-----------------------------------------------
+-----------------------------------------------------
 
 We'll create a separate mode called *sequential_drops* to manage the game logic.
 Separate modes keep the code clean and make it easy to turn the drop sequence on
