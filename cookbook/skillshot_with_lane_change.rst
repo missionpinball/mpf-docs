@@ -15,9 +15,7 @@ Skillshots are a self-contained set of rules, so it's wise to create a separate
 mode that can be started when a player's ball starts and ended after the
 skillshot is hit (or missed).
 
-The first thing our mode needs is :doc:`/config/shots`. Each lane will count as
-a shot, and for this example we'll have three lanes "left", "middle", and
-"right". We'll assume that the machine has switches defined in the ``switches:``
+We'll assume that the machine has switches defined in the ``switches:``
 config section for each of the lanes, called ``s_lane_left``, ``s_lane_middle``,
 and ``s_lane_right``. We'll also use corresponding lights ``l_lane_left`` etc.
 to indicate which lane is lit.
@@ -25,30 +23,45 @@ to indicate which lane is lit.
 
 .. code-block:: mpf-config
 
-  #! switches:
-  #!   s_lane_left:
-  #!     number: 1
-  #!   s_lane_middle:
-  #!     number: 2
-  #!   s_lane_right:
-  #!     number: 3
-  #! lights:
-  #!   l_lane_left:
-  #!     number: 1
-  #!   l_lane_middle:
-  #!     number: 2
-  #!   l_lane_right:
-  #!     number: 3
-  #! shot_profiles:
-  #!   skillshot_profile:
-  #!     states:
-  #!       - name: off
-  #!       - name: on
-  ##! mode: skillshot
+  #config_version=5
+  modes:
+    - skillshot_with_lane_change
+  switches:
+    s_lane_left:
+      number: 1
+    s_lane_middle:
+      number: 2
+    s_lane_right:
+      number: 3
+  lights:
+    l_lane_left:
+      number: 1
+    l_lane_middle:
+      number: 2
+    l_lane_right:
+      number: 3
+  shot_profiles:
+    skillshot_profile:
+      states:
+        - name: off
+        - name: on
 
+  ##! mode: skillshot_with_lane_change
+  #! mode:
+  #!   start_events: start_mode_skillshot_with_lane_change
+  #!   stop_events: stop_mode_skillshot_with_lane_change
+  #!   priority: 1000
+
+The first thing our mode needs is :doc:`/config/shots`. Each lane will count as
+a shot, and for this example we'll have three lanes "left", "middle", and
+"right".
+
+.. code-block:: mpf-config
+
+  ##! mode: skillshot_with_lane_change
   mode:
-    start_events: start_mode_skillshot
-    stop_events: stop_mode_skillshot
+    start_events: start_mode_skillshot_with_lane_change
+    stop_events: stop_mode_skillshot_with_lane_change
     priority: 1000
 
   shots:
@@ -85,7 +98,7 @@ want that here so we'll set ``advance_on_hit: false``. Instead, we have explicit
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: skillshot_with_lane_change
   shot_profiles:
     skillshot_profile:
       advance_on_hit: false
@@ -107,48 +120,7 @@ together. In this case, we'll use our shot group to rotate the lit shots.
 
 .. code-block:: mpf-config
 
-  #! switches:
-  #!   s_lane_left:
-  #!     number: 1
-  #!   s_lane_middle:
-  #!     number: 2
-  #!   s_lane_right:
-  #!     number: 3
-  #! lights:
-  #!   l_lane_left:
-  #!     number: 1
-  #!   l_lane_middle:
-  #!     number: 2
-  #!   l_lane_right:
-  #!     number: 3
-  #!
-  ##! mode: skillshot
-  #! shots:
-  #!   skillshot_left:
-  #!     switch: s_lane_left
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_left
-  #!   skillshot_middle:
-  #!     switch: s_lane_middle
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_middle
-  #!   skillshot_right:
-  #!     switch: s_lane_right
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_right
-  #!
-  #! shot_profiles:
-  #!  shot_profiles:
-  #!    skillshot_profile:
-  #!      advance_on_hit: false
-  #!      states:
-  #!        - name: off
-  #!          show: off
-  #!        - name: lit
-  #!          show: flash
+  ##! mode: skillshot_with_lane_change
   shot_groups:
     skillshot:
       shots: skillshot_left, skillshot_middle, skillshot_right
@@ -172,7 +144,7 @@ shot at random and advance it to its "lit" state. We'll use the
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: skillshot_with_lane_change
   random_event_player:
     mode_skillshot_started:
       events:
@@ -195,7 +167,7 @@ individually.
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: skillshot_with_lane_change
   variable_player:
     skillshot_lit_hit:
       score: 20_000
@@ -217,7 +189,7 @@ ending the mode.
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: skillshot_with_lane_change
   event_player:
     skillshot_hit: stop_mode_skillshot
     playfield_active: stop_mode_skillshot|1s

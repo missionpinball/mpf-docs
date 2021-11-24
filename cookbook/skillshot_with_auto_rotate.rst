@@ -14,6 +14,46 @@ Skillshots are a self-contained set of rules, so it's wise to create a separate
 mode that can be started when a player's ball starts and ended after the
 skillshot is hit (or missed).
 
+.. code-block:: mpf-config
+  #config_version=5
+  modes:
+    - skillshot_with_auto_rotate
+    -
+  switches:
+    s_dropbank_1:
+      number: 1
+    s_dropbank_2:
+      number: 2
+    s_dropbank_3
+      number: 3
+    s_dropbank_4:
+      number: 4
+    s_dropbank_5:
+      number: 5
+  lights:
+    l_dropbank_1:
+      number: 1
+    l_dropbank_2:
+      number: 2
+    l_dropbank_3
+      number: 3
+    l_dropbank_4:
+      number: 4
+    l_dropbank_5:
+      number: 5
+
+  ##! mode: skillshot_with_auto_rotate
+  #! mode:
+  #!   start_events: start_mode_skillshot_with_auto_rotate
+  #!   stop_events: stop_mode_skillshot_with_auto_rotate
+  #!   priority: 1000
+  #! shot_profiles:
+  #!   skillshot_profile:
+  #!     states:
+  #!       - name: off
+  #!       - name: on
+
+
 The first thing our mode needs is :doc:`/config/shots`. Each possible target
 will be a shot (in this example, we'll have five). Each shot has a switch,
 a light, and a shot profile to track its state. The sample code below uses
@@ -27,44 +67,16 @@ automatically light when the mode starts, as the first shot in the rotation.
 
 .. code-block:: mpf-config
 
-  #! switches:
-  #!   s_dropbank_1:
-  #!     number: 1
-  #!   s_dropbank_2:
-  #!     number: 2
-  #!   s_dropbank_3
-  #!     number: 3
-  #!   s_dropbank_4:
-  #!     number: 4
-  #!   s_dropbank_5:
-  #!     number: 5
-  #! lights:
-  #!   l_dropbank_1:
-  #!     number: 1
-  #!   l_dropbank_2:
-  #!     number: 2
-  #!   l_dropbank_3
-  #!     number: 3
-  #!   l_dropbank_4:
-  #!     number: 4
-  #!   l_dropbank_5:
-  #!     number: 5
-  #! shot_profiles:
-  #!   skillshot_profile:
-  #!     states:
-  #!       - name: off
-  #!       - name: on
-  ##! mode: skillshot
-
+  ##! mode: skillshot_with_auto_rotate
   mode:
-    start_events: start_mode_skillshot
-    stop_events: stop_mode_skillshot
+    start_events: start_mode_skillshot_with_auto_rotate
+    stop_events: stop_mode_skillshot_with_auto_rotate
     priority: 1000
 
   shots:
     skillshot_drop_1:
       switch: s_dropbank_1
-      advance_events: mode_skillshot_started, advance_skillshot_1
+      advance_events: mode_skillshot_with_auto_rotate_started, advance_skillshot_1
       profile: skillshot_profile
       show_tokens:
         leds: l_dropbank_1
@@ -105,9 +117,9 @@ when the shot is hit, but we don't want that here so we'll set
 
 When the mode starts, all shots will be in the first profile state "off". The
 first shot will immediately advance to the "on" state (from the
-``advance_events: mode_skillshot_started`` noted above). Every time the shot
-group rotates, the next shot in sequence will shift to "on". This creates the
-rotation effect of the lit shot moving across the targets.
+``advance_events: mode_skillshot_with_auto_rotate_started`` noted above). Every
+time the shot group rotates, the next shot in sequence will shift to "on". This
+creates the rotation effect of the lit shot moving across the targets.
 
 When the ball is plunged, whichever shot is in the "on" state will be advanced
 to the "lit" state and its light will flash. When any shot is hit, we'll check
@@ -115,7 +127,7 @@ whether it is "lit" or not to know whether the skillshot should be awarded.
 
 .. code-block:: mpf-config
 
-  ##! mode: skillshot
+  ##! mode: skillshot_with_auto_rotate
   shot_profiles:
     skillshot_profile:
       advance_on_hit: false
@@ -141,61 +153,7 @@ half-second.
 
 .. code-block:: mpf-config
 
-  #! switches:
-  #!   s_dropbank_1:
-  #!     number: 1
-  #!   s_dropbank_2:
-  #!     number: 2
-  #!   s_dropbank_3
-  #!     number: 3
-  #!   s_dropbank_4:
-  #!     number: 4
-  #!   s_dropbank_5:
-  #!     number: 5
-  #! lights:
-  #!   l_dropbank_1:
-  #!     number: 1
-  #!   l_dropbank_2:
-  #!     number: 2
-  #!   l_dropbank_3
-  #!     number: 3
-  #!   l_dropbank_4:
-  #!     number: 4
-  #!   l_dropbank_5:
-  #!     number: 5
-  #! shot_profiles:
-  #!   skillshot_profile:
-  #!     states:
-  #!       - name: off
-  #!       - name: on
-  #!       - name: lit
-  #! shots:
-  #!   skillshot_left:
-  #!     switch: s_lane_left
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_left
-  #!   skillshot_middle:
-  #!     switch: s_lane_middle
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_middle
-  #!   skillshot_right:
-  #!     switch: s_lane_right
-  #!     profile: skillshot_profile
-  #!     show_tokens:
-  #!       led: l_lane_right
-  #!
-  #! shot_profiles:
-  #!  shot_profiles:
-  #!    skillshot_profile:
-  #!      advance_on_hit: false
-  #!      states:
-  #!        - name: off
-  #!          show: off
-  #!        - name: lit
-  #!          show: flash
-  ##! mode: skillshot
+  ##! mode: skillshot_with_auto_rotate
 
   shot_groups:
     skillshot:
@@ -234,7 +192,7 @@ advance event for a shot if that shot is in state number 1, a.k.a. "on".
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot_with_auto_rotate
   event_player:
     timer_skillshot_rotate_stopped:
       - advance_skillshot_1{device.shots.skillshot_drop_1.state==1}
@@ -261,7 +219,7 @@ is hit rather than having to check each shot individually.
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot_with_auto_rotate
   variable_player:
     skillshot_lit_hit:
       score: 20_000
@@ -284,7 +242,7 @@ ending the mode.
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot_with_auto_rotate
   event_player:
     # Add these lines after timer_skillshot_rotate_stopped (defined above)
     skillshot_hit: stop_mode_skillshot
