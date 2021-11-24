@@ -107,15 +107,16 @@ when the shot is hit, but we don't want that here so we'll set
 
   ##! mode: sequential_drops
 
-  drop_sequence:
-    advance_on_hit: false
-    states:
-      - name: off
-        show: off
-      - name: lit
-        show: flash
-      - name: down
-        show: on
+  shot_profiles:
+    drop_sequence:
+      advance_on_hit: false
+      states:
+        - name: off
+          show: off
+        - name: lit
+          show: flash
+        - name: down
+          show: on
 
 Step 3. Create a Sequence Logic Block to track the progression
 --------------------------------------------------------------

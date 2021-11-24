@@ -134,7 +134,7 @@ When this mode is ending you should enable the coils you disabled.
         - enable_Lower_Left_pop_bumper
         - enable_Lower_Right_pop_bumper
         - enable_sling
-        - start_<another_mode>
+        - start_another_mode
 
     queue_event_player:
       mode_end_<mode_name>_started:

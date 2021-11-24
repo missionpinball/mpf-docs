@@ -121,7 +121,8 @@ together. In this case, we'll use our shot group to rotate the lit shots.
   #!     number: 2
   #!   l_lane_right:
   #!     number: 3
-  #! mode: skillshot
+  #!
+  ##! mode: skillshot
   #! shots:
   #!   skillshot_left:
   #!     switch: s_lane_left
@@ -171,7 +172,7 @@ shot at random and advance it to its "lit" state. We'll use the
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot
   random_event_player:
     mode_skillshot_started:
       events:
@@ -194,7 +195,7 @@ individually.
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot
   variable_player:
     skillshot_lit_hit:
       score: 20_000
@@ -216,7 +217,7 @@ ending the mode.
 
 .. code-block:: mpf-config
 
-  #! mode: skillshot
+  ##! mode: skillshot
   event_player:
     skillshot_hit: stop_mode_skillshot
     playfield_active: stop_mode_skillshot|1s
