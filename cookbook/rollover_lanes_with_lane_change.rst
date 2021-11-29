@@ -1,7 +1,7 @@
 Recipe: Rollover Lanes (with Lane Change)
 ==============================================
 
-This guide shows you how to build an MPF config for rotating rollaver lanes,
+This guide shows you how to build an MPF config for rotating rollover lanes,
 as found in *Indiana Jones*, *Attack From Mars*, *Medieval Madness*,
 and many, many more.
 
