@@ -58,6 +58,13 @@ a shot, and for this example we'll have three lanes "left", "middle", and
 
 .. code-block:: mpf-config
 
+  #! switches:
+  #!   s_lane_left:
+  #!     number: 1
+  #!   s_lane_middle:
+  #!     number: 2
+  #!   s_lane_right:
+  #!     number: 3
   ##! mode: skillshot_with_lane_change
   #! shot_profiles:
   #!   skillshot_profile:

@@ -58,6 +58,17 @@ automatically light when the mode starts, as the first shot in the rotation.
 
 .. code-block:: mpf-config
 
+  #! switches:
+  #!   s_dropbank_1:
+  #!     number: 1
+  #!   s_dropbank_2:
+  #!     number: 2
+  #!   s_dropbank_3:
+  #!     number: 3
+  #!   s_dropbank_4:
+  #!     number: 4
+  #!   s_dropbank_5:
+  #!     number: 5
   ##! mode: skillshot_with_auto_rotate
   #! shot_profiles:
   #!   skillshot_profile:
