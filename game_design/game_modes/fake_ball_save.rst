@@ -54,7 +54,7 @@ In your mode it can be enabled whenever you want it to, mode start or when a sho
 
     ##! mode: your_mode
     ball_saves:
-      fake_<mode_name>_ball_save:
+      fake_MODE_NAME_ball_save:
         enable_events:
           - multiball_<multiball_name>_ended
         auto_launch: false
@@ -74,9 +74,9 @@ We will call this mode ball_save_end_mode.
     ##! mode: your_mode
     mode:
       start_events:
-        - mode_end_<mode_name>_started
+        - mode_end_MODE_NAME_started
       stop_events:
-        - mode_end_<mode_name>_stopped
+        - mode_end_MODE_NAME_stopped
       priority: 9100
 
     ball_saves:
@@ -114,13 +114,13 @@ When this mode is ending you should enable the coils you disabled.
     ##! mode: your_mode
     mode:
       start_events:
-        - start_end_<mode_name>_mode
+        - start_end_MODE_NAME_mode
       stop_events:
         - player_continue_show_ended
       priority: 8150
 
     event_player:
-      mode_end_<mode_name>_started:
+      mode_end_MODE_NAME_started:
         - flipper_off
         - disable_Upper_Left_pop_bumper
         - disable_Upper_Right_pop_bumper
@@ -134,26 +134,26 @@ When this mode is ending you should enable the coils you disabled.
         - enable_Lower_Left_pop_bumper
         - enable_Lower_Right_pop_bumper
         - enable_sling
-        - start_another_mode
+        - start_ANOTHER_MODE
 
     queue_event_player:
-      mode_end_<mode_name>_started:
-        queue_event: my_queue_end_<mode_name>
-        events_when_finished: end_end_<mode_name>
+      mode_end_MODE_NAME_started:
+        queue_event: my_queue_end_MODE_NAME
+        events_when_finished: end_end_MODE_NAME
 
     queue_relay_player:
-      my_queue_end_<mode_name>:
-        post: start_end_<mode_name>_intro
+      my_queue_end_MODE_NAME:
+        post: start_end_MODE_NAME_intro
         wait_for: end_show_ended
       balldevice_bd_trough_ball_eject_attempt:
         post: wait_for_instruction
         wait_for: player_continue_show_ended
 
     shows:
-      end_<mode_name>_ball_over:
+      end_MODE_NAME_ball_over:
         - duration: 11
           slides:
-            end_<mode_name>_ball_over_slide:
+            end_MODE_NAME_ball_over_slide:
               widgets:
                 - type: text
                   text: "BALL LOST"
@@ -195,8 +195,8 @@ When this mode is ending you should enable the coils you disabled.
 
 
     show_player:
-      start_end_<mode_name>_intro:
-        end_<mode_name>_ball_over:
+      start_end_MODE_NAME_intro:
+        end_MODE_NAME_ball_over:
           loops: 0
           events_when_stopped: end_show_ended
       end_show_ended:

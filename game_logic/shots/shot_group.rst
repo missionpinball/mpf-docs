@@ -60,7 +60,7 @@ Monitorable Properties
 
 For :doc:`dynamic values </config/instructions/dynamic_values>` and
 :doc:`conditional events </events/overview/conditional>`,
-the prefix for multiballs is ``device.shots.<name>``.
+the prefix for shot groups is ``device.shot_groups.<name>``.
 
 *common_state*
    The name of the common state of all shots in the group.
