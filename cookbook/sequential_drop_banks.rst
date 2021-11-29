@@ -200,7 +200,7 @@ corresponding reset events, as configured below.
   #!     number: 1
   #!   s_drop_2:
   #!     number: 2
-  #!   s_drop_3
+  #!   s_drop_3:
   #!     number: 3
   #!   s_drop_4:
   #!     number: 4
@@ -209,11 +209,10 @@ corresponding reset events, as configured below.
   #!     number: 1
   #!   c_drop_2:
   #!     number: 2
-  #!   c_drop_3
+  #!   c_drop_3:
   #!     number: 3
   #!   c_drop_4:
   #!     number: 4
-  ##! machine config.yaml
 
   drop_targets:
     drop_1:

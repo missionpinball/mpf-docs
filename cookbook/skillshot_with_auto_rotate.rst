@@ -14,7 +14,7 @@ Skillshots are a self-contained set of rules, so it's wise to create a separate
 mode that can be started when a player's ball starts and ended after the
 skillshot is hit (or missed).
 
-.. code-block:: yaml
+.. code-block:: mpf-config
 
   #config_version=5
   modes:
@@ -42,6 +42,9 @@ skillshot is hit (or missed).
     l_dropbank_5:
       number: 5
 
+  ##! mode: skillshot_with_auto_rotate
+  # mode will be defined below
+
 The first thing our mode needs is :doc:`/config/shots`. Each possible target
 will be a shot (in this example, we'll have five). Each shot has a switch,
 a light, and a shot profile to track its state. The sample code below uses
@@ -56,6 +59,10 @@ automatically light when the mode starts, as the first shot in the rotation.
 .. code-block:: mpf-config
 
   ##! mode: skillshot_with_auto_rotate
+  #! shot_profiles:
+  #!   skillshot_profile
+  #!     states:
+  #!       - name: off
   mode:
     start_events: start_mode_skillshot_with_auto_rotate
     stop_events: stop_mode_skillshot_with_auto_rotate
@@ -142,6 +149,17 @@ half-second.
 .. code-block:: mpf-config
 
   ##! mode: skillshot_with_auto_rotate
+  #! shots:
+  #!   skillshot_drop_1:
+  #!     number:
+  #!   skillshot_drop_2:
+  #!     number:
+  #!   skillshot_drop_3:
+  #!     number:
+  #!   skillshot_drop_4:
+  #!     number:
+  #!   skillshot_drop_5:
+  #!     number:
 
   shot_groups:
     skillshot:

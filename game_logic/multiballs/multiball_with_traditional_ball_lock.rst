@@ -106,6 +106,8 @@ multiball.
    #! assert_balls_in_play 1
    #! assert_int_condition 1 current_player.ball
    #! assert_int_condition 0 device.multiball_locks.madnesslock.locked_balls
+   #! # The ball device should be empty now
+   #! assert_int_condition 0 device.ball_devices.lockdevice.balls
    #! # second try. mb should start again
    #! mock_event multiball_lock_madnesslock_full
    #! add_ball_to_device lockdevice
