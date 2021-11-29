@@ -59,10 +59,11 @@ a shot, and for this example we'll have three lanes "left", "middle", and
 .. code-block:: mpf-config
 
   ##! mode: skillshot_with_lane_change
-  #!  shot_profiles:
-  #!    skillshot_profile:
-  #!      states:
-  #!        - name: off
+  #! shot_profiles:
+  #!   skillshot_profile:
+  #!     states:
+  #!       - name: off
+  #!
 
   mode:
     start_events: start_mode_skillshot_with_lane_change
@@ -125,14 +126,21 @@ together. In this case, we'll use our shot group to rotate the lit shots.
 
 .. code-block:: mpf-config
 
+  #! switches:
+  #!   s_lane_left:
+  #!     number: 1
+  #!   s_lane_middle:
+  #!     number: 2
+  #!   s_lane_right:
+  #!     number: 3
   ##! mode: skillshot_with_lane_change
-  #!  shots:
-  #!    skillshot_left:
-  #!      number:
-  #!    skillshot_middle:
-  #!      number:
-  #!    skillshot_right:
-  #!      number:
+  #! shots:
+  #!   skillshot_left:
+  #!     switch: s_lane_left
+  #!   skillshot_middle:
+  #!     switch: s_lane_middle
+  #!   skillshot_right:
+  #!     switch: s_lane_right
 
   shot_groups:
     skillshot:

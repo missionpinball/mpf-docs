@@ -24,7 +24,7 @@ skillshot is hit (or missed).
       number: 1
     s_dropbank_2:
       number: 2
-    s_dropbank_3
+    s_dropbank_3:
       number: 3
     s_dropbank_4:
       number: 4
@@ -35,7 +35,7 @@ skillshot is hit (or missed).
       number: 1
     l_dropbank_2:
       number: 2
-    l_dropbank_3
+    l_dropbank_3:
       number: 3
     l_dropbank_4:
       number: 4
@@ -60,7 +60,7 @@ automatically light when the mode starts, as the first shot in the rotation.
 
   ##! mode: skillshot_with_auto_rotate
   #! shot_profiles:
-  #!   skillshot_profile
+  #!   skillshot_profile:
   #!     states:
   #!       - name: off
   mode:
@@ -148,18 +148,29 @@ half-second.
 
 .. code-block:: mpf-config
 
+  #! switches:
+  #!   s_dropbank_1:
+  #!     number: 1
+  #!   s_dropbank_2:
+  #!     number: 2
+  #!   s_dropbank_3:
+  #!     number: 3
+  #!   s_dropbank_4:
+  #!     number: 4
+  #!   s_dropbank_5:
+  #!     number: 5
   ##! mode: skillshot_with_auto_rotate
   #! shots:
   #!   skillshot_drop_1:
-  #!     number:
+  #!     switch: s_dropbank_1
   #!   skillshot_drop_2:
-  #!     number:
+  #!     switch: s_dropbank_2
   #!   skillshot_drop_3:
-  #!     number:
+  #!     switch: s_dropbank_3
   #!   skillshot_drop_4:
-  #!     number:
+  #!     switch: s_dropbank_4
   #!   skillshot_drop_5:
-  #!     number:
+  #!     switch: s_dropbank_5
 
   shot_groups:
     skillshot:

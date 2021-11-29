@@ -37,7 +37,7 @@ be reset after completion.
   #!     number: 1
   #!   s_drop_2:
   #!     number: 2
-  #!   s_drop_3
+  #!   s_drop_3:
   #!     number: 3
   #!   s_drop_4:
   #!     number: 4
@@ -46,7 +46,7 @@ be reset after completion.
   #!     number: 1
   #!   l_drop_2:
   #!     number: 2
-  #!   l_drop_3
+  #!   l_drop_3:
   #!     number: 3
   #!   l_drop_4:
   #!     number: 4

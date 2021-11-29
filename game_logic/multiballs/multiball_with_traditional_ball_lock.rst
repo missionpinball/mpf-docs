@@ -66,6 +66,8 @@ multiball.
    #!     number:
    #!   s_ball2:
    #!     number:
+   #!   s_target:
+   #!     number:
    #! coils:
    #!   c_eject:
    #!     number:
@@ -98,6 +100,11 @@ multiball.
    #! add_ball_to_device lockdevice
    #! advance_time_and_run 1
    #! assert_event_called multiball_lock_madnesslock_full
+   #! # release the ball device switches to confirm the locked balls ejected
+   #! advance_time_and_run 1
+   #! release_switch s_ball2
+   #! advance_time_and_run 1
+   #! release_switch s_ball1
    #! advance_time_and_run 40
    #! assert_balls_in_play 3
    #! drain_one_ball
