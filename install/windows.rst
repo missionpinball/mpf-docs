@@ -13,7 +13,7 @@ MPF is written in a computer language called "Python". This means you have to in
 first before you can use MPF. Luckily this is just a one-time install, and you don't have to
 install it again if you update MPF later.
 
-On Windows platforms, MPF requires Python 3.6 through Python 3.8.
+On Windows platforms, MPF requires Python 3.6 through Python 3.8 (NOT 3.9 or higher at this stage).
 It is recommended you use the newest supported version of Python
 available when you are setting up your PC
 (Python 3.8 as of the time this document was last updated).
@@ -50,6 +50,8 @@ Here's an example of running this on a 64-bit Windows 10 machine:
 Then go to the Python website download the version you need. (Note that the final digit in the Python version
 number is the "patch" number, so 3.6.4 is a version of Python 3.6.) Or use the direct-download links here:
 
++ `Python 3.8 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe>`_
++ `Python 3.8 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe>`_
 + `Python 3.7 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.7.8/python-3.7.8-amd64.exe>`_
 + `Python 3.7 for 32-bit (x86) Windows <https://www.python.org/ftp/python/3.7.8/python-3.7.8.exe>`_
 + `Python 3.6 for 64-bit (x64 or AMD64) Windows <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
@@ -233,7 +235,7 @@ and install it onto your computer.
 
 .. note::
 
-   If you want to install the development version of MPF you need to add **--pre**
+   If you want to install the development version of MPF you need to add ``--pre``
    at the end which tells it to get the latest "pre-release" version.
    Normally, you do want the stable version unless you depend on a new feature
    or bugfix which is only in the dev version yet.
