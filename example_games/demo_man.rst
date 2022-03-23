@@ -108,12 +108,18 @@ Afterward, please check if numlock is enabled.
 This seems to be common issue on Windows 10.
 Disable numlock in this case.
 
-Game does not start with some error
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Game does not start errors
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Make sure you are using the exact version of demo_man for your MPF, MPF-MC
+**Version mismatch** - Make sure you are using the exact version of demo_man for your MPF, MPF-MC
 and MPF monitor (optional).
 For instance use ``0.30.x`` if you are on MPF ``0.30.2``.
 MPF-MC and (if installed) MPF monitor need to have the same major version
 (``0.30`` in this case).
 You can check installed versions using ``pip3 list``.
+
+**FT_ListDevices(2) or WARNING : P-Roc : Failed to instantiate pinproc.PinPROC(3) error** - By default the 
+Demo Man example expects to be connected to P-Roc hardware. If you see this you probably forgot to add the 
+``-X`` switch to your ``mpf both`` command which tells MPF to override the hardware setting to the Smart 
+Virtual platform. This sometimes happens when trying to debug another error and you follow the guide about
+verbose logging using the ``-v -V`` switches.
