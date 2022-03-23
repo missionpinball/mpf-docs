@@ -182,7 +182,7 @@ Start your fadecandy server with the following config:
                    [ 6, 0, 384, 64 ],
                    [ 7, 0, 448, 64 ]
                ]
-           },
+           }
        ]
    }
 
