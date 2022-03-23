@@ -36,8 +36,8 @@ Channel and Number Syntax
 FAST assumes RGB lights by default.
 For everything else (i.e. RGBW) you have to use channels.
 
-The FAST Nano supports 256 LEDs on four chains.
-LEDs 0-63 are on chain 0, 64-127 on chain 1, 128-195 on chain 2 and 196-255 on chain 3.
+The FAST Nano supports 256 LEDs across four chains (listed as "CH 1" - "CH 4" on the Nano).
+LEDs 0-63 are on chain 1, 64-127 on chain 2, 128-191 on chain 3 and 192-255 on chain 4 (please note that FAST diagrams label these 4 headers as "channels" but we are using the term "chains" to avoid confusion with the non-RGB "Channels" section below).
 
 Light Numbers
 ^^^^^^^^^^^^^
