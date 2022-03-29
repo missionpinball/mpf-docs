@@ -108,6 +108,25 @@ post hit events and therefore do not trigger scoring or other events
 related to a shot hit. They are useful if you need to move a shot to a
 starting state (like selecting a shot to be active for skill shot).
 
+control_events:
+~~~~~~~~~~~~~~~
+List of one (or more) values, each is a type: :doc:`shot_control_events <shot_control_events>`. Defaults to empty.
+
+Control events to change the state of this shot.
+This supports jumping to state to a value that is specified.  This is a
+``0`` index, so the first state is ``0``.
+
+For instance in the following example ``set_state_one`` will set the state to ``1``,
+which is the second state:
+
+.. code-block:: mpf-config
+
+   shots:
+     shot_with_control_events:
+       control_events:
+         - events: set_state_one
+           value: 1
+
 delay_switch:
 ~~~~~~~~~~~~~
 One or more sub-entries. Each in the format of string name of a :doc:`switches <switches>` device : ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`)
