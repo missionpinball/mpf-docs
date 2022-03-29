@@ -150,6 +150,7 @@ indicated which type of config file it's valid in.
    settings: <settings>
    sequences: <sequences>
    sequence_shots: <sequence_shots>
+   shot_control_events: <shot_control_events>
    shot_groups: <shot_groups>
    shot_profiles: <shot_profiles>
    shots: <shots>
