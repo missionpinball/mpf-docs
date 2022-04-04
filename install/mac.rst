@@ -159,7 +159,7 @@ window. To do that, run the command:
 
    python3 --version
 
-You should see it print something like "Python 3.6.5". Note that you have
+You should see it print something like "Python 3.6.8". Note that you have
 to run the command "Python3", not "Python", since the regular python command
 without the "3" on the end points to the Python 2.x that's built into your
 Mac. Here's a screenshot showing running "python" and "python3" and the
@@ -170,7 +170,7 @@ different between the two:
 4. Create a Virtual Environment (recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Python includes a utility call "virtual environment" that creates a safe,
+Python includes a utility called "virtual environment" that creates a safe,
 isolated place to install packages and configure python. It's strongly
 recommended to install MPF in a virtual environment, so that other Python
 programs can't interfere with it (and it can't interfere with others).
