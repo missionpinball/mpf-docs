@@ -62,7 +62,7 @@ the current versions of MPF and MPF-MC as well as each of their dependencies.
 .. code-block:: console
 
   cd ~
-  wget https://github.com/missionpinball/mpf-debian-installer/archive/dev.zip
+  wget https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip
   unzip dev.zip
   cd mpf-debian-installer-dev
   sudo -H ./install
