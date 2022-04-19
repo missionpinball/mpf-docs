@@ -4,7 +4,7 @@
 In MPF 0.33 and earlier not all LEDs had to be configured as LEDs.
 This changed in 0.50+ where all lights, GIs and matrix_lights were
 unified as lights. The distinction is now only the `subtype` in
-the :doc:`lights config </config/matrix_lights>`.
+the :doc:`lights config </config/lights>`.
 
 Taking a step back. There are two types of lighting systems in pinball
 machines: lamp matrices and direct-connected LEDs. All commercial pinball
