@@ -11,6 +11,9 @@ Here are the recipes that are done:
 * :doc:`Indiana Jones: Rollover Lanes (with Lane Change) <rollover_lanes_with_lane_change>`
 * :doc:`Batman 66: Gadgets Targets <B66_gadget>`
 * :doc:`Modifying the Game mode: Dual launch devices <dual_launch>`
+* :doc:`Skillshots with Lane Change <skillshot_with_lane_change>`
+* :doc:`Skillshots with Auto-Rotate <skillshot_with_auto_rotate>`
+* :doc:`Sequential Drop Bank Targets <sequential_drop_banks>`
 
 If you've ever played a game and wondered, "How would I do that?" then let us
 know and we'll write a recipe for it! And here's what's on our to-do list:
@@ -31,3 +34,6 @@ know and we'll write a recipe for it! And here's what's on our to-do list:
    Indiana Jones: Rollover Lanes <rollover_lanes_with_lane_change>
    Batman 66: Gadgets Targets <B66_gadget>
    Modifying the Game mode: Dual launch devices <dual_launch>
+   Sequential Drop Banks <sequential_drop_banks>
+   Skillshots with Lane Change <skillshot_with_lane_change>
+   Skillshots with Auto-Rotate <skillshot_with_auto_rotate>

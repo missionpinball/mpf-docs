@@ -46,6 +46,11 @@ Reformat your MPF config files.
 
 Run single file tests to reproduce problems or verify behaviour.
 
+:doc:`MPF test <hardware/index>`
+--------------------------------
+
+Commands to debug, upgrade or benchmark your hardware.
+
 
 Machine Fuzzer
 --------------
@@ -84,3 +89,4 @@ Future Tools
    build/index
    format/index
    test/index
+   hardware/index

@@ -79,7 +79,7 @@ What to do to make a MPF release?
 
    - ``a.bb`` on ``mpf-docs`` repository
 
-   - ``a.bb`` on ``mpf-debian-installer`` repository
+   - ``a.bb.x`` on ``mpf-debian-installer`` repository
 
 - Publish release post on forum
 
@@ -96,3 +96,9 @@ What to do to make a MPF release?
    - ``mpf-mc``
 
    - ``mpf-monitor``
+
+- Tag Release on github
+
+   - ``mpf``
+
+   - ``mpf-mc``

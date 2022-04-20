@@ -15,6 +15,9 @@ connectors to use for the different power rails below.
    risk. Electricity can be dangerous and might kill you or burn down your
    house.
 
+Video about electronics basics:
+
+.. youtube:: 3ZdSLruAYM0
 
 Primary side - 230/110V
 -----------------------

@@ -51,6 +51,13 @@ Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 True/False which controls whether the ball save should auto launch the
 saved ball or wait for the player to launch it.
 
+ball_locks:
+~~~~~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`ball_devices <ball_devices>` device. Defaults to empty.
+
+Use those devices first when ejecting balls to the playfield on ball save. If there are not enough balls in the lock more balls will be
+requested to the source_playfield.
+
 balls_to_save:
 ~~~~~~~~~~~~~~
 Single value, type: ``integer``. Default: ``1``

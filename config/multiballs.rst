@@ -60,6 +60,16 @@ real world, you'd probably only have one multiball for each mode.)
        shoot_again: 0
        start_events: mb6_start
        ball_locks: bd_lock
+     full_ball_save:
+       ball_count: 2
+       shoot_again: 30s
+       hurry_up_time: 10s
+       grace_period: 5s
+       add_a_ball_events: add_ball
+       add_a_ball_shoot_again: 20s
+       add_a_ball_hurry_up_time: 5s
+       add_a_ball_grace_period: 10s
+       start_events: mb20_start
 
 .. config
 
@@ -93,6 +103,31 @@ multiple times will add one ball for each time the event is posted.
 This is useful for "add-a-ball" functionality (which you can combine with a
 counter and/or conditional events if you want to cap how many total balls can
 be added into play).
+
+add_a_ball_grace_period:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
+
+The “secret” time (in MPF time string format) the ball save is still active
+after any shows or effects that are triggered end. This is added onto the
+add_a_ball_shoot_again.
+
+add_a_ball_hurry_up_time:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
+
+The time before the add-a-ball ball save ends (in MPF time string format)
+that will cause the multiball_<name>_hurry_up event to be posted. Use this
+to change the script for the light or trigger other effect.
+
+add_a_ball_shoot_again: 
+~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``5s``
+
+Specifies a time period for "shoot again" when an add-a-ball event is posted.
+This is a sort of automatic ball save for multiballs. The timer will start
+when this multiball starts, and any balls that drain during this time will
+be re-added into play.
 
 ball_count_type:
 ~~~~~~~~~~~~~~~~
@@ -143,6 +178,22 @@ the multiball or, or add a ball, etc.) do not work unless this multiball is enab
 
 Note that if you do not add any ``enable_events:`` (which is the default), this
 multiball will be automatically enabled when the mode it's in starts.
+
+grace_period:
+~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
+
+The “secret” time (in MPF time string format) the ball save is still active
+after any shows or effects that are triggered end. This is added onto the
+shoot_again.
+
+hurry_up_time:
+~~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``0``
+
+The time before the ball save ends (in MPF time string format) that will
+cause the multiball_<name>_hurry_up event to be posted. Use this to change
+the script for the light or trigger other effect.
 
 replace_balls_in_play:
 ~~~~~~~~~~~~~~~~~~~~~~
