@@ -79,7 +79,7 @@ NEW entry changes that so the 100 points are added when the event
 This illustrates something to know about shots: Whenever a shot is "hit", then
 an event is posted with the name of the shot plus "_hit" added onto it.
 
-So in this case, the shot "my_first_shot" will post then event
+So in this case, the shot "my_first_shot" will post the event
 "my_first_shot_hit" whenever that shot is made.
 
 If you save your changed config file and run MPF again, start a game
@@ -147,22 +147,6 @@ Let's do that now.
 To do this, go back to the mode config where you defined the shot (base.yaml)
 and change the ``shots:`` section.
 
-If you have LEDs in your machine, change it to this:
-
-.. code-block:: mpf-config
-
-   #! switches:
-   #!   s_right_inlane:
-   #!     number: 1
-   ##! mode: base
-   shots:
-     my_first_shot:
-       switch: s_right_inlane
-       show_tokens:
-         led: led_1 # pick an LED that's valid in your machine
-
-If you have a lamp matrix, change it to this:
-
 .. code-block:: mpf-config
 
    #! switches:
@@ -175,8 +159,7 @@ If you have a lamp matrix, change it to this:
        show_tokens:
          light: l_light_quick_freeze # pick a light that's valid in your machine
 
-In either case, be sure to pick an LED or light name that is a valid light
-in your machine.
+Be sure to pick an LED or light name that is a valid light in your machine.
 
 For now don't worry about what "show_tokens" is or what's happening. (We'll
 get to that.)
@@ -279,7 +262,7 @@ just created by adding a ``profile:`` setting.
      my_first_shot:
        switch: s_right_inlane
        show_tokens:
-         led: l_led1 # or use light: here, depending on your machine
+         light: l_led1
        profile: my_first_profile
 
 Save your config and re-run MPF. Once you start a game, the light or LED
@@ -539,6 +522,8 @@ To illustrate this, open up your ``mode2.yaml`` file and:
    shots:
      my_first_shot_mode2:
        switch: s_right_inlane
+       show_tokens:
+         light: l_led1
        profile: mode2
 
    shot_profiles:
@@ -566,10 +551,10 @@ Save your files and run your game again, pressing the following keys:
 * ``Q`` - hits your shot, score jumps to 11,400
 * ``Q`` - hits your shot, score jumps to 12,400
 
-Let's deconstruct the changes to the ``mode2.yaml`` config file too see what's
+Let's deconstruct the changes to the ``mode2.yaml`` config file to see what's
 going on.
 
-First, notice that we added a ``shots:`` section and then added "my_first_shot"
+First, notice that we added a ``shots:`` section and then added "my_first_shot_mode2"
 to it, like this:
 
 .. code-block:: mpf-config
@@ -586,17 +571,20 @@ to it, like this:
    #!     loop: false
    #!     block: true
    shots:
-     my_first_shot:
+     my_first_shot_mode2:
+       switch: s_right_inlane
+       show_tokens:
+         light: l_led1
        profile: mode2
 
-However, unlike the "my_first_shot" entry in the base mode config, in the mode2
-config we did NOT redefine the ``switch:`` or ``show_tokens:`` entries. Instead,
-we just added the ``profile:`` setting and told it to use a profile called ``mode2``.
+We've copied the ``switch:`` or ``show_tokens:`` entries from the "my_first_shot" entry in 
+the base mode config, but we are changing the profile.
+.. note::
 
-So what this means is that we're not creating a new shot or changing the configuration
-of the shot, rather, we're just saying that when mode2 is active, we want to apply
-a different shot profile to the shot. (Remember that settings from mode configuration
-files are only active when that mode is active.)
+   Before 0.50 you could use the same shot name and override just the profile which saved
+   redefining the ``switch:`` or ``show_tokens:`` entries, but unfortunately it caused a lot
+   of confusion and subtle bugs. It might come back in the form of prototype objects at some point.
+
 
 Next, take a look at the ``shot_profiles:`` section:
 
