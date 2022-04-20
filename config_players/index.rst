@@ -154,6 +154,7 @@ them, with explanations of how to use them in config files and in shows.
 .. toctree::
    :maxdepth: 1
 
+   blinkenlight_player
    coil_player
    display_light_player
    event_player

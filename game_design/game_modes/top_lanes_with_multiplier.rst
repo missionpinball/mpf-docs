@@ -70,7 +70,7 @@ This example is based on Bally's Heavy Metal Meltdown.  The example below create
     priority: 110
   counters:
     lb_JAM_complete_count:
-      count_events: JAM_lanes_complete
+      count_events: JAM_lanes_lit_complete
       events_when_hit: JAM_lanes_done
       starting_count: 1
       direction: up

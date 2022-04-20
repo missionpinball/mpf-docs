@@ -34,6 +34,8 @@ This is an example for a two 7-segment display:
 
    #! hardware:
    #!   segment_displays: light_segment_displays
+   #! light_segment_displays:
+   #!   display_flash_frequency: 2  # overrides default frequency
    #! lights:
    #!   segment1_a:
    #!     number: 1
@@ -100,6 +102,15 @@ For 16segment your segments are: u, t, s, r, p, n, m, k, h, g, f, e, d, c, b, a 
 
 dp is an optional decimal point per display.
 
+
+Optional settings
+-----------------
+
+display_flash_frequency:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
+
+How fast should the displays flash? Defaults to once per second or 1Hz.
 
 Related How To guides
 ---------------------

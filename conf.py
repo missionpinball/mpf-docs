@@ -28,9 +28,9 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.55+'   # all versions these docs cover
+version = '0.56+'   # all versions these docs cover
 branch  = 'dev'     # current branch
-release = '0.54.x'  # latest release
+release = '0.55.x'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
