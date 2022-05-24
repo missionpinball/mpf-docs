@@ -30,4 +30,4 @@ logic blocks.
 For instance if you got conditions in your logic (i.e. on how many balls are
 locked).
 Another clear indicator for logic blocks would be if your logic is triggered
-by other elements such as locks (and nor just switches).
+by other elements such as locks (and not just switches).
