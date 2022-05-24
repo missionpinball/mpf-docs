@@ -3,29 +3,7 @@ How to configure End of Ball Bonus
 
 This guide walks you through configuring an end-of-ball Bonus mode in MPF.
 
-1. Add the bonus mode to your machine's list of modes
------------------------------------------------------
-
-MPF contains a built-in bonus mode that you can use which should contain
-everything you need. To use it, first simply add ``- bonus`` to your
-machine config's ``modes:`` section, like this:
-
-.. code-block:: yaml
-
-   #config_version=5
-
-   modes:
-      - base
-      - some_other_modes
-      - jackpot
-      - credits
-      - tilt
-      - bonus  # just add bonus to this list, don't forget the dash
-
-The bonus mode is automatically configured to start when the ball ends (as
-long as the machine is not tilted), running at priority 500.
-
-2. Create your bonus mode folders
+1. Create your bonus mode folders
 ---------------------------------
 
 Even though the bonus mode is built-in, you'll still need to add a ``bonus``
@@ -37,7 +15,7 @@ It should look something like this:
 
 .. image:: /game_logic/images/bonus_folder.png
 
-3. Add the bonus mode to your machine-wide modes list
+2. Add the bonus mode to your machine-wide modes list
 -----------------------------------------------------
 
 Remember that when you create a new mode, you need to add it to the ``modes:``
@@ -73,7 +51,10 @@ machine-wide config, like this:
      - jukebox_two_ball
      - bonus                  # just add bonus to the list of existing modes
 
-4. Think about what you want to score bonus on
+The bonus mode is automatically configured to start when the ball ends (as
+long as the machine is not tilted), running at priority 500.
+
+3. Think about what you want to score bonus on
 ----------------------------------------------
 
 Most modern pinball machines have bonus scores based on multiple things.
