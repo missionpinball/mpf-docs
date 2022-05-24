@@ -33,7 +33,7 @@ add_player_event:
 Single event. The device will add an handler for this event. Defaults to empty.
 
 An event name which will request to add a player.
-Same as ``add_player_switch_tag`` but using an event instead oa switch tag
+Same as ``add_player_switch_tag`` but using an event instead of a switch tag
 (see below).
 
 add_player_switch_tag:
