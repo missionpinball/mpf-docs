@@ -79,6 +79,10 @@ True/False (or Yes/No) which controls whether this logic block resets itself
 once it completes. This just resets the current value or progress. It does
 not change the enabled or disabled state.
 
+Note, ``disable_on_complete`` default is ``true``, which may seem like
+reset isn't working. For something like a counter that automatically starts 
+again change ``disable_on_complete`` to ``false``.
+
 restart_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`).
