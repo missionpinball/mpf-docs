@@ -37,7 +37,7 @@ See our :doc:`player variables reference </player_vars/index>` and
 :doc:`machine variables reference </machine_vars/index>`
 to learn about existing variables.
 You can also create player variables on the fly if they did not exist.
-If you want to define defaults for variables your may define them in the
+If you want to define defaults for variables you may define them in the
 :doc:`/config/player_vars` or :doc:`/config/machine_vars` sections.
 
 Usage in config files
