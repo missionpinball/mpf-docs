@@ -24,5 +24,6 @@ This MPF documentation was written by:
 * Thomas Fulenwider (cobra18t)
 * Brandon Hill (bghill.dev@gmail.com)
 * Dave Ensminger
+* Matt Kemp (matt@blz.co)
 
 Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!
