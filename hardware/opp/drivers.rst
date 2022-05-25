@@ -51,6 +51,7 @@ example, consider the following configuration:
 When MPF sends this coil a pulse command, the coil will be fired for
 30ms.
 
+
 Hold Power
 ^^^^^^^^^^
 If you want to hold a driver on at less than full power, MPF does this by using
@@ -70,6 +71,30 @@ default_hold_power to .25 and OPP will use 4ms/16ms = 25%.
 
 This will configure OPP card 0, solenoid wing 0, last solenoid to
 have an initial pulse of 32 ms, and then be held on at 50% power.
+
+
+Pulse Power
+^^^^^^^^^^
+.. note:: This feature is only available on OPP firmware version 2.3.0.5 and above.
+
+If you want to pulse a driver on at less than full power, MPF does this by using
+*default_pulse_power* parameter. This can be used along with default_pulse_ms to fully tune the response of a coil. This can be especially useful when controlling lower voltage coils from a 48V source.
+
+It can range from
+0.0 to 1.0 and defines the time share the coil is on (0%-100%). Any value under 0.03125 will be forced to output 3.125%.
+
+
+.. code-block:: mpf-config
+
+    coils:
+      some_coil:
+        number: 0-3
+        default_pulse_ms: 32
+        default_pulse_power: 0.8125
+        default_hold_power: 0.125
+
+This will configure OPP card 0, solenoid wing 0, last solenoid to
+have an initial pulse of 32 ms at 81.25% power, and then be held on at 12.5% power.
 
 
 Recycle Factor
