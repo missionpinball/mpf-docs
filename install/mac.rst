@@ -273,7 +273,7 @@ running the following command:
 .. code-block:: console
 
     pip3 install --upgrade setuptools pillow
-    pip3 install -I Cython==0.27.3
+    pip3 install -I Cython
 
 This command will download and install the latest versions of the *setuptools*
 and the correct version of *cython* packages.
