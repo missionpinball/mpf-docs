@@ -291,6 +291,12 @@ Single value, type: string name of a :doc:`shows <shows>` device. Defaults to em
 
 Name of the show that will be started when this achievement has been stopped.
 
+speed:
+~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1``
+
+Playback speed of all shows that are referenced by this achievement.
+
 start_enabled:
 ~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Defaults to empty.
