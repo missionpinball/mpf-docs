@@ -28,9 +28,9 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.55+'   # all versions these docs cover
-branch  = 'dev'     # current branch
-release = '0.54.x'  # latest release
+version = '0.55'   # all versions these docs cover
+branch  = '0.55.x'     # current branch
+release = '0.55'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
@@ -40,7 +40,7 @@ author = 'The Mission Pinball Framework Team'
 # names:
 branches_for_dev_warning = ['dev']
 
-language = None
+language = 'en'
 
 exclude_patterns = ['_build',
                     '_not_updated_yet',
@@ -160,7 +160,7 @@ epub_tocdepth = 2
 # -- Show warnings for dev branches in HTML docs --------------------------
 
 # If this is running on ReadTheDocs.org, the context dict will be overwritten
-# by theirs which will contain the propoer branch name (since the git command
+# by theirs which will contain the proper branch name (since the git command
 # doesn't work there.
 
 context = dict()
