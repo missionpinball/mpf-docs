@@ -31,31 +31,38 @@ Running MPF
 
 See the :doc:`/running/index` for details and command-line options.
 
-If you see a Failed to initialize MPF exception when trying to start MPF with Multimorphic P-Roc/P3-Roc boards with Python 3.8.
+If you see a Failed to initialize MPF exception when trying to start MPF with Multimorphic P-ROC/P3-ROC boards with Python 3.8.
 
 Example Error:
 
-Failed to initialise MPF
-Traceback (most recent call last):
- File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in <module>
-  import pinproc
-ModuleNotFoundError: No module named ‘pinproc’
-During handling of the above exception, another exception occurred:
-Traceback (most recent call last):
- File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 41, in <module>
-  raise ImportError
-ImportError
+.. code-block::
 
-Try Changing:
+    Failed to initialise MPF
+    Traceback (most recent call last):
+    File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 31, in <module>
+      import pinproc
+    ModuleNotFoundError: No module named ‘pinproc’
+    During handling of the above exception, another exception occurred:
+    Traceback (most recent call last):
+    File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”, line 41, in <module>
+      raise ImportError
+    ImportError: No module named ‘pinproc’
 
-Edit install-proc:
+Try Changing `Edit install-proc:`
 
-FROM:
+From:
+
+.. code-block::
+
     cd pypinproc
     sudo python3 setup.py install
-TO:
-   cd pypinproc
-   python3 setup.py install --user
+
+To:
+
+.. code-block::
+
+    cd pypinproc
+    python3 setup.py install --user
 
 Keeping MPF up-to-date
 ----------------------
