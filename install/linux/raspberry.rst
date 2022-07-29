@@ -1,6 +1,8 @@
 Installing MPF on a Raspberry Pi 3
 ==================================
 
+.. include::  /_include/new-installers.rst
+
 .. warning::
 
    Raspberry Pi support is experimental at this point. Users have found various issues with audio, and we're not sure

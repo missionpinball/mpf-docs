@@ -1,6 +1,8 @@
 Installing MPF on Xubuntu/Lubuntu
 =================================
 
+.. include::  /_include/new-installers.rst
+
 Xubuntu is a Ubuntu-based linux distribution using the minimalist, yet still feature-packed, XFCE desktop manager.
 The focus of this guide will be for getting MPF up and running directly from power (unattended) for use in a production
 scenario.

@@ -1,6 +1,8 @@
 Installing MPF on Mac
 =====================
 
+.. include::  /_include/new-installers.rst
+
 MPF can be used on Mac OS X 10.9 and newer, including Mavericks, Yosemite,
 El Capitan, Sierra and High Sierra.
 
