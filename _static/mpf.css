@@ -139,11 +139,11 @@ body {
 }
 
 .rst-content code {
-    background: black;
+    background: #f5f5f5;
 }
 
 .rst-content code.literal {
-    color: white;
+    color: #404040;
     vertical-align: 10%;
 }
 
