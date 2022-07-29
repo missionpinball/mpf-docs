@@ -3,28 +3,28 @@ Mission Pinball Framework Documentation (mpf-docs)
 
 <img align="right" height="146" src="_static/images/mpf-logo-200.png"/>
 
-This repo is the documentation for the
+This repo is the user documentation for the
 [Mission Pinball Framework](http://missionpinball.org).
 
-Docs are hosted by Read the Docs at <http://docs.missionpinball.org>.
-You can download PDF, HTML, and Epub versions.
+These docs are static HTML, generated from the files in this repo via the
+[Sphinx Python Documentation Generator](https://www.sphinx-doc.org/en/master/) project.
+
+The rendered HTML docs are hosted by [Read the Docs](https://readthedocs.org)
+at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from, there.
 
 The "latest" branch of these docs corresponds to the latest released branch
-recent version of MPF. (We note which features have been added, changed,
-and removed as needed.)
-
+recent version of MPF. There are numbered branches for specific released versions (e.g. `0.55`, etc.). There's also a `dev` branch which corresponds to the `dev` branch which is the next upcoming release.
 
 Building Docs Locally
 ---------------------
 
 You can build the docs using **Sphinx**. You will first need to install
-`Python 3.x` and `pip`. Then add these libraries:
+`Python 3.x`. Then install the packages used by this repo. From the root folder of this repo, run
+the following command:
 
-    pip install sphinx
-    pip install gitpython
-    pip install sphinx_rtd_theme
-    pip install sphinx-notfound-page
-    pip install ruamel.yaml==0.15.100
+    pip3 install -r requirements.txt
+
+You can view the contents of the [requirements.txt](requirements.txt) file to see which packages will be installed.
 
 ### Running Unit Tests
 
@@ -38,7 +38,6 @@ corresponding unit tests inside the docs (if there is one) type:
 Compile the docs to `./_build/html/` with the command:
 
     make html
-
 
 Licensing
 ---------
