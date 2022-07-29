@@ -102,7 +102,7 @@ Click the "Read the Docs" link in the lower left corner for other versions.
 
 .. note::
 
-   You can download PDF, Epub, and HTML versions of these docs. Click the "Read the Docs" link in the
+   You can download PDF and zipped HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
 
 Overview
