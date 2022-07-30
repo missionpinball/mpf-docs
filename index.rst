@@ -171,4 +171,4 @@ Let's go!
 
 You can access the full table of contents of MPF documentation via the expandable menu
 on the left (or the hamburger menu icon if you're on a mobile device). There are over
-1100 pages of printed documentation and examples to help you build your pinball machine!
+2000 pages of printed documentation and examples to help you build your pinball machine!
