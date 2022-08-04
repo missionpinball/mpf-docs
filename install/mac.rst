@@ -12,7 +12,7 @@ Overview of MPF on macOS
 
 MPF works on macOS running on both Intel and Apple Silicon (M1/M2 processors). These instructions are the same for both.
 
-This process has been confirmed to work on macOS 12.5 and 12.6. It could in theory work as far back as macOS 10.9 (though possibly kivy requires 10.14 or something). If you have an older version of macOS, give it a shot and let us know.
+This process has been confirmed to work on macOS 12.4 and 12.5. It could in theory work as far back as macOS 10.9 (though possibly kivy requires 10.14 or something). If you have an older version of macOS, give it a shot and let us know.
 
 These instructions will only work with Python 3.9. It will be possible to support 3.8 as well, but since these wheels are manually built at this time we are just targeting 3.9. If you need 3.8, let us know. (Though it's possible to have multiple Python versions side-by-side, so hopefully everyone can just use 3.9 and keep it easy for us.)
 
