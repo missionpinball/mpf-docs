@@ -1,48 +1,25 @@
-Downloading & Installing MPF
-============================
+Downloading & Installing MPF (Aug 4, 2022 update)
+=================================================
 
-.. include::  /_include/new-installers.rst
+The MPF Installers are being rewritten from scratch and will be completely
+updated for MPF 0.56 (the current "dev" version that will be released once
+we get these installer built).
 
-Installing MPF is fairly straightforward. It can be used on Windows, Mac, or Linux, on both Intel x86 and ARM
-processors, and in 64-bit and 32-bit systems (see :doc:`/hardware/computer/index` for details).
+We are currently targeting the following platforms:
 
-Installing MPF for the first time
----------------------------------
+* Windows 10 / Windows 11 (64-bit only)
+* macOS 10.9+ (Intel & Apple Silicon)
+* Linux (64-bit, lots of distros)
 
-We've created step-by-step installation guides which walk you through the
-entire process. Select the OS you're using from the list below:
+We are targeting Python 3.9. Python 3.10 will definitely not work yet. Python 3.7 and 3.8
+could work, but we're not focusing on them yet and might not ever unless we hear from you that
+you need one of those Python versions.
 
-.. toctree::
-   :maxdepth: 1
-
-   Windows <windows>
-   Mac <mac>
-   Linux <linux/index>
-   Virtual Machine (Debian) <virtual-machine/index>
-
-.. note::
-   These guides just show you how to get MPF up and running. If you're using
-   MPF with a physical machine, check out the :doc:`/hardware/index` guide for
-   details about how to get the drivers and configuration set for the
-   specific hardware controller platform you've chosen.
-
-Installing the MPF Monitor
---------------------------
-
-We have a rough prototype of a graphical tool called the "MPF Monitor" which
-you can use to connect to a running instance of MPF to graphically interact
-with switches, lights, and LEDs, and to see the status of various devices. You
-can even add a picture of your playfield and drag-and-drop the MPF mechanisms
-onto it which makes it possible to "play" your machine via a simulation.
-
-Details in the MPF Monitor are :doc:`here </tools/monitor/index>`.
-
-Migrating from previous versions of MPF
----------------------------------------
+Here are the links to the guides we have started so far:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
+    
+    macOS <mac>
 
-   migrating
-   migrate4to5
 
