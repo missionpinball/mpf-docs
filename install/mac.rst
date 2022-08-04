@@ -30,6 +30,8 @@ At this point, MPF 0.56.0.dev-something(20 maybe?) and MPF-MC 0.56.0.dev3 should
 
 Then back in the terminal, change into the ``mpf-examples`` folder (or whatever folder you just unzipped that into), then change into the ``mc_demo`` folder, then run ``mpf both``. That should launch the mc_demo code (which is Media Controller demo). A window should open with a red background and some text about slides, you should be able to use the right arrow key to advance to the next slide. You should be able to use the left arrow key to go back to the previous slide and you should hear a drum and cymbal sound when you change the slide.
 
+You will see a bunch of warnings about some classes implemented in multiple locations, and how one will be used, but which one is undefined. It sounds scary, but this is normal. (For now.) We are investigating whether this is something we need to fix, and how we'll fix it if so. But for now it's fine.
+
 At this point, MPF is ready to go!
 
 Notes, Caveats & Next Steps
@@ -49,7 +51,7 @@ Do NOT use brew to install Python. Why? Because the Python in brew is meant to s
 
 Eventually the installation process will handle many of the steps, like installing kivy, etc. It's just extra-manual for now.
 
-Questions? Comments? Need help? You can post a reply into the MPF new installers thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/gvDmmdcSe10
+Questions? Comments? Need help? You can post a reply into the MPF new installers for macOS thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
 
 Or email me, Brian Madden, brian@fastpinball.com.
 
