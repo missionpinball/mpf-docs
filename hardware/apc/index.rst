@@ -1,7 +1,7 @@
 Arduino Pinball Controller
 ==========================
 
-MPF can control System6 to System11c machines directly using the Arduino
+MPF can control System3 to System11c machines directly using the Arduino
 Pinball Controller (APC).
 It contains CPU and drivers so it can also be used to build full custom
 machines.
