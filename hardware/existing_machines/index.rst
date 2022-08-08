@@ -13,7 +13,7 @@ how to connect and configure existing machines with MPF.
 * :doc:`Stern SAM <sam>`
 * :doc:`Stern SPIKE / SPIKE 2 <spike>`
 * :doc:`Pinball 2000 <pinball2000>`
-* :doc:`Gottlieb System 3 to 7 <gottlieb_system3_to_7>`
+* :doc:`Williams System 3 to 9 <williams_system3_to_9>`
 * :doc:`Bally/Stern with AS-2518-17 or AS-2518-35 MPU <bally_stern_as_2518>`
 
 See :doc:`/machines/existing` for a platform machine matrix.
