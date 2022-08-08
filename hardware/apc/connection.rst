@@ -1,10 +1,10 @@
-Connecting a System6 to System11c Machine to APC
+Connecting a System3 to System11c Machine to APC
 ================================================
 
 1. Replace your original MPU and driver board with APC
 ------------------------------------------------------
 
-See the `APC wiki <https://github.com/AmokSolderer/APC/wiki>`_ for build up
+See the `APC documentation <https://github.com/AmokSolderer/APC>`_ for build up
 and installation instructions.
 
 
