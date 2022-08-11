@@ -79,7 +79,7 @@ change. (In fact this will cause MPF to think that the eject failed, because
 it will fire the eject coil and not see the ball leave.)
 
 If you wanted to "play" an MPF game with the example config above,
-you'd have to manually manually simulate the ball leaving the trough by
+you'd have to manually simulate the ball leaving the trough by
 hitting the "1" key to deactivate a trough switch, and then hitting the "P"
 key to activate the plunger lane switch. (And you'd have to do this
 fast enough for the eject failure detection not to kick in.)
