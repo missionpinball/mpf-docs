@@ -1,4 +1,4 @@
-Downloading & Installing MPF (Aug 4, 2022 update)
+Downloading & Installing MPF (Aug 11, 2022 update)
 =================================================
 
 The MPF Installers are being rewritten from scratch and will be completely
