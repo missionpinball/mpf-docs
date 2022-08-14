@@ -30,26 +30,8 @@ You will see a bunch of warnings about some classes implemented in multiple loca
 
 At this point, MPF is ready to go!
 
-Alternate installation with pipx
----------------------------------
-
-We will most likely suggest ``pipx`` as the way to install and run MPF. pipx automatically sets up an isolated python environment which is harder to break. To try it now:
-
-``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
-
-
-Then the following command will use pipx to install this new pre-release version of MPF-MC (and MPF).
-
-``pipx install mpf-mc --pip-args '\--pre' --python $(which python3) --verbose --include-deps``
-
-Then you should be able to run "mpf" from anywhere just like a regular install.
-
 Notes, Caveats & Next Steps
 ---------------------------
-
-If running the ``mpf`` command does not work, you can run ``python3 -m mpf`` in its place. This is due to an issue with the Python commands folder not being on your path. (You can google that or post to the forums if you want to fix it. It's easy to fix.)
-
-If you're familiar with Python, you should probably use Python virtual environments for this. Once we get a more final installer, we will probably prescribe using ``pipx`` which will automatically handle all that.
 
 If have existing SDL and Gstreamer libraries installed (check the ``/Library/Frameworks`` folder), you can delete them. The versions that brew installs will go into the ``/opt/homebrew`` folder.
 
