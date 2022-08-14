@@ -3,12 +3,6 @@ Installing MPF on Mac (Aug 11 2022 update)
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
 
-Current version these instructions are for: v0.56.0.dev30
-
-These instructions will change often over the next few days until we get the process dialed-in.
-
-Also as we are working out the process, the installation instructions will involve lots of manual steps. We will integrate these into a more streamlined experience over time. For now we're just figuring out the process.
-
 Overview of MPF on macOS
 ------------------------
 
@@ -21,12 +15,14 @@ Here is the quick version:
 1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one. (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
 2. Install Homebrew (https://brew.sh/). This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
 3. When homebrew is done, there are two "next steps" listed in the terminal. Copy both of those into the terminal and run them. They're used to ensure brew is on your path.
-4. Install the libraries MPF MC needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly``
-5. Use pip to install / update some Python modules MPF needs to set up: ``pip3 install --upgrade pip setuptools wheel build virtualenv``
-6. Install MPF-MC (the MPF Media Controller), which will automatically install the corresponding version of MPF. ``pip3 install mpf-mc --pre`` That "pre" flag tells pip to install the latest "pre-release" version of MPF, which is what you're doing in this case since the version has "dev" in it.
-7. Finally, there's a library that Kivy installs that conflicts with some stuff that MPF uses, so remove that via ``pip3 uninstall pillow``
+4. Use brew to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
+5. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
+6. Use pipx to install MPF-MC (which will also install MPF). ``pipx install mpf-mc --pip-args '\--pre' --python $(which python3) --verbose --include-deps``
 
-At this point, MPF 0.56.0.dev30 and MPF-MC 0.56.0.dev30 should be installed. To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
+
+At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
+
+To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
 
 Then back in the terminal, change into the ``mpf-examples`` folder (or whatever folder you just unzipped that into), then change into the ``mc_demo`` folder, then run ``mpf both``. That should launch the mc_demo code (which is Media Controller demo). A window should open with a red background and some text about slides, you should be able to use the right arrow key to advance to the next slide. You should be able to use the left arrow key to go back to the previous slide and you should hear a drum and cymbal sound when you change the slide.
 
@@ -39,11 +35,12 @@ Alternate installation with pipx
 
 We will most likely suggest ``pipx`` as the way to install and run MPF. pipx automatically sets up an isolated python environment which is harder to break. To try it now:
 
-``brew install pipx``
+``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
 
-Then the following command will use pipx to install this new version of MPF-MC (and MPF).
 
-``pipx install mpf-mc==0.56.0.dev30 --python $(which python3) --verbose --include-deps``
+Then the following command will use pipx to install this new pre-release version of MPF-MC (and MPF).
+
+``pipx install mpf-mc --pip-args '\--pre' --python $(which python3) --verbose --include-deps``
 
 Then you should be able to run "mpf" from anywhere just like a regular install.
 

@@ -8,7 +8,7 @@ VM Benefits
 
 -  Containerization:
 
-   -  Keep Mission Pinball inside it's own container, without having to
+   -  Keep Mission Pinball inside its own container, without having to
       worry about outside packages or configurations causing problems
 
    -  Ensures dependencies are exactly what you expect them to be

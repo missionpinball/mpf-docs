@@ -4,9 +4,10 @@ Installing MPF on Linux
 .. include::  /_include/new-installers.rst
 
 As part of our automated build process, we build and test MPF and MPF-MC
-against Ubuntu 16.04 & 18.04 & 20.04 and Debian Stretch & Buster.
+against Ubuntu 20.04 & 22.04 and Debian Stretch & Buster.
 MPF 0.54 supports Python 3.5 to 3.7.
 MPF 0.55 supports Python 3.6 to 3.9.
+MPF 0.56 supports Python 3.7 to 3.9
 
 Installing MPF Using Our Installer
 ----------------------------------
