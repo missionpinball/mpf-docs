@@ -17,7 +17,7 @@ Here is the quick version:
 3. When homebrew is done, there are two "next steps" listed in the terminal. Copy both of those into the terminal and run them. They're used to ensure brew is on your path.
 4. Use brew to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
 5. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
-6. Use pipx to install MPF-MC (which will also install MPF). ``pipx install mpf-mc --pip-args '\--pre' --python $(which python3) --verbose --include-deps``
+6. Use pipx to install MPF-MC (which will also install MPF). ``pipx install mpf-mc --pip-args="--pre" --python $(which python3) --verbose --include-deps``
 
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)

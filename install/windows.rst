@@ -24,11 +24,11 @@ Then open a command prompt (you can just run "cmd"), and type each of these comm
   pip install --user pipx
   python -m pipx ensurepath
 
-After this, restart the cmd window. (Just close it and then open a new one.) Then type this commands and push enter:
+After this, restart the cmd window. (Just close it and then open a new one.) Then type this command and push enter:
 
 .. code-block:: doscon
 
-    pipx install mpf-mc --pip-args '\--pre' --verbose --include-deps
+    pipx install mpf-mc --pip-args="--pre" --verbose --include-deps
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
