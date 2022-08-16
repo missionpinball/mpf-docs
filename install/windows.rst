@@ -1,4 +1,4 @@
-Installing MPF on Windows (Aug 12, 2022 update)
+Installing MPF on Windows (Aug 16, 2022 update)
 ===============================================
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Windows machine.
@@ -24,10 +24,11 @@ Then open a command prompt (you can just run "cmd"), and type each of these comm
   pip install --user pipx
   python -m pipx ensurepath
 
-After this, restart the cmd window. (Just close it and then open a new one.) Then type this command and push enter:
+After this, restart the cmd window. (Just close it and then open a new one.) Then type these commands, hitting enter after each one:
 
 .. code-block:: doscon
 
+    pipx install mpf[all] --pip-args="--pre" --verbose --include-deps
     pipx install mpf-mc --pip-args="--pre" --verbose --include-deps
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
