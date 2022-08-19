@@ -3,8 +3,7 @@ Installing MPF on Windows (Aug 16, 2022 update)
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Windows machine.
 
-Current version these instructions are for: v0.56.0.dev30
-
+Current version these instructions are for v0.56.0, which is the current "dev" branch of MPF.
 
 Overview of MPF on Windows
 --------------------------
@@ -40,6 +39,11 @@ Then back in the command terminal, change into the ``mpf-examples`` folder (or w
 You will see a bunch of warnings about some classes implemented in multiple locations, and how one will be used, but which one is undefined. It sounds scary, but this is normal. (For now.) We are investigating whether this is something we need to fix, and how we'll fix it if so. But for now it's fine.
 
 At this point, MPF is ready to go!
+
+Keeping MPF up-to-date
+-----------------------
+
+Once you have MPF installed via the procedure above, you can keep it up-to-date by running the final two pipx commands from above which you used to install MPF and MPF-MC.
 
 Questions? Comments? Need help? You can post a reply into the MPF new installers for macOS thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
 

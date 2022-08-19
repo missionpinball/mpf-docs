@@ -1,4 +1,4 @@
-Installing MPF on Mac (Aug 16 2022 update)
+Installing MPF on Mac (Aug 19, 2022 update)
 =========================================
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
@@ -37,6 +37,11 @@ Notes, Caveats & Next Steps
 If have existing SDL and Gstreamer libraries installed (check the ``/Library/Frameworks`` folder), you can delete them. The versions that brew installs will go into the ``/opt/homebrew`` folder.
 
 Do NOT use brew to install Python. Why? Because the Python in brew is meant to support other brew packages that need python, and as such it will automatically "upgrade" you to the latest Python, even on its own, which means your Python will flip to 3.10 and MPF won't work and you'll be sad. So that's why we install the "Framework Python" from python.org. (Why's it called "Framework Python"? Because it installs like a framework to that ``/Library/Frameworks`` folder.)
+
+Keeping MPF up-to-date
+-----------------------
+
+Once you have MPF installed via the procedure above, you can keep it up-to-date by running the final two pipx commands from above which you used to install MPF and MPF-MC.
 
 Questions? Comments? Need help? You can post a reply into the MPF new installers for macOS thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
 
