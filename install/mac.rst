@@ -9,6 +9,8 @@ Installing MPF on Mac
 
    The latest instructions support macOS Monterey and Intel and Apple M1/M2 processors with Python 3.7, 3.8, and 3.9.
 
+OLD INSTRUCTIONS FROM SEVERAL YEARS AGO START BELOW:
+
 MPF can be used on Mac OS X 10.9 and newer, including Mavericks, Yosemite,
 El Capitan, Sierra and High Sierra.
 
