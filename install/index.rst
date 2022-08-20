@@ -1,6 +1,15 @@
 Downloading & Installing MPF
 ============================
 
+.. note::
+   These instructions are several years old and probably don't work. We have just
+   rewritten the MPF installers in Aug 2022 and updated the instructions for the 0.56 (latest version)
+   of MPF. If you are installing for the first time, we HIGHLY recommend you use
+   the "v\:latest" version of these docs, available here: https://docs.missionpinball.org/en/latest/install/
+
+   The latest instructions support current OSes (macOS Monterey, Windows 10/11, and Ubuntu 20.04/22.04) and Pyton 3.7, 3.8, and 3.9.
+
+
 Installing MPF is fairly straightforward. It can be used on Windows, Mac, or Linux, on both Intel x86 and ARM
 processors, and in 64-bit and 32-bit systems (see :doc:`/hardware/computer/index` for details).
 
@@ -43,4 +52,3 @@ Migrating from previous versions of MPF
 
    migrating
    migrate4to5
-
