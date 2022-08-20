@@ -29,6 +29,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 version = '0.56'   # MPF version these docs cover
+stable_version = '0.55'
 branch  = 'dev'     # current branch
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
@@ -227,20 +228,26 @@ def setup(app):
     if globals()['context']['github_version'] in branches_for_dev_warning:
 
         globals()['rst_prolog'] += '''
-        
+
         .. only:: html
-        
+
            .. warning::
-           
-              **This is the dev documentation for an unreleased version of MPF!**
-        
+
+              **This is the documentation the latest work-in-progress version of MPF!**
+
               This is the documentation for MPF |version|, which is the "dev" (next)
-              release of MPF that is a work-in-progress. Unless you're specifically
-              looking for this version, you probably want to use the version of
-              documentation called "latest" which is for the latest released version of
-              MPF. That documentation is at
-              `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
-        
+              release of MPF that is a work-in-progress. This is probably ok, and means
+              you'll be on the latest, cutting-edge version of MPF.
+
+              However, if you want a more stable version, select the ``v:stable`` version from the
+              lower-left corner of this page, which is for MPF |stable_version|. (You can also
+              read the docs for older MPF versions too.)
+
+              If you are new to MPF, we have recently rewritten the installation process
+              which only applies to this "latest" |version|, so you probably want to stay here
+              because the prior |stable_version| installation process doesn't work on the latest
+              OS and Python versions.
+
         '''
 
 
