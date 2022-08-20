@@ -30,8 +30,8 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.53+'  # all versions these docs cover
-release = '0.53.x'  # latest release
+version = '0.53'  # all versions these docs cover
+release = '0.56'  # latest release
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
@@ -221,24 +221,24 @@ def setup(app):
         # no idea why there is an origin/ in there. breaks our edit on github links
         globals()['context']['github_version'] = globals()['context']['github_version'][7:]
 
-    if globals()['context']['github_version'] in branches_for_dev_warning:
+    globals()['rst_prolog'] += '''
 
-        globals()['rst_prolog'] = '''
-        
-        .. only:: html
-        
-           .. warning::
-           
-              **This is the dev documentation for an unreleased version of MPF!**
-        
-              This is the documentation for MPF |version|, which is the "dev" (next)
-              release of MPF that is a work-in-progress. Unless you're specifically
-              looking for this version, you probably want to use the version of
-              documentation called "latest" which is for the latest released version of
-              MPF. That documentation is at
-              `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
-        
-        '''
+    .. only:: html
+
+        .. warning::
+
+            **This is the documentation for an old version of MPF!**
+
+            This is the documentation for MPF |version|, which is several years old.
+            This documentation is here for people who are still using that version,
+            but unless you're specifically looking for the old documentation, you
+            most likely want to be using the latest version of MPF. You can change
+            to the latest version via the ``v:latest`` link at the bottom left corner
+            of the page, or directly via
+            `docs.missionpinball.org/en/latest <http://docs.missionpinball.org/en/latest>`_.
+
+    '''
+
 
 def get_repo_path(repo_name):
     if os.path.isdir(os.path.join(os.getcwd(), os.pardir, repo_name)):
