@@ -28,7 +28,7 @@ After this, restart the cmd window. (Just close it and then open a new one.) The
 .. code-block:: doscon
 
     pipx install "mpf[cli]" --pip-args="--pre" --verbose --include-deps
-    pipx install mpf-mc --pip-args="--pre" --verbose --include-deps
+    pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
@@ -52,6 +52,16 @@ This is because those warnings mentioned above print on top of the nice MPF disp
 Alternately if you don't want to resize the window every time, you can open two different command prompt windows, and run ``mpf -X`` in one and ``mpf mc`` in the other.
 
 At this point, MPF is ready to go!
+
+Installing MPF Monitor
+----------------------
+
+To install MPF Monitor, you also need to inject it into the mpf environment via pipx. You can do that with the following two commands:
+
+.. code-block:: doscon
+
+    pipx inject mpf PyQt5 --verbose --include-deps --include-apps
+    pipx inject mpf mpf-monitor --pip-args="--pre" --verbose --include-deps --include-apps
 
 Keeping MPF up-to-date
 -----------------------

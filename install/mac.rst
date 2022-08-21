@@ -13,10 +13,18 @@ Apple Silicon (M1/M2 processors) require macOS Monterey as well as Python 3.9. W
 Here is the quick version:
 
 1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one. (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
+
 2. Install Homebrew (https://brew.sh/). This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
-5. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
-6. Use pipx to install MPF with all optional components. ``pipx install "mpf[all]" --pip-args="--pre" --python $(which python3) --verbose --include-deps``
-7. Use pipx to install MPF-MC. ``pipx install mpf-mc --pip-args="--pre" --python $(which python3) --verbose --include-deps``
+
+3. Use brew to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
+
+4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
+
+5. If you have an M1/M2 Apple Silicon Mac, run the following command: ``pip3 install --no-deps ruamel.yaml==0.15.100``
+
+6. (Now we are back to the same instructionsf for M1 or Intel processors) Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(which python3) --verbose --include-deps``.
+
+7. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
@@ -30,6 +38,16 @@ You can also run the "demo_man" game from the ``mpf-examples`` folder. Change in
 text UI display. Just grab a corner of the window with the mouse and resize the window (just make it a tiny bit bigger and smaller) and that will cause the window contents to completely refresh and you should see the expected MPF text UI display showing switch status, ball locations, etc. (See the screenshots below for details)
 
 At this point, MPF is ready to go!
+
+Installing MPF Monitor
+----------------------
+
+To install MPF Monitor, you also need to inject it into the mpf environment via pipx. You can do that with the following two commands:
+
+.. code-block:: doscon
+
+    pipx inject mpf PyQt5 --verbose --include-deps --include-apps
+    pipx inject mpf mpf-monitor --pip-args="--pre" --verbose --include-deps --include-apps
 
 Notes, Caveats & Next Steps
 ---------------------------
