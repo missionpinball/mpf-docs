@@ -20,9 +20,9 @@ Here is the quick version:
 
 4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
 
-5. If you have an M1/M2 Apple Silicon Mac, run the following command: ``pip3 install --no-deps ruamel.yaml==0.15.100``
+5. If you have an M1/M2 Apple Silicon Mac, run the following command: ``xcode-select --install``
 
-6. (Now we are back to the same instructionsf for M1 or Intel processors) Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(which python3) --verbose --include-deps``.
+6. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(which python3) --verbose --include-deps``.
 
 7. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
@@ -55,6 +55,8 @@ Notes, Caveats & Next Steps
 If have existing SDL and Gstreamer libraries installed (check the ``/Library/Frameworks`` folder), you can delete them. The versions that brew installs will go into the ``/opt/homebrew`` folder.
 
 Do NOT use brew to install Python. Why? Because the Python in brew is meant to support other brew packages that need python, and as such it will automatically "upgrade" you to the latest Python, even on its own, which means your Python will flip to 3.10 and MPF won't work and you'll be sad. So that's why we install the "Framework Python" from python.org. (Why's it called "Framework Python"? Because it installs like a framework to that ``/Library/Frameworks`` folder.)
+
+The reason Apple Silicon Macs need to install the xcode command-line tools is because the ruamel.yaml library that MPF uses to read YAML files doesn't have a pre-built version for M1/M2 Macs, so it has to be built locally. This process is autoamtic and transparent when these tools are installed.
 
 If you do not see the "normal" MPF text UI display, and instead see something like this:
 
