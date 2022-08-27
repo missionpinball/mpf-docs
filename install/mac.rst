@@ -1,4 +1,4 @@
-Installing MPF on Mac (Aug 23, 2022 update)
+Installing MPF on Mac (Aug 26, 2022 update)
 =========================================
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
@@ -12,7 +12,7 @@ Apple Silicon (M1/M2 processors) require macOS Monterey as well as Python 3.9. W
 
 Here is the quick version:
 
-1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one. (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
+1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one. (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg) Choose the default installation location. If you want to install to a custom location, remember that location for Step 5.
 
 2. Install Homebrew (https://brew.sh/). This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
 
@@ -20,7 +20,7 @@ Here is the quick version:
 
 4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
 
-5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(which python3) --verbose --include-deps``.
+5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(/Library/Frameworks/Python.framework/Versions/3.9/bin/python3) --verbose --include-deps``.
 
 6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
@@ -78,5 +78,20 @@ Or email me, Brian Madden, brian@fastpinball.com.
 What if you borked it?
 ----------------------
 
-Remove Homebrew: ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"``
+There aren't too many things that could go wrong, but if your environment is broken and you want to remove everything and start over, here are some notes:
+
+To remove homebrew, run the following command:
+
+``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"``
+
 Homebrew installs everything to ``/opt/homebrew``, which means if you just delete that folder, everything will be gone.
+
+Another problem is sometimes the system's default Python will be the homebrew one, and not that one that you installed from python.org. This can be a problem because MPF requires Python 3.7, 3.8, or 3.9 (3.9 only on M1/M2 Macs), but the homebrew python could be version 3.10 which won't work with MPF. So if you need to check or change this, you can use the following command:
+
+``which python3``
+
+You will see a path to the version of python that runs when you just type ``python3`` from the command line. Ideally you want it to be the version you installed, which will be:
+
+``/Library/Frameworks/Python.framework/Versions/3.9/bin/python3``
+
+If you see something else, then run ``which -a python3`` to see what other versions are installed. Then copy the path to the version you installed (which will be the ``/Library/Frameworks/...`` version), and use that in Step 5 (the initial pipx installation command) when you install MPF.
