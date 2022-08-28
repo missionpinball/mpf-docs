@@ -1,4 +1,4 @@
-Installing MPF on Mac (Aug 26, 2022 update)
+Installing MPF on Mac (Aug 28, 2022 update)
 =========================================
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
@@ -20,7 +20,7 @@ Here is the quick version:
 
 4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
 
-5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python $(/Library/Frameworks/Python.framework/Versions/3.9/bin/python3) --verbose --include-deps``.
+5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 --verbose --include-deps``.
 
 6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
