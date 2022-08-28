@@ -95,3 +95,9 @@ You will see a path to the version of python that runs when you just type ``pyth
 ``/Library/Frameworks/Python.framework/Versions/3.9/bin/python3``
 
 If you see something else, then run ``which -a python3`` to see what other versions are installed. Then copy the path to the version you installed (which will be the ``/Library/Frameworks/...`` version), and use that in Step 5 (the initial pipx installation command) when you install MPF.
+
+If you get an error about a failure while loading assets, and you see some references to PIL, there's a potential conflict with an image library that you can remove. To do that, use the following command:
+
+``pipx runpip mpf uninstall pillow``
+
+This command uses pipx to run a pip command inside the mpf environment to uninstall a package called pillow. (Phew!)
