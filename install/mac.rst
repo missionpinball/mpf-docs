@@ -1,4 +1,4 @@
-Installing MPF on Mac (Aug 28, 2022 update)
+Installing MPF on Mac (Aug 29, 2022 update)
 =========================================
 
 This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
@@ -24,6 +24,8 @@ Here is the quick version:
 
 6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
+7. Updated MPF Monitor instructions (which work with pipx) are :doc:`here <tools/monitor/installation.rst>`.
+
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
 To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
@@ -36,16 +38,6 @@ You can also run the "demo_man" game from the ``mpf-examples`` folder. Change in
 text UI display. Just grab a corner of the window with the mouse and resize the window (just make it a tiny bit bigger and smaller) and that will cause the window contents to completely refresh and you should see the expected MPF text UI display showing switch status, ball locations, etc. (See the screenshots below for details)
 
 At this point, MPF is ready to go!
-
-Installing MPF Monitor
-----------------------
-
-To install MPF Monitor, you also need to inject it into the mpf environment via pipx. You can do that with the following two commands:
-
-.. code-block:: doscon
-
-    pipx inject mpf PyQt5 --verbose --include-deps --include-apps
-    pipx inject mpf mpf-monitor --pip-args="--pre" --verbose --include-deps --include-apps
 
 Notes, Caveats & Next Steps
 ---------------------------
