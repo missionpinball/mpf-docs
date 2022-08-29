@@ -22,4 +22,4 @@ Here are the links to the guides we have started so far:
 
     macOS <mac>
     Windows <windows>
-    MPF Monitor <tools/monitor/installation>
+    MPF Monitor </tools/monitor/installation>

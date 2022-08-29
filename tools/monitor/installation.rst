@@ -1,7 +1,7 @@
 Installing the MPF Monitor (Aug 29, 2022 update)
 ==========================
 
-The MPF installers have been rewritten and updated in August 2022. See the new instructions :doc:`here <install>`.
+The MPF installers have been rewritten and updated in August 2022. See the new instructions :doc:`here </install/index>`.
 
 The instructions for installing MPF Monitor have been updated too. If you installed MPF 0.56 (the current dev version) via the new instructions
 from August 2022, then you can use the following process to install MPF Monitor.

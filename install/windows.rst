@@ -30,7 +30,7 @@ After this, restart the cmd window. (Just close it and then open a new one.) The
     pipx install "mpf[cli]" --pip-args="--pre" --verbose --include-deps
     pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
 
-Updated MPF Monitor instructions (which work with pipx) are :doc:`here <tools/monitor/installation>`.
+Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
