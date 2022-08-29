@@ -24,7 +24,7 @@ Here is the quick version:
 
 6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
 
-7. Updated MPF Monitor instructions (which work with pipx) are :doc:`here <tools/monitor/installation.rst>`.
+7. Updated MPF Monitor instructions (which work with pipx) are :doc:`here <tools/monitor/installation>`.
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
