@@ -51,7 +51,7 @@ You can read about possible elements in the `rst documentation <http://www.sphin
 
 Some excerpts from the documentation above:
 
-A list of item:
+A bulleted list of items:
 
 ::
 
