@@ -1,7 +1,7 @@
 Installing MPF on Mac (Aug 29, 2022 update)
 =========================================
 
-This process is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
+This is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
 
 Overview of MPF on macOS
 ------------------------
@@ -12,11 +12,14 @@ Apple Silicon (M1/M2 processors) require macOS Monterey as well as Python 3.9. W
 
 Here is the quick version:
 
-1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one. (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg) Choose the default installation location. If you want to install to a custom location, remember that location for Step 5.
+1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one.
+   macOS 64-bit Intel-only installer (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macosx10.9.pkg)
+   macOS 64-bit universal installer (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
+   Choose the default installation location. If you want to install to a custom location, remember that location for Step 5.
 
 2. Install Homebrew (https://brew.sh/). This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
 
-3. Use brew to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
+3. Use Homebrew (or 'brew') to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
 
 4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
 
@@ -32,7 +35,7 @@ To test, download the ``mpf-examples`` repo from here: https://github.com/missio
 
 Then back in the terminal, change into the ``mpf-examples`` folder (or whatever folder you just unzipped that into), then change into the ``mc_demo`` folder, then run ``mpf both``. That should launch the mc_demo code (which is Media Controller demo). A window should open with a red background and some text about slides, you should be able to use the right arrow key to advance to the next slide. You should be able to use the left arrow key to go back to the previous slide and you should hear a drum and cymbal sound when you change the slide.
 
-You will see a bunch of warnings about some classes implemented in multiple locations, and how one will be used, but which one is undefined. It sounds scary, but this is normal. (For now.) We are investigating whether this is something we need to fix, and how we'll fix it if so. But for now it's fine.
+You will see a bunch of warnings about some classes implemented in multiple locations, and how one will be used, but which one is undefined. It sounds scary, but this is normal. (For now.) We are investigating whether this is something we need to fix, and how we'll fix it if it is. But for now, it's fine.
 
 You can also run the "demo_man" game from the ``mpf-examples`` folder. Change into the ``demo_man`` folder and run ``mpf both -X``. You should see the DMD window pop up. The window you ran the command from will have some warnings which cover up the nice
 text UI display. Just grab a corner of the window with the mouse and resize the window (just make it a tiny bit bigger and smaller) and that will cause the window contents to completely refresh and you should see the expected MPF text UI display showing switch status, ball locations, etc. (See the screenshots below for details)
@@ -46,17 +49,17 @@ If have existing SDL and Gstreamer libraries installed (check the ``/Library/Fra
 
 Do NOT use brew to install Python. Why? Because the Python in brew is meant to support other brew packages that need python, and as such it will automatically "upgrade" you to the latest Python, even on its own, which means your Python will flip to 3.10 and MPF won't work and you'll be sad. So that's why we install the "Framework Python" from python.org. (Why's it called "Framework Python"? Because it installs like a framework to that ``/Library/Frameworks`` folder.)
 
-The reason Apple Silicon Macs need to install the xcode command-line tools is because the ruamel.yaml library that MPF uses to read YAML files doesn't have a pre-built version for M1/M2 Macs, so it has to be built locally. This process is autoamtic and transparent when these tools are installed.
+The Apple Silicon Macs need the Xcode command-line tools installed because the ruamel.yaml library that MPF uses to read YAML files doesn't have a pre-built version for M1/M2 Macs, so it has to be built locally. This process is automstic and transparent when the Xcode tools are installed.
 
 If you do not see the "normal" MPF text UI display, and instead see something like this:
 
 .. image:: images/bad-display.jpg
 
-This is because those warnings mentioned above print on top of the nice MPF display. To fix this, just grab a corner of the window with the mouse and resize it to be a bit bigger or smaller, which will cause the entire window to update and you should see the expected MPF text UI display showing switch status, ball locations, etc. (See the screenshots below for details)
+This is because those warnings mentioned above print on top of the nice MPF display. To fix this, just grab a corner of the window with the mouse and resize it to be a bit bigger and then smaller again. This will cause the entire window to update and you should see the expected MPF text UI display showing switch status, ball locations, etc. (See the screenshots below for details)
 
 .. image:: images/good-display.jpg
 
-Alternately if you don't want to resize the window every time, you can open two different terminal windows, and run ``mpf -X`` in one and ``mpf mc`` in the other.
+Alternately, if you don't want to resize the window every time, you can open two different terminal windows, and run ``mpf -X`` in one and ``mpf mc`` in the other.
 
 Keeping MPF up-to-date
 -----------------------
@@ -73,11 +76,13 @@ What if you borked it?
 There aren't too many things that could go wrong, but if your environment is broken and you want to remove everything and start over, here are some notes:
 
 To remove homebrew, run the following command:
-
+____
 ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"``
 
 Homebrew installs everything to ``/opt/homebrew``, which means if you just delete that folder, everything will be gone.
 
+To fix Python versions:
+____
 Another problem is sometimes the system's default Python will be the homebrew one, and not that one that you installed from python.org. This can be a problem because MPF requires Python 3.7, 3.8, or 3.9 (3.9 only on M1/M2 Macs), but the homebrew python could be version 3.10 which won't work with MPF. So if you need to check or change this, you can use the following command:
 
 ``which python3``
@@ -88,8 +93,10 @@ You will see a path to the version of python that runs when you just type ``pyth
 
 If you see something else, then run ``which -a python3`` to see what other versions are installed. Then copy the path to the version you installed (which will be the ``/Library/Frameworks/...`` version), and use that in Step 5 (the initial pipx installation command) when you install MPF.
 
+To fix errors about failing to load assets:
+____
 If you get an error about a failure while loading assets, and you see some references to PIL, there's a potential conflict with an image library that you can remove. To do that, use the following command:
 
 ``pipx runpip mpf uninstall pillow``
 
-This command uses pipx to run a pip command inside the mpf environment to uninstall a package called pillow. (Phew!)
+This command uses pipx to run a pip command inside the mpf environment to uninstall a package called pillow.
