@@ -13,11 +13,18 @@ Apple Silicon (M1/M2 processors) require macOS Monterey as well as Python 3.9. W
 Here is the quick version:
 
 1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one.
+
    macOS 64-bit Intel-only installer (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macosx10.9.pkg)
+   
    macOS 64-bit universal installer (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
+   
    Choose the default installation location. If you want to install to a custom location, remember that location for Step 5.
 
-2. Install Homebrew (https://brew.sh/). This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
+2. Install Homebrew (https://brew.sh/). Open your command terminal and paste in this command:
+
+   ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
+   
+   This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
 
 3. Use Homebrew (or 'brew') to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
 
