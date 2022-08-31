@@ -6,22 +6,32 @@ Running the MPF Monitor
    from the download folder.)
 #. Create a subfolder in your MPF machine folder called ``/monitor``
 #. Put an image of your playfield in that folder named ``playfield.jpg``
-#. Run MPF monitor from a command prompt in a new window via the command
+#. Run MPF monitor from a command prompt via the command
    ``mpf monitor``. Be sure to run this from your machine folder (the same
    place where you run ``mpf both``).
-#. Start MPF and MPF-MC. (You can start MPF before or after monitor is started,
-   and leave the monitor running while MPF is not.)
-#. MPF Monitor should connect to MPF and populate the devices tree. You can
-   look through there to see the states of various devices. The columns are
-   sortable and resizeable.
-#. Drag-and-drop switches and LEDs onto the playfield image. When you do this,
-   a config file called ``/monitor/monitor.yaml`` will be created. If you open
-   that file, you'll see that x/y values of devices are stored in percentages
+#. In a new terminal window, Start MPF and MPF-MC. You can start MPF before or
+   after monitor is started, and leave the monitor running while MPF is not.
+#. MPF Monitor has multiple windows that can be viewed, though not all may be enabled
+   by default. The "Inspector" window is the main window where you can toggle other
+   windows On and Off. To enable different windows, click on the "Monitor" tab. This
+   will show you a list of all the different windows you can enable and view:
+   
+   #. Show device window (this window lists all your switches, shots, targets, etc)
+   #. Show event window
+   #. Show playfield window (this window shows your playfield picture)
+   #. Show mode window
+  
+#. MPF Monitor should connect to MPF and populate the devices tree in the device window.
+   You can look through this list to see the states of various devices. The columns
+   in each window are sortable and resizeable.
+#. You can drag-and-drop switches and LEDs from the Devices window onto the playfield image.
+   When you do this, a config file called ``/monitor/monitor.yaml`` will be created. If
+   you open that file, you'll see that x/y values of devices are stored in percentages
    instead of pixels, so they should stay in the right place even if you change
    your playfield image. The file is updated automatically. You can drag
    devices that you previously placed on the playfield too (there's a half-
    second delay so you don't accidentally move something when you're clicking
-   on it.)
+   on it).
 #. Edit ``monitor.yaml`` to remove devices from the playfield you don't want
    anymore.
 #. When you resize or reposition one of the monitor windows, the window
