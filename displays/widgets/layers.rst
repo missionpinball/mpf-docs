@@ -153,11 +153,11 @@ To do this, you can add the setting ``z: -1`` under the ``widget_settings:`` sec
 
 .. code-block:: yaml
 
-widget_player:
-  trigger_event:
-    my_widget:
-      widget_settings:
-        z: -1
+   widget_player:
+      trigger_event:
+        my_widget:
+          widget_settings:
+            z: -1
 
 This will make the widget added to the frame, and not to a slide, meaning your widget will ride "on top" of every slide (and even on top of any slide transitions that take place).
 
