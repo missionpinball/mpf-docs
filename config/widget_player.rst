@@ -14,7 +14,7 @@ widget_player:
 .. overview
 
 The ``widget_player:`` section of your config is where you configure widgets to be added to,
-removed from, or updated on slides based on based on events being posted.
+removed from, or updated on slides (or parent frames) based on based on events being posted.
 
 This is an example:
 
@@ -126,10 +126,16 @@ used and the ``slide:`` value will be ignored.
 
 widget_settings:
 ~~~~~~~~~~~~~~~~
-Unknown type. See description below.
 
-Used to override and/or update
+Used to override and/or update settings for widgets specified in your ``widgets:`` section, such as ``z:`` value. Here is an example:
 
+.. code-block:: yaml
+
+widget_player:
+  trigger_event:
+    my_widget:
+      widget_settings:
+        z: 1
 
 Related How To guides
 ---------------------
