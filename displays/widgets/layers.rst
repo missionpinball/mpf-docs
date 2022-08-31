@@ -18,7 +18,7 @@ Any time you have two widgets that overlap, MPF must decide which widget will
 be drawn "on top" of the other.
 
 At the most basic level, any time you have more than one widget listed in
-a config (whether it's in a ``widget_player:``, ``slide_player:``, or
+a config (whether it's in a ``widget_player:``, ``slide_player:``, or 
 a definition in a ``slides:`` or ``widgets:`` section), the widgets will be
 drawn in the order they are in the config.
 
@@ -149,7 +149,15 @@ Another example is the scores. Maybe you want those to show along the bottom
 on top of every slide? Or maybe something like the news crawl on the bottom
 of the *Dialed In* display?
 
-So instead of using a ``slide:`` setting with your widget player, you can use
-the ``target:`` setting and enter of name of a display. In that case, the widget
-will be added there, and not to the slide, meaning your widget will ride "on top"
-of the slides (and even on top of any slide transitions that take place).
+To do this, you can add the setting ``z: -1`` under the ``widget_settings:`` section of your desired widget. Here's an example:
+
+.. code-block:: yaml
+
+widget_player:
+  trigger_event:
+    my_widget:
+      widget_settings:
+        z: -1
+
+This will make the widget added to the frame, and not to a slide, meaning your widget will ride "on top" of every slide (and even on top of any slide transitions that take place).
+
