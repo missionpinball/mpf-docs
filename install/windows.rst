@@ -5,7 +5,19 @@ This process is the new step-by-step process we are actively working out to get 
 
 Current version these instructions are for v0.56.0, which is the current "dev" branch of MPF.
 
-Overview of MPF on Windows
+NOTE: If you already have an earlier version of MPF installed, uninstall that first by using this command: 
+
+.. code-block:: doscon
+
+  pip uninstall mpf
+  
+If you are unsure which version of MPF you have installed, you can run this command to check what is installed:
+
+.. code-block:: doscon
+
+  mpf --version
+
+Overview of MPF installation on Windows
 --------------------------
 
 We test MPF on Windows 10 and Windows 11. Older versions of Windows might (probably?) work too, we just don't test them. MPF requires 64-bit (x86) Windows running on Intel-compatible processors. It does not run on 32-bit systems and does not run on ARM processors on Windows.
@@ -58,7 +70,7 @@ At this point, MPF is ready to go!
 Installing MPF Monitor
 ----------------------
 
-Updated MPF Monitor instructions (which work with pipx) are :doc:`here <tools/monitor/installation.rst>`.
+Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
 
 Keeping MPF up-to-date
 -----------------------
