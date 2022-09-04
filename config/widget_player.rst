@@ -131,11 +131,11 @@ Used to override and/or update settings for widgets specified in your ``widgets:
 
 .. code-block:: yaml
 
-widget_player:
-  trigger_event:
-    my_widget:
-      widget_settings:
-        z: 1
+   widget_player:
+     trigger_event:
+       my_widget:
+         widget_settings:
+           z: 1
 
 Related How To guides
 ---------------------
