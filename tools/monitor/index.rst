@@ -11,8 +11,8 @@ great when you have more than one person working on your MPF code but your
 physical machine is at one person's house. :)
 
 The MPF Monitor can run on Windows, Mac, and Linux. It uses
-`PyQt5 <https://www.riverbankcomputing.com/software/pyqt/intro>`_ (Python
-bindings for Qt5) for its visual framework.
+`PyQt6 <https://www.riverbankcomputing.com/software/pyqt/intro>`_ (Python
+bindings for Qt6) for its visual framework.
 
 Here's a screen shot of it in action:
 
