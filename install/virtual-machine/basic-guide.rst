@@ -6,9 +6,9 @@ Basic Guide
 Prerequisites
 -------------
 
--  Comfortability with running Linux commands
+-  Comfort with running Linux commands
 
--  Basic knowlege of SSH
+-  Basic knowledge of SSH
 
 -  Host OS with VirtualBox 5+ installed and 10 GB+ of free space
 
