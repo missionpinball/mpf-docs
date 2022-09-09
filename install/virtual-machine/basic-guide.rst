@@ -143,7 +143,7 @@ To fix this:
 
 
 
-Setting up the VirtualBox Guest Additions CD 
+Setting up the VirtualBox Guest Additions CD
 --------------------------------------------
 
 The VirtualBox Guest Additions provide many benefits including `but not
@@ -232,7 +232,7 @@ virtual machine.
    -  .. code-block:: console
 
          vboxnet0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
-                ether 0a:00:27:00:00:00 
+                ether 0a:00:27:00:00:00
                 inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255
 
 4. In the *guest* OS (Debian), verify the VirtualBox virtual network
@@ -252,7 +252,7 @@ virtual machine.
              link/ether 08:00:27:d8:b5:e6 brd ff:ff:ff:ff:ff:ff
              inet 192.168.56.101/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
                 valid_lft 805sec preferred_lft 805sec
-             inet6 fe80::e970:3c21:bf92:1f16/64 scope link noprefixroute 
+             inet6 fe80::e970:3c21:bf92:1f16/64 scope link noprefixroute
                 valid_lft forever preferred_lft forever
          [...]
 
@@ -361,11 +361,11 @@ Installing and Running MPF-Monitor
 The full installation guide for setting up MPF-Monitor :doc:`can be found
 here </tools/monitor/installation>`.
 
-1. Install PyQt5 (may already be installed):
+1. Install PyQt6 (may already be installed):
 
    -  .. code-block:: console
 
-         sudo apt-get install python3-pyqt5
+         sudo apt-get install python3-pyqt6
 
 2. Install mpf-monitor:
 
@@ -388,7 +388,7 @@ here </tools/monitor/installation>`.
 
    -  .. code:: yaml
 
-         device_size: 0.1 
+         device_size: 0.1
 
    -  More info at :doc:`MPF Monitor
       docs </tools/monitor/running>`.
