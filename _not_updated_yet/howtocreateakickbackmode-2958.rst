@@ -1,8 +1,6 @@
 
 Warning: This How To guide has not yet been updated for MPF 0.21 (the
-current version). If you're reading this now and you'd like to add
-this to your game, send me an email (brian@missionpinball.com) and
-I'll get it updated. Many games have a kickback, so let’s go through
+current version). Many games have a kickback, so let’s go through
 the process of setting one up as a mode. Typically, a kickback has a
 series of things that have to be done to enable it (in our case,
 completing a set of standup targets), an indicator light to let you
@@ -30,7 +28,7 @@ configuration ( `your_machine/config/config.yaml`) with this:
 
 ::
 
-    
+
     autofire_coils:
         kickback:
             coil: c_kickback
@@ -71,7 +69,7 @@ add kickback to the list of modes, like this:
 
 ::
 
-    
+
     modes:
         - base
         - skill_shot
@@ -86,7 +84,7 @@ Now, let’s edit the mode configuration file (
 
 ::
 
-    
+
     mode:
         start_events: targets_left_bank_lit_complete
         stop_events: timer_kickback_grace_period_complete
@@ -124,7 +122,7 @@ like this:
 
 ::
 
-    
+
     target_groups:
         left_bank:
             targets: t_leftBankBottom, t_leftBankTop, t_leftBankMiddle
@@ -163,7 +161,7 @@ it expires.
 
 ::
 
-    
+
     timers:
         kickback_grace_period:
             start_value: 5
@@ -184,7 +182,7 @@ config file, add a tag to your left outlane switch called “kickback”.
 
 ::
 
-    
+
     switches:
         s_leftOutlane:
             number: S15
@@ -209,7 +207,7 @@ should look like now:
 
 ::
 
-    
+
     mode:
         start_events: targets_left_bank_lit_complete
         stop_events: timer_kickback_grace_period_complete
@@ -219,7 +217,7 @@ should look like now:
 
 ::
 
-    
+
     timers:
         kickback_grace_period:
             start_value: 5
@@ -258,7 +256,7 @@ config file:
 
 ::
 
-    
+
     slide_player:
         sw_kickback:
             - type: Text
@@ -288,7 +286,7 @@ subdirectory under our kickback folder. Name the file “
 
 ::
 
-    
+
     - tocks: 1
         lights:
         l_kickback: ff
@@ -301,7 +299,7 @@ called “ `flash_kickback.yaml`” and fill it with this:
 
 ::
 
-    
+
     - tocks: 1
         lights:
         l_kickback: ff
@@ -318,7 +316,7 @@ files we created into the ShowPlayer, which we do like this:
 
 ::
 
-    
+
     show_player:
         mode_kickback_enabled:
             - show: light_kickback
@@ -363,14 +361,14 @@ file that looks something like this:
 
 ::
 
-    
+
     # kickback.yaml mode config file
-    
+
     mode:
         start_events: targets_left_bank_lit_complete
         stop_events: timer_kickback_grace_period_complete
         priority: 400
-    
+
     slide_player:
         sw_kickback:
             - type: Text
@@ -379,7 +377,7 @@ file that looks something like this:
             transition:
                 type: move_in
                 direction: top
-    
+
     timers:
         kickback_grace_period:
             start_value: 5
@@ -387,7 +385,7 @@ file that looks something like this:
             control_events:
                 - event: sw_kickback
                   action: start
-    
+
     show_player:
             mode_kickback_enabled:
                 - show: light_kickback
@@ -405,5 +403,3 @@ file that looks something like this:
 
 .. _Target Group: https://missionpinball.com/docs/configuration-file-reference/targetgroups/
 .. _Targets section: https://missionpinball.com/docs/configuration-file-reference/targets/
-
-

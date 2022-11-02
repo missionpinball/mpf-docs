@@ -42,7 +42,7 @@ Yes! See `developer.missionpinball.org <http://developer.missionpinball.org>`_ f
 Where does the name come from?
 ------------------------------
 
-Brian lives in San Francisco's "Mission" neighborhood. There are a lot of "Mission" things here, Mission
+Brian lived in San Francisco's "Mission" neighborhood when MPF was first created. There are a lot of "Mission" things here, Mission
 Bowling, Mission Coffee, Mission Ice Cream... So we thought "Mission Pinball" had a great ring to it!
 
 What pinball hardware does MPF work with?
