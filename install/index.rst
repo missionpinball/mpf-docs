@@ -1,5 +1,5 @@
 Downloading & Installing MPF (Aug 29, 2022 update)
-=================================================
+==================================================
 
 The MPF Installers have been rewritten from scratch in August 2022 and
 are completely updated for MPF 0.56 (the current "dev" version that will be released once
@@ -22,4 +22,5 @@ Here are the links to the guides we have started so far:
 
     macOS <mac>
     Windows <windows>
+    Linux <linux/index>
     MPF Monitor </tools/monitor/installation>
