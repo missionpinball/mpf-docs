@@ -18,6 +18,68 @@ https://github.com/missionpinball/mpf-debian-installer/archive/0.55.x.zip
 Unzip it, and from a terminal run ``chmod +x install && sudo ./install`` from the folder you unzipped the files to. If you are using a P-Roc
 or P3-Roc also run ``chmod +x install-proc && ./install-proc`` (skip for other platforms). Consult the README for more information.
 
+Installing MPF Manually
+-----------------------
+Current version these instructions are for v0.56.0, which is the current "dev" branch of MPF.
+
+MPF 0.56 requires Python 3.7, 3.8, or 3.9. Various Linux distributions offer to install multiple versions of Python in parallel. First check what version of Python you might
+have already running on your computer.
+
+.. code-block:: doscon
+
+  python3 --version
+
+In some cases you might only get a Python version of 3.6, then run your admin tool and install a higher version of python, preferabyl the latest version of 3.9. If you don't want to remove the older version of Python
+you can keep it in parallel, just make sure to run the installer commands with the right version of python. If you have for example installed Python 3.9 try to running
+
+.. code-block:: doscon
+
+  python3.9 --version
+
+You will need pip further down the line to complete the installation. Same as above for Python, check what version of pip you are running and choose the command to match the version
+you would like to use. Try the following commands to figure out what pip command works for you and has the right version.
+
+.. code-block:: doscon
+
+  pip --version
+  pip3 --version
+  pip3.9 --version
+
+For the rest of the chapter I will always write python3.9 and pip3.9 as commands as reminder to use the right version, any of the above commands might work for you (or fail).
+
+NOTE: If you already have an earlier version of MPF installed, uninstall that first by using this command: 
+
+.. code-block:: doscon
+
+  sudo pip3.9 uninstall mpf-mc mpf
+  
+If you are unsure which version of MPF you have installed, you can run this command to check what is installed:
+
+.. code-block:: doscon
+
+  mpf --version
+
+
+Now back to the installation, in a console run
+
+.. code-block:: doscon
+
+  pip3.9 install --user pipx
+  python3.9 -m pipx ensurepath
+
+After this it might be necessary to restart the console. Now run the following command (obey that this is pipx and here there is no need for a version)
+
+.. code-block:: doscon
+
+    pipx install "mpf[cli]" --pip-args="--pre" --verbose --include-deps
+    pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
+
+Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
+
+At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
+
+
+
 Download & run the "Demo Man" example game
 ------------------------------------------
 
@@ -77,19 +139,7 @@ To upgrade MPF just re-run the installer which will make sure that you will also
   sudo ./install
 
 
-Alternatively, since MPF is a work-in-progress, you can use the *pip* command to update your
-MPF installation.
-
-To to this, run the following:
-
-.. code-block:: console
-
-  pip3 install pip setuptools --upgrade
-  pip3 install mpf[all] mpf-mc --upgrade
-
-This will cause *pip* to contact PyPI to see if there's a newer version of the
-MPF MC (and any of its requirements, like MPF). If newer versions are found, it
-will download and install them.
+If you have MPF installed via the manual procedure above, you can keep it up-to-date by running the final two pipx commands from above which you used to install MPF and MPF-MC.
 
 .. warning::
 
