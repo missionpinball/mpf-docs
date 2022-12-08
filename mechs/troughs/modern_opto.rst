@@ -681,7 +681,7 @@ the plunger switch.
 For that reason it is important to set ``eject_timeouts`` to your shooter
 lane and your trough.
 You should measure how long the maximum time is until a ball cannot possibly
-return to your trough and plunger (with some safty margin).
+return to your trough and plunger (with some safety margin).
 Usually this is about ``2s - 4s`` for a trough and ``3s - 5s`` for a plunger.
 
 .. code-block:: mpf-config
