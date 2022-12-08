@@ -86,16 +86,40 @@ Neopixel Support
 
 .. image:: /hardware/images/CobraPinV0_2_NEO.jpg
 
+J10:
+   Power input for Neopixels, most likely 5V, but if you use 12V Neopixels you need to provide 12V power here. Power input is used for both Neopixel chains.
+
 J11, J12:
     Neopixel outputs
 F4:
     5V fuse for neopixels
 J14:
     Fused 5V output
+    
+The connectors J10, J11, J12 and J14 are JST connectors VH style. There are lots of Neopixels which come with a JST connector SM style. You might want to craft a little converter cable in such a case.
 
-There are two neopixel chains that support 256 RGB pixels each for a total of 512. RGBW pixels are also possible, but the number may be limited to 230 pixels per chain for a total of 460. :doc:`OPP LEDs </hardware/opp/leds>`.
+.. image:: /hardware/images/Cobra_Neopixel_JST_adapter_VH_SM.jpg
 
-The J14 fused output can be used to provide additional power taps in a neopixel chain. Each pin is rated for 7A continuous. The fuse holder is rated for 10A. The red D25 LED can be used to confirm you have a good fuse and are providing power for neopixels.
+There are two neopixel chains that support 256 RGB pixels each for a total of 512. RGBW pixels are also possible, but the number may be limited to 230 pixels per chain for a total of 460. 
+
+The J14 fused output can be used to provide additional power taps in a neopixel chain. Each pin is rated for 7A continuous. The fuse holder is rated for 10A. The red D25 LED can be used to confirm you have a good fuse and are providing power for neopixels. For the LED to light up there is no need to run any mpf configuration, you don't even have to power up the micro controllers.
+
+.. image:: /hardware/images/Cobra_Power_LED_Neopixel.jpg
+
+When you order the micro controllers you have various options, one option to choose from is Regular vs NoGlow. If you order the Regular version then after power is provided for the Neopixel and the micro controllers are powered up (still no need to run any mpf on them), the LEDs of your strip will glow blue, which is a good first test.
+
+.. image:: /hardware/images/Cobra_Neopixel_blue_glow.jpg
+
+In order to addess the LEDs in MPF you need to know their address
+
+J11: 
+   NEO 0 Neopixel output, all these lights have MPF numbers with the format 0-0-##. The first LED in the chain is 0-0-0.
+
+J12: 
+   NEO 1 Neopixel output, all these lights have MPF numbers with the format 1-0-##. The first LED in the chain is 1-0-0. 
+
+Details on how to configure LEDs in your mpf project can be found here :doc:`OPP LEDs </hardware/opp/leds>`.
+
 
 Microcontrollers
 ---------------------------------------------------------------------------------------------------------------
