@@ -14,6 +14,17 @@ Another stupid thing to check:
 Is your hardware connected to your PC?
 We know it is stupid but a loose USB connector has happened to most of us.
 
+On Linux you might want to run the command ``lsusb`` which should show both of your micro controllers connected. You should see two lines similar to
+
+.. code-block:: console
+
+ Bus 002 Device 014: ID 0483:5740 STMicroelectronics Virtual COM Port
+ Bus 002 Device 015: ID 0483:5740 STMicroelectronics Virtual COM Port
+
+
+If you are unsure about the output, run the command once with your controllers connected and once without. If there is no difference, then for sure the USB device
+is not properly connected.
+
 Add debugging to related devices
 --------------------------------
 

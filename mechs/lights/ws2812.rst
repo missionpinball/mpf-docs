@@ -134,7 +134,7 @@ You can buy them for around 15 bucks with 50 lights.
 Those work well for GIs but you can also use them below inserts if you
 print or bend holders for this.
 
-:doc:`TODO: Add a picture of christmas lights WS2811 </about/help_us_to_write_it>`
+.. image:: images/LED_WS2811_Christmas_lights.jpg
 
 Those LEDs are WS2811 in most of the cases.
 You typically see the controller as a separate chip and a RGB LED soldered
