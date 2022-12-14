@@ -34,7 +34,9 @@ In the following we assume that ``l_light1`` and ``l_light2`` exist.
 If you do not have lights with that name make sure to adjust all examples
 accordingly or you will run into issues.
 
-3: Create an attract mode light/LED show
+If you would like to see a fully working example you can take a look at the two example configurations in :doc:`LEDs </mechs/lights/index>`.
+
+3. Create an attract mode light/LED show
 ----------------------------------------
 
 Once you add your lights, you need a simple way to test them

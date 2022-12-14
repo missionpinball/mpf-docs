@@ -21,6 +21,8 @@ LEDs work similar to matrix lights (chain 0, board 1, LED 1):
         subtype: led
         type: rgb
 
+Note, counting starts always with 0, so LED 1 in aboves example is the 2nd LED of the strip.
+        
 Overview video about serial LEDs:
 
 .. youtube:: Q9BG9T7Kj4A

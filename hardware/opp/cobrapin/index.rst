@@ -120,6 +120,7 @@ J12:
 
 Details on how to configure LEDs in your mpf project can be found here :doc:`OPP LEDs </hardware/opp/leds>`.
 
+Two fully working example for the Cobra board can be found in the generic LED section :doc:`LEDs </mechs/lights/index>` where as well the more general concept is explained.
 
 Microcontrollers
 ---------------------------------------------------------------------------------------------------------------
