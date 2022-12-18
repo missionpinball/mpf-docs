@@ -102,7 +102,7 @@ command:
 
 ::
 
-   ls /dev/tty.*
+   ls /dev/tty*
 
 This will list all the devices whose names begin with "tty".
 
