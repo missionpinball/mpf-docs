@@ -48,7 +48,9 @@ switches. Here’s an example section:
        events_when_deactivated: ball_out
 
 Each subsection of ``switches:`` is a switch name, which is how you
-refer to the switch in your game code. Then there are several
+refer to the switch in your game code. A fully working example for the Cobra board can be found in :doc:`OPP Switches </hardware/opp/switches>`, that example might be as well helpful when using other hardware to understand what events are being fired when using a switch. 
+
+When configuring switches, then there are several
 parameters for each switch:
 
 .. config
@@ -118,15 +120,20 @@ events_when_activated:
 List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this
-switch goes active. These events are posted exactly as they're entered, in addition to any
-events that are posted based on the switch's tags.
+switch goes active. These events are posted exactly as they're entered, in addition to the
+events that are posted based on the switch's tags. See as well the ``tags`` section below. In addition, an event will be posted based on the switch name, ``<switch name>_active``.
+
+The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 List of one (or more) events. Those will be posted by the device. Defaults to empty.
 
 A list of one or more names of events that MPF will post when this
-switch goes inactive.
+switch goes inactive. These events are posted exactly as they're entered, in addition to the
+events that are posted based on the switch's tags. See as well the ``tags`` section below. In addition, an event will be posted based on the switch name, ``<switch name>_inactive``.
+
+The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
 
 ignore_window_ms:
 ~~~~~~~~~~~~~~~~~
@@ -204,7 +211,7 @@ debug:
 ~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
-Set this to true to get additional debug output.
+Set this to true to get additional debug output. You need to set this flag to see event you have defined for this switch in mpf monitor.
 
 file_log:
 ~~~~~~~~~
@@ -232,6 +239,10 @@ it will post the event ``sw_hello``. If you have a switch tagged with
 "hello" and "yo", then every time that switch is activated it will
 post the events ``sw_hello`` and ``sw_yo``. MPF also makes use of several
 tags on its own.
+
+In addition, events will be posted based on the switch name, ``<switch name>_active`` and ``<switch name>_inactive``.
+
+The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
 
 Special-purpose tags for switches include:
 

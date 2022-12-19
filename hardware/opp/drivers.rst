@@ -74,7 +74,7 @@ have an initial pulse of 32 ms, and then be held on at 50% power.
 
 
 Pulse Power
-^^^^^^^^^^
+^^^^^^^^^^^
 .. note:: This feature is only available on OPP firmware version 2.3.0.5 and above.
 
 If you want to pulse a driver on at less than full power, MPF does this by using
