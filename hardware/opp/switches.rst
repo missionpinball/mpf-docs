@@ -51,6 +51,47 @@ numbered from 32 to 95.  Switches 32 - 39 are column 0, switches 40 -
 column 3, switches 64 - 71 are column 4, switches 72 to 79 are column
 5, switches 80 to 87 are column 6, and switches 88 to 95 are column 7.
 
+      
+Fully working Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lets bring above informaton together and learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, you only need to power up the micro controllers, no need for any other power supply on the Cobra board. You need to connect a switch to the switch inputs. See as well in :doc:`/hardware/opp/cobrapin/index` how to connect a switch. In this example I am using ``0-0-16`` if you use a different switch input, then you need to change the config file.  This ``config.yaml`` is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running mpf. If you have a Cobra board but run Windows or macOS you have to change the ``ports``. If you run a completely different hardware you have to adapt the ``hardware`` section.
+
+.. code-block:: mpf-config
+
+   #config_version=5
+
+      hardware:
+         platform: opp
+         driverboards: gen2
+
+      opp:
+         ports: /dev/ttyACM0, /dev/ttyACM1 # change this if you are not using Linux
+
+      switches:
+         my_test_switch:
+            debug: true
+            number: 0-0-16 # change this if you have connected the switch to a different input
+            tags: switch_tag1, switch_tag2
+            events_when_activated: active_event1, active_event2
+            events_when_deactivated: inactive_event1
+            
+The important part for this example is to understand the events which are being posted. First of all please obey that we have set ``debug:true``, this is necessary to see the events in the mpf monitor. Before you start this mpf project with ``mpf both`` please start ``mpf monitor`` and activate the window in the monitor to view the events. Now you can press and release the switch and monitor the events being posted. When pressing the switch you should be able to see the following events:
+
+* ``my_test_switch_active`` based on the switch <switch_name>_active
+* ``sw_switch_tag1`` based on the tags sw_<tag_name>
+* ``sw_switch_tag1_active`` based on the tags sw_<tag_name>_active
+* Same as the last two, just for the second tag ``switch_tag2``
+* ``active_event1`` based on the configuration ``events_when_activated``
+* ``active_event2`` based on the configuration ``events_when_activated``
+
+Once you release the switch again some events are being fired:
+
+* ``my_test_switch_inactive`` based on the switch <switch_name>_active
+* ``sw_switch_tag1_inactive`` based on the tags sw_<tag_name>_active
+* ``sw_switch_tag2_inactive`` based on the tags sw_<tag_name>_active
+* ``inactive_event1`` based on the configuration ``events_when_activated``
+
+
 What if it did not work?
 ------------------------
 

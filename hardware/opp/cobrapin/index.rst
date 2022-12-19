@@ -75,11 +75,21 @@ Switch Inputs
 J1, J2, J3:
     Direct input switches.
 J4, J5:
-    Remaining direct input switches <OR> switch matrix input/output.
+    Remaining direct input switches or switch matrix input/output. 
+    
+If you do have either 38 direct inputs or 22 direct inputs + a 8x8 switch matrix depends on your Cobra board. You specify this as an option when you order your board. The switch inputs are labeled in silkscreen with the MPF compatible numbers. The two pins labeled "N/C" are not connected to anything.
 
-The switch inputs are labeled in silkscreen with the MPF compatible numbers. The two pins labeled "N/C" are not connected to anything.
+Each connector also includes a logic ground pin. Use this for the direct input return. If you measure the voltage between GND and a switch (in below picture 0-0-16) you should measure 3.3V.
 
-Each connector also includes a logic ground pin. Use this for the direct input return. :doc:`OPP Switches </hardware/opp/switches>`.
+.. image:: /hardware/images/Cobra_Voltage_Switch.jpg
+
+For that to measure only the micro controllers need to be powered up, no need to apply any other voltage on the Cobra board. To perform a simple test connect any kind of switch to one of the inputs and setup a little mpf test configuration.
+
+
+.. image:: /hardware/images/Cobra_Switch_connected.jpg
+
+
+For further details and fully working Cobra board configuration example please check :doc:`OPP Switches </hardware/opp/switches>`.
 
 Neopixel Support
 ---------------------------------------------------------------------------------------------------------------
