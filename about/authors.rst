@@ -25,5 +25,6 @@ This MPF documentation was written by:
 * Brandon Hill (bghill.dev@gmail.com)
 * Dave Ensminger
 * Matt Kemp (matt@blz.co)
+* Charles Duncan (nullbuilds)
 
 Want to help with the docs? See our :doc:`contributing_to_mpf_docs` page for details. It's easy!
