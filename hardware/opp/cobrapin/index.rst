@@ -36,37 +36,6 @@ J10:
 
 The filter provides consistent power to solenoids while also protecting the power supply from sudden current surges that may otherwise cause a fault.
 
-Solenoid Outputs
----------------------------------------------------------------------------------------------------------------
-
-.. image:: /hardware/images/CobraPinV0_2_solenoids.jpg
-
-J6, J7, J8:
-    Solenoid outputs.
-
-The 24 solenoids are broken up into 3 banks of 8 outputs. There is a ninth pin on the connector that can be used as a key. Each solenoid has a diode to help protect the transistor. You may still use coils with axial diodes installed, but you MUST ensure that you connect them with the correct polarity.
-
-The solenoid outputs are labeled in silkscreen with the MPF compatible numbers. :doc:`OPP coils / drivers </hardware/opp/drivers>`.
-
-Each bank has an LED next to it to indicate if that bank has power. Check these if you are concerned you have blown a fuse.
-
-Each solenoid has an associated LED to indicate it is being driven by the processor. It is highly recommended to test a new setup without high voltage power or without the coils plugged in. Using these LEDs, you can verify that each output is being driven correctly.
-
-Solenoid Power Output and Fuses
----------------------------------------------------------------------------------------------------------------
-
-.. image:: /hardware/images/CobraPinV0_2_HVout.jpg
-
-J13:
-    Solenoid power outputs.
-F1, F2, F3:
-    Solenoid power bank fuses.
-
-The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
-
-.. note:: Solenoids in bank A should only be powered by the HV_A pin, bank B should only be powered by HV_B, bank C should only be powered by HV_C. Failure to do so may confuse future troubleshooting and could eventually blow out a transistor.
-
-
 Switch Inputs
 ---------------------------------------------------------------------------------------------------------------
 
@@ -89,7 +58,74 @@ For that to measure only the micro controllers need to be powered up, no need to
 .. image:: /hardware/images/Cobra_Switch_connected.jpg
 
 
-For further details and fully working Cobra board configuration example please check :doc:`OPP Switches </hardware/opp/switches>`.
+Do not apply any voltage to the switches, most likely that will destroy your CPU. For further details and fully working Cobra board configuration example please check :doc:`OPP Switches </hardware/opp/switches>`. For autofire devices please see for additional remarks in the solenoid section below.
+
+Solenoid Outputs
+---------------------------------------------------------------------------------------------------------------
+
+.. image:: /hardware/images/CobraPinV0_2_solenoids.jpg
+
+J6, J7, J8:
+    Solenoid outputs.
+
+The 24 solenoids are broken up into 3 banks of 8 outputs. There is a ninth pin on the connector that can be used as a key. Each solenoid has a diode to help protect the transistor. You may still use coils with axial diodes installed, but you MUST ensure that you connect them with the correct polarity.
+
+The solenoid outputs are labeled in silkscreen with the MPF compatible numbers. :doc:`OPP coils / drivers </hardware/opp/drivers>`. You need to obey that some of these outputs are controlled by the first micro controller and some by the second. The first digit of the solenoid number shows by which micro controller it is addressed, e.g. ``1-0-7`` is controlled by micro controller 1. This is important later for the autofire devices (flippers, slingshots, bumpers), because they are hardware controlled and the switch and the coil must use the same controller. In other words a coil on ``0-x-y`` of an autofire device must be controlled by switch with number ``0-a-b``.
+
+Each bank has an LED next to it to indicate if that bank has power. Check these if you are concerned you have blown a fuse.
+
+.. image:: /hardware/images/Cobra_Coils_LED_Power.jpg
+
+In above picture you see that the LED for bank A is alight but not for bank B. In order to have the LED alight you only need to have connected your high power supply, no need for the 5V power supply or to have micro controllers booted up. Please be aware that once you remove the power supply the LED will still glow for a while until the the capacitors have discharged.
+
+Each solenoid has an associated LED to indicate it is being driven by the processor. It is highly recommended to test a new setup without high voltage power or without the coils plugged in. Using these LEDs, you can verify that each output is being driven correctly, in the picture below coil 1-0-1 is being driven at this very moment.
+
+.. image:: /hardware/images/Cobra_Coils_LED_Switch.jpg
+
+To run the above test, there is no need for a high voltage power supply neither for any coil. Only the mirco controllers need to be powered up. The ``config.yaml`` below is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the ``ports``. 
+
+.. code-block:: mpf-config
+
+   #config_version=5
+
+   hardware:              
+      platform: opp
+      driverboards: gen2
+
+   opp:
+      ports: /dev/ttyACM0, /dev/ttyACM1 # change if your Cobra board uses different ports
+      
+   coils:
+       c_my_coil:
+          number: 1-0-1
+          pulse_events: s_my_switch_active
+        
+   switches:
+      s_my_switch:
+         number: 0-0-16
+
+Some remarks on above ``config.yaml``
+
+* Obey that we don't have an autofire device in this example, and thus the coil and the switch can be connected to the different micro controllers.
+* In the coil section ``pulse_events`` is being used, don't mix it up with ``enable_events`` which would not only pulse the coil but have it on permanently.
+* When a switch is being activated automatically an event :doc:`(switch_name)_active </events/switch_active>` is being fired. The above example makes use of this fact.
+
+To have a fully working example for setting up autofire coils see the :doc:`Autofire Coils</mechs/autofire_coils/index>` section of the documentation.
+         
+Solenoid Power Output and Fuses
+---------------------------------------------------------------------------------------------------------------
+
+.. image:: /hardware/images/CobraPinV0_2_HVout.jpg
+
+J13:
+    Solenoid power outputs.
+F1, F2, F3:
+    Solenoid power bank fuses.
+
+The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
+
+.. note:: Solenoids in bank A should only be powered by the HV_A pin, bank B should only be powered by HV_B, bank C should only be powered by HV_C. Failure to do so may confuse future troubleshooting and could eventually blow out a transistor.
+
 
 Neopixel Support
 ---------------------------------------------------------------------------------------------------------------
@@ -112,11 +148,11 @@ The connectors J10, J11, J12 and J14 are JST connectors VH style. There are lots
 
 There are two neopixel chains that support 256 RGB pixels each for a total of 512. RGBW pixels are also possible, but the number may be limited to 230 pixels per chain for a total of 460. 
 
-The J14 fused output can be used to provide additional power taps in a neopixel chain. Each pin is rated for 7A continuous. The fuse holder is rated for 10A. The red D25 LED can be used to confirm you have a good fuse and are providing power for neopixels. For the LED to light up there is no need to run any mpf configuration, you don't even have to power up the micro controllers.
+The J14 fused output can be used to provide additional power taps in a neopixel chain. Each pin is rated for 7A continuous. The fuse holder is rated for 10A. The red D25 LED can be used to confirm you have a good fuse and are providing power for neopixels. For the LED to light up there is no need to run any MPF configuration, you don't even have to power up the micro controllers.
 
 .. image:: /hardware/images/Cobra_Power_LED_Neopixel.jpg
 
-When you order the micro controllers you have various options, one option to choose from is Regular vs NoGlow. If you order the Regular version then after power is provided for the Neopixel and the micro controllers are powered up (still no need to run any mpf on them), the LEDs of your strip will glow blue, which is a good first test.
+When you order the micro controllers you have various options, one option to choose from is Regular vs NoGlow. If you order the Regular version then after power is provided for the Neopixel and the micro controllers are powered up (still no need to run any MPF on them), the LEDs of your strip will glow blue, which is a good first test.
 
 .. image:: /hardware/images/Cobra_Neopixel_blue_glow.jpg
 
