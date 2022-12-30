@@ -185,8 +185,8 @@ self.flippers.enable(). Nice! (But if you dig through the source code
 you'll see that the framework uses all these rules behind the scenes.)
 
 You can also configure autofire coils manually for simpler things like
-pop bumpers and slingshots. See the `autofire_coils: section of the
-configuration file reference </config/autofire_coils>`_ for details.
+pop bumpers and slingshots. See the :doc:`autofire_coils </config/autofire_coils>` section of the
+configuration file reference  for details.
 
 Debounce and Recycle in Autofire Coils
 --------------------------------------
@@ -221,6 +221,63 @@ the prefix for autofire coils is ``device.autofires.<name>``.
 
 *enabled*
    Boolean (true/false) which shows whether this autofire coil is enabled.
+   
+
+Fully working basic example
+---------------------------
+Let's learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, the Cobra board needs to have the micro controllers powered up only. No need for a high voltage power supply, neither for any coil.  The ``config.yaml`` below is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the ``ports``. If you run a completely different hardware you have to adapt the ``hardware`` section.
+
+
+.. code-block:: mpf-config
+
+   #config_version=5
+
+   hardware:
+      platform: opp
+      driverboards: gen2
+
+   opp:
+      ports: /dev/ttyACM0, /dev/ttyACM1
+      
+   playfields: 
+   playfield:    #playfield must exist for autofire coils
+      tags: default
+      default_source_device: bd_plunger   #value must be set, default "none" not allowed when having autofire coils
+
+   ball_devices:
+   bd_plunger:
+      ball_capacity: 1
+      mechanical_eject: true
+
+   coils:
+   c_my_coil:
+      number: 0-0-11
+
+   switches:
+   s_my_switch:
+      number: 0-0-16
+      
+   autofire_coils:
+   my_autofire_1:
+      coil: c_my_coil
+      switch: s_my_switch
+      enable_events: simulate_start
+      disable_events: simulate_stop
+      
+   keyboard:
+   1:
+      event: simulate_start
+   2:
+      event: simulate_stop
+
+Now run ``mpf both`` to start above example. The Cobra board has a little LED next the coil output which will light up yellow when the coil is activated, see the :doc:`Cobra board</hardware/opp/cobrapin/index>` documentation for details. Now press the connected switch, you will see that the LED will not light up since the coil has not been activated. Press key 1 and afterwards press again the switch, this time you will see the LED light up for a short time. After you pressed the key 2, the LED won't light up anymore when the switch is activated, because you deactivated the coil.
+      
+A few comments on the above example:
+
+* The playfield is needed even in this basic example, in a real setup you have it anyways.
+* Coils are enabled by MPF upon the ``ball_started`` event and disabled by the events ``ball_will_end``, ``service_mode_entered``. In our basic example we don't have these events, thus added our own events when the keys are pressed. In a real pinball most likely you won't have these additional events.
+* Both, coil and switch, need to be controlled by the same micro controller for autofire coils, as you can see both ``number`` value starts with 0. If you would use different values MPF will throw an exception once the coil is being enabled, but not directly at startup. The error message is ``Config File Error in OPP: Invalid switch being configured for driver. Driver = 1-0-1 Switch = 0-0-16. Driver and switch have to be on the same board.``
+* The auto fire rules are stored in the micro controller. If you execute the above example, then change the coil to another coil (on micro controller 0) and run it again. Now the switch will then trigger both coils. If you do these kind of changes you want to power down the micro controllers to have a fresh start and avoid strange behavior.
 
 Related How To guides
 ---------------------
@@ -232,4 +289,4 @@ Related Events
 
 *None*
    The autofire coils can be configured to enable or disable based on
-   other events)
+   other events.

@@ -123,7 +123,7 @@ A list of one or more names of events that MPF will post when this
 switch goes active. These events are posted exactly as they're entered, in addition to the
 events that are posted based on the switch's tags. See as well the ``tags`` section below. In addition, an event will be posted based on the switch name, ``<switch name>_active``.
 
-The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
+The events will only be visible in the ``mpf monitor`` if they are consumed by something, e.g. ``light_player`` or if ``debug:true`` is defined for them. They will be posted regardless of the ``debug`` setting, it is only a question of visibility in the ``mpf monitor``.
 
 events_when_deactivated:
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ A list of one or more names of events that MPF will post when this
 switch goes inactive. These events are posted exactly as they're entered, in addition to the
 events that are posted based on the switch's tags. See as well the ``tags`` section below. In addition, an event will be posted based on the switch name, ``<switch name>_inactive``.
 
-The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
+The events will only be visible in the ``mpf monitor`` if they are consumed by something, e.g. ``light_player`` or if ``debug:true`` is defined for them. They will be posted regardless of the ``debug`` setting, it is only a question of visibility in the ``mpf monitor``.
 
 ignore_window_ms:
 ~~~~~~~~~~~~~~~~~
@@ -242,7 +242,7 @@ tags on its own.
 
 In addition, events will be posted based on the switch name, ``<switch name>_active`` and ``<switch name>_inactive``.
 
-The events will only be visible in the mpf monitor if ``debug:true`` is defined for them. They will be posted with out that flag, it is only necessary if you need to see these events in the mpf monitor.
+The events will only be visible in the ``mpf monitor`` if they are consumed by something, e.g. ``light_player`` or if ``debug:true`` is defined for them. They will be posted regardless of the ``debug`` setting, it is only a question of visibility in the ``mpf monitor``.
 
 Special-purpose tags for switches include:
 
