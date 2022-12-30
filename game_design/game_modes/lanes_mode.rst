@@ -484,8 +484,7 @@ two steps: ``unlit`` and ``lit``, with the ``unlit`` step running a light
 script that turns off the associated light or LED and the *lit* step
 running a light script that turns on the light. One anomaly with the
 scoring is that when you hit the last shot to complete the group,
-you'll actually get 15,000 points instead of 10,000. (Brian was
-confused by this in the video!) That's because when you hit that final
+you'll actually get 15,000 points instead of 10,000. That's because when you hit that final
 unlit shot, you get 5,000 points for hitting an unlit shot plus the
 10,000 points for completing the group. If you really only want 10,000
 points total on the last hit, then you could just change the

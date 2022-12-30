@@ -73,7 +73,7 @@ from GitHub. You can unzip it to wherever you want.
 3. Install the FadeCandy drivers
 --------------------------------
 
-When I (Brian) plugged the FadeCandy hardware into my Windows
+When I plugged the FadeCandy hardware into my Windows
 computer, the driver did not install automatically. Running the
 fcserver (next step) said it was installing the drivers, but that
 didn't do anything for me. (It just said "this may take awhile" but I

@@ -1,8 +1,8 @@
 
 Warning: This How To guide has not yet been updated for MPF 0.21 (the
-current version). If you're reading this now and you'd like to add
-this to your game, send me an email (brian@missionpinball.com) and
-I'll get it updated. While we're working on game modes, let's create
+current version).
+
+While we're working on game modes, let's create
 one more before we move on to other things. In this step, we're going
 to create a "super jets" mode. This is something that's pretty common,
 where each hit to a pop bumper is worth a small amount of points
@@ -33,7 +33,7 @@ entries):
 
 ::
 
-    
+
     switches:
         pop_left:
             switch: pop_left
@@ -77,7 +77,7 @@ the ` `autofire_coils:` section`_ of your machine config file:
 
 ::
 
-    
+
     autofire_coils:
         pop_left:
             switch: pop_left
@@ -129,7 +129,7 @@ this:
 
 ::
 
-    
+
     mode:
         start_events: ball_starting
         stop_events: super_jets_phase_1_start
@@ -142,7 +142,7 @@ let's configure it like this:
 
 ::
 
-    
+
     mode:
         start_events: super_jets_phase_1_start
         priority: 300
@@ -172,7 +172,7 @@ config file):
 
 ::
 
-    
+
     logic_blocks:
         counters:
             super_jets:
@@ -195,7 +195,7 @@ file should now look like this:
 
 ::
 
-    
+
     modes:
        - base
        - skill_shot
@@ -216,7 +216,7 @@ let's create those two scoring entries now. First, in your
 
 ::
 
-    
+
     scoring:
         sw_pop:
             Score: 500
@@ -227,7 +227,7 @@ Then in you `super_jets_phase_1.yaml` file:
 
 ::
 
-    
+
     scoring:
         sw_pop:
             Score: 5000
@@ -262,5 +262,3 @@ We have a bit more to finish in this step, including:
 .. _ section: https://missionpinball.com/docs/configuration-file-reference/autofire-coils/
 .. _more info: https://missionpinball.com/docs/mechs/autofire-coil/
 .. _LogicBlocks section: https://missionpinball.com/docs/configuration-file-reference/logicblocks/
-
-
