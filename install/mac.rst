@@ -1,4 +1,4 @@
-Installing MPF on Mac (Aug 29, 2022 update)
+Installing MPF on Mac (2023 update)
 =========================================
 
 This is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
@@ -6,9 +6,9 @@ This is the new step-by-step process we are actively working out to get MPF 0.56
 Overview of MPF on macOS
 ------------------------
 
-MPF works on macOS running on both Intel and Apple Silicon (M1/M2 processors). The instructions are ALMOST the same for both, except Apple Silicon M1/M2 processors have a few extra steps for the time being. (We are still waiting for one of the libraries MPF needs to be compiled for M1/M2, so there's a workaround until then.)
+MPF works on macOS running on both Intel and Apple Silicon (M1/M2 processors). The instructions are *almost* the same for both, except Apple Silicon M1/M2 processors have a few extra steps for the time being. (We are still waiting for one of the libraries MPF needs to be compiled for M1/M2, so there's a workaround until then.)
 
-Apple Silicon (M1/M2 processors) require macOS Monterey as well as Python 3.9. With Intel processors, MPF can work as far back as 10.14 (or so? let us know!), and can use Python 3.7, 3.8, or 3.9.
+Apple Silicon (M1/M2 processors) require macOS 12 Monterey or newer, as well as Python 3.9. For Macs with Intel processors, MPF can work as far back as 10.14 (or so? let us know!), and can use Python 3.7, 3.8, or 3.9.
 
 Here is the quick version:
 
@@ -38,6 +38,12 @@ Here is the quick version:
 
 At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
 
+Note that if you need to install a specific version of MPF-MC, you can use this command instead:
+
+.. code-block:: doscon
+
+      pipx inject mpf mpf-mc==0.56.0.dev33 --verbose --include-deps --include-apps
+
 To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
 
 Then back in the terminal, change into the ``mpf-examples`` folder (or whatever folder you just unzipped that into), then change into the ``mc_demo`` folder, then run ``mpf both``. That should launch the mc_demo code (which is Media Controller demo). A window should open with a red background and some text about slides, you should be able to use the right arrow key to advance to the next slide. You should be able to use the left arrow key to go back to the previous slide and you should hear a drum and cymbal sound when you change the slide.
@@ -56,7 +62,7 @@ If have existing SDL and Gstreamer libraries installed (check the ``/Library/Fra
 
 Do NOT use brew to install Python. Why? Because the Python in brew is meant to support other brew packages that need python, and as such it will automatically "upgrade" you to the latest Python, even on its own, which means your Python will flip to 3.10 and MPF won't work and you'll be sad. So that's why we install the "Framework Python" from python.org. (Why's it called "Framework Python"? Because it installs like a framework to that ``/Library/Frameworks`` folder.)
 
-The Apple Silicon Macs need the Xcode command-line tools installed because the ruamel.yaml library that MPF uses to read YAML files doesn't have a pre-built version for M1/M2 Macs, so it has to be built locally. This process is automstic and transparent when the Xcode tools are installed.
+The Apple Silicon Macs need the Xcode command-line tools installed because the ruamel.yaml library that MPF uses to read YAML files doesn't have a pre-built version for M1/M2 Macs, so it has to be built locally. This process is automatic and transparent when the Xcode tools are installed.
 
 If you do not see the "normal" MPF text UI display, and instead see something like this:
 

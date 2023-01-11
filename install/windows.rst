@@ -1,4 +1,4 @@
-Installing MPF on Windows (Dec 30, 2022 Update)
+Installing MPF on Windows (January 11, 2023 Update)
 ===============================================
 
 This process walks through installing MPF 0.56 (current dev branch) a Windows machine. These instructions are for v0.56.0, which is the current "dev" branch of MPF.
@@ -8,7 +8,7 @@ Note that installing MPF is more complicated than a normal application. This is 
 Help Needed!
 ------------
 
-MPF is a community project that is created, maintained, supported, and documented by volunteers in their spare time. At this time, we do not have any Windows users who are able to help us test and update these instructions. If you are a Windows and can figure out how to get MPF installed on Windows, please help us out by updating these instructions.
+MPF is a community project that is created, maintained, supported, and documented by volunteers in their spare time. At this time, we do not have any Windows users who are able to help us test and update these instructions. If you are a Windows user and have any updates, additions, or corrections, please help us out by updating these instructions.
 
 Remove prior versions of MPF
 ---------------------------
@@ -32,12 +32,12 @@ Windows System Requirements
 
 We test MPF on Windows 11. (Technically it's whatever the "windows-latest" Github Actions runner is, which is currently Windows Server 2022 which is the same core as Windows 11.) Older versions of Windows might (probably?) work too, we just don't test them. MPF requires 64-bit (x86) Windows running on Intel-compatible processors. It does not run on 32-bit systems and does not run on ARM processors on Windows.
 
-MPF 0.56 requires Python 3.7, 3.8, or 3.9. It does not run on Python 3.10 or newer. (If you can figure out how to get it to run on Python 3.10, please submit the fixes!)
+MPF 0.56 requires Python 3.7, 3.8, or 3.9. It does not run on Python 3.10 or newer. (If you can figure out how to get it to run on Python 3.10+, please submit the fixes!)
 
 Install Python
 --------------
 
-If you open a command prompt on a fresh Windows machine and type ``python``, the Microsoft App Store will open and try to install Python 3.7. This is not the version of Python we want. So don't do that. (Yes, MPF runs on Python 3.7, but Python installed from the app store is weird and we don't fully understand it. So don't do that. But if you want to figure it out and update these instructions, please do!)
+If you open a command prompt on a fresh Windows machine and type ``python``, the Microsoft App Store will open and try to install Python 3.7. This is not the version of Python we want. So don't do that. (While MPF runs on Python 3.7, Python installed from the app store is weird complicated. So don't do that unless you know what you're doing. And feel free to update these instructions if you do!)
 
 So instead, install Python from python.org --> Downloads --> Windows --> Scroll down to the latest version of Python 3.9 (which is 3.9.13 at the time of this writing) --> Download Windows installer (64-bit).
 
@@ -51,7 +51,7 @@ Then open a command prompt (you can just run "cmd"), and type each of these comm
 
 You want a result like "Python 3.9.13" or whatever version you just installed.
 
-Next, you'll run a command to install "pipx" which is a tool that will help us install MPF and MPF-MC. (It's a tool that helps install and run python apps such as MPF.) You can read more about pipx here: https://pypa.github.io/pipx/
+Next, you'll run a command to install "pipx" which is a tool that will help you install and manage the MPF installation. You can read more about pipx here: https://pypa.github.io/pipx/
 
 The second command below ensures that you can run "pipx" by typing "pipx" in the command prompt. (If you don't run this command, you'll have to type "python -m pipx" instead of just "pipx" to run pipx.)
 
@@ -78,7 +78,7 @@ A bunch of things will scroll by, and then hopefully MPF is installed. You can t
 
     mpf --version
 
-This should print out something like "MPF 0.56.0.devXX" where the "XX" is the dev build number. (0.56.0-dev33 at the time of this writing.) If you get an error, something went wrong. If you get a result like "MPF 0.55.0" or "MPF 0.54.0" or something like that, then you have an older version of MPF installed and you need to uninstall it first. (See the "Remove prior versions of MPF" section above.)
+This should print out something like "MPF 0.56.0.devXX" where the "XX" is the dev build number. (0.56.0.dev33 at the time of this writing.) If you get an error, something went wrong. If you get a result like "MPF 0.55.0" or "MPF 0.54.0" or something like that, then you have an older version of MPF installed and you need to uninstall it first. (See the "Remove prior versions of MPF" section above.)
 
 You can now proceed with the getting started tutorials.
 
@@ -87,17 +87,21 @@ Install the MPF Media Controller (MPF-MC)
 
 The MPF Media Controller (MPF-MC) is a standalone package that is used to control the LCD or DMD graphics as well as sounds and music in a pinball machine. It is a separate package from MPF. Not every pinball machine uses MPF-MC, but most do. (There are also other media controllers that are not MPF-MC. For example, some people use Unity, the Unreal Engine, or Godot as their media controllers.)
 
-Unfortunately MPF-MC is much more difficult to install on Windows than MPF. This is because graphics and sound libraries are complex and different on various platforms. The MPF-MC uses a graphical library called Kivy, which is a cross-platform library that works on Windows, Mac, Linux, Android, iOS, and more. But it's not always easy to install on Windows.
+Unfortunately there is currently a bug in the latest builds of MPF-MC on Windows where the audio doesn't work. That bug is being tracked `here <https://github.com/missionpinball/mpf-mc/issues/436>`_. In the meantime, the workaround is to install a specific version `0.56.0.dev33` of MPF-MC until the bug is fixed.
 
-Again, we are always looking for help improving the installation process or improving the MPF-MC itself. If you can help, please do!
+To install MPF-MC `0.56.0.dev33`, use the following command:
 
-To install MPF-MC, use the following command:
+.. code-block:: doscon
+
+    pipx inject mpf mpf-mc==0.56.0.dev33 --verbose --include-deps --include-apps
+
+This command will install MPF-MC into the same virtual environment that MPF is installed in. (This is why we used pipx to install MPF in the first place.) It will also install a bunch of other dependencies that MPF-MC needs to run. When it's done, you should see a message like "Injected package mpf-mc into venv mpf".
+
+If you want to install the newest build of MPF-MC, you can use this command instead (but audio will not work until the bug is fixed):
 
 .. code-block:: doscon
 
     pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
-
-This command will install MPF-MC into the same virtual environment that MPF is installed in. (This is why we used pipx to install MPF in the first place.) It will also install a bunch of other dependencies that MPF-MC needs to run. When it's done, you should see a message like "Injected package mpf-mc into venv mpf".
 
 Testing MPF-MC
 --------------
