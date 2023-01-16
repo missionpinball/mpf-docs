@@ -29,7 +29,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 version = '0.56'   # MPF version these docs cover
-stable_version = '0.55'
+stable_version = '0.56'
 branch  = 'dev'     # current branch
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
@@ -260,7 +260,7 @@ def get_repo_path(repo_name):
     else:
         # clone repo
         print("Cloning {}".format(repo_name))
-        current_branch = "0.55.x"
+        current_branch = "0.56.x"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(tempfile.gettempdir(), '_src', repo_name), branch=current_branch)
         return os.path.join(tempfile.gettempdir(), '_src', repo_name)
 

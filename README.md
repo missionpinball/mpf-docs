@@ -13,7 +13,7 @@ The rendered HTML docs are hosted by [Read the Docs](https://readthedocs.org)
 at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from, there.
 
 The "latest" branch of these docs corresponds to the latest released branch
-recent version of MPF. There are numbered branches for specific released versions (e.g. `0.55`, etc.). There's also a `dev` branch which corresponds to the `dev` branch which is the next upcoming release.
+recent version of MPF. There are numbered branches for specific released versions (e.g. `0.56`, etc.). There's also a `dev` branch which corresponds to the `dev` branch which is the next upcoming release.
 
 Building Docs Locally
 ---------------------
