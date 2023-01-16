@@ -1,8 +1,6 @@
 Installing MPF on Linux
 =======================
 
-.. include::  /_include/new-installers.rst
-
 As part of our automated build process, we build and test MPF and MPF-MC
 against Ubuntu 20.04 & 22.04 and Debian Stretch & Buster.
 MPF 0.54 supports Python 3.5 to 3.7.
@@ -47,12 +45,12 @@ you would like to use. Try the following commands to figure out what pip command
 
 For the rest of the chapter I will always write python3.9 and pip3.9 as commands as reminder to use the right version, any of the above commands might work for you (or fail).
 
-NOTE: If you already have an earlier version of MPF installed, uninstall that first by using this command: 
+NOTE: If you already have an earlier version of MPF installed, uninstall that first by using this command:
 
 .. code-block:: doscon
 
   sudo pip3.9 uninstall mpf-mc mpf
-  
+
 If you are unsure which version of MPF you have installed, you can run this command to check what is installed:
 
 .. code-block:: doscon

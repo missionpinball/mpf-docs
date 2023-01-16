@@ -28,7 +28,7 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.56'   # MPF version these docs cover
+version = '0.57'   # MPF version these docs cover
 stable_version = '0.56'
 branch  = 'dev'     # current branch
 
@@ -240,12 +240,7 @@ def setup(app):
               you'll be on the latest, cutting-edge version of MPF.
 
               However, if you want a more stable version, select the ``v:stable`` version from the
-              lower-left corner of this page, which is the most recent version that is not getting new updates.
-
-              If you are new to MPF, we have recently rewritten the installation process
-              which only applies to this "latest" |version|, so you probably want to stay here
-              because the prior installation process doesn't work on the latest
-              OS and Python versions.
+              lower-left corner of this page. You can always update to the latest at any time.
 
         '''
 
