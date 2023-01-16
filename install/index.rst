@@ -2,12 +2,12 @@ Downloading & Installing MPF
 ============================
 
 .. note::
-   These instructions are several years old and probably don't work. We have just
-   rewritten the MPF installers in Aug 2022 and updated the instructions for the 0.56 (latest version)
-   of MPF. If you are installing for the first time, we HIGHLY recommend you use
+   These instructions are for MPF 0.55 and are several years old and probably don't work.
+
+   We have rewritten the installers and updated the instructions for MPF 0.56. If you are installing for the first time, we HIGHLY recommend you use
    the "v\:latest" version of these docs, available here: https://docs.missionpinball.org/en/latest/install/
 
-   The latest instructions support current OSes (macOS Monterey, Windows 10/11, and Ubuntu 20.04/22.04) and Python 3.7, 3.8, and 3.9.
+   The latest instructions support current OSes (macOS 10+ including Intel & Apple Silicon, Windows 10/11, and Ubuntu 20.04/22.04)
 
 
 OLD INSTRUCTIONS FROM SEVERAL YEARS AGO START BELOW:
