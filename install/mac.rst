@@ -1,16 +1,18 @@
-Installing MPF on Mac (2023 update)
-=========================================
+Installing MPF 0.56 on Mac
+==========================
 
-This is the new step-by-step process we are actively working out to get MPF 0.56 (current dev branch) installed on a Mac.
+This is the new process used to install MPF 0.56 on a Mac.
 
 Overview of MPF on macOS
 ------------------------
 
-MPF works on macOS running on both Intel and Apple Silicon (M1/M2 processors). The instructions are *almost* the same for both, except Apple Silicon M1/M2 processors have a few extra steps for the time being. (We are still waiting for one of the libraries MPF needs to be compiled for M1/M2, so there's a workaround until then.)
+MPF works on macOS running on both Intel and Apple Silicon (M1/M2 processors). Requirements are:
 
-Apple Silicon (M1/M2 processors) require macOS 12 Monterey or newer, as well as Python 3.9. For Macs with Intel processors, MPF can work as far back as 10.14 (or so? let us know!), and can use Python 3.7, 3.8, or 3.9.
+* Apple Silicon Mac (M1/M2 processors) require macOS 12 Monterey or newer and Python 3.9.
+* Intel processors require MacOS 10.14 or newer, and Python 3.7 - 3.9.
+* MPF does not work with Python 3.10+
 
-Here is the quick version:
+To install MPF on a Mac:
 
 1. If you do not have Python, install Python 3.9.13 from python.org. If you have an M1/M2 Mac, be sure to get the Universal installer, not the Intel one.
 
@@ -30,19 +32,13 @@ Here is the quick version:
 
 4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
 
-5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --pip-args="--pre" --python /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 --verbose --include-deps``.
+5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --python /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 --verbose --include-deps``.
 
-6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps``
+6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --verbose --include-deps --include-apps``
 
 7. Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
 
-At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed. (The "XX" in the version will be the dev build numbers.)
-
-Note that if you need to install a specific version of MPF-MC, you can use this command instead:
-
-.. code-block:: doscon
-
-      pipx inject mpf mpf-mc==0.56.0.dev33 --verbose --include-deps --include-apps
+At this point, the latest current MPF and MPF-MC released are installed. (0.56 at this writing)
 
 To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
 
@@ -79,7 +75,7 @@ Keeping MPF up-to-date
 
 Once you have MPF installed via the procedure above, you can keep it up-to-date by running the final two pipx commands from above which you used to install MPF and MPF-MC.
 
-Questions? Comments? Need help? You can post a reply into the MPF new installers for macOS thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
+Questions? Comments? Need help? You can post to the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
 
 What if you borked it?
 ----------------------

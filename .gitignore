@@ -3,6 +3,7 @@
 _build
 __pycache__/
 BUILD_WARNINGS.txt
+logs
 mpf_examples
 mpfmc_examples
 examples/

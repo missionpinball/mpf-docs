@@ -1,21 +1,19 @@
-Downloading & Installing MPF (2023 update)
-==================================================
+Downloading & Installing MPF 0.56 (2023 Version)
+================================================
 
-The MPF Installers were rewritten from scratch in August 2022 and
-are completely updated for MPF 0.56 (the current "dev" version that will be released once
-we get these installer built).
+The MPF Installers were rewritten from scratch and
+are completely updated for MPF 0.56.
 
-We are currently targeting the following platforms:
+MPF 0.56 should work with following platforms:
 
 * Windows 10 / Windows 11 (64-bit only)
 * macOS 10.14+, up through macOS 13 Ventura (Intel & Apple Silicon)
 * Linux (64-bit, lots of distros)
 * Raspberry Pi 4B (eventually, not done yet, but no one can get Pis now anyway so no hurry.)
 
-We are targeting Python 3.9. Python 3.10+ will definitely not work yet. Python 3.7 and 3.8
-are also supported on most platforms.
+Python 3.9 is the latest version of Python supported. Some platforms also support Python 3.7 and 3.8. Python 3.10+ will not work.
 
-Here are the links to the guides we have started so far:
+Here links to the installation guides for each platform:
 
 .. toctree::
     :maxdepth: 1
@@ -23,4 +21,10 @@ Here are the links to the guides we have started so far:
     macOS <mac>
     Windows <windows>
     Linux <linux/index>
-    MPF Monitor </tools/monitor/installation>
+
+Install MPF Monitor
+-------------------
+
+One you install MPF, you should install the MPF Monitor. This is a tool that allows you to monitor and interact with your game while MPF is running. It's very useful, especially for working on MPF without a physical machine.
+
+:doc:`MPF Monitor Installation Instructions </tools/monitor/installation>`
