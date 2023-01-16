@@ -30,6 +30,7 @@ Here is the list of available effect types (the settings for each type are found
 - ``glow`` applies a pulsing glow effect
 - ``horizontal_blur`` Gaussian blurs horizontally
 - ``invert_colors`` inverts the colors
+- ``linear_gradient`` applies a linear gradient tint
 - ``monochrome`` converts the image to monochrome/grayscale
 - ``pixelate`` pixelates the image
 - ``reduce`` reduces the number of bits per color channel (reducing the number of resulting colors)
@@ -344,6 +345,27 @@ Settings for *invert_colors* effect:
 ------------------------------------
 
 The ``invert_colors`` effect does not have any settings.
+
+
+Settings for *linear_gradient* effect:
+--------------------------------------
+
+color_stops:
+^^^^^^^^^^^^
+Dictionary, type: ``float:kivycolor``. Default: ``None``
+
+This defines the colors along the gradient. Each key is a floating point number in the range
+``[0.0, 1.0]`` (inclusive) representing the position along the gradient while the value is the
+RGBA color at that position. Key values must be written in double quotes, for example:
+``"0.1": ff00ff00``
+
+angle:
+^^^^^^
+Single value, type: ``float``. Default: ``0.0``
+
+The angle of the gradient in degrees. A value of ``0.0`` produces a horizontal gradient with the
+first color stop on the right while a value of ``90.0`` produces a vertical gradient with the first
+stop on the top and so on.
 
 
 Settings for *monochrome* effect:
