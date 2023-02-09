@@ -1,8 +1,6 @@
 Installing MPF on a Pine64 with Ubuntu
 ======================================
 
-.. include::  /_include/new-installers.rst
-
 .. note::
 
    This procedure for installing MPF on a Pine64 does not fully work. (MPF runs

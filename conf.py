@@ -28,8 +28,8 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.56'   # MPF version these docs cover
-stable_version = '0.55'
+version = '0.57'   # MPF version these docs cover
+stable_version = '0.56'
 branch  = 'dev'     # current branch
 
 project = 'Mission Pinball Framework v{} User Documentation'.format(version)
@@ -240,12 +240,7 @@ def setup(app):
               you'll be on the latest, cutting-edge version of MPF.
 
               However, if you want a more stable version, select the ``v:stable`` version from the
-              lower-left corner of this page, which is the most recent version that is not getting new updates.
-
-              If you are new to MPF, we have recently rewritten the installation process
-              which only applies to this "latest" |version|, so you probably want to stay here
-              because the prior installation process doesn't work on the latest
-              OS and Python versions.
+              lower-left corner of this page. You can always update to the latest at any time.
 
         '''
 
@@ -260,7 +255,7 @@ def get_repo_path(repo_name):
     else:
         # clone repo
         print("Cloning {}".format(repo_name))
-        current_branch = "0.55.x"
+        current_branch = "dev"
         repo = git.Repo.clone_from("https://github.com/missionpinball/" + repo_name + ".git", os.path.join(tempfile.gettempdir(), '_src', repo_name), branch=current_branch)
         return os.path.join(tempfile.gettempdir(), '_src', repo_name)
 
