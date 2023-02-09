@@ -11,6 +11,8 @@ Features:
     * Neopixel support for 512 RGB pixels (RGBW also possible but may be limited to ~460 pixels)
     * 24-50V power filter. Board also provides the common ground for the supplies.
     * Fuses for solenoid banks and Neopixels
+    
+The size of the board is about 197 x 115 mm. Mounting holes are available in the corners of the board, spaced 184 mm and 103 mm respectively. Mounting holes are good for M4 screws.
 
 Overview video about Cobrapin:
 
@@ -24,6 +26,39 @@ Video about cobrapin extension board:
 
 .. youtube:: lfxKcaiZyMs
 
+
+Test Rig
+---------------------------------------------------------------------------------------------------------------
+
+.. image:: Cobra_test_rig.jpg
+
+For an easy start you might want to setup a test rig similar to the one shown above. The advantage is that you can use push in clamps to change connected hardware easily without
+the need to crimp lots of cables. For the connection from the board to the push in clamps you can use pre-fabricated headers with wires, then there is no need to crimp anything.
+
+BOM (Bill of material)
+
+======================= ========= ===============================================================================================
+ Item                    Amount    Description                                                                                   
+======================= ========= ===============================================================================================
+ board                   1         A wooden board about 30x30cm                                                                  
+ Cobra board             1                                                                                                       
+ DIN rail                2         each rail about 20cm or longer                                                                          
+ Spacer                  8         Spacer (plastic) to mount the board, one spacer above and one below the board. Diameter M4.  
+ Screws                  4         About 4,0x20mm (depending on the length of your spacer)                                       
+ Screws                  4         About 3,0x15mm to mount the rails, length can vary depending on board thickness               
+ KF2510 wires, 9 pins    5         KF2510 plugs with wire, 9 pins                                                                
+ KF2510 wires, 4 pins    1         KF2510 plugs with wire, 4 pins                                                                
+ JST VH wires, 9 pins    4         JST VH plugs with wires, 9 pins                                                               
+ JST VH wires, 4 pins    3         JST VH plugs with wires, 4 pins                                                               
+ JST VH wires, 3 pins    3         JST VH plugs with wires, 3 pins                                                               
+ push in connector 1:1   >10       1:1 wire connection, for each switch and each coil you need one, buy plenty.                   
+ push in connector 1:n   5         1:n wire connection, for ground of the switches and power for the soils, amount varies.        
+======================= ========= ===============================================================================================
+
+You can use as well bridges to connect multiple cage clamps together, that might be handy for ground connection. See the two cage clamps at the top right, they have a little bridge (this light grey/white box) to have
+all inputs internally connected. 
+
+
 Power Input and Filter
 ---------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +69,7 @@ J9:
 J10:
     Neopixel 5V input.
 
-The filter provides consistent power to solenoids while also protecting the power supply from sudden current surges that may otherwise cause a fault.
+The filter provides consistent power to solenoids while also protecting the power supply from sudden current surges that may otherwise cause a fault. The connectors for the power supply on the board are JST VH style connectors.
 
 Switch Inputs
 ---------------------------------------------------------------------------------------------------------------
@@ -48,7 +83,7 @@ J4, J5:
     
 If you do have either 38 direct inputs or 22 direct inputs + a 8x8 switch matrix depends on your Cobra board. You specify this as an option when you order your board. The switch inputs are labeled in silkscreen with the MPF compatible numbers. The two pins labeled "N/C" are not connected to anything.
 
-Each connector also includes a logic ground pin. Use this for the direct input return. If you measure the voltage between GND and a switch (in below picture 0-0-16) you should measure 3.3V.
+The connectors for the switches on the board are KF2510 style connectors. Each connector also includes a logic ground pin. Use this for the direct input return. If you measure the voltage between GND and a switch (in below picture 0-0-16) you should measure 3.3V.
 
 .. image:: /hardware/images/Cobra_Voltage_Switch.jpg
 
@@ -68,7 +103,7 @@ Solenoid Outputs
 J6, J7, J8:
     Solenoid outputs.
 
-The 24 solenoids are broken up into 3 banks of 8 outputs. There is a ninth pin on the connector that can be used as a key. Each solenoid has a diode to help protect the transistor. You may still use coils with axial diodes installed, but you MUST ensure that you connect them with the correct polarity.
+The 24 solenoids are broken up into 3 banks of 8 outputs. The connectors for the solenoids on the board are JST VH style connectors. There is a ninth pin on the connector that can be used as a key. Each solenoid has a diode to help protect the transistor. You may still use coils with axial diodes installed, but you MUST ensure that you connect them with the correct polarity.
 
 The solenoid outputs are labeled in silkscreen with the MPF compatible numbers. :doc:`OPP coils / drivers </hardware/opp/drivers>`. You need to obey that some of these outputs are controlled by the first micro controller and some by the second. The first digit of the solenoid number shows by which micro controller it is addressed, e.g. ``1-0-7`` is controlled by micro controller 1. This is important later for the autofire devices (flippers, slingshots, bumpers), because they are hardware controlled and the switch and the coil must use the same controller. In other words a coil on ``0-x-y`` of an autofire device must be controlled by switch with number ``0-a-b``.
 
