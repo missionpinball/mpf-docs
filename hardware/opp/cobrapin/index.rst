@@ -27,37 +27,6 @@ Video about cobrapin extension board:
 .. youtube:: lfxKcaiZyMs
 
 
-Test Rig
----------------------------------------------------------------------------------------------------------------
-
-.. image:: Cobra_test_rig.jpg
-
-For an easy start you might want to setup a test rig similar to the one shown above. The advantage is that you can use push in clamps to change connected hardware easily without
-the need to crimp lots of cables. For the connection from the board to the push in clamps you can use pre-fabricated headers with wires, then there is no need to crimp anything.
-
-BOM (Bill of material)
-
-======================= ========= ===============================================================================================
- Item                    Amount    Description                                                                                   
-======================= ========= ===============================================================================================
- board                   1         A wooden board about 30x30cm                                                                  
- Cobra board             1                                                                                                       
- DIN rail                2         each rail about 20cm or longer                                                                          
- Spacer                  8         Spacer (plastic) to mount the board, one spacer above and one below the board. Diameter M4.  
- Screws                  4         About 4,0x20mm (depending on the length of your spacer)                                       
- Screws                  4         About 3,0x15mm to mount the rails, length can vary depending on board thickness               
- KF2510 wires, 9 pins    5         KF2510 plugs with wire, 9 pins                                                                
- KF2510 wires, 4 pins    1         KF2510 plugs with wire, 4 pins                                                                
- JST VH wires, 9 pins    4         JST VH plugs with wires, 9 pins                                                               
- JST VH wires, 4 pins    3         JST VH plugs with wires, 4 pins                                                               
- JST VH wires, 3 pins    3         JST VH plugs with wires, 3 pins                                                               
- push in connector 1:1   >10       1:1 wire connection, for each switch and each coil you need one, buy plenty.                   
- push in connector 1:n   5         1:n wire connection, for ground of the switches and power for the soils, amount varies.        
-======================= ========= ===============================================================================================
-
-You can use as well bridges to connect multiple cage clamps together, that might be handy for ground connection. See the two cage clamps at the top right, they have a little bridge (this light grey/white box) to have
-all inputs internally connected. 
-
 
 Power Input and Filter
 ---------------------------------------------------------------------------------------------------------------
@@ -213,6 +182,41 @@ The brains of the CobraPin are two STM32 microcontroller boards programmed with 
 .. note:: It is important to have your config file refer to the silkscreen board numbers (0 and 1) in the correct order, otherwise the labels on the solenoids, switches, etc. will refer to incorrect pin numbers.
 
 The microcontrollers are removable so you can replace them if they fail for whatever reason. They are widely available and often referred to as "STM32 Blue Pill" boards. The right angle header that is normally used as a programming port is replaced with a vertical header so that those pins can be used on the CobraPin board.
+
+
+Test Rig
+---------------------------------------------------------------------------------------------------------------
+
+.. image:: Cobra_test_rig.jpg
+
+For an easy start you might want to setup a test rig similar to the one shown above. The advantage is that you can use push in clamps to change connected hardware easily without
+the need to crimp lots of cables. For the connection from the board to the push in clamps you can use pre-fabricated headers with wires, then there is no need to crimp anything.
+
+BOM (Bill of material)
+
+======================= ========= ===============================================================================================
+ Item                    Amount    Description                                                                                   
+======================= ========= ===============================================================================================
+ board                   1         A wooden board about 30x30cm                                                                  
+ Cobra board             1                                                                                                       
+ DIN rail                2         each rail about 20cm or longer                                                                          
+ Spacer                  8         Spacer (plastic) to mount the board, one spacer above and one below the board. Diameter M4.  
+ Screws                  4         About 4,0x20mm (depending on the length of your spacer)                                       
+ Screws                  4         About 3,0x15mm to mount the rails, length can vary depending on board thickness               
+ KF2510 wires, 9 pins    5         KF2510 plugs with wire, 9 pins                                                                
+ KF2510 wires, 4 pins    1         KF2510 plugs with wire, 4 pins                                                                
+ JST VH wires, 9 pins    4         JST VH plugs with wires, 9 pins                                                               
+ JST VH wires, 4 pins    3         JST VH plugs with wires, 4 pins                                                               
+ JST VH wires, 3 pins    3         JST VH plugs with wires, 3 pins                                                               
+ push in connector 1:1   >10       1:1 wire connection, for each switch and each coil you need one, buy plenty.                   
+ push in connector 1:n   5         1:n wire connection, for ground of the switches and power for the soils, amount varies.        
+======================= ========= ===============================================================================================
+
+You can use as well bridges to connect multiple cage clamps together, that might be handy for ground connection. See the two cage clamps at the top right, they have a little bridge (this light grey/white box) to have
+all inputs internally connected. 
+
+
+
 
 Example Config
 ---------------------------------------------------------------------------------------------------------------
