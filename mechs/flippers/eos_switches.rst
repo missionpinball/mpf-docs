@@ -12,7 +12,7 @@ that the EOS switch wasn't hit when it should have been and cut the
 power anyway.)
 
 If you wanted to program a game without EOS switches,
-you could do that. They way you'd do that is to flip from "power" to
+you could do that. The way you'd do that is to flip from "power" to
 "hold" mode after a predefined time (like 30ms), rather than waiting
 for an EOS switch to be engaged.
 
