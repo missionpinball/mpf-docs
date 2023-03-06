@@ -5,7 +5,7 @@ The MPF Media Controller uses the same core architecture to power all kinds of
 displays, regardless of whether it's a DMD (physical or virtual, monochrome or
 color), an LCD (on screen window displays), or a combination of both.
 
-The MPF Media Controller's display system is based based on Kivy (a multimedia
+The MPF Media Controller's display system is based on Kivy (a multimedia
 programming library) and uses technologies like SDL2 and Gstreamer under the
 hood.
 
