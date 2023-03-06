@@ -32,7 +32,7 @@ We recommend you read the :doc:`/mechs/coils/dual_vs_single_wound`
 guide to understand the difference between "dual wound" and "single wound"
 coils, as flippers in pinball machines can be either type.
 
-You should also probably read the EOS Switches guide if your machine has flipper
+You should also probably read the  :doc:`EOS Switches guide <eos_switches>` if your machine has flipper
 EOS switches. (In general EOS switches are not needed for flippers with MPF.)
 
 See :doc:`coil hardware </mechs/coils/index>` for more details about the
