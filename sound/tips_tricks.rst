@@ -167,7 +167,7 @@ is posted.
 When Two Drop Targets Are Hit Simultaneously How Do I Keep Two Sounds From Playing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A common scenario with drop targets is top play a sound when each target is hit.  Frequently a
+A common scenario with drop targets is to play a sound when each target is hit.  Frequently a
 player will hit two targets with a single shot dropping them both virtually at the same time.  In
 this situation playing a sound for each target is not always desired. Instead, it would be nice
 to only have a single sound played when the targets are hit within a short time window.
