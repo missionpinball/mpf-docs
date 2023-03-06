@@ -23,7 +23,8 @@ extend the attract mode for your own use. So let's do that now.
 
 Go into your machine's ``/modes`` folder (which should only have your base
 folder in it) and create a new folder called ``attract``. Now you should
-see two folders in it:
+see two folders in your machine's ``/modes`` folder, the base folder and
+the attract folder.
 
 Now create a ``/config`` folder in your attract
 folder, and then create a new config file called ``attract.yaml``. So the attract
@@ -59,9 +60,9 @@ file you can use as a starting point:
 
 .. code-block:: mpf-mc-config
 
-   ##! show: attract_display_loop
    #show_version=5
-
+   ##! show: attract_display_loop
+  
    - duration: 3s
      slides:
        awesome_slide:
@@ -162,11 +163,11 @@ this applies to other "players"; for example, ``light_player:`` in a config file
 ``lights:`` in a show, ``sound_player:`` in a config file is the same as ``sounds:`` in a show, etc.)
 
 Then in the ``slides:`` section of each step, we've added a slide name. These slides are named
-``awesome_slide``, ``press_start``, and ``mission_pinball`` in the example above. The slide names
-don't really matter, but since none of these slides have been defined yet, we add a ``widgets:``
-section to each one and define them here. (The slides are only created once, the first time they're
-displayed. After that they are kept in memory so they can be used over and over. They're only
-removed from memory when the attract mode stops.)
+``awesome_slide``, ``press_start``, ``mission_pinball``, and ``last_game_score_slide`` in the
+example above. The slide names don't really matter, but since none of these slides have been
+defined yet, we add a ``widgets:`` section to each one and define them here. (The slides are
+only created once, the first time they're displayed. After that they are kept in memory so they
+can be used over and over. They're only removed from memory when the attract mode stops.)
 
 Also notice that we added ``transition:`` settings which control how one slide transitions
 to the next. Without transitions, the new slide appears instantly. But with transitions, we
@@ -188,12 +189,12 @@ back to the config file for the attract mode (
 
 .. code-block:: mpf-mc-config
 
+   #config_version=5
    ##! show: attract_display_loop
    #! - duration: .1
    #!   events: ok_super
    ##! mode: attract
-   #config_version=5
-
+   
    show_player:
      mode_attract_started: attract_display_loop
    ##! test
