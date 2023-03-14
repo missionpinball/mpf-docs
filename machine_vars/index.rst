@@ -28,6 +28,9 @@ machine might only persist for a few hours.)
 Like player variables, you can use machine variables in your config files,
 particularly in text display widgets, to show things on your display.
 
+If you want to use a machine variable in a slide player you can access it similarly to
+normal variables, you need to use the syntax ``(machine|my_var_name)`` where ``my_var_name`` obviously has to be replaced with your variable name.
+
 Video about player and machine variables:
 
 .. youtube:: PUxEsNUGXPY

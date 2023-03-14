@@ -27,7 +27,7 @@ Please let us know if you want to connect any other machine.
    system11
    gottlieb_system1
    gottlieb_system80
-   gottlieb_system3_to_7
+   williams_system3_to_9
    sam
    spike
    pinball2000
