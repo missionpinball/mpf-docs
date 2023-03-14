@@ -41,16 +41,40 @@ Text UI costs some performance so disable it in production or on less powerful
 hardware in general.
 You can do this by adding the ``-t`` flag to the MPF commandline.
 
-Run MPF with pypy
+Install the latest Python version
+---------------------------------
+
+For instance, MPF runs significantly faster on Python 3.6 than on 3.5.
+Similarly, 3.5 is faster than 3.4.
+We expect the same for the next releases.
+You might not need this if you are using PyPy.
+
+Install uvloop
+--------------
+
+When running MPF on linux install ``uvloop`` will reduce latency and increase
+throughput for I/O operations.
+This will keep your game responsive:
+
+.. code-block:: console
+
+   pip3 install uvloop
+
+MPF will use uvloop once it is available.
+Requires at least Python 3.7 for the latest version.
+
+Run MPF with PyPy
 -----------------
 
-This will currently only work for MPF and not for MPF-MC because kivy is not
-yet compatible to pypy.
+PyPy is a replacement for standard Python. It uses a Just-in-time compiler 
+that makes it facter and often use less memory.  PyPy does not support all 
+Python code, and currently works for MPF, but not for MPF-MC because kivy
+is not yet compatible with PyPy.
 Performance and latency improvements are around 10x in our benchmarks so
 this might be essential on low-end hardware.
-Download pypy and install it.
-Since pypy is a separate python environment you need to install pip and
-reinstall all pip packages for pypy.
+Download PyPy and install it.
+Since PyPy is a separate Python environment you need to install pip and
+reinstall all pip packages for PyPy.
 
 .. code-block:: console
 
@@ -67,31 +91,8 @@ Afterward, you can start MPF within your game folder using:
 Instead of the ``mpf`` command just use ``pypy -m mpf``.
 For ``pip`` use ``pypy -m pip``.
 
-You still need to run MPF-MC using normal python.
+You still need to run MPF-MC using normal Python.
 This might change in the future.
-
-Install the latest Python version
----------------------------------
-
-For instance, MPF runs significantly faster on Python 3.6 than on 3.5.
-Similarly, 3.5 is faster than 3.4.
-We expect the same for the next releases.
-You might not need this if you are using pypy.
-
-Install uvloop
---------------
-
-When running MPF on linux install ``uvloop`` to reduce latency and increase
-throughput for I/O operations.
-That will keep your game responsive:
-
-.. code-block:: console
-
-   pip3 install uvloop
-
-MPF will use uvloop once it is available.
-Requires at least Python 3.5.
-
 
 Some random hints
 -----------------
