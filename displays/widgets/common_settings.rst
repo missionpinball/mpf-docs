@@ -179,7 +179,7 @@ style:
 ~~~~~~
 
 The name of the style (or styles) you want to apply to this widget. Note that
-styles must be previously defined someone in your config in order to use them.
+styles must be previously defined somewhere in your config in order to use them.
 Also you can override any setting from the style by also manually including it
 in the widget config. See the :doc:`style documentation </displays/widgets/styles>`
 for details.
