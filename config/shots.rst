@@ -125,7 +125,7 @@ which is the second state:
      shot_with_control_events:
        control_events:
          - events: set_state_one
-           value: 1
+           state: 1
 
 delay_switch:
 ~~~~~~~~~~~~~
