@@ -1,5 +1,5 @@
-Installing MPF 0.56 on Mac
-==========================
+Installing MPF on Mac
+=====================
 
 This is the new process used to install MPF 0.56 on a Mac.
 

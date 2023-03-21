@@ -28,17 +28,17 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
-version = '0.57'   # MPF version these docs cover
+version = '0.56'   # MPF version these docs cover
 stable_version = '0.56'
 branch  = 'dev'     # current branch
 
-project = 'Mission Pinball Framework v{} User Documentation'.format(version)
+project = 'Mission Pinball Framework Documentation'
 copyright = '2013-%s, The Mission Pinball Framework Team' % time.strftime('%Y')
 author = 'The Mission Pinball Framework Team'
 
 # dev warning box will be shown in HTML builds for the following GitHub branch
 # names:
-branches_for_dev_warning = ['dev']
+# branches_for_dev_warning = ['dev']
 
 language = 'en'
 
@@ -108,7 +108,7 @@ latex_elements = {
 
     }
 
-# Added "True" at the end to make Layex only use the TOC from index.rst
+# Added "True" at the end to make Latex only use the TOC from index.rst
 # and not the other text content
 latex_documents = [
     (master_doc, 'MissionPinballFramework.tex',
@@ -165,10 +165,10 @@ epub_tocdepth = 2
 
 context = dict()
 
-try:
-    context['github_version'] = git.Repo().active_branch.name
-except TypeError:
-    context['github_version'] = None
+# try:
+#     context['github_version'] = git.Repo().active_branch.name
+# except TypeError:
+context['github_version'] = None
 
 
 # Test all configs in case the dummy builder is used
@@ -212,37 +212,37 @@ def setup(app):
     app.connect('doctree-resolved', annotate_html)
     app.connect('build-finished', run_tests)
 
-    # We need to do this in the setup() function since ReadTheDocs will append
-    # the context dict to the end of conf.py which means we don't have the
-    # populated value at the global context yet, so we need to do it here.
+    # # We need to do this in the setup() function since ReadTheDocs will append
+    # # the context dict to the end of conf.py which means we don't have the
+    # # populated value at the global context yet, so we need to do it here.
 
-    if globals()['context']['github_version'] and globals()['context']['github_version'].startswith("origin/"):
-        # no idea why there is an origin/ in there. breaks our edit on github links
-        globals()['context']['github_version'] = globals()['context']['github_version'][7:]
+    # if globals()['context']['github_version'] and globals()['context']['github_version'].startswith("origin/"):
+    #     # no idea why there is an origin/ in there. breaks our edit on github links
+    #     globals()['context']['github_version'] = globals()['context']['github_version'][7:]
 
-    globals()['rst_prolog'] = '''
+    # globals()['rst_prolog'] = '''
 
-        .. |branch| replace:: {}
-    '''.format(branch)
+    #     .. |branch| replace:: {}
+    # '''.format(branch)
 
-    if globals()['context']['github_version'] in branches_for_dev_warning:
+    # if globals()['context']['github_version'] in branches_for_dev_warning:
 
-        globals()['rst_prolog'] += '''
+    #     globals()['rst_prolog'] += '''
 
-        .. only:: html
+    #     .. only:: html
 
-           .. warning::
+    #        .. warning::
 
-              **This is the documentation the latest work-in-progress version of MPF!**
+    #           **This is the documentation the latest work-in-progress version of MPF!**
 
-              This is the documentation for MPF |version|, which is the "dev" (next)
-              release of MPF that is a work-in-progress. This is probably ok, and means
-              you'll be on the latest, cutting-edge version of MPF.
+    #           This is the documentation for MPF |version|, which is the "dev" (next)
+    #           release of MPF that is a work-in-progress. This is probably ok, and means
+    #           you'll be on the latest, cutting-edge version of MPF.
 
-              However, if you want a more stable version, select the ``v:stable`` version from the
-              lower-left corner of this page. You can always update to the latest at any time.
+    #           However, if you want a more stable version, select the ``v:stable`` version from the
+    #           lower-left corner of this page. You can always update to the latest at any time.
 
-        '''
+    #     '''
 
 
 def get_repo_path(repo_name):

@@ -1,10 +1,10 @@
-Downloading & Installing MPF 0.56 (2023 Version)
+Downloading & Installing MPF (2023 Version)
 ================================================
 
-The MPF Installers were rewritten from scratch and
-are completely updated for MPF 0.56.
+The MPF Installers were rewritten from scratch and completely updated for MPF 0.56 in August 2022.
+(If you're using an older version of MPF, see the docs for the version you're using for installation instructions.)
 
-MPF 0.56 should work with following platforms:
+MPF should work with following platforms:
 
 * Windows 10 / Windows 11 (64-bit only)
 * macOS 10.14+, up through macOS 13 Ventura (Intel & Apple Silicon)
