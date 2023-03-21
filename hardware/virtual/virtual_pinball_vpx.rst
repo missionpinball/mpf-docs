@@ -8,10 +8,11 @@ The Virtual Pinball (VPX) Platform
 +------------------------------------------------------------------------------+
 
 
-VPX can be used to emulate the hardware of a pinball machine to test your
-game without real hardware.
+`VPX <https://en.wikipedia.org/wiki/Visual_Pinball>`_ can be used (on Windows) to emulate the hardware of a pinball machine to test your
+game without real hardware. For instructions to download and install Visual Pinball please see `here <https://www.vpforums.org/index.php?app=tutorials&article=1>`_.
+
 This can be useful for software and hardware development.
-To use the VPX platform you need to install the
+To use the VPX platform you need to install it, along with the
 `MPF-VPX bridge <https://github.com/missionpinball/mpf-vpcom-bridge>`_ and
 add some VPX scripts to your VPX table.
 
