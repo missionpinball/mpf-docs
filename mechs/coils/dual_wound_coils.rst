@@ -62,8 +62,18 @@ How do you connect that?
 Typically, driver boards connect your coils to ground so you connect power to
 the terminal which is common between both coils.
 In this case this would be terminal 1.
-Terminal 2 and 3 would be connected to your driver board.
+Terminal 2 and 3 would be connected to your driver board. See the following picture for example:
 
+ .. image:: coil_correct.jpg
+
+The common terminal on the right (terminal 1) has both wires connected. You see that the diode band is
+facing in that direction and that two copper wires for the coil are connected here. One wire is a bit thicker, which means less
+resistance thus more current thus stronger. Hence, the thinner wire is for the hold position. You might not be able to spot
+that on every coil.
+
+Please note, that you not just connect two wires across each diode. But that one pair of wires is across one diode and the other pair of wires is 
+across two diodes. If you don't do it that way you will fry one of your FETs on the driver board.
+ 
 .. warning::
 
    Please make sure that any diodes on your coil are in reverse to the voltage
