@@ -10,7 +10,7 @@ These docs are static HTML, generated from the files in this repo via the
 [Sphinx Python Documentation Generator](https://www.sphinx-doc.org/en/master/) project.
 
 The rendered HTML docs are hosted by [Read the Docs](https://readthedocs.org)
-at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from, there.
+at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from there.
 
 Building Docs Locally
 ---------------------
