@@ -60,7 +60,7 @@ available if no other higher-priority modes are running. To create the
 base game mode:
 
 #. Create a folder called ``modes`` in your machine's folder.
-#. Create a subfolder your ``modes`` folder called ``base``. (You will
+#. Create a subfolder for your ``modes`` folder called ``base``. (You will
    ultimately create one subfolder for each mode you have, and the name of
    the folder controls the name of the mode.)
 #. Inside your ``base`` folder, create a folder called ``config``. (This
@@ -79,7 +79,7 @@ this:
 3. Add your base game mode's settings to its config file
 --------------------------------------------------------
 
-The settings that control a mode are configured the mode's own
+The settings that control a mode are configured in the mode's own
 configuration file. We do this because it allows modes to be completely
 self-contained. In other words, as long as you have a mode's folder
 and all its content, then you have everything you need for that mode.
@@ -101,7 +101,7 @@ like this:
      priority: 100
 
 There are lots more settings besides ``start_events`` and ``priority``
-which you can set for a mode. See the :doc:`/config/mode` for details.
+which you can set for a mode. See :doc:`/config/mode` for details.
 
 The two settings we added here
 should be pretty obvious. The ``start_events: ball_starting`` means that
@@ -157,7 +157,7 @@ Note that it's very important that you put dashes in front of each
 mode in this list? Why? Because with dashes, MPF will be able to
 combine settings together in this list from different config files.
 
-For modes that important, because MPF has several built-in modes it
+For modes that's important, because MPF has several built-in modes it
 uses for its own things. (For example, "attract" and "game" are both
 modes, and we'll be creating future ones that you might want to use
 too for tilt, volume control, game statistics, high score entry,
