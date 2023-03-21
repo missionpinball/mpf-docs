@@ -14,7 +14,7 @@ class MpfDocsTestCase(MpfTestCase):
        load them and run tests against them.
 
     To use it, add comments in the rst file which specific the begin/end of
-    the indended code block in the RST file which will be the config. The
+    the indented code block in the RST file which will be the config. The
     begin also has the path and filename to the config file.
 
     For example, from an .rst file:
@@ -105,4 +105,3 @@ class MpfDocsTestCase(MpfTestCase):
 
                     else:
                         config += line
-

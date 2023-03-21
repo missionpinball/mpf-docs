@@ -96,11 +96,10 @@ Requires at least Python 3.5.
 Some random hints
 -----------------
 
-- Optimise assets for your hardware.
+- Optimize assets for your hardware.
   Audio should have the same sampling rate as your hardware is using.
   Images and videos should be at native resolution to prevent scaling up or down.
 
-- Reencode your videos in a codec which can be efficiently decoded on your target hardware.
+- Re-encode your videos in a codec which can be efficiently decoded on your target hardware.
 
 - Let us know if we missed something here.
-
