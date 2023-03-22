@@ -104,8 +104,8 @@ This is the documentation for the `Mission Pinball Framework <http://missionpinb
    You can download PDF and zipped HTML versions of these docs. Click the "Read the Docs" link in the
    lower left corner for the links.
 
-This documentation generally applies to all versions of MPF. If you want to find specific versions of the
-docs to match a specific older version of MPF you're using, see the :doc:`MPF Versions </versions/index>` page.
+This documentation generally applies to all versions of MPF. If you need specific documentation for older versions of MPF,
+it's available in the "Assets" section for that release on the `MPF releases page on GitHub <https://github.com/missionpinball/mpf/releases>`_.)
 
 Overview
 --------

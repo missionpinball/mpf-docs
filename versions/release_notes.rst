@@ -3,6 +3,14 @@ MPF Release Notes
 Here's the history of the various release versions and changes of the Mission
 Pinball Framework. (Patch releases and bug fixes are not included in this list.)
 
+0.56 (and newer)
+----
+
+Release notes have moved to the `MPF releases page on GitHub <https://github.com/missionpinball/mpf/releases>`_.
+
+Note you can also click the "Assets" section at the end of the notes for each release to download
+the PDF or HTML versions of the documentation for that specific release.
+
 0.55
 ----
 Released: June 25, 2021
