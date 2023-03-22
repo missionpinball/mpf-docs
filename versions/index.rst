@@ -1,18 +1,11 @@
 MPF Versions
 ============
 
-MPF is a work-in-progress. We release numbered versions approximately once a year. There is a "dev"
-version which holds all latest the work-in-progress features.
+MPF is a work-in-progress. New versions are released every so often. You can find your MPF version by running `mpf --version` from the command line.
 
-You can find your MPF version by running `mpf --version` from the command line.
+A full release history, along with release notes, and links to download older (matching) versions of the
+documentation, is available in the `MPF releases page on GitHub <https://github.com/missionpinball/mpf/releases>`_.
 
-The links below explain more about how MPF version numbering works, what features are in what versions,
-and a roadmap of ideas and plans for the future.
-
-You can look at the top of the `MPF Users Google Group <https://groups.google.com/forum/#!forum/mpf-users>`_ to see what the latest version of MPF is.
-
-The documentation you're reading now is for MPF v|version|. You can find documentation for
-other versions via the menu in the lower left corner of this website.
 
 .. toctree::
    :titlesonly:
