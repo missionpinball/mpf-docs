@@ -35,17 +35,35 @@ Optional settings
 
 The following sections are optional in the ``system11:`` section of your config. (If you don't include them, the default will be used).
 
+ac_relay_debounce_ms:
+~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 ac_relay_delay_ms:
 ~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``75ms``
 
 Delay when switching between A and C side.
 
+ac_relay_switch:
+~~~~~~~~~~~~~~~~
+Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 console_log:
 ~~~~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``none``
 
 Log level for the console log for this platform.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 file_log:
 ~~~~~~~~~
@@ -75,6 +93,12 @@ Single event. The device will add an handler for this event. Default: ``game_wil
 
 Event to trigger C-side preference.
 This is triggered at game start by default to increase response times.
+
+queue_c_side_while_preferred:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 
 Related How To guides

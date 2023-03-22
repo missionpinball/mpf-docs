@@ -48,6 +48,7 @@ event out of a list based on an event.
          event4{device.counters.health.value>9}: 30
          event5{current_player.hearts < current_player.hearts_max}: 10
        fallback_event: event_posts_if_everything_above_false
+
 .. config
 
 

@@ -114,7 +114,7 @@ might call enable with a different power setting.
 
 default_pulse_ms:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
 
 The default amount of time, in milliseconds, that this coil will pulse
 for. This can be overridden in other ways, but this is the default
@@ -143,6 +143,12 @@ the hardware platform used. See the documentation for your specific hardware
 platform if you'd like more control than what's available with the straight
 on/off settings.
 
+default_timed_enable_ms:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 disable_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
@@ -155,6 +161,12 @@ List of one (or more) device control events (:doc:`Instructions for entering dev
 
 Enables (holds on) this coil. This requires that *allow_enable* is true
 or that a *default_hold_power* or *max_hold_power* setting is configured.
+
+max_hold_duration:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 max_hold_power:
 ~~~~~~~~~~~~~~~
@@ -217,6 +229,12 @@ Default: ``None`` (Note that if you add an entry here, it will replace the defau
 also want the default value(s) to apply, add them too.)
 
 Event(s) that pulse this coil (at its default_pulse_ms and power settings).
+
+pulse_with_timed_enable:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 console_log:
 ~~~~~~~~~~~~

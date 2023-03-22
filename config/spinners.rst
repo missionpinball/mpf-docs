@@ -1,5 +1,5 @@
 spinners:
-=============
+=========
 
 *Config file section*
 
@@ -69,7 +69,6 @@ Optional settings
 
 The following sections are optional in the ``spinners:`` section of your config. (If you don't include them, the default will be used).
 
-
 active_ms:
 ~~~~~~~~~~
 Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1000ms``
@@ -96,10 +95,9 @@ Default: ``None``
 Events in this list, when posted, enable this spinner. If a spinner is
 not enabled, then hits to it have no effect.
 
-
 idle_ms:
 ~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``None``
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 How long the spinner should stay inactive before going idle. This time is counted
 *after* the ``active_ms:`` has expired, and is useful for displaying slides or
@@ -116,24 +114,6 @@ When a spinner switch is hit and ``labels:`` are defined, additional events will
 be posted with *spinner_<name>_<label>_active* and *spinner_<name>_<label>_hit*.
 This allows the game to trigger different behavior based on which spinner switch
 is hit first or spins more times.
-
-switch:
-~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
-
-The name of the switch (or a list of switches) for this spinner. You can
-use multiple switches if the playfield has a series of spinners that work
-together (for example at both ends of a horseshoe loop).
-
-switches:
-~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
-
-This setting is the same as the ``switch:`` setting above. You can technically
-enter a single switch or a list of switches in either the ``switch:`` setting
-or the ``switches:`` setting, but we include both since it was confusing to
-be able to enter multiple switches for a singlular "switch" setting and vice
-versa.
 
 playfield:
 ~~~~~~~~~~
@@ -154,6 +134,24 @@ When false, the spinner's ``hit`` count will reset when the spinner goes idle
 
 This value has no effect if ``idle_ms:`` is not set.
 
+switch:
+~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+
+The name of the switch (or a list of switches) for this spinner. You can
+use multiple switches if the playfield has a series of spinners that work
+together (for example at both ends of a horseshoe loop).
+
+switches:
+~~~~~~~~~
+List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+
+This setting is the same as the ``switch:`` setting above. You can technically
+enter a single switch or a list of switches in either the ``switch:`` setting
+or the ``switches:`` setting, but we include both since it was confusing to
+be able to enter multiple switches for a singlular "switch" setting and vice
+versa.
+
 console_log:
 ~~~~~~~~~~~~
 Single value, type: one of the following options: none, basic, full. Default: ``basic``
@@ -172,3 +170,21 @@ file_log:
 Single value, type: one of the following options: none, basic, full. Default: ``basic``
 
 Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`

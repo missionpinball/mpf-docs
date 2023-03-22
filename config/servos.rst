@@ -109,6 +109,12 @@ to the default platform.
 
 See the :doc:`/hardware/platform` guide for details.
 
+platform_settings:
+~~~~~~~~~~~~~~~~~~
+Single value, type: dict. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 positions:
 ~~~~~~~~~~
 One or more sub-entries. Each in the format of ``number`` (will be converted to floating point) : ``string``
@@ -200,6 +206,18 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 The maximum speed of this servo.
 The unit of this value depends on your platform.
+
+stop_events:
+~~~~~~~~~~~~
+List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+stop_timeout_after_last_move:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 console_log:
 ~~~~~~~~~~~~

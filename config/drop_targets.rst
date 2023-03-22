@@ -166,6 +166,12 @@ List of one (or more) device control events (:doc:`Instructions for entering dev
 Events in this list, when posted, pulse this drop target's knockdown coil. (If this drop target doesn't
 have a knockdown coil, then these events will have no effect.)
 
+max_reset_attempts:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 playfield:
 ~~~~~~~~~~
 Single value, type: string name of a :doc:`playfields <playfields>` device. Default: ``playfield``

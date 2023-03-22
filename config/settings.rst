@@ -83,6 +83,12 @@ Single value, type: ``string``. Defaults to empty.
 Name of the machine variable to use. If this is not set it will use the name
 of this setting as machine variable.
 
+settingType:
+~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``standard``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 
 Related How To guides
 ---------------------

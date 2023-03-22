@@ -64,6 +64,8 @@ configs:
    p_roc_hardware_version <p_roc_hardware_version>
    p_roc_revision <p_roc_revision>
    p_roc_version <p_roc_version>
+   pkone_firmware <pkone_firmware>
+   pkone_hardware <pkone_hardware>
    platform <platform>
    platform_machine <platform_machine>
    platform_release <platform_release>
@@ -71,9 +73,6 @@ configs:
    platform_version <platform_version>
    player(x)_score <playerx_score>
    python_version <python_version>
-   twitch_last_(x) <twitch_last_x>
-
-
 Related Events
 --------------
 

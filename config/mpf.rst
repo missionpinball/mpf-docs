@@ -82,6 +82,12 @@ Single value, type: ``integer``. Default: ``0``
 
 Default sync_mc for all shows when not specified otherwise.
 
+default_timed_enable_ms:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 device_modules:
 ~~~~~~~~~~~~~~~
 Unknown type. See description below.
@@ -105,6 +111,12 @@ plugins:
 Unknown type. See description below.
 
 A list of plugins which will be loaded.
+
+report_crashes:
+~~~~~~~~~~~~~~~
+Single value, type: one of the following options: ask, never, always. Default: ``ask``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 save_machine_vars_to_disk:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

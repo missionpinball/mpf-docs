@@ -57,6 +57,12 @@ This is needed for :doc:`APC </hardware/apc/index>` and some other controllers
 which would reset when this happens.
 If in doubt check the documentation of your controller.
 
+display_flash_duty:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``0.5``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 display_flash_frequency:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``

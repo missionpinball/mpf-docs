@@ -80,6 +80,18 @@ words, you could swap out assets for different physical machine types
 without having to update your display code.) That said, we expect that
 99% of people won't use this ``file:`` setting, which is fine.
 
+frame_skips:
+~~~~~~~~~~~~
+List of one (or more) values, each is a type: :doc:`images_frame_skips <images_frame_skips>`. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+image_template:
+~~~~~~~~~~~~~~~
+Single value, type: :doc:`images <images>`. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 load:
 ~~~~~
 Single value, type: ``string``. Defaults to empty.

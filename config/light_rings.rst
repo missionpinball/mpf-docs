@@ -43,13 +43,6 @@ This is a list of sub-settings (indented) that are regular settings from the
 :doc:`lights` section of your machine config. Any settings that are valid there
 are valid here, and they're applied to all the LEDs in the ring.
 
-number_start:
-~~~~~~~~~~~~~
-Single value, type: ``integer``. Defaults to empty.
-
-The integer value for the number for the first LED in the ring. (MPF assumes
-that all the LEDs in the ring are numbered sequentially.)
-
 
 Optional settings
 -----------------
@@ -68,6 +61,13 @@ Single value, type: ``number`` (will be converted to floating point). Defaults t
 
 The "y" position of the center of the ring.
 
+number_start:
+~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+The integer value for the number for the first LED in the ring. (MPF assumes
+that all the LEDs in the ring are numbered sequentially.)
+
 number_template:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Defaults to empty.
@@ -85,6 +85,12 @@ The example config with a number template of ``7-{}`` with a number start of
 200 and a count of 5 will create 5 LEDs with the numbers 7-200, 7-201, 7-202,
 7-203, and 7-204.
 
+previous:
+~~~~~~~~~
+Single value, type: string name of a :doc:`lights <lights>` device. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 radius:
 ~~~~~~~
 Single value, type: ``number`` (will be converted to floating point). Defaults to empty.
@@ -99,6 +105,12 @@ Single value, type: ``number`` (will be converted to floating point). Default: `
 
 The angle (in degrees, 0-360) of the first LED in the right. This is used for
 the calculation of x/y positions of individual LEDs only.
+
+start_channel:
+~~~~~~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 console_log:
 ~~~~~~~~~~~~

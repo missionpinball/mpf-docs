@@ -24,7 +24,6 @@ Optional settings
 
 The following sections are optional in the ``flasher_player:`` section of your config. (If you don't include them, the default will be used).
 
-
 color:
 ~~~~~~
 Single value, type: ``string``. Default: ``on``
@@ -39,7 +38,6 @@ colors in the :doc:`/config/named_colors` section of your config.
 If you use brightness on an RGB light MPF will use the brightness for every
 channel.
 For instance brigness ``AA`` will result in color ``AAAAAA``.
-
 
 ms:
 ~~~

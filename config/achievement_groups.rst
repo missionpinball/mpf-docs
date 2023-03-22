@@ -104,6 +104,12 @@ These events will also cause the
 achievements to play the show defined in their ``show_when_disabled:`` setting
 and to emit (post) events in their ``events_when_disabled:`` settings.
 
+disable_random:
+~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 disable_while_achievement_started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
@@ -292,6 +298,12 @@ These events only work if the achievement group is enabled.
 When the individual achievements change from "selected" to "started", they will
 play their ``show_when_started:`` shows and post their
 ``events_when_started:`` events.
+
+sync_ms:
+~~~~~~~~
+Single value, type: ``integer``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 console_log:
 ~~~~~~~~~~~~

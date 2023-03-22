@@ -38,6 +38,12 @@ Optional settings
 
 The following sections are optional in the ``mode:`` section of your config. (If you don't include them, the default will be used).
 
+asset_paths:
+~~~~~~~~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 code:
 ~~~~~
 Single value, type: ``string``. Defaults to empty.
@@ -81,6 +87,12 @@ A mode can only access player state if ``game_mode`` is set to ``True``.
 You can set this to ``False`` to allow a mode to run outside of a game.
 On example for such a mode is the attract mode.
 Game modes are automatically stopped at the end of a game.
+
+path:
+~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 priority:
 ~~~~~~~~~

@@ -201,6 +201,12 @@ associated with this shot, (or that the entire switch sequence has
 been completed), except it comes in via an event instead of from a
 switch activity.
 
+mark_playfield_active:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 persist_enable:
 ~~~~~~~~~~~~~~~
 Single value, type: ``boolean`` (``true``/``false``). Default: ``true``

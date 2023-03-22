@@ -66,13 +66,11 @@ See :doc:`/config_players/blinkenlight_player` for details.
 Optional settings
 -----------------
 
-The following sections are optional in the ``blinkenlight_player:`` section of
-your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``blinkenlight_player:`` section of your config. (If you don't include them, the default will be used).
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: add, remove, remove_mode, remove_all.
-Default: ``add``
+Single value, type: one of the following options: add, remove, remove_mode, remove_all. Default: ``add``
 
 What action the blinkenlight should perform. The ``remove_all``
 action will remove all the colors from the blinkenlight, effectively turning it
@@ -83,7 +81,7 @@ whole purpose!).
 
 color:
 ~~~~~~
-Single value, type: ``string``. Default: ``white``
+Single value, type: color_or_token. Default: ``white``
 
 The only action that requires a color setting is the ``add`` action.  It sets
 the color to add to this blinkenlight. Color values may be a hex string
@@ -97,13 +95,14 @@ For instance brigness ``AA`` will result in color ``AAAAAA``.
 
 key:
 ~~~~
-Single valid, type: ``string``. Defaults to empty.
+Single value, type: ``string``. Defaults to empty.
 
 You can think of this value as a name for the color you're adding or removing
 from the blinkenlight.  If you add a color, then the key allows you to remove
 the color later using the key to specify which color to remove.  If you don't
 specify a key, then the color is considered "keyless" (see
 :doc:`/config_players/blinkenlight_player` for more information about keyless colors).
+
 
 Related How To guides
 ---------------------

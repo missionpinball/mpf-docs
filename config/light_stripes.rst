@@ -44,13 +44,6 @@ This is a list of sub-settings (indented) that are regular settings from the
 :doc:`lights` section of your machine config. Any settings that are valid there
 are valid here, and they're applied to all the LEDs in the stripe.
 
-number_start:
-~~~~~~~~~~~~~
-Single value, type: ``integer``. Defaults to empty.
-
-The integer value for the number for the first LED in the stripe. (MPF assumes
-that all the LEDs in the stripe are numbered sequentially.)
-
 
 Optional settings
 -----------------
@@ -73,6 +66,13 @@ The distance between individual LEDs (in relative size to the x/y coordinates
 of the ``start_x:`` and ``start_y:`` positions. This is used for
 the calculation of x/y positions of individual LEDs only.
 
+number_start:
+~~~~~~~~~~~~~
+Single value, type: ``integer``. Default: ``0``
+
+The integer value for the number for the first LED in the stripe. (MPF assumes
+that all the LEDs in the stripe are numbered sequentially.)
+
 number_template:
 ~~~~~~~~~~~~~~~~
 Single value, type: ``string``. Defaults to empty.
@@ -89,6 +89,18 @@ Just use braces ``{}`` for the part you want replaced by a number.
 The example config with a number template of ``7-{}`` with a number start of
 200 and a count of 5 will create 5 LEDs with the numbers 7-200, 7-201, 7-202,
 7-203, and 7-204.
+
+previous:
+~~~~~~~~~
+Single value, type: string name of a :doc:`lights <lights>` device. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+start_channel:
+~~~~~~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 start_x:
 ~~~~~~~~

@@ -110,6 +110,12 @@ no balls are active on the playfield and the game becomes stuck. See
 :doc:`/game_logic/multiballs/multiball_with_traditional_ball_lock` for instructions
 and examples.
 
+blocking_facility:
+~~~~~~~~~~~~~~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 disable_events:
 ~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
@@ -122,6 +128,12 @@ lock devices don't count towards the lock. If you want to set up a ball lock tha
 requires the player to "re-light" the lock after locking a ball, you can set this
 ball lock's "ball_locked" event as a disable event for this lock and then set some
 other shot that re-enables the lock as an enable event.
+
+empty_lock_devices_on_ball_end:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 enable_events:
 ~~~~~~~~~~~~~~

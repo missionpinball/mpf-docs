@@ -35,7 +35,7 @@ If a ball randomly shows up in this device, should it be automatically ejected?
 
 ball_capacity:
 ~~~~~~~~~~~~~~
-Single value, type: ``integer``. Defaults to empty.
+Unknown type. See description below.
 
 Optional value for how many balls this device can hold. You only need
 to specify this if your device holds more balls that it has
@@ -85,7 +85,7 @@ See the :doc:`/game_logic/ball_search/index` documentation for details.
 
 ball_switches:
 ~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+Unknown type. See description below.
 
 A list of switch names that are active when a ball is in the device.
 It's assumed there is a one-to-one *ball switch* to *ball* ratio, so
@@ -164,6 +164,12 @@ confirming the eject include:
   you would use when setting up devices, but it's included here in case
   you happen to see a reference to it in the code or the log files.
 
+counter:
+~~~~~~~~
+Unknown type. See description below.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 eject_all_events:
 ~~~~~~~~~~~~~~~~~
 List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
@@ -172,7 +178,7 @@ Causes this device to eject all its balls.
 
 eject_coil:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
+Unknown type. See description below.
 
 The coil that is fired to eject a ball from this device.This
 *eject_coil* is optional, since some devices (like a manual plunger or
@@ -180,7 +186,7 @@ the playfield) don't have eject coils. Default is *None*.
 
 eject_coil_enable_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+Unknown type. See description below.
 
 When using an ``eject_coil`` and specifying ``eject_coil_enable_time`` MPF
 will enable to ``eject_coil`` for ``eject_coil_enable_time`` instead of
@@ -188,7 +194,7 @@ pulsing that coil.
 
 eject_coil_jam_pulse:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+Unknown type. See description below.
 
 This is the pulse time, in ms, that the eject coil will use if the jam
 switch is active and the first eject attempt failed to eject the ball.
@@ -200,14 +206,14 @@ attempts.
 
 eject_coil_max_wait_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``200ms``
+Unknown type. See description below.
 
 MPF might delay the eject by ``eject_coil_max_wait_ms`` to ensure consistent
 pulses. See :doc:`psus` for details.
 
 eject_coil_reorder_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+Unknown type. See description below.
 
 Pulse duration to use to reorder balls. If the ball device assumes that the
 balls are not settled properly it will pulse the ``eject_coil`` for
@@ -216,7 +222,7 @@ if multiple balls disappear or the ``jam_switch`` is active.
 
 eject_coil_retry_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
+Unknown type. See description below.
 
 The new pulse time, in ms, that the eject coil will use if the eject
 has failed too many times. This pulse time is used up until the device stops trying.
@@ -358,7 +364,7 @@ Additional ejectors:
 
 entrance_count_delay:
 ~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
+Unknown type. See description below.
 
 This is the time delay (in MPF time string format) that this ball
 device will wait before counting the balls after any of the
@@ -369,7 +375,7 @@ is *500ms*.
 
 entrance_event_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``5s``
+Unknown type. See description below.
 
 How long does the ball need after an ``entrance_event`` to settle in
 the ball device? This is used for some heuristics to determine if this is
@@ -388,7 +394,7 @@ These events tell this ball device that a ball has entered (been added to) the d
 
 entrance_switch:
 ~~~~~~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+Unknown type. See description below.
 
 The name of a switch that is activated when a ball enters the device.
 Most devices don't have this, since they have the ball switches that
@@ -399,7 +405,7 @@ your ball device has *ball_switches*. Default is *None*.
 
 entrance_switch_full_timeout:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
+Unknown type. See description below.
 
 When using an ``entrance_switch`` and setting this to anything except 0,
 the device will be considered to be full after ``entrance_switch_full_timeout``
@@ -408,13 +414,13 @@ switch (see :doc:`/mechs/troughs/two_coil_one_switch`).
 
 entrance_switch_ignore_window_ms:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
+Unknown type. See description below.
 
 How long should another entrance switch be ignored after a previous activation?
 
 exit_count_delay:
 ~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``500ms``
+Unknown type. See description below.
 
 This is the time delay that the device will wait before counting the
 balls after any after it attempts to eject a ball if the device is
@@ -422,7 +428,7 @@ configured to verify the eject via a count of the switches.
 
 hold_coil:
 ~~~~~~~~~~
-Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.
+Unknown type. See description below.
 
 The name of a coil that is held in the enabled position to hold a
 ball. This is used in place of an *eject_coil*, and it's for devices
@@ -434,7 +440,7 @@ in the transporter link.
 
 hold_coil_release_time:
 ~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``1s``
+Unknown type. See description below.
 
 This is the time (in MPF time string format) that devices with
 *hold_coils* will hold their coil open to release a ball. Default is
@@ -442,13 +448,13 @@ This is the time (in MPF time string format) that devices with
 
 hold_events:
 ~~~~~~~~~~~~
-List of one (or more) device control events (:doc:`Instructions for entering device control events </config/instructions/device_control_events>`). Defaults to empty.
+Unknown type. See description below.
 
 These events cause this device to enable its hold coil.
 
 hold_switches:
 ~~~~~~~~~~~~~~
-List of one (or more) values, each is a type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+Unknown type. See description below.
 
 A switch (or list of switches) that indicates a ball is in position to
 be captured by a *hold_coil*. Default is *None*.
@@ -463,7 +469,7 @@ device is not ejecting.
 
 jam_switch:
 ~~~~~~~~~~~
-Single value, type: string name of a :doc:`switches <switches>` device. Defaults to empty.
+Unknown type. See description below.
 
 Some pinball trough devices have a switch in the "exit lane" part of
 the trough that can detect if a ball fell back into the trough from
@@ -524,7 +530,7 @@ These events cause this device to request a ball to be sent to it.
 
 retries_before_increasing_pulse:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``4``
+Unknown type. See description below.
 
 The number of times this ball device will attempt to eject the ball before increasing
 the eject coil pulse time as specified in the ``eject_coil_retry_pulse:`` above.

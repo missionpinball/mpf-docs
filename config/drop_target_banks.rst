@@ -104,6 +104,12 @@ Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time s
 How long this device should ignore switch changes while ball search is running. (Otherwise the ball search pulsing
 coils will set switches that could add to the score, start modes, etc.
 
+max_reset_attempts:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``integer``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 reset_coil:
 ~~~~~~~~~~~
 Single value, type: string name of a :doc:`coils <coils>` device. Defaults to empty.

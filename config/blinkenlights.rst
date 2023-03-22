@@ -62,22 +62,14 @@ The options are as follows:
 .. config
 
 
-Required settings
+Optional settings
 -----------------
 
-The following sections are required in the ``blinkenlights:`` section of your
-config:
-
-light:
-~~~~~~
-Single value, type: string name of a :doc:`lights <lights>` device. Defaults
-to empty.
-
-This is the name of the light which this blinkenlight controls.
+The following sections are optional in the ``blinkenlights:`` section of your config. (If you don't include them, the default will be used).
 
 color_duration:
 ~~~~~~~~~~~~~~~
-Time value. Defaults to empty.
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Either ``color_duration`` or ``cycle_duration`` (see below) must be specified
 for each blinkenlight, but not both.
@@ -94,7 +86,7 @@ below).
 
 cycle_duration:
 ~~~~~~~~~~~~~~~
-Time value. Defaults to empty.
+Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Either ``cycle_duration`` or ``color_duration`` (see above) must be specified
 for each blinkenlight, but not both.
@@ -113,15 +105,15 @@ specified, the shorter each color will be displayed.  If you want each color to
 be displayed for a certain length of time regardless of the number of colors,
 then use ``color_duration`` instead (see above).
 
-Optional settings
------------------
+light:
+~~~~~~
+Single value, type: string name of a :doc:`lights <lights>` device. Defaults to empty.
 
-The following sections are optional in the ``blinkenlights:`` section
-of your config. (If you don't include them, the default will be used).
+This is the name of the light which this blinkenlight controls.
 
 off_when_multiple:
 ~~~~~~~~~~~~~~~~~~
-Boolean True/False or Yes/No. Default: ``False``.
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 This specifies whether or not to include an "off" color at the end of each
 cycle when the blinkenlight has more than one color in its list.
@@ -146,3 +138,39 @@ The priority of the blinkenlight.  If there is a show that uses this
 blinkenlight's light, and the show and the blinkenlight are happening at the
 same time, then the light will be controlled by whichever one has the highest
 priority.
+
+console_log:
+~~~~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the console log for this device.
+
+debug:
+~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
+
+Set this to true to see additional debug output. This might impact the performance of MPF.
+
+file_log:
+~~~~~~~~~
+Single value, type: one of the following options: none, basic, full. Default: ``basic``
+
+Log level for the file log for this device.
+
+label:
+~~~~~~
+Single value, type: ``string``. Default: ``%``
+
+Name of this device in service mode.
+
+tags:
+~~~~~
+List of one (or more) values, each is a type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`

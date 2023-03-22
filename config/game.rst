@@ -115,6 +115,12 @@ machine is set to require credits and there are not enough credits available.)
 
 This is the name of the tag in the ``tags:`` section of one of your switches.
 
+wait_for_empty_playfields_on_ball_start:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 
 Related How To guides
 ---------------------

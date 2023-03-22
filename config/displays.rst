@@ -67,7 +67,6 @@ a target for that slide. If you only have one display, it will be the default au
 
 enabled:
 ~~~~~~~~
-
 Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Whether this display is enabled. If false, all slide and widget player calls

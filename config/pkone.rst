@@ -90,6 +90,7 @@ is essentially the maximum time a coil could be stuck "on" if MPF crashes.
 The default is 1 second which is probably fine for almost everyone, and you don't
 have to include this section in your config if you want to use the default.
 
+
 Related How To guides
 ---------------------
 

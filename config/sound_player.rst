@@ -118,7 +118,6 @@ There is also a shorthand way (express config format):
    sound_player:
      sw_jet_bumper_active: super_jet_bumper_sound|block
 
-
 delay:
 ~~~~~~
 Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.

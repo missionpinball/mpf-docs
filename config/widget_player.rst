@@ -126,8 +126,7 @@ used and the ``slide:`` value will be ignored.
 
 widget_settings:
 ~~~~~~~~~~~~~~~~
-
-Used to override and/or update settings for widgets specified in your ``widgets:`` section, such as ``z:`` value. Here is an example:
+Unknown type. See description below.
 
 .. code-block:: yaml
 
@@ -136,6 +135,7 @@ Used to override and/or update settings for widgets specified in your ``widgets:
        my_widget:
          widget_settings:
            z: 1
+
 
 Related How To guides
 ---------------------

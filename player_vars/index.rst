@@ -23,14 +23,15 @@ That said, here's a list of the "built in" player variables and how they work:
    index <_index>
    ball <ball>
    extra_ball_(name)_awarded <extra_ball_name_awarded>
-   (logic_block)_state <logic_block_state>
+   extra_balls <extra_balls>
+   (logic_block)_state
+config_section: counters, accruals, sequences <logic_block_state
+config_section: counters, accruals, sequences>
    (mode)_(timer)_tick <mode_timer_tick>
    number <number>
    random_(x).(y) <random_x.y>
    restart_modes_on_next_ball <restart_modes_on_next_ball>
    score <score>
-   (shot)_(profile) <shot_profile>
-
 Related Events
 --------------
 

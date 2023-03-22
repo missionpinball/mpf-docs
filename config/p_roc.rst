@@ -36,6 +36,18 @@ Set this to ``True`` if you want to know what is going on under the hood.
 We will usually ask you to set this if you experience any hardware related problems
 and send us your log.
 
+display_flash_duty:
+~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``0.5``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+display_flash_frequency:
+~~~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``number`` (will be converted to floating point). Default: ``1.0``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 dmd_timing_cycles:
 ~~~~~~~~~~~~~~~~~~
 List of one (or more) values, each is a type: ``integer``. Defaults to empty.

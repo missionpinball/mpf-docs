@@ -1,5 +1,5 @@
-hardware_sound_systems:
-=======================
+digital_score_reels:
+====================
 
 *Config file section*
 
@@ -11,8 +11,9 @@ hardware_sound_systems:
 
 .. overview
 
-The ``hardware_sound_systems:`` section of your config is where you configure external sound systems.
-For instance, this is used in the :doc:`LISY platform </hardware/lisy/index>`.
+The ``digital_score_reels:`` section of your config is where you...
+
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 .. config
 
@@ -20,17 +21,29 @@ For instance, this is used in the :doc:`LISY platform </hardware/lisy/index>`.
 Optional settings
 -----------------
 
-The following sections are optional in the ``hardware_sound_systems:`` section of your config. (If you don't include them, the default will be used).
+The following sections are optional in the ``digital_score_reels:`` section of your config. (If you don't include them, the default will be used).
 
-platform:
-~~~~~~~~~
-Single value, type: ``string``. Defaults to empty.
+frames:
+~~~~~~~
+List of one (or more) values, each is a type: :doc:`digital_score_reel_frame <digital_score_reel_frame>`. Defaults to empty.
 
-Overwrite the default platform.
+.. todo:: :doc:`/about/help_us_to_write_it`
 
-platform_settings:
-~~~~~~~~~~~~~~~~~~
-Single value, type: dict. Defaults to empty.
+include_player_number:
+~~~~~~~~~~~~~~~~~~~~~~
+Single value, type: ``boolean`` (``true``/``false``). Default: ``False``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+reel_count:
+~~~~~~~~~~~
+Single value, type: ``number`` (can be integer or floating point). Default: ``0``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+start_value:
+~~~~~~~~~~~~
+Single value, type: ``string``. Default: ``0``
 
 .. todo:: :doc:`/about/help_us_to_write_it`
 
@@ -62,11 +75,10 @@ tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Defaults to empty.
 
-Not used.
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 
 Related How To guides
 ---------------------
 
-* :doc:`/hardware/apc/index`
-* :doc:`/hardware/lisy/index`
+.. todo:: :doc:`/about/help_us_to_write_it`
