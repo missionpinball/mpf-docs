@@ -11,6 +11,7 @@ in the `MPF releases page on GitHub <https://github.com/missionpinball/mpf/relea
 .. toctree::
    :titlesonly:
 
+   docs
    understanding
    release_notes
    roadmap
