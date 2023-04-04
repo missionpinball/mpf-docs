@@ -103,6 +103,10 @@ on solid after a second advancement. By default, a shot will advance its profile
 when the shot is hit, but we don't want that here so we'll set
 ``advance_on_hit: false``.
 
+This profile uses three built-in shows, ``off``, ``flash``, and ``on``.  These 
+shows accept the ``show_tokens`` from our shots. In this case, it is the LED we wish 
+to control. You can create your own shows to change LED color, play sounds, etc.
+
 .. code-block:: mpf-config
 
   ##! mode: sequential_drops
