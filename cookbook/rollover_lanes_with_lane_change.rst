@@ -78,7 +78,7 @@ Step 2. Creating a profile for the lanes
 ----------------------------------------
 
 
-We can create a :doc`shot_profile</config/shot_profiles>` for the top lanes that starts with the
+We can create a :doc:`shot_profile</config/shot_profiles>` for the top lanes that starts with the
 light on, and turns it off after the shot is hit.
 
 .. code-block:: mpf-config
