@@ -224,16 +224,16 @@ corresponding reset events, as configured below.
       reset_coil: c_drop_1
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_1
     drop_2:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_2
+      reset_coil: c_drop_2
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_2
     drop_3:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_3
+      reset_coil: c_drop_3
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_3
     drop_4:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_4
+      reset_coil: c_drop_4
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_4
 
 
