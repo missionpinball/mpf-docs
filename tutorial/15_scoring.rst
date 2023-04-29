@@ -197,6 +197,32 @@ slide is first displayed, there is no player variable called "potato"--it's not 
 button--so the text widget doesn't know what to do with "potato", so it just prints it as is. Later we'll learn how to
 properly initialize variables, but the main thing for now is to see how the scoring and slide player works.
 
+5. Play with multiple players
+----------------------------------
+So far we have only played the game with one player. Multiplayer support we get out of the box. By default a game can have up to 4 players. That is 
+of course only the default and can be changed
+
+.. code-block:: mpf-config
+
+    game:
+       max_players: 27
+
+for example to allow 27 players in your game. In order to increase the number of players simply push the start button multiple times. For each push you 
+add one player. If you monitor the events in ``mpf monitor`` you will see an event :doc:`player_added</events/player_added>` for each new player. In order to configure a multi player 
+display you might want to look at this :doc:`multi display tutorial</displays/slides/multiplayer_display>`.
+
+Now play the virtual game in our tutorial with 2 players. Run ``mpf both`` like you did before and press the following keys:
+
+- s (to start the game with 1 player)
+- s (to add a second player)
+- p (to tell the game that the ball has left the plunger lane)
+- q (to tell the game that the playfield is active and to score points)
+- q (press it a few times to see points increasing)
+- 1 (to drain the ball, now you should see on the screen that player 2 is active)
+- Now go back to the third step above to press p again.
+
+You will see that players take turns and points are counted for each player.
+
 Check out the complete config.yaml file so far
 ----------------------------------------------
 
