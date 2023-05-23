@@ -179,7 +179,7 @@ show the slide "you_stink" if ball 3 is starting and the player has less than
 
 But wait, there's more!
 
-You can also use standard math operators (``+``, ``-``, ``*``, ``/``, etc.)
+You can also use standard math operators (``+``, ``-``, ``*``, ``/``, ``//``, etc.)
 to evaluate whether the action should take place:
 
 .. code-block:: mpf-mc-config
