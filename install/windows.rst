@@ -124,6 +124,6 @@ At this point, MPF is ready to go!
 Keeping MPF up-to-date
 -----------------------
 
-Once you have MPF installed via the procedure above, you can keep it up-to-date by running the final two pipx commands from above which you used to install MPF and MPF-MC.
+Once you have MPF installed via the procedure above, you can keep it up-to-date by running the final two pip commands from above which you used to install MPF and MPF-MC.
 
 Questions? Comments? Need help? You can post a reply into the MPF new installers for macOS thread in the MPF Users Google Group: https://groups.google.com/g/mpf-users/c/BIemtw17lx0
