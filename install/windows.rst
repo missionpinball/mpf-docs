@@ -38,7 +38,7 @@ Install Python
 
 If you open a command prompt on a fresh Windows machine and type ``python``, the Microsoft App Store will open and try to install Python 3.7. This is not the version of Python you want. So don't do that.
 
-So instead, install Python from python.org --> Downloads --> Windows --> Scroll down to the latest version of Python 3.9 (which is 3.9.13 at the time of this writing) --> Download Windows installer (64-bit).
+So instead, install Python from python.org. Here's the direct link to the newest installer for the final version of Python 3.9: https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe
 
 Run the installer, and choose the "Customize installation" option, and make sure to check the box for "py launcher" and "pip". (The others don't matter either way.) Then on the next screen, check the box for "Add Python to environment variables". Then click "Install".
 
@@ -48,19 +48,7 @@ Then open a command prompt (you can just run "cmd"), and type each of these comm
 
   python --version
 
-You want a result like "Python 3.9.13" or whatever version you just installed.
-
-Next, you'll run a command to install "pipx" which is a tool that will help you install and manage the MPF installation. You can read more about pipx here: https://pypa.github.io/pipx/
-
-The second command below ensures that you can run "pipx" by typing "pipx" in the command prompt. (If you don't run this command, you'll have to type "python -m pipx" instead of just "pipx" to run pipx.)
-
-
-.. code-block:: doscon
-
-  pip install --user pipx
-  python -m pipx ensurepath
-
-After this, restart the cmd window. (Just close it and then open a new one.)
+You want a result like "Python 3.9.13" or whatever version you just installed. If you see a version other than that, trying running ``python3 --version`` instead.
 
 Install MPF
 -----------
@@ -69,7 +57,7 @@ Now you're ready to install MPF. Open a new command window (cmd.exe) and type th
 
 .. code-block:: doscon
 
-    pipx install "mpf[cli]" --verbose --include-deps
+  pip install "mpf[cli]"
 
 A bunch of things will scroll by, and then hopefully MPF is installed. You can test it by typing this command:
 
@@ -79,7 +67,18 @@ A bunch of things will scroll by, and then hopefully MPF is installed. You can t
 
 This should print out something like `MPF 0.56.0`. If you get an error, something went wrong. If you get a different version, then you might have an older version of MPF which you need to uninstall first. (See the "Remove prior versions of MPF" section above.)
 
-You can now proceed with the getting started tutorials, or, go on to install the MPF-MC.
+Install MPF Monitor
+-------------------
+
+MPF Monitor the developers "god view" into your running MPF code. It has windows to show the states of every device, events, variables, modes, etc. You can even add a photo of your playfield and it will show all the lights and switches on it animated in real time to show you what's happening in your game.
+
+MPF Monitor is also nice because it's a simple install, so you can visualize your game quickly. The MPF-MC (which will drive the displays in your machine) is a more complicated install, so you can get your game working with MPF Monitor first, and then add the MPF-MC later.
+
+.. code-block:: doscon
+
+    pip install mpf-monitor
+
+You can now proceed with the getting started tutorials, or, go on to install the MPF Media Controller (MPF-MC).
 
 Install the MPF Media Controller (MPF-MC)
 -----------------------------------------
@@ -90,20 +89,16 @@ To install MPF-MC, use the following command:
 
 .. code-block:: doscon
 
-    pipx inject mpf mpf-mc --verbose --include-deps --include-apps
+    pip install mpf-mc
 
-This command will install MPF-MC into the same virtual environment that MPF is installed in. (This is why we used pipx to install MPF in the first place.) It will also install a bunch of other dependencies that MPF-MC needs to run. When it's done, you should see a message like "Injected package mpf-mc into venv mpf".
-
-If you want to install the newest build of MPF-MC, you can use this command instead (but audio will not work until the bug is fixed):
-
-.. code-block:: doscon
-
-    pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
+If you encounter permission issues during the installation, try running the commands with administrator privileges (Right-click on cmd.exe -> Run as Administrator).
 
 Testing MPF-MC
 --------------
 
 Installing MPF-MC is pretty straightforward. Unfortunately just because it installs doesn't mean it works. :(
+
+May 2023 Note: Some of this might not work: The mc_demo and demo_man mentioned below might not work anymore as they haven't been updated in a while. Feel free to fix and/or update them and we'll merge your changes in!
 
 One way to test the MC is download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
 
@@ -125,11 +120,6 @@ This is because those warnings mentioned above print on top of the nice MPF disp
 Alternately if you don't want to resize the window every time, you can open two different command prompt windows, and run ``mpf -X`` in one and ``mpf mc`` in the other.
 
 At this point, MPF is ready to go!
-
-Installing MPF Monitor
-----------------------
-
-Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
 
 Keeping MPF up-to-date
 -----------------------

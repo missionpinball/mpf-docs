@@ -18,13 +18,6 @@ Here links to the installation guides for each platform:
 .. toctree::
     :maxdepth: 1
 
-    macOS <mac>
+    Mac <mac>
     Windows <windows>
     Linux <linux/index>
-
-Install MPF Monitor
--------------------
-
-One you install MPF, you should install the MPF Monitor. This is a tool that allows you to monitor and interact with your game while MPF is running. It's very useful, especially for working on MPF without a physical machine.
-
-:doc:`MPF Monitor Installation Instructions </tools/monitor/installation>`

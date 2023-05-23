@@ -20,25 +20,40 @@ To install MPF on a Mac:
 
    macOS 64-bit universal installer (https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg)
 
-   Choose the default installation location. If you want to install to a custom location, remember that location for Step 5.
+   Choose the default installation location. If you want to install to a custom location, remember that location for later steps.
 
 2. Install Homebrew (https://brew.sh/). Open your command terminal and paste in this command:
 
    ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
 
-   This will also install the Xcode command line tools if you don't have them. A lot of stuff will scroll by and it might take awhile.
+   This will also install the Xcode command line tools if you don't have them. This process might take some time, so be patient.
 
-3. Use Homebrew (or 'brew') to install the libraries and other support files MPF needs: ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly pipx``
+3. Use Homebrew (or 'brew') to install the libraries and other support files MPF needs:
 
-4. Run ``pipx ensurepath`` which will configure things pipx installs to be able to run from anywhere.
+   ``brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly``
 
-5. Use pipx to install MPF with the Text UI components. ``pipx install "mpf[cli]" --python /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 --verbose --include-deps``.
+4. Verify that pip is installed. If you installed Python from python.org, then pip should have been installed as well. You can verify this by running ``pip --version`` or ``pip3 --version`` in your terminal. If it's not installed, you can install it using ``brew install pip``.
 
-6. Use pipx to install MPF-MC into the mpf environment. ``pipx inject mpf mpf-mc --verbose --include-deps --include-apps``
+5. Use pip to install MPF with the Text UI components:
 
-7. Updated MPF Monitor instructions (which work with pipx) are :doc:`here </tools/monitor/installation>`.
+   ``pip install "mpf[cli]"``
 
-At this point, the latest current MPF and MPF-MC released are installed. (0.56 at this writing)
+6. Use pip to install the MPF Monitor (Note that the latest version requires PyQt6, priors required PyQt5):
+
+   ``pip install mpf-monitor``
+
+7. Use pip to install MPF-MC:
+
+   ``pip install mpf-mc``
+
+Note: For the commands that use pip, if you run into permission issues, try prefixing the command with sudo (i.e., ``sudo pip install "mpf[cli]"``). Be aware that sudo allows the command to run with root permissions, which can pose a security risk if used carelessly.
+
+Also, pip installs Python packages globally by default. If you'd prefer to keep your project and its dependencies isolated from your system's Python, consider using a Python virtual environment. There are several tools available for this, such as pipx, venv, or virtualenv.
+
+Testing
+-------
+
+May 2023 Note: Some of this might not work: The mc_demo and demo_man mentioned below might not work anymore as they haven't been updated in a while. Feel free to fix and/or update them and we'll merge your changes in!
 
 To test, download the ``mpf-examples`` repo from here: https://github.com/missionpinball/mpf-examples. You can either clone it locally, or download the zip file and unzip it. Either is fine, just do what you're most comfortable with. Be sure to download / switch to the ``dev`` branch.
 

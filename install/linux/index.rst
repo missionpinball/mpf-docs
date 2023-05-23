@@ -1,6 +1,13 @@
 Installing MPF on Linux
 =======================
 
+May 2023 Update
+---------------
+
+We need to update this page (we no longer suggest pipx, btw), but if you want the "real"
+linux install instructions, read through the GitHub Actions job scripts in the ``.github/workflows/build_wheel.yml`` file. You'll see the exact steps we use to build MPF-MC (MPF is simple to install, it's the MC part that's tricky). Various jobs in there use both apt-get and yum to set everything up before building the MC.
+
+
 As part of our automated build process, we build and test MPF and MPF-MC
 against Ubuntu 20.04 & 22.04 and Debian Stretch & Buster.
 MPF 0.54 supports Python 3.5 to 3.7.
