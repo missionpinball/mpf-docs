@@ -30,7 +30,11 @@ Behind the scenes MPF performs
 The default should be fine for most machine but if your PSU is very weak try
 this config:
 
+.. code-block:: mpf-config
 
+   psus:
+     default:
+       release_wait_ms: 50    # defaults to 10ms
 
 
 Configuring Pulse Times
@@ -46,10 +50,6 @@ One solution to this is to lower ``default_pulse_power`` to something between
 Your hardware will PWM the pulse and you can use much longer pulse times
 without too much stress on your hardware.
 Also reduces the sound caused by the reset.
-
-You can try something like this:
-
-
 
 Resetting a Drop Target Multiple Times
 --------------------------------------

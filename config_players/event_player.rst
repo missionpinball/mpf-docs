@@ -179,6 +179,22 @@ be posted as a string.
       set_dynamo_round_without_type:
         round_number:
           value: device.counters.dynamo_rounds.value
+          
+Priority:
+~~~~~~~~~
+
+Note that as with other config players, event player can accept priorties for events to be posted.  This can be useful in scenarios such as where a player variable must be updated prior to a condtional check, so that they happen in the desired order.  
+
+.. code-block:: mpf-config
+
+  event_player:
+    mode_dynamo_started:
+      reset_pv_tokens_collected_to_0
+        priority: 50
+      play_slide{current_player.pv_tokens_collected <= 5}:
+        priority: 5
+        slide: dynamo_collect_more_tokens_slide
+
 
 Usage in config files
 ---------------------

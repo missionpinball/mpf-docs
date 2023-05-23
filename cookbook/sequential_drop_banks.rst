@@ -103,6 +103,10 @@ on solid after a second advancement. By default, a shot will advance its profile
 when the shot is hit, but we don't want that here so we'll set
 ``advance_on_hit: false``.
 
+This profile uses three built-in shows, ``off``, ``flash``, and ``on``.  These 
+shows accept the ``show_tokens`` from our shots. In this case, it is the LED we wish 
+to control. You can create your own shows to change LED color, play sounds, etc.
+
 .. code-block:: mpf-config
 
   ##! mode: sequential_drops
@@ -220,16 +224,16 @@ corresponding reset events, as configured below.
       reset_coil: c_drop_1
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_1
     drop_2:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_2
+      reset_coil: c_drop_2
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_2
     drop_3:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_3
+      reset_coil: c_drop_3
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_3
     drop_4:
-      switch: s_drop_1
-      reset_coil: c_drop_1
+      switch: s_drop_4
+      reset_coil: c_drop_4
       reset_events: ball_starting, machine_reset_phase_3, reset_drop_4
 
 
