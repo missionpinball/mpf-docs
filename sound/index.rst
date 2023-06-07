@@ -3,7 +3,7 @@ Sounds, Music & Audio
 
 .. note::
 
-   Everything in this "Displays & Graphics" section is about default the MPF Media Controller
+   Everything in this "Displays & Graphics" section is about the default MPF Media Controller
 
 Since the release of MPF 0.30, audio and sound support has been provided by a custom
 audio library built on SDL2, SDL_Mixer, and GStreamer libraries.  This custom library allows the
