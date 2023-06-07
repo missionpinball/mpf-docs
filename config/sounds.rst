@@ -46,7 +46,6 @@ Here's an example:
     sounds:
       extra_ball:
         file: extra_ball_12753.wav
-        events_when_stopped: extra_ball_callout_finished
         streaming: false
         track: voice
         volume: 0.5
@@ -71,51 +70,11 @@ Optional settings
 
 The following sections are optional in the ``sounds:`` section of your config. (If you don't include them, the default will be used).
 
-about_to_finish_time:
-~~~~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
-
-The point relative to the end of the sound at which to post the ``events_when_about_to_finish`` event(s).
-A value of 0.5 seconds means to post the event(s) prior to the end of the sound. When set to ``None``, no events will be
-posted. If the value of this setting is greater than the duration of the sound, the event(s) will be posted as soon as
-the sound begins playback. This value is specified as a :doc:`time string </config/instructions/time_strings>`.
-
 ducking:
 ~~~~~~~~
 Single value, type: :doc:`sound_ducking <sound_ducking>`. Defaults to empty.
 
 The ``ducking:`` section controls :doc:`ducking </sound/ducking>` for the sound.
-
-events_when_about_to_finish:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events. Those will be posted by the device. Defaults to empty.
-
-A list of one or more names of events that MPF will post when this sound is about to finish playing.
-The exact timing of this event is determined by the ``about_to_finish_time`` setting for this sound.
-Enter the list in the MPF config list format. These events are posted exactly as they’re entered.
-
-events_when_looping:
-~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events. Those will be posted by the device. Defaults to empty.
-
-A list of one or more names of events that MPF will post when this sound loops back to the
-beginning while playing. Enter the list in the MPF config list format. These events are posted
-exactly as they’re entered.
-
-events_when_played:
-~~~~~~~~~~~~~~~~~~~
-List of one (or more) events. Those will be posted by the device. Defaults to empty.
-
-A list of one or more names of events that MPF will post when this sound is played. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.
-
-events_when_stopped:
-~~~~~~~~~~~~~~~~~~~~
-List of one (or more) events. Those will be posted by the device. Defaults to empty.
-
-A list of one or more names of events that MPF will post when this sound stops playing. Enter the list
-in the MPF config list format. These events are posted exactly as they’re entered.  These events can
-be useful to trigger some action when a callout has finished playing.
 
 fade_in:
 ~~~~~~~~
