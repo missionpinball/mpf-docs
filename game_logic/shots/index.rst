@@ -50,7 +50,7 @@ You can also configure different "states" for shots, e.g. "What state is that sh
 That can be things like lit, unlit, complete, flashing, etc. You can also configure
 shows for each state (the unlit state means the light is off, flashing means that
 the light is flashing, etc.), and you can configure different scoring based on
-whether state the shot is in (1,000 points if unlit, 5,000 if lit, etc.). All of this
+which state the shot is in (1,000 points if unlit, 5,000 if lit, etc.). All of this
 is completely configurable.
 
 You can also group multiple shots into "shot groups" and then do certain things
@@ -59,7 +59,7 @@ three standup targets configured as three separate shots that all start in the
 "unlit" state, but then once all three shots are advanced to the "complete" state,
 you could add 100,000 points and start another mode.
 
-Shots are also are integrated into MPF's modes system, so you
+Shots are also integrated into MPF's modes system, so you
 can configure a shot to do different things in different modes.
 
 For example, a ramp shot might do nothing more than score 1,000 points in your base
