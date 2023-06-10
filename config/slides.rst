@@ -139,7 +139,7 @@ Or you can use it to create a blank slide with options, but no widgets, like thi
        widgets: []
 
 Settings
---------
+-----------------
 
 The following sections provide additional options for your slide which you
 can use if you move the widgets into their own ``widgets:`` section. If you
@@ -154,13 +154,13 @@ The background color of the slide. Details on how to enter color values are :doc
 
 debug:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Set to true/yes if you want to add addition debug information about this slide to the log. (Note this requires a verbose log to see.)
 
 expire:
 ~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Sets an expiration time which will automatically remove this slide. If it's showing when it's removed, the next-highest priority
 active slide will be shown in its place.
@@ -181,12 +181,11 @@ Sets the overall opacity of the slide. A value of 1.0 is fully opaque. A value
 of .5 means the slide is 50% transparent, and a value of 0 means the slide will
 be invisible and you'll probably be confused about why it's not showing up.
 
-transition:
-~~~~~~~~~~~
+transition_out:
+~~~~~~~~~~~~~~~
+Unknown type. See description below.
 
-A sub-configuration of key/value pairs that make up the incoming transition
-that will be used when this slide is shown. See the :doc:`/displays/slides/transitions`
-documentation for details.
+.. todo:: :doc:`/about/help_us_to_write_it`
 
 Note that you can also configure a transition when the slide is shown (in either
 a show or via the slide_player), so you don't need to define a transition as
@@ -196,8 +195,7 @@ slide is shown.
 If you specify a transition in both places, the transition in the slide_player
 or show will take precedence.
 
-widgets:
-~~~~~~~~
+Related How To guides
+---------------------
 
-A sub-configuration of widgets that will be added to this slide when it's
-created. See the examples above for details and syntax options.
+.. todo:: :doc:`/about/help_us_to_write_it`

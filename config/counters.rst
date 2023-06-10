@@ -181,24 +181,6 @@ Single value, type: ``string``. Default: ``%``
 
 Name of this device in service mode.
 
-logic_block_timer:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
-
-This is an :doc:`MPF time value string </config/instructions/time_strings>`
-that will be used to require that all steps of the counter are completed
-in a specific amount of time.  If the counter is not completed in
-that amount of time, the counter will reset to its initial value,
-and the timer will restart at this point.
-
-This is intended to be used for basic integrations where you want to
-require all counts to be completed, or reset.  Or to see how many counts
-can be achieved in a given amount of time.  For more complex
-integrations, you will need to use other methods to control the
-counter.
-
-Default is ``0`` (which means there is no time limit).
-
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Defaults to empty.

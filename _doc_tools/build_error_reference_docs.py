@@ -193,7 +193,7 @@ if __name__ == '__main__':
     rst_path = '../events'
     dont_delete_files = []
 
-    a = EventDocParser(rst_path)
+    a = ErrorDocParser(rst_path)
 
     # delete existing files
     for path, _, files in os.walk(rst_path):

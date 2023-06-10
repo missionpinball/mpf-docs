@@ -29,8 +29,11 @@ This is an example:
 
 See :doc:`/config_players/slide_player` for details.
 
-Settings
---------
+.. config
+
+
+Optional settings
+-----------------
 
 The following sections are optional in the ``slide_player:`` section of your config. (If you don't include them, the default will be used).
 
@@ -78,9 +81,15 @@ You can also specify a transition for the removal, like this:
          action: remove
          transition: fade
 
+background_color:
+~~~~~~~~~~~~~~~~~
+Single value, type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Default: ``000000ff``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 expire:
 ~~~~~~~
-Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings) </config/instructions/time_strings>` . Default: ``None``
+Single value, type: ``time string (secs)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Defaults to empty.
 
 Specifies that this slide should automatically be removed after the time has passed.
 When it's removed, whichever slide is the next-highest priority will be shown.
@@ -116,7 +125,7 @@ If a ``transition_out:`` is specified, it will be applied when the slide expires
 
 force:
 ~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 Forces this slide to be shown, even if it's not the highest priority. Note that if you
 add or remove a slide and the priority list is recalculated, whichever slide is the
@@ -125,7 +134,7 @@ Really you should use priorities to control which slides are shown.
 
 priority:
 ~~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int_or_token. Defaults to empty.
 
 An adjustment to the priority of the slide that will be shown.
 
@@ -145,7 +154,7 @@ you adjust it)
 
 show:
 ~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``True``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``true``
 
 Specifies whether this slide should be shown. (It will only be shown if it's the highest
 priority slide for that display.) If you set ``show: false``, then the slide will be
@@ -157,14 +166,14 @@ Really you should use priorities to control which slides are shown.
 
 slide:
 ~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 You can specify the slide name here (instead of as key for the complete player).
 There are reasons to use this but you won't need it in most cases.
 
 target:
 ~~~~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Specifies the display target this slide will be shown on. If you do not specify a target,
 then the slide will be shown on the default display.
@@ -177,12 +186,15 @@ give it a name, and that name is added to the list of valid targets.
 So really the ``target:`` here is either the name of a display, or the name of a slide_frmae
 where you want this slide to be displayed.
 
+tokens:
+~~~~~~~
+One or more sub-entries. Each in the format of ``string`` : ``string``
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 transition:
 ~~~~~~~~~~~
-
-A sub-configuration of key/value pairs that make up the incoming transition
-that will be used when this slide is shown. See the :doc:`/displays/slides/transitions`
-documentation for details.
+Unknown type. See description below.
 
 Note that you can also configure a transition when the slide is defined
 in the :doc:`/config/slides` section of your config if you want to use the
@@ -192,13 +204,9 @@ define it here.
 If you specify a transition in both places, the transition in the slide_player
 or show will take precedence.
 
-
 transition_out:
 ~~~~~~~~~~~~~~~
-
-A sub-configuration of key/value pairs that make up the incoming transition
-that will be used when this slide is removed. See the :doc:`/displays/slides/transitions`
-documentation for details.
+Unknown type. See description below.
 
 Note that you can add a transition out to the slide player when a slide
 is shown, and it will be "attached" to the slide and used when that slide
@@ -237,3 +245,15 @@ Or you can specify a transition out when you remove the slide (with
 There can only be one transition between slides, so if an outgoing slide has
 a transition out set, and an incoming slide has a transition set, then the
 incoming transition will take precedence.
+
+widgets:
+~~~~~~~~
+Unknown type. See description below.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+
+Related How To guides
+---------------------
+
+.. todo:: :doc:`/about/help_us_to_write_it`

@@ -23,12 +23,11 @@ See :doc:`/displays/display/alpha_numeric` for details.
 Optional settings
 -----------------
 
-The following sections are optional in the ``segment_display_player:`` section of your config. (If you don't include
-them, the default will be used).
+The following sections are optional in the ``segment_display_player:`` section of your config. (If you don't include them, the default will be used).
 
 action:
 ~~~~~~~
-Single value, type: one of the following options: add, remove, flash, no_flash. Default: ``add``
+Single value, type: one of the following options: add, remove, flash, no_flash, flash_match, flash_mask, set_color. Default: ``add``
 
 * ``add`` - Add a text to the segment_display.
 * ``remove`` - Remove a text from the segment_display by key. If a ``transition_out:`` setting is used, then that
@@ -40,6 +39,14 @@ Single value, type: one of the following options: add, remove, flash, no_flash. 
   flash.
 * ``set_color`` - Set the color(s) of the characters in the segment display (for platforms that support it).
 
+color:
+~~~~~~
+List of one (or more) values, each is a type: ``color`` (*color name*, *hex*, or list of values *0*-*255*). Defaults to empty.
+
+The color for each character in the display (if the platform supports it). If a single color is supplied,
+all characters in the display will be set to that color. See :doc:`/config/instructions/colors` for more
+information on specifying colors in config files.
+
 expire:
 ~~~~~~~
 Single value, type: ms_or_token. Defaults to empty.
@@ -48,7 +55,7 @@ Only used with ``action`` ``add``. Text will be removed after ``expire`` ms.
 
 flash_mask:
 ~~~~~~~~~~~
-Single value, type: str. Defaults to empty.
+Single value, type: ``string``. Defaults to empty.
 
 Only used with the ``flash_mask`` action (or with ``add`` when the ``flashing`` parameter is set to ``mask``.
 Determines which characters of the segment display will be flashed. Each character of the flash mask string
@@ -88,26 +95,9 @@ Single value, type: ``string``. Defaults to empty.
 
 Text to show. You can use :doc:`/config/instructions/text_templates`.
 
-color:
-~~~~~~
-List of one (or more) color values, type: ``color``. Defaults to empty.
-
-The color for each character in the display (if the platform supports it). If a single color is supplied,
-all characters in the display will be set to that color. See :doc:`/config/instructions/colors` for more
-information on specifying colors in config files.
-
-platform_options:
-~~~~~~~~~~~~~~~~~
-Single value, type: dict. Defaults to empty.
-
-A dictionary of platform-specific options/settings when updating segment displays using the segment display
-player.
-
 transition:
 ~~~~~~~~~~~
-
-A sub-configuration of key/value pairs that make up the incoming text transition that will be used when this
-text entry is shown. See the :doc:`/hardware/segment_display_transitions` documentation for details.
+Unknown type. See description below.
 
 .. note::
    Be sure the ``segment_display`` ``size`` parameter has been properly set for the segment display or the
@@ -115,9 +105,7 @@ text entry is shown. See the :doc:`/hardware/segment_display_transitions` docume
 
 transition_out:
 ~~~~~~~~~~~~~~~
-
-A sub-configuration of key/value pairs that make up the incoming text transition that will be used when this
-text entry is removed. See the :doc:`/hardware/segment_display_transitions` documentation for details.
+Unknown type. See description below.
 
 .. code-block:: mpf-config
 

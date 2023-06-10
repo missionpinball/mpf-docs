@@ -27,14 +27,17 @@ When the event *some_other_event* is posted, the show called ``another_show`` wi
 
 See :doc:`/config_players/show_player` for details.
 
-Settings
---------
+.. config
 
-The following settings can be added under a show name. If you don't include them, the default will be used.
+
+Optional settings
+-----------------
+
+The following sections are optional in the ``show_player:`` section of your config. (If you don't include them, the default will be used).
 
 action:
 ~~~~~~~
-Single value of one of the following options: play, stop, pause, resume, advance, step_back, update. Default: ``play``
+Single value, type: one of the following options: play, stop, pause, resume, advance, step_back, update, queue. Default: ``play``
 
 ``play``
    Starts playing the show. This is the default action which will happen if you don't include an ``action:`` setting.
@@ -60,8 +63,7 @@ Single value of one of the following options: play, stop, pause, resume, advance
 
 block_queue:
 ~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
-
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 You can use ``block_queue: yes`` if you want the show to block a queue event until the show is
 done. Note that you can only use this if the event that starts the show is a
@@ -91,16 +93,94 @@ If you used this setting, make sure that you don't have
 ``loops: -1``, or a ``duration: -1`` as the final step of the show, since those will mean the show
 will never end, and then the queue event will never be unblocked, and your machine will hang.
 
+events_when_advanced:
+~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has been manually advanced to the
+next step.
+
+events_when_completed:
+~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has completed, meaning it ran
+through to the last step and ended naturally.
+
+Note that if a show loops, these events are *not* posted when the loop happens.
+(You can use the *events_when_looped* for that.) However if a show is set to
+loop a specific number of times and then ends, these events will be posted at
+the end.
+
+Note that if you want an event to post whenever the show stops, even if it
+didn't make it all the way to the end, you can use *events_when_stopped*.
+
+events_when_looped:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has looped (meaning it reached the
+end and is jumping back to the first step).
+
+events_when_paused:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has been paused.
+
+events_when_played:
+~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show is played (started).
+
+events_when_resumed:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show is resumed from a pause.
+
+events_when_stepped_back:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has been manually stepped back to
+the previous step.
+
+events_when_stopped:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has been stopped. Note that these
+events are posted anytime the show has been stopped, regardless of whether it
+made it to the end and stopped on its own, or whether it was stopped randomly
+where it was.
+
+events_when_updated:
+~~~~~~~~~~~~~~~~~~~~
+List of one (or more) events. Those will be posted by the device. Defaults to empty.
+
+Event(s) that will be posted when this show has been updated. Note that the
+show "update" function has not been implemented yet, so this setting is more
+of a placeholder at the moment.
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   show_config: <show_config>
+
 key:
 ~~~~
-Single value, type: ``string``. Default: ``None``
+Single value, type: ``string``. Defaults to empty.
 
 Used to set a unique identifier you can set when playing a show which can then be used later
 to identify a show you want to perform an action on.
 
 loops:
 ~~~~~~
-Single value, type: ``integer``. Default: ``-1``
+Single value, type: int_or_token. Default: ``-1``
 
 Controls the looping / repeating of the show. The default if you don't include this setting is
 ``loops: -1`` means that the show will repeat indefinitely until it's stopped.
@@ -115,7 +195,7 @@ Note that if a show only has one step, *loops* will be set to 0, regardless of t
 
 manual_advance:
 ~~~~~~~~~~~~~~~
-Single value, type: ``boolean`` (Yes/No or True/False). Default: ``False``
+Single value, type: ``boolean`` (``true``/``false``). Default: ``false``
 
 If you set this to yes/true, then the show will not auto-advance based on time. Instead you will
 have to manually advance the show step-by-step with additional show_player entries with
@@ -143,7 +223,7 @@ next step.
 
 priority:
 ~~~~~~~~~
-Single value, type: ``integer``. Default: ``0``
+Single value, type: int_or_token. Default: ``0``
 
 Adjusts the priority of the show that's played.
 
@@ -154,9 +234,21 @@ show will run at priority 310. Priorities can also be negative.
 
 The show's priority affects the priority of everything it does. Sounds, slides, LEDs, etc.
 
+show:
+~~~~~
+Single value, type: ``string``. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
+show_queue:
+~~~~~~~~~~~
+Single value, type: string name of a :doc:`show_queues <show_queues>` device. Defaults to empty.
+
+.. todo:: :doc:`/about/help_us_to_write_it`
+
 show_tokens:
 ~~~~~~~~~~~~
-One or more sub-entries, each in the format of type: ``str``:``str``. Default: ``None``
+One or more sub-entries. Each in the format of ``string`` : template_str
 
 Allows you to specify show token values that will be used to replace the show tokens in the show
 when it's played.
@@ -178,7 +270,7 @@ show will be replaced at runtime with the value "right_inlane".
 
 speed:
 ~~~~~~
-Single value, type: ``number`` (will be converted to floating point). Default: ``1``
+Single value, type: float_or_token. Default: ``1``
 
 Controls the playback speed of the show. The default value of 1 means the show plays back at 1x
 speed. (In other words, it plays at the actual speed each step is configured for. In this case
@@ -189,7 +281,7 @@ speed, use ``speed: .5``. Etc.
 
 start_running:
 ~~~~~~~~~~~~~~
-Single value, type: ``boolean``. Default: ``True``
+Single value, type: ``boolean`` or ``template`` (``true/false``; :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``True``
 
 Whether the show starts running immediately when it is played.
 
@@ -199,7 +291,7 @@ and immediately pause. You can begin playing the show by calling show_player wit
 
 start_step:
 ~~~~~~~~~~~
-Single value, type: ``integer``. Default: ``1``
+Single value, type: ``integer`` or ``template`` (:doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``1``
 
 Which step the show starts on when it's played.
 
@@ -208,120 +300,15 @@ for this setting.
 
 sync_ms:
 ~~~~~~~~
-Single value, type: ``integer``. Default: ``None``
+Single value, type: int_or_token. Defaults to empty.
 
 Sets the sync_ms value of this show which will delay the start to a certain millisecond multiple
 to ensure that multiple shows started at different times all play in sync with each other.
 
 See the :doc:`/shows/sync_ms` documentation for details.
 
-Events posted by shows
-----------------------
 
-You can configure shows to post certain events when things happen. These are
-useful (for example), to eject a ball when a show ends.
+Related How To guides
+---------------------
 
-events_when_advanced:
-~~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has been manually advanced to the
-next step.
-
-events_when_completed:
-~~~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has completed, meaning it ran
-through to the last step and ended naturally.
-
-Note that if a show loops, these events are *not* posted when the loop happens.
-(You can use the *events_when_looped* for that.) However if a show is set to
-loop a specific number of times and then ends, these events will be posted at
-the end.
-
-Note that if you want an event to post whenever the show stops, even if it
-didn't make it all the way to the end, you can use *events_when_stopped*.
-
-events_when_looped:
-~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has looped (meaning it reached the
-end and is jumping back to the first step).
-
-events_when_paused:
-~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has been paused.
-
-events_when_played:
-~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show is played (started).
-
-events_when_resumed:
-~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show is resumed from a pause.
-
-events_when_stepped_back:
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has been manually stepped back to
-the previous step.
-
-events_when_stopped:
-~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has been stopped. Note that these
-events are posted anytime the show has been stopped, regardless of whether it
-made it to the end and stopped on its own, or whether it was stopped randomly
-where it was.
-
-events_when_updated:
-~~~~~~~~~~~~~~~~~~~~
-
-
-:doc:`List </config/instructions/lists>` of one (or more) names of events.
-Default: ``None``.
-
-Event(s) that will be posted when this show has been updated. Note that the
-show "update" function has not been implemented yet, so this setting is more
-of a placeholder at the moment.
-
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   show_config: <show_config>
+.. todo:: :doc:`/about/help_us_to_write_it`

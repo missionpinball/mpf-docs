@@ -138,23 +138,6 @@ Single value, type: ``string``. Default: ``%``
 
 Name of this device in service mode.
 
-logic_block_timer:
-~~~~~~~~~~~~~~~~~~
-Single value, type: ``time string (ms)`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>`). Default: ``0``
-
-This is an :doc:`MPF time value string </config/instructions/time_strings>`
-that will be used to require that all steps of the sequence are completed
-in a specific amount of time.  If the steps are not all completed in
-that amount of time, the sequence will reset to its initial state,
-and the timer will restart at this point.
-
-This is intended to be used for basic integrations where you want to
-require all steps to be completed, or reset.  For more complex
-integrations, you will need to use other methods to control the
-sequence.
-
-Default is ``0`` (which means there is no time limit).
-
 tags:
 ~~~~~
 List of one (or more) values, each is a type: ``string``. Defaults to empty.

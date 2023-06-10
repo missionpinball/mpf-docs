@@ -120,7 +120,7 @@ The time before the add-a-ball ball save ends (in MPF time string format)
 that will cause the multiball_<name>_hurry_up event to be posted. Use this
 to change the script for the light or trigger other effect.
 
-add_a_ball_shoot_again: 
+add_a_ball_shoot_again:
 ~~~~~~~~~~~~~~~~~~~~~~~
 Single value, type: ``time string (ms) or template`` (:doc:`Instructions for entering time strings </config/instructions/time_strings>` and :doc:`Instructions for entering templates </config/instructions/dynamic_values>`). Default: ``5s``
 

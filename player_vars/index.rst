@@ -7,13 +7,13 @@ Here's a list of all the different "built in"
 You can use these in your config files to trigger game logic or to display as
 text on your display.
 
-Note that you can also create your own player variables in your configs, and
-most likely your machine will have several orders of magnitude more player
-variables than this list here.
-
 Video about player and machine variables:
 
 .. youtube:: PUxEsNUGXPY
+
+Note that you can also create your own player variables in your configs, and
+most likely your machine will have several orders of magnitude more player
+variables than this list here.
 
 That said, here's a list of the "built in" player variables and how they work:
 
@@ -32,6 +32,7 @@ config_section: counters, accruals, sequences>
    random_(x).(y) <random_x.y>
    restart_modes_on_next_ball <restart_modes_on_next_ball>
    score <score>
+
 Related Events
 --------------
 
