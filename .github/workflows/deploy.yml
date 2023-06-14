@@ -1,0 +1,32 @@
+name: Build & deploy mpf-docs to missionpinball.org
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate project showcase pages from .yaml files
+        run: python build_tools/generate_project_pages.py
+
+      - name: Build and deploy
+        uses: afritzler/mkdocs-gh-pages-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_DOMAIN: missionpinball.org
