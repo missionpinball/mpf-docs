@@ -1,3 +1,5 @@
+-------------------------------------------------------------------
+
 !!! question "Something missing or wrong? You can fix it!"
 
     This website is edited by people like you!
