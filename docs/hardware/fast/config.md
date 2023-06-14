@@ -99,7 +99,7 @@ On Mac or Linux, it's easiest to find the port numbers via the terminal
 window (or console window). To do that, open a new window and run the
 following command:
 
-    ls /dev/tty.*
+    ls /dev/tty*
 
 This will list all the devices whose names begin with "tty".
 

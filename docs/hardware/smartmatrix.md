@@ -211,7 +211,7 @@ On Windows, you can just open Device Manager and see which port appears
 when you plug in the Teensy.
 
 On Mac or Linux, open up the terminal window and type the following
-command: `ls /dev/tty.*` The output of this command will look something
+command: `ls /dev/tty*` The output of this command will look something
 like this on Mac:
 
     /dev/tty.Bluetooth-Incoming-Port
