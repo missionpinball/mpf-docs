@@ -25,35 +25,53 @@ homebrew and commercial pinball machines.
     lost as you can easily move everything to a new hardware platform
     with a few changed lines in your config file.
 
-## Compatible control systems / electronics
+## Compatible pinball controllers
 
-MPF currently interfaces with the following pinball control systems &
+MPF supports the following pinball control systems &
 electronics (which in turn control the physical pinball machine
 hardware):
 
-  * Multimorphic P-ROC & P3-ROC pinball controllers, with either PD-8x8,
-    PD-16, PD-LED, and SW-16 driver and accessory boards or installation
-    in existing WPC, Stern Whitestar, or Stern SAM machines.
-  * FAST Pinball Core, Nano & WPC controllers, with 3802, 1616, and 0804
-    I/O boards, FAST servo boards, or installation in existing WPC
-    machines.
-  * Open Pinball Project (OPP) open source controllers with Gen2 driver
-    boards.
-  * Stern SPIKE / SPIKE 2 pinball machines.
-  * LISY controllers for Gottlieb System 1 and System 80 machines.
-  * Mark Sunnucks's "Snux" System 11 driver board for use in System
-    11 and Data East machines, in concert with either a P-ROC or FAST
-    WPC controller.
-  * Fadecandy RGB LED controllers.
-  * Open Pixel Control (OPC) LED and lighting controllers.
-  * I2C servo controllers.
-  * Pololu Maestro servo controllers.
-  * SmartMatrix RGB LED DMD controllers.
-  * RGB.DMD RGB LED-based DMD controllers.
-  * MyPinballs segment display controllers.
-  * Trinamics Steprocker stepper motor controllers.
+* FAST Pinball Modern & Retro controllers
+* Open Pinball Project (OPP) open source hardware controllers
+* CobraPin (Pre-built based on OPP)
+* Multimorphic P-ROC & P3-ROC pinball controllers
+* Stern SPIKE / SPIKE 2 pinball machines
+* LISY controllers (Gottlieb System 1 and System 80)
+* Arduino Pinball Controller (APC)
+* Penny K PKONE pinball controller
 
-See the [Control Systems / Electronics](../hardware/index.md) documentation for full details.
+See the [pinball controllers](..hardware/pinball_controllers.md) page for details.
+
+## Compatible pinball accessories
+
+MPF also supports the following pinball accessory and mod
+electronics:
+
+* Snux System 11 driver board
+* SmartMatrix RGB LED DMD controllers
+* RGB.DMD RGB LED-based DMD controllers
+* PIN2DMD
+* Raspberry Pi DMD
+* MyPinballs segment display controllers
+
+## Compatible hobby electronics boards
+
+In addition to control systems designed specifically for pinball machines,
+MPF also supports several "hobby" style electronics which people often use
+in homebrew machines, including:
+
+* Fadecandy RGB LED controllers
+* Open Pixel Control (OPC) LED and lighting controllers
+* I2C servo controllers
+* Pololu Maestro servo controllers
+* Pololu Tic stepper controllers
+* StepStick stepper controllers
+* Other native I2C devices
+* MMA8451-based accelerometers
+* OSC, DMX, and MIDI devices
+* Trinamics Steprocker stepper motor controllers
+
+See the [Hobbyist Electronics](../hardware/hobbyist.md) documentation for full details.
 
 ## Pinball mechanism support
 
@@ -155,8 +173,7 @@ documentation for full details.
   * Any property of any widget can be animated (opacity, size, position,
     etc.)
 
-See the [Displays](../mc/index.md)
-documentation for full details.
+See the [Displays](../mc/displays/types.md) documentation for full details.
 
 ## Sounds & Audio
 
@@ -194,6 +211,8 @@ documentation for full details.
     including audits, earnings, machine variables, high scores, etc.
   * Power supply management (map drivers to power supplies to make sure
     not too many things fire at once)
+
+See the [machine management](../machine_management/index.md) documentation for details.
 
 ## Tools
 
@@ -258,4 +277,4 @@ you don't want to be a "coder," you don't have to be. (Though if you
 are a coder, we'd love to have you help us write MPF!
 
 By the way, if you'd like to see what we have in store for the future,
-check out our [/versions/roadmap).
+check out our [road map](/versions/roadmap.md).

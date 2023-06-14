@@ -4,6 +4,13 @@ title: Snux System 11 Driver Board
 
 # Snux System 11 Driver Board
 
+!!! note "This board is most likely not available"
+
+    This section about the "Snux" System 11 driverboard probably no longer applies, as that
+    board was only released as a hobby kit in the early 2010s and does not appear to be
+    available anymore. (Or is it? [Update this page if you know more](../about/help.md).)
+
+    [Other solutions for controlling System 11 machines exist](../machines/system11.md) though.
 
 Related Config File Sections:
 

@@ -155,17 +155,17 @@ nav:
     - Homebrew / New Machine: machines/homebrew.md
     - Existing / Re-theme:
       - machines/index.md
-      - Bally/Stern Machines with AS-2518-17 or AS-2518-35 MPU: machines/bally_stern_as_2518.md
-      - Controlling Gottlieb System 80 Machines: machines/gottlieb_system80.md
-      - Controlling Pinball 2000 Machines: machines/pinball2000.md
-      - Controlling Stern SPIKE/SPIKE 2 Machines: machines/spike.md
-      - Controlling Williams System 3 to 9 Machines: machines/williams_system3_to_9.md
-      - Controlling Stern SAM Machines: machines/sam.md
-      - Controlling Data East Machines: machines/data_east.md
-      - How to use MPF with WPC machines: machines/wpc.md
-      - Controlling Stern Whitestar Machines: machines/whitestar.md
-      - Controlling Williams, Bally System 11 Machines: machines/system11.md
-      - Controlling Gottlieb System 1 Machines: machines/gottlieb_system1.md
+      - Bally/Williams WPC: machines/wpc.md
+      - Bally/Williams System 11: machines/system11.md
+      - Stern SPIKE/SPIKE 2: machines/spike.md
+      - Bally/Williams Pinball 2000: machines/pinball2000.md
+      - Williams System 3 to 9: machines/williams_system3_to_9.md
+      - Gottlieb System 80: machines/gottlieb_system80.md
+      - Gottlieb System 1: machines/gottlieb_system1.md
+      - Stern SAM: machines/sam.md
+      - Stern Whitestar Machines: machines/whitestar.md
+      - Data East: machines/data_east.md
+      - Bally/Stern w/ AS-2518-17/35 MPU: machines/bally_stern_as_2518.md
   - Pinball Controllers:
     - hardware/pinball_controllers.md
     - FAST Pinball:
