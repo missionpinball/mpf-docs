@@ -1,5 +1,5 @@
 ---
-title: extra_ball_groups:
+title: "extra_ball_groups:"
 ---
 
 # extra_ball_groups:

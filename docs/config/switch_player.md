@@ -1,5 +1,5 @@
 ---
-title: switch_player:
+title: "switch_player:"
 ---
 
 # switch_player:

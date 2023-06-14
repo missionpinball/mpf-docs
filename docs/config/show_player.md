@@ -1,5 +1,5 @@
 ---
-title: show_player:
+title: "show_player:"
 ---
 
 # show_player:

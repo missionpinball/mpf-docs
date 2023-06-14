@@ -1,5 +1,5 @@
 ---
-title: show_pools:
+title: "show_pools:"
 ---
 
 # show_pools:

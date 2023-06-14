@@ -1,5 +1,5 @@
 ---
-title: fast_coils:
+title: "fast_coils:"
 ---
 
 # fast_coils:

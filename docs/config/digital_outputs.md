@@ -1,5 +1,5 @@
 ---
-title: digital_outputs:
+title: "digital_outputs:"
 ---
 
 # digital_outputs:

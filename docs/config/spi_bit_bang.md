@@ -1,5 +1,5 @@
 ---
-title: spi_bit_bang:
+title: "spi_bit_bang:"
 ---
 
 # spi_bit_bang:

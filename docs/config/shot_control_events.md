@@ -1,5 +1,5 @@
 ---
-title: shot_control_events:
+title: "shot_control_events:"
 ---
 
 # shot_control_events:

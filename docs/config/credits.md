@@ -1,5 +1,5 @@
 ---
-title: credits:
+title: "credits:"
 ---
 
 # credits:

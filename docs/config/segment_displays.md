@@ -1,5 +1,5 @@
 ---
-title: segment_displays:
+title: "segment_displays:"
 ---
 
 # segment_displays:

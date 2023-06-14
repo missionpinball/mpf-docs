@@ -1,5 +1,5 @@
 ---
-title: counter_control_events:
+title: "counter_control_events:"
 ---
 
 # counter_control_events:

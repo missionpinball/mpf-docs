@@ -1,5 +1,5 @@
 ---
-title: state_machine_transitions:
+title: "state_machine_transitions:"
 ---
 
 # state_machine_transitions:

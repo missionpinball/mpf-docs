@@ -1,5 +1,5 @@
 ---
-title: sound_loop_player:
+title: "sound_loop_player:"
 ---
 
 # sound_loop_player:

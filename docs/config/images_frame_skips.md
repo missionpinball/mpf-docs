@@ -1,5 +1,5 @@
 ---
-title: images_frame_skips:
+title: "images_frame_skips:"
 ---
 
 # images_frame_skips:

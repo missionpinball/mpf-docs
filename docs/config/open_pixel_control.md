@@ -1,5 +1,5 @@
 ---
-title: open_pixel_control:
+title: "open_pixel_control:"
 ---
 
 # open_pixel_control:

@@ -1,5 +1,5 @@
 ---
-title: ball_devices:
+title: "ball_devices:"
 ---
 
 # ball_devices:

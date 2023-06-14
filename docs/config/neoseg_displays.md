@@ -1,5 +1,5 @@
 ---
-title: neoseg_displays:
+title: "neoseg_displays:"
 ---
 
 # neoseg_displays:

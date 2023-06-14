@@ -1,5 +1,5 @@
 ---
-title: show_config:
+title: "show_config:"
 ---
 
 # show_config:

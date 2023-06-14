@@ -1,5 +1,5 @@
 ---
-title: pin2dmd:
+title: "pin2dmd:"
 ---
 
 # pin2dmd:

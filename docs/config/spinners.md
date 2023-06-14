@@ -1,5 +1,5 @@
 ---
-title: spinners:
+title: "spinners:"
 ---
 
 # spinners:

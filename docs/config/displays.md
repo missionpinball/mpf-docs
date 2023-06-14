@@ -1,5 +1,5 @@
 ---
-title: displays:
+title: "displays:"
 ---
 
 # displays:

@@ -1,5 +1,5 @@
 ---
-title: blinkenlights:
+title: "blinkenlights:"
 ---
 
 # blinkenlights:

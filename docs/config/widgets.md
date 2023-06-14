@@ -1,5 +1,5 @@
 ---
-title: widgets:
+title: "widgets:"
 ---
 
 # widgets:

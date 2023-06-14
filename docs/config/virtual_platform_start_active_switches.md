@@ -1,5 +1,5 @@
 ---
-title: virtual_platform_start_active_switches:
+title: "virtual_platform_start_active_switches:"
 ---
 
 # virtual_platform_start_active_switches:

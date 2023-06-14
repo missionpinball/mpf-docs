@@ -1,5 +1,5 @@
 ---
-title: pololu_tic:
+title: "pololu_tic:"
 ---
 
 # pololu_tic:

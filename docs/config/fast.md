@@ -1,5 +1,5 @@
 ---
-title: fast:
+title: "fast:"
 ---
 
 # fast:

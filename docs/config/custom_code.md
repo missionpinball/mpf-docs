@@ -1,5 +1,5 @@
 ---
-title: custom_code:
+title: "custom_code:"
 ---
 
 # custom_code:

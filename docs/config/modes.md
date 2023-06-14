@@ -1,5 +1,5 @@
 ---
-title: modes:
+title: "modes:"
 ---
 
 # modes:

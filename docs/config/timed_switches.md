@@ -1,5 +1,5 @@
 ---
-title: timed_switches:
+title: "timed_switches:"
 ---
 
 # timed_switches:

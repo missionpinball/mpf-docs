@@ -1,5 +1,5 @@
 ---
-title: machine_vars:
+title: "machine_vars:"
 ---
 
 # machine_vars:

@@ -1,5 +1,5 @@
 ---
-title: trinamics_steprocker:
+title: "trinamics_steprocker:"
 ---
 
 # trinamics_steprocker:

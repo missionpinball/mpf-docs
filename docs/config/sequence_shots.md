@@ -1,5 +1,5 @@
 ---
-title: sequence_shots:
+title: "sequence_shots:"
 ---
 
 # sequence_shots:

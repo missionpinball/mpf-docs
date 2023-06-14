@@ -1,5 +1,5 @@
 ---
-title: color_correction_profile:
+title: "color_correction_profile:"
 ---
 
 # color_correction_profile:

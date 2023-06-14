@@ -1,5 +1,5 @@
 ---
-title: fast_switches:
+title: "fast_switches:"
 ---
 
 # fast_switches:

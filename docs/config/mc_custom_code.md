@@ -1,5 +1,5 @@
 ---
-title: mc_custom_code:
+title: "mc_custom_code:"
 ---
 
 # mc_custom_code:

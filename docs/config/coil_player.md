@@ -1,5 +1,5 @@
 ---
-title: coil_player:
+title: "coil_player:"
 ---
 
 # coil_player:

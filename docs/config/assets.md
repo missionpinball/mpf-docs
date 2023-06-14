@@ -1,5 +1,5 @@
 ---
-title: assets:
+title: "assets:"
 ---
 
 # assets:

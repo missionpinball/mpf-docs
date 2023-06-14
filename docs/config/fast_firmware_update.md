@@ -1,5 +1,5 @@
 ---
-title: fast_firmware_update:
+title: "fast_firmware_update:"
 ---
 
 # fast_firmware_update:

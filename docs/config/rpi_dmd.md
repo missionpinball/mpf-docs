@@ -1,5 +1,5 @@
 ---
-title: rpi_dmd:
+title: "rpi_dmd:"
 ---
 
 # rpi_dmd:

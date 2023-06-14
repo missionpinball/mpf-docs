@@ -1,5 +1,5 @@
 ---
-title: event_player:
+title: "event_player:"
 ---
 
 # event_player:

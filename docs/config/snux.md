@@ -1,5 +1,5 @@
 ---
-title: snux:
+title: "snux:"
 ---
 
 # snux:

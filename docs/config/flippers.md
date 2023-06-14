@@ -1,5 +1,5 @@
 ---
-title: flippers:
+title: "flippers:"
 ---
 
 # flippers:

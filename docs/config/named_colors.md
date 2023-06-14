@@ -1,5 +1,5 @@
 ---
-title: named_colors:
+title: "named_colors:"
 ---
 
 # named_colors:

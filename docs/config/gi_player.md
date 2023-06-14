@@ -1,5 +1,5 @@
 ---
-title: gi_player:
+title: "gi_player:"
 ---
 
 # gi_player:

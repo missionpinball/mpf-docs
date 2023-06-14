@@ -1,5 +1,5 @@
 ---
-title: machine:
+title: "machine:"
 ---
 
 # machine:

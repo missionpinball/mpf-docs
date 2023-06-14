@@ -1,5 +1,5 @@
 ---
-title: ball_routings:
+title: "ball_routings:"
 ---
 
 # ball_routings:

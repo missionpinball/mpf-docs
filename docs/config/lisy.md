@@ -1,5 +1,5 @@
 ---
-title: lisy:
+title: "lisy:"
 ---
 
 # lisy:

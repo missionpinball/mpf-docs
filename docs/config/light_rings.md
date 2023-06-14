@@ -1,5 +1,5 @@
 ---
-title: light_rings:
+title: "light_rings:"
 ---
 
 # light_rings:

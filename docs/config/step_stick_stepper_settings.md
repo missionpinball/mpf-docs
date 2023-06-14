@@ -1,5 +1,5 @@
 ---
-title: step_stick_stepper_settings:
+title: "step_stick_stepper_settings:"
 ---
 
 # step_stick_stepper_settings:

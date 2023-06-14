@@ -1,5 +1,5 @@
 ---
-title: scriptlets:
+title: "scriptlets:"
 ---
 
 # scriptlets:

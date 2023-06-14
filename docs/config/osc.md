@@ -1,5 +1,5 @@
 ---
-title: osc:
+title: "osc:"
 ---
 
 # osc:

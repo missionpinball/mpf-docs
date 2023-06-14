@@ -1,5 +1,5 @@
 ---
-title: state_machines:
+title: "state_machines:"
 ---
 
 # state_machines:

@@ -1,5 +1,5 @@
 ---
-title: fadecandy:
+title: "fadecandy:"
 ---
 
 # fadecandy:

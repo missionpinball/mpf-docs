@@ -1,5 +1,5 @@
 ---
-title: virtual_segment_display_connector:
+title: "virtual_segment_display_connector:"
 ---
 
 # virtual_segment_display_connector:

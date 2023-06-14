@@ -1,5 +1,5 @@
 ---
-title: smartmatrix:
+title: "smartmatrix:"
 ---
 
 # smartmatrix:

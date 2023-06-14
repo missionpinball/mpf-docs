@@ -1,5 +1,5 @@
 ---
-title: config:
+title: "config:"
 ---
 
 # config:

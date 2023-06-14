@@ -1,5 +1,5 @@
 ---
-title: light_stripes:
+title: "light_stripes:"
 ---
 
 # light_stripes:

@@ -1,5 +1,5 @@
 ---
-title: smart_virtual:
+title: "smart_virtual:"
 ---
 
 # smart_virtual:

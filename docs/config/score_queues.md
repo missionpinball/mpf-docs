@@ -1,5 +1,5 @@
 ---
-title: score_queues:
+title: "score_queues:"
 ---
 
 # score_queues:

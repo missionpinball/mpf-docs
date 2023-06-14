@@ -1,5 +1,5 @@
 ---
-title: kivy_config:
+title: "kivy_config:"
 ---
 
 # kivy_config:

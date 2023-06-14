@@ -1,5 +1,5 @@
 ---
-title: sequences:
+title: "sequences:"
 ---
 
 # sequences:

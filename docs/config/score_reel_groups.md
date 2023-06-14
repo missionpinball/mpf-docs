@@ -1,5 +1,5 @@
 ---
-title: score_reel_groups:
+title: "score_reel_groups:"
 ---
 
 # score_reel_groups:

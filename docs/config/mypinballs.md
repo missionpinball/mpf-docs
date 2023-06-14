@@ -1,5 +1,5 @@
 ---
-title: mypinballs:
+title: "mypinballs:"
 ---
 
 # mypinballs:

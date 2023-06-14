@@ -1,5 +1,5 @@
 ---
-title: hardware_benchmark:
+title: "hardware_benchmark:"
 ---
 
 # hardware_benchmark:

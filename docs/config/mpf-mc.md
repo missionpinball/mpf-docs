@@ -1,5 +1,5 @@
 ---
-title: mpf-mc:
+title: "mpf-mc:"
 ---
 
 # mpf-mc:

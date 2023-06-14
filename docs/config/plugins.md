@@ -1,5 +1,5 @@
 ---
-title: plugins:
+title: "plugins:"
 ---
 
 # plugins:

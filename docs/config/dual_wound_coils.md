@@ -1,5 +1,5 @@
 ---
-title: dual_wound_coils:
+title: "dual_wound_coils:"
 ---
 
 # dual_wound_coils:

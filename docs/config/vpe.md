@@ -1,5 +1,5 @@
 ---
-title: vpe:
+title: "vpe:"
 ---
 
 # vpe:

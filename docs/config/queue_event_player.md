@@ -1,5 +1,5 @@
 ---
-title: queue_event_player:
+title: "queue_event_player:"
 ---
 
 # queue_event_player:

@@ -1,5 +1,5 @@
 ---
-title: sound_loop_sets:
+title: "sound_loop_sets:"
 ---
 
 # sound_loop_sets:

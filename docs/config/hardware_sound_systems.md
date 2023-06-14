@@ -1,5 +1,5 @@
 ---
-title: hardware_sound_systems:
+title: "hardware_sound_systems:"
 ---
 
 # hardware_sound_systems:

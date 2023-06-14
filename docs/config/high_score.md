@@ -1,5 +1,5 @@
 ---
-title: high_score:
+title: "high_score:"
 ---
 
 # high_score:

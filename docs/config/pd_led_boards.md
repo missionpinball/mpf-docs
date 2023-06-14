@@ -1,5 +1,5 @@
 ---
-title: pd_led_boards:
+title: "pd_led_boards:"
 ---
 
 # pd_led_boards:

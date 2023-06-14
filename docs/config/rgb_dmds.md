@@ -1,5 +1,5 @@
 ---
-title: rgb_dmds:
+title: "rgb_dmds:"
 ---
 
 # rgb_dmds:

@@ -1,5 +1,5 @@
 ---
-title: lights:
+title: "lights:"
 ---
 
 # lights:

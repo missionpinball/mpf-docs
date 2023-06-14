@@ -1,5 +1,5 @@
 ---
-title: hardware_sound_player:
+title: "hardware_sound_player:"
 ---
 
 # hardware_sound_player:

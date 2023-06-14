@@ -1,5 +1,5 @@
 ---
-title: shots:
+title: "shots:"
 ---
 
 # shots:

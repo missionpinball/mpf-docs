@@ -1,5 +1,5 @@
 ---
-title: animations:
+title: "animations:"
 ---
 
 # animations:

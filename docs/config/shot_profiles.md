@@ -1,5 +1,5 @@
 ---
-title: shot_profiles:
+title: "shot_profiles:"
 ---
 
 # shot_profiles:

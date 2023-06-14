@@ -1,5 +1,5 @@
 ---
-title: logic_blocks:
+title: "logic_blocks:"
 ---
 
 # logic_blocks:

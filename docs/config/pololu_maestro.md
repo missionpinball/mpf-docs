@@ -1,5 +1,5 @@
 ---
-title: pololu_maestro:
+title: "pololu_maestro:"
 ---
 
 # pololu_maestro:

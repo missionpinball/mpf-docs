@@ -1,5 +1,5 @@
 ---
-title: text_strings:
+title: "text_strings:"
 ---
 
 # text_strings:

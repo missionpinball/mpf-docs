@@ -1,5 +1,5 @@
 ---
-title: light_player:
+title: "light_player:"
 ---
 
 # light_player:

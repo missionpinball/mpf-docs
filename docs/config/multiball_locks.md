@@ -1,5 +1,5 @@
 ---
-title: multiball_locks:
+title: "multiball_locks:"
 ---
 
 # multiball_locks:

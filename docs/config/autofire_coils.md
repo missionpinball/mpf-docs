@@ -1,5 +1,5 @@
 ---
-title: autofire_coils:
+title: "autofire_coils:"
 ---
 
 # autofire_coils:

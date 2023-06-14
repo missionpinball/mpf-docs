@@ -1,5 +1,5 @@
 ---
-title: blinkenlight_player:
+title: "blinkenlight_player:"
 ---
 
 # blinkenlight_player:

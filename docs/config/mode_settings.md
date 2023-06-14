@@ -1,5 +1,5 @@
 ---
-title: mode_settings:
+title: "mode_settings:"
 ---
 
 # mode_settings:

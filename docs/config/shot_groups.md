@@ -1,5 +1,5 @@
 ---
-title: shot_groups:
+title: "shot_groups:"
 ---
 
 # shot_groups:

@@ -1,5 +1,5 @@
 ---
-title: sound_player:
+title: "sound_player:"
 ---
 
 # sound_player:

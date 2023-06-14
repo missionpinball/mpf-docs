@@ -1,5 +1,5 @@
 ---
-title: light_segment_displays:
+title: "light_segment_displays:"
 ---
 
 # light_segment_displays:

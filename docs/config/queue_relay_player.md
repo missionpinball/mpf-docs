@@ -1,5 +1,5 @@
 ---
-title: queue_relay_player:
+title: "queue_relay_player:"
 ---
 
 # queue_relay_player:

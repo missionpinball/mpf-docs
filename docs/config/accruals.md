@@ -1,5 +1,5 @@
 ---
-title: accruals:
+title: "accruals:"
 ---
 
 # accruals:

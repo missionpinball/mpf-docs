@@ -1,5 +1,5 @@
 ---
-title: drop_targets:
+title: "drop_targets:"
 ---
 
 # drop_targets:

@@ -1,5 +1,5 @@
 ---
-title: sound_system_tracks:
+title: "sound_system_tracks:"
 ---
 
 # sound_system_tracks:

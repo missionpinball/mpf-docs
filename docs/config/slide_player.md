@@ -1,5 +1,5 @@
 ---
-title: slide_player:
+title: "slide_player:"
 ---
 
 # slide_player:

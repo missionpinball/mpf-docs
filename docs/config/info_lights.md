@@ -1,5 +1,5 @@
 ---
-title: info_lights:
+title: "info_lights:"
 ---
 
 # info_lights:

@@ -1,5 +1,5 @@
 ---
-title: twitch_client:
+title: "twitch_client:"
 ---
 
 # twitch_client:

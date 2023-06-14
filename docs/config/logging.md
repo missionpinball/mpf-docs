@@ -1,5 +1,5 @@
 ---
-title: logging:
+title: "logging:"
 ---
 
 # logging:

@@ -1,5 +1,5 @@
 ---
-title: sound_ducking:
+title: "sound_ducking:"
 ---
 
 # sound_ducking:

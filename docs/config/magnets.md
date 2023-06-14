@@ -1,5 +1,5 @@
 ---
-title: magnets:
+title: "magnets:"
 ---
 
 # magnets:

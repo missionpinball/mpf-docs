@@ -1,5 +1,5 @@
 ---
-title: light_settings:
+title: "light_settings:"
 ---
 
 # light_settings:

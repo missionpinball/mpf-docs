@@ -1,5 +1,5 @@
 ---
-title: sound_marker:
+title: "sound_marker:"
 ---
 
 # sound_marker:

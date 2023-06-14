@@ -1,5 +1,5 @@
 ---
-title: playlist_player:
+title: "playlist_player:"
 ---
 
 # playlist_player:

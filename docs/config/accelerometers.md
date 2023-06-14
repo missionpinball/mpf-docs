@@ -1,5 +1,5 @@
 ---
-title: accelerometers:
+title: "accelerometers:"
 ---
 
 # accelerometers:

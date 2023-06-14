@@ -1,5 +1,5 @@
 ---
-title: videos:
+title: "videos:"
 ---
 
 # videos:

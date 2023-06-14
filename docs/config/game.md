@@ -1,5 +1,5 @@
 ---
-title: game:
+title: "game:"
 ---
 
 # game:

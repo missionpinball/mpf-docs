@@ -1,5 +1,5 @@
 ---
-title: display_light_player:
+title: "display_light_player:"
 ---
 
 # display_light_player:

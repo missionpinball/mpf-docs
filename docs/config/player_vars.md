@@ -1,5 +1,5 @@
 ---
-title: player_vars:
+title: "player_vars:"
 ---
 
 # player_vars:

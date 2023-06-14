@@ -1,5 +1,5 @@
 ---
-title: mc_scriptlets:
+title: "mc_scriptlets:"
 ---
 
 # mc_scriptlets:

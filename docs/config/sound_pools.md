@@ -1,5 +1,5 @@
 ---
-title: sound_pools:
+title: "sound_pools:"
 ---
 
 # sound_pools:

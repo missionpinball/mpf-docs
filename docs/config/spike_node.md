@@ -1,5 +1,5 @@
 ---
-title: spike_node:
+title: "spike_node:"
 ---
 
 # spike_node:

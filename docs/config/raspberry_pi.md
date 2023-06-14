@@ -1,5 +1,5 @@
 ---
-title: raspberry_pi:
+title: "raspberry_pi:"
 ---
 
 # raspberry_pi:

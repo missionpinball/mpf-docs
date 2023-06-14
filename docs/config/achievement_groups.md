@@ -1,5 +1,5 @@
 ---
-title: achievement_groups:
+title: "achievement_groups:"
 ---
 
 # achievement_groups:

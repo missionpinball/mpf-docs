@@ -1,5 +1,5 @@
 ---
-title: slides:
+title: "slides:"
 ---
 
 # slides:

@@ -1,5 +1,5 @@
 ---
-title: settings:
+title: "settings:"
 ---
 
 # settings:

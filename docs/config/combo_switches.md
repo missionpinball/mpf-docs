@@ -1,5 +1,5 @@
 ---
-title: combo_switches:
+title: "combo_switches:"
 ---
 
 # combo_switches:

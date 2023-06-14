@@ -1,5 +1,5 @@
 ---
-title: bonus (mode_settings:)
+title: "bonus (mode_settings:)"
 ---
 
 # bonus (mode_settings:)

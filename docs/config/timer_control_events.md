@@ -1,5 +1,5 @@
 ---
-title: timer_control_events:
+title: "timer_control_events:"
 ---
 
 # timer_control_events:

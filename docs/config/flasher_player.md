@@ -1,5 +1,5 @@
 ---
-title: flasher_player:
+title: "flasher_player:"
 ---
 
 # flasher_player:

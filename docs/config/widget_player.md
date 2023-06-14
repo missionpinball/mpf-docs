@@ -1,5 +1,5 @@
 ---
-title: widget_player:
+title: "widget_player:"
 ---
 
 # widget_player:
