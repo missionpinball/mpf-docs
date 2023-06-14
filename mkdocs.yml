@@ -14,7 +14,7 @@ extra_css:
 
 markdown_extensions:
   - toc:                    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
-      title: One this page
+      title: On this page
   - attr_list               # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
   - tables                  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/s#tables
   - admonition              # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
