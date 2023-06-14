@@ -17,7 +17,7 @@ what visual effect is used to transition from the current slide to the
 new slide. (Transitions are things like cross-fade, move in, push out,
 etc.)
 
-![image](/displays/images/how_slides_work.png)
+![image](/mc/images/how_slides_work.png)
 
 ## Slide Priorities
 
@@ -58,7 +58,7 @@ priorities of the slides in the stack and the priority of the current
 slide on one display has nothing to do with the active and current
 slides of another display.
 
-![image](/displays/images/slides_with_multiple_displays.png)
+![image](/mc/images/slides_with_multiple_displays.png)
 
 * [Creating Slides](creating_slides.md)
 * [Showing Slides](showing_slides.md)

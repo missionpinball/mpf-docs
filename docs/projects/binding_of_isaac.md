@@ -31,11 +31,8 @@ title: The Binding of Isaac, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: None
 
-**Gameplay Link**: None
 
 **Controller**: FAST
 

@@ -33,9 +33,8 @@ title: Apollo 11 Landing on the Moon, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/apollo-11-landing-on-the-moon)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

@@ -8,7 +8,7 @@ title: Text Widget
 The text widget is used to show text on a
 [slide](../../slides/index.md).
 
-![image](/displays/images/text_widget1.jpg)
+![image](/mc/images/text_widget1.jpg)
 
 In addition to being able to specify static text, text widgets also
 include powerful functionality:
@@ -234,7 +234,7 @@ other baseline options detailed in the
 ## Examples
 
 The example config files section of the documentation contains
-[examples of text widgets](/examples/text).
+[examples of text widgets](../examples/index.md).
 
 [text_dynamic](text_dynamic.md)
 [text_strings](text_strings.md)

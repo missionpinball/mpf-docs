@@ -33,9 +33,8 @@ title: Haunted House Remake, built with MPF
 
 **Documentation Link**: [Here](hhttps://pinside.com/pinball/forum/topic/let-s-p-roc-this-haunted-house-my-magnum-opus-has-begun)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

@@ -31,11 +31,10 @@ title: Mindcrime, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/flamtime/mindcrime-pinball
+**Code Link**: [Here](https://github.com/flamtime/mindcrime-pinball)
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

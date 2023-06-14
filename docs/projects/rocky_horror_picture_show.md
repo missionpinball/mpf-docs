@@ -33,9 +33,8 @@ title: Rocky Horror Picture Show, built with MPF
 
 **Documentation Link**: [Here](https://www.flippermarkt.de/community/forum/threads/mein-custom-flipper-eigenbau-projekt-vorstellung-und-zwischenbilanz.226164/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P-ROC
 

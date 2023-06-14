@@ -7,11 +7,11 @@ title: Lane Mode
 
 Related Config File Sections:
 
-* [mode:](../../config/mode.md)
-* [shots:](../../config/shots.md)
-* [shot_groups:](../../config/shot_groups.md)
-* [variable_player:](../../config/variable_player.md)
-* [show_player:](../../config/show_player.md)
+* [mode:](../config/mode.md)
+* [shots:](../config/shots.md)
+* [shot_groups:](../config/shot_groups.md)
+* [variable_player:](../config/variable_player.md)
+* [show_player:](../config/show_player.md)
 
 In this How To guide, we're going to look at how you can set up a
 series of lanes with lights (or standup targets) which you can rotate
@@ -214,7 +214,7 @@ shot_groups:
 
 You can specify whatever event name(s) you want for your rotation
 events. By default, MPF will post
-[(switch_name)_active](../../events/switch_active.md) when every switch in the game activates. So in our case, our
+[(switch_name)_active](../events/switch_active.md) when every switch in the game activates. So in our case, our
 flipper buttons from the machine-wide switches: section are named
 `left_flipper` and `right_flipper`. If you named your switch
 `s_lower_left_flipper_button`, then your event name would be
@@ -353,7 +353,7 @@ is that every time a shot changes state, the shot group it belongs to
 checks the state of all the shots in the group. If they are all the
 same, then it posts a "complete" event which we can use to assign
 scores, trigger effects, and reset the group. The format of that event
-is [(name)_(state)_complete](../../events/shot_group_state_complete.md). In
+is [(name)_(state)_complete](../events/shot_group_state_complete.md). In
 our case, our shot group name is `indy_lanes`, and the state of the
 shots that we're interested in is called *lit*. Also notice that
 instead of adding `indy_lanes_lit_complete` to the same line as
@@ -453,7 +453,7 @@ Again, these event names might seem crazy, but they're all very logical
 if you break them down. The shot group will post events any time one of
 its member shots is hit. This is similar to the *complete* event from
 the previous step, except the
-[hit event](../../events/shot_group_state_hit.md)
+[hit event](../events/shot_group_state_hit.md)
 ends in `_hit` and is posted with every hit to any shot versus the
 *_complete* event which is only posted when all the shots in the group
 have made it to the same state. Remember that since we haven't assigned

@@ -31,11 +31,10 @@ title: Doctor Who Redux, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/travisbmartin/doctorwho
+**Code Link**: [Here](https://github.com/travisbmartin/doctorwho)
 
-**Gameplay Link**: None
+
 
 **Controller**: P-ROC
 

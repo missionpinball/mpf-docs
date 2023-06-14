@@ -33,9 +33,8 @@ title: Yucatan, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/my-first-homebrew-pinball-trip-to-yucatan)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

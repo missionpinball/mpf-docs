@@ -28,7 +28,7 @@ Example uses of timers might include:
 * Etc.
 
 The example config files section of the documentation contains
-[examples of timers in modes](/examples/timer).
+[examples of timers in modes](../examples/index.md).
 
 ## Displaying the value of a timer on a slide
 

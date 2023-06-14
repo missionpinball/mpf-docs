@@ -57,7 +57,7 @@ slide_player:
 
 And the result:
 
-![image](/displays/images/slide_frame.png)
+![image](/mc/images/slide_frame.png)
 
 ## Settings
 

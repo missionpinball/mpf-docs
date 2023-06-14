@@ -33,9 +33,8 @@ title: Who Finds a Friend, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/who-finds-a-friend-40th-anniversary-edition)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

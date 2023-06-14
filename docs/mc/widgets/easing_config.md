@@ -9,7 +9,7 @@ the complete MPF machine config for them.
 First, here's the GIF where we set the easing for the x (horizontal
 position) property and move them left and right:
 
-![image](/displays/images/easing.gif)
+![image](/mc/images/easing.gif)
 
 !!! note
 
@@ -120,7 +120,7 @@ slide_player:
 
 And here's the example where we animate the opacity:
 
-![image](/displays/images/easing_opacity.gif)
+![image](/mc/images/easing_opacity.gif)
 
 ``` mpf-mc-config
 # config_version=5

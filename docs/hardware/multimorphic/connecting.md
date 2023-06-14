@@ -17,7 +17,7 @@ If you got a P-Roc just connect it to your computer using USB.
 ![image](/hardware/images/multimorphic_p_roc.png)
 
 Then connect switches and driver according to the manual (see
-[leds](../existing_machines/index.md) for
+[leds](../../machines/index.md) for
 specific machines). If you are using a PD-Master board see below for
 switches and drivers.
 

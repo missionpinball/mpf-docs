@@ -33,9 +33,8 @@ title: Hyperdrive, built with MPF
 
 **Documentation Link**: [Here](https://www.aussiearcade.com/forum/pinball/pinball-restoration-s/homebrew-pinball-projects/99290-homebrew-tna-inspired-build-first-time-build)
 
-**Code Link**: None
 
-**Gameplay Link**: 
+
 
 **Controller**: FAST
 

@@ -5,14 +5,14 @@ title: How to Drain All Balls on the Playfield and Serve One Back
 
 Related Config File Sections:
 
-* [mode:](../../config/mode.md)
-* [ball_saves:](../../config/ball_saves.md)
-* [autofire_coils:](../../config/autofire_coils.md)
-* [event_player:](../../config/event_player.md)
-* [show_player:](../../config/show_player.md)
-* [shows:](../../config/shows.md)
-* [queue_event_player:](../../config/queue_event_player.md)
-* [queue_relay_player:](../../config/queue_relay_player.md)
+* [mode:](../config/mode.md)
+* [ball_saves:](../config/ball_saves.md)
+* [autofire_coils:](../config/autofire_coils.md)
+* [event_player:](../config/event_player.md)
+* [show_player:](../config/show_player.md)
+* [shows:](../config/shows.md)
+* [queue_event_player:](../config/queue_event_player.md)
+* [queue_relay_player:](../config/queue_relay_player.md)
 
 You might want to a have a mode that does not end the current ball when
 a timer expires, a jackpot is collected, or some other event happens.

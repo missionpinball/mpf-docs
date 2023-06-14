@@ -33,9 +33,8 @@ title: Gravity Falls, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/gravity-falls)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: 
 

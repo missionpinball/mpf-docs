@@ -17,7 +17,7 @@ version of MPF.
 
 A full list of all the available commands, along with the various
 command line options, is
-[here](commands/index.md).
+[here](index.md).
 
 ## Command line options
 
@@ -34,5 +34,5 @@ MPF v0.xx.yy
 
 Runs the MPF command (with or without additional options).
 
-See the [commands/index](commands) documentation for
+See the [commands/index](commands/index.md) documentation for
 options.

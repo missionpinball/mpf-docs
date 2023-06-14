@@ -60,7 +60,7 @@ p_roc:
 
 Note that if you're using a P-ROC with an existing machine, then your
 driver boards will be either wpc, stern, etc. See the documentation on
-[configuring MPF for use in existing machines](../existing_machines/index.md) for details.
+[configuring MPF for use in existing machines](../../machines/index.md) for details.
 
 ## 3. Configure your watch dog timeout
 

@@ -31,11 +31,10 @@ title: Powerman 5000, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/travisbmartin/powerman
+**Code Link**: [Here](https://github.com/travisbmartin/powerman)
 
-**Gameplay Link**: None
+
 
 **Controller**: OPP
 

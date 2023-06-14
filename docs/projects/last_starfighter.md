@@ -33,9 +33,8 @@ title: The Last Starfighter, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/southern-california-homebrew-anyone-interested/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

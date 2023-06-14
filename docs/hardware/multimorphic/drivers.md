@@ -16,7 +16,7 @@ you can follow the guides and instructions in the
 
 (If you're using a P-ROC with an existing machine's driver board, like
 a WPC machine, then see the
-[existing machine documentation](../existing_machines/index.md).) If you are using the P-Roc with PDB drivers you can use
+[existing machine documentation](../../machines/index.md).) If you are using the P-Roc with PDB drivers you can use
 the local drivers as number 0 to 31.
 
 --8<-- "common_ground_warning.md"

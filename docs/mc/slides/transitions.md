@@ -21,14 +21,14 @@ action.
 
 ## none
 
-![image](/displays/images/no_transition.gif)
+![image](/mc/images/no_transition.gif)
 
 Setting a transition type of `none` means that no transition will be
 used, and the incoming slide instantly replaces the current slide.
 
 ## push
 
-![image](/displays/images/push_transitions.gif)
+![image](/mc/images/push_transitions.gif)
 
 The push transition means that the incoming slide "pushes" the
 outgoing slide out of the way. (e.g. the outgoing slide moves out while
@@ -44,7 +44,7 @@ Options for the push transition:
 
 ## move_in
 
-![image](/displays/images/move_in_transitions.gif)
+![image](/mc/images/move_in_transitions.gif)
 
 The move in transition means that the incoming slide moves in on top of
 the outgoing slide. The outgoing slide is not animated.
@@ -63,7 +63,7 @@ Not working yet.
 
 ## wipe
 
-![image](/displays/images/wipe_transition.gif)
+![image](/mc/images/wipe_transition.gif)
 
 The wipe transition means that the display is wiped from the outgoing
 slide to the incoming one. Neither slide is animated.
@@ -75,7 +75,7 @@ Options for the wipe transition:
 
 ## swap
 
-![image](/displays/images/swap_transition.gif)
+![image](/mc/images/swap_transition.gif)
 
 The swap transition similates an app screen swap like on a mobile
 device. The outgoing slide moves out of the way and the incoming slide
@@ -88,7 +88,7 @@ Options for the swap transition:
 
 ## fade
 
-![image](/displays/images/fade_transition.gif)
+![image](/mc/images/fade_transition.gif)
 
 The fade transition is a classic crossfade from the outgoing slide to
 the incoming one.
@@ -100,7 +100,7 @@ Options for the fade transition:
 
 ## fade_back
 
-![image](/displays/images/fade_back_transition.gif)
+![image](/mc/images/fade_back_transition.gif)
 
 The fade_back transition causes the outgoing slide to shrink and fade
 away, revealing the incoming slide.
@@ -112,7 +112,7 @@ Options for the fade_back transition:
 
 ## rise_in
 
-![image](/displays/images/rise_in_transition.gif)
+![image](/mc/images/rise_in_transition.gif)
 
 The rise in transition causes the incoming slide to fade in and rise up
 from the center of the display. It's essentially the opposite of the

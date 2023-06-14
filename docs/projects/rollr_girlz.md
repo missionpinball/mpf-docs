@@ -33,9 +33,8 @@ title: RollrGirlz, built with MPF
 
 **Documentation Link**: [Here](https://www.facebook.com/RollrGirlz/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

@@ -33,9 +33,8 @@ title: Taxi Rewrite, built with MPF
 
 **Documentation Link**: [Here](http://fastpintaxi.blogspot.com/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

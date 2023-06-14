@@ -33,9 +33,10 @@ title: Dave's Angels, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/dave-s-angels)
 
-**Code Link**: https://github.com/Topedal/Charlies-Angels
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/Topedal/Charlies-Angels)
+
+
 
 **Controller**: OPP
 

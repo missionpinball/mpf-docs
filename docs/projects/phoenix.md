@@ -33,9 +33,10 @@ title: Phoenix, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/phoenix-is-rising-with-a-cobrapin-pinball-controller/)
 
-**Code Link**: https://github.com/legtod2/mpf-phoenix-table
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/legtod2/mpf-phoenix-table)
+
+
 
 **Controller**: Cobrapin
 

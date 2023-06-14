@@ -7,19 +7,19 @@ title: Mystery Awards
 
 Related Config File Sections:
 
-* [ball_holds:](../../config/ball_holds.md)
-* [event_player:](../../config/event_player.md)
-* [random_event_player:](../../config/random_event_player.md)
-* [slide_player:](../../config/slide_player.md)
-* [slides:](../../config/slides.md)
+* [ball_holds:](../config/ball_holds.md)
+* [event_player:](../config/event_player.md)
+* [random_event_player:](../config/random_event_player.md)
+* [slide_player:](../config/slide_player.md)
+* [slides:](../config/slides.md)
 
 Mystery awards provide a random award from a list of options while
 holding the ball.
 
 ## Holding the Ball
 
-Any [ball_device](../../mechs/ball_devices/index.md) can be used to hold a ball while the mystery award display
-runs with [ball_holds](../../game_logic/ball_holds.md).
+Any [ball_device](../mechs/ball_devices/index.md) can be used to hold a ball while the mystery award display
+runs with [ball_holds](../game_logic/ball_holds.md).
 
 Here is an example of how to use a scoop to hold a ball during a mystery
 award animation:
@@ -65,7 +65,7 @@ a ball.
 ### Providing Random Awards
 
 Once mystery has been lit and the ball enters the device, you can use
-[random_event_player](../../config_players/random_event_player.md) to control which awards are chosen.
+[random_event_player](../config_players/random_event_player.md) to control which awards are chosen.
 
 In the below example, there are four possible awards and the game will
 make sure each one is provided to avoid doubling-up.
@@ -202,6 +202,6 @@ slides:
 
 ## More examples
 
-See [How to design a game in MPF using Modes](../index.md) and
-[Other Game Modes](../other_modes.md) in particular
+See [How to design a game in MPF using Modes](../game_design/index.md) and
+[Other Game Modes](../game_design/other_modes.md) in particular
 for more examples.

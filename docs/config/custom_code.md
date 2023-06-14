@@ -14,7 +14,7 @@ title: custom_code:
 
 The `custom_code:` section of your config is a list where you register
 your custom code classes. You can find an example here:
-[/examples/custom_code/index](/examples/custom_code).
+[/examples/custom_code/index](../examples/index.md).
 
 ## Related How To guides
 

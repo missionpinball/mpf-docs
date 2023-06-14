@@ -74,5 +74,5 @@ event are done processing it. This setting is optional.
 
 ## Related How To guides
 
-* [How to Drain All Balls on the Playfield and Serve One Back](../game_design/game_modes/fake_ball_save.md)
+* [How to Drain All Balls on the Playfield and Serve One Back](../cookbook/fake_ball_save.md)
 * [Queue Event player](../config_players/queue_event_player.md)

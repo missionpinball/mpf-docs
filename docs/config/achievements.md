@@ -85,7 +85,7 @@ achievements:
 More examples:
 
 * [Recipe: The Addams Family Mansion Awards](../cookbook/TAF_mansion_awards.md)
-* [/game_logic/achievements/index](/examples/achievement)
+* [/game_logic/achievements/index](../examples/index.md)
 
 ## Shows
 

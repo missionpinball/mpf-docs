@@ -33,9 +33,10 @@ title: NOBS, built with MPF
 
 **Documentation Link**: [Here](http://nobs-pinball.blogspot.com/)
 
-**Code Link**: https://github.com/borgdog/Nobs
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/borgdog/Nobs)
+
+
 
 **Controller**: OPP
 

@@ -33,9 +33,10 @@ title: Mass Effect, built with MPF
 
 **Documentation Link**: [Here](https://masseffectpinball.com)
 
-**Code Link**: https://github.com/avanwinkle/masseffect2
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/avanwinkle/masseffect2)
+
+
 
 **Controller**: FAST
 

@@ -33,9 +33,8 @@ title: ESCAPE!, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/escape-a-new-pinball-project)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P-ROC
 

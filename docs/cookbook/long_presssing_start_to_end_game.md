@@ -7,7 +7,7 @@ title: Ending the Current Game by Long-pressing Start
 
 Related Config File Sections:
 
-* [timed_switches:](../../config/timed_switches.md)
+* [timed_switches:](../config/timed_switches.md)
 
 The following snippet will end a running game by long-pressing the start
 button:

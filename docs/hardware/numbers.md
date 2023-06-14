@@ -38,14 +38,14 @@ documentation, but here are the links all in one place to make it easy.
 * [P-ROC / P3-ROC (PD-LED)](multimorphic/leds.md)
 * [Open Pinball Project (OPP)](opp/leds.md)
 * [Stern SPIKE](spike/leds.md)
-* [FadeCandy](fadecandy)
+* [FadeCandy](fadecandy/index.md)
 
 ## Lamp Matrix-based lights
 
-* [FAST Pinball (WPC Machine)](existing_machines/wpc.md)
+* [FAST Pinball (WPC Machine)](../machines/wpc.md)
 * [P-ROC / P3-ROC (PD-8x8)](multimorphic/lights.md)
-* [P-ROC (WPC Machine)](existing_machines/wpc.md)
-* [P-ROC (Stern SAM / Whitestar)](existing_machines/whitestar.md)
+* [P-ROC (WPC Machine)](../machines/wpc.md)
+* [P-ROC (Stern SAM / Whitestar)](../machines/whitestar.md)
 * [Open Pinball Project (OPP)](opp/lights.md)
 * [Snux (System 11)](snux.md)
 

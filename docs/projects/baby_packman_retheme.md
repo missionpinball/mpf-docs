@@ -33,9 +33,8 @@ title: Baby Pacman Re-Theme, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/baby-pac-man-re-theme-questions)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

@@ -33,9 +33,8 @@ title: Nitro Ground Shaker Mod, built with MPF
 
 **Documentation Link**: [Here](http://diypinball.ca/machines/nitro-ground-shaker/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: DIY Pinball CAN MPF Platform
 

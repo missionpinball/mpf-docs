@@ -33,9 +33,8 @@ title: Dead Flip Pin, built with MPF
 
 **Documentation Link**: [Here](https://www.twitch.tv/deadflip/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

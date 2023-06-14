@@ -33,9 +33,10 @@ title: Zelda, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/legend-of-zelda-a-link-to-the-past)
 
-**Code Link**: https://github.com/wildertronix/zelda
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/wildertronix/zelda)
+
+
 
 **Controller**: FAST
 

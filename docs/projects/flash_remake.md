@@ -33,9 +33,8 @@ title: Flash Remake, built with MPF
 
 **Documentation Link**: [Here](https://www.flippertreff.de/start/forum/topic/11522-flash-wiederbelebung/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: APC
 

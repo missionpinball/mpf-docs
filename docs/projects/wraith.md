@@ -31,11 +31,8 @@ title: Wraith, built with MPF
 
 **YouTube Video IDs**: Qezv5beKBqM
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: None
 
-**Gameplay Link**: None
 
 **Controller**: P3-ROC
 

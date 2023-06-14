@@ -33,9 +33,8 @@ title: Judas Priest (Metal Gods), built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/time-to-lift-the-curtain-or-another-music-related-pin-really)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: OPP
 

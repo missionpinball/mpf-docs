@@ -33,9 +33,8 @@ title: Steampunk Royale, built with MPF
 
 **Documentation Link**: [Here](https://www.facebook.com/SteamPunkRoyale/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

@@ -111,4 +111,4 @@ between balls.
 ## Related How To guides
 
 * [Random event player](../config_players/random_event_player.md)
-* [Mystery Awards](../game_design/game_modes/mystery_award.md)
+* [Mystery Awards](../cookbook/mystery_award.md)

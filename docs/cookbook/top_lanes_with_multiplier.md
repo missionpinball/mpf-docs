@@ -7,11 +7,11 @@ title: Implement a Mode for Top Lanes with Multiplier and Scoring
 
 Related Config File Sections:
 
-* [mode:](../../config/mode.md)
-* [shots:](../../config/shots.md)
-* [shot_groups:](../../config/shot_groups.md)
-* [variable_player:](../../config/variable_player.md)
-* [show_player:](../../config/show_player.md)
+* [mode:](../config/mode.md)
+* [shots:](../config/shots.md)
+* [shot_groups:](../config/shot_groups.md)
+* [variable_player:](../config/variable_player.md)
+* [show_player:](../config/show_player.md)
 
 This example shows how to make a classic rule used in many games. By
 making the three top lanes light (J, A, and M), the playfield multiplier

@@ -61,7 +61,7 @@ For
 
 ## Related How To guides
 
-* [Using ball_holds for a mystery award](../game_design/game_modes/mystery_award.md)
+* [Using ball_holds for a mystery award](../cookbook/mystery_award.md)
 
 ## Related Events
 

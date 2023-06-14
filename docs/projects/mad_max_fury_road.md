@@ -33,9 +33,8 @@ title: Mad Max Fury Road Homebrew, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/witness-mad-max-fury-road-homebrew)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

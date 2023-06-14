@@ -33,9 +33,8 @@ title: Deep Blue Rage, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/new-homebrew-pinball-deep-blue-rage)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

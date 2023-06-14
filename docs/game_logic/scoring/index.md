@@ -232,5 +232,5 @@ Related How To Guides
 
 * [ss_style_score_queues](../high_scores/index.md)
 * [ss_style_score_queues](../logic_blocks/scoring_based_on_logic_blocks.md)
-* [ss_style_score_queues](../../game_design/game_modes/top_lanes_with_multiplier.md)
+* [ss_style_score_queues](../../cookbook/top_lanes_with_multiplier.md)
 * [How to implement solid state game style score queues in MPF](ss_style_score_queues.md)-----

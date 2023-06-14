@@ -30,12 +30,15 @@ title: {{ name }}, built with MPF
 **Project type**: {{ project_type }}
 
 **YouTube Video IDs**: {{ youtube_video_ids }}
-
+{% if documentation_link %}
 **Documentation Link**: [Here]({{ documentation_link }})
-
-**Code Link**: {{ code_link }}
-
-**Gameplay Link**: {{ gameplay_link }}
+{% endif %}
+{% if code_link %}
+**Code Link**: [Here]({{ code_link }})
+{% endif %}
+{% if gameplay_link %}
+**Gameplay Link**: [Here]({{ gameplay_link }})
+{% endif %}
 
 **Controller**: {{ controller }}
 

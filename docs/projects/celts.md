@@ -31,11 +31,8 @@ title: Celts, built with MPF
 
 **YouTube Video IDs**: trq7AGllWwQ
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: None
 
-**Gameplay Link**: None
 
 **Controller**: P3-ROC
 

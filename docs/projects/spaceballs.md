@@ -33,9 +33,8 @@ title: Spaceballs - The Pin, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/spaceballs-the-pin/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

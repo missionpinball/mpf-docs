@@ -7,9 +7,9 @@ title: Lighting Multiple Timed Shots at the Same Time
 
 Related Config File Sections:
 
-* [timed_switches:](../../config/timed_switches.md)
-* [timers:](../../config/timers.md)
-* [event_player:](../../config/event_player.md)
+* [timed_switches:](../config/timed_switches.md)
+* [timers:](../config/timers.md)
+* [event_player:](../config/event_player.md)
 
 In this mode you can active shots for 3s by hitting a target. We assume
 that those shots post `timerx_start`. The mode succeeds when all three

@@ -33,9 +33,8 @@ title: The Crazy Mansion, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/the-crazy-mansion-by-the-pinball-amigos)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

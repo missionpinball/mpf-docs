@@ -33,9 +33,8 @@ title: AF Tor Mod, built with MPF
 
 **Documentation Link**: [Here](http://diypinball.ca/machines/af-tor/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: DIY Pinball CAN MPF Platform
 

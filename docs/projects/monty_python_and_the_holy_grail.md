@@ -33,9 +33,8 @@ title: Monty Python and The Holy Grail, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/monty-python-amp-the-holy-grail-retheme-of-demolition-man-)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P-ROC
 

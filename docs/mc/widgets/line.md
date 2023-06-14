@@ -39,7 +39,7 @@ slide_player:
 
 And the results:
 
-![image](/displays/images/line.png)
+![image](/mc/images/line.png)
 
 ## Settings
 
@@ -128,4 +128,4 @@ If `True`, the line will be closed.
 ## Examples
 
 The example config files section of the documentation contains
-[examples of line widgets](/examples/shapes).
+[examples of line widgets](../examples/index.md).

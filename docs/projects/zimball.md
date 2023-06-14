@@ -33,9 +33,10 @@ title: Zimball, built with MPF
 
 **Documentation Link**: [Here](https://invaderz.im/)
 
-**Code Link**: https://github.com/homechicken/pinball
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/homechicken/pinball)
+
+
 
 **Controller**: FAST
 

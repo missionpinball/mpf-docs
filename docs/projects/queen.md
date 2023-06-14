@@ -33,9 +33,8 @@ title: Queen Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/flash-retheme-project/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P-ROC
 

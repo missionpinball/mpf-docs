@@ -31,11 +31,8 @@ title: Cthulhu - Attack on Arkham, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: None
 
-**Gameplay Link**: None
 
 **Controller**: P3-ROC
 

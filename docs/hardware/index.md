@@ -241,13 +241,4 @@ Requirements](computer)
 Switches](spi_bit_bang)
 * [Open Sound Control (OSC)](osc.md)
 * [Virtual Hardware](virtual)
-* [Existing Machines](existing_machines)
 * [Voltages and Power](voltages_and_power)
-
-## Browse Platforms by Capabilities
-
-* [i2c_platforms servo_platforms stepper_platforms
-segment_display_platforms dmd_platforms](i2c_platforms servo_platforms stepper_platforms
-segment_display_platforms dmd_platforms)
-
-* [Segment Display Transitions](segment_display_transitions.md)

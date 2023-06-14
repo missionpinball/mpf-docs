@@ -33,9 +33,8 @@ title: Archer, built with MPF
 
 **Documentation Link**: [Here](https://groups.google.com/forum/#!topic/mpf-users/KkpU_xke5rI)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

@@ -33,9 +33,10 @@ title: Ding et Dong, built with MPF
 
 **Documentation Link**: [Here](https://ibb.co/album/hYZHVb)
 
-**Code Link**: None
 
-**Gameplay Link**: https://youtu.be/Gj1PXnAK3mM
+
+**Gameplay Link**: [Here](https://youtu.be/Gj1PXnAK3mM)
+
 
 **Controller**: Cobrapin
 

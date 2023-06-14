@@ -10,7 +10,7 @@ that blank canvas, like text, images, shapes, videos, etc. Here's an
 example of a slide (on the window display) showing how it's made up of
 different types of widgets.
 
-![image](/displays/images/widget_examples.jpg)
+![image](/mc/images/widget_examples.jpg)
 
 Widgets have properties like size and position, and some widgets include
 additional properties depending on what type of widget they are. (Text

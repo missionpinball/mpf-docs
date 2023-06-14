@@ -33,9 +33,8 @@ title: Holopin, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/holopin-projection-mapped-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

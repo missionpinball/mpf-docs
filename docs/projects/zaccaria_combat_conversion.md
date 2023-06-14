@@ -33,9 +33,10 @@ title: Zaccaria Combat Conversion, built with MPF
 
 **Documentation Link**: [Here](https://steemit.com/creativity/@unrared/we-rebuilt-my-friends-rusted-moldy-70-s-em-pinball-machine-and-we-wrote-the-logic-in-python-part-2-2)
 
-**Code Link**: https://github.com/pinballplaid/combat
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/pinballplaid/combat)
+
+
 
 **Controller**: FAST
 

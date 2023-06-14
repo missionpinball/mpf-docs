@@ -21,12 +21,12 @@ like these better than LCD-based displays because they're brighter and
 more vibrant, and the blacks are actually black since the LEDs are off
 versus LCD displays which have blacks are are actually dark gray.
 
-![image](../images/display_rgb_dmd.jpg)
+![image](/mc/images/display_rgb_dmd.jpg)
 
 We will also show you how to create an on-screen popup window which will
 show the contents of the DMD, like this (with a blank DMD):
 
-![image](../images/on_screen_basic_dmd_window.png)
+![image](/mc/images/on_screen_basic_dmd_window.png)
 
 If you want to use a physical RGB DMD without the on-screen equivalent,
 we'll show you how to do that at the end of this guide.

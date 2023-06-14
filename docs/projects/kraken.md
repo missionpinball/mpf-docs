@@ -33,9 +33,8 @@ title: Karken, built with MPF
 
 **Documentation Link**: [Here](https://www.aussiearcade.com/forum/pinball/pinball-restoration-s/homebrew-pinball-projects/105318-kraken-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

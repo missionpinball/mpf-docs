@@ -33,9 +33,12 @@ title: Metroid, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/metroid-pinball)
 
-**Code Link**: https://github.com/mwseiden/metroid_pinball
 
-**Gameplay Link**: https://twitch.tv/thearrrrrcade
+**Code Link**: [Here](https://github.com/mwseiden/metroid_pinball)
+
+
+**Gameplay Link**: [Here](https://twitch.tv/thearrrrrcade)
+
 
 **Controller**: FAST
 

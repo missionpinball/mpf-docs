@@ -33,9 +33,8 @@ title: Proto1, built with MPF
 
 **Documentation Link**: [Here](https://www.instagram.com/AppliedCine/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

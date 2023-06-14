@@ -100,5 +100,5 @@ Log level for the file log for this platform.
 
 ## Related How To guides
 
-[WPC Platform](../hardware/existing_machines/wpc.md) to connect to the
+[WPC Platform](../machines/wpc.md) to connect to the
 [SNUX board](../hardware/snux.md).

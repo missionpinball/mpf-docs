@@ -27,7 +27,7 @@ slide_player:
 
 The example above results in the following:
 
-![image](/displays/images/triangle.png)
+![image](/mc/images/triangle.png)
 
 ## Settings
 

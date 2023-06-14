@@ -13,8 +13,7 @@ Contributions to the guide (and the rest of the documentation are
 
 ## Control System
 
-If you are "just" retheming a machine have a look at the
-[/hardware/voltages_and_power/wiring_and_connectors](existing.md) section. If you want to use MPF
+If you want to use MPF
 to power a new *custom* pinball machine that you build yourself, you
 should buy new custom driver boards. There are a few common choices:
 
@@ -25,10 +24,9 @@ should buy new custom driver boards. There are a few common choices:
 * [LISY Home (custom pinball version of LISY)](../hardware/lisy/index.md)
 * [Arduino Pinball Controller](../hardware/apc/index.md)
 
-P3-Roc and FAST are both commercial systems at a similar price point but
-features vary slightly so compare them wisely. OPP is an open
-source/open hardware project and much cheaper but expect to invest some
-more time into the hardware itself. CobraPin is based on OPP with the
+FAST and Multimorphic are both commercial systems. OPP is an open
+source/open hardware project which is cheaper to buy, but barebones
+and requires some time and skill. CobraPin is based on OPP with the
 goal of making OPP more accessible and provides somewhat of an
 all-in-one solution.
 

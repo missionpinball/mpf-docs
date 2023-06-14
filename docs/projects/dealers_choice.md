@@ -33,9 +33,10 @@ title: Dealers Choice Revived, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/trying-to-revive-an-old-em-dealer-s-choice-with-opp-and-mpf)
 
-**Code Link**: https://github.com/BENETNATH/mpf_dealers_choice
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/BENETNATH/mpf_dealers_choice)
+
+
 
 **Controller**: OPP
 

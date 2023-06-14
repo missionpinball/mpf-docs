@@ -94,4 +94,4 @@ event posted in `post`.
 * [Queue Relay player](../config_players/queue_relay_player.md)
 * [Mode Selection](../game_design/mode_selection.md)
 * [Game End Modes](../game_design/game_end_modes.md)
-* [How to Drain All Balls on the Playfield and Serve One Back](../game_design/game_modes/fake_ball_save.md)
+* [How to Drain All Balls on the Playfield and Serve One Back](../cookbook/fake_ball_save.md)

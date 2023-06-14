@@ -6,7 +6,7 @@ title: Controlling Gottlieb System 80 Machines
 
 
 You can connect your machine using a
-[LISY 80 board](../lisy/index.md).
+[LISY 80 board](../hardware/lisy/index.md).
 The documentation regarding switch, coil and light numbering can be
 found in LISY documentation.
 

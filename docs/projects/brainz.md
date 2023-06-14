@@ -33,9 +33,8 @@ title: Brainz or Zombies, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/guess-you-need-brainz-to-build-another-hombrew-machine)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: Cobrapin
 

@@ -33,9 +33,10 @@ title: Greek Gods, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/greek-gods-homebrew)
 
-**Code Link**: None
 
-**Gameplay Link**: https://youtu.be/iR5ddav2cdk
+
+**Gameplay Link**: [Here](https://youtu.be/iR5ddav2cdk)
+
 
 **Controller**: P3-ROC
 

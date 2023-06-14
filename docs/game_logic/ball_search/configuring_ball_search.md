@@ -38,7 +38,7 @@ fires during search. You can further configure ball search per
 Coils are included indirectly using their devices. Most devices allow
 you to configure their order in ball search using the
 [ball_search_order](#) attribute (see the
-[example ball_search](/examples/ball_search)). By default flippers are not included in ball search.
+[example ball_search](../examples/index.md)). By default flippers are not included in ball search.
 However, you might want to enable it for upper playfield flippers:
 
 ``` mpf-config

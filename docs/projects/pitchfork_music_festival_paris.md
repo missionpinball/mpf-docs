@@ -33,9 +33,10 @@ title: Pitchfork Music Festival Paris 2015 Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pitchfork.com/news/60196-godspeed-you-black-emperor-ratatat-health-more-added-to-pitchfork-music-festival-paris/)
 
-**Code Link**: None
 
-**Gameplay Link**: https://vimeo.com/156696984
+
+**Gameplay Link**: [Here](https://vimeo.com/156696984)
+
 
 **Controller**: P-ROC
 

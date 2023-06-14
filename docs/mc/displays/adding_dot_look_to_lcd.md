@@ -8,7 +8,7 @@ title: How to give your on-screen window the DMD "dot look
 This guide will show you how to configure a full screen "dot look"
 display, like this:
 
-![image](../images/dot_look_full_screen.png)
+![image](/mc/images/dot_look_full_screen.png)
 
 The final sections of the machine config to make this happen are here:
 
@@ -100,7 +100,7 @@ resulting in a better overall image.
 For example, if we zoom in on the 120x90 virtual DMD being shown on an
 800x600 window, we'll see that it looks like this:
 
-![image](../images/dot_look_zoom_in_6_to_1.png)
+![image](/mc/images/dot_look_zoom_in_6_to_1.png)
 
 This works because there is about a 6x6 grid of pixels in the window for
 each virtual pixel in the DMD.
@@ -251,7 +251,7 @@ Also, you don't have to make the virtual DMD be the full size of the
 display. For example, if you set your dmd display to be 128x32 and then
 set the color_dmd widget to be 640x160, you'll get a display like this:
 
-![image](../images/display_color_dmd2.png)
+![image](/mc/images/display_color_dmd2.png)
 
 You can also use the
 [widget sizing and positioning](/positioning.md) to create a DMD widget that is pre-positioned at a certain

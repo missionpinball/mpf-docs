@@ -4,15 +4,13 @@ title: How to use MPF with WPC machines
 
 # How to use MPF with WPC machines
 
-
 You can use MPF to control existing Williams / Bally / Midway WPC,
 WPC-S, and WPC-95 pinball machines.
 
 ## 1. Connecting the physical hardware
 
-The main options for pinball controller hardware is the
-[Multimorphic P-ROC](../multimorphic/index.md) (not the P3-ROC). FAST has a WPC controller too but it never
-hit general availability.
+You can use a FAST Pinball Retro Controller or P-ROC to interface with
+an existing WPC machine.
 
 In all cases, you remove the existing MPU board from the backbox of your
 machine and replace it with the new controller. You then connect up all
@@ -21,14 +19,14 @@ the new WPC controller becomes the new MPU of your machine.
 
 A few notes:
 
-* Both the P-ROC and the FAST WPC controller have USB connections on
+* Both the P-ROC and the FAST Retro controller have USB connections on
     them, and the actual "code" that makes up MPF runs on a computer
     which remotely controls the pinball controller (and therefore the
     machine)
-* Switch connectors are connected directly to the P-ROC or FAST WPC
+* Switch connectors are connected directly to the P-ROC or FAST Retro
     controller.
 * Drivers, coils, lamps, and GI are controlled via the existing WPC
-    power driver board (which is connected to the P-ROC or FAST WPC
+    power driver board (which is connected to the P-ROC or FAST Retro
     controller via the existing 34-pin ribbon cable).
 * The existing WPC sound board in the backbox is not used, as sounds
     are generated via the computer running MPF. There are articles
@@ -42,8 +40,10 @@ A few notes:
     P-ROC or FAST WPC controller. This means you can remove the existing
     DMD driver board from the backbox.
 
-For the P-Roc connect your machine according to the [P-Roc connector
+For the P-ROC, connect your machine according to the [P-ROC connector
 mappings](https://www.multimorphic.com/content/uploads/2017/08/P-ROC_Connector_Mappings_v2.pdf).
+
+FAST Pinball Retro controller instructions are available on [their site](https://fastpinball.com).
 
 More technical information can be found in the [PinWiki Williams
 WPC](http://www.pinwiki.com/wiki/index.php?title=Williams_WPC) page.
@@ -278,8 +278,8 @@ lights:
     subtype: matrix
 ```
 
-See [lights:](../../config/lights.md) and
-[light_player:](../../config/light_player.md) for details on how
+See [lights:](../config/lights.md) and
+[light_player:](../config/light_player.md) for details on how
 to use them.
 
 ## 5. Configuring GI (general illumination)
@@ -305,8 +305,8 @@ lights:
     subtype: gi
 ```
 
-See [lights:](../../config/lights.md) and
-[light_player:](../../config/light_player.md) for details on how
+See [lights:](../config/lights.md) and
+[light_player:](../config/light_player.md) for details on how
 to use them.
 
 ## 6. Configuring flashers
@@ -329,5 +329,5 @@ coils:
     number: c24
 ```
 
-See [flashers:](../../config/flashers.md) for details on how
+See [flashers:](../config/flashers.md) for details on how
 to use flashers.

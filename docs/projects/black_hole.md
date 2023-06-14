@@ -33,9 +33,10 @@ title: Phoenix Retheme - The Black Hole, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/phoenix-retheme-project-the-black-hole)
 
-**Code Link**: https://github.com/kaydeeH/OutpostKodelia-TBH
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/kaydeeH/OutpostKodelia-TBH)
+
+
 
 **Controller**: P3-ROC
 

@@ -43,7 +43,7 @@ python3 --version
 ```
 
 In some cases you might only get a Python version of 3.6, then run your
-admin tool and install a higher version of python, preferabyl the latest
+admin tool and install a higher version of python, preferably the latest
 version of 3.9. If you don't want to remove the older version of Python
 you can keep it in parallel, just make sure to run the installer
 commands with the right version of python. If you have for example
@@ -169,13 +169,6 @@ sudo ./install
 If you have MPF installed via the manual procedure above, you can keep
 it up-to-date by running the final two pipx commands from above which
 you used to install MPF and MPF-MC.
-
-!!! warning
-
-    If you are upgrading from MPF 0.33 to 0.50 you will need to manually
-    perform several migration steps to modify your configuration files or
-    they will not work in MPF 0.50. Please refer to
-    [Migrating from config version 4 to 5 of MPF](/install/migrate4to5) for step-by-step instructions.
 
 To install the latest dev release (not generally recommended) which
 allows you to try bleeding-edge features run:

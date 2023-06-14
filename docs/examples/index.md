@@ -20,3 +20,5 @@ resource for people creating games with MPF since they show many
 different options and configurations that are known to work.
 
 todo explain how to find these on GitHub
+
+--8<-- "todo.md"

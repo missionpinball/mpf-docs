@@ -31,11 +31,10 @@ title: William's Grand Prix Conversion, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/pinballplaid/grand-prix
+**Code Link**: [Here](https://github.com/pinballplaid/grand-prix)
 
-**Gameplay Link**: None
+
 
 **Controller**: OPP
 

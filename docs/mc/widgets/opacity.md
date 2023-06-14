@@ -15,7 +15,7 @@ Here's an example. (This example is from the
 [MC Demo](../../example_games/mc_demo.md) which
 you can download and run to see it in action.)
 
-![image](/displays/images/opacity_example.png)
+![image](/mc/images/opacity_example.png)
 
 ## Specifying opacity by opacity: setting
 

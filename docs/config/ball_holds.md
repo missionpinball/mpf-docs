@@ -181,6 +181,6 @@ See the
 ## Related How To guides
 
 * [Ball Holds](../game_logic/ball_holds.md)
-* [Mystery Awards](../game_design/game_modes/mystery_award.md)
+* [Mystery Awards](../cookbook/mystery_award.md)
 * [Ball Locks](../game_logic/ball_locks.md)
 * [Scoops / Vertical up Kickers (VUKs) / Saucer holes](../mechs/scoops.md)

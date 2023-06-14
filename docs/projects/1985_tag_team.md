@@ -33,9 +33,8 @@ title: 1985 Tag Team Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/re-game-1985-tag-team-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: Cobrapin
 

@@ -33,9 +33,8 @@ title: The Minions Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/we-are-building-a-minions-pinball-updates-every-friday)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

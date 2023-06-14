@@ -7,11 +7,11 @@ title: Carousel
 
 Related Config File Sections:
 
-* [mode:](../../config/mode.md)
-* [mode_settings:](../../config/mode_settings.md)
-* [event_player:](../../config/event_player.md)
-* [slide_player:](../../config/slide_player.md)
-* [slides:](../../config/slides.md)
+* [mode:](../config/mode.md)
+* [mode_settings:](../config/mode_settings.md)
+* [event_player:](../config/event_player.md)
+* [slide_player:](../config/slide_player.md)
+* [slides:](../config/slides.md)
 
 A carousel allows you to create process for the player to select from a
 list of items such as selecting a mode to play. The carousel is
@@ -20,8 +20,8 @@ you provide on the display or cycle through playfield inserts.
 
 This is just one way to select modes. More ways to implement mode
 selection are described in the
-[mode selection section](../mode_selection.md) of the
-[game design documentation](../index.md).
+[mode selection section](../game_design/mode_selection.md) of the
+[game design documentation](../game_design/index.md).
 
 A common use of the carousel is to create a mode selection process. For
 example, the player can scroll through a list of modes on the display.

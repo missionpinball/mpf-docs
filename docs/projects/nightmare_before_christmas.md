@@ -33,9 +33,8 @@ title: The Nightmare Before Christmas, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/the-nightmare-before-christmas)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

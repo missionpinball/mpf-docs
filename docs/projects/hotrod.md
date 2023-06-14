@@ -33,9 +33,10 @@ title: Gottliebs HotRod, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/gottlieb-hot-rod-a-tribute-to-classic-em-pinball)
 
-**Code Link**: https://github.com/missionpinball/hotrod
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/missionpinball/hotrod)
+
+
 
 **Controller**: P3-ROC
 

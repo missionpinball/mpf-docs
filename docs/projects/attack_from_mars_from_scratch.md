@@ -33,9 +33,8 @@ title: Attack From Mars From Scratch, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/attack-from-mars-scratch-build)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

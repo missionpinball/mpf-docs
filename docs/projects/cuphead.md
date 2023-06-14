@@ -33,9 +33,8 @@ title: Cuphead, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/cuphead-homebrew-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: Cobrapin
 

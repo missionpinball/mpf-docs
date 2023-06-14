@@ -33,9 +33,8 @@ title: Dukes of Hazzard, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/the-dukes-of-hazzard-custom-pin-official-thread)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: Cobrapin
 

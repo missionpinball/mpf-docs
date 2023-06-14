@@ -43,7 +43,6 @@ theme:
     - navigation.instant    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
     - navigation.footer     # https://squidfunk.github.io/mkdocs-material/upgrade/#navigationfooter
     - navigation.tabs       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
-    # - navigation.sections   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
     - navigation.indexes    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.top        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
     - content.action.edit   # https://squidfunk.github.io/mkdocs-material/upgrade/#contentaction
@@ -101,7 +100,7 @@ nav:
     - Debugging Segfaults: troubleshooting/debugging_segfaults.md
     - Debugging YAML Parse Errors: troubleshooting/debugging_yaml_parse_errors.md
     - Debugging MPF installation problems: troubleshooting/debugging_mpf_install.md
-    - YAML Error on first start: install/common_problems_and_solutions.md
+    - YAML Error on first start: troubleshooting/common_problems_and_solutions.md
   - Running MPF:
     - running/index.md
     - MPF command launcher: running/mpf.md
@@ -147,27 +146,25 @@ nav:
 - Hardware:
   - hardware/index.md
   - Concepts:
-    - How MPF handles flippers: hardware/hw_rules.md
-    - Hardware numbers: hardware/numbers.md
+    - Understanding Hardware Rules: hardware/hw_rules.md
+    - Hardware Numbering Schemes: hardware/numbers.md
     - Mixing Platforms: hardware/platform.md
     - Troubleshooting Platforms: hardware/troubleshooting_hardware.md
   - Working with real pinball machines:
     - machines/index.md
-    - Existing Machine / Re-theme:
-      - machines/existing.md
-      - hardware/existing_machines/index.md
-      - Bally/Stern Machines with AS-2518-17 or AS-2518-35 MPU: hardware/existing_machines/bally_stern_as_2518.md
-      - Controlling Gottlieb System 80 Machines: hardware/existing_machines/gottlieb_system80.md
-      - Controlling Pinball 2000 Machines: hardware/existing_machines/pinball2000.md
-      - Controlling Stern SPIKE/SPIKE 2 Machines: hardware/existing_machines/spike.md
-      - Controlling Williams System 3 to 9 Machines: hardware/existing_machines/williams_system3_to_9.md
-      - Controlling Stern SAM Machines: hardware/existing_machines/sam.md
-      - Controlling Data East Machines: hardware/existing_machines/data_east.md
-      - How to use MPF with WPC machines: hardware/existing_machines/wpc.md
-      - Controlling Stern Whitestar Machines: hardware/existing_machines/whitestar.md
-      - Controlling Williams, Bally System 11 Machines: hardware/existing_machines/system11.md
-      - Controlling Gottlieb System 1 Machines: hardware/existing_machines/gottlieb_system1.md
-      - Building a homebrew from scratch: machines/homebrew.md
+    - Existing / Re-theme:
+      - machines/index.md
+      - Bally/Stern Machines with AS-2518-17 or AS-2518-35 MPU: machines/bally_stern_as_2518.md
+      - Controlling Gottlieb System 80 Machines: machines/gottlieb_system80.md
+      - Controlling Pinball 2000 Machines: machines/pinball2000.md
+      - Controlling Stern SPIKE/SPIKE 2 Machines: machines/spike.md
+      - Controlling Williams System 3 to 9 Machines: machines/williams_system3_to_9.md
+      - Controlling Stern SAM Machines: machines/sam.md
+      - Controlling Data East Machines: machines/data_east.md
+      - How to use MPF with WPC machines: machines/wpc.md
+      - Controlling Stern Whitestar Machines: machines/whitestar.md
+      - Controlling Williams, Bally System 11 Machines: machines/system11.md
+      - Controlling Gottlieb System 1 Machines: machines/gottlieb_system1.md
     - Homebrew / New Machine: machines/homebrew.md
   - Pinball Controllers:
     - hardware/pinball_controllers.md
@@ -485,7 +482,6 @@ nav:
   - Modes:
     - game_design/index.md
     - Mode Selection: game_design/mode_selection.md
-    - Game Mode: game_design/game_modes/index.md
     - Wizard Modes: game_design/wizard_modes.md
     - Ball End Modes: game_design/ball_end_modes.md
     - Game End Modes: game_design/game_end_modes.md
@@ -515,13 +511,13 @@ nav:
     - Sequential Drop Banks: cookbook/sequential_drop_banks.md
     - Skillshots with Lane Change: cookbook/skillshot_with_lane_change.md
     - Skillshots with Auto-Rotate: cookbook/skillshot_with_auto_rotate.md
-    - Lighting Multiple Timed Shots at the Same Time: game_design/game_modes/multiple_timed_shots.md
-    - Implement a Mode for Top Lanes with Multiplier and Scoring: game_design/game_modes/top_lanes_with_multiplier.md
-    - Ending the Current Game by Long-pressing Start: game_design/game_modes/long_presssing_start_to_end_game.md
-    - Mystery Awards: game_design/game_modes/mystery_award.md
-    - Lane Mode: game_design/game_modes/lanes_mode.md
-    - Carousel: game_design/game_modes/carousel.md
-    - How to Drain All Balls on the Playfield and Serve One Back: game_design/game_modes/fake_ball_save.md
+    - Lighting Multiple Timed Shots at the Same Time: cookbook/multiple_timed_shots.md
+    - Implement a Mode for Top Lanes with Multiplier and Scoring: cookbook/top_lanes_with_multiplier.md
+    - Ending the Current Game by Long-pressing Start: cookbook/long_presssing_start_to_end_game.md
+    - Mystery Awards: cookbook/mystery_award.md
+    - Lane Mode: cookbook/lanes_mode.md
+    - Carousel: cookbook/carousel.md
+    - How to Drain All Balls on the Playfield and Serve One Back: cookbook/fake_ball_save.md
   - Flowcharts:
     - flowcharts/index.md
     - MPF Boot Up / Start Up Sequence: flowcharts/mpf_boot.md

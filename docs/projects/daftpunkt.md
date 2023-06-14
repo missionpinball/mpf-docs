@@ -33,9 +33,10 @@ title: Daftpunk, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/daft-punk-pinball)
 
-**Code Link**: https://github.com/flamtime/daftpunk-pinball
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/flamtime/daftpunk-pinball)
+
+
 
 **Controller**: FAST
 

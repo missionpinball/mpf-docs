@@ -31,11 +31,10 @@ title: Fan-Tas-Tic Pinball, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/yetifrisstlama/Fan-Tas-Tic-machine
+**Code Link**: [Here](https://github.com/yetifrisstlama/Fan-Tas-Tic-machine)
 
-**Gameplay Link**: None
+
 
 **Controller**: Fan-Tas-Tic
 

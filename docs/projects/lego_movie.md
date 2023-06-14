@@ -33,9 +33,10 @@ title: The Lego Movie Pinball, built with MPF
 
 **Documentation Link**: [Here](https://thelegomoviepinball.wordpress.com/)
 
-**Code Link**: https://github.com/vgrillot/supersonic-machine
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/vgrillot/supersonic-machine)
+
+
 
 **Controller**: Custom Raspberry Arduino MPF platform
 

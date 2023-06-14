@@ -182,7 +182,7 @@ Some remarks on above `config.yaml`
     fact.
 
 To have a fully working example for setting up autofire coils see the
-[Autofire Coils</mechs/autofire_coils/index](Autofire Coils</mechs/autofire_coils) section of the documentation.
+[Autofire Coils](../../../mechs/autofire_coils.md) section of the documentation.
 
 ## Solenoid Power Output and Fuses
 

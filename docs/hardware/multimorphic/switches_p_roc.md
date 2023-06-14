@@ -27,7 +27,7 @@ number format.
 
     If you're using your P-ROC in an existing machine, then don't use the
     number settings here. Instead use the numbers from the
-    [existing machine section](../existing_machines/index.md) of the documentation.
+    [existing machine section](../../machines/index.md) of the documentation.
 
 ### Direct Switches
 

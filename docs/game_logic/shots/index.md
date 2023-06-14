@@ -162,6 +162,6 @@ Related How To Guides
 
 * [Tutorial step 18: Add your first shot](../../tutorial/18_shots.md)
 * [Shots on inlane/outlanes](../../mechs/switches/rollover_switches.md)
-* [Shots in game modes](../../game_design/game_modes/multiple_timed_shots.md)
-* [Implement a Mode for Top Lanes with Multiplier and Scoring](../../game_design/game_modes/top_lanes_with_multiplier.md)
+* [Shots in game modes](../../cookbook/multiple_timed_shots.md)
+* [Implement a Mode for Top Lanes with Multiplier and Scoring](../../cookbook/top_lanes_with_multiplier.md)
 * [Shots in other modes](../../game_design/other_modes.md)

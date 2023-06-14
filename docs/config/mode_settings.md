@@ -27,5 +27,5 @@ In fact, several of the built-in MPF modes make use of the
 
 * [End of Ball Bonus mode](bonus.md)
 * [Mode Selection](../game_design/mode_selection.md)
-* [Carousel](../game_design/game_modes/carousel.md)
+* [Carousel](../cookbook/carousel.md)
 * [End of Ball Bonus](../game_logic/bonus/index.md)

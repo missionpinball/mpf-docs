@@ -33,9 +33,10 @@ title: Aziz Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/crazy-homebrew-pinball-aziz-)
 
-**Code Link**: None
 
-**Gameplay Link**: https://diode.zone/videos/watch/dd039de1-e8e2-47c9-b761-6ca2092eb717
+
+**Gameplay Link**: [Here](https://diode.zone/videos/watch/dd039de1-e8e2-47c9-b761-6ca2092eb717)
+
 
 **Controller**: OPP
 

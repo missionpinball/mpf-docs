@@ -6,7 +6,7 @@ title: Controlling Gottlieb System 1 Machines
 
 
 You can connect your machine using a
-[LISY 1 board](../lisy/index.md). The
+[LISY 1 board](../hardware/lisy/index.md). The
 documentation regarding switch, coil and light numbering can be found in
 LISY documentation.
 

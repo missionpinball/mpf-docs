@@ -33,9 +33,10 @@ title: Good vs Evil - Head2Head Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/head2head-custom-pinball-machine-good-vs-evil)
 
-**Code Link**: None
 
-**Gameplay Link**: https://youtu.be/ginYq-k496k
+
+**Gameplay Link**: [Here](https://youtu.be/ginYq-k496k)
+
 
 **Controller**: FAST
 

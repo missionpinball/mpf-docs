@@ -33,9 +33,8 @@ title: Pinbot Extended, built with MPF
 
 **Documentation Link**: [Here](https://www.aussiearcade.com/forum/pinball/pinball-restoration-s/homebrew-pinball-projects/102553-pinbot-extended-a-2-0-project)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: Snux
 

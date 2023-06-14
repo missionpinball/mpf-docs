@@ -33,9 +33,8 @@ title: Supernatural, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/supernatural-homebrew-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

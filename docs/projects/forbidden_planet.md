@@ -33,9 +33,8 @@ title: Forbidden Planet, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/john-treadeaus-forbidden-planet/)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: 
 

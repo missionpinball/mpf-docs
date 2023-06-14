@@ -33,9 +33,10 @@ title: Brooks and Dunn, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/brooks-dunn)
 
-**Code Link**: https://github.com/GabeKnuth/BnD
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/GabeKnuth/BnD)
+
+
 
 **Controller**: FAST
 

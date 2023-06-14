@@ -35,7 +35,7 @@ slide_player:
 
 The example above results in the following:
 
-![image](/displays/images/widget_segment_display_emulator.png)
+![image](/mc/images/widget_segment_display_emulator.png)
 
 ## Settings
 

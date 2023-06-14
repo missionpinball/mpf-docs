@@ -33,9 +33,8 @@ title: Sonic the Hedgehog Spinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/sonic-the-hedgehog-spinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

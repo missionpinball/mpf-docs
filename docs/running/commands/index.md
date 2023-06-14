@@ -5,7 +5,7 @@ title: MPF commands
 # MPF commands
 
 
-MPF offers multiple commandline commands. Almost all of those commands
+MPF offers multiple command-line commands. Almost all of those commands
 should executed from within your MPF machine folder.
 
 Usually you start MPF using:

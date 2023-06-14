@@ -33,9 +33,8 @@ title: The Fight Club, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/the-first-rule-is-fight-club-homebrew-build)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

@@ -44,9 +44,9 @@ queue_relay_player:
 
 ## Ending the Game by Long-Pressing Start
 
-See [/game_logic/match_mode/index](game_modes/long_presssing_start_to_end_game.md).
+See [/game_logic/match_mode/index](../cookbook/long_presssing_start_to_end_game.md).
 
-## Highscore Mode
+## High Score Mode
 
 Allow players to enter their initials on high score. See
 [High Scores](../game_logic/high_scores/index.md) for

@@ -33,9 +33,8 @@ title: Bud Spencer & Terence Hill Pinball, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/bbth-homebrew-pinball)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

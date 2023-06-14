@@ -34,7 +34,7 @@ slide_player:
 
 Which results in the following:
 
-![image](/displays/images/bezier.png)
+![image](/mc/images/bezier.png)
 
 ## Settings
 
@@ -134,4 +134,4 @@ of points.
 ## Examples
 
 The example config files section of the documentation contains
-[examples of bezier widgets](/examples/shapes).
+[examples of bezier widgets](../examples/index.md).

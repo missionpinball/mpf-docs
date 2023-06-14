@@ -33,9 +33,10 @@ title: DEVO Pinball, built with MPF
 
 **Documentation Link**: [Here](https://spacejunk.cc)
 
-**Code Link**: https://github.com/seanirby/DEVOPinball/
 
-**Gameplay Link**: None
+**Code Link**: [Here](https://github.com/seanirby/DEVOPinball/)
+
+
 
 **Controller**: P3-ROC
 

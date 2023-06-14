@@ -31,11 +31,10 @@ title: Genie, built with MPF
 
 **YouTube Video IDs**: None
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: https://github.com/zacaj/genie-mpf/
+**Code Link**: [Here](https://github.com/zacaj/genie-mpf/)
 
-**Gameplay Link**: None
+
 
 **Controller**: LISY
 

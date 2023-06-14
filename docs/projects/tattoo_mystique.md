@@ -33,9 +33,8 @@ title: Tattoo Mystique, built with MPF
 
 **Documentation Link**: [Here](http://www.space-eight.com/Pinball_Tattoo_Mystique.html)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: FAST
 

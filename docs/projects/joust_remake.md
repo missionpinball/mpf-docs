@@ -31,11 +31,8 @@ title: Joust Remake, built with MPF
 
 **YouTube Video IDs**: vVpXM8kC8CA
 
-**Documentation Link**: [Here](None)
 
-**Code Link**: None
 
-**Gameplay Link**: None
 
 **Controller**: P3-ROC
 

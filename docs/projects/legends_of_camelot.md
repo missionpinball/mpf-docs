@@ -33,9 +33,8 @@ title: Legends of Camelot, built with MPF
 
 **Documentation Link**: [Here](https://pinside.com/pinball/forum/topic/legend-of-camelot)
 
-**Code Link**: None
 
-**Gameplay Link**: None
+
 
 **Controller**: P3-ROC
 

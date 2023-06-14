@@ -109,7 +109,7 @@ please tell us how to run your machine to experience the issue.
 
 ## Ask In the Forum
 
-With all this information, now you can ask in our [a support forum](/community/index.md). Please keep
+With all this information, now you can ask in our [a support forum](../community/index.md). Please keep
 in mind that MPF is an open source project and we are doing this for fun
 in our spare time. Be kind and patient. If you provide more relevant
 information it is likely that somebody can help you. More is not always
