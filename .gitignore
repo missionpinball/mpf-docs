@@ -1,12 +1,4 @@
-.idea
-.DS_Store
-_build
-__pycache__/
-BUILD_WARNINGS.txt
-logs
-mpf_examples
-mpfmc_examples
-examples/
-events/*.rst
-/.vs
-/.vscode
+# ignore all the generated files in the project folder
+# except the files we need which start with _
+docs/projects/*
+!docs/projects/_*
