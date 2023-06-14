@@ -11,5 +11,5 @@
     ----------------------------------------------------------------------------------
 
     <div style="text-align: center;">
-        [CLICK TO LEARN HOW TO EDIT A PAGE :material-heart-multiple-outline:](/about/help){ .md-button .md-button--primary }
+        [CLICK TO LEARN HOW TO EDIT THIS PAGE :material-heart-multiple-outline:](/about/help){ .md-button .md-button--primary }
     </div>
