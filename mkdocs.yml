@@ -4,7 +4,7 @@ site_description: Mission Pinball Framework (MPF) open source software framework
 use_directory_urls: true
 repo_url: https://github.com/missionpinball/mpf-docs
 repo_name: Website source on GitHub
-edit_uri: blob/mkdocs/docs/
+edit_uri: blob/main/docs/
 
 plugins:
   - search                # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
