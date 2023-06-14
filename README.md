@@ -1,43 +1,37 @@
-Mission Pinball Framework Documentation (mpf-docs)
-==================================================
 
-<img align="right" height="146" src="_static/images/mpf-logo-200.png"/>
+# Mission Pinball website source code
 
-This repo is the user documentation for the
-[Mission Pinball Framework](http://missionpinball.org).
+This repo contains all the source code for MissionPinball.org.
 
-These docs are static HTML, generated from the files in this repo via the
-[Sphinx Python Documentation Generator](https://www.sphinx-doc.org/en/master/) project.
 
-The rendered HTML docs are hosted by [Read the Docs](https://readthedocs.org)
-at <http://docs.missionpinball.org>. You can also download PDF and HTML versions from there.
+## Technical details
 
-Building Docs Locally
----------------------
+This site is built using [MkDocs](http://www.mkdocs.org/), which is a static
+site generator that uses Markdown files as the source. It uses the
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
-You can build the docs using **Sphinx**. You will first need to install
-`Python 3.x`. Then install the packages used by this repo. From the root folder of this repo, run
-the following command:
+The site is hosted on GitHub Pages, and the `main` branch of this repo is
+what's published to the live site. GitHub Actions are used to automatically
+build and publish the site whenever a commit or merge is made to the `main` branch
+(assuming no bad links were added).
 
-    pip3 install -r requirements.txt
+## To build / run locally
 
-You can view the contents of the [requirements.txt](requirements.txt) file to see which packages will be installed.
+1. Clone the repo
+2. Open a terminal window and `cd` into the root folder of this repo
+3. `pip install -r requirements.txt` (to install mkdocs and what it needs)
+4. `mkdocs serve` (runs a local webserver on port 8000)
 
-### Running Unit Tests
+You should be able to access the doc site via your web browser at `localhost:8000`.
 
-To test that MPF can run all the config snippets in the docs and run the
-corresponding unit tests inside the docs (if there is one) type:
+## To contribute
 
-    make unit
+Yes!!
 
-### Compiling HTML
+## Configuring site navigation
 
-Compile the docs to `./_build/html/` with the command:
-
-    make html
-
-Licensing
----------
-
-These docs are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-MPF and all code licensed [MIT](https://opensource.org/licenses/MIT).
+It's all in `mkdocs.yml`. I tried to use the auto pages plugin to automatically
+create the navigation, and/or at least keep it local to each subfolder, but
+unfortunately our navigation tree is different from our folder hierarchy which
+makes that impossible. So we have to manually configure the navigation in the
+`mkdocs.yml` file.

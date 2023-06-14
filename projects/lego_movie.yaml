@@ -1,0 +1,14 @@
+name: The Lego Movie Pinball
+acronym:
+team: vgrillot
+location: France
+started: 2016-06-06
+finished:
+images:
+project_type:
+youtube_video_ids:
+documentation_link: https://thelegomoviepinball.wordpress.com/
+code_link: https://github.com/vgrillot/supersonic-machine
+gameplay_link:
+controller: Custom Raspberry Arduino MPF platform
+description: >

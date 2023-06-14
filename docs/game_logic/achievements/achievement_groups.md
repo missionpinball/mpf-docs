@@ -1,0 +1,76 @@
+---
+title: Achievement Groups
+---
+
+# Achievement Groups
+
+
+Related Config File Sections:
+
+* [achievement_groups:](../../config/achievement_groups.md)
+
+Achievement groups are used to group together individual achievements.
+
+If you look at the real-world examples we used in the achievements
+documentation, each of the entries in that list is an achievement
+"group" that's made up of individual achievements.
+
+For example, in The Addams Family, the mansion awards would be
+individual achievements, for example:
+
+* 9 Mil
+* 6 Mil
+* 3 Mil
+* Thing
+* Quick Multiball
+* Grave Yard at Max
+* Raise the Dead
+* Etc.
+
+Each of those individual achievements has a state (enabled, started,
+completed, etc.)
+
+If you were building a config for *The Addams Family (TAF)* with MPF,
+you would create an achievement group called "Mansion Awards", and
+then you would add the individual achievements to that group.
+
+The achievement group will let you perform group-level actions on the
+achievements in the group. For example:
+
+* Randomly select one of the incomplete achievements (so you can flash
+    that achievement's light to indicate it's selected).
+* Change which achievement is selected. (In *TAF*, each hit to a pop
+    bumper changes the lit achievement, so you'd configure your
+    achievement group to pick a new achievement when the pop bumper hit
+    event was posted.)
+* Post an event when all achievements are complete (to start a wizard
+    mode, etc.)
+* Post a "start" event for whichever achievement is lit (In *TAF*,
+    you shoot the lit electric chair or the swamp to start the flashing
+    achievement.)
+
+## Monitorable Properties
+
+For
+[dynamic values](../../config/instructions/dynamic_values.md) and
+[conditional events](../../events/overview/conditional.md), the prefix for achievement groups is
+`device.achievement_groups.<name>`.
+
+*enabled*
+
+:   Boolean (true/false) as to whether this achievement group is
+    enabled.
+
+*selected_member*
+
+:   The achievement in the group that is currently in the selected
+    state, or *None* if no achievement is selected.
+
+## Related How To guides
+
+* [Recipe: The Addams Family Mansion Awards](../../cookbook/TAF_mansion_awards.md)
+
+## Related Events
+
+* Custom events as defined in the achievement's configuration in your
+    config files.
