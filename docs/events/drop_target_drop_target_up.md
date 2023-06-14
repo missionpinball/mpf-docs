@@ -1,0 +1,14 @@
+---
+title: [drop_target](../index.md)(name)_up
+---
+
+# [drop_target](../index.md)(name)_up
+
+
+--8<-- "event.md"
+
+The drop target (name) has just changed to the "up" state.
+
+*This event does not have any keyword arguments*
+
+Event is posted by [drop_targets:](../config/drop_targets.md)

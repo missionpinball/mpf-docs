@@ -1,0 +1,1230 @@
+site_name: The Mission Pinball Framework
+site_url: https://missionpinball.org
+site_description: Mission Pinball Framework (MPF) open source software framework that's used to run real pinball machines.
+use_directory_urls: true
+repo_url: https://github.com/missionpinball/mpf-docs
+repo_name: Website source on GitHub
+edit_uri: blob/mkdocs/docs/
+
+plugins:
+  - search                # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
+
+extra_css:
+  - stylesheets/mpf.css     # Sets our custom colors
+
+markdown_extensions:
+  - toc:                    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
+      title: One this page
+  - attr_list               # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+  - tables                  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/s#tables
+  - admonition              # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - pymdownx.details        # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#details
+  - pymdownx.superfences    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+  - pymdownx.emoji:         # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets:      # https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
+      base_path: includes
+      check_paths: true
+      auto_append:
+        - content_footer.md
+  - pymdownx.keys           # https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+
+theme:
+  name: material            # https://squidfunk.github.io
+  logo: images/mission-flag-header.png
+  icon:
+    # logo: material/checkbox-blank-circle
+    repo: fontawesome/brands/github
+    edit: fontawesome/solid/wand-magic-sparkles
+  custom_dir: overrides     # https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme
+
+  features:
+    - navigation.instant    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.footer     # https://squidfunk.github.io/mkdocs-material/upgrade/#navigationfooter
+    - navigation.tabs       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    # - navigation.sections   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
+    - navigation.indexes    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.top        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - content.action.edit   # https://squidfunk.github.io/mkdocs-material/upgrade/#contentaction
+    - toc.follow            # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-following
+
+  palette:                  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
+    # Palette toggle for light mode
+    - scheme: default       # specified in docs/stylesheets/mpf.css
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate         # specified in docs/stylesheets/mpf.css
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Open Sans
+    code: Noto Sans Mono
+
+extra:
+  social:                                      # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=social#social-links
+    - icon: fontawesome/brands/github
+      link: https://github.com/missionpinball
+
+nav:
+- Getting Started:
+  - start/index.md
+  - Features: start/features.md
+  - Philosophy: start/dsl_vs_programming.md
+  - Config Files: start/config_files.md
+  - The Media Controller: start/media_controller.md
+  - Installation:
+    - install/index.md
+    - Quickstart: start/quickstart.md
+    - Mac: install/mac.md
+    - Windows: install/windows.md
+    - Linux:
+      - install/linux/index.md
+      - Raspberry Pi: install/linux/raspberry.md
+      - Pine64: install/linux/pine64.md
+      - Xubuntu Linux: install/linux/xubuntu.md
+    - Virtual Machine:
+      - install/virtual-machine/index.md
+      - Why use a VM: install/virtual-machine/why-use-vm.md
+      - Setup Guide: install/virtual-machine/basic-guide.md
+
+  - Troubleshooting:
+    - troubleshooting/index.md
+    - Working with Log Files: troubleshooting/general_debugging.md
+    - Attaching A Debugger to MPF: troubleshooting/attaching_a_debugger.md
+    - Debugging Memory Leaks: troubleshooting/debugging_memory_leaks.md
+    - Reading MPF Errors: troubleshooting/reading_errors.md
+    - Debugging Segfaults: troubleshooting/debugging_segfaults.md
+    - Debugging YAML Parse Errors: troubleshooting/debugging_yaml_parse_errors.md
+    - Debugging MPF installation problems: troubleshooting/debugging_mpf_install.md
+    - YAML Error on first start: install/common_problems_and_solutions.md
+  - Running MPF:
+    - running/index.md
+    - MPF command launcher: running/mpf.md
+    - Commands:
+      - running/commands/index.md
+      - mpf both: running/commands/both.md
+      - mpf core: running/commands/core.md
+      - mpf diagnosis: running/commands/diagnosis.md
+      - mpf game: running/commands/game.md
+      - mpf mc: running/commands/mc.md
+      - mpf imc: running/commands/imc.md
+      - mpf migrate: running/commands/migrate.md
+      - mpf monitor: running/commands/monitor.md
+      - mpf hardware: running/commands/hardware.md
+      - mpf service: running/commands/service.md
+      - mpf build: running/commands/build.md
+      - mpf test: running/commands/test.md
+      - mpf format: running/commands/format.md
+    - Changing TCP ports: running/ports.md
+  - Tutorial:
+    - tutorial/index.md
+    - 1.  Install MPF: tutorial/1_install_mpf.md
+    - 2.  Create your machine folder: tutorial/2_creating_a_new_machine.md
+    - 3.  Get flipping!: tutorial/3_get_flipping.md
+    - 4.  Adjusting your flipper power: tutorial/4_adjust_flipper_power.md
+    - 5.  Add a display: tutorial/5_add_a_display.md
+    - 6.  Add keyboard control: tutorial/6_keyboard.md
+    - 7.  Add your trough: tutorial/7_trough.md
+    - 8.  Add your plunger lane: tutorial/8_plunger.md
+    - 9.  Add the start button: tutorial/9_start_button.md
+    - 10. Run a real game!: tutorial/10_run_a_game.md
+    - 11. Add the rest of your coils & switches: tutorial/11_add_coils_switches.md
+    - 12. Add the rest of your ball devices: tutorial/12_add_ball_devices.md
+    - 13. Add "autofire" devices: tutorial/13_add_autofires.md
+    - 14. Add your first mode: tutorial/14_add_a_mode.md
+    - 15. Add scoring: tutorial/15_scoring.md
+    - 16. Add an attract mode display show: tutorial/16_attract_mode_show.md
+    - 17. Add lights (or LEDs): tutorial/17_add_lights_leds.md
+    - 18. Add your first shot: tutorial/18_shots.md
+    - 19. Testing your machine: tutorial/19_unit_testing.md
+    - 20. Next steps: tutorial/20_next_steps.md
+
+- Hardware:
+  - hardware/index.md
+  - Concepts:
+    - How MPF handles flippers: hardware/hw_rules.md
+    - Hardware numbers: hardware/numbers.md
+    - Mixing Platforms: hardware/platform.md
+    - Troubleshooting Platforms: hardware/troubleshooting_hardware.md
+  - Working with real pinball machines:
+    - machines/index.md
+    - Existing Machine / Re-theme:
+      - machines/existing.md
+      - hardware/existing_machines/index.md
+      - Bally/Stern Machines with AS-2518-17 or AS-2518-35 MPU: hardware/existing_machines/bally_stern_as_2518.md
+      - Controlling Gottlieb System 80 Machines: hardware/existing_machines/gottlieb_system80.md
+      - Controlling Pinball 2000 Machines: hardware/existing_machines/pinball2000.md
+      - Controlling Stern SPIKE/SPIKE 2 Machines: hardware/existing_machines/spike.md
+      - Controlling Williams System 3 to 9 Machines: hardware/existing_machines/williams_system3_to_9.md
+      - Controlling Stern SAM Machines: hardware/existing_machines/sam.md
+      - Controlling Data East Machines: hardware/existing_machines/data_east.md
+      - How to use MPF with WPC machines: hardware/existing_machines/wpc.md
+      - Controlling Stern Whitestar Machines: hardware/existing_machines/whitestar.md
+      - Controlling Williams, Bally System 11 Machines: hardware/existing_machines/system11.md
+      - Controlling Gottlieb System 1 Machines: hardware/existing_machines/gottlieb_system1.md
+      - Building a homebrew from scratch: machines/homebrew.md
+    - Homebrew / New Machine: machines/homebrew.md
+  - Pinball Controllers:
+    - hardware/pinball_controllers.md
+    - FAST Pinball:
+      - hardware/fast/index.md
+      - Connecting FAST to your Computer: hardware/fast/connecting.md
+      - Installing hardware drivers & configuring COM ports: hardware/fast/config.md
+      - Switches: hardware/fast/switches.md
+      - Coils/Drivers/Magnets/Motors: hardware/fast/drivers.md
+      - Flippers, Slingshots, Pop Bumpers, and other "quick response" devices: hardware/fast/hw_rules.md
+      - LEDs: hardware/fast/leds.md
+      - Matrix Lights: hardware/fast/lights.md
+      - Traditional (single color) DMDs: hardware/fast/dmd.md
+      - RGB DMDs: hardware/fast/rgb_dmd.md
+      - Servos: hardware/fast/servos.md
+      - Power Filter Board: hardware/fast/power_filter.md
+      - Troubleshooting: hardware/fast/troubleshooting.md
+    - Open Pinball Project (OPP):
+      - hardware/opp/index.md
+      - Troubleshooting OPP: hardware/opp/troubleshooting.md
+      - OPP LEDs: hardware/opp/leds.md
+      - OPP Lights: hardware/opp/lights.md
+      - Configuring your machine for OPP: hardware/opp/config.md
+      - OPP coils / drivers: hardware/opp/drivers.md
+      - Connecting OPP to your computer: hardware/opp/connecting.md
+      - OPP Switches: hardware/opp/switches.md
+      - CobraPin segments: hardware/opp/cobrapin/cobrapin_serial_segment_displays.md
+      - CobraPin Pinball Controller powered by OPP: hardware/opp/cobrapin/index.md
+    - P-ROC/P3-ROC:
+      - hardware/multimorphic/index.md
+      - Connecting: hardware/multimorphic/connecting.md
+      - Installing Hardware Drivers: hardware/multimorphic/hardware_drivers.md
+      - Setting the platform: hardware/multimorphic/platform.md
+      - Switches (P-ROC): hardware/multimorphic/switches_p_roc.md
+      - Switches (P3-ROC): hardware/multimorphic/switches_p3_roc.md
+      - Coils/Drivers/Magnets/Motors: hardware/multimorphic/drivers.md
+      - LEDs: hardware/multimorphic/leds.md
+      - Matrix Lights: hardware/multimorphic/lights.md
+      - Traditional single-color DMD (P-ROC): hardware/multimorphic/dmd.md
+      - RGB DMD: hardware/multimorphic/rgb_dmd.md
+      - Alpha-numeric displays (P-ROC): hardware/multimorphic/alpha_numeric.md
+      - Accelerometer (P3-ROC): hardware/multimorphic/accelerometer.md
+      - I2C (P3-ROC): hardware/multimorphic/i2c.md
+      - Power Entry Board: hardware/multimorphic/power_entry.md
+      - Servos on PD-LED: hardware/multimorphic/servos.md
+      - Steppers on PD-LED: hardware/multimorphic/steppers.md
+      - Firmware Upgrade: hardware/multimorphic/firmware_upgrade.md
+      - Troubleshooting: hardware/multimorphic/troubleshooting.md
+      - Linux Drivers: hardware/multimorphic/linux.md
+      - Mac Drivers: hardware/multimorphic/mac.md
+      - Windows (x64) Drivers: hardware/multimorphic/win_x64.md
+      - Windows (32-bit) Drivers: hardware/multimorphic/win_x86.md
+    - LISY platform:
+      - hardware/lisy/index.md
+      - Connecting a System1/80 Machine to LISY1/80: hardware/lisy/connection.md
+      - Configuring Switches with LISY1: hardware/lisy/switches_lisy1.md
+      - Configuring Switches with LISY80: hardware/lisy/switches_lisy80.md
+      - Configuring Drivers in LISY: hardware/lisy/drivers.md
+      - Configuring and Enabling Flippers/Pop Bumpers/Slingshots in LISY: hardware/lisy/flippers_slings_popbumpers.md
+      - Configuring Lights in LISY: hardware/lisy/lights.md
+      - Configuring Segment Displays in LISY: hardware/lisy/segment_displays.md
+      - Configuring Sound in LISY: hardware/lisy/sound.md
+      - LISY Protocol: hardware/lisy/protocol.md
+      - Troubleshooting LISY: hardware/lisy/troubleshooting.md
+    - Arduino Pinball Controller:
+      - hardware/apc/index.md
+      - connection: hardware/apc/connection.md
+    - Stern SPIKE / SPIKE 2:
+      - hardware/spike/index.md
+      - Installing the MPF SPIKE bridge on the SD card: hardware/spike/mpf-spike-bridge.md
+      - Connecting your computer: hardware/spike/connection.md
+      - Configuring MPF for SPIKE: hardware/spike/config.md
+      - Coils & Drivers: hardware/spike/drivers.md
+      - LEDs, GI, & Backbox lights: hardware/spike/leds.md
+      - DMDs: hardware/spike/dmds.md
+      - Switches: hardware/spike/switches.md
+      - Steppers: hardware/spike/steppers.md
+      - Troubleshooting: hardware/spike/troubleshooting.md
+    - Penny K Pinball PKONE Platform:
+      - hardware/pkone/index.md
+      - Connecting PKONE to your Computer: hardware/pkone/connecting.md
+      - Installing hardware drivers & configuring COM ports: hardware/pkone/config.md
+      - Switches: hardware/pkone/switches.md
+      - Coils/Drivers/Magnets/Motors: hardware/pkone/drivers.md
+      - RGB/RGBW LEDs: hardware/pkone/leds.md
+      - Simple LEDs/Lights: hardware/pkone/lights.md
+      - Servos: hardware/pkone/servos.md
+      - Troubleshooting: hardware/pkone/troubleshooting.md
+    - Virtual Hardware:
+      - hardware/virtual/index.md
+      - Connecting Your Computer Keyboard to MPF Switches: hardware/virtual/keyboard.md
+      - The Virtual Platform: hardware/virtual/virtual.md
+      - The Virtual Pinball (VPX) Platform: hardware/virtual/virtual_pinball_vpx.md
+      - The "Smart Virtual" Platform: hardware/virtual/smart_virtual.md
+      - Virtual Segment Display Emulator: hardware/virtual/segment_display_emulator.md
+  - Hobbyist Maker Boards:
+    - hardware/hobbyist.md
+    - Snux: hardware/snux.md
+    - FadeCandy RGB LED controllers:
+      - hardware/fadecandy/index.md
+      - troubleshooting: hardware/fadecandy/troubleshooting.md
+    - Pololu Maestro: hardware/pololu_maestro.md
+    - I2C Servos: hardware/i2c_servo.md
+    - Pololu Tic: hardware/pololu_tic.md
+    - SmartMatrix RGB DMD: hardware/smartmatrix.md
+    - RGB.DMD: hardware/eli_dmd.md
+    - PIN2DMD:
+      - hardware/pin2dmd/index.md
+      - troubleshooting: hardware/pin2dmd/troubleshooting.md
+    - Raspberry Pi DMD: hardware/rpi_dmd.md
+    - MyPinballs Segment Displays:
+      - hardware/mypinballs/index.md
+      - Wiring 3rd-Party Segment Displays: hardware/mypinballs/wiring.md
+    - Light Segment Displays: hardware/light_segment_displays.md
+    - Trinamics StepRocker: hardware/trinamics.md
+    - StepStick Steppers: hardware/stepstick.md
+    - Computer Requirements: hardware/computer.md
+    - Native I2C: hardware/smbus.md
+    - Raspberry Pi: hardware/rpi.md
+    - MMA8451-based accelerometer: hardware/mma8451.md
+    - SPI Big Bang Switches: hardware/spi_bit_bang.md
+    - Open Sound Control (OSC): hardware/osc.md
+    - Understanding MPF Platforms:
+      - I2C Platforms in MPF: hardware/i2c_platforms.md
+      - Servo Platforms in MPF: hardware/servo_platforms.md
+      - Stepper Platforms in MPF: hardware/stepper_platforms.md
+      - Segment Display Platforms in MPF: hardware/segment_display_platforms.md
+      - segment_display_transitions: hardware/segment_display_transitions.md
+      - DMD Platforms in MPF: hardware/dmd_platforms.md
+  - Physical Machine Building:
+    - physical_building/index.md
+    - Layout Considerations: physical_building/layout_considerations.md
+    - Planning Layout with CAD: physical_building/planning_layout_with_cad.md
+    - Voltages and Power:
+      - hardware/voltages_and_power/index.md
+      - Voltages and Power: hardware/voltages_and_power/voltages_and_power.md
+      - Ground and Appliance Classes: hardware/voltages_and_power/ground_and_appliance_classes.md
+      - Wiring and Connectors in Pinball Machines: hardware/voltages_and_power/wiring_and_connectors.md
+      - Power Management in Software: hardware/voltages_and_power/power_management.md
+
+- Game Programming:
+  - game/index.md
+  - Pinball Mechs:
+    - mechs/index.md
+    - Flippers:
+      - mechs/flippers/index.md
+      - Dual-wound Flippers: mechs/flippers/dual_wound.md
+      - Single Wound Flippers: mechs/flippers/single_wound.md
+      - EOS Switches: mechs/flippers/eos_switches.md
+      - Multiple Flippers: mechs/flippers/multiple.md
+      - Disabling Flippers: mechs/flippers/disabled_flippers.md
+      - Secondary Flippers: mechs/flippers/enabling_secondary_flippers.md
+      - Delayed Flippers: mechs/flippers/delayed_flippers.md
+      - Inverted Flippers: mechs/flippers/inverted_flippers.md
+      - No Hold Flippers: mechs/flippers/no_hold_flippers.md
+      - Reversed Flippers: mechs/flippers/reversed_flippers.md
+      - Weak Flippers: mechs/flippers/weak_flippers.md
+    - Switches:
+      - mechs/switches/index.md
+      - Debouncing in Pinball Machines: mechs/switches/debounce.md
+      - MPF Switch Controller: mechs/switches/switch_controller.md
+      - Switch/Opto Breakout Boards: mechs/switches/breakout_boards.md
+      - Rollover Switches: mechs/switches/rollover_switches.md
+      - Mechanical Switches: mechs/switches/mechanical_switches.md
+      - Proximity Switches: mechs/switches/proximity_switches.md
+      - Reed Switches: mechs/switches/reed_switches.md
+      - Service and Door Switches: mechs/switches/service_and_door_switches.md
+      - Optos: mechs/switches/optos.md
+      - Start, Tournament and Launcher Buttons: mechs/switches/start_tournament_and_launcher_buttons.md
+    - Troughs / Ball Drains:
+      - mechs/troughs/index.md
+      - Modern Trough (Optos): mechs/troughs/modern_opto.md
+      - Modern Trough (switches): mechs/troughs/modern_mechanical.md
+      - Stern SPIKE Trough: mechs/troughs/spike_trough.md
+      - Classic Two-Coil (one switch): mechs/troughs/two_coil_one_switch.md
+      - Classic Two-Coil (multiple switches): mechs/troughs/two_coil_multiple_switches.md
+      - Classic Single Ball (no shooter lane): mechs/troughs/classic_single_ball_no_shooter_lane.md
+      - Classic Single Ball: mechs/troughs/classic_single_ball.md
+    - Targets:
+      - mechs/targets/index.md
+      - Stationary or Standup Targets: mechs/targets/stationary_targets.md
+      - Kicking Targets: mechs/targets/kicking_targets.md
+      - Vari Targets: mechs/targets/vari_targets.md
+      - Drop Targets:
+        - mechs/targets/drop_targets/index.md
+        - Fixing Drop Target Reset Issues: mechs/targets/drop_targets/fixing_drop_target_reset_issues.md
+        - Drop Target Bank: mechs/targets/drop_targets/drop_target_bank.md
+    - Plungers / Launch Devices:
+      - mechs/plungers/index.md
+      - Plunger lanes with no ball switch: mechs/plungers/mechanical_no_switch.md
+      - Coil-fired plungers / ball launchers: mechs/plungers/coil_fired.md
+      - Mechanical (spring) plungers: mechs/plungers/mechanical_with_switch.md
+      - Combo (mechanical + coil-fired) plungers: mechs/plungers/auto_manual.md
+    - Pop Bumpers: mechs/pop_bumpers/index.md
+    - Servos:
+      - mechs/servos/index.md
+      - Programming Servo Sequences: mechs/servos/servo_sequence.md
+    - Coils (Solenoids):
+      - mechs/coils/index.md
+      - Adjust coil strength (pulse times): mechs/coils/pulse_power.md
+      - Adjust coil hold power: mechs/coils/hold_power.md
+      - Recycle / "Cool Down" Time: mechs/coils/recycle.md
+      - Dual-wound Coils: mechs/coils/dual_wound_coils.md
+      - Dual-Wound versus Single-Wound coils: mechs/coils/dual_vs_single_wound.md
+    - Magnets:
+      - mechs/magnets/index.md
+      - How to use the Stern Magnet Processor Board: mechs/magnets/stern_magnet_pcb.md
+    - Ball Devices:
+      - mechs/ball_devices/index.md
+      - Troubleshooting: mechs/ball_devices/troubleshooting.md
+    - Playfields:
+      - mechs/playfields/index.md
+      - Playfield Ball Tracking: mechs/playfields/ball_tracking.md
+      - Balls vs. Balls in Play: mechs/playfields/playfield_balls_vs_balls_in_play.md
+      - Playfield Transfers: mechs/playfields/playfield_transfer.md
+    - Lights / LEDs:
+      - mechs/lights/index.md
+      - WS2811 and WS2812 LEDs: mechs/lights/ws2812.md
+      - GI (general illumination): mechs/lights/gis.md
+      - Flashers: mechs/lights/flashers.md
+      - LEDs: mechs/lights/leds.md
+      - Some LEDs are Lights?!?: mechs/lights/lights_versus_leds.md
+      - Coils as Lights: mechs/lights/coils_as_lights.md
+      - Matrix Lights (Bulbs): mechs/lights/matrix_lights.md
+    - Loops / Orbits / Ramps: mechs/loops.md
+    - Spinners: mechs/spinners.md
+    - Diverters:
+      - mechs/diverters/index.md
+      - Up-Down Ramps: mechs/diverters/up_down_ramps.md
+      - Using a Servo as Diverter: mechs/diverters/servo_as_diverter.md
+      - Using a Stepper as Diverter: mechs/diverters/stepper_as_diverter.md
+      - Dual Coil Diverter: mechs/diverters/dual_coil_diverter.md
+    - Kickback Lanes: mechs/kickbacks.md
+    - Score Reels: mechs/score_reels.md
+    - Scoops / Vertical Up Kickers (VUKs) / Saucer holes: mechs/scoops.md
+    - Autofire Coils: mechs/autofire_coils.md
+    - Accelerometers: mechs/accelerometers.md
+    - Motors: mechs/motors.md
+    - Stepper Motors: mechs/steppers.md
+    - Slingshot: mechs/slingshots.md
+    - Shakers: mechs/shaker.md
+    - Tilt Bob: mechs/tilt_bob.md
+  - Game Logic:
+    - game_logic/index.md
+    - Achievements:
+      - game_logic/achievements/index.md
+      - Achievement Groups: game_logic/achievements/achievement_groups.md
+    - Ball Holds: game_logic/ball_holds.md
+    - Ball Locks: game_logic/ball_locks.md
+    - Ball Saves:
+      - game_logic/ball_saves/index.md
+      - Center Post Ball Save: game_logic/ball_saves/center_post.md
+    - Ball Search:
+      - game_logic/ball_search/index.md
+      - How to configure Ball Search: game_logic/ball_search/configuring_ball_search.md
+    - Ball Start and End Behavior: game_logic/ball_start_end.md
+    - Ball Tracking: game_logic/ball_tracking.md
+    - Bonus:
+      - game_logic/bonus/index.md
+      - Configuring Bonus: game_logic/bonus/configuring_bonus.md
+    - Coins & Credits: game_logic/credits.md
+    - Combo Switches: game_logic/combo_switches.md
+    - Extra Balls: game_logic/extra_balls.md
+    - High Scores:
+      - game_logic/high_scores/index.md
+      - High Scores in EMs: game_logic/high_scores/high_scores_in_ems.md
+    - Logic Blocks:
+      - game_logic/logic_blocks/index.md
+      - Counters: game_logic/logic_blocks/counters.md
+      - Accruals: game_logic/logic_blocks/accruals.md
+      - Sequences: game_logic/logic_blocks/sequences.md
+      - State Machines: game_logic/logic_blocks/state_machines.md
+      - game_logic/logic_blocks/common_problems.md
+      - game_logic/logic_blocks/integrating_logic_block_and_slides.md
+      - game_logic/logic_blocks/integrating_logic_blocks_and_lights.md
+      - game_logic/logic_blocks/integrating_logic_blocks_and_shows.md
+      - game_logic/logic_blocks/persisting_state_in_a_player_variable.md
+      - game_logic/logic_blocks/scoring_based_on_logic_blocks.md
+    - Match Mode: game_logic/match_mode.md
+    - Modes:
+      - game_logic/modes/index.md
+      - Tilt (mode): game_logic/modes/tilt.md
+      - Using "modes" to implement game logic: game_logic/modes/modes_as_game_logic.md
+      - Creating your own modes: game_logic/modes/custom_modes.md
+      - Credits (mode): game_logic/modes/credits.md
+      - Attract (mode): game_logic/modes/attract.md
+      - High score (mode): game_logic/modes/high_score.md
+      - Game (mode): game_logic/modes/game.md
+    - Multiballs:
+      - game_logic/multiballs/index.md
+      - How to create a multiball which uses multiple lock devices: game_logic/multiballs/multiball_with_multiple_lock_devices.md
+      - How to create an "add-a-ball" style multiball: game_logic/multiballs/add_a_ball_multiball.md
+      - Multiball Locks: game_logic/multiballs/multiball_locks.md
+      - How to create a multiball with a traditional ball lock: game_logic/multiballs/multiball_with_traditional_ball_lock.md
+      - How to create a multiball with a virtual ball lock: game_logic/multiballs/multiball_with_virtual_ball_lock.md
+    - Player Variables: game_logic/players.md
+    - Replays: game_logic/replays.md
+    - Tilt:
+      - game_logic/tilt/index.md
+      - Overwrite Tilt Slides: game_logic/tilt/overwrite_tilt_slides.md
+    - Timed Switches: game_logic/timed_switches.md
+    - Timers: game_logic/timers.md
+    - Scoring:
+      - game_logic/scoring/index.md
+      - How to implement solid state game style score queues in MPF: game_logic/scoring/ss_style_score_queues.md
+    - Service Mode: game_logic/service_mode.md
+    - Shots:
+      - game_logic/shots/index.md
+      - How to integrate shots with shows, lights, sounds, widgets, or slides: game_logic/shots/integrate_shots_with_shows_lights_sounds_widgets_or_slides.md
+      - Sequence Shots: game_logic/shots/sequence_shots.md
+      - Shot Profiles: game_logic/shots/shot_profiles.md
+      - Grouping Shots for lane change, rotation, etc.: game_logic/shots/shot_group.md
+    - Skill Shot: game_logic/skill_shot.md
+    - Video Modes: game_logic/video_modes.md
+  - Modes:
+    - game_design/index.md
+    - Mode Selection: game_design/mode_selection.md
+    - Game Mode: game_design/game_modes/index.md
+    - Wizard Modes: game_design/wizard_modes.md
+    - Ball End Modes: game_design/ball_end_modes.md
+    - Game End Modes: game_design/game_end_modes.md
+    - Other Modes: game_design/other_modes.md
+    - Layering Modes Example: game_design/mode_layering.md
+  - Machine Management:
+    - machine_management/index.md
+    - Auditor: machine_management/auditor.md
+    - Service Mode: machine_management/service_mode.md
+    - Operator Settings: machine_management/operator_settings.md
+  - Finalization:
+    - finalization/index.md
+    - Enabling & fine-tuning ball search: finalization/ball_search.md
+    - Choosing a computer to run MPF: finalization/host_computer.md
+    - Controlling your machine & computer power on / power off: finalization/power.md
+    - Fine-tuning ball device timing: finalization/ball_devices.md
+    - Tuning Software for Production: finalization/software.md
+    - Choosing an OS for your final machine: finalization/os.md
+    - Fine-tuning switches: finalization/switches.md
+  - Cookbook:
+    - cookbook/index.md
+    - 'The Addams Family: Mansion Awards': cookbook/TAF_mansion_awards.md
+    - 'Attack From Mars: Super Jets': cookbook/AFM_super_jets.md
+    - 'Indiana Jones: Rollover Lanes': cookbook/rollover_lanes_with_lane_change.md
+    - 'Batman 66: Gadgets Targets': cookbook/B66_gadget.md
+    - 'Modifying the Game mode: Dual launch devices': cookbook/dual_launch.md
+    - Sequential Drop Banks: cookbook/sequential_drop_banks.md
+    - Skillshots with Lane Change: cookbook/skillshot_with_lane_change.md
+    - Skillshots with Auto-Rotate: cookbook/skillshot_with_auto_rotate.md
+    - Lighting Multiple Timed Shots at the Same Time: game_design/game_modes/multiple_timed_shots.md
+    - Implement a Mode for Top Lanes with Multiplier and Scoring: game_design/game_modes/top_lanes_with_multiplier.md
+    - Ending the Current Game by Long-pressing Start: game_design/game_modes/long_presssing_start_to_end_game.md
+    - Mystery Awards: game_design/game_modes/mystery_award.md
+    - Lane Mode: game_design/game_modes/lanes_mode.md
+    - Carousel: game_design/game_modes/carousel.md
+    - How to Drain All Balls on the Playfield and Serve One Back: game_design/game_modes/fake_ball_save.md
+  - Flowcharts:
+    - flowcharts/index.md
+    - MPF Boot Up / Start Up Sequence: flowcharts/mpf_boot.md
+    - Game Start Sequence: flowcharts/game_start.md
+    - Ball Start Sequence: flowcharts/ball_start.md
+    - Mode Start Sequence: flowcharts/mode_start.md
+    - Mode Stop Sequence: flowcharts/mode_stop.md
+    - Ball End Sequence: flowcharts/ball_end.md
+
+- Media Controller:
+  - mc/index.md
+  - Displays:
+    - mc/displays/index.md
+    - Concepts & Architecture: mc/displays/architecture.md
+    - Display Types:
+      - mc/displays/types.md
+      - LCD: mc/displays/lcd.md
+      - DMD: mc/displays/dmd.md
+      - RGB LED DMD: mc/displays/rgb_dmd.md
+      - Applying the DMD look to a screen: mc/displays/adding_dot_look_to_lcd.md
+      - Alphanumer displays: mc/displays/alpha_numeric.md
+      - Working with Multiple Displays: mc/displays/multiple_screens.md
+
+  - Slides:
+    - mc/slides/index.md
+    - Creating Slides: mc/slides/creating_slides.md
+    - Showing Slides: mc/slides/showing_slides.md
+    - Slide Transitions: mc/slides/transitions.md
+    - mc/creating_your_own.md
+    - mc/mpf_and_mc_different_machines.md
+    - mc/mpfmc.md
+    - mc/multiple_mcs.md
+    - mc/unity_bcp_server.md
+    - mc/slides/display_targets.md
+    - mc/slides/multiplayer_display.md
+    - mc/slides/picture_in_picture.md
+    - mc/slides/split_screen.md
+  - Widgets:
+    - mc/widgets/index.md
+    - Base Settings (for all widgets):
+      - mc/widgets/common_settings.md
+      - mc/widgets/adding_widgets.md
+      - mc/widgets/animation.md
+      - mc/widgets/bitmap_fonts.md
+      - mc/widgets/dmd_fonts.md
+      - mc/widgets/easing.md
+      - mc/widgets/easing_config.md
+      - mc/widgets/expire.md
+      - mc/widgets/fonts.md
+      - mc/widgets/keys.md
+      - mc/widgets/layers.md
+      - mc/widgets/opacity.md
+      - mc/widgets/positioning.md
+      - mc/widgets/reusable_widgets.md
+      - mc/widgets/styles.md
+      - mc/widgets/types.md
+      - mc/widgets/widgets_vs_slides.md
+    - Text:
+      - mc/widgets/text/index.md
+      - Dynamic Text: mc/widgets/text/text_dynamic.md
+      - Text Strings: mc/widgets/text/text_strings.md
+    - Image: mc/widgets/image.md
+    - Video: mc/widgets/video.md
+    - Bezier Curve: mc/widgets/bezier.md
+    - Display (put one display inside another):
+      - mc/widgets/display/index.md
+      - Effects: mc/widgets/display/effects.md
+    - Ellipse: mc/widgets/ellipse.md
+    - Line: mc/widgets/line.md
+    - Points: mc/widgets/points.md
+    - Quad: mc/widgets/quad.md
+    - Rectangle: mc/widgets/rectangle.md
+    - Segment Display Emulator:
+      - mc/widgets/segment_display_emulator/index.md
+      - How To Guide: mc/widgets/segment_display_emulator/how_to.md
+    - Text Input: mc/widgets/text_input.md
+    - Triangle: mc/widgets/triangle.md
+    - Camera: mc/widgets/camera.md
+
+  - Sound & Audio:
+    - mc/sound/index.md
+    - Technical Overview: mc/sound/technical.md
+    - Ducking: mc/sound/ducking.md
+    - Tracks: mc/sound/tracks.md
+    - How to set up sound: mc/sound/basic_setup.md
+    - Tips & tricks: mc/sound/tips_tricks.md
+    - Playing a sound with variations: mc/sound/variations.md
+
+- Tools:
+  - tools/index.md
+  - MPF Monitor:
+    - tools/monitor/index.md
+    - Installation: tools/monitor/installation.md
+    - Running: tools/monitor/running.md
+    - Using MPF Monitor: tools/monitor/devices-and-using.md
+  - Interactive MC: tools/imc.md
+  - Service CLI: tools/service_cli.md
+  - Show Creator: tools/showcreator.md
+  - IDE Support: tools/language_server/index.md
+  - Production Config Bundler: tools/build.md
+  - tools/format.md
+  - tools/hardware.md
+  - tools/test.md
+
+- Reference:
+  - reference/index.md
+  - Config File Reference:
+    - config/index.md
+    - Instructions:
+      - config/instructions/index.md
+      - Text Templates: config/instructions/text_templates.md
+      - "Understanding the debug: setting": config/instructions/debug.md
+      - Using dynamic runtime values in config files: config/instructions/dynamic_values.md
+      - How to create and understand YAML files: config/instructions/yaml.md
+      - "Understanding the #config_version setting": config/instructions/config_version.md
+      - Specifying Colors in Config Files: config/instructions/colors.md
+      - Config player "express" configs: config/instructions/express_config.md
+      - Overwriting config files: config/instructions/overwrite.md
+      - Mode config files: config/instructions/mode_config.md
+      - How to add lists to config files: config/instructions/lists.md
+      - Case insensitivity in config files: config/instructions/case_insensitivity.md
+      - Understanding tags: config/instructions/tags.md
+      - Gamma correction in MPF: config/instructions/gamma_correction.md
+      - How to enter gain values in config files: config/instructions/gain_values.md
+      - Device Control Events: config/instructions/device_control_events.md
+      - How to enter time strings in config files: config/instructions/time_strings.md
+      - Machine config files: config/instructions/machine_config.md
+    - config/accelerometers.md
+    - config/accruals.md
+    - config/achievement_groups.md
+    - config/achievements.md
+    - config/animations.md
+    - config/assets.md
+    - config/auditor.md
+    - config/autofire_coils.md
+    - config/ball_devices.md
+    - config/ball_holds.md
+    - config/ball_locks.md
+    - config/ball_routings.md
+    - config/ball_saves.md
+    - config/bcp.md
+    - config/bcp_connection.md
+    - config/bcp_server.md
+    - config/bitmap_fonts.md
+    - config/blinkenlight_player.md
+    - config/blinkenlights.md
+    - config/bonus.md
+    - config/coil_overwrites.md
+    - config/coil_player.md
+    - config/coils.md
+    - config/color_correction_profile.md
+    - config/combo_switches.md
+    - config/config.md
+    - config/counter_control_events.md
+    - config/counters.md
+    - config/credits.md
+    - config/custom_code.md
+    - config/digital_outputs.md
+    - config/digital_score_reels.md
+    - config/display_light_player.md
+    - config/displays.md
+    - config/diverters.md
+    - config/dmds.md
+    - config/drop_target_banks.md
+    - config/drop_targets.md
+    - config/dual_wound_coils.md
+    - config/event_player.md
+    - config/extra_ball_groups.md
+    - config/extra_balls.md
+    - config/fadecandy.md
+    - config/fast.md
+    - config/fast_coils.md
+    - config/fast_firmware_update.md
+    - config/fast_switches.md
+    - config/flasher_player.md
+    - config/flashers.md
+    - config/flippers.md
+    - config/game.md
+    - config/gi_player.md
+    - config/gis.md
+    - config/hardware.md
+    - config/hardware_benchmark.md
+    - config/hardware_sound_player.md
+    - config/hardware_sound_systems.md
+    - config/high_score.md
+    - config/image_pools.md
+    - config/images.md
+    - config/images_frame_skips.md
+    - config/info_lights.md
+    - config/keyboard.md
+    - config/kickbacks.md
+    - config/kivy_config.md
+    - config/led_player.md
+    - config/leds.md
+    - config/light_player.md
+    - config/light_rings.md
+    - config/light_segment_displays.md
+    - config/light_segment_displays_device.md
+    - config/light_settings.md
+    - config/light_stripes.md
+    - config/lights.md
+    - config/lisy.md
+    - config/logging.md
+    - config/logic_blocks.md
+    - config/logic_blocks_common.md
+    - config/machine.md
+    - config/machine_vars.md
+    - config/magnets.md
+    - config/matrix_lights.md
+    - config/mc_custom_code.md
+    - config/mc_scriptlets.md
+    - config/mode.md
+    - config/mode_settings.md
+    - config/modes.md
+    - config/motors.md
+    - config/mpf-mc.md
+    - config/mpf.md
+    - config/multiball_locks.md
+    - config/multiballs.md
+    - config/mypinballs.md
+    - config/named_colors.md
+    - config/neoseg_displays.md
+    - config/open_pixel_control.md
+    - config/opp.md
+    - config/opp_coils.md
+    - config/osc.md
+    - config/p_roc.md
+    - config/pd_led_boards.md
+    - config/pin2dmd.md
+    - config/pkone.md
+    - config/player_vars.md
+    - config/playfield_transfers.md
+    - config/playfields.md
+    - config/playlist_player.md
+    - config/playlists.md
+    - config/plugins.md
+    - config/pololu_maestro.md
+    - config/pololu_tic.md
+    - config/psus.md
+    - config/queue_event_player.md
+    - config/queue_relay_player.md
+    - config/random_event_player.md
+    - config/raspberry_pi.md
+    - config/rgb_dmds.md
+    - config/rpi_dmd.md
+    - config/score_queue_player.md
+    - config/score_queues.md
+    - config/score_reel_groups.md
+    - config/score_reels.md
+    - config/scriptlets.md
+    - config/segment_display_player.md
+    - config/segment_displays.md
+    - config/sequence_shots.md
+    - config/sequences.md
+    - config/servo_controllers.md
+    - config/servos.md
+    - config/settings.md
+    - config/shot_control_events.md
+    - config/shot_groups.md
+    - config/shot_profiles.md
+    - config/shots.md
+    - config/show_config.md
+    - config/show_player.md
+    - config/show_pools.md
+    - config/shows.md
+    - config/slide_player.md
+    - config/slides.md
+    - config/smart_virtual.md
+    - config/smartmatrix.md
+    - config/snux.md
+    - config/sound_ducking.md
+    - config/sound_loop_player.md
+    - config/sound_loop_sets.md
+    - config/sound_marker.md
+    - config/sound_player.md
+    - config/sound_pools.md
+    - config/sound_system.md
+    - config/sound_system_tracks.md
+    - config/sounds.md
+    - config/spi_bit_bang.md
+    - config/spike.md
+    - config/spike_node.md
+    - config/spinners.md
+    - config/state_machine_states.md
+    - config/state_machine_transitions.md
+    - config/state_machines.md
+    - config/steppers.md
+    - config/step_stick_stepper_settings.md
+    - config/switch_overwrites.md
+    - config/switch_player.md
+    - config/switches.md
+    - config/system11.md
+    - config/template_setting.md
+    - config/text_strings.md
+    - config/text_ui.md
+    - config/tic_stepper_settings.md
+    - config/tilt.md
+    - config/timed_switches.md
+    - config/timer_control_events.md
+    - config/timers.md
+    - config/track_player.md
+    - config/trinamics_steprocker.md
+    - config/twitch_client.md
+    - config/variable_player.md
+    - config/video_pools.md
+    - config/videos.md
+    - config/virtual_platform_start_active_switches.md
+    - config/virtual_segment_display_connector.md
+    - config/vpe.md
+    - config/widget_player.md
+    - config/widget_styles.md
+    - config/widgets.md
+    - config/window.md
+  - Game Variables:
+    - game_vars/index.md
+    - balls_in_play: game_vars/balls_in_play.md
+    - balls_per_game: game_vars/balls_per_game.md
+    - max_players: game_vars/max_players.md
+    - num_players: game_vars/num_players.md
+    - slam_tilted: game_vars/slam_tilted.md
+    - tilted: game_vars/tilted.md
+  - Machine Variables:
+    - machine_vars/index.md
+    - credit_units: machine_vars/credit_units.md
+    - credits_denominator: machine_vars/credits_denominator.md
+    - credits_numerator: machine_vars/credits_numerator.md
+    - credits_string: machine_vars/credits_string.md
+    - credits_value: machine_vars/credits_value.md
+    - credits_whole_num: machine_vars/credits_whole_num.md
+    - fast_(x)_firmware: machine_vars/fast_x_firmware.md
+    - fast_(x)_model: machine_vars/fast_x_model.md
+    - (high_score_category)(position)_label: machine_vars/high_score_categoryposition_label.md
+    - (high_score_category)(position)_name: machine_vars/high_score_categoryposition_name.md
+    - (high_score_category)(position)_value: machine_vars/high_score_categoryposition_value.md
+    - lisy_api_version: machine_vars/lisy_api_version.md
+    - lisy_hardware: machine_vars/lisy_hardware.md
+    - lisy_version: machine_vars/lisy_version.md
+    - mc_extended_version: machine_vars/mc_extended_version.md
+    - mc_version: machine_vars/mc_version.md
+    - mpf_extended_version: machine_vars/mpf_extended_version.md
+    - mpf_version: machine_vars/mpf_version.md
+    - p_roc_hardware_version: machine_vars/p_roc_hardware_version.md
+    - p_roc_revision: machine_vars/p_roc_revision.md
+    - p_roc_version: machine_vars/p_roc_version.md
+    - pkone_firmware: machine_vars/pkone_firmware.md
+    - pkone_hardware: machine_vars/pkone_hardware.md
+    - platform: machine_vars/platform.md
+    - platform_machine: machine_vars/platform_machine.md
+    - platform_release: machine_vars/platform_release.md
+    - platform_system: machine_vars/platform_system.md
+    - platform_version: machine_vars/platform_version.md
+    - player(x)_score: machine_vars/playerx_score.md
+    - python_version: machine_vars/python_version.md
+  - Player Variables:
+    - player_vars/index.md
+    - index: player_vars/_index.md
+    - ball: player_vars/ball.md
+    - extra_ball_(name)_awarded: player_vars/extra_ball_name_awarded.md
+    - extra_balls: player_vars/extra_balls.md
+    - lb: player_vars/logic_block_state.md
+    - mode_timer_tick: player_vars/mode_timer_tick.md
+    - number: player_vars/number.md
+    - random_x.y: player_vars/random_x.y.md
+    - restart_modes_on_next_ball: player_vars/restart_modes_on_next_ball.md
+    - score: player_vars/score.md
+  - Event Reference:
+    - events/index.md
+    - Overview:
+      - events/overview/index.md
+      - Handler Priorities: events/overview/priorities.md
+      - Types of events: events/overview/event_types.md
+      - Conditional Events: events/overview/conditional.md
+    - achievement_(name)_changed_state: events/achievement_achievement_changed_state.md
+    - achievement_(name)_state_(state): events/achievement_achievement_state_state.md
+    - asset_loading_complete: events/asset_loading_complete.md
+    - ball_drain: events/ball_drain.md
+    - ball_ended: events/ball_ended.md
+    - ball_ending: events/ball_ending.md
+    - ball_hold_(name)_balls_released: events/ball_hold_ball_hold_balls_released.md
+    - ball_hold_(name)_full: events/ball_hold_ball_hold_full.md
+    - ball_hold_(name)_held_ball: events/ball_hold_ball_hold_held_ball.md
+    - ball_save_(name)_disabled: events/ball_save_ball_save_disabled.md
+    - ball_save_(name)_enabled: events/ball_save_ball_save_enabled.md
+    - ball_save_(name)_grace_period: events/ball_save_ball_save_grace_period.md
+    - ball_save_(name)_hurry_up: events/ball_save_ball_save_hurry_up.md
+    - ball_save_(name)_saving_ball: events/ball_save_ball_save_saving_ball.md
+    - ball_save_(name)_timer_start: events/ball_save_ball_save_timer_start.md
+    - ball_save_(name)_add_a_ball_timer_start: events/ball_save_multiball_add_a_ball_timer_start.md
+    - ball_save_(name)_timer_start: events/ball_save_multiball_timer_start.md
+    - ball_search_failed: events/ball_search_failed.md
+    - ball_search_phase_(num): events/ball_search_phase_num.md
+    - ball_search_prevents_game_start: events/ball_search_prevents_game_start.md
+    - ball_search_started: events/ball_search_started.md
+    - ball_search_stopped: events/ball_search_stopped.md
+    - ball_start_target: events/ball_start_target.md
+    - ball_started: events/ball_started.md
+    - ball_starting: events/ball_starting.md
+    - ball_will_end: events/ball_will_end.md
+    - ball_will_start: events/ball_will_start.md
+    - balldevice_(name)_ball_count_changed: events/balldevice_ball_device_ball_count_changed.md
+    - balldevice_(name)_ball_eject_attempt: events/balldevice_ball_device_ball_eject_attempt.md
+    - balldevice_(name)_ball_eject_failed: events/balldevice_ball_device_ball_eject_failed.md
+    - balldevice_(name)_ball_eject_success: events/balldevice_ball_device_ball_eject_success.md
+    - balldevice_(name)_ball_enter: events/balldevice_ball_device_ball_enter.md
+    - balldevice_(name)_ball_entered: events/balldevice_ball_device_ball_entered.md
+    - balldevice_(name)_ball_missing: events/balldevice_ball_device_ball_missing.md
+    - balldevice_(name)_broken: events/balldevice_ball_device_broken.md
+    - balldevice_(name)_ejecting_ball: events/balldevice_ball_device_ejecting_ball.md
+    - balldevice_ball_missing: events/balldevice_ball_missing.md
+    - balldevice_balls_available: events/balldevice_balls_available.md
+    - balldevice_captured_from_(captures_from): events/balldevice_captured_from_captures_from.md
+    - balls_in_play: events/balls_in_play.md
+    - bcp_clients_connected: events/bcp_clients_connected.md
+    - bcp_connection_attempt: events/bcp_connection_attempt.md
+    - bonus_multiplier: events/bonus_multiplier.md
+    - bonus_start: events/bonus_start.md
+    - bonus_subtotal: events/bonus_subtotal.md
+    - cancel_ball_search: events/cancel_ball_search.md
+    - clear: events/clear.md
+    - client_connected: events/client_connected.md
+    - client_disconnected: events/client_disconnected.md
+    - collecting_balls: events/collecting_balls.md
+    - collecting_balls_complete: events/collecting_balls_complete.md
+    - (name)_both: events/combo_switch_both.md
+    - (name)_inactive: events/combo_switch_inactive.md
+    - (name)_one: events/combo_switch_one.md
+    - (name)_switches_1: events/combo_switch_switches_1.md
+    - (name)_switches_2: events/combo_switch_switches_2.md
+    - credits_added: events/credits_added.md
+    - display_(name)_initialized: events/display_display_initialized.md
+    - display_(name)_ready: events/display_display_ready.md
+    - displays_initialized: events/displays_initialized.md
+    - diverter_(name)_activating: events/diverter_diverter_activating.md
+    - diverter_(name)_deactivating: events/diverter_diverter_deactivating.md
+    - diverter_(name)_disabling: events/diverter_diverter_disabling.md
+    - diverter_(name)_enabling: events/diverter_diverter_enabling.md
+    - drop_target_bank_(name)_down: events/drop_target_bank_drop_target_bank_down.md
+    - drop_target_bank_(name)_mixed: events/drop_target_bank_drop_target_bank_mixed.md
+    - drop_target_bank_(name)_up: events/drop_target_bank_drop_target_bank_up.md
+    - drop_target_(name)_down: events/drop_target_drop_target_down.md
+    - drop_target_(name)_up: events/drop_target_drop_target_up.md
+    - enabling_credit_play: events/enabling_credit_play.md
+    - enabling_free_play: events/enabling_free_play.md
+    - extra_ball_award_disabled: events/extra_ball_award_disabled.md
+    - extra_ball_awarded: events/extra_ball_awarded.md
+    - extra_ball_(name)_award_disabled: events/extra_ball_extra_ball_award_disabled.md
+    - extra_ball_(name)_awarded: events/extra_ball_extra_ball_awarded.md
+    - extra_ball_(name)_lit: events/extra_ball_extra_ball_lit.md
+    - extra_ball_group_(name)_award_disabled: events/extra_ball_group_extra_ball_group_award_disabled.md
+    - extra_ball_group_(name)_awarded: events/extra_ball_group_extra_ball_group_awarded.md
+    - extra_ball_group_(name)_lit: events/extra_ball_group_extra_ball_group_lit.md
+    - extra_ball_group_(name)_lit_awarded: events/extra_ball_group_extra_ball_group_lit_awarded.md
+    - extra_ball_group_(name)_unlit: events/extra_ball_group_extra_ball_group_unlit.md
+    - flipper_cancel: events/flipper_cancel.md
+    - flipper_cradle: events/flipper_cradle.md
+    - flipper_cradle_release: events/flipper_cradle_release.md
+    - game_ended: events/game_ended.md
+    - game_ending: events/game_ending.md
+    - game_start: events/game_start.md
+    - game_started: events/game_started.md
+    - game_starting: events/game_starting.md
+    - game_will_end: events/game_will_end.md
+    - game_will_start: events/game_will_start.md
+    - init_done: events/init_done.md
+    - init_phase_1: events/init_phase_1.md
+    - init_phase_2: events/init_phase_2.md
+    - init_phase_3: events/init_phase_3.md
+    - init_phase_4: events/init_phase_4.md
+    - init_phase_5: events/init_phase_5.md
+    - kickback_(name)_fired: events/kickback_kickback_fired.md
+    - loading_assets: events/loading_assets.md
+    - logicblock_(name)_complete: events/logicblock_name_complete.md
+    - logicblock_(name)_hit: events/logicblock_name_hit.md
+    - logicblock_(name)_updated: events/logicblock_name_updated.md
+    - machine_reset_phase_1: events/machine_reset_phase_1.md
+    - machine_reset_phase_2: events/machine_reset_phase_2.md
+    - machine_reset_phase_3: events/machine_reset_phase_3.md
+    - machine_var_(name): events/machine_var_machine_var.md
+    - magnet_(name)_flinged_ball: events/magnet_magnet_flinged_ball.md
+    - magnet_(name)_flinging_ball: events/magnet_magnet_flinging_ball.md
+    - magnet_(name)_grabbed_ball: events/magnet_magnet_grabbed_ball.md
+    - magnet_(name)_grabbing_ball: events/magnet_magnet_grabbing_ball.md
+    - magnet_(name)_released_ball: events/magnet_magnet_released_ball.md
+    - magnet_(name)_releasing_ball: events/magnet_magnet_releasing_ball.md
+    - master_volume_decrease: events/master_volume_decrease.md
+    - master_volume_increase: events/master_volume_increase.md
+    - match_has_match: events/match_has_match.md
+    - match_no_match: events/match_no_match.md
+    - max_credits_reached: events/max_credits_reached.md
+    - mc_ready: events/mc_ready.md
+    - mc_reset_complete: events/mc_reset_complete.md
+    - mc_reset_phase_1: events/mc_reset_phase_1.md
+    - mc_reset_phase_2: events/mc_reset_phase_2.md
+    - mc_reset_phase_3: events/mc_reset_phase_3.md
+    - mode_(name)_started: events/mode_name_started.md
+    - mode_(name)_starting: events/mode_name_starting.md
+    - mode_(name)_stopped: events/mode_name_stopped.md
+    - mode_(name)_stopping: events/mode_name_stopping.md
+    - mode_(name)_will_start: events/mode_name_will_start.md
+    - mode_(name)_will_stop: events/mode_name_will_stop.md
+    - motor_(name)_reached_(position): events/motor_motor_reached_position.md
+    - multi_player_ball_started: events/multi_player_ball_started.md
+    - multiball_lock_(name)_full: events/multiball_lock_multiball_lock_full.md
+    - multiball_lock_(name)_locked_ball: events/multiball_lock_multiball_lock_locked_ball.md
+    - multiball_(name)_ended: events/multiball_multiball_ended.md
+    - multiball_(name)_grace_period: events/multiball_multiball_grace_period.md
+    - multiball_(name)_hurry_up: events/multiball_multiball_hurry_up.md
+    - multiball_(name)_lost_ball: events/multiball_multiball_lost_ball.md
+    - multiball_(name)_shoot_again: events/multiball_multiball_shoot_again.md
+    - multiball_(name)_shoot_again_ended: events/multiball_multiball_shoot_again_ended.md
+    - multiball_(name)_started: events/multiball_multiball_started.md
+    - multiplayer_game: events/multiplayer_game.md
+    - (name)_timeout: events/name_timeout.md
+    - not_enough_credits: events/not_enough_credits.md
+    - player_add_request: events/player_add_request.md
+    - player_added: events/player_added.md
+    - player_adding: events/player_adding.md
+    - player_(name): events/player_player_var.md
+    - player_turn_ended: events/player_turn_ended.md
+    - player_turn_ending: events/player_turn_ending.md
+    - player_turn_started: events/player_turn_started.md
+    - player_turn_starting: events/player_turn_starting.md
+    - player_turn_will_end: events/player_turn_will_end.md
+    - player_turn_will_start: events/player_turn_will_start.md
+    - player_will_add: events/player_will_add.md
+    - (name)_active: events/playfield_active.md
+    - (name)_ball_count_change: events/playfield_ball_count_change.md
+    - playfield_transfer_(playfield_transfer)_ball_transferred: events/playfield_transfer_playfield_transfer_ball_transferred.md
+    - reel_(name)_advanced: events/reel_score_reel_advanced.md
+    - request_to_start_game: events/request_to_start_game.md
+    - reset_complete: events/reset_complete.md
+    - (name)_hit: events/sequence_shot_hit.md
+    - (name)_complete: events/shot_group_complete.md
+    - (name)_hit: events/shot_group_hit.md
+    - (name)_(state)_complete: events/shot_group_state_complete.md
+    - (name)_(state)_hit: events/shot_group_state_hit.md
+    - (name)_hit: events/shot_hit.md
+    - (name)_(profile)_hit: events/shot_profile_hit.md
+    - (name)_(profile)_(state)_hit: events/shot_profile_state_hit.md
+    - (name)_(state)_hit: events/shot_state_hit.md
+    - shutdown: events/shutdown.md
+    - single_player_ball_started: events/single_player_ball_started.md
+    - slam_tilt: events/slam_tilt.md
+    - slide_(name)_active: events/slide_slide_active.md
+    - slide_(name)_created: events/slide_slide_created.md
+    - slide_(name)_removed: events/slide_slide_removed.md
+    - spinner_(name)_active: events/spinner_spinner_active.md
+    - spinner_(name)_hit: events/spinner_spinner_hit.md
+    - spinner_(name)_idle: events/spinner_spinner_idle.md
+    - spinner_(name)_inactive: events/spinner_spinner_inactive.md
+    - spinner_(name)_(label)_active: events/spinner_spinner_label_active.md
+    - spinner_(name)_(label)_hit: events/spinner_spinner_label_hit.md
+    - sw_(name)_active: events/sw_playfield_active.md
+    - sw_(tag): events/sw_tag.md
+    - sw_(tag)_active: events/sw_tag_active.md
+    - sw_(tag)_inactive: events/sw_tag_inactive.md
+    - (name)_active: events/switch_active.md
+    - (name)_inactive: events/switch_inactive.md
+    - switch_(name)_active: events/switch_switch_active.md
+    - switch_(name)_inactive: events/switch_switch_inactive.md
+    - text_input_(key)_abort: events/text_input_key_abort.md
+    - text_input_(key)_complete: events/text_input_key_complete.md
+    - tilt: events/tilt.md
+    - tilt_clear: events/tilt_clear.md
+    - tilt_warning: events/tilt_warning.md
+    - tilt_warning_(number): events/tilt_warning_number.md
+    - (name)_active: events/timed_switch_active.md
+    - (name)_released: events/timed_switch_released.md
+    - timer_(name)_complete: events/timer_timer_complete.md
+    - timer_(name)_paused: events/timer_timer_paused.md
+    - timer_(name)_started: events/timer_timer_started.md
+    - timer_(name)_stopped: events/timer_timer_stopped.md
+    - timer_(name)_tick: events/timer_timer_tick.md
+    - timer_(name)_time_added: events/timer_timer_time_added.md
+    - timer_(name)_time_subtracted: events/timer_timer_time_subtracted.md
+    - twitch_bit_donation: events/twitch_bit_donation.md
+    - twitch_chat_message: events/twitch_chat_message.md
+    - twitch_command: events/twitch_command.md
+    - twitch_raid: events/twitch_raid.md
+    - twitch_subscription: events/twitch_subscription.md
+    - unexpected_ball_on_(name): events/unexpected_ball_on_playfield.md
+    - achievement: events/index_achievements.md
+    - ball_device: events/index_ball_devices.md
+    - ball_hold: events/index_ball_holds.md
+    - ball_save: events/index_ball_saves.md
+    - combo_switch: events/index_combo_switches.md
+    - display: events/index_displays.md
+    - diverter: events/index_diverters.md
+    - drop_target_bank: events/index_drop_target_banks.md
+    - drop_target: events/index_drop_targets.md
+    - extra_ball_group: events/index_extra_ball_groups.md
+    - extra_ball: events/index_extra_balls.md
+    - kickback: events/index_kickbacks.md
+    - machine_var: events/index_machine_vars.md
+    - magnet: events/index_magnets.md
+    - motor: events/index_motors.md
+    - multiball_lock: events/index_multiball_locks.md
+    - multiball: events/index_multiballs.md
+    - player_var: events/index_player_vars.md
+    - playfield_transfer: events/index_playfield_transfers.md
+    - playfield: events/index_playfields.md
+    - score_reel: events/index_score_reels.md
+    - sequence_shot: events/index_sequence_shots.md
+    - shot_group: events/index_shot_groups.md
+    - shot: events/index_shots.md
+    - slide: events/index_slides.md
+    - spinner: events/index_spinners.md
+    - switch: events/index_switches.md
+    - timed_switch: events/index_timed_switches.md
+    - timer: events/index_timers.md
+  - Config Players Types:
+    - config_players/index.md
+    - Blinkenlight player: config_players/blinkenlight_player.md
+    - Coil player: config_players/coil_player.md
+    - Using LEDs as display (display_light_player): config_players/display_light_player.md
+    - Event player: config_players/event_player.md
+    - Flasher player: config_players/flasher_player.md
+    - GI (general illumination) player: config_players/gi_player.md
+    - Hardware Sound player: config_players/hardware_sound_player.md
+    - LED player: config_players/led_player.md
+    - Light player: config_players/light_player.md
+    - Playlist player: config_players/playlist_player.md
+    - Queue Event player: config_players/queue_event_player.md
+    - Queue Relay player: config_players/queue_relay_player.md
+    - Random event player: config_players/random_event_player.md
+    - Segment Display player: config_players/segment_display_player.md
+    - Show player: config_players/show_player.md
+    - Slide player: config_players/slide_player.md
+    - Sound Loop player: config_players/sound_loop_player.md
+    - Sound player: config_players/sound_player.md
+    - Track player: config_players/track_player.md
+    - Variable player: config_players/variable_player.md
+    - Widget player: config_players/widget_player.md
+  - Assets:
+    - assets/index.md
+    - Asset Pools: assets/asset_pools.md
+    - Bitmap Fonts: assets/bitmap_fonts.md
+    - Images: assets/images.md
+    - Shows: assets/shows.md
+    - Sounds: assets/sounds.md
+    - Videos: assets/videos.md
+  - Shows:
+    - shows/index.md
+    - Show configuration format: shows/format.md
+    - What can you put in shows?: shows/content.md
+    - Creating standalone show files: shows/file_shows.md
+    - Creating embedded shows in config files: shows/config_shows.md
+    - Shows in shows: shows/shows_in_shows.md
+    - Using "tokens" for run-time variable replacement in shows: shows/tokens.md
+    - Starting & stopping shows: shows/playing.md
+    - Synchronizing multiple shows: shows/sync_ms.md
+    - Playing Shows in a Show: shows/shows_in_shows.md
+  - MPF Errors from Log Files:
+    - logs/index.md
+    - CFE-coils-1: logs/CFE-coils-1.md
+    - CFE-ConfigValidator-1: logs/CFE-ConfigValidator-1.md
+    - CFE-ConfigValidator-2: logs/CFE-ConfigValidator-2.md
+    - CFE-ConfigValidator-4: logs/CFE-ConfigValidator-4.md
+    - CFE-ConfigValidator-6: logs/CFE-ConfigValidator-6.md
+    - CFE-ConfigValidator-9: logs/CFE-ConfigValidator-9.md
+    - CFE-ConfigValidator-12: logs/CFE-ConfigValidator-12.md
+    - CFE-ConfigValidator-13: logs/CFE-ConfigValidator-13.md
+    - CFE-DeviceManager-3: logs/CFE-DeviceManager-3.md
+    - CFE-show-1: logs/CFE-show-1.md
+    - CFE-Smart_Virtual_Platform-1: logs/CFE-Smart_Virtual_Platform-1.md
+    - CFE-Virtual_Platform-1: logs/CFE-Virtual_Platform-1.md
+    - Log-SwitchController-1: logs/Log-SwitchController-1.md
+    - RE-MPF-MC_BCP_Server-1: logs/RE-MPF-MC_BCP_Server-1.md
+    - RE-MPF_BCP_Server-1: logs/RE-MPF_BCP_Server-1.md
+    - RE-P-Roc-1: logs/RE-P-Roc-1.md
+    - RE-P-Roc-2: logs/RE-P-Roc-2.md
+    - RE-P-Roc-3: logs/RE-P-Roc-3.md
+  - Example Games:
+    - example_games/index.md
+    - examples/index.md
+    - mpf-examples: example_games/mpf-examples.md
+    - demo_man: example_games/demo_man.md
+    - mc_demo: example_games/mc_demo.md
+
+- Projects:
+  - projects/index.md
+  - Add your project: projects/_add_yours.md
+
+- Community:
+  - community/index.md
+
+- About:
+  - about/index.md
+  - FAQs:
+    - faq/index.md
+    - General: faq/general.md
+    - Getting Help: faq/help.md
+    - Installation: faq/installation.md
+    - Building your game: faq/game.md
+  - MPF Versions:
+    - versions/index.md
+    - Docs for Old MPF Versions: versions/docs.md
+    - Understanding MPF version numbering: versions/understanding.md
+    - MPF Release Notes: versions/release_notes.md
+    - MPF Road Map, Vision & Future: versions/roadmap.md
+    - MPF release checklist: versions/release_checklist.md
+  - License & Copyright: about/license.md
+  - MPF Documentation authors: about/authors.md
+  - Contributing to MPF's Documentation: about/help_docs.md
+  - Help us to write it: about/help.md
+  - Contributing to MPF: about/contributing_to_mpf.md

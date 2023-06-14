@@ -1,6 +1,1 @@
-Sphinx
-sphinx-rtd-theme
-sphinx-notfound-page
-sphinxcontrib-youtube
-gitpython
-ruamel.yaml==0.15.42
+mkdocs-material

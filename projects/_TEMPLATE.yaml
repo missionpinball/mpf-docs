@@ -1,0 +1,20 @@
+# Use this file as a template to add your project
+# It will be included automatically when the site is built
+
+name: Brooks & Dunn                   # Name of your project
+acronym: BND               #
+team: Gabe Knuth, Brian Madden
+location: Omaha, NE
+started: 2016-01-01
+finished: 2016-10-20
+images:  # image (or images), just a list of file names, no path needed, from the images folder in this folder
+project_type: code_update    # code_update, retheme, original
+youtube_video_ids:      # list of youtube video ids, comma separated for multiples
+documentation_link:  # Link to website or Pinside thread about this project
+code_link:          # Link to GitHub or other code repository
+gameplay_link:     # web link to gameplay videos
+controller: FAST   # FAST, cobrapin, P-ROC, P3-ROC, etc.
+description: >
+  As much text as you want. If you go multiple lines, be
+  sure each one is indented by at least two spaces, like
+  this line is.
