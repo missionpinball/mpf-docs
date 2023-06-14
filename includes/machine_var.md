@@ -1,3 +1,3 @@
-!!! note "This is a machine variable"
+!!! note "This is an MPF machine variable"
 
-    What is that? todo.
+    The content on this page is technical documentation for an [MPF Machine Variable](/machine_vars).

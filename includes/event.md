@@ -1,3 +1,3 @@
-!!! note "This is event"
+!!! note "This is an MPF Event"
 
-    What is that? todo.
+    The content on this page is technical documentation for an [MPF Event](/events/overview).

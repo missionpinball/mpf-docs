@@ -1,3 +1,3 @@
-!!! note "This is a player variable"
+!!! note "This is an MPF player variable"
 
-    Todo link, etc.
+    The content on this page is technical documentation for an [MPF Player Variable](/players_vars).

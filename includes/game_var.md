@@ -1,3 +1,3 @@
-!!! note "This is a game variable"
+!!! note "This is an MPF game variable"
 
-    Todo link, etc.
+    The content on this page is technical documentation for an [MPF Game Variable](/game_vars).
