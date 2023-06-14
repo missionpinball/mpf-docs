@@ -152,6 +152,7 @@ nav:
     - Troubleshooting Platforms: hardware/troubleshooting_hardware.md
   - Working with real pinball machines:
     - machines/index.md
+    - Homebrew / New Machine: machines/homebrew.md
     - Existing / Re-theme:
       - machines/index.md
       - Bally/Stern Machines with AS-2518-17 or AS-2518-35 MPU: machines/bally_stern_as_2518.md
@@ -165,7 +166,6 @@ nav:
       - Controlling Stern Whitestar Machines: machines/whitestar.md
       - Controlling Williams, Bally System 11 Machines: machines/system11.md
       - Controlling Gottlieb System 1 Machines: machines/gottlieb_system1.md
-    - Homebrew / New Machine: machines/homebrew.md
   - Pinball Controllers:
     - hardware/pinball_controllers.md
     - FAST Pinball:
