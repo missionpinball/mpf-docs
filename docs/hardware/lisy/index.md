@@ -4,6 +4,7 @@ title: How to use MPF with the LISY platform
 
 # How to use MPF with the LISY platform
 
+--8<-- "hardware_platform.md"
 
 Related Config File Sections:
 

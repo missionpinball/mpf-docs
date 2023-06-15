@@ -99,7 +99,7 @@ shots:
 
 ## Step 2. Creating a profile for the lanes
 
-We can create a [shot profile](../config/shot_profiles) for the lanes that starts with the light off and makes it
+We can create a [shot profile](../config/shot_profiles.md) for the lanes that starts with the light off and makes it
 flash if that lane is lit for the skillshot.
 
 By default, a shot will advance its profile when the shot is hit, but we

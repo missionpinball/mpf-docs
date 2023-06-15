@@ -4,6 +4,7 @@ title: How to configure Multimorphic (P-ROC & P3-ROC) hardware
 
 # How to configure Multimorphic (P-ROC & P3-ROC) hardware
 
+--8<-- "hardware_platform.md"
 
 Here's a list of all the How To guides which explain how to use MPF
 with [Multimorphic P-ROC and P3-ROC control

@@ -4,6 +4,7 @@ title: CobraPin Pinball Controller powered by OPP
 
 # CobraPin Pinball Controller powered by OPP
 
+--8<-- "hardware_platform.md"
 
 This page is under development...don't believe a word you read.
 

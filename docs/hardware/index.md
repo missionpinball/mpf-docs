@@ -44,12 +44,28 @@ interface to it and submit a pull request to the MPF codebase!)
 Also see our guide on
 [voltages found in a pinball machine](voltages_and_power).
 
-## List of supported control systems & hardware
+## List of pinball control systems & hardware compatible with MPF
 
 Here's a list of all the different types of control systems and
 hardware that MPF currently supports. If there's a type of hardware
 you'd like us to support that you don't see on this list, you can add it!
+(Or, you can get the hardware maker to add it.)
 Reach out in the [forum](../community/index.md) if you need help.
+
+!!! note "Pinball hardware makers are responsible for their own MPF integration"
+
+    The maintainers of MPF are responsible for maintaining the MPF
+    software itself. But the individual "platform" code that allows
+    MPF to interact with physical hardware is owned and maintained
+    by the hardware vendors themselves. (e.g. FAST Pinball maintains
+    the [`/platforms/fast`](https://github.com/missionpinball/mpf/tree/dev/mpf/platforms/fast)
+    code, CobraPin and the OPP project creators maintain the
+    [`/platforms/opp`](https://github.com/missionpinball/mpf/tree/dev/mpf/platforms/opp)
+    code, etc.)
+
+    If you have a specific feature, support, or documentation
+    request for how MPF interacts with pinball hardware, reach out to
+    that company.
 
 ### Primary control systems
 

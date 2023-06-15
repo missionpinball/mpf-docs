@@ -4,6 +4,7 @@ title: How to configure a PIN2DMD RGB LED DMD
 
 # How to configure a PIN2DMD RGB LED DMD
 
+--8<-- "hardware_platform.md"
 
 Related Config File Sections:
 

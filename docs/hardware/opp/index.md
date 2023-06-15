@@ -4,6 +4,7 @@ title: How to configure Open Pinball Project (OPP) hardware for MPF
 
 # How to configure Open Pinball Project (OPP) hardware for MPF
 
+--8<-- "hardware_platform.md"
 
 This how to guide explains how to set up your MPF configuration files to
 interface with an Open Pinball Project (OPP) pinball controller.

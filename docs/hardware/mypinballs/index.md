@@ -4,6 +4,7 @@ title: MyPinballs Segment Display Controller
 
 # MyPinballs Segment Display Controller
 
+--8<-- "hardware_platform.md"
 
 Related Config File Sections:
 
