@@ -6,9 +6,10 @@ title: How to configure MPF for FAST Pinball hardware
 
 --8<-- "hardware_platform.md"
 
-FAST Pinball maintains their own documentation for how to use
-MPF with FAST on their website, which also includes all the
+FAST Pinball maintains [their own documentation on fastpinball.com](https://fastpinball.com/mpf)
+detailing how to use MPF with FAST, which also includes all the
 latest documentation for the newest FAST Pinball hardware.
+Check it out at the source:
 
 [fastpinball.com/mpf](https://fastpinball.com/mpf)
 
@@ -18,7 +19,6 @@ If you're using a FAST Nano Controller, along with MPF 0.56.0 or
 older, then the documentation on this site still applies to you.
 For anything newer, check out the latest documentation on the
 FAST Pinball website.
-
 
 Here's a list of all the How To guides which explain how to use MPF
 with FAST Pinball hardware. These guides include the numbering format
