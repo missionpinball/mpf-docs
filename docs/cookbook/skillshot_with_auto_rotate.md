@@ -116,7 +116,7 @@ shots:
 
 ## Step 2. Create a profile for the targets
 
-We can create a [shot profile](../config/shot_profiles) for the targets that starts with the light off, lights it
+We can create a [shot profile](../config/shot_profiles.md) for the targets that starts with the light off, lights it
 solid after one advancement, and makes it flash after a second
 advancement. By default, a shot will advance its profile when the shot
 is hit, but we don't want that here so we'll set
