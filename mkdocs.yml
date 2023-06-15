@@ -690,7 +690,6 @@ nav:
     - config/fadecandy.md
     - config/fast.md
     - config/fast_coils.md
-    - config/fast_firmware_update.md
     - config/fast_switches.md
     - config/flasher_player.md
     - config/flashers.md

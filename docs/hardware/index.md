@@ -48,10 +48,8 @@ Also see our guide on
 
 Here's a list of all the different types of control systems and
 hardware that MPF currently supports. If there's a type of hardware
-you'd like us to support that you don't see on this list, please [post
-a message to the MPF Users Google
-Group](https://groups.google.com/forum/#!forum/mpf-users) and we'll go
-from there.
+you'd like us to support that you don't see on this list, you can add it!
+Reach out in the [forum](../community/index.md) if you need help.
 
 ### Primary control systems
 

@@ -36,9 +36,15 @@ complex light shows.
 
 Read on for more info on how shows work:
 
-* [format content file_shows config_shows tokens playing sync_ms
-shows_in_shows](format content file_shows config_shows tokens playing sync_ms
-shows_in_shows)
+* [Show configuration format](format.md)
+* [What can you put in shows?](content.md)
+* [Creating standalone show files](file_shows.md)
+* [Creating embedded shows in config files](config_shows.md)
+* [Shows in shows](shows_in_shows.md)
+* [Using "tokens" for run-time variable replacement in shows](tokens.md)
+* [Starting & stopping shows](playing.md)
+* [Synchronizing multiple shows](sync_ms.md)
+* [Playing Shows in a Show](shows_in_shows.md)
 
 You should have a look at [Config Players](../config_players/index.md) to find more information about all the elements which are
 possible in shows (i.e. lights, slides, widgets or sounds).

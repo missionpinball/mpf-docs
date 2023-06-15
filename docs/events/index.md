@@ -12,9 +12,10 @@ posting and event or responding to an event that was posted.
 There are several important concepts about events in MPF that you should
 understand:
 
-* [overview/index overview/conditional overview/priorities
-overview/event_types](overview/index overview/conditional overview/priorities
-overview/event_types)
+* [Overview of the MPF event system](overview/index.md)
+* [Conditional Events (only trigger if certain conditions are true, e.g. last ball, score > 1000, etc.)](overview/conditional.md)
+* [Event priorities (control the order that handlers fire)](overview/priorities.md)
+* [Types of events](overview/event_types.md)
 
 ## Event Reference
 

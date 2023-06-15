@@ -96,8 +96,7 @@ above:
 ## What if it did not work?
 
 In the following we list some common problems and solutions. If you got
-another problem please ask in our [MPF User
-Forum](https://groups.google.com/forum/#!forum/mpf-users).
+another problem please ask in our [forum](../community/index.md).
 
 ### Keyboard does not work
 

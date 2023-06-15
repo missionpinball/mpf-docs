@@ -158,8 +158,7 @@ Once you have MPF installed via the procedure above, you can keep it
 up-to-date by running the final two pip commands from above which you
 used to install MPF and MPF-MC.
 
-Questions? Comments? Need help? You can post to the MPF Users Google
-Group: <https://groups.google.com/g/mpf-users/c/BIemtw17lx0>
+Questions? Comments? Need help? You can post to the [forum](../community/index.md).
 
 ## What if you borked it?
 

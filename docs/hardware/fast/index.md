@@ -18,17 +18,13 @@ Video about FAST:
 </div>
 
 * [Connecting FAST to your Computer](connecting.md)
-* [Installing hardware
-drivers & configuring COM ports](config)
+* [Installing hardware drivers & configuring COM ports](config.md)
 * [Switches](switches.md)
 * [Coils/Drivers/Magnets/Motors](drivers.md)
-* [Flippers, Slingshots, Pop
-Bumpers, and other "quick response" devices](hw_rules)
+* [Flippers, Slingshots, Pop Bumpers, and other "quick response" devices](hw_rules)
 * [LEDs](leds.md)
 * [Matrix Lights](lights.md)
 * [Traditional (single color) DMDs](dmd.md)
-* [RGB
-DMDs](rgb_dmd)
+* [RGB DMDs](rgb_dmd)
 * [Servos](servos.md)
 * [Power Filter Board](power_filter.md)
-* [Troubleshooting](../../troubleshooting/index.md)

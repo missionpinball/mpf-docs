@@ -70,7 +70,6 @@ in.
 * [fadecandy:](fadecandy.md)
 * [fast:](fast.md)
 * [fast_coils:](fast_coils.md)
-* [fast_firmware_update:](fast_firmware_update.md)
 * [fast_switches:](fast_switches.md)
 * [flasher_player:](flasher_player.md)
 * [flashers:](flashers.md)

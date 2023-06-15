@@ -37,6 +37,30 @@ Some examples:
     `variables:` setting of that step.
 * etc.
 
+## Config players in MPF
+
+* [Blinkenlight player](blinkenlight_player.md)
+* [Coil player](coil_player.md)
+* [Using LEDs as display (display_light_player)](display_light_player.md)
+* [Event player](event_player.md)
+* [Flasher player](flasher_player.md)
+* [GI (general illumination) player](gi_player.md)
+* [Hardware Sound player](hardware_sound_player.md)
+* [LED player](led_player.md)
+* [Light player](light_player.md)
+* [Playlist player](playlist_player.md)
+* [Queue Event player](queue_event_player.md)
+* [Queue Relay player](queue_relay_player.md)
+* [Random event player](random_event_player.md)
+* [Segment Display player](segment_display_player.md)
+* [Show player](show_player.md)
+* [Slide player](slide_player.md)
+* [Sound Loop player](sound_loop_player.md)
+* [Sound player](sound_player.md)
+* [Track player](track_player.md)
+* [Variable player](variable_player.md)
+* [Widget player](widget_player.md)
+
 Video about events in MPF:
 
 <div class="video-wrapper">
@@ -164,15 +188,3 @@ There is no one line syntax in shows.
 There are several different config players in MPF and MPF-MC. Click on
 each below for specific details of how to use them, with explanations of
 how to use them in config files and in shows.
-
-* [blinkenlight_player coil_player display_light_player event_player
-flasher_player gi_player hardware_sound_player led_player light_player
-playlist_player queue_event_player queue_relay_player
-random_event_player segment_display_player show_player slide_player
-sound_loop_player sound_player track_player variable_player
-widget_player](blinkenlight_player coil_player display_light_player event_player
-flasher_player gi_player hardware_sound_player led_player light_player
-playlist_player queue_event_player queue_relay_player
-random_event_player segment_display_player show_player slide_player
-sound_loop_player sound_player track_player variable_player
-widget_player)

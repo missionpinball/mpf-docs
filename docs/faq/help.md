@@ -7,13 +7,16 @@ title: FAQ: Getting help
 
 ## Where can I go for help?
 
-If you're stuck with something, feel free to post a message to the [MPF
-Users Google Group](https://groups.google.com/forum/#!forum/mpf-users).
+Check the [Community](../community/index.md) page for links to forums and events.
 
 ## I think I've found a bug. Now what?
 
-Again, post it to the [MPF Users Google
-Group](https://groups.google.com/forum/#!forum/mpf-users).
+Post it to the "issues" section of that repo on GitHub:
+
+* [MPF Issues](https://github.com/missionpinball/mpf/issues)
+* [MPF-MC Issues](https://github.com/missionpinball/mpf-mc/issues)
+* [MPF Monitor Issues](https://github.com/missionpinball/mpf-monitor/issues)
+* [MPF Website / Documentation Issues](https://github.com/missionpinball/mpf-docs/issues)
 
 ## I want MPF to work with a new piece of hardware
 
@@ -26,6 +29,5 @@ for the existing platform interfaces. This code is in the [platforms
 folder in
 MPF](https://github.com/missionpinball/mpf/tree/dev/mpf/platforms).
 
-As always, if you have questions, please post them to the [MPF Users
-Google Group](https://groups.google.com/forum/#!forum/mpf-users) and
-we'll go from there!
+As always, if you have questions, please post them to the
+[Mission Pinball discussion group on GitHub](https://github.com/orgs/missionpinball/discussions).

@@ -273,9 +273,7 @@ Single value, type: `string`. Defaults to empty.
 
 ### show_queue:
 
-Single value, type: string name of a
-[show_queues](show_queues) device.
-Defaults to empty.
+Is this still a thing? Need to confirm, June 2023
 
 --8<-- "todo.md"
 

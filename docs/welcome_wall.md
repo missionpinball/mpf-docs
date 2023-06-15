@@ -19,7 +19,7 @@ How do links work?
 
 [This is my text](https://missionpinball.org)
 
-Or a link to [another local page](/about/index.md)
+Or a link to [another local page](about/index.md)
 
 ## Don't worry, we will approve this first!
 

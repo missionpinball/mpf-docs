@@ -133,7 +133,7 @@ slides:
 ```
 
 Next we have to add some widgets to that slide. (Refer to the
-[documentation on widgets](/index.md) if you're not familiar with widgets yet.)
+[documentation on widgets](../widgets/index.md) if you're not familiar with widgets yet.)
 
 The first widget will be a
 [display widget](../widgets/display/index.md) with a

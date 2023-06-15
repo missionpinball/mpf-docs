@@ -64,5 +64,5 @@ Run `mpf format` on your config. See
 ## What if it did not help?
 
 If this did not help you can ask in the [mpf-users Google
-group](https://groups.google.com/forum/#!forum/mpf-users). Please post
+group](../community/index.md). Please post
 the full error message, your log file and the relevant config file.

@@ -58,8 +58,7 @@ For example, the latest MPF version might be 0.31.11 while the latest
 MPF-MC version could be 0.31.8. That's fine.)
 
 You can see which versions are the latest released versions at any time
-by visiting the [MPF Users Google
-Group](https://groups.google.com/forum/#!forum/mpf-users) where we list
+by visiting the [community forum](../community/index.md) where we list
 the latest versions in the header of the page.
 
 ## Documentation Versions

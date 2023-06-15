@@ -25,7 +25,7 @@ can do most of your display configuration via the config files.
 
     Everything in this "Displays & Graphics" section is about the default
     MPF Media Controller. See the
-    [media controller](mc) section for
+    [media controller](../index.md) section for
     details and alternative implementations.
 
 Here are a few photos of the MPF Media Controller's display system in

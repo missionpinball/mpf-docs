@@ -690,5 +690,4 @@ At this point, your Gadget mode is ready to go. You can add scoring in a
 `variable_player` and extend this by writing ways to use gadgets and
 reduce the "gadgets_available" player_vars. If any of this feels
 unclear or I've muddied up the explanation, feel free to join the
-discussion in the forums at
-<https://groups.google.com/forum/#!topic/mpf-users/oVwBRQOgodY> .
+discussion in the [forum](../community/index.md).

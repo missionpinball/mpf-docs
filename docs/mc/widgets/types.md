@@ -25,20 +25,18 @@ But also these:
 * Triangle
 * Common Settings (all widgets)
 
-* [Text](text)
+* [Text](text/index.md)
 * [Image](image.md)
 * [Video](video.md)
-* [Bezier
-Curve](bezier)
-* [Display](display)
+* [Bezier Curve](bezier.md)
+* [Display](display/index.md)
 * [Ellipse](ellipse.md)
 * [Line](line.md)
 * [Points](points.md)
 * [Quad](quad.md)
 * [Rectangle](rectangle.md)
-* [Segment Display Emulator](segment_display_emulator)
+* [Segment Display Emulator](segment_display_emulator/index.md)
 * [Text Input](text_input.md)
 * [Triangle](triangle.md)
 * [Camera](camera.md)
-* [Common Settings (all
-widgets)](common_settings)
+* [Common Settings (all widgets)](common_settings.md)

@@ -32,6 +32,4 @@ You can also read our [MPF Road Map, Vision & Future](../versions/roadmap.md)
 for an idea of our longer-term plans for MPF.
 
 If you still don't see your idea, of you'd like to talk about it or
-ask questions, feel free to post a message to the [MPF Users Google
-Group
-<https://groups.google.com/forum/#!forum/mpf-users>](#).
+ask questions, feel free to post a message to the a [forum](../community/index.md).

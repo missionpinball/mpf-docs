@@ -586,5 +586,4 @@ on the playfield.
 
 At this point you should have a working Super Pop mode. If any of this
 feels unclear or I've muddied up the explanation, feel free to join the
-discussion in the forums at
-<https://groups.google.com/forum/#!topic/mpf-users/oVwBRQOgodY> .
+discussion in the [forum](../community/index.md).

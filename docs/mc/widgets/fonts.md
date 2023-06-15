@@ -25,7 +25,7 @@ you put the fonts you want to use in your machine's fonts folder.
 
 Specifying which font a particular widget uses is done via that
 widget's `font_name:` setting, so see either the
-[bitmap_fonts](text) or
+[bitmap_fonts](text/index.md) or
 [bitmap_fonts](text_input.md) reference for details.
 
 Keep in mind that all widget properties, including fonts, can be

@@ -5,4 +5,7 @@ title: MPF FAQ
 # MPF FAQ
 
 
-* [general/index installation/index game/index help/index](general/index installation/index game/index help)
+* [General](general.md)
+* [Game](game.md)
+* [Help](help.md)
+* [Installation](installation.md)

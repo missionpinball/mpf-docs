@@ -98,7 +98,7 @@ shots:
 
 ## Step 2. Create a profile for the targets
 
-We can create a [/config/variable_player](shot_profile</config/shot_profiles) for the targets that starts with the light off, flashes it
+We can create a [shot profile](../config/shot_profiles) for the targets that starts with the light off, flashes it
 after one advancement, and keeps the light on solid after a second
 advancement. By default, a shot will advance its profile when the shot
 is hit, but we don't want that here so we'll set
@@ -128,7 +128,7 @@ shot_profiles:
 
 MPF includes a number of convenient ways for tracking progress called
 Logic Blocks, including the
-[/config/variable_player](sequence</config/sequences) that we can
+[sequence](../config/sequences.md) that we can
 use to require a series of events to occur in a specific order.
 
 The below sequence requires all four drop target shots to be hit, but

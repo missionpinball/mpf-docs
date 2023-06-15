@@ -47,10 +47,6 @@ We recommend that people use the latest "stable" (or "release")
 version of MPF unless you need specific features from the "dev" (next)
 version.
 
-The current "stable" version of MPF is listed on the top of the [MPF
-Users home page on Google
-Groups](https://groups.google.com/forum/#!forum/mpf-users).
-
 ## Where do I find information on older versions of MPF?
 
 If you want information about an older version (0.30 and newer), click

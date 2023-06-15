@@ -116,7 +116,7 @@ shots:
 
 ## Step 2. Create a profile for the targets
 
-We can create a [/config/variable_player](shot_profile</config/shot_profiles) for the targets that starts with the light off, lights it
+We can create a [shot profile](../config/shot_profiles) for the targets that starts with the light off, lights it
 solid after one advancement, and makes it flash after a second
 advancement. By default, a shot will advance its profile when the shot
 is hit, but we don't want that here so we'll set
@@ -151,12 +151,12 @@ shot_profiles:
 ## Step 3. Create a shot_group for the lanes, and a rotation timer
 
 To tell MPF that the five shots are related to each other, we create a
-[/config/variable_player](shot_group</config/shot_groups) with all
+[shot group](../config/shot_groups.md) with all
 the shots in it.
 
 Shot groups are powerful because they control behavior of all the shots
 together. In this case, we'll use our shot group control the rotation
-of the shots, and a [/config/variable_player](timer</config/timers) to trigger a rotation every half-second.
+of the shots, and a [timer](../config/timers.md) to trigger a rotation every half-second.
 
 ``` mpf-config
 #! switches:

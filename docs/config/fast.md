@@ -144,14 +144,6 @@ Default: `basic`
 
 Log level for the file log for this platform.
 
-### firmware_updates:
-
-List of one (or more) values, each is a type:
-[/hardware/fast/index](fast_firmware_update <fast_firmware_update). Defaults to empty.
-
-A list of firmware versions which can be installed using
-[mpf hardware (command-line utility)](../running/commands/hardware.md).
-
 ### hardware_led_fade_time:
 
 Single value, type: `time string (ms)`

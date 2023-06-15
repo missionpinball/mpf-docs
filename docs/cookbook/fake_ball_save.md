@@ -207,5 +207,4 @@ This is just an example of how I did it in my game. Every game is
 different.
 
 If you have any questions about how to do this in your game please post
-to [MPF Users Google
-Group](https://groups.google.com/forum/#!forum/mpf-users).
+to the forum](../community/index.md).

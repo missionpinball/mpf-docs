@@ -111,5 +111,4 @@ Here's an example of shot lines on Demolition Man:
 
 Do you have more advice? Did you make a stupid mistake (in
 retrospective) and want to tell other about it? Please
-[contribute a section to this guide](../about/help_docs.md) or tell us in the [MPF Users Google
-Group](https://groups.google.com/forum/#!forum/mpf-users).
+[contribute a section to this guide](../about/help_docs.md) or tell us in the [community forum](../community/index.md).

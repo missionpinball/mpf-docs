@@ -24,8 +24,9 @@ used).
 
 ### frames:
 
-List of one (or more) values, each is a type:
-[digital_score_reel_frame](digital_score_reel_frame). Defaults to empty.
+!!! question "Is this a thing?"
+
+    Need to investigate if this is still how this works? As of June 2023.
 
 --8<-- "todo.md"
 

@@ -254,7 +254,7 @@ set the color_dmd widget to be 640x160, you'll get a display like this:
 ![image](/mc/images/display_color_dmd2.png)
 
 You can also use the
-[widget sizing and positioning](/positioning.md) to create a DMD widget that is pre-positioned at a certain
+[widget sizing and positioning](../widgets/positioning.md) to create a DMD widget that is pre-positioned at a certain
 spot on the display. This is useful if you have a standard size LCD
 monitor in your backbox but only part of it is visible to the player. In
 that case you could make a color_dmd widget that was the size of the

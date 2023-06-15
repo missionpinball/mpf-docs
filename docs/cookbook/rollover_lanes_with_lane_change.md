@@ -76,7 +76,7 @@ shots:
 
 ## Step 2. Creating a profile for the lanes
 
-We can create a [/config/variable_player](shot_profile</config/shot_profiles) for the top lanes that starts with the light on, and turns
+We can create a [shot profile](../config/shot_profiles.md) for the top lanes that starts with the light on, and turns
 it off after the shot is hit.
 
 ``` mpf-config
@@ -149,7 +149,7 @@ shots:
 ## Step 3. Creating a shot_group for the lanes
 
 To tell MPF that the four lane shots are related to each other, we
-create a [/config/variable_player](shot_group</config/shot_groups)
+create a [shot group](../config/shot_groups.md)
 with all the shots in it.
 
 Shot groups are powerful because they control behavior of all the shots

@@ -78,6 +78,5 @@ MPF events are posted in the
 * [Ducking](ducking.md)
 * [Tracks](tracks.md)
 * [How to set up sound](basic_setup.md)
-* [Tips
-& tricks](/sound/tips_tricks)
+* [Tips & tricks](tips_tricks.md)
 * [Playing a sound with variations](variations.md)

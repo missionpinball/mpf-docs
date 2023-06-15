@@ -555,4 +555,4 @@ our [Debugging YAML Parse Errors](../troubleshooting/debugging_yaml_parse_errors
 
 Most of the other errors should be pretty self-explanatory. If you get
 stuck, feel free to post to the [mpf-users Google
-group](https://groups.google.com/forum/#!forum/mpf-users).
+group](../community/index.md).
