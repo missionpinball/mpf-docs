@@ -10,7 +10,7 @@ Related Config File Sections:
 * [ball_devices:](../../config/ball_devices.md)
 * [switches:](../../config/switches.md)
 * [playfields:](../../config/playfields.md)
-* [example ball_search](../examples/index.md)
+* [example ball_search](../../examples/index.md)
 
 !!! note
 

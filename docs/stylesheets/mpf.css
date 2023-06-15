@@ -3,8 +3,6 @@
 /* set site-wide colors */
 :root > * {
     --md-primary-fg-color:        #D63E29;
-    --md-primary-fg-color--light: #D63E29;
-    --md-primary-fg-color--dark:  #D63E29;
     --md-accent-fg-color:         #D63E29; /* button color on hover */
     --md-default-fg-color--light: hsla(0, 0%, 0%, 0.87); /* text in light mode */
   }

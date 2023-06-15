@@ -1,8 +1,8 @@
 ---
-title: Lane Mode
+title: Lit Lane Rotation
 ---
 
-# Lane Mode
+# Lit Lane Rotation
 
 
 Related Config File Sections:

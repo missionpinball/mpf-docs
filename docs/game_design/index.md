@@ -60,7 +60,7 @@ Questions answered in this section:
 * How to implement a mystery award mode?
 * How to implement a stand-up target bank mode?
 
-* [Game Mode](game_modes)
+* [Game Mode](../game_design/index.md)
 
 ## Wizard Modes
 

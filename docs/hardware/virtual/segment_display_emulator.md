@@ -20,7 +20,7 @@ if you don't have any physical segment display hardware connected.
 Here is a simple example of what the display can be configured to look
 like:
 
-![image](/displays/images/widget_segment_display_emulator.png)
+![image](../../mc/images/widget_segment_display_emulator.png)
 
 Video about segment displays:
 

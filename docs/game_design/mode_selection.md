@@ -10,7 +10,7 @@ to shoot and/or select them first. This usually serves multiple
 purposes: First, it gives the player options and allows different play
 styles. Second, it prevents all modes from starting at once. We will
 create a selection/qualification mode which then starts a
-[game mode](game_modes) (or
+[game mode](index.md) (or
 sometimes two). This selection mode usually runs all the time and
 provides the following functionality:
 

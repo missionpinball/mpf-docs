@@ -48,17 +48,10 @@ See the following image for an architecture overview:
 LISY can controll all features of your Gottlieb System1/80 machine. This
 includes:
 
-* Switches ([LISY1](switches_lisy1.md) and
-    [LISY80](switches_lisy80.md))
+* Switches ([LISY1](switches_lisy1.md) and [LISY80](switches_lisy80.md))
 * [Coils](drivers.md)
 * [Lights](lights.md)
 * [Enabling/disabling flipper, slings and popbumpers](flippers_slings_popbumpers.md)
 * [Segment displays](segment_displays.md)
 * [Original sounds of your game](../../mc/sound/index.md)
 * [Text to speech and additional sounds](../../mc/sound/index.md)
-
-* [connection switches_lisy1 switches_lisy80 drivers
-flippers_slings_popbumpers lights segment_displays sound protocol
-troubleshooting](connection switches_lisy1 switches_lisy80 drivers
-flippers_slings_popbumpers lights segment_displays sound protocol
-troubleshooting)

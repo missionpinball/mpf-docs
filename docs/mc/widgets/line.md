@@ -128,4 +128,4 @@ If `True`, the line will be closed.
 ## Examples
 
 The example config files section of the documentation contains
-[examples of line widgets](../examples/index.md).
+[examples of line widgets](../../examples/index.md).

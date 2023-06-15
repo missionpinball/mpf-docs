@@ -40,7 +40,7 @@ hardware):
 * Arduino Pinball Controller (APC)
 * Penny K PKONE pinball controller
 
-See the [pinball controllers](..hardware/pinball_controllers.md) page for details.
+See the [pinball controllers](../hardware/pinball_controllers.md) page for details.
 
 ## Compatible pinball accessories
 
@@ -277,4 +277,4 @@ you don't want to be a "coder," you don't have to be. (Though if you
 are a coder, we'd love to have you help us write MPF!
 
 By the way, if you'd like to see what we have in store for the future,
-check out our [road map](/versions/roadmap.md).
+check out our [road map](../versions/roadmap.md).

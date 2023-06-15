@@ -70,11 +70,11 @@ For
 
 ## Related How To guides
 
-* [/events/multiball_multiball_ended](multiball_with_traditional_ball_lock.md)
-* [/events/multiball_multiball_ended](multiball_with_virtual_ball_lock.md)
-* [/events/multiball_multiball_ended](add_a_ball_multiball.md)
-* [/events/multiball_multiball_ended](multiball_with_virtual_ball_lock.md)
-* [/events/multiball_multiball_ended](multiball_with_multiple_lock_devices.md)
+* [Multiball locks](multiball_locks.md)
+* [Multiball with a traditional ball lock](multiball_with_traditional_ball_lock.md)
+* [Multiball with a virtual ball lock](multiball_with_virtual_ball_lock.md)
+* [Multiball with multiple lock devices](multiball_with_multiple_lock_devices.md)
+* [Add a ball multiball](add_a_ball_multiball.md)
 
 ## Related Events
 
@@ -87,9 +87,3 @@ For
 * [multiball_(name)_shoot_again_ended](../../events/multiball_multiball_shoot_again_ended.md)
 * [ball_save_(name)_add_a_ball_timer_start](../../events/ball_save_multiball_add_a_ball_timer_start.md)
 * [multiball_(name)_ended](../../events/multiball_multiball_ended.md)
-
-* [multiball_locks multiball_with_traditional_ball_lock
-multiball_with_virtual_ball_lock add_a_ball_multiball
-multiball_with_multiple_lock_devices](multiball_locks multiball_with_traditional_ball_lock
-multiball_with_virtual_ball_lock add_a_ball_multiball
-multiball_with_multiple_lock_devices)

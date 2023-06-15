@@ -18,25 +18,11 @@ Here are the recipes that are done:
 * [Skillshots with Lane Change](skillshot_with_lane_change.md)
 * [Skillshots with Auto-Rotate](skillshot_with_auto_rotate.md)
 * [Sequential Drop Bank Targets](sequential_drop_banks.md)
-
-If you've ever played a game and wondered, "How would I do that?"
-then let us know and we'll write a recipe for it! And here's what's
-on our to-do list:
-
-* *Attack from Mars:* 5-Way Combo
-* *Red & Ted's RoadShow:* Bulldozer hits to ball lock & multiball
-* *Red & Ted's RoadShow:* City modes
-* *Centigrade 37:* Flip-flopping groups of lit targets
-* *Judge Dredd* DeadWorld ball lock and multiball
-* *Demolition Man* Crane elevator & unloader
-
-* [The Addams Family](Mansion Awards)
-* [Attack From
-Mars](Super Jets)
-* [Indiana Jones](Rollover Lanes)
-* [Batman 66](Gadgets Targets)
-* [Modifying the Game mode](Dual launch devices)
 * [Sequential Drop Banks](sequential_drop_banks.md)
-* [Skillshots with Lane Change](skillshot_with_lane_change.md)
-* [Skillshots
-with Auto-Rotate](skillshot_with_auto_rotate)
+* [Carousel Mode Selection](carousel.md)
+* [How to Drain All Balls on the Playfield and Serve One Back](fake_ball_save.md)
+* [Lit Lane Rotation](lanes_mode.md)
+* [Ending the Current Game by Long-pressing Start](long_presssing_start_to_end_game.md)
+* [Lighting Multiple Timed Shots at the Same Time](multiple_timed_shots.md)
+* [Mystery Awards](mystery_award.md)
+* [Implement a Mode for Top Lanes with Multiplier and Scoring](top_lanes_with_multiplier.md)

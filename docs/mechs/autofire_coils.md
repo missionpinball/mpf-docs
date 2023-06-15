@@ -216,7 +216,7 @@ For
 
 Let's learn by example. Though the following example is a fully working
 minimal set for the Cobra controller, it is as well helpful to
-understand the concpet more if you use a different set of hardware. For
+understand the concept more if you use a different set of hardware. For
 this example to work physically, the Cobra board needs to have the micro
 controllers powered up only. No need for a high voltage power supply,
 neither for any coil. The `config.yaml` below is the only configuration
@@ -270,8 +270,8 @@ keyboard:
 
 Now run `mpf both` to start above example. The Cobra board has a little
 LED next the coil output which will light up yellow when the coil is
-activated, see the
-[/tutorial/13_add_autofires](Cobra board</hardware/opp/cobrapin) documentation for details. Now press the connected switch,
+activated, see the [Cobra board](../hardware/opp/cobrapin/index.md)
+documentation for details. Now press the connected switch,
 you will see that the LED will not light up since the coil has not been
 activated. Press key 1 and afterwards press again the switch, this time
 you will see the LED light up for a short time. After you pressed the

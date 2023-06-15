@@ -103,12 +103,13 @@ For
 
 ## Related How To guides
 
-* [dual_wound single_wound disabled_flippers enabling_secondary_flippers
-weak_flippers](dual_wound single_wound disabled_flippers enabling_secondary_flippers
-weak_flippers)
-
-## Related Events
-
-None
-
+* [dual wound flippers](dual_wound.md)
+* [single wound flippers](single_wound.md)
+* [disabled flippers](disabled_flippers.md)
+* [enabling secondary flippers](enabling_secondary_flippers.md)
+* [weak flippers](weak_flippers.md)
 * [Flipper end-of-stroke (EOS) switches](eos_switches.md)
+* [inverted flippers](inverted_flippers.md)
+* [multiple flippers](multiple.md)
+* [no hold flippers](no_hold_flippers.md)
+* [reversed flippers](reversed_flippers.md)

@@ -1,8 +1,8 @@
 ---
-title: Carousel
+title: Carousel Mode Selection
 ---
 
-# Carousel
+# Carousel Mode Selection
 
 
 Related Config File Sections:

@@ -234,7 +234,7 @@ other baseline options detailed in the
 ## Examples
 
 The example config files section of the documentation contains
-[examples of text widgets](../examples/index.md).
+[examples of text widgets](../../../examples/index.md).
 
 [text_dynamic](text_dynamic.md)
 [text_strings](text_strings.md)

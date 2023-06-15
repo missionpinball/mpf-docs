@@ -134,4 +134,4 @@ of points.
 ## Examples
 
 The example config files section of the documentation contains
-[examples of bezier widgets](../examples/index.md).
+[examples of bezier widgets](../../examples/index.md).
