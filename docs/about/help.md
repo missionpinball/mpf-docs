@@ -1,8 +1,8 @@
 ---
-title: Help us write it!
+title: First timer's guide to editing MPF documentation
 ---
 
-# Help us write it!
+# First timer's guide to editing MPF documentation
 
 Hey! You found something that is not documented yet, or that needs to be
 updated. What a great opportunity to help us improve the documentation!

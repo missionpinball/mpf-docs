@@ -90,17 +90,6 @@ nav:
       - install/virtual-machine/index.md
       - Why use a VM: install/virtual-machine/why-use-vm.md
       - Setup Guide: install/virtual-machine/basic-guide.md
-
-  - Troubleshooting:
-    - troubleshooting/index.md
-    - Working with Log Files: troubleshooting/general_debugging.md
-    - Attaching A Debugger to MPF: troubleshooting/attaching_a_debugger.md
-    - Debugging Memory Leaks: troubleshooting/debugging_memory_leaks.md
-    - Reading MPF Errors: troubleshooting/reading_errors.md
-    - Debugging Segfaults: troubleshooting/debugging_segfaults.md
-    - Debugging YAML Parse Errors: troubleshooting/debugging_yaml_parse_errors.md
-    - Debugging MPF installation problems: troubleshooting/debugging_mpf_install.md
-    - YAML Error on first start: troubleshooting/common_problems_and_solutions.md
   - Running MPF:
     - running/index.md
     - MPF command launcher: running/mpf.md
@@ -120,28 +109,16 @@ nav:
       - mpf test: running/commands/test.md
       - mpf format: running/commands/format.md
     - Changing TCP ports: running/ports.md
-  - Tutorial:
-    - tutorial/index.md
-    - 1.  Install MPF: tutorial/1_install_mpf.md
-    - 2.  Create your machine folder: tutorial/2_creating_a_new_machine.md
-    - 3.  Get flipping!: tutorial/3_get_flipping.md
-    - 4.  Adjusting your flipper power: tutorial/4_adjust_flipper_power.md
-    - 5.  Add a display: tutorial/5_add_a_display.md
-    - 6.  Add keyboard control: tutorial/6_keyboard.md
-    - 7.  Add your trough: tutorial/7_trough.md
-    - 8.  Add your plunger lane: tutorial/8_plunger.md
-    - 9.  Add the start button: tutorial/9_start_button.md
-    - 10. Run a real game!: tutorial/10_run_a_game.md
-    - 11. Add the rest of your coils & switches: tutorial/11_add_coils_switches.md
-    - 12. Add the rest of your ball devices: tutorial/12_add_ball_devices.md
-    - 13. Add "autofire" devices: tutorial/13_add_autofires.md
-    - 14. Add your first mode: tutorial/14_add_a_mode.md
-    - 15. Add scoring: tutorial/15_scoring.md
-    - 16. Add an attract mode display show: tutorial/16_attract_mode_show.md
-    - 17. Add lights (or LEDs): tutorial/17_add_lights_leds.md
-    - 18. Add your first shot: tutorial/18_shots.md
-    - 19. Testing your machine: tutorial/19_unit_testing.md
-    - 20. Next steps: tutorial/20_next_steps.md
+  - Troubleshooting:
+    - troubleshooting/index.md
+    - Working with Log Files: troubleshooting/general_debugging.md
+    - Attaching A Debugger to MPF: troubleshooting/attaching_a_debugger.md
+    - Debugging Memory Leaks: troubleshooting/debugging_memory_leaks.md
+    - Reading MPF Errors: troubleshooting/reading_errors.md
+    - Debugging Segfaults: troubleshooting/debugging_segfaults.md
+    - Debugging YAML Parse Errors: troubleshooting/debugging_yaml_parse_errors.md
+    - Debugging MPF installation problems: troubleshooting/debugging_mpf_install.md
+    - YAML Error on first start: troubleshooting/common_problems_and_solutions.md
 
 - Hardware:
   - hardware/index.md
@@ -307,6 +284,28 @@ nav:
 
 - Game Programming:
   - game/index.md
+  - Tutorial:
+    - tutorial/index.md
+    - 1.  Install MPF: tutorial/1_install_mpf.md
+    - 2.  Create your machine folder: tutorial/2_creating_a_new_machine.md
+    - 3.  Get flipping!: tutorial/3_get_flipping.md
+    - 4.  Adjusting your flipper power: tutorial/4_adjust_flipper_power.md
+    - 5.  Add a display: tutorial/5_add_a_display.md
+    - 6.  Add keyboard control: tutorial/6_keyboard.md
+    - 7.  Add your trough: tutorial/7_trough.md
+    - 8.  Add your plunger lane: tutorial/8_plunger.md
+    - 9.  Add the start button: tutorial/9_start_button.md
+    - 10. Run a real game!: tutorial/10_run_a_game.md
+    - 11. Add the rest of your coils & switches: tutorial/11_add_coils_switches.md
+    - 12. Add the rest of your ball devices: tutorial/12_add_ball_devices.md
+    - 13. Add "autofire" devices: tutorial/13_add_autofires.md
+    - 14. Add your first mode: tutorial/14_add_a_mode.md
+    - 15. Add scoring: tutorial/15_scoring.md
+    - 16. Add an attract mode display show: tutorial/16_attract_mode_show.md
+    - 17. Add lights (or LEDs): tutorial/17_add_lights_leds.md
+    - 18. Add your first shot: tutorial/18_shots.md
+    - 19. Testing your machine: tutorial/19_unit_testing.md
+    - 20. Next steps: tutorial/20_next_steps.md
   - Pinball Mechs:
     - mechs/index.md
     - Flippers:
@@ -492,6 +491,8 @@ nav:
     - Auditor: machine_management/auditor.md
     - Service Mode: machine_management/service_mode.md
     - Operator Settings: machine_management/operator_settings.md
+  - Testing your Game:
+    - testing/index.md
   - Finalization:
     - finalization/index.md
     - Enabling & fine-tuning ball search: finalization/ball_search.md

@@ -8,5 +8,6 @@ title: Writing your Game Software
 * Game Logic
 * Modes
 * Machine Management
+* Testing your game
 * Finalization
 * Cookbook

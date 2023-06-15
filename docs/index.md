@@ -51,7 +51,6 @@ What MPF is, how it works, how to install it, how to use it.
   * [Config files versus "real" programming](start/dsl_vs_programming.md)
   * [Troubleshooting](troubleshooting/index.md)
   * [Running MPF](running/index.md)
-  * [Tutorial](tutorial/index.md)
 
 ## Hardware
 
@@ -59,17 +58,18 @@ Pinball machines, control systems, and pinball mechs.
 
   * [Working with real pinball machines](machines/index.md)
   * [Pinball Controllers](hardware/pinball_controllers.md)
-  * [Pinball Mechs](mechs/index.md)
-  * [Machine Management](machine_management/index.md)
   * [Physical Machine Building](physical_building/index.md)
 
 ## Game Programming
 
-  * [Game Programming](game/index.md)
+  * [Tutorial](tutorial/index.md)
+  * [Pinball Mechs](mechs/index.md)
   * [Game Elements](game_logic/index.md)
-  * [How to use modes](game_design/index.md)
-  * [Cookbook](cookbook/index.md)
+  * [Modes](game_design/index.md)
+  * [Machine Management](machine_management/index.md)
+  * [Testing](testing/index.md)
   * [Finalization](finalization/index.md)
+  * [Cookbook](cookbook/index.md)
   * [Flowcharts](flowcharts/index.md)
 
 ## Media Controller(s)
