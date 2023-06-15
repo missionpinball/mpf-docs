@@ -4,6 +4,7 @@ title: Writing your Game Software
 
 # Programming your Game
 
+* Tutorial
 * Pinball Mechs
 * Game Logic
 * Modes

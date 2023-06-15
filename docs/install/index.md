@@ -26,3 +26,8 @@ Here links to the installation guides for each platform:
 * [Mac](mac.md)
 * [Windows](windows.md)
 * [Linux](linux)
+
+## Next step: The Tutorial!
+
+We have a tutorial which walks you through the first few steps of getting
+your project started at [missionpinball.org/tutorial](../tutorial/index.md)
