@@ -185,7 +185,7 @@ style of drain and trough is actually configured using Option 2, the
 modern trough with mechanical switches.)
 
 If you have something weird that you can't figure out, we're happy to
-help! Just post a photo of it to [community forum](../.) and we'll go
+help! Just post a photo of it to [community forum](../../community/index.md) and we'll go
 from there.
 
 Related How To guides:
