@@ -155,7 +155,7 @@ open two different terminal windows, and run `mpf -X` in one and
 ## Keeping MPF up-to-date
 
 Once you have MPF installed via the procedure above, you can keep it
-up-to-date by running the final two pipx commands from above which you
+up-to-date by running the final two pip commands from above which you
 used to install MPF and MPF-MC.
 
 Questions? Comments? Need help? You can post to the MPF Users Google
@@ -191,14 +191,13 @@ version you installed, which will be:
 If you see something else, then run `which -a python3` to see what other
 versions are installed. Then copy the path to the version you installed
 (which will be the `/Library/Frameworks/...` version), and use that in
-Step 5 (the initial pipx installation command) when you install MPF.
+Step 5 when you install MPF.
 
 To fix errors about failing to load assets: ____ If you get an error
 about a failure while loading assets, and you see some references to
 PIL, there's a potential conflict with an image library that you can
 remove. To do that, use the following command:
 
-`pipx runpip mpf uninstall pillow`
+`pip3 uninstall pillow`
 
-This command uses pipx to run a pip command inside the mpf environment
-to uninstall a package called pillow.
+This command uses pip to uninstall a package called pillow.

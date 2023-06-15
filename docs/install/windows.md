@@ -15,9 +15,9 @@ there are a lot of steps.
 
     If you're an expert Python user, you can skip most of this page. Just
     know you need Python 3.9 (newer or older won't work, see below), and
-    you can install MPF-MC via pip. `pipx install mpf-mc` This will also
+    you can install MPF-MC via pip. `pip install mpf-mc` This will also
     install MPF. You probably also want to install MPF Monitor via
-    `pipx install mpf-monitor`.
+    `pip install mpf-monitor`.
 
 ## Remove prior versions of MPF
 

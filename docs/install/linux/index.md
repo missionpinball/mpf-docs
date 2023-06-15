@@ -83,22 +83,6 @@ this command to check what is installed:
 mpf --version
 ```
 
-Now back to the installation, in a console run
-
-``` doscon
-pip3.9 install --user pipx
-python3.9 -m pipx ensurepath
-```
-
-After this it might be necessary to restart the console. Now run the
-following command (obey that this is pipx and here there is no need for
-a version)
-
-``` doscon
-pipx install "mpf[cli]" --pip-args="--pre" --verbose --include-deps
-pipx inject mpf mpf-mc --pip-args="--pre" --verbose --include-deps --include-apps
-```
-
 Updated MPF Monitor instructions (which work with pipx) are
 [here](../../tools/monitor/installation.md).
 
