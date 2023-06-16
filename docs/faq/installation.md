@@ -47,7 +47,7 @@ version.
 ## Where do I find information on older versions of MPF?
 
 If you want information about an older version of MPF, we have
-[prior version documentation bundles](../version/docs.md).
+[prior version documentation bundles](../versions/docs.md).
 
 You can install older versions of MPF with pip, like this:
 

@@ -31,7 +31,7 @@ Happy Pinball Building!
 
 ## More about MPF
 
-* [FAQs](../faqs/index.md)
+* [FAQs](../faq/index.md)
 * [MPF License](license.md) It's MIT! Go nuts!
 * [Contributing to MPF's documentation](help_docs.md)
 * [First timer's guide to docs contributions](help.md)

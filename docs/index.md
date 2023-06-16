@@ -104,11 +104,15 @@ device state, player variables, etc.
 
 ## Projects built on MPF
 
-* [Projects](projects/index.md)
+* [List of pinball machine projects running on MPF](projects/index.md)
+* [Add your machine to the list!](projects/_add_yours.md)
 
 ## Community
 
 * [Community](community/index.md)
+* [MPF Users Google Group](https://groups.google.com/forum/#!forum/mpf-users)
+* [MPF discussion group on GitHub](https://github.com/orgs/missionpinball/discussions)
+* [PinDevCon](https://fastpinball.com/pindevcon) - The pinball developer conference, lots of MPF content!
 
 ## About MPF
 
