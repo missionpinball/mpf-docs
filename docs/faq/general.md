@@ -1,5 +1,5 @@
 ---
-title: FAQ: General
+title: "FAQ: General"
 ---
 
 # FAQ: General
@@ -34,7 +34,7 @@ make MPF hardware-independent so it could work with any pinball control
 system.
 
 The first release of MPF was in May, 2014. (That's before the project was
-even on GitHub!) Since then, MPF has grown to be a complete framework
+even on GitHub!) (Check out the [MPF announcement post on Pinside](https://pinside.com/pinball/forum/topic/announcing-the-mission-pinball-framework-hw-independent-python-based-game-sw).) Since then, MPF has grown to be a complete framework
 that's used by homebrewers and commercial pinball companies to power
 real pinball machines around the world.
 
@@ -55,9 +55,10 @@ details and examples.
 ## Where does the name come from?
 
 Brian lived in San Francisco's "Mission" neighborhood when MPF was
-first created. There are a lot of "Mission" things here, Mission
-Bowling, Mission Coffee, Mission Ice Cream... So we thought "Mission
-Pinball" had a great ring to it!
+first created. There were a lot of "Mission" things here, Mission
+Bowling, Mission Coffee, Mission Ice Cream... He had registered the
+Mission Pinball domain "just in case" and this project turned out to
+be a great use for it!
 
 ## What pinball hardware does MPF work with?
 

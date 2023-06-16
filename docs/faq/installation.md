@@ -1,5 +1,5 @@
 ---
-title: FAQ: Installation
+title: "FAQ: Installation"
 ---
 
 # FAQ: Installation
@@ -8,14 +8,12 @@ title: FAQ: Installation
 ## How do I get started?
 
 Start with the [Start Here](../start/index.md)
-link in the menu on the left. That will explain an overview of how MPF
-works and then lead you through the features, the tutorial, and so on.
+link in the menu. That will explain an overview of how MPF works and then lead you through the features, the tutorial, and so on.
 
 ## What are the prerequisites?
 
 If you just want to start playing with MPF, you do not need a physical
-pinball machine. In fact we have a graphical tool (the [MPF
-Monitor](https://github.com/missionpinball/mpf-monitor)) which simulates
+pinball machine. In fact we have a graphical tool (the [MPF Monitor](../tools/monitor/index.md)) which simulates
 a real pinball machine, so you can probably build an entire game without
 having an actual pinball machine.
 
@@ -36,8 +34,7 @@ Pi) in their machine to run MPF.
 
 ## What Python version can I use with MPF?
 
-Your need Python 3.5 or 3.6. Python 3.4 is end of life and will no
-longer be supported. Python 3.7 and newer are not yet supported. We walk
+MPF uses Python 3.7 - 3.9. We walk
 you through getting Python installed in our
 [installation documentation](../install/index.md).
 
@@ -49,13 +46,9 @@ version.
 
 ## Where do I find information on older versions of MPF?
 
-If you want information about an older version (0.30 and newer), click
-the "Read the Docs" link in the lower-left corner of any page on
-docs.missionpinball.org and select the version you want to read about.
+If you want information about an older version of MPF, we have
+[prior version documentation bundles](../version/docs.md).
 
 You can install older versions of MPF with pip, like this:
 
     pip install mpf-mc==0.31
-
-Documentation for versions of MPF prior to 0.30 is available in [this
-post](https://groups.google.com/forum/#!msg/mpf-users/7I-phnq9rOs/)

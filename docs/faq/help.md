@@ -1,5 +1,5 @@
 ---
-title: FAQ: Getting help
+title: "FAQ: Getting help"
 ---
 
 # FAQ: Getting help

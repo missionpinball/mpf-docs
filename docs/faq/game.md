@@ -1,5 +1,5 @@
 ---
-title: FAQ: Building your game
+title: "FAQ: Building your game"
 ---
 
 # FAQ: Building your game
