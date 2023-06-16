@@ -8,17 +8,16 @@ title: Voltages and Power
 A pinball machine uses multiple different voltages for different
 purposes. You need at least one power supply unit (PSU) to transform the
 AC power to multiple DC rails. See
-[ground_and_appliance_classes](wiring_and_connectors.md) for more details
+[Wiring and Connectors](wiring_and_connectors.md) for more details
 on the wire thickness and connectors to use for the different power
 rails below.
 
-!!! warning
+!!! danger
 
-    If you are unsure ask a professional electric engineer. This guide does
+    If you are unsure ask a professional electrical engineer. This guide does
     not provide all information needed to design and operate a
     high-voltage/high-current system in a pinball machine. Use this at your
-    own risk. Electricity can be dangerous and might kill you or burn down
-    your house.
+    own risk. Electricity can be dangerous.
 
 Video about electronics basics:
 
@@ -39,7 +38,7 @@ windings differently depending on the input voltage. If you get this
 wrong the output voltages might be different or the transformer may
 burst into flames.
 
-In any case it is a good idea and common practise to add a fuse before
+In any case it is a good idea and common practice to add a fuse before
 your PSU or transformer in case anything goes wrong. This is for your
 own safety and for the safety of your neighborhood because if stuff
 starts burning it might cause a lot of damage.
@@ -109,8 +108,8 @@ machine.
 
 Common power supplies:
 
-* Standard ATX power supplies - Work well but you might have to cut
-    the connectors
+* Standard ATX power supplies - People use them, but they're not generally
+    recommended for pinball machines
 * Meanwell SP/MW for 12V or 24V - Precalculate your current and get
     one with some headroom
 

@@ -142,7 +142,7 @@ rather unlikely the culprit.
 Consult the FAST support for an official repair. Alternatively, you can
 buy `IRL540NSTRLPBF` FETs from your electronics supplier and replace
 them yourself. Replacing SMD FETs is possible with a decent soldering
-iron and some practise.
+iron and some practice.
 
 ## What if it did not work?
 

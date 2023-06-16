@@ -18,6 +18,11 @@ safe operations.
     own risk. Electricity can be dangerous and might kill you or burn down
     your house.
 
+FAST Pinball has wiring guides for machines built on their platforms,
+but even if you're not using FAST Pinball hardware, there are some relevant ones here:
+
+* [FAST Pinball guide to pinball ground and grounding](https://fastpinball.com/wiring/grounding/)
+
 Video about ground:
 
 <div class="video-wrapper">

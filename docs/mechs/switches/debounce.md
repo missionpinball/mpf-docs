@@ -40,7 +40,7 @@ platforms (for instance, P-ROC, P3-ROC) say "a switch must be in a new
 state for 2 consecutive reads" to be considered debounced, while other
 platforms (e.g. FAST) focus on time-based durations rather than number
 of reads, saying, "a switch must be in a new state for X milliseconds
-before it's considered debounced." In practise, there is not much
+before it's considered debounced." In practice, there is not much
 difference between those two.
 
 When considering switch debounce, the switch usually is supposed to be

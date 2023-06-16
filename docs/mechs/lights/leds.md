@@ -254,7 +254,7 @@ or not. In general, serial LEDs require much less wiring which make them
 much cheaper during assembly. However, if one LED fails within a chain
 all subsequent ones will likely also fail until the broken LED is
 changed. Interference will happen below a playfield and might disturb
-the colors. In practise the refresh rate of serial LEDs are so high that
+the colors. In practice the refresh rate of serial LEDs are so high that
 you will not notice any incorrect colors. It is unclear how interference
 affects the reliability of the controller chips of serial LEDs. Jersey
 Jack Pinball tried serial LEDs in the Wizard of Oz (WoZ) and ran into a
@@ -268,7 +268,7 @@ common ground; see
 For production runs you should probably be careful with serial LEDs. At
 least test extensively. However, you might take some risks in a homebrew
 machine because serial LEDs are quite cheap and easy to replace once
-broken. In practise they seem to work just fine for all homebrew
+broken. In practice they seem to work just fine for all homebrew
 machines we know.
 
 ## Can I used RGB LEDs below colored inserts?
