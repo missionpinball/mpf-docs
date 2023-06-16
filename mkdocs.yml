@@ -1197,9 +1197,9 @@ nav:
     - demo_man: example_games/demo_man.md
     - mc_demo: example_games/mc_demo.md
 
-- Projects:
-  - projects/index.md
-  - Add your project: projects/_add_yours.md
+- Showcase:
+  - showcase/index.md
+  - Add your project: showcase/_add_yours.md
 
 - Community:
   - community/index.md

@@ -10,10 +10,10 @@ more detailed ones!
 --8<-- "todo.md"
 
 To add your project to the list on this page, you need to add a file
-into the `mpf-docs` projects folder. (You need to add it to the projects
+into the `mpf-docs` showcase folder. (You need to add it to the showcase
 folder in the root of the repo):
 
-https://github.com/missionpinball/mpf-docs/tree/main/projects
+https://github.com/missionpinball/mpf-docs/tree/main/showcase
 
 Make a copy of the file `_TEMPLATE.yaml` and name it based on your project. Then
 edit the entries in there. You can look at the other projects for examples, such as:

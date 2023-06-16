@@ -104,8 +104,8 @@ device state, player variables, etc.
 
 ## Projects built on MPF
 
-* [List of pinball machine projects running on MPF](projects/index.md)
-* [Add your machine to the list!](projects/_add_yours.md)
+* [List of pinball machine projects running on MPF](showcase/index.md)
+* [Add your machine to the list!](showcase/_add_yours.md)
 
 ## Community
 

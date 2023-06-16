@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define the absolute path to the templates directory
-templates_dir = os.path.join(script_dir, '../docs/projects')
+templates_dir = os.path.join(script_dir, '../docs/showcase')
 templates_dir = os.path.abspath(templates_dir)
 print(f"Templates directory: {templates_dir}")
 
@@ -17,13 +17,13 @@ env = Environment(loader=FileSystemLoader(templates_dir))
 project_template = env.get_template('_project_template.md')
 index_template = env.get_template('_project_list_template.md')
 
-# Loop over all .md files in /docs/projects directory and delete them unless they start with "_"
+# Loop over all .md files in /docs/showcase directory and delete them unless they start with "_"
 for filename in os.listdir(templates_dir):
     if filename.endswith(".md") and not filename.startswith("_"):
         os.remove(os.path.join(templates_dir, filename))
 
 # Define directories for .yaml files and output
-root_dir = os.path.join(script_dir, '../projects')
+root_dir = os.path.join(script_dir, '../showcase')
 output_dir = templates_dir
 index_links = []
 

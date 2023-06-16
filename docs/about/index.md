@@ -17,8 +17,8 @@ MPF is what it is today due to the efforts of many people. We owe special shout 
 ran the whole project from 2017-2022, and Quinn Capen who did a lot of the
 Media Controller and wrote the custom sound engine.
 
-MPF has been used in hundreds of pinball machine projects (mostly homebrew,
-though a few commercial machines run it.) See the [Projects page](../projects/index.md)
+MPF has been used in hundreds of pinball machine showcase (mostly homebrew,
+though a few commercial machines run it.) See the [showcase page](../showcase/index.md)
 for a partial list of projects running MPF, and add yours if it's not there!
 
 MPF is currently fairly stable, as much of the "hard work" is done. The most
