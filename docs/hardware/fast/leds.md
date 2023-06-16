@@ -10,7 +10,7 @@ Related Config File Sections:
 * [leds:](../../config/leds.md)
 * [fast:](../../config/fast.md)
 
-Each FAST Pinball Controller has a built-in 4-channel RGB LED controller
+The FAST Nano Controller has a built-in 4-channel RGB LED controller
 which can drive up to 64 RGB LEDs per channel. This controller uses
 serially-controlled LEDs (where each LED element has a little serial
 protocol decoder chip in it), allowing you to drive dozens of LEDs from

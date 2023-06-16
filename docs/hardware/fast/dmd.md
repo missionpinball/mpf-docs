@@ -4,12 +4,11 @@ title: How to configure mono/traditional DMD (FAST Pinball)
 
 # How to configure mono/traditional DMD (FAST Pinball)
 
-
 Related Config File Sections:
 
 * [dmds:](../../config/dmds.md)
 
-The FAST WPC and Core controllers can drive traditional single-color
+The FAST Core controller can drive traditional single-color
 pinball DMDs via the 14-pin DMD connector cable that's been in most
 pinball machines for the past 25 years, like this:
 

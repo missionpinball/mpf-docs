@@ -1,8 +1,8 @@
 ---
-title: How to use install drivers & configure COM ports (FAST Pinball)
+title: How to configure FAST Pinball COM ports
 ---
 
-# How to use install drivers & configure COM ports (FAST Pinball)
+# How to configure FAST Pinball COM ports
 
 
 Related Config File Sections:
@@ -14,30 +14,13 @@ This guide explains how to configure MPF to work with a FAST Pinball
 controller. It applies to all three of their models---the Core, Nano,
 and WPC controllers.
 
-## 1. Install the FAST USB driver
+!!! note "This guide applies to the FAST Nano with MPF <= 0.56.0"
 
-FAST Pinball controllers use a USB chip from FTDI, so you need to
-download and install the FTDI driver. It's pretty simple. Go to this
-[this page](http://www.ftdichip.com/Drivers/VCP.htm) and scroll down to
-the VCP Drivers section and download the driver for your OS. If you're
-using Windows, we think it's easier to use the "setup executable"
-they link to in the comments.
+    If you're using a FAST Neuron or Retro controller, follow the
+    newer information on the FAST Pinball website about
+    [using MPF with FAST hardware](https://fastpinball.com/mpf)
 
-Once this is done, when you plug in and power on your FAST controller,
-you should see some kind of notification that new hardware has been
-detected. What exactly you see will depend on which FAST controller
-you're using and what OS you have. For example, here's what happens when
-you plug a FAST WPC controller into Windows 10 for the first time (after
-you've installed the FTDI driver):
-
-![image](/hardware/images/fast-ftdi-driver.png)
-
-(This is just a progress bar which shows Windows configuring the
-drivers. You don't have to click anything to get it started, and it
-should only take 5-10 seconds. It will only happen the first time you
-plug in the hardware.)
-
-## 2. Configure your hardware platform for FAST
+## 1. Configure your hardware platform for FAST
 
 To use MPF with a FAST, you need to configure your platform as `fast` in
 your machine-wide config file, like this:
@@ -57,9 +40,9 @@ Use `driverboards: fast` if you're using FAST I/O boards (like the
 3208, 0804, etc.), or use `driverboards: wpc` if you're using an
 existing WPC or Snux System 11 driver board.
 
-## 3. Find the FAST COM ports
+## 2. Find the FAST COM ports
 
-Even though the FAST controllers are USB devices, they use "virtual"
+Even though the FAST Nano controller is a USB device, it uses "virtual"
 COM ports to communicate with the host computer running MPF. On your
 computer, if you look at your list of ports and then connect and power
 on your FAST controller, you will see 4 new ports appear. The exact
@@ -67,13 +50,10 @@ names and numbers of these ports will vary depending on your computer,
 what other devices you have, and which port you plug the FAST controller
 into, but the order of which ports do what is the same everywhere:
 
-* First (lowest numbered) port: **DMD Processor**
+* First (lowest numbered) port: (available for your own custom use)
 * Second: **NET processor** (the main processor)
 * Third: **RGB LED processor**
-* Fourth: **Unused** (available for your own custom use!)
-
-Note that the FAST Nano controller does not have a DMD processor, so on
-that device, both the first and fourth ports are unused.
+* Fourth: **Unused** (available for your own custom use)
 
 You need to tell MPF which ports are used for the FAST Controller, and
 the first step to doing that is to figure out what the port names are on
@@ -137,7 +117,7 @@ other revisions):
 
     udevadm monitor --property
 
-## 4. Add the ports to your config file
+## 3. Add the ports to your config file
 
 Next you need to add the ports to your machine config file. To do this,
 create a new section called `fast:`, and then add a `ports:` setting
@@ -172,7 +152,7 @@ Windows thing. Google it for details.)
 There are more settings in the [fast:](../../config/fast.md) section of the machine config that we have not covered here,
 but the ports are the bare minimum you need to get up and running.
 
-## 5. Configure your watch dog timeout
+## 4. Configure your watch dog timeout
 
 FAST Pinball controllers have the ability to use a
 `watch dog` timer. This is enabled by

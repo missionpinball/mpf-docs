@@ -4,6 +4,18 @@ title: How to configure servos (FAST Pinball)
 
 # How to configure servos (FAST Pinball)
 
+!!! note "FAST Pinball servos are mostly different now"
+
+    This documentation describes how to use servos connected to
+    a special daughter board on FAST I/O boards. This is not the
+    current way FAST does things, and this documentation is here
+    for historical purposes for people who might be doing things
+    this way.
+
+    Modern FAST servos use the
+    EXP bus via expansion boards. See the
+    [documentation](https://fastpinball.com/docs) on the FAST
+    website for details.
 
 Related Config File Sections:
 

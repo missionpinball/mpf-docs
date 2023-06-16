@@ -5,20 +5,25 @@ title: How to configure Flippers, Slingshots, Pop Bumpers, and other
 
 MPF uses some special tricks to ensure that "quick response" devices
 like flippers, slingshots, and pop bumpers are able to respond to switch
-changes as fast as possible. (Read more about that
-[here](../hw_rules.md).)
+changes as fast as possible. (Read more about that [here](../hw_rules.md).)
 
 When using FAST Pinball hardware, there are a few things you should know
 about these hardware rules.
 
-First, remember that FAST IO boards contain both switch inputs and
+First, remember that FAST I/O boards contain both switch inputs and
 driver outputs.
 
-For best performance, either:
+For best performance when using a FAST Nano Controller, either:
 
 1.  Make sure switches & drivers for hardware rules are on the same IO
     board, *or*
-2.  Make sure switches are the first 8 switches on the first IO board
+2.  Make sure switches are the first 8 switches on the first I/O board
+
+!!! note "This applies to the FAST Nano Controller only"
+
+    If you're using a FAST Neuron Controller, any switch from any
+    I/O board can be used with hardware rules for any driver, so none
+    of this applies.
 
 In other words, if you have a pop bumper or slingshot, make sure that
 the activation switch for that device and the coil for that device are
@@ -32,7 +37,7 @@ switches numbered `0-0` through `0-7`.)
 
 These priority switches are sent across the FAST loop network
 immediately which means they can be used with hardware rules to trigger
-drivers (coils) on any IO board in the network.
+drivers (coils) on any I/O board in the network.
 
 If you only have two flippers in your machine, this is probably nothing
 you'll ever need to worry about since it will be easy to connect the

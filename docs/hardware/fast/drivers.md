@@ -15,10 +15,15 @@ connected to an IO board's driver outputs) with FAST Pinball hardware,
 you can follow the guides and instructions in the
 [Coils (Solenoids)](../../mechs/coils/index.md) docs.
 
---8<-- "common_ground_warning.md"
+!!! warning "High voltage can be dangerous."
 
-However there are a few things to know and some additional options you
-get with FAST hardware that are discussed here.
+    It's important that you wire your boards correctly. FAST Pinball has
+    detailed wiring guides which you should follow. Please see the wiring
+    guide for the [FAST Nano Controller](https://fastpinball.com/wiring/nano)
+    on their website.
+
+Once everything is wired, here's how you configure MPF to use a FAST
+Nano Controller.
 
 ## number:
 

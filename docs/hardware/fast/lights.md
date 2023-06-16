@@ -4,13 +4,12 @@ title: How to configure Matrix Lights (FAST Pinball)
 
 # How to configure Matrix Lights (FAST Pinball)
 
-
 Related Config File Sections:
 
 * [lights:](../../config/lights.md)
 
-Matrix lights are currently only supported on FAST Pinball via their WPC
-Controller. Like the other WPC-related settings in MPF, you can enter
+Matrix lights are currently only supported on FAST Pinball via their Retro
+Controllers. Like the other WPC-related settings in MPF, you can enter
 the numbers right out of your operators manual, so there's nothing
 FAST-specific you have to do.
 

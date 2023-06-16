@@ -4,32 +4,14 @@ title: Power Filter Board
 
 # Power Filter Board
 
+FAST Pinball has full documentation for thier power filter board on
+their website:
 
-This board can be used to fan out your power rails. See
-[Voltages and Power in Pinball Machines](../voltages_and_power/index.md) for
-details.
+* [Power Filter Board for FAST Nano machines](https://fastpinball.com/products/power/power-filter-board/)
+* [How to wire your power filter board](https://fastpinball.com/wiring/nano/power-filter-board/)
 
-![image](/hardware/images/fast-power-filter-board.png)
+If you're using a FAST Neuron controller (their newest one), it pairs with a "smart" power filter board
+which adds realtime current and voltage monitoring, fuse state detection, remote power control, and more. Those details are here:
 
-The board supports 5 power rails with one fuse per rail:
-
-* High Voltage (HV)
-* Aux V1
-* Aux V2
-* 5V
-* 12V
-
-There are capacitors on HV and Aux V1. This is the theory of operations:
-
-![image](/hardware/images/fast-power-filter-board-block-diagram.png)
-
-Additionally, there is a high voltage enable switch on the board on J2.
-You can connect it to your door switch to cut power when the door opens.
-Make sure to close this switch when you operate the machine or HV will
-be off. During development you may use a jumper but be careful since HV
-will be always on.
-
-Connect all your PSUs to J3 and the playfield and controller to J4. This
-is how FAST envisions the wiring of the board:
-
-![image](/hardware/images/fast-power-filter-board-wiring.png)
+* [FAST Smart Power Filter Board](https://fastpinball.com/products/power/smart-power-filter-board/)
+* [Smart Power Filter Board wiring guide](https://fastpinball.com/wiring/neuron/smart-power-filter-board/)

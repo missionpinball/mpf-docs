@@ -4,7 +4,6 @@ title: How to configure an RGB DMD (FAST Pinball)
 
 # How to configure an RGB DMD (FAST Pinball)
 
-
 Related Config File Sections:
 
 * [rgb_dmds:](../../config/rgb_dmds.md)

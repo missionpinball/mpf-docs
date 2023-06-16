@@ -4,10 +4,13 @@ title: Troubleshooting FAST
 
 # Troubleshooting FAST
 
+FAST Pinball provides customer support via their Slack channel. That's the
+recommended way to get help with FAST Pinball hardware nowadays.
 
-If you got problems with your hardware platform we first recommend to
-read our
-[troubleshooting guide](../../troubleshooting/index.md). Here are some hardware platform specific steps:
+Here's some legacy information about FAST Pinball hardware troubleshooting:
+
+If you have problems with your hardware platform we first recommend to
+read our [troubleshooting guide](../../troubleshooting/index.md). Here are some hardware platform specific steps:
 
 ## Run Hardware Scan
 
