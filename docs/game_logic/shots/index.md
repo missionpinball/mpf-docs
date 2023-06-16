@@ -42,11 +42,6 @@ called *right_orbit* that's triggered when the switches *orbit_right*,
 *orbit_center*, and *orbit_left* are hit within 3 seconds. (So, same
 switches, but two different shots depending on the order they're hit.)
 
-The beauty of using shots is that you just define all the switches and
-timing once, and then every time you want to use that shot in your game,
-you just need to work with the "right_orbit" shot and not have to
-worry about all the details of the switches and timing.
-
 You can also configure different "states" for shots, e.g. "What state
 is that shot in?" That can be things like lit, unlit, complete,
 flashing, etc. You can also configure shows for each state (the unlit
@@ -74,6 +69,8 @@ just want to score the million points for the jackpot if that shot is
 made while the multiball mode is running and *not* score the 1,000
 points for that shot from the base mode even though the base mode is
 still running under the multiball mode.
+
+It's important to understand, however, that in order to achieve these different results using the same shot, that you will need to define your shots on a "per mode" basis. Meaning, in the example above, you would define the ramp shot once in your base mode, and then you would define the same shot again (with a name distinct from the shot name used in the base mode) in your multiball mode. This is also important when you begin to apply shot profiles to your shots, as you'll likely want distinct profile behavior per mode you design as well.
 
 ## Example
 
