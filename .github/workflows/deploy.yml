@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Generate project showcase pages from .yaml files
-        run: python build_tools/generate_project_pages.py
+        run: python build_tools/generate_showcase_pages.py
 
       - name: Build and deploy site
         run: mkdocs gh-deploy --force
