@@ -2,7 +2,7 @@
 title: Add your project to this list
 ---
 
-# Add your project to this site
+# Add your project to the MPF showcase page!
 
 These instructions are quick and temporary. You can help by writing
 more detailed ones!
