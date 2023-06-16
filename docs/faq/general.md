@@ -10,30 +10,31 @@ title: "FAQ: General"
 The Mission Pinball Framework was started in 2014 by Brian Madden for
 a homebrew pinball machine he and Gabe Knuth were planning. Both of
 them had dreamed of building their own pinball machines for years,
-and in 2013 they discovered the P-ROC and the wonderful community of
-homebrew pinball builders and hackers.
+and in 2013 they discovered the Multimorphic P-ROC and the wonderful
+community of homebrew pinball builders and hackers.
 
-The P-ROC pinball control system worked with an open source project
-called `pyprocgame` which is a Python-based game framework. Pyprocgame
-is great, but it's pretty basic. (It's more of a pinball development
+The P-ROC pinball control system didn't come with any software, rather,
+an open source and unrelated project called `pyprocgame` was created to let
+people write their own Python-based game software. Pyprocgame
+was great, but it's pretty basic. (It was more of a pinball development
 environment versus a complete framework.) One of the challenges we saw
-was that people kept on having to "reinvent the wheel" with each game
-they built. After reading forum posts about "How do you write code for
+was that everyone building a game had to "reinvent the wheel" to
+implement a lot of the core basic functionality. After reading forum posts about "How do you write code for
 a trough?" about ten times, we thought, "Why isn't there a framework
 that just 'does that' for you?"
 
-Pyprocgame also requires everything to be written in Python code, and we
+Pyprocgame also required everything to be written in Python code, and we
 found that a lot of people who wanted to build their own pinball
 machines weren't software developers. So we thought it would be cool to
 create a framework where the majority of the "programming" could be
 done with text-based configuration files.
 
-Around the same time, FAST Pinball came onto the market to offer an
-alternative control system to the P-ROC and P3-ROC. So we decided to
-make MPF hardware-independent so it could work with any pinball control
-system.
+Around the same time, FAST Pinball came onto the market with their
+control system, and many other hobby pinball controllers started to pop up.
+So we decided to make MPF hardware-independent so it could work with any
+pinball control system.
 
-The first release of MPF was in May, 2014. (That's before the project was
+The first release of MPF was in May 2014. (That's before the project was
 even on GitHub!) (Check out the [MPF announcement post on Pinside](https://pinside.com/pinball/forum/topic/announcing-the-mission-pinball-framework-hw-independent-python-based-game-sw).) Since then, MPF has grown to be a complete framework
 that's used by homebrewers and commercial pinball companies to power
 real pinball machines around the world.

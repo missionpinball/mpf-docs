@@ -4,7 +4,6 @@ title: Contributing to MPF
 
 # Contributing to MPF
 
-
 Want to add a feature? A missing event somewhere? Wrote a new device
 which might be useful for other users? Fixed a bug? Added some small
 missing piece?
@@ -13,16 +12,12 @@ We'd love to take your contribution upstream!
 
 Found a bug which you can reproduce? Fill an issue:
 
-* [MPF Issues on
-    github](https://github.com/missionpinball/mpf/issues). Use this for
-    game and platform related bugs
-* [MPF-MC Issues on
-    github](https://github.com/missionpinball/mpf-mc/issues). Use this
-    for media controller bugs such as problems with slides, widgets or
-    audio.
+* [MPF Issues on GitHub](https://github.com/missionpinball/mpf/issues). Use this for game and platform related bugs
+* [MPF-MC Issues on GitHub](https://github.com/missionpinball/mpf-mc/issues). Use this for media controller bugs such as problems with slides, widgets or audio.
 
-If you want to discuss a feature or bug (or if you are unsure). Visit
-our forum: <https://github.com/orgs/missionpinball/discussions>
+If you want to discuss a feature or bug (or if you are unsure), use the
+[discussion forum on GitHub](https://github.com/orgs/missionpinball/discussions)
+(versus the Google group which is more for end users).
 
 ## Install MPF in development mode
 
@@ -38,12 +33,8 @@ mode:
     following command:
     (`git clone https://github.com/YOUR_GITHUB_HANDLE/mpf/`)
 3.  Install the MPF dependencies if you haven't installed mpf before.
-    On linux you can run our [mpf dependency
-    installer](https://raw.githubusercontent.com/missionpinball/mpf-debian-installer/dev/install-mpf-dependencies).
-    On other platforms check the
-    [installation instructions](../install/index.md) instructions.
 4.  Navigate to your cloned repository and run:
-    `pip3 install mpf-mc --pre` to install MPF in editable mode.
+    `pip3 install -e .` to install MPF in editable mode.
 
 ## Install MPF-MC in development mode
 
@@ -117,8 +108,7 @@ of the MPF developers use PyCharm but other IDEs will work as well.
 
 We maintain a list of issues which are self-contained and good to solve
 on their own without too much interaction with core code. We label those
-as [help
-wanted](https://github.com/missionpinball/mpf/labels/help%20wanted)
-(although they do not have to be easy, just self-containted). If you
+as [help wanted](https://github.com/missionpinball/mpf/labels/help%20wanted)
+(although they do not have to be easy, just self-contained). If you
 want to work on one of them (or any other issue) comment on the issue or
 write in the forum and we will assist you along the way.
