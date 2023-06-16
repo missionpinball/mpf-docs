@@ -19,6 +19,14 @@ If you want to discuss a feature or bug (or if you are unsure), use the
 [discussion forum on GitHub](https://github.com/orgs/missionpinball/discussions)
 (versus the Google group which is more for end users).
 
+## MPF file and module structure (from PinDevCon 2023)
+
+If you're interesting in contributing to MPF, you might find this video interesting. It's a "deep dive" into the MPF file and module structure from [PinDevCon 2023](https://fastpinball.com/pindevcon).
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4KOpcgxJer4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Install MPF in development mode
 
 To make changes to MPF you need to install it in developer/editable
