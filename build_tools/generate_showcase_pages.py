@@ -15,7 +15,7 @@ env = Environment(loader=FileSystemLoader(templates_dir))
 
 # Then you can access your templates like so
 project_template = env.get_template('_project_template.md')
-index_template = env.get_template('_project_list_template.md')
+index_template = env.get_template('_showcase_list_template.md')
 
 # Loop over all .md files in /docs/showcase directory and delete them unless they start with "_"
 for filename in os.listdir(templates_dir):
