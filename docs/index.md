@@ -8,31 +8,33 @@ title: Welcome to The Mission Pinball Framework!
 
 The **Mission Pinball Framework** (MPF) is a free Python-based pinball software
 framework that's used to run real pinball machines. It's compatible with
-virtually all modern pinball machines, and it's the most feature complete
-pinball software environment you'll find. MPF runs on Windows, Mac, Linux,
-and Raspberry Pi.
+virtually all modern pinball controllers and machines, and it's the most feature
+complete pinball software environment you'll find.
 
 MPF is a complete pinball software package which runs on a computer inside
-your pinball machine. It controls all the electronics in the machine,
+your pinball machine. (It can run on Windows, Mac, Linux, or Raspberry Pi.)
+MPF controls all the electronics in the machine,
 including the lights, the solenoids (the things that make the balls move),
 the DMD if your machine has one, the LCD if your machine has one, the
-switches, and the motors. MPF also runs the game logic, so you can use it
-to create the rules of your game, including modes, multiballs, ball saves,
-scoring, and more.
+switches, and the motors. MPF uses simple configuration files to control
+the game logic, sounds, videos, effects, and everything else you need to create
+the rules for your game, including modes, multiballs, ball saves, scoring, and more.
 
 MPF has been around since 2014, and it's been used to power hundreds of
 homebrew pinball machines and a few commercially-released ones. It's
 created by volunteers in their spare time.
 
+Join in!
+
 ## Features
 
-* Build your game with simple configuration files. No "real" programming required.
 * Works with many modern pinball control systems, including FAST Pinball, CobraPin, P3-ROC, and many more.
 * Runs on Windows, Mac, Linux, and Raspberry Pi.
 * Supports many types of pinball machines, including solid state, EM, and custom homebrew machines.
 * Built-in support for many types of pinball mechs, including flippers, pop bumpers, slingshots, drop targets, spinners, and more. (See the [complete list](mechs/index.md).)
 * Supports many types of pinball displays, including DMDs, LCDs, segments, and mechanical score reels.
 * Pinball logic built in for player management, game modes, multiballs, ball saves, tilt, shots, and more. (See the [complete list](game_logic/index.md).)
+* Build your game with simple configuration files. (But you can also mix in your own custom code too, use as much or little of the config files as you want.)
 * 100% open source and completely free to use.
 
 See the [Features](start/features.md) page for a complete list of features.
