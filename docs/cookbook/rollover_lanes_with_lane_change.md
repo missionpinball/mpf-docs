@@ -138,12 +138,12 @@ shots:
     switch: s_top_lane_3
     profile: top_lane_profile
     show_tokens:
-      led: l_top_lane_2
+      led: l_top_lane_3
   top_lane_y:
     switch: s_top_lane_4
     profile: top_lane_profile
     show_tokens:
-      led: l_top_lane_2
+      led: l_top_lane_4
 ```
 
 ## Step 3. Creating a shot_group for the lanes
@@ -185,12 +185,12 @@ together. In this case, we'll use our shot group to:
 #!     switch: s_top_lane_3
 #!     profile: top_lane_profile
 #!     show_tokens:
-#!       led: l_top_lane_2
+#!       led: l_top_lane_3
 #!   top_lane_y:
 #!     switch: s_top_lane_4
 #!     profile: top_lane_profile
 #!     show_tokens:
-#!       led: l_top_lane_2
+#!       led: l_top_lane_4
 #!
 #! shot_profiles:
 #!   top_lane_profile:
@@ -275,12 +275,12 @@ shots:
     switch: s_top_lane_3
     profile: top_lane_profile
     show_tokens:
-      led: l_top_lane_2
+      led: l_top_lane_3
   top_lane_y:
     switch: s_top_lane_4
     profile: top_lane_profile
     show_tokens:
-      led: l_top_lane_2
+      led: l_top_lane_4
 
 shot_groups:
   top_lane_group:
