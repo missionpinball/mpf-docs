@@ -1,5 +1,5 @@
-!!! note "This page a config file reference"
+??? note "This is a config file reference. Click for instructions."
 
-    The content on this page is technical documentation which explains the various
-    options for this specific config file section. See the Game Programming or other
-    documentation for more general information on what the settings on this page do.
+    This page is reference material which explains every setting and option for this section of an MPF yaml config file.
+    See the [instructions for config files](/config/instructions) for formatting and other details. See our guide
+    to [config file examples](/examples) for more examples of real configs in action.
