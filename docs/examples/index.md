@@ -29,7 +29,7 @@ including:
 Full details about the mpf-examples project and how to download it are
 [here](mpf-examples.md).
 
-## The MPF Cookbook
+## The MPF cookbook
 
 We have a "cookbook" as part of the MPF documentation that shows example
 recipes of how to do things in MPF. You can find that here:
@@ -57,13 +57,13 @@ you can simulate gameplay without the Spike GoT hardware.
 
 All of the project code is via [github.com/avanwinkle/masseffect2](https://github.com/avanwinkle/masseffect2).
 
-## Check out the MPF Showcase
+## Check out the MPF showcase
 
 The [MPF Showcase](../showcase/index.md) has links to lots of MPF projects, and many of them have
 "code" links which link to their code on GitHub or another public location. You can browse through them to see
 how they handle things.
 
-## Search GitHub Globally
+## Search GitHub globally
 
 There are hundreds of MPF projects on GitHub. GitHub has recently overhauled their search capabilities, and now you
 can search all of GitHub for MPF projects. For example, go to GitHub.com and search for a term like "driverboards:" (be sure to include the colon), and then click the "Code" filter (so you're searching for source code, not repo names), and maybe also click the "YAML" Language filter so you're looking for just YAML files.
