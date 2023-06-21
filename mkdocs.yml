@@ -1191,11 +1191,11 @@ nav:
     - RE-P-Roc-2: logs/RE-P-Roc-2.md
     - RE-P-Roc-3: logs/RE-P-Roc-3.md
   - Example Games:
-    - example_games/index.md
     - examples/index.md
-    - mpf-examples: example_games/mpf-examples.md
-    - demo_man: example_games/demo_man.md
-    - mc_demo: example_games/mc_demo.md
+    - Example Config from MPF Tests: examples/tests.md
+    - MPF Examples Repo: examples/mpf-examples.md
+    - Demo Man Example Game: examples/demo_man.md
+    - MC Demo: examples/mc_demo.md
 
 - Showcase:
   - showcase/index.md

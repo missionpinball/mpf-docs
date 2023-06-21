@@ -262,7 +262,7 @@ pip3 install pip setuptools --upgrade
         * `ESC` - Close mpf-mc and quit
 
     * Follow the rest of the Demo Man [example
-        guide](/example_games/demo_man).
+        guide](/examples/demo_man).
 
 !!! warning
 

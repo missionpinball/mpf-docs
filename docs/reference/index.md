@@ -18,4 +18,4 @@ looking for something specific.
 * [Assets](../assets/index.md)
 * [Shows](../shows/index.md)
 * [MPF Errors](../logs/index.md)
-* [Example Games](../example_games/index.md)
+* [Example Games](../examples/index.md)

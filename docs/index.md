@@ -100,7 +100,7 @@ device state, player variables, etc.
   * [Assets](assets/index.md)
   * [Shows](shows/index.md)
   * [MPF Errors from Log Files](logs/index.md)
-  * [Example Games](example_games/index.md)
+  * [Example Games](examples/index.md)
 
 ## Projects built on MPF
 

@@ -12,7 +12,7 @@ transparent and would not show up at all. 50% means it's about half-way
 in between, etc.
 
 Here's an example. (This example is from the
-[MC Demo](../../example_games/mc_demo.md) which
+[MC Demo](../../examples/mc_demo.md) which
 you can download and run to see it in action.)
 
 ![image](/mc/images/opacity_example.png)

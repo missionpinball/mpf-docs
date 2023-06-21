@@ -94,13 +94,13 @@ At this point, MPF 0.56.0.devXX and MPF-MC 0.56.0.devXX are installed.
 Now that you have MPF installed, you probably want to see it in action.
 The easiest way to do that is to download a bundle of MPF examples and
 run our "Demo Man" example game. To do that, follow the instructions
-in the [How to run "Demo Man", an MPF example game](../../example_games/demo_man.md) guide.
+in the [How to run "Demo Man", an MPF example game](../../examples/demo_man.md) guide.
 
 There's another example project you can also check out if you want
 called the "MC Demo" (for media controller demo) that lets you step
 through a bunch of example display things (slides, widgets, sounds,
 videos, etc). Instructions for running the MC Demo are
-[here](../../example_games/mc_demo.md).
+[here](../../examples/mc_demo.md).
 
 ## Running MPF
 
