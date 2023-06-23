@@ -24,21 +24,6 @@ Ball holds are *not* used to lock balls for multiball. (See the
 You can have lots of different ball holds in your game, typically
 configured per mode.
 
-MPF's *ball holds* are used to temporarily hold a ball that has entered
-a [Ball Devices](../mechs/ball_devices/index.md) while
-something else happens.
-
-The most common use cases are to hold a ball while you play a show, or
-while a video mode is going on. Ball holds do not affect the balls in
-play count, and if all other balls drain while a ball hold is in
-progress, the players ball does not end.
-
-Ball holds are *not* used to lock balls for multiball. (See the
-[multiball_locks](multiballs/multiball_locks.md) device for that).
-
-You can have lots of different ball holds in your game, typically
-configured per mode.
-
 Video about ball locks and multiballs:
 
 <div class="video-wrapper">
