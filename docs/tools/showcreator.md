@@ -129,6 +129,13 @@ like a hollywood premiere.
     repository.
 2.  Double click on led.exe
 
+## Running the showcreator on Mac x64
+
+1.  Checkout or download the
+    [showcreator](https://github.com/missionpinball/showcreator.git)
+    repository.
+2.  Double click on: led mac x64.app (you may not see .app in the name)
+
 ## Compiling and running the showcreator on Ubuntu
 
 Inside a new install folder:
