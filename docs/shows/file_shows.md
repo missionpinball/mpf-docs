@@ -44,7 +44,7 @@ section on show config formats. However there's one important change.
 Since this is a standalone show file, we need to tell MPF what
 "version" of the show format this file is. MPF versions use
 `show_version=5`. If we ever change something in the show format, then
-we'll increment the version. (Don't worry though, we have and
+we'll increment the version. (Don't worry though, we have an
 automated migration tool that converts shows to the new formats. That's
 actually part of the reason we include the show_version in the show
 files)
