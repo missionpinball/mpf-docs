@@ -66,18 +66,16 @@ Creating a shot group has several advantages, including:
 * Any time the state of a member shot in a group changes, MPF will
     check to see what all the other shots' states are. If they are all
     the same, it will post a "complete" event (in the form of
-    *<shot_group_name>_<active_profile_name>_<profile_state_name>_complete*)
+    *<shot_group_name>* *<active_profile_name>* *<profile_state_name>_complete*)
     which you can use to trigger scores based on complete, light shows,
     shot group resets, etc.
 * Any time a member shot is hit, MPF will post an event (in the form
-    of
-    *<shot_group_name>_<profile_name_of_shot_that_was_hit>_<profile_state_name_of_shot_that_was_hit>_hit*).
+    of *<shot_group_name>* *<profile_name_of_shot_that_was_hit>* *<profile_state_name_of_shot_that_was_hit>_hit*).
     You can use this to tie scoring, sounds, or logic blocks to any shot
     being hit in a group, which can be easier than creating entries for
     each individual shot.
 * Any time a member shot is hit, MPF will post an event (in the form
-    of
-    *<shot_group_name>_<profile_name_of_shot_that_was_hit>_hit*)
+    of *<shot_group_name>* *<profile_name_of_shot_that_was_hit>_hit*)
 * Any time a member shot is hit, MPF will post an event (in the form
     of *<shot_group_name>_hit*)
 
