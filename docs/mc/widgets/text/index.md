@@ -43,6 +43,8 @@ number_grouping:
 min_digits:
 halign:
 valign:
+outline_color:  # added in MPF 0.56.1
+outline_width:  # added in MPF 0.56.1
 ```
 
 !!! note
@@ -224,6 +226,18 @@ text widget is automatically created and sized based on the actual text
 and font chosen.
 
 The default setting is `middle`.
+
+### outline_color:
+
+Added in MPF 0.56.1.
+
+The color of the text outline. Default is black, but also the default outline width is 0, so you won't see it unless you set the outline width to something greater than 0.
+
+### outline_width:
+
+Added in MPF 0.56.1.
+
+The width of the text outline. Default is 0, which means no outline. You can also use dynamic placeholders here.
 
 ### anchor_y: baseline
 
