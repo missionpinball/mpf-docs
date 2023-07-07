@@ -4,20 +4,21 @@ title: Understanding tags
 
 # Understanding tags
 
+## General Theory
 
-## **General Theory**
+You can use "tags" in MPF to group multiple devices together which you can
+later control via the tag name instead of the individual device names.
 
-A common definition of a tag is "a label attached to someone or
-something for the purpose of identification or to give other
-information". This sums up the whole idea behind tags in MPF. You can
-add one or more tags on to the various parts of your game. These tag
-identifiers can then be used in various ways such as firing events or
-identifying a device in some particular way.
+For example, you could tag all your GI LEDs with "gi", and then if you want
+to turn off all the GI LEDs, you can just set the color of the "gi" tag instead
+of having to list out all the individual LEDs.
 
-## **Tags and Events**
+Tags also affect the events that are posted by devices. This lets you easily set
+up logic which fires when any device with a certain tag is activated, for example.
 
-Some tags will cause events to be generated. An example of this is a
-switch device. You can tag a switch device with one or more tags.
+## Tags and Events
+
+For example, look at this config where we add a couple of tags to the start button switch:
 
 ``` mpf-config
 switches:
@@ -43,10 +44,10 @@ with the [mpf:](../mpf.md) section.
 
     Please note that those events will only show up if either a handler for
     them exists (i.e. an event_player) or when you set `debug: True` to your
-    switch. This is purely a performance optimization and also will safe you
+    switch. This is purely a performance optimization and also will save you
     a lot of log lines.
 
-## **Power of Tags**
+## Power of Tags
 
 While tags and events can be used interchangeably at times, the real
 power lies in multiple tagging. When you use the same tags on multiple
@@ -129,7 +130,7 @@ switches:
     tags: playfield_active
 ```
 
-## **Reserved Tags in MPF**
+## Reserved Tags in MPF
 
 MPF contains some reserved tags that are used for certain devices. An
 example of this is a ball trough.
@@ -163,3 +164,12 @@ characteristics of this device. Namely that it is considered a 'home'
 device where balls can come to rest when a game is not in play. And the
 'trough' tag to help MPF denote that this is a ball trough and not
 some other style of captive device like a saucer.
+
+## Using `*` for a catch all
+
+Added in MPF 0.56.1
+
+Any time you're specifying tags in MPF, you can use the `*` character as
+the tag name to return all the devices of that type. In other words, the
+`*` is not a valid tag name, but when you're doing something based on tags,
+you can use it to get a list of all devices.
