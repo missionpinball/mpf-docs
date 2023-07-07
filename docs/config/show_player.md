@@ -302,7 +302,7 @@ the value "right_inlane".
 
 ### speed:
 
-Single value, type: float_or_token. Default: `1`
+Single value, type: template_float_or_token. Default: `1`
 
 Controls the playback speed of the show. The default value of 1 means
 the show plays back at 1x speed. (In other words, it plays at the actual
@@ -311,6 +311,8 @@ to include the setting.)
 
 If you want to play the show at 2x the speed, use `speed: 2`. If you
 want to play it at half speed, use `speed: .5`. Etc.
+
+You can use dynamic placeholders here also, as of MPF 0.56.1. This allows a show to be played using a variable speed.
 
 ### start_running:
 
