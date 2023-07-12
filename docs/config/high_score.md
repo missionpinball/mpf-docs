@@ -17,6 +17,42 @@ built-in high score mode. See
 [High Scores](../game_logic/high_scores/index.md) for
 details.
 
+Example section:
+
+```yaml
+#config_version=5
+high_score:
+  _overwrite: True
+  categories: !!omap
+  - score:
+      - GRAND CHAMPION
+      - HIGH SCORE 1
+      - HIGH SCORE 2
+      - HIGH SCORE 3
+      - HIGH SCORE 4
+  - loops:
+      - LOOP CHAMP
+  - hits:
+      - MOST HITS
+  defaults:
+    score:
+      - BRI: 4242
+      - GHK: 2323
+      - JK: 1337
+      - QC: 42
+      - MPF: 23
+    loops:
+      - JK: 42
+    hits:
+      - A: 1
+  vars:
+    loops:
+      - player: number
+    hits:
+      - player: number
+      - machine: credits_string
+```
+
 ## Required settings
 
 The following sections are required in the `high_score:` section of your
@@ -75,6 +111,17 @@ empty.
 A list of categories where the sort should be inverted. Usually the
 highest score is the best but sometimes you want the shortest time or
 least amount of shots to be the best score.
+
+### vars:
+
+(Added in MPF 0.56.1)
+
+One or more sub-entries, each one being a list. Defaults to empty.
+
+Used to define player variables which can be used in the `award_slide:` section.
+
+--8<-- "todo.md"
+
 
 ## Related How To guides
 
