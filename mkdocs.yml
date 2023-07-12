@@ -797,6 +797,7 @@ nav:
     - config/sound_system.md
     - config/sound_system_tracks.md
     - config/sounds.md
+    - config/speedometers.md
     - config/spi_bit_bang.md
     - config/spike.md
     - config/spike_node.md

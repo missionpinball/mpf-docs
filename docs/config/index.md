@@ -171,6 +171,7 @@ in.
 * [sound_system_tracks:](sound_system_tracks.md)
 * [sound_system:](sound_system.md)
 * [sounds:](sounds.md)
+* [speedometers:](speedometers.md)
 * [spi_bit_bang:](spi_bit_bang.md)
 * [spike:](spike.md)
 * [spike_node:](spike_node.md)
