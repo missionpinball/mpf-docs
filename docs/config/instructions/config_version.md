@@ -4,7 +4,6 @@ title: Understanding the #config_version setting
 
 # Understanding the #config_version setting
 
-
 Since MPF is mainly "programmed" with YAML-based config files, we need
 a way for MPF to know that the config file(s) it's loading are
 compatible with the version of MPF that's running.
@@ -33,7 +32,8 @@ your config files to the latest version.
 
 ## Which versions of MPF require which config_versions?
 
-* MPF 0.50+: `#config_version=5`
+* MPF 0.57+: `#config_version=6`
+* MPF 0.50-0.56: `#config_version=5`
 * MPF 0.30-0.33: `#config_version=4`
 * MPF 0.20-0.21: `#config_version=3`
 * MPF 0.19: `#config_version=2`

@@ -79,6 +79,7 @@ nav:
   - Installation:
     - install/index.md
     - Quickstart: start/quickstart.md
+    - 'Big changes in 0.57': install/0.57.md
     - Mac: install/mac.md
     - Windows: install/windows.md
     - Linux:
@@ -629,23 +630,25 @@ nav:
     - config/index.md
     - Instructions:
       - config/instructions/index.md
-      - Text Templates: config/instructions/text_templates.md
-      - "Understanding the debug: setting": config/instructions/debug.md
-      - Using dynamic runtime values in config files: config/instructions/dynamic_values.md
       - How to create and understand YAML files: config/instructions/yaml.md
       - "Understanding the #config_version setting": config/instructions/config_version.md
-      - Specifying Colors in Config Files: config/instructions/colors.md
-      - Config player "express" configs: config/instructions/express_config.md
-      - Overwriting config files: config/instructions/overwrite.md
+      - config_version 6 changes: config/instructions/config_v6.md
+      - Machine config files: config/instructions/machine_config.md
       - Mode config files: config/instructions/mode_config.md
-      - How to add lists to config files: config/instructions/lists.md
+      - "Understanding the debug: setting": config/instructions/debug.md
+      - Overwriting config files: config/instructions/overwrite.md
       - Case insensitivity in config files: config/instructions/case_insensitivity.md
       - Understanding tags: config/instructions/tags.md
-      - Gamma correction in MPF: config/instructions/gamma_correction.md
-      - How to enter gain values in config files: config/instructions/gain_values.md
+      - Using dynamic runtime values in config files: config/instructions/dynamic_values.md
       - Device Control Events: config/instructions/device_control_events.md
       - How to enter time strings in config files: config/instructions/time_strings.md
-      - Machine config files: config/instructions/machine_config.md
+      - Text Templates: config/instructions/text_templates.md
+      - Specifying Colors in Config Files: config/instructions/colors.md
+      - Config player "express" configs: config/instructions/express_config.md
+      - How to add lists to config files: config/instructions/lists.md
+      - Gamma correction in MPF: config/instructions/gamma_correction.md
+      - How to enter gain values in config files: config/instructions/gain_values.md
+
     - config/accelerometers.md
     - config/accruals.md
     - config/achievement_groups.md
