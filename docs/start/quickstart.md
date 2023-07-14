@@ -15,5 +15,5 @@ This is for people who know what they're doing. If you're lost, check out our fu
 
 4. Create a folder for your machine config files as outlined in the [tutorial](../tutorial/index.md).
 
-We do not recommend installation the Media Controller right away since it's more of a pain to get installed, and
+We do not recommend installing the Media Controller right away since it's more of a pain to get installed, and
 you don't need it yet.
