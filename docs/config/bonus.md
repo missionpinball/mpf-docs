@@ -94,7 +94,7 @@ Also note that you can use
 [dynamic values](instructions/dynamic_values.md) here if you want to do math or use settings to make this
 configurable.
 
-### bonus_entries:
+## bonus_entries:
 
 A list of sub-entries, with one entry for each "thing" you want to
 track in the bonus.
@@ -112,11 +112,18 @@ one begins.
 Here's how an example might look based on the aliens, modes, and combos
 example just mentioned:
 
+```
 bonus_entries:
->
-:   * event: alien_bonus score: 25000 player_score_entry: aliens
-    * event: mode_bonus score: 1000000 player_score_entry: num_modes
-    * event: combo_bonus score: 100000 player_score_entry: combos
+  - event: alien_bonus
+    score: 25000
+    player_score_entry: aliens
+  - event: mode_bonus
+    score: 1000000
+    player_score_entry: num_modes
+  - event: combo_bonus
+    score: 100000
+    player_score_entry: combos
+```
 
 Let's look at each option you can use in each bonus entry:
 
