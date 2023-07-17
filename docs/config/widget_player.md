@@ -19,7 +19,7 @@ title: "widget_player:"
 
 The `widget_player:` section of your config is where you configure
 widgets to be added to, removed from, or updated on slides (or parent
-frames) based on based on events being posted.
+frames) based on events being posted.
 
 This is an example:
 
