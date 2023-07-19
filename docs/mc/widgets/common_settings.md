@@ -93,29 +93,6 @@ See the
 [widget positioning](positioning.md) documentation for full details on how to position a widget
 on a slide.
 
-## opacity:
-
-A value from 0 to 1 which controls the opacity (or transparency) of the
-widget. You can use decimal values between 0 and 1 for partial
-transparency.
-
-* Completely transparent (e.g. invisible): `0`
-* Completely opaque (e.g. normal): `1`
-* 50% transparent: `0.5`
-
-The default value is `1`.
-
-Note that some widget types allow you to set values greater than 1,
-which will have the effect of making the "glow" of the widget
-brighter. This isn't a great effect, but it could be useful in some
-cases.
-
-    !!! note
-
-    Note that opacity values are 0 to 1, not 0 to 100. If you set
-    `opacity: 100` then that's really like 10,000% opacity and your widget
-    will probably look really weird.
-
 ## z:
 
 Specifies the "layer" or "z-order" of the widget. Higher z values
@@ -138,28 +115,28 @@ If you do want to add a widget with a particular z order to an existing
 slide, you'll probably have to set those existing widgets to a z value
 other than 0.
 
-## rotation:
+## opacity:
 
-Specifies the rotation of the widget. Values are entered in degrees. For
-example, 90 = one quarter rotation counter clockwise. May be used to
-rotate images and GIFs.
+A value from 0 to 1 which controls the opacity (or transparency) of the
+widget. You can use decimal values between 0 and 1 for partial
+transparency.
 
-## animations:
+* Completely transparent (e.g. invisible): `0`
+* Completely opaque (e.g. normal): `1`
+* 50% transparent: `0.5`
 
-Contains a list of events and the animated widget properties and steps
-for each of those events. See the
-[widget animation documentation](animation.md) for details.
+The default value is `1`.
 
-## reset_animations_events:
+Note that some widget types allow you to set values greater than 1,
+which will have the effect of making the "glow" of the widget
+brighter. This isn't a great effect, but it could be useful in some
+cases.
 
-A list of events which are used to reset the widget to its original
-settings and stop all running animations. See the
-[widget animation documentation](animation.md) for details.
+    !!! note
 
-Note that this seems like a grammatical error, since it's "animations
-events", but it's correct in this case because this setting is for a
-list of events that resets the widget animations (since animations
-themselves are a list of separate animations).
+    Note that opacity values are 0 to 1, not 0 to 100. If you set
+    `opacity: 100` then that's really like 10,000% opacity and your widget
+    will probably look really weird.
 
 ## color:
 
@@ -192,6 +169,12 @@ sequentially. As a result, individual style names cannot have spaces in
 them.
 
 The default value is `None` which means no style is used.
+
+## rotation:
+
+Specifies the rotation of the widget. Values are entered in degrees. For
+example, 90 = one quarter rotation counter clockwise. May be used to
+rotate images and GIFs.
 
 ## adjust_top:
 
@@ -240,6 +223,27 @@ The default value is `None`.
 See the
 [widget positioning](positioning.md) documentation for full details on how widget positioning
 offset adjustments work.
+
+## animations:
+
+Contains a list of events and the animated widget properties and steps
+for each of those events. See the
+[widget animation documentation](animation.md) for details.
+
+## reset_animations_events:
+
+A list of events which are used to reset the widget to its original
+settings and stop all running animations. See the
+[widget animation documentation](animation.md) for details.
+
+Note that this seems like a grammatical error, since it's "animations
+events", but it's correct in this case because this setting is for a
+list of events that resets the widget animations (since animations
+themselves are a list of separate animations).
+
+## priority:
+
+Sets the priority in which a given widget will be drawn in relation to other widgets triggered by the same event. While not a required setting (as any such overlapping of widgets is handled by the 'z' value), without this setting users have found the the media controller log files tend to get bloated with messages about an `Unordered handler... with priority 0` which, in rare circumstances might lead to a possible race condition. 
 
 ## expire:
 
