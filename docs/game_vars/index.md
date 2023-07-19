@@ -5,7 +5,7 @@ title: Game Variables
 # Game Variables
 
 
-Game variables allow you to query specifics while a game is in play.
+Game variables are variables built-in as part of the core MPF code. These variables are available to you to query specifics while a game is in play.
 
 Like player and machine variables, you can use the game variables in
 your config files and can be particularly useful for conditional
