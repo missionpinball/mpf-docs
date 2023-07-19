@@ -132,7 +132,7 @@ which will have the effect of making the "glow" of the widget
 brighter. This isn't a great effect, but it could be useful in some
 cases.
 
-    !!! note
+!!! note
 
     Note that opacity values are 0 to 1, not 0 to 100. If you set
     `opacity: 100` then that's really like 10,000% opacity and your widget
@@ -243,7 +243,7 @@ themselves are a list of separate animations).
 
 ## priority:
 
-Sets the priority in which a given widget will be drawn in relation to other widgets triggered by the same event. While not a required setting (as any such overlapping of widgets is handled by the 'z' value), without this setting users have found the the media controller log files tend to get bloated with messages about an `Unordered handler... with priority 0` which, in rare circumstances might lead to a possible race condition. 
+Sets the priority in which a given widget will be drawn in relation to other widgets triggered by the same event. While not a required setting (as any such overlapping of widgets is handled by the 'z' value), without this setting users have found the the media controller log files tend to get bloated with messages about an `Unordered handler... with priority 0` which, in rare circumstances might lead to a possible race condition.
 
 ## expire:
 
