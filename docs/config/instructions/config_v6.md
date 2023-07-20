@@ -4,10 +4,10 @@ title: config_version 6
 
 # Changes in MPF config version 6
 
-MPF uses version numbers in its YAML config files which ensures that MPF is loading config
+MPF uses version numbers in its YAML config files which ensure that MPF is loading
 files that are compatible with the version of MPF that's running. [More info on config versions](config_version.md)
 
-MPF 0.57 moves from config version 5 to config version 6. This page documents the changes.
+MPF 0.57 moves from config version 5 to config version 6 (and from show version 5 to 6 as well). This page documents the changes.
 
 ## Why config version 6?
 
@@ -18,17 +18,17 @@ Those hacks are being removed in MPF 0.57, which means you'll need to update you
 ## Specific changes you need to make
 
 If you want ot know what specific hacks MPF used prior to config version 6, see the
-"What were the hacks?" section below. But if you just care about updating your config files,
+"What were the hacks?" section below. But if you just care about updating your YAML files,
 here's what you need to do:
 
 1. Find and replace `#config_version=5` with `#config_version=6`.
-2. Find and replace `time: +` with `time: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc.
-3. Search for any value that starts with a leading zero, like `: 0` and then see if it only has digits after the zero. If so, add quotes around the value. e.g. `: "000066"`.
-4. Find and replace `: on` with `: "on"` and `: off` with `: "off"`.
+2. Find and replace `#show_version=5` with `#show_version=6`.
+3. Find and replace `: +` with `: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc.
+4. Search for any value that starts with a leading zero, like `: 0` and then see if it only has digits after the zero. If so, add quotes around the value. e.g. `: "000066"`.
 5. You might have a bit of cleanup for some random other things which are now invalid YAML (as outlined below), but the easiest way to do that is just to run your game and then hunt down any last remaining errors as they come up.
 
 That's it! Not too bad overall. We updated several configs for complete and mature machines, and
-each one only took a few minutes. It's really pretty quick.
+each machine's entire bundle of configs and shows only took a few minutes. It's really pretty quick.
 
 ## What were the hacks?
 
@@ -48,12 +48,6 @@ Here are hacks that MPF used prior to config version 6:
    So in pure YAML, `color: 000066` would be processed as `color: 66` which is wrong.
 
    The fix for this is to add quotes around the values that are only numbers and start with a leading zero. e.g. `color: "000066"` instead of `color: 000066`.
-
-**"On" and "Off" values are strings**
-
-   The YAML spec defines `on` and `off` values as boolean (like true/false). But many MPF users create show names called "on" and "off", so MPF's YAML processor interprets those as strings.
-
-   The fix for this is to add quotes around the values that are only `on` or `off`. e.g. `show: "on"` instead of `show: on`.
 
 **Values with only digits and "e" are strings**
 
