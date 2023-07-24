@@ -508,7 +508,7 @@ Let's look at the config for the "chair_lit_3s" mode:
 mode:
   priority: 101
   start_events: right_inlane_active
-  stop_events: unlight_chair balldevice_electric_chair_ball_enter balldevice_swamp_kickout_ball_enter cancel_chair_timer
+  stop_events: unlight_chair balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter cancel_chair_timer
 event_player:
   mode_chair_lit_3s_started: light_chair
   timer_unlight_chair_complete: unlight_chair
@@ -575,7 +575,7 @@ Here's the config for this mode:
 mode:
   priority: 102
   start_events: center_ramp_active, ball_starting
-  stop_events: balldevice_electric_chair_ball_enter balldevice_swamp_kickout_ball_enter
+  stop_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter
 event_player:
   mode_chair_lit_stopping: unlight_chair
   mode_chair_lit_started: light_chair, cancel_chair_timer
