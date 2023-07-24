@@ -571,7 +571,7 @@ Here's the config for this mode:
 #config_version=5
 mode:
   priority: 102
-  start_events: center_ramp_active, ball_starting
+  start_events: center_ramp_active, mode_mansion_awards_started
   stop_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter
 event_player:
   mode_chair_lit_stopping: unlight_chair
