@@ -57,7 +57,7 @@ Here are the specific rules we need to implement:
 * When the game starts, either "Hit Cousin It" or "Mamushka" are
     selected.
 * The selected award is awarded / collected when the electric chair is
-    lit (yellow and red lights on the chair toy) and either the electric
+    lit (yellow light on the chair toy) and either the electric
     chair or swamp shot is hit. (The swamp is technically an operator
     setting, but we'll use it since that's what the default it.)
 * Some of the awards start modes, and others are instant awards with a
@@ -200,9 +200,6 @@ lights:
     subtype: matrix
   electric_chair_yellow:
     number: L64
-    subtype: matrix
-  electric_chair_red:
-    number: L47
     subtype: matrix
 ball_devices:
   drain:
@@ -371,7 +368,7 @@ achievement_groups:
       - hit_cousin_it
       - mamushka
     show_tokens:
-      lights: electric_chair_yellow, electric_chair_red
+      lights: electric_chair_yellow
     auto_select: true
     events_when_all_completed: select_tour_mansion
     enable_while_no_achievement_started: false
@@ -394,8 +391,8 @@ Let's look at each of these settings:
 `show_tokens:`
 
 :   These are the show tokens for the group itself. In this case
-    they're the two lights on the electric chair, since those lights
-    turn on and off to indicate whether the chair or swamp can be shot
+    it's the yellow light on the electric chair, since this light
+    turns on and off to indicate whether the chair or swamp can be shot
     to award the currently selected item.
 
 `auto_select: yes`
@@ -423,8 +420,8 @@ Let's look at each of these settings:
 `show_when_enabled: on`
 
 :   This plays the show called "on" when the achievement group is in
-    the enabled state. This will have the effect of turning on the red
-    and yellow chair lights (from the `show_tokens:` section) when the
+    the enabled state. This will have the effect of turning on the
+    yellow chair light (from the `show_tokens:` section) when the
     achievement group is enabled and the selected item can be awarded.
 
 `select_random_achievement_events: sw_jet`
@@ -451,13 +448,13 @@ Let's look at each of these settings:
 `enable_events: light_chair`
 
 :   When an event called *light_chair* is posted, this achievement group
-    will be enabled (which will turn on the chair lights and allow the
+    will be enabled (which will turn on the chair light and allow the
     selected achievement to be started via the `start_selected_events:`.
 
 `disable_events: unlight_chair`
 
-:   When an event called *light_chair* is posted, this achievement group
-    will be disabled. The chair lights will turn off, and the
+:   When an event called *unlight_chair* is posted, this achievement group
+    will be disabled. The chair light will turn off, and the
     `start_selected_events:` will not cause the current selected
     achievement to start.
 
@@ -466,7 +463,7 @@ This step takes care of:
 * Hitting any pop bumper will change the currently selected award to
     another random from the awards that are not yet complete.
 * The selected award is awarded / collected when the electric chair is
-    lit (yellow and red lights on the chair toy) and either the electric
+    lit (yellow light on the chair toy) and either the electric
     chair or swamp shot is hit.
 
 ## Step 4. Light the electric chair
