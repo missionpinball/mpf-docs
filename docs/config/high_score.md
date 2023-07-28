@@ -116,9 +116,16 @@ least amount of shots to be the best score.
 
 (Added in MPF 0.56.1)
 
-One or more sub-entries, each one being a list. Defaults to empty.
+One or more sub-entries. Each in the format of `string` : `list`
+([Instructions](instructions/lists.md) for entering lists) Defaults
+to empty.
 
-Used to define player variables which can be used in the `award_slide:` section.
+By default player name/initials and value of high score entry are 
+saved for later use in slides, such as in your attract mode. Adding
+additional values here allows for unique variables to be saved.
+These can include both player and machine variables.
+
+Entered in the form of variable type: variable name (e.g., player: number)
 
 --8<-- "todo.md"
 
