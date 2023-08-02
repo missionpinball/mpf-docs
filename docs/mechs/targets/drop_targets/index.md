@@ -37,5 +37,6 @@ coils:
     number:
 drop_targets:
   d_drop_target:
-    switch](s_drop_target
-    reset_coil)```
+    switch: s_drop_target
+    reset_coil: c_reset_drop_target
+```
