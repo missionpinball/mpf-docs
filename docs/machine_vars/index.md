@@ -61,6 +61,7 @@ use in your configs:
 * [(high_score_category)(position)_label](high_score_categoryposition_label.md)
 * [(high_score_category)(position)_name](high_score_categoryposition_name.md)
 * [(high_score_category)(position)_value](high_score_categoryposition_value.md)
+* [(high_score_category)(position)_(variable_type)_(variable)](high_score_categoryposition_variabletype_variable.md)
 * [lisy_api_version](lisy_api_version.md)
 * [lisy_hardware](lisy_hardware.md)
 * [lisy_version](lisy_version.md)

@@ -856,6 +856,7 @@ nav:
     - (high_score_category)(position)_label: machine_vars/high_score_categoryposition_label.md
     - (high_score_category)(position)_name: machine_vars/high_score_categoryposition_name.md
     - (high_score_category)(position)_value: machine_vars/high_score_categoryposition_value.md
+    - (high_score_category)(position)_(variable_type)_(variable): machine_vars/high_score_categoryposition_variabletype_variable.md
     - lisy_api_version: machine_vars/lisy_api_version.md
     - lisy_hardware: machine_vars/lisy_hardware.md
     - lisy_version: machine_vars/lisy_version.md

@@ -21,6 +21,8 @@ include:
 * Set what each "award name" is called. (The highest score is "GRAND
     CHAMPION," the second highest score is "HIGH SCORE 1", the highest
     loop score is "MAJOR LOOPER", etc.)
+* Additional player and machine variables that accompany this
+    achievement. (Character selected, time to complete, etc.)
 * How many characters a player can enter for their name.
 * A list of valid characters the player can choose from
 * The layout of the display for entering their names and show their
@@ -77,6 +79,9 @@ high_score:
       - ANT: 200000
     loops:
       - JAN: 42
+  vars:
+    loops:
+      - player: character
 # optional: change the slides (you can omit all the following)
 slide_player:
   _overwrite: true
@@ -173,6 +178,48 @@ slides:
       font_size: 20
       number_grouping: true
       min_digits: 2
+loops_award_display:
+    - type: text
+      text: (player_name)
+      font_size: 18
+      style: big
+      anchor_y: middle
+      anchor_x: middle
+      x: middle
+      y: middle
+      color: 00ff00
+      animations:
+        show_slide:
+          - property: opacity
+            value: 1
+            duration: 0.05s
+          - property: opacity
+            value: 0
+            duration: 0.05s
+            repeat: true
+    - type: text
+      text: (award)
+      font_size: 18
+      style: big
+      x: 105
+      y: 110
+      color: 0000ff
+    - type: text
+      text: (value)
+      style: big
+      x: 105
+      y: 30
+      color: 4040FF
+      font_size: 20
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: (player(player_num)|character)
+      style: big
+      x: 105
+      y: 10
+      color: 4040FF
+      font_size: 20
 ##! test
 #! assert_machine_variable 1000000 score1_value
 #! assert_machine_variable MPF score1_name
@@ -211,9 +258,10 @@ slides:
 
 High score mode will also create a few machine variables for you:
 
-* [high_scores_in_ems](../../machine_vars/high_score_categoryposition_label.md) - `score1_label` = GRAND CHAMPION
-* [high_scores_in_ems](../../machine_vars/high_score_categoryposition_name.md) - `score1_name` = MPF
-* [high_scores_in_ems](../../machine_vars/high_score_categoryposition_value.md) - `score1_value` = 1000000
+* [high_scores](../../machine_vars/high_score_categoryposition_label.md) - `score1_label` = GRAND CHAMPION
+* [high_scores](../../machine_vars/high_score_categoryposition_name.md) - `score1_name` = MPF
+* [high_scores](../../machine_vars/high_score_categoryposition_value.md) - `score1_value` = 1000000
+* [high_scores](../../machine_vars/high_score_categoryposition_variable.md) - `score1_player_character` = Squid
 
 In this case this will be `score1_value`, `score1_name` and
 `score1_label` (till `score9_value`, `score9_name` and `score9_label`).
@@ -311,6 +359,10 @@ widget_styles:
         y: top-600
       - type: Text
         text: (machine|loops1_value)
+        style: attract_mode_high_score_display_score
+        y: top-600
+      - type: Text
+        text: (machine|loops1_player_character)
         style: attract_mode_high_score_display_score
         y: top-600
 ##! test
