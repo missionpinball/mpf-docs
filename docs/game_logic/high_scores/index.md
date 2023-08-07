@@ -261,7 +261,7 @@ High score mode will also create a few machine variables for you:
 * [high_scores](../../machine_vars/high_score_categoryposition_label.md) - `score1_label` = GRAND CHAMPION
 * [high_scores](../../machine_vars/high_score_categoryposition_name.md) - `score1_name` = MPF
 * [high_scores](../../machine_vars/high_score_categoryposition_value.md) - `score1_value` = 1000000
-* [high_scores](../../machine_vars/high_score_categoryposition_variable.md) - `score1_player_character` = Squid
+* [high_scores](../../machine_vars/high_score_categoryposition_variabletype_variable.md) - `score1_player_character` = Squid
 
 In this case this will be `score1_value`, `score1_name` and
 `score1_label` (till `score9_value`, `score9_name` and `score9_label`).
