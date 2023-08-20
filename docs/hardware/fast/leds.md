@@ -78,6 +78,38 @@ lights:
     type: rgbw   # will use red: 2-1, green: 2-2, blue: 3-0, white: 3-1
 ```
 
+Remember that each chain from the Nano will handle up to 64 RGB LEDs. You likely will have more than just 64 LEDs in your machine resulting in multiple chains. When configuring the `start_channel` or `number` for subsequent chains, remember to identify the number of the first LED in that chain starting with the first number LED supported in that chain. For example, your first chain should start with LED_0 and your second chain with LED_64, the third with LED_128 and the fourth with LED_192, like this:
+
+``` mpf-config
+lights:
+  led_0:
+    start_channel: 0      # you could also use number: 0
+    subtype: led
+    type: rgb    # will use red: 0-0, green: 0-1, blue: 0-2
+  led_1:
+    previous: led_0
+    subtype: led
+    type: rgb   # will use red: 1-0, green: 1-2, blue: 1-3
+  led_2:
+    previous: led_1
+    subtype: led
+    type: rgb   # will use red: 2-0, green: 2-1, blue: 2-2
+
+## beginning of second chain
+  led_50:
+    start_channel: 64      # even though you only used 3 LEDs on the first chain, this chain needs to start with '64' to signify this is the beginning of a new chain from the Nano board
+    subtype: led
+    type: rgb    # will use red: 64-0, green: 64-1, blue: 64-2
+  led_51:
+    previous: led_50
+    subtype: led
+    type: rgb   # will use red: 65-0, green: 65-1, blue: 65-2
+  led_52:
+    previous: led_51
+    subtype: led
+    type: rgb   # will use red: 66-0, green: 66-1, blue: 66-2
+```
+
 See [WS2811 and WS2812 LEDs in Pinball](../../mechs/lights/ws2812.md) for details.
 
 ## RGB LED buffering
