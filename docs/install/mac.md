@@ -42,7 +42,7 @@ To install MPF on a Mac:
 3.  Use Homebrew (or 'brew') to install the libraries and other
     support files MPF needs:
 
-    `brew install SDL2 SDL2_mixer SDL2_image gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly`
+    `brew install SDL2 SDL2_mixer SDL2_image gstreamer`
 
 4.  Verify that pip is installed. If you installed Python from
     python.org, then pip should have been installed as well. You can
