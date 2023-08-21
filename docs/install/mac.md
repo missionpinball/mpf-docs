@@ -52,16 +52,16 @@ To install MPF on a Mac:
 
 5.  Use pip to install MPF with the Text UI components:
 
-    `pip install "mpf[cli]"`
+    `pip install "mpf[cli]"` or 'pip3 install "mpf[cli]"'
 
 6.  Use pip to install the MPF Monitor (Note that the latest version
     requires PyQt6, priors required PyQt5):
 
-    `pip install mpf-monitor`
+    `pip install mpf-monitor` or 'pip3 install mpf-monitor'
 
 7.  Use pip to install MPF-MC:
 
-    `pip install mpf-mc`
+    `pip install mpf-mc` or 'pip3 install mpf-mc'
 
 Note: For the commands that use pip, if you run into permission issues,
 try prefixing the command with sudo (i.e.,
