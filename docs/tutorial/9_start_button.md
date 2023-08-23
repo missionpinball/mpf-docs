@@ -7,7 +7,7 @@ title: "Tutorial 9. Add the start button"
 --8<-- "tutorial.md"
 
 Obviously in order to play an actual game, you have to be able to start
-a game, and that requires a start button. So let's add that now.
+a game, and that requires a start button. Let's add that now.
 
 ## 1. Add a switch for your Start button
 
@@ -25,7 +25,7 @@ switches:
 
 Just like the special-purpose tags we used when configuring the ball
 devices, MPF uses some
-[special purpose tags for switches](../config/switches.md), too. One of them is `start`, as MPF watches for switches
+special purpose tags for [switches](../config/switches.md), too. One of them is `start`, as MPF watches for switches
 tagged with "start" to start games and add players to running games.
 
 Sometimes people ask "Why do you use a tag for this? Why not just look
@@ -87,8 +87,8 @@ switches:
     tags: playfield_active
 ```
 
-Note: The tags playfield_active and above the start tag are [special
-purpose tags for switches](/config/switches).
+Note: The tags playfield_active and above the start tag are special
+purpose tags for [switches](../config/switches.md).
 
 While you're at it, create a keyboard key mapping for this switch in
 the `keyboard:` section of your config, like this:

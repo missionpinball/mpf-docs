@@ -15,12 +15,12 @@ trough with opto boards. (If you have a modern-style trough which uses
 mechanical leaf switches, use
 [this guide](modern_mechanical.md) instead.)
 
-![image](/mechs/images/trough_opto_fast.jpg)
+![image](../images/trough_opto_fast.jpg)
 
 The following diagram shows how the ball flow and eject coil work in a
 modern trough. (This is a side view)
 
-![image](/mechs/images/modern_trough.jpg)
+![image](../images/modern_trough.jpg)
 
 And this diagram shows how the "opto boards" are typically located.
 Note that one of the opto boards is a "transmit" board that contains
@@ -29,7 +29,7 @@ board which contains photo transistors which are activated when the IR
 beam is hitting them (i.e. when there is no ball blocking the path) and
 inactive when a ball is present and in the way.
 
-![image](/mechs/images/trough_opto_diagram.jpg)
+![image](../images/trough_opto_diagram.jpg)
 
 If you got a Stern Spike Trough but are not using Stern Spike (not
 recommended) read the

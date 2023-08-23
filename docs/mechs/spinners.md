@@ -15,7 +15,7 @@ rotation.
 
 ## Hardware
 
-![image](/mechs/images/spinner.jpg)
+![image](images/spinner.jpg)
 
 Part numbers:
 
