@@ -15,7 +15,7 @@ title: Running the MPF Monitor
     you run `mpf both`).
 5.  In a new terminal window, Start MPF and MPF-MC. You can start MPF
     before or after monitor is started, and leave the monitor running
-    while MPF is not.
+    while MPF is not. Note, that certain actions in the monitor are only available while mpf is running.
 6.  MPF Monitor has multiple windows that can be viewed, though not all
     may be enabled by default. The "Inspector" window is the main
     window where you can toggle other windows On and Off. To enable
@@ -26,7 +26,7 @@ title: Running the MPF Monitor
     2.  Show event window
     3.  Show playfield window (this window shows your playfield picture)
     4.  Show mode window
-7.  MPF Monitor should connect to MPF and populate the devices tree in
+7.  MPF Monitor should connect to a running MPF instance and populate the devices tree in
     the device window. You can look through this list to see the states
     of various devices. The columns in each window are sortable and
     resizeable.

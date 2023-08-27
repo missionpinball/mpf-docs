@@ -16,17 +16,17 @@ that uses opto boards, use [this guide](modern_opto.md) instead.
 
 Here's an example from a Stern Star Trek Premium machine:
 
-![image](/mechs/images/modern_mechanical_trough_photo.jpg)
+![image](../images/modern_mechanical_trough_photo.jpg)
 
 The following diagram shows how the ball flow and eject coil work in a
 modern trough. (This is a side view)
 
-![image](/mechs/images/modern_trough.jpg)
+![image](../images/modern_trough.jpg)
 
 And this diagram shows how the switches are typically arranged in a
 modern trough with mechanical switches:
 
-![image](/mechs/images/trough_mechanical_switch_diagram.jpg)
+![image](../images/trough_mechanical_switch_diagram.jpg)
 
 !!! note
 
