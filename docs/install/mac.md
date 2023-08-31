@@ -75,7 +75,11 @@ environment variable, like this (but check the version number since that might v
 
 `export DYLD_LIBRARY_PATH=/usr/local/Cellar/gstreamer/1.22.5/lib:$DYLD_LIBRARY_PATH`
 
-Also, pip installs Python packages globally by default. If you'd prefer
+If this works, you'll need to update your `~/.zshenv` file (or create one) with that same command to
+ensure that variable is set for each terminal window launched. (ZSH is the shell for MacOS Catalina
+and onward. If you're somehow still running something older, you'd edit the `~/.bash_profile` file instead).
+
+Finally, pip installs Python packages globally by default. If you'd prefer
 to keep your project and its dependencies isolated from your system's
 Python, consider using a Python virtual environment. There are several
 tools available for this, such as pipx, venv, or virtualenv.
