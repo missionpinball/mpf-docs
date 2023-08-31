@@ -69,6 +69,12 @@ try prefixing the command with sudo (i.e.,
 run with root permissions, which can pose a security risk if used
 carelessly.
 
+Also, if the MC doesn't load due to an error that has to do with gstreamer,
+try adding homebrew's gstreamer install location to the DYLD_LIBRARY_PATH
+environment variable, like this (but check the version number since that might vary:
+
+`export DYLD_LIBRARY_PATH=/usr/local/Cellar/gstreamer/1.22.5/lib:$DYLD_LIBRARY_PATH`
+
 Also, pip installs Python packages globally by default. If you'd prefer
 to keep your project and its dependencies isolated from your system's
 Python, consider using a Python virtual environment. There are several
