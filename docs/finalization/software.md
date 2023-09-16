@@ -57,8 +57,7 @@ responsive:
 pip3 install uvloop
 ```
 
-MPF will use uvloop once it is available. Requires at least Python 3.7
-for the latest version.
+MPF will use uvloop once it is available.
 
 ## Run MPF with PyPy
 
