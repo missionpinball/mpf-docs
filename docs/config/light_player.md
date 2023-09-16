@@ -58,8 +58,10 @@ your config. (If you don't include them, the default will be used).
 Single value, type: `string`. Default: `white`
 
 Set a color to this light. Color values may be a hex string (e.g.
-`22FFCC`), a list of RGB values (e.g. `[50, 128, 206]`), a color name
-(e.g. `turquoise`), or a brightness value (i.e. `AA` or `120`). MPF
+`22FFCC`), a hex string including a brightness value (e.g. `22FFCC%60`), a color name
+(e.g. `turquoise`), or a brightness value (i.e. `AA` or `120`). Note that
+a list of RGB values (e.g. `[50, 128, 206]`) cannot be used, these RGB values
+are only valid in the [named_colors:](named_colors.md) section of your config file. MPF
 knows 140+ standard web color names, and you can define your own custom
 colors in the [named_colors:](named_colors.md)
 section of your config. If you use brightness on an RGB light MPF will
