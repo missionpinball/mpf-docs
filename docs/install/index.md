@@ -4,11 +4,7 @@ title: Downloading & Installing MPF (2023 Version)
 
 # Installing MPF
 
-
-The MPF Installers were rewritten from scratch and completely updated
-for MPF 0.56 in August 2022. (If you're using an older version of MPF,
-see the [docs for the version you're using](../versions/docs.md) for installation
-instructions.)
+The current stable version of MPF is `0.56.x`.
 
 MPF should work with following platforms:
 
@@ -17,14 +13,11 @@ MPF should work with following platforms:
 * Linux (64-bit, lots of distros)
 * Raspberry Pi
 
-Python 3.9 is the latest version of Python supported. Some platforms
-also support Python 3.7 and 3.8. Python 3.10+ will not work.
+MPF 0.56 only works with Python 3.7 - 3.9.
 
-!!! note "MPF 0.57 will support Python 3.10 & 3.11"
+!!! note "MPF 0.57 supports Python 3.10 & 3.11"
 
-    MPF 0.57, which is in progress now and should be available for testing
-    somewhere in the Aug/Sept 2023 timeframe will drop support for Python 3.7
-    and add support for Python 3.10 and 3.11. See our [0.57 page](0.57.md) for details.
+    MPF 0.57, which is the current `dev` branch of MPF, supports Python 3.8 - 3.11. See our [0.57 page](0.57.md) for details.
 
 Here links to the installation guides for each platform:
 
