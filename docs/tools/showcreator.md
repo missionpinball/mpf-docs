@@ -8,11 +8,13 @@ title: MPF Showcreator
 MPF supports playing [light shows](../shows/index.md) out of files in your config folder. Those are human readable
 and can be created by hand. But isn't that a bit cumbersome for larger
 shows? Especially, if you want to swipe over all (or most) of your LEDs
-this might take days. Luckily, there is a tool for that.
+this might take days. Luckily, there are two tools for that.
+
+## A) MPF Showcreator based on playfield layout
 
 The [light show generator for
 MPF](https://github.com/missionpinball/showcreator) loads your LED
-positions from the [The MPF Monitor](monitor/index.md)
+positions from the [MPF Monitor](monitor/index.md)
 config and lets you create show for transitions.
 
 Video about showcreator:
@@ -122,49 +124,52 @@ have several color swipes coming from different directions one after the
 other or effects like multiple spotlights moving across the playfield
 like a hollywood premiere.
 
-## Running the showcreator on Windows
+### Running the showcreator on Windows
 
 1.  Checkout or download the
     [showcreator](https://github.com/missionpinball/showcreator.git)
     repository.
 2.  Double click on led.exe
 
-## Running the showcreator on Mac x64
+### Running the showcreator on Mac x64
 
 1.  Checkout or download the
     [showcreator](https://github.com/missionpinball/showcreator.git)
     repository.
 2.  Double click on: led mac x64.app (you may not see .app in the name)
 
-## Compiling and running the showcreator on Ubuntu
+### Running the showcreator on Linux
 
-Inside a new install folder:
+The showcreator is developed with a development language called [Blitzmax](https://de.wikipedia.org/wiki/Blitz_Basic), there is no precompiled
+executable for Linux available, so we need to follow the [Blitzmax homepage](https://blitzmax.org/) to set up the development environment to compile an executable.
+
+As a first step some pre-requisites need to be met, follow these [guidelines](https://blitzmax.org/docs/en/setup/linux/) to install the packages needed. On that page you find
+the instructions for some common Linux distros.
+
+Next you need to download the Blitzmax environment from [here](https://blitzmax.org/downloads/), that is just a compressed folder you need to extract to any location on your computer. Inside that folder you should
+see an executable called `MaxIDE`, that is the development IDE you need to start. You could follow this [Hello World Guide](https://blitzmax.org/docs/en/setup/get_started/#hello-world-with-maxide) to verify if the installation 
+is correct until here, but it is not compulsory to do so.
+
+Now you need the source code from the showcreator project, you need to clone the complete project
+
 
 ``` console
-# inside a new install folder
-apt install linux-libc-dev:i386 libxft2:i386 g++-multilib gcc-multilib libxpm-dev:i386 libxxf86vm-dev:i386 libgl1-mesa-dev:i386 libglu1-mesa-dev:i386
-git clone https://github.com/blitz-research/blitzmax.git
-cd blitzmax
-cd _src_/linux
-./install.bat  # yes its .bat
-cd ../../../   # back to your src folder
-
 git clone https://github.com/missionpinball/showcreator.git
-cd showcreator
-../blitzmax/bin/bmk makeapp led.bmx
+```
 
-# run it
+It is not sufficient just to download the led.bmx source file, though the build will succeed, the execution of the showcreator will fail earlier or later due to missing dependencies. Open the led.bmx source file in the `MaxIDE`. In the MaxIDE in the menu `Program --> Build Options --> Debug Build` you can switch off 
+the debug build that is not really needed. Now compile (build) the source code by selection `Program --> Build`. When building the first time, it might run some time since Blitzmax needs to compile all kind of
+dependencies. After the build is done, you find in the same folder where your source file is located an executable called `led`.
+
+Afterwards you can run the showcreator using (from within your install folder):
+
+``` console
 ./led
 ```
 
-Afterwards you can run the showcreator using (from within your install
-folder):
+Note, that on the console, which might be hidden by the showcreator window, you are being asked for the monitor.yaml file. Enter the file location to load your light data.
 
-``` console
-./showcreator/led
-```
-
-## Key bindings
+### Key bindings
 
 * A - adjust rotation
 * S - adjust x scale
@@ -186,10 +191,14 @@ folder):
     end (START or FINISH) +SHIFT adjusts both START AND FINISH
     positions
 
-## Dynamic Shows
+### Dynamic Shows
 
 The tool is handy to render static shows which will not change during
 runtime. If you want to render shows dynamically (using your GPU) you
 can also use
 [your lights as display in MC](../config_players/display_light_player.md) but that will cost much more resources during runtime than
 offline generated shows.
+
+## B) MPF light and show creator
+Another tool exists to create light shows. It is has a bit different approach and is not based on the monitor.yaml file. Take a look at the tool's [homepage](https://github.com/worldpeace-germany/mpfLightAndShowGenerator)
+to see if this approach suites your needs.
