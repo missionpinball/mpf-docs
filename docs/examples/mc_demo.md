@@ -21,7 +21,7 @@ do different things with the MC.
 
 ## 1. Download the MPF examples bundle
 
-Instructions [here](mpf-examples.md).
+Instructions [here](mpf-examples.md). (Make sure you get the one that matches the version of MPF you're using. The 'dev' branch is MPF 0.57, so if you're on 0.56 or earlier, select the proper branch to download.)
 
 ## 2. Run it
 
