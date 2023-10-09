@@ -17,7 +17,7 @@ Those hacks are being removed in MPF 0.57, which means you'll need to update you
 
 ## Specific changes you need to make
 
-If you want ot know what specific hacks MPF used prior to config version 6, see the
+If you want to know what specific hacks MPF used prior to config version 6, see the
 "What were the hacks?" section below. But if you just care about updating your YAML files,
 here's what you need to do:
 
@@ -25,8 +25,10 @@ here's what you need to do:
 2. Find and replace `#show_version=5` with `#show_version=6`.
 3. Find and replace `: +` with `: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc.
 4. Search for any value that starts with a leading zero, like `: 0` and then see if it only has digits after the zero. If so, add quotes around the value. e.g. `: "000066"`. If this is a multi-part value, put quotes around the whole thing: `number: 0804-1` becomes `number: "0804-1"`. This also applies for key names: `0804:` becomes `"0804":`.
-5. Search your YAML files for `!!omap` and remove and update those. Also search for your high score data YAML file to change it there. (Details below.)
-6. You might have a bit of cleanup for some random other things which are now invalid YAML (as outlined below), but the easiest way to do that is just to run your game and then hunt down any last remaining errors as they come up.
+5. Any color values that are only numbers will need quotes around them. e.g. `color: 330000` becomes `color: "330000"`.
+6. Search your YAML files for `!!omap` and remove and update those. (See below.)
+7. Update the format of your high score data files. (See below.)
+8. You might have a bit of cleanup for some random other things which are now invalid YAML (as outlined below), but the easiest way to do that is just to run your game and then hunt down any last remaining errors as they come up.
 
 That's it! Not too bad overall. We updated several configs for complete and mature machines, and
 each machine's entire bundle of configs and shows only took a few minutes. It's really pretty quick.
@@ -102,3 +104,66 @@ Here are hacks that MPF used prior to config version 6:
       - HIGH SCORE 1
       - HIGH SCORE 2
    ```
+
+## How to update your high score data file
+
+If you use MPF's High Score mode, your high scores (and other achievements) are stored in a YAML file. The format of that file has changed in config version 6. Here's how to update it:
+
+1. Find your high scores file. It will most likely be in your machine folder, in the data folder, and it will be named `high_scores.yaml`.
+
+2. Make some changes. Here's what an old high score file will look like:
+
+``` yaml title="Old high score file"
+
+bonus_rupees:
+- !!python/tuple
+  - WIZ
+  - 146
+- !!python/tuple
+  - AAA
+  - 126
+score:
+- !!python/tuple
+  - WIZ
+  - 563550
+- !!python/tuple
+  - WIZ
+  - 537200
+- !!python/tuple
+  - WIZ
+  - 510630
+- !!python/tuple
+  - WIZ
+  - 482705
+- !!python/tuple
+  - AAA
+  - 458435
+- !!python/tuple
+  - WIZ
+  - 449960
+
+```
+
+3. Delete the `!!python/tuple` from each line. (You can do this with a find and replace.) However you want to keep the dash, so your new file will look like:)
+
+``` yaml title="New high score file for MPF 0.57"
+
+bonus_rupees:
+- - WIZ
+  - 30
+- - WIZ
+  - 25
+score:
+- - WIZ
+  - 100000
+- - WIZ
+  - 95000
+- - WIZ
+  - 90000
+- - AAA
+  - 86490
+- - WIZ
+  - 85000
+- - WIZ
+  - 80000
+```
