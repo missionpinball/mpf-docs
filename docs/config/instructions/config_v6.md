@@ -25,7 +25,8 @@ here's what you need to do:
 2. Find and replace `#show_version=5` with `#show_version=6`.
 3. Find and replace `: +` with `: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc.
 4. Search for any value that starts with a leading zero, like `: 0` and then see if it only has digits after the zero. If so, add quotes around the value. e.g. `: "000066"`. If this is a multi-part value, put quotes around the whole thing: `number: 0804-1` becomes `number: "0804-1"`. This also applies for key names: `0804:` becomes `"0804":`.
-5. You might have a bit of cleanup for some random other things which are now invalid YAML (as outlined below), but the easiest way to do that is just to run your game and then hunt down any last remaining errors as they come up.
+5. Search your YAML files for `!!omap` and remove and update those. Also search for your high score data YAML file to change it there. (Details below.)
+6. You might have a bit of cleanup for some random other things which are now invalid YAML (as outlined below), but the easiest way to do that is just to run your game and then hunt down any last remaining errors as they come up.
 
 That's it! Not too bad overall. We updated several configs for complete and mature machines, and
 each machine's entire bundle of configs and shows only took a few minutes. It's really pretty quick.
@@ -54,3 +55,50 @@ Here are hacks that MPF used prior to config version 6:
    The YAML spec will process a value like ``123e45`` as "123 exponent 45". Since those could
    be hex color codes, MPF's YAML interface processes values that are all digits with a single
    "e" character as strings.
+
+**!!omap is no longer needed**
+
+   MPF used to use the `!!omap` YAML type to ensure that the order of items in a list was
+   preserved. This is no longer needed with the current versions of Python, so you can remove
+   the `!!omap` from your YAML files.
+
+   If your keys in the section had leading dashes, you need to remove those as well.
+
+   For example, this:
+
+   ``` yaml title="Old way"
+   position_switches:  !!omap
+   - up: s_position_up
+   - down: s_position_down
+   ```
+
+   Becomes this:
+
+   ``` yaml title="New way in config version 6"
+   position_switches:
+     up: s_position_up
+     down: s_position_down
+   ```
+
+   Notice the dashes that were in front of the keys are gone.
+
+   If the values in the omap section were just keys with no colons and no values, then you need to
+   remove the !!omap but keep the dashes, like this:
+
+   ``` yaml title="Old way"
+   categories:  !!omap
+    score:
+      - GRAND CHAMPION
+      - HIGH SCORE 1
+      - HIGH SCORE 2
+   ```
+
+   Becomes this:
+
+   ``` yaml title="New way in config version 6"
+   categories:
+    score:
+      - GRAND CHAMPION
+      - HIGH SCORE 1
+      - HIGH SCORE 2
+   ```
