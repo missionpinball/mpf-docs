@@ -4,9 +4,49 @@ title: Installing MPF on Mac
 
 # Installing MPF on Mac
 
-This is the new process used to install MPF 0.56 on a Mac.
+*Last updated Oct 13, 2023*
 
-## Overview of MPF on macOS
+This guide will walk you through the process of installing MPF on a Mac. It's broken into two parts:
+
+* Installing MPF 0.57 (current dev branch) on a Mac
+* Installing MPF 0.56 (current stable branch) on a Mac
+
+## Installing MPF 0.57 (dev) on a Mac
+
+MPF 0.57 works on macOS running on both Intel and Apple Silicon (M1/M2
+processors). For new installs, we recommend using Python 3.11, and that's
+what these instructions will show. (MPF will work with Python 3.8 - 3.11.)
+
+1.  The easiest way to install MPF on a Mac is to use the [Homebrew package manager](https://brew.sh).
+    Open your command terminal and paste and run this command:
+
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+    This will also install the Xcode command line tools if you don't
+    have them. This process might take some time, so be patient.
+
+2. Use Homebrew (or 'brew') to install the Python and the multimedia libraries MPF and MPF-MC need:
+
+    `brew install python@3.11 SDL2_mixer SDL2_image gstreamer`
+
+3. Install the various MPF packages. For example, to install MPF, MPF-MC, and MPF Monitor:
+
+    `pip3 install mpf mpf-mc mpf-monitor --pre`
+
+   Note that the `--pre` flag tells pip to install "pre-release" versions, which is how you get the
+   0.57 versions of these packages. If you omit that flag, you'll get 0.56 versions.
+
+4. You're ready to go! Scroll down to the "Testing" section below to test your install.
+
+   Note that the first time you run the MC, it will seem to hang after the sound system loads. This is ok. The window
+   title will show it's the gst-plugin-scanner, which is a one-time thing on the first run. After that it will be
+   quick.
+
+## Installing MPF 0.56 (stable) on a Mac
+
+!!! note "These instructions are for MPF 0.56"
+
+    These instructions are from 2022 for MPF 0.56. Every "MPF" reference below should be thought of as "MPF 0.56".
 
 MPF works on macOS running on both Intel and Apple Silicon (M1/M2
 processors). Requirements are:
