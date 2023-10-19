@@ -4,9 +4,57 @@ title: Installing MPF on Mac
 
 # Installing MPF on Mac
 
-This is the new process used to install MPF 0.56 on a Mac.
+*Last updated Oct 13, 2023*
 
-## Overview of MPF on macOS
+This guide will walk you through the process of installing MPF on a Mac. It's broken into two parts:
+
+* Installing MPF 0.57 (current dev branch) on a Mac
+* Installing MPF 0.56 (current stable branch) on a Mac
+
+## Installing MPF 0.57 (dev) on a Mac
+
+MPF 0.57 works on macOS running on both Intel and Apple Silicon (M1/M2
+processors). For new installs, we recommend using Python 3.11, and that's
+what these instructions will show. (MPF will work with Python 3.8 - 3.11.)
+
+1.  The easiest way to install MPF on a Mac is to use the [Homebrew package manager](https://brew.sh).
+    Open your command terminal and paste and run this command:
+
+    ``` { .bash .copy}
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    ```
+
+    This will also install the Xcode command line tools if you don't
+    have them. This process might take some time, so be patient.
+
+2. Use Homebrew (or 'brew') to install the Python and the multimedia libraries MPF and MPF-MC need:
+
+    ``` { .bash .copy}
+
+    brew install python@3.11 SDL2_mixer SDL2_image gstreamer
+
+    ```
+
+3. Install the various MPF packages. For example, to install MPF, MPF-MC, and MPF Monitor:
+
+    ``` { .bash .copy}
+
+    pip3 install mpf mpf-mc mpf-monitor --pre
+
+    ```
+
+   Note that the `--pre` flag tells pip to install "pre-release" versions, which is how you get the
+   0.57 versions of these packages. If you omit that flag, you'll get 0.56 versions.
+
+That's it! Skip down to the "Testing your MPF Installation" section to continue.
+
+## Installing MPF 0.56 (stable) on a Mac
+
+!!! note "These instructions are for MPF 0.56"
+
+    These instructions are from 2022 for MPF 0.56. Every "MPF" reference below should be thought of as "MPF 0.56".
 
 MPF works on macOS running on both Intel and Apple Silicon (M1/M2
 processors). Requirements are:
@@ -84,129 +132,26 @@ to keep your project and its dependencies isolated from your system's
 Python, consider using a Python virtual environment. There are several
 tools available for this, such as pipx, venv, or virtualenv.
 
-## Testing
+## Testing your MPF installation with the mpf-examples repo
 
-May 2023 Note: Some of this might not work: The mc_demo and demo_man
-mentioned below might not work anymore as they haven't been updated in
-a while. Feel free to fix and/or update them and we'll merge your
-changes in!
+Now that MPF is installed, you probably want to test it out to make sure
+it worked properly. One of the easiest ways to do this is to use the
+`mpf-examples` repo from GitHub. This repo contains a bunch of example
+MPF projects.
 
-To test, download the `mpf-examples` repo from here:
-<https://github.com/missionpinball/mpf-examples>. You can either clone
-it locally, or download the zip file and unzip it. Either is fine, just
-do what you're most comfortable with. Be sure to download / switch to
-the `dev` branch.
+Download the `mpf-examples` repo from [github.com/missionpinball/mpf-examples](https://github.com/missionpinball/mpf-examples)
 
-Then back in the terminal, change into the `mpf-examples` folder (or
+Unzip it, and then back in the terminal, change into the `mpf-examples` folder (or
 whatever folder you just unzipped that into), then change into the
-`mc_demo` folder, then run `mpf both`. That should launch the mc_demo
-code (which is Media Controller demo). A window should open with a red
-background and some text about slides, you should be able to use the
-right arrow key to advance to the next slide. You should be able to use
-the left arrow key to go back to the previous slide and you should hear
-a drum and cymbal sound when you change the slide.
-
-You will see a bunch of warnings about some classes implemented in
-multiple locations, and how one will be used, but which one is
-undefined. It sounds scary, but this is normal. (For now.) We are
-investigating whether this is something we need to fix, and how we'll
-fix it if it is. But for now, it's fine.
-
-You can also run the "demo_man" game from the `mpf-examples` folder.
-Change into the `demo_man` folder and run `mpf both -X`. You should see
-the DMD window pop up. The window you ran the command from will have
-some warnings which cover up the nice text UI display. Just grab a
-corner of the window with the mouse and resize the window (just make it
-a tiny bit bigger and smaller) and that will cause the window contents
-to completely refresh and you should see the expected MPF text UI
-display showing switch status, ball locations, etc. (See the screenshots
-below for details)
+`demo_man` folder, then run `mpf both`. You should see
+the DMD window pop up.
 
 At this point, MPF is ready to go!
-
-## Notes, Caveats & Next Steps
-
-If have existing SDL and Gstreamer libraries installed (check the
-`/Library/Frameworks` folder), you can delete them. The versions that
-brew installs will go into the `/opt/homebrew` folder.
-
-Do NOT use brew to install Python. Why? Because the Python in brew is
-meant to support other brew packages that need python, and as such it
-will automatically "upgrade" you to the latest Python, even on its
-own, which means your Python will flip to 3.10 and MPF won't work and
-you'll be sad. So that's why we install the "Framework Python" from
-python.org. (Why's it called "Framework Python"? Because it installs
-like a framework to that `/Library/Frameworks` folder.)
-
-The Apple Silicon Macs need the Xcode command-line tools installed
-because the ruamel.yaml library that MPF uses to read YAML files
-doesn't have a pre-built version for M1/M2 Macs, so it has to be built
-locally. This process is automatic and transparent when the Xcode tools
-are installed.
-
-If you do not see the "normal" MPF text UI display, and instead see
-something like this:
-
-![image](images/bad-display.jpg)
-
-This is because those warnings mentioned above print on top of the nice
-MPF display. To fix this, just grab a corner of the window with the
-mouse and resize it to be a bit bigger and then smaller again. This will
-cause the entire window to update and you should see the expected MPF
-text UI display showing switch status, ball locations, etc. (See the
-screenshots below for details)
-
-![image](images/good-display.jpg)
-
-Alternately, if you don't want to resize the window every time, you can
-open two different terminal windows, and run `mpf -X` in one and
-`mpf mc` in the other.
 
 ## Keeping MPF up-to-date
 
 Once you have MPF installed via the procedure above, you can keep it
-up-to-date by running the final two pip commands from above which you
-used to install MPF and MPF-MC.
+up-to-date by running the pip commands from above which you
+used to install the MPF components, but with the additional `--update` flag.
 
 Questions? Comments? Need help? You can post to the [forum](../community/index.md).
-
-## What if you borked it?
-
-There aren't too many things that could go wrong, but if your
-environment is broken and you want to remove everything and start over,
-here are some notes:
-
-To remove homebrew, run the following command: ____
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"`
-
-Homebrew installs everything to `/opt/homebrew`, which means if you just
-delete that folder, everything will be gone.
-
-To fix Python versions: ____ Another problem is sometimes the
-system's default Python will be the homebrew one, and not that one that
-you installed from python.org. This can be a problem because MPF
-requires Python 3.7, 3.8, or 3.9 (3.9 only on M1/M2 Macs), but the
-homebrew python could be version 3.10 which won't work with MPF. So if
-you need to check or change this, you can use the following command:
-
-`which python3`
-
-You will see a path to the version of python that runs when you just
-type `python3` from the command line. Ideally you want it to be the
-version you installed, which will be:
-
-`/Library/Frameworks/Python.framework/Versions/3.9/bin/python3`
-
-If you see something else, then run `which -a python3` to see what other
-versions are installed. Then copy the path to the version you installed
-(which will be the `/Library/Frameworks/...` version), and use that in
-Step 5 when you install MPF.
-
-To fix errors about failing to load assets: ____ If you get an error
-about a failure while loading assets, and you see some references to
-PIL, there's a potential conflict with an image library that you can
-remove. To do that, use the following command:
-
-`pip3 uninstall pillow`
-
-This command uses pip to uninstall a package called pillow.

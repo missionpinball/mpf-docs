@@ -1,3 +1,5 @@
+.vscode
+
 # ignore all the generated files in the project folder
 # except the files we need which start with _
 docs/showcase/*

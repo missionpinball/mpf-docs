@@ -7,7 +7,7 @@ title: MPF Quickstart
 This is for people who know what they're doing. If you're lost, check out our full
 [installation guides](../install/index.md).
 
-1. MPF requires Python 3.7 - 3.9. Newer than 3.9 won't work.
+1. MPF requires Python 3.7 - 3.9. Newer than 3.9 won't work. (Update: MPF 0.57 supports Python 3.10 & 3.11. See our [0.57 page](0.57.md) for details.)
 
 2. `pip install mpf`
 

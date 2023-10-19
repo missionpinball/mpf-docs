@@ -34,9 +34,11 @@ Pi) in their machine to run MPF.
 
 ## What Python version can I use with MPF?
 
-MPF uses Python 3.7 - 3.9. We walk
+The stable version (0.56) of MPF uses Python 3.7 - 3.9. We walk
 you through getting Python installed in our
 [installation documentation](../install/index.md).
+
+The dev branch (0.57) of MPF supports Python 3.8 - 3.11.
 
 ## Should I use the stable version or development version?
 
