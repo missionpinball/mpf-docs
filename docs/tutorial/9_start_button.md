@@ -111,7 +111,8 @@ add the *playfield_active* tag to all the switches that might be hit by
 a ball being loose on the playfield. (So lane switches, ramp switches,
 rollovers, standups etc.) You do *not* want to tag ball device switches
 with `playfield_active` since if a ball is in a ball device, then it's
-not loose on the playfield.
+not loose on the playfield. Neither you do *not* want to tag autofire devices
+like slingshots or pop bumpers, they are handled automatically by mpf.
 
 At this point we're really, really close! There are a few more quick
 things we want to do, then run some checks. But then we're ready to
