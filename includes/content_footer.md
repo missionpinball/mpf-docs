@@ -7,7 +7,7 @@
 
     Please help us! You can fix it yourself and be an official "open source" contributor!
 
-    It's easy! See our _[Beginner's guide to editing the docs](/about/help.md)_.
+    It's easy! See our _[Beginner's guide to editing the docs](/about/help)_.
 
 ??? tip "Page navigation via the keyboard: ++less++ ++greater++"
 
