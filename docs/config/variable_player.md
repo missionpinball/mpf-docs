@@ -13,13 +13,15 @@ title: "variable_player:"
 |[mode](instructions/mode_config.md) config files|**YES** :white_check_mark:|
 
 The `variable_player:` section of your mode config lets you add,
-subtract, or replace player variables based on events that are posted.
+subtract, or replace player and machine variables based on events that are posted. When using a `variable_player:` you need strictly distinguish 
+between player and machine variables. The first thing to pay attention to is that a variable_player for player variables can only be used inside mode config files, a variable player for machine
+variables can be as well specified in the global config file.
 
 At the most basic level, you can use this to add to a player's score
-(which is technically adding value to the player variable called
+(which is technically adding a value to the player variable called
 *score*), but in reality you can affect any player or machine variable.
 
-Here's an example:
+Here's an example which would work for player variables, but not for machine variables (see below why):
 
 ``` mpf-config
 ##! mode: mode1
@@ -42,8 +44,7 @@ variable_player:
       string: RUBY     # Sets the player's "treasure_name" variable to a string called "RUBY"
 ```
 
-See [Variable player](../config_players/variable_player.md) for
-details.
+See as well [Variable player](../config_players/variable_player.md).
 
 ## Settings
 
@@ -61,13 +62,13 @@ variable_player:
 ```
 
 The following settings can be used with each event section listed in
-your variable_player section:
+your `variable_player` section:
 
-### Example
+### Example for player variables
 
-You can include any player variable under an event to add numeric value
-to that variable. (If the variable doesn't exist, it will set the
-player variable to that.) For example:
+You can include any player or machine variable under an event to add a numeric value
+to that variable. This example is for player variables and not for machine variables. (If the variable doesn't exist, it will set the
+player variable to that.) For player variables there is a simplified syntax, for example:
 
 ``` mpf-config
 ##! mode: mode1
@@ -84,6 +85,29 @@ when the event called *some_event* is posted. Note that you don't even
 need to include a "score" if you just want to add to other player
 vars.
 
+The fully expanded config for player variables look like this
+
+``` mpf-config
+##! mode: mode1
+variable_player:
+  some_event:
+    score:
+      int: 1000
+      action: add
+    aliens:
+      int: 1
+      action: add
+    aliens:
+      int: 1
+      action: add
+    bonus:
+      int: 10
+      action: add
+```
+
+The above config is the expanded form, the example above still only works for player variables. If you want to use this 
+for machine variables you need to change the `action` to `action: add_machine`, see below the settings details for `action`.
+
 Note that you can use a
 [dynamic value](instructions/dynamic_values.md) for this setting too, which means you can pull in values
 from other player variables, device states, etc. and do math on them.
@@ -95,7 +119,7 @@ your config. (If you don't include them, the default will be used).
 
 ### action:
 
-Single value, type: one of the following options: add, set, add_machine,
+Single value, one of the following options: add, set, add_machine,
 set_machine. Default: `add`
 
 By default, the variable player entries will be added to the existing
@@ -120,7 +144,8 @@ variable_player:
 Starting in MPF 0.33, you can also add and set machine variables, by
 specifying `action: add_machine` or `action: set_machine`. In these
 cases the machine variable is specified just like the player variable in
-the "set" example above.
+the "set" example above. In case of machine variables the action setting is not optional
+anymore but compulsory.
 
 ### block:
 
@@ -161,7 +186,7 @@ floating point;
 Adds or sets a player or machine variable to the specified float value.
 The `int:` setting takes priority over the `float:` setting so if both
 are present only the `int:` will be used. You can use
-[placeholders](instructions/dynamic_values.md) which evalute to float as well.
+[placeholders](instructions/dynamic_values.md) which evaluate to float as well.
 
 ### int:
 
@@ -172,7 +197,7 @@ Adds or sets a player or machine variable to the specified integer value
 (this is the most common use of the variable_player). The `int:` setting
 takes priority over the `float:` setting so if both are present only the
 `int:` will be used. You can use
-[placeholders](instructions/dynamic_values.md) which evalute to int as well.
+[placeholders](instructions/dynamic_values.md) which evaluate to int as well.
 
 ### player:
 
