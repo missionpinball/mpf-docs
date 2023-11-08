@@ -6,18 +6,15 @@ title: CobraPin Pinball Controller powered by OPP
 
 --8<-- "hardware_platform.md"
 
-This page is under development...don't believe a word you read.
 
 ![image](/hardware/images/CobraPinV0_2_isoSmall.jpg)
 
 Features:
 
-:   * 24 solenoid outputs broken into 3 banks
+    * 24 solenoid outputs broken into 3 banks
     * 38 direct inputs <OR> 22 direct inputs + 8x8 switch matrix
-    * Neopixel support for 512 RGB pixels (RGBW also possible but may
-        be limited to \~460 pixels)
-    * 24-50V power filter. Board also provides the common ground for
-        the supplies.
+    * Neopixel support for 512 RGB pixels (RGBW also possible but may be limited to \~460 pixels)
+    * 24-50V power filter. Board also provides the common ground for the supplies.
     * Fuses for solenoid banks and Neopixels
 
 The size of the board is about 197 x 115 mm. Mounting holes are
@@ -46,13 +43,13 @@ Video about cobrapin extension board:
 
 ![image](/hardware/images/CobraPinV0_2_VIN.jpg)
 
-J9:
+**J9:** 
 
-:   Solenoid power input (24-50V).
+Solenoid power input (24-50V).
 
-J10:
+**J10:**
 
-:   Neopixel 5V input.
+Neopixel 5V input.
 
 The filter provides consistent power to solenoids while also protecting
 the power supply from sudden current surges that may otherwise cause a
@@ -63,13 +60,13 @@ connectors.
 
 ![image](/hardware/images/CobraPinV0_2_switches.jpg)
 
-J1, J2, J3:
+**J1, J2, J3:**
 
-:   Direct input switches.
+Direct input switches.
 
-J4, J5:
+**J4, J5:**
 
-:   Remaining direct input switches or switch matrix input/output.
+Remaining direct input switches or switch matrix input/output.
 
 If you do have either 38 direct inputs or 22 direct inputs + a 8x8
 switch matrix depends on your Cobra board. You specify this as an option
@@ -78,7 +75,7 @@ with the MPF compatible numbers. The two pins labeled "N/C" are not
 connected to anything.
 
 The connectors for the switches on the board are KF2510 style
-connectors. Each connector also includes a logic ground pin. Use this
+connectors. For example Molex KK254 series available for AWG 30-22. Each connector also includes a logic ground pin. Use this
 for the direct input return. If you measure the voltage between GND and
 a switch (in below picture 0-0-16) you should measure 3.3V.
 
@@ -102,9 +99,9 @@ section below.
 
 ![image](/hardware/images/CobraPinV0_2_solenoids.jpg)
 
-J6, J7, J8:
+**J6, J7, J8:**
 
-:   Solenoid outputs.
+Solenoid outputs.
 
 The 24 solenoids are broken up into 3 banks of 8 outputs. The connectors
 for the solenoids on the board are JST VH style connectors. There is a
@@ -189,13 +186,13 @@ To have a fully working example for setting up autofire coils see the
 
 ![image](/hardware/images/CobraPinV0_2_HVout.jpg)
 
-J13:
+**J13:**
 
-:   Solenoid power outputs.
+Solenoid power outputs.
 
-F1, F2, F3:
+**F1, F2, F3:**
 
-:   Solenoid power bank fuses.
+Solenoid power bank fuses.
 
 The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
 
@@ -210,23 +207,21 @@ The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
 
 ![image](/hardware/images/CobraPinV0_2_NEO.jpg)
 
-J10:
+**J10:**
 
-:   Power input for Neopixels, most likely 5V, but if you use 12V
-    Neopixels you need to provide 12V power here. Power input is used
-    for both Neopixel chains.
+Power input for Neopixels, most likely 5V, but if you use 12V Neopixels you need to provide 12V power here. Power input is used for both Neopixel chains.
 
-J11, J12:
+**J11, J12:**
 
-:   Neopixel outputs
+Neopixel outputs
 
-F4:
+**F4:**
 
-:   5V fuse for neopixels
+5V fuse for neopixels
 
-J14:
+**J14:**
 
-:   Fused 5V output
+Fused 5V output
 
 The connectors J10, J11, J12 and J14 are JST connectors VH style. There
 are lots of Neopixels which come with a JST connector SM style. You
@@ -257,15 +252,13 @@ LEDs of your strip will glow blue, which is a good first test.
 
 In order to addess the LEDs in MPF you need to know their address
 
-J11:
+**J11:**
 
-:   NEO 0 Neopixel output, all these lights have MPF numbers with the
-    format 0-0-##. The first LED in the chain is 0-0-0.
+NEO 0 Neopixel output, all these lights have MPF numbers with the format 0-0-##. The first LED in the chain is 0-0-0.
 
-J12:
+**J12:**
 
-:   NEO 1 Neopixel output, all these lights have MPF numbers with the
-    format 1-0-##. The first LED in the chain is 1-0-0.
+NEO 1 Neopixel output, all these lights have MPF numbers with the format 1-0-##. The first LED in the chain is 1-0-0.
 
 Details on how to configure LEDs in your mpf project can be found here
 [OPP LEDs](../leds.md).
@@ -303,56 +296,6 @@ connected hardware easily without the need to crimp lots of cables. For
 the connection from the board to the push in clamps you can use
 pre-fabricated headers with wires, then there is no need to crimp
 anything.
-
-BOM (Bill of material)
-
-+-------------------------+--------+-----------------------------+
-| Item                    | Amount | Description                 |
-+=========================+========+=============================+
-| > board Cobra board     | > 1 1  | > A wooden board about      |
-|                         |        | > 30x30cm                   |
-+-------------------------+--------+-----------------------------+
-| > DIN rail              | > 2    | > each rail about 20cm or   |
-|                         |        | > longer                    |
-+-------------------------+--------+-----------------------------+
-| > Spacer                | > 8    | > Spacer (plastic) to mount |
-|                         |        | > the board, one spacer     |
-|                         |        | > above and one below the   |
-|                         |        | > board. Diameter M4.       |
-+-------------------------+--------+-----------------------------+
-| > Screws                | > 4    | > About 4,0x20mm (depending |
-|                         |        | > on the length of your     |
-|                         |        | > spacer)                   |
-+-------------------------+--------+-----------------------------+
-| > Screws                | > 4    | > About 3,0x15mm to mount   |
-|                         |        | > the rails, length can     |
-|                         |        | > vary depending on board   |
-|                         |        | > thickness                 |
-+-------------------------+--------+-----------------------------+
-| > KF2510 wires, 9 pins  | > 5    | > KF2510 plugs with wire, 9 |
-|                         |        | > pins                      |
-+-------------------------+--------+-----------------------------+
-| > KF2510 wires, 4 pins  | > 1    | > KF2510 plugs with wire, 4 |
-|                         |        | > pins                      |
-+-------------------------+--------+-----------------------------+
-| > JST VH wires, 9 pins  | > 4    | > JST VH plugs with wires,  |
-|                         |        | > 9 pins                    |
-+-------------------------+--------+-----------------------------+
-| > JST VH wires, 4 pins  | > 3    | > JST VH plugs with wires,  |
-|                         |        | > 4 pins                    |
-+-------------------------+--------+-----------------------------+
-| > JST VH wires, 3 pins  | > 3    | > JST VH plugs with wires,  |
-|                         |        | > 3 pins                    |
-+-------------------------+--------+-----------------------------+
-| > push in connector 1:1 | > >10 | > 1:1 wire connection, for  |
-|                         |        | > each switch and each coil |
-|                         |        | > you need one, buy plenty. |
-+-------------------------+--------+-----------------------------+
-| > push in connector 1:n | > 5    | > 1:n wire connection, for  |
-|                         |        | > ground of the switches    |
-|                         |        | > and power for the soils,  |
-|                         |        | > amount varies.            |
-+-------------------------+--------+-----------------------------+
 
 You can use as well bridges to connect multiple cage clamps together,
 that might be handy for ground connection. See the two cage clamps at
