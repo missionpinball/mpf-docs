@@ -31,7 +31,7 @@ Pop bumpers are made of three elements relevant for MPF:
 * A [coil](../coils/index.md) to
     push the ball away.
 
-There are of course other parts, like the pop bumper body, all parts
+There areother parts, like the pop bumper body, all parts
 need to match in size and dimension of course. The complete assembly
 consists of parts above the playfield and some parts below the
 playfield. Above the playfield the following parts need to be
