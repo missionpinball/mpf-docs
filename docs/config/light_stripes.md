@@ -12,9 +12,9 @@ title: "light_stripes:"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-A "led_stripe" will create "count" leds for you starting the number
-at "number_start". If you need a prefix or suffix for the number you
-can use "number_template". All settings in "led_template" will be
+A `led_stripe` will create `count` leds for you starting the number
+at `number_start`. If you need a prefix or suffix for the number you
+can use `number_template`. All settings in `led_template` will be
 applied to all LEDs. The only difference between
 [led_stripes](light_stripes.md) and
 [light_rings](light_rings.md) is how
@@ -147,7 +147,6 @@ Name of this device in service mode.
 List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
-Unused.
 
 ## Related How To guides
 
