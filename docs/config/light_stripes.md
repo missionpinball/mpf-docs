@@ -12,13 +12,15 @@ title: "light_stripes:"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-A `led_stripe` will create `count` leds for you starting the number
+A `light_stripes` will create `count` leds for you starting the number
 at `number_start`. If you need a prefix or suffix for the number you
 can use `number_template`. All settings in `led_template` will be
 applied to all LEDs. The only difference between
 [led_stripes](light_stripes.md) and
 [light_rings](light_rings.md) is how
 the x/y coordinates are computed.
+
+In order to access single light in your strip you can use the following syntax schema `<light_strip_name>_light_<light_number>`. Where `<light_strip_name>` is the name you have choosen for your light strip and `<light_number>` is the number of the light in the stip, keep in mind the numbering starts with 0 and not 1.
 
 ## Required settings
 

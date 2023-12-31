@@ -37,30 +37,6 @@ channels (either RGBW or GRBW order). Other serial LEDs contain three
 white LEDs (WWW order). If nothing is specified MPF assumes RGB order so
 you need to specify it for any LED with a different channel order.
 
-MPF can control LEDs, including single-channel (single color) and full
-RGB LEDs. (You can control the order too, so you can control RGB, BRG,
-etc.) You can set default fade rates and control strips and rings of
-LEDs.
-
-In general there are two ways to wire LEDs in a pinball machine. Either
-parallel or serial. With serial LEDs you got a chain of LEDs which are
-connected to a controller board on one side. In contrast, with parallel
-LEDs every LED has its own wire(s) to the controller. While parallel
-LEDs are more robust in general they also require much more wiring.
-Which kind of LEDs you're using usually depends on what is supported in
-your platform (some support both).
-
-## Serial LEDs
-
-With serial LEDs the order of colors is usually fixed. For instance, in
-WS2811 LEDs (a common serial LED controller embedded inside the LED),
-the first channel is red, the second green and third is blue (RGB
-order). Newer WS2812 LEDs have GRB order (green, red and blue). Some
-LEDs also contain an additional white channel and thereby have four
-channels (either RGBW or GRBW order). Other serial LEDs contain three
-white LEDs (WWW order). If nothing is specified MPF assumes RGB order so
-you need to specify it for any LED with a different channel order.
-
 Overview video about serial LEDs:
 
 <div class="video-wrapper">
