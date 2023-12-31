@@ -43,7 +43,7 @@ until the balls drain, etc.)
 
 ## Related How To guides
 
-* [/events/flipper_cradle_release](configuring_ball_search.md)
+* [How to configure Ball Search](configuring_ball_search.md)
 
 ## Related Events
 
@@ -53,4 +53,3 @@ until the balls drain, etc.)
 * [flipper_cradle](../../events/flipper_cradle.md)
 * [flipper_cradle_release](../../events/flipper_cradle_release.md)
 
-* [How to configure Ball Search](configuring_ball_search.md)
