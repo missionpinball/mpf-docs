@@ -226,13 +226,19 @@ light_player:
     strip0: DFFF00
  led_off:
     led_strip_0: off
+ single_led_green:
+    led_strip_0_light_5: green #led_strip_0 is the name of the strip
 
 keyboard:
  1:
     event: led_off
  2:
     event: full_strip_on
+ 3:
+    event: single_led_green
 ```
+Pay attention to the event `single_led_green` to understand how to address a single light in your light strip.
+
 
 ## Monitorable Properties
 For dynamic values and conditional events, the prefix for lights is `device.lights.<name>`.
