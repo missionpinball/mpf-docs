@@ -144,6 +144,37 @@ Run as Administrator).
 Installing MPF-MC is pretty straightforward. Unfortunately just because
 it installs doesn't mean it works. :(
 
+Dec. 2023 Note: mc_demo and demo_man aren't working, but you can get
+the demo_man loading screen to display after performing the following:
+
+Because 0.56 is the current release, download the `0.56.x` branch of 
+the `mpf-examples` repo from here:
+<https://github.com/missionpinball/mpf-examples>.
+
+![image](images/version-select.png)
+
+You can download the zip file and unzip it, or clone it. If you
+download the `dev` branch, you will have config version mismatch 
+issues.
+
+From the commmand terminal, change to the `mpf-examples-0.56.x`
+directory, where ever it was downloaded. Then, change to the
+`demo_man` directory. Finally, run the following command:
+
+``` doscon
+mpf mc
+```
+
+You should have text displayed in the terminal, showing that MPF MC
+is loading, then the MPF BCP server should wait for a connection:
+
+![image](images/mpf-mc-output.jpg)
+
+The Demo Man loading screen should also be displayed:
+
+![image](images/mpf-demo-man-display.png)
+
+
 May 2023 Note: Some of this might not work: The mc_demo and demo_man
 mentioned below might not work anymore as they haven't been updated in
 a while. Feel free to fix and/or update them and we'll merge your

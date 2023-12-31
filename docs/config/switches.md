@@ -283,6 +283,13 @@ Special-purpose tags for switches include:
     switch is released, not pressed, which allows the "time held down"
     to be sent to MPF to perform alternate game start actions.)
 
+## Monitorable Properties
+
+For
+[dynamic values](../../config/instructions/dynamic_values.md) and
+[conditional events](../../events/overview/conditional.md), the syntax for switches is `device.switches.<name>.state`.
+Though uncommon, it is possible to query the current state of a switch in this way.
+
 ## Related How To guides
 
 * [Switches](../mechs/switches/index.md)
