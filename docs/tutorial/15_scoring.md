@@ -11,7 +11,7 @@ got a score showing on the display, but it's still pretty boring since
 nothing is actually configured to register a score yet. So in this step
 we're going to add some scoring.
 
-## 1. Understand in scoring works in MPF
+## 1. Understand how scoring works in MPF
 
 MPF includes a core module called the *Variable Player* which is
 responsible for adding (or subtracting) points from a player's score.
