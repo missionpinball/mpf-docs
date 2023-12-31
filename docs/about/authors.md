@@ -30,6 +30,7 @@ This MPF documentation was written by:
 * Dave Ensminger
 * Matt Kemp (<matt@blz.co>)
 * Charles Duncan (nullbuilds)
+* Holden Oullette (houllette)
 
 Want to help with the docs? See our
 [Contributing to MPF's Documentation](help_docs.md) page for
