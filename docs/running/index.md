@@ -85,7 +85,7 @@ mpf both -v -b
 ```
 
 The full list of available commands is covered in the documentation for
-each command (discussed below).
+each command (discussed below). For a list of all the 'mpf game' command-line options, see [C](../running/commands/game.md).
 
 ## Understanding how this works
 
