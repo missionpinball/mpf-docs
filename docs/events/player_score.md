@@ -23,6 +23,10 @@ only respond to certain combinations of the arguments below.)
 
 :   The score / amount of points the player had before this scoring event.
 
+`player_num`
+
+:   The player number who scored. Index starts with 1, so first player is 1.
+
 `change`
 
 :   The amout of how much the score changed.
