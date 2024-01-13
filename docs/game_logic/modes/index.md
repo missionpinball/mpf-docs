@@ -266,7 +266,7 @@ priority mode is running.)
 Related How To Guides
 
 * [Creating your first game mode](../../tutorial/14_add_a_mode.md)
-* [Game Design](../../game_design/index.md)------
+* [Game Design](../../game_design/index.md)
 
 Related Events
 
@@ -284,3 +284,10 @@ MPF includes several "built-in" modes which are ready to use in your
 game. Some of them are used automatically, and some require that you add
 some config sections and options to your machine. Click on each for
 details:
+
+* [Custom Modes](custom_modes.md)
+* [Attract](attract.md)
+* [Game](game.md)
+* [Credits](credits.md)
+* [High Score](high_score.md)
+* [Tilt](tilt.md)

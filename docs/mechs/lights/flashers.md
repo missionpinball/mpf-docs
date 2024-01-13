@@ -29,7 +29,7 @@ driver output rather than a light output.
 
 ## Hardware
 
-#89 and #906 bulbs are commonly used as flashers in pinball machines.
+\#89 and \#906 bulbs are commonly used as flashers in pinball machines.
 Those are rated at 13V but typically driven at higher voltages for only
 a very short amount of time. Turning them on permanently will burn
 quickly in most machines.

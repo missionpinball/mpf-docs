@@ -184,6 +184,7 @@ will posted an event called *switch_s_left_slingshot_active*.
 * [player_added](player_added.md)
 * [player_adding](player_adding.md)
 * [player_(name)](player_player_var.md)
+* [player_score](player_score.md)
 * [player_turn_ended](player_turn_ended.md)
 * [player_turn_ending](player_turn_ending.md)
 * [player_turn_started](player_turn_started.md)
