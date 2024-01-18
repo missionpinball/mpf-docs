@@ -7,6 +7,7 @@ title: Installing MPF on a Raspberry Pi
 These instructions are based on those created by [Gilles Bouthenot](https://github.com/orgs/missionpinball/discussions/115). They use a Python virtual environment without system-wide Python packages, and you can have multiple versions Python if you need.
 
 A few other notes:
+
 * These instructions are specifically made for a Raspberry Pi 5 running Raspberry Pi OS "Bookworm," which appears to have the power to run both MPF and MPF-MC. Older models strugged with video and sounds, but may work in certain scenarios. These instructions should work for them as well.
 * It's assumed that you've already installed Raspberry Pi OS, expanded your filesystem, configured wifi, and so on. If you need help getting to that point, check out the [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html).
 * The Pi 5 does not have a dedicated Audio Out jack like prior models. You will need a USB audio interface. [This one has been tested](https://www.amazon.com/Adapter-External-Converter-Compatible-Desktops/dp/B099FLWJD3) and is known to work. 
