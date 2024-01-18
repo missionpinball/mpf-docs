@@ -1,10 +1,10 @@
 ---
-title: Installing MPF on a Raspberry Pi
+title: Installing MPF on a Raspberry Pi - Updated Jan 2024
 ---
 
 # Installing MPF on a Raspberry Pi
 
-These instructions are based on those created by [Gilles Bouthenot](https://github.com/orgs/missionpinball/discussions/115). They use a Python virtual environment without system-wide Python packages, and you can have multiple versions Python if you need.
+These instructions are based on those created by [Gilles Bouthenot](https://github.com/orgs/missionpinball/discussions/115) for Linux. They use a Python virtual environment without system-wide Python packages, and you can have multiple versions Python if you need. Using a virtual environment also lets you use a different version of Python from what comes installed by default in your OS, and lets you easily erase and restart without having to re-image the device.
 
 A few other notes:
 
@@ -19,13 +19,16 @@ A few other notes:
 To get started, log in to the terminal (locally or via SSH) and update your device and install some dependencies:
 
 ``` shell
+# Update your device.
+# Note that the 'update' command will run quickly, but 'upgrade' could take several minutes
 sudo apt update
 sudo apt upgrade
 
-# Dependencies:
+# Dependencies.
+# Note: There are many here, so these can also take several minutes to install.
 sudo apt-get install libssl-dev libncurses-dev libffi-dev libreadline-dev libbz2-dev libsqlite3-dev liblzma-dev tk-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libsdl2-mixer-dev libavfilter-dev libsdl2-dev libsdl2-image-dev libavcodec-dev libavformat-dev libswscale-dev libavdevice-dev
 
-# These are for mpf-monitor and are not necessarily needed
+# These are for mpf-monitor and are not needed unless you intend to install that
 sudo apt-get install libjpeg-dev libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 xsel
 ```
 
@@ -76,7 +79,7 @@ EOF
 exec $SHELL
 ```
 
-## Installing MPF
+## Installing MPF and MPF-MC
 
 Now it's time to install MPF. As mentioned, installing automatically via pip isn't possible right now, but that's not a show stopper. With a few extra steps, we can get things up and running in "editable" mode (which still uses pip, but in a different way).
 
@@ -87,19 +90,20 @@ Note: Ensure you're doiong this with the Python pyenv environment activated! You
 pip install --upgrade pip
 
 # clone mpf repository (note 0.56.x branch has been specified)
-git clone -b 0.56.x https://github.com/missionpinball/mpf-mc.git ~/mpf-git/mpf
+git clone -b 0.56.x https://github.com/missionpinball/mpf.git ~/mpf-git/mpf
 
 # install MPF
 cd ~/mpf-git/mpf
-pip install –e .
+pip install -e .
 
 
 # clone mpf-mc repository (note 0.56.x branch has been specified)
-git clone -b 0.56.x https://github.com/missionpinball/mpf.git ~/mpf-git/mpf-mc
+# Note: MPF-MC can take several minutes to install
+git clone -b 0.56.x https://github.com/missionpinball/mpf-mc.git ~/mpf-git/mpf-mc
 
 # install MPF-MC
 cd ~/mpf-git/mpf-mc
-pip install –e .
+pip install -e .
 ```
 
 That's it! Now it's time to test. 
@@ -112,7 +116,8 @@ You'll need to get mpf-examples first, then make a few tweaks to the demo_man co
 git clone -b 0.56.x https://github.com/missionpinball/mpf-examples.git ~/mpf-git/mpf-examples
 
 # switch to the demo_man configs folder
-cd ~/mpf-git/mpf-examples/demo-man/config
+cd ~/mpf-git/mpf-examples/demo_man/config/
+
 ```
 
 From here, you'll need to edit two files. How you do this is up to you, but if you're relatively new the easiest way is probably to use `nano` from the command line. Simply run `nano filename.yaml` to open the file. 
@@ -123,7 +128,7 @@ If using nano, push Control-X to exit, Y to save. Then open the config.yaml file
 
 To run the test, ensure your virtual environment is activated (it should be since you added it to your bash profile) and that you have a display connected. 
 
-Note: If you're connected via SSH, you'll need to specify which display should be used. The default is 0, but your configuration might be different. To do this, simply run the following command (remember - you only need to do this if you're not using the local console, either directly or via VNC):
+Note: If you're connected via SSH, you'll need to specify which display should be used. The default is 0, but your configuration might be different. To do this, simply run the following command. Remember - you only need to do this if you're not using the local console, either directly or via VNC. (You can also add this to your .bashrc file if you want it to be set each time you log in):
 
 ``` shell
 # set default display for windowed apps
@@ -133,7 +138,7 @@ To test MPF with the demo-man game, follow these steps:
 
 ``` shell
 # Switch to demo-man directory
-cd ~/mpf-git/mpf-examples/demo-man
+cd ~/mpf-git/mpf-examples/demo_man
 
 # start MPF
 mpf both -X
