@@ -19,16 +19,17 @@ A few other notes:
 To get started, log in to the terminal (locally or via SSH) and update your device and install some dependencies:
 
 ``` shell
-# Update your device.
-# Note that the 'update' command will run quickly, but 'upgrade' could take several minutes
+# Update your device. Note that the 'update' command will run quickly,
+# but 'upgrade' could take several minutes
 sudo apt update
 sudo apt upgrade
 
-# Dependencies.
-# Note: There are many here, so these can also take several minutes to install.
+# Dependencies. Note: There are many here, so these can also take
+# several minutes to install.
 sudo apt-get install libssl-dev libncurses-dev libffi-dev libreadline-dev libbz2-dev libsqlite3-dev liblzma-dev tk-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libsdl2-mixer-dev libavfilter-dev libsdl2-dev libsdl2-image-dev libavcodec-dev libavformat-dev libswscale-dev libavdevice-dev
 
-# These are for mpf-monitor and are not needed unless you intend to install that
+# These are for mpf-monitor and are not needed unless you intend
+# to install that
 sudo apt-get install libjpeg-dev libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 xsel
 ```
 
@@ -54,7 +55,8 @@ eval "$(pyenv init -)"
 EOF
 exec $SHELL
 
-# Check to ensure pyenv is available (A list of pyenv commands is the expected output)
+# Check to ensure pyenv is available (A list of pyenv commands
+# is the expected output)
 pyenv
 ```
 
@@ -63,7 +65,8 @@ pyenv
 Next step is to install Python itself and set up the virtual environment. We'll use Python 3.9.18 since it's compatible with both MPF 0.56 and 0.57, and is the most recent version of Python 3.9.
 
 ``` shell
-# python3.9 compilation. Note this can take a while since Python is being downloaded and compiled from source
+# python3.9 compilation. Note this can take a while since Python is
+# being downloaded and compiled from source
 pyenv install 3.9.18
 
 # Create virtual environment
@@ -72,7 +75,8 @@ pyenv virtualenv 3.9.18 mpf
 # Activate virtual environment
 pyenv activate 3.9.18/envs/mpf
 
-# Assuming that works, let's add that command to .bashrc so that the virtual environment activates at each login
+# Assuming that works, let's add that command to .bashrc so that the
+# virtual environment activates at each login
 cat <<'EOF'>>.bashrc
 pyenv activate 3.9.18/envs/mpf
 EOF
