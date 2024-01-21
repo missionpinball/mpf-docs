@@ -247,6 +247,9 @@ the DMD looks in the window. For example, you can configure the pixel
 size, the glow radius, the color of the space between the pixels, gain,
 tint, etc.
 
+If you are putting text on your DMD be sure to check out the documentation for [widget postion rounding](../widgets/positioning/#7-widget-position-rounding) to prevent
+pixel fractions and blurry text like the image at the top of this page.
+
 Also, you don't have to make the virtual DMD be the full size of the
 display. For example, if you set your dmd display to be 128x32 and then
 set the color_dmd widget to be 640x160, you'll get a display like this:
