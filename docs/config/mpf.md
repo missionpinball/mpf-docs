@@ -83,7 +83,7 @@ be used when you do not specify any pulse_ms in your coil.
 
 Single value, type: `integer`. Default: `0`
 
-Default sync_mc for all shows when not specified otherwise.
+Default sync_ms for all shows when not specified otherwise.
 
 ### default_timed_enable_ms:
 
