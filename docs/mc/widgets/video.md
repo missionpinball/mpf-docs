@@ -74,7 +74,7 @@ See the `height:` setting above for details.
 ### volume:
 
 Volume for this video on a scale from `0` to `1`. Default is `1.0`. Note
-that you can the volume during playback via the `control_events:` below.
+that you can control the volume during playback via the `control_events:` below.
 
 !!! note
 
