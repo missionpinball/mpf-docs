@@ -72,6 +72,73 @@ multiplied by 100 (but you can also omit this or do anything
 [Variable player](../config_players/variable_player.md)
 supports). Afterwards, you can use the variable in your slide.
 
+## Displaying the value of a timer on a slide in minutes and seconds
+
+In this example, we'll display a count-down timer as minutes and seconds. Again, if you want to use your timer in a slide you have to set the value to a
+player variable first:
+
+``` mpf-mc-config
+##! mode: your_mode
+# in your mode
+timers:
+  your_timer:
+    start_value: 180
+    end_value: 0
+    control_events:
+      - action: start
+        event: mode_your_mode_started
+
+variable_player:
+  timer_your_timer_tick:
+    your_timer_minutes:
+      int: device.timers.your_timer.ticks / 60
+      action: set
+    your_timer_seconds:
+      int: device.timers.your_timer.ticks % 60
+      action: set
+
+slides:
+  show_timer:
+    widgets:
+    - type: text
+      text: 'Time Left: (player|your_timer_minutes)'
+      font_size: 72
+      anchor_x: left
+      anchor_y: bottom
+      x: 100
+      y: 906
+      z: 2
+    - type: text
+      text: ':'
+      font_size: 72
+      anchor_x: left
+      anchor_y: bottom
+      x: 350
+      y: 906
+      z: 2
+    - type: text
+      text: '(player|your_timer_seconds)'
+      min_digits: 2
+      font_size: 72
+      anchor_x: left
+      anchor_y: bottom
+      x: 365
+      y: 906
+      z: 2
+
+slide_player:
+  mode_your_mode_started: show_timer
+##! test
+#! start_game
+#! start_mode your_mode
+#! advance_time_and_run .1
+#! assert_text_on_top_slide 0
+#! advance_time_and_run 1
+#! assert_text_on_top_slide 100
+```
+
+In this example we update the player variable `timer_your_timer_tick` every time the timer changes based on the tick event. The value is divided by 60 to calculate the number of whole minutes remaining and stored as the variable `your_timer_minutes`. We also calculate any ticks above the whole number of minutes into seconds with the `int: device.timers.your_timer.ticks % 60` line and store this as `your_timer_seconds`. We then display these in our slide with a text widget of `:` placed between the two values.
+
 ## Related Events
 
 * [timer_(name)_started](../events/timer_timer_started.md)
