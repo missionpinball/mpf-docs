@@ -152,6 +152,6 @@ At this point, MPF is ready to go!
 
 Once you have MPF installed via the procedure above, you can keep it
 up-to-date by running the pip commands from above which you
-used to install the MPF components, but with the additional `--update` flag.
+used to install the MPF components, but with the additional `--upgrade` flag.
 
 Questions? Comments? Need help? You can post to the [forum](../community/index.md).
