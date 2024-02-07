@@ -6,6 +6,8 @@ title: How to configure MPF for FAST Pinball hardware
 
 --8<-- "hardware_platform.md"
 
+## FAST Neuron Controller with MPF 0.57.0 and newer
+
 FAST Pinball maintains [their own documentation on fastpinball.com](https://fastpinball.com/mpf)
 detailing how to use MPF with FAST, which also includes all the
 latest documentation for the newest FAST Pinball hardware.
