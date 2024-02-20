@@ -98,9 +98,9 @@ window in the monitor to view the events. Now you can press and release
 the switch and monitor the events being posted. When pressing the switch
 you should be able to see the following events:
 
-* `my_test_switch_active` based on the switch <switch_name>_active
-* `sw_switch_tag1` based on the tags [sw](../../index.md)<tag_name>
-* `sw_switch_tag1_active` based on the tags [sw](../../index.md)<tag_name>_active
+* `my_test_switch_active` based on the switch \(switch_name\)_active
+* `sw_switch_tag1` based on the tags [sw](../../index.md)_\(tag_name\)
+* `sw_switch_tag1_active` based on the tags [sw](../../index.md)_\(tag_name\)_active
 * Same as the last two, just for the second tag `switch_tag2`
 * `active_event1` based on the configuration `events_when_activated`
 * `active_event2` based on the configuration `events_when_activated`
@@ -108,16 +108,16 @@ you should be able to see the following events:
 Once you release the switch again some events are being fired:
 
 * `my_test_switch_inactive` based on the switch
-    <switch_name>_active
+    \(switch_name\)_active
 * `sw_switch_tag1_inactive` based on the tags
-    [sw](../../index.md)<tag_name>_active
+    [sw](../../index.md)_\(tag_name\)_active
 * `sw_switch_tag2_inactive` based on the tags
-    [sw](../../index.md)<tag_name>_active
+    [sw](../../index.md)_\(tag_name\)_active
 * `inactive_event1` based on the configuration `events_when_activated`
 
 Please obey the difference in activating and releasing a switch in terms
 of what events are being fired. When activating a switch the event
-`sw_<tag_name>` is being fired, there is no corresponding event when a
+`sw_(tag_name)` is being fired, there is no corresponding event when a
 switch goes inactive. See as well the [Events](../../events/index.md) reference.
 
 ### What if it did not work?

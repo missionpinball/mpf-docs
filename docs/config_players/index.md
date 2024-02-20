@@ -16,9 +16,9 @@ Config players are used in both the machine-wide and mode-specific
 config files, and also in show steps.
 
 * In a config file, the config players are setup via the
-    `<config_player_name>_player:` section of the file.
+    `(config_player_name)_player:` section of the file.
 * In show steps, config players are accessed via the
-    `<config_player_name>s:` setting.
+    `(config_player_name)s:` setting.
 
 Some examples:
 

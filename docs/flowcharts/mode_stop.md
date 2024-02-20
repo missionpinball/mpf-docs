@@ -22,7 +22,7 @@ Here's what happens behind-the-scenes when a mode stops.
 
 5.  Delays set in that mode are cleared.
 
-6.  An queue event is posted: *mode_<mode_name>_stopping*.
+6.  An queue event is posted: *mode_\(mode_name\)_stopping*.
 
 7.  Once that queue is clear, the mode's `_stopped()` method is called.
 
@@ -31,7 +31,7 @@ Here's what happens behind-the-scenes when a mode stops.
     returned from the call to the mode's start_methods when the mode
     starts).
 
-9.  An event *mode_<mode_name>_stopped* is posted.
+9.  An event *mode_\(mode_name\)_stopped* is posted.
 
 10. Once any handlers for that event have finished, the mode's
     `_mode_stopped_callback()` method is called.

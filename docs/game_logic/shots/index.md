@@ -102,7 +102,7 @@ the shot.
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.shots.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.shots.(name)`.
 
 *state*
 

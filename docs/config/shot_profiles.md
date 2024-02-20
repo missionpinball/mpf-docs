@@ -29,7 +29,7 @@ shot_profiles:
         show: "on"
 ```
 
-## <name>:
+## \(name\):
 
 This is the name of the shot profile, which is how you'll refer to it
 elsewhere in your config files when you apply it to shots. The sample
@@ -112,7 +112,7 @@ Single value, type: `string`. Default: `None`
 This is a profile setting that lets you specify the name of the player
 variable that will be used to track the status of this shot when this
 profile is applied. If you don't specify the name of a player variable,
-it will automatically use *<shot_name>_<profile_name>* as the
+it will automatically use *\(shot_name\)_\(profile_name\)* as the
 player variable.
 
 ### rotation_pattern:

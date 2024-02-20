@@ -135,7 +135,7 @@ Single value, type: `integer` or `template`
 Specifies what the final value for this timer will be. When the timer
 value equals or exceeds this (for timers counting up), or when it equals
 or is lower than this (for timers counting down), the
-*timer_<name>_complete* event is posted and the timer is stopped.
+*timer_\(name\)_complete* event is posted and the timer is stopped.
 (If the `restart_on_complete:` setting is true, then the timer is also
 reset back to its `start_value:` and started again.)
 

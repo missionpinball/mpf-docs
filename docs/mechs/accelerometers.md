@@ -30,7 +30,7 @@ Learn more at: <https://en.wikipedia.org/wiki/Accelerometer>
 For
 [dynamic values](../config/instructions/dynamic_values.md) and
 [conditional events](../events/overview/conditional.md), the prefix for accelerometers is
-`device.accelerometers.<name>`.
+`device.accelerometers.(name)`.
 
 *value*
 

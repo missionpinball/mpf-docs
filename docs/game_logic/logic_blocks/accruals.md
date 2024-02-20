@@ -67,7 +67,7 @@ that it was hit.
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for accruals is `device.accruals.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for accruals is `device.accruals.(name)`.
 
 *value*
 

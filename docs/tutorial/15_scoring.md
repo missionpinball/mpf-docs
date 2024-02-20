@@ -45,8 +45,8 @@ variable_player:
 Then inside the `variable_player:` section, you create sub-entries for
 MPF events that you map back to a list of player variables whose value
 you want to change. By default, whenever a switch is hit in MPF, it
-posts an event *<switch_name>_active* . (A second event called
-*<switch_name>_inactive* is also posted when the switch opens back
+posts an event *\(switch_name\)_active* . (A second event called
+*\(switch_name\)_inactive* is also posted when the switch opens back
 up.) To give the player points when a switch is hit, add sub-entries to
 the `variable_player:` section of your config file, with some switch
 name followed by "_active", like this:

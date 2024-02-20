@@ -68,7 +68,7 @@ counters:
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for ball holds is `device.counters.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for ball holds is `device.counters.(name)`.
 
 *value*
 

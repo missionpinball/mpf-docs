@@ -34,14 +34,14 @@ Here's what happens when a mode starts:
 
 6.  Any device control_events from the mode config are registered
 
-7.  A queue event is posted called *mode_<mode_name>_starting* .
+7.  A queue event is posted called *mode_\(mode_name\)_starting* .
 
 8.  The mode's `_started()` method is the callback for the starting
     queue event and is called when that event is complete.
 
 9.  Mode timers are started.
 
-10. An event *mode_<mode_name>_started* is posted.
+10. An event *mode_\(mode_name\)_started* is posted.
 
 11. The mode's `_mode_started_callback()` method is the callback for
     the started event, so it's called once that event is complete.

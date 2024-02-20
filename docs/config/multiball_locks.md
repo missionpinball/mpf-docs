@@ -32,9 +32,9 @@ the [queue_relay_player:](queue_relay_player.md) (for
 example, to have a mode selection screen before returning to play).
 
 Whenever a new ball is locked, the event
-*multiball_lock_<name>_locked_ball* is posted with an argument
+*multiball_lock_\(name\)_locked_ball* is posted with an argument
 "total_balls_locked". When the lock is full, it will post
-*multiball_lock_<name>_full*, which you can use as a start event for
+*multiball_lock_\(name\)_full*, which you can use as a start event for
 a related [multiballs:](multiballs.md) to start
 multiball. (And since the multiball lock tracks the "virtual" ball
 lock count on a per-player basis, this will still work even if another

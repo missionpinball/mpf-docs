@@ -61,7 +61,7 @@ or whatever you want.
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for sequences is `device.sequences.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for sequences is `device.sequences.(name)`.
 
 *value*
 

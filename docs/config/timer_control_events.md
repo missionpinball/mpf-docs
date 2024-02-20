@@ -65,7 +65,7 @@ with control events:
 :   Adds the time (specified in the `value:` setting) to the timer. If
     the value would be higher than the timer's `max_value:` setting,
     then the value is set to the max value. Posts the
-    *timer_<name>_time_added* event.
+    *timer_\(name\)_time_added* event.
 
     This action does not change the timer's running state.
 
@@ -77,7 +77,7 @@ with control events:
 `subtract`
 
 :   Subtracts time (specified in the `value:` setting) from the timer.
-    Posts the *timer_<name>_time_subtracted* event and checks to see
+    Posts the *timer_\(name\)_time_subtracted* event and checks to see
     if the timer is complete.
 
 `jump`
@@ -88,11 +88,11 @@ with control events:
 `start`
 
 :   Starts the timer if it's not running. Does nothing if the timer is
-    already running. Posts the *timer_<name>_started* event.
+    already running. Posts the *timer_\(name\)_started* event.
 
 `stop`
 
-:   Stops the timer and posts the *timer_<name>_stopped* event.
+:   Stops the timer and posts the *timer_\(name\)_stopped* event.
     Removes any outstanding "pause" delays.
 
 `reset`
@@ -110,7 +110,7 @@ with control events:
     the timer pause value is real world seconds and does not take the
     timers tick interval into consideration. If the pause value is 0,
     the timer is paused indefinitely. Posts the
-    *timer_<name>_paused* event.
+    *timer_\(name\)_paused* event.
 
 `set_tick_interval`
 

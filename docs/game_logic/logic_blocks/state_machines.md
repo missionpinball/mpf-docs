@@ -142,7 +142,7 @@ variable_player:
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for state machines is
-`device.state_machines.<name>`.
+`device.state_machines.(name)`.
 
 *state*
 
