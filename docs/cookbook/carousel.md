@@ -59,13 +59,13 @@ release_events: both_flippers_inactive
 
 There are two events of importance here:
 
-* [carousel](#carousel)<item>_highlighted
-* [carousel](#carousel)<item>_selected
+* [carousel](#carousel)_\(item\)_highlighted
+* [carousel](#carousel)_\(item\)_selected
 
-You can use the [carousel](#carousel)<item>_highlighted event to
+You can use the [carousel](#carousel)_\(item\)_highlighted event to
 display a slide showing the name of the mode to the player.
 
-You can then use the [carousel](#carousel)<item>_selected event to
+You can then use the [carousel](#carousel)_\(item\)_selected event to
 start the mode that was selected by the player.
 
 ``` mpf-mc-config

@@ -241,7 +241,7 @@ Pay attention to the event `single_led_green` to understand how to address a sin
 
 
 ## Monitorable Properties
-For dynamic values and conditional events, the prefix for lights is `device.lights.<name>`.
+For dynamic values and conditional events, the prefix for lights is `device.lights.(name)`.
 
 * brightness: The numeric value of the brightness of this light, from 0-255.
 * color: The current color.

@@ -20,7 +20,7 @@ applied to all LEDs. The only difference between
 [light_rings](light_rings.md) is how
 the x/y coordinates are computed.
 
-In order to access single light in your strip you can use the following syntax schema `<light_strip_name>_light_<light_number>`. Where `<light_strip_name>` is the name you have choosen for your light strip and `<light_number>` is the number of the light in the stip, keep in mind the numbering starts with 0 and not 1.
+In order to access single light in your strip you can use the following syntax schema `(light_strip_name)_light_(light_number)`. Where `(light_strip_name)` is the name you have choosen for your light strip and `(light_number)` is the number of the light in the stip, keep in mind the numbering starts with 0 and not 1.
 
 ## Required settings
 

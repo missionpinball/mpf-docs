@@ -83,7 +83,7 @@ of your [playfield](../../config/playfields.md).
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for multiball locks is
-`device.multiball_locks.<name>`.
+`device.multiball_locks.(name)`.
 
 *enabled*
 

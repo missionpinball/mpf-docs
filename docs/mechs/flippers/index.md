@@ -95,7 +95,7 @@ player cradles a ball for 3s. Later it will post
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for flippers is `device.flippers.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for flippers is `device.flippers.(name)`.
 
 *enabled*
 

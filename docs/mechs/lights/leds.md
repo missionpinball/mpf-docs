@@ -283,7 +283,7 @@ can compensate for it by configuring
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for LEDs is `device.lights.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for LEDs is `device.lights.(name)`.
 
 * *color*
 * *corrected_color*

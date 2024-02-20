@@ -108,7 +108,7 @@ buttons are pressed which will cancel the show.
 For
 [dynamic values](../config/instructions/dynamic_values.md) and
 [conditional events](../events/overview/conditional.md), the prefix for combo switches is
-`device.combo_switches.<name>`.
+`device.combo_switches.(name)`.
 
 *state*
 

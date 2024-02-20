@@ -93,7 +93,7 @@ magnets:
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for magnets is `device.magnets.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for magnets is `device.magnets.(name)`.
 
 *active*
 

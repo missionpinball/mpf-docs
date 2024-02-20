@@ -405,7 +405,7 @@ happens.
 So next, go to the `slide_player:` section of your config and add an
 entry for the event `mode_attract_started`. (This is the event that is
 posted whenever a mode starts, in the form of
-*mode_<mode_name>_started*.)
+*mode_\(mode_name\)_started*.)
 
 By the way, if you're wondering how we know what events to use,
 there's an [event reference](../events/index.md) in the documentation which has a list of all the events in

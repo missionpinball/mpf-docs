@@ -63,7 +63,7 @@ List of one (or more) events. Those will be posted by the device.
 Defaults to empty.
 
 If you don't enter any events here, an event will automatically be
-posted in the format *<name_of_this_timed_switch>_active*. In other
+posted in the format *\(name_of_this_timed_switch\)_active*. In other
 words, in the example at the top of this page, the timed switch entry is
 called "flipper_cradle", so the automatically-created event would be
 called *flipper_cradle_active*, but since that config has an

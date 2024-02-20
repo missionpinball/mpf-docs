@@ -205,7 +205,7 @@ You can overwrite both settings using `switch_overwrite` and/or
 
 For
 [dynamic values](../config/instructions/dynamic_values.md) and
-[conditional events](../events/overview/conditional.md), the prefix for autofire coils is `device.autofires.<name>`.
+[conditional events](../events/overview/conditional.md), the prefix for autofire coils is `device.autofires.(name)`.
 
 *enabled*
 

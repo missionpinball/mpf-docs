@@ -49,7 +49,7 @@ drop_target_banks:
 For
 [dynamic values](../../../config/instructions/dynamic_values.md) and
 [conditional events](../../../events/overview/conditional.md), the prefix for drop target banks is
-`device.drop_target_banks.<name>`.
+`device.drop_target_banks.(name)`.
 
 *complete*
 

@@ -48,7 +48,7 @@ timeout passed (`eject timeouts in ball_devices </config/ball_devices>`) which d
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.multiballs.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for multiballs is `device.multiballs.(name)`.
 
 *balls_added_live*
 

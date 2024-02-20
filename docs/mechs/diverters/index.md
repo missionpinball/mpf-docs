@@ -174,7 +174,7 @@ Hopefully that makes sense? :)
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for diverters is `device.diverters.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for diverters is `device.diverters.(name)`.
 
 *active*
 

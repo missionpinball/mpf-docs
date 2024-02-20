@@ -311,11 +311,11 @@ gets 100 points.
 
 That scoring entry is based on the `my_first_shot_hit`, which is
 generated every time that shot is hit since shots make events in the
-form `<shot_name>_hit`.
+form `\(shot_name\)_hit`.
 
 However, each time a shot is hit, there's two ADDITIONAL events posted
-which are `<shot_name>_<profile>_hit` and
-`<shot_name>_<profile>_<state>_hit`.
+which are `\(shot_name\)_\(profile\)_hit` and
+`\(shot_name\)_\(profile\)_\(state\)_hit`.
 
 For example, when you start a new game with the shot and shot profile
 we've been working with, when you hit the switch for that shot, three

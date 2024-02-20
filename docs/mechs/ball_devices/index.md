@@ -214,7 +214,7 @@ Video on ball tracking in MPF:
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for ball devices is
-`device.ball_devices.<name>`.
+`device.ball_devices.(name)`.
 
 *available_balls*
 

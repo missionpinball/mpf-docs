@@ -47,7 +47,7 @@ servos:
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for servos is `device.servos.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for servos is `device.servos.(name)`.
 
 *position*
 

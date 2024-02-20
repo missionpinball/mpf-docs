@@ -34,7 +34,7 @@ Video about ball locks and multiballs:
 
 For
 [dynamic values](../config/instructions/dynamic_values.md) and
-[conditional events](../events/overview/conditional.md), the prefix for ball holds is `device.ball_holds.<name>`.
+[conditional events](../events/overview/conditional.md), the prefix for ball holds is `device.ball_holds.(name)`.
 
 *balls_held*
 

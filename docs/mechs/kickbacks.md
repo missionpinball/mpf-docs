@@ -44,7 +44,7 @@ ball_saves:
 
 For
 [dynamic values](../config/instructions/dynamic_values.md) and
-[conditional events](../events/overview/conditional.md), the prefix for kickbacks is `device.kickbacks.<name>`.
+[conditional events](../events/overview/conditional.md), the prefix for kickbacks is `device.kickbacks.(name)`.
 
 *enabled*
 

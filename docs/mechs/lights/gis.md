@@ -102,7 +102,7 @@ shows.
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for lights is `device.lights.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for lights is `device.lights.(name)`.
 
 *color*
 

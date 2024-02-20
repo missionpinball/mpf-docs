@@ -122,7 +122,7 @@ Single value, type: `time string (ms) or template`
 [Instructions for entering templates](instructions/dynamic_values.md)). Default: `0`
 
 The time before the add-a-ball ball save ends (in MPF time string
-format) that will cause the [multiball](../index.md)<name>_hurry_up event to be
+format) that will cause the [multiball](../index.md)_\(name\)_hurry_up event to be
 posted. Use this to change the script for the light or trigger other
 effect.
 
@@ -217,7 +217,7 @@ Single value, type: `time string (ms) or template`
 [Instructions for entering templates](instructions/dynamic_values.md)). Default: `0`
 
 The time before the ball save ends (in MPF time string format) that will
-cause the [multiball](../index.md)<name>_hurry_up event to be posted. Use this
+cause the [multiball](../index.md)_\(name\)_hurry_up event to be posted. Use this
 to change the script for the light or trigger other effect.
 
 ### replace_balls_in_play:

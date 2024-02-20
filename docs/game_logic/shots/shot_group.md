@@ -57,7 +57,7 @@ shot_groups:
 
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
-[conditional events](../../events/overview/conditional.md), the prefix for shot groups is `device.shot_groups.<name>`.
+[conditional events](../../events/overview/conditional.md), the prefix for shot groups is `device.shot_groups.(name)`.
 
 *common_state*
 

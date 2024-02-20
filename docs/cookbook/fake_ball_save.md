@@ -52,7 +52,7 @@ you want it to, mode start or when a shot is hit, etc.
 ball_saves:
   fake_MODE_NAME_ball_save:
     enable_events:
-      - multiball_<multiball_name>_ended
+      - multiball_(multiball_name)_ended
     auto_launch: false
     balls_to_save: 1
     debug: true

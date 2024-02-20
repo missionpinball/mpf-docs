@@ -127,7 +127,7 @@ Single value, type: `time string (ms)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `0`
 
 The time before the ball save ends (in MPF time string format) that will
-cause the *ball_save_<name>_hurry_up* event to be posted. Use this
+cause the *ball_save_\(name\)_hurry_up* event to be posted. Use this
 to change the script for the light or trigger other effect. Default is
 *0*.
 

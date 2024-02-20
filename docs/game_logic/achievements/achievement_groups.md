@@ -54,7 +54,7 @@ achievements in the group. For example:
 For
 [dynamic values](../../config/instructions/dynamic_values.md) and
 [conditional events](../../events/overview/conditional.md), the prefix for achievement groups is
-`device.achievement_groups.<name>`.
+`device.achievement_groups.(name)`.
 
 *enabled*
 
