@@ -23,7 +23,7 @@ here's what you need to do:
 
 1. Find and replace `#config_version=5` with `#config_version=6`.
 2. Find and replace `#show_version=5` with `#show_version=6`.
-3. Find and replace `: +` with `: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc.
+3. Find and replace `: +` with `: "+`. You'll need to also add the quote to the end of the line. Or if you only have a few different values, you can find and replace the entire line, like `time: +1` with `time: "+1"`, `time: +2` with `time: "+2"`, etc (however, do NOT do this around any `time: 0` entries in shows).
 4. Search for any value that starts with a leading zero, like `: 0` and then see if it only has digits after the zero. If so, add quotes around the value. e.g. `: "000066"`. If this is a multi-part value, put quotes around the whole thing: `number: 0804-1` becomes `number: "0804-1"`. This also applies for key names: `0804:` becomes `"0804":`.
 5. Any color values that are only numbers will need quotes around them. e.g. `color: 330000` becomes `color: "330000"`.
 6. Search your YAML files for `!!omap` and remove and update those. (See below.)
