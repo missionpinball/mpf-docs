@@ -12,6 +12,62 @@ Note you can also click the "Assets" section at the end of the notes
 for each release to download the PDF or HTML versions of the
 documentation for that specific release.
 
+## 0.57.0
+
+Release: March 10, 2024
+
+### New Features
+* Audio: New service menu for customizing audio volumes by track
+* Audio: New service menu for managing hardware audio platforms
+* Ball Locks: Customizable behavior for when a physical lock/hold loses a ball
+* Bonus: Option to round bonus scores up or down to a nearest whole increment
+* Coils: Coils now support `timed_enable_events` for automatic timed pulse-and-hold
+* FAST: Support for FAST modern platform (Neuron) and retro platform (SYS11/WPC89/WPC95)
+* Lights: Customizable RGBW behavior for managing how white pixel blends with colors
+* Lights: New service menu for testing light chains
+* Platform Integration Tests: new plugin for running automated test games on physical machines
+* Steppers: More control with new config options `home_events` and `relative_positions`
+
+### Improvements
+* Animations: Support for `step` to throttle how many animation frames are calculated per second
+* Auditor: More control over what is audited and when, including missing switches
+* BCP: More fine-tune control of receiving settings and machine variables over BCP
+* Dynamic Values: Support for `//` floor division
+* FAST: Complete refactor of FAST serial connections by @toomanybrians
+* FAST: Improve port autodetection and allow boards to be optional
+* Framework: Only instantiate plugins that are enabled
+* Framework: Use asyncio for managing async operations and loops
+* Logging: Additional debug logs for drop targets by @wolfmarsh
+* Logging: Improve logging statements and reduce logs written while in production mode
+* Modes: New mode property `starting` for when a mode is starting up but not active
+* Python: Support for Python up to 3.11, deprecate Python <= 3.7
+* Shots: New event kwarg `elapsed` for sequence shots by @cobra18t
+* Shots: Support for `priority` in shots to control multiple shots on the same switch
+* Shows: Support for `start_step` in `show_tokens`
+* Shows: Support for dynamic placeholders in `speed` by @cobra18t
+* Sounds: Support for `ducking` in `sound_player` settings
+* Text Input: Support for `bitmap_font` when using text input widget
+* Timers: Support for event kwargs in evaluating dynamic timer values
+
+### Bug Fixes
+* Concurrent file writes would crash writing thread and silently fail subsequent writes
+* Conditional asset pools would crash multiplayer games if players had different conditions
+* FAST Nano RGB would hang when attempting a soft reset
+* FAST serial comms would hang when awaiting a header with <3 characters
+* Fix Windows audio crash due to cyclical dependencies by @ericselkpc
+* Game ball count would break if a multi-ball device ejects more than one ball
+* OPP `kick_coil` missing the EOM command by @mrechte
+* Updating machine vars would erase previously-saved settings
+* Verbose logging would not honor `-V` argument by @mrechte
+
+### Breaking Changes
+* Auditor: Uninitialized player variables will not be audited if zero
+* Config files: `omap` deprecated; use `dict` instead
+* Config files: Color values that are numeric with leading zeros (e.g. `005599`) must be wrapped in quotes
+* Config files: New `config_version` and `show_version` 6 to support updated YAML features
+* Custom code: The `scriptlets` class is deprecated; use `custom_code` instead
+
+
 ## 0.56
 
 Released: January 15, 2023
