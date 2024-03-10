@@ -16,6 +16,15 @@ documentation for that specific release.
 
 Release: March 10, 2024
 
+MPF 0.57 represents a major upgrade all across MPF, including a complete reworking of the
+FAST platform layer and significant improvements in stability and auditing for machines
+on-location.
+
+Version 0.57 requires config file and show version 6, so machines running 0.56 and prior
+will need to migrate their config files: namely, wrapping some colors and relative time
+values in quotes. This process takes less than an hour and is documented in the
+[migrating to config 6](../config/instructions/config_v6.md) guide.
+
 ### New Features
 * Audio: New service menu for customizing audio volumes by track
 * Audio: New service menu for managing hardware audio platforms
@@ -37,6 +46,7 @@ Release: March 10, 2024
 * FAST: Improve port autodetection and allow boards to be optional
 * Framework: Only instantiate plugins that are enabled
 * Framework: Use asyncio for managing async operations and loops
+* Kivy: Support for `auto` and `fake` values in `fullscreen`
 * Logging: Additional debug logs for drop targets by @wolfmarsh
 * Logging: Improve logging statements and reduce logs written while in production mode
 * Modes: New mode property `starting` for when a mode is starting up but not active
@@ -63,7 +73,7 @@ Release: March 10, 2024
 ### Breaking Changes
 * Auditor: Uninitialized player variables will not be audited if zero
 * Config files: `omap` deprecated; use `dict` instead
-* Config files: Color values that are numeric with leading zeros (e.g. `005599`) must be wrapped in quotes
+* Config files: Color values that are numeric with leading zeros (e.g. `005599`) and relative time values (e.g. `+1`)must be wrapped in quotes
 * Config files: New `config_version` and `show_version` 6 to support updated YAML features
 * Custom code: The `scriptlets` class is deprecated; use `custom_code` instead
 
