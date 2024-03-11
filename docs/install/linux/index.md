@@ -31,10 +31,10 @@ other platforms). Consult the README for more information.
 
 ## Installing MPF Manually
 
-Current version these instructions are for v0.56.2, which is the current
+Current version these instructions are for v0.57, which is the current
 "main" branch of MPF.
 
-MPF 0.56 requires Python 3.7, 3.8, or 3.9. Various Linux distributions
+MPF 0.57 requires Python 3.8, 3.9, 3.10, or 3.11. Various Linux distributions
 offer to install multiple versions of Python in parallel. First check
 what version of Python you might have already running on your computer.
 
@@ -43,8 +43,7 @@ python3 --version
 ```
 
 In some cases you might only get a Python version of 3.6, then run your
-admin tool and install a higher version of python, preferably the latest
-version of 3.9. If you don't want to remove the older version of Python
+admin tool and install a higher version of python. If you don't want to remove the older version of Python
 you can keep it in parallel, just make sure to run the installer
 commands with the right version of python. If you have for example
 installed Python 3.9 try to running
@@ -106,7 +105,7 @@ Now you should be ready to use mpf, for a first test run
 mpf --version
 ```
 You should see a version number printed, as time of writing it is 0.56.2. Maybe you see some higher
-number. If you get a message that the command `mpf` is not being found or known you might have to add the location of the 
+number. If you get a message that the command `mpf` is not being found or known you might have to add the location of the
 command to your `PATH` variable. Most likely (it depends on the shell type you use) you need to add to your `.profile` or `.bashrc` file an entry like
 
 ``` doscon

@@ -4,20 +4,19 @@ title: Downloading & Installing MPF (2023 Version)
 
 # Installing MPF
 
-The current stable version of MPF is `0.56.x`.
+The current stable version of MPF is `0.57.x`.
 
 MPF should work with following platforms:
 
 * Windows 10 / Windows 11 (64-bit only)
-* macOS 10.14+, up through macOS 13 Ventura (Intel & Apple Silicon)
-* Linux (64-bit, lots of distros)
+* macOS 10.14+, up through macOS 14 Sonoma (Intel & Apple Silicon)
+* Linux (64-bit, lots of distros including Debian and Ubuntu)
 * Raspberry Pi
 
-MPF 0.56 only works with Python 3.7 - 3.9.
+MPF 0.57 works with Python 3.8 - 3.11. It is untested on 3.12, so your mileage may vary.
 
-!!! note "MPF 0.57 supports Python 3.10 & 3.11"
-
-    MPF 0.57, which is the current `dev` branch of MPF, supports Python 3.8 - 3.11. See our [0.57 page](0.57.md) for details.
+Regardless of your platform or Python version, a [virtual environment](virtual-environments.md) is
+strongly recommended when working with MPF.
 
 Here links to the installation guides for each platform:
 

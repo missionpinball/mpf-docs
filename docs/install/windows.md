@@ -4,7 +4,7 @@ title: Installing MPF 0.56 on Windows
 
 # Installing MPF on Windows
 
-This process walks through installing MPF 0.56 a Windows machine.
+This process walks through installing MPF 0.57 a Windows machine.
 
 Note that installing MPF is more complicated than a normal application.
 This is because MPF is a development tool you use to create your pinball
@@ -40,13 +40,14 @@ this command to check what is installed:
 mpf --version
 ```
 
+If you are using a virtual environment for MPF (recommended!) then
+you don't need to uninstall anything, just create a new one.
+
 ## Windows System Requirements
 
-MPF 0.56 requires Python 3.9. It does not run on Python 3.10 or newer.
-(If you can figure out how to get it to run on Python 3.10+, please
-submit the fixes!)
+MPF 0.57 requires Python 3.9, 3.10, or 3.11.
 
-MPF can run on Python 3.7 and 3.8, but the MPF-MC audio doesn't work on
+MPF can run on 3.8, but the MPF-MC audio doesn't work on Windows in
 those versions. So you should use Python 3.9.
 
 ## Install Python
@@ -79,13 +80,20 @@ You want a result like "Python 3.9.13" or whatever version you just
 installed. If you see a version other than that, trying running
 `python3 --version` instead.
 
+## Create a Virtual Environment
+
+It's strongly recommended to create a virtual environment for MPF,
+which will keep the installed packages from conflicting with other
+applications on your computer. Before proceeding, follow the steps on
+the [virtual environment installation guide](virtual-environments.md)
+
 ## Install MPF
 
-Now you're ready to install MPF. Open a new command window (cmd.exe)
-and type these commands and hit enter.
+Now you're ready to install MPF. Open a new command window (cmd.exe),
+activate your virtual environment, and type these commands and hit enter.
 
 ``` doscon
-pip install "mpf[cli]"
+pip install "mpf"
 ```
 
 A bunch of things will scroll by, and then hopefully MPF is installed.
@@ -95,7 +103,7 @@ You can test it by typing this command:
 mpf --version
 ```
 
-This should print out something like [MPF 0.56.0](#). If you
+This should print out something like [MPF 0.57.0](#). If you
 get an error, something went wrong. If you get a different version, then
 you might have an older version of MPF which you need to uninstall
 first. (See the "Remove prior versions of MPF" section above.)
@@ -129,7 +137,7 @@ most do. (There are also other media controllers that are not MPF-MC.
 For example, some people use Unity, the Unreal Engine, or Godot as their
 media controllers.)
 
-To install MPF-MC, use the following command:
+To install MPF-MC, open your virtual environment and use the following command:
 
 ``` doscon
 pip install mpf-mc
@@ -147,17 +155,17 @@ it installs doesn't mean it works. :(
 Dec. 2023 Note: mc_demo and demo_man aren't working, but you can get
 the demo_man loading screen to display after performing the following:
 
-Because 0.56 is the current release, download the `0.56.x` branch of 
+Because 0.57 is the current release, download the `0.57.x` branch of
 the `mpf-examples` repo from here:
 <https://github.com/missionpinball/mpf-examples>.
 
 ![image](images/version-select.png)
 
 You can download the zip file and unzip it, or clone it. If you
-download the `dev` branch, you will have config version mismatch 
+download the `dev` branch, you will have config version mismatch
 issues.
 
-From the commmand terminal, change to the `mpf-examples-0.56.x`
+From the commmand terminal, change to the `mpf-examples-0.57.x`
 directory, where ever it was downloaded. Then, change to the
 `demo_man` directory. Finally, run the following command:
 
