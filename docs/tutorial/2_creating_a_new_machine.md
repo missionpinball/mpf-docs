@@ -74,7 +74,7 @@ Text Document*, make sure that Windows Explorer is configured to show
 file extensions so you actually create a file called `config.yaml` and
 not `config.yaml.txt`. (That's in the "View" menu of Explorer.)
 
-## 4. Add #config_version=5 to the top of your config file
+## 4. Add #config_version=6 to the top of your config file
 
 The first thing you need to do when you create any new config file for
 MPF is to add an entry on the very top line that tells MPF what
@@ -98,7 +98,7 @@ You can also follow our video about the perfect IDE setup:
 For MPF , that should look like this:
 
 ``` yaml
-#config_version=5
+#config_version=6
 ```
 
 Be sure to enter this exactly as it's shown here, with no spaces around
@@ -108,15 +108,15 @@ This line tells MPF which version of the config spec you have. That way
 if a future version of MPF requires changes to a config file, it can
 automatically recognize older files and update them.
 
-The current version of the config files is `5` which is what's used with
-MPF 0.50 and newer, so that's what we're adding here.
+The current version of the config files is `6` which is what's used with
+MPF 0.57 and newer, so that's what we're adding here.
 
 At this point, your environment should look like this:
 
 ![image](images/machine_config_folder.png)
 
 Note the folder structure, the location of the `config.yaml` file, and
-the `#config_version=5` as the only contents of that file.
+the `#config_version=6` as the only contents of that file.
 
 ## 5. Run your game!
 
@@ -207,7 +207,7 @@ Traceback (most recent call last):
 ValueError: Config file version mismatch: C:\pinball\your_machine\config\config.yaml
 ```
 
-This means you don't have `#config_version=5` in the top line of your
+This means you don't have `#config_version=6` in the top line of your
 config file. (Make sure you include the hash mark as part of that.)
 
 If the following line at the end of your log and nothing more happens
