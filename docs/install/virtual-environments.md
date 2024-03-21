@@ -66,7 +66,7 @@ For users on Mac OSX, you will use `source` instead of the period:
   source ~/mpfenv/bin/activate
 ```
 
-!! note  Make note of this activation command
+!!! note  Make note of this activation command
 
     You may want to write this step down, as you'll run it every time you open up
     a terminal window to work on MPF. If you are on a dedicated MPF machine, you
@@ -84,7 +84,7 @@ the name of your venv in parenthesis.
   (mpfenv) My-Mac:~
 ```
 
-!!! note
+!!! note  Virtual environments set a default "python"
 
     The python you used to create the virtual environment will now be the
     default python. Outside the virtual environment "python" may be Python 2 or 3, and
