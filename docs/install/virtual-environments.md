@@ -30,14 +30,22 @@ call the environment "mpfenv" and put it in our home directory (known as "~").
   python3 -m venv ~/mpfenv
 ```
 
+Or if you want to explicitly define a directory, like this example of an "mpf" virtual environment in a common venvs directory (because remember you can have as many virtual environments as you like):
+
+``` console
+  python3 -m venv C:\Users\Rudy\venvs\mpf
+```
+
 !!! note
-  If you have multiple versions of Python3 (say, 3.9 and 3.11), you can specify
-  which one to use in the virtual environment: ``python3.9 -m venv ~/mpfenv``
+
+    If you have multiple versions of Python3 (say, 3.9 and 3.11), you can specify
+    which one to use in the virtual environment: ``python3.9 -m venv ~/mpfenv``
 
 A virtual environment is recommended for any general-use computer you'll be
 using MPF on. For a dedicated MPF machine that will have no other programs
 installed (for example, a computer inside a pinball cabinet), a virtual
-environment is not required (except see above note regarding Debian and Ubuntu).
+environment is not required (except see above note regarding Debian and Ubuntu)
+but can still be helpful for keeping packages organized and cleanly upgrading.
 
 # Activate your Virtual Environment
 
@@ -59,9 +67,10 @@ For users on Mac OSX, you will use `source` instead of the period:
 ```
 
 !! note  Make note of this activation command
-  You may want to write this step down, as you'll run it every time you open up
-  a terminal window to work on MPF. If you are on a dedicated MPF machine, you
-  could add this line to your bash/zsh profile to automatically run it at login.
+
+    You may want to write this step down, as you'll run it every time you open up
+    a terminal window to work on MPF. If you are on a dedicated MPF machine, you
+    could add this line to your bash/zsh profile to automatically run it at login.
 
 You'll know you're in the virtual environment because the console prompt will include
 the name of your venv in parenthesis.
@@ -76,8 +85,9 @@ the name of your venv in parenthesis.
 ```
 
 !!! note
-   The python you used to create the virtual environment will now be the
-   default python. Outside the virtual environment "python" may be Python 2 or 3, and
-   "python3" may be 3.6 or 3.9 or 3.11; inside the virtual environment,
-   you can use "python" to refer to the exact version of Python 3 you used
-   to create the virtual environment
+
+    The python you used to create the virtual environment will now be the
+    default python. Outside the virtual environment "python" may be Python 2 or 3, and
+    "python3" may be 3.6 or 3.9 or 3.11; inside the virtual environment,
+    you can use "python" to refer to the exact version of Python 3 you used
+    to create the virtual environment
