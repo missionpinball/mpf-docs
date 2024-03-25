@@ -60,7 +60,17 @@ You can enable the virtual environment with the dot command from the terminal:
 Note that the first character is a period, followed by a space, then the path
 to your virtual environment and "/bin/activate".
 
-For users on Mac OSX, you will use `source` instead of the period:
+For Windows users, you well activate with a bat/ps1 script depending on whether you're using the Command Prompt or the PowerShell.
+
+``` console
+# Command Prompt:
+> mpfenv/Scripts/activate.bat
+
+# PowerShell:
+PS > mpfenv/Scripts/Activate.ps1
+```
+
+For users on Mac OSX, you will use `source` instead:
 
 ``` console
   source ~/mpfenv/bin/activate
