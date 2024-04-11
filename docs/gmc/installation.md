@@ -2,11 +2,11 @@
 title: Installing GMC
 ---
 
+# Setup and Installation
+
 !!! note "GMC is in Early Access"
 
     These instructions are for the early-access version of Godot MC, and require a few extra manual steps than the typical installation. You will need a functioning MPF 0.57+ project and a little patience :)
-
-# Setup and Installation
 
 ## Create a Virtual Environment for MPF 0.80
 
@@ -40,7 +40,7 @@ After MPF is installed, return back up to your main git folder and clone the GMC
 
 ## Download Godot
 
-The Godot Media Controller is, of course, built on the Godot game engine. Visit https://godotengine.org to download the latest version of the Godot Editor and install it on your machine.
+The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor and install it on your machine.
 
 After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.
 
@@ -70,7 +70,7 @@ In the Godot Editor, open the *Project > Project Settings* menu and select the *
 
 Now go to the *Autoload* tab and click the folder icon to select an Autoload script. Navigate to the `addons/mpf-gmc` folder and choose the file *mpf_gmc.md*. Under **Node Name** set the name to "MPF" (all caps) and press **Add**. You should see a new line appear with a checkbox enabled.
 
-!!! caution
+!!! warning
 
     Godot exposes autoloads by the given Node Name, and various components of GMC reference one another by the name "MPF". When adding the *mpf_gmc.md* autoload, you _must_ set the Node Nade to "MPF" or the GMC will not function.
 

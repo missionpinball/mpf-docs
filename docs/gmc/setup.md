@@ -40,7 +40,7 @@ You'll now be at the Scene Editor view for the attract slide, which is empty. We
 
 !!! tip
 
-  You can enable grid snap to help get the rectangle node in the correct place, or you can manually enter the size to make it exact. In the *Inspector* panel on the right, go to *Layout > Transform > Size* to enter the exact dimensions you want.
+    You can enable grid snap to help get the rectangle node in the correct place, or you can manually enter the size to make it exact. In the *Inspector* panel on the right, go to *Layout > Transform > Size* to enter the exact dimensions you want.
 
 Next we'll add some text to the slide. Back at the *Scene* panel, add another node and this time search for and select `Label`. Move the node to the middle of the slide and expand it to the full width of the slide.
 
