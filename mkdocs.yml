@@ -608,6 +608,10 @@ nav:
     - Tips & tricks: mc/sound/tips_tricks.md
     - Playing a sound with variations: mc/sound/variations.md
 
+  - Godot MC:
+    - gmc/index.md
+    - Installation: gmc/installation.md
+
 - Tools:
   - tools/index.md
   - MPF Monitor:
