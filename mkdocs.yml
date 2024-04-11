@@ -611,6 +611,7 @@ nav:
   - Godot MC:
     - gmc/index.md
     - Installation: gmc/installation.md
+    - Setup: gmc/setup.md
 
 - Tools:
   - tools/index.md
