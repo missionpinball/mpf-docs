@@ -612,6 +612,7 @@ nav:
     - gmc/index.md
     - Installation: gmc/installation.md
     - Setup: gmc/setup.md
+    - Slides: gmc/slides.md
 
 - Tools:
   - tools/index.md
