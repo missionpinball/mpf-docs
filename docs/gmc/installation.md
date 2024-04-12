@@ -68,7 +68,11 @@ When successful, you should see a new *mpf-gmc* folder in the *addons* folder yo
 
 In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin.
 
+![image](images/project_settings_plugins.png)
+
 Now go to the *Autoload* tab and click the folder icon to select an Autoload script. Navigate to the *addons/mpf-gmc* folder and choose the file *mpf_gmc.md*. Under *Node Name* set the name to "MPF" (all caps) and press *Add*. You should see a new line appear with a checkbox enabled.
+
+![image](images/project_settings_autoload.png)
 
 !!! warning
 

@@ -1,5 +1,5 @@
 ---
-title: MPFSlide
+title: GMC Slides
 ---
 
 # GMC Slides
