@@ -26,7 +26,41 @@ The other settings here will be customized later, including windowed/fullscreen 
 
 You can now close the Project Settings and save your project.
 
-# Create an Attract Mode slide
+## Configure the Audio Busses
+
+Godot manages audio through a series of buses that feed into the *Master* audio bus for output to speakers. You can configure as many audio buses as you'd like, and most pinball projects use a standard set of three: *music*, *effects*, and *voice*.
+
+Each bus can be configured with its own parameters for how it plays back sounds (e.g. music plays one file at a time, voice plays files sequentially, and effects play files simultaneously), how it ducks for other buses, and which bus is the default.
+
+### Create Buses in Godot Editor
+
+At the bottom panel of the Godot Editor there is a tab called *Audio*  which will bring up the audio control panel. By default your new project only has one bus, "Master", which is the main audio output.
+
+!!! note "Change from MPF 0.5 Terminology"
+
+    In MPF 0.5 the various buses that fed the main audio output were called "tracks". This could be confusing sometimes, because a music file is also referred to as a track and mixing sound loops is known as layering tracks.
+
+    Godot uses the term "buses" instead of "tracks", and GMC will follow this pattern. As a result, an MPF project previously built for MPF 0.5 will need to update `sound_player` config entries to use `bus:` instead of `track:`.
+
+Click on the *Add Bus* button to add a new bus and name it *"music"*. Do the same for *"effects"* and *"voice"*, or customize the buses to what you need for your project.
+
+### Configure the Busses in GMC Config File
+
+Unfortunately, Godot Audio Buses are not extensible like Nodes, so GMC cannot create customization options directly on the buses. Instead, a GMC configuration file will be used to configure the audio system.
+
+Create a new text file in the root of your project called *gmc.cfg* and paste in the following:
+
+``` ini
+
+    [sound_system]
+    music={"type": "solo"}
+    sfx={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
+    voice={"type": "sequential"}
+```
+
+You may then adjust these defaults if you've customized your buses, but otherwise this configuration will take care of you for a while. Save the *gmc.cfg* file and close it.
+
+## Create an Attract Mode slide
 
 The first slide we will create is for Attract mode, so we can connect to MPF and verify that GMC is working properly. Slides can live in either a `slides` folder in the project root, or in a `slides` subfolder under any mode in your project modes folder (e.g. `/modes/attract/slides`). Create a slides folder in either location, and then in the Godot FileSystem panel right-click on the slides folder and select *Create New > Scene*.
 
@@ -46,7 +80,7 @@ Next we'll add some text to the slide. Back at the *Scene* panel, add another no
 
 In the *Inspector* panel, in the *Text* field type in the text "Welcome to GMC!", set the *Horizontal Alignment* to Center, and under *Theme Overrides > Font Sizes* set a nice big font, like 100px.
 
-# Run MPF
+## Run MPF
 
 In your `attract.yaml` mode config, add the following block:
 

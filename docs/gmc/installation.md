@@ -50,7 +50,7 @@ For most pinball games, *Mobile* rendering is the recommended balance between pe
 
 When GMC is officially released, it will be available to download and install with a single click from the Godot Asset Library. Until then, you will need to manually create an alias from your project to the GMC repository you cloned in a previous step.
 
-In your game project folder, create a new folder called `addons`. Then create a symbolic link that will create an alias folder `mpf-gmc` in the addons folder that points to the `mpf-gmc` folder in the GMC repository.
+In your game project folder, create a new folder called *addons*. Then create a symbolic link that will create an alias folder *mpf-gmc* in the addons folder that points to the *mpf-gmc* folder in the GMC repository.
 
 The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
@@ -58,7 +58,7 @@ The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to proje
   (mpf080) %-$ sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
 ```
 
-When successful, you should see a new `mpf-gmc` folder in the `addons` folder you just created.
+When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created.
 
 ## Install the GMC Plugin
 
@@ -68,7 +68,7 @@ When successful, you should see a new `mpf-gmc` folder in the `addons` folder yo
 
 In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin.
 
-Now go to the *Autoload* tab and click the folder icon to select an Autoload script. Navigate to the `addons/mpf-gmc` folder and choose the file *mpf_gmc.md*. Under **Node Name** set the name to "MPF" (all caps) and press **Add**. You should see a new line appear with a checkbox enabled.
+Now go to the *Autoload* tab and click the folder icon to select an Autoload script. Navigate to the *addons/mpf-gmc* folder and choose the file *mpf_gmc.md*. Under *Node Name* set the name to "MPF" (all caps) and press *Add*. You should see a new line appear with a checkbox enabled.
 
 !!! warning
 
