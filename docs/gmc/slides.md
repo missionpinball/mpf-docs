@@ -6,6 +6,11 @@ title: GMC Slides
 
 The **MPFSlide** base class is used for all slides that GMC will render based on MPF `slide_player:` configs. This page outlines how the slides work and some of what you can do with them.
 
+**Config References:**
+
+  * [MPFSlide](reference/mpf-slide.md)
+  * [slide_player:](reference/slide_player.md)
+
 ## Slide Scenes: Files and Naming
 
 Every slide you create will be a unique Godot scene file (`.tscn`) that uses the `MPFSlide` node as its root. GMC will automatically look for slide scenes in the project root's `/slides` folder (and subfolders) as well as every `/modes/<mode_name>/slides` folder (and subfolders).
