@@ -79,3 +79,5 @@ Now go to the *Autoload* tab and click the folder icon to select an Autoload scr
     Godot exposes autoloads by the given Node Name, and various components of GMC reference one another by the name "MPF". When adding the *mpf_gmc.md* autoload, you _must_ set the Node Name to **MPF** or the GMC will not function.
 
 Close the Project Settings menu, save the project, and restart Godot.
+
+You can now proceed to your [project setup](setup.md)!

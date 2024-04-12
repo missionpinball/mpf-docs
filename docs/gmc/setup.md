@@ -30,6 +30,8 @@ You can now close the Project Settings and save your project.
 
 Godot manages audio through a series of buses that feed into the *Master* audio bus for output to speakers. You can configure as many audio buses as you'd like, and most pinball projects use a standard set of three: *music*, *effects*, and *voice*.
 
+![image](images/audio_buses.png)
+
 Each bus can be configured with its own parameters for how it plays back sounds (e.g. music plays one file at a time, voice plays files sequentially, and effects play files simultaneously), how it ducks for other buses, and which bus is the default.
 
 ### Create Buses in Godot Editor
@@ -95,3 +97,14 @@ You are now ready to run GMC and connect to MPF! Save the project and in the upp
 ![image](images/play_project.png)
 
 In your terminal, in your project folder with your virtual environment activated, run `mpf -xt` to start MPF.
+
+!!! note "Advanced Users: Command Line"
+
+    Godot can be run from the command line without the Editor open. Simply run the godot executable from within the project folder. You can add the `-f` argument for fullscreen mode.
+
+    For Mac users, you'll need to symlink the godot binary from the Godot.app to a path-executable. It might look like this:
+
+    ``` console
+    sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+    ```
+
