@@ -2,7 +2,7 @@
 title: MPFSlide
 ---
 
-# MPFSlide: The GMC Slide Magic
+# GMC Slides
 
 The **MPFSlide** base class is used for all slides that GMC will render based on MPF `slide_player:` configs. This page outlines how the slides work and some of what you can do with them.
 

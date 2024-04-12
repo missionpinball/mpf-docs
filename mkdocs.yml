@@ -613,6 +613,10 @@ nav:
     - Installation: gmc/installation.md
     - Setup: gmc/setup.md
     - Slides: gmc/slides.md
+    - Config Reference:
+      - gmc/reference/index.md
+      - MPFSlide: gmc/reference/mpf-slide.md
+      - MPFWindow: gmc/reference/mpf-window.md
 
 - Tools:
   - tools/index.md
