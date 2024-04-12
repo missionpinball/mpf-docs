@@ -92,4 +92,6 @@ In your `attract.yaml` mode config, add the following block:
 
 You are now ready to run GMC and connect to MPF! Save the project and in the upper right corner of the Editor, click on the Play icon. You will see a window appear with the MPF logo, which is the default startup scene from GMC.
 
+![image](images/play_project.png)
+
 In your terminal, in your project folder with your virtual environment activated, run `mpf -xt` to start MPF.

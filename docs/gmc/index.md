@@ -14,4 +14,4 @@ Why use Godot?
   * Well documented: the full knowledge base of Godot tutorials, guides, and forums
   * Performant: Godot is already engineered to perform on a wide range of devices, and customizable builds can pare down to only the bare requirements you need for your game.
 
-Ready to give GMC a try? Visit the [GMC Installation Instructions](instructions.md) to get started!
+Ready to give GMC a try? Visit the [GMC Installation Instructions](installation.md) to get started!
