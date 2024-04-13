@@ -58,6 +58,12 @@ Once you've created a slide scene in Godot, the entire world of Godot features a
 
 You can read up all about Godot's features on the [Godot Documentation page](https://docs.godotengine.org/en/stable/getting_started/introduction/index.html) or check out some [Godot tutorials and guides](https://docs.godotengine.org/en/stable/community/tutorials.html) for inspiration!
 
+## Adding Scores, Timers, and other Variables
+
+For adding MPF-based data to a slide, the `MPFVariable` class provides a slew of options including player and machine variables, event arguments, comma-separation and minimum digits, and template string formatting.
+
+Check out the [MPFVariable Config Reference](reference/mpf-variable.md) for documentation.
+
 ## Slide Custom Methods
 
 With all of the robust features available through Godot, how can you use MPF to control behavior of a slide after it's on screen? Through the use of **slide methods**, a new feature of MPF to trigger custom behavior on a slide.

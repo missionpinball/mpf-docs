@@ -618,7 +618,9 @@ nav:
       - gmc/reference/index.md
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
+      - MPFVariable: gmc/reference/mpf-variable.md
       - MPFWindow: gmc/reference/mpf-window.md
+      - slide_player: gmc/reference/slide_player.md
 
 - Tools:
   - tools/index.md
