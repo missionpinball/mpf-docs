@@ -108,3 +108,8 @@ In your terminal, in your project folder with your virtual environment activated
     sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
     ```
 
+## Create a Keymap
+
+For testing your game, it's convenient to setup a keyboard map for using keys to simulate switches and events without a connection to a physical machine.
+
+See the [GMC Keyboard Guide](keyboard.md) for guidance on creating keyboard mappings for your game.
