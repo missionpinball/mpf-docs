@@ -49,9 +49,13 @@ Add another `MPFVariable` node, name it "ball", and position it in the upper-lef
   * *Template String*: "Ball %s"
   * *Label > Text*: "Ball 1"
 
+![image](../images/ball_variable.png)
+
 Rather than setting the font details for this variable explicitly, we will create a Theme that can be re-used throughout the project. In the *Inspector* panel under *Theme*, click the dropdown that says `<empty>` and select *New Theme*. A theme icon will appear in the dropdown, click it again to open the Theme Editor at the bottom of the screen.
 
 On the right side of the Theme Editor next to *Type* click the plus icon and add a `Label` type. The Font tab will open below, click the plus icon to enable a theme font and then click on `<empty>` and *Quick Load* to select a font file from your fonts folder. The next tab is for font size, click the plus icon to enable a size and set the value to 40px.
+
+![image](../images/font_theme.png)
 
 At the top of the Theme Editor select *Save As...* and save the theme in your fonts folder (or a theme folder if you'd prefer) with a name for the font style, e.g. *body_md.tres*. In the *Inspector* panel, you should see your ball number label now has the theme *body_md*.
 

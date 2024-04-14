@@ -30,7 +30,7 @@ A basic example is having the "1" key press the switch `s_switch_1` and the "Ent
 
     [keyboard]
     1=["switch", "s_switch_1"]
-    enter=["switch", "s_start_button]
+    enter=["switch", "s_start_button"]
 ```
 
 #### Explicit Actions
