@@ -620,6 +620,7 @@ nav:
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFVariable: gmc/reference/mpf-variable.md
+      - MPFVideoPlayer: gmc/reference/mpf-video-player.md
       - MPFWindow: gmc/reference/mpf-window.md
       - slide_player: gmc/reference/slide_player.md
     - Guides:
