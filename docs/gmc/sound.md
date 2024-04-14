@@ -6,7 +6,7 @@ title: GMC Sounds
 
 All sounds in GMC are managed through Godot, but MPF can be used to trigger playback actions through the `sound_player` config settings.
 
-All sound files (including resource files) must be placed in either a */sounds* folder in the project root, or in */modes/<mode_name>/sounds* folder in any mode. Subfolders within these folders are allowed as well.
+All sound files (including resource files) must be placed in either a */sounds* folder in the project root, or in */modes/(mode_name)/sounds* folder in any mode. Subfolders within these folders are allowed as well.
 
 ## Sound Resources: Files, Native, and Custom Types
 
