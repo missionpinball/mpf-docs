@@ -14,6 +14,25 @@ The `MPFCarousel` node works in tandem with the MPF Carousel mode to support dyn
 
 Add an `MPFCarousel` node to your slide and create child nodes for each carousel item you wish to render. You can use the eyeball icon in the *Scene* panel to preview what each carousel item will look like. Each child node needs to have a name that corresponds to one of the `selectable_items:` in your MPF config file.
 
+``` yaml
+
+    # attract_mode.yaml
+
+    mode:
+      start_events: mode_attract_started
+      stop_events: mode_attract_will_stop
+      game_mode: false
+      code: mpf.modes.carousel.code.carousel.Carousel
+
+    mode_settings:
+      selectable_items:
+        - gameover
+        - title
+        - last_game_scores
+      next_item_events: s_flipper_right_active
+      previous_item_events: s_flipper_left_active
+```
+
 ![image](../images/carousel_children.png)
 
 When the MPF Carousel mode selects an item to display, it will post event with the name of the carousel mode and the name of the selected item. The `MPFCarousel` node will then iterate through its child nodes and hide all children except one with the same name as the selected item.
