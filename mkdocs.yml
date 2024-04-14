@@ -617,6 +617,7 @@ nav:
     - Sound: gmc/sound.md
     - Config Reference:
       - gmc/reference/index.md
+      - MPFCarousel: gmc/reference/mpf-carousel.md
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFVariable: gmc/reference/mpf-variable.md
