@@ -612,6 +612,7 @@ nav:
     - gmc/index.md
     - Installation: gmc/installation.md
     - Setup: gmc/setup.md
+    - Keyboard: gmc/keyboard.md
     - Slides: gmc/slides.md
     - Sound: gmc/sound.md
     - Config Reference:
@@ -621,6 +622,8 @@ nav:
       - MPFVariable: gmc/reference/mpf-variable.md
       - MPFWindow: gmc/reference/mpf-window.md
       - slide_player: gmc/reference/slide_player.md
+    - Guides:
+      - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
 
 - Tools:
   - tools/index.md
