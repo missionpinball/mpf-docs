@@ -53,6 +53,18 @@ Single value, type `float`. Default: `0.0`
 
 The timecode (in seconds) where playback of this sound should start when it is played.
 
+### max_queue_time:
+
+Single value, type `float`. Default `-1`
+
+The number of seconds that this sound will be kept in queue while its `sequential`-type bus is busy. If the bus does not free up before this number of seconds passes, the sound will not be played.
+
+A value of `0` means the sound will not be queued and will only be played if the bus is immediately available.
+
+A value of `-1` means the sound will be queued indefinitely and will not expire.
+
+*Note: this value has no effect for sounds played on `solo` and `simultaneous` buses.*
+
 ## Methods
 
 `MPFSoundAsset` does not have any public methods exposed.
