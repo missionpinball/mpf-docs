@@ -36,7 +36,7 @@ GMC includes a custom class called `MPFSound` that provides properties that can 
 
 This is a convenient way to keep the same settings for a sound file without having to specify it every time it's called in `sound_player`.
 
-More details on can be found on the [MPFSound Reference Doc](reference/mpf-sound.md).
+More details on can be found on the [MPFSound Reference Doc](reference/mpf-sound-asset.md).
 
 ### Other Godot Resources
 

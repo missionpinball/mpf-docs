@@ -21,11 +21,13 @@ In the *Inspector* tab on the right side, you can configure the `MPFSoundAsset` 
 
     Options configured in the `MPFSoundAsset` will be the defaults for this sound, but can be overridden with values in `sound_player` for different behavior when needed.
 
-### file:
+### stream:
 
-Single value, type: `Resource`. Default: `None`
+Single value, type: `AudioStream`. Default: `None`
 
 This is the sound file or sound resource that will be played for this sound's name. It can be a single sound file (WAV, OGG), or any `AudioStream`-based resource in the project (`AudioStreamRandomizer`, `AudioStreamPlaylist`, etc).
+
+You can also create a new `AudioStream` in-place here, if you don't wish to reuse the audio stream resource elsewhere.
 
 ### bus:
 

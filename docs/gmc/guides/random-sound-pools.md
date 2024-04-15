@@ -53,9 +53,9 @@ You can trigger playback of the sound from MPF by using the filename of the save
 
 ## Wrap the Sound Pool with MPFSoundAsset
 
-If you want to leverage the properties of `MPFSoundAsset` like fade times and target bus, you can create an `MPFSoundAsset` resource and select your saved `AudioStreamRandomizer` as the *File*.
+If you want to leverage the properties of `MPFSoundAsset` like fade times and target bus, you can create an `MPFSoundAsset` resource and select your saved `AudioStreamRandomizer` as the *Stream*.
 
-Alternatively, you can combine the sound pool and the MPF sound asset into a single resource. Create a new `MPFSoundAsset` resource and under *File*, instead of loading a sound file choose *New AudioStreamRandomizer*. This will create a new randomizer pool inside the `MPFSoundAsset` resource, and you can add streams and customize the pool like before. The randomizer will be saved as part of the same resource file so you don't need multiple files.
+Alternatively, you can combine the sound pool and the MPF sound asset into a single resource. Create a new `MPFSoundAsset` resource and under *Stream*, instead of loading a sound file choose *New AudioStreamRandomizer*. This will create a new randomizer pool inside the `MPFSoundAsset` resource, and you can add streams and customize the pool like before. The randomizer will be saved as part of the same resource file so you don't need multiple files.
 
 ![image](../images/sound_asset_randomizer.png)
 
