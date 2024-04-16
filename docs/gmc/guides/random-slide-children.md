@@ -12,7 +12,7 @@ In this example we'll use a random video, but this same workflow can be used for
 
 Open a scene with an `MPFSlide` root node and add a new child node of `MPFChildPool`. Under this child create three `MPFVideoPlayer` nodes and assign a different video to each one. (Or if you don't have three videos, create three `Sprite2D` nodes and assign a different image to each one).
 
-## The Child Ndones
+## The Child Nodes
 
 Using the eyeball icon next to each child, make each visible one at a time and position the children how you'd like each to appear on the slide.
 
