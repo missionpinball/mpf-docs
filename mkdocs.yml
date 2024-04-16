@@ -618,6 +618,7 @@ nav:
     - Config Reference:
       - gmc/reference/index.md
       - MPFCarousel: gmc/reference/mpf-carousel.md
+      - MPFChildPool: gmc/reference/mpf-child-pool.md
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFVariable: gmc/reference/mpf-variable.md
