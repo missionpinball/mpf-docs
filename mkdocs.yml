@@ -628,6 +628,7 @@ nav:
     - Guides:
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
       - Random Sound Pools: gmc/guides/random-sound-pools.md
+      - Random Slide Children: gmc/guides/random-slide-children.md
 
 - Tools:
   - tools/index.md
