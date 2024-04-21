@@ -82,6 +82,8 @@ Next we'll add some text to the slide. Back at the *Scene* panel, add another no
 
 In the *Inspector* panel, in the *Text* field type in the text "Welcome to GMC!", set the *Horizontal Alignment* to Center, and under *Theme Overrides > Font Sizes* set a nice big font, like 100px.
 
+![image](images/attract_slide.png)
+
 ## Run MPF
 
 In your `attract.yaml` mode config, add the following block:
