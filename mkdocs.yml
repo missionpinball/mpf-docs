@@ -625,10 +625,12 @@ nav:
       - MPFVideoPlayer: gmc/reference/mpf-video-player.md
       - MPFWindow: gmc/reference/mpf-window.md
       - slide_player: gmc/reference/slide_player.md
+      - bonus mode_settings: gmc/reference/bonus.md
     - Guides:
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
       - Random Sound Pools: gmc/guides/random-sound-pools.md
       - Random Slide Children: gmc/guides/random-slide-children.md
+      - Bonus Mode Slide: gmc/guides/bonus_mode.md
 
 - Tools:
   - tools/index.md
