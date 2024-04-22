@@ -38,13 +38,40 @@ After MPF is installed, return back up to your main git folder and clone the GMC
   (mpf080) ~/git %-$ git clone https://github.com/missionpinball/mpf-gmc.git
 ```
 
-## Download Godot
+## Download Godot 4
 
-The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor and install it on your machine.
+The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and install it on your machine.
 
 After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.
 
 For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*.
+
+!!! note "Root project vs GMC subfolder"
+
+    Some users prefer to create a distinct "gmc" subfolder in their MPF machine folder, and save their Godot project there. This keeps the Godot Editor *FileSystem* tree cleaner because it's not filled with MPF config files, and can make it easier to navigate and maintain each piece independently.
+
+    Note that Godot only has access to files in its project folder and below. If you choose to make a "gmc" subfolder for your Godot project, all slides, sounds, and widgets will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
+
+## Setup Godot Editor
+
+The Godot Editor includes some default configuration options that may cause headaches for users, so the following tweaks are recommended:
+
+### Indentation Setup
+
+The GMC code is written with space-based indentation, but Godot not only defaults to tabs but defaults to auto-convert files. You are free to use tabs if that's your preference, but at least disabling the auto-convert will spare you grief.
+
+From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
+
+  *  In the *Indent* section change `Tabs` to `Spaces`.
+  *  In the *Files* section de-select the `Convert Indent on Save` option.
+
+### Other Good Things
+
+Also in the *Editor Settings > Text Editor > Behavior* menu:
+
+  *  In the *Files* section, select the `Trim Trailing Whitespace on Save` option, because it's just good practice.
+  *  If you use an external text editor like VS Code or Atom, in the *Files* section select `Auto Reload Scripts on External Change`.
+
 
 ## Symlink the GMC Plugin to your Project Folder
 
