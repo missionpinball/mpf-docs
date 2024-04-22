@@ -619,6 +619,8 @@ nav:
       - gmc/reference/index.md
       - MPFCarousel: gmc/reference/mpf-carousel.md
       - MPFChildPool: gmc/reference/mpf-child-pool.md
+      - MPFConditional: gmc/reference/mpf-conditional.md
+      - MPFConditionalChildren: gmc/reference/mpf-conditional-children.md
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFVariable: gmc/reference/mpf-variable.md
