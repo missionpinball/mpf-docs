@@ -70,13 +70,13 @@ To keep things organized, click on the eyeball icon next to the "*initial*" node
 
 #### Bonus Entries
 
-Right-click again on the `MPFConditionalChildren` node, then *Add Child Node...*, `Node2D`, and create it. Rename this node to "*__default__*" (that's "default" with **two underscores** before and after).
+Right-click again on the `MPFConditionalChildren` node, then *Add Child Node...*, `Node2D`, and create it. Rename this node to "*\_\_default\_\_*" (that's "default" with **two underscores** before and after).
 
 !!! note
 
-    *__default__* is a special name for `MPFConditionalChildren` which will appear as a fallback if none of the other child nodes match the condition. With this fallback, we can have as many bonus entries as we want with whatever names we want and they'll all use this child node.
+    *\_\_default\_\_* is a special name for `MPFConditionalChildren` which will appear as a fallback if none of the other child nodes match the condition. With this fallback, we can have as many bonus entries as we want with whatever names we want and they'll all use this child node.
 
-Create two `MPFVariable` child nodes inside the *__default__* node. Name the first one "*text*" and set it up like so:
+Create two `MPFVariable` child nodes inside the *\_\_default\_\_* node. Name the first one "*text*" and set it up like so:
 
   *  **Variable Type:** Event Arg
   *  **Variable Name:** text
@@ -91,11 +91,11 @@ Name the second one "*score*" and set it up as well:
   *  **Initialize Empty:** Enabled
   *  **Label > Text:** "1,000,000"
 
-Now set the position, font, size, color, et cetera how you want. When you're done, click the eyeball icon to hide the *__default__* node.
+Now set the position, font, size, color, et cetera how you want. When you're done, click the eyeball icon to hide the *\_\_default\_\_* node.
 
 #### Subtotal Text
 
-Right-click on the *__default__* node and select *Duplicate*, then rename the duplicate to "*subtotal*".
+Right-click on the *\_\_default\_\_* node and select *Duplicate*, then rename the duplicate to "*subtotal*".
 
 For these next children, we'll want to hard-code the title text but keep the same styling as the dynamic event-driven text from the bonus entries. In the *Scene* panel, select the "*text*" node child of "*subtitle*". In the *Inspector* panel, click on the hammer/screwdriver icon for the tools menu and choose *Copy Properties*.
 
@@ -125,7 +125,7 @@ For those who want to know more, here's a rundown of how this all will play out 
 
   1.  When the bonus mode starts, the `slide_player` will play the `bonus` slide (aka *bonus.tscn*). The file you just saved in your project will supersede the default GMC bonus slide, so your scene will appear.
 
-  1.  The *mode_bonus_started* event does not include an argument named "entry", so none of the named conditional children match. The default child ("*__default__*") is selected, but since both variables have `Initialize Empty`, nothing appears on screen.
+  1.  The *mode_bonus_started* event does not include an argument named "entry", so none of the named conditional children match. The default child ("*\_\_default\_\_*") is selected, but since both variables have `Initialize Empty`, nothing appears on screen.
 
   1.  The first event the bonus mode posts is *bonus_start*, which triggers the slide player to call `update` on the `bonus` slide and passes the token `entry: initial`
 
@@ -135,7 +135,7 @@ For those who want to know more, here's a rundown of how this all will play out 
 
   1.  These events trigger the `slide_player:` to call `update` on the `bonus` slide again, passing the original event's arguments as part of the update.
 
-  1.  The bonus slide continues to update on each event. Since none of the `entry` values match explicit child names, the "*__default__*" child is shown and its variables render the `text` and `score` values accordingly.
+  1.  The bonus slide continues to update on each event. Since none of the `entry` values match explicit child names, the "*\_\_default\_\_*" child is shown and its variables render the `text` and `score` values accordingly.
 
   1.  When the bonus entries are completed, MPF posts the subtotal, multiplier, and total versions of the *bonus_entry* event. (Note that if the multiplier is one, the subtotal and multiplier events will be skipped.)
 
