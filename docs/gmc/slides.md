@@ -79,7 +79,7 @@ In this example, we have a scene *multiball_base_slide.tscn* and a matching scri
 
     extends MPFSlide
 
-    func explode():
+    func explode(_settings, _kwargs):
         $AnimationPlayer.play("explode")
 ```
 

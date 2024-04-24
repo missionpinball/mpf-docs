@@ -40,7 +40,7 @@ This value will be added to the calling mode's priority to determine the overall
 
 `MPFSlide` does not have any public methods exposed, but custom methods can be added to scene scripts that extend `MPFSlide`. These methods can be triggered from MPF `slide_player` with the `action: method` option. See the [slide_player: reference](slide_player.md) for more details.
 
-When a custom function is called, two parameters are passed in: `settings`, the configuration settings from the slide player config, and `kwargs`, the arguments from the event that triggered the slide player. If you declared any `tokens:` in your config for the slide player, those will be available as `settings.tokens`.
+When a custom function is called, two parameters are passed in: *settings*, the configuration settings from the slide player config, and *kwargs*, the arguments from the event that triggered the slide player. If you declared any `tokens:` in your config for the slide player, those will be available as `settings.tokens`.
 
 ``` code
 
@@ -56,3 +56,30 @@ When a custom function is called, two parameters are passed in: `settings`, the 
     Godot has a pattern for parameters that are required by a function but not used by it: prefix the parameter name with a single underscore. This tells Godot that you know there is a required parameter but you're not going to use it; otherwise, Godot will give you a warning that the parameter is not used.
 
     `func my_custom_method(_settings, _kwargs):`
+
+### settings
+
+Single value, type `Dictionary`.
+
+The *settings* parameter passed to the custom method is the configuration used in the `slide_player:` config file. It includes settings like `priority`, `action`, and the `tokens:` dictionary if you made one.
+
+### kwargs
+
+Single value, type `Dictionary`.
+
+The *kwargs* parameter passed to the custom method is the list of event arguments from the event that triggered the `slide_player` to be called in the first place.
+
+For example, the *player_score* event includes arguments for `value`, `prev_value`, `change`, and `player_num`. If your slide player is triggered by the *player_score* event, like so:
+
+``` yaml
+
+    slide_player:
+        player_score:
+            main_slide:
+                action: method
+                method: my_method
+```
+
+Then in the `func my_method(settings, kwargs):` method of *main_slide.gd* you would have access to `kwargs.value`, `kwargs.prev_value`, `kwargs.change`, and `kwargs.player_num`.
+
+If you're curious what event arguments are available for a given event, look at the MPF log files. Each event is logged with all its arguments, so you can quickly see what's available.
