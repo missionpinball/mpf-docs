@@ -25,21 +25,21 @@ Because the GMC is not yet released, pre-built binaries are not available and mu
 First, clone the main MPF repository to your computer and then check out the 0.80 development branch.
 
 ``` console
-  (mpf080) ~/git %-$ git clone https://github.com/missionpinball/mpf.git
-  (mpf080) ~/git %-$ cd mpf
-  (mpf080) ~/git/mpf %-$ git checkout 0.80.x
+  (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf.git
+  (mpf080) ~/git $> cd mpf
+  (mpf080) ~/git/mpf $> git checkout 0.80.x
 ```
 
-With the MPF source code on your machine, you can then use pip to install MPF. Unlike a normal pip installation, the `-e` flag instructs pip to run MPF directly from the source code rather than using a pre-compiled version. The period after the `-e` tells pip to install the package in the current folder.
+With the MPF source code on your machine, you can then use pip to install MPF. Unlike a normal pip installation, the `-e` flag instructs pip to run MPF directly from the source code rather than using a pre-compiled version. The period after the `-e` tells pip to install the package found in the current folder.
 
 ``` console
-  (mpf080) ~/git/mpf %-$ pip install -e .
+  (mpf080) ~/git/mpf $> pip install -e .
 ```
 
 After MPF is installed, return back up to your main git folder and clone the GMC repository.
 
 ``` console
-  (mpf080) ~/git %-$ git clone https://github.com/missionpinball/mpf-gmc.git
+  (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf-gmc.git
 ```
 
 ## Download Godot 4
@@ -48,7 +48,7 @@ The Godot Media Controller is, of course, built on the Godot game engine. Visit 
 
 After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.
 
-For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*.
+For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*. Note that you can change this setting at any time, so don't stress about it :)
 
 !!! note "Root project vs GMC subfolder"
 
@@ -69,6 +69,8 @@ From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
   *  In the *Indent* section change `Tabs` to `Spaces`.
   *  In the *Files* section de-select the `Convert Indent on Save` option.
 
+![image](images/editor-settings-indentation.png)
+
 ### Other Good Things
 
 Also in the *Editor Settings > Text Editor > Behavior* menu:
@@ -86,7 +88,7 @@ In your game project folder, create a new folder called *addons*. Then create a 
 The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
 ``` console
-  (mpf080) %-$ sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
+  (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
 ```
 
 When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created.
