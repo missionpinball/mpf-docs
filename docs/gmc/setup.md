@@ -44,7 +44,7 @@ At the bottom panel of the Godot Editor there is a tab called *Audio*  which wil
 
     Godot uses the term "buses" instead of "tracks", and GMC will follow this pattern. As a result, an MPF project previously built for MPF 0.5 will need to update `sound_player` config entries to use `bus:` instead of `track:`.
 
-Click on the *Add Bus* button to add a new bus and name it *"music"*. Do the same for *"effects"* and *"voice"*, or customize the buses to what you need for your project.
+Click on the *Add Bus* button to add a new bus and name it *"music"* (case sensitive). Do the same for *"effects"* and *"voice"*, or customize the buses to what you need for your project.
 
 ### Configure the Busses in GMC Config File
 
@@ -56,7 +56,7 @@ Create a new text file in the root of your project called *gmc.cfg* and paste in
 
     [sound_system]
     music={"type": "solo"}
-    sfx={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
+    effects={"type": "simultaneous", "simultaneous_sounds": 3, "default": true}
     voice={"type": "sequential"}
 ```
 
