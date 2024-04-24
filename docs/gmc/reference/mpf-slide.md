@@ -39,3 +39,20 @@ This value will be added to the calling mode's priority to determine the overall
 ## Methods
 
 `MPFSlide` does not have any public methods exposed, but custom methods can be added to scene scripts that extend `MPFSlide`. These methods can be triggered from MPF `slide_player` with the `action: method` option. See the [slide_player: reference](slide_player.md) for more details.
+
+When a custom function is called, two parameters are passed in: `settings`, the configuration settings from the slide player config, and `kwargs`, the arguments from the event that triggered the slide player. If you declared any `tokens:` in your config for the slide player, those will be available as `settings.tokens`.
+
+``` code
+
+    func my_custom_method(settings, kwargs):
+        # Function does stuff here
+```
+
+
+!!! note "Godot requires parameters for this function"
+
+    You don't have to _use_ the settings and kwargs parameters, but you _do_ need to include them in your method.
+
+    Godot has a pattern for parameters that are required by a function but not used by it: prefix the parameter name with a single underscore. This tells Godot that you know there is a required parameter but you're not going to use it; otherwise, Godot will give you a warning that the parameter is not used.
+
+    `func my_custom_method(_settings, _kwargs):`

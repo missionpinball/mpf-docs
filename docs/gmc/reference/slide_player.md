@@ -56,6 +56,8 @@ technically show the slide.
 
 Calls a custom method on the slide scene using the `method:` parameter. This is used to trigger custom slide behavior in GMC. To pass additional parameters to the method, use `tokens:`.
 
+On the receiving slide, the method will be called with two parameters: `settings`, the config here in slide player (including `tokens`), and `kwargs`, the arguments from the event that triggered this slide player.
+
 #### `queue`
 
 Queues the slide for playback at the end of the slide queue. Queued slides will be played sequentially, and the default is to queue the slide last.
