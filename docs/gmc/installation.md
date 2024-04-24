@@ -67,7 +67,7 @@ The GMC code is written with space-based indentation, but Godot not only default
 From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
 
   *  In the *Indent* section change `Tabs` to `Spaces`.
-  *  In the *Files* section de-select the `Convert Indent on Save` option.
+  *  In the *Files* section **disable** the `Convert Indent on Save` option.
 
 ![image](images/editor-settings-indentation.png)
 
@@ -75,8 +75,8 @@ From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
 
 Also in the *Editor Settings > Text Editor > Behavior* menu:
 
-  *  In the *Files* section, select the `Trim Trailing Whitespace on Save` option, because it's just good practice.
-  *  If you use an external text editor like VS Code or Atom, in the *Files* section select `Auto Reload Scripts on External Change`.
+  *  In the *Files* section, **enable** the `Trim Trailing Whitespace on Save` option, because it's just good practice.
+  *  If you use an external text editor like VS Code or Atom, in the *Files* section **enable** the option `Auto Reload Scripts on External Change`.
 
 
 ## Symlink the GMC Plugin to your Project Folder
