@@ -628,6 +628,7 @@ nav:
       - MPFWindow: gmc/reference/mpf-window.md
       - slide_player: gmc/reference/slide_player.md
       - bonus mode_settings: gmc/reference/bonus.md
+      - MPF-GMC Singleton: gmc/reference/mpf-gmc.md
     - Guides:
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
       - Random Sound Pools: gmc/guides/random-sound-pools.md
