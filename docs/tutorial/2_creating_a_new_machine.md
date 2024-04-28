@@ -52,6 +52,12 @@ If you follow these steps, you'll now have a folder on your computer that you ca
 sync with the online repository, track changes in, and share with others. This
 folder will be your machine folder, discussed in the next step.
 
+!!! note  "Convert an existing project to a Git repo"
+
+    If you have an existing MPF game already, you can still easily convert it to use Git for version control. Follow the above steps and clone your repository to a new folder an your computer, and then copy your MPF machine folder contents into the repository folder. Stage and commit all the files, then delete your old machine folder and work out of the new repository folder.
+
+For managing your repository, a desktop client can save a lot of headache. [SourceTree](https://www.sourcetreeapp.com) and [GitHub Desktop](https://desktop.github.com) are popular, easy-to-use choices.
+
 ## 3. Your machine folder
 
 Okay, so let's get started with your own game's machine folder.
@@ -146,7 +152,17 @@ At this point, your environment should look like this:
 Note the folder structure, the location of the `config.yaml` file, and
 the `#config_version=6` as the only contents of that file.
 
-## 5. Run your game!
+## 5. Commit Your Changes
+
+Whenever you make changes to your code and you want to save a snapshot of your game at that point, it's time to commit your changes to your git repository.
+
+Using your git desktop client or command line, you can review your new changes (called "unstaged") and make sure you want to keep everything there. You can discard any changes you don't want, and "stage" the ones you want to keep.
+
+When all your changes are staged, make a new commit with a message describing what's being saved. In this case, something simple like "First commit" will be fine. Commit your changes with your message, and then "push" the changes to the remote (online) repository.
+
+Now your changes are safe and if you ever need to come back to this point (or share your code with someone else), it's ready!
+
+## 6. Run your game!
 
 Believe it our not, it's time to run your game! Simply open a console
 window, activate your virtual environment, change to your machine folder,
