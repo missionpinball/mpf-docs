@@ -635,6 +635,7 @@ nav:
       - Random Slide Children: gmc/guides/random-slide-children.md
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
       - Display Filter Effects: gmc/guides/window-filters.md
+      - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
 - Tools:
   - tools/index.md

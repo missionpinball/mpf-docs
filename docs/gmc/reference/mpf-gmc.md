@@ -119,6 +119,10 @@ Emitted when a mode ends.
 
 Emitted during a carousel event.
 
+#### `options(payload)`
+
+Emitted when the *options* event is received from MPF. This is a generic subscribable event that can be used for any purpose, which can be simpler to use because it doesn't require creating custom event handlers and callbacks. Just post an event named "*options*"  from MPF and connect to this signal.
+
 #### `player_var(value, prev_value, change, player_num)`
 
 Emitted when a player variable changes. Can be subscribed to for manually triggering updates and scene behaviors based on player variables.
