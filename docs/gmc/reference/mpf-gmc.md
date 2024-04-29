@@ -12,7 +12,7 @@ The MPF-GMC singleton is accessed through the global name `MPF` and is an aggreg
 
   *  `MPF.game`: Data related to the current game in progress
   *  `MPF.log`: Logging functionality
-  *  `MPF.mc`: Data related to the displays, slides, and widgets of the MC
+  *  `MPF.media`: Data related to the displays, slides, and widgets of the MC
   *  `MPF.server`: Methods for sending and receiving data to/from MPF via the BCP connection
   *  `MPF.util`: Utility functions and convenience methods
 
@@ -79,6 +79,27 @@ A list of all players in the current game.
 Dictionary, type `String: any`
 
 All settings values tracked by MPF.
+
+# MPF Media
+
+The `MPF.media` manages the media contents of the project, including slides, widgets, and sounds. It is responsible for: traversing the project directory on startup to catalog all media assets; instantiating the SoundPlayer node; and handling the config player events from MPF (*slides_play*, *widgets_play*, and *sounds_play*).
+
+## Methods
+
+### `get_slide_instance(slide_name: String, preload_only: bool) -> MPFSlide`
+
+Instantiates and returns the instance of `MPFSlide` with the given name, or preloads it.
+
+
+### `get_sound_instance(sound_name: String, preload_only: bool) -> MPFSound`
+
+Instantiates and returns the instance of `MPFSound` with the given name, or preloads it.
+
+
+### `get_widget_instance(widget_name: String, preload_only: bool) -> MPFWidget`
+
+Instantiates and returns the instance of `MPFWidget` with the given name, or preloads it.
+
 
 # MPF Server
 
