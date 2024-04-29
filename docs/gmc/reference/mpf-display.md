@@ -14,6 +14,16 @@ All `MPFDisplay` instances must be first-level child nodes of the main `MPFWindo
 
 The Godot Editor *Inspector* panel provides the following parameters for the `MPFDisplay` node:
 
+### allow_empty:
+
+Single value, type: `bool`. Default `false`
+
+If enabled, this display will render an empty screen if all slides are removed. If disabled (default), this display will persist the current slide even after its removal has been requested, until a new slide is triggered.
+
+This is useful for situations where the game is shifting from one mode to another, and the running mode stops before the new mode starts. The ending mode's *clear* event will trigger the slide to be removed some fraction of a second before the starting mode's *mode_(name)_started* event triggers the new slide to be shown.
+
+That scenario would result in a brief flash of a blank display, which is not desirable for most users. By disabling `allow_empty`, the outgoing slide will remain in the display until the next one replaces it.
+
 ### is_default:
 
 Single value, type: `bool`. Default: `false`
