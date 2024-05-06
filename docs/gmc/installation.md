@@ -42,6 +42,25 @@ After MPF is installed, return back up to your main git folder and clone the GMC
   (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf-gmc.git
 ```
 
+## Keeping MPF 0.80 and MPF-GMC Up-To-Date
+MPF 0.80 and MPF-GMC are likely to change drastically during this period, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest features, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
+
+To update MPF 0.80 run the following commands, which will show the changes or if your branch is still up to date.
+
+``` console
+  (mpf080) ~/git $> cd mpf
+  (mpf080) ~/git/mpf $> git fetch
+  (mpf080) ~/git/mpf $> git pull
+```
+
+To update MPF-GMC run the following commands, which will show the changes or if your branch is still up to date.
+
+``` console
+  (mpf080) ~/git $> cd mpf-gmc
+  (mpf080) ~/git/mpf-gmc $> git fetch
+  (mpf080) ~/git/mpf-gmc $> git pull
+```
+
 ## Download Godot 4
 
 The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and install it on your machine.
@@ -89,6 +108,12 @@ The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to proje
 
 ``` console
   (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
+```
+
+For Windows the syntax is `mklink /D <path to project folder/addons/mpf-gmc> <path to GMC repository/addons/mpf-gmc>`, and will look something like this:
+
+``` console
+  (mpf080) $> mklink /D /Users/tommy/pinballgame/addons/mpf-gmc /Users/tommy/git/mpf-gmc/addons/mpf-gmc
 ```
 
 When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created.
