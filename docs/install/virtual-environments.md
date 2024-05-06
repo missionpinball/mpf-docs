@@ -51,6 +51,12 @@ but can still be helpful for keeping packages organized and cleanly upgrading.
 
 To keep itself isolated from other programs, your virtual enviroment only
 activates when you tell it to.
+
+!!! note
+
+    If you defined a specific path in the above step, replace mpfenv with the
+    path to the given folder, e.g., ``C:\Users\Rudy\venvs\mpf``. 
+
 You can enable the virtual environment with the dot command from the terminal:
 
 ``` console
