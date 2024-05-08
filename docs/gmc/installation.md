@@ -98,7 +98,7 @@ You will create a symbolic link *mpf-gmc* in your project */addons* folder that 
 When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created. You can confirm that the folder is a symbolic link with the `ls -la` command, which will show the path that the symbolic link points to.
 
 ``` console
-  (mpf080) pinballgame $> ls -la addons/mpf-gmc
+  (mpf080) pinballgame $> ls -la addons
 
   total 0
   drwxr-xr-x    96 Apr  8 19:09 .
