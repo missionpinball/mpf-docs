@@ -42,25 +42,6 @@ After MPF is installed, return back up to your main git folder and clone the GMC
   (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf-gmc.git
 ```
 
-## Keeping MPF 0.80 and MPF-GMC Up-To-Date
-MPF 0.80 and MPF-GMC are likely to change drastically during this period, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest features, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
-
-To update MPF 0.80 run the following commands, which will show the changes or if your branch is still up to date.
-
-``` console
-  (mpf080) ~/git $> cd mpf
-  (mpf080) ~/git/mpf $> git fetch
-  (mpf080) ~/git/mpf $> git pull
-```
-
-To update MPF-GMC run the following commands, which will show the changes or if your branch is still up to date.
-
-``` console
-  (mpf080) ~/git $> cd mpf-gmc
-  (mpf080) ~/git/mpf-gmc $> git fetch
-  (mpf080) ~/git/mpf-gmc $> git pull
-```
-
 ## Download Godot 4
 
 The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and install it on your machine.
@@ -98,25 +79,63 @@ Also in the *Editor Settings > Text Editor > Behavior* menu:
   *  If you use an external text editor like VS Code or Atom, in the *Files* section **enable** the option `Auto Reload Scripts on External Change`.
 
 
-## Symlink the GMC Plugin to your Project Folder
+## Place the GMC Plugin to your Project Folder
 
-When GMC is officially released, it will be available to download and install with a single click from the Godot Asset Library. Until then, you will need to manually create an alias from your project to the GMC repository you cloned in a previous step.
+When GMC is officially released, it will be available to download and install with a single click from the Godot Asset Library. Until then, you will need to manually place the main folder of the GMC repository (which you cloned in a previous step) into your project addons folder.
 
-In your game project folder, create a new folder called *addons*. Then create a symbolic link that will create an alias folder *mpf-gmc* in the addons folder that points to the *mpf-gmc* folder in the GMC repository.
+In your game project folder, create a new folder called *addons*.
 
-The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
+### Option 1: Symbolic Links (Mac & Linux)
+
+A symbolic link is a way to mirror one file or folder in a second location, which makes it easy to keep data synchronized. With a symbolic link from the GMC repository to your project folder, your project will always have the latest changes whenever you pull from the GMC repository.
+
+You will create a symbolic link *mpf-gmc* in your project */addons* folder that points to the *mpf-gmc* folder in the GMC repository. The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
 ``` console
   (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
 ```
 
-For Windows the syntax is `mklink /D <path to project folder/addons/mpf-gmc> <path to GMC repository/addons/mpf-gmc>`, and will look something like this:
+When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created. You can confirm that the folder is a symbolic link with the `ls -la` command, which will show the path that the symbolic link points to.
 
 ``` console
-  (mpf080) $> mklink /D /Users/tommy/pinballgame/addons/mpf-gmc /Users/tommy/git/mpf-gmc/addons/mpf-gmc
+  (mpf080) pinballgame $> ls -la addons/mpf-gmc
+
+  total 0
+  drwxr-xr-x    96 Apr  8 19:09 .
+  drwxr-xr-x  1024 May  6 12:30 ..
+  lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -> /Users/tommy/git/mpf-gmc/addons/mpf-gmc
 ```
 
-When successful, you should see a new *mpf-gmc* folder in the *addons* folder you just created.
+### Option 2: Copy the MPF-GMC Folder (Windows)
+
+Windows does not support symbolic links in the same way, so you must manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your project *addons* folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
+
+The downside of copying the folder is that you will need to manually re-copy the folder each time you download a new update to the GMC.
+
+
+## Keeping MPF 0.80 and MPF-GMC Up-To-Date
+MPF 0.80 and MPF-GMC are likely to change drastically during this period, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest features, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
+
+To update MPF 0.80 run the following commands, which will show the changes or if your branch is still up to date.
+
+``` console
+  (mpf080) ~/git $> cd mpf
+  (mpf080) ~/git/mpf $> git fetch
+  (mpf080) ~/git/mpf $> git pull
+```
+
+To update MPF-GMC run the following commands, which will show the changes or if your branch is still up to date.
+
+``` console
+  (mpf080) ~/git $> cd mpf-gmc
+  (mpf080) ~/git/mpf-gmc $> git fetch
+  (mpf080) ~/git/mpf-gmc $> git pull
+```
+
+**Mac and Linux Users:** If you are using a symlink to mirror the *mpf-gmc* folder in your project *addons* folder, the above steps are enough.
+
+**Windows Users:** If you have copy+pasted the *mpf-gmc* folder from the GMC repository to your project *addons* folder, you will need to re-copy+paste the folder after you fetch and pull.
+
 
 ## Install the GMC Plugin
 
