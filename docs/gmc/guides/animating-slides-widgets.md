@@ -23,6 +23,11 @@ To use the built-in animations, you will need to add an `AnimationPlayer` Node t
 
 ## Create Animations
 
+!!! note "See the Godot Docs"
+
+    The Godot AnimationPlayer is a powerful and robust tool with dozens of features
+    and options. It's highly recommended to review the [Introduction to Godot Animation Features](https://docs.godotengine.org/en/stable/tutorials/animation/introduction.html) guide before proceeding.
+
 When you select the `AnimationPlayer` node in the *Scene* panel, the *Animation* panel will appear at the bottom of the editor. Click on the *Animation* button to create a new animation. You can name the animation "created", "active", "inactive", or "removed" depending on which lifecycle state you want to animate.
 
 You can then create keyframes in the animation. For example, to have a slide fade-in when it's created, make an animation named "created".
