@@ -633,6 +633,7 @@ nav:
       - MPF-GMC Singleton: gmc/reference/mpf-gmc.md
     - Guides:
       - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
+      - Animating Slides and Widgets: gmc/guides/animating-slides-widgets.md
       - Random Sound Pools: gmc/guides/random-sound-pools.md
       - Random Slide Children: gmc/guides/random-slide-children.md
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
