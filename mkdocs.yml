@@ -627,6 +627,7 @@ nav:
       - MPFSoundAsset: gmc/reference/mpf-sound-asset.md
       - MPFVariable: gmc/reference/mpf-variable.md
       - MPFVideoPlayer: gmc/reference/mpf-video-player.md
+      - MPFWidget: gmc/reference/mpf-widget.md
       - MPFWindow: gmc/reference/mpf-window.md
       - slide_player: gmc/reference/slide_player.md
       - bonus mode_settings: gmc/reference/bonus.md
