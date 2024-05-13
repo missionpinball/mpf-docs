@@ -56,6 +56,10 @@ An active slide may be removed and a new or underlying slide will become active,
 
   * The outgoing `REMOVED` animation **will not play**. Because the new slide is on top of the old slide, there is no need to play the removal animation.
 
-#### If the incoming active slide has a *lower priority* than the old one:
+#### If the new active slide has a *lower priority* than the old one:
 
   * The newly-active slide's `CREATED` or `ACTIVE`animation **will not play**. Because the new slide is below the old slide, it must be present for when the old slide is removed.
+
+These rules are based on expected use cases. If you need to fine-tune the behavior of slides coming in and out, GMC will post events that can be used to trigger subsequent `action: play` and `action: remove` behaviors.
+
+Each slide will post the events *slide_(name)_created*, *slide_(name)_active*, *slide_(name)_inactive*, and *slide_(name)_removed*. Of note is that the *slide_(name)_removed* event will not be posted until after the removal animation plays, so you can use this event to delay the playing of a new lower-priority slide and see its created/active animation.

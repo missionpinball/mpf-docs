@@ -8,7 +8,9 @@ title: MPFSlide
 
 ## Node Configuration
 
-There are currently no options for configuring `MPFSlide` instances. Create any scene with any content and Godot features you like!
+### animation_player:
+
+An instance of an `AnimationPlayer` node that one or more animations named "created", "active", and/or "removed". If an `AnimationPlayer` node is attached and contains any of those animation names, the respective animation will play on the slide when the slide changes to that state.
 
 ## Parameters
 
