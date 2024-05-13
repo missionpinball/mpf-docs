@@ -35,6 +35,11 @@ slide_player:
 See [Slide player](../config_players/slide_player.md) for
 details.
 
+!!! note "Order Matters!"
+
+    When multiple slides are listed under a single `slide_player:` event, they will be executed in the order provided. This allows you to remove one slide and add a new slide with the same `key` in a single event, so long as the slide with `action: remove` is listed *before* the slide with the `action: play`.
+
+
 ## Optional settings
 
 The following sections are optional in the `slide_player:` section of
