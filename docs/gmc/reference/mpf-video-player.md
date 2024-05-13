@@ -10,9 +10,29 @@ title: MPFVideoPlayer
 
 An `MPFVideoPlayer` node can be placed anywhere in a slide or widget and offers the following custom properties.
 
+### hide_behavior:
+
+Single value, one of `"Restart"`, "`Pause`", `"Continue"`. Default: `"Restart"`
+
+This behavior is triggered when the video player visibility changes (either directly or from an ancestor node's visibility).
+
+#### `"Restart"`:
+
+When the video is not visible, playback stops. When the video becomes visible again, playback restarts from the beginning.
+
+#### `"Pause"`:
+
+When the video is not visible, playback is paused. When the video becomes visible again, playback resumes from where it left off.
+
+#### `"Continue"`:
+
+The video will play regardless of whether it is visible or not.
+
 ### end_behavior:
 
 Single value, one of `"Nothing"`, `"Remove Slide/Widget"`, `"Post Event"`. Default `"Nothing"`
+
+This behavior is triggered when the video playback finishes and the video is not set to loop.
 
 #### `"Nothing"`:
 
@@ -30,7 +50,7 @@ When the video finishes playing, the event *video_finished* will be posted to MP
 
 Multiple values, type: `String`. Default `None`.
 
-When the video finishes playing, custom events can be posted to MPF. Enter the name of the event here, or multiple events separated by commas. The event(s) will be posted regardless of the `end_behavior` setting.
+When the video finishes playing, custom events can be posted to MPF. Enter the name of the event here, or multiple events separated by commas. The event(s) will be posted in addition to the `end_behavior` action.
 
 ## VideoStreamPlayer Node Configuration
 
@@ -58,7 +78,9 @@ The volume this video should play at. `0db` is the standard volume level, and `-
 
 Single value, type `boolean`. Default `false`.
 
-If checked, this video will begin playing immediately when it is added to the scene tree.
+If checked, this video will begin playing immediately when it is added to the scene tree and visible.
+
+If `hide_behavior` is "continue", it will play immediately even if not visible.
 
 ### expand:
 
