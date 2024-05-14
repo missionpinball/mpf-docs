@@ -622,6 +622,7 @@ nav:
       - MPFChildPool: gmc/reference/mpf-child-pool.md
       - MPFConditional: gmc/reference/mpf-conditional.md
       - MPFConditionalChildren: gmc/reference/mpf-conditional-children.md
+      - MPFLogger: gmc/reference/mpf-logger.md
       - MPFDisplay: gmc/reference/mpf-display.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFSoundAsset: gmc/reference/mpf-sound-asset.md
