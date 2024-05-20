@@ -622,8 +622,9 @@ nav:
       - MPFChildPool: gmc/reference/mpf-child-pool.md
       - MPFConditional: gmc/reference/mpf-conditional.md
       - MPFConditionalChildren: gmc/reference/mpf-conditional-children.md
-      - MPFLogger: gmc/reference/mpf-logger.md
       - MPFDisplay: gmc/reference/mpf-display.md
+      - MPFEventHandler: gmc/reference/mpf-event-handler.md
+      - MPFLogger: gmc/reference/mpf-logger.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFSoundAsset: gmc/reference/mpf-sound-asset.md
       - MPFVariable: gmc/reference/mpf-variable.md
@@ -639,6 +640,7 @@ nav:
       - Random Sound Pools: gmc/guides/random-sound-pools.md
       - Random Slide Children: gmc/guides/random-slide-children.md
       - Bonus Mode Slide: gmc/guides/bonus_mode.md
+      - Spanning Multiple Monitors: gmc/guides/spanning-multiple-monitors.md
       - Display Filter Effects: gmc/guides/window-filters.md
       - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
