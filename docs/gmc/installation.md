@@ -136,6 +136,13 @@ To update MPF-GMC run the following commands, which will show the changes or if 
 
 **Windows Users:** If you have copy+pasted the *mpf-gmc* folder from the GMC repository to your project *addons* folder, you will need to re-copy+paste the folder after you fetch and pull.
 
+Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log. This is expected the first time you open your project in Godot after a GMC update. You can use the *Project > Reload Current Project* menu to refresh the Godot editor and clear out errors after updating.
+
+!!! note "In Case of Catastrophe"
+
+    In some cases, a godot project can get corrupted with cached variants of GMC autoload/class files that cause a slew of errors on startup, even after restarting the editor.
+
+    In these rare cases, exit the editor and from the Project List, remove your project from the list of saved projects. Then in your project folder delete the *.godot* folder and re-import your project.godot file into the Project List.
 
 ## Install the GMC Plugin
 
