@@ -6,6 +6,11 @@ title: Installing MPF 0.56 on Windows
 
 This process walks through installing MPF 0.57 a Windows machine.
 
+
+!!! warning "MPF 0.80 is Coming Soon"
+
+    This installation guide is for MPF 0.57 and the legacy MC, which is being replaced in the upcoming MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](index.md) instead.
+
 Note that installing MPF is more complicated than a normal application.
 This is because MPF is a development tool you use to create your pinball
 software, not a finished app itself. So, like everything in pinball,

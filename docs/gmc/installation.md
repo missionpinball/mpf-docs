@@ -4,43 +4,13 @@ title: Installing GMC
 
 # Setup and Installation
 
-!!! note "GMC is in Early Access"
-
-    These instructions are for the early-access version of Godot MC, and require a few extra manual steps than the typical installation. You will need a functioning MPF 0.57+ project and a little patience :)
-
 !!! warning "Please use a repository"
 
-    Because GMC is in early access, you will likely be the first to encounter a scenario or request a feature. Having your project in a repository means that GMC developers can clone and run your game to quickly identify and fix issues, understand your goals, and validate requested features against your code. This is the fastest and smoothest way to make GMC better!
+    Because GMC is brand new, you will likely be the first to encounter a scenario or request a feature. Having your project in a repository means that GMC developers can clone and run your game to quickly identify and fix issues, understand your goals, and validate requested features against your code. This is the fastest and smoothest way to make GMC better!
 
-## Create a Virtual Environment for MPF 0.80
+## Install MPF 0.80
 
-To support the new features and integrations of GMC, there is a new version of MPF in development. The first step, like with any MPF project, is to [create a virtual environment](../install/virtual-environments.md) that will keep this version of MPF and its dependencies separate from any other projects on your machine.
-
-Follow the instructions linked above and create a new virtual environment in Python 3.8-3.11. For convenience, you may want to name the environment "mpf080" or "mpfgmc". Once you've created the environment, activate it and proceed to the next step.
-
-## Download MPF 0.80 and MPF-GMC
-
-Because the GMC is not yet released, pre-built binaries are not available and must instead be run locally. You will need two Git repositories: one for MPF 0.80, and one for GMC. It's recommended to create a special folder on your computer for your Git repositories—in this example we'll create a folder called "git" in our home directory.
-
-First, clone the main MPF repository to your computer and then check out the 0.80 development branch.
-
-``` console
-  (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf.git
-  (mpf080) ~/git $> cd mpf
-  (mpf080) ~/git/mpf $> git checkout 0.80.x
-```
-
-With the MPF source code on your machine, you can then use pip to install MPF. Unlike a normal pip installation, the `-e` flag instructs pip to run MPF directly from the source code rather than using a pre-compiled version. The period after the `-e` tells pip to install the package found in the current folder.
-
-``` console
-  (mpf080) ~/git/mpf $> pip install -e .
-```
-
-After MPF is installed, return back up to your main git folder and clone the GMC repository.
-
-``` console
-  (mpf080) ~/git $> git clone https://github.com/missionpinball/mpf-gmc.git
-```
+Before you get working with GMC, you need to install MPF 0.80 by following the [MPF Installation Guide](../install/index.md).
 
 ## Download Godot 4
 
@@ -50,42 +20,46 @@ After Godot is installed, open the editor and create a New Project. Select your 
 
 For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*. Note that you can change this setting at any time, so don't stress about it :)
 
+Finally, in your game project folder create a new folder called *addons*.
+
 !!! note "Root project vs GMC subfolder"
 
     Some users prefer to create a distinct "gmc" subfolder in their MPF machine folder, and save their Godot project there. This keeps the Godot Editor *FileSystem* tree cleaner because it's not filled with MPF config files, and can make it easier to navigate and maintain each piece independently.
 
     Note that Godot only has access to files in its project folder and below. If you choose to make a "gmc" subfolder for your Godot project, all slides, sounds, and widgets will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
 
-## Setup Godot Editor
+## Install the GMC Plugin
 
-The Godot Editor includes some default configuration options that may cause headaches for users, so the following tweaks are recommended:
+### Simplest Installation: Godot Asset Library (Coming Soon!)
 
-### Indentation Setup
+The Godot editor features a built-in library of plugins that you can download and install with a single click. Unfortunately this library is managed manually by volunteers, and updating plugins can take weeks. Because GMC is changing and improving rapidly every day, it is not yet available on the Godot Asset Library.
 
-The GMC code is written with space-based indentation, but Godot not only defaults to tabs but defaults to auto-convert files. You are free to use tabs if that's your preference, but at least disabling the auto-convert will spare you grief.
+Until then, you will need to manually place the GMC plugin into your project addons folder using the Standard or Expert Installation steps.
 
-From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
+### Standard Installation: Download & Copy
 
-  *  In the *Indent* section change `Tabs` to `Spaces`.
-  *  In the *Files* section **disable** the `Convert Indent on Save` option.
+You can download the GMC plugin from the MPF-GMC repository on GitHub. Visit https://github.com/missionpinball/mpf-gmc and click on the green **Code** button to show the Code dropdown, and select *Download ZIP* to download the plugin.
 
-![image](images/editor-settings-indentation.png)
+![image](./images/gmc-download-zip.png)
 
-### Other Good Things
+Extract the downloaded ZIP file and go to the *addons* folder, where you'll see a folder named *mpf-gmc*. Copy this folder into the *addons* folder in your Godot project folder.
 
-Also in the *Editor Settings > Text Editor > Behavior* menu:
+!!! note "Manual Updates Required"
 
-  *  In the *Files* section, **enable** the `Trim Trailing Whitespace on Save` option, because it's just good practice.
-  *  If you use an external text editor like VS Code or Atom, in the *Files* section **enable** the option `Auto Reload Scripts on External Change`.
+    When downloading and copying GMC in this way, you will need to manually update the GMC to get new features and bugfixes. Just follow the above instructions again and overwrite the *addons/mpf-gmc* folder to get the newest version.
 
+### Expert Installation: Local Repository (MPF-GMC)
 
-## Place the GMC Plugin to your Project Folder
+For complete control, you can clone the MPF-GMC repository to your computer and run it directly. First, open a terminal window to the directory where you keep your Git repositories, and then clone:
 
-When GMC is officially released, it will be available to download and install with a single click from the Godot Asset Library. Until then, you will need to manually place the main folder of the GMC repository (which you cloned in a previous step) into your project addons folder.
+``` console
 
-In your game project folder, create a new folder called *addons*.
+    git clone https://github.com/missionpinball/mpf-gmc
+```
 
-### Option 1: Symbolic Links (Mac & Linux)
+You now have a copy of the MPF-GMC source code on your machine, and you need to share it with your Godot project. To update GMC, go to the repository folder in your terminal and type `git fetch` and `git pull`.
+
+#### Option 1: Symbolic Links (Mac & Linux)
 
 A symbolic link is a way to mirror one file or folder in a second location, which makes it easy to keep data synchronized. With a symbolic link from the GMC repository to your project folder, your project will always have the latest changes whenever you pull from the GMC repository.
 
@@ -106,25 +80,19 @@ When successful, you should see a new *mpf-gmc* folder in the *addons* folder yo
   lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -> /Users/tommy/git/mpf-gmc/addons/mpf-gmc
 ```
 
-### Option 2: Copy the MPF-GMC Folder (Windows)
+#### Option 2: Copy the MPF-GMC Folder (Windows)
 
 Windows does not support symbolic links in the same way, so you must manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your project *addons* folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
 
 The downside of copying the folder is that you will need to manually re-copy the folder each time you download a new update to the GMC.
 
 
-## Keeping MPF 0.80 and MPF-GMC Up-To-Date
-MPF 0.80 and MPF-GMC are likely to change drastically during this period, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest features, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
+## Keeping MPF-GMC Up-To-Date
+MPF-GMC is in active development and changes frequently, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest and greatest, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
 
-To update MPF 0.80 run the following commands, which will show the changes or if your branch is still up to date.
+If you downloaded MPF-GMC as a ZIP file from GitHub, follow those steps again and replace the old *addons/mpf-gmc* folder with the newly downloaded one.
 
-``` console
-  (mpf080) ~/git $> cd mpf
-  (mpf080) ~/git/mpf $> git fetch
-  (mpf080) ~/git/mpf $> git pull
-```
-
-To update MPF-GMC run the following commands, which will show the changes or if your branch is still up to date.
+If you cloned the MPF-GMC repository, you need to fetch and pull:
 
 ``` console
   (mpf080) ~/git $> cd mpf-gmc
@@ -144,11 +112,11 @@ Because of how Godot processes and caches plugins and autoloads, sometimes pulli
 
     In these rare cases, exit the editor and from the Project List, remove your project from the list of saved projects. Then in your project folder delete the *.godot* folder and re-import your project.godot file into the Project List.
 
-## Install the GMC Plugin
+## Activate the GMC Plugin
 
 !!! note "There will be errors"
 
-    During this step, at various points some pieces will be setup before others and Godot will present errors. It is safe to ignore them, we will restart Godot after this step and everything will be in order.
+    During this step, at various points some pieces will be setup before others and Godot will present errors about files not found or scripts unable to be parsed. It is safe to ignore these errors for now: we will restart Godot after this step and everything will be in order.
 
 In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin.
 
