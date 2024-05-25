@@ -111,6 +111,10 @@ If you are installing MPF 0.57 to continue work on an existing MC-based project,
 * [Windows](windows.md)
 * [Linux](linux)
 
+## Migrating MPF 0.57 to MPF 0.80
+
+If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the GMC, there are just a few config changes needed. See the [MPF 0.80 Migration Guide](./0.80.md) for instructions.
+
 ## Next step: The Tutorial!
 
 We have a tutorial which walks you through the first few steps of getting
