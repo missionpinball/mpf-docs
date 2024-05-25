@@ -2,6 +2,10 @@
 title: Sound & Audio Tips & Tricks
 ---
 
+!!! warning "MPF-MC is being deprecated"
+
+    This instruction page is for the legacy MPF-MC for MPF versions 0.57 and prior. For users of MPF 0.80 and later, please refer to the [Godot Media Controller (GMC) Documentation](../../gmc/index.md)
+
 # Sound & Audio Tips & Tricks
 
 

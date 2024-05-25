@@ -42,3 +42,5 @@ This is for people who know what they're doing. If you're lost, check out our fu
 1. In your terminal, type `mpf -xt`
 
 The Godot window should now say "Connected to MPF". Congratulations, you're running a pinball game!
+
+You can now proceed to [set up your GMC slides](../gmc/setup.md) and start creating modes.
