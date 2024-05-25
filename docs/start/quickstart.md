@@ -38,8 +38,8 @@ This is for people who know what they're doing. If you're lost, check out our fu
 
 ``` console
 
-    mkdir config
-    echo "#config_version=6" > config/config.yaml
+    (mpf) my_project_folder $> mkdir config
+    (mpf) my_project_folder $> echo "#config_version=6" > config/config.yaml
 ```
 
 ## Running the Game

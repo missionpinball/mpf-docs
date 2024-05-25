@@ -42,7 +42,7 @@ As of MPF 0.80 we are providing precompiled binaries for new users to get up and
   * Not (yet) available for all platforms
   * No option to customize MPF or use bleeding-edge features
 
-!!! note 'No, it's not actually pre-"compiled"'
+!!! note "No, it's not actually precompiled"
 
     MPF is written in Python, which is an interpreted language, and therefore cannot be truly "compiled" into a binary. The provided binaries are special applications that bundle a copy of Python, the MPF framework modules, and all dependency packages into a single file.
 
