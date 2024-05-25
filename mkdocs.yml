@@ -79,6 +79,7 @@ nav:
   - Installation:
     - install/index.md
     - Quickstart: start/quickstart.md
+    - 'Migrating to 0.80': install/0.80.md
     - 'Big changes in 0.57': install/0.57.md
     - Mac: install/mac.md
     - Windows: install/windows.md
