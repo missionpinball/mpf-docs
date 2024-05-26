@@ -75,6 +75,10 @@ Now when inside your virtual environment, you can run MPF simply by typing `mpf`
   * Mistakes can pollute Pip environments and cause dependency conflicts
   * No option to customize MPF or use bleeding-edge features
 
+!!! note "Many Python Interpreters Supported"
+
+    Without the MC's Kivy dependencies, MPF 0.80 now supports alternative Python interpreters like PyPy. You can use a different interpreter if you'd like.
+
 ## Expert Installation: Local Repository (MPF 0.80)
 
 For complete control, you can clone the MPF repository to your computer and run it directly from the source code.

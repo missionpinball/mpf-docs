@@ -129,6 +129,16 @@ sound_player:
   sw_jet_bumper_active: super_jet_bumper_sound|block
 ```
 
+### bus:
+
+!!! info ""
+
+    New in MPF 0.80
+
+Single value, type: `string`. Defaults to empty.
+
+Specifies an audio bus on which this sound should be played. Overrides the sound setting if one exists.
+
 ### delay:
 
 Single value, type: `time string (secs)`
@@ -237,6 +247,10 @@ Please refer to the [sounds:](sounds.md) documentation for details about this se
 overwrites the setting in your sound.
 
 ### track:
+
+!!! warning ""
+
+    Deprecated in MPF 0.80. Use `bus` instead.
 
 Single value, type: `string`. Defaults to empty.
 
