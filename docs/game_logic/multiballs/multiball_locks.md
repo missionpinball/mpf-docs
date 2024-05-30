@@ -97,11 +97,10 @@ For
 
 ## Related How To guides
 
-* [/events/multiball_lock_multiball_lock_full](multiball_with_traditional_ball_lock.md)
-* [/events/multiball_lock_multiball_lock_full](multiball_with_virtual_ball_lock.md)
-* [/events/multiball_lock_multiball_lock_full](add_a_ball_multiball.md)
-* [/events/multiball_lock_multiball_lock_full](multiball_with_virtual_ball_lock.md)
-* [/events/multiball_lock_multiball_lock_full](multiball_with_multiple_lock_devices.md)
+* [Multiball with a traditional ball lock](multiball_with_traditional_ball_lock.md)
+* [Multiball with a virtual ball lock](multiball_with_virtual_ball_lock.md)
+* [Multiball with multiple lock devices](multiball_with_multiple_lock_devices.md)
+* [Add a ball multiball](add_a_ball_multiball.md)
 
 ## Related Events
 
