@@ -7,9 +7,9 @@ title: State Machine Logic Block
 
 Related Config File Sections:
 
-* [integrating_logic_blocks_and_shows](../../config/state_machines.md)
-* [integrating_logic_blocks_and_shows](../../config/state_machine_states.md)
-* [integrating_logic_blocks_and_shows](../../config/state_machine_transitions.md)
+* [state_machines:](../../config/state_machines.md)
+* [state_machine_states:](../../config/state_machine_states.md)
+* [state_machine_transitions:](../../config/state_machine_transitions.md)
 
   Related How To Guides
 
