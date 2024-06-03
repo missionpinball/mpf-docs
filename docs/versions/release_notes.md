@@ -16,18 +16,18 @@ documentation for that specific release.
 
 *Not Yet Released*
 
-## New Features
+MPF 0.57.2 includes improvements to ball search.
 
-MPF 0.57.2 includes improvements to ball search
-
-## New Features
+### New Features
 * Switch `ignore_during_ball_search:` config option to prevent false positives during searches
+* Playfield `enable_ball_search:` now supports templates, e.g. `settings.enable_ball_search==1`
 
-## Improvements
+### Improvements
 * Playfield *playfield_active* event now includes the source of the active trigger
 * Better (more reliable) suppression of switch hits from Drop Target firings during ball search
+* Better error messaging for ball search on a playfield without iterator devices
 
-## Bug Fixes
+### Bug Fixes
 * Fixed a bug in ball search phase/iteration counting that miscounted the number of phases and iterations to perform
 
 ## 0.57.1
@@ -36,7 +36,7 @@ Release: May 21, 2024
 
 MPF 0.57.1 includes some important performance and stability updates and more functionality for machines running on-location.
 
-## New Features
+### New Features
 * Segment Displays `update_method:` to choose between stacked text and replace text
 * Ball devices can attempt to re-order (knock around) balls to settle misalignments
 * Service menu for displaying light chains
@@ -45,7 +45,7 @@ MPF 0.57.1 includes some important performance and stability updates and more fu
 * Auditor report for "missing" switches (i.e. switches not hit since some number of games)
 * Platform Integration Test runner for automated testing on physical hardware platforms
 
-## Improvements
+### Improvements
 * Re-enable Prospector linting checks at high strictness
 * Use Python-preferred iteration over lists/dicts
 * Re-raise validation errors to include more useful stacktraces
@@ -53,7 +53,7 @@ MPF 0.57.1 includes some important performance and stability updates and more fu
 * Reduce FAST Segment Display bandwidth by only sending color changes instead of all color statements
 * Better handling of missing balls and trough jams during startup
 
-## Bug Fixes
+### Bug Fixes
 * Fixed production bundle packaging with new ruamel syntax
 * Fixed memory leak when using segment displays
 * Fixed numerous bugs in managing FAST Audio Board through service menu
