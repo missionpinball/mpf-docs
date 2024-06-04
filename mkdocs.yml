@@ -79,6 +79,7 @@ nav:
   - Installation:
     - install/index.md
     - Quickstart: start/quickstart.md
+    - 'Migrating to 0.80': install/0.80.md
     - 'Big changes in 0.57': install/0.57.md
     - Mac: install/mac.md
     - Windows: install/windows.md
@@ -607,6 +608,42 @@ nav:
     - How to set up sound: mc/sound/basic_setup.md
     - Tips & tricks: mc/sound/tips_tricks.md
     - Playing a sound with variations: mc/sound/variations.md
+
+  - Godot MC:
+    - gmc/index.md
+    - Installation: gmc/installation.md
+    - Setup: gmc/setup.md
+    - Keyboard: gmc/keyboard.md
+    - Slides: gmc/slides.md
+    - Sound: gmc/sound.md
+    - Config Reference:
+      - gmc/reference/index.md
+      - gmc.cfg: gmc/reference/gmc-cfg.md
+      - MPFCarousel: gmc/reference/mpf-carousel.md
+      - MPFChildPool: gmc/reference/mpf-child-pool.md
+      - MPFConditional: gmc/reference/mpf-conditional.md
+      - MPFConditionalChildren: gmc/reference/mpf-conditional-children.md
+      - MPFDisplay: gmc/reference/mpf-display.md
+      - MPFEventHandler: gmc/reference/mpf-event-handler.md
+      - MPFLogger: gmc/reference/mpf-logger.md
+      - MPFSlide: gmc/reference/mpf-slide.md
+      - MPFSoundAsset: gmc/reference/mpf-sound-asset.md
+      - MPFVariable: gmc/reference/mpf-variable.md
+      - MPFVideoPlayer: gmc/reference/mpf-video-player.md
+      - MPFWidget: gmc/reference/mpf-widget.md
+      - MPFWindow: gmc/reference/mpf-window.md
+      - slide_player: gmc/reference/slide_player.md
+      - bonus mode_settings: gmc/reference/bonus.md
+      - MPF-GMC Singleton: gmc/reference/mpf-gmc.md
+    - Guides:
+      - Base Slide and Player Vars: gmc/guides/base-slide-with-score.md
+      - Animating Slides and Widgets: gmc/guides/animating-slides-widgets.md
+      - Random Sound Pools: gmc/guides/random-sound-pools.md
+      - Random Slide Children: gmc/guides/random-slide-children.md
+      - Bonus Mode Slide: gmc/guides/bonus_mode.md
+      - Spanning Multiple Monitors: gmc/guides/spanning-multiple-monitors.md
+      - Display Filter Effects: gmc/guides/window-filters.md
+      - Advanced Custom Code: gmc/guides/advanced-custom-code.md
 
 - Tools:
   - tools/index.md

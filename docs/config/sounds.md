@@ -51,7 +51,7 @@ sounds:
     file: extra_ball_12753.wav
     events_when_stopped: extra_ball_callout_finished
     streaming: false
-    track: voice
+    bus: voice
     volume: 0.5
     priority: 50
     max_queue_time: None
@@ -84,6 +84,17 @@ events will be posted. If the value of this setting is greater than the
 duration of the sound, the event(s) will be posted as soon as the sound
 begins playback. This value is specified as a
 [time string](instructions/time_strings.md).
+
+
+### bus:
+
+!!! info ""
+
+    New in MPF 0.80
+
+Single value, type: `string`. Defaults to empty.
+
+Specifies an audio bus on which this sound should be played. If none is provided, the default bus will be used.
 
 ### ducking:
 
@@ -364,6 +375,10 @@ particular sound. When `streaming` is set to `True`, the
 `simultaneous_limit` setting is ignored and a value of 1 is used.
 
 ### track:
+
+!!! warning ""
+
+    Deprecated in MPF 0.80. Use `bus` instead.
 
 Single value, type: `string`. Defaults to empty.
 

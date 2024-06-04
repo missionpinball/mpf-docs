@@ -59,10 +59,10 @@ console.
 
 ## Starting the MPF game engine
 
-You can run the MPF game engine by itself by running:
+You can run the MPF game engine by itself (no media controller) by running:
 
 ``` console
-mpf game <enter>
+mpf <enter>
 ```
 
 Note that if you do not have a media controller running, the game engine
@@ -77,7 +77,7 @@ use them, add them *after* the name of the MPF command you're running,
 like:
 
 ``` console
-mpf game -x -v
+mpf -x -v
 
 mpf mc -xvV
 
@@ -101,12 +101,12 @@ details and command-line options.
 
 * [MPF command-line utility](mpf.md) (Starts the MPF game
     engine and other commands)
-* [mpf game](commands/game.md) (Starts the
-    MPF game engine)
+* [mpf](commands/game.md) (Starts the
+    MPF engine)
 * [mpf mc](commands/mc.md) (Starts the MPF
     Media Controller)
 * [mpf both](commands/both.md) (Starts
-    both the MPF game engine and media controller at the same time)
+    both the MPF engine and media controller at the same time)
 * [mpf migrate](commands/migrate.md)
     (Migrates older config and show files to the current version)
 * [mpf hardware](commands/hardware.md)

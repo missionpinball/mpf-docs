@@ -6,6 +6,11 @@ title: Installing MPF on Mac
 
 *Last updated Mar 10, 2024*
 
+!!! warning "MPF 0.80 is Coming Soon"
+
+    This installation guide is for MPF 0.57 and the legacy MC, which is being replaced in the upcoming MPF 0.80 with the Godot MC. If you are just getting started with MPF, we recommend you [install MPF 0.80](index.md) instead.
+
+
 ## Install Python
 
 MPF 0.57 works on macOS running on both Intel and Apple Silicon (M1/M2

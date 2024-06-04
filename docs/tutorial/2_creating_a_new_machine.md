@@ -30,13 +30,46 @@ platform. (Windows to Linux, Mac to Windows, etc.)
     etc.). So you're really creating a pinball *machine* config, not a
     pinball game config.
 
-## 2. Create your machine folders
+## 2. Create a Repository for your machine
 
-Okay, so let's get started with your own game's machine folder. The
-first step is to create an empty folder somewhere. (Anywhere you want.)
-You can name this folder whatever you want too.
+It is strongly recommended that you use a Version Control System when working
+on your machine code. A VCS tracks changes to files and allows you to review,
+revert, and isolate changes to make sure you never lose progress or get your
+game into an irrecoverable bad state.
 
-Let's use the name "your_machine", and let's add that folder to the
+Additionally, using a repository means that you can share your code with others,
+which is important when asking for help and support.
+
+The most popular system is Git, and you can use Git for free on GitHub. Follow these
+guides to get setup with a GitHub account and create a new repository, which will
+hold all the code for your game.
+
+  * [Create a GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)
+  * [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+  * [Clone your repository to your computer](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+If you follow these steps, you'll now have a folder on your computer that you can
+sync with the online repository, track changes in, and share with others. This
+folder will be your machine folder, discussed in the next step.
+
+!!! note  "Convert an existing project to a Git repo"
+
+    If you have an existing MPF game already, you can still easily convert it to use Git for version control. Follow the above steps and clone your repository to a new folder an your computer, and then copy your MPF machine folder contents into the repository folder. Stage and commit all the files, then delete your old machine folder and work out of the new repository folder.
+
+For managing your repository, a desktop client can save a lot of headache. [SourceTree](https://www.sourcetreeapp.com) and [GitHub Desktop](https://desktop.github.com) are popular, easy-to-use choices.
+
+## 3. Your machine folder
+
+Okay, so let's get started with your own game's machine folder.
+
+!!! info
+
+  Hopefully you created a repository in the previous step and cloned it and now have
+  your repository folder on your computer. But if you skipped that part, the
+  first step is to create an empty folder somewhere. (Anywhere you want.)
+  You can name this folder whatever you want too.
+
+Let's say your repository is named "your_machine", and you cloned it into your
 `C:\pinball` folder, like this:
 
 ``` doscon
@@ -44,7 +77,7 @@ C:\pinball\your_machine
 ```
 
 Obviously if you're on Mac or Linux, you won't have a C: drive, but
-that doesn't matter for the tutorial. Just create a new folder empty
+that doesn't matter for the tutorial. Just clone your repository
 folder somewhere and name it whatever you want.
 
 Throughout this tutorial we'll refer to this as "your machine
@@ -76,12 +109,14 @@ not `config.yaml.txt`. (That's in the "View" menu of Explorer.)
 
 ## 4. Add #config_version=6 to the top of your config file
 
+
 The first thing you need to do when you create any new config file for
 MPF is to add an entry on the very top line that tells MPF what
 "version" of the MPF config spec you're using for the file you're
 creating.
 
 So just open the file (with a text editor or a free tool like
+[VS Code](https://code.visualstudio.com),
 [Atom](http://atom.io), [Sublime](https://www.sublimetext.com/), or
 [Notepad++](https://notepad-plus-plus.org/)) and then add that to the
 top of the file and save it. If you are familiar with an IDE such as
@@ -118,10 +153,22 @@ At this point, your environment should look like this:
 Note the folder structure, the location of the `config.yaml` file, and
 the `#config_version=6` as the only contents of that file.
 
-## 5. Run your game!
+## 5. Commit Your Changes
+
+Whenever you make changes to your code and you want to save a snapshot of your game at that point, it's time to commit your changes to your git repository.
+
+Using your git desktop client or command line, you can review your new changes (called "unstaged") and make sure you want to keep everything there. You can discard any changes you don't want, and "stage" the ones you want to keep.
+
+When all your changes are staged, make a new commit with a message describing what's being saved. In this case, something simple like "First commit" will be fine. Commit your changes with your message, and then "push" the changes to the remote (online) repository.
+
+Now your changes are safe and if you ever need to come back to this point (or share your code with someone else), it's ready!
+
+
+## 6. Run your game!
 
 Believe it our not, it's time to run your game! Simply open a console
-window and change to your machine folder, and run `mpf -b`, like this:
+window, activate your virtual environment, change to your machine folder,
+and run `mpf -b`, like this:
 
 ``` doscon
 C:\pinball\your_machine>mpf -b
