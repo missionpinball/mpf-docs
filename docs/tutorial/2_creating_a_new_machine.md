@@ -107,7 +107,8 @@ Text Document*, make sure that Windows Explorer is configured to show
 file extensions so you actually create a file called `config.yaml` and
 not `config.yaml.txt`. (That's in the "View" menu of Explorer.)
 
-## 4. Add #config_version to the top of your config file
+## 4. Add #config_version=6 to the top of your config file
+
 
 The first thing you need to do when you create any new config file for
 MPF is to add an entry on the very top line that tells MPF what
@@ -161,6 +162,7 @@ Using your git desktop client or command line, you can review your new changes (
 When all your changes are staged, make a new commit with a message describing what's being saved. In this case, something simple like "First commit" will be fine. Commit your changes with your message, and then "push" the changes to the remote (online) repository.
 
 Now your changes are safe and if you ever need to come back to this point (or share your code with someone else), it's ready!
+
 
 ## 6. Run your game!
 
