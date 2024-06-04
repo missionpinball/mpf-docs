@@ -11,11 +11,11 @@ title: CobraPin Pinball Controller powered by OPP
 
 Features:
 
-    * 24 solenoid outputs broken into 3 banks
-    * 38 direct inputs <OR> 22 direct inputs + 8x8 switch matrix
-    * Neopixel support for 512 RGB pixels (RGBW also possible but may be limited to \~460 pixels)
-    * 24-50V power filter. Board also provides the common ground for the supplies.
-    * Fuses for solenoid banks and Neopixels
+* 24 solenoid outputs broken into 3 banks
+* 38 direct inputs <OR> 22 direct inputs + 8x8 switch matrix
+* Neopixel support for 512 RGB pixels (RGBW also possible but may be limited to \~460 pixels)
+* 24-50V power filter. Board also provides the common ground for the supplies.
+* Fuses for solenoid banks and Neopixels
 
 The size of the board is about 197 x 115 mm. Mounting holes are
 available in the corners of the board, spaced 184 mm and 103 mm

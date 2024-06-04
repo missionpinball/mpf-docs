@@ -5,9 +5,9 @@ title: CobraPin Serial Segment Displays
 # NeoSeg (CobraPin) Serial Segment Displays
 
 
-Video about CobraPin serial segment displays (This was a prototype
+Video about CobraPin serial segment displays. The video shows a prototype
 7-digit 16-segment version versus the production 8-digit 14-segment
-version):
+version. Hence use the video only for general information. For configuration information follow the information below.
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iMeX1qC4EA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -27,8 +27,10 @@ hardware:
 
 ## Create the NeoSeg Light Groups
 
+For each neo segment you would like to use you have to use light group, in other words there is a 1:1 mapping between a light group and the piece of hardware you hold in your hands.
+
 The creation of the mpf lights for a NeoSeg display is handled by
-creating a light_group using "neoseg_displays." This is much easier
+creating a light_group using `neoseg_displays`. This is much easier
 than defining each light for each of the 120 segments in an 8-digit
 display.
 
@@ -72,8 +74,7 @@ light_settings:
 ## Create Segment Displays
 
 Once you have the light groups defined, you can arrange them into
-displays. These are the displays that can be targeted by a
-segment_display_player.
+displays. The light group is a `neoseg_displays` object and the logical display a `segment_displays` object. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.
 
 ``` mpf-config
 segment_displays:
@@ -102,6 +103,8 @@ only be wide enough for 7 digits for example. In that case, change the
 size to 7 and the 8th digit will remain unused.
 
 ## Complete Example Config
+
+Below you find a complete example config file, with this you can use a `segment_display_player` to diplay a certain text upon a given event.
 
 ``` mpf-config
 #config_version=5
@@ -185,4 +188,51 @@ light_settings:
       whitepoint: [1, 1, 1]
     NeoSeg_green:
       whitepoint: [.5, .5, .5]
+```
+## Complete Example Config
+
+Below you find a complete example config file to display scored points. To keep this example simple the `neoseg_displays` object is mapped 1:1 to a `segment_displays` object.
+
+``` mpf-config
+#config_version=5
+
+hardware:
+  platform: opp
+  driverboards: gen2
+  segment_displays: light_segment_displays
+
+#create light group for each NeoSeg display
+neoseg_displays:
+  neoSeg_0:
+    start_channel: 0-0-0
+    size: 8digit
+    light_template:
+      type: w
+      subtype: led
+      
+segment_displays:
+  neoSegTop:
+    number: 1
+    size: 16
+    integrated_dots: true
+    use_dots_for_commas: true
+    default_transition_update_hz: 30
+    platform_settings:
+      light_groups:
+        - neoSeg_0
+      type: 14segment
+      
+show_player:
+  player_score{player_num==1}: #of course for more than 1 player you need to have multiple entries
+    p1_score:
+      show_tokens:
+        txt: "{(players[0].score):d}"
+        
+shows:
+  p1_score:
+  - duration: -1
+    segment_displays:
+      neoSegTop:
+        text: (txt)
+
 ```
