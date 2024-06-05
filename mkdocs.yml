@@ -172,6 +172,7 @@ nav:
       - OPP Switches: hardware/opp/switches.md
       - CobraPin segments: hardware/opp/cobrapin/cobrapin_serial_segment_displays.md
       - CobraPin Pinball Controller powered by OPP: hardware/opp/cobrapin/index.md
+      - OPP EM Combo boards: hardware/opp/oppcombo/index.md
     - P-ROC/P3-ROC:
       - hardware/multimorphic/index.md
       - Connecting: hardware/multimorphic/connecting.md
