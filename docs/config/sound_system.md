@@ -7,6 +7,11 @@ title: "sound_system:"
 
 --8<-- "config_section.md"
 
+!!! warning "Deprecated in MPF 0.80
+
+    The GMC used by MPF 0.80 manages audio outside of configuration files. See the [GMC Setup Guide](../gmc/setup.md) for instructions on configuring the audio system in GMC.
+
+
 | Valid in | |
 |-----|:----:|
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|

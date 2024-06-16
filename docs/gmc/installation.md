@@ -59,11 +59,15 @@ For complete control, you can clone the MPF-GMC repository to your computer and 
 
 You now have a copy of the MPF-GMC source code on your machine, and you need to share it with your Godot project. To update GMC, go to the repository folder in your terminal and type `git fetch` and `git pull`.
 
-#### Option 1: Symbolic Links (Mac & Linux)
+#### Option 1: Symbolic Links
 
 A symbolic link is a way to mirror one file or folder in a second location, which makes it easy to keep data synchronized. With a symbolic link from the GMC repository to your project folder, your project will always have the latest changes whenever you pull from the GMC repository.
 
-You will create a symbolic link *mpf-gmc* in your project */addons* folder that points to the *mpf-gmc* folder in the GMC repository. The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
+You will create a symbolic link *mpf-gmc* in your project */addons* folder that points to the *mpf-gmc* folder in the GMC repository.
+
+**Mac & Linux**
+
+The syntax is `sudo ln -s <path to GMC repository/addons/mpf-gmc> <path to project folder/addons/mpf-gmc>`, and will look something like this:
 
 ``` console
   (mpf080) $> sudo ln -s /Users/tommy/git/mpf-gmc/addons/mpf-gmc /Users/tommy/pinballgame/addons/mpf-gmc
@@ -80,12 +84,20 @@ When successful, you should see a new *mpf-gmc* folder in the *addons* folder yo
   lrwxr-xr-x    41 Apr  8 19:09 mpf-gmc -> /Users/tommy/git/mpf-gmc/addons/mpf-gmc
 ```
 
-#### Option 2: Copy the MPF-GMC Folder (Windows)
+**Windows**
 
-Windows does not support symbolic links in the same way, so you must manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your project *addons* folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
+The syntax is `mklink /d <path to project folder/addons/mpf-gmc> <path to GMC repository/addons/mpf-gmc>` and will look something like this:
+
+``` console
+  (mpf080) $> mklink /d "C:\repos\pinballgame\addons\mpf-gmc" "C:\repos\mpf-gmc\addons\mpf-gmc"
+```
+
+
+#### Option 2: Copy the MPF-GMC Folder
+
+If you do not create a symbolic link, you can manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your project *addons* folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
 
 The downside of copying the folder is that you will need to manually re-copy the folder each time you download a new update to the GMC.
-
 
 ## Keeping MPF-GMC Up-To-Date
 MPF-GMC is in active development and changes frequently, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest and greatest, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.
@@ -100,9 +112,9 @@ If you cloned the MPF-GMC repository, you need to fetch and pull:
   (mpf080) ~/git/mpf-gmc $> git pull
 ```
 
-**Mac and Linux Users:** If you are using a symlink to mirror the *mpf-gmc* folder in your project *addons* folder, the above steps are enough.
+**Symlink Users:** If you are using a symlink to mirror the *mpf-gmc* folder in your project *addons* folder, the above steps are enough.
 
-**Windows Users:** If you have copy+pasted the *mpf-gmc* folder from the GMC repository to your project *addons* folder, you will need to re-copy+paste the folder after you fetch and pull.
+**Copy+Paste Users:** If you have copy+pasted the *mpf-gmc* folder from the GMC repository to your project *addons* folder, you will need to re-copy+paste the folder after you fetch and pull.
 
 Because of how Godot processes and caches plugins and autoloads, sometimes pulling a fresh update of GMC will trigger errors and warnings in the Godot log. This is expected the first time you open your project in Godot after a GMC update. You can use the *Project > Reload Current Project* menu to refresh the Godot editor and clear out errors after updating.
 
@@ -110,7 +122,7 @@ Because of how Godot processes and caches plugins and autoloads, sometimes pulli
 
     In some cases, a godot project can get corrupted with cached variants of GMC autoload/class files that cause a slew of errors on startup, even after restarting the editor.
 
-    In these rare cases, exit the editor and from the Project List, remove your project from the list of saved projects. Then in your project folder delete the *.godot* folder and re-import your project.godot file into the Project List.
+    In these rare cases, exit the editor and from the Project List, remove your project from the list of saved projects. Then in your project folder delete the */.godot* folder and re-import your project.godot file into the Project List.
 
 ## Activate the GMC Plugin
 

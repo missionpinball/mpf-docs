@@ -88,7 +88,9 @@ After creating your Python 3.8+ [virtual environment](virtual-environments.md), 
 ``` console
 
     git clone https://github.com/missionpinball/mpf
-    pip install -e mpf
+    cd mpf
+    git checkout 0.80.x
+    pip install -e .
 ```
 
 Now when inside your virtual environment, you can run MPF simply by typing `mpf` while in your machine folder. Typing `pip list` will reveal that the MPF module is being run directly from the repo folder on your computer. To update MPF, navigate inside the MPF repo folder and type `git fetch` and `git pull`.
