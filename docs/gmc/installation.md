@@ -12,9 +12,14 @@ title: Installing GMC
 
 Before you get working with GMC, you need to install MPF 0.80 by following the [MPF Installation Guide](../install/index.md).
 
+
+!!! note "Upgrade is available"
+
+    If you already have a working MPF 0.57 installation, you can upgrade to MPF 0.80 with the command `pip install --upgrade --pre mpf`. However, to maintain the option of reverting back to 0.57 it's recommended to create a new, separate virtual enviroment for MPF 0.80 and install it there.
+
 ## Download Godot 4
 
-The Godot Media Controller is, of course, built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and install it on your machine.
+The Godot Media Controller is built on the Godot game engine. Visit [https://godotengine.org](https://godotengine.org) to download the latest version of the Godot Editor (4.2 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).
 
 After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.
 
@@ -24,9 +29,9 @@ Finally, in your game project folder create a new folder called *addons*.
 
 !!! note "Root project vs GMC subfolder"
 
-    Some users prefer to create a distinct "gmc" subfolder in their MPF machine folder, and save their Godot project there. This keeps the Godot Editor *FileSystem* tree cleaner because it's not filled with MPF config files, and can make it easier to navigate and maintain each piece independently.
+    Some users prefer to create a distinct "gmc" subfolder in their MPF machine folder, and save their Godot project there. This keeps the Godot Editor *FileSystem* tree cleaner because it's not mixing Godot files with MPF config files, which can make it easier to navigate and maintain.
 
-    Note that Godot only has access to files in its project folder and below. If you choose to make a "gmc" subfolder for your Godot project, all slides, sounds, and widgets will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
+    However, note that Godot only has access to files in its project folder and subfolders. If you choose to make a "gmc" subfolder for your Godot project, all slides, widgets, sound files, and video files will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
 
 ## Install the GMC Plugin
 

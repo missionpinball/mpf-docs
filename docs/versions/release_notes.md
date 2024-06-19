@@ -20,12 +20,16 @@ MPF 0.57.2 includes improvements to ball search.
 
 ### New Features
 * Switch `ignore_during_ball_search:` config option to prevent false positives during searches
+* Switch support for `playfield:` config option to propagate to devices (drop targets, shots, etc.)
 * Playfield `enable_ball_search:` now supports templates, e.g. `settings.enable_ball_search==1`
+* OPP: Support for `WING_SOL_8` wings with up to 32 solenoids
+* Virtual Pinball: Support for segment displays
 
 ### Improvements
 * Playfield *playfield_active* event now includes the source of the active trigger
 * Better (more reliable) suppression of switch hits from Drop Target firings during ball search
 * Better error messaging for ball search on a playfield without iterator devices
+* Ball devices that mark playfield active can now inherit the playfield from their switch
 
 ### Bug Fixes
 * Fixed a bug in ball search phase/iteration counting that miscounted the number of phases and iterations to perform
