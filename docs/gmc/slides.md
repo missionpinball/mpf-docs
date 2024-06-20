@@ -64,6 +64,16 @@ For adding MPF-based data to a slide, the `MPFVariable` class provides a slew of
 
 Check out the [MPFVariable Config Reference](reference/mpf-variable.md) for documentation.
 
+## The Special "Overlay" Slide
+
+Sometimes you may want to display a widget onscreen using `widget_player:` without targeting a specific slide. There are two scenarios that GMC supports:
+
+* **No Slide Specified**
+  If you call `widget_player:` without passing a `slide:` argument, the widget will be played on whatever the currently active slide is. This is convenient for when you don't know or don't care what that slide may be. The downside is that if this slide is removed the widget will go with it, which you may not want.
+
+* **Special "Overlay" Slide**
+  Each `MPFDisplay` has a special "overlay" slide that sits on top of the slide stack. If you call `widget_player:` and pass `slide: _overlay` (note the preceding underscore) then the display will render the widget on top of all of the slides. This means that if any slide is added or removed from the stack, the widget will be unaffected.
+
 ## Slide Custom Methods
 
 With all of the robust features available through Godot, how can you use MPF to control behavior of a slide after it's on screen? Through the use of **slide methods**, a new feature of MPF to trigger custom behavior on a slide.
