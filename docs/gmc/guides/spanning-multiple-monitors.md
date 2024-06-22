@@ -33,7 +33,7 @@ Right-click on your new scene in the *FileSystem* window and select **Set as Mai
 
 ## Create Main Display
 
-The first display will be run on the main screen, and doesn't require extra setup. In your scene tree add a new node of type `MPFDisplay` and give it a name (this name will be how it's targeted in MPF `slide_player`).
+The first display will be run on the main screen, and doesn't require extra setup. In your scene tree add a new node of type `MPFDisplay` and give it a name (this name will be how it's targeted in MPF `slide_player` ex: 'primary').
 
 In the *Inspector* panel set `is_default` to true and select an initial slide. For most use cases, the default GMC initial slide will work (*/addons/mpf-gmc/slides/startup.tscn*). Expand the *Layout > Transform* section and set the size to be the dimensions of the main monitor.
 
@@ -55,7 +55,7 @@ Under the *Flags* dropdown, set the following:
   * **Unresizable**: On
   * **Borderless**: On
 
-Now create a new `MPFDisplay` child node of this `Window`. Set the same Initial Slide as the other, and under *Layout > Transform > Size* set the dimensions of the second monitor. Give this node a name that you will reference in MPF to target it.
+Now create a new `MPFDisplay` child node of this `Window`. Set the same Initial Slide as the other, and under *Layout > Transform > Size* set the dimensions of the second monitor. Give this node a name that you will reference in MPF to target it (ex: 'mini-display').
 
 In the Editor scene view, you should now see two copies of the MPF logo, one for each display.
 
