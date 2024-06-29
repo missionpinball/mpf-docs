@@ -59,6 +59,13 @@ which will keep the installed packages from conflicting with other
 applications on your computer. Before proceeding, follow the steps on
 the [virtual environment installation guide](virtual-environments.md)
 
+!!! danger "Do not skip the Virtual Environment"
+
+    Virtual environments are important for keeping your computer clean and preventing different packages from
+    conflicting. Without virtual environments, you may encounter dependency conflicts and stale packages that
+    will prevent MPF from running. Troubleshooting and manually cleaning up packages is a pain—do your future
+    self a favor and setup an MPF virtual environment now!
+
 ## Install MPF
 
 First, activate the virtual environment you setup in the previous step.

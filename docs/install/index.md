@@ -42,9 +42,9 @@ As of MPF 0.80 we are providing precompiled binaries for new users to get up and
   * Not (yet) available for all platforms
   * No option to customize MPF or use bleeding-edge features
 
-!!! note "No, it's not actually precompiled"
+!!! note ""
 
-    MPF is written in Python, which is an interpreted language, and therefore cannot be truly "compiled" into a binary. The provided binaries are special applications that bundle a copy of Python, the MPF framework modules, and all dependency packages into a single file.
+    Okay, it's not technically "pre-compiled". MPF is written in Python, which is an interpreted language, and therefore cannot be truly "compiled" into a binary. The provided binaries are special applications that bundle a copy of Python, the MPF framework modules, and all dependency packages into a single file.
 
     The point is, you can download a single file and run it and have a working copy of MPF!
 
@@ -52,6 +52,13 @@ As of MPF 0.80 we are providing precompiled binaries for new users to get up and
 
 Regardless of your platform or Python version, a [virtual environment](virtual-environments.md) is
 strongly recommended when working with MPF unless you are using a precompiled binary.
+
+!!! danger "Do not skip the Virtual Environment"
+
+    Virtual environments are important for keeping your computer clean and preventing different packages from
+    conflicting. Without virtual environments, you may encounter dependency conflicts and stale packages that
+    will prevent MPF from running. Troubleshooting and manually cleaning up packages is a pain—do your future
+    self a favor and setup an MPF virtual environment now!
 
 After creating your Python 3.8-3.12 virtual environment and activating it, install MPF 0.80.
 

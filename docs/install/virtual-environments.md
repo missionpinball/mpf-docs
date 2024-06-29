@@ -52,21 +52,20 @@ but can still be helpful for keeping packages organized and cleanly upgrading.
 To keep itself isolated from other programs, your virtual enviroment only
 activates when you tell it to.
 
-!!! note
+!!! note  Make note of this activation command
 
-    If you defined a specific path in the above step, replace mpfenv with the
-    path to the given folder, e.g., ``C:\Users\Rudy\venvs\mpf``. 
+    You may want to write this step down, as you'll run it every time you open up
+    a terminal window to work on MPF. If you are on a dedicated MPF machine, you
+    could add this line to your bash/zsh profile to automatically run it at login.
 
-You can enable the virtual environment with the dot command from the terminal:
 
-``` console
-  . ~/mpfenv/bin/activate
-```
+If you defined a specific path when creating your virtual environment, replace
+`mpfenv` below with the path to the given folder, e.g., ``C:\Users\Rudy\venvs\mpf``.
 
-Note that the first character is a period, followed by a space, then the path
-to your virtual environment and "/bin/activate".
-
-For Windows users, you well activate with a bat/ps1 script depending on whether you're using the Command Prompt or the PowerShell.
+**Windows:**
+For Windows users, you will activate with a bat/ps1 script depending on whether
+you're using the Command Prompt or the PowerShell. The script lives in the "Scripts"
+folder under where you created your virtual environment.
 
 ``` console
 # Command Prompt:
@@ -76,20 +75,29 @@ For Windows users, you well activate with a bat/ps1 script depending on whether 
 PS > mpfenv/Scripts/Activate.ps1
 ```
 
-For users on Mac OSX, you will use `source` instead:
+**Mac:**
+
+For users on Mac OSX, you will use the `source` command with the path to your venv:
 
 ``` console
   source ~/mpfenv/bin/activate
 ```
 
-!!! note  Make note of this activation command
+**Linux:**
 
-    You may want to write this step down, as you'll run it every time you open up
-    a terminal window to work on MPF. If you are on a dedicated MPF machine, you
-    could add this line to your bash/zsh profile to automatically run it at login.
+Linux users can enable the virtual environment with the dot command from the terminal:
+``` console
+  . ~/mpfenv/bin/activate
+```
 
-You'll know you're in the virtual environment because the console prompt will include
-the name of your venv in parenthesis.
+Note that the first character is a period, followed by a space, then the path
+to your virtual environment and "/bin/activate".
+
+
+**All Platforms:**
+
+After you run the activation, you'll know you're in the virtual environment
+because the console prompt will include the name of your venv in parenthesis.
 
 ``` console
   My-Mac:~ python --version
@@ -100,7 +108,7 @@ the name of your venv in parenthesis.
   (mpfenv) My-Mac:~
 ```
 
-!!! note  Virtual environments set a default "python"
+!!! note  "Virtual environments set a default python"
 
     The python you used to create the virtual environment will now be the
     default python. Outside the virtual environment "python" may be Python 2 or 3, and
