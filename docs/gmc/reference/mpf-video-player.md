@@ -86,7 +86,10 @@ If `hide_behavior` is "continue", it will play immediately even if not visible.
 
 Single value, type `boolean`. Default `false`.
 
-If checked, this video will expand to fill the size of the `MPFVideoPlayer` container. If unchecked, the video will play at its native resolution.
+If checked, this video will scale to fill the size of the `MPFVideoPlayer` node. You can manually position and size the video player node to your liking, or let it inherit from its parent container.
+
+If unchecked, the video will play at its native resolution. You will not be able to adjust the size of the video player node.
+
 
 ### loop:
 
