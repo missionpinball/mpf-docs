@@ -103,16 +103,16 @@ create subscriptions for variables within them, and automatically update the dis
 text when the variable value changes. This is a convenient way to
 persist player variables (e.g. score) without having to continually push updates.
 
-!!! warning: Can cause memory bloat
+!!! warning "Can cause memory bloat"
 
-    Using the "stack" method for updates will create a new event subscriber for each entry, so misusing the segment_display_player and sending manual updates will cause
-    hundreds or thousands of subscribers to be created, which can cause lag and memory issues.
+        Using the "stack" method for updates will create a new event subscriber for each entry, so misusing the segment_display_player and sending manual updates will cause
+        hundreds or thousands of subscribers to be created, which can cause lag and memory issues.
 
-    In a future release of MPF **"replace" will become the default setting** because it is more aligned with how most people implement their segment_display_player.
+        In a future release of MPF **"replace" will become the default setting** because it is more aligned with how most people implement their segment_display_player.
 
-    If you know what you're doing and want to use "stack", you should set it explicitly in your config to prevent errors when the default changes to "replace".
+        If you know what you're doing and want to use "stack", you should set it explicitly in your config to prevent errors when the default changes to "replace".
 
-    If you are unsure or don't know which to use, use "replace".
+        If you are unsure or don't know which to use, use "replace".
 
 ### use_dots_for_commas:
 
