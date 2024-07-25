@@ -100,6 +100,10 @@ event_player:
       action: select
 ```
 
-When the END key on the on-screen keyboard is selected, GMC will post an event *text_input_\<input_name\>_complete* where input_name is the `input_name` value of the MPFTextInput node.
+When the END key on the on-screen keyboard is selected, GMC will post an event *text_input_<input_name\>_complete* where input_name is the `input_name` value of the MPFTextInput node.
 
 This event will include an argument `text` with the text string entered by the user.
+
+```
+==='text_input_high_score_complete'=== Args={'text': 'MY NAME'}
+```
