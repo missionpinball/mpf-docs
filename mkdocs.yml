@@ -629,6 +629,7 @@ nav:
       - MPFLogger: gmc/reference/mpf-logger.md
       - MPFSlide: gmc/reference/mpf-slide.md
       - MPFSoundAsset: gmc/reference/mpf-sound-asset.md
+      - MPFTextInput: gmc/reference/mpf-text-input.md
       - MPFVariable: gmc/reference/mpf-variable.md
       - MPFVideoPlayer: gmc/reference/mpf-video-player.md
       - MPFWidget: gmc/reference/mpf-widget.md

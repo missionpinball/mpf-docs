@@ -14,9 +14,9 @@ documentation for that specific release.
 
 ## 0.57.2
 
-*Not Yet Released*
+Release: July 17, 2024
 
-MPF 0.57.2 includes improvements to ball search.
+MPF 0.57.2 includes substantial upgrades to ball search, and numerous bug fixes and improvements.
 
 ### New Features
 * Switch `ignore_during_ball_search:` config option to prevent false positives during searches
@@ -24,15 +24,19 @@ MPF 0.57.2 includes improvements to ball search.
 * Playfield `enable_ball_search:` now supports templates, e.g. `settings.enable_ball_search==1`
 * OPP: Support for `WING_SOL_8` wings with up to 32 solenoids
 * Virtual Pinball: Support for segment displays
+* Spinners: `max_events_per_second:` config option to reduce event load during spins
 
 ### Improvements
 * Playfield *playfield_active* event now includes the source of the active trigger
-* Better (more reliable) suppression of switch hits from Drop Target firings during ball search
+* Better (more reliable) suppression of switch hits from Drop Target firings during ball search with `switch.mute()`
 * Better error messaging for ball search on a playfield without iterator devices
 * Ball devices that mark playfield active can now inherit the playfield from their switch
+* Switches no longer post active events during startup
+* Shows now include debug logging for starting, stopping, and pausing
 
 ### Bug Fixes
 * Fixed a bug in ball search phase/iteration counting that miscounted the number of phases and iterations to perform
+* Fixed a bug in FAST LED channel numbering for rolling over channel offsets
 
 ## 0.57.1
 
