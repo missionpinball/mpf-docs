@@ -37,7 +37,8 @@ display.
 If you want to use a machine variable in a slide player you can access
 it similarly to normal variables, you need to use the syntax
 `(machine|my_var_name)` where `my_var_name` obviously has to be replaced
-with your variable name.
+with your variable name. If you want to access the machine variable in a player, e.g. segment player you need to use this syntax
+`{machine.my_var_name}`
 
 Video about player and machine variables:
 
