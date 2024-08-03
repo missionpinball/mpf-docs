@@ -75,6 +75,11 @@ Step 3:
 
 ## Setting step time
 
+!!! warning "Important Syntax change with mpf 0.80"
+
+    In this chapter the used sytax for the time parameter is for versions up to 0.57. With mpf 0.80
+    you need to add quotes around time values which are not zero, e.g. `time: "1"`, `time: "+1"` but `time: 0`.
+
 The `time:` setting in each step represents the time when that step
 *starts*. The first step will always be `time: 0`
 
