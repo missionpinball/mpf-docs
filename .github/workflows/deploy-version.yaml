@@ -6,12 +6,6 @@ on:
       - main
       - "0.80"
 
-permissions:
-  contents: write
-  id-token: write
-  pages: write
-
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -39,28 +33,19 @@ jobs:
           git config --global user.name Docs deploy
           git config --global user.email docs@dummy.bot.com
 
-      - name: Fetch gh-pages branch
-        run: |
-          git fetch
-          git checkout gh-pages
-          git pull
-          git checkout ${{ github.ref_name }}
+      # - name: Fetch gh-pages branch
+      #   run: |
+      #     git fetch
+      #     git checkout gh-pages
+      #     git pull
+      #     git checkout ${{ github.ref_name }}
 
       - name: Publish 0.80 website and API reference
         if: ${{ github.ref_name == '0.80' }}
         run: |
-          mike deploy --push --update-aliases 0.80 dev
+          mike deploy --push --force --update-aliases 0.80 dev
 
       - name: Publish latest docs website and API reference
         if: ${{ github.ref_name == 'main' }}
         run: |
-          mike deploy --push --update-aliases 0.57 latest
-
-      # - name: Upload Artifact
-      #   uses: actions/upload-pages-artifact@v2
-      #   with:
-      #     # upload entire directory
-      #     path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          mike deploy --push --force --update-aliases 0.57 latest
