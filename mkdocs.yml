@@ -21,8 +21,8 @@ markdown_extensions:
   - pymdownx.details        # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#details
   - pymdownx.superfences    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
   - pymdownx.emoji:         # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.snippets:      # https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
       base_path: includes
       check_paths: true
