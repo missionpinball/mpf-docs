@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  pages: write
 
 jobs:
   deploy:
@@ -14,6 +16,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,4 +34,22 @@ jobs:
         run: python build_tools/generate_showcase_pages.py
 
       - name: Build and deploy site
-        run: mkdocs gh-deploy --force
+        #run: mkdocs gh-deploy --force
+        run: |
+          git config user.name "mike-ci-bot"
+          git config user.email "missionpinball@users.noreply.github.com"
+          git fetch
+          git checkout gh-pages
+          git pull
+          git checkout main
+          mike deploy 0.57 latest
+          mike set-default latest
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # upload entire directory
+          path: 'site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
