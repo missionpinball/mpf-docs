@@ -36,12 +36,12 @@ jobs:
         run: |
           git config user.name "mike-ci-bot"
           git config user.email "missionpinball@users.noreply.github.com"
-          # git fetch
-          # git checkout gh-pages
-          # git pull
-          # git checkout main
+          git fetch
+          git checkout gh-pages
+          git pull
+          git checkout main
           mike deploy 0.57 latest
-          mike set-default --push latest
+          mike set-default latest
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
