@@ -30,4 +30,7 @@ jobs:
 
       - name: Build and deploy site
         #run: mkdocs gh-deploy --force
-        run: mike deploy 0.57 latest
+        run: |
+          git config user.name "mike-ci-bot"
+          git config user.email "missionpinball@users.noreply.github.com"
+          mike deploy 0.57 latest
