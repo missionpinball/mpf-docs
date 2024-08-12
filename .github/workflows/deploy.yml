@@ -36,5 +36,6 @@ jobs:
           git fetch
           git checkout gh-pages
           git pull
+          git checkout main
           mike deploy --push 0.57 latest
           mike set-default --push latest
