@@ -58,11 +58,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # upload entire directory
-          path: '.'
+      # - name: Upload Artifact
+      #   uses: actions/upload-pages-artifact@v2
+      #   with:
+      #     # upload entire directory
+      #     path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
