@@ -35,7 +35,7 @@ Single value, type: [lights:](lights.md).
 Defaults to empty.
 
 This is a list of sub-settings (indented) that are regular settings from
-the [/about/help_us_to_write_it](lights.md) section of your machine
+the [../about/help_us_to_write_it](lights.md) section of your machine
 config. Any settings that are valid there are valid here, and they're
 applied to all the LEDs in the ring.
 
