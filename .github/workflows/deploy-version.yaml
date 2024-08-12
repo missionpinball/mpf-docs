@@ -3,7 +3,9 @@ name: Version-dependent docs build & deploy
 on:
   push:
     branches:
+      - main
       - "0.80"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -30,6 +32,13 @@ jobs:
         run: |
           git config --global user.name Docs deploy
           git config --global user.email docs@dummy.bot.com
-      - name: Publish docs website and API reference
+
+      - name: Publish 0.80 website and API reference
+        if: ${{ github.ref_name == "0.80" }}
         run: |
           mike deploy --push --update-aliases 0.80 dev
+
+      - name: Publish latest docs website and API reference
+        if: ${{ github.ref_name == "main" }}
+        run: |
+          mike deploy --push --update-aliases 0.57 latest
