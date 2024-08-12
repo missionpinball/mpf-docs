@@ -29,4 +29,5 @@ jobs:
         run: python build_tools/generate_showcase_pages.py
 
       - name: Build and deploy site
-        run: mkdocs gh-deploy --force
+        #run: mkdocs gh-deploy --force
+        run: mike deploy 0.57 latest
