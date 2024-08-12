@@ -33,6 +33,13 @@ jobs:
           git config --global user.name Docs deploy
           git config --global user.email docs@dummy.bot.com
 
+      - name: Fetch gh-pages branch
+        run: |
+          git fetch
+          git checkout gh-pages
+          git pull
+          git checkout ${{ github.ref_name }}
+
       - name: Publish 0.80 website and API reference
         if: ${{ github.ref_name == '0.80' }}
         run: |
