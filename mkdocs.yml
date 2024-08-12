@@ -1,5 +1,5 @@
 site_name: The Mission Pinball Framework
-site_url: https://missionpinball.org
+site_url: https://missionpinball.org/
 site_description: Mission Pinball Framework (MPF) open source software framework that's used to run real pinball machines.
 use_directory_urls: true
 repo_url: https://github.com/missionpinball/mpf-docs
@@ -8,9 +8,20 @@ edit_uri: blob/main/docs/
 
 plugins:
   - search                # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
-
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: latest
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
 extra_css:
   - stylesheets/mpf.css     # Sets our custom colors
+
+extra:
+  version:
+    provider: mike
 
 markdown_extensions:
   - toc:                    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
@@ -21,7 +32,7 @@ markdown_extensions:
   - pymdownx.details        # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#details
   - pymdownx.superfences    # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
   - pymdownx.emoji:         # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.snippets:      # https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
       base_path: includes
@@ -47,6 +58,7 @@ theme:
     - navigation.top        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
     - content.action.edit   # https://squidfunk.github.io/mkdocs-material/upgrade/#contentaction
     - toc.follow            # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-following
+    - content.code.annotate # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
 
   palette:                  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
     # Palette toggle for light mode

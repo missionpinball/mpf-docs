@@ -4,3 +4,4 @@
 # except the files we need which start with _
 docs/showcase/*
 !docs/showcase/_*
+site
