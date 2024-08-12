@@ -34,11 +34,11 @@ jobs:
           git config --global user.email docs@dummy.bot.com
 
       - name: Publish 0.80 website and API reference
-        if: ${{ github.ref_name == "0.80" }}
+        if: ${{ github.ref_name == '0.80' }}
         run: |
           mike deploy --push --update-aliases 0.80 dev
 
       - name: Publish latest docs website and API reference
-        if: ${{ github.ref_name == "main" }}
+        if: ${{ github.ref_name == 'main' }}
         run: |
           mike deploy --push --update-aliases 0.57 latest
