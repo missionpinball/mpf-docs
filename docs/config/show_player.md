@@ -300,7 +300,7 @@ In the example above, the show called "show1" will be played, but the
 show token called "led" in the show will be replaced at runtime with
 the value "right_inlane".
 
-To learn more about show tokens and how to use dynamic values take a look [here](../shows/tokens.md).
+To learn more about show tokens and how to use dynamic values take a look at the [Tokens](../shows/tokens.md) reference page.
 
 ### speed:
 

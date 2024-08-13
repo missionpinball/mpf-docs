@@ -9,18 +9,16 @@ MPF contains a “CustomCode” concept which lets you add custom code to your g
 
 CustomCode classes are Python modules that run at the “root” of your game. You can use them to do anything you want.
 
-Note that MPF also has the ability to run custom mode code which is code that is associated with a certain game mode and is generally only active when the mode it’s in is active. So if you just want to write your own custom game logic, you’ll probably use mode code.
-
-CustomCode classes, on the other hand, are sort of “machine-level” custom code. CustomCode classes are nice if you have some kind of custom device type that doesn’t match up to any of MPF’s built in devices. The elevator and claw unloader in Demolition Man is a good example, and what we’ll use here.
+CustomCode classes are sort of “machine-level” custom code. CustomCode classes are nice if you have some kind of custom device type that doesn’t match up to any of MPF’s built in devices. The elevator and claw unloader in Demolition Man is a good example, and what we’ll use here.
 
 (You can read about how to download and run Demo Man in the example games section section of the MPF User Documentation.)
 
 Here’s how to create a custom code class:
 ## Create your custom code file
 
-First, add a `custom_code` folder to your machine folder (you can use another name if you want). Then inside there, create the Python file that will hold your custom code classes. You can name this file whatever you want, just remember the name for the next step.
+First, add a `custom_code` folder to your machine folder. Then inside there, create the Python file that will hold your custom code classes.
 
-Add an empty `__init__.py` file into your folder to make it a package. It become the package code and all your classes will be referenced as `custom_code.file_name.ClassName`.
+All your classes will be referenced as `custom_code.file_name.ClassName`.
 
 ## Open and edit your custom code class file
 
@@ -33,9 +31,9 @@ class Claw(CustomCode):
     pass
 ```
 
-Note that MPF contains a CustomCode base class which is very simple. You can see the source of it on GitHub [here](https://github.com/missionpinball/mpf/blob/dev/mpf/core/custom_code.py). We called our class Claw in this case.
+Note that MPF contains a CustomCode base class which is very simple. You can see the [CustomCode source](https://github.com/missionpinball/mpf/blob/dev/mpf/core/custom_code.py) on GitHub. We called our class Claw in this case.
 
-Pretty much all this does is give you a reference to the main MPF machine controller at self.machine, as well as setup a delay manager you can use and set the name of your class. There’s also an on_load() method which is called when the class is loaded which you can use in your own code.
+Pretty much all this does is give you a reference to the main MPF machine controller at `self.machine`, as well as setup a delay manager you can use and set the name of your class. There’s also an `on_load()` method which is called when the class is loaded which you can use in your own code.
 
 ## Add the class to your machine config
 
@@ -45,7 +43,7 @@ For Demo Man, that looks like this:
 
 ```
 custom_code:
-  - code.claw.Claw
+  - custom_code.claw.Claw
 ```
 
 This references class Claw in file claw.py which lives package custom_code.

@@ -247,7 +247,7 @@ show_player:
         txt: (number)
 ```
 
-The number of the player whose turn started is being displayed in the show where you have used the placeholder `txt`. The argument `number` is probably used in many events, when refering to `number` you always refer to the event which is triggering this show. You don't have to specify the event name in some kind of dot notation.
+The number of the player whose turn started is being displayed in the show where you have used the placeholder `txt`. The argument `number` is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.
 
 ### Variable values
 You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with `current_player.<variable>`
@@ -262,7 +262,7 @@ show_player:
 In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use `players[<player_number>].<variable>` where `player_number` is the player starting with 0, e.g. the second player needs the value 1 in this example.
 
 
-You can as well access game variables, machine variables or settings. Just use the notation `game.<variable>` or `machine.<variable>` or `settings.<variable>`. To learn more about dynamic values look as well [here](../config/instructions/dynamic_values.md).
+You can as well access game variables, machine variables or settings. Just use the notation `game.<variable>` or `machine.<variable>` or `settings.<variable>`. You can learn more about using variables as tokens in the [Dynamic Values](../config/instructions/dynamic_values.md) reference page.
 
 ### Formatting of variable values
 mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this

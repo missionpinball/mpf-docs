@@ -15,7 +15,19 @@ Here’s how you get started with custom mode code.
 
 First, go into the mode folder where you want to create your custom code, and add a “code” folder to that mode folder. Then inside that folder, create a file (we usually give this file the same name as the mode) with a .py extension.
 
-For example, if you wanted to create custom code for your base mode, it would look like this `<mpf-game-folder>/modes/base/code/base.py`
+For example, if you wanted to create custom code for your base mode, it might look like this:
+
+```
+<mpf-game-folder>
+├── config
+└── modes
+    ├── attract
+    └── base
+        ├── config
+        │   └── base.yaml
+        └── code
+            └── base.py
+```
 
 ## Open up the new Python file you just created
 
@@ -59,7 +71,7 @@ You can look at the Mode base class (the link from GitHub from earlier) to see w
 
 * **mode_start:** Called every time the mode starts, just after the mode_<name>_started event is posted.
 
-* **add_mode_event_handler:** This is the same as the main add_event_handler() method from the Event Manager, except since it’s mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular self.machine.mode.add_handler() method.
+* **add_mode_event_handler:** This is the same as the main add_event_handler() method from the Event Manager, except since it’s mode-specific it will also automatically remove any event handlers that you registered when the mode stops. (If you want to register event handlers that are always watching for events even when the mode is not running, you can use the regular `self.machine.mode.add_handler()` method.
 
 You don’t have to use all of these if you don’t want to.
 
@@ -88,22 +100,23 @@ from mpf.core.mode import Mode
 class Base(Mode):
 
     def mode_init(self):
-        print("My custom mode code is being initialized")
+        self.machine.log.info("My custom mode code is being initialized")
+        #Technically the Python print command works as well, but make it a habit to log properly
 
     def mode_start(self, **kwargs):
         # The mode_start method needs **kwargs because some events that
         # start modes pass additional parameters
 
-        print("My custom mode code is starting")
+        self.machine.log.info("My custom mode code is starting")
 
-        # call a delay in 5 seconds
+        # Set a delay to call self.my_callback() in 5 seconds
         self.delay.add(5000, self.my_callback)
 
         # what player are we?
-        print(self.player.number)
+        self.machine.log.info(self.player.number)
 
         # what's the player's score?
-        print('Score: {}'.format(self.player.score))
+        self.machine.log.info('Score: {}'.format(self.player.score))
 
         self.add_mode_event_handler('player_score', self.player_score_change)
 
@@ -111,16 +124,19 @@ class Base(Mode):
         self.machine.leds.led01.color('red')
 
     def my_callback(self):
-        print("My delayed call was just called!")
+        self.machine.log.info("My delayed call was just called!")
 
     def player_score_change(self, **kwargs):
-        print("The new player's score is {}".format(self.player.score))
+        #Option 1 to log the score using kwargs
+        self.machine.log.info("Player score went up by %s, was %s and is now %s", kwargs['change'], kwargs['prev_value'], kwargs['value'])
+        #Option 2 to log the score using the player variable
+        self.machine.log.info("The new player's score is {}".format(self.player.score))
 
     def mode_stop(self, **kwargs):
         # The mode_stop method needs **kwargs because some events that
         # stop modes pass additional parameters
 
-        print("My custom mode code is stopping")
+        self.machine.log.info("My custom mode code is stopping")
 ```
 
 You can use the API reference (or just look at the source code) to see what options exist. Really you can do anything you want.

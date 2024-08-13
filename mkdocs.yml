@@ -1252,7 +1252,7 @@ nav:
     - MPF Examples Repo: examples/mpf-examples.md
     - Demo Man Example Game: examples/demo_man.md
     - MC Demo: examples/mc_demo.md
-  - Code Extension:
+  - Extending MPF with Custom Code:
     - code/index.md
     - Getting Started:
       - code/introduction/index.md
