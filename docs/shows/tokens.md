@@ -227,6 +227,56 @@ show_player:
         color2: blue
 ```
 
+## Using mpf variable values in tokens
+In the above explainations the token values, e.g. led_02 were objects you have defined in your config file. You can as well use values of variables mpf is having, e.g. machine variables, or parameter values of an event.
+
+### Event parameter(argument) values
+
+Let's assume the following event is posted
+
+```
+INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
+```
+The event `player_turn_started` has for example the argument `number` for the number of the player whose turn has started.
+
+``` mpf-config
+show_player:
+  player_turn_started:
+    player_num: #The name of the show to be started upon this event
+      show_tokens:
+        txt: (number)
+```
+
+The number of the player whose turn started is being displayed in the show where you have used the placeholder `txt`. The argument `number` is probably used in many events. When using event arguments as tokens, just use the argument name without any prefix or dot notation.
+
+### Variable values
+You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with `current_player.<variable>`
+
+``` mpf-config
+show_player:
+  player_turn_started:
+    ball_num: #The name of the show to be started upon this event
+      show_tokens:
+        txt: (current_player.ball)
+```
+In this example the ball number of the player is being used in your show once the player's turn has started. In case you want to access a variable of a specific player (which is not necessarily the current player) you can use `players[<player_number>].<variable>` where `player_number` is the player starting with 0, e.g. the second player needs the value 1 in this example.
+
+
+You can as well access game variables, machine variables or settings. Just use the notation `game.<variable>` or `machine.<variable>` or `settings.<variable>`. You can learn more about using variables as tokens in the [Dynamic Values](../config/instructions/dynamic_values.md) reference page.
+
+### Formatting of variable values
+mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this
+
+``` mpf-config
+show_player:
+  player_turn_started:
+    ball_num: #The name of the show to be started upon this event
+      show_tokens:
+        txt: "{(current_player.ball):d}"
+```
+
+That `:d` tells mpf to format the value as a decimal. To learn about the other Python formatting options see for example here https://docs.python.org/2/library/string.html#format-specification-mini-language
+
 ## Tokens vs Tags
 
 Almost all devices support tags. In

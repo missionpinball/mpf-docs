@@ -102,9 +102,9 @@ to use in the display. In some cases, the opening in your backglass may
 only be wide enough for 7 digits for example. In that case, change the
 size to 7 and the 8th digit will remain unused.
 
-## Complete Example Config
+## Complete Example Config for Hardware Definition
 
-Below you find a complete example config file, with this you can use a `segment_display_player` to diplay a certain text upon a given event.
+Below you find a complete example config file how to define your hardware. With this you can use a `segment_display_player` to diplay a certain text upon a given event.
 
 ``` mpf-config
 #config_version=5
@@ -189,9 +189,9 @@ light_settings:
     NeoSeg_green:
       whitepoint: [.5, .5, .5]
 ```
-## Complete Example Config
+## Complete Example Config for Show Definition
 
-Below you find a complete example config file to display scored points. To keep this example simple the `neoseg_displays` object is mapped 1:1 to a `segment_displays` object.
+Below you find a complete example config file to display scored points. It is not using all possible hardware options like the example above, but it includes the display of a show on the LED segments. To keep this example simple the `neoseg_displays` object is mapped 1:1 to a `segment_displays` object.
 
 ``` mpf-config
 #config_version=5
@@ -236,3 +236,4 @@ shows:
         text: (txt)
 
 ```
+To learn more about show tokens and how to use dynamic values take a look [here](../../../shows/tokens.md).

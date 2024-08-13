@@ -19,3 +19,4 @@ looking for something specific.
 * [Shows](../shows/index.md)
 * [MPF Errors](../logs/index.md)
 * [Example Games](../examples/index.md)
+* [Code Extensions](../code/index.md)

@@ -1252,6 +1252,28 @@ nav:
     - MPF Examples Repo: examples/mpf-examples.md
     - Demo Man Example Game: examples/demo_man.md
     - MC Demo: examples/mc_demo.md
+  - Extending MPF with Custom Code:
+    - code/index.md
+    - Getting Started:
+      - code/introduction/index.md
+      - Machine Extensions: code/introduction/machine_code.md
+      - Mode Extensions: code/introduction/mode_code.md
+      - Variables in Code: code/introduction/variables_in_code.md
+      - Setup Dev Env: code/introduction/setup.md
+      - Debugging: code/introduction/debug.md
+    - API Reference:
+      - code/api_reference/index.md
+      - Core: code/api_reference/api_reference_core.md
+      - Devices: code/api_reference/api_reference_device.md
+      - Modes: code/api_reference/api_reference_modes.md
+      - Hardware Platforms: code/api_reference/api_reference_hardware_platforms.md
+      - Config Players: code/api_reference/api_reference_config_players.md
+      - Test: code/api_reference/api_reference_testing_class_api.md
+      - Miscellaneous Components: code/api_reference/api_reference_misc_components.md
+    - Writing Tests:
+      - code/Writing_Tests/index.md
+      - Running Tests: code/Writing_Tests/RunUnitTests.md
+      - Writing Tests: code/Writing_Tests/WritingCustomTestsForYourMachine.md
 
 - Showcase:
   - showcase/index.md

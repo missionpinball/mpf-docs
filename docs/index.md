@@ -101,6 +101,7 @@ device state, player variables, etc.
   * [Shows](shows/index.md)
   * [MPF Errors from Log Files](logs/index.md)
   * [Example Games](examples/index.md)
+  * [Extending MPF with Custom Code](code/index.md)
 
 ## Projects built on MPF
 
