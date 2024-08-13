@@ -1,0 +1,51 @@
+name: Version-dependent docs build & deploy
+
+on:
+  push:
+    branches:
+      - main
+      - "0.80"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate project showcase pages from .yaml files
+        run: python build_tools/generate_showcase_pages.py
+
+      - name: Configure github
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch gh-pages branch
+        run: |
+          git fetch
+          git checkout gh-pages
+          git pull
+          git checkout ${{ github.ref_name }}
+
+      - name: Publish 0.80 website and API reference
+        if: ${{ github.ref_name == '0.80' }}
+        run: |
+          mike deploy --push --update-aliases 0.80 dev
+
+      - name: Publish latest docs website and API reference
+        if: ${{ github.ref_name == 'main' }}
+        run: |
+          mike deploy --push --update-aliases 0.57 latest

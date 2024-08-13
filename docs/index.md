@@ -2,7 +2,7 @@
 title: Welcome to The Mission Pinball Framework!
 ---
 
-# The Mission Pinball Framework (MPF)
+# The Mission Pinball Framework (MPF) 0.57
 
 *Open source software for powering real pinball machines!*
 
