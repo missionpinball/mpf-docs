@@ -1,15 +1,15 @@
 
-# self.machine.hardware_sound_player_player
+# self.machine.hardware_sound_player
 
 `class mpf.config_players.hardware_sound_player.HardwareSoundPlayer(machine)`
 
-Bases: mpf.config_players.device_config_player.DeviceConfigPlayer
+Bases: `mpf.config_players.device_config_player.DeviceConfigPlayer`
 
 Plays sounds on an external sound card.
 
 ## Accessing the hardware_sound_player_player in code
 
-The hardware_sound_player_player is available via `self.machine.hardware_sound_player_player`.
+The hardware_sound_player_player is available via `self.machine.hardware_sound_player`.
 
 ## Methods & Attributes
 
