@@ -1274,6 +1274,8 @@ nav:
       - code/Writing_Tests/index.md
       - Running Tests: code/Writing_Tests/RunUnitTests.md
       - Writing Tests: code/Writing_Tests/WritingCustomTestsForYourMachine.md
+    - BCP Interface:
+      - code/BCP_Protocol/index.md
 
 - Showcase:
   - showcase/index.md
