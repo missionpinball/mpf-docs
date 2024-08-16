@@ -34,7 +34,7 @@ perspective the playfield always has only one ball in play.
 Perhaps the two most common types of multiballs are *virtual-only* and *physical-only*. For *virtual-only* multiballs, you only need a `multiballs:` section to your config and a corresponding *start_event*. You do not need to configure a `multiball_locks:` section. Instead, a counter or *logic_block* is often used to track when the requirements for a multiball have been satisfied, such as a certain number of shots to the captive ball target in _Metallica_ for instance.
 
 ## Setting up a physical-only multiball
-In order to use a physical lock in combination witha multiball, you just define a *ball_device* as well as define a *multiball_lock* within your config files. The *ball_device* must be listed as a `lock_device` within the settings of the `multiball_lock` config section.
+In order to use a physical lock in combination with a multiball, you just define a *ball_device* as well as define a *multiball_lock* within your config files. The *ball_device* must be listed as a `lock_device` within the settings of the `multiball_lock` config section.
 
 ## Making sure the right number of balls are in play
 
