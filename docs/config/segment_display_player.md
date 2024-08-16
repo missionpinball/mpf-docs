@@ -96,25 +96,27 @@ Only used with the `add` action.
 Single value, type: `string`. Defaults to empty.
 
 Key to use with `action` `add` and `remove` to reference a text on the
-segment display.
+segment display. Only relevant if [segment_displays](segment_displays.md) `update_method` is `stack`, not being
+used if `replace` is used.
 
 ### priority:
 
 Single value, type: int_or_token. Default: `0`
 
 Priority of this text. The segment display will maintain a stack and
-show the text on top (highest priority).
+show the text on top (highest priority). Only relevant if [segment_displays](segment_displays.md) `update_method` is `stack`, not being
+used if `replace` is used.
 
 ### text:
 
 Single value, type: `string`. Defaults to empty.
 
-Text to show. You can use
-[Text Templates](instructions/text_templates.md).
+Text to show. You can use [Text Templates](instructions/text_templates.md).
+To erase the text on a display simply send an empty string "".
 
 ### transition:
 
-Unknown type. See description below.
+Note, that if you have set a duration in a show, that this duration **in**cludes the time for the incoming transition.
 
 !!! note
 
@@ -122,9 +124,7 @@ Unknown type. See description below.
     the segment display or the transition effects may not be calculated and
     displayed properly.
 
-### transition_out:
-
-Unknown type. See description below.
+Example:
 
 ``` mpf-config
 #! segment_displays:
@@ -145,6 +145,29 @@ segment_display_player:
         direction: right
         text: " *** "
 ```
+
+#### type
+
+The type of animation to be used.
+
+* push
+* cover
+* uncover
+* split
+* wipe
+
+#### direction
+
+The direction of the animation, for type `push`, `cover`, `uncover` and `wipe` value can be either `left` or `right` (default). For split the value can be `in` or `out` (default).
+
+#### text
+
+_Additonal_ text used in animation, if not set only the show text will be used.
+
+
+### transition_out:
+
+Note, that if you have set a duration in a show, that this duration **ex**cludes the time for the outgoing transition. For anything else see above on the `transition` section.
 
 There can only be one transition between text entries, so if outgoing
 text has a `transition_out` set, and an incoming text entry has a
