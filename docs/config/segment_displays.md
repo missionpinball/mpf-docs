@@ -27,6 +27,8 @@ Single value, type: `string`. Defaults to empty.
 
 The number of the display. The meaning depends on the hardware platform.
 
+* [Cobra serial segment display](../hardware/opp/cobrapin/cobrapin_serial_segment_displays.md): Not relevant, just use always `1`
+
 ## Optional settings
 
 The following sections are optional in the `segment_displays:` section
