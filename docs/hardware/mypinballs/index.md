@@ -8,10 +8,10 @@ title: MyPinballs Segment Display Controller
 
 Related Config File Sections:
 
-* [wiring](../../config/hardware.md)
-* [wiring](../../config/mypinballs.md)
-* [wiring](../../config/segment_displays.md)
-* [wiring](../../config/segment_display_player.md)
+* [Hardware](../../config/hardware.md)
+* [mypinballs](../../config/mypinballs.md)
+* [segment_displays](../../config/segment_displays.md)
+* [segment_display_player](../../config/segment_display_player.md)
 
 Those segment displays are controlled by a very simple serial protocol.
 Two variants exist: The original MyPinball controller which can controll
