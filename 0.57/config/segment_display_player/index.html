@@ -19019,6 +19019,39 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="transition:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      direction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -28983,6 +29016,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
       
@@ -29522,6 +29557,63 @@ icons & this code generated via https://realfavicongenerator.net
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../code/BCP_Protocol/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    BCP Interface
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            BCP Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
           </ul>
@@ -30389,6 +30481,39 @@ icons & this code generated via https://realfavicongenerator.net
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="transition:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      direction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -30529,25 +30654,26 @@ not_set. Default: <code>not_set</code></p>
 <h3 id="key">key:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
 <p>Key to use with <code>action</code> <code>add</code> and <code>remove</code> to reference a text on the
-segment display.</p>
+segment display. Only relevant if <a href="../segment_displays/">segment_displays</a> <code>update_method</code> is <code>stack</code>, not being
+used if <code>replace</code> is used.</p>
 <h3 id="priority">priority:</h3>
 <p>Single value, type: int_or_token. Default: <code>0</code></p>
 <p>Priority of this text. The segment display will maintain a stack and
-show the text on top (highest priority).</p>
+show the text on top (highest priority). Only relevant if <a href="../segment_displays/">segment_displays</a> <code>update_method</code> is <code>stack</code>, not being
+used if <code>replace</code> is used.</p>
 <h3 id="text">text:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
-<p>Text to show. You can use
-<a href="../instructions/text_templates/">Text Templates</a>.</p>
+<p>Text to show. You can use <a href="../instructions/text_templates/">Text Templates</a>.
+To erase the text on a display simply send an empty string "".</p>
 <h3 id="transition">transition:</h3>
-<p>Unknown type. See description below.</p>
+<p>Note, that if you have set a duration in a show, that this duration <strong>in</strong>cludes the time for the incoming transition.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Be sure the <code>segment_display</code> <code>size</code> parameter has been properly set for
 the segment display or the transition effects may not be calculated and
 displayed properly.</p>
 </div>
-<h3 id="transition_out">transition_out:</h3>
-<p>Unknown type. See description below.</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code>#! segment_displays:
 #!   display1:
 #!     number: 1
@@ -30566,6 +30692,21 @@ segment_display_player:
         direction: right
         text: &quot; *** &quot;
 </code></pre></div>
+<h4 id="type">type</h4>
+<p>The type of animation to be used.</p>
+<ul>
+<li>push</li>
+<li>cover</li>
+<li>uncover</li>
+<li>split</li>
+<li>wipe</li>
+</ul>
+<h4 id="direction">direction</h4>
+<p>The direction of the animation, for type <code>push</code>, <code>cover</code>, <code>uncover</code> and <code>wipe</code> value can be either <code>left</code> or <code>right</code> (default). For split the value can be <code>in</code> or <code>out</code> (default).</p>
+<h4 id="text_1">text</h4>
+<p><em>Additonal</em> text used in animation, if not set only the show text will be used.</p>
+<h3 id="transition_out">transition_out:</h3>
+<p>Note, that if you have set a duration in a show, that this duration <strong>ex</strong>cludes the time for the outgoing transition. For anything else see above on the <code>transition</code> section.</p>
 <p>There can only be one transition between text entries, so if outgoing
 text has a <code>transition_out</code> set, and an incoming text entry has a
 <code>transition</code> set, then the incoming transition will take precedence.</p>

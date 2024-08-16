@@ -28916,6 +28916,8 @@ icons & this code generated via https://realfavicongenerator.net
       
         
       
+        
+      
     
     
       
@@ -29455,6 +29457,63 @@ icons & this code generated via https://realfavicongenerator.net
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../code/BCP_Protocol/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    BCP Interface
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            BCP Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
           </ul>
@@ -30354,7 +30413,7 @@ default brightness. Use the whitepoint setting to vary the brightness:</p>
 </code></pre></div>
 <h2 id="create-segment-displays">Create Segment Displays</h2>
 <p>Once you have the light groups defined, you can arrange them into
-displays. The light group is a <code>neoseg_displays</code> object and the logical display a <code>segment_displays</code> object. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.</p>
+displays. The light group is a <code>neoseg_displays</code> object and the logical display a <a href="../../../../config/segment_displays/"><code>segment_displays</code></a> object. The  <code>segment_displays</code> object is not specific for Cobra serial segments, but being used for all kind of segment displays. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.</p>
 <div class="highlight"><pre><span></span><code>segment_displays:
   neoSegTop:
     number: 1
@@ -30377,6 +30436,7 @@ a type of "14segment."</p>
 to use in the display. In some cases, the opening in your backglass may
 only be wide enough for 7 digits for example. In that case, change the
 size to 7 and the 8th digit will remain unused.</p>
+<p>Keep in mind that a <code>segment_display</code> is an own object regardless what <code>light_groups</code> you combine. In the above example the two groups <code>neoSeg_0</code> and <code>neoSeg_1</code> have been combined out of two 8-digit displays. Let us assume <code>light_group</code> <code>neoSeg_0</code> is used for the score of player 1 and <code>neoSeg_1</code> for the score of player 2. That would make it necessary to define two more <code>display_segments</code>, e.g. <code>displayScore1</code> and <code>displayScore2</code> which each consist of only one light group. The combined light_group could be useful if for example after the game ended you want to scroll the text "GAME OVER" from left to right along both displays (assuming they are mounted next to each other) - but is not needed if you only want to display the scores. Now assume the game is over and the final score is shown on <code>displayScore1</code> and <code>displayScore2</code>. If you now run "GAME OVER" on <code>neoSegTop</code> that is independent on the other two displays, so the scores and the text "GAME OVER" is shown at the same time (and thus unreadable since it is a logical AND connection of the texts). Which means that before you run the text "GAME OVER" you need to erase the content of <code>displayScore1</code> and <code>displayScore2</code>. In order to erase the text just send an empty String to it.</p>
 <h2 id="complete-example-config-for-hardware-definition">Complete Example Config for Hardware Definition</h2>
 <p>Below you find a complete example config file how to define your hardware. With this you can use a <code>segment_display_player</code> to diplay a certain text upon a given event.</p>
 <div class="highlight"><pre><span></span><code>#config_version=5

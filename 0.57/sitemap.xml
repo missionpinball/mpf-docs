@@ -81,6 +81,111 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/ball_end/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/ball_start/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/device/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/error/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/goodbye/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/hello/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/machine_variable/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/mode_start/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/mode_stop/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/monitor_start/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/monitor_stop/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/player_added/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/player_turn_start/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/player_variable/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/register_trigger/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/remove_trigger/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/reset/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/reset_complete/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/switch/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/BCP_Protocol/trigger/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://missionpinball.org/latest/code/Writing_Tests/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
@@ -156,7 +261,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/config_players/hardware_sound_player_player/</loc>
+         <loc>https://missionpinball.org/latest/code/api_reference/config_players/hardware_sound_player/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -181,12 +286,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/config_players/score_queue_player_player/</loc>
+         <loc>https://missionpinball.org/latest/code/api_reference/config_players/score_queue_player/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://missionpinball.org/latest/code/api_reference/config_players/segment_display_player_player/</loc>
+         <loc>https://missionpinball.org/latest/code/api_reference/config_players/segment_display_player/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -207,6 +312,11 @@
     </url>
     <url>
          <loc>https://missionpinball.org/latest/code/api_reference/core/ball_controller/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/core/bcp/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -887,6 +997,16 @@
     </url>
     <url>
          <loc>https://missionpinball.org/latest/code/api_reference/modes/tilt/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/testing_class_api/MockBcpClient/</loc>
+         <lastmod>2024-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://missionpinball.org/latest/code/api_reference/testing_class_api/MpfBcpTestCase/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
