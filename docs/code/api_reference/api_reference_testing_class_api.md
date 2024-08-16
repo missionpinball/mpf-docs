@@ -15,6 +15,8 @@ Here’s a diagram which shows how all the MPF and MPF-MC test case classes rela
 
 And the API reference for each:
 
+* [MockBcpClient](testing_class_api/MockBcpClient.md)
+* [MpfBcpTestCase](testing_class_api/MpfBcpTestCase.md)
 * [MpfFakeGameTestCase](testing_class_api/MpfFakeGameTestCase.md)
 * [MpfGameTestCase](testing_class_api/MpfGameTestCase.md)
 * [MpfMachineTestCase](testing_class_api/MpfMachineTestCase.md)

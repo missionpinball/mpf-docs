@@ -74,7 +74,7 @@ light_settings:
 ## Create Segment Displays
 
 Once you have the light groups defined, you can arrange them into
-displays. The light group is a `neoseg_displays` object and the logical display a `segment_displays` object. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.
+displays. The light group is a `neoseg_displays` object and the logical display a [`segment_displays`](../../../config/segment_displays.md) object. The  `segment_displays` object is not specific for Cobra serial segments, but being used for all kind of segment displays. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.
 
 ``` mpf-config
 segment_displays:
@@ -101,6 +101,8 @@ Be sure to change "size" to the total number of digits that you intend
 to use in the display. In some cases, the opening in your backglass may
 only be wide enough for 7 digits for example. In that case, change the
 size to 7 and the 8th digit will remain unused.
+
+Keep in mind that a `segment_display` is an own object regardless what `light_groups` you combine. In the above example the two groups `neoSeg_0` and `neoSeg_1` have been combined out of two 8-digit displays. Let us assume `light_group` `neoSeg_0` is used for the score of player 1 and `neoSeg_1` for the score of player 2. That would make it necessary to define two more `display_segments`, e.g. `displayScore1` and `displayScore2` which each consist of only one light group. The combined light_group could be useful if for example after the game ended you want to scroll the text "GAME OVER" from left to right along both displays (assuming they are mounted next to each other) - but is not needed if you only want to display the scores. Now assume the game is over and the final score is shown on `displayScore1` and `displayScore2`. If you now run "GAME OVER" on `neoSegTop` that is independent on the other two displays, so the scores and the text "GAME OVER" is shown at the same time (and thus unreadable since it is a logical AND connection of the texts). Which means that before you run the text "GAME OVER" you need to erase the content of `displayScore1` and `displayScore2`. In order to erase the text just send an empty String to it.
 
 ## Complete Example Config for Hardware Definition
 

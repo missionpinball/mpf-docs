@@ -4,6 +4,7 @@ Core MPF machine components, accessible to programmers at self.machine.*name*. F
 
 * [auditor](core/auditor.md)
 * [ball_controller](core/ball_controller.md)
+* [bcp](core/bcp.md)
 * [device_manager](core/device_manager.md)
 * [events](core/events.md)
 * [info_lights](core/info_lights.md)
