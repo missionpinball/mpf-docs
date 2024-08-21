@@ -37,9 +37,12 @@ of your config. (If you don't include them, the default will be used).
 ### default_color:
 
 List of one (or more) values, each is a type: `color` (*color name*,
-*hex*, or list of values *0*-*255*). Default: `white`
+*hex*, or list of values *0*-*255*). Default: `white`.
 
---8<-- "todo.md"
+You should specify for each digit of your segment display a default color. If you specify less
+colors than the `size` of your display the other digitis will have `white` as default color. E.g. if you have 8 digits and specify `"blue, yellow"` then the other
+6 digits will have `white` as default color.
+
 
 ### default_transition_update_hz:
 
