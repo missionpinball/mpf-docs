@@ -1,19 +1,19 @@
 ---
-title: player_(var_name)
+title: player_(player_var_name)
 ---
 
-# player_(var_name)
+# player_(player_var_name)
 
 
 --8<-- "event.md"
 
 Posted when simpler types of player variables are added or change value.
 
-The actual event has (var_name) replaced with the name of the player
+The actual event has (player_var_name) replaced with the name of the player
 variable that changed. Some examples:
 
-* player_score
-* player_shot_upper_lit_hit
+* For the "score" player_var, the event will be: "player_score"
+* For "bumper_hits", the event is: "player_bumper_hits"
 
 Lots of things are stored in player variables, so there's no way to
 build a complete list of what all the options are here. Elsewhere in the

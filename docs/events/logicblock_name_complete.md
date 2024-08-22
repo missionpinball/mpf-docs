@@ -7,7 +7,7 @@ title: logicblock_(name)_complete
 
 --8<-- "event.md"
 
-The logic block called "name" has just been completed.
+The logic block called (name) has just been completed.
 
 Note that this is the default completion event for logic blocks, but
 this can be changed in a logic block's "events_when_complete:"

@@ -1,8 +1,8 @@
 ---
-title: (name)_released
+title: (timed_switch)_released
 ---
 
-# (name)_released
+# (timed_switch)_released
 
 
 --8<-- "event.md"
