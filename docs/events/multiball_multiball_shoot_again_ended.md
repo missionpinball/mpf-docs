@@ -1,8 +1,8 @@
 ---
-title: [multiball](../index.md)(name)_shoot_again_ended
+title: multiball_(name)_shoot_again_ended
 ---
 
-# [multiball](../index.md)(name)_shoot_again_ended
+# multiball_(name)_shoot_again_ended
 
 
 --8<-- "event.md"

@@ -1,8 +1,8 @@
 ---
-title: [logicblock](../index.md)(name)_complete
+title: logicblock_(name)_complete
 ---
 
-# [logicblock](../index.md)(name)_complete
+# logicblock_(name)_complete
 
 
 --8<-- "event.md"

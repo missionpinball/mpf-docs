@@ -1,8 +1,8 @@
 ---
-title: [unexpected_ball_on](../index.md)(name)
+title: unexpected_ball_on_(name)
 ---
 
-# [unexpected_ball_on](../index.md)(name)
+# unexpected_ball_on_(name)
 
 
 --8<-- "event.md"

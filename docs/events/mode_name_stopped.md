@@ -1,8 +1,8 @@
 ---
-title: [mode](../index.md)(name)_stopped
+title: mode_(name)_stopped
 ---
 
-# [mode](../index.md)(name)_stopped
+# mode_(name)_stopped
 
 
 --8<-- "event.md"

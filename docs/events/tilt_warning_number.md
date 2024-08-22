@@ -1,8 +1,8 @@
 ---
-title: [tilt_warning](../index.md)(number)
+title: tilt_warning_(number)
 ---
 
-# [tilt_warning](../index.md)(number)
+# tilt_warning_(number)
 
 
 --8<-- "event.md"
