@@ -5,7 +5,7 @@ title: ball_device
 # ball_device
 
 
-See: [balldevice_balls_available](../config/ball_devices.md)
+See: [ball_devices:](../config/ball_devices.md)
 
 * [balldevice_(name)_ball_eject_failed](balldevice_ball_device_ball_eject_failed.md)
 * [balldevice_(name)_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md)

@@ -5,9 +5,9 @@ title: diverter
 # diverter
 
 
-See: [diverter_diverter_deactivating](../config/diverters.md)
+See: [diverters:](../config/diverters.md)
 
-* [diverter_diverter_deactivating](diverter_diverter_enabling.md)
-* [diverter_diverter_deactivating](diverter_diverter_disabling.md)
-* [diverter_diverter_deactivating](diverter_diverter_activating.md)
-* [diverter](../index.md)(name)_deactivating](diverter_diverter_deactivating)
+* [diverter_(name)_enabling](diverter_diverter_enabling.md)
+* [diverter_(name)_disabling](diverter_diverter_disabling.md)
+* [diverter_(name)_activating](diverter_diverter_activating.md)
+* [diverter_(name)_deactivating](diverter_diverter_deactivating.md)

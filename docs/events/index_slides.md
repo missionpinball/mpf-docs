@@ -5,8 +5,8 @@ title: slide
 # slide
 
 
-See: [slide_slide_active](../config/slides.md)
+See: [slides:](../config/slides.md)
 
-* [slide_slide_active](slide_slide_created.md)
-* [slide_slide_active](slide_slide_removed.md)
-* [slide](../index.md)(name)_active](slide_slide_active)
+* [slide_(name)_created](slide_slide_created.md)
+* [slide_(name)_removed](slide_slide_removed.md)
+* [slide_(name)_active](slide_slide_active.md)
