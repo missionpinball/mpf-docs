@@ -1,8 +1,8 @@
 ---
-title: [drop_target](../index.md)(name)_up
+title: drop_target_(name)_up
 ---
 
-# [drop_target](../index.md)(name)_up
+# drop_target_(name)_up
 
 
 --8<-- "event.md"

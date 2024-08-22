@@ -1,8 +1,8 @@
 ---
-title: [ball_save](../index.md)(name)_grace_period
+title: ball_save_(name)_grace_period
 ---
 
-# [ball_save](../index.md)(name)_grace_period
+# ball_save_(name)_grace_period
 
 
 --8<-- "event.md"

@@ -1,8 +1,8 @@
 ---
-title: [balldevice](../index.md)(name)_ball_entered
+title: balldevice_(name)_ball_entered
 ---
 
-# [balldevice](../index.md)(name)_ball_entered
+# balldevice_(name)_ball_entered
 
 
 --8<-- "event.md"
