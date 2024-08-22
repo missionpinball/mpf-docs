@@ -1,8 +1,8 @@
 ---
-title: [player](../index.md)(name)
+title: player_(var_name)
 ---
 
-# [player](../index.md)(name)
+# player_(var_name)
 
 
 --8<-- "event.md"

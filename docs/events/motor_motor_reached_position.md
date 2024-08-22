@@ -1,8 +1,8 @@
 ---
-title: [motor](../index.md)(name)_[reached](../index.md)(position)
+title: motor_(name)_reached_(position)
 ---
 
-# [motor](../index.md)(name)_[reached](../index.md)(position)
+# motor_(name)_reached_(position)
 
 
 --8<-- "event.md"

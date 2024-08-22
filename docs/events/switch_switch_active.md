@@ -1,8 +1,8 @@
 ---
-title: [switch](../index.md)(name)_active
+title: switch_(name)_active
 ---
 
-# [switch](../index.md)(name)_active
+# switch_(name)_active
 
 
 *MPF-MC Event*

@@ -1,8 +1,8 @@
 ---
-title: [logicblock](../index.md)(name)_hit
+title: logicblock_(name)_hit
 ---
 
-# [logicblock](../index.md)(name)_hit
+# logicblock_(name)_hit
 
 
 --8<-- "event.md"
