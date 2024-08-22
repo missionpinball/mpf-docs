@@ -26,15 +26,15 @@ they work:
 
 * [index](_index.md)
 * [ball](ball.md)
-* [extra_ball](../index.md)(name)_awarded](extra_ball_name_awarded)
+* [extra_ball_(name)_awarded](extra_ball_name_awarded.md)
 * [extra_balls](extra_balls.md)
-
-config_section: counters, accruals, sequences <logic_block_state
-config_section: counters, accruals, sequences> (mode)_(timer)_tick
-<mode_timer_tick> number <number> [random](../index.md)(x).(y) <random_x.y>
-restart_modes_on_next_ball <restart_modes_on_next_ball> score
-<score>
+* [logic_block_state](logic_block_state.md)
+* [(mode)_(timer)_tick](mode_timer_tick.md)
+* [number](number.md)
+* [random_(x).(y)](random_x.y.md)
+* [restart_modes_on_next_ball](restart_modes_on_next_ball.md)
+* [score](score.md)
 
 ## Related Events
 
-* [player_(name)](../events/player_player_var.md)
+* [player_(var_name)](../events/player_player_var.md)

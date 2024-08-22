@@ -121,8 +121,8 @@ For
 
 ## Related Events
 
-* [(name)_one](../events/combo_switch_one.md)
-* [(name)_both](../events/combo_switch_both.md)
-* [(name)_inactive](../events/combo_switch_inactive.md)
-* [(name)_switches_1](../events/combo_switch_switches_1.md)
-* [(name)_switches_2](../events/combo_switch_switches_2.md)
+* [(combo_switch_name)_one](../events/combo_switch_one.md)
+* [(combo_switch_name)_both](../events/combo_switch_both.md)
+* [(combo_switch_name)_inactive](../events/combo_switch_inactive.md)
+* [(combo_switch_name)_switches_1](../events/combo_switch_switches_1.md)
+* [(combo_switch_name)_switches_2](../events/combo_switch_switches_2.md)
