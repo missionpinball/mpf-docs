@@ -5,6 +5,6 @@ title: sequence_shot
 # sequence_shot
 
 
-See: [sequence_shot_hit](../config/sequence_shots.md)
+See: [sequence_shots:](../config/sequence_shots.md)
 
-* [(name)_hit](sequence_shot_hit.md)
+* [(sequence_shot)_hit](sequence_shot_hit.md)

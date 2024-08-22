@@ -5,7 +5,7 @@ title: ball_save
 # ball_save
 
 
-See: [ball_save_(name)_saving_ball](../config/ball_saves.md)
+See: [ball_saves:](../config/ball_saves.md)
 
 * [ball_save_(name)_enabled](ball_save_ball_save_enabled.md)
 * [ball_save_(name)_disabled](ball_save_ball_save_disabled.md)

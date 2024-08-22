@@ -5,7 +5,7 @@ title: display
 # display
 
 
-See: [display_display_ready](../config/displays.md)
+See: [displays:](../config/displays.md)
 
-* [display_display_ready](display_display_initialized.md)
-* [display](../index.md)(name)_ready](display_display_ready)
+* [display_(name)_initialized](display_display_initialized.md)
+* [display_(name)_ready](display_display_ready.md)

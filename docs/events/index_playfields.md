@@ -5,9 +5,9 @@ title: playfield
 # playfield
 
 
-See: [unexpected_ball_on_playfield](../config/playfields.md)
+See: [playfields:](../config/playfields.md)
 
-* [unexpected_ball_on_playfield](playfield_ball_count_change.md)
-* [unexpected_ball_on_playfield](playfield_active.md)
-* [unexpected_ball_on_playfield](sw_playfield_active.md)
-* [unexpected_ball_on](../index.md)(name)](unexpected_ball_on_playfield)
+* [(playfield)_ball_count_change](playfield_ball_count_change.md)
+* [(playfield)_active](playfield_active.md)
+* [sw_(playfield)_active](sw_playfield_active.md)
+* [unexpected_ball_on_(playfield)](unexpected_ball_on_playfield.md)
