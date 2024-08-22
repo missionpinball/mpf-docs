@@ -1,13 +1,13 @@
 ---
-title: sw_(name)_active
+title: sw_(playfield_name)_active
 ---
 
-# sw_(name)_active
+# sw_(playfield_name)_active
 
 
 --8<-- "event.md"
 
-The playfield called (name) was active, though a ball was just removed
+The playfield called (playfield_name) was active, though a ball was just removed
 from it.
 
 ## Keyword arguments

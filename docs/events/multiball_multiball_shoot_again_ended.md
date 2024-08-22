@@ -7,7 +7,7 @@ title: multiball_(name)_shoot_again_ended
 
 --8<-- "event.md"
 
-Shoot again for multiball (name) has ended.
+Shoot again for multiball called (name) has ended.
 
 *This event does not have any keyword arguments*
 

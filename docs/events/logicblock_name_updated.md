@@ -7,9 +7,9 @@ title: logicblock_(name)_updated
 
 --8<-- "event.md"
 
-The logic block called "name" has changed.
+The logic block called (name) has changed.
 
-This might happen when the block advanced, it was resetted or restored.
+This might happen when the block advanced, was reset, or was restored.
 
 ## Keyword arguments
 

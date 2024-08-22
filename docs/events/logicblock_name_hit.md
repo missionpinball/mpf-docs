@@ -7,7 +7,7 @@ title: logicblock_(name)_hit
 
 --8<-- "event.md"
 
-The logic block "name" was just hit.
+The logic block (name) was just hit.
 
 Note that this is the default hit event for logic blocks, but this can
 be changed in a logic block's "events_when_hit:" setting, so this
