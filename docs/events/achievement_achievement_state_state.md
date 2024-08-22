@@ -1,8 +1,8 @@
 ---
-title: [achievement](../index.md)(name)_[state](../index.md)(state)
+title: achievement_(name)_state_(state)
 ---
 
-# [achievement](../index.md)(name)_[state](../index.md)(state)
+# achievement_(name)_state_(state)
 
 
 --8<-- "event.md"

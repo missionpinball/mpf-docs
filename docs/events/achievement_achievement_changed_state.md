@@ -1,8 +1,8 @@
 ---
-title: [achievement](../index.md)(name)_changed_state
+title: achievement_(name)_changed_state
 ---
 
-# [achievement](../index.md)(name)_changed_state
+# achievement_(name)_changed_state
 
 
 --8<-- "event.md"
