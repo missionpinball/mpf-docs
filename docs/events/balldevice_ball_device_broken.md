@@ -7,7 +7,7 @@ title: balldevice_(name)_broken
 
 --8<-- "event.md"
 
-The ball device called "name" is broken and will no longer operate.
+The ball device called (name) is broken and will no longer operate.
 
 *This event does not have any keyword arguments*
 
