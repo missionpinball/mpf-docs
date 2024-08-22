@@ -1,8 +1,8 @@
 ---
-title: extra_ball
+title: extra_ball event index
 ---
 
-# extra_ball
+# extra_ball events
 
 
 See: [extra_balls:](../config/extra_balls.md)

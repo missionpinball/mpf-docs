@@ -1,8 +1,8 @@
 ---
-title: ball_hold
+title: ball_hold event index
 ---
 
-# ball_hold
+# ball_hold events
 
 
 See: [ball_holds:](../config/ball_holds.md)

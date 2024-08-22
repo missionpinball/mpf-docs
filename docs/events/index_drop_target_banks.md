@@ -1,8 +1,8 @@
 ---
-title: drop_target_bank
+title: drop_target_bank event index
 ---
 
-# drop_target_bank
+# drop_target_bank events
 
 
 See: [drop_target_banks:](../config/drop_target_banks.md)

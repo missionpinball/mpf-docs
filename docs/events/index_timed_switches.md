@@ -1,8 +1,8 @@
 ---
-title: timed_switch
+title: timed_switch event index
 ---
 
-# timed_switch
+# timed_switch events
 
 
 See: [timed_switches:](../config/timed_switches.md)

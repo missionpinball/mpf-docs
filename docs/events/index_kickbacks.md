@@ -1,8 +1,8 @@
 ---
-title: kickback
+title: kickback event index
 ---
 
-# kickback
+# kickback events
 
 
 See: [kickbacks:](../config/kickbacks.md)

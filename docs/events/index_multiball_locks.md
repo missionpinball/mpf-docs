@@ -1,8 +1,8 @@
 ---
-title: multiball_lock
+title: multiball_lock event index
 ---
 
-# multiball_lock
+# multiball_lock events
 
 
 See: [multiball_locks:](../config/multiball_locks.md)

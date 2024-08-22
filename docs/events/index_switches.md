@@ -1,8 +1,8 @@
 ---
-title: switch
+title: switch event index
 ---
 
-# switch
+# switch events
 
 
 See: [switches:](../config/switches.md)

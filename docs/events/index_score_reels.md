@@ -1,8 +1,8 @@
 ---
-title: score_reel
+title: score_reel event index
 ---
 
-# score_reel
+# score_reel events
 
 
 See: [score_reels:](../config/score_reels.md)

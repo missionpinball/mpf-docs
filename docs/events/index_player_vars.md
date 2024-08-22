@@ -1,8 +1,8 @@
 ---
-title: player_var
+title: player_var event index
 ---
 
-# player_var
+# player_var events
 
 
 See: [player_vars:](../config/player_vars.md)

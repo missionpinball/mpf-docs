@@ -1,8 +1,8 @@
 ---
-title: shot
+title: shot event index
 ---
 
-# shot
+# shot events
 
 
 See: [shots:](../config/shots.md)

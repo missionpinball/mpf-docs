@@ -1,8 +1,8 @@
 ---
-title: sequence_shot
+title: sequence_shot event index
 ---
 
-# sequence_shot
+# sequence_shot events
 
 
 See: [sequence_shots:](../config/sequence_shots.md)

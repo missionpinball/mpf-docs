@@ -1,8 +1,8 @@
 ---
-title: slide
+title: slide event index
 ---
 
-# slide
+# slide events
 
 
 See: [slides:](../config/slides.md)

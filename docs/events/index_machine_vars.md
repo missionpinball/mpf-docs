@@ -1,8 +1,8 @@
 ---
-title: machine_var
+title: machine_var event index
 ---
 
-# machine_var
+# machine_var events
 
 
 See: [machine_vars:](../config/machine_vars.md)
