@@ -7,7 +7,7 @@ title: achievement_(name)_state_(state)
 
 --8<-- "event.md"
 
-Achievement (name) changed to state (state).
+The achievement called (name) changed to state (state).
 
 Valid states are: disabled, enabled, started, completed, stopped
 

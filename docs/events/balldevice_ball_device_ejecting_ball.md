@@ -7,7 +7,7 @@ title: balldevice_(name)_ejecting_ball
 
 --8<-- "event.md"
 
-The ball device called "name" is ejecting a ball right now.
+The ball device called (name) is ejecting a ball right now.
 
 ## Keyword arguments
 

@@ -7,7 +7,7 @@ title: ball_hold_(name)_held_ball
 
 --8<-- "event.md"
 
-The ball hold device (name) has just held additional ball(s).
+The ball hold device called (name) has just held additional ball(s).
 
 ## Keyword arguments
 
