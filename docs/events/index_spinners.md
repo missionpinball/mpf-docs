@@ -1,8 +1,8 @@
 ---
-title: spinner
+title: spinner event index
 ---
 
-# spinner
+# spinner events
 
 
 See: [spinners:](../config/spinners.md)

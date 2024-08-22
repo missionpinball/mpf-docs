@@ -1,8 +1,8 @@
 ---
-title: shot_group
+title: shot_group event index
 ---
 
-# shot_group
+# shot_group events
 
 
 See: [shot_groups:](../config/shot_groups.md)

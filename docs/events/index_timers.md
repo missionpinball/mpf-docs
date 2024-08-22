@@ -1,8 +1,8 @@
 ---
-title: timer
+title: timer event index
 ---
 
-# timer
+# timer events
 
 
 See: [timers:](../config/timers.md)

@@ -1,8 +1,8 @@
 ---
-title: drop_target
+title: drop_target event index
 ---
 
-# drop_target
+# drop_target events
 
 
 See: [drop_targets:](../config/drop_targets.md)

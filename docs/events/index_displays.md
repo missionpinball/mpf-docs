@@ -1,8 +1,8 @@
 ---
-title: display
+title: display event index
 ---
 
-# display
+# display events
 
 
 See: [displays:](../config/displays.md)

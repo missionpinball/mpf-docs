@@ -1,8 +1,8 @@
 ---
-title: diverter
+title: diverter event index
 ---
 
-# diverter
+# diverter events
 
 
 See: [diverters:](../config/diverters.md)

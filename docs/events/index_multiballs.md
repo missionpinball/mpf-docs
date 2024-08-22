@@ -1,8 +1,8 @@
 ---
-title: multiball
+title: multiball event index
 ---
 
-# multiball
+# multiball events
 
 
 See: [multiballs:](../config/multiballs.md)

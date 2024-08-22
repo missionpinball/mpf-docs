@@ -1,8 +1,8 @@
 ---
-title: playfield
+title: playfield event index
 ---
 
-# playfield
+# playfield events
 
 
 See: [playfields:](../config/playfields.md)

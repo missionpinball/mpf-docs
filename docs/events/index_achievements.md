@@ -1,8 +1,8 @@
 ---
-title: achievement
+title: achievement event index
 ---
 
-# achievement
+# achievement events
 
 
 See: [achievements:](../config/achievements.md)

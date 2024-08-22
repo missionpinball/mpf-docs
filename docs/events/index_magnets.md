@@ -1,8 +1,8 @@
 ---
-title: magnet
+title: magnet event index
 ---
 
-# magnet
+# magnet events
 
 
 See: [magnets:](../config/magnets.md)

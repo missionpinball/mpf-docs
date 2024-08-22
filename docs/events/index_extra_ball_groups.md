@@ -1,8 +1,8 @@
 ---
-title: extra_ball_group
+title: extra_ball_group event index
 ---
 
-# extra_ball_group
+# extra_ball_group events
 
 
 See: [extra_ball_groups:](../config/extra_ball_groups.md)

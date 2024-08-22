@@ -1,8 +1,8 @@
 ---
-title: ball_device
+title: ball_device event index
 ---
 
-# ball_device
+# ball_device events
 
 
 See: [ball_devices:](../config/ball_devices.md)

@@ -1,8 +1,8 @@
 ---
-title: playfield_transfer
+title: playfield_transfer event index
 ---
 
-# playfield_transfer
+# playfield_transfer events
 
 
 See: [playfield_transfers:](../config/playfield_transfers.md)

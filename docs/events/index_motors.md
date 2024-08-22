@@ -1,8 +1,8 @@
 ---
-title: motor
+title: motor event index
 ---
 
-# motor
+# motor events
 
 
 See: [motors](../config/motors.md)

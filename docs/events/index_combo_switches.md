@@ -1,8 +1,8 @@
 ---
-title: combo_switch
+title: combo_switch event index
 ---
 
-# combo_switch
+# combo_switch events
 
 
 See: [combo_switches:](../config/combo_switches.md)
