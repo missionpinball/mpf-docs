@@ -15,6 +15,6 @@ title: "plugins:"
 The `plugins:` section of your config is where you list all plugin
 classes to load. By default it contains:
 
-* [auditor](info_lights.md)
-* [auditor](switch_player.md)
+* [info_lights:](info_lights.md)
+* [switch_player:](switch_player.md)
 * [auditor:](auditor.md)
