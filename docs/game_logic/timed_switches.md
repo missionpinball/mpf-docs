@@ -43,5 +43,5 @@ For
 
 ## Related Events
 
-* [(name)_active](../events/timed_switch_active.md)
-* [(name)_released](../events/timed_switch_released.md)
+* [(timed_switch_name)_active](../events/timed_switch_active.md)
+* [(timed_switch_name)_released](../events/timed_switch_released.md)

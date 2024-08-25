@@ -1,8 +1,8 @@
 ---
-title: [display](../index.md)(name)_ready
+title: display_(name)_ready
 ---
 
-# [display](../index.md)(name)_ready
+# display_(name)_ready
 
 
 *MPF-MC Event*

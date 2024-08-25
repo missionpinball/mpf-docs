@@ -1,10 +1,10 @@
 ---
-title: playfield_transfer
+title: playfield_transfer event index
 ---
 
-# playfield_transfer
+# playfield_transfer events
 
 
-See: [playfield_transfer_playfield_transfer_ball_transferred](../config/playfield_transfers.md)
+See: [playfield_transfers:](../config/playfield_transfers.md)
 
-* [playfield_transfer](../index.md)(playfield_transfer)_ball_transferred](playfield_transfer_playfield_transfer_ball_transferred)
+* [playfield_transfer_(name)_ball_transferred](playfield_transfer_playfield_transfer_ball_transferred)

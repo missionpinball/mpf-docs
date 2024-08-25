@@ -1,13 +1,13 @@
 ---
-title: [balldevice](../index.md)(name)_ejecting_ball
+title: balldevice_(name)_ejecting_ball
 ---
 
-# [balldevice](../index.md)(name)_ejecting_ball
+# balldevice_(name)_ejecting_ball
 
 
 --8<-- "event.md"
 
-The ball device called "name" is ejecting a ball right now.
+The ball device called (name) is ejecting a ball right now.
 
 ## Keyword arguments
 

@@ -1,8 +1,8 @@
 ---
-title: (name)_active
+title: (timed_switch)_active
 ---
 
-# (name)_active
+# (timed_switch)_active
 
 
 --8<-- "event.md"

@@ -1,8 +1,8 @@
 ---
-title: [ball_save](../index.md)(name)_add_a_ball_timer_start
+title: ball_save_(name)_add_a_ball_timer_start
 ---
 
-# [ball_save](../index.md)(name)_add_a_ball_timer_start
+# ball_save_(name)_add_a_ball_timer_start
 
 
 --8<-- "event.md"

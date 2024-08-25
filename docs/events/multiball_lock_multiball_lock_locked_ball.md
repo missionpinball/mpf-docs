@@ -1,8 +1,8 @@
 ---
-title: [multiball_lock](../index.md)(name)_locked_ball
+title: multiball_lock_(name)_locked_ball
 ---
 
-# [multiball_lock](../index.md)(name)_locked_ball
+# multiball_lock_(name)_locked_ball
 
 
 --8<-- "event.md"
