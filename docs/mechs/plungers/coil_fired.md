@@ -106,7 +106,7 @@ ball_devices:
     eject_coil: c_plunger
 ```
 
-In the example above, we named the plunger device *bd_plunger*, but if
+In the example above, we named the plunger device *bd_plunger*, but of
 course you can name it whatever you want. You might use *bd_catapult*
 for a catapult-style launcher, or *bd_right_plunger* and
 *bd_left_plunger* for a game like Judge Dredd that has plunger lanes on
