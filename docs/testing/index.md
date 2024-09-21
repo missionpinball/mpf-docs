@@ -32,7 +32,7 @@ Bonus: there are “fuzz” tests too which are just automated tests that hit al
 
 Consolidate this content to here:
 
-* https://missionpinball.org/tutorial/19_unit_testing/
+* https://missionpinball.org/latest/tutorial/19_unit_testing/
 * https://developer.missionpinball.org/en/dev/testing/writing_machine_tests.html
 * https://developer.missionpinball.org/en/dev/testing/tutorial/2.html
 

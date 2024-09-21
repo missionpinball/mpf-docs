@@ -131,4 +131,4 @@ If you have an existing MPF 0.57 project and would like to use MPF 0.80 and the 
 ## Next step: The Tutorial!
 
 We have a tutorial which walks you through the first few steps of getting
-your project started at [missionpinball.org/tutorial](../tutorial/index.md)
+your project started at [missionpinball.org/latest/tutorial](../tutorial/index.md)
