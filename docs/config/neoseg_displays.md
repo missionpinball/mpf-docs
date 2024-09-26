@@ -12,9 +12,9 @@ title: "neoseg_displays:"
 |[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
 |[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
 
-The `neoseg_displays:` section of your config is where you...
-
---8<-- "todo.md"
+The `neoseg_displays:` section of your config is where you set the hardware specific settings for this type of segment display. It is
+only needed if you use a [Cobra serial segment display](../hardware/opp/cobrapin/cobrapin_serial_segment_displays.md). For any other
+segment display hardware this setting is not needed.
 
 ## Required settings
 
@@ -24,9 +24,17 @@ your config:
 ### light_template:
 
 Single value, type: [lights:](lights.md).
-Defaults to empty.
+Defaults to empty. Used to specify the light you have, though neoseg displays come in different
+colors each segment is considered a single color segment, use color white in any case.
 
---8<-- "todo.md"
+```
+light_template:
+      type: w
+      subtype: led
+      color_correction_profile: NeoSeg_orange
+```
+
+See as well these examples in the [Cobra serial segment display](../hardware/opp/cobrapin/cobrapin_serial_segment_displays.md) section.
 
 ## Optional settings
 
@@ -56,13 +64,15 @@ Single value, type: string name of a [lights:](lights.md) device. Defaults to em
 Single value, type: one of the following options: 2digit, 8digit.
 Default: `8digit`
 
---8<-- "todo.md"
+Make sure to set the right size depending on what hardware you have.
 
 ### start_channel:
 
 Single value, type: `string`. Defaults to empty.
 
---8<-- "todo.md"
+The start channel for the first display would be either `0-0-0` or `1-0-0`, depending what neo seg connection you use on your Cobra pin. The start channel of the next hardware is
+easily computed, for each digit you need 15 channels (14 segments plus the integrated dot). If your first segment has 8 digits you need 120 channels from 0 to 119, thus the next
+display would have as start channel either `0-0-120` or `1-0-120`.
 
 ### start_x:
 
