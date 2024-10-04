@@ -34,7 +34,7 @@ waiting to be plunged.
 
 Here's an example of this from a Pin\*Bot machine:
 
-![image](/mechs/images/plunger_with_switch.jpg)
+![image](../images/plunger_with_switch.jpg)
 
 If you have this type of spring-powered plunger with a switch that's
 active when a ball is sitting in it ready to be plunged, follow the
@@ -50,7 +50,7 @@ ball is sitting in the plunger lane.
 
 Here's an example of this from Gottlieb Big Shot:
 
-![image](/mechs/images/plunger_no_switch.jpg)
+![image](../images/plunger_no_switch.jpg)
 
 If you have this type of spring-powered plunger with **no** switch
 that's active when a ball is sitting in it ready to be plunged, follow
@@ -69,7 +69,7 @@ Here are two examples of slightly different versions of these, the left
 from a Stern Star Trek Premium, and the right from a Gottlieb Brooks 'n
 Dunn machine:
 
-![image](/mechs/images/auto_manual_plunger.jpg)
+![image](../images/auto_manual_plunger.jpg)
 
 If you have this type of auto/manual combo plunger, follow the
 [guide](auto_manual.md) to configure it in
@@ -84,13 +84,13 @@ There are a few different physical forms of this. Here's a typical
 example from Judge Dredd where a coil shaft with a plastic tip is pulsed
 to launch the ball directly:
 
-![image](/mechs/images/coil_fired_plunger.jpg)
+![image](../images/coil_fired_plunger.jpg)
 
 And here's an example from Williams Star Trek: The Next Generation
 which uses a catapult-style mechanism in order to launch the ball into
 play.
 
-![image](/mechs/images/catapult_plunger.jpg)
+![image](../images/catapult_plunger.jpg)
 
 Note that both of these options are "identical" as far as MPF is
 concerned. They both have switches which are active when a ball is able

@@ -39,7 +39,7 @@ slide_player:
 
 And the results:
 
-![image](/mc/images/line.png)
+![image](../images/line.png)
 
 ## Settings
 

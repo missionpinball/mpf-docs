@@ -31,7 +31,7 @@ from 100% to 50% in 500ms, etc.)
 We can illustrate this with a graph, where time is the X axis, and the
 value is the Y axis, like this:
 
-![image](/mc/images/easing_explained.png)
+![image](/docs/mc/images/easing_explained.png)
 
 The image above shows the default formula with no easing applied. (This
 is technically the "linear" easing function.) The value of the
@@ -42,7 +42,7 @@ But what if we wanted our animation to start slow and accelerate, then
 slow down again towards the end? For that, we could use a formula like
 this:
 
-![image](/mc/images/anim_in_out_sine.png)
+![image](/docs/mc/images/anim_in_out_sine.png)
 
 Notice that at the beginning (in the lower left corner), as you move
 right, the red line doesn't change too much. Then towards the middle,
@@ -54,7 +54,7 @@ applied to animate text moving left and right.
 
 Don't worry about the function names. We'll cover those in a bit.
 
-![image](/mc/images/easing.gif)
+![image](/docs/mc/images/easing.gif)
 
 !!! note
 
@@ -74,14 +74,14 @@ something to start slow, but then speed up without slowing down again.
 will have a gentle start and then it will shoot off and get faster and
 faster.) That function might look like this:
 
-![image](/mc/images/anim_in_quart.png)
+![image](/docs/mc/images/anim_in_quart.png)
 
 Conversely, if you have a widget coming in from off screen, you might
 want it to start out fast and then slow down as it approaches its final
 location. For that you could use what's essentially the opposite of the
 previous formula, like this:
 
-![image](/mc/images/anim_out_quad.png)
+![image](/docs/mc/images/anim_out_quad.png)
 
 The important thing to remember with these easing formulas is that the
 red line does NOT represent the path the moving objects take, rather, it
@@ -103,7 +103,7 @@ can also include the size, scale, and/or the opacity (transparency).
 Here's an animated GIF showing the same five easing functions applied
 to each text widget's opacity property (cycling them between 1 and 0):
 
-![image](/mc/images/easing_opacity.gif)
+![image](/docs/mc/images/easing_opacity.gif)
 
 Refer to the
 [slide transition](../slides/transitions.md) and
@@ -121,43 +121,43 @@ time and then accelerate to the end:
 
 `easing: in_back`
 
-![image](/mc/images/anim_in_back.png)
+![image](/docs/mc/images/anim_in_back.png)
 
 `easing: in_bounce`
 
-![image](/mc/images/anim_in_bounce.png)
+![image](/docs/mc/images/anim_in_bounce.png)
 
 `easing: in_circ`
 
-![image](/mc/images/anim_in_circ.png)
+![image](/docs/mc/images/anim_in_circ.png)
 
 `easing: in_cubic`
 
-![image](/mc/images/anim_in_cubic.png)
+![image](/docs/mc/images/anim_in_cubic.png)
 
 `easing: in_elastic`
 
-![image](/mc/images/anim_in_elastic.png)
+![image](/docs/mc/images/anim_in_elastic.png)
 
 `easing: in_expo`
 
-![image](/mc/images/anim_in_expo.png)
+![image](/docs/mc/images/anim_in_expo.png)
 
 `easing: in_quad`
 
-![image](/mc/images/anim_in_quad.png)
+![image](/docs/mc/images/anim_in_quad.png)
 
 `easing: in_quart`
 
-![image](/mc/images/anim_in_quart.png)
+![image](/docs/mc/images/anim_in_quart.png)
 
 `easing: in_quint`
 
-![image](/mc/images/anim_in_quint.png)
+![image](/docs/mc/images/anim_in_quint.png)
 
 `easing: in_sine`
 
-![image](/mc/images/anim_in_sine.png)
+![image](/docs/mc/images/anim_in_sine.png)
 
 ## Easing "end" functions
 
@@ -166,43 +166,43 @@ meaning they start fast and then slow down towards the end:
 
 `easing: out_back`
 
-![image](/mc/images/anim_out_back.png)
+![image](/docs/mc/images/anim_out_back.png)
 
 `easing: out_bounce`
 
-![image](/mc/images/anim_out_bounce.png)
+![image](/docs/mc/images/anim_out_bounce.png)
 
 `easing: out_circ`
 
-![image](/mc/images/anim_out_circ.png)
+![image](/docs/mc/images/anim_out_circ.png)
 
 `easing: out_cubic`
 
-![image](/mc/images/anim_out_cubic.png)
+![image](/docs/mc/images/anim_out_cubic.png)
 
 `easing: out_elastic`
 
-![image](/mc/images/anim_out_elastic.png)
+![image](/docs/mc/images/anim_out_elastic.png)
 
 `easing: out_expo`
 
-![image](/mc/images/anim_out_expo.png)
+![image](/docs/mc/images/anim_out_expo.png)
 
 `easing: out_quad`
 
-![image](/mc/images/anim_out_quad.png)
+![image](/docs/mc/images/anim_out_quad.png)
 
 `easing: out_quart`
 
-![image](/mc/images/anim_out_quart.png)
+![image](/docs/mc/images/anim_out_quart.png)
 
 `easing: out_quint`
 
-![image](/mc/images/anim_out_quint.png)
+![image](/docs/mc/images/anim_out_quint.png)
 
 `easing: out_sine`
 
-![image](/mc/images/anim_out_sine.png)
+![image](/docs/mc/images/anim_out_sine.png)
 
 ## Easing both "start" and "end" functions
 
@@ -212,43 +212,43 @@ then slow down again at the end.
 
 `easing: in_out_back`
 
-![image](/mc/images/anim_in_out_back.png)
+![image](/docs/mc/images/anim_in_out_back.png)
 
 `easing: in_out_bounce`
 
-![image](/mc/images/anim_in_out_bounce.png)
+![image](/docs/mc/images/anim_in_out_bounce.png)
 
 `easing: in_out_circ`
 
-![image](/mc/images/anim_in_out_circ.png)
+![image](/docs/mc/images/anim_in_out_circ.png)
 
 `easing: in_out_cubic`
 
-![image](/mc/images/anim_in_out_cubic.png)
+![image](/docs/mc/images/anim_in_out_cubic.png)
 
 `easing: in_out_elastic`
 
-![image](/mc/images/anim_in_out_elastic.png)
+![image](/docs/mc/images/anim_in_out_elastic.png)
 
 `easing: in_out_expo`
 
-![image](/mc/images/anim_in_out_expo.png)
+![image](/docs/mc/images/anim_in_out_expo.png)
 
 `easing: in_out_quad`
 
-![image](/mc/images/anim_in_out_quad.png)
+![image](/docs/mc/images/anim_in_out_quad.png)
 
 `easing: in_out_quart`
 
-![image](/mc/images/anim_in_out_quart.png)
+![image](/docs/mc/images/anim_in_out_quart.png)
 
 `easing: in_out_quint`
 
-![image](/mc/images/anim_in_out_quint.png)
+![image](/docs/mc/images/anim_in_out_quint.png)
 
 `easing: in_out_sine`
 
-![image](/mc/images/anim_in_out_sine.png)
+![image](/docs/mc/images/anim_in_out_sine.png)
 
 We'd like to give a shout out and thanks to the creators of the Kivy
 multimedia library (which is what the MPC MC uses) for [creating the

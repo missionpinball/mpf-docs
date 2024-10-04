@@ -17,7 +17,7 @@ Gottlieb CPU board with the "LISY1" board.
     details. Basically you replace the MPU with the LISY board. You can
     still play the original ROM using PinMAME on LISY.
 
-![image](/hardware/images/lisy80_board.jpg)
+![image](/docs/hardware/images/lisy80_board.jpg)
 
 More details can be found in the [LISY user
 manual](http://www.lisy80.com/english/documentation-lisy/).
@@ -44,7 +44,7 @@ b.  Run MPF on the LISY hardware directly ("master" mode).
 
 See the following image for an architecture overview:
 
-![image](/hardware/images/lisy_mpf_overview.jpg)
+![image](/docs/hardware/images/lisy_mpf_overview.jpg)
 
 If you want to run MPF on the LISY controller itself, set DIP 4
 (option1) and DIP 8 (autostart) to 'ON' and all other DIPs on that
@@ -63,7 +63,7 @@ with the host PC running MPF, set DIP 2 to 'ON' for network mode or
     order to be able to reboot, as it will power the Raspberry Pi over the
     USB connection.
 
-![image](/hardware/images/LISY_modes.png)
+![image](/docs/hardware/images/LISY_modes.png)
 
 ## 3. Configure your Game
 
@@ -130,7 +130,7 @@ needed, a "normal" USB charging cable (Micro-USB cable) will do the
 job. Once connected to the host computer, it will (hopefully) identify a
 new serial device. This is usually `COMX` on windows:
 
-![image](/hardware/images/lisy_windows_com_port.png)
+![image](/docs/hardware/images/lisy_windows_com_port.png)
 
 Or `/dev/ttyACMX` on Linux:
 

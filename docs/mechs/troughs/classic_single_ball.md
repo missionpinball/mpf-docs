@@ -17,12 +17,12 @@ electronic single ball machines of the early 1980s.
 
 Here's an example from a Gottlieb Big Shot (1974 EM):
 
-![image](/mechs/images/classic_single_ball_trough_photo.jpg)
+![image](../images/classic_single_ball_trough_photo.jpg)
 
 And here's a diagram which shows this a bit more clearly: (This is a
 side view)
 
-![image](/mechs/images/classic_single_ball.png)
+![image](../images/classic_single_ball.png)
 
 We assume that your machine has a shooter lane switch. If that is not
 the case see [/mechs/plungers/index](classic_single_ball_no_shooter_lane.md).

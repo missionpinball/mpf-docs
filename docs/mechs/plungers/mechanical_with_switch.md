@@ -16,7 +16,7 @@ plunger with MPF.
 This guide is for use with a plunger lane that has a switch in the lane
 which is activated by a ball waiting to be plunged, like this:
 
-![image](/mechs/images/plunger_with_switch.jpg)
+![image](../images/plunger_with_switch.jpg)
 
 If you have a mechanical spring plunger but you do NOT have a switch
 there, then follow the [/mechs/playfields/ball_tracking](mechanical_no_switch.md) guide instead.

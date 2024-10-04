@@ -14,7 +14,7 @@ they are often paired with a light (below an insert) which qualifies
 them as candidate for a shots in MPF. They are usually
 [mechanical micro switches](mechanical_switches.md).
 
-![image](/mechs/images/rollover_micro_switch.jpg)
+![image](../images/rollover_micro_switch.jpg)
 
 Typical part numbers:
 

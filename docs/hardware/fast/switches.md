@@ -21,7 +21,7 @@ get with FAST hardware that is discussed here.
 When you're using FAST IO boards, switches plug into individual IO
 boards. Then the IO boards are connected together in a loop.
 
-![image](/hardware/images/fast-io-3208.png)
+![image](../images/fast-io-3208.png)
 
 The `number:` setting for each switch is its board's position number in
 the chain, then the dash, then the switch input number. Note that the

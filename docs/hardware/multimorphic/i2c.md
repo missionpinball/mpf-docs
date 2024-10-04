@@ -12,7 +12,7 @@ Related Config File Sections:
 The P3-ROC contains an I2C port (J17) which is accessible to MPF. You
 can use this port to control any I2C-based device.
 
-![image](/hardware/images/multimorphic_p3_roc.png)
+![image](/docs/hardware/images/multimorphic_p3_roc.png)
 
 You need to connect SDA, SCL and ground. You may not need the 3.3V from
 the P3-ROC as your controller might be a different voltage (which you

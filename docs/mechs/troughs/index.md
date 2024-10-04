@@ -21,7 +21,7 @@ been used over the past 70 years, and (as far as we know), MPF supports
 all of them. So regardless of what's in your machine, we're talking
 about whatever is under here:
 
-![image](/mechs/images/trough_drain.jpg)
+![image](../images/trough_drain.jpg)
 
 Here are the options:
 
@@ -80,7 +80,7 @@ rather than infrared opto boards. (Other than that, they're the same as
 the opto-based troughs.) Here's a photo of a modern trough with
 mechanical switches from a Stern Star Trek Premium machine:
 
-![image](/mechs/images/modern_mechanical_trough_photo.jpg)
+![image](../images/modern_mechanical_trough_photo.jpg)
 
 If you have a modern-style trough with mechanical switches instead of
 opto boards, then read the [guide](modern_mechanical.md) to continue.
@@ -110,7 +110,7 @@ because each ball is sitting on a switch.
 
 Here's a photo of this type of trough system from a Pin\*Bot machine:
 
-![image](/mechs/images/two_coil_multiple_switches_trough_photo.jpg)
+![image](../images/two_coil_multiple_switches_trough_photo.jpg)
 
 If you have this kind of trough system, read the
 [guide](two_coil_multiple_switches.md) to
@@ -136,7 +136,7 @@ full.
 Here's a photo from a Gottlieb System 3 machine (Brooks 'n Dunn) which
 shows what this type of system looks like:
 
-![image](/mechs/images/two_coil_one_switch_trough_photo.jpg)
+![image](../images/two_coil_one_switch_trough_photo.jpg)
 
 If your machine has a system similar to this, then read the
 [guide](two_coil_one_switch.md) to continue.
@@ -151,7 +151,7 @@ way into the plunger lane in a single action.
 
 Here's an example from Gottlieb Big Shot:
 
-![image](/mechs/images/classic_single_ball_trough_photo.jpg)
+![image](../images/classic_single_ball_trough_photo.jpg)
 
 If you have a system like this, read the
 [guide](classic_single_ball.md) to continue.
@@ -163,7 +163,7 @@ playfield. There is no shooter lane. This was used in early EM machines.
 
 Here's an example from Gottlieb Playball:
 
-![image](/mechs/images/classic_single_ball_trough_without_shooter_lane_photo.png)
+![image](../images/classic_single_ball_trough_without_shooter_lane_photo.png)
 
 If you have a system like this, read the
 [guide](classic_single_ball_no_shooter_lane.md) to continue.

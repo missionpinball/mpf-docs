@@ -22,7 +22,7 @@ itself. Instead, you add SW-16 boards which each have 16 direct switch
 inputs. (e.g. there is no switch matrix.) You can connect up to 16
 SW-16s to support as many as 256 switches.
 
-![image](/hardware/images/multimorphic_SW-16.png)
+![image](../images/multimorphic_SW-16.png)
 
 Each SW-16 has a unique `board number` which is set using DIP switches
 (find that out now). On each board there are two `banks` (A and B) of 8
@@ -89,7 +89,7 @@ MPF.
 * Local Inputs - Alternatively you can use them as direct local inputs
     (and the burst drivers as outputs; see [How to configure coils/drivers/magnets (P-ROC/P3-ROC)](drivers.md) section for details).
 
-![image](/hardware/images/multimorphic_p3_roc.png)
+![image](../images/multimorphic_p3_roc.png)
 
 ### Burst Switches as Burst Optos
 

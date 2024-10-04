@@ -27,7 +27,7 @@ slides:
 #! assert_text_on_top_slide MISSION
 ```
 
-![image](/mc/images/dmd_default.png)
+![image](../images/dmd_default.png)
 
 Sure, it works, but it doesn't look good because the default font is a
 regular font that's made for a high-res display.
@@ -55,7 +55,7 @@ slides:
 #! assert_text_on_top_slide MISSION
 ```
 
-![image](/mc/images/dmd_big.png)
+![image](../images/dmd_big.png)
 
 ## style: med
 
@@ -76,7 +76,7 @@ slides:
 #! assert_text_on_top_slide MISSION
 ```
 
-![image](/mc/images/dmd_med.png)
+![image](../images/dmd_med.png)
 
 ## style: small
 
@@ -102,4 +102,4 @@ slides:
 #! assert_text_on_top_slide MISSION
 ```
 
-![image](/mc/images/dmd_small.png)
+![image](../images/dmd_small.png)

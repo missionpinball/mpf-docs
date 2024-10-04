@@ -14,7 +14,7 @@ MPF supports servos connected to Pololu Maestro servo controllers. Each
 Maestro can control multiple servos, with models that control 6, 12, 18,
 or 24 servos.
 
-![image](/hardware/images/pololu_maestro.jpg)
+![image](/docs/hardware/images/pololu_maestro.jpg)
 
 Here is an explanation video by the pinball amigos on how to setup a
 pololu maestro (and more):

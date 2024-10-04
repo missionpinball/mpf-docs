@@ -25,7 +25,7 @@ There are two common types of mechanical switches:
 First, blade switches which are very cheap and reliable but cannot be
 used everywhere:
 
-![image](/mechs/images/blade_target_switch.jpg)
+![image](../images/blade_target_switch.jpg)
 
 Typically, those are use for
 [flipper buttons](../flippers/index.md)
@@ -70,7 +70,7 @@ over switches. Those usually have three connectors:
 Usually, you connect `C` to ground and `NO` to your direct input (see
 below for switch matrices).
 
-![image](/mechs/images/micro_switches_common_no_nc.jpg)
+![image](../images/micro_switches_common_no_nc.jpg)
 
 Electronically and logically both switches work similarly.
 

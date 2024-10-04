@@ -9,7 +9,7 @@ Related Config File Sections:
 
 * [servo_sequence](../../config/servos.md)
 
-![image](/mechs/images/servos.jpg)
+![image](../images/servos.jpg)
 
 A servo is device which can move to a certain position based on internal
 feedback. There is no need to add position switches and the servo will

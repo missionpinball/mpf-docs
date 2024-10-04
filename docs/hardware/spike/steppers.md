@@ -44,7 +44,7 @@ number once.
 Then you need to look up the motor reference number in your manual. This
 is an example from Game of Thrones LE:
 
-![image](/hardware/images/spike_stepper_table.png)
+![image](../images/spike_stepper_table.png)
 
 We are interested in `10-LP-10`. This is used as `light_number` above.
 `10-LP-11` is not used and we guess that Spike automatically uses the

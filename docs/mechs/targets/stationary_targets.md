@@ -9,7 +9,7 @@ Related Config File Sections:
 
 * [switches:](../../config/switches.md)
 
-![image](/mechs/images/blade_target_switch.jpg)
+![image](../images/blade_target_switch.jpg)
 
 Mission Pinball Framework's (MPF) *stationary target* device represents
 a switch in a pinball machine. This might also be know as a stand-up

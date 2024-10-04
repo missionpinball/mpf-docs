@@ -7,7 +7,7 @@ title: CobraPin Pinball Controller powered by OPP
 --8<-- "hardware_platform.md"
 
 
-![image](/hardware/images/CobraPinV0_2_isoSmall.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_isoSmall.jpg)
 
 Features:
 
@@ -41,7 +41,7 @@ Video about cobrapin extension board:
 
 ## Power Input and Filter
 
-![image](/hardware/images/CobraPinV0_2_VIN.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_VIN.jpg)
 
 **J9:** 
 
@@ -58,7 +58,7 @@ connectors.
 
 ## Switch Inputs
 
-![image](/hardware/images/CobraPinV0_2_switches.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_switches.jpg)
 
 **J1, J2, J3:**
 
@@ -79,14 +79,14 @@ connectors. For example Molex KK254 series available for AWG 30-22. Each connect
 for the direct input return. If you measure the voltage between GND and
 a switch (in below picture 0-0-16) you should measure 3.3V.
 
-![image](/hardware/images/Cobra_Voltage_Switch.jpg)
+![image](/docs/hardware/images/Cobra_Voltage_Switch.jpg)
 
 For that to measure only the micro controllers need to be powered up, no
 need to apply any other voltage on the Cobra board. To perform a simple
 test connect any kind of switch to one of the inputs and setup a little
 mpf test configuration.
 
-![image](/hardware/images/Cobra_Switch_connected.jpg)
+![image](/docs/hardware/images/Cobra_Switch_connected.jpg)
 
 Do not apply any voltage to the switches, most likely that will destroy
 your CPU. For further details and fully working Cobra board
@@ -97,7 +97,7 @@ section below.
 
 ## Solenoid Outputs
 
-![image](/hardware/images/CobraPinV0_2_solenoids.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_solenoids.jpg)
 
 **J6, J7, J8:**
 
@@ -123,7 +123,7 @@ must be controlled by switch with number `0-a-b`.
 Each bank has an LED next to it to indicate if that bank has power.
 Check these if you are concerned you have blown a fuse.
 
-![image](/hardware/images/Cobra_Coils_LED_Power.jpg)
+![image](/docs/hardware/images/Cobra_Coils_LED_Power.jpg)
 
 In above picture you see that the LED for bank A is alight but not for
 bank B. In order to have the LED alight you only need to have connected
@@ -138,7 +138,7 @@ voltage power or without the coils plugged in. Using these LEDs, you can
 verify that each output is being driven correctly, in the picture below
 coil 1-0-1 is being driven at this very moment.
 
-![image](/hardware/images/Cobra_Coils_LED_Switch.jpg)
+![image](/docs/hardware/images/Cobra_Coils_LED_Switch.jpg)
 
 To run the above test, there is no need for a high voltage power supply
 neither for any coil. Only the mirco controllers need to be powered up.
@@ -184,7 +184,7 @@ To have a fully working example for setting up autofire coils see the
 
 ## Solenoid Power Output and Fuses
 
-![image](/hardware/images/CobraPinV0_2_HVout.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_HVout.jpg)
 
 **J13:**
 
@@ -205,7 +205,7 @@ The fuses are 5x20mm. Each fuse provides power to a bank of 8 solenoids.
 
 ## Neopixel Support
 
-![image](/hardware/images/CobraPinV0_2_NEO.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_NEO.jpg)
 
 **J10:**
 
@@ -227,7 +227,7 @@ The connectors J10, J11, J12 and J14 are JST connectors VH style. There
 are lots of Neopixels which come with a JST connector SM style. You
 might want to craft a little converter cable in such a case.
 
-![image](/hardware/images/Cobra_Neopixel_JST_adapter_VH_SM.jpg)
+![image](/docs/hardware/images/Cobra_Neopixel_JST_adapter_VH_SM.jpg)
 
 There are two neopixel chains that support 256 RGB pixels each for a
 total of 512. RGBW pixels are also possible, but the number may be
@@ -240,7 +240,7 @@ fuse and are providing power for neopixels. For the LED to light up
 there is no need to run any MPF configuration, you don't even have to
 power up the micro controllers.
 
-![image](/hardware/images/Cobra_Power_LED_Neopixel.jpg)
+![image](/docs/hardware/images/Cobra_Power_LED_Neopixel.jpg)
 
 When you order the micro controllers you have various options, one
 option to choose from is Regular vs NoGlow. If you order the Regular
@@ -248,7 +248,7 @@ version then after power is provided for the Neopixel and the micro
 controllers are powered up (still no need to run any MPF on them), the
 LEDs of your strip will glow blue, which is a good first test.
 
-![image](/hardware/images/Cobra_Neopixel_blue_glow.jpg)
+![image](/docs/hardware/images/Cobra_Neopixel_blue_glow.jpg)
 
 In order to addess the LEDs in MPF you need to know their address
 
@@ -268,7 +268,7 @@ generic LED section [LEDs](../../../mechs/lights/index.md) where as well the mor
 
 ## Microcontrollers
 
-![image](/hardware/images/CobraPinV0_2_STM32.jpg)
+![image](/docs/hardware/images/CobraPinV0_2_STM32.jpg)
 
 The brains of the CobraPin are two STM32 microcontroller boards
 programmed with OPP firmware. They are connected to the host computer

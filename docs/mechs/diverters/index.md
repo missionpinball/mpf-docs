@@ -12,9 +12,9 @@ Related Config File Sections:
 In MPF, a diverter (sometimes spelled "divertor") is anything that
 alters the path of the ball based on the state it's in, including:
 
-![image](/mechs/images/diverter1.jpg)
+![image](../images/diverter1.jpg)
 
-![image](/mechs/images/diverter2.jpg)
+![image](../images/diverter2.jpg)
 
 * A traditional diverter which is a metal flap at the end of a rod,
     typically used on ramps to "divert" the ball one way or the other.
@@ -46,9 +46,9 @@ to them goes towards one place, and when they're active, a ball is
 In MPF, a diverter (sometimes spelled "divertor") is anything that
 alters the path of the ball based on the state it's in, including:
 
-![image](/mechs/images/diverter1.jpg)
+![image](../images/diverter1.jpg)
 
-![image](/mechs/images/diverter2.jpg)
+![image](../images/diverter2.jpg)
 
 * A traditional diverter which is a metal flap at the end of a rod,
     typically used on ramps to "divert" the ball one way or the other.

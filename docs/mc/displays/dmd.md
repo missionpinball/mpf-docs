@@ -8,7 +8,7 @@ title: Using a traditional (single color) physical DMD
 This guide will show you how to use a traditional, physical DMD with
 MPF, like this:
 
-![image](/mc/images/display_mono_dmd.jpg)
+![image](../images/display_mono_dmd.jpg)
 
 This is supported for all
 [Monochome DMD platforms](../../hardware/dmd_platforms.md).
@@ -16,7 +16,7 @@ This is supported for all
 It will also show you how to create an on-screen popup window which will
 show the contents of the DMD, like this (with a blank DMD):
 
-![image](/mc/images/on_screen_basic_dmd_window.png)
+![image](../images/on_screen_basic_dmd_window.png)
 
 If you want to use a physical DMD without the on-screen equivalent,
 we'll show you how to do that at the end.
@@ -36,7 +36,7 @@ This guide explains how to config physical single-color (mono) DMDs.
 These are DMDs that are connected to your FAST Pinball or P-ROC
 controller via the 14-pin ribbon cable, like this:
 
-![image](/mc/images/physical_dmd_in_backbox.jpg)
+![image](../images/physical_dmd_in_backbox.jpg)
 
 It makes no difference whether you're using an LED or an original
 plasma gas DMD. (Also it doesn't matter what color it is.)

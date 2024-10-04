@@ -17,9 +17,13 @@ Popbumpers are configured as
 
 ## Hardware
 
-![Pop Bumper Data East/Sega/Williams 500-5227-00](/mechs/images/pop_bumper.jpg)
+Pop Bumper Data East/Sega/Williams 500-5227-00
 
-![Pop Bumpers Installed in Playfield](/mechs/images/pop_bumpers_installed.jpg)
+![image](../images/pop_bumper.jpg)
+
+Pop Bumpers Installed in Playfield
+
+![image](../images/pop_bumpers_installed.jpg)
 
 Pop bumpers are made of three elements relevant for MPF:
 

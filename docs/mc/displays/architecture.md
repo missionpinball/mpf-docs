@@ -22,7 +22,7 @@ step-by-step tutorial to get your display up and running just with a few
 config file entries.) But as you start to create more advanced display
 effects, it will be helpful to understand how everything fits together.
 
-![image](/mc/images/display_architecture.png)
+![image](../images/display_architecture.png)
 
 The major components of the MPF Media Controller's display system are:
 

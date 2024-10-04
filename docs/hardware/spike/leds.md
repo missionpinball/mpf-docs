@@ -45,7 +45,7 @@ Pretty much you just look up the number in the manual for your machine
 and then enter it without any letters. For example, here is (part of)
 the lighting chart from Wrestlemania Pro:
 
-![image](/hardware/images/spike_light_table.jpg)
+![image](/docs/hardware/images/spike_light_table.jpg)
 
 Use the address column (highlighted in yellow) to get the numbers for
 each LED. Remove the "LP" letters, and also remove any lowercase
@@ -98,7 +98,7 @@ into single RGB objects.
 
 Here's an example from the Wrestlemania Pro manual:
 
-![image](/hardware/images/spike_rgb_light_table.jpg)
+![image](/docs/hardware/images/spike_rgb_light_table.jpg)
 
 You could enter the three channels as three separate lights in the
 `lights:` section of your machine config. However, that would complicate

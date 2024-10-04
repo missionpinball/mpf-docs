@@ -57,7 +57,7 @@ slides:
 The result is like this. Note that widget3.1 is on top of widget3.2,
 which is on top of widget3.3:
 
-![image](/mc/images/widget_layers_order.jpg)
+![image](../images/widget_layers_order.jpg)
 
 In this example, all three widgets are 100% opaque, but if any of them
 had opacity of less than 100%, then you would see the lower level widget
@@ -101,7 +101,7 @@ slides:
 
 And the results:
 
-![image](/mc/images/widget_layers_z.jpg)
+![image](../images/widget_layers_z.jpg)
 
 Note that *widget3.2* is on top since it's `z:` is 100, then
 *widget3.3* is next with `z: 2`, and finally *widget3.1* is on the

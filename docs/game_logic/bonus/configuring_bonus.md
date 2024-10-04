@@ -17,7 +17,7 @@ Even though the bonus mode is built-in, you'll still need to add a
 
 It should look something like this:
 
-![image](/game_logic/images/bonus_folder.png)
+![image](../images/bonus_folder.png)
 
 ## 2. Add the bonus mode to your machine-wide modes list
 

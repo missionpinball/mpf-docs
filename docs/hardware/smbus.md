@@ -38,7 +38,7 @@ Install `smbus2_asyncio` via pip:
 This is an adafruit trinket used as USB-I2C adapter for an
 [MMA8451-based accelerometer](mma8451.md):
 
-![image](/hardware/images/mma8451-i2c-usb-accelerometer.jpg)
+![image](/docs/hardware/images/mma8451-i2c-usb-accelerometer.jpg)
 
 ## 3. Connect your hardware
 

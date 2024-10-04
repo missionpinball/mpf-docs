@@ -176,7 +176,7 @@ the group posts `skill_shot_lit_hit` and `skill_shot_unlit_hit` when a
 unlit shot is hit. To prevent races between the two events we use a
 state_machine called `skill_shot_success` which has three states:
 
-![image](/game_logic/images/skill_shot_state_machine.png)
+![image](/docs/game_logic/images/skill_shot_state_machine.png)
 
 When the mode started it starts at `start`. Then when either
 `skill_shot_lit_hit` or `skill_shot_unlit_hit` are posted in transitions

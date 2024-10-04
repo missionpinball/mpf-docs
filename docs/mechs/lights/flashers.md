@@ -17,9 +17,9 @@ MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors
 instead of low-power lighting circuitry.
 
-![image](/mechs/images/flasher1.jpg)
+![image](/docs/mechs/images/flasher1.jpg)
 
-![image](/mechs/images/flasher2.jpg)
+![image](/docs/mechs/images/flasher2.jpg)
 
 MPF's flasher devices are only used in older machines (WPC, Stern SAM,
 System 11) since modern LED-based machines typically use regular LED

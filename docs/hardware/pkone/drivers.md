@@ -26,7 +26,7 @@ When you're using PKONE Extension boards, drivers plug into individual
 Extension boards. Then the Extension boards are connected together in a
 chain to the controller.
 
-![image](/hardware/images/pkone-extension.png)
+![image](../images/pkone-extension.png)
 
 The `number:` setting for each coil/driver is its board's Address ID
 number in the PKONE chain, then the dash, then the coil/driver output

@@ -35,28 +35,28 @@ manual programming.
 Here's a traditional
 [single-color / mono DMD](dmd.md):
 
-![image](/mc/images/display_mono_dmd.jpg)
+![image](/docs/mc/images/display_mono_dmd.jpg)
 
 Here's an on-screen window (or what many people called an "LCD"
 display. In this case, it's showing on single
 [color DMD](rgb_dmd.md) virtually
 with no "dot" filter applied, along with other on-screen content:
 
-![image](/mc/images/display_window.jpg)
+![image](/docs/mc/images/display_window.jpg)
 
 Here's a "color" DMD on an LCD monitor. It's showing a 128x32 window
 of color content, with a "dot look" filter to make it look like dots.
 
-![image](/mc/images/display_color_dmd.jpg)
+![image](/docs/mc/images/display_color_dmd.jpg)
 
 Here's a full-size window with the dot filter applied:
 
-![image](/mc/images/dot_look_full_screen.png)
+![image](/docs/mc/images/dot_look_full_screen.png)
 
 Here's a full-color RGB DMD LED matrix. (So it's like a color DMD, but
 a matrix of 2.5mm RGB LEDs rather than an LCD):
 
-![image](/mc/images/display_rgb_dmd.jpg)
+![image](/docs/mc/images/display_rgb_dmd.jpg)
 
 Before we go into the details of all the various display components,
 let's start with an overview of how the MPF display architecture works.

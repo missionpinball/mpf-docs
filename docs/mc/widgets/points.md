@@ -27,7 +27,7 @@ slide_player:
 
 Which results in the following:
 
-![image](/mc/images/points.png)
+![image](/docs/mc/images/points.png)
 
 ## Settings
 

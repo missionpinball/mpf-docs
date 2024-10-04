@@ -44,7 +44,7 @@ b.  Run MPF on the LISY hardware directly ("master" mode).
 
 See the following image for an architecture overview:
 
-![image](/hardware/images/lisy_mpf_overview.jpg)
+![image](../images/lisy_mpf_overview.jpg)
 
 LISY can controll all features of your Gottlieb System1/80 machine. This
 includes:

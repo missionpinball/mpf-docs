@@ -15,7 +15,7 @@ The main reasons for doing this are to combine reset coils (since one
 coil typically resets an entire bank) and to get additional events
 posted when the entire bank is up, down or in a mixed state.
 
-![image](/mechs/images/drop_target_bank.jpg)
+![image](/docs/mechs/images/drop_target_bank.jpg)
 
 This is an example:
 
