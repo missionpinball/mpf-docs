@@ -1,5 +1,5 @@
 ---
-title: "Lights" versus "LEDs"
+title: Lights versus LEDs
 ---
 
 # "Lights" versus "LEDs" (Some LEDs are lights!)
@@ -32,7 +32,7 @@ The following diagram shows the different types. An easy way to tell is
 if your lights or LEDs have mini bayonet or mini wedge bases, they're
 *Matrix Lights*, and everything else is *LEDs*:
 
-![image](/mechs/images/lights_vs_leds.jpg)
+![image](/docs/mechs/images/lights_vs_leds.jpg)
 
 Note that it's possible that you'll have both matrix lights and direct
 connected LEDs in the same machine. For example, maybe you're writing

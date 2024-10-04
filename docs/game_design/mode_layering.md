@@ -81,7 +81,7 @@ default, the global mode starts when the base mode starts and the field
 mode starts when the global mode starts. As a result, the typical player
 turn starts with field mode (a.k.a. on an open playfield).
 
-![image](/game_design/images/mode_layering.png)
+![image](images/mode_layering.png)
 
 *Field and Mission modes are mutually exclusive:* the field mode stops
 when a mission mode starts, and starts again when the mission mode

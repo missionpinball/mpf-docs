@@ -23,7 +23,7 @@ When you're using PKONE Extension boards, coils plug into individual
 Extension boards. Then the Extension boards are connected together in a
 chain to the controller.
 
-![image](/hardware/images/pkone-extension.png)
+![image](/docs/hardware/images/pkone-extension.png)
 
 The `number:` setting for each servo is its board's Address ID number
 in the PKONE chain, then the dash, then the servo output number (11-14).

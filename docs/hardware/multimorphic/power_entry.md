@@ -9,7 +9,7 @@ This board can be used to fan out your power rails. See
 [Voltages and Power in Pinball Machines](../voltages_and_power/index.md) for
 details.
 
-![image](/hardware/images/multimorphic_Power_Entry.png)
+![image](../images/multimorphic_Power_Entry.png)
 
 The Multimorphic Power Filter board serves four purposes. 1. It serves
 as a central connection point for 230V/110V AC and all your PSUs using
