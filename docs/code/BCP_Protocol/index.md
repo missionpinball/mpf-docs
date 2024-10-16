@@ -36,7 +36,7 @@ While the BCP protocol was created as part of the MPF project, the intention is 
 * Simple parameter values are prefixed with a string that indicates their data type: (`int:`, `float:`, `bool:`, `NoneType:`). For example, the integer 5 would appear in the command string as `int:5`.
 * When a command includes one or more complex value types (list or dict) all parameters are encoded using JSON and the resulting encoded value is assigned to the `json:` parameter.
 * Parameters are separated by an ampersand (`&`)
-* Parameter names and their values are escaped using percent encoding as necessary; (details here).
+* Parameter names and their values are escaped using percent encoding as necessary; ([details here](https://en.m.wikipedia.org/wiki/Percent-encoding)).
 * Commands are terminated by a line feed character (`\n`). Carriage return characters (`\r`) should be tolerated but are not significant.
 * A blank line (no command) is ignored
 * Commands beginning with a hash character (`#`) are ignored
