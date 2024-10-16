@@ -33,7 +33,7 @@ While the BCP protocol was created as part of the MPF project, the intention is 
 * Parameters are in the format `name=value`
 * Parameter names are case-insensitive
 * Parameter values are case-sensitive
-* Simple parameter values are prefixed with a string that indicates their data type: (`int:`, `float:`, `bool:`, `NoneType:`). For example, the integer 5 would appear in the command string as `int:5`.
+* Simple parameter values of the following types are are prefixed with a string that indicates their data type: (`int:`, `float:`, `bool:`, `NoneType:`). For example, the integer 5 would appear in the command string as `int:5`.
 * When a command includes one or more complex value types (list or dict) all parameters are encoded using JSON and the resulting encoded value is assigned to the `json:` parameter.
 * Parameters are separated by an ampersand (`&`)
 * Parameter names and their values are escaped using percent encoding as necessary; (details here).
