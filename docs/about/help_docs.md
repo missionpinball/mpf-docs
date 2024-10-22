@@ -20,7 +20,7 @@ change.
 
 ## How this website works
 
-There's a GitHub repository called [mpf-docs`](https://github.com/missionpinball/mpf-docs)
+There's a GitHub repository called [mpf-docs](https://github.com/missionpinball/mpf-docs)
 which contains the source code for this website. It's a [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 site. Every time a change is made to that repository, a GitHub action runs that
 builds the site and deploys it to GitHub pages.
