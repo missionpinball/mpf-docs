@@ -1,6 +1,6 @@
 
 # machine_variable (BCP command)
-This is a generic “catch all” which sends machine variables to the media controller any time they change. Machine variables are like player variables, except they’re maintained machine-wide instead of per-player or per-game. Since the pin controller will most likely track hundreds of variables (with many being internal things that the media controller doesn’t care about), it's recommended that the pin controller has a way to filter which machine variables are sent to the media controller.
+This is a generic "catch all" which sends machine variables to the media controller any time they change. Machine variables are like player variables, except they're maintained machine-wide instead of per-player or per-game. Since the pin controller will most likely track hundreds of variables (with many being internal things that the media controller doesn't care about), it's recommended that the pin controller has a way to filter which machine variables are sent to the media controller.
 
 ## Origin
 Pin controller
