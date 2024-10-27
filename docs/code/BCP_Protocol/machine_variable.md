@@ -6,14 +6,7 @@ This is a generic "catch all" which sends machine variables to the media control
 Pin controller
 
 ## Parameters
-If the value is a single variable, the command will have one parameter for the name and another for the value:
-```
-machine_variable?name=credits_string&value=FREE PLAY
-```
-If the value is more complex, both the name and the value will be contained in a single json parameter with the name 'json':
-```
-machine_variable?json={"name": "audits_player_score", "value": {"average": 6000, "top": [8300, 5200, 4500], "total": 3}}
-```
+The parameters `prev_value` and `change` are only present if there was a change. When monitoring of machine variables is started, MPF will send the current state of all machine variables without these two parameters.
 
 ### name
 Type: `string`
@@ -24,6 +17,16 @@ This is the name of the machine variable.
 Type: Varies depending on the variable type.
 
 This is the new value of the machine variable.
+
+### prev_value
+Type: Varies depending upon the variable type.
+
+This is the previous value of the machine variable. This parameter is only included if there was a change.
+
+### change
+Type: Varies depending upon the variable type.
+
+If the machine variable just changed, this will be the amount of the change. If it's not possible to determine a numeric change (for example, if this machine variable is a string), then this change value will be set to the boolean True. This parameter is only included if there was a change.
 
 ## Response
 None
