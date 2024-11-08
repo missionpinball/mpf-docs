@@ -6,6 +6,7 @@ title: Setting up GMC
 
 Before we can start building scenes, a few project setup steps are required. With your project open in the Godot Editor, go to *Project > Project Settings* to open the settings dialog.
 
+
 ## Set the Main Scene
 
 Every slide, widget, and other UI file in Godot is called a "scene". When your Godot project runs, it needs to know which scene to load as its entry point.
@@ -15,6 +16,9 @@ When using GMC, the main scene will be the "window", the foundation on which all
 As your project becomes more complex and your knowledge of Godot improves, you may want to build a custom startup scene for your game. In the meantime, GMC comes with a default Window scene to get you started.
 
 Since your Godot project is brand new, you need to tell it what scene is the entry point. On the left menu bar of Project Settings, select *Application > Run* and in the Main Scene picker, navigate to `/addons/mpf-gmc/slides/window.tscn` and select that to be your main scene.
+
+![image](images/set_main_scene.png)
+
 
 ## Set the Window Size
 
@@ -26,6 +30,7 @@ The other settings here will be customized later, including windowed/fullscreen 
 
 You can now close the Project Settings and save your project.
 
+
 ## Configure the Audio Busses
 
 Godot manages audio through a series of buses that feed into the *Master* audio bus for output to speakers. You can configure as many audio buses as you'd like, and most pinball projects use a standard set of three: *music*, *effects*, and *voice*.
@@ -33,6 +38,7 @@ Godot manages audio through a series of buses that feed into the *Master* audio 
 ![image](images/audio_buses.png)
 
 Each bus can be configured with its own parameters for how it plays back sounds (e.g. music plays one file at a time, voice plays files sequentially, and effects play files simultaneously), how it ducks for other buses, and which bus is the default.
+
 
 ### Create Buses in Godot Editor
 
@@ -45,6 +51,7 @@ At the bottom panel of the Godot Editor there is a tab called *Audio*  which wil
     Godot uses the term "buses" instead of "tracks", and GMC will follow this pattern. As a result, an MPF project previously built for MPF 0.5 will need to update `sound_player` config entries to use `bus:` instead of `track:`.
 
 Click on the *Add Bus* button to add a new bus and name it *"music"* (case sensitive). Do the same for *"effects"* and *"voice"*, or customize the buses to what you need for your project.
+
 
 ### Configure the Busses in GMC Config File
 
@@ -62,17 +69,38 @@ Create a new text file in the root of your project called *gmc.cfg* and paste in
 
 You may then adjust these defaults if you've customized your buses, but otherwise this configuration will take care of you for a while. Save the *gmc.cfg* file and close it.
 
+
 ## Create an Attract Mode slide
 
 The first slide we will create is for Attract mode, so we can connect to MPF and verify that GMC is working properly. Slides can live in either a `slides` folder in the project root, or in a `slides` subfolder under any mode in your project modes folder (e.g. `/modes/attract/slides`). Create a slides folder in either location, and then in the Godot FileSystem panel right-click on the slides folder and select *Create New > Scene*.
 
+![image](images/new_slide_scene.png)
+
+Enter the name of your slide "attract" as the scene name and click the tree icon to open the root type selection menu.
+
 ![image](images/create_attract_slide.png)
 
-Every slide in GMC must derive from the custom `MPFSlide` class, so in the *Create New Scene* dialog under **Root Type** click on the tree icon to pick a custom node class. Search for and select the `MPFSlide` class. Enter the name of your slide "attract" as the scene name, and press OK to create the scene.
+Every slide in GMC must derive from the custom `MPFSlide` class, so in the *Create New Scene* dialog under **Root Type** click on the tree icon to pick a custom node class. Search for and select the `MPFSlide` class, then press "Pick".
+
+![image](images/new_scene_root_node.png)
+
+Back in the "Create new Scene" menu, press OK to complete creation.
+
 
 ## Decorate the Attract slide
 
-You'll now be at the Scene Editor view for the attract slide, which is empty. We'll start by adding a nice background color: In the *Scene* panel in the upper-left, click on the **+** icon to add a new node. In the node panel, search for and select `ColorRect` to add a colored rectangle to the scene. Drag the rectangle's corners to fill the purple dimensions on screen (which correspond to your Window size). Use the color picker in the *Inspector* panel to set a nice color.
+You'll now be at the Scene Editor view for the attract slide, which is empty. We'll start by adding a nice background color: In the *Scene* panel in the upper-left, click on the **+** icon to add a new node.
+
+![image](images/add_node_to_scene.png)
+
+In the node panel, search for and select `ColorRect` to add a colored rectangle to the scene.
+
+![image](images/add_color_rect.png)
+
+Drag the rectangle's corners to fill the purple dimensions on screen (which correspond to your Window size). Use the color picker in the *Inspector* panel to set a nice color.
+
+![image](images/select_rect_color.png)
+
 
 !!! tip
 
@@ -82,7 +110,12 @@ Next we'll add some text to the slide. Back at the *Scene* panel, add another no
 
 In the *Inspector* panel, in the *Text* field type in the text "Welcome to GMC!", set the *Horizontal Alignment* to Center, and under *Theme Overrides > Font Sizes* set a nice big font, like 100px.
 
+![image](images/label_settings.png)
+
+Overall you should have a slide with a background color and text label that looks something like this:
+
 ![image](images/attract_slide.png)
+
 
 ## Run MPF
 
@@ -109,6 +142,7 @@ In your terminal, in your project folder with your virtual environment activated
     ``` console
     sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
     ```
+
 
 ## Create a Keymap
 
