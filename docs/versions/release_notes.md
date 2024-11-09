@@ -12,6 +12,23 @@ Note you can also click the "Assets" section at the end of the notes
 for each release to download the PDF or HTML versions of the
 documentation for that specific release.
 
+## 0.57.3
+
+Release: September 15, 2024
+
+MPF 0.57.3 includes quality of life changes with many small changes including more graceful error handling and mpf version enforcement.
+
+### New Features
+* FAST EXP Board Config option `ignore_led_errors` - setting `true` will log parsing/interpolation errors for LED colors but not crash the game.
+* High Score "Filler" Initials/Names - provide defaults if a player chooses not to enter their own initials/name.
+* Config option `min_mpf_version` - When specified, boot up will error out if the current MPF version is less than the config-specified one.
+
+### Improvements
+ * Bonus entries that use `player_score_entry` player variables will be zero if the player variable is unset (previously: one)
+ * Active modes are logged at main loop start, with a warning if attract mode is not active
+ * Platform Integration Test runner improved support for trough ball detection
+ * Misc code cleanup and fixes
+
 ## 0.57.2
 
 Release: July 17, 2024
