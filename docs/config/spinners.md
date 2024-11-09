@@ -50,26 +50,22 @@ The basic flow:
 1. Spinner sits in idle state
 
 2. A spinner switch is hit
-        i.  The spinner becomes "active" and sets a timeout for
-            `active_ms:` duration
-        ii. The spinner posts *spinner_\(name\)_active* event
-        iii. The spinner posts *spinner_\(name\)_hit* event
+    1. The spinner becomes "active" and sets a timeout for `active_ms:` duration
+    2. The spinner posts *spinner_\(name\)_active* event
+    3. The spinner posts *spinner_\(name\)_hit* event
 
-3. Additional switch hits occur
-        i.  The spinner resets the timeout for another `active_ms:`
-            duration
-        ii. The spinner posts a *spinner_\(name\)_hit* event for
-            each hit
+4. Additional switch hits occur
+   1. The spinner resets the timeout for another `active_ms:` duration
+   2. The spinner posts a *spinner_\(name\)_hit* event for each hit
 
-4. Switch hits stop and the active delay timer expires
-        i.  The spinner switches to "inactive" state
-        ii. The spinner posts *spinner_\(name\)_inactive* event
-        iii. (Optional) If `idle_ms:` is defined, the spinner sets a
-             timeout for idle_ms duration
+5. Switch hits stop and the active delay timer expires
+   1. The spinner switches to "inactive" state
+   2. The spinner posts *spinner_\(name\)_inactive* event
+   3. (Optional) If `idle_ms:` is defined, the spinner sets a timeout for idle_ms duration
 
-5. (Optional) No switch hits occur and the idle delay timer expires
-        i.  The spinner posts *spinner_\(name\)_idle* event
-        ii. The spinner switches to "idle" state
+6. (Optional) No switch hits occur and the idle delay timer expires
+   1.  The spinner posts *spinner_\(name\)_idle* event
+   2. The spinner switches to "idle" state
 
 ## Optional settings
 
