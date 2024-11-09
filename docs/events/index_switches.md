@@ -1,16 +1,16 @@
 ---
-title: switch
+title: switch event index
 ---
 
-# switch
+# switch events
 
 
-See: [switch_switch_inactive](../config/switches.md)
+See: [switches:](../config/switches.md)
 
-* [switch_switch_inactive](switch_active.md)
-* [switch_switch_inactive](switch_inactive.md)
-* [switch_switch_inactive](sw_tag.md)
-* [switch_switch_inactive](sw_tag_active.md)
-* [switch_switch_inactive](sw_tag_inactive.md)
-* [switch_switch_inactive](switch_switch_active.md)
-* [switch](../index.md)(name)_inactive](switch_switch_inactive)
+* [(switch_name)_active](switch_active.md)
+* [(switch_name)_inactive](switch_inactive.md)
+* [sw_(tag)](sw_tag.md)
+* [sw_(tag)_active](sw_tag_active.md)
+* [sw_(tag)_inactive](sw_tag_inactive.md)
+* [switch_(switch_name)_active](switch_switch_active.md)
+* [switch_(switch_name)_inactive](switch_switch_inactive.md)

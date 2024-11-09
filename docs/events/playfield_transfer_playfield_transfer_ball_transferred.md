@@ -1,8 +1,8 @@
 ---
-title: [playfield_transfer](../index.md)(playfield_transfer)_ball_transferred
+title: playfield_transfer_(playfield_transfer)_ball_transferred
 ---
 
-# [playfield_transfer](../index.md)(playfield_transfer)_ball_transferred
+# playfield_transfer_(playfield_transfer)_ball_transferred
 
 
 --8<-- "event.md"

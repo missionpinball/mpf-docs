@@ -1,11 +1,11 @@
 ---
-title: timed_switch
+title: timed_switch event index
 ---
 
-# timed_switch
+# timed_switch events
 
 
-See: [timed_switch_released](../config/timed_switches.md)
+See: [timed_switches:](../config/timed_switches.md)
 
-* [timed_switch_released](timed_switch_active.md)
-* [(name)_released](timed_switch_released.md)
+* [(timed_switch)_active](timed_switch_active.md)
+* [(timed_switch)_released](timed_switch_released.md)

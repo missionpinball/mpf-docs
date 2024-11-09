@@ -1,11 +1,11 @@
 ---
-title: achievement
+title: achievement event index
 ---
 
-# achievement
+# achievement events
 
 
-See: [achievement_achievement_state_state](../config/achievements.md)
+See: [achievements:](../config/achievements.md)
 
-* [achievement_achievement_state_state](achievement_achievement_changed_state.md)
-* [achievement](../index.md)(name)_[state](../index.md)(state)](achievement_achievement_state_state)
+* [achievement_(name)_changed_state](achievement_achievement_changed_state.md)
+* [achievement_(name)_state_(state)](achievement_achievement_state_state.md)

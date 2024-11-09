@@ -1,13 +1,13 @@
 ---
-title: (name)_(state)_hit
+title: (shot_group_name)_(state)_hit
 ---
 
-# (name)_(state)_hit
+# (shot_group_name)_(state)_hit
 
 
 --8<-- "event.md"
 
-A member shot with state (state) in the shot group (name) has been hit.
+A member shot with state (state) in the shot group (shot_group_name) has been hit.
 
 *This event does not have any keyword arguments*
 
