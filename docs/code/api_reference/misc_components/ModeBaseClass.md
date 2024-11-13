@@ -1,0 +1,164 @@
+
+# Mode base class
+
+`class mpf.core.mode.Mode(machine: MachineController, config, name: str, path, asset_paths)`
+
+Bases: mpf.core.logging.LogMixin
+
+Base class for a mode.
+
+## Methods & Attributes
+
+The Mode base class has the following methods & attributes available. Note that methods & attributes inherited from the base class are not included here.
+
+`active`
+
+Return True if this mode is active.
+
+`add_mode_event_handler(event: str, handler: Callable, priority: int = 0, **kwargs) → mpf.core.events.EventHandlerKey`
+
+Register an event handler which is automatically removed when this mode stops.
+
+This method is similar to the Event Manager’s add_handler() method, except this method automatically unregisters the handlers when the mode ends.
+
+Parameters:
+
+* **event** – String name of the event you’re adding a handler for. Since events are text strings, they don’t have to be pre-defined.
+* **handler** – The method that will be called when the event is fired.
+* **priority** – An arbitrary integer value that defines what order the handlers will be called in. The default is 1, so if you have a handler that you want to be called first, add it here with a priority of 2. (Or 3 or 10 or 100000.) The numbers don’t matter. They’re called from highest to lowest. (i.e. priority 100 is called before priority 1.)
+* ****kwargs** – Any any additional keyword/argument pairs entered here will be attached to the handler and called whenever that handler is called. Note these are in addition to kwargs that could be passed as part of the event post. If there’s a conflict, the event-level ones will win.
+
+Returns a EventHandlerKey to the handler which you can use to later remove the handler via remove_handler_by_key. Though you don’t need to remove the handler since the whole point of this method is they’re automatically removed when the mode stops.
+
+Note that if you do add a handler via this method and then remove it manually, that’s ok too.
+
+`auto_stop_on_ball_end`
+
+Controls whether this mode is stopped when the ball ends, regardless of its stop_events settings.
+
+`configure_logging(logger: str, console_level: str = 'basic', file_level: str = 'basic', url_base=None)`
+
+Configure logging.
+
+Parameters:
+
+* **logger** – The string name of the logger to use.
+* **console_level** – The level of logging for the console. Valid options are “none”, “basic”, or “full”.
+* **file_level** – The level of logging for the console. Valid options are “none”, “basic”, or “full”.
+* **url_base** – Base URL for docs links in exceptions.
+
+`configure_mode_settings(config: dict) → None`
+
+Process this mode’s configuration settings from a config dictionary.
+
+`create_mode_devices() → None`
+
+Create new devices that are specified in a mode config that haven’t been created in the machine-wide.
+
+`debug_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
+
+Log a message at the debug level.
+
+Note that whether this message shows up in the console or log file is controlled by the settings used with configure_logging().
+
+`delay`
+
+DelayManager instance for delays in this mode. Note that all delays scheduled here will be automatically canceled when the mode stops.
+
+`error_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
+
+Log a message at the error level.
+
+These messages will always be shown in the console and the log file.
+
+`format_log_line(msg, context, error_no) → str`
+
+Return a formatted log line with log link and context.
+
+`static get_config_spec() → str`
+
+Return config spec for mode_settings.
+
+`ignorable_runtime_exception(msg: str) → None`
+
+Handle ignorable runtime exception.
+
+During development or tests raise an exception for easier debugging. Log an error during production.
+
+`info_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
+
+Log a message at the info level.
+
+Whether this message shows up in the console or log file is controlled by the settings used with configure_logging().
+
+`initialise_mode() → None`
+
+Initialise this mode.
+
+`is_game_mode`
+
+Return true if this is a game mode.
+
+`load_mode_devices() → None`
+
+Load config of mode devices.
+
+`mode_init() → None`
+
+User-overrideable method which will be called when this mode initializes as part of the MPF boot process.
+
+`mode_start(**kwargs) → None`
+
+User-overrideable method which will be called whenever this mode starts (i.e. whenever it becomes active).
+
+`mode_stop(**kwargs) → None`
+
+User-overrideable method which will be called whenever this mode stops.
+
+`mode_will_start(**kwargs) → None`
+
+User-overrideable method which will be called whenever this mode starts (i.e. before it becomes active).
+
+`player`
+
+Reference to the current player object.
+
+`raise_config_error(msg, error_no, *, context=None) → NoReturn`
+
+Raise a ConfigFileError exception.
+
+`restart_on_next_ball`
+
+Controls whether this mode will restart on the next ball. This only works if the mode was running when the ball ended. It’s tracked per- player in the ‘restart_modes_on_next_ball’ player variable.
+
+`start(mode_priority=None, callback=None, **kwargs) → None`
+
+Start this mode.
+
+Parameters:
+
+* **mode_priority** – Integer value of what you want this mode to run at. If you don’t specify one, it will use the “Mode: priority” setting from this mode’s configuration file.
+* **callback** – Callback to call when this mode has been started.
+* ****kwargs** – Catch-all since this mode might start from events with who-knows-what keyword arguments.
+
+Warning: You can safely call this method, but do not override it in your mode code. If you want to write your own mode code by subclassing Mode, put whatever code you want to run when this mode starts in the mode_start method which will be called automatically.
+
+`stop(callback: Any = None, **kwargs) → bool`
+
+Stop this mode.
+
+Parameters:
+
+* **callback** – Method which will be called once this mode has stopped. Will only be called when the mode is running (includes currently stopping)
+* ****kwargs** – Catch-all since this mode might start from events with who-knows-what keyword arguments.
+
+Warning: You can safely call this method, but do not override it in your mode code. If you want to write your own mode code by subclassing Mode, put whatever code you want to run when this mode stops in the mode_stop method which will be called automatically.
+
+Returns true if the mode is running. Otherwise false.
+
+`warning_log(msg: str, *args, context=None, error_no=None, **kwargs) → None`
+
+Log a message at the warning level.
+
+These messages will always be shown in the console and the log file.
+
