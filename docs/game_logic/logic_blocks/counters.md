@@ -138,7 +138,7 @@ enough in most cases because `disable_on_complete` is `True` by default.
 Unless you have some enable logic to re-enable the block later, you
 probably want to set `disable_on_complete` to `False`.
 
-### When should I used logic blocks and when should I use shots/show_groups?
+### When should I used logic blocks and when should I use shots/shot_groups?
 
 There is no definitive answer to this question. Generally, it depends on
 your usecase. Shots and shot_groups serve a very specific usecase.
