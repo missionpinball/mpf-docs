@@ -56,6 +56,12 @@ light number. An 8-digit NeoSeg display occupies 120 channels while the
 display after neoSeg_0, its start_channel would be 0-0-0 plus 120...so
 0-0-120.
 
+Note, though these are 14 segment displays you need 15 channels per digit since the
+period provided as an own segment needs on own channel. If you look at the hardware closely
+you will see the period and underneath a comma. The comma cannot be addressed separately, in fact
+the display shows a dot rather as a semicolon. For a neoseg display you probably would set [use_dots_for_commas](../../../config/segment_displays.md) to
+true to show a comma as a dot.
+
 We had to add a light template so that we could identify it as a single
 channel LED.
 

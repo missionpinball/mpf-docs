@@ -17,5 +17,9 @@ looping.
 Note that any shows which were started via a `show_player:` section in a
 mode config file will automatically be stopped when that mode stops.
 
-So check the [show_player:](../config/show_player.md)
+!!! note
+
+    Please make sure to always stop your show when you don't need it anymore. For example you run a show (show 1) on segment display, that show displays the player number. After the game is over another show (show 2) kicks in and that new show writes something on that display (so no more showing the actual player). Now you want to start the next game, the old show (show 1) starts again. If the player number has not changed, and it doesn't for example in a 1-player game, mpf believes the old execution of show 1 is still valid since nothing has changed and won't update the display (which again you have overwritten in a different show).
+
+Check the [show_player:](../config/show_player.md)
 documentation for details.
