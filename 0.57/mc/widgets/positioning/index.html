@@ -30479,7 +30479,7 @@ on slide (horizontal, then vertical).</p>
     from the left edge and 20 pixels up from the bottom.</li>
 </ul>
 <p>Here's a simple example that illustrates this:</p>
-<p><img alt="image" src="/mc/images/widget_positioning_basics.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_positioning_basics.png" /></p>
 <p>By the way, in MPF, the actual "pixel size" of the display as MPF sees
 it is separate from actual pixels of the physical display. So you could
 have a display in MPF that's 400x300 pixels, but you show that full
@@ -30505,11 +30505,11 @@ position it on the slide. Here are some examples which show how various
 anchor settings are applied to different widgets. The red bulls-eye
 target represents the point that's used by MPF to position that widget
 with each type of anchor settings.</p>
-<p><img alt="image" src="/mc/images/widget_anchors.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_anchors.png" /></p>
 <h2 id="3-combing-anchors-and-widget-positioning">3. Combing anchors and widget positioning</h2>
 <p>Now that you know how the coordinates and anchors work, let's look at
 some examples that combine these two concepts:</p>
-<p><img alt="image" src="/mc/images/widget_positioning_with_anchors_1.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_positioning_with_anchors_1.png" /></p>
 <p>In the diagram above, you can see how the bulls-eye anchor target is the
 actual point of the widget that is positioned with each widget's <code>x:</code>
 and <code>y:</code> settings.</p>
@@ -30536,7 +30536,7 @@ you constantly have to think about how big your display is and do lots
 of math to get your values set.</p>
 <p>Fortunately MPF can use relative positions for a widget's <code>x:</code> and <code>y:</code>
 values, as show here:</p>
-<p><img alt="image" src="/mc/images/widget_positioning_with_anchors_2.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_positioning_with_anchors_2.png" /></p>
 <p>There are a lot of different options in this diagram, so let's go
 through them one-by-one.</p>
 <p>First, for <code>x:</code> values, you can use:</p>
@@ -30607,7 +30607,7 @@ Even though this font is small (only 5 pixels tall, uses for small text
 on a DMD), it still has two blank rows of pixels below every letter.
 This means that if you set the <code>anchor_y: bottom</code> on both your text and
 the circle, they will not actually be aligned:</p>
-<p><img alt="image" src="/mc/images/widget_bad_offset.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_bad_offset.png" /></p>
 <p>What's even worst is that this font only has 1 extra row on top, so if
 you want to center-align it with another widget you won't get the
 actual center of the visible text.</p>
@@ -30638,7 +30638,7 @@ move it more away from the center (adding padding)</p>
 <p>Going back to the example from before, if we add <code>adjust_bottom: 2</code>,
 that will move the adjustment point 2 pixels towards the middle, meaning
 our bottom alignment now actually aligns:</p>
-<p><img alt="image" src="/mc/images/widget_good_offset.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_good_offset.png" /></p>
 <p>Negative values have the effect of adding padding to widgets, which can
 also be nice as you're aligning and distributing things.</p>
 <p>The only other thing to know about adjustments is that they only affect
@@ -30661,7 +30661,7 @@ MPF-MC to round fractional anchor positions in the specified direction.</p>
 <li><code>round_anchor_y: top</code> - Round the vertical pixel position up</li>
 <li><code>round_anchor_y: center</code> - Do not round the pixel position (default)</li>
 </ul>
-<p><img alt="image" src="/mc/images/widget_anchor_rounding.png" /></p>
+<p><img alt="image" src="/docs/mc/images/widget_anchor_rounding.png" /></p>
 <p>This setting is valid on <code>widgets</code> and <code>displays</code>. If you have a display
 and a widget both configured for rounding, the widget's setting will
 take priority.</p>
