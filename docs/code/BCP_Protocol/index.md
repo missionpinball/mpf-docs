@@ -82,6 +82,7 @@ The following BCP commands have been defined (and implemented) in MPF:
 * [machine_variable](machine_variable.md)
 * [mode_start](mode_start.md)
 * [mode_stop](mode_stop.md)
+* [mode_list](mode_list.md)
 * [monitor_start](monitor_start.md)
 * [monitor_stop](monitor_stop.md)
 * [player_added](player_added.md)
