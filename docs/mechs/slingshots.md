@@ -15,9 +15,9 @@ in MPF.
 
 ## Hardware
 
-![image](/mechs/images/slingshot_side.jpg)
+![image](images/slingshot_side.jpg)
 
-![image](/mechs/images/slingshot_front.jpg)
+![image](images/slingshot_front.jpg)
 
 A sling shot usually consists of two
 [blade switches](switches/mechanical_switches.md) and one [coil](../config/coils.md). Those switches are wired in parallel because it does not

@@ -21,12 +21,12 @@ looks fully bright, and that 50% looks like 50%, etc. Here is a
 screenshot of a slide which has 16 bars which fade from off to fully
 white, in a more-or-less even fashion:
 
-![image](/config/images/good_gamma.png)
+![image](../images/good_gamma.png)
 
 However if you show this slide on your physical DMD with no gamma
 correction, it looks something like this:
 
-![image](/config/images/bad_gamma.png)
+![image](../images/bad_gamma.png)
 
 Even though the individual pixels are showing their "correct"
 brightness, the human eye can't really tell a different between 50% and

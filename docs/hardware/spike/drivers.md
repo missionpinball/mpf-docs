@@ -26,7 +26,7 @@ The `number:` setting for each driver is a combination of the node it's
 connected to and its address from the manual. For example, here's the
 driver reference table from Page 11 of the Wrestlemania Pro manual:
 
-![image](/hardware/images/spike_driver_table.jpg)
+![image](../images/spike_driver_table.jpg)
 
 The address for each driver is in the highlighted column. To enter the
 number for the driver into MPF, remove the middle "DR" letters so you

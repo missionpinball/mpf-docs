@@ -12,7 +12,7 @@ roughly covers connecting the bus between the boards.
 
 Connect your PKONE NANO controller to your PC using USB.
 
-![image](/hardware/images/pkone-nano.png)
+![image](/docs/hardware/images/pkone-nano.png)
 
 Then connect the OUT port of your NANO to the IN port of your first
 board (Extension or Lightshow). Consequently, connect the OUT port of

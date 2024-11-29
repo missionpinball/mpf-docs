@@ -9,9 +9,9 @@ Related Config File Sections:
 
 * [steppers:](../config/steppers.md)
 
-![image](/mechs/images/stepper_driver.jpg)
+![image](images/stepper_driver.jpg)
 
-![image](/mechs/images/stepper_with_switch.jpg)
+![image](images/stepper_with_switch.jpg)
 
 Stepper motors offer digitally controlled precise movement of
 mechanisms. They require a separate driver board that interfaces with

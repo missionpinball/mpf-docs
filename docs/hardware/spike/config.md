@@ -74,7 +74,7 @@ nodes:
     can get this from the manual. Here's an example from Wrestlemania
     Pro:
 
-    ![image](/hardware/images/spike_node_table.png)
+  ![image](../images/spike_node_table.png)
 
       Only map the node boards and ignore the extension boards because
     those   are transparent to MPF. Just consider 8 and 8a/8b to be the

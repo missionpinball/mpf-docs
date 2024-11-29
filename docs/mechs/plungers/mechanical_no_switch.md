@@ -21,7 +21,7 @@ including many EM and early solid state machines.)
 
 Here's an example from a Gottlieb Big Shot
 
-![image](/mechs/images/plunger_no_switch.jpg)
+![image](../images/plunger_no_switch.jpg)
 
 ## 1. Configure your trough / ball drain
 

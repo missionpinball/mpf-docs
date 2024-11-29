@@ -54,7 +54,7 @@ diagram shows the layout we will be creating, along with the lower left
 and upper right coordinates of each display widget based on a 1280 x 720
 pixel main window.
 
-![image](/mc/images/split_screen_layout.png)
+![image](/docs/mc/images/split_screen_layout.png)
 
 To accomplish this in MPF, we will need to create a slide that will be
 shown in the main window display that will contain display widgets for
@@ -134,7 +134,7 @@ The above config will display the `layout_4_mini` slide we just created
 as soon as the media controller is ready. Here is the result of the
 above config:
 
-![image](/mc/images/split_screen_example.png)
+![image](/docs/mc/images/split_screen_example.png)
 
 ## 3. Create additional slides and show them on one of the smaller displays
 
@@ -253,7 +253,7 @@ slide_player:
 
 The above config results in the following output:
 
-![image](/mc/images/split_screen_example_2.png)
+![image](/docs/mc/images/split_screen_example_2.png)
 
 ## 4. Conclusion
 

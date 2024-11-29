@@ -12,7 +12,7 @@ are several programs or online tools to create bitmap font descriptors.
 
 An example might look like this:
 
-![image](/mc/images/bitmap_font_example.png)
+![image](/docs/mc/images/bitmap_font_example.png)
 
 ## 2. Map Your Characters in a Descriptor File
 
@@ -38,7 +38,7 @@ char id=32 x=0 y=550 width=40 height=55 xoffset=0 yoffset=0 xadvance=40 page=0 c
 
 ## 3. Put PNG File and Descriptor Into the bitmap_fonts Folder
 
-![image](/mc/images/bitmap_font_file_structure.png)
+![image](/docs/mc/images/bitmap_font_file_structure.png)
 
 Some things to note:
 

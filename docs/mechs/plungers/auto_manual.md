@@ -16,11 +16,11 @@ plunge option.
 
 Here's an example of this:
 
-![image](/mechs/images/auto_manual_plunger.jpg)
+![image](../images/auto_manual_plunger.jpg)
 
-![image](/mechs/images/auto_launcher_side.jpg)
+![image](../images/auto_launcher_side.jpg)
 
-![image](/mechs/images/auto_launcher_bottom.jpg)
+![image](../images/auto_launcher_bottom.jpg)
 
 If you have a purely mechanical plunger with no autolaunch option,
 follow the [/mechs/playfields/ball_tracking](mechanical_with_switch.md) guide

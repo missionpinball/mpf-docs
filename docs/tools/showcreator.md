@@ -73,7 +73,7 @@ Mark, the maker of the [Nightmare before Christmas custom pinball
 machine](https://pinside.com/pinball/forum/topic/the-nightmare-before-christmas),
 created this awesome MPF Lightshow generator.
 
-![image](/tools/images/showcreator.png)
+![image](images/showcreator.png)
 
 The tool allows you to set a shape (i.e. a star in the example), choose
 a start and an end position and color. Based on that it will create a
@@ -95,12 +95,12 @@ that shape anywhere you want over the playfield.
 Here we start with a gradient bar at the top of the playfield in a pink
 color.
 
-![image](/tools/images/showcreator_start.png)
+![image](images/showcreator_start.png)
 
 We want the final position to be here at the bottom, in a darker red
 shade.
 
-![image](/tools/images/showcreator_end.png)
+![image](images/showcreator_end.png)
 
 You can then adjust the length of the animation in milliseconds and
 hence the number of steps in the final show. In this example, the shape
@@ -113,7 +113,7 @@ passes over. Lightshow playback speed can be adjusted in MPF.
 You're not restricted to just the included shapes. You can make your
 own shapes and drop them in the shapes folder.
 
-![image](/tools/images/showcreator_shapes.png)
+![image](images/showcreator_shapes.png)
 
 Once you get the hang of animating a single shape, you can go further by
 adding in more shapes. You can add a total of 256 shapes in animation

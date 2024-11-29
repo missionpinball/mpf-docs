@@ -54,7 +54,7 @@ slide_player:
 
 And the result:
 
-![image](/mc/images/ellipse.png)
+![image](../images/ellipse.png)
 
 ## Settings
 

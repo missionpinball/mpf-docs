@@ -16,12 +16,12 @@ launch the ball into play.
 Sometimes these look more-or-less like traditional plunger lanes, except
 there's a solenoid instead of a spring-powered plunger, like this:
 
-![image](/mechs/images/coil_fired_plunger.jpg)
+![image](../images/coil_fired_plunger.jpg)
 
 Other times these are more like "catapult" devices with a coil
 attached to the arm to launch the ball into play:
 
-![image](/mechs/images/catapult_plunger.jpg)
+![image](../images/catapult_plunger.jpg)
 
 Note that if you have a coil-fired ball launcher that's combined with a
 spring plunger (giving the option for manual spring launches or

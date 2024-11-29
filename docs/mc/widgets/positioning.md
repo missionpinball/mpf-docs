@@ -29,7 +29,7 @@ on slide (horizontal, then vertical).
 
 Here's a simple example that illustrates this:
 
-![image](/mc/images/widget_positioning_basics.png)
+![image](/docs/mc/images/widget_positioning_basics.png)
 
 By the way, in MPF, the actual "pixel size" of the display as MPF sees
 it is separate from actual pixels of the physical display. So you could
@@ -62,14 +62,14 @@ anchor settings are applied to different widgets. The red bulls-eye
 target represents the point that's used by MPF to position that widget
 with each type of anchor settings.
 
-![image](/mc/images/widget_anchors.png)
+![image](/docs/mc/images/widget_anchors.png)
 
 ## 3. Combing anchors and widget positioning
 
 Now that you know how the coordinates and anchors work, let's look at
 some examples that combine these two concepts:
 
-![image](/mc/images/widget_positioning_with_anchors_1.png)
+![image](/docs/mc/images/widget_positioning_with_anchors_1.png)
 
 In the diagram above, you can see how the bulls-eye anchor target is the
 actual point of the widget that is positioned with each widget's `x:`
@@ -104,7 +104,7 @@ of math to get your values set.
 Fortunately MPF can use relative positions for a widget's `x:` and `y:`
 values, as show here:
 
-![image](/mc/images/widget_positioning_with_anchors_2.png)
+![image](/docs/mc/images/widget_positioning_with_anchors_2.png)
 
 There are a lot of different options in this diagram, so let's go
 through them one-by-one.
@@ -187,7 +187,7 @@ on a DMD), it still has two blank rows of pixels below every letter.
 This means that if you set the `anchor_y: bottom` on both your text and
 the circle, they will not actually be aligned:
 
-![image](/mc/images/widget_bad_offset.png)
+![image](/docs/mc/images/widget_bad_offset.png)
 
 What's even worst is that this font only has 1 extra row on top, so if
 you want to center-align it with another widget you won't get the
@@ -224,7 +224,7 @@ Going back to the example from before, if we add `adjust_bottom: 2`,
 that will move the adjustment point 2 pixels towards the middle, meaning
 our bottom alignment now actually aligns:
 
-![image](/mc/images/widget_good_offset.png)
+![image](/docs/mc/images/widget_good_offset.png)
 
 Negative values have the effect of adding padding to widgets, which can
 also be nice as you're aligning and distributing things.
@@ -252,7 +252,7 @@ MPF-MC to round fractional anchor positions in the specified direction.
 * `round_anchor_y: top` - Round the vertical pixel position up
 * `round_anchor_y: center` - Do not round the pixel position (default)
 
-![image](/mc/images/widget_anchor_rounding.png)
+![image](/docs/mc/images/widget_anchor_rounding.png)
 
 This setting is valid on `widgets` and `displays`. If you have a display
 and a widget both configured for rounding, the widget's setting will
