@@ -30652,31 +30652,33 @@ from active to idle.</p>
 <p>Spinner sits in idle state</p>
 </li>
 <li>
-<p>A spinner switch is hit
-        i.  The spinner becomes "active" and sets a timeout for
-            <code>active_ms:</code> duration
-        ii. The spinner posts <em>spinner_(name)_active</em> event
-        iii. The spinner posts <em>spinner_(name)_hit</em> event</p>
+<p>A spinner switch is hit</p>
+<ol>
+<li>The spinner becomes "active" and sets a timeout for <code>active_ms:</code> duration</li>
+<li>The spinner posts <em>spinner_(name)_active</em> event</li>
+<li>The spinner posts <em>spinner_(name)_hit</em> event</li>
+</ol>
 </li>
 <li>
-<p>Additional switch hits occur
-        i.  The spinner resets the timeout for another <code>active_ms:</code>
-            duration
-        ii. The spinner posts a <em>spinner_(name)_hit</em> event for
-            each hit</p>
+<p>Additional switch hits occur</p>
+</li>
+<li>The spinner resets the timeout for another <code>active_ms:</code> duration</li>
+<li>
+<p>The spinner posts a <em>spinner_(name)_hit</em> event for each hit</p>
 </li>
 <li>
-<p>Switch hits stop and the active delay timer expires
-        i.  The spinner switches to "inactive" state
-        ii. The spinner posts <em>spinner_(name)_inactive</em> event
-        iii. (Optional) If <code>idle_ms:</code> is defined, the spinner sets a
-             timeout for idle_ms duration</p>
+<p>Switch hits stop and the active delay timer expires</p>
+</li>
+<li>The spinner switches to "inactive" state</li>
+<li>The spinner posts <em>spinner_(name)_inactive</em> event</li>
+<li>
+<p>(Optional) If <code>idle_ms:</code> is defined, the spinner sets a timeout for idle_ms duration</p>
 </li>
 <li>
-<p>(Optional) No switch hits occur and the idle delay timer expires
-        i.  The spinner posts <em>spinner_(name)_idle</em> event
-        ii. The spinner switches to "idle" state</p>
+<p>(Optional) No switch hits occur and the idle delay timer expires</p>
 </li>
+<li>The spinner posts <em>spinner_(name)_idle</em> event</li>
+<li>The spinner switches to "idle" state</li>
 </ol>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>spinners:</code> section of your
