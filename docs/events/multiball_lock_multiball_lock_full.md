@@ -1,8 +1,8 @@
 ---
-title: [multiball_lock](../index.md)(name)_full
+title: multiball_lock_(name)_full
 ---
 
-# [multiball_lock](../index.md)(name)_full
+# multiball_lock_(name)_full
 
 
 --8<-- "event.md"

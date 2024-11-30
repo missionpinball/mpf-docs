@@ -1,10 +1,10 @@
 ---
-title: motor
+title: motor event index
 ---
 
-# motor
+# motor events
 
 
-See: [motor_motor_reached_position](../config/motors.md)
+See: [motors](../config/motors.md)
 
-* [motor](../index.md)(name)_[reached](../index.md)(position)](motor_motor_reached_position)
+* [motor_(name)_reached_(position)](motor_motor_reached_position.md)

@@ -1,10 +1,10 @@
 ---
-title: machine_var
+title: machine_var event index
 ---
 
-# machine_var
+# machine_var events
 
 
-See: [machine_var_machine_var](../config/machine_vars.md)
+See: [machine_vars:](../config/machine_vars.md)
 
-* [machine_var](../index.md)(name)](machine_var_machine_var)
+* [machine_var_(var_name)](machine_var_machine_var)

@@ -1,13 +1,13 @@
 ---
-title: [ball_hold](../index.md)(name)_full
+title: ball_hold_(name)_full
 ---
 
-# [ball_hold](../index.md)(name)_full
+# ball_hold_(name)_full
 
 
 --8<-- "event.md"
 
-The ball hold device (name) is now full.
+The ball hold device called (name) is now full.
 
 ## Keyword arguments
 

@@ -1,13 +1,13 @@
 ---
-title: (name)_(profile)_hit
+title: (shot_name)_(profile)_hit
 ---
 
-# (name)_(profile)_hit
+# (shot_name)_(profile)_hit
 
 
 --8<-- "event.md"
 
-The shot called (name) was just hit with the profile (profile) active.
+The shot called (shot_name) was just hit with the profile (profile) active.
 
 Note that there are four events posted when a shot is hit, each with
 variants of the shot name, profile, and current state, allowing you to

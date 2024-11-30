@@ -1,8 +1,8 @@
 ---
-title: [timer](../index.md)(name)_time_subtracted
+title: timer_(name)_time_subtracted
 ---
 
-# [timer](../index.md)(name)_time_subtracted
+# timer_(name)_time_subtracted
 
 
 --8<-- "event.md"

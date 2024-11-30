@@ -1,8 +1,8 @@
 ---
-title: [spinner](../index.md)(name)_hit
+title: spinner_(name)_hit
 ---
 
-# [spinner](../index.md)(name)_hit
+# spinner_(name)_hit
 
 
 --8<-- "event.md"

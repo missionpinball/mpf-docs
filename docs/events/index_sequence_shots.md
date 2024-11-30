@@ -1,10 +1,10 @@
 ---
-title: sequence_shot
+title: sequence_shot event index
 ---
 
-# sequence_shot
+# sequence_shot events
 
 
-See: [sequence_shot_hit](../config/sequence_shots.md)
+See: [sequence_shots:](../config/sequence_shots.md)
 
-* [(name)_hit](sequence_shot_hit.md)
+* [(sequence_shot)_hit](sequence_shot_hit.md)

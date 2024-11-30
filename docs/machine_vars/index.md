@@ -86,4 +86,4 @@ use in your configs:
 
 ## Related Events
 
-* [machine_var_(name)](../events/machine_var_machine_var.md)
+* [machine_var_(var_name)](../events/machine_var_machine_var.md)

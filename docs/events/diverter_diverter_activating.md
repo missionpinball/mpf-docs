@@ -1,8 +1,8 @@
 ---
-title: [diverter](../index.md)(name)_activating
+title: diverter_(name)_activating
 ---
 
-# [diverter](../index.md)(name)_activating
+# diverter_(name)_activating
 
 
 --8<-- "event.md"

@@ -1,13 +1,13 @@
 ---
-title: [ball_hold](../index.md)(name)_balls_released
+title: ball_hold_(name)_balls_released
 ---
 
-# [ball_hold](../index.md)(name)_balls_released
+# ball_hold_(name)_balls_released
 
 
 --8<-- "event.md"
 
-The ball hold device (name) has just released a ball(s).
+The ball hold device called (name) has just released a ball(s).
 
 ## Keyword arguments
 

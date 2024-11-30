@@ -1,8 +1,8 @@
 ---
-title: [slide](../index.md)(name)_active
+title: slide_(name)_active
 ---
 
-# [slide](../index.md)(name)_active
+# slide_(name)_active
 
 
 *MPF-MC Event*

@@ -1,13 +1,13 @@
 ---
-title: (name)_hit
+title: (shot_group_name)_hit
 ---
 
-# (name)_hit
+# (shot_group_name)_hit
 
 
 --8<-- "event.md"
 
-A member shots in the shot group called (name) has been hit.
+A member shots in the shot group called (shot_group_name) has been hit.
 
 *This event does not have any keyword arguments*
 
