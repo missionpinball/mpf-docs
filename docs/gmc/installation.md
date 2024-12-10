@@ -33,6 +33,28 @@ Finally, in your game project folder create a new folder called *addons*.
 
     However, note that Godot only has access to files in its project folder and subfolders. If you choose to make a "gmc" subfolder for your Godot project, all slides, widgets, sound files, and video files will need to be in those respective subfolders in the gmc folder (e.g. */gmc/slides/*), NOT in the MPF mode subfolders (e.g. */modes/attract/slides/*).
 
+
+## Setup Godot Editor
+
+The Godot Editor includes some default configuration options that may cause headaches for users, so the following tweaks are recommended:
+
+### Indentation Setup
+
+The GMC code is written with space-based indentation, but Godot not only defaults to tabs but defaults to auto-convert files. You are free to use tabs if that's your preference, but at least disabling the auto-convert will spare you grief.
+
+From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
+  *  In the *Indent* section change `Tabs` to `Spaces`.
+  *  In the *Files* section **disable** the `Convert Indent on Save` option.
+
+![image](./images/editor-settings-indentation.png)
+
+### Other Good Things
+
+Also in the *Editor Settings > Text Editor > Behavior* menu:
+
+  *  In the *Files* section, **enable** the `Trim Trailing Whitespace on Save` option, because it's just good practice.
+  *  If you use an external text editor like VS Code or Atom, in the *Files* section **enable** the option `Auto Reload Scripts on External Change`.
+
 ## Install the GMC Plugin
 
 ### Simplest Installation: Godot Asset Library (Coming Soon!)
