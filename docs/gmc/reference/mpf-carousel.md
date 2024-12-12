@@ -41,4 +41,4 @@ When the MPF Carousel mode selects an item to display, it will post event with t
 
 Single value, type `String`. Default `None`.
 
-This is the name of the carousel mode in MPF that will be triggering changes. The name is required so that GMC can correctly identify in case multiple carousels are active at once.
+This value is set in Godot by clicking on the MPFCarousel node, and setting the value under the Inspector for "Carousel Name". This must be the name of the mode in MPF that contains the carousel and will be triggering changes. The name is required so that GMC can correctly identify in case multiple carousels are active at once. Each mode can only contain a single carousel, but multiple modes can contain carousels. The carousel that is shown is determined by the active modes, and the higher priority mode if multiple modes with carousels are running concurrently.

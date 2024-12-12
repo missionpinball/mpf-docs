@@ -74,7 +74,7 @@ $ mpf game -c /home/brian/pinball/demo_man/config/config.yaml
 ### -C (uppercase)
 
 Specify the name of the MPF default config file which is loaded before
-your before your machine config. (MPF includes a file `mpfconfig.yaml`
+your machine config. (MPF includes a file `mpfconfig.yaml`
 which is inside the MPF package which sets up default things like which
 modules are loaded, paths used, etc. If for some reason you want to
 override this file, you can do so with the [-C](#) option.

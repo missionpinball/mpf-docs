@@ -17,7 +17,7 @@ This guide is written for the types of devices that have only have one
 switch on the trough side, like this example of a Gottlieb System 3
 machine (Brooks 'n Dunn):
 
-![image](/mechs/images/two_coil_one_switch_trough_photo.jpg)
+![image](../images/two_coil_one_switch_trough_photo.jpg)
 
 If your trough system has multiple switches in the trough (one for each
 ball), then use
@@ -32,7 +32,7 @@ the last ball that goes into it sits on the switch.
 The following diagram shows a more clear view of the type of trough
 system this guide is for: (This is a side view)
 
-![image](/mechs/images/two_coils_one_switch.png)
+![image](../images/two_coils_one_switch.png)
 
 ## 1. Add the switches
 

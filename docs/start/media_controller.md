@@ -26,7 +26,7 @@ part that shows the graphics and plays the sounds.
 
 Here's a diagram that shows what each piece does:
 
-![image](/mc/images/mpf_game_engine_mc.png)
+![image](/docs/mc/images/mpf_game_engine_mc.png)
 
 More details about MPF's media controller architecture, as well as
 guides which show you how to run them on separate computers, or even to

@@ -14,7 +14,7 @@ The P-ROC can drive a traditional single-color pinball DMD via the
 14-pin DMD connector cable that's been in most pinball machines for the
 past 25 years, like this:
 
-![image](/hardware/images/display_mono_dmd.jpg)
+![image](../images/display_mono_dmd.jpg)
 
 !!! note
 
@@ -25,7 +25,7 @@ past 25 years, like this:
 
 ## 1. Connect your hardware
 
-![image](/hardware/images/physical_dmd_in_backbox.jpg)
+![image](../images/physical_dmd_in_backbox.jpg)
 
 ## 2. Add a physical DMD device entry
 

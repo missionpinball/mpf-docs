@@ -22,7 +22,7 @@ Here's a screen shot of the download section of that page. Note that
 the actual version number of the driver might be newer that the screen
 shot below. That should be ok.
 
-![image](/hardware/images/ftdi_x86.jpg)
+![image](/docs/hardware/images/ftdi_x86.jpg)
 
 Download and run the setup executable from the "1" link in the screen
 shot. (We like to use that because it's easier than the manual process

@@ -21,7 +21,7 @@ individual Lightshow boards. Then the Lightshow boards are connected
 together in a chain with other add-on boards (such as PKONE Extension
 boards) to the controller.
 
-![image](/hardware/images/pkone-lightshow.png)
+![image](/docs/hardware/images/pkone-lightshow.png)
 
 The `number:` setting for each simple LED is its board's Address ID
 number in the PKONE chain, then the dash, then the simple LED output

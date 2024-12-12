@@ -15,7 +15,7 @@ the 1950s through electronic single ball machines of the early 1980s.
 
 Here's an example from a Gottlieb Playball (1971 EM):
 
-![image](/mechs/images/classic_single_ball_trough_without_shooter_lane_photo.png)
+![image](../images/classic_single_ball_trough_without_shooter_lane_photo.png)
 
 ## 1. Add the drain switch
 

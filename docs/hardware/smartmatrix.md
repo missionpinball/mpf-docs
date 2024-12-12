@@ -29,7 +29,7 @@ other options that MPF supports is available in the
 
 Here's an image of the SmartMatrix RGB DMD in action:
 
-![image](/hardware/images/display_rgb_dmd.jpg)
+![image](/docs/hardware/images/display_rgb_dmd.jpg)
 
 And a video which explains it all:
 
@@ -39,7 +39,7 @@ And a video which explains it all:
 
 The following diagram shows how all the components fit together:
 
-![image](/hardware/images/smartmatrix_architecture.png)
+![image](/docs/hardware/images/smartmatrix_architecture.png)
 
 ## 1. Buy all the parts you need
 
@@ -87,7 +87,7 @@ bit-shifting of data needed to control these panels.
 
 Here's a Teensy:
 
-![image](/hardware/images/teensy.jpg)
+![image](/docs/hardware/images/teensy.jpg)
 
 The software to run the Teensy is open source (more on that in Step 3)
 and the Teensy has a USB port which you connect to your computer which
@@ -103,13 +103,13 @@ The SmartMatrix shield is a "dumb" device that basically just connects
 the Teensy's GPIO pins to the 16-pin ribbon cable that drives the
 displays.
 
-![image](/hardware/images/smartmatrix_shield.jpg)
+![image](/docs/hardware/images/smartmatrix_shield.jpg)
 
 The Teensy mounts onto the SmartMatrix shield, creating a single unit
 which accepts data via USB on one end and spits out the 16-pin signal
 for the display panels on the other.
 
-![image](/hardware/images/smartmatrix_shield_with_teensy.jpg)
+![image](/docs/hardware/images/smartmatrix_shield_with_teensy.jpg)
 
 ### (4) The Power Supply
 
@@ -124,7 +124,7 @@ If you're ordering your RGB LED display panels from FAST Pinball, you
 can also order a [5v, 10A power supply from them for
 \$19](https://squareup.com/store/fast-pinball-llc/item/five-volt-ten-amp-switching-power-supply).
 
-![image](/hardware/images/5v10a_psu.jpg)
+![image](/docs/hardware/images/5v10a_psu.jpg)
 
 An ATX computer power supply will probably have a decent amount of amps
 also, so that could be an option too, just check the specs. Any other 5V
