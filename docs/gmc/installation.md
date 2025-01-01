@@ -40,11 +40,11 @@ The Godot Editor includes some default configuration options that may cause head
 
 ### Indentation Setup
 
-The GMC code is written with space-based indentation, but Godot not only defaults to tabs but defaults to auto-convert files. You are free to use tabs if that's your preference, but at least disabling the auto-convert will spare you grief.
+The GMC code is written with tab-based indentation (per the offical Godot standards guide), and Godot not only defaults to tab-indendation but also defaults to auto-convert files. You are free to use spaces if that's your preference, but disabling the auto-convert will spare you grief.
 
 From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
-  *  In the *Indent* section change `Tabs` to `Spaces`.
   *  In the *Files* section **disable** the `Convert Indent on Save` option.
+  *  If you wish to use spaces in your project and edit in the Godot editor, in the *Indent* section change `Tabs` to `Spaces`.
 
 ![image](./images/editor-settings-indentation.png)
 
@@ -57,11 +57,11 @@ Also in the *Editor Settings > Text Editor > Behavior* menu:
 
 ## Install the GMC Plugin
 
-### Simplest Installation: Godot Asset Library (Coming Soon!)
+### Simplest Installation: Godot Asset Library
 
-The Godot editor features a built-in library of plugins that you can download and install with a single click. Unfortunately this library is managed manually by volunteers, and updating plugins can take weeks. Because GMC is changing and improving rapidly every day, it is not yet available on the Godot Asset Library.
+The Godot editor features a built-in library of plugins that you can download and install with a single click.
 
-Until then, you will need to manually place the GMC plugin into your project addons folder using the Standard or Expert Installation steps.
+In the Godot editor, select **AssetLib** from the top center selector. You may need to enable online access to the asset library when prompted. Search for "GMC" and click on the GMC asset to download and install.
 
 ### Standard Installation: Download & Copy
 
