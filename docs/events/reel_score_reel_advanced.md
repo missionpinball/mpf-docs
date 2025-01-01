@@ -1,8 +1,8 @@
 ---
-title: [reel](../index.md)(name)_advanced
+title: reel_(name)_advanced
 ---
 
-# [reel](../index.md)(name)_advanced
+# reel_(name)_advanced
 
 
 --8<-- "event.md"

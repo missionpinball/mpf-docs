@@ -1,8 +1,8 @@
 ---
-title: [ball_save](../index.md)(name)_enabled
+title: ball_save_(name)_enabled
 ---
 
-# [ball_save](../index.md)(name)_enabled
+# ball_save_(name)_enabled
 
 
 --8<-- "event.md"

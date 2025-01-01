@@ -85,4 +85,4 @@ shot_groups:
 
 ## Related Events
 
-* [(name)_hit](../../events/sequence_shot_hit.md)
+* [(sequence_shot_name)_hit](../../events/sequence_shot_hit.md)

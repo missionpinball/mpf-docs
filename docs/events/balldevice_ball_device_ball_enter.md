@@ -1,13 +1,13 @@
 ---
-title: [balldevice](../index.md)(name)_ball_enter
+title: balldevice_(name)_ball_enter
 ---
 
-# [balldevice](../index.md)(name)_ball_enter
+# balldevice_(name)_ball_enter
 
 
 --8<-- "event.md"
 
-A ball (or balls) have just entered the ball device called "name".
+A ball (or balls) have just entered the ball device called (name).
 
 Note that this is a relay event based on the "unclaimed_balls" arg.
 Any unclaimed balls in the relay will be processed as new balls entering

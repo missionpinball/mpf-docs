@@ -1,8 +1,8 @@
 ---
-title: [timer](../index.md)(name)_paused
+title: timer_(name)_paused
 ---
 
-# [timer](../index.md)(name)_paused
+# timer_(name)_paused
 
 
 --8<-- "event.md"

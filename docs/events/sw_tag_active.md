@@ -1,8 +1,8 @@
 ---
-title: [sw](../index.md)(tag)_active
+title: sw_(tag)_active
 ---
 
-# [sw](../index.md)(tag)_active
+# sw_(tag)_active
 
 
 --8<-- "event.md"

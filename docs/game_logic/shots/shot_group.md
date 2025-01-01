@@ -89,7 +89,7 @@ in this case we are using Ball_Started and Ball_Ending.
 
 ## Related Events
 
-* [(name)_complete](../../events/shot_group_complete.md)
-* [(name)_(state)_complete](../../events/shot_group_state_complete.md)
-* [(name)_hit](../../events/shot_group_hit.md)
-* [(name)_(state)_hit](../../events/shot_group_state_hit.md)
+* [(shot_group_name)_complete](../../events/shot_group_complete.md)
+* [(shot_group_name)_(state)_complete](../../events/shot_group_state_complete.md)
+* [(shot_group_name)_hit](../../events/shot_group_hit.md)
+* [(shot_group_name)_(state)_hit](../../events/shot_group_state_hit.md)

@@ -1,13 +1,13 @@
 ---
-title: (name)_timeout
+title: (logic_block_name)_timeout
 ---
 
-# (name)_timeout
+# (logic_block_name)_timeout
 
 
 --8<-- "event.md"
 
-The logic block called "name" has just timeouted.
+The logic block called (logic_block_name) has just timeouted.
 
 Timeouts are disabled by default but you can set logic_block_timeout to
 enable them. They will run from start of your logic block until it is

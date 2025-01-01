@@ -1,15 +1,15 @@
 ---
-title: spinner
+title: spinner event index
 ---
 
-# spinner
+# spinner events
 
 
-See: [spinner_spinner_label_active](../config/spinners.md)
+See: [spinners:](../config/spinners.md)
 
-* [spinner_spinner_label_active](spinner_spinner_hit.md)
-* [spinner_spinner_label_active](spinner_spinner_inactive.md)
-* [spinner_spinner_label_active](spinner_spinner_idle.md)
-* [spinner_spinner_label_active](spinner_spinner_active.md)
-* [spinner_spinner_label_active](spinner_spinner_label_hit.md)
-* [spinner](../index.md)(name)_(label)_active](spinner_spinner_label_active)
+* [spinner_(name)_hit](spinner_spinner_hit.md)
+* [spinner_(name)_inactive](spinner_spinner_inactive.md)
+* [spinner_(name)_idle](spinner_spinner_idle.md)
+* [spinner_(name)_active](spinner_spinner_active.md)
+* [spinner_(name)_(label)_hit](spinner_spinner_label_hit.md)
+* [spinner_(name)_(label)_active](spinner_spinner_label_active.md)

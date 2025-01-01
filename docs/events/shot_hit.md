@@ -1,13 +1,13 @@
 ---
-title: (name)_hit
+title: (shot_name)_hit
 ---
 
-# (name)_hit
+# (shot_name)_hit
 
 
 --8<-- "event.md"
 
-The shot called (name) was just hit.
+The shot called (shot_name) was just hit.
 
 Note that there are four events posted when a shot is hit, each with
 variants of the shot name, profile, and current state, allowing you to

@@ -1,8 +1,8 @@
 ---
-title: [extra_ball](../index.md)(name)_award_disabled
+title: extra_ball_(name)_award_disabled
 ---
 
-# [extra_ball](../index.md)(name)_award_disabled
+# extra_ball_(name)_award_disabled
 
 
 --8<-- "event.md"

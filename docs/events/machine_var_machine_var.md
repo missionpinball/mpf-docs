@@ -1,8 +1,8 @@
 ---
-title: [machine_var](../index.md)(name)
+title: machine_var_(var_name)
 ---
 
-# [machine_var](../index.md)(name)
+# machine_var_(var_name)
 
 
 --8<-- "event.md"

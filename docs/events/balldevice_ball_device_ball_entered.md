@@ -1,13 +1,13 @@
 ---
-title: [balldevice](../index.md)(name)_ball_entered
+title: balldevice_(name)_ball_entered
 ---
 
-# [balldevice](../index.md)(name)_ball_entered
+# balldevice_(name)_ball_entered
 
 
 --8<-- "event.md"
 
-A ball (or balls) have just entered the ball device called "name".
+A ball (or balls) have just entered the ball device called (name).
 
 The ball was also added to balls and available_balls of the device.
 

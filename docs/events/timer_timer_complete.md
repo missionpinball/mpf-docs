@@ -1,8 +1,8 @@
 ---
-title: [timer](../index.md)(name)_complete
+title: timer_(name)_complete
 ---
 
-# [timer](../index.md)(name)_complete
+# timer_(name)_complete
 
 
 --8<-- "event.md"

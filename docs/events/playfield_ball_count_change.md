@@ -1,13 +1,13 @@
 ---
-title: (name)_ball_count_change
+title: (playfield_name)_ball_count_change
 ---
 
-# (name)_ball_count_change
+# (playfield_name)_ball_count_change
 
 
 --8<-- "event.md"
 
-The playfield with the name (name) has changed the number of balls that
+The playfield with the name (playfield_name) has changed the number of balls that
 are live.
 
 ## Keyword arguments
