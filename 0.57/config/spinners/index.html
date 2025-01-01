@@ -30661,24 +30661,26 @@ from active to idle.</p>
 </li>
 <li>
 <p>Additional switch hits occur</p>
-</li>
+<ol>
 <li>The spinner resets the timeout for another <code>active_ms:</code> duration</li>
-<li>
-<p>The spinner posts a <em>spinner_(name)_hit</em> event for each hit</p>
+<li>The spinner posts a <em>spinner_(name)_hit</em> event for each hit</li>
+</ol>
 </li>
 <li>
 <p>Switch hits stop and the active delay timer expires</p>
-</li>
+<ol>
 <li>The spinner switches to "inactive" state</li>
 <li>The spinner posts <em>spinner_(name)_inactive</em> event</li>
-<li>
-<p>(Optional) If <code>idle_ms:</code> is defined, the spinner sets a timeout for idle_ms duration</p>
+<li>(Optional) If <code>idle_ms:</code> is defined, the spinner sets a timeout for idle_ms duration</li>
+</ol>
 </li>
 <li>
 <p>(Optional) No switch hits occur and the idle delay timer expires</p>
-</li>
+<ol>
 <li>The spinner posts <em>spinner_(name)_idle</em> event</li>
 <li>The spinner switches to "idle" state</li>
+</ol>
+</li>
 </ol>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>spinners:</code> section of your
