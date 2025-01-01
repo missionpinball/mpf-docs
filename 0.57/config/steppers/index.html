@@ -19875,6 +19875,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#relative_positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      relative_positions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reset_events" class="md-nav__link">
     <span class="md-ellipsis">
       reset_events:
@@ -30632,6 +30641,15 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
+  <a href="#relative_positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      relative_positions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reset_events" class="md-nav__link">
     <span class="md-ellipsis">
       reset_events:
@@ -30879,6 +30897,22 @@ details.</p>
 <p>Single value, type: <code>integer</code>. Default: <code>0</code></p>
 <p>Minimum possible position. Negative values are left of the home
 position.</p>
+<h3 id="relative_positions">relative_positions:</h3>
+<p>One or more sub-entries. Each in the format of <code>number</code> (will be
+converted to floating point) : <code>string</code></p>
+<p>This is a sub-section mapping of relative stepper increments to MPF event names (as opposed to absolute rotational positions).
+For example:</p>
+<div class="highlight"><pre><span></span><code>#! steppers:
+#!   my_stepper:
+#!     number: 1
+    relative_positions:
+      50: advance_50 # positive values move the stepper in the direction of the `homing_direction`
+      -50: move_back_50 # Negative positions move the stepper opposite of the `homing_direction`
+</code></pre></div>
+<p>The values in this <code>relative_positions:</code> list represent MPF events that,
+when posted, tell this stepper to increment a certain number of "steps". So, in the
+example above, when the <em>advance_50</em> event is posted, this stepper will
+advance 50 steps or increments from where it is currently. Positive relative positions always advance in the direction that is defined in <code>homing_direction</code>. Negative relative positions move in the opposite direction.</p>
 <h3 id="reset_events">reset_events:</h3>
 <p>List of one (or more) device control events
 (<a href="../instructions/device_control_events/">Instructions for entering device control events</a>). Default:
