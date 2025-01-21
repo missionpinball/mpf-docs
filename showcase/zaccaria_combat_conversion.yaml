@@ -1,14 +1,26 @@
 name: Zaccaria Combat Conversion
-acronym:
-team: Pinball Plaid and unRARed
+team: Death Save Pinball Cult and unRARed
 location: Bellingham, WA
 started: 2017-01-01
-finished: 2017-07-31
-images:
-project_type:
 youtube_video_ids: 88huQ837KaY
-documentation_link: https://steemit.com/creativity/@unrared/we-rebuilt-my-friends-rusted-moldy-70-s-em-pinball-machine-and-we-wrote-the-logic-in-python-part-2-2
-code_link: https://github.com/pinballplaid/combat
-gameplay_link:
+documentation_link: https://github.com/deathsave/combat/blob/main/docs/rules.md
+code_link: https://github.com/deathsave/combat
 controller: FAST
 description: >
+  Josiah and Steve were buying another game and on the way home
+  picked up this Zaccaria Combat that had been sitting for far
+  too long. The backglass was destroyed and the backbox had
+  broken in half. The playfield was in fantastic shape, however.
+  Josiah's band was looking for a new project, so they decided
+  to take on the ambitious challenge of converting the "EM" game
+  to "solid state" using FAST hardware and the Mission
+  Pinball Framework (MPF). Josiah's band recorded some music for
+  the game and Ryan began working on rebuilding the game logic
+  and rules with MPF. Once the logic was more or less complete,
+  Josiah and Steve began the process of putting the game back
+  together and retrofitting the new hardware. The physical build
+  took about 6 weeks once things were in motion. The game was
+  taken to the 2017 NW Pinball and Arcade Show where it was
+  played by many and received well. Fast forward to 2025, the
+  game code has been updated to run on MPF 0.57. The game
+  currently resides at the Death Save Pinball Cult clubhouse.
