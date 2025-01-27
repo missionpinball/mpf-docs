@@ -13,6 +13,10 @@ There are several command-line options you can use when running the MPF
 MC. Note that single commands that take no options can be combined, so
 `mpf mc -vVb` is the same as `mpf mc -v -V -b`.
 
+### -b (lowercase)
+
+Start MPF without the Media Controller (MC).
+
 ### -c (lowercase)
 
 Specifies the name of the config file (or files) to load. Default
