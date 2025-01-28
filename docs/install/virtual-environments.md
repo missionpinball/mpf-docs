@@ -91,7 +91,8 @@ Linux users can enable the virtual environment with the dot command from the ter
 ```
 
 Note that the first character is a period, followed by a space, then the path
-to your virtual environment and "/bin/activate".
+to your virtual environment and "/bin/activate". The period performs the same function as
+the `source` command, and is POSIX compliant.
 
 
 **All Platforms:**
@@ -115,3 +116,11 @@ because the console prompt will include the name of your venv in parenthesis.
     "python3" may be 3.6 or 3.9 or 3.11; inside the virtual environment,
     you can use "python" to refer to the exact version of Python 3 you used
     to create the virtual environment
+
+
+!!! note  "Deactivation of virtual environments"
+
+    If you want to deactivate your virtual environment, you can simply enter `deactivate` at the prompt.
+    The virtual environment sets this up for us, usually as an alias. The console prompt now won't include
+    the name of your venv in parenthesis.
+    
