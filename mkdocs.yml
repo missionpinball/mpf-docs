@@ -1093,6 +1093,7 @@ nav:
     - player_added: events/player_added.md
     - player_adding: events/player_adding.md
     - player_(name): events/player_player_var.md
+    - player_score: events/player_score.md
     - player_turn_ended: events/player_turn_ended.md
     - player_turn_ending: events/player_turn_ending.md
     - player_turn_started: events/player_turn_started.md

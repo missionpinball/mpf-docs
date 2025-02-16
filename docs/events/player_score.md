@@ -7,7 +7,7 @@ title: player_score
 
 --8<-- "event.md"
 
-The player has scored.
+The player has scored. This is a built-in example version of the [player_(var_name)](player_player_var.md) event used when score changes.
 
 ## Keyword arguments
 
