@@ -20,4 +20,4 @@ Or, with `variable_type: Event Arg` and `variable_name: hero`, this node would h
 
 ### Default / Fallback
 
-A special child node can be named `\_\_default\_\_` with **two underscores** before and after the word "default". If this child node exists and none of the other children match the condition, this child node will be shown as a fallback. If any other child node condition evaluates true, this child node will be hidden.
+A special child node can be named `__default__` with **two underscores** before and after the word "default". If this child node exists and none of the other children match the condition, this child node will be shown as a fallback. If any other child node condition evaluates true, this child node will be hidden.
