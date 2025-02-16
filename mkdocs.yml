@@ -998,11 +998,11 @@ nav:
     - client_disconnected: events/client_disconnected.md
     - collecting_balls: events/collecting_balls.md
     - collecting_balls_complete: events/collecting_balls_complete.md
-    - (name)_both: events/combo_switch_both.md
-    - (name)_inactive: events/combo_switch_inactive.md
-    - (name)_one: events/combo_switch_one.md
-    - (name)_switches_1: events/combo_switch_switches_1.md
-    - (name)_switches_2: events/combo_switch_switches_2.md
+    - (combo_switch)_both: events/combo_switch_both.md
+    - (combo_switch)_inactive: events/combo_switch_inactive.md
+    - (combo_switch)_one: events/combo_switch_one.md
+    - (combo_switch)_switches_1: events/combo_switch_switches_1.md
+    - (combo_switch)_switches_2: events/combo_switch_switches_2.md
     - credits_added: events/credits_added.md
     - display_(name)_initialized: events/display_display_initialized.md
     - display_(name)_ready: events/display_display_ready.md
@@ -1087,7 +1087,7 @@ nav:
     - multiball_(name)_shoot_again_ended: events/multiball_multiball_shoot_again_ended.md
     - multiball_(name)_started: events/multiball_multiball_started.md
     - multiplayer_game: events/multiplayer_game.md
-    - (name)_timeout: events/name_timeout.md
+    - (logicblock_name)_timeout: events/name_timeout.md
     - not_enough_credits: events/not_enough_credits.md
     - player_add_request: events/player_add_request.md
     - player_added: events/player_added.md
@@ -1101,21 +1101,21 @@ nav:
     - player_turn_will_end: events/player_turn_will_end.md
     - player_turn_will_start: events/player_turn_will_start.md
     - player_will_add: events/player_will_add.md
-    - (name)_active: events/playfield_active.md
-    - (name)_ball_count_change: events/playfield_ball_count_change.md
+    - (playfield_name)_active: events/playfield_active.md
+    - (playfield_name)_ball_count_change: events/playfield_ball_count_change.md
     - playfield_transfer_(playfield_transfer)_ball_transferred: events/playfield_transfer_playfield_transfer_ball_transferred.md
     - reel_(name)_advanced: events/reel_score_reel_advanced.md
     - request_to_start_game: events/request_to_start_game.md
     - reset_complete: events/reset_complete.md
-    - (name)_hit: events/sequence_shot_hit.md
-    - (name)_complete: events/shot_group_complete.md
-    - (name)_hit: events/shot_group_hit.md
-    - (name)_(state)_complete: events/shot_group_state_complete.md
-    - (name)_(state)_hit: events/shot_group_state_hit.md
-    - (name)_hit: events/shot_hit.md
-    - (name)_(profile)_hit: events/shot_profile_hit.md
-    - (name)_(profile)_(state)_hit: events/shot_profile_state_hit.md
-    - (name)_(state)_hit: events/shot_state_hit.md
+    - (sequence_shot)_hit: events/sequence_shot_hit.md
+    - (shot_group)_complete: events/shot_group_complete.md
+    - (shot_group)_hit: events/shot_group_hit.md
+    - (shot_group)_(state)_complete: events/shot_group_state_complete.md
+    - (shot_group)_(state)_hit: events/shot_group_state_hit.md
+    - (shot)_hit: events/shot_hit.md
+    - (shot)_(profile)_hit: events/shot_profile_hit.md
+    - (shot)_(profile)_(state)_hit: events/shot_profile_state_hit.md
+    - (shot)_(state)_hit: events/shot_state_hit.md
     - shutdown: events/shutdown.md
     - single_player_ball_started: events/single_player_ball_started.md
     - slam_tilt: events/slam_tilt.md
@@ -1132,8 +1132,8 @@ nav:
     - sw_(tag): events/sw_tag.md
     - sw_(tag)_active: events/sw_tag_active.md
     - sw_(tag)_inactive: events/sw_tag_inactive.md
-    - (name)_active: events/switch_active.md
-    - (name)_inactive: events/switch_inactive.md
+    - (switch)_active: events/switch_active.md
+    - (switch)_inactive: events/switch_inactive.md
     - switch_(name)_active: events/switch_switch_active.md
     - switch_(name)_inactive: events/switch_switch_inactive.md
     - text_input_(key)_abort: events/text_input_key_abort.md
@@ -1142,8 +1142,8 @@ nav:
     - tilt_clear: events/tilt_clear.md
     - tilt_warning: events/tilt_warning.md
     - tilt_warning_(number): events/tilt_warning_number.md
-    - (name)_active: events/timed_switch_active.md
-    - (name)_released: events/timed_switch_released.md
+    - (timed_switch)_active: events/timed_switch_active.md
+    - (timed_switch)_released: events/timed_switch_released.md
     - timer_(name)_complete: events/timer_timer_complete.md
     - timer_(name)_paused: events/timer_timer_paused.md
     - timer_(name)_started: events/timer_timer_started.md
