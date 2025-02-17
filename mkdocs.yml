@@ -1061,6 +1061,7 @@ nav:
       - (playfield_name)_active: events/playfield_active.md
       - (playfield_name)_ball_count_change: events/playfield_ball_count_change.md
       - unexpected_ball_on_(playfield_name): events/unexpected_ball_on_playfield.md
+      - sw_(playfield_name)_active: events/sw_playfield_active.md
     - playfield_transfer Events:
       - events/index_playfield_transfers.md
       - playfield_transfer_(playfield_transfer)_ball_transferred: events/playfield_transfer_playfield_transfer_ball_transferred.md
@@ -1097,7 +1098,6 @@ nav:
       - spinner_(name)_(label)_hit: events/spinner_spinner_label_hit.md
     - switch Events:
       - events/index_switches.md
-      - sw_(name)_active: events/sw_playfield_active.md
       - sw_(tag): events/sw_tag.md
       - sw_(tag)_active: events/sw_tag_active.md
       - sw_(tag)_inactive: events/sw_tag_inactive.md
