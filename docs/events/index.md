@@ -153,6 +153,7 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [(name)\_ball_count_change](playfield_ball_count_change.md)
         * [(name)_active](playfield_active.md)
         * [unexpected_ball_on_(playfield_name)](unexpected_ball_on_playfield.md)
+        * [sw_(playfield_name)_active](sw_playfield_active.md)
 
     * [Playfield Transfer Events](index_playfield_transfers.md)
         * [playfield_transfer_(playfield_transfer)\_ball_transferred](playfield_transfer_playfield_transfer_ball_transferred.md)
@@ -190,7 +191,6 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [spinner_(name)\_(label)_hit](spinner_spinner_label_hit.md)
 
     * [Switch Events](index_switches.md)
-        * [sw_(name)_active](sw_playfield_active.md)
         * [sw_(tag)](sw_tag.md)
         * [sw_(tag)_active](sw_tag_active.md)
         * [sw_(tag)_inactive](sw_tag_inactive.md)
