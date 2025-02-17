@@ -36,7 +36,7 @@ will posted an event called *switch_s_left_slingshot_active*.
 
 * [Events Overview](overview/index.md)
     * [Handler Priorities](overview/priorities.md)
-    * [Types of events](overview/event_types.md)
+    * [Types of Events](overview/event_types.md)
     * [Conditional Events](overview/conditional.md)
 
 * Device Events
@@ -152,7 +152,7 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [Playfield Events](index_playfields.md)
         * [(name)\_ball_count_change](playfield_ball_count_change.md)
         * [(name)_active](playfield_active.md)
-        * [unexpected_ball_on_(name)](unexpected_ball_on_playfield.md)
+        * [unexpected_ball_on_(playfield_name)](unexpected_ball_on_playfield.md)
 
     * [Playfield Transfer Events](index_playfield_transfers.md)
         * [playfield_transfer_(playfield_transfer)\_ball_transferred](playfield_transfer_playfield_transfer_ball_transferred.md)
