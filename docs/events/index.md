@@ -214,7 +214,6 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [timer_(name)\_time_added](timer_timer_time_added.md)
         * [timer_(name)\_time_subtracted](timer_timer_time_subtracted.md)
 
-
 * Other Event Groups
     * Audio Management Events
         * [master_volume_decrease](master_volume_decrease.md)
