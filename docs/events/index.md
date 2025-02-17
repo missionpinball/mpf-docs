@@ -40,11 +40,11 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [Conditional Events](overview/conditional.md)
 
 * Device Events
-    * [Achievement Events](index_achievements.md)
+    * [Achievement Events](achievements/index.md)
         * [achievement_(name)\_changed_state](achievement_achievement_changed_state.md)
         * [achievement_(name)\_state_(state)](achievement_achievement_state_state.md)
 
-    * [Ball Device Events](index_ball_devices.md)
+    * [Ball Device Events](ball_devices/index.md)
         * [balldevice_(name)\_ball_count_changed](balldevice_ball_device_ball_count_changed.md)
         * [balldevice_(name)\_ball_eject_attempt](balldevice_ball_device_ball_eject_attempt.md)
         * [balldevice_(name)\_ball_eject_failed](balldevice_ball_device_ball_eject_failed.md)
@@ -58,12 +58,12 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [balldevice_balls_available](balldevice_balls_available.md)
         * [balldevice_captured_from_(captures_from)](balldevice_captured_from_captures_from.md)
 
-    * [Ball Hold Events](index_ball_holds.md)
+    * [Ball Hold Events](ball_holds/index.md)
         * [ball_hold_(name)\_balls_released](ball_hold_ball_hold_balls_released.md)
         * [ball_hold_(name)\_full](ball_hold_ball_hold_full.md)
         * [ball_hold_(name)\_held_ball](ball_hold_ball_hold_held_ball.md)
 
-    * [Ball Save Events](index_ball_saves.md)
+    * [Ball Save Events](ball_saves/index.md)
         * [ball_save_(name)_disabled](ball_save_ball_save_disabled.md)
         * [ball_save_(name)_enabled](ball_save_ball_save_enabled.md)
         * [ball_save_(name)\_grace_period](ball_save_ball_save_grace_period.md)
@@ -71,7 +71,7 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [ball_save_(name)\_saving_ball](ball_save_ball_save_saving_ball.md)
         * [ball_save_(name)\_timer_start](ball_save_ball_save_timer_start.md)
 
-    * [Combo Switch Events](index_combo_switches.md)
+    * [Combo Switch Events](combo_switches/index.md)
         * [(name)_both](combo_switch_both.md)
         * [(name)_inactive](combo_switch_inactive.md)
         * [(name)_one](combo_switch_one.md)
@@ -79,46 +79,46 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [(name)\_switches_2](combo_switch_switches_2.md)
         * [flipper_cancel](flipper_cancel.md)
 
-    * [Display Events](index_displays.md)
+    * [Display Events](displays/index.md)
         * [display_(name)_initialized](display_display_initialized.md)
         * [display_(name)_ready](display_display_ready.md)
 
-    * [Diverter Events](index_diverters.md)
+    * [Diverter Events](diverters/index.md)
         * [diverter_(name)_activating](diverter_diverter_activating.md)
         * [diverter_(name)_deactivating](diverter_diverter_deactivating.md)
         * [diverter_(name)_disabling](diverter_diverter_disabling.md)
         * [diverter_(name)_enabling](diverter_diverter_enabling.md)
 
-    * [Drop Target Events](index_drop_targets.md)
+    * [Drop Target Events](drop_targets/index.md)
         * [drop_target_(name)_down](drop_target_drop_target_down.md)
         * [drop_target_(name)_up](drop_target_drop_target_up.md)
 
-    * [Drop Target Bank Events](index_drop_target_banks.md)
+    * [Drop Target Bank Events](drop_target_banks/index.md)
         * [drop_target_bank_(name)_down](drop_target_bank_drop_target_bank_down.md)
         * [drop_target_bank_(name)_mixed](drop_target_bank_drop_target_bank_mixed.md)
         * [drop_target_bank_(name)_up](drop_target_bank_drop_target_bank_up.md)
 
-    * [Extra Ball Events](index_extra_balls.md)
+    * [Extra Ball Events](extra_balls/index.md)
         * [extra_ball_award_disabled](extra_ball_award_disabled.md)
         * [extra_ball_awarded](extra_ball_awarded.md)
         * [extra_ball_(name)\_award_disabled](extra_ball_extra_ball_award_disabled.md)
         * [extra_ball_(name)_awarded](extra_ball_extra_ball_awarded.md)
         * [extra_ball_(name)_lit](extra_ball_extra_ball_lit.md)
 
-    * [Extra Ball Group Events](index_extra_ball_groups.md)
+    * [Extra Ball Group Events](extra_ball_groups/index.md)
         * [extra_ball_group_(name)\_award_disabled](extra_ball_group_extra_ball_group_award_disabled.md)
         * [extra_ball_group_(name)_awarded](extra_ball_group_extra_ball_group_awarded.md)
         * [extra_ball_group_(name)_lit](extra_ball_group_extra_ball_group_lit.md)
         * [extra_ball_group_(name)\_lit_awarded](extra_ball_group_extra_ball_group_lit_awarded.md)
         * [extra_ball_group_(name)_unlit](extra_ball_group_extra_ball_group_unlit.md)
 
-    * [Kickback Events](index_kickbacks.md)
+    * [Kickback Events](kickbacks/index.md)
         * [kickback_(name)_fired](kickback_kickback_fired.md)
 
-    * [Machine Var Events](index_machine_vars.md)
+    * [Machine Var Events](machine_vars/index.md)
         * [machine_var_(name)](machine_var_machine_var.md)
 
-    * [Magnet Events](index_magnets.md)
+    * [Magnet Events](magnets/index.md)
         * [magnet_(name)\_flinged_ball](magnet_magnet_flinged_ball.md)
         * [magnet_(name)\_flinging_ball](magnet_magnet_flinging_ball.md)
         * [magnet_(name)\_grabbed_ball](magnet_magnet_grabbed_ball.md)
@@ -126,10 +126,10 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [magnet_(name)\_released_ball](magnet_magnet_released_ball.md)
         * [magnet_(name)\_releasing_ball](magnet_magnet_releasing_ball.md)
 
-    * [Motor Events](index_motors.md)
+    * [Motor Events](motors/index.md)
         * [motor_(name)\_reached_(position)](motor_motor_reached_position.md)
 
-    * [Multiball Events](index_multiballs.md)
+    * [Multiball Events](multiballs/index.md)
         * [multiball_(name)_ended](multiball_multiball_ended.md)
         * [multiball_(name)\_grace_period](multiball_multiball_grace_period.md)
         * [multiball_(name)\_hurry_up](multiball_multiball_hurry_up.md)
@@ -140,48 +140,48 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [ball_save_(multiball_name)\_add_a_ball_timer_start](ball_save_multiball_add_a_ball_timer_start.md)
         * [ball_save_(multiball_name)\_timer_start](ball_save_multiball_timer_start.md)
 
-    * [Multiball Lock Events](index_multiball_locks.md)
+    * [Multiball Lock Events](multiball_locks/index.md)
         * [multiball_lock_(name)_full](multiball_lock_multiball_lock_full.md)
         * [multiball_lock_(name)\_locked_ball](multiball_lock_multiball_lock_locked_ball.md)
 
-    * [Player Var Events](index_player_vars.md)
+    * [Player Var Events](player_vars/index.md)
         * [player_(name)](player_player_var.md)
         * [player_score](player_score.md)
 
-    * [Playfield Events](index_playfields.md)
+    * [Playfield Events](playfields/index.md)
         * [(name)\_ball_count_change](playfield_ball_count_change.md)
         * [(name)_active](playfield_active.md)
         * [unexpected_ball_on_(playfield_name)](unexpected_ball_on_playfield.md)
         * [sw_(playfield_name)_active](sw_playfield_active.md)
 
-    * [Playfield Transfer Events](index_playfield_transfers.md)
+    * [Playfield Transfer Events](playfield_transfers/index.md)
         * [playfield_transfer_(playfield_transfer)\_ball_transferred](playfield_transfer_playfield_transfer_ball_transferred.md)
 
-    * [Score Reel Events](index_score_reels.md)
+    * [Score Reel Events](score_reels/index.md)
         * [reel_(name)_advanced](reel_score_reel_advanced.md)
 
-    * [Sequence Shot Events](index_sequence_shots.md)
+    * [Sequence Shot Events](sequence_shots/index.md)
         * [(name)_hit](sequence_shot_hit.md)
 
-    * [Shot Events](index_shots.md)
+    * [Shot Events](shots/index.md)
         * [(name)_hit](shot_hit.md)
         * [(name)\_(profile)_hit](shot_profile_hit.md)
         * [(name)\_(profile)\_(state)_hit](shot_profile_state_hit.md)
         * [(name)\_(state)_hit](shot_state_hit.md)
 
-    * [Shot Group Events](index_shot_groups.md)
+    * [Shot Group Events](shot_groups/index.md)
         * [(name)_complete](shot_group_complete.md)
         * [(name)_hit](shot_group_hit.md)
         * [(name)\_(state)_complete](shot_group_state_complete.md)
         * [(name)\_(state)_hit](shot_group_state_hit.md)
 
 
-    * [Slide Events](index_slides.md)
+    * [Slide Events](slides/index.md)
         * [slide_(name)_active](slide_slide_active.md)
         * [slide_(name)_created](slide_slide_created.md)
         * [slide_(name)_removed](slide_slide_removed.md)
 
-    * [Spinner Events](index_spinners.md)
+    * [Spinner Events](spinners/index.md)
         * [spinner_(name)_active](spinner_spinner_active.md)
         * [spinner_(name)_hit](spinner_spinner_hit.md)
         * [spinner_(name)_idle](spinner_spinner_idle.md)
@@ -189,7 +189,7 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [spinner_(name)\_(label)_active](spinner_spinner_label_active.md)
         * [spinner_(name)\_(label)_hit](spinner_spinner_label_hit.md)
 
-    * [Switch Events](index_switches.md)
+    * [Switch Events](switches/index.md)
         * [sw_(tag)](sw_tag.md)
         * [sw_(tag)_active](sw_tag_active.md)
         * [sw_(tag)_inactive](sw_tag_inactive.md)
@@ -198,13 +198,13 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [switch_(name)_active](switch_switch_active.md)
         * [switch_(name)_inactive](switch_switch_inactive.md)
 
-    * [Timed Switch Events](index_timed_switches.md)
+    * [Timed Switch Events](timed_switches/index.md)
         * [(name)_active](timed_switch_active.md)
         * [(name)_released](timed_switch_released.md)
         * [flipper_cradle](flipper_cradle.md)
         * [flipper_cradle_release](flipper_cradle_release.md)
 
-    * [Timer Events](index_timers.md)
+    * [Timer Events](timers/index.md)
         * [timer_(name)_complete](timer_timer_complete.md)
         * [timer_(name)_paused](timer_timer_paused.md)
         * [timer_(name)_started](timer_timer_started.md)
