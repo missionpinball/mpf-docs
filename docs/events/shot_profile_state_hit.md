@@ -2,7 +2,7 @@
 title: (shot_name)_(profile)_(state)_hit
 ---
 
-# (shot_name)_(profile)_(state)_hit
+# (shot_name)\_(profile)\_(state)_hit
 
 
 --8<-- "event.md"

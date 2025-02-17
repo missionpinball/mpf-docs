@@ -70,8 +70,6 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [ball_save_(name)\_hurry_up](ball_save_ball_save_hurry_up.md)
         * [ball_save_(name)\_saving_ball](ball_save_ball_save_saving_ball.md)
         * [ball_save_(name)\_timer_start](ball_save_ball_save_timer_start.md)
-        * [ball_save_(name)\_add_a_ball_timer_start](ball_save_multiball_add_a_ball_timer_start.md)
-        * [ball_save_(name)\_timer_start](ball_save_multiball_timer_start.md)
 
     * [Combo Switch Events](index_combo_switches.md)
         * [(name)_both](combo_switch_both.md)
@@ -84,7 +82,6 @@ will posted an event called *switch_s_left_slingshot_active*.
     * [Display Events](index_displays.md)
         * [display_(name)_initialized](display_display_initialized.md)
         * [display_(name)_ready](display_display_ready.md)
-        * [displays_initialized](displays_initialized.md)
 
     * [Diverter Events](index_diverters.md)
         * [diverter_(name)_activating](diverter_diverter_activating.md)
@@ -140,6 +137,8 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [multiball_(name)\_shoot_again](multiball_multiball_shoot_again.md)
         * [multiball_(name)\_shoot_again_ended](multiball_multiball_shoot_again_ended.md)
         * [multiball_(name)_started](multiball_multiball_started.md)
+        * [ball_save_(multiball_name)\_add_a_ball_timer_start](ball_save_multiball_add_a_ball_timer_start.md)
+        * [ball_save_(multiball_name)\_timer_start](ball_save_multiball_timer_start.md)
 
     * [Multiball Lock Events](index_multiball_locks.md)
         * [multiball_lock_(name)_full](multiball_lock_multiball_lock_full.md)
@@ -306,6 +305,7 @@ will posted an event called *switch_s_left_slingshot_active*.
         * [mc_reset_phase_1](mc_reset_phase_1.md)
         * [mc_reset_phase_2](mc_reset_phase_2.md)
         * [mc_reset_phase_3](mc_reset_phase_3.md)
+        * [displays_initialized](displays_initialized.md)
 
     * Mode Lifecycle Events
         * [mode_(name)_started](mode_name_started.md)
