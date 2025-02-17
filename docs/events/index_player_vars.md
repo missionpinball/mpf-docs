@@ -8,3 +8,4 @@ title: player_var event index
 See: [player_vars:](../config/player_vars.md)
 
 * [player_(var_name)](player_player_var.md)
+* [player_score](player_score.md)

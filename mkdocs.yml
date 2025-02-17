@@ -978,8 +978,6 @@ nav:
       - ball_save_(name)_hurry_up: events/ball_save_ball_save_hurry_up.md
       - ball_save_(name)_saving_ball: events/ball_save_ball_save_saving_ball.md
       - ball_save_(name)_timer_start: events/ball_save_ball_save_timer_start.md
-      - ball_save_(name)_add_a_ball_timer_start: events/ball_save_multiball_add_a_ball_timer_start.md
-      - ball_save_(name)_timer_start: events/ball_save_multiball_timer_start.md
     - combo_switch Events:
       - events/index_combo_switches.md
       - (combo_switch)_both: events/combo_switch_both.md
@@ -992,7 +990,6 @@ nav:
       - events/index_displays.md
       - display_(name)_initialized: events/display_display_initialized.md
       - display_(name)_ready: events/display_display_ready.md
-      - displays_initialized: events/displays_initialized.md
     - diverter Events:
       - events/index_diverters.md
       - diverter_(name)_activating: events/diverter_diverter_activating.md
@@ -1048,6 +1045,8 @@ nav:
       - multiball_(name)_shoot_again: events/multiball_multiball_shoot_again.md
       - multiball_(name)_shoot_again_ended: events/multiball_multiball_shoot_again_ended.md
       - multiball_(name)_started: events/multiball_multiball_started.md
+      - ball_save_(multiball_name)_add_a_ball_timer_start: events/ball_save_multiball_add_a_ball_timer_start.md
+      - ball_save_(multiball_name)_timer_start: events/ball_save_multiball_timer_start.md
     - multiball_lock Events:
       - events/index_multiball_locks.md
       - multiball_lock_(name)_full: events/multiball_lock_multiball_lock_full.md
@@ -1148,8 +1147,6 @@ nav:
     - BCP Events:
       - bcp_clients_connected: events/bcp_clients_connected.md
       - bcp_connection_attempt: events/bcp_connection_attempt.md
-      - client_connected: events/client_connected.md
-      - client_disconnected: events/client_disconnected.md
     - Bonus (End of Ball) Events:
       - bonus_multiplier: events/bonus_multiplier.md
       - bonus_start: events/bonus_start.md
@@ -1195,11 +1192,14 @@ nav:
       - match_has_match: events/match_has_match.md
       - match_no_match: events/match_no_match.md
     - MC (Pre 0.80.x) Events:
+      - client_connected: events/client_connected.md
+      - client_disconnected: events/client_disconnected.md
       - mc_ready: events/mc_ready.md
       - mc_reset_complete: events/mc_reset_complete.md
       - mc_reset_phase_1: events/mc_reset_phase_1.md
       - mc_reset_phase_2: events/mc_reset_phase_2.md
       - mc_reset_phase_3: events/mc_reset_phase_3.md
+      - displays_initialized: events/displays_initialized.md
     - Mode Lifecycle Events:
       - mode_(name)_started: events/mode_name_started.md
       - mode_(name)_starting: events/mode_name_starting.md
