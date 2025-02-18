@@ -1,9 +1,4 @@
----
-title: Coils Are Not Firing
----
-
 # Coils Are Not Firing
-
 
 What to do if your coils are not working?
 
