@@ -189,7 +189,7 @@ specify a target, then the slide will be shown on the default display.
 
 In MPF, display targets are the names of the displays themselves.
 However there is also a *slide_frame* widget (literally a widget which
-you add to a slide which holds other slides, kind of line
+you add to a slide which holds other slides, kind of like
 picture-in-picture). When you add a slide_frame to a slide, you give it
 a name, and that name is added to the list of valid targets.
 

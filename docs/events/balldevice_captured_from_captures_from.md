@@ -1,8 +1,8 @@
 ---
-title: [balldevice_captured_from](../index.md)(captures_from)
+title: balldevice_captured_from_(captures_from)
 ---
 
-# [balldevice_captured_from](../index.md)(captures_from)
+# balldevice_captured_from_(captures_from)
 
 
 --8<-- "event.md"

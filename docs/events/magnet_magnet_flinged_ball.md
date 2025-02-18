@@ -1,8 +1,8 @@
 ---
-title: [magnet](../index.md)(name)_flinged_ball
+title: magnet_(name)_flinged_ball
 ---
 
-# [magnet](../index.md)(name)_flinged_ball
+# magnet_(name)_flinged_ball
 
 
 --8<-- "event.md"

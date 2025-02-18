@@ -1,8 +1,8 @@
 ---
-title: [drop_target_bank](../index.md)(name)_mixed
+title: drop_target_bank_(name)_mixed
 ---
 
-# [drop_target_bank](../index.md)(name)_mixed
+# drop_target_bank_(name)_mixed
 
 
 --8<-- "event.md"

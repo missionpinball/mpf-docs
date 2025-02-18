@@ -1,10 +1,10 @@
 ---
-title: player_var
+title: player_var event index
 ---
 
-# player_var
+# player_var events
 
 
-See: [player_player_var](../config/player_vars.md)
+See: [player_vars:](../config/player_vars.md)
 
-* [player](../index.md)(name)](player_player_var)
+* [player_(var_name)](player_player_var.md)

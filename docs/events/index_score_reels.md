@@ -1,10 +1,10 @@
 ---
-title: score_reel
+title: score_reel event index
 ---
 
-# score_reel
+# score_reel events
 
 
-See: [reel_score_reel_advanced](../config/score_reels.md)
+See: [score_reels:](../config/score_reels.md)
 
-* [reel](../index.md)(name)_advanced](reel_score_reel_advanced)
+* [reel_(name)_advanced](reel_score_reel_advanced.md)

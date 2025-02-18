@@ -1,8 +1,8 @@
 ---
-title: [text_input](../index.md)(key)_abort
+title: text_input_(key)_abort
 ---
 
-# [text_input](../index.md)(key)_abort
+# text_input_(key)_abort
 
 
 *MPF-MC Event*

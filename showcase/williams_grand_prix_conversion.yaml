@@ -1,14 +1,16 @@
-name: William's Grand Prix Conversion
-acronym:
-team: Pinball Plaid and unRARed
+name: Grand Prix '86
+team: Death Save Pinball Cult
 location: Bellingham, WA
-started: 2018-03-24
-finished:
-images:
-project_type:
-youtube_video_ids:
-documentation_link:
-code_link: https://github.com/pinballplaid/grand-prix
-gameplay_link:
+started: 2018-03-23
+images: grand-prix-86.jpg
+documentation_link: https://github.com/deathsave/grand-prix/blob/main/docs/RULES.md
+code_link: https://github.com/deathsave/grand-prix
 controller: OPP
 description: >
+  After converting Zaccaria Combat, Steve and Ryan began work to
+  convert a William's Grand Prix. Ryan had picked up the game as
+  his first machine and it was in poor shape. It worked ok, but
+  there was some weirdness, probably due to worn out EM parts.
+  The plan is to convert and retheme the game as "Grand Prix '86",
+  with 80's style art and music. Progress halted in 2020 due to
+  the global pandemic, but has picked back up as of Fall 2024.

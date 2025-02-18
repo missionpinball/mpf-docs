@@ -1,13 +1,13 @@
 ---
-title: (name)_switches_2
+title: (combo_switch_name)_switches_2
 ---
 
-# (name)_switches_2
+# (combo_switch_name)_switches_2
 
 
 --8<-- "event.md"
 
-Combo switch (name) changed to state switches_2.
+Combo switch named (combo_switch_name) changed to state switches_2.
 
 Only switches_2 is active. max_offset_time has passed and this hit
 cannot become both later on. Only emited when `max_offset_time:` is

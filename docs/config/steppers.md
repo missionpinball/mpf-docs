@@ -187,6 +187,28 @@ Single value, type: `integer`. Default: `0`
 Minimum possible position. Negative values are left of the home
 position.
 
+### relative_positions:
+
+One or more sub-entries. Each in the format of `number` (will be
+converted to floating point) : `string`
+
+This is a sub-section mapping of relative stepper increments to MPF event names (as opposed to absolute rotational positions).
+For example:
+
+``` mpf-config
+#! steppers:
+#!   my_stepper:
+#!     number: 1
+    relative_positions:
+      50: advance_50 # positive values move the stepper in the direction of the `homing_direction`
+      -50: move_back_50 # Negative positions move the stepper opposite of the `homing_direction`
+```
+
+The values in this `relative_positions:` list represent MPF events that,
+when posted, tell this stepper to increment a certain number of "steps". So, in the
+example above, when the *advance_50* event is posted, this stepper will
+advance 50 steps or increments from where it is currently. Positive relative positions always advance in the direction that is defined in `homing_direction`. Negative relative positions move in the opposite direction.
+
 ### reset_events:
 
 List of one (or more) device control events

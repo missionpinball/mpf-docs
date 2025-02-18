@@ -1,8 +1,8 @@
 ---
-title: [kickback](../index.md)(name)_fired
+title: kickback_(name)_fired
 ---
 
-# [kickback](../index.md)(name)_fired
+# kickback_(name)_fired
 
 
 --8<-- "event.md"

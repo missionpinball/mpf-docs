@@ -25,7 +25,7 @@ You should be able to access the doc site via your web browser at `localhost:800
 
 ## To contribute
 
-We would love contributions to the docs! We have a Contributing Guide ([view on GitHub](https://github.com/missionpinball/mpf-docs/blob/main/docs/about/help_docs.md) | [view on the website](https://missionpinball.org/about/help_docs/))
+We would love contributions to the docs! We have a Contributing Guide ([view on GitHub](https://github.com/missionpinball/mpf-docs/blob/main/docs/about/help_docs.md) | [view on the website](https://missionpinball.org/latest/about/help_docs/))
 which explains how to contribute.
 
 ## Configuring site navigation
@@ -42,7 +42,7 @@ something someone could look into.
 
 ## Script to build the showcase pages
 
-The MPF project showcase is published at [missionpinball.org/showcase](https://missionpinball.org/showcase/).
+The MPF project showcase is published at [missionpinball.org/latest/showcase](https://missionpinball.org/latest/showcase/).
 The source content for each showcase entry are YAML files [`/showcase`](https://github.com/missionpinball/mpf-docs/tree/main/showcase) folder of this repo. The script [`generate_showcase_pages.py`](https://github.com/missionpinball/mpf-docs/blob/main/build_tools/generate_showcase_pages.py) generates the .md files for each project, and also generates the showcase index
 page.
 

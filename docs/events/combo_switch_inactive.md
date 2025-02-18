@@ -1,13 +1,13 @@
 ---
-title: (name)_inactive
+title: (combo_switch_name)_inactive
 ---
 
-# (name)_inactive
+# (combo_switch_name)_inactive
 
 
 --8<-- "event.md"
 
-Combo switch (name) changed to state inactive.
+Combo switch named (combo_switch_name) changed to state inactive.
 
 Both switches are inactive.
 

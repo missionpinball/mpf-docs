@@ -1,8 +1,8 @@
 ---
-title: [text_input](../index.md)(key)_complete
+title: text_input_(key)_complete
 ---
 
-# [text_input](../index.md)(key)_complete
+# text_input_(key)_complete
 
 
 *MPF-MC Event*

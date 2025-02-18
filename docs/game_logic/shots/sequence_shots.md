@@ -33,16 +33,16 @@ sequence_shots:
 ```
 
 When both switches are hit in sequence `ramp_hit`
-([(name)_hit](../../events/sequence_shot_hit.md)) will be
+([(sequence_shot_name)_hit](../../events/sequence_shot_hit.md)) will be
 posted. You can use that event to trigger further logic/shows/etc.
 
 ## Using Sequence Shots in Shot Groups
 
-Sequence shots got shots in their name but they cannot be used in
+Sequence shots has "shots" in its name, but they cannot be used in
 [shot_groups](shot_group.md). If you want to
-use them in a shot groups create a
+use them in a shot group, you need to create a
 [shot](../../config/shots.md) which is triggerd
-on the [(name)_hit](../../events/sequence_shot_hit.md) event.
+on the [(sequence_shot_name)_hit](../../events/sequence_shot_hit.md) event of the sequence shot.
 
 This is an example:
 
@@ -85,4 +85,4 @@ shot_groups:
 
 ## Related Events
 
-* [(name)_hit](../../events/sequence_shot_hit.md)
+* [(sequence_shot_name)_hit](../../events/sequence_shot_hit.md)

@@ -1,13 +1,13 @@
 ---
-title: (name)_both
+title: (combo_switch_name)_both
 ---
 
-# (name)_both
+# (combo_switch_name)_both
 
 
 --8<-- "event.md"
 
-Combo switch (name) changed to state both.
+Combo switch named (combo_switch_name) changed to state both.
 
 A switch from group 1 and group 2 are both active at the same time,
 having been pressed within the `max_offset_time:` and being active for

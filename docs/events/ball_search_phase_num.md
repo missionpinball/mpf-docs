@@ -1,8 +1,8 @@
 ---
-title: [ball_search_phase](../index.md)(num)
+title: ball_search_phase_(num)
 ---
 
-# [ball_search_phase](../index.md)(num)
+# ball_search_phase_(num)
 
 
 --8<-- "event.md"
