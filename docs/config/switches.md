@@ -275,13 +275,25 @@ Special-purpose tags for switches include:
     playfield that indicate a ball is loose on the playfield. This tag
     is used by the playfield to know that balls are on it. Note that if
     you have more than one playfield, the tag name is
-    (playfield_name)_active, so if you have a playfield called "upper
+    (playfield_name)\_active, so if you have a playfield called "upper
     playfield", you'd tag the switches on that playfield with
-    "upper_playfield_active".
-* `start` - Let's MPF know that this switch is used to start a game.
+    "upper_playfield_active". Many devices (such as slingshots and VUKs) will
+    manage this behavior for you and will generate error "CFE-ball_device-13"
+    if you have this tag when you should not. Removing the tag will fix the error.
+    See: [Ball Search](../game_logic/ball_search/configuring_ball_search.md)
+* `start` - Lets MPF know that this switch is used to start a game.
     (Note that in MPF, the game start process is kicked off when this
     switch is released, not pressed, which allows the "time held down"
-    to be sent to MPF to perform alternate game start actions.)
+    to be sent to MPF to perform alternate game start actions.) See: [Start Button](../tutorial/9_start_button.md).
+* `left_flipper` and `right_flipper` - MPF will provide automatic [flipper_cradle](../events/flipper_cradle.md)
+    and [flipper_cancel](../events/flipper_cancel.md) events if your cabinet flipper buttons are tagged with
+    their respective flippers.
+* `service_esc`, `service_down`, `service_up`, and `service_enter` - When using the builtin
+    Service Mode, you will want to tag four different switches with these tags so the
+    operator can use the interface without keyboard or mouse access. See: [Service Mode](../game_logic/service_mode.md)
+* `service_door_open` - This is used for the coin door switch to manage the service mode. See: [Service Mode](../game_logic/service_mode.md)
+* `tilt_warning` - This is added to a plumb-bob style tilt switch. See: [Tilt](../game_logic/tilt/index.md)
+* `slam_tilt` - This is added to a slam tilt type switch. See: [Tilt](../game_logic/tilt/index.md)
 
 ## Monitorable Properties
 
