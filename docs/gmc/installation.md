@@ -25,7 +25,7 @@ After Godot is installed, open the editor and create a New Project. Select your 
 
 For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*. Note that you can change this setting at any time, so don't stress about it :)
 
-Finally, in your game project folder create a new folder called *addons*.
+Finally, in your Godot game project folder(not the MPF project folder) create a new folder called *addons*.
 
 !!! note "Root project vs GMC subfolder"
 
@@ -122,7 +122,7 @@ The syntax is `mklink /d <path to project folder/addons/mpf-gmc> <path to GMC re
 
 #### Option 2: Copy the MPF-GMC Folder
 
-If you do not create a symbolic link, you can manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your project *addons* folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
+If you do not create a symbolic link, you can manually copy the *mpf-gmc* folder from the GMC repository */addons* folder to your Godot project *addons* folder. You'll know it's in the right place if your Godot project root (in this example, "pinballgame") has the file path `/pinballgame/addons/mpf-gmc/plugin.cfg`.
 
 The downside of copying the folder is that you will need to manually re-copy the folder each time you download a new update to the GMC.
 
@@ -157,7 +157,7 @@ Because of how Godot processes and caches plugins and autoloads, sometimes pulli
 
     During this step, at various points some pieces will be setup before others and Godot will present errors about files not found or scripts unable to be parsed. It is safe to ignore these errors for now: we will restart Godot after this step and everything will be in order.
 
-In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin.
+In the Godot Editor, open the *Project > Project Settings* menu and select the *Plugins* tab. You should see an option there for **Godot MC**, check the checkbox to enable the plugin. If the plugin is not visible in the plugin list, you should check to see if you placed the *addons* folder in the wrong location.
 
 ![image](images/project_settings_plugins.png)
 
