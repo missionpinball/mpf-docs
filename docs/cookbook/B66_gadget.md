@@ -1,5 +1,5 @@
 ---
-title: Recipe: GADGET Targets from Stern Batman '66
+title: "Recipe: GADGET Targets from Stern Batman '66"
 ---
 
 # Recipe: GADGET Targets from Stern Batman '66

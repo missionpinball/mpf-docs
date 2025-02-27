@@ -1,5 +1,5 @@
 ---
-title: Recipe: Skillshot (with Lane Change)
+title: "Recipe: Skillshot (with Lane Change)"
 ---
 
 # Recipe: Skillshot (with Lane Change)

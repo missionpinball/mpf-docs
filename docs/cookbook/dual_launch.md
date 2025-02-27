@@ -1,5 +1,5 @@
 ---
-title: Recipe: Modifying the game mode - Dual launch devices
+title: "Recipe: Modifying the game mode - Dual launch devices"
 ---
 
 # Recipe: Modifying the game mode - Dual launch devices
