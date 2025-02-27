@@ -25,7 +25,7 @@ After Godot is installed, open the editor and create a New Project. Select your 
 
 For most pinball games, *Mobile* rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose *Forward+*. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose *Compatibility*. Note that you can change this setting at any time, so don't stress about it :)
 
-Finally, in your Godot game project folder(not the MPF project folder) create a new folder called *addons*.
+Finally, in your Godot game project folder create a new folder called *addons* (Note that if your Godot project folder is not your MPF project folder, the addons should be in the Godot folder).
 
 !!! note "Root project vs GMC subfolder"
 
