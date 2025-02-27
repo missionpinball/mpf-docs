@@ -1,9 +1,8 @@
 ---
-title: CFE-ConfigValidator-4: Invalid Validator in config spec
+title: "CFE-ConfigValidator-4: Invalid Validator in config spec"
 ---
 
 # CFE-ConfigValidator-4: Invalid Validator in config spec
-
 
 This error occurs when MPF does not understand the config specification
 for a device. Unless you created custom config specs in a mode,

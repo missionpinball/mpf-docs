@@ -1,9 +1,8 @@
 ---
-title: CFE-show-1: Show does not appear to be a valid show config
+title: "CFE-show-1: Show does not appear to be a valid show config"
 ---
 
 # CFE-show-1: Show does not appear to be a valid show config
-
 
 Related Config File Sections:
 

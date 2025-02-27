@@ -1,7 +1,8 @@
 ---
-title: RE-MPF-MC_BCP_Server-1: Failed to bind BCP Socket to localhost
-  on port 5050
+title: "RE-MPF-MC_BCP_Server-1: Failed to bind BCP Socket to localhost on port 5050"
 ---
+
+# RE-MPF-MC_BCP_Server-1: Failed to bind BCP Socket to localhost on port 5050
 
 See [/troubleshooting/index](RE-MPF_BCP_Server-1.md) which is exactly
 the same error.

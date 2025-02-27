@@ -1,9 +1,8 @@
 ---
-title: CFE-ConfigValidator-12: Item is not a dict
+title: "CFE-ConfigValidator-12: Item is not a dict"
 ---
 
 # CFE-ConfigValidator-12: Item is not a dict
-
 
 This error occurs when MPF expects a dictionary in a config setting but
 found something else.

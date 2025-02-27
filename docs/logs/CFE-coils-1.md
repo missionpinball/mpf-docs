@@ -1,9 +1,8 @@
 ---
-title: CFE-coils-1: Driver must have a number
+title: "CFE-coils-1: Driver must have a number"
 ---
 
 # CFE-coils-1: Driver must have a number
-
 
 Related Config File Sections:
 

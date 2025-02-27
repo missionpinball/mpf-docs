@@ -1,7 +1,8 @@
 ---
-title: RE-MPF_BCP_Server-1: Failed to bind BCP Socket to 127.0.0.1 on
-  port 5051
+title: "RE-MPF_BCP_Server-1: Failed to bind BCP Socket to 127.0.0.1 on port 5051"
 ---
+
+# RE-MPF_BCP_Server-1: Failed to bind BCP Socket to 127.0.0.1 on port 5051
 
 Related Config File Sections:
 

@@ -1,7 +1,8 @@
 ---
-title: CFE-ConfigValidator-2: Your config contains a value for the
-  setting, but this is not a valid setting name
+title: "CFE-ConfigValidator-2: Your config contains a value for the setting, but this is not a valid setting name"
 ---
+
+# CFE-ConfigValidator-2: Your config contains a value for the setting, but this is not a valid setting name
 
 This error occurs when MPF does not know a setting you specified in a
 device.

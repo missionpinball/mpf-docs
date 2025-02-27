@@ -1,7 +1,8 @@
 ---
-title: CFE-DeviceManager-3: Device does not have a valid config.
-  Expected a dictionary.
+title: "CFE-DeviceManager-3: Device does not have a valid config. Expected a dictionary."
 ---
+
+# CFE-DeviceManager-3: Device does not have a valid config. Expected a dictionary.
 
 This error occurs when MPF expects a dictionary in a config of a device
 but found something else.
