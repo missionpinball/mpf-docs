@@ -8,7 +8,7 @@ title: ball_will_start
 --8<-- "event.md"
 
 The ball is about to start. This event is posted just before
-[/events/overview/conditional](ball_starting.md).
+[ball_starting](ball_starting.md).
 
 ## Keyword arguments
 
