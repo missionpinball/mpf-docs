@@ -107,7 +107,7 @@ safe place), and then when the machine powers on, instead of running the
 existing game code from the SD card, the CPU runs the MPF SPIKE bridge
 software.
 
-![image](/hardware/images/spike_bridge.png)
+![image](../images/spike_bridge.png)
 
 The MPF SPIKE bridge is fairly simple. Essentially all it does is relay
 messages from the SPIKE node bus to the debug port on the CPU node, and

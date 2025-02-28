@@ -12,7 +12,7 @@ Related Config File Sections:
 To configure switches on a P-ROC, you can follow the guides and
 instructions in the [Switches](../../mechs/switches/index.md) docs.
 
-![image](/hardware/images/multimorphic_p_roc.png)
+![image](../images/multimorphic_p_roc.png)
 
 However there are a few things to know about using switches with a
 P-ROC.

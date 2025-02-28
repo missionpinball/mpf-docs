@@ -19,7 +19,7 @@ similar). You can buy them from many different companies, and they're
 what's sold as the "NeoPixel" brand of products from Adafruit. (They
 have all different shapes and sizes.)
 
-![image](/hardware/images/fast-nano.png)
+![image](../images/fast-nano.png)
 
 Most of the settings in the [Lights](../../mechs/lights/index.md) documentation apply to LEDs connected to FAST Pinball
 controllers, however there are a few FAST-specific things to know.

@@ -23,7 +23,7 @@ address of the node its plugged into, and then its individual ID.
 You can find the switch numbers are in the manual. Omit the "SW" and
 letters for extension boards. Here's an example from Wrestlemania Pro:
 
-![image](/hardware/images/spike_switch_table.jpg)
+![image](../images/spike_switch_table.jpg)
 
 This would result in the following switch entries:
 
