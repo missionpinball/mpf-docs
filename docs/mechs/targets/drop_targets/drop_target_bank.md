@@ -66,8 +66,8 @@ For
 
 ## Related How To guides
 
-* [Welcome to The Mission Pinball Framework!](../../../index.md)
-* [/events/drop_target_bank_drop_target_bank_mixed](fixing_drop_target_reset_issues.md)
+* [Drop Targets](index.md)
+* [Fixing Drop Target Reset Issues](fixing_drop_target_reset_issues.md)
 
 ## Related Events
 
