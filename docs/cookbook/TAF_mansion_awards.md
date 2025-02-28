@@ -1,5 +1,5 @@
 ---
-title: Recipe: The Addams Family Mansion Awards
+title: "Recipe: The Addams Family Mansion Awards"
 ---
 
 # Recipe: The Addams Family Mansion Awards

@@ -1,7 +1,8 @@
 ---
-title: CFE-ConfigValidator-9: Required setting is missing from section
-  in your config
+title: "CFE-ConfigValidator-9: Required setting is missing from section in your config"
 ---
+
+# CFE-ConfigValidator-9: Required setting is missing from section in your config
 
 This error occurs when MPF does not find a required setting in one of
 your config sections.

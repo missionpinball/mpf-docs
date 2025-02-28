@@ -1,9 +1,8 @@
 ---
-title: RE-P-Roc-1 - Known Firmware Bug in P/P3-Roc
+title: "RE-P-Roc-1 - Known Firmware Bug in P/P3-Roc"
 ---
 
 # RE-P-Roc-1 - Known Firmware Bug in P/P3-Roc
-
 
 Related Config File Sections:
 

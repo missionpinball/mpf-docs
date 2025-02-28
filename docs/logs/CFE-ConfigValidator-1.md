@@ -1,9 +1,8 @@
 ---
-title: CFE-ConfigValidator-1: Section not valid outside of game modes
+title: "CFE-ConfigValidator-1: Section not valid outside of game modes"
 ---
 
 # CFE-ConfigValidator-1: Section not valid outside of game modes
-
 
 This error occurs when MPF needs to reference player variables in a
 device but you defined the device in a non-game

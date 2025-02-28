@@ -1,9 +1,8 @@
 ---
-title: RE-P-Roc-2 - Communication with P/P3-Roc broke down
+title: "RE-P-Roc-2 - Communication with P/P3-Roc broke down"
 ---
 
 # RE-P-Roc-2 - Communication with P/P3-Roc broke down
-
 
 Related Config File Sections:
 

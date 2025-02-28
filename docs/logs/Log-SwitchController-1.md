@@ -1,7 +1,8 @@
 ---
-title: Log-SwitchController-1: Received duplicate switch state for
-  switch
+title: "Log-SwitchController-1: Received duplicate switch state for switch"
 ---
+
+# Log-SwitchController-1: Received duplicate switch state for switch
 
 Related Config File Sections:
 

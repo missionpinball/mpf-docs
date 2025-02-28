@@ -1,5 +1,5 @@
 ---
-title: Understanding the debug: setting
+title: "Understanding the debug: setting"
 ---
 
 # Understanding the debug: setting

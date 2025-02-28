@@ -1,5 +1,5 @@
 ---
-title: Recipe: Attack From Mars Super Jets
+title: "Recipe: Attack From Mars Super Jets"
 ---
 
 # Recipe: Attack From Mars Super Jets

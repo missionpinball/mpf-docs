@@ -1,9 +1,8 @@
 ---
-title: CFE-ConfigValidator-13: Cannot convert value to boolean
+title: "CFE-ConfigValidator-13: Cannot convert value to boolean"
 ---
 
 # CFE-ConfigValidator-13: Cannot convert value to boolean
-
 
 This error occurs when MPF expects a boolean value (i.e. `true` or
 `false`) for a config setting but got a value of a different type.
