@@ -22,7 +22,7 @@ pulse times, PWM values, whether they can be enabled (held on), etc.
 You don't typically work with coils directly, rather, you tend to add
 them to other devices once they've been defined (flippers, autofires,
 ball devices, diverters, etc). You can configure
-[/tutorial/3_get_flipping](dual_wound_coils.md) on top of coils.
+[dual_wound_coils:](../../config/dual_wound_coils.md) on top of coils.
 
 That said, it is possible to perform actions on coils directly, such as
 pulsing, enabling, or disabling them. You can do this via the
@@ -35,11 +35,12 @@ file or via the `coils:` section of a
 ### Connecting Coils
 
 If you coil has more than two terminals please have a look at
-[/tutorial/3_get_flipping](dual_wound_coils.md) because you got a
-dual-wound coil-If your coil has two terminals it is a single wound
+[dual_wound_coils](dual_wound_coils.md) because you have a
+dual-wound coil. If your coil has only two terminals it is a single wound
 coil.
 
 [TODO: Add a picture a single wound coil with diode](../../about/help.md)
+
 [TODO: Add a electrical drawing a single wound coil with diode](../../about/help.md)
 
 In general, polarity does not matter for a coil. However, there might be
@@ -90,10 +91,8 @@ means slightly less powerful.
 If you want to compare the strength of different coils you can get the
 number of windings and their resistance from one of the following pages:
 
-* [Pinball Medic Coil
-    Chart](https://www.pinballmedic.net/coilchart.html)
-* [Flippers.com Coil
-    Resistance](https://flippers.com/coil-resistance.html)
+* [Pinball Medic Coil Chart](https://www.pinballmedic.net/coilchart.html)
+* [Flippers.com Coil Resistance](https://flippers.com/coil-resistance.html)
 
 Get windings `N` and resistance `R` from the chart. To get the current
 you can use `I = U/R`. Depending on your power supply `U` is either 48
@@ -135,14 +134,13 @@ coils:
     default_hold_power: .2
 ```
 
-See [/tutorial/3_get_flipping](dual_wound_coils.md) for more details.
+See [Dual-wound Coils](dual_wound_coils.md) for more details.
 
 ## Related How To guides
 
 * [Tutorial step 3: Get flipping!](../../tutorial/3_get_flipping.md)
-
-[pulse_power](pulse_power.md)
-[hold_power](hold_power.md)
-[recycle](recycle.md)
-[dual_wound_coils](dual_wound_coils.md)
-[dual_vs_single_wound](dual_vs_single_wound.md)
+* [Adjust Coil Strength (Pulse Times)](pulse_power.md)
+* [Adjust Coil Hold Power](hold_power.md)
+* [Recycle/"Cool Down" Time](recycle.md)
+* [Dual-wound Coils](dual_wound_coils.md)
+* [Dual-wound vs Single-wound Coils](dual_vs_single_wound.md)

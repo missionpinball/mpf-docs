@@ -79,11 +79,11 @@ score normally is.
 
 ![image](../images/multiplayer_player_2.png)
 
-The _[multi_player_ball_started](../../index.md) event happens when a player's turn
+The _[multi_player_ball_started](../../events/multi_player_ball_started.md)_ event happens when a player's turn
 starts and there are multiple players in the game, so this will show our
 multiplayer slide at the beginning of every ball.
 
-The _[multiplayer_game](../../index.md) event happens as soon as a second player is
+The _[multiplayer_game](../../events/multiplayer_game.md)_ event happens as soon as a second player is
 added, so we use it to swap the slides if player_2 joins after player_1
 has already started their turn.
 
