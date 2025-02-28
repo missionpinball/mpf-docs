@@ -15,7 +15,7 @@ PD-LED. You need an additional cheap external stepper driver to drive
 the load of the stepper. Those are sold for a few bucks as StepStick or
 DRV8825 on amazon, ebay, aliexpress or similar platforms.
 
-![image](/hardware/images/multimorphic_PD-LED.png)
+![image](../images/multimorphic_PD-LED.png)
 
 To enable steppers you need to configure your PD-LED board in your
 `p_roc` section. Assuming your PD-LED has the ID 4 you can use the

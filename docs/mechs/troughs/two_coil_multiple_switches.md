@@ -20,7 +20,7 @@ sitting there.
 Here's an example of a Williams System 11 trough that uses this system,
 from a Pin\*Bot machine:
 
-![image](/mechs/images/two_coil_multiple_switches_trough_photo.jpg)
+![image](../images/two_coil_multiple_switches_trough_photo.jpg)
 
 If your machine's trough system is like this but you only have one
 switch on the trough side (like Gottlieb System 3 machines), then use
@@ -30,7 +30,7 @@ instead.
 The following diagram shows how the layout that this guide is written
 for works: (This is a side view)
 
-![image](/mechs/images/two_coils_multiple_switches.png)
+![image](../images/two_coils_multiple_switches.png)
 
 This style of trough and drain was used in Williams System 11 machines
 and early WPC machines (Addams Family, T2, Hurricane, and a few others).

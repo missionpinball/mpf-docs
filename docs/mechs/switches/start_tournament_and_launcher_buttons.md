@@ -21,7 +21,7 @@ start a tournament.
 
 ## Hardware
 
-![image](/mechs/images/button.jpg)
+![image](../images/button.jpg)
 
 Those buttons usually come with a
 [micro switch](mechanical_switches.md) and a

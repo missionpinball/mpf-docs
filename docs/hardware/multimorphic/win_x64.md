@@ -25,7 +25,7 @@ shot below. That should be ok.
 Download and run the setup executable from the "1" link in the screen
 shot.
 
-![image](/docs/hardware/images/ftdi_x64.jpg)
+![image](../images/ftdi_x64.jpg)
 
 ## 2. Now download and unzip the other package
 

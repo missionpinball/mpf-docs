@@ -49,7 +49,7 @@ Here's a diagram which shows the relationships between the various
 states. A device can only transition from its current state to one of
 the states an arrow is connected to.
 
-![image](/docs/mechs/images/ball_device_fsm_diagram.png)
+![image](../images/ball_device_fsm_diagram.png)
 
 When you configure ball devices in MPF, you configure the list of other
 devices that a ball device can eject to. This allows MPF to have an

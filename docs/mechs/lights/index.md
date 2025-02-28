@@ -23,7 +23,7 @@ There are multiple types of lights (read those for specific details):
 * [Flashers](flashers.md)
 * [Coils as Lights](coils_as_lights.md)
 
-![image](/mechs/images/lights_vs_leds.jpg)
+![image](../images/lights_vs_leds.jpg)
 
 This is an example of for a light:
 

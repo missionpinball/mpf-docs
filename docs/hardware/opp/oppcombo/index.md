@@ -7,9 +7,9 @@ title: OPP EM Combo boards
 --8<-- "hardware_platform.md"
 
 
-![image](/docs/hardware/images/O16I16_comps.jpg)
+![image](../../images/O16I16_comps.jpg)
 
-![image](/docs/hardware/images/O32_comps.jpg)
+![image](../../images/O32_comps.jpg)
 
 The aim of this project is to provide cheap hardware to control EM pinball machines:
 
@@ -30,9 +30,9 @@ The size of the board is about 150 x 125 mm.
 Several boards are required to drive an EM machine. 
 According to the complexity and your personal taste, 3-4 to drive the play field, 2-3 to drive the light box.
 
-![image](/docs/hardware/images/fast_draw_lb.jpg)
+![image](../../images/fast_draw_lb.jpg)
 
-![image](/docs/hardware/images/fast_draw_pf.jpg)
+![image](../../images/fast_draw_pf.jpg)
 
 ## Configuration
 
@@ -85,6 +85,6 @@ In the above example one would do:
 With those boards, I digitized a 1975 Gottlieb Fast Draw, which was presented to the [Pontacq Pinball Show](https://www.facebook.com/groups/154388563388625)
 on June 1rst-2nd, 2024, South of France, where it ran 375 plays without any software problem.
 
-![image](/docs/hardware/images/pontacq.jpg)
+![image](../../images/pontacq.jpg)
 
 

@@ -30,7 +30,7 @@ Nano Controller.
 When you're using FAST IO boards, drivers plug into individual IO
 boards. Then the IO boards are connected together in a loop.
 
-![image](/hardware/images/fast-io-3208.png)
+![image](../images/fast-io-3208.png)
 
 The `number:` setting for each driver is its board's position number in
 the chain, then the dash, then the driver output number. Note that the

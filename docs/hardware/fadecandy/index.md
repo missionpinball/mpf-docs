@@ -16,7 +16,7 @@ MPF allows you to use a FadeCandy LED controller to drive the LEDs in
 your pinball machine. A FadeCandy is a small, cheap (\$25) USB
 controller which can drive up to 512 serially-controlled RGB LEDs.
 
-![image](/hardware/images/fadecandy.jpg)
+![image](../images/fadecandy.jpg)
 
 You can use the FadeCandy in place of connecting your LEDs to a
 P-ROC/P3-ROC controller, or you can choose to drive some LEDs via your
@@ -141,7 +141,7 @@ physically connected to Connector 0.
 
 The following diagram explains how the numbering works:
 
-![image](/hardware/images/fadecandy_numbering.jpg)
+![image](../images/fadecandy_numbering.jpg)
 
 Consider the following config:
 

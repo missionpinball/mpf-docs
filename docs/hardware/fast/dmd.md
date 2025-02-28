@@ -12,7 +12,7 @@ The FAST Core controller can drive traditional single-color
 pinball DMDs via the 14-pin DMD connector cable that's been in most
 pinball machines for the past 25 years, like this:
 
-![image](/hardware/images/display_mono_dmd.jpg)
+![image](../images/display_mono_dmd.jpg)
 
 It makes no difference as to whether you're using an LED or an original
 plasma gas DMD. (Also it doesn't matter what color it is.)

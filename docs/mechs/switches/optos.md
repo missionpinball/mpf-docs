@@ -118,9 +118,9 @@ them.
 
 ### Williams/Bally Optos
 
-![image](/docs/mechs/images/williams_optos_front.jpg)
+![image](../images/williams_optos_front.jpg)
 
-![image](/docs/mechs/images/williams_optos_back.jpg)
+![image](../images/williams_optos_back.jpg)
 
 In most platforms with direct inputs you can directly connect a receiver
 to an input. You connect the collector to the input (`C`) and the
@@ -160,7 +160,7 @@ Part numbers:
 
 Labels on Stern Spike optos looks different but they work similarly:
 
-![image](/docs/mechs/images/spike_optos_front.jpg)
+![image](../images/spike_optos_front.jpg)
 
 On the transmitter (left) connect `+5` to 5V and `G` to GND. A current
 limiting resistor is not required since it is embedded on the sender.
@@ -175,7 +175,7 @@ Part numbers:
 
 ### Multimorphic Optos:
 
-![image](/docs/mechs/images/multimorphic_optos.jpg)
+![image](../images/multimorphic_optos.jpg)
 
 Multimorphic produces and sells optos with a JST connector. The
 transmitter contains a current limiting resistor for 12V (you only have

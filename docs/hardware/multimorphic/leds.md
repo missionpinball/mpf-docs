@@ -133,7 +133,7 @@ The PD-LED controls up to 84 individual LED elements, which can be used
 to control individual single color LEDs, or (more likely), combined into
 groups to control RGB LEDs.
 
-![image](/hardware/images/multimorphic_PD-LED.png)
+![image](../images/multimorphic_PD-LED.png)
 
 The PD-LED uses a "direct/parallel" connection method for LEDs, where
 each LED has connections for each color element running back to the
@@ -289,7 +289,7 @@ showing current saturation meeting the needs of the strip with a voltage
 between the gate and source (VGS) of 3.3 V or less. This is an example
 of such a circuit:
 
-![image](/hardware/images/FET-LEDs.png)
+![image](../images/FET-LEDs.png)
 
 Please make sure to connect your PD-LED and the FET to the same
 [common ground](../voltages_and_power/voltages_and_power.md) or your FET will smoke when connecting power.

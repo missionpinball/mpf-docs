@@ -46,7 +46,7 @@ From the *Editor* menu select *Editor Settings > Text Editor > Behavior*.
   *  In the *Files* section **disable** the `Convert Indent on Save` option.
   *  If you wish to use spaces in your project and edit in the Godot editor, in the *Indent* section change `Tabs` to `Spaces`.
 
-![image](./images/editor-settings-indentation.png)
+![image](images/editor-settings-indentation.png)
 
 ### Other Good Things
 
@@ -67,7 +67,7 @@ In the Godot editor, select **AssetLib** from the top center selector. You may n
 
 You can download the GMC plugin from the MPF-GMC repository on GitHub. Visit https://github.com/missionpinball/mpf-gmc and click on the green **Code** button to show the Code dropdown, and select *Download ZIP* to download the plugin.
 
-![image](./images/gmc-download-zip.png)
+![image](images/gmc-download-zip.png)
 
 Extract the downloaded ZIP file and go to the *addons* folder, where you'll see a folder named *mpf-gmc*. Copy this folder into the *addons* folder in your Godot project folder.
 

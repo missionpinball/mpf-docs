@@ -23,7 +23,7 @@ When you're using PKONE Extension boards, switches plug into individual
 Extension boards. Then the Extension boards are connected together in a
 chain.
 
-![image](/hardware/images/pkone-extension.png)
+![image](../images/pkone-extension.png)
 
 The `number:` setting for each switch is its board's Address ID number
 in the PKONE chain, then the dash, then the switch input number (1-35).

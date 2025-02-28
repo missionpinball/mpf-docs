@@ -20,7 +20,7 @@ generally known as "WS2812" (or similar). You can buy them from many
 different companies, and they're what's sold as the "NeoPixel" brand
 of products from Adafruit. (They have all different shapes and sizes.)
 
-![image](/hardware/images/pkone-lightshow.png)
+![image](../images/pkone-lightshow.png)
 
 Most of the settings in the [Lights](../../mechs/lights/index.md) documentation apply to LEDs connected to PKONE Lightshow
 boards, however there are a few PKONE-specific things to know.
