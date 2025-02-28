@@ -138,7 +138,7 @@ voltage power or without the coils plugged in. Using these LEDs, you can
 verify that each output is being driven correctly, in the picture below
 coil 1-0-1 is being driven at this very moment.
 
-![image](../../Cobra_Coils_LED_Switch.jpg)
+![image](../../images/Cobra_Coils_LED_Switch.jpg)
 
 To run the above test, there is no need for a high voltage power supply
 neither for any coil. Only the mirco controllers need to be powered up.
