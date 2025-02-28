@@ -31461,7 +31461,7 @@ pulse times, PWM values, whether they can be enabled (held on), etc.</p>
 <p>You don't typically work with coils directly, rather, you tend to add
 them to other devices once they've been defined (flippers, autofires,
 ball devices, diverters, etc). You can configure
-<a href="dual_wound_coils/">/tutorial/3_get_flipping</a> on top of coils.</p>
+<a href="../../config/dual_wound_coils/">dual_wound_coils:</a> on top of coils.</p>
 <p>That said, it is possible to perform actions on coils directly, such as
 pulsing, enabling, or disabling them. You can do this via the
 <a href="../../config/coil_player/">coil_player:</a> section of a config
@@ -31470,11 +31470,11 @@ file or via the <code>coils:</code> section of a
 <h2 id="hardware">Hardware</h2>
 <h3 id="connecting-coils">Connecting Coils</h3>
 <p>If you coil has more than two terminals please have a look at
-<a href="dual_wound_coils/">/tutorial/3_get_flipping</a> because you got a
-dual-wound coil-If your coil has two terminals it is a single wound
+<a href="dual_wound_coils/">dual_wound_coils</a> because you have a
+dual-wound coil. If your coil has only two terminals it is a single wound
 coil.</p>
-<p><a href="../../about/help/">TODO: Add a picture a single wound coil with diode</a>
-<a href="../../about/help/">TODO: Add a electrical drawing a single wound coil with diode</a></p>
+<p><a href="../../about/help/">TODO: Add a picture a single wound coil with diode</a></p>
+<p><a href="../../about/help/">TODO: Add a electrical drawing a single wound coil with diode</a></p>
 <p>In general, polarity does not matter for a coil. However, there might be
 a diode between the terminals of your coil which needs to be inverse to
 the voltage. This means that at the side of the stripe of the diode is
@@ -31516,10 +31516,8 @@ means slightly less powerful.</p>
 <p>If you want to compare the strength of different coils you can get the
 number of windings and their resistance from one of the following pages:</p>
 <ul>
-<li><a href="https://www.pinballmedic.net/coilchart.html">Pinball Medic Coil
-    Chart</a></li>
-<li><a href="https://flippers.com/coil-resistance.html">Flippers.com Coil
-    Resistance</a></li>
+<li><a href="https://www.pinballmedic.net/coilchart.html">Pinball Medic Coil Chart</a></li>
+<li><a href="https://flippers.com/coil-resistance.html">Flippers.com Coil Resistance</a></li>
 </ul>
 <p>Get windings <code>N</code> and resistance <code>R</code> from the chart. To get the current
 you can use <code>I = U/R</code>. Depending on your power supply <code>U</code> is either 48
@@ -31551,16 +31549,16 @@ more powerful coils.</p>
     default_pulse_ms: 10
     default_hold_power: .2
 </code></pre></div>
-<p>See <a href="dual_wound_coils/">/tutorial/3_get_flipping</a> for more details.</p>
+<p>See <a href="dual_wound_coils/">Dual-wound Coils</a> for more details.</p>
 <h2 id="related-how-to-guides">Related How To guides</h2>
 <ul>
 <li><a href="../../tutorial/3_get_flipping/">Tutorial step 3: Get flipping!</a></li>
+<li><a href="pulse_power/">Adjust Coil Strength (Pulse Times)</a></li>
+<li><a href="hold_power/">Adjust Coil Hold Power</a></li>
+<li><a href="recycle/">Recycle/"Cool Down" Time</a></li>
+<li><a href="dual_wound_coils/">Dual-wound Coils</a></li>
+<li><a href="dual_vs_single_wound/">Dual-wound vs Single-wound Coils</a></li>
 </ul>
-<p><a href="pulse_power/">pulse_power</a>
-<a href="hold_power/">hold_power</a>
-<a href="recycle/">recycle</a>
-<a href="dual_wound_coils/">dual_wound_coils</a>
-<a href="dual_vs_single_wound/">dual_vs_single_wound</a></p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
