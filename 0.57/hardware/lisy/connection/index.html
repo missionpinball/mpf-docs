@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -31622,7 +31622,7 @@ Gottlieb CPU board with the "LISY1" board.</p>
 details. Basically you replace the MPU with the LISY board. You can
 still play the original ROM using PinMAME on LISY.</p>
 </div>
-<p><img alt="image" src="/docs/hardware/images/lisy80_board.jpg" /></p>
+<p><img alt="image" src="../../images/lisy80_board.jpg" /></p>
 <p>More details can be found in the <a href="http://www.lisy80.com/english/documentation-lisy/">LISY user
 manual</a>.</p>
 <h2 id="2-configure-lisy-to-run-mpf">2. Configure LISY to Run MPF</h2>
@@ -31643,7 +31643,7 @@ b.  Run MPF on the LISY hardware directly ("master" mode).
     separate computer (which can still be small and inside your machine)
     and connect to the LISY controller via Option (a) above.</p>
 <p>See the following image for an architecture overview:</p>
-<p><img alt="image" src="/docs/hardware/images/lisy_mpf_overview.jpg" /></p>
+<p><img alt="image" src="../../images/lisy_mpf_overview.jpg" /></p>
 <p>If you want to run MPF on the LISY controller itself, set DIP 4
 (option1) and DIP 8 (autostart) to 'ON' and all other DIPs on that
 switch to 'OFF'. This will configure the LISY board to boot to MPF
@@ -31659,7 +31659,7 @@ with the host PC running MPF, set DIP 2 to 'ON' for network mode or
 order to be able to reboot, as it will power the Raspberry Pi over the
 USB connection.</p>
 </div>
-<p><img alt="image" src="/docs/hardware/images/LISY_modes.png" /></p>
+<p><img alt="image" src="../../images/LISY_modes.png" /></p>
 <h2 id="3-configure-your-game">3. Configure your Game</h2>
 <p>As usual, configure your specific Game Hardware via Switch 'S2'. For
 instance, for <em>Devils Dare</em>, which is internal number '18', set S2 DIP
@@ -31710,7 +31710,7 @@ the USB connection no special driver Software nor a special USB cable is
 needed, a "normal" USB charging cable (Micro-USB cable) will do the
 job. Once connected to the host computer, it will (hopefully) identify a
 new serial device. This is usually <code>COMX</code> on windows:</p>
-<p><img alt="image" src="/docs/hardware/images/lisy_windows_com_port.png" /></p>
+<p><img alt="image" src="../../images/lisy_windows_com_port.png" /></p>
 <p>Or <code>/dev/ttyACMX</code> on Linux:</p>
 <div class="highlight"><pre><span></span><code><span class="go">dmesg</span>
 

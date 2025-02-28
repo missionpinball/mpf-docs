@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -31520,7 +31520,7 @@ the game mode, which MPF will automatically append to the default game
 configuration. You do not need to add any mode start/stop events to
 game.yaml, as those are all taken care of internally.</p>
 <h2 id="2-create-a-base-single_player-slide-in-gameyaml">2. Create a base "single_player" slide in game.yaml</h2>
-<p><img alt="image" src="/mc/images/multiplayer_player_1.png" /></p>
+<p><img alt="image" src="../../images/multiplayer_player_1.png" /></p>
 <p>We'll start by creating the default single-player slide and showing it
 when the game starts, which will always be single-player because a
 second player can't be added until after the game starts.</p>
@@ -31568,7 +31568,7 @@ player_2 indicator in the upper-right. Because the current player's
 score is already shown in the middle, in this example we'll show
 another player variable (in this case, the player's name) where their
 score normally is.</p>
-<p><img alt="image" src="/mc/images/multiplayer_player_2.png" /></p>
+<p><img alt="image" src="../../images/multiplayer_player_2.png" /></p>
 <p>The _<a href="../../../">multi_player_ball_started</a> event happens when a player's turn
 starts and there are multiple players in the game, so this will show our
 multiplayer slide at the beginning of every ball.</p>
@@ -31663,7 +31663,7 @@ widgets:
 <p>Since the multiplayer slide is already being shown, adding player_3 and
 player_4 is as easy as swapping out the "level" and "ball" widgets
 for player scores.</p>
-<p><img alt="image" src="/mc/images/multiplayer_player_4.png" /></p>
+<p><img alt="image" src="../../images/multiplayer_player_4.png" /></p>
 <pre><code>widget_player:
   { ... single and player_2 widget_player ... }
 

@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -31648,14 +31648,14 @@ just one of the options. More information about this type of display and
 other options that MPF supports is available in the
 <a href="../../mc/displays/rgb_dmd/">Using an RGB full-color LED DMD</a> documentation.</p>
 <p>Here's an image of the SmartMatrix RGB DMD in action:</p>
-<p><img alt="image" src="/docs/hardware/images/display_rgb_dmd.jpg" /></p>
+<p><img alt="image" src="../images/display_rgb_dmd.jpg" /></p>
 <p>And a video which explains it all:</p>
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zbZQCByeXOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <p>The following diagram shows how all the components fit together:</p>
-<p><img alt="image" src="/docs/hardware/images/smartmatrix_architecture.png" /></p>
+<p><img alt="image" src="../images/smartmatrix_architecture.png" /></p>
 <h2 id="1-buy-all-the-parts-you-need">1. Buy all the parts you need</h2>
 <p>This solution is very much a "homebrew" solution that will require
 you to buy a lot of parts from various sources.</p>
@@ -31691,7 +31691,7 @@ from them.</p>
 slightly different processor architecture which is needed for the rapid
 bit-shifting of data needed to control these panels.</p>
 <p>Here's a Teensy:</p>
-<p><img alt="image" src="/docs/hardware/images/teensy.jpg" /></p>
+<p><img alt="image" src="../images/teensy.jpg" /></p>
 <p>The software to run the Teensy is open source (more on that in Step 3)
 and the Teensy has a USB port which you connect to your computer which
 MPF uses to send the display data to the panels.</p>
@@ -31702,11 +31702,11 @@ Adafruit</a>).</p>
 <p>The SmartMatrix shield is a "dumb" device that basically just connects
 the Teensy's GPIO pins to the 16-pin ribbon cable that drives the
 displays.</p>
-<p><img alt="image" src="/docs/hardware/images/smartmatrix_shield.jpg" /></p>
+<p><img alt="image" src="../images/smartmatrix_shield.jpg" /></p>
 <p>The Teensy mounts onto the SmartMatrix shield, creating a single unit
 which accepts data via USB on one end and spits out the 16-pin signal
 for the display panels on the other.</p>
-<p><img alt="image" src="/docs/hardware/images/smartmatrix_shield_with_teensy.jpg" /></p>
+<p><img alt="image" src="../images/smartmatrix_shield_with_teensy.jpg" /></p>
 <h3 id="4-the-power-supply">(4) The Power Supply</h3>
 <p>These RGB LED displays require 5vdc for power. At first you might think,
 "Cool! I have 5v elsewhere in my machine, so I'll just tap into
@@ -31717,7 +31717,7 @@ blue), and a 128x32 display means that you have 4,096 pixels. So that's
 <p>If you're ordering your RGB LED display panels from FAST Pinball, you
 can also order a <a href="https://squareup.com/store/fast-pinball-llc/item/five-volt-ten-amp-switching-power-supply">5v, 10A power supply from them for
 \$19</a>.</p>
-<p><img alt="image" src="/docs/hardware/images/5v10a_psu.jpg" /></p>
+<p><img alt="image" src="../images/5v10a_psu.jpg" /></p>
 <p>An ATX computer power supply will probably have a decent amount of amps
 also, so that could be an option too, just check the specs. Any other 5V
 supply with decent power should also work.</p>

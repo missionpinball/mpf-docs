@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -31573,7 +31573,7 @@ maintaining the content here.</p>
 want, but if something seems weird, reach out to the hardware
 maker, not the MPF maintainers. ;)</p>
 </div>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_isoSmall.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_isoSmall.jpg" /></p>
 <p>Features:</p>
 <ul>
 <li>24 solenoid outputs broken into 3 banks</li>
@@ -31601,7 +31601,7 @@ respectively. Mounting holes are good for M4 screws.</p>
 </div>
 
 <h2 id="power-input-and-filter">Power Input and Filter</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_VIN.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_VIN.jpg" /></p>
 <p><strong>J9:</strong> </p>
 <p>Solenoid power input (24-50V).</p>
 <p><strong>J10:</strong></p>
@@ -31611,7 +31611,7 @@ the power supply from sudden current surges that may otherwise cause a
 fault. The connectors for the power supply on the board are JST VH style
 connectors.</p>
 <h2 id="switch-inputs">Switch Inputs</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_switches.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_switches.jpg" /></p>
 <p><strong>J1, J2, J3:</strong></p>
 <p>Direct input switches.</p>
 <p><strong>J4, J5:</strong></p>
@@ -31625,12 +31625,12 @@ connected to anything.</p>
 connectors. For example Molex KK254 series available for AWG 30-22. Each connector also includes a logic ground pin. Use this
 for the direct input return. If you measure the voltage between GND and
 a switch (in below picture 0-0-16) you should measure 3.3V.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Voltage_Switch.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Voltage_Switch.jpg" /></p>
 <p>For that to measure only the micro controllers need to be powered up, no
 need to apply any other voltage on the Cobra board. To perform a simple
 test connect any kind of switch to one of the inputs and setup a little
 mpf test configuration.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Switch_connected.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Switch_connected.jpg" /></p>
 <p>Do not apply any voltage to the switches, most likely that will destroy
 your CPU. For further details and fully working Cobra board
 configuration example please check
@@ -31638,7 +31638,7 @@ configuration example please check
 For autofire devices please see for additional remarks in the solenoid
 section below.</p>
 <h2 id="solenoid-outputs">Solenoid Outputs</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_solenoids.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_solenoids.jpg" /></p>
 <p><strong>J6, J7, J8:</strong></p>
 <p>Solenoid outputs.</p>
 <p>The 24 solenoids are broken up into 3 banks of 8 outputs. The connectors
@@ -31658,7 +31658,7 @@ same controller. In other words a coil on <code>0-x-y</code> of an autofire devi
 must be controlled by switch with number <code>0-a-b</code>.</p>
 <p>Each bank has an LED next to it to indicate if that bank has power.
 Check these if you are concerned you have blown a fuse.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Coils_LED_Power.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Coils_LED_Power.jpg" /></p>
 <p>In above picture you see that the LED for bank A is alight but not for
 bank B. In order to have the LED alight you only need to have connected
 your high power supply, no need for the 5V power supply or to have micro
@@ -31670,7 +31670,7 @@ the processor. It is highly recommended to test a new setup without high
 voltage power or without the coils plugged in. Using these LEDs, you can
 verify that each output is being driven correctly, in the picture below
 coil 1-0-1 is being driven at this very moment.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Coils_LED_Switch.jpg" /></p>
+<p><img alt="image" src="../../Cobra_Coils_LED_Switch.jpg" /></p>
 <p>To run the above test, there is no need for a high voltage power supply
 neither for any coil. Only the mirco controllers need to be powered up.
 The <code>config.yaml</code> below is the only configuration file you need in your
@@ -31710,7 +31710,7 @@ switches:
 <p>To have a fully working example for setting up autofire coils see the
 <a href="../../../mechs/autofire_coils/">Autofire Coils</a> section of the documentation.</p>
 <h2 id="solenoid-power-output-and-fuses">Solenoid Power Output and Fuses</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_HVout.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_HVout.jpg" /></p>
 <p><strong>J13:</strong></p>
 <p>Solenoid power outputs.</p>
 <p><strong>F1, F2, F3:</strong></p>
@@ -31724,7 +31724,7 @@ Failure to do so may confuse future troubleshooting and could eventually
 blow out a transistor.</p>
 </div>
 <h2 id="neopixel-support">Neopixel Support</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_NEO.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_NEO.jpg" /></p>
 <p><strong>J10:</strong></p>
 <p>Power input for Neopixels, most likely 5V, but if you use 12V Neopixels you need to provide 12V power here. Power input is used for both Neopixel chains.</p>
 <p><strong>J11, J12:</strong></p>
@@ -31736,7 +31736,7 @@ blow out a transistor.</p>
 <p>The connectors J10, J11, J12 and J14 are JST connectors VH style. There
 are lots of Neopixels which come with a JST connector SM style. You
 might want to craft a little converter cable in such a case.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Neopixel_JST_adapter_VH_SM.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Neopixel_JST_adapter_VH_SM.jpg" /></p>
 <p>There are two neopixel chains that support 256 RGB pixels each for a
 total of 512. RGBW pixels are also possible, but the number may be
 limited to 230 pixels per chain for a total of 460.</p>
@@ -31746,13 +31746,13 @@ rated for 10A. The red D25 LED can be used to confirm you have a good
 fuse and are providing power for neopixels. For the LED to light up
 there is no need to run any MPF configuration, you don't even have to
 power up the micro controllers.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Power_LED_Neopixel.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Power_LED_Neopixel.jpg" /></p>
 <p>When you order the micro controllers you have various options, one
 option to choose from is Regular vs NoGlow. If you order the Regular
 version then after power is provided for the Neopixel and the micro
 controllers are powered up (still no need to run any MPF on them), the
 LEDs of your strip will glow blue, which is a good first test.</p>
-<p><img alt="image" src="/docs/hardware/images/Cobra_Neopixel_blue_glow.jpg" /></p>
+<p><img alt="image" src="../../images/Cobra_Neopixel_blue_glow.jpg" /></p>
 <p>In order to addess the LEDs in MPF you need to know their address</p>
 <p><strong>J11:</strong></p>
 <p>NEO 0 Neopixel output, all these lights have MPF numbers with the format 0-0-##. The first LED in the chain is 0-0-0.</p>
@@ -31763,7 +31763,7 @@ LEDs of your strip will glow blue, which is a good first test.</p>
 <p>Two fully working example for the Cobra board can be found in the
 generic LED section <a href="../../../mechs/lights/">LEDs</a> where as well the more general concept is explained.</p>
 <h2 id="microcontrollers">Microcontrollers</h2>
-<p><img alt="image" src="/docs/hardware/images/CobraPinV0_2_STM32.jpg" /></p>
+<p><img alt="image" src="../../images/CobraPinV0_2_STM32.jpg" /></p>
 <p>The brains of the CobraPin are two STM32 microcontroller boards
 programmed with OPP firmware. They are connected to the host computer
 via micro USB connectors.</p>
