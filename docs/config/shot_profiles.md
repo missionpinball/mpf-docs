@@ -181,27 +181,20 @@ commands, etc.)
 
 List of one (or more) values, each is a type: `string`. Default: `None`
 
-This works like *state_names_to_rotate*, except it's the opposite where
-you can enter the names of states to not rotate. You don't need to use
-both---the options are here just for convenience.
-
-### state_names_to_rotate:
-
-List of one (or more) values, each is a type: `string`. Default: `None`
-
 This is a list of state names that will be used to determine which shots
-in a shot group will be rotated. By default, all states are included.
-But this can be nice if you only want to rotate a subset of the states.
-For example, if you have a shot group with a bunch of lights that
-represent modes, you might have a shot profile with states called
-*unlit*, *active* (flashing), and *complete* (lit). You'd use these
-shots (and their lights) to track the game modes you've completed, so
-at any time, you'd have a bunch of unlit shots representing modes you
-haven't completed yet, solidly lit shots for modes you've completed,
-and a single flashing shot representing the mode that will be started
-next. Then in your game if you wanted to rotate among the incomplete
-targets, you would set your shot profile so it only rotated those state
-names, like this
+in a shot group will be rotated or skipped.
+By default, no states are included, meaning all states will rotate.
+
+This property can be useful if you only want to rotate a subset of states.
+For example, you might have a set of standup targets defined as three shots
+with three states, *unlit*, *on_target*, and *locked*.
+During normal play you might have one of the targets marked as *on_target*\
+at any time, with the others unlit, rotating which target is active based
+on a timer or some gameplay event.
+When the *on_target* shot is hit, you advance that target to *locked* and
+set a new shot to be *on_target*. Using `state_names_to_not_rotate: locked`
+you can keep the already-locked shots in place, and only rotate among the
+remaining shots.
 
 ## states:
 
