@@ -134,7 +134,7 @@ weird console slowness we recommend that you do not use the
 
 Ignores all `platform:` settings in your config files and forces MPF to
 run using the
-[virtual platform](../../hardware/virtual/smart_virtual.md) interface. This is nice for testing when you don't have
+[virtual platform](../../hardware/virtual/virtual.md) interface. This is nice for testing when you don't have
 your physical hardware attached.
 
 ### -X (uppercase)
