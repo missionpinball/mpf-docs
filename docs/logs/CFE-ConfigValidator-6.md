@@ -1,7 +1,8 @@
 ---
-title: CFE-ConfigValidator-6: Device not found in section in your
-  config
+title: "CFE-ConfigValidator-6: Device not found in section in your config"
 ---
+
+# CFE-ConfigValidator-6: Device not found in section in your config
 
 This error occurs when MPF does not find a device which is referenced by
 one of your settings in your config.

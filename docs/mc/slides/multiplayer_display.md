@@ -21,7 +21,7 @@ game.yaml, as those are all taken care of internally.
 
 ## 2. Create a base "single_player" slide in game.yaml
 
-![image](/mc/images/multiplayer_player_1.png)
+![image](../images/multiplayer_player_1.png)
 
 We'll start by creating the default single-player slide and showing it
 when the game starts, which will always be single-player because a
@@ -77,13 +77,13 @@ score is already shown in the middle, in this example we'll show
 another player variable (in this case, the player's name) where their
 score normally is.
 
-![image](/mc/images/multiplayer_player_2.png)
+![image](../images/multiplayer_player_2.png)
 
-The _[multi_player_ball_started](../../index.md) event happens when a player's turn
+The _[multi_player_ball_started](../../events/multi_player_ball_started.md)_ event happens when a player's turn
 starts and there are multiple players in the game, so this will show our
 multiplayer slide at the beginning of every ball.
 
-The _[multiplayer_game](../../index.md) event happens as soon as a second player is
+The _[multiplayer_game](../../events/multiplayer_game.md)_ event happens as soon as a second player is
 added, so we use it to swap the slides if player_2 joins after player_1
 has already started their turn.
 
@@ -181,7 +181,7 @@ Since the multiplayer slide is already being shown, adding player_3 and
 player_4 is as easy as swapping out the "level" and "ball" widgets
 for player scores.
 
-![image](/mc/images/multiplayer_player_4.png)
+![image](../images/multiplayer_player_4.png)
 
     widget_player:
       { ... single and player_2 widget_player ... }

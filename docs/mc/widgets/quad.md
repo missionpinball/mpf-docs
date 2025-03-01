@@ -24,7 +24,7 @@ slide_player:
 
 Which results in the following:
 
-![image](/docs/mc/images/quad.png)
+![image](../../images/quad.png)
 
 ## Settings
 

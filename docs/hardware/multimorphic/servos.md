@@ -13,7 +13,7 @@ Related Config File Sections:
 Starting with PD-LED v3 you can configure up to twelve steppers on a
 PD-LED.
 
-![image](/hardware/images/multimorphic_PD-LED.png)
+![image](../images/multimorphic_PD-LED.png)
 
 To enable servos you need to configure your PD-LED board in your `p_roc`
 section. Assuming your PD-LED has the ID 4 you can use the following

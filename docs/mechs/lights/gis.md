@@ -114,15 +114,9 @@ For
 
 See the documentation of your platform on how to configure GIs.
 
-Platform related How To
-
-* [P/P3-Roc leds](../../hardware/multimorphic/leds.md)
-* [P/P3-Roc matrix light](../../hardware/multimorphic/lights.md)
-* [FAST leds](../../hardware/fast/leds.md)
-* [FAST matrix light](../../hardware/fast/lights.md)
-* [OPP leds](../../hardware/opp/leds.md)
-* [OPP matrix light](../../hardware/opp/lights.md)----
-
-## Related Events
-
-None
+* [P/P3-Roc - leds](../../hardware/multimorphic/leds.md)
+* [P/P3-Roc - matrix light](../../hardware/multimorphic/lights.md)
+* [FAST - leds](../../hardware/fast/leds.md)
+* [FAST - matrix light](../../hardware/fast/lights.md)
+* [OPP - leds](../../hardware/opp/leds.md)
+* [OPP - matrix light](../../hardware/opp/lights.md)

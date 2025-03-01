@@ -17,9 +17,9 @@ MPF includes support for flashers, which are essentially just really
 bright lights that are controlled via high-power driver transistors
 instead of low-power lighting circuitry.
 
-![image](/docs/mechs/images/flasher1.jpg)
+![image](../images/flasher1.jpg)
 
-![image](/docs/mechs/images/flasher2.jpg)
+![image](../images/flasher2.jpg)
 
 MPF's flasher devices are only used in older machines (WPC, Stern SAM,
 System 11) since modern LED-based machines typically use regular LED
@@ -88,11 +88,9 @@ The color of this string. If you set it to brightness values all color channels 
 
 See the documentation of your platform on how to configure GIs.
 
-Platform related How To
-
-* [P/P3-Roc leds](../../hardware/multimorphic/leds.md)
-* [P/P3-Roc matrix light](../../hardware/multimorphic/lights.md)
-* [FAST leds](../../hardware/fast/leds.md)
-* [FAST matrix light](../../hardware/fast/lights.md)
-* [OPP leds](../../hardware/opp/leds.md)
-* [OPP matrix light](../../hardware/opp/lights.md)----
+* [P/P3-Roc - leds](../../hardware/multimorphic/leds.md)
+* [P/P3-Roc - matrix light](../../hardware/multimorphic/lights.md)
+* [FAST - leds](../../hardware/fast/leds.md)
+* [FAST - matrix light](../../hardware/fast/lights.md)
+* [OPP - leds](../../hardware/opp/leds.md)
+* [OPP - matrix light](../../hardware/opp/lights.md)

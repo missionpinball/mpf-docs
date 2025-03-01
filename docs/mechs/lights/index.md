@@ -23,7 +23,7 @@ There are multiple types of lights (read those for specific details):
 * [Flashers](flashers.md)
 * [Coils as Lights](coils_as_lights.md)
 
-![image](/mechs/images/lights_vs_leds.jpg)
+![image](../images/lights_vs_leds.jpg)
 
 This is an example of for a light:
 
@@ -243,8 +243,8 @@ Pay attention to the event `single_led_green` to understand how to address a sin
 ## Monitorable Properties
 For dynamic values and conditional events, the prefix for lights is `device.lights.(name)`.
 
-* brightness: The numeric value of the brightness of this light, from 0-255.
-* color: The current color.
+* *brightness*: The numeric value of the brightness of this light, from 0-255.
+* *color*: The current color.
 
 ## Related How To guides
 

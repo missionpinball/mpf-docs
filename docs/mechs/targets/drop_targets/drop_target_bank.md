@@ -15,7 +15,7 @@ The main reasons for doing this are to combine reset coils (since one
 coil typically resets an entire bank) and to get additional events
 posted when the entire bank is up, down or in a mixed state.
 
-![image](/docs/mechs/images/drop_target_bank.jpg)
+![image](../../images/drop_target_bank.jpg)
 
 This is an example:
 
@@ -66,8 +66,8 @@ For
 
 ## Related How To guides
 
-* [Welcome to The Mission Pinball Framework!](../../../index.md)
-* [/events/drop_target_bank_drop_target_bank_mixed](fixing_drop_target_reset_issues.md)
+* [Drop Targets](index.md)
+* [Fixing Drop Target Reset Issues](fixing_drop_target_reset_issues.md)
 
 ## Related Events
 

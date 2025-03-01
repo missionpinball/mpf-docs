@@ -32,7 +32,7 @@ The following diagram shows the different types. An easy way to tell is
 if your lights or LEDs have mini bayonet or mini wedge bases, they're
 *Matrix Lights*, and everything else is *LEDs*:
 
-![image](/docs/mechs/images/lights_vs_leds.jpg)
+![image](../images/lights_vs_leds.jpg)
 
 Note that it's possible that you'll have both matrix lights and direct
 connected LEDs in the same machine. For example, maybe you're writing

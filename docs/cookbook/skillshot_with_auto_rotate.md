@@ -1,5 +1,5 @@
 ---
-title: Recipe: Skillshot (with Auto-Rotate)
+title: "Recipe: Skillshot (with Auto-Rotate)"
 ---
 
 # Recipe: Skillshot (with Auto-Rotate)

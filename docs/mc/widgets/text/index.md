@@ -12,7 +12,7 @@ title: Text Widget
 The text widget is used to show text on a
 [slide](../../slides/index.md).
 
-![image](/mc/images/text_widget1.jpg)
+![image](../../images/text_widget1.jpg)
 
 In addition to being able to specify static text, text widgets also
 include powerful functionality:

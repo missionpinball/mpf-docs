@@ -34,7 +34,7 @@ slide_player:
 
 Which results in the following:
 
-![image](/mc/images/bezier.png)
+![image](../images/bezier.png)
 
 ## Settings
 

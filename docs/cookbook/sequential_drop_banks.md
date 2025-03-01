@@ -1,5 +1,5 @@
 ---
-title: Recipe: Sequential Drop Target Banks
+title: "Recipe: Sequential Drop Target Banks"
 ---
 
 # Recipe: Sequential Drop Target Banks

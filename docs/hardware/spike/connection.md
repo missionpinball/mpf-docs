@@ -112,7 +112,7 @@ essential at higher baud rates (up to 3M).
 
 The following diagram illustrates how everything fits together:
 
-![image](/hardware/images/spike_usb_to_usb.jpg)
+![image](../images/spike_usb_to_usb.jpg)
 
 You've essentially created a null modem cable as described in Option 1.
 This option may be a little cheaper but the solution is far less elegant

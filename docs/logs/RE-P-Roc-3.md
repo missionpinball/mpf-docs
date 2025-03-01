@@ -1,9 +1,8 @@
 ---
-title: RE-P-Roc-3 - Failed to Import Pinproc
+title: "RE-P-Roc-3 - Failed to Import Pinproc"
 ---
 
 # RE-P-Roc-3 - Failed to Import Pinproc
-
 
 Related Config File Sections:
 
