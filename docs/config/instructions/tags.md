@@ -133,7 +133,9 @@ switches:
 ## Reserved Tags in MPF
 
 MPF contains some reserved tags that are used for certain devices. An
-example of this is a ball trough.
+example of this is a ball trough, as follows.
+
+### Ball Device Tags
 
 ``` mpf-config
 #! switches:
@@ -164,6 +166,17 @@ characteristics of this device. Namely that it is considered a 'home'
 device where balls can come to rest when a game is not in play. And the
 'trough' tag to help MPF denote that this is a ball trough and not
 some other style of captive device like a saucer.
+
+For the full reference of Ball Device tags, see [ball_devices:tags](../ball_devices.md#tags).
+
+### Switch Tags
+
+Switches in particular have a wide variety of built-in behaviors provided by MPF. Features such as flipper cancel and automatic ball detection on playfields will automatically work if you include these tags. To see the full reference, visit [switches:tags](../switches.md#tags).
+
+### Playfield Tags
+
+If your game has a single playfield, it should have the tag "default" set in its config. If your game has multiple playfields, one of them will need to be tagged as default - usually it will be the one that the plunger lane most frequently ejects to. See: [playfields:tags](../playfields.md#tags).
+
 
 ## Using `*` for a catch all
 

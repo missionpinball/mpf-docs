@@ -159,11 +159,9 @@ Label for service menu.
 
 ### tags:
 
-List of one (or more) values, each is a type: `string`. Defaults to
-empty.
+List of one (or more) values, each is a type: `string`. Defaults to empty.
 
-Set tag [default](#) to your default playfield. The game will
-use the default playfield to eject balls.
+Set tag `default` on one playfield. The game will use the default playfield to eject balls onto.
 
 ## Related How To guides
 
