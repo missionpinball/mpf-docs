@@ -112,10 +112,24 @@ The MPF section defines parameters for the GMC-spawned MPF process. The full com
 
 ``` console
 
-    <executable_path> <executable_args> <machine_path> <machine_args>
+    <executable_path> <executable_args> <machine_path> <mpf_args>
 ```
 
-### `executable_args`
+### Options:
+
+#### `spawn_mpf`
+
+Single value, type `bool`. Default `false`.
+
+If true, GMC will spawn a subprocess to run MPF when the main project is run. The rest of these values will only be used if this is true.
+
+#### `executable_path`
+
+Single value, type `String`. Default `None`.
+
+The path to the executable entry point for the MPF process. It can be a Python interpreter, a symlink to a virtual environment mpf executable, or a precompiled MPF binary.
+
+#### `executable_args`
 
 Single value, type `String`. Default `None`
 
@@ -123,42 +137,38 @@ Additional arguments to pass to the executable. For example, if the executable i
 
 Note that MPF-specific command line args should *not* go here, even if the executable is an MPF binary.
 
-
-### `executable_path`
-
-Single value, type `String`. Default `None`.
-
-The path to the executable entry point for the MPF process. It can be a Python interpreter, a symlink to a virtual environment mpf executable, or a precompiled MPF binary.
-
-### `machine_path`
+#### `machine_path`
 
 Single value, type `String`. Defaults to the GMC project folder.
 
 The path of the MPF machine folder, i.e. the root folder containing the */config* and */modes* folders for your project. If not specified, the GMC project folder will be used.
 
-### `mpf_args`
+#### `mpf_args`
 
 Single value, type `String`. Default `None`
 
-Additional arguments to pass to MPF after the machine path. Common values may include `-x` for virtual mode, `-vV` for verbose logging, or `-P` for production mode. Note that values defined specifically for virtal or verbose (see below) will supersede.
+Additional arguments to pass to MPF after the machine path. Common values may include `-x` for virtual mode, `-vV` for verbose logging, or `-P` for production mode. Note that values defined specifically for virtual or verbose (see below) will supersede. See [mpf game](../../running/commands/game.md) for full reference.
 
-### `spawn_mpf`
-
-Single value, type `bool`. Default `false`.
-
-If true, GMC will spawn a subprocess to run MPF when the main project is run.
-
-### `virtual`
+#### `virtual`
 
 Single value, type `bool`. Default `false`.
 
 If true, the MPF process will spawn in virtual mode (i.e. `-x` will be appended to the `mpf_args`).
 
-### `verbose`
+#### `verbose`
 
 Single value, type `bool`. Default `false`.
 
 If true, the MPF process will have verbose logging (i.e. `-vV` will be appended to the `mpf_args`).
+
+
+### Launching the MPF game with GMC
+
+The options from this \[mpf\] section can also be seen and changed in the Godot editor. Next to the "Scene" menu header, find the tab header for "MPF".
+
+![image](../images/launch_mpf_with_gmc.png)
+
+The Godot editor misbehaves if you edit the `gmc.cfg` values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the **Play** button to play your GMC project. 
 
 
 ## \[sound_system\]
