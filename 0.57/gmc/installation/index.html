@@ -24,7 +24,7 @@ icons & this code generated via https://realfavicongenerator.net
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -34123,7 +34123,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>The Godot Media Controller is built on the Godot game engine. Visit <a href="https://godotengine.org">https://godotengine.org</a> to download the latest version of the Godot Editor (4.2 or later) and place it wherever you typically keep applications on your machine (not in your game project folder).</p>
 <p>After Godot is installed, open the editor and create a New Project. Select your MPF game project folder as the project path, and choose an appropriate render engine.</p>
 <p>For most pinball games, <em>Mobile</em> rendering is the recommended balance between performance and featureset. If you plan to do advanced 3D graphics and complex rendering, choose <em>Forward+</em>. If you want to optimize your game to run on very low-powered hardware with limited rendering features, choose <em>Compatibility</em>. Note that you can change this setting at any time, so don't stress about it :)</p>
-<p>Finally, in your game project folder create a new folder called <em>addons</em>.</p>
+<p>Finally, in your Godot game project folder create a new folder called <em>addons</em> (Note that if your Godot project folder is not your MPF project folder, the addons should be in the Godot folder).</p>
 <div class="admonition note">
 <p class="admonition-title">Root project vs GMC subfolder</p>
 <p>Some users prefer to create a distinct "gmc" subfolder in their MPF machine folder, and save their Godot project there. This keeps the Godot Editor <em>FileSystem</em> tree cleaner because it's not mixing Godot files with MPF config files, which can make it easier to navigate and maintain.</p>
@@ -34180,7 +34180,7 @@ icons & this code generated via https://realfavicongenerator.net
 <div class="highlight"><pre><span></span><code><span class="go">  (mpf080) $&gt; mklink /d &quot;C:\repos\pinballgame\addons\mpf-gmc&quot; &quot;C:\repos\mpf-gmc\addons\mpf-gmc&quot;</span>
 </code></pre></div>
 <h4 id="option-2-copy-the-mpf-gmc-folder">Option 2: Copy the MPF-GMC Folder</h4>
-<p>If you do not create a symbolic link, you can manually copy the <em>mpf-gmc</em> folder from the GMC repository <em>/addons</em> folder to your project <em>addons</em> folder. You'll know it's in the right place if your project root (in this example, "pinballgame") has the file path <code>/pinballgame/addons/mpf-gmc/plugin.cfg</code>.</p>
+<p>If you do not create a symbolic link, you can manually copy the <em>mpf-gmc</em> folder from the GMC repository <em>/addons</em> folder to your Godot project <em>addons</em> folder. You'll know it's in the right place if your Godot project root (in this example, "pinballgame") has the file path <code>/pinballgame/addons/mpf-gmc/plugin.cfg</code>.</p>
 <p>The downside of copying the folder is that you will need to manually re-copy the folder each time you download a new update to the GMC.</p>
 <h2 id="keeping-mpf-gmc-up-to-date">Keeping MPF-GMC Up-To-Date</h2>
 <p>MPF-GMC is in active development and changes frequently, including new features, fixes, and other changes. In order to ensure that you are experiencing the latest and greatest, please ensure that you periodically run the following commands to get the changes to both projects. Once they are pulled into your local copy, you will immediately have access to the new features in building your game.</p>
@@ -34203,7 +34203,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p class="admonition-title">There will be errors</p>
 <p>During this step, at various points some pieces will be setup before others and Godot will present errors about files not found or scripts unable to be parsed. It is safe to ignore these errors for now: we will restart Godot after this step and everything will be in order.</p>
 </div>
-<p>In the Godot Editor, open the <em>Project &gt; Project Settings</em> menu and select the <em>Plugins</em> tab. You should see an option there for <strong>Godot MC</strong>, check the checkbox to enable the plugin.</p>
+<p>In the Godot Editor, open the <em>Project &gt; Project Settings</em> menu and select the <em>Plugins</em> tab. You should see an option there for <strong>Godot MC</strong>, check the checkbox to enable the plugin. If the plugin is not visible in the plugin list, you should check to see if you placed the <em>addons</em> folder in the wrong location.</p>
 <p><img alt="image" src="../images/project_settings_plugins.png" /></p>
 <p>Now go to the <em>Autoload</em> tab and click the folder icon to select an Autoload script. Navigate to the <em>addons/mpf-gmc</em> folder and choose the file <em>mpf_gmc.gd</em>. Under <em>Node Name</em> set the name to "MPF" (all caps) and press <em>Add</em>. You should see a new line appear with a checkbox enabled.</p>
 <p><img alt="image" src="../images/project_settings_autoload.png" /></p>
@@ -34219,7 +34219,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>This website is edited by people like you!
 Is something wrong or missing? Is something out of date, or can you explain it better?</p>
 <p>Please help us! You can fix it yourself and be an official "open source" contributor!</p>
-<p>It's easy! See our <em><a href="/latest/about/help">Beginner's guide to editing the docs</a></em>.</p>
+<p>It's easy! See our <em><a href="https://missionpinball.org/latest/about/help">Beginner's guide to editing the docs</a></em>.</p>
 </div>
 <details class="tip">
 <summary>Page navigation via the keyboard: <span class="keys"><kbd class="key-less">&lt;</kbd></span> <span class="keys"><kbd class="key-greater">&gt;</kbd></span></summary>
@@ -34350,7 +34350,7 @@ Is something wrong or missing? Is something out of date, or can you explain it b
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.footer", "navigation.tabs", "navigation.indexes", "navigation.top", "content.action.edit", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
