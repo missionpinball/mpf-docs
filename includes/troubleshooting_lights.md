@@ -1,6 +1,5 @@
 # Reducing light update rate
 
-
 If you got a lot of lights you might run into bus contention issues. You
 can reduce the light update rate in MPF:
 
