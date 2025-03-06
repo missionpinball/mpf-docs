@@ -14970,9 +14970,19 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#executable_args" class="md-nav__link">
+  <a href="#options" class="md-nav__link">
     <span class="md-ellipsis">
-      executable_args
+      Options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spawn_mpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      spawn_mpf
     </span>
   </a>
   
@@ -14982,6 +14992,15 @@ icons & this code generated via https://realfavicongenerator.net
   <a href="#executable_path" class="md-nav__link">
     <span class="md-ellipsis">
       executable_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executable_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      executable_args
     </span>
   </a>
   
@@ -15006,15 +15025,6 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
-  <a href="#spawn_mpf" class="md-nav__link">
-    <span class="md-ellipsis">
-      spawn_mpf
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#virtual" class="md-nav__link">
     <span class="md-ellipsis">
       virtual
@@ -15027,6 +15037,20 @@ icons & this code generated via https://realfavicongenerator.net
   <a href="#verbose" class="md-nav__link">
     <span class="md-ellipsis">
       verbose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-mpf-game-with-gmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the MPF game with GMC
     </span>
   </a>
   
@@ -34103,9 +34127,19 @@ icons & this code generated via https://realfavicongenerator.net
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#executable_args" class="md-nav__link">
+  <a href="#options" class="md-nav__link">
     <span class="md-ellipsis">
-      executable_args
+      Options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spawn_mpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      spawn_mpf
     </span>
   </a>
   
@@ -34115,6 +34149,15 @@ icons & this code generated via https://realfavicongenerator.net
   <a href="#executable_path" class="md-nav__link">
     <span class="md-ellipsis">
       executable_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executable_args" class="md-nav__link">
+    <span class="md-ellipsis">
+      executable_args
     </span>
   </a>
   
@@ -34139,15 +34182,6 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
         
           <li class="md-nav__item">
-  <a href="#spawn_mpf" class="md-nav__link">
-    <span class="md-ellipsis">
-      spawn_mpf
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#virtual" class="md-nav__link">
     <span class="md-ellipsis">
       virtual
@@ -34160,6 +34194,20 @@ icons & this code generated via https://realfavicongenerator.net
   <a href="#verbose" class="md-nav__link">
     <span class="md-ellipsis">
       verbose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-mpf-game-with-gmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the MPF game with GMC
     </span>
   </a>
   
@@ -34306,30 +34354,35 @@ icons & this code generated via https://realfavicongenerator.net
 </code></pre></div>
 <h2 id="mpf">[mpf]</h2>
 <p>The MPF section defines parameters for the GMC-spawned MPF process. The full command for the process will be assembled thus:</p>
-<div class="highlight"><pre><span></span><code><span class="go">    &lt;executable_path&gt; &lt;executable_args&gt; &lt;machine_path&gt; &lt;machine_args&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="go">    &lt;executable_path&gt; &lt;executable_args&gt; &lt;machine_path&gt; &lt;mpf_args&gt;</span>
 </code></pre></div>
-<h3 id="executable_args"><code>executable_args</code></h3>
+<h3 id="options">Options:</h3>
+<h4 id="spawn_mpf"><code>spawn_mpf</code></h4>
+<p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
+<p>If true, GMC will spawn a subprocess to run MPF when the main project is run. The rest of these values will only be used if this is true.</p>
+<h4 id="executable_path"><code>executable_path</code></h4>
+<p>Single value, type <code>String</code>. Default <code>None</code>.</p>
+<p>The path to the executable entry point for the MPF process. It can be a Python interpreter, a symlink to a virtual environment mpf executable, or a precompiled MPF binary.</p>
+<h4 id="executable_args"><code>executable_args</code></h4>
 <p>Single value, type <code>String</code>. Default <code>None</code></p>
 <p>Additional arguments to pass to the executable. For example, if the executable is a Python interpreter then the executable args may be <code>-m mpf</code> to load the MPF module.</p>
 <p>Note that MPF-specific command line args should <em>not</em> go here, even if the executable is an MPF binary.</p>
-<h3 id="executable_path"><code>executable_path</code></h3>
-<p>Single value, type <code>String</code>. Default <code>None</code>.</p>
-<p>The path to the executable entry point for the MPF process. It can be a Python interpreter, a symlink to a virtual environment mpf executable, or a precompiled MPF binary.</p>
-<h3 id="machine_path"><code>machine_path</code></h3>
+<h4 id="machine_path"><code>machine_path</code></h4>
 <p>Single value, type <code>String</code>. Defaults to the GMC project folder.</p>
 <p>The path of the MPF machine folder, i.e. the root folder containing the <em>/config</em> and <em>/modes</em> folders for your project. If not specified, the GMC project folder will be used.</p>
-<h3 id="mpf_args"><code>mpf_args</code></h3>
+<h4 id="mpf_args"><code>mpf_args</code></h4>
 <p>Single value, type <code>String</code>. Default <code>None</code></p>
-<p>Additional arguments to pass to MPF after the machine path. Common values may include <code>-x</code> for virtual mode, <code>-vV</code> for verbose logging, or <code>-P</code> for production mode. Note that values defined specifically for virtal or verbose (see below) will supersede.</p>
-<h3 id="spawn_mpf"><code>spawn_mpf</code></h3>
-<p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
-<p>If true, GMC will spawn a subprocess to run MPF when the main project is run.</p>
-<h3 id="virtual"><code>virtual</code></h3>
+<p>Additional arguments to pass to MPF after the machine path. Common values may include <code>-x</code> for virtual mode, <code>-vV</code> for verbose logging, or <code>-P</code> for production mode. Note that values defined specifically for virtual or verbose (see below) will supersede. See <a href="../../../running/commands/game/">mpf game</a> for full reference.</p>
+<h4 id="virtual"><code>virtual</code></h4>
 <p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
 <p>If true, the MPF process will spawn in virtual mode (i.e. <code>-x</code> will be appended to the <code>mpf_args</code>).</p>
-<h3 id="verbose"><code>verbose</code></h3>
+<h4 id="verbose"><code>verbose</code></h4>
 <p>Single value, type <code>bool</code>. Default <code>false</code>.</p>
 <p>If true, the MPF process will have verbose logging (i.e. <code>-vV</code> will be appended to the <code>mpf_args</code>).</p>
+<h3 id="launching-the-mpf-game-with-gmc">Launching the MPF game with GMC</h3>
+<p>The options from this [mpf] section can also be seen and changed in the Godot editor. Next to the "Scene" menu header, find the tab header for "MPF".</p>
+<p><img alt="image" src="../../images/launch_mpf_with_gmc.png" /></p>
+<p>The Godot editor misbehaves if you edit the <code>gmc.cfg</code> values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the <strong>Play</strong> button to play your GMC project. </p>
 <h2 id="sound_system">[sound_system]</h2>
 <p>The sound system section defines playback properties of the Audio Buses defined in your Godot project.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">[sound_system]</span>
