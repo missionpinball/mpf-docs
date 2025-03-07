@@ -32346,6 +32346,16 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#run-in-debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run in debug mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run in debug mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#attach-to-process" class="md-nav__link">
     <span class="md-ellipsis">
       Attach to process
@@ -32353,13 +32363,18 @@ icons & this code generated via https://realfavicongenerator.net
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#start-debugging" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#start-mpf-in-debug-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Start Debugging
+      Start mpf in debug mode
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -33599,6 +33614,16 @@ icons & this code generated via https://realfavicongenerator.net
 </li>
       
         <li class="md-nav__item">
+  <a href="#run-in-debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run in debug mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run in debug mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#attach-to-process" class="md-nav__link">
     <span class="md-ellipsis">
       Attach to process
@@ -33606,13 +33631,18 @@ icons & this code generated via https://realfavicongenerator.net
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#start-debugging" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#start-mpf-in-debug-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Start Debugging
+      Start mpf in debug mode
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -33652,16 +33682,21 @@ icons & this code generated via https://realfavicongenerator.net
 <p>On the left side you will find the file structure, here you need to navigate to the source file you want to debug. Open that file in the code editor.</p>
 <p>By clicking on the line number you can set a breakpoint:</p>
 <p><img alt="open menu" src="../images/debug_set_breakpoint.png" /></p>
-<h2 id="attach-to-process">Attach to process</h2>
+<h2 id="run-in-debug-mode">Run in debug mode</h2>
+<p>You basically have two options to run mpf in debug mode. You can either start mpf normally and then attach the debugger to the running process. The other option is that you start mpf in debug mode from PyCharm directly. The latter has the advantage that you can as well catch code that executes while mpf initializes and not only during the game flow. Both options are being explained below.</p>
+<h3 id="attach-to-process">Attach to process</h3>
 <p>Now it is time to start mpf like you normally do. Keep in mind, that before you start mpf with e.g. <code>mpf -t -b</code>, that you need to <a href="../../../install/virtual-environments/">activate</a> your Python virtual environment.</p>
 <p>From the <code>Run</code> menu select <code>Attach to Process</code></p>
 <p><img alt="open menu" src="../images/debug_attach.png" /></p>
 <p>Afterwards a new pop-up window will open up</p>
 <p><img alt="open menu" src="../images/debug_select_process.png" /></p>
-<p>from where you need to select your mpf process, depeding what other (Python) process you have running the list might be shorter or longer.</p>
-<h2 id="start-debugging">Start Debugging</h2>
-<p>Run your game and wait until your game flow hits the debugger. Now you have the normal debugging options like stepping in or looking into variables.</p>
+<p>from where you need to select your mpf process, depeding what other (Python) process you have running the list might be shorter or longer. Run your game and wait until your game flow hits the debugger. Now you have the normal debugging options like stepping in or looking into variables.</p>
 <p><img alt="open menu" src="../images/debug_code.png" /></p>
+<h3 id="start-mpf-in-debug-mode">Start mpf in debug mode</h3>
+<p>In this case you need to execute mpf not as an executable like you normally do, but as a python script. So you don't run it with <code>mpf -t -b</code> but with something like <code>python &lt;path&gt;/&lt;script&gt;.py</code>. First of all you need to know your python command, it could be simply <code>python</code> or it could include a version number like <code>python3.11</code>. Just try in a terminal what python command works for you if you don't know. Secondly you need to know the path and the script name which you want to execute. For mpf the script is named <code>__main__.py</code> the path depends on your virtual environment, look into your folder <code>&lt;virtual_env&gt;/lib64/python3.11/site-packages/mpf</code>, there you should be able to see the script <code>__main__.py</code>.</p>
+<p>In PyCharm in the <code>run</code> menu open the debug configuration and configure it as following:</p>
+<p><img alt="debug script" src="../images/debug_script.png" /></p>
+<p>The name in the first field is set automatically if you leave it empty, you can choose your own name as well. In the script enter the full path to your python script like explained above. In the script parameters field enter the parameters you would pass usually to mpf, e.g. <code>-b -t</code>. Last but not least make sure to set the field working directory to your machine folder. Now you can start mpf using the <code>run</code> menu select there <code>debug &lt;name&gt;</code>, where name is the name you have specified in the debug configuration screen above.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>

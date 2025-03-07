@@ -33885,35 +33885,22 @@ to <a href="../../examples/">config file examples</a> for more examples of real 
 </tr>
 </tbody>
 </table>
-<p>The <code>neoseg_displays:</code> section of your config is where you...</p>
-<div class="admonition success">
-<p class="admonition-title">Help us write it!</p>
-<p>This section is unwritten or needs an update or edit. Can you <a href="https://missionpinball.org/latest/about/help">help write it</a>?
-Get your name in lights and geeky pinball bragging rights! Hit the magic sparkly wand to
-the right of the title to see this page source on GitHub. Then add/edit and
-submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M234.7 42.7 197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1 14.1 37.7c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2l-37.7-14.1L263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0l381.3-381.4c18.7-18.7 18.7-49.1 0-67.9l-34.6-34.5c-18.7-18.7-49.1-18.7-67.9 0zM484.6 82.6l-105 105-23.3-23.3 105-105zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L64 96zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19z"/></svg></span></p>
-<hr />
-<p><div style="text-align: center;">
-    <a class="md-button md-button--primary" href="https://missionpinball.org/latest/about/help">CLICK TO LEARN HOW TO EDIT THIS PAGE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.1-1.5 1.3c-6.6-5.9-10-9-10-12.8 0-1.2.4-2.3 1-3.2V7c0 4.7 3.9 8.2 10.5 14.1m1.6-4.1c4.7-4.3 7.9-7.1 8-10 0-2-1.5-3.5-3.5-3.5-1.6 0-3.1 1-3.6 2.4h-1.9C12 4.5 10.5 3.5 9 3.5 7 3.5 5.5 5 5.5 7c0 2.9 3.1 5.7 7.9 10l.1.1M18 1.5c3.1 0 5.5 2.4 5.5 5.5 0 3.7-3.4 6.8-10 12.8-6.6-5.9-10-9-10-12.8 0-3.1 2.4-5.5 5.5-5.5 1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1"/></svg></span></a>
-</div></p>
-</div>
+<p>The <code>neoseg_displays:</code> section of your config is where you set the hardware specific settings for this type of segment display. It is
+only needed if you use a <a href="../../hardware/opp/cobrapin/cobrapin_serial_segment_displays/">Cobra serial segment display</a>. For any other
+segment display hardware this setting is not needed.</p>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required in the <code>neoseg_displays:</code> section of
 your config:</p>
 <h3 id="light_template">light_template:</h3>
 <p>Single value, type: <a href="../lights/">lights:</a>.
-Defaults to empty.</p>
-<div class="admonition success">
-<p class="admonition-title">Help us write it!</p>
-<p>This section is unwritten or needs an update or edit. Can you <a href="https://missionpinball.org/latest/about/help">help write it</a>?
-Get your name in lights and geeky pinball bragging rights! Hit the magic sparkly wand to
-the right of the title to see this page source on GitHub. Then add/edit and
-submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M234.7 42.7 197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1 14.1 37.7c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2l-37.7-14.1L263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0l381.3-381.4c18.7-18.7 18.7-49.1 0-67.9l-34.6-34.5c-18.7-18.7-49.1-18.7-67.9 0zM484.6 82.6l-105 105-23.3-23.3 105-105zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L64 96zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19z"/></svg></span></p>
-<hr />
-<p><div style="text-align: center;">
-    <a class="md-button md-button--primary" href="https://missionpinball.org/latest/about/help">CLICK TO LEARN HOW TO EDIT THIS PAGE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.1-1.5 1.3c-6.6-5.9-10-9-10-12.8 0-1.2.4-2.3 1-3.2V7c0 4.7 3.9 8.2 10.5 14.1m1.6-4.1c4.7-4.3 7.9-7.1 8-10 0-2-1.5-3.5-3.5-3.5-1.6 0-3.1 1-3.6 2.4h-1.9C12 4.5 10.5 3.5 9 3.5 7 3.5 5.5 5 5.5 7c0 2.9 3.1 5.7 7.9 10l.1.1M18 1.5c3.1 0 5.5 2.4 5.5 5.5 0 3.7-3.4 6.8-10 12.8-6.6-5.9-10-9-10-12.8 0-3.1 2.4-5.5 5.5-5.5 1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1"/></svg></span></a>
-</div></p>
-</div>
+Defaults to empty. Used to specify the light you have, though neoseg displays come in different
+colors each segment is considered a single color segment, use color white in any case.</p>
+<div class="highlight"><pre><span></span><code>light_template:
+      type: w
+      subtype: led
+      color_correction_profile: NeoSeg_orange
+</code></pre></div>
+<p>See as well these examples in the <a href="../../hardware/opp/cobrapin/cobrapin_serial_segment_displays/">Cobra serial segment display</a> section.</p>
 <h2 id="optional-settings">Optional settings</h2>
 <p>The following sections are optional in the <code>neoseg_displays:</code> section of
 your config. (If you don't include them, the default will be used).</p>
@@ -33959,30 +33946,12 @@ submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.o
 <h3 id="size">size:</h3>
 <p>Single value, type: one of the following options: 2digit, 8digit.
 Default: <code>8digit</code></p>
-<div class="admonition success">
-<p class="admonition-title">Help us write it!</p>
-<p>This section is unwritten or needs an update or edit. Can you <a href="https://missionpinball.org/latest/about/help">help write it</a>?
-Get your name in lights and geeky pinball bragging rights! Hit the magic sparkly wand to
-the right of the title to see this page source on GitHub. Then add/edit and
-submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M234.7 42.7 197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1 14.1 37.7c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2l-37.7-14.1L263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0l381.3-381.4c18.7-18.7 18.7-49.1 0-67.9l-34.6-34.5c-18.7-18.7-49.1-18.7-67.9 0zM484.6 82.6l-105 105-23.3-23.3 105-105zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L64 96zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19z"/></svg></span></p>
-<hr />
-<p><div style="text-align: center;">
-    <a class="md-button md-button--primary" href="https://missionpinball.org/latest/about/help">CLICK TO LEARN HOW TO EDIT THIS PAGE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.1-1.5 1.3c-6.6-5.9-10-9-10-12.8 0-1.2.4-2.3 1-3.2V7c0 4.7 3.9 8.2 10.5 14.1m1.6-4.1c4.7-4.3 7.9-7.1 8-10 0-2-1.5-3.5-3.5-3.5-1.6 0-3.1 1-3.6 2.4h-1.9C12 4.5 10.5 3.5 9 3.5 7 3.5 5.5 5 5.5 7c0 2.9 3.1 5.7 7.9 10l.1.1M18 1.5c3.1 0 5.5 2.4 5.5 5.5 0 3.7-3.4 6.8-10 12.8-6.6-5.9-10-9-10-12.8 0-3.1 2.4-5.5 5.5-5.5 1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1"/></svg></span></a>
-</div></p>
-</div>
+<p>Make sure to set the right size depending on what hardware you have.</p>
 <h3 id="start_channel">start_channel:</h3>
 <p>Single value, type: <code>string</code>. Defaults to empty.</p>
-<div class="admonition success">
-<p class="admonition-title">Help us write it!</p>
-<p>This section is unwritten or needs an update or edit. Can you <a href="https://missionpinball.org/latest/about/help">help write it</a>?
-Get your name in lights and geeky pinball bragging rights! Hit the magic sparkly wand to
-the right of the title to see this page source on GitHub. Then add/edit and
-submit your change. It's easy! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M234.7 42.7 197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1 14.1 37.7c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2l-37.7-14.1L263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0l381.3-381.4c18.7-18.7 18.7-49.1 0-67.9l-34.6-34.5c-18.7-18.7-49.1-18.7-67.9 0zM484.6 82.6l-105 105-23.3-23.3 105-105zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L64 96zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19z"/></svg></span></p>
-<hr />
-<p><div style="text-align: center;">
-    <a class="md-button md-button--primary" href="https://missionpinball.org/latest/about/help">CLICK TO LEARN HOW TO EDIT THIS PAGE <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.1-1.5 1.3c-6.6-5.9-10-9-10-12.8 0-1.2.4-2.3 1-3.2V7c0 4.7 3.9 8.2 10.5 14.1m1.6-4.1c4.7-4.3 7.9-7.1 8-10 0-2-1.5-3.5-3.5-3.5-1.6 0-3.1 1-3.6 2.4h-1.9C12 4.5 10.5 3.5 9 3.5 7 3.5 5.5 5 5.5 7c0 2.9 3.1 5.7 7.9 10l.1.1M18 1.5c3.1 0 5.5 2.4 5.5 5.5 0 3.7-3.4 6.8-10 12.8-6.6-5.9-10-9-10-12.8 0-3.1 2.4-5.5 5.5-5.5 1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1"/></svg></span></a>
-</div></p>
-</div>
+<p>The start channel for the first display would be either <code>0-0-0</code> or <code>1-0-0</code>, depending what neo seg connection you use on your Cobra pin. The start channel of the next hardware is
+easily computed, for each digit you need 15 channels (14 segments plus the integrated dot). If your first segment has 8 digits you need 120 channels from 0 to 119, thus the next
+display would have as start channel either <code>0-0-120</code> or <code>1-0-120</code>.</p>
 <h3 id="start_x">start_x:</h3>
 <p>Single value, type: <code>number</code> (will be converted to floating point).
 Defaults to empty.</p>
