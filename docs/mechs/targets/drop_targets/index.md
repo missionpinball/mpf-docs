@@ -13,7 +13,7 @@ Related Config File Sections:
 Mission Pinball Framework's (MPF) *drop target* device represents a
 switch in a pinball machine. This device is used for drop target banks
 with a coil for resetting. If the reset coil resets more than just this
-one drop target configure all targets as a
+one drop target, configure all targets as a
 [drop target bank](drop_target_bank.md) and
 put the coil there. Additionally, there may be a knockdown coil which
 allows the software to knock the target down.
