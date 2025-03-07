@@ -12,7 +12,7 @@ GMC supports running multiple `MPFDisplay` parents across multiple monitors, wit
 
 ## Set your Project Settings
 
-Open the Project Settings menu and go to *Display > Window*, and in the upper left corner toggle on *Advanced Settings* to see additional configuration options.
+Open the Project Settings menu and go to *Display > Window*, and in the upper right corner toggle on *Advanced Settings* to see additional configuration options.
 
   * **Viewport Width / Height**: Set these to be the maximum bounding box to contain all of your displays.
   * **Initial Position Type**: Absolute
@@ -46,8 +46,8 @@ Under your main Window root node, create a new node of type `Window` (just the d
 In the *Inspector* panel, set the following:
 
   *  **Initial Position**: Absolute
-  *  **Size**: The dimensions of the screen
   *  **Position**: The coordinates from the top-left of the main monitor
+  *  **Size**: The dimensions of the screen
 
 Under the *Flags* dropdown, set the following:
 
