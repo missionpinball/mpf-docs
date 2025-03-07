@@ -37,9 +37,12 @@ of your config. (If you don't include them, the default will be used).
 ### default_color:
 
 List of one (or more) values, each is a type: `color` (*color name*,
-*hex*, or list of values *0*-*255*). Default: `white`
+*hex*, or list of values *0*-*255*). Default: `white`.
 
---8<-- "todo.md"
+You should specify for each digit of your segment display a default color. If you specify less
+colors than the `size` of your display the other digitis will have `white` as default color. E.g. if you have 8 digits and specify `"blue, yellow"` then the other
+6 digits will have `white` as default color.
+
 
 ### default_transition_update_hz:
 
@@ -55,7 +58,9 @@ Single value, type: `boolean` (`true`/`false`). Default: `false`
 Determines whether or not the physical segment display has integrated
 commas in each character rather than taking up an entire character. When
 set to `true`, commas are collapsed with the preceding character when
-calculating text transition effects.
+calculating text transition effects. You need to check with your hardware vendor
+if commas have an own segment, sometimes you can see a comma on the display but it
+is not being used, e.g. [Cobra serial segment display](../hardware/opp/cobrapin/cobrapin_serial_segment_displays.md).
 
 ### integrated_dots:
 
@@ -120,7 +125,8 @@ persist player variables (e.g. score) without having to continually push updates
 
 Single value, type: `boolean` (`true`/`false`). Default: `false`
 
---8<-- "todo.md"
+If your segment display doesn't provide an own segment for a comma but has an own segment for period, then this setting will use
+the period segment as a comma. Otherwise the comma will be display on an own segment (which doesn't look too nice usually).
 
 ### console_log:
 
