@@ -8,13 +8,18 @@ title: "slide_player:"
 
     This config reference is for the upcoming MPF 0.80 release and the GMC media controller. For generating slides in MPF 0.57, see the [current slide_player reference](../../config/slide_player.md).
 
---8<-- "config_section.md"
+<!-- --8<-- "config_section.md" # The note below is duplicate to the include, but the link paths are different so the include does not work-->
+??? note "This is a config file reference. Click for instructions."
+
+    This page is reference material which explains every setting and option for this section of an MPF yaml config file.
+    See the [instructions for config files](../../config/instructions/index.md) for formatting and other details. See our guide
+    to [config file examples](../../examples/index.md) for more examples of real configs in action.
 
 | Valid in | |
 |-----|:----:|
-|[machine](instructions/machine_config.md) config files |**YES** :white_check_mark:|
-|[mode](instructions/mode_config.md) config files|**NO** :no_entry_sign:|
-|[shows](../shows/index.md) & show files|**YES** :white_check_mark:|
+|[machine](../../config/instructions/machine_config.md) config files |**YES** :white_check_mark:|
+|[mode](../../config/instructions/mode_config.md) config files|**NO** :no_entry_sign:|
+|[shows](../../shows/index.md) & show files|**YES** :white_check_mark:|
 
 The `slide_player:` section of your config is where you configure slides
 to be shown (or removed) based on events being posted.
@@ -32,7 +37,7 @@ slide_player:
   event3: slide3
 ```
 
-See [Slide player](../config_players/slide_player.md) for
+See [Slide player](../../config_players/slide_player.md) for
 details.
 
 !!! note "Order Matters!"
@@ -111,7 +116,7 @@ slide_player:
 ### expire:
 
 Single value, type: `time string (secs)`
-([Instructions for entering time strings](instructions/time_strings.md)). Defaults to empty.
+([Instructions for entering time strings](../../config/instructions/time_strings.md)). Defaults to empty.
 
 Specifies that this slide should automatically be removed after the time
 has passed. When it's removed, whichever slide is the next-highest
