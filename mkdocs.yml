@@ -138,10 +138,11 @@ nav:
 - Hardware:
   - hardware/index.md
   - Concepts:
+    - hardware/index.md
     - Understanding Hardware Rules: hardware/hw_rules.md
     - Hardware Numbering Schemes: hardware/numbers.md
     - Mixing Platforms: hardware/platform.md
-    - Troubleshooting Platforms: hardware/troubleshooting_hardware.md
+    - Troubleshooting Platforms: hardware/troubleshooting_hardware/index.md
   - Working with real pinball machines:
     - machines/index.md
     - Homebrew / New Machine: machines/homebrew.md

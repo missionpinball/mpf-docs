@@ -7,7 +7,7 @@ title: Troubleshooting Hardware Platforms
 
 If you got problems with your hardware platform we first recommend to
 read our
-[troubleshooting guide](../troubleshooting/index.md). Here are some hardware platform specific steps. This is a
+[troubleshooting guide](../../troubleshooting/index.md). Here are some hardware platform specific steps. This is a
 generic guide so please check if there is a more specific guide for your
 specific platform.
 
@@ -15,8 +15,8 @@ specific platform.
 
 If you got problems with your platform try to enable `debug` first. As
 described in the
-[general debugging section](../troubleshooting/general_debugging.md) of our
-[troubleshooting guide](../troubleshooting/index.md) this is done by adding `debug: true` to your platform config
+[general debugging section](../../troubleshooting/general_debugging.md) of our
+[troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your platform config
 section. This will add a lot more debugging and might slow down MPF a
 bit. We recommend to disable/remove it after finishing debugging.
 
@@ -49,8 +49,8 @@ if your boards are properly wired.
 Hardware is connected and generally working, watchdog is good but still
 your coils are not working? Maybe something with the numbering is odd.
 Lets tests that using the
-[MPF Service CLI](../tools/service_cli.md). Alternatively, you can also use
-[service mode](../game_logic/service_mode.md) if you have already configured it. Both ways work similarly.
+[MPF Service CLI](../../tools/service_cli.md). Alternatively, you can also use
+[service mode](../../game_logic/service_mode.md) if you have already configured it. Both ways work similarly.
 
 To use service cli:
 

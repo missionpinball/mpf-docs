@@ -102,5 +102,4 @@ config.
 
 ## What if it did not work?
 
-Have a look at our
-[hardware troubleshooting guide](troubleshooting_hardware.md).
+Have a look at our [hardware troubleshooting guide](troubleshooting_hardware/index.md).
