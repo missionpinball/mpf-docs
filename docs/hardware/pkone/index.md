@@ -16,12 +16,10 @@ For additional information, please visit the [Penny K Pinball
 website](https://pennykpinball.com).
 
 * [Connecting PKONE to your Computer](connecting.md)
-* [Installing hardware
-drivers & configuring COM ports](config)
+* [Installing hardware drivers & configuring COM ports](config.md)
 * [Switches](switches.md)
 * [Coils/Drivers/Magnets/Motors](drivers.md)
 * [RGB/RGBW LEDs](leds.md)
-* [Simple
-LEDs/Lights](lights)
+* [Simple LEDs/Lights](lights.md)
 * [Servos](servos.md)
 * [Troubleshooting](../../troubleshooting/index.md)
