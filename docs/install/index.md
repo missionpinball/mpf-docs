@@ -122,7 +122,7 @@ If you are installing MPF 0.57 to continue work on an existing MC-based project,
 
 * [Mac](mac.md)
 * [Windows](windows.md)
-* [Linux](linux)
+* [Linux](linux/index.md)
 
 ## Migrating MPF 0.57 to MPF 0.80
 

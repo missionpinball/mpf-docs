@@ -37,8 +37,7 @@ you will understand the powerful tools of VirtualBox.
 
 ## Downloading Debian
 
-1.  Navigate to [the official Debian download
-    site](https://www.debian.org/distrib/netinst).
+1.  Navigate to [the official Debian download site](https://www.debian.org/distrib/netinst).
 
 2.  Under the `Small CDs or USB sticks` header, click on `amd64` to
     download the latest version of Debian.
@@ -53,19 +52,15 @@ you will understand the powerful tools of VirtualBox.
 2.  Click the green ➡️ `Start` icon
 3.  If you have not yet attached the Debian ISO file to your VM, you
     will be prompted to select it now
-    * Click the 📂 Folder icon and find your downloaded Debian.iso
-        file:
+    * Click the 📂 Folder icon and find your downloaded Debian.iso file:
 
         `debian-10.4.0-amd64-netinst.iso`
 4.  Click `Start`
-5.  In the virtual machine window, highlight `Graphical Install` and
-    click enter
+5.  In the virtual machine window, highlight `Graphical Install` and click enter
 6.  Follow the prompts to install Debian. You may need to navigate using
     the keyboard (using `Tab` and `Enter`) because the VirtualBox Guest
-    Additions are not yet installed. That will be done in the next few
-    steps.
-7.  Make sure to set a root password and setup a new user of your
-    choice.
+    Additions are not yet installed. That will be done in the next few steps.
+7.  Make sure to set a root password and setup a new user of your choice.
 
 ## Setting up `sudo`
 
@@ -156,12 +151,9 @@ virtual machine.
     2.  Click on the `Adapter 2` tab
     3.  Enable the adapter
     4.  Select `Host Only Adapter` as "Attached to"
-    5.  Name is the Virtual Network we created earlier (`vboxnet0` in my
-        case)
-3.  In the *host* OS, verify the VirtualBox virtual network adapter is
-    connected
-    * The following is for macOS. Your command and output may look
-        different
+    5.  Name is the Virtual Network we created earlier (`vboxnet0` in my case)
+3.  In the *host* OS, verify the VirtualBox virtual network adapter is connected
+    * The following is for macOS. Your command and output may look different
 
     * ``` console
         ifconfig vboxnet0
@@ -174,8 +166,7 @@ virtual machine.
         ```
 4.  In the *guest* OS (Debian), verify the VirtualBox virtual network
     adapter is connected
-    * The following is for my installation. Your command and output
-        may look different
+    * The following is for my installation. Your command and output may look different
 
     * ``` console
         ip addr
@@ -221,9 +212,7 @@ sudo apt-get install python3-pip pkg-config
 
 ## Installing Mission Pinball Framework
 
-Follow the [installation
-guide](/install/linux) for MPF on
-Linux.
+Follow the [installation guide](../linux/index.md) for MPF on Linux.
 
 Basic installation:
 
@@ -245,8 +234,7 @@ pip3 install pip setuptools --upgrade
         cd mpf
         git clone https://github.com/missionpinball/mpf-examples
         ```
-3.  Run the Demo Man example. In the VBox Desktop, open terminal and
-    execute:
+3.  Run the Demo Man example. In the VBox Desktop, open terminal and execute:
     * ``` console
         cd ~/mpf/mpf-examples/demo_man
         mpf both -X
@@ -261,20 +249,18 @@ pip3 install pip setuptools --upgrade
         * `1` - Drain ball
         * `ESC` - Close mpf-mc and quit
 
-    * Follow the rest of the Demo Man [example
-        guide](/examples/demo_man).
+    * Follow the rest of the Demo Man [example guide](../../examples/demo_man.md).
 
 !!! warning
 
     Some users have reported having trouble with OpenGL on a macOS host.
 
-    If mpf-mc shows only a blank screen inside your VM, please [open an
-    issue](https://github.com/missionpinball/mpf-mc/issues/new).
+    If mpf-mc shows only a blank screen inside your VM, please
+    [open an issue](https://github.com/missionpinball/mpf-mc/issues/new).
 
 ## Installing and Running MPF-Monitor
 
-The full installation guide for setting up MPF-Monitor [can be found
-here](/tools/monitor/installation).
+The full installation guide for setting up MPF-Monitor [can be found here](../../tools/monitor/installation.md).
 
 1.  Install PyQt6 (may already be installed):
     * ``` console
@@ -298,5 +284,4 @@ here](/tools/monitor/installation).
         device_size: 0.1
         ```
 
-    * More info at [MPF Monitor
-        docs](/tools/monitor/running).
+    * More info at [MPF Monitor docs](../../tools/monitor/running.md).
