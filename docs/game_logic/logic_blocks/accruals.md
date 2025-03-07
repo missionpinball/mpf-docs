@@ -11,11 +11,13 @@ Related Config File Sections:
 
 Related How To Guides
 
-* [/events/logicblock_name_updated](integrating_logic_blocks_and_shows.md)
+* [Integrating Logic Blocks and Shows](integrating_logic_blocks_and_shows.md)
 * [Scoring Based on Logic Blocks](scoring_based_on_logic_blocks.md)
 * [Integrating Logic_Blocks and Lights](integrating_logic_blocks_and_lights.md)
 * [Integrating Logic_Blocks and Slides](integrating_logic_block_and_slides.md)
-* [Persisting the State of a Logic Block in a Player Variable](persisting_state_in_a_player_variable.md)-------------
+* [Persisting the State of a Logic Block in a Player Variable](persisting_state_in_a_player_variable.md)
+
+-------------
 
 "Accruals" are a type of
 [Logic Block](index.md) where you can trigger a new event based on a series of one
