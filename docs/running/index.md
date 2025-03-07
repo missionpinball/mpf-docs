@@ -99,30 +99,20 @@ take additional options).
 Here's a list of valid MPF commands. Click on any one of them for full
 details and command-line options.
 
-* [MPF command-line utility](mpf.md) (Starts the MPF game
-    engine and other commands)
-* [mpf](commands/game.md) (Starts the
-    MPF engine)
-* [mpf mc](commands/mc.md) (Starts the MPF
-    Media Controller)
-* [mpf both](commands/both.md) (Starts
-    both the MPF engine and media controller at the same time)
-* [mpf migrate](commands/migrate.md)
-    (Migrates older config and show files to the current version)
-* [mpf hardware](commands/hardware.md)
-    (Scan, inspect and configure hardware)
-* [mpf service](commands/service.md)
-    (Service command line interface)
-* [mpf build](commands/build.md) (Build
-    production bundles)
+* [MPF command-line utility](mpf.md) (Starts the MPF game engine and other commands)
+* [mpf](commands/game.md) (Starts the MPF engine)
+* [mpf mc](commands/mc.md) (Starts the MPF Media Controller)
+* [mpf both](commands/both.md) (Starts both the MPF engine and media controller at the same time)
+* [mpf migrate](commands/migrate.md) (Migrates older config and show files to the current version)
+* [mpf hardware](commands/hardware.md) (Scan, inspect and configure hardware)
+* [mpf service](commands/service.md) (Service command line interface)
+* [mpf build](commands/build.md) (Build production bundles)
 
 ## Specifying BCP ports
 
-By default, the MPF game engine and the MC will connect via TCP port
-5050.
+By default, the MPF game engine and the MC will connect via TCP port 5050.
 [You can change that port to whatever you want though](ports.md).
 
 * [MPF command launcher](mpf.md)
-* [MPF commands](commands)
-* [Specifying
-BCP ports](ports)
+* [MPF commands](commands/index.md)
+* [Specifying BCP ports](ports.md)

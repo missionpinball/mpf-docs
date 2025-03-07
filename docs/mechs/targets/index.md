@@ -4,11 +4,10 @@ title: Targets
 
 # Targets
 
-There are many types of targets on a pinball playfield some of which are
-described here. In the Mission Pinball Framework(MPF) they are handled
-in a number of ways depending. In some instances they are just a switch
-hit while in others they may require a coil to be fired to reset or fire
-the ball back at the player.
+There are many types of targets on a pinball playfield, some of which are
+described here. In MPF they can be handled in a number of ways.
+In some instances they are just a switch hit, while in others they may
+require a coil to be fired to reset or fire the ball back at the player.
 
 Related Config File Sections:
 
@@ -18,7 +17,7 @@ Related Config File Sections:
 
 Related How To guides:
 
-* [Drop Targets](drop_targets)
+* [Drop Targets](drop_targets/index.md)
 * [Kicking Targets](kicking_targets.md)
 * [Stand Up Targets](stationary_targets.md)
 * [Vari Targets](vari_targets.md)

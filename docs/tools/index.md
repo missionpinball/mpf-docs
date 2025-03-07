@@ -8,7 +8,7 @@ title: Tools
 There are several tools that have been created to help you build your
 game in MPF.
 
-## [MPF Monitor](monitor)
+## [MPF Monitor](monitor/index.md)
 
 The MPF Monitor is a graphical utility you can use to interact with a
 running instance of MPF. See lights change in action, click to control
@@ -33,7 +33,7 @@ A command to prepare production config bundles.
 
 A lightshow generator for MPF.
 
-## [Language Server in Your IDE](language_server)
+## [Language Server in Your IDE](language_server/index.md)
 
 IDE support for your editor to support auto-complete for MPF configs.
 
@@ -68,5 +68,4 @@ configuration settings. See
 * Show builder
 * Slide / animation tool
 * Auto machine documentation builder
-* Device / asset explorer (Why did this sound stop? Why is this LED
-    red? etc)
+* Device / asset explorer (Why did this sound stop? Why is this LED red? etc)

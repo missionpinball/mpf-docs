@@ -54,7 +54,7 @@ achievement_groups:
 More examples:
 
 * [Recipe: The Addams Family Mansion Awards](../cookbook/TAF_mansion_awards.md)
-* [Achievements](../../game_logic/achievements)
+* [Achievements](../game_logic/achievements/index.md)
 
 ## Required settings
 

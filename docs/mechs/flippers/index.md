@@ -37,7 +37,7 @@ building your own pinball machine. In fact when most people get their
 own hardware and start drilling holes in a piece of plywood, the first
 visible thing they do is to get their flippers flipping.
 
-![Pinball flippers](/mechs/images/flippers.png){width="400px"}
+![Pinball flippers](../images/flippers.png){width="400px"}
 
 MPF has support for lots of different kinds of flippers (as there are
 many different ways they've been wired over the years), as well as a
