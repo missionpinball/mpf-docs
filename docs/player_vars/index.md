@@ -29,7 +29,7 @@ they work:
 * [extra_ball_(name)_awarded](extra_ball_name_awarded.md)
 * [extra_balls](extra_balls.md)
 * [logic_block_state](logic_block_state.md)
-* [(mode)_(timer)_tick](mode_timer_tick.md)
+* [(mode)\_(timer)\_tick](mode_timer_tick.md)
 * [number](number.md)
 * [random_(x).(y)](random_x.y.md)
 * [restart_modes_on_next_ball](restart_modes_on_next_ball.md)

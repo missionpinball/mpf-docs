@@ -2,7 +2,7 @@
 title: fast_(x)_model
 ---
 
-# fast_(x)_model
+# fast_(x)\_model
 
 
 --8<-- "machine_var.md"
