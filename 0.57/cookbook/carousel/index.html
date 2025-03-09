@@ -1894,11 +1894,17 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
         
       
+        
+          
         
       
     
@@ -1914,8 +1920,10 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../hardware/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Concepts
@@ -1923,8 +1931,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
@@ -1932,6 +1946,8 @@ icons & this code generated via https://realfavicongenerator.net
             Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -33606,19 +33622,19 @@ the select event, you may notice that after cancelling the subsequent
 selection has been made. The Carousel's <code>block_events</code> can be used to
 prevent carousel event handling until one of the <code>release_events</code> is
 posted. If you don't need to do anything after selection, just
-specifying <a href="#">block_events</a> without any
-<a href="#">release_events</a> will help.</p>
+specifying <code>block_events</code> without any
+<code>release_events</code> will help.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">block_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flipper_cancel</span>
 <span class="nt">release_events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">both_flippers_inactive</span>
 </code></pre></div>
 <p>There are two events of importance here:</p>
 <ul>
-<li><a href="#carousel">carousel</a>_(item)_highlighted</li>
-<li><a href="#carousel">carousel</a>_(item)_selected</li>
+<li>carousel_(item)_highlighted</li>
+<li>carousel_(item)_selected</li>
 </ul>
-<p>You can use the <a href="#carousel">carousel</a>_(item)_highlighted event to
+<p>You can use the carousel_(item)_highlighted event to
 display a slide showing the name of the mode to the player.</p>
-<p>You can then use the <a href="#carousel">carousel</a>_(item)_selected event to
+<p>You can then use the carousel_(item)_selected event to
 start the mode that was selected by the player.</p>
 <div class="highlight"><pre><span></span><code>##! mode: my_carousel
 # in mode my_carousel

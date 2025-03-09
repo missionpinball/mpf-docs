@@ -1894,11 +1894,17 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
         
       
+        
+          
         
       
     
@@ -1914,8 +1920,10 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../hardware/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Concepts
@@ -1923,8 +1931,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
@@ -1932,6 +1946,8 @@ icons & this code generated via https://realfavicongenerator.net
             Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -33831,11 +33847,12 @@ icons & this code generated via https://realfavicongenerator.net
 <p class="admonition-title">MPF 0.80 &amp; GMC</p>
 <p>This config reference is for the upcoming MPF 0.80 release and the GMC media controller. For generating slides in MPF 0.57, see the <a href="../../../config/slide_player/">current slide_player reference</a>.</p>
 </div>
+<!-- --8<-- "config_section.md" # The note below is duplicate to the include, but the link paths are different so the include does not work-->
 <details class="note">
 <summary>This is a config file reference. Click for instructions.</summary>
 <p>This page is reference material which explains every setting and option for this section of an MPF yaml config file.
-See the <a href="instructions/index.md">instructions for config files</a> for formatting and other details. See our guide
-to <a href="../examples/index.md">config file examples</a> for more examples of real configs in action.</p>
+See the <a href="../../../config/instructions/">instructions for config files</a> for formatting and other details. See our guide
+to <a href="../../../examples/">config file examples</a> for more examples of real configs in action.</p>
 </details>
 <table>
 <thead>
@@ -33846,15 +33863,15 @@ to <a href="../examples/index.md">config file examples</a> for more examples of 
 </thead>
 <tbody>
 <tr>
-<td><a href="instructions/machine_config.md">machine</a> config files</td>
+<td><a href="../../../config/instructions/machine_config/">machine</a> config files</td>
 <td style="text-align: center;"><strong>YES</strong> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 </tr>
 <tr>
-<td><a href="instructions/mode_config.md">mode</a> config files</td>
+<td><a href="../../../config/instructions/mode_config/">mode</a> config files</td>
 <td style="text-align: center;"><strong>NO</strong> <img alt="🚫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6ab.svg" title=":no_entry_sign:" /></td>
 </tr>
 <tr>
-<td><a href="../shows/index.md">shows</a> &amp; show files</td>
+<td><a href="../../../shows/">shows</a> &amp; show files</td>
 <td style="text-align: center;"><strong>YES</strong> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 </tr>
 </tbody>
@@ -33871,7 +33888,7 @@ slide_player:
   event2: slide2
   event3: slide3
 </code></pre></div>
-<p>See <a href="../config_players/slide_player.md">Slide player</a> for
+<p>See <a href="../../../config_players/slide_player/">Slide player</a> for
 details.</p>
 <div class="admonition note">
 <p class="admonition-title">Order Matters!</p>
@@ -33924,7 +33941,7 @@ slide_player:
 </code></pre></div>
 <h3 id="expire">expire:</h3>
 <p>Single value, type: <code>time string (secs)</code>
-(<a href="instructions/time_strings.md">Instructions for entering time strings</a>). Defaults to empty.</p>
+(<a href="../../../config/instructions/time_strings/">Instructions for entering time strings</a>). Defaults to empty.</p>
 <p>Specifies that this slide should automatically be removed after the time
 has passed. When it's removed, whichever slide is the next-highest
 priority will be shown.</p>

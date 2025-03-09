@@ -2036,11 +2036,17 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
         
       
+        
+          
         
       
     
@@ -2056,8 +2062,10 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../hardware/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Concepts
@@ -2065,8 +2073,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
@@ -2074,6 +2088,8 @@ icons & this code generated via https://realfavicongenerator.net
             Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -33771,8 +33787,7 @@ you will understand the powerful tools of VirtualBox.</p>
 <h2 id="downloading-debian">Downloading Debian</h2>
 <ol>
 <li>
-<p>Navigate to <a href="https://www.debian.org/distrib/netinst">the official Debian download
-    site</a>.</p>
+<p>Navigate to <a href="https://www.debian.org/distrib/netinst">the official Debian download site</a>.</p>
 </li>
 <li>
 <p>Under the <code>Small CDs or USB sticks</code> header, click on <code>amd64</code> to
@@ -33790,18 +33805,14 @@ you will understand the powerful tools of VirtualBox.</p>
 <li>If you have not yet attached the Debian ISO file to your VM, you
     will be prompted to select it now<ul>
 <li>
-<p>Click the 📂 Folder icon and find your downloaded Debian.iso
-    file:</p>
+<p>Click the 📂 Folder icon and find your downloaded Debian.iso file:</p>
 <p><code>debian-10.4.0-amd64-netinst.iso</code>
 4.  Click <code>Start</code>
-5.  In the virtual machine window, highlight <code>Graphical Install</code> and
-    click enter
+5.  In the virtual machine window, highlight <code>Graphical Install</code> and click enter
 6.  Follow the prompts to install Debian. You may need to navigate using
     the keyboard (using <code>Tab</code> and <code>Enter</code>) because the VirtualBox Guest
-    Additions are not yet installed. That will be done in the next few
-    steps.
-7.  Make sure to set a root password and setup a new user of your
-    choice.</p>
+    Additions are not yet installed. That will be done in the next few steps.
+7.  Make sure to set a root password and setup a new user of your choice.</p>
 </li>
 </ul>
 </li>
@@ -33900,17 +33911,14 @@ virtual machine.</p>
 <li>Click on the <code>Adapter 2</code> tab</li>
 <li>Enable the adapter</li>
 <li>Select <code>Host Only Adapter</code> as "Attached to"</li>
-<li>Name is the Virtual Network we created earlier (<code>vboxnet0</code> in my
-    case)</li>
+<li>Name is the Virtual Network we created earlier (<code>vboxnet0</code> in my case)</li>
 </ol>
 </li>
 <li>
-<p>In the <em>host</em> OS, verify the VirtualBox virtual network adapter is
-    connected</p>
+<p>In the <em>host</em> OS, verify the VirtualBox virtual network adapter is connected</p>
 <ul>
 <li>
-<p>The following is for macOS. Your command and output may look
-    different</p>
+<p>The following is for macOS. Your command and output may look different</p>
 </li>
 <li>
 <p><code>console
@@ -33925,8 +33933,7 @@ virtual machine.</p>
 <li>In the <em>guest</em> OS (Debian), verify the VirtualBox virtual network
 adapter is connected</li>
 <li>
-<p>The following is for my installation. Your command and output
-    may look different</p>
+<p>The following is for my installation. Your command and output may look different</p>
 </li>
 <li>
 <p><code>console
@@ -33965,9 +33972,7 @@ environment tools you are accustomed with.</p>
 <div class="highlight"><pre><span></span><code><span class="go">sudo apt-get install python3-pip pkg-config</span>
 </code></pre></div>
 <h2 id="installing-mission-pinball-framework">Installing Mission Pinball Framework</h2>
-<p>Follow the <a href="/install/linux">installation
-guide</a> for MPF on
-Linux.</p>
+<p>Follow the <a href="../../linux/">installation guide</a> for MPF on Linux.</p>
 <p>Basic installation:</p>
 <div class="highlight"><pre><span></span><code><span class="go">pip3 install pip setuptools --upgrade</span>
 </code></pre></div>
@@ -33989,8 +33994,7 @@ Linux.</p>
 </ul>
 </li>
 <li>
-<p>Run the Demo Man example. In the VBox Desktop, open terminal and
-    execute:</p>
+<p>Run the Demo Man example. In the VBox Desktop, open terminal and execute:</p>
 <ul>
 <li>
 <p><code>console
@@ -34011,8 +34015,7 @@ Linux.</p>
 </ul>
 </li>
 <li>
-<p>Follow the rest of the Demo Man <a href="/examples/demo_man">example
-    guide</a>.</p>
+<p>Follow the rest of the Demo Man <a href="../../../examples/demo_man/">example guide</a>.</p>
 </li>
 </ul>
 </li>
@@ -34020,12 +34023,11 @@ Linux.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some users have reported having trouble with OpenGL on a macOS host.</p>
-<p>If mpf-mc shows only a blank screen inside your VM, please <a href="https://github.com/missionpinball/mpf-mc/issues/new">open an
-issue</a>.</p>
+<p>If mpf-mc shows only a blank screen inside your VM, please
+<a href="https://github.com/missionpinball/mpf-mc/issues/new">open an issue</a>.</p>
 </div>
 <h2 id="installing-and-running-mpf-monitor">Installing and Running MPF-Monitor</h2>
-<p>The full installation guide for setting up MPF-Monitor <a href="/tools/monitor/installation">can be found
-here</a>.</p>
+<p>The full installation guide for setting up MPF-Monitor <a href="../../../tools/monitor/installation/">can be found here</a>.</p>
 <ol>
 <li>Install PyQt6 (may already be installed):<ul>
 <li><code>console
@@ -34055,8 +34057,7 @@ the first line of your <code>monitor.yaml</code> file:</li>
     device_size: 0.1</code></p>
 </li>
 <li>
-<p>More info at <a href="/tools/monitor/running">MPF Monitor
-    docs</a>.</p>
+<p>More info at <a href="../../../tools/monitor/running/">MPF Monitor docs</a>.</p>
 </li>
 </ul>
 </li>

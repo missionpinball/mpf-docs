@@ -1894,11 +1894,17 @@ icons & this code generated via https://realfavicongenerator.net
     
       
         
+          
+        
+      
+        
       
         
       
         
       
+        
+          
         
       
     
@@ -1914,8 +1920,10 @@ icons & this code generated via https://realfavicongenerator.net
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../hardware/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Concepts
@@ -1923,8 +1931,14 @@ icons & this code generated via https://realfavicongenerator.net
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
@@ -1932,6 +1946,8 @@ icons & this code generated via https://realfavicongenerator.net
             Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -33509,21 +33525,20 @@ icons & this code generated via https://realfavicongenerator.net
 
 <div class="admonition warning">
 <p class="admonition-title">MPF-MC is being deprecated</p>
-<p>This instruction page is for the legacy MPF-MC for MPF versions 0.57 and prior. For users of MPF 0.80 and later, please refer to the <a href="../../gmc/index.md">Godot Media Controller (GMC) Documentation</a></p>
+<p>This instruction page is for the legacy MPF-MC for MPF versions 0.57 and prior. For users of MPF 0.80 and later, please refer to the <a href="../../gmc/">Godot Media Controller (GMC) Documentation</a></p>
 </div>
 <h1 id="the-mpf-media-controller">The MPF Media Controller</h1>
 <div class="admonition note">
 <p class="admonition-title">This page is about the MPF Media Controller (MPF-MC)</p>
-<p>You don't have to use the MPF-MC. <a href="/start/media_controller">Details here</a>.</p>
+<p>You don't have to use the MPF-MC. <a href="../../start/media_controller/">Details here</a>.</p>
 </div>
 <p>Like MPF, the MPF-MC is also written in Python, using a Python-based
 multimedia framework called <a href="http://kivy.org">Kivy</a>. Kivy is a wrapper
 for the native graphics &amp; sound libraries on your computer, and it
 leverages the latest technologies including SDL2, Gstreamer, and OpenGL.</p>
 <p>All of the tutorials and installation guides included in this
-documentation explain how to install and use the MPF-MC, so there's
-really nothing to know about it other than it's probably the one
-you're using.</p>
+documentation explain how to install and use the MPF-MC, and are 
+unlikely to be relevant for configurations using <a href="../../gmc/">GMC</a>.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
