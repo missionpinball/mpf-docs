@@ -1,8 +1,8 @@
 ---
-title: [random](../index.md)(x).(y)
+title: random_(x).(y)
 ---
 
-# [random](../index.md)(x).(y)
+# random_(x).(y)
 
 
 --8<-- "player_var.md"

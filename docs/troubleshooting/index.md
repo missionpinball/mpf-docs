@@ -29,7 +29,7 @@ What kind of issue are you having?
 
 If you coils are not firing, switches are not working or hardware is
 behaving weirdly in general read our
-[hardware troubleshooting guide](../hardware/troubleshooting_hardware.md).
+[hardware troubleshooting guide](../hardware/troubleshooting_hardware/index.md).
 
 ## Step 2: Prepare a Report and Ask in the Forum
 

@@ -39,11 +39,9 @@ mechanisms for the P-ROC or P3-ROC.
 * [Switches (P3-ROC)](switches_p3_roc.md)
 * [Coils/Drivers/Magnets/Motors (P-ROC & P3-ROC)](drivers.md)
 * [LEDs (P-ROC & P3-ROC)](leds.md)
-* [Matrix Lights (P-ROC &
-P3-ROC)](lights)
+* [Matrix Lights (P-ROC & P3-ROC)](lights.md)
 * [Traditional single-color DMD (P-ROC)](dmd.md)
-* [RGB DMD
-(P-ROC & P3-ROC)](rgb_dmd)
+* [RGB DMD (P-ROC & P3-ROC)](rgb_dmd.md)
 * [Alpha-numeric displays (P-ROC)](alpha_numeric.md)
 * [Accelerometer (P3-ROC)](accelerometer.md)
 * [I2C (P3-ROC)](i2c.md)

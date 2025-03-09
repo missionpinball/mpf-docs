@@ -16,7 +16,7 @@ As you dig into the specific settings for individual config sections,
 it's important to understand how various settings mentioned in the
 reference are used:
 
-* [Instructions](instructions)
+* [Instructions](instructions/index.md)
 
 ## Index of config sections
 
@@ -44,8 +44,7 @@ in.
 * [bitmap_fonts:](bitmap_fonts.md)
 * [blinkenlight_player:](blinkenlight_player.md)
 * [blinkenlights:](blinkenlights.md)
-* [bonus
-(mode_settings:)](bonus)
+* [bonus (mode_settings:)](bonus.md)
 * [coil_overwrites:](coil_overwrites.md)
 * [coil_player:](coil_player.md)
 * [coils:](coils.md)

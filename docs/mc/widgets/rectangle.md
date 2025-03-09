@@ -41,7 +41,7 @@ slide_player:
 
 Which results in the following:
 
-![image](../../images/rectangle.png)
+![image](../images/rectangle.png)
 
 ## Settings
 

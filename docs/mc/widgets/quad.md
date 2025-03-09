@@ -24,7 +24,7 @@ slide_player:
 
 Which results in the following:
 
-![image](../../images/quad.png)
+![image](../images/quad.png)
 
 ## Settings
 

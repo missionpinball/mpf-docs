@@ -2,7 +2,7 @@
 title: fast_(x)_firmware
 ---
 
-# fast_(x)_firmware
+# fast_(x)\_firmware
 
 --8<-- "machine_var.md"
 

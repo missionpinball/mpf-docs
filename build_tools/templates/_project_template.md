@@ -15,12 +15,12 @@ title: {{ name }}, built with MPF
     [`/showcase`](https://github.com/missionpinball/mpf-docs/tree/main/docs/showcase)
     folder in the root of the repo.
 
-    You can still [add your own project](/showcase/_add_yours).
+    You can still [add your own project](_add_yours.md).
 
     Since we just did the website migration, we still need to make these project
     pages look nice. We'll probably get to it soon, or, you can help us out and
     submit a PR to make this page look better. :) Edit the
-    `/docs/showcase/_project_template.md` file to change the layout of this page.
+    `/build_tools/templates/_project_template.md` file to change the layout of this page.
 
 **Team**: {{ team }}
 

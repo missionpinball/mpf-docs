@@ -42,7 +42,7 @@ use that we don't support, let us know. (Or better yet, write your own
 interface to it and submit a pull request to the MPF codebase!)
 
 Also see our guide on
-[voltages found in a pinball machine](voltages_and_power).
+[voltages found in a pinball machine](voltages_and_power/index.md).
 
 ## List of pinball control systems & hardware compatible with MPF
 
@@ -72,7 +72,7 @@ Reach out in the [forum](../community/index.md) if you need help.
 You'll need to pick one of these three as the main interface between
 MPF and your pinball machine.
 
-  * [FAST Pinball](fast)
+  * [FAST Pinball](fast/index.md)
     * Neuron, Nano, and Retro Controllers
     * All I/O Boards (Playfield & Cabinet Controller)
     * Expansion Boards & EXP Bus (LEDs, servos, motors, etc.)
@@ -81,13 +81,13 @@ MPF and your pinball machine.
     * FAST LED DMD (All platforms)
     * FAST Audio Interface (Modern & Retro platforms)
 
-  * [Open Pinball Project (OPP) controllers](opp)
+  * [Open Pinball Project (OPP) controllers](opp/index.md)
     * Gen 2 OPP hardware, with many combinations of wing boards
         for drivers, switches, switch matrix, LEDs & incandescent
         lights
-    * [CobraPin Pinball Controller](opp/cobrapin)
+    * [CobraPin Pinball Controller](opp/cobrapin/index.md)
 
-  * [Arduino Pinball Controller (APC)](apc)
+  * [Arduino Pinball Controller (APC)](apc/index.md)
     * *New in MPF 0.53*
     * System 3 to System 11c
     * Segment displays
@@ -95,7 +95,7 @@ MPF and your pinball machine.
     * Switches, rules and coils
     * Lights and enable triggers
 
-  * [LISY](lisy)
+  * [LISY](lisy/index.md)
     * *New in MPF 0.50*
     * Gottlieb System 1 (LISY1)
     * Gottlieb System 80 (LISY80)
@@ -106,7 +106,7 @@ MPF and your pinball machine.
     * Switches, rules and coils
     * Lights and enable triggers
 
-  * [Multimorphic](multimorphic)
+  * [Multimorphic](multimorphic/index.md)
     * P-ROC with PDB driver boards (PD-16, PD-8x8, PD-LED)
     * P-ROC in all supported existing machines (Williams, Stern,
       etc.)
@@ -117,18 +117,18 @@ MPF and your pinball machine.
       supported) (P3-ROC)
     * Alphanumeric displays via aux port (P-Roc)
 
-  * [Stern SPIKE / SPIKE 2 machines](spike)
+  * [Stern SPIKE / SPIKE 2 machines](spike/index.md)
     * *New in MPF 0.33*
     * A computer running MPF can directly connect to a SPIKE
       machine with a simple "USB to serial" converter which you
       plug into the SPIKE main board.
 
-  * [Penny K Pinball PKONE Platform](pkone)
+  * [Penny K Pinball PKONE Platform](pkone/index.md)
     * Nano Controller
     * PKONE Extension (switches, coils, rules, servos)
     * PKONE Lightshow (simple LEDs, WS281x RGB/RGBW LEDs)
 
-  * [Virtual (software-only) controllers](virtual)
+  * [Virtual (software-only) controllers](virtual/index.md)
     * MPF includes virtual hardware interfaces you can use to run
       MPF when it's not connected to physical hardware. (This is
       good for working on your game when you're not around your
@@ -154,7 +154,7 @@ systems to provide additional functionality.
 * [I2C Servo Controllers](i2c_servo.md)
     * Servos connected to I2C-based servo controllers
 
-* [Fadecandy RGB LED controllers](fadecandy)
+* [Fadecandy RGB LED controllers](fadecandy/index.md)
     * 512 RGB LEDs per Fadecandy
     * Can connect multiple Fadecandys to support more LEDs
 
@@ -167,7 +167,7 @@ systems to provide additional functionality.
 * [RGB.DMD RGB LED display controller](eli_dmd.md)
     * Supports a "real" color DMD made up of RGB LED matrix
 
-* [MyPinballs Segment Display Controller](mypinballs)
+* [MyPinballs Segment Display Controller](mypinballs/index.md)
     * *New in MPF 0.50*
     * Alphanumeric segment displays
     * Also supports TNA Numeric Score Displays
@@ -191,7 +191,7 @@ systems to provide additional functionality.
     * All inputs and outputs
     * I2C and SPI
 
-* [PIN2DMD RGB DMD](pin2dmd)
+* [PIN2DMD RGB DMD](pin2dmd/index.md)
     * *New in MPF 0.54*
     * 128x32 or 192x64 RGB LED DMD
     * Connected via USB
@@ -227,32 +227,29 @@ We have configuration guides which show you how to setup and use
 different types of pinball mechanisms with the various control systems
 and hardware that MPF supports:
 
-* [Open Pinball Project (OPP)](opp)
-* [LISY platform](lisy)
-* [Arduino Pinball Controller](apc)
-* [P-ROC/P3-ROC](multimorphic)
-* [FAST Pinball](fast)
-* [Stern SPIKE / SPIKE 2](spike)
-* [Penny K Pinball PKONE Platform](pkone)
-* [snux/index FadeCandy RGB LED controllers](fadecandy)
+* [Open Pinball Project (OPP)](opp/index.md)
+* [LISY platform](lisy/index.md)
+* [Arduino Pinball Controller](apc/index.md)
+* [P-ROC/P3-ROC](multimorphic/index.md)
+* [FAST Pinball](fast/index.md)
+* [Stern SPIKE / SPIKE 2](spike/index.md)
+* [Penny K Pinball PKONE Platform](pkone/index.md)
+* [snux/index FadeCandy RGB LED controllers](fadecandy/index.md)
 * [i2c_servo/index Pololu Maestro](pololu_maestro.md)
 * [Pololu Tic](pololu_tic.md)
 * [SmartMatrix RGB DMD](smartmatrix.md)
 * [RGB.DMD](eli_dmd.md)
-* [PIN2DMD](pin2dmd)
+* [PIN2DMD](pin2dmd/index.md)
 * [Raspberry Pi DMD](rpi_dmd.md)
-* [MyPinballs Segment Displays](mypinballs)
-* [Light
-Segment Displays](light_segment_displays)
+* [MyPinballs Segment Displays](mypinballs/index.md)
+* [Light Segment Displays](light_segment_displays.md)
 * [Trinamics StepRocker](trinamics.md)
 * [StepStick Steppers](stepstick.md)
-* [Computer
-Requirements](computer)
+* [Computer Requirements](computer.md)
 * [Native I2C](smbus.md)
 * [Raspberry Pi](rpi.md)
 * [MMA8451-based accelerometer](mma8451.md)
-* [SPI Big Bang
-Switches](spi_bit_bang)
+* [SPI Big Bang Switches](spi_bit_bang.md)
 * [Open Sound Control (OSC)](osc.md)
-* [Virtual Hardware](virtual)
-* [Voltages and Power](voltages_and_power)
+* [Virtual Hardware](virtual/index.md)
+* [Voltages and Power](voltages_and_power/index.md)

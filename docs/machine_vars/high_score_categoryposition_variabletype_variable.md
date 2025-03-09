@@ -2,7 +2,7 @@
 title: (high_score_category)(position)_(variable_type)_(variable)
 ---
 
-# (high_score_category)(position)_(variable_type)_(variable)
+# (high_score_category)(position)\_(variable_type)\_(variable)
 
 
 --8<-- "machine_var.md"

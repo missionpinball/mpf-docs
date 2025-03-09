@@ -15,7 +15,7 @@ Here's an example. (This example is from the
 [MC Demo](../../examples/mc_demo.md) which
 you can download and run to see it in action.)
 
-![image](../../images/opacity_example.png)
+![image](../images/opacity_example.png)
 
 ## Specifying opacity by opacity: setting
 

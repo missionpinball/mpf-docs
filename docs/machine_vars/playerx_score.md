@@ -2,7 +2,7 @@
 title: player(x)_score
 ---
 
-# player(x)_score
+# player(x)\_score
 
 
 --8<-- "machine_var.md"

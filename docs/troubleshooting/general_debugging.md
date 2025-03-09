@@ -95,7 +95,7 @@ p_roc:
 
 For most platforms this will generate a lot of log lines and might also
 affect performance a lot. We recommend to disable it after you finished
-debugging. See [Troubleshooting Hardware Platforms](../hardware/troubleshooting_hardware.md) for details.
+debugging. See [Troubleshooting Hardware Platforms](../hardware/troubleshooting_hardware/index.md) for details.
 
 After enable debug check the log again to understand what your device or
 platform is actually doing at the time of your issue.

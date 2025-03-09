@@ -49,8 +49,8 @@ the select event, you may notice that after cancelling the subsequent
 selection has been made. The Carousel's `block_events` can be used to
 prevent carousel event handling until one of the `release_events` is
 posted. If you don't need to do anything after selection, just
-specifying [block_events](#) without any
-[release_events](#) will help.
+specifying `block_events` without any
+`release_events` will help.
 
 ``` yaml
 block_events: flipper_cancel
@@ -59,13 +59,13 @@ release_events: both_flippers_inactive
 
 There are two events of importance here:
 
-* [carousel](#carousel)_\(item\)_highlighted
-* [carousel](#carousel)_\(item\)_selected
+* carousel_\(item)\_highlighted
+* carousel_\(item)\_selected
 
-You can use the [carousel](#carousel)_\(item\)_highlighted event to
+You can use the carousel_\(item)\_highlighted event to
 display a slide showing the name of the mode to the player.
 
-You can then use the [carousel](#carousel)_\(item\)_selected event to
+You can then use the carousel_\(item)\_selected event to
 start the mode that was selected by the player.
 
 ``` mpf-mc-config

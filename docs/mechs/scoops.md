@@ -22,11 +22,11 @@ from the playfield but they eject onto a ramp or a upper playfield.
 Electronically, all of those mechs consist of a switch or opto and a
 coil to eject the ball.
 
-![Scoop from front](/mechs/images/scoop_front.jpg){.align-left}
+![Scoop from front](images/scoop_front.jpg){.align-left}
 
-![Scoop from back](/mechs/images/scoop_back.jpg){.align-left}
+![Scoop from back](images/scoop_back.jpg){.align-left}
 
-![Scoop from side](/mechs/images/scoop_side.jpg){.align-left}
+![Scoop from side](images/scoop_side.jpg){.align-left}
 
 <div style="clear: both;"></div>
 

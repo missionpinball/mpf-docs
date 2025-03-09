@@ -25,8 +25,8 @@ if your boards are properly wired.
 Hardware is connected and generally working, watchdog is good but still
 your coils are not working? Maybe something with the numbering is odd.
 Lets tests that using the
-[MPF Service CLI](/tools/service_cli). Alternatively, you can also use
-[service mode](/game_logic/service_mode) if you have already configured it. Both ways work similarly.
+[MPF Service CLI](../../tools/service_cli.md). Alternatively, you can also use
+[service mode](../../game_logic/service_mode.md) if you have already configured it. Both ways work similarly.
 
 To use service cli:
 

@@ -2,7 +2,7 @@
 title: (mode)_(timer)_tick
 ---
 
-# (mode)_(timer)_tick
+# (mode)\_(timer)\_tick
 
 
 --8<-- "player_var.md"

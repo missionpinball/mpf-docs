@@ -30,23 +30,23 @@ If you got problems with some switches also add `debug: true` to those
 as it will give to more insights into the intentions of those devices.
 Same will work for flippers, coils, lights, servos, steppers and more.
 See
-[general debugging section](/troubleshooting/general_debugging) for details.
+[general debugging section](../../troubleshooting/general_debugging.md) for details.
 
 ## Run MPF with verbose flag
 
 See
-[general debugging section](/troubleshooting/general_debugging) for details. TLDR: run `mpf both -t -v -V`.
+[general debugging section](../../troubleshooting/general_debugging.md) for details. TLDR: run `mpf both -t -v -V`.
 
 ## Report Your Issue and Ask For Help
 
 If you cannot find the issue yourself please prepare some information
 about your issue according to our
-[troubleshooting guide](/troubleshooting) and ask in our forum.
+[troubleshooting guide](../../troubleshooting/index.md) and ask in our forum.
 
 ## Consider Improving the Documentation
 
 Did you solve your issue but found that some relevant information in the
 documentation is missing or should be linked/located elsewhere? Either
 tell us in the forum or consider
-[improving the documentation](/about/help_docs) yourself to save future users some troubles the same way
+[improving the documentation](../../about/help_docs.md) yourself to save future users some troubles the same way
 others saved you some troubles by writing this documentation.
