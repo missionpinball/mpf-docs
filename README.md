@@ -19,9 +19,13 @@ You can see the commits and page builds in the [Actions tab](https://github.com/
 1. Clone the repo
 2. Open a terminal window and `cd` into the root folder of this repo
 3. `pip install -r requirements.txt` (to install mkdocs and what it needs)
-4. `mkdocs serve` (runs a local web server on port 8000)
+4. `SITE_URL=https://mpf/latest/ mkdocs serve` (runs a local web server on port 8000)
 
 You should be able to access the doc site via your web browser at `localhost:8000`.
+
+If you included the `SITE_URL` env var in the serve command, `/`` should automatically redirect you to `latest/`.
+This is done when serving via mkdocs to mimic the version-nesting of `mike` so that absolute URLs will still
+resolve properly in this simplified build.
 
 ## To contribute
 
