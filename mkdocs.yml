@@ -81,6 +81,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/missionpinball
 
+not_in_nav: |
+  code/BCP_Protocol/
+  code/api_reference/
+  showcase/
+
 nav:
 - Getting Started:
   - start/index.md
