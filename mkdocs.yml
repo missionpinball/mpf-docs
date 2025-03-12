@@ -81,10 +81,18 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/missionpinball
 
+# index is not included because it has no other section members
+# code samples are not included because they are all embedded in other pages
+# showcase cannot be included trivially because the files are generated in a separate step
+# icons readme is a note for embedding the meta tags in overrides/main.md
+# welcome wall is for editors to try things out!
 not_in_nav: |
+  index.md
   code/BCP_Protocol/
   code/api_reference/
   showcase/
+  images/icons/README.md
+  welcome_wall.md
 
 nav:
 - Getting Started:
