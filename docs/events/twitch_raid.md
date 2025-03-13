@@ -15,10 +15,10 @@ Another Twitch user has raided your channel
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`raid_count`
+#### `raid_count`:
 
-:   The count of viewers in the raid
+The count of viewers in the raid
 
-`raid_user`
+#### `raid_user`:
 
-:   The user who raided
+The user who raided

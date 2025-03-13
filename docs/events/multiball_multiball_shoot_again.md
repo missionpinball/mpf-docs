@@ -2,7 +2,7 @@
 title: multiball_(name)_shoot_again
 ---
 
-# multiball_(name)_shoot_again
+# multiball_(name)\_shoot_again
 
 
 --8<-- "event.md"
@@ -17,8 +17,8 @@ saved and re-added into play.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that are being saved.
+The number of balls that are being saved.
 
 Event is posted by [multiballs:](../config/multiballs.md)

@@ -2,7 +2,7 @@
 title: (timed_switch)_active
 ---
 
-# (timed_switch)_active
+# (timed_switch)\_active
 
 
 --8<-- "event.md"

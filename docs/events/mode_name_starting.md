@@ -2,7 +2,7 @@
 title: mode_(name)_starting
 ---
 
-# mode_(name)_starting
+# mode_(name)\_starting
 
 
 --8<-- "event.md"

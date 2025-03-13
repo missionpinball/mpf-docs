@@ -2,7 +2,7 @@
 title: multiball_lock_(name)_full
 ---
 
-# multiball_lock_(name)_full
+# multiball_lock_(name)\_full
 
 
 --8<-- "event.md"
@@ -15,8 +15,8 @@ The multiball lock device (name) is now full.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls currently locked in this device.
+The number of balls currently locked in this device.
 
 Event is posted by [multiball_locks:](../config/multiball_locks.md)

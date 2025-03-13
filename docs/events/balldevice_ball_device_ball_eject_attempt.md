@@ -2,7 +2,7 @@
 title: balldevice_(name)_ball_eject_attempt
 ---
 
-# balldevice_(name)_ball_eject_attempt
+# balldevice_(name)\_ball_eject_attempt
 
 
 --8<-- "event.md"
@@ -17,24 +17,24 @@ until the queue is cleared.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that are to be ejected.
+The number of balls that are to be ejected.
 
-`mechanical_eject`
+#### `mechanical_eject`:
 
-:   Boolean as to whether this is a mechanical eject.
+Boolean as to whether this is a mechanical eject.
 
-`num_attempts`
+#### `num_attempts`:
 
-:   How many eject attempts have been tried so far.
+How many eject attempts have been tried so far.
 
-`source`
+#### `source`:
 
-:   The source device that will be ejecting the balls.
+The source device that will be ejecting the balls.
 
-`target`
+#### `target`:
 
-:   The target ball device that will receive these balls.
+The target ball device that will receive these balls.
 
 Event is posted by [ball_devices:](../config/ball_devices.md)

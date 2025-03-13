@@ -2,7 +2,7 @@
 title: playfield_transfer_(playfield_transfer)_ball_transferred
 ---
 
-# playfield_transfer_(playfield_transfer)_ball_transferred
+# playfield_transfer_(playfield_transfer)\_ball_transferred
 
 
 --8<-- "event.md"
@@ -16,12 +16,12 @@ from playfield (source) to playfield (target).
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`source`
+#### `source`:
 
-:   The source playfield.
+The source playfield.
 
-`target`
+#### `target`:
 
-:   The target playfield.
+The target playfield.
 
 Event is posted by [playfield_transfers:](../config/playfield_transfers.md)

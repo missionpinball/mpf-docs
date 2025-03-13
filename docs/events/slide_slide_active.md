@@ -2,7 +2,7 @@
 title: slide_(name)_active
 ---
 
-# slide_(name)_active
+# slide_(name)\_active
 
 
 *MPF-MC Event*

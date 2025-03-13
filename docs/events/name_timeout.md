@@ -2,7 +2,7 @@
 title: (logic_block_name)_timeout
 ---
 
-# (logic_block_name)_timeout
+# (logic_block_name)\_timeout
 
 
 --8<-- "event.md"

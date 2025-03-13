@@ -2,7 +2,7 @@
 title: spinner_(name)_inactive
 ---
 
-# spinner_(name)_inactive
+# spinner_(name)\_inactive
 
 
 --8<-- "event.md"
@@ -18,8 +18,8 @@ active_ms has timed out.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`hits`
+#### `hits`:
 
-:   The number of switch hits the spinner had while it was active
+The number of switch hits the spinner had while it was active
 
 Event is posted by [spinners:](../config/spinners.md)

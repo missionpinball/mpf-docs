@@ -2,7 +2,7 @@
 title: ball_save_(name)_hurry_up
 ---
 
-# ball_save_(name)_hurry_up
+# ball_save_(name)\_hurry_up
 
 
 --8<-- "event.md"

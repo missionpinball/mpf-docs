@@ -15,6 +15,6 @@ Increase the master volume of the audio system.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`volume`
+#### `volume`:
 
-:   New volume as float between 0.0 an 1.0
+New volume as float between 0.0 an 1.0

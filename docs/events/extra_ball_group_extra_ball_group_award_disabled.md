@@ -2,7 +2,7 @@
 title: extra_ball_group_(name)_award_disabled
 ---
 
-# extra_ball_group_(name)_award_disabled
+# extra_ball_group_(name)\_award_disabled
 
 
 --8<-- "event.md"

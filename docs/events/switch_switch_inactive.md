@@ -2,7 +2,7 @@
 title: switch_(name)_inactive
 ---
 
-# switch_(name)_inactive
+# switch_(name)\_inactive
 
 
 *MPF-MC Event*

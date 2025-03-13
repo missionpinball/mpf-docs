@@ -2,7 +2,7 @@
 title: magnet_(name)_grabbed_ball
 ---
 
-# magnet_(name)_grabbed_ball
+# magnet_(name)\_grabbed_ball
 
 
 --8<-- "event.md"

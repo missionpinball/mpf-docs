@@ -2,7 +2,7 @@
 title: logicblock_(name)_complete
 ---
 
-# logicblock_(name)_complete
+# logicblock_(name)\_complete
 
 
 --8<-- "event.md"

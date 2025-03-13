@@ -2,7 +2,7 @@
 title: ball_save_(name)_grace_period
 ---
 
-# ball_save_(name)_grace_period
+# ball_save_(name)\_grace_period
 
 
 --8<-- "event.md"

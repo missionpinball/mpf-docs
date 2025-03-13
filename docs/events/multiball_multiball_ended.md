@@ -2,7 +2,7 @@
 title: multiball_(name)_ended
 ---
 
-# multiball_(name)_ended
+# multiball_(name)\_ended
 
 
 --8<-- "event.md"

@@ -2,7 +2,7 @@
 title: drop_target_bank_(name)_up
 ---
 
-# drop_target_bank_(name)_up
+# drop_target_bank_(name)\_up
 
 
 --8<-- "event.md"

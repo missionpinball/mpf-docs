@@ -16,18 +16,18 @@ start until the queue is cleared.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`ball`
+#### `ball`:
 
-:   The ball number
+The ball number
 
-`balls_remaining`
+#### `balls_remaining`:
 
-:   The number of balls left in the game (not including this one)
+The number of balls left in the game (not including this one)
 
-`is_extra_ball`
+#### `is_extra_ball`:
 
-:   True if this ball is an extra ball (default False)
+True if this ball is an extra ball (default False)
 
-`player`
+#### `player`:
 
-:   The player number
+The player number

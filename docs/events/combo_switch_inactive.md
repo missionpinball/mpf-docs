@@ -2,7 +2,7 @@
 title: (combo_switch_name)_inactive
 ---
 
-# (combo_switch_name)_inactive
+# (combo_switch_name)\_inactive
 
 
 --8<-- "event.md"

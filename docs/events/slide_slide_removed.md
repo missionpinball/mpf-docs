@@ -2,7 +2,7 @@
 title: slide_(name)_removed
 ---
 
-# slide_(name)_removed
+# slide_(name)\_removed
 
 
 *MPF-MC Event*

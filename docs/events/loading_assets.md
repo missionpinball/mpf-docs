@@ -18,23 +18,23 @@ to zero.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`loaded`
+#### `loaded`:
 
-:   The number of assets that have been loaded so far.
+The number of assets that have been loaded so far.
 
-`percent`
+#### `percent`:
 
-:   The numerical percent completion of the assets loaded, express in
-    the range of 0 to 100.
+The numerical percent completion of the assets loaded, express in
+the range of 0 to 100.
 
-`remaining`
+#### `remaining`:
 
-:   The number of assets that are remaining to be loaded.
+The number of assets that are remaining to be loaded.
 
-`total`
+#### `total`:
 
-:   The total number of assets that need to be loaded. This is equal to
-    the sum of the *loaded* and *remaining* values below. It also
-    includes assets that MPF is loading itself as well as any assets
-    that have been reported from remotely connected BCP hosts (e.g. the
-    media controller).
+The total number of assets that need to be loaded. This is equal to
+the sum of the *loaded* and *remaining* values below. It also
+includes assets that MPF is loading itself as well as any assets
+that have been reported from remotely connected BCP hosts (e.g. the
+media controller).

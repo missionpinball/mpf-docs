@@ -15,6 +15,6 @@ The ball search phase (num) has started.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`iteration`
+#### `iteration`:
 
-:   Current iteration of phase (num)
+Current iteration of phase (num)

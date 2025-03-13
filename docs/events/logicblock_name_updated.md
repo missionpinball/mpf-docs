@@ -2,7 +2,7 @@
 title: logicblock_(name)_updated
 ---
 
-# logicblock_(name)_updated
+# logicblock_(name)\_updated
 
 
 --8<-- "event.md"
@@ -17,13 +17,13 @@ This might happen when the block advanced, was reset, or was restored.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`enabled`
+#### `enabled`:
 
-:   Whatever this block is enabled or not.
+Whatever this block is enabled or not.
 
-`value`
+#### `value`:
 
-:   The current value of this block.
+The current value of this block.
 
 Event is posted by [counters:](../config/counters.md)
 

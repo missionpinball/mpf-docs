@@ -2,7 +2,7 @@
 title: (name)_inactive
 ---
 
-# (name)_inactive
+# (name)\_inactive
 
 
 --8<-- "event.md"

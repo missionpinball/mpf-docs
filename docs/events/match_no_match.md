@@ -15,22 +15,22 @@ All players missed the match number.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`match_number0`
+#### `match_number0`:
 
-:   Match number for player 0
+Match number for player 0
 
-`match_number1`
+#### `match_number1`:
 
-:   Match number for player 1
+Match number for player 1
 
-`match_numberX`
+#### `match_numberX`:
 
-:   Match number for player X (up to max players)
+Match number for player X (up to max players)
 
-`winner_number`
+#### `winner_number`:
 
-:   Winner number
+Winner number
 
-`winners`
+#### `winners`:
 
-:   Number of winners (always 0 here)
+Number of winners (always 0 here)

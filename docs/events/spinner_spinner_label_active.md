@@ -2,7 +2,7 @@
 title: spinner_(name)_(label)_active
 ---
 
-# spinner_(name)_(label)_active
+# spinner_(name)\_(label)\_active
 
 
 --8<-- "event.md"

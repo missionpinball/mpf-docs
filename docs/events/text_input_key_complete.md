@@ -2,7 +2,7 @@
 title: text_input_(key)_complete
 ---
 
-# text_input_(key)_complete
+# text_input_(key)\_complete
 
 
 *MPF-MC Event*
@@ -16,6 +16,6 @@ text is finalized.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`text`
+#### `text`:
 
-:   A string of the final characters that were entered.
+A string of the final characters that were entered.

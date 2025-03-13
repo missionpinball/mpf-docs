@@ -2,7 +2,7 @@
 title: diverter_(name)_deactivating
 ---
 
-# diverter_(name)_deactivating
+# diverter_(name)\_deactivating
 
 
 --8<-- "event.md"

@@ -2,7 +2,7 @@
 title: balldevice_(name)_ball_enter
 ---
 
-# balldevice_(name)_ball_enter
+# balldevice_(name)\_ball_enter
 
 
 --8<-- "event.md"
@@ -22,12 +22,12 @@ available_balls of the device during this event.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`device`
+#### `device`:
 
-:   A reference to the ball device object that is posting this event.
+A reference to the ball device object that is posting this event.
 
-`unclaimed_balls`
+#### `unclaimed_balls`:
 
-:   The number of balls that have not yet been claimed.
+The number of balls that have not yet been claimed.
 
 Event is posted by [ball_devices:](../config/ball_devices.md)

@@ -2,7 +2,7 @@
 title: timer_(name)_complete
 ---
 
-# timer_(name)_complete
+# timer_(name)\_complete
 
 
 --8<-- "event.md"
@@ -18,12 +18,12 @@ posted, depending on its settings.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`ticks`
+#### `ticks`:
 
-:   The current tick number this timer is at.
+The current tick number this timer is at.
 
-`ticks_remaining`
+#### `ticks_remaining`:
 
-:   The number of ticks in this timer remaining.
+The number of ticks in this timer remaining.
 
 Event is posted by [timers:](../config/timers.md)

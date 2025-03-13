@@ -2,7 +2,7 @@
 title: achievement_(name)_changed_state
 ---
 
-# achievement_(name)_changed_state
+# achievement_(name)\_changed_state
 
 
 --8<-- "event.md"
@@ -20,16 +20,16 @@ next ball to restore state.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`restore`
+#### `restore`:
 
-:   true if this is reposted to restore state
+true if this is reposted to restore state
 
-`selected`
+#### `selected`:
 
-:   Whatever this achievement is selected currently
+Whatever this achievement is selected currently
 
-`state`
+#### `state`:
 
-:   Current state
+Current state
 
 Event is posted by [achievements:](../config/achievements.md)

@@ -2,7 +2,7 @@
 title: (playfield_name)_active
 ---
 
-# (playfield_name)_active
+# (playfield_name)\_active
 
 
 --8<-- "event.md"

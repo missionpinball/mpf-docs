@@ -16,8 +16,8 @@ A ball device has just captured a ball from the device called
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that were captured.
+The number of balls that were captured.
 
 Event is posted by [ball_devices:](../config/ball_devices.md)

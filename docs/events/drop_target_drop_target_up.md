@@ -2,7 +2,7 @@
 title: drop_target_(name)_up
 ---
 
-# drop_target_(name)_up
+# drop_target_(name)\_up
 
 
 --8<-- "event.md"

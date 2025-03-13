@@ -2,7 +2,7 @@
 title: display_(name)_initialized
 ---
 
-# display_(name)_initialized
+# display_(name)\_initialized
 
 
 *MPF-MC Event*

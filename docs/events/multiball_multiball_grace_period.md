@@ -2,7 +2,7 @@
 title: multiball_(name)_grace_period
 ---
 
-# multiball_(name)_grace_period
+# multiball_(name)\_grace_period
 
 
 --8<-- "event.md"

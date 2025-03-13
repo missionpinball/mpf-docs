@@ -2,7 +2,7 @@
 title: logicblock_(name)_hit
 ---
 
-# logicblock_(name)_hit
+# logicblock_(name)\_hit
 
 
 --8<-- "event.md"

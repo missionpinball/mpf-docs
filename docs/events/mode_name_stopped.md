@@ -2,7 +2,7 @@
 title: mode_(name)_stopped
 ---
 
-# mode_(name)_stopped
+# mode_(name)\_stopped
 
 
 --8<-- "event.md"

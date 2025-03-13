@@ -2,7 +2,7 @@
 title: (shot_group_name)_(state)_hit
 ---
 
-# (shot_group_name)_(state)_hit
+# (shot_group_name)\_(state)\_hit
 
 
 --8<-- "event.md"

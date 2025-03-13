@@ -19,6 +19,6 @@ so if the bonus multiplier is 1, then this event will be skipped.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`score`
+#### `score`:
 
-:   The score of the bonus (so far)
+The score of the bonus (so far)

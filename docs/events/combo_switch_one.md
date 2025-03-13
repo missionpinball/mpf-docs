@@ -2,7 +2,7 @@
 title: (combo_switch_name)_one
 ---
 
-# (combo_switch_name)_one
+# (combo_switch_name)\_one
 
 
 --8<-- "event.md"

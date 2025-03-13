@@ -15,14 +15,14 @@ A chat user has donated bits on Twitch
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`bits`
+#### `bits`:
 
-:   The number of bits donated
+The number of bits donated
 
-`message`
+#### `message`:
 
-:   Chat message text
+Chat message text
 
-`user`
+#### `user`:
 
-:   The chat user name who subscribed
+The chat user name who subscribed

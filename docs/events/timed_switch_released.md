@@ -2,7 +2,7 @@
 title: (timed_switch)_released
 ---
 
-# (timed_switch)_released
+# (timed_switch)\_released
 
 
 --8<-- "event.md"

@@ -2,7 +2,7 @@
 title: sw_(tag)_inactive
 ---
 
-# sw_(tag)_inactive
+# sw_(tag)\_inactive
 
 
 --8<-- "event.md"

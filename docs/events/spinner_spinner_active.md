@@ -2,7 +2,7 @@
 title: spinner_(name)_active
 ---
 
-# spinner_(name)_active
+# spinner_(name)\_active
 
 
 --8<-- "event.md"
@@ -18,8 +18,8 @@ not already active.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`label`
+#### `label`:
 
-:   The label of the switch that triggered the activation
+The label of the switch that triggered the activation
 
 Event is posted by [spinners:](../config/spinners.md)
