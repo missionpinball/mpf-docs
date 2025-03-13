@@ -98,7 +98,7 @@ ball device.
     this device mean that a ball has drained from the playfield, that
     it's ok to start a game with a ball here, and that this device is
     used to store unused balls.
-* Set [eject_timeouts](#) to the maximum time the ball can
+* Set `eject_timeouts` to the maximum time the ball can
     take to return if the eject fails.
 
 Your drain device configuration should look now look like this:

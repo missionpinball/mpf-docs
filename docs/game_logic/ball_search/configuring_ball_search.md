@@ -5,7 +5,7 @@ title: How to configure Ball Search
 # How to configure Ball Search
 
 
-To enable ball search set [enable_ball_search](#) to True for
+To enable ball search set `enable_ball_search` to True for
 your playfield(s). In most cases, this is as simple as this:
 
 ``` mpf-config
@@ -30,14 +30,14 @@ playfields:
 Ball search will run in multiple phases with increasing intensity (phase
 1 to 3) and give up afterwards. To change the timeout before ball search
 starts when no ball was seen by MPF, change
-[ball-search-timeout](#). Similarly,
-[ball-search-interval](#) determines the delay between coil
+`ball-search-timeout`. Similarly,
+`ball-search-interval` determines the delay between coil
 fires during search. You can further configure ball search per
 [playfield](../../config/playfields.md).
 
 Coils are included indirectly using their devices. Most devices allow
 you to configure their order in ball search using the
-[ball_search_order](#) attribute (see the
+`ball_search_order` attribute (see the
 [example ball_search](../../examples/index.md)). By default flippers are not included in ball search.
 However, you might want to enable it for upper playfield flippers:
 

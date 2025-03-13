@@ -453,8 +453,7 @@ you need to add a `hardware:` section to your config file, and then you
 add settings for `platform:` and `driverboards:`.
 
 Don't worry if you do not have any hardware yet. You can run through
-the tutorial without hardware by using the [virtual](#)
-hardware platform.
+the tutorial without hardware by using the `virtual` hardware platform.
 
 Remember earlier in this step, we provided links to the documentation
 for each platform. Here is

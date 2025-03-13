@@ -281,10 +281,10 @@ not in progress.)
 If you played with this, you most likely noticed that the shots didn't
 actually reset once they were all complete. So that's what we'll do in
 this step. The way we'll do that is to add an entry for
-[reset_events:](#) which specifies what events will cause the
-shots to reset. To do that, go back into your [base.yaml](#)
+`reset_events:` which specifies what events will cause the
+shots to reset. To do that, go back into your `base.yaml`
 file and add another setting to your *indy_lanes* shot group for
-[reset_events:](#), like this:
+`reset_events:`, like this:
 
 ``` mpf-config
 #! switches:
@@ -475,7 +475,7 @@ As it is now, when you complete the lanes, you get the points which is
 cool, but after 1 second the lights just sort of unceremoniously reset.
 Boring! So let's create a light show that flashes the lane lights when
 you complete the lanes. To do this, let's first create a light show
-(details in Steps A and B [here](#)) called
+(details in Steps A and B `here`) called
 \`indy_lanes_complete.yaml\`:
 
 ``` mpf-config
@@ -496,8 +496,8 @@ you complete the lanes. To do this, let's first create a light show
 
 Obviously you can make this show do whatever you want; I opted for a
 simple one that sort of alternates the lights. Then to run the light
-show, go back to your [base.yaml](#) mode config and add a
-[light_player:](#) entry which plays this show when the lanes
+show, go back to your `base.yaml` mode config and add a
+`light_player:` entry which plays this show when the lanes
 are complete, like this:
 
 ``` mpf-config

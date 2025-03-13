@@ -23,7 +23,7 @@ You can easily use this numerical value in a text widget to show the
 number of combos complete, or the number of pop bumper hits required for
 super jets, etc. This player variable "state" is different than the
 state of the logic block itself, which is an object with
-[enabled](#), [completed](#), and [value](#)
+`enabled`, `completed`, and `value`
 attributes. Note the difference in accessing the logic block state as a
 dynamic value vs. placeholder text:
 

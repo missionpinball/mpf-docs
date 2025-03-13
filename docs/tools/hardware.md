@@ -10,7 +10,7 @@ hardware:
 
 ## mpf hardware scan
 
-You can run [mpf hardware scan](#) to get an overview over the
+You can run `mpf hardware scan` to get an overview over the
 connected hardware. MPF will try to enumerate all connected boards and
 tell you what it know about your hardware. The output varies per
 hardware platform from almost nothing to a lot.

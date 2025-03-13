@@ -123,13 +123,13 @@ pixel-style display), we have some
 
 ### bitmap_font:
 
-A true/false value indicating whether the [font_name:](#)
+A true/false value indicating whether the `font_name:`
 setting contains the name of a
 [bitmap_font](../../../config/bitmap_fonts.md)
-asset. When set to [True](#), [font_name:](#) must
-refer to an existing bitmap_font asset name and [font_size:](#)
-will be ignored. When set to [False](#),
-[font_name:](#) should refer to a font name.
+asset. When set to `True`, `font_name:` must
+refer to an existing bitmap_font asset name and `font_size:`
+will be ignored. When set to `False`,
+`font_name:` should refer to a font name.
 
 ### font_size:
 

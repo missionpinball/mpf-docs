@@ -54,7 +54,7 @@ segment_displays:
     number: 6
 ```
 
-You can configure your serial port in [port](#). See
+You can configure your serial port in `port`. See
 [segment_display](../../mc/displays/alpha_numeric.md) for more informations about how to drive segment display in
 your game.
 
@@ -86,7 +86,7 @@ segment_displays:
     number: 4
 ```
 
-You can configure your serial port in [port](#). See
+You can configure your serial port in `port`. See
 [segment_display](../../mc/displays/alpha_numeric.md) for more informations about how to drive segment display in
 your game.
 

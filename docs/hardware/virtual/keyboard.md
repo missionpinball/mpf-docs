@@ -18,7 +18,7 @@ map single key presses or combinations of keys, and you can use the
 keyboard module with or without a physical pinball machine connected to
 your computer.
 
-To use the keyboard interface, you add a [keyboard:](#) section
+To use the keyboard interface, you add a `keyboard:` section
 to your machine configuration file and then create a list which maps
 keyboard keys to pinball machine switch names or MPF events. Then when
 you press a key on the keyboard, the switch controller receives that

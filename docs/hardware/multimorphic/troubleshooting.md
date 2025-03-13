@@ -139,7 +139,7 @@ the following points:
 
 ### On the P3-Roc
 
-* Do your SW-16 show in [mpf hardware scan](#)? (see above)
+* Do your SW-16 show in `mpf hardware scan`? (see above)
 * If not: Is the SW-16 bus connected properly (and not twisted)?
 * Is ground connected properly to your switches? Should be connected
     to pin 10 on J2 or J6 of SW-16.

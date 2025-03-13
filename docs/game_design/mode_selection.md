@@ -195,7 +195,7 @@ of your modes.
 This might be useful for cases where you want to select characters or
 general awards which then might influence how fast your modes start. For
 instance this might be combined with the example above by influencing
-the [starting_count:](#) or [count_complete_value](#)
+the `starting_count:` or `count_complete_value:`
 using conditional events:
 
 ``` mpf-config

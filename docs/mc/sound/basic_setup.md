@@ -15,7 +15,7 @@ you're using MPF-MC for your media controller. Please ensure your
 system is properly setup to play sound (drivers are installed and
 configured) before proceeding with this guide.
 
-## 1. Configuring the [sound_system](#)
+## 1. Configuring the `sound_system`
 
 The first step in the process of setting up sound for your machine is to
 setup the `sound_system:` section of your machine configuration file

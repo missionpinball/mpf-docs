@@ -47,7 +47,7 @@ List of one (or more) values, each is a type:
 [bcp_connection:](bcp_connection.md).
 Defaults to empty.
 
-The [connections:](#) section is where you can specify the
+The `connections:` section is where you can specify the
 connections the MPF core engine will make to standalone media
 controllers. MPF supports connecting to multiple media controllers
 simultaneously which is why you can add multiple entries here.
@@ -64,7 +64,7 @@ List of one (or more) values, each is a type:
 [bcp_server:](bcp_server.md). Defaults to
 empty.
 
-The [servers:](#) section is where you can specify bcp server
+The `servers:` section is where you can specify bcp server
 instances which can be connected from other processes. For instance,
 this is used for the
 [service cli](../running/commands/service.md).
