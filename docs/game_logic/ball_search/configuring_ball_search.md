@@ -57,7 +57,7 @@ flippers:
     activation_switch: s_flipper_left
 ```
 
-Make sure to include the tag [playfield_active](#) in all
+Make sure to include the tag `playfield_active` in all
 playfield switches which are not bound to devices. For instance do not
 put that tag into your plunger switch but put it to target, inlane and
 outlane switches.

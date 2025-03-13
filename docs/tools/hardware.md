@@ -60,14 +60,14 @@ hardware_benchmark:
   flipper: f_flipper
 ```
 
-Disconnect or disable high voltage. Then connect [s_test1](#)
-to [c_coil1](#) and [s_test2](#) to
-[c_coil2](#). MPF will enable the flipper
-[f_flipper](#) which will create a hardware rule on
-[s_test1](#) to pulse [c_coil2](#). Afterwards, MPF
-will pulse [c_coil1](#) which should then activate
-[s_test1](#). In turn the hardware rule should pulse
-[c_coil2](#) which then activates [s_test2](#).
+Disconnect or disable high voltage. Then connect `s_test1`
+to `c_coil1` and `s_test2` to
+`c_coil2`. MPF will enable the flipper
+`f_flipper` which will create a hardware rule on
+`s_test1` to pulse `c_coil2`. Afterwards, MPF
+will pulse `c_coil1` which should then activate
+`s_test1`. In turn the hardware rule should pulse
+`c_coil2` which then activates `s_test2`.
 Hardware benchmark will measure the timings of the two switches. It will
 repeat this procedure a few times and run some statistics on the
 results.

@@ -671,10 +671,9 @@ This is a 0.52 maintenance release with cleanups and some refactorings.
 We identified a few potential upgrade issues:
 
 * We fixed validation of animations. You might get a validation error
-    with [repeat: -1](#). Change it to [repeat:
-    false](#). See the [change in the
+    with `repeat: -1`. Change it to `repeat: false`. See the [change in the
     docs](https://github.com/missionpinball/mpf-docs/commit/6a141ec4434a0904d92f05bcbce1fe345513c018).
-* We changed [active_time](#) of ball_save from ms to secs.
+* We changed `active_time` of ball_save from ms to secs.
     In case you did not use a unit here this might change the time.
     [Details](https://github.com/missionpinball/mpf/pull/1463).
 * [Machine variables
@@ -1773,7 +1772,7 @@ Sept 14, 2015
         config processing was done manually in each module before.
     * The config processing is more efficient and less-error prone
         since it's not written from scratch for each module.
-    * There's now a master list (in [mpfconfig.yaml](#)) of
+    * There's now a master list (in `mpfconfig.yaml`) of
         all config settings for all device types.
     * The config processor and validator can run as a service to
         support the back-end business logic behind future GUI tools
@@ -1898,9 +1897,9 @@ Released: May 4, 2015
 * Added version control to config files.
 * Added volume control.
 * Switches that you want to start active when using virtual hardware
-    are now added to the [virtual platform start active
-    switches:](#) section instead of being a property of the
-    [keyboard:](#) entry.
+    are now added to the `virtual platform start active
+    switches:` section instead of being a property of the
+    `keyboard:` entry.
 * Converted several former plugins to system modules, including shots,
     scoring, bcp, and logic blocks.
 * General performance improvements. (Running MPF on my machine used to
@@ -1981,10 +1980,10 @@ Released: February 9, 2015
     playfield device module.
 * Different types of events were broken out into their own methods.
     For example, to post a boolean event, instead of calling
-    [event.post(type='boolean')](#), you now use
-    [event.post_boolean()](#). There are similar new methods
-    for other event types, like [post_relay()](#) and
-    [post_queue()](#).
+    `event.post(type='boolean')`, you now use
+    `event.post_boolean()`. There are similar new methods
+    for other event types, like `post_relay()` and
+    `post_queue()`.
 * Added a debug option for ball devices which enables extra debug
     logging for problem devices.
 * Tilt status was removed from the machine controller. (It was

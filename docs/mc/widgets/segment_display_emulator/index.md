@@ -249,10 +249,8 @@ The `character_map` parameter allows custom character segment mappings
 This advanced feature is useful for creating your own special characters
 or simply overriding the default mappings for any individual character.
 For more information on segment display character mappings, see [David
-Madison's Segmented LED Display - ASCII Library page
-<https://github.com/dmadison/LED-Segment-ASCII>](#). This
-parameter is a dictionary with integer keys and values (key is the ascii
-character ordinal number, value is the segment bit mapping as an
-integer).
+Madison's Segmented LED Display - ASCII Library page](https://github.com/dmadison/LED-Segment-ASCII).
+This parameter is a dictionary with integer keys and values (key is the ascii
+character ordinal number, value is the segment bit mapping as an integer).
 
 * [How to setup and use the virtual segment display emulator](how_to.md)

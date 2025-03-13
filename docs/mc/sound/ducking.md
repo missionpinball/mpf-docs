@@ -28,7 +28,7 @@ music. The following parameters control the ducking behavior of the
 voice clip:
 
 * `target` - The track name to apply the ducking to when the sound is
-    played. In the example above the [music](#) track is the
+    played. In the example above the `music` track is the
     target.
 * `delay` - The duration to delay after the sound starts playing
     before ducking starts. This value may be specified as a time string

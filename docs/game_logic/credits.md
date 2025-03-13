@@ -357,11 +357,11 @@ they're displayed in your particular machine. (We'll use an example of
     including the fraction (if there are any partial credits). For
     example, `2 1/4`.
 * `credits_whole_num` -- This is just the whole number of credits.
-    Example: [2](#).
+    Example: `2`.
 * `credits_numerator` -- This is just the numerator of the fraction of
-    partial credits. Example: [1](#).
+    partial credits. Example: `1`.
 * `credits_denominator` -- This is just the denominator of the
-    fraction of partial credits. Example: [4](#).
+    fraction of partial credits. Example: `4`.
 
 The denominator of the fraction in the `credit_string` is automatically
 calculated based on the smallest value coin switch and the price of your

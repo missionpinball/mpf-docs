@@ -68,7 +68,7 @@ Channels use the format: `board_number-led_index`
 
 This is almost the same as above but it addresses only one output
 (instead of three). You can use the channel syntax as for
-[l_led0](#) above:
+`l_led0` above:
 
 ``` mpf-config
 lights:

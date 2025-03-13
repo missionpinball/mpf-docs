@@ -162,7 +162,7 @@ File “/usr/local/lib/python3.8/dist-packages/mpf/platforms/p_roc_common.py”,
 ImportError: No module named ‘pinproc’
 ```
 
-Try Changing [Edit install-proc:](#)
+Try Changing `Edit install-proc:`
 
 From:
 

@@ -193,9 +193,9 @@ Start your fadecandy server with the following config:
 }
 ```
 
-Replace [YOUR_FADECANDY_SERIAL](#) with the serial of your
+Replace `YOUR_FADECANDY_SERIAL` with the serial of your
 fadecandy. The serial will be shown on the console of
-[fcserver](#) when connecting your fadecandy.
+`fcserver` when connecting your fadecandy.
 
 Then configure your lights as follows:
 
@@ -271,11 +271,11 @@ config:
 }
 ```
 
-Replace [YOUR_FADECANDY_SERIAL1](#),
-[YOUR_FADECANDY_SERIAL2](#) and
-[YOUR_FADECANDY_SERIAL3](#) with the serials of your fadecandy
+Replace `YOUR_FADECANDY_SERIAL1`,
+`YOUR_FADECANDY_SERIAL2` and
+`YOUR_FADECANDY_SERIAL3` with the serials of your fadecandy
 boards (you can use more or less than three). The serial will be shown
-on the console of [fcserver](#) when connecting your fadecandy.
+on the console of `fcserver` when connecting your fadecandy.
 
 Afterwards, configure your lights as follows:
 

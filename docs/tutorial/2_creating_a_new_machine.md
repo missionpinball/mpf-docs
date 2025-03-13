@@ -258,8 +258,8 @@ This means you don't have `#config_version=6` in the top line of your
 config file. (Make sure you include the hash mark as part of that.)
 
 If the following line at the end of your log and nothing more happens
-you probably started mpf with mc (i.e. by omitting the [-b](#)
-switch). This can be fixed by either running [mpf -b](#) or by
+you probably started mpf with mc (i.e. by omitting the `-b`
+switch). This can be fixed by either running `mpf -b` or by
 making sure that the media controller is running.
 
 ``` console

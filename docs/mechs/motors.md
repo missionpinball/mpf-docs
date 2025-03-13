@@ -48,11 +48,11 @@ motors:
 
 The motor can run continuously and drives a camshaft which moves the
 bank up and down. MPF will figure the position using two position
-switches [s_position_up](#) and [s_position_down](#).
-To enable the motor we use a digitial_output [c_motor_run](#)
+switches `s_position_up` and `s_position_down`.
+To enable the motor we use a digitial_output `c_motor_run`
 which maps to a driver. On reset the bank moves down and can afterwards
-be commanded using the events [go_up](#) and
-[go_down](#).
+be commanded using the events `go_up` and
+`go_down`.
 
 The following is an example to drive the slimer in Stern Ghostbusters:
 
@@ -85,12 +85,12 @@ motors:
 ```
 
 The slimer motor can move in two directions using two digital_outputs
-[c_slimer_motor_forward](#) and
-[c_slimer_motor_backward](#) which map to lights in Spike. The
-switches [s_slimer_home](#) and [s_slimer_away](#) are
+`c_slimer_motor_forward` and
+`c_slimer_motor_backward` which map to lights in Spike. The
+switches `s_slimer_home` and `s_slimer_away` are
 used by to determine the current position. To command the slimer use the
-events [slimer_home](#) or [slimer_away](#).
+events `slimer_home` or `slimer_away`.
 
 ## Related Events
 
-* [motor_(name)_[reached_(position)](../events/motor_motor_reached_position.md)
+* [motor_(name)\_[reached_(position)](../events/motor_motor_reached_position.md)

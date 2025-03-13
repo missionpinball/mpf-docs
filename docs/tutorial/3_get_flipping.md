@@ -675,8 +675,8 @@ any flipping, check the following:
 If MPF crashes or gives an error:
 
 * If you're using a P-ROC and you get a bunch of really fast messages
-    about [Error opening P-ROC device](#) and [Failed, trying
-    again...](#), this is because (1) your pinball machine is
+    about `Error opening P-ROC device` and `Failed, trying
+    again...`, this is because (1) your pinball machine is
     not turned on, (2) your P-ROC is not connected to your computer (via
     USB), or (3) you have a problem with the P-ROC drivers. If you're
     running MPF in a virtual machine, make sure the USB connection is

@@ -60,7 +60,7 @@ before your before your machine config. (MPF MC includes a file
 `mcconfig.yaml` which is inside the MPF MC package which sets up default
 things like which modules are loaded, paths used, etc. If for some
 reason you want to override this file, you can do so with the
-[-C](#) option.
+`-C` option.
 
 Note that the `-C` option is used by both `mpf game` and `mpf mc`, but
 these two packages use different default files. So if you want to
@@ -115,7 +115,7 @@ Note that on due to the way the command prompt console works on Windows,
 enabling verbose logging on Windows will significantly affect MPF (in a
 bad way). Windows computers can run MPF no problem, but because of their
 weird console slowness we recommend that you do not use the
-[-V](#) command line option from a Windows computer.
+`-V` command line option from a Windows computer.
 
 ### -x (lowercase)
 
@@ -125,7 +125,7 @@ when you don't have your physical hardware attached.
 
 ### -X (uppercase)
 
-Like [-x](#), except it forces the *smart virtual* platform.
+Like `-x`, except it forces the *smart virtual* platform.
 
 ## Unused Options
 

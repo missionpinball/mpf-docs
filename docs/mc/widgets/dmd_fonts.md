@@ -38,7 +38,7 @@ low-res DMD.)
 
 ## style: big
 
-[big](#) is 10 pixels tall.
+`big` is 10 pixels tall.
 
 ``` mpf-mc-config
 slides:
@@ -59,7 +59,7 @@ slides:
 
 ## style: med
 
-[medium](#) is 7 pixels tall.
+`medium` is 7 pixels tall.
 
 ``` mpf-mc-config
 slides:
@@ -80,7 +80,7 @@ slides:
 
 ## style: small
 
-[small](#) is 5 pixels tall.
+`small` is 5 pixels tall.
 
 Notice that this font has a color set and we're using it with a Color
 DMD. All three of these fonts (like any font) can be used on a mono or

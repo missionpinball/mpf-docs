@@ -57,8 +57,8 @@ sound_pools:
 To create a sound pool, add a sub entry to the `sound_pools:` section of
 your config which will be the name of that sound pool. The name must be
 unique among all sound pools *and* sound assets. In the above example
-[drain_callout:](#), [slingshot:](#) and
-[target_completion:](#) are each a sound pool name. Then create
+`drain_callout:`, `slingshot:` and
+`target_completion:` are each a sound pool name. Then create
 one or more of the following settings for each sound pool:
 
 ## Required settings
@@ -77,11 +77,11 @@ number controls the relative weighting for random item selection, or the
 number of times to play the sound before moving to the next sound in the
 pool with a sequence pool. If no weight value is provided, a default
 value of `1` will be applied. In the example above, the
-[slingshot:](#) random sound pool contains relative weighting
+`slingshot:` random sound pool contains relative weighting
 values. The weights sum to 10 for the three sounds so the
-[slingshot_01](#) sound has a probability of being randomly
-selected of 5 out of 10 (50%), [slingshot_02](#) 3/10 (30%),
-and [slingshot_03](#) 2/10 (20%).
+`slingshot_01` sound has a probability of being randomly
+selected of 5 out of 10 (50%), `slingshot_02` 3/10 (30%),
+and `slingshot_03` 2/10 (20%).
 
 !!! note
 

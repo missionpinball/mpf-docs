@@ -77,7 +77,7 @@ Specify the name of the MPF default config file which is loaded before
 your machine config. (MPF includes a file `mpfconfig.yaml`
 which is inside the MPF package which sets up default things like which
 modules are loaded, paths used, etc. If for some reason you want to
-override this file, you can do so with the [-C](#) option.
+override this file, you can do so with the `-C` option.
 
 ### -h
 
@@ -128,7 +128,7 @@ Note that due to the way the command prompt console works on Windows,
 enabling verbose logging on Windows will significantly affect MPF (in a
 bad way). Windows computers can run MPF no problem, but because of their
 weird console slowness we recommend that you do not use the
-[-V](#) command line option from a Windows computer.
+`-V` command line option from a Windows computer.
 
 ### -x (lowercase)
 
@@ -139,10 +139,10 @@ your physical hardware attached.
 
 ### -X (uppercase)
 
-Like [-x](#), except it forces the
+Like `-x`, except it forces the
 [smart virtual platform](../../hardware/virtual/smart_virtual.md).
 
 ### --vpx
 
-Like [-x](#), except it forces the
+Like `-x`, except it forces the
 [Virtual Pinball (VPX) platform](../../hardware/virtual/virtual_pinball_vpx.md).
