@@ -40,7 +40,7 @@ systemctl enable pigpiod.service
 systemctl start pigpiod.service
 ```
 
-The [enable](#) step gets the service running at startup, thus
+The `enable` step gets the service running at startup, thus
 it is optional.
 
 ## Using pigpio via network

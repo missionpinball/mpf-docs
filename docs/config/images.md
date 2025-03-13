@@ -100,9 +100,9 @@ Specifies when this asset should be loaded. (See the
 [Assets](../assets/index.md) documentation for an
 explanation on loading.)
 
-* [preload](#) (The asset is loaded when MPF boots and stays
+* `preload` (The asset is loaded when MPF boots and stays
     in memory as long as MPF is running.)
-* [mode_start](#) (The asset is loaded when the mode starts
+* `mode_start` (The asset is loaded when the mode starts
     and is unloaded when the mode ends. This option is only valid for
     asset files that are in mode folders, not machine-wide assets.)
 * Anything else (or nothing at all) means that the asset it loaded

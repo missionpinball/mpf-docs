@@ -50,7 +50,7 @@ Baud rate of your serial port. Depends on the smartmatrix firmware.
 Single value, type: `string`. Defaults to empty.
 
 Name of the serial port of your smartmatrix device. This will be
-[comX](#) on Windows. On Linux and Mac it depends on the
+`comX` on Windows. On Linux and Mac it depends on the
 usb-serial chip (usually /dev/ttyUSBX on linux or /dev/tty.usbmodemYYY
 on Mac).
 

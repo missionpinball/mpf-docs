@@ -78,7 +78,7 @@ progress, your own game design may have other approaches.
 ## Starting and Stopping Wizard Modes
 
 Most wizard modes will be started and stopped like any other game mode,
-using the mode [start_events](#) and [stop_events](#).
+using the mode `start_events` and `stop_events`.
 There will usually be a close relationship between the start/stop events
 and the achievement state events, as in these typical examples:
 

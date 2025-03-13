@@ -48,11 +48,10 @@ USB. See [/mechs/lights/ws2812](connecting.md) for details about
 chains. If you only got one chain you can omit this part and your format
 becomes `card_num`-`index`.
 
-`card_num`[ is the index of the board on the chain. As the first board
-is always at addr ](#)[0x20](#)[ you can calculate the
-addr using ](#)[0x20 + card_num](#)[. If you only got
-one board you can omit the board and your format becomes just
-](#)[index](#)\`.
+`card_num` is the index of the board on the chain. As the first board
+is always at addr `0x20` you can calculate the
+addr using `0x20` + card_num. If you only got
+one board you can omit the board and your format becomes just `index`.
 
 For instance, `0-0-0` for the first RGB LED on chain `0` on card `0x20`.
 In this case you can also use `0-0` or `0` (channel `0-2`). `0-0-1` or

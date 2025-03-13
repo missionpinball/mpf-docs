@@ -127,7 +127,7 @@ converted to floating point). Default: `1.0, 1.0, 1.0`
 Specifies the white point (or white balance) of your lights. Enter it as
 a list of three floating point values that correspond to the red, blue,
 and green light segments. These values are treated as multipliers to all
-incoming color commands. The default of [1.0, 1.0, 1.0](#)
+incoming color commands. The default of `1.0, 1.0, 1.0`
 means that no white point adjustment is used. [1.0, 1.0,
 0.8](#) would set the blue segment to be at 80% brightness
 while red and green are 100%, etc.

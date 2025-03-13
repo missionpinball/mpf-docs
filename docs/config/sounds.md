@@ -167,10 +167,10 @@ Single value, type: `string`. Defaults to empty.
 Sometimes you might want to name a file one thing on disk but refer to
 it as another thing in your game and config files. In this case, you can
 create an `file:` setting in an asset entry. (Note the file:
-[extra_ball_12753.wav](#) setting in the example above, and
+`extra_ball_12753.wav` setting in the example above, and
 note that it includes the file extension.) In this example, you would
-refer to that image asset as [extra_ball](#) even though the
-file is [extra_ball_12753](#). You might be wondering why this
+refer to that image asset as `extra_ball` even though the
+file is `extra_ball_12753`. You might be wondering why this
 exists? Why not just change the file name to be whatever you want and/or
 who cares what the name is? The reason this function exists is because
 it allows for the separation of the actual file on disk from the way

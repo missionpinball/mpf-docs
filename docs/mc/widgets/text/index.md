@@ -79,7 +79,7 @@ This value is required. If you don't want text, use ""
 Your text can contain placeholders as described in
 [dynamic text](text_dynamic.md).
 
-Newline characters ([n](#)) are supported in text values to
+Newline characters (`\n`) are supported in text values to
 create multiple lines with line breaks, however you must surround the
 text with quotes or the backslash will be treated as a printing
 character and will appear in the output. For example:
@@ -123,13 +123,13 @@ pixel-style display), we have some
 
 ### bitmap_font:
 
-A true/false value indicating whether the [font_name:](#)
+A true/false value indicating whether the `font_name:`
 setting contains the name of a
 [bitmap_font](../../../config/bitmap_fonts.md)
-asset. When set to [True](#), [font_name:](#) must
-refer to an existing bitmap_font asset name and [font_size:](#)
-will be ignored. When set to [False](#),
-[font_name:](#) should refer to a font name.
+asset. When set to `True`, `font_name:` must
+refer to an existing bitmap_font asset name and `font_size:`
+will be ignored. When set to `False`,
+`font_name:` should refer to a font name.
 
 ### font_size:
 

@@ -7,7 +7,7 @@ title: Lights versus LEDs
 
 In MPF 0.33 and earlier not all LEDs had to be configured as LEDs. This
 changed in 0.50+ where all lights, GIs and matrix_lights were unified as
-lights. The distinction is now only the [subtype](#) in the
+lights. The distinction is now only the `subtype` in the
 [lights config](../../config/matrix_lights.md).
 
 Taking a step back. There are two types of lighting systems in pinball
@@ -26,7 +26,7 @@ LED bulbs in your lamp matrix.
 
 Alternately, if you have directly-controlled LEDs (i.e. no lamp matrix),
 whether single color or RGB, then you'll configure them as
-[subtype](#) led in the [lights:](../../config/lights.md) section of your config.
+`subtype` led in the [lights:](../../config/lights.md) section of your config.
 
 The following diagram shows the different types. An easy way to tell is
 if your lights or LEDs have mini bayonet or mini wedge bases, they're

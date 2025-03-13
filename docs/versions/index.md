@@ -6,7 +6,7 @@ title: MPF Versions
 
 
 MPF is a work-in-progress. New versions are released every so often. You
-can find your MPF version by running [mpf --version](#) from
+can find your MPF version by running `mpf --version` from
 the command line.
 
 **The current long-term-support (LTS) version of MPF is 0.57**

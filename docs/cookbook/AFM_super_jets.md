@@ -256,7 +256,7 @@ s_left_bumper_active:
 ```
 
 Everytime "s_left_bumper_active" is seen, the score has 3,000,000
-points added onto it. The [\|block](#) is used to prevent any
+points added onto it. The `\|block` is used to prevent any
 other instances that awards points for hitting "s_left_bumper_active"
 from adding points as well.
 
@@ -523,7 +523,7 @@ bumper hit is worth 1,000,000 at the start. But, we also have to add
 50,000 points for each time the rollovers are completed. To do that, we
 take the value of the counter, "lb_rollover_complete_count" and
 multiply it by 50000. Then we add that value to the standard 1,000,000.
-Remember in "super_jets" that we added [\|block](#) to the
+Remember in "super_jets" that we added `\|block` to the
 end of the scoring? That was in part to keep these lines from continuing
 to add to the score, and to just have the scoring from
 "super_jets.yaml" to appear.

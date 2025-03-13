@@ -11,8 +11,8 @@ Related Config File Sections:
 
 The variable_player is commonly used to score points for the current
 player when a certain event is posted. This event could be a switch hit
-(i.e. for [s_your_switch](#) use the event
-[s_your_switch_active](#)).
+(i.e. for `s_your_switch` use the event
+`s_your_switch_active`).
 
 ``` mpf-config
 ##! mode: mode1

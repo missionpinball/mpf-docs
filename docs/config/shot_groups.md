@@ -137,7 +137,7 @@ the shot group rotates.
 
 The presence or absence of this value will not affect whether individual
 shots in the group can be enabled via their own
-[enable_events](#) settings. An individual shot can always be
+`enable_events` settings. An individual shot can always be
 enabled/disabled regardless of the group state, although a subsequent
 group enable/disable events will also affect that individual shot.
 
@@ -198,7 +198,7 @@ List of one (or more) device control events
 This list of events that, when posted, will rotate the current lit and
 unlit shot states to the right. This can be a simple list of events or a
 time-delayed list. The state of right-most (i.e. last entry) in your
-[shots:](#) list will rotate over to the left-most shot.
+`shots:` list will rotate over to the left-most shot.
 
 ### shots:
 

@@ -33,7 +33,7 @@ fast:
   driverboards: fast
 ```
 
-You also need to configure the [driverboards:](#) entry for
+You also need to configure the `driverboards:` entry for
 what kind of driver boards you're controlling.
 
 Use `driverboards: fast` if you're using FAST I/O boards (like the

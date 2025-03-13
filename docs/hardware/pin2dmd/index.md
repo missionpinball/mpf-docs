@@ -60,7 +60,7 @@ Once you have your hardware all set, you need to add a `smartmatrix:`
 section to your machine-wide config and which tells MPF how to talk to
 RGB DMDs that use the SmartMatrix platform.
 
-1.  Add [pin2dmd](#) to your hardware section:
+1.  Add `pin2dmd` to your hardware section:
 
 ``` mpf-config
 hardware:

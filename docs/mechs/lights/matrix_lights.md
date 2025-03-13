@@ -33,7 +33,7 @@ machines used #555 bulbs (or the vibration resistant variant #444 or the
 ## Config
 
 Details differ by platform but the syntax for the number of such a light
-is usually [column:row](#) or [column:row](#) (see
+is usually `column:row` or `column:row` (see
 your platform for details). The config looks like this:
 
 ``` mpf-config

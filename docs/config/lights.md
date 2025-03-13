@@ -156,9 +156,9 @@ For multi-color LEDs, the color defined here will be used when the light
 is enabled via "on" (as opposed to being enabled with a specific
 color). Not intended for single-color lights.
 
-Color values may be a hex string (e.g. [22FFCC](#)), a list of
-RGB values (e.g. [\[50, 128, 206\]](#)), or a color name (e.g.
-[turquoise](#)). MPF knows 140+ standard web color names, and
+Color values may be a hex string (e.g. `22FFCC`), a list of
+RGB values (e.g. `\[50, 128, 206\]`), or a color name (e.g.
+`turquoise`). MPF knows 140+ standard web color names, and
 you can define your own custom colors in the
 [named_colors:](named_colors.md) section of your
 config.
@@ -295,7 +295,7 @@ This describes the channel order of an LED. Can be 1 to many channels
 (always off).
 
 When using serial LEDs (e.g. with FAST or Fadecandy), use
-[rgb](#) for WS2812 and [grb](#) for WS2811 LEDs.
+`rgb` for WS2812 and `grb` for WS2811 LEDs.
 
 ### x:
 
@@ -353,7 +353,7 @@ List of one (or more) values, each is a type: `string`. Defaults to
 empty.
 
 Lights can be referenced by their tags in light_players. Typical tags
-are [gi](#) for all GIs or [playfield_inserts](#) for
+are `gi` for all GIs or `playfield_inserts` for
 all inserts on the playfield.
 
 ## Related How To guides

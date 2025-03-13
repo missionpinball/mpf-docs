@@ -255,7 +255,7 @@ smartmatrix:
 Just enter the `baud:` and `old_cookie:` settings like they are in the
 example above. These are the settings that are needed for the
 SmartMatrix. If you are using the FAST DMD board set baud to
-[3000000](#).
+`3000000`.
 
 ## 3. Add a physical RGB DMD device entry
 

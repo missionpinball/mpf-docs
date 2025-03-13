@@ -16,7 +16,7 @@ The `playfields:` section of your config is where you configure your
 [playfields](../mechs/playfields/index.md) in
 your machine. You can have multiple playfields and MPF will track balls
 per playfield. One playfield should contain the tag
-[default](#) so that the game knows which playfield to use.
+`default` so that the game knows which playfield to use.
 
 ## Required settings
 
@@ -107,7 +107,7 @@ gives up.
 Single value, type: `time string (ms)`
 ([Instructions for entering time strings](instructions/time_strings.md)). Default: `15s`
 
-[ball_search_timeout](#) configures the time of inactivity
+`ball_search_timeout` configures the time of inactivity
 which has to pass until ball search starts.
 
 ### ball_search_unblock_events:

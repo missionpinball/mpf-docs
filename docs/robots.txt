@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /welcome_wall/
+Disallow: */welcome_wall/

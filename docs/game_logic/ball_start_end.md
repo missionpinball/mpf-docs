@@ -12,7 +12,7 @@ ending.
 
 During game start (see [Flowcharts](../flowcharts/index.md)
 for details) you can trigger shows/lights or any other player on the
-[ball_started](#) event (see
+`ball_started` event (see
 [Ball Start Sequence](../flowcharts/ball_start.md)). This will not
 delay the ball start and the ball will eject instantly.
 

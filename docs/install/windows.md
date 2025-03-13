@@ -115,7 +115,7 @@ You can test it by typing this command:
 mpf --version
 ```
 
-This should print out something like [MPF 0.57.0](#). If you
+This should print out something like `MPF 0.57.0`. If you
 get an error, something went wrong. If you get a different version, then
 you might have an older version of MPF which you need to uninstall
 first. (See the "Remove prior versions of MPF" section above.)

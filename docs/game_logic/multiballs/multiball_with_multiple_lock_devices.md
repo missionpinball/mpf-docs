@@ -27,8 +27,7 @@ multiball starts reset counters of your locks.
 
 In the following example, you have to lock balls sequentially in your
 three locks. Every lock will enable the next lock using the
-[multiball_lock_(name)_full](../../events/multiball_lock_multiball_lock_full.md) event. The last lock will start the [multiball](#)
-mode. If you hit [s_target1](#) the multiball will start which
+[multiball_lock_(name)_full](../../events/multiball_lock_multiball_lock_full.md) event. The last lock will start the `multiball` mode. If you hit `s_target1` the multiball will start which
 will reset and disable all locks using the
 [multiball_(name)_started](../../events/multiball_multiball_started.md)
 event. After all the balls from the multiball drained all lock modes and

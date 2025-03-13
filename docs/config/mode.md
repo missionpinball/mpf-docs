@@ -147,7 +147,7 @@ that's ok. (i.e. It won't start over or break.)
 
 For modes that you want to start when the player's ball starts (like
 for your base mode, ball save, or skillshot, you'd enter
-[ball_starting](#) here. For modes that should start when some
+`ball_starting` here. For modes that should start when some
 progress has been made in the game, enter the name of the event that
 represents when you want to start the mode. This could be the event from
 a shot being made, the resultant event from a logic block being
@@ -251,7 +251,7 @@ mode, and if other modes don't have a stop_priority set then they'll
 stop after it. (A higher number means that mode stops first.)
 
 If you have a mode you want to stop last, then don't enter a
-*stop_priority* for it but enter [stop_priority: 1](#) for all
+*stop_priority* for it but enter `stop_priority: 1` for all
 the other modes you want to stop first. You can add different
 *stop_priority* values for different modes, and they will all stop in
 order, highest numeric value to lowest. Note that the *stop_priority*

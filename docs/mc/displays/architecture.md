@@ -34,7 +34,7 @@ on the host operating system. If you do not provide a "window:"
 section in your config, a default window will be created for you (800 x
 600 pixels). The size settings (width, height) control the dimensions
 (in pixels) of the host operating system window that will be created.
-Various settings in the [window:](#) section control the
+Various settings in the `window:` section control the
 appearance and behavior of the main on-screen window which is created by
 MPF-MC. These settings include things such as whether or not the window
 has a border, is full screen, or whether special image processing is

@@ -392,8 +392,8 @@ variable_player:
 
 You can also use the parameters of an event to determine the widget to
 include. In the following example from a game with different multiballs,
-the event [mball_lock_lit](#) might post with either "angel"
-or "demon" as the [mball_name](#) parameter.
+the event `mball_lock_lit` might post with either "angel"
+or "demon" as the `mball_name` parameter.
 
 ``` mpf-mc-config
 slide_player:

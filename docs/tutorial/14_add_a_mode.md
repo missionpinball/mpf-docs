@@ -316,9 +316,9 @@ slide_player:
 * If you get some kind of crash or error, specifically any errors that
     mention anything about "config" or "path," double-check that you
     put all the files in the proper locations back in Step 2. (A common
-    mistake is to put [base.yaml](#) in the
-    [/modes/base](#) folder rather than the
-    [/modes/base/config](#) folder.)
+    mistake is to put `base.yaml` in the
+    `/modes/base` folder rather than the
+    `/modes/base/config` folder.)
 
 ## Check out the complete config.yaml file so far
 

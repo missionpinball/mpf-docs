@@ -91,7 +91,7 @@ original game again.)
 
 Add mpf-spike-bridge to /bin/bridge and mark it as executable.
 
-On Linux this can be done with [chmod +x bridge](#) from within
+On Linux this can be done with `chmod +x bridge` from within
 the folder.
 
 Get the bridge from <https://github.com/missionpinball/mpf-spike>

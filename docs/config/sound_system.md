@@ -67,9 +67,9 @@ machine. The example above shows three tracks, called *music*, *voice*,
 and *sfx*. The idea (in case it isn't obvious) is that you play all
 your music clips on the music track, voice callouts on the voice track,
 and the sound effects on the sfx track. To create a track, add a sub
-entry to the [tracks:](#) section which will be the name of
-that track. (So again, [music:](#), [voice:](#) and
-[sfx:](#) in the example.)
+entry to the `tracks:` section which will be the name of
+that track. (So again, `music:`, `voice:` and
+`sfx:` in the example.)
 
 ## Optional settings
 
