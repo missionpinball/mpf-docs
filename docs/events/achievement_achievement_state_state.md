@@ -11,7 +11,7 @@ Event is posted by [achievements:](../config/achievements.md)
 
 The achievement called (name) changed to state (state).
 
-Valid states are: disabled, enabled, started, completed, stopped
+Valid states are: `disabled`, `enabled`, `started`, `completed`, `stopped`
 
 This is only posted once per state. Its also posted on restart on the
 next ball to restore state and when selection changes.

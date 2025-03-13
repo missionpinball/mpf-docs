@@ -11,7 +11,7 @@ Event is posted by [ball_devices:](../config/ball_devices.md)
 
 A ball (or balls) have just entered the ball device called (name).
 
-The ball was also added to balls and available_balls of the device.
+The ball was also added to `balls` and `available_balls` of the device.
 
 ## Keyword arguments
 

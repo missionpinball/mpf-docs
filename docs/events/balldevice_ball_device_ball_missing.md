@@ -10,7 +10,7 @@ title: balldevice_(name)_ball_missing
 Event is posted by [ball_devices:](../config/ball_devices.md)
 
 The device (name) is missing a ball. Note this event is posted in
-addition to the generic *balldevice_ball_missing* event.
+addition to the generic *[balldevice_ball_missing](balldevice_ball_missing.md)* event.
 
 ## Keyword arguments
 

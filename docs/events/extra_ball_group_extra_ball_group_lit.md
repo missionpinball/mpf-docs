@@ -16,7 +16,7 @@ that extra ball" sound, etc.
 Note that this event is posted if an extra ball is lit during play and
 also when a player's turn starts if they have a lit extra ball.
 
-See also the [/config/extra_ball_groups](extra_ball_extra_ball_lit.md)
+See also the [*extra_ball_extra_ball_lit*](extra_ball_extra_ball_lit.md) event
 for a similar event that is only posted when an extra ball is lit during
 play, and not if the player starts their turn with the extra ball lit.
 

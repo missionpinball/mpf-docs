@@ -15,7 +15,7 @@ A switch from group 1 and group 2 are both active at the same time,
 having been pressed within the `max_offset_time:` and being active for
 at least the `hold_time:`.
 
-The event name can be changed by using the "events_when_both:"
+The event name can be changed by using the `events_when_both:`
 attribute.
 
 --8<-- "event_no_keywords_notice.md"

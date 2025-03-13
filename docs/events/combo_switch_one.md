@@ -14,7 +14,7 @@ Combo switch named (combo_switch_name) changed to state one.
 Either switch 1 or switch 2 has been released for at least the
 `release_time:` but the other switch is still active.
 
-The event name can be changed by using the "events_when_one:"
+The event name can be changed by using the `events_when_one:`
 attribute.
 
 --8<-- "event_no_keywords_notice.md"
