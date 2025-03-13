@@ -7,6 +7,8 @@ title: slide_(name)_created
 
 *MPF-MC Event*
 
+Event is posted by [slides:](../config/slides.md)
+
 A slide called (name) has just been created.
 
 This means that this slide now exists, but it's not necessarily the
@@ -22,5 +24,3 @@ they're playing on, so be sure to create machine-wide unique names when
 you're naming your slides.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [slides:](../config/slides.md)

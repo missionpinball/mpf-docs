@@ -7,6 +7,8 @@ title: multiball_lock_(name)_full
 
 --8<-- "event.md"
 
+Event is posted by [multiball_locks:](../config/multiball_locks.md)
+
 The multiball lock device (name) is now full.
 
 ## Keyword arguments
@@ -18,5 +20,3 @@ only respond to certain combinations of the arguments below.)
 #### `balls`:
 
 The number of balls currently locked in this device.
-
-Event is posted by [multiball_locks:](../config/multiball_locks.md)

@@ -7,6 +7,8 @@ title: balldevice_(name)_ejecting_ball
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 The ball device called (name) is ejecting a ball right now.
 
 ## Keyword arguments
@@ -34,5 +36,3 @@ The source device that will be ejecting the balls.
 #### `target`:
 
 The target ball device that will receive these balls.
-
-Event is posted by [ball_devices:](../config/ball_devices.md)

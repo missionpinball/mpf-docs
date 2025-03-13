@@ -7,6 +7,8 @@ title: timer_(name)_time_subtracted
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) just had some ticks removed.
 
 ## Keyword arguments
@@ -27,5 +29,3 @@ The new number of ticks in this timer remaining.
 
 How many ticks were just subtracted from this timer.
 (This number will be positive, indicating the ticks subtracted.)
-
-Event is posted by [timers:](../config/timers.md)

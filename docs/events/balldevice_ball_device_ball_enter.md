@@ -7,6 +7,8 @@ title: balldevice_(name)_ball_enter
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 A ball (or balls) have just entered the ball device called (name).
 
 Note that this is a relay event based on the "unclaimed_balls" arg.
@@ -29,5 +31,3 @@ A reference to the ball device object that is posting this event.
 #### `unclaimed_balls`:
 
 The number of balls that have not yet been claimed.
-
-Event is posted by [ball_devices:](../config/ball_devices.md)

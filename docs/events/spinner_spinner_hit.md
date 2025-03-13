@@ -7,6 +7,8 @@ title: spinner_(name)_hit
 
 --8<-- "event.md"
 
+Event is posted by [spinners:](../config/spinners.md)
+
 The spinner (name) was just hit.
 
 This event will post whenever a spinner switch is hit.
@@ -24,5 +26,3 @@ The number of switch hits the spinner has had since it became active
 #### `label`:
 
 The label of the switch that was hit
-
-Event is posted by [spinners:](../config/spinners.md)

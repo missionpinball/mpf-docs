@@ -7,6 +7,8 @@ title: logicblock_(name)_updated
 
 --8<-- "event.md"
 
+Event is posted by [counters:](../config/counters.md), [accruals:](../config/accruals.md), and [sequences:](../config/sequences.md)
+
 The logic block called (name) has changed.
 
 This might happen when the block advanced, was reset, or was restored.
@@ -24,9 +26,3 @@ Whatever this block is enabled or not.
 #### `value`:
 
 The current value of this block.
-
-Event is posted by [counters:](../config/counters.md)
-
-Event is posted by [accruals:](../config/accruals.md)
-
-Event is posted by [sequences:](../config/sequences.md)

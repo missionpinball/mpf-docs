@@ -7,6 +7,8 @@ title: extra_ball_group_(name)_lit
 
 --8<-- "event.md"
 
+Event is posted by [extra_ball_groups:](../config/extra_ball_groups.md)
+
 An extra ball was just lit. This is a good event to use to start your
 extra ball lit mode, to turn on an extra ball light, to play the "get
 that extra ball" sound, etc.
@@ -19,5 +21,3 @@ for a similar event that is only posted when an extra ball is lit during
 play, and not if the player starts their turn with the extra ball lit.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [extra_ball_groups:](../config/extra_ball_groups.md)

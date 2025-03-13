@@ -7,6 +7,8 @@ title: balldevice_(name)_ball_eject_failed
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 A ball (or balls) has failed to eject from the device (name).
 
 ## Keyword arguments
@@ -30,5 +32,3 @@ Boolean as to whether this eject will be retried.
 #### `target`:
 
 The target device that was supposed to receive the ejected balls.
-
-Event is posted by [ball_devices:](../config/ball_devices.md)

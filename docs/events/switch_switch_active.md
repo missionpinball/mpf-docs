@@ -4,8 +4,9 @@ title: switch_(name)_active
 
 # switch_(name)\_active
 
-
 *MPF-MC Event*
+
+Event is posted by [switches:](../config/switches.md)
 
 Posted on MPF-MC only (e.g. not in MPF) when the MC receives a BCP
 "switch" active command. Useful for video modes and graphical menu
@@ -14,5 +15,3 @@ rather, only for switches that have been configured to send events to
 BCP.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [switches:](../config/switches.md)

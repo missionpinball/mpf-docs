@@ -7,6 +7,8 @@ title: player_(player_var_name)
 
 --8<-- "event.md"
 
+Event is posted by [player_vars:](../config/player_vars.md)
+
 Posted when simpler types of player variables are added or change value.
 
 The actual event has (player_var_name) replaced with the name of the player
@@ -61,5 +63,3 @@ the current value.
 #### `value`:
 
 The new value of this player variable.
-
-Event is posted by [player_vars:](../config/player_vars.md)

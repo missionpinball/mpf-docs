@@ -7,6 +7,8 @@ title: timer_(name)_stopped
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) has stopped.
 
 This event is posted any time the timer stops, whether it stops because
@@ -25,5 +27,3 @@ The current tick number this timer is at.
 #### `ticks_remaining`:
 
 The number of ticks in this timer remaining.
-
-Event is posted by [timers:](../config/timers.md)

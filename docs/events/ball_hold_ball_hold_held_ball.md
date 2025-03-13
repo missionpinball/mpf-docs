@@ -7,6 +7,8 @@ title: ball_hold_(name)_held_ball
 
 --8<-- "event.md"
 
+Event is posted by [ball_holds:](../config/ball_holds.md)
+
 The ball hold device called (name) has just held additional ball(s).
 
 ## Keyword arguments
@@ -22,5 +24,3 @@ The number of new balls just held.
 #### `total_balls_held`:
 
 The current total number of balls this device has held.
-
-Event is posted by [ball_holds:](../config/ball_holds.md)

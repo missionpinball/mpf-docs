@@ -7,6 +7,8 @@ title: ball_hold_(name)_full
 
 --8<-- "event.md"
 
+Event is posted by [ball_holds:](../config/ball_holds.md)
+
 The ball hold device called (name) is now full.
 
 ## Keyword arguments
@@ -18,5 +20,3 @@ only respond to certain combinations of the arguments below.)
 #### `balls`:
 
 The number of balls currently held in this device.
-
-Event is posted by [ball_holds:](../config/ball_holds.md)

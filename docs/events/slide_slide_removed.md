@@ -7,6 +7,8 @@ title: slide_(name)_removed
 
 *MPF-MC Event*
 
+Event is posted by [slides:](../config/slides.md)
+
 A slide called (name) has just been removed.
 
 This event is posted whenever a slide is removed, regardless of whether
@@ -21,5 +23,3 @@ they're playing on, so be sure to create machine-wide unique names when
 you're naming your slides.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [slides:](../config/slides.md)

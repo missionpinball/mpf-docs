@@ -7,6 +7,8 @@ title: playfield_transfer_(playfield_transfer)_ball_transferred
 
 --8<-- "event.md"
 
+Event is posted by [playfield_transfers:](../config/playfield_transfers.md)
+
 The playfield_transfer called (playfield_transfer) transferred a ball
 from playfield (source) to playfield (target).
 
@@ -23,5 +25,3 @@ The source playfield.
 #### `target`:
 
 The target playfield.
-
-Event is posted by [playfield_transfers:](../config/playfield_transfers.md)

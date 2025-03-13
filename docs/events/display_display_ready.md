@@ -7,6 +7,8 @@ title: display_(name)_ready
 
 *MPF-MC Event*
 
+Event is posted by [displays:](../config/displays.md)
+
 The display target called (name) is now ready and available to show
 slides. This event is useful with display widgets where you want to add
 a display to an existing slide which shows some content, but you need to
@@ -20,5 +22,3 @@ slide_player, widget_player, etc., but not to start shows or other
 things controlled by MPF.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [displays:](../config/displays.md)

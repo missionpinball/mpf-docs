@@ -7,6 +7,8 @@ title: timer_(name)_started
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) has just started.
 
 ## Keyword arguments
@@ -22,5 +24,3 @@ The current tick number this timer is at.
 #### `ticks_remaining`:
 
 The number of ticks in this timer remaining.
-
-Event is posted by [timers:](../config/timers.md)

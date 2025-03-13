@@ -7,6 +7,8 @@ title: (shot_name)_(profile)_(state)_hit
 
 --8<-- "event.md"
 
+Event is posted by [shots:](../config/shots.md)
+
 The shot called (shot_name) was just hit with the profile (profile) active in
 the state (state).
 
@@ -32,5 +34,3 @@ The name of the profile that was active when hit.
 #### `state`:
 
 The name of the state the profile was in when it was hit
-
-Event is posted by [shots:](../config/shots.md)

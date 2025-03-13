@@ -7,6 +7,8 @@ title: timer_(name)_complete
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) has completed.
 
 Note that this timer may reset and start again after this event is
@@ -25,5 +27,3 @@ The current tick number this timer is at.
 #### `ticks_remaining`:
 
 The number of ticks in this timer remaining.
-
-Event is posted by [timers:](../config/timers.md)

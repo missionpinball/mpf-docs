@@ -7,6 +7,8 @@ title: balldevice_(name)_ball_eject_attempt
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 The ball device called (name) is attempting to eject a ball (or
 balls). This is a queue event. The eject will not actually be attempted
 until the queue is cleared.
@@ -36,5 +38,3 @@ The source device that will be ejecting the balls.
 #### `target`:
 
 The target ball device that will receive these balls.
-
-Event is posted by [ball_devices:](../config/ball_devices.md)

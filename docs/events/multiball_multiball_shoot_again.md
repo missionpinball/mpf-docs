@@ -7,6 +7,8 @@ title: multiball_(name)_shoot_again
 
 --8<-- "event.md"
 
+Event is posted by [multiballs:](../config/multiballs.md)
+
 A ball has drained during the multiball called (name) while the ball
 save timer for that multiball was running, so a ball (or balls) will be
 saved and re-added into play.
@@ -20,5 +22,3 @@ only respond to certain combinations of the arguments below.)
 #### `balls`:
 
 The number of balls that are being saved.
-
-Event is posted by [multiballs:](../config/multiballs.md)

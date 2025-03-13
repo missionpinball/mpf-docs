@@ -7,6 +7,8 @@ title: (playfield_name)_ball_count_change
 
 --8<-- "event.md"
 
+Event is posted by [playfields:](../config/playfields.md)
+
 The playfield with the name (playfield_name) has changed the number of balls that
 are live.
 
@@ -23,5 +25,3 @@ The current number of balls on the playfield.
 #### `change`:
 
 The change in balls from the last count.
-
-Event is posted by [playfields:](../config/playfields.md)

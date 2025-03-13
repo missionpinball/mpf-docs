@@ -7,6 +7,8 @@ title: achievement_(name)_changed_state
 
 --8<-- "event.md"
 
+Event is posted by [achievements:](../config/achievements.md)
+
 The achievement called (name) changed state.
 
 Valid states are: disabled, enabled, started, completed, stopped
@@ -31,5 +33,3 @@ Whatever this achievement is selected currently
 #### `state`:
 
 Current state
-
-Event is posted by [achievements:](../config/achievements.md)

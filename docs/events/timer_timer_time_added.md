@@ -7,6 +7,8 @@ title: timer_(name)_time_added
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) has just had time added to it.
 
 ## Keyword arguments
@@ -26,5 +28,3 @@ How many ticks were just added.
 #### `ticks_remaining`:
 
 The new number of ticks in this timer remaining.
-
-Event is posted by [timers:](../config/timers.md)

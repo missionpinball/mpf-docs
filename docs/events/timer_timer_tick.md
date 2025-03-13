@@ -7,6 +7,8 @@ title: timer_(name)_tick
 
 --8<-- "event.md"
 
+Event is posted by [timers:](../config/timers.md)
+
 The timer named (name) has just counted down (or up, depending on its
 settings).
 
@@ -23,5 +25,3 @@ The new tick number this timer is at.
 #### `ticks_remaining`:
 
 The new number of ticks in this timer remaining.
-
-Event is posted by [timers:](../config/timers.md)

@@ -7,6 +7,8 @@ title: spinner_(name)_idle
 
 --8<-- "event.md"
 
+Event is posted by [spinners:](../config/spinners.md)
+
 The spinner (name) is now idle
 
 This event will post whenever a spinner has not received hits and its
@@ -22,5 +24,3 @@ only respond to certain combinations of the arguments below.)
 #### `hits`:
 
 The number of switch hits the spinner had while it was active
-
-Event is posted by [spinners:](../config/spinners.md)

@@ -7,6 +7,8 @@ title: multiball_(name)_started
 
 --8<-- "event.md"
 
+Event is posted by [multiballs:](../config/multiballs.md)
+
 The multiball called (name) has just started.
 
 ## Keyword arguments
@@ -18,5 +20,3 @@ only respond to certain combinations of the arguments below.)
 #### `balls`:
 
 The number of balls in this multiball
-
-Event is posted by [multiballs:](../config/multiballs.md)

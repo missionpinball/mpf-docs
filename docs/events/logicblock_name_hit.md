@@ -7,6 +7,8 @@ title: logicblock_(name)_hit
 
 --8<-- "event.md"
 
+Event is posted by [counters:](../config/counters.md), [accruals:](../config/accruals.md), and [sequences:](../config/sequences.md)
+
 The logic block (name) was just hit.
 
 Note that this is the default hit event for logic blocks, but this can
@@ -15,9 +17,3 @@ might not be the actual event that's posted for all logic blocks in
 your machine.
 
 *This event does not have any keyword arguments*
-
-Event is posted by [counters:](../config/counters.md)
-
-Event is posted by [accruals:](../config/accruals.md)
-
-Event is posted by [sequences:](../config/sequences.md)
