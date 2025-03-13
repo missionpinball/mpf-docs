@@ -34038,7 +34038,7 @@ list of the modes to be restarted.</p>
 that's ok. (i.e. It won't start over or break.)</p>
 <p>For modes that you want to start when the player's ball starts (like
 for your base mode, ball save, or skillshot, you'd enter
-<a href="#">ball_starting</a> here. For modes that should start when some
+<code>ball_starting</code> here. For modes that should start when some
 progress has been made in the game, enter the name of the event that
 represents when you want to start the mode. This could be the event from
 a shot being made, the resultant event from a logic block being
@@ -34113,7 +34113,7 @@ stop before another mode, you can simply add <code>stop_priority: 1</code> to th
 mode, and if other modes don't have a stop_priority set then they'll
 stop after it. (A higher number means that mode stops first.)</p>
 <p>If you have a mode you want to stop last, then don't enter a
-<em>stop_priority</em> for it but enter <a href="#">stop_priority: 1</a> for all
+<em>stop_priority</em> for it but enter <code>stop_priority: 1</code> for all
 the other modes you want to stop first. You can add different
 <em>stop_priority</em> values for different modes, and they will all stop in
 order, highest numeric value to lowest. Note that the <em>stop_priority</em>

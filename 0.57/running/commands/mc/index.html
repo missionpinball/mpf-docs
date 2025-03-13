@@ -33847,7 +33847,7 @@ before your before your machine config. (MPF MC includes a file
 <code>mcconfig.yaml</code> which is inside the MPF MC package which sets up default
 things like which modules are loaded, paths used, etc. If for some
 reason you want to override this file, you can do so with the
-<a href="#">-C</a> option.</p>
+<code>-C</code> option.</p>
 <p>Note that the <code>-C</code> option is used by both <code>mpf game</code> and <code>mpf mc</code>, but
 these two packages use different default files. So if you want to
 override the default, you'll have to make one file that works for both
@@ -33885,13 +33885,13 @@ you're troubleshooting.</p>
 enabling verbose logging on Windows will significantly affect MPF (in a
 bad way). Windows computers can run MPF no problem, but because of their
 weird console slowness we recommend that you do not use the
-<a href="#">-V</a> command line option from a Windows computer.</p>
+<code>-V</code> command line option from a Windows computer.</p>
 <h3 id="-x-lowercase">-x (lowercase)</h3>
 <p>Ignores all <code>platform:</code> settings in your config files and forces MPF to
 run using the <em>virtual</em> platform interface. This is nice for testing
 when you don't have your physical hardware attached.</p>
 <h3 id="-x-uppercase">-X (uppercase)</h3>
-<p>Like <a href="#">-x</a>, except it forces the <em>smart virtual</em> platform.</p>
+<p>Like <code>-x</code>, except it forces the <em>smart virtual</em> platform.</p>
 <h2 id="unused-options">Unused Options</h2>
 <p>Note that command line options <code>-a -A -x -X</code> are valid but ignored by
 the MPF MC. This is because these options are used with the MPF game

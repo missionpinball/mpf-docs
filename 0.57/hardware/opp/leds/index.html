@@ -33699,11 +33699,10 @@ have to use channels.</p>
 USB. See <a href="../connecting/">/mechs/lights/ws2812</a> for details about
 chains. If you only got one chain you can omit this part and your format
 becomes <code>card_num</code>-<code>index</code>.</p>
-<p><code>card_num</code><a href="#"> is the index of the board on the chain. As the first board
-is always at addr </a><a href="#">0x20</a><a href="#"> you can calculate the
-addr using </a><a href="#">0x20 + card_num</a><a href="#">. If you only got
-one board you can omit the board and your format becomes just
-</a><a href="#">index</a>`.</p>
+<p><code>card_num</code> is the index of the board on the chain. As the first board
+is always at addr <code>0x20</code> you can calculate the
+addr using <code>0x20</code> + card_num. If you only got
+one board you can omit the board and your format becomes just <code>index</code>.</p>
 <p>For instance, <code>0-0-0</code> for the first RGB LED on chain <code>0</code> on card <code>0x20</code>.
 In this case you can also use <code>0-0</code> or <code>0</code> (channel <code>0-2</code>). <code>0-0-1</code> or
 <code>0-1</code> or <code>1</code> is the second LED on the chain (channels <code>3-5</code>).</p>

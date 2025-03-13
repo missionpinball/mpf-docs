@@ -33620,7 +33620,7 @@ icons & this code generated via https://realfavicongenerator.net
 <p>MPF allows has a few command line actions to check and update your
 hardware:</p>
 <h2 id="mpf-hardware-scan">mpf hardware scan</h2>
-<p>You can run <a href="#">mpf hardware scan</a> to get an overview over the
+<p>You can run <code>mpf hardware scan</code> to get an overview over the
 connected hardware. MPF will try to enumerate all connected boards and
 tell you what it know about your hardware. The output varies per
 hardware platform from almost nothing to a lot.</p>
@@ -33662,14 +33662,14 @@ hardware_benchmark:
   switch2: s_test2
   flipper: f_flipper
 </code></pre></div>
-<p>Disconnect or disable high voltage. Then connect <a href="#">s_test1</a>
-to <a href="#">c_coil1</a> and <a href="#">s_test2</a> to
-<a href="#">c_coil2</a>. MPF will enable the flipper
-<a href="#">f_flipper</a> which will create a hardware rule on
-<a href="#">s_test1</a> to pulse <a href="#">c_coil2</a>. Afterwards, MPF
-will pulse <a href="#">c_coil1</a> which should then activate
-<a href="#">s_test1</a>. In turn the hardware rule should pulse
-<a href="#">c_coil2</a> which then activates <a href="#">s_test2</a>.
+<p>Disconnect or disable high voltage. Then connect <code>s_test1</code>
+to <code>c_coil1</code> and <code>s_test2</code> to
+<code>c_coil2</code>. MPF will enable the flipper
+<code>f_flipper</code> which will create a hardware rule on
+<code>s_test1</code> to pulse <code>c_coil2</code>. Afterwards, MPF
+will pulse <code>c_coil1</code> which should then activate
+<code>s_test1</code>. In turn the hardware rule should pulse
+<code>c_coil2</code> which then activates <code>s_test2</code>.
 Hardware benchmark will measure the timings of the two switches. It will
 repeat this procedure a few times and run some statistics on the
 results.</p>

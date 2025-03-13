@@ -35469,10 +35469,9 @@ identified a few potential upgrade issues:</p>
 We identified a few potential upgrade issues:</p>
 <ul>
 <li>We fixed validation of animations. You might get a validation error
-    with <a href="#">repeat: -1</a>. Change it to <a href="#">repeat:
-    false</a>. See the <a href="https://github.com/missionpinball/mpf-docs/commit/6a141ec4434a0904d92f05bcbce1fe345513c018">change in the
+    with <code>repeat: -1</code>. Change it to <code>repeat: false</code>. See the <a href="https://github.com/missionpinball/mpf-docs/commit/6a141ec4434a0904d92f05bcbce1fe345513c018">change in the
     docs</a>.</li>
-<li>We changed <a href="#">active_time</a> of ball_save from ms to secs.
+<li>We changed <code>active_time</code> of ball_save from ms to secs.
     In case you did not use a unit here this might change the time.
     <a href="https://github.com/missionpinball/mpf/pull/1463">Details</a>.</li>
 <li><a href="https://github.com/missionpinball/mpf/pull/1394">Machine variables
@@ -36548,7 +36547,7 @@ settings for production machines.</p>
     config processing was done manually in each module before.</li>
 <li>The config processing is more efficient and less-error prone
     since it's not written from scratch for each module.</li>
-<li>There's now a master list (in <a href="#">mpfconfig.yaml</a>) of
+<li>There's now a master list (in <code>mpfconfig.yaml</code>) of
     all config settings for all device types.</li>
 <li>The config processor and validator can run as a service to
     support the back-end business logic behind future GUI tools
@@ -36676,9 +36675,9 @@ settings for production machines.</p>
 <li>Added version control to config files.</li>
 <li>Added volume control.</li>
 <li>Switches that you want to start active when using virtual hardware
-    are now added to the <a href="#">virtual platform start active
-    switches:</a> section instead of being a property of the
-    <a href="#">keyboard:</a> entry.</li>
+    are now added to the <code>virtual platform start active
+    switches:</code> section instead of being a property of the
+    <code>keyboard:</code> entry.</li>
 <li>Converted several former plugins to system modules, including shots,
     scoring, bcp, and logic blocks.</li>
 <li>General performance improvements. (Running MPF on my machine used to
@@ -36758,10 +36757,10 @@ settings for production machines.</p>
     playfield device module.</li>
 <li>Different types of events were broken out into their own methods.
     For example, to post a boolean event, instead of calling
-    <a href="#">event.post(type='boolean')</a>, you now use
-    <a href="#">event.post_boolean()</a>. There are similar new methods
-    for other event types, like <a href="#">post_relay()</a> and
-    <a href="#">post_queue()</a>.</li>
+    <code>event.post(type='boolean')</code>, you now use
+    <code>event.post_boolean()</code>. There are similar new methods
+    for other event types, like <code>post_relay()</code> and
+    <code>post_queue()</code>.</li>
 <li>Added a debug option for ball devices which enables extra debug
     logging for problem devices.</li>
 <li>Tilt status was removed from the machine controller. (It was

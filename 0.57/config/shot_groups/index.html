@@ -34016,7 +34016,7 @@ not post hit events but it <em>will</em> still rotate its profile state when
 the shot group rotates.</p>
 <p>The presence or absence of this value will not affect whether individual
 shots in the group can be enabled via their own
-<a href="#">enable_events</a> settings. An individual shot can always be
+<code>enable_events</code> settings. An individual shot can always be
 enabled/disabled regardless of the group state, although a subsequent
 group enable/disable events will also affect that individual shot.</p>
 <h3 id="enable_rotation_events">enable_rotation_events:</h3>
@@ -34059,7 +34059,7 @@ These states are based on whatever shot profile is active at that time.</p>
 <p>This list of events that, when posted, will rotate the current lit and
 unlit shot states to the right. This can be a simple list of events or a
 time-delayed list. The state of right-most (i.e. last entry) in your
-<a href="#">shots:</a> list will rotate over to the left-most shot.</p>
+<code>shots:</code> list will rotate over to the left-most shot.</p>
 <h3 id="shots">shots:</h3>
 <p>List of one (or more) values, each is a type: string name of a
 <a href="../shots/">shots:</a> device. Defaults to empty.</p>

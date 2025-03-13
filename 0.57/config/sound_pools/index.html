@@ -33797,8 +33797,8 @@ available if you're using MPF-MC for your media controller.)</p>
 <p>To create a sound pool, add a sub entry to the <code>sound_pools:</code> section of
 your config which will be the name of that sound pool. The name must be
 unique among all sound pools <em>and</em> sound assets. In the above example
-<a href="#">drain_callout:</a>, <a href="#">slingshot:</a> and
-<a href="#">target_completion:</a> are each a sound pool name. Then create
+<code>drain_callout:</code>, <code>slingshot:</code> and
+<code>target_completion:</code> are each a sound pool name. Then create
 one or more of the following settings for each sound pool:</p>
 <h2 id="required-settings">Required settings</h2>
 <p>The following sections are required for each named sound pool in your
@@ -33813,11 +33813,11 @@ number controls the relative weighting for random item selection, or the
 number of times to play the sound before moving to the next sound in the
 pool with a sequence pool. If no weight value is provided, a default
 value of <code>1</code> will be applied. In the example above, the
-<a href="#">slingshot:</a> random sound pool contains relative weighting
+<code>slingshot:</code> random sound pool contains relative weighting
 values. The weights sum to 10 for the three sounds so the
-<a href="#">slingshot_01</a> sound has a probability of being randomly
-selected of 5 out of 10 (50%), <a href="#">slingshot_02</a> 3/10 (30%),
-and <a href="#">slingshot_03</a> 2/10 (20%).</p>
+<code>slingshot_01</code> sound has a probability of being randomly
+selected of 5 out of 10 (50%), <code>slingshot_02</code> 3/10 (30%),
+and <code>slingshot_03</code> 2/10 (20%).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to use a sound that has spaces in its name, the name of the

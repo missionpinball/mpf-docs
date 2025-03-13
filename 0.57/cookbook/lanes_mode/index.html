@@ -33927,10 +33927,10 @@ not in progress.)</p>
 <p>If you played with this, you most likely noticed that the shots didn't
 actually reset once they were all complete. So that's what we'll do in
 this step. The way we'll do that is to add an entry for
-<a href="#">reset_events:</a> which specifies what events will cause the
-shots to reset. To do that, go back into your <a href="#">base.yaml</a>
+<code>reset_events:</code> which specifies what events will cause the
+shots to reset. To do that, go back into your <code>base.yaml</code>
 file and add another setting to your <em>indy_lanes</em> shot group for
-<a href="#">reset_events:</a>, like this:</p>
+<code>reset_events:</code>, like this:</p>
 <div class="highlight"><pre><span></span><code>#! switches:
 #!   indy_i:
 #!     number: 1
@@ -34111,7 +34111,7 @@ to track the count and trigger the scoring.</p>
 cool, but after 1 second the lights just sort of unceremoniously reset.
 Boring! So let's create a light show that flashes the lane lights when
 you complete the lanes. To do this, let's first create a light show
-(details in Steps A and B <a href="#">here</a>) called
+(details in Steps A and B <code>here</code>) called
 `indy_lanes_complete.yaml`:</p>
 <div class="highlight"><pre><span></span><code>##! show: indy_lanes_complete
 - duration: 1
@@ -34129,8 +34129,8 @@ you complete the lanes. To do this, let's first create a light show
 </code></pre></div>
 <p>Obviously you can make this show do whatever you want; I opted for a
 simple one that sort of alternates the lights. Then to run the light
-show, go back to your <a href="#">base.yaml</a> mode config and add a
-<a href="#">light_player:</a> entry which plays this show when the lanes
+show, go back to your <code>base.yaml</code> mode config and add a
+<code>light_player:</code> entry which plays this show when the lanes
 are complete, like this:</p>
 <div class="highlight"><pre><span></span><code>#! switches:
 #!   indy_i:

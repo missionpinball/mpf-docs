@@ -33743,7 +33743,7 @@ using text widgets.</p>
 <p>This value is required. If you don't want text, use ""</p>
 <p>Your text can contain placeholders as described in
 <a href="text_dynamic/">dynamic text</a>.</p>
-<p>Newline characters (<a href="#">n</a>) are supported in text values to
+<p>Newline characters (<code>\n</code>) are supported in text values to
 create multiple lines with line breaks, however you must surround the
 text with quotes or the backslash will be treated as a printing
 character and will appear in the output. For example:</p>
@@ -33770,13 +33770,13 @@ you should read.</p>
 pixel-style display), we have some
 <a href="../dmd_fonts/">built in DMD fonts</a> that you can use which are pre-configured for DMDs.</p>
 <h3 id="bitmap_font">bitmap_font:</h3>
-<p>A true/false value indicating whether the <a href="#">font_name:</a>
+<p>A true/false value indicating whether the <code>font_name:</code>
 setting contains the name of a
 <a href="../../../config/bitmap_fonts/">bitmap_font</a>
-asset. When set to <a href="#">True</a>, <a href="#">font_name:</a> must
-refer to an existing bitmap_font asset name and <a href="#">font_size:</a>
-will be ignored. When set to <a href="#">False</a>,
-<a href="#">font_name:</a> should refer to a font name.</p>
+asset. When set to <code>True</code>, <code>font_name:</code> must
+refer to an existing bitmap_font asset name and <code>font_size:</code>
+will be ignored. When set to <code>False</code>,
+<code>font_name:</code> should refer to a font name.</p>
 <h3 id="font_size">font_size:</h3>
 <p>The size of the font (in points). Default is 15.</p>
 <p>See the

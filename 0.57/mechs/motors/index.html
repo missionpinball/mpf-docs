@@ -33655,11 +33655,11 @@ motors:
 </code></pre></div>
 <p>The motor can run continuously and drives a camshaft which moves the
 bank up and down. MPF will figure the position using two position
-switches <a href="#">s_position_up</a> and <a href="#">s_position_down</a>.
-To enable the motor we use a digitial_output <a href="#">c_motor_run</a>
+switches <code>s_position_up</code> and <code>s_position_down</code>.
+To enable the motor we use a digitial_output <code>c_motor_run</code>
 which maps to a driver. On reset the bank moves down and can afterwards
-be commanded using the events <a href="#">go_up</a> and
-<a href="#">go_down</a>.</p>
+be commanded using the events <code>go_up</code> and
+<code>go_down</code>.</p>
 <p>The following is an example to drive the slimer in Stern Ghostbusters:</p>
 <div class="highlight"><pre><span></span><code>switches:
   s_slimer_home:
@@ -33688,11 +33688,11 @@ motors:
       slimer_away: away
 </code></pre></div>
 <p>The slimer motor can move in two directions using two digital_outputs
-<a href="#">c_slimer_motor_forward</a> and
-<a href="#">c_slimer_motor_backward</a> which map to lights in Spike. The
-switches <a href="#">s_slimer_home</a> and <a href="#">s_slimer_away</a> are
+<code>c_slimer_motor_forward</code> and
+<code>c_slimer_motor_backward</code> which map to lights in Spike. The
+switches <code>s_slimer_home</code> and <code>s_slimer_away</code> are
 used by to determine the current position. To command the slimer use the
-events <a href="#">slimer_home</a> or <a href="#">slimer_away</a>.</p>
+events <code>slimer_home</code> or <code>slimer_away</code>.</p>
 <h2 id="related-events">Related Events</h2>
 <ul>
 <li>[motor_(name)_<a href="../../events/motor_motor_reached_position/">reached_(position)</a></li>
