@@ -9,4 +9,4 @@ title: init_phase_4
 
 Posted during the initial boot up of MPF.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -9,4 +9,4 @@ title: bcp_clients_connected
 
 All BCP outgoing BCP connections have been made.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

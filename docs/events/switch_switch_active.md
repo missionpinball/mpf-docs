@@ -14,4 +14,4 @@ navigation. Note that this is not posted for every switch all the time,
 rather, only for switches that have been configured to send events to
 BCP.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -20,4 +20,4 @@ Note that in order for this event to work, you have to add
 
 See [timed_switches:](../config/timed_switches.md) for details.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

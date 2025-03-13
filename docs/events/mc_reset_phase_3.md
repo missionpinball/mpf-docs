@@ -10,4 +10,4 @@ title: mc_reset_phase_3
 Posted on the MPF-MC only (e.g. not in MPF). This event is used
 internally as part of the MPF-MC reset process.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

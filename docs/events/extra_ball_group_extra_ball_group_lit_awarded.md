@@ -19,4 +19,4 @@ because that is also posted when the player's turn starts and you
 don't want the award show to play again when they're starting their
 turn.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -9,4 +9,4 @@ title: reset_complete
 
 The machine reset process is complete
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

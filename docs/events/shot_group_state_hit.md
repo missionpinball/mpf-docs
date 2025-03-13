@@ -11,4 +11,4 @@ Event is posted by [shot_groups:](../config/shot_groups.md)
 
 A member shot with state (state) in the shot group (shot_group_name) has been hit.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

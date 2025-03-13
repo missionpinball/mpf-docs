@@ -12,4 +12,4 @@ Event is posted by [shot_groups:](../config/shot_groups.md)
 All the member shots in the shot group called (shot_group_name) are in the same
 state named (state).
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

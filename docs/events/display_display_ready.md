@@ -21,4 +21,4 @@ MPF-MC and will not exist on the MPF side. So you can use this event for
 slide_player, widget_player, etc., but not to start shows or other
 things controlled by MPF.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

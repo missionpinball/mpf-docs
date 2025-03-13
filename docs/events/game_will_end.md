@@ -10,4 +10,4 @@ title: game_will_end
 The game is about to end. This event is posted just before
 [game_ending](game_ending.md).
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

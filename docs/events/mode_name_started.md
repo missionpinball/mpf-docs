@@ -13,4 +13,4 @@ actual name of the mode, so the actual event posted is something like
 
 This is posted after the "mode_(name)\_starting" event.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

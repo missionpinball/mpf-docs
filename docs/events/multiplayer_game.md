@@ -13,4 +13,4 @@ multiplayer game.
 This event is typically used to switch the score display from the single
 player layout to the multiplayer layout.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -11,4 +11,4 @@ Event is posted by [ball_devices:](../config/ball_devices.md)
 
 A device has balls available to be ejected.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

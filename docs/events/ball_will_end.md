@@ -10,4 +10,4 @@ title: ball_will_end
 The ball is about to end. This event is posted just before
 [ball_ending](ball_ending.md).
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

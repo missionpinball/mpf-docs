@@ -21,4 +21,4 @@ and connects, MPF will need to load its own assets, which means the MPF
 MC will post more *loading_assets* and then a final
 *asset_loading_complete* event a second time for the MPF-based assets.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -14,4 +14,4 @@ state, meaning that they're not all down or not all up. This event is
 posted every time a member drop target changes but the overall bank is
 not not complete.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

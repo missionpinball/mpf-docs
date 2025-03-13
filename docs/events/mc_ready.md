@@ -20,4 +20,4 @@ If you want to show slides that require images or video loaded from
 disk, use the event "init_done" instead which is posted once all the
 assets set to "preload" have been loaded.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

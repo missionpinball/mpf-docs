@@ -11,4 +11,4 @@ Event is posted by [diverters:](../config/diverters.md)
 
 The diverter called (name) is deativating itself.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

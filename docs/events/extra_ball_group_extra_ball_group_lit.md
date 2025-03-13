@@ -20,4 +20,4 @@ See also the [/config/extra_ball_groups](extra_ball_extra_ball_lit.md)
 for a similar event that is only posted when an extra ball is lit during
 play, and not if the player starts their turn with the extra ball lit.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

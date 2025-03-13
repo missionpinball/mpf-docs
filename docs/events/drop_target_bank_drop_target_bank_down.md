@@ -13,4 +13,4 @@ Every drop target in the drop target bank called (name) is now in the
 "down" state. This event is only posted once, when all the drop
 targets are down.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

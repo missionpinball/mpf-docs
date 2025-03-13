@@ -12,4 +12,4 @@ The mode called (name) is starting.
 This is a queue event. The mode will not fully start until the queue is
 cleared.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -11,4 +11,4 @@ Event is posted by [kickbacks:](../config/kickbacks.md)
 
 Kickback fired a ball.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

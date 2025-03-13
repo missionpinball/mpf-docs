@@ -14,4 +14,4 @@ extra balls but where an extra ball would have been awarded. This is a
 good alternative event to use to score points or whatever else you want
 to give the player when extra balls are disabled.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

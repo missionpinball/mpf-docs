@@ -11,4 +11,4 @@ Event is posted by [multiballs:](../config/multiballs.md)
 
 The multiball called (name) has just ended.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

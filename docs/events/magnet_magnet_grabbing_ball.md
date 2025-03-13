@@ -11,4 +11,4 @@ Event is posted by [magnets:](../config/magnets.md)
 
 The magnet called (name) is attempting to grab a ball.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

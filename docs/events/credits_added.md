@@ -9,4 +9,4 @@ title: credits_added
 
 Credits (or partial credits) have just been added to the machine.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

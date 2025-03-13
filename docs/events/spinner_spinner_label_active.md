@@ -14,4 +14,4 @@ The idle spinner (name) was just hit and became active.
 This event will post whenever a spinner switch is hit and the spinner is
 not already active, but only if labels are defined for the spinner.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

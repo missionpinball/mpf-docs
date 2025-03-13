@@ -12,4 +12,4 @@ end until the queue is cleared.
 
 This event is posted just after [ball_will_end](ball_will_end.md)
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

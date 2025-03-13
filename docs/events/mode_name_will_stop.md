@@ -14,4 +14,4 @@ like *mode_attract_will_stop*, *mode_base_will_stop*, etc.
 This is posted immediately before the "mode_(name)\_stopping"
 event.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

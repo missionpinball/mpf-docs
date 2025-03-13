@@ -11,4 +11,4 @@ Event is posted by [ball_saves:](../config/ball_saves.md)
 
 The ball save called (name) has just entered its grace period time.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

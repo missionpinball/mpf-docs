@@ -23,4 +23,4 @@ Slide names do not take into account what display or slide frame
 they're playing on, so be sure to create machine-wide unique names when
 you're naming your slides.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

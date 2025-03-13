@@ -12,4 +12,5 @@ Event is posted by [playfields:](../config/playfields.md)
 The playfield named (playfield_name) just had a switch hit, meaning a ball is on
 it, but that ball was not expected.
 
-*This event does not have any keyword arguments*
+
+--8<-- "event_no_keywords_notice.md"

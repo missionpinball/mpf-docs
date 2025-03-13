@@ -11,4 +11,4 @@ Event is posted by [motors:](../config/motors.md)
 
 A motor device called (name) reached position (position) (device)
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

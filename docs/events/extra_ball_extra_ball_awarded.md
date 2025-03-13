@@ -11,4 +11,4 @@ Event is posted by [extra_balls:](../config/extra_balls.md)
 
 The extra ball called (name) has just been awarded.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

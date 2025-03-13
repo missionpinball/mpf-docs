@@ -14,4 +14,4 @@ magnet doesn't actually "know" whether it successfully grabbed a ball
 or not, so this event is saying that that the process is complete rather
 than confirming that it has a ball.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

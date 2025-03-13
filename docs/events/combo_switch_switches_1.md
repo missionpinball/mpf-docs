@@ -18,4 +18,4 @@ defined.
 The event name can be changed by using the "events_when_switches_1:"
 attribute.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"
