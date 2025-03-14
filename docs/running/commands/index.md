@@ -46,10 +46,15 @@ your platform):
 $ mpf hardware firmware_update
 ```
 
+If you do not use any of the specific command names, you are [defaulted](mpf.md) to `game`.
+
+So `$ mpf` by itself is the same as `$ mpf game`.
+
 * [mpf both](both.md)
 * [mpf core](core.md)
 * [mpf diagnosis](diagnosis.md)
 * [mpf game](game.md)
+* [mpf (default)](mpf.md)
 * [mpf mc](mc.md)
 * [mpf imc](imc.md)
 * [mpf migrate](migrate.md)

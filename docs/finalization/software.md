@@ -5,17 +5,17 @@ title: Tuning Software for Production
 # Tuning Software for Production
 
 
-## Run MPF in production mode
+## Run MPF in Production mode
 
 YAML is quite slow to parse and reading configs dominates the startup
 time of MPF and MPF-MC. This is mostly fine during development and we
 can partially mitigate the costs by caching. However, things are
 different when running a production machine as caching will not work on
 a cold boot with a typical read-only setup. Usually production machine
-setups use less beefy computers with slower disks which makes thinks
+setups use less beefy computers with slower disks which makes things
 even worse.
 
-Starting with version 0.54 MPF has a production mode which will use
+Starting with version 0.54, MPF has a production mode which will use
 pre-compiled config bundles for much faster start-up times.
 Additionally, this will disable some expensive config and runtime
 validations to increase performance. Furthermore this will reduce the
