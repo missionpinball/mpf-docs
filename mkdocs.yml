@@ -127,6 +127,7 @@ nav:
       - mpf core: running/commands/core.md
       - mpf diagnosis: running/commands/diagnosis.md
       - mpf game: running/commands/game.md
+      - mpf (default): running/commands/mpf.md
       - mpf mc: running/commands/mc.md
       - mpf imc: running/commands/imc.md
       - mpf migrate: running/commands/migrate.md

@@ -100,7 +100,8 @@ Here's a list of valid MPF commands. Click on any one of them for full
 details and command-line options.
 
 * [MPF command-line utility](mpf.md) (Starts the MPF game engine and other commands)
-* [mpf](commands/game.md) (Starts the MPF engine)
+* [mpf game](commands/game.md) (Starts the MPF engine)
+* [mpf (default)](commands/mpf.md) (Game is assumed when no command is given)
 * [mpf mc](commands/mc.md) (Starts the MPF Media Controller)
 * [mpf both](commands/both.md) (Starts both the MPF engine and media controller at the same time)
 * [mpf migrate](commands/migrate.md) (Migrates older config and show files to the current version)
