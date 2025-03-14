@@ -18,8 +18,8 @@ This is a relay event.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`target`
+#### `target`:
 
-:   The name of the ball_device target where the ball will be ejected
-    to. Can be modified by a relay event handler to change the target
-    before the ball is ejected.
+The name of the ball_device target where the ball will be ejected
+to. Can be modified by a relay event handler to change the target
+before the ball is ejected.

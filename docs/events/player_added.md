@@ -15,11 +15,11 @@ A new player was just added to this game
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`num`
+#### `num`:
 
-:   The number of the player that was just added. (e.g. Player 1 will
-    have *num=1*, Player 4 will have *num=4*, etc.)
+The number of the player that was just added. (e.g. Player 1 will
+have *num=1*, Player 4 will have *num=4*, etc.)
 
-`player`
+#### `player`:
 
-:   A reference to the instance of the Player() object.
+A reference to the instance of the Player() object.

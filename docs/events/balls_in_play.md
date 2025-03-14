@@ -21,6 +21,6 @@ play even though there are no balls on the playfield.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of ball(s) in play.
+The number of ball(s) in play.

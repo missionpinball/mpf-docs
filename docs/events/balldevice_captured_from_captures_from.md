@@ -7,6 +7,8 @@ title: balldevice_captured_from_(captures_from)
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 A ball device has just captured a ball from the device called
 (captures_from)
 
@@ -16,8 +18,6 @@ A ball device has just captured a ball from the device called
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that were captured.
-
-Event is posted by [ball_devices:](../config/ball_devices.md)
+The number of balls that were captured.

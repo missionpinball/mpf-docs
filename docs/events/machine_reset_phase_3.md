@@ -16,4 +16,4 @@ posted), and they're also posted subsequently when the machine is reset
 This is a queue event. The machine reset phase 3 will not be complete
 until the queue is cleared.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

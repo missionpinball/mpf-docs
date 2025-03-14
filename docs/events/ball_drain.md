@@ -18,11 +18,11 @@ This is a relay event.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that have just drained. Any balls remaining
-    after the relay will be processed as newly-drained balls.
+The number of balls that have just drained. Any balls remaining
+after the relay will be processed as newly-drained balls.
 
-`device`
+#### `device`:
 
-:   The ball device object that received the ball(s)
+The ball device object that received the ball(s)

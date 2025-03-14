@@ -9,4 +9,4 @@ title: game_started
 
 A new game has started.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

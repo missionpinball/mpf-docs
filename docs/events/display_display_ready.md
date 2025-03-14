@@ -2,10 +2,12 @@
 title: display_(name)_ready
 ---
 
-# display_(name)_ready
+# display_(name)\_ready
 
 
 *MPF-MC Event*
+
+Event is posted by [displays:](../config/displays.md)
 
 The display target called (name) is now ready and available to show
 slides. This event is useful with display widgets where you want to add
@@ -19,6 +21,4 @@ MPF-MC and will not exist on the MPF side. So you can use this event for
 slide_player, widget_player, etc., but not to start shows or other
 things controlled by MPF.
 
-*This event does not have any keyword arguments*
-
-Event is posted by [displays:](../config/displays.md)
+--8<-- "event_no_keywords_notice.md"

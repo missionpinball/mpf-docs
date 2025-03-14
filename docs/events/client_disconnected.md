@@ -19,10 +19,10 @@ This is useful for triggering a slide notifying of the disconnect.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`host`
+#### `host`:
 
-:   The hostname or IP address that the socket is listening on.
+The hostname or IP address that the socket is listening on.
 
-`port`
+#### `port`:
 
-:   The port that the socket is listening on.
+The port that the socket is listening on.

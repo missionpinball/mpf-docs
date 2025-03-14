@@ -16,6 +16,6 @@ game won't actually start until the queue is cleared.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`game`
+#### `game`:
 
-:   A reference to the game mode object.
+A reference to the game mode object.

@@ -15,14 +15,14 @@ MPF is attempting to make a BCP connection.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`host`
+#### `host`:
 
-:   The host name MPF is attempting to connect to.
+The host name MPF is attempting to connect to.
 
-`name`
+#### `name`:
 
-:   The name of the connection.
+The name of the connection.
 
-`port`
+#### `port`:
 
-:   The TCP port MPF is attempting to connect to
+The TCP port MPF is attempting to connect to

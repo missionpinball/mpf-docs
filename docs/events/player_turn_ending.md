@@ -16,10 +16,10 @@ player's turn won't actually end until the queue is cleared.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`number`
+#### `number`:
 
-:   The player number
+The player number
 
-`player`
+#### `player`:
 
-:   The player object whose turn is ending.
+The player object whose turn is ending.

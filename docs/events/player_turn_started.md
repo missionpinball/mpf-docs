@@ -17,10 +17,10 @@ again, this event is not posted a second time.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`number`
+#### `number`:
 
-:   The player number
+The player number
 
-`player`
+#### `player`:
 
-:   The player object whose turn is starting.
+The player object whose turn is starting.

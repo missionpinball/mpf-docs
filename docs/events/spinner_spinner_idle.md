@@ -2,10 +2,12 @@
 title: spinner_(name)_idle
 ---
 
-# spinner_(name)_idle
+# spinner_(name)\_idle
 
 
 --8<-- "event.md"
+
+Event is posted by [spinners:](../config/spinners.md)
 
 The spinner (name) is now idle
 
@@ -19,8 +21,6 @@ post.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`hits`
+#### `hits`:
 
-:   The number of switch hits the spinner had while it was active
-
-Event is posted by [spinners:](../config/spinners.md)
+The number of switch hits the spinner had while it was active

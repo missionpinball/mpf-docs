@@ -15,10 +15,10 @@ Posted on the MPF-MC only when a BCP client has connected.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`address`
+#### `address`:
 
-:   The IP address of the client that connected.
+The IP address of the client that connected.
 
-`port`
+#### `port`:
 
-:   The port the client connected on.
+The port the client connected on.

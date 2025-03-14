@@ -7,6 +7,8 @@ title: player_(player_var_name)
 
 --8<-- "event.md"
 
+Event is posted by [player_vars:](../config/player_vars.md)
+
 Posted when simpler types of player variables are added or change value.
 
 The actual event has (player_var_name) replaced with the name of the player
@@ -36,30 +38,28 @@ be posted, one for each change.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`change`
+#### `change`:
 
-:   If the player variable just changed, this will be the amount of the
-    change. If it's not possible to determine a numeric change (for
-    example, if this player variable is a string), then this *change*
-    value will be set to the boolean *True*.
+If the player variable just changed, this will be the amount of the
+change. If it's not possible to determine a numeric change (for
+example, if this player variable is a string), then this *change*
+value will be set to the boolean *True*.
 
-`kwargs`
+#### `kwargs`:
 
-:   Additional keyword arguments to include in the event args.
+Additional keyword arguments to include in the event args.
 
-`player_num`
+#### `player_num`:
 
-:   The player number this variable just changed for, starting with 1.
-    (e.g. Player 1 will have *player_num=1*, Player 4 will have
-    *player_num=4*, etc.)
+The player number this variable just changed for, starting with 1.
+(e.g. Player 1 will have *player_num=1*, Player 4 will have
+*player_num=4*, etc.)
 
-`prev_value`
+#### `prev_value`:
 
-:   The previous value of this player variable, e.g. what it was before
-    the current value.
+The previous value of this player variable, e.g. what it was before
+the current value.
 
-`value`
+#### `value`:
 
-:   The new value of this player variable.
-
-Event is posted by [player_vars:](../config/player_vars.md)
+The new value of this player variable.

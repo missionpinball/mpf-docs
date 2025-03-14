@@ -16,6 +16,6 @@ prior to the player_adding event.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`number`
+#### `number`:
 
-:   The new player number that will be added
+The new player number that will be added

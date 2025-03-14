@@ -16,6 +16,6 @@ on the key passed. Typically posted when a show or mode ends.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`key`
+#### `key`:
 
-:   string name of the configs to clear
+String name of the configs to clear

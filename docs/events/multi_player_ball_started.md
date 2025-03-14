@@ -9,4 +9,4 @@ title: multi_player_ball_started
 
 A new ball has started, and this is a multiplayer game.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

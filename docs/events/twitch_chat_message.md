@@ -15,38 +15,38 @@ A chat message was received via Twitch
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`line_1`
+#### `line_1`:
 
-:   Split line 1
+Split line 1
 
-`line_2`
+#### `line_2`:
 
-:   Split line 2
+Split line 2
 
-`line_3`
+#### `line_3`:
 
-:   Split line 3
+Split line 3
 
-`line_4`
+#### `line_4`:
 
-:   Split line 4
+Split line 4
 
-`line_5`
+#### `line_5`:
 
-:   Split line 5
+Split line 5
 
-`line_6`
+#### `line_6`:
 
-:   Split line 6
+Split line 6
 
-`line_count`
+#### `line_count`:
 
-:   The number of lines that the text splitter produced
+The number of lines that the text splitter produced
 
-`message`
+#### `message`:
 
-:   Full chat message text
+Full chat message text
 
-`user`
+#### `user`:
 
-:   The chat user name who subscribed
+The chat user name who subscribed

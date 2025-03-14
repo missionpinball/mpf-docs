@@ -15,34 +15,34 @@ A chat user has subscribed or resubscribed on Twitch
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`gift`
+#### `gift`:
 
-:   True if this sub was gifted by another user
+True if this sub was gifted by another user
 
-`message`
+#### `message`:
 
-:   Chat message text
+Chat message text
 
-`months`
+#### `months`:
 
-:   The number of months that the user has been a subscriber
+The number of months that the user has been a subscriber
 
-`sub_plan`
+#### `sub_plan`:
 
-:   The subscription tier (Prime, 1000, 2000, 3000)
+The subscription tier (Prime, 1000, 2000, 3000)
 
-`sub_plan_name`
+#### `sub_plan_name`:
 
-:   The streamer specific name for the sub tier
+The streamer specific name for the sub tier
 
-`sub_recipient`
+#### `sub_recipient`:
 
-:   The user who is subscribing
+The user who is subscribing
 
-`subscriber_message`
+#### `subscriber_message`:
 
-:   The message the user typed when subscribing
+The message the user typed when subscribing
 
-`user`
+#### `user`:
 
-:   The chat user name who paid for the subscription
+The chat user name who paid for the subscription

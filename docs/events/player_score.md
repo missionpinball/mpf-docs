@@ -15,20 +15,18 @@ The player has scored. This is a built-in example version of the [player_(var_na
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`value`
+#### `value`:
 
-:   The score / amount of points the player has after this scoring event.
+The score / amount of points the player has after this scoring event.
 
-`prev_value`
+#### `prev_value`:
 
-:   The score / amount of points the player had before this scoring event.
+The score / amount of points the player had before this scoring event.
 
-`player_num`
+#### `player_num`:
 
-:   The player number who scored. Index starts with 1, so first player is 1.
+The player number who scored. Index starts with 1, so first player is 1.
 
-`change`
+#### `change`:
 
-:   The amout of how much the score changed.
-
-
+The amout of how much the score changed.

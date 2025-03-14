@@ -18,15 +18,15 @@ code. Instead, use the *request_to_start_game* event.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`buttons`
+#### `buttons`:
 
-:   A list of switches tagged with *player* that were held in when the
-    start button was released. This is used for "alternate" game
-    starts (e.g. hold the right flipper and press start for tournament
-    mode, etc.)
+A list of switches tagged with *player* that were held in when the
+start button was released. This is used for "alternate" game
+starts (e.g. hold the right flipper and press start for tournament
+mode, etc.)
 
-`hold_time`
+#### `hold_time`:
 
-:   The time, in seconds, that the start button was held in to start the
-    game. This can be used to start alternate games via a "long press"
-    of the start button.
+The time, in seconds, that the start button was held in to start the
+game. This can be used to start alternate games via a "long press"
+of the start button.

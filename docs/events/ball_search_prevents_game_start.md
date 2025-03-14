@@ -12,4 +12,4 @@ and thus the game start has been blocked. This is a good event to use
 for a slide player to inform the player that the machine is looking for
 a missing ball.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

@@ -15,10 +15,10 @@ A user typed a line that begins with ! or ?
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`command`
+#### `command`:
 
-:   The text after the ! or ?
+The text after the ! or ?
 
-`user`
+#### `user`:
 
-:   The chat user who executed the command
+The chat user who executed the command

@@ -10,4 +10,4 @@ title: game_will_start
 The game is about to start. This event is posted just before
 [game_starting](game_starting.md).
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

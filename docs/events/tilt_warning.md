@@ -15,10 +15,10 @@ A tilt warning just happened.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`warnings`
+#### `warnings`:
 
-:   The total number of warnings so far.
+The total number of warnings so far.
 
-`warnings_remaining`
+#### `warnings_remaining`:
 
-:   The remaining number of warnings until a tilt.
+The remaining number of warnings until a tilt.

@@ -7,6 +7,8 @@ title: balldevice_ball_missing
 
 --8<-- "event.md"
 
+Event is posted by [ball_devices:](../config/ball_devices.md)
+
 A ball is missing from a device.
 
 ## Keyword arguments
@@ -15,12 +17,10 @@ A ball is missing from a device.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`balls`
+#### `balls`:
 
-:   The number of balls that are missing
+The number of balls that are missing
 
-`name`
+#### `name`:
 
-:   Name of device which lost the ball
-
-Event is posted by [ball_devices:](../config/ball_devices.md)
+Name of device which lost the ball

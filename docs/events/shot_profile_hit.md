@@ -2,10 +2,12 @@
 title: (shot_name)_(profile)_hit
 ---
 
-# (shot_name)_(profile)_hit
+# (shot_name)\_(profile)\_hit
 
 
 --8<-- "event.md"
+
+Event is posted by [shots:](../config/shots.md)
 
 The shot called (shot_name) was just hit with the profile (profile) active.
 
@@ -24,12 +26,10 @@ might result in this event being posted multiple times with different
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`profile`
+#### `profile`:
 
-:   The name of the profile that was active when hit.
+The name of the profile that was active when hit.
 
-`state`
+#### `state`:
 
-:   The name of the state the profile was in when it was hit
-
-Event is posted by [shots:](../config/shots.md)
+The name of the state the profile was in when it was hit

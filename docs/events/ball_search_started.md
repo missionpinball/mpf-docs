@@ -9,4 +9,4 @@ title: ball_search_started
 
 The ball search process has been begun.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

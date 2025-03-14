@@ -9,4 +9,4 @@ title: slam_tilt
 
 A slam tilt has just occurred.
 
-*This event does not have any keyword arguments*
+--8<-- "event_no_keywords_notice.md"

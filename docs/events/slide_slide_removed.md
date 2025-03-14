@@ -2,10 +2,12 @@
 title: slide_(name)_removed
 ---
 
-# slide_(name)_removed
+# slide_(name)\_removed
 
 
 *MPF-MC Event*
+
+Event is posted by [slides:](../config/slides.md)
 
 A slide called (name) has just been removed.
 
@@ -20,6 +22,4 @@ Slide names do not take into account what display or slide frame
 they're playing on, so be sure to create machine-wide unique names when
 you're naming your slides.
 
-*This event does not have any keyword arguments*
-
-Event is posted by [slides:](../config/slides.md)
+--8<-- "event_no_keywords_notice.md"

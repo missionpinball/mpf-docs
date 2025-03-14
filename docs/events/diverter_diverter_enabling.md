@@ -2,10 +2,12 @@
 title: diverter_(name)_enabling
 ---
 
-# diverter_(name)_enabling
+# diverter_(name)\_enabling
 
 
 --8<-- "event.md"
+
+Event is posted by [diverters:](../config/diverters.md)
 
 The diverter called (name) is enabling itself. Note that if this
 diverter has `activation_switches:` configured, it will not physically
@@ -18,10 +20,8 @@ will activate immediately.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`auto`
+#### `auto`:
 
-:   Boolean which indicates whether this diverter enabled itself
-    automatically for the purpose of routing balls to their proper
-    location(s).
-
-Event is posted by [diverters:](../config/diverters.md)
+Boolean which indicates whether this diverter enabled itself
+automatically for the purpose of routing balls to their proper
+location(s).

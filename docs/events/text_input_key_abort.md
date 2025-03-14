@@ -2,7 +2,7 @@
 title: text_input_(key)_abort
 ---
 
-# text_input_(key)_abort
+# text_input_(key)\_abort
 
 
 *MPF-MC Event*
@@ -16,6 +16,6 @@ process was aborted.
 guide for details for how to create entries in your config file that
 only respond to certain combinations of the arguments below.)
 
-`text`
+#### `text`:
 
-:   A string of the characters that were entered so far.
+A string of the characters that were entered so far.
