@@ -108,12 +108,16 @@ Full documentation can be found on the [Keyboard Setup guide](../keyboard.md).
 
 ## \[mpf\]
 
-The MPF section defines parameters for the GMC-spawned MPF process. The full command for the process will be assembled thus:
+If you have configured [Godot to launch the MPF game](../guides/launching-the-mpf-game-with-godot.md) for you, this section contains the values you set in that menu.
+These options are assembled together into the following shell command and run when you play the Godot project:
 
 ``` console
 
     <executable_path> <executable_args> <machine_path> <mpf_args>
 ```
+
+The Godot editor misbehaves if you edit the `gmc.cfg` values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the **Play** button to play your GMC project. 
+
 
 ### Options:
 
@@ -160,15 +164,6 @@ If true, the MPF process will spawn in virtual mode (i.e. `-x` will be appended 
 Single value, type `bool`. Default `false`.
 
 If true, the MPF process will have verbose logging (i.e. `-vV` will be appended to the `mpf_args`).
-
-
-### Launching the MPF game with GMC
-
-The options from this \[mpf\] section can also be seen and changed in the Godot editor. Next to the "Scene" menu header, find the tab header for "MPF".
-
-![image](../images/launch_mpf_with_gmc.png)
-
-The Godot editor misbehaves if you edit the `gmc.cfg` values while also editing in this UI form, so take care to save changes and reload the editor if you notice odd behaviors. If the top line "Launch MPF with GMC" is enabled, the values here will be used to spawn an MPF game instance when you press the **Play** button to play your GMC project. 
 
 
 ## \[sound_system\]
