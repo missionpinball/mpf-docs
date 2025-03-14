@@ -28,3 +28,5 @@ or
 $ mpf game -c my_config
 $ mpf -c my_config
 ```
+
+For options and command reference, see: [mpf game](game.md)

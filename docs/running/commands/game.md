@@ -146,3 +146,26 @@ Like `-x`, except it forces the
 
 Like `-x`, except it forces the
 [Virtual Pinball (VPX) platform](../../hardware/virtual/virtual_pinball_vpx.md).
+
+### -pit
+
+Run a platform integration test.
+
+### --json-logging
+
+Enable json logging to file.
+
+### -P (uppercase)
+
+Enable Production mode. This will suppress errors, wait for hardware on start
+and try to exit when startup fails. It is recommended to run this inside of a loop.
+See: [Software Finalization](../../finalization/software.md)
+
+### -p (lowercase)
+
+Pause on exit. This is useful if you spawn MPF in a transient shell window that would otherwise immediately close when MPF crashes with an error.
+
+### --syslog-address
+
+Log to the specified syslog address. This can be a domain socket such as `/dev/og` on Linux or `/var/run/syslog` on Mac.
+Alternatively, you an specify `host:port` for remote logging over UDP.
