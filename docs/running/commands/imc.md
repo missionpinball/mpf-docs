@@ -2,6 +2,8 @@
 title: mpf imc (command-line utility)
 ---
 
+*MPF IMC is used with MPF versions before 0.80*
+
 # mpf imc (command-line utility)
 
 

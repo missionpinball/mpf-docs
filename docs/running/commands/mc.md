@@ -2,6 +2,10 @@
 title: mpf mc (command-line utility)
 ---
 
+*MPF MC is used with MPF versions before 0.80*
+
+For 0.80+, see the [Godot Media Controller](../../gmc/index.md).
+
 # mpf mc (command-line utility)
 
 
@@ -11,11 +15,7 @@ Starts the MPF Media Controller.
 
 There are several command-line options you can use when running the MPF
 MC. Note that single commands that take no options can be combined, so
-`mpf mc -vVb` is the same as `mpf mc -v -V -b`.
-
-### -b (lowercase)
-
-Start MPF without the Media Controller (MC).
+`mpf mc -lvV` is the same as `mpf mc -l -v -V`.
 
 ### -c (lowercase)
 
@@ -117,20 +117,20 @@ bad way). Windows computers can run MPF no problem, but because of their
 weird console slowness we recommend that you do not use the
 `-V` command line option from a Windows computer.
 
-### -x (lowercase)
-
-Ignores all `platform:` settings in your config files and forces MPF to
-run using the *virtual* platform interface. This is nice for testing
-when you don't have your physical hardware attached.
-
-### -X (uppercase)
-
-Like `-x`, except it forces the *smart virtual* platform.
-
 ## Unused Options
 
-Note that command line options `-a -A -x -X` are valid but ignored by
+Note that command line options `-a` `-A` `-x`, and `-X` are valid but ignored by
 the MPF MC. This is because these options are used with the MPF game
 engine, but if you start the MPF game engine and MPF MC at the same time
 via `mpf both`, all options will be sent to both the game engine and the
 MC, so the MC ignores these options which it doesn't use.
+
+### -x (lowercase)
+
+This option tells the mpf game engine to run with the `virtual` platform. It does not have any
+effect on the MPF MC.
+
+### -X (uppercase)
+
+This option tells the mpf game engine to run with the `smart_virtual` platform. It does not have any
+effect on the MPF MC.
