@@ -33517,6 +33517,74 @@ icons & this code generated via https://realfavicongenerator.net
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands-for-starting-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands for starting your game
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-to-run-alongside-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands to run alongside your game
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Command Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine_folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      machine_folder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -33541,29 +33609,45 @@ icons & this code generated via https://realfavicongenerator.net
 
 <h1 id="mpf-commands">MPF commands</h1>
 <p>MPF offers multiple command-line commands. Almost all of those commands
-should executed from within your MPF machine folder.</p>
-<p>Usually you start MPF using:</p>
+should be executed from within your MPF machine folder. If you want to run
+a command <em>not</em> inside your machine folder, you may include the path
+to the game folder as <a href="#machine_folder">the first argument</a> after the command name, BEFORE
+any of the dashed options.</p>
+<p>Each of the following commands can take a variety of options, which have
+been omitted on this page to simplify the represented workflow steps.
+See the specific command reference pages to determine which command line
+options you will need for your particular use cases.</p>
+<h3 id="commands-for-starting-your-game">Commands for starting your game</h3>
+<p>To start the MPF game engine as well as the media controller, you can use:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>both
 </code></pre></div>
 <p>Alternatively your can run MPF and MC separately:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>game
 </code></pre></div>
-<p>and:</p>
+<p>and in another shell window:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>mc
 </code></pre></div>
-<p>To start the interactive service cli run (start mpf both before):</p>
+<p><em>Note: MPF MC is the media controller used before MPF 0.80.
+For MPF GMC with MPF 0.80+, see: <a href="../../gmc/">Godot Media Controller</a></em></p>
+<h3 id="commands-to-run-alongside-your-game">Commands to run alongside your game</h3>
+<p>Many commands can connect with the MPF game instance to assist with development tasks.
+For these, make sure your game is running (e.g. with <code>game</code> or <code>both</code>), and then run the
+command in another shell instance.</p>
+<p>To start the interactive service cli, after starting your game run:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>service
 </code></pre></div>
-<p>If you want to see details about your hardware (do not run MPF in
-parallel):</p>
+<p>To start the interactive monitor tool (which requires a <a href="../../tools/monitor/installation/">separate install</a>) run:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>monitor
+</code></pre></div>
+<h3 id="other-commands">Other commands</h3>
+<p>Some commands may need to be run <strong><em>without</em></strong> a running game.</p>
+<p>If you want to see details about your hardware (while <strong>NOT</strong> running MPF in parallel):</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>hardware<span class="w"> </span>scan
 </code></pre></div>
-<p>To update the firmware of your hardware controllers (if supported by
-your platform):</p>
+<p>To update the firmware of your hardware controllers (if supported by your platform):</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>hardware<span class="w"> </span>firmware_update
 </code></pre></div>
-<p>If you do not use any of the specific command names, you are <a href="mpf/">defaulted</a> to <code>game</code>.</p>
-<p>So <code>$ mpf</code> by itself is the same as <code>$ mpf game</code>.</p>
+<h2 id="full-command-reference">Full Command Reference</h2>
 <ul>
 <li><a href="both/">mpf both</a></li>
 <li><a href="core/">mpf core</a></li>
@@ -33580,6 +33664,16 @@ your platform):</p>
 <li><a href="test/">mpf test</a></li>
 <li><a href="format/">mpf format</a></li>
 </ul>
+<p>There are over a dozen commands for <code>mpf</code>, but it is also possible to run <code>$ mpf</code> without
+writing a command name at all. If you do not use any of the specific command names,
+you are <a href="mpf/">defaulted</a> to <code>game</code>.</p>
+<p>So <code>$ mpf</code> by itself is the same as <code>$ mpf game</code>.</p>
+<h2 id="optional-arguments">Optional Arguments</h2>
+<h3 id="machine_folder">machine_folder</h3>
+<p>To use the machine_folder optional argument, you must include it after the command name, for example:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mpf<span class="w"> </span>game<span class="w"> </span>./path/to/machine_folder<span class="w"> </span>-P
+</code></pre></div>
+<p>If you do not include this argument, your current folder will be assumed to be the machine folder.</p>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Something missing or wrong? You can fix it!</p>
