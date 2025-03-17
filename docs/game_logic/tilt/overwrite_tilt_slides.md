@@ -8,7 +8,7 @@ title: Overwriting Tilt Slides
 The [tilt mode](../../index.md) comes with very
 basic slides. You can overwrite them using the following config:
 
-``` mpf-mc-config
+``` yaml
 #! switches:
 #!   s_tilt:
 #!     number:

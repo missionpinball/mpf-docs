@@ -32,7 +32,7 @@ simultaneously so that is what we have configured in the example below.
 
 Example:
 
-``` mpf-config
+``` yaml
 sound_system:
   tracks:
     music:
@@ -84,7 +84,7 @@ the `track:` setting accordingly.
 
 `assets:` section in machine configuration file:
 
-``` mpf-config
+``` yaml
 assets:
   sounds:
     default:
@@ -128,7 +128,7 @@ The master volume ranges from 0.0 (silent) to 1.0 (full), and defaults
 to 0.5 (50%). You can set your own default volume by overriding the
 machine variable settings in your machine config file.
 
-``` mpf-config
+``` yaml
 machine_vars:
   master_volume:
     initial_value: 0.25   # Set this to any value you want
@@ -166,7 +166,7 @@ default). In my `sounds:` section of my machine configuration file (see
 [sounds:](../../config/sounds.md) in the
 documentation for more details) I can put the following text:
 
-``` mpf-config
+``` yaml
 sounds:
   triangle:
     file: 22783__franciscopadilla__80-mute-triangle.wav
@@ -185,7 +185,7 @@ from various sources rather than trying to adjust the levels in each
 sound file using audio editing software. Building on the example above,
 let's set the volume of the *triangle* sound in our config file:
 
-``` mpf-config
+``` yaml
 sounds:
   triangle:
     file: 22783__franciscopadilla__80-mute-triangle.wav
@@ -226,7 +226,7 @@ these settings.
 
 Example `sounds:` configuration demonstrating most common settings:
 
-``` mpf-config
+``` yaml
 sounds:
   triangle:
     file: 22783__franciscopadilla__80-mute-triangle.wav
@@ -275,7 +275,7 @@ example (`song_01`) to play infinitely when the *attract* mode starts
 and stop when the *attract* mode stops. Create the following entries in
 the `sound_player:` section of the machine config file:
 
-``` mpf-config
+``` yaml
 sound_player:
   mode_attract_started:
     song_01:

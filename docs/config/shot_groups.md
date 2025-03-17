@@ -17,7 +17,7 @@ config file.
 
 For example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   lane_l:
 #!     number:

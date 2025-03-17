@@ -13,7 +13,7 @@ For instance, `show_tokens` in a
 [show_player](../config/show_player.md) has to
 be a dictionary:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     your_show_name:

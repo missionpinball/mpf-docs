@@ -17,7 +17,7 @@ will always enable with full power (which is fine in older machines and
 should not break things). However, you can still choose the pulse length
 using `pulse_ms`.
 
-``` mpf-config
+``` yaml
 coils:
   c_some_coil:
     number: 04
@@ -30,7 +30,7 @@ address those you have to add 100 to their number from the manual. For
 instance, to address a coil which is connected to the light output `05`
 use coil `105`:
 
-``` mpf-config
+``` yaml
 coils:
   c_coil_on_light_bank:
     number: 107

@@ -17,7 +17,7 @@ position 2 contains bulbs 16 to 23. Wing position 3 contains bulbs 24 to
 31. The bulb is numbered using the position of the OPP card (starting at
 0), then a '-', and finally the bulb number on the card.
 
-``` mpf-config
+``` yaml
 lights:
   some_light:
     number: 1-16

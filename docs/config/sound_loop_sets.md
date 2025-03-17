@@ -29,7 +29,7 @@ references the sound asset named *kick*. This is the simplest sound loop
 set definition you can have. The volume of the *kick* sound will be
 taken from the sound asset definition.
 
-``` mpf-config
+``` yaml
 sound_loop_sets:
   basic_beat:
     sound: kick
@@ -40,7 +40,7 @@ sound_loop_sets:
 When specifying multiple layers use a dash (and a space) to dictate
 where a new layer starts, like this:
 
-``` mpf-config
+``` yaml
 sound_loop_sets:
   basic_beat:
     sound: kick

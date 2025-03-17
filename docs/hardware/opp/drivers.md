@@ -23,7 +23,7 @@ to 11. Wing position 3 contains coil numbers 12 to 15. The coil is
 numbered using the position of the OPP card (starting at 0), then a
 '-', and finally the coil number on the card.
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 0-12
@@ -39,7 +39,7 @@ The OPP hardware also has the ability to specify the "pulse time".
 Pulse time is the coil's initial kick time. For example, consider the
 following configuration:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 0-12
@@ -59,7 +59,7 @@ It can range from 0.0 to 1.0 and defines the time share the coil is on
 The period is fixed at 16ms for OPP. To set the hold power to 25%, set
 default_hold_power to .25 and OPP will use 4ms/16ms = 25%.
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 0-3
@@ -86,7 +86,7 @@ source.
 It can range from 0.0 to 1.0 and defines the time share the coil is on
 (0%-100%). Any value under 0.03125 will be forced to output 3.125%.
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 0-3
@@ -108,7 +108,7 @@ the recycle time. The time will be `default_pulse_ms * recycle_factor`.
 For instance, if you set a pulse time of `10ms` and a recycle_factor of
 two the coil will cool down for at least `20ms`. This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: 0-3

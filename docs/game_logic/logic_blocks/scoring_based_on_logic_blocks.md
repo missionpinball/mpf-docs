@@ -12,7 +12,7 @@ Sometimes you want to score points based on the state of a logic block.
 This is a simple example with an accrual. Every event can increase the
 multiplier exactly once. Multiplier starts at 1 and goes up to 4.
 
-``` mpf-config
+``` yaml
 ##! mode: test
 mode:
   start_events: ball_started
@@ -73,7 +73,7 @@ variable_player:
 Similarly, you can use a counter to increase a multiplier. Every event
 listed can increase the multiplier multiple times.
 
-``` mpf-config
+``` yaml
 ##! mode: test
 mode:
   start_events: ball_started
@@ -133,7 +133,7 @@ variable_player:
 
 This also works with sequences.
 
-``` mpf-config
+``` yaml
 ##! mode: test
 mode:
   start_events: ball_started

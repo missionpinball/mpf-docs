@@ -33,7 +33,7 @@ the sequence resets when it's hit.
 Each shot also has `reset_events` configured, so that the entire
 sequence can be reset after completion.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drop_1:
 #!     number: 1
@@ -109,7 +109,7 @@ shows accept the `show_tokens` from our shots. In this case, it is the
 LED we wish to control. You can create your own shows to change LED
 color, play sounds, etc.
 
-``` mpf-config
+``` yaml
 ##! mode: sequential_drops
 
 shot_profiles:
@@ -141,7 +141,7 @@ starts and when the sequence completes. All logicblocks have a default
 completion event called *logicblock_(name)_complete* so we don't need
 to explicitly define any completion event.
 
-``` mpf-config
+``` yaml
 ##! mode: sequential_drops
 
 sequences:
@@ -177,7 +177,7 @@ reset coil for the target so that the target stays up.
 We can apply all of these rules based on the corresponding events, like
 follows.
 
-``` mpf-config
+``` yaml
 ##! mode: sequential_drops
 
 event_player:
@@ -200,7 +200,7 @@ event_player:
 The above configuration requires that each drop target coil has the
 corresponding reset events, as configured below.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drop_1:
 #!     number: 1
@@ -247,7 +247,7 @@ points for progression with the *logicblock_(name)_hit* event (when a
 lit target is hit) and the *logicblock_(name)_complete* event (when
 the full sequence is completed).
 
-``` mpf-config
+``` yaml
 ##! mode: sequential_drops
 
 variable_player:

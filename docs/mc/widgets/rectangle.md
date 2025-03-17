@@ -11,7 +11,7 @@ width are the same.
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

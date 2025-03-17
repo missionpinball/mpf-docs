@@ -55,7 +55,7 @@ In order to use MPF in a WPC machine, you need to configure the
 
 If you're using a FAST WPC controller, it will look like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
 fast:
@@ -64,7 +64,7 @@ fast:
 
 And if you're using a P-ROC:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
 p_roc:
@@ -94,7 +94,7 @@ of switch:
 Matrix switches start with the letter `S`, followed by the switch
 number. For example:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_slingshot:
     number: s41
@@ -127,7 +127,7 @@ if the numbers are wrong.
 Direct switches (which are typically the coin and front door switches)
 are entered with the `SD` prefix, then the number, like this:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_coin:
     number: sd1
@@ -159,7 +159,7 @@ Fliptronics switches are used for other things.
 
 You would use Fliptronics switches in your config like this:
 
-``` mpf-config
+``` yaml
 switches:
   s_flipper_lower_right_eos:
     number: sf1
@@ -187,7 +187,7 @@ To configure the regular coils (from the "Solenoid / Flasher" table in
 your machine's operator's manual, enter the letter `C` followed by the
 solenoid number, like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_trough_eject:
     number: c01
@@ -229,7 +229,7 @@ and diverters).
 
 An example in your config might be:
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left_main:
     number: fllm
@@ -256,7 +256,7 @@ coils:
 Lights are configured with the letter `L` followed by the lamp number
 from the manual:
 
-``` mpf-config
+``` yaml
 lights:
   l_ball_save:
     number: l11
@@ -286,7 +286,7 @@ to use them.
 
 GI strings are configured with `G` followed by the number, like this:
 
-``` mpf-config
+``` yaml
 lights:
   gi_back_panel:
     number: g01
@@ -315,7 +315,7 @@ Since flashers in WPC machines are technically drivers (coils), they are
 also configured with the letter `C` followed by their number similar to
 `coils`.
 
-``` mpf-config
+``` yaml
 coils:
   f_claw:
     number: c17

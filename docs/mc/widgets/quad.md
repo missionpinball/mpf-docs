@@ -9,7 +9,7 @@ The quad widget is used to draw solid polygons on a slide.
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

@@ -20,7 +20,7 @@ and then come back here for the nitty-gritty details later.
 Here's a very simple example that creates a display called "window"
 with a height and width of 800x600:
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     width: 800
@@ -30,7 +30,7 @@ displays:
 You can name your display whatever you want. For example, here's a
 display called "potato" which is 100x100:
 
-``` mpf-mc-config
+``` yaml
 displays:
   potato:
     width: 100
@@ -41,7 +41,7 @@ You can add multiple displays to your config. Here's an example with a
 display called "lcd" which is 1366x768, and a second display called
 "playfield" which is 640x480:
 
-``` mpf-mc-config
+``` yaml
 displays:
   lcd:
     width: 1366

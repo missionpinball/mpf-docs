@@ -34,7 +34,7 @@ There are three ways you can use the virtual platform:
 You can manually specify the virtual platform in the machine config,
 like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual
 ```

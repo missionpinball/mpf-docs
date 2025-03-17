@@ -19,7 +19,7 @@ There's a default `bcp:` section in the default `mpfconfig.yaml`
 system-wide defaults section that should be fine to get started, and
 then you can override it if needed for a specific situation:
 
-``` mpf-config
+``` yaml
 bcp:
   connections:
     local_display:

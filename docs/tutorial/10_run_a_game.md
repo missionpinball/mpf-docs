@@ -23,7 +23,7 @@ what's actually going on. For now just make this change.) In your
 config file, add a `ball_started:` entry with the following information.
 Your complete `slide_player:` section should now look like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   welcome_slide:
 #!     widgets:
@@ -60,7 +60,7 @@ your virtual machine starts up. Additionally, we add keyboard bindings
 for ball switches to the numbers `1` to `5` and the plunger switch to
 `p`.
 
-``` mpf-mc-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number:
@@ -117,7 +117,7 @@ flipper sections of your config file. So now your `` `flippers: ``
 section should look like this: (It might not be 100% identical since you
 might have single-wound flipper coils and/or EOS switches.)
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 0

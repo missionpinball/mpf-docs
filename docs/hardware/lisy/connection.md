@@ -115,7 +115,7 @@ to be able to connect to the LISY board.
 If you want to use the serial port, add/update the following sections in
 your machine config:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: lisy
 lisy:
@@ -152,7 +152,7 @@ cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
 Alternatively, if you want to connect using WiFi or Ethernet, add/update
 the following sections in your machine config:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: lisy
 lisy:

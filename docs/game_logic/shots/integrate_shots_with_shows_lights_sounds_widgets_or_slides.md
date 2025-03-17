@@ -45,7 +45,7 @@ and display the widget we define a show and integrate it to our shots
 using a shot_profile. Eventually, we add a show_player to play
 animations and sounds when a shot is hit.
 
-``` mpf-mc-config
+``` yaml
 # this is in your machine-wide config
 # first we define some switches + lights
 switches:

@@ -17,7 +17,7 @@ detect certain position using switches (usually 0)
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   light_p1:
     number:

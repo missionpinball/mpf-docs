@@ -25,7 +25,7 @@ FLAC (.flac) files.
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 ##! asset: sounds/extra_ball_12753.wav=../mc/sound/sounds/sound.ogg
 ##! asset: sounds/slingshot_01.ogg=../mc/sound/sounds/sound.ogg
 #! sound_system:
@@ -248,7 +248,7 @@ point on the user's next turn (using mode code).
 
 Here's a simple example utilizing markers:
 
-``` mpf-config
+``` yaml
 sounds:
   long_sound_1:
     volume: 0.8

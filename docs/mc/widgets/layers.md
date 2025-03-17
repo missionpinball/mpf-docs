@@ -28,7 +28,7 @@ drawn in the order they are in the config.
 For example, here's a slide that has widget3.1, then widget3.2, then
 widget3.3:
 
-``` mpf-mc-config
+``` yaml
 slides:
   3_widgets:
     - type: text
@@ -70,7 +70,7 @@ will be drawn on top of those with lower values.
 
 Here's the same example as before, but with `z:` values added:
 
-``` mpf-mc-config
+``` yaml
 slides:
   3_widgets:
     - type: text

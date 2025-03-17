@@ -7,7 +7,7 @@ title: How to temporarily disable flippers
 
 [Help us to write it](../../about/help.md)
 
-``` mpf-config
+``` yaml
 switches:
   s_left_flipper:
     number: 1

@@ -62,7 +62,7 @@ exactly three channels. However, this is not true for RGBW or similar
 LEDs which do not work with this style of numbering. Luckily, you can
 chain them instead and have MPF calculate the internal channels for you:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0      # you could also use number: 0
@@ -80,7 +80,7 @@ lights:
 
 Remember that each chain from the Nano will handle up to 64 RGB LEDs. You likely will have more than just 64 LEDs in your machine resulting in multiple chains. When configuring the `start_channel` or `number` for subsequent chains, remember to identify the number of the first LED in that chain starting with the first number LED supported in that chain. For example, your first chain should start with LED_0 and your second chain with LED_64, the third with LED_128 and the fourth with LED_192, like this:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0      # you could also use number: 0
@@ -122,7 +122,7 @@ to corrupt messages.
 
 To help combat this, there are two settings you can adjust:
 
-``` mpf-config
+``` yaml
 mpf:
   default_light_hw_update_hz: 50
 fast:

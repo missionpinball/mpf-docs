@@ -27,14 +27,14 @@ There are multiple types of lights (read those for specific details):
 
 This is an example of for a light:
 
-``` mpf-config
+``` yaml
 lights:
   my_led:
     number: 7   # the exact number format depends on your platform
 ```
 
 For WS2812 LEDs use `type grb` (WS2811 does not need this)
-``` mpf-config
+``` yaml
 lights:
   my_ws2812_led:
     number: 23  # the exact number format depends on your platform
@@ -42,7 +42,7 @@ lights:
 ```
 
 You can also map individual color channels:
-``` mpf-config
+``` yaml
 lights:
   rgb_led:
     type: rgb
@@ -58,7 +58,7 @@ lights:
 ```
 
 Starting with MPF 0.54 there is a new syntax to chain lights:
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-0    # the exact number format depends on your platform
@@ -75,7 +75,7 @@ lights:
 ```
 
 If your light is connected to a driver use this example:
-``` mpf-config
+``` yaml
 coils:
   light_connected_to_a_driver:
     number: 42          # number depends on your platform
@@ -89,7 +89,7 @@ lights:
 ## Fully working Example 1 - Basics
 Let’s bring above informaton together and learn by example. Though the following example is a fully working minimal set for the Cobra controller, it is as well helpful to understand the concpet more if you use a different set of hardware. For this example to work physically, the Cobra board needs to have 5V power supply and a Neopixel strip connected to NEO0. No need for a high voltage power supply like you need for coils. The example has been built for a WS2811 strip, but can be used as well for a WS2812 strips and others. This `config.yaml` is the only configuration file you need in your project. The config file is fully valid for the Cobra board connected to a Linux PC running MPF. If you have a Cobra board but run Windows or macOS you have to change the `ports`. If you run a completely different hardware you have to adapt the `hardware` section.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:               # change in case you don't use OPP
@@ -202,7 +202,7 @@ paramater is that you are able to define a full serial LED light strip
 with a few lines of config. See as well the corresponding config file
 section [light_stripes:](../../config/light_stripes.md)
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:

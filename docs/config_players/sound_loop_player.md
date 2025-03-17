@@ -13,7 +13,7 @@ available if you're using MPF-MC for your media controller.)
 
 Examples:
 
-``` mpf-config
+``` yaml
 sound_loop_player:
   play_basic_beat:
     loops:

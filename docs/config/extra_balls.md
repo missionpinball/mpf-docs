@@ -23,7 +23,7 @@ details.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 extra_balls:
   my_mode_eb:

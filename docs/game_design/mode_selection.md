@@ -72,7 +72,7 @@ Batman DK (2008) or Stern Star Wars (2017).
 
 This is an example:
 
-``` mpf-config
+``` yaml
 ##! mode: left_ramp
 # mode: left_ramp
 mode:
@@ -162,7 +162,7 @@ There are multiple options to implement a selection carousel.
 One way to achieve mode selection you use a carousel mode which looks
 like this:
 
-``` mpf-config
+``` yaml
 ##! mode: carousel
 #config_version=5
 mode:
@@ -198,7 +198,7 @@ instance this might be combined with the example above by influencing
 the `starting_count:` or `count_complete_value:`
 using conditional events:
 
-``` mpf-config
+``` yaml
 ##! mode: qualify
 counters:
   left_ramp_qualify_counter:
@@ -214,7 +214,7 @@ You can define multiple
 [achievements](../config/achievements.md) and
 rotate them:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   l_left_ramp:
 #!     number:
@@ -309,7 +309,7 @@ This is a very flexible way to achieve this.
 Use this to delay the start of a player's first ball until they select
 a mode:
 
-``` mpf-config
+``` yaml
 ##! mode: start_selecton_on_ball_one
 #config_version=5
 mode:
@@ -333,7 +333,7 @@ extra balls). If you also want to trigger it on extra balls use
 Normally, pressing the start button will cause MPF to add another
 player. To suppress this during mode selection you can do the following:
 
-``` mpf-config
+``` yaml
 # Add the following to the game section of your machine's config.yaml
 # This will disable the start button for adding players
 game:

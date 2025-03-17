@@ -11,7 +11,7 @@ device.
 
 For instance, a [switch](../config/switches.md) knows certain settings:
 
-``` mpf-config
+``` yaml
 switches:
   s_flipper_left:
     number: 1

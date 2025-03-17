@@ -27,7 +27,7 @@ Generically-speaking, there are two formats you can use for slide_player
 entries: "express" and "full" configs. Express configs will look
 like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 #!   slide2: []
@@ -65,7 +65,7 @@ is posted, but it will also override the default settings and show the
 slide on the display target called *display1* and at a priority that's
 200 higher than the base priority.
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide_1: []
 #! displays:
@@ -97,7 +97,7 @@ defined called *slide_1* and you redefine it in your slide player like
 the example below, this new slide will become *slide_1* and the old one
 will be gone.
 
-``` mpf-mc-config
+``` yaml
 slide_player:
   some_event:
     slide_1:
@@ -114,7 +114,7 @@ You can also mix-and-match defining a slide in the slide player as well
 as adjusting properties of how the slide is shown. Just add multiple
 settings, like this:
 
-``` mpf-mc-config
+``` yaml
 slide_player:
   some_event:
     slide_1:
@@ -132,7 +132,7 @@ Remember that these slide player settings can also be used in show steps
 (in a `slides:` section). Any of the examples above apply, you just
 don't include the event name, like this:
 
-``` mpf-mc-config
+``` yaml
 ##! show: show1
 #show_version=5
 - time: 0

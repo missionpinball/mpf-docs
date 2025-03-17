@@ -15,7 +15,7 @@ title: "logging:"
 In the logging section you can configure which how verbose parts of MPFs
 should log.
 
-``` mpf-config
+``` yaml
 logging:
   console:
     asset_manager: none

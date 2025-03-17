@@ -197,7 +197,7 @@ Part numbers:
 
 You can configure a normally closed opto like this:
 
-``` mpf-config
+``` yaml
 switches:
   trough1:
     number: 81    # number depends on your platform

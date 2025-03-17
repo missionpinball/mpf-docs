@@ -17,7 +17,7 @@ Skillshots are a self-contained set of rules, so it's wise to create a
 separate mode that can be started when a player's ball starts and ended
 after the skillshot is hit (or missed).
 
-``` mpf-config
+``` yaml
 #config_version=5
 modes:
   - skillshot_with_auto_rotate
@@ -59,7 +59,7 @@ that the first shot includes `advance_events: mode_skillshot_started` so
 that this shot will automatically light when the mode starts, as the
 first shot in the rotation.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_dropbank_1:
 #!     number: 1
@@ -134,7 +134,7 @@ advanced to the "lit" state and its light will flash. When any shot is
 hit, we'll check whether it is "lit" or not to know whether the
 skillshot should be awarded.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_auto_rotate
 shot_profiles:
   skillshot_profile:
@@ -158,7 +158,7 @@ Shot groups are powerful because they control behavior of all the shots
 together. In this case, we'll use our shot group control the rotation
 of the shots, and a [timer](../config/timers.md) to trigger a rotation every half-second.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_dropbank_1:
 #!     number: 1
@@ -218,7 +218,7 @@ state is number 0 and the "on" state is number 1. The following code
 will only post the advance event for a shot if that shot is in state
 number 1, a.k.a. "on".
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_auto_rotate
 event_player:
   timer_skillshot_rotate_stopped:
@@ -244,7 +244,7 @@ with the state name of the shot that was hit. This way, we can check
 when *any* shot is hit rather than having to check each shot
 individually.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_auto_rotate
 variable_player:
   skillshot_lit_hit:
@@ -265,7 +265,7 @@ will post before the *skillshot_lit_hit* event, so if we end the mode
 immediately then no score will be awarded. Instead, we add a 1 second
 delay after playfield activation before ending the mode.
 
-``` mpf-config
+``` yaml
 ##! mode: skillshot_with_auto_rotate
 event_player:
   # Add these lines after timer_skillshot_rotate_stopped (defined above)

@@ -93,7 +93,7 @@ entry `start_events: ball_starting`. On the following line, also indent
 four spaces and type `priority: 100`. Your `base.yaml` file should now
 look like this:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 #config_version=5
 mode:
@@ -195,7 +195,7 @@ To do this, go back to your base mode's config file
 `slide_player:`. Then add the following subsections so your complete
 `base.yaml` looks like this:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: base
 #config_version=5
 mode:
@@ -284,7 +284,7 @@ can go into your machine-wide `config.yaml` and remove the slide_player:
 entry for ball_started:. So now the slide_player: in your machine-wide
 `config.yaml` should just look like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   welcome_slide:
 #!     widgets:

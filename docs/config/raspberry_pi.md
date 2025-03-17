@@ -17,7 +17,7 @@ Raspberry Pi running pigpio. See [Raspberry PI (pigpio)](../hardware/rpi.md) for
 
 This is an example:
 
-``` mpf-config
+``` yaml
 raspberry_pi:
   ip: localhost
   port: 8888

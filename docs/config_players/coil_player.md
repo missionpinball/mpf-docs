@@ -11,7 +11,7 @@ that's used pulse, enable, or disable coils and drivers.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 coil_player:
   some_event: coil_1
   some_other_event:
@@ -37,7 +37,7 @@ The coil player's express config is the "pulse" action.
 
 Example coil player from a show:
 
-``` mpf-config
+``` yaml
 ##! show: test
 - time: 0
   coils:

@@ -28,7 +28,7 @@ rarely used to render multiple windows. The simplest solution to this
 problem is to extend the MC window to span both (or more) screens. This
 can be achieved using the following config:
 
-``` mpf-mc-config
+``` yaml
 kivy_config:
   kivy:
     desktop: 1

@@ -18,7 +18,7 @@ processing continues.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 queue_relay_player:
   game_ending:
     post: start_my_mode

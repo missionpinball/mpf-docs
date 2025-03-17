@@ -11,7 +11,7 @@ one of your settings in your config.
 
 For instance, a flipper device references a switch and a coil:
 
-``` mpf-config
+``` yaml
 switches:
   s_flipper_left:
     number:

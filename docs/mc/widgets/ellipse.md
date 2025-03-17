@@ -16,7 +16,7 @@ use the [Bezier Curve Widget](bezier.md).
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

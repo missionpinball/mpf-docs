@@ -23,7 +23,7 @@ color strings).
 
 This is an example:
 
-``` mpf-config
+``` yaml
 named_colors:
   custom_blue: [24, 65, 226]
   troll_green: 4a9b22

@@ -22,7 +22,7 @@ animations with the same name.
 
 For example:
 
-``` mpf-config
+``` yaml
 animations:
   fade_in:
     property: opacity

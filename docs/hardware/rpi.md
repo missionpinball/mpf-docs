@@ -56,7 +56,7 @@ properly.
 
 This is an example config:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: rpi
 raspberry_pi:

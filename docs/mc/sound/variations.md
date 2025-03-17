@@ -44,7 +44,7 @@ name to remember (`triangle_01`) using the `file:` setting (or you could
 simply rename the file to *triangle_01.wav* and omit the *file:*
 setting):
 
-``` mpf-config
+``` yaml
 sounds:
   triangle_01:
     file: 13147__looppool__triangle1.wav
@@ -60,7 +60,7 @@ add them to the `sounds:` section in the machine configuration file (I
 named the sound variations *triangle_02*, *triangle_03*, and
 *triangle_04*:
 
-``` mpf-config
+``` yaml
 sounds:
   triangle_01:
     file: 13147__looppool__triangle1.wav
@@ -80,7 +80,7 @@ put them all into a single sound pool object so we can treat them as a
 single sound. To do so, we need to add a `sound_pools:` section to our
 machine configuration file as follows:
 
-``` mpf-config
+``` yaml
 sound_pools:
   triangle:
     type: random
@@ -104,7 +104,7 @@ It's very easy to do. We can add weights to each sound in the pool that
 specify the probability of each sound being selected. Let's look at our
 `sound_pools:` section again:
 
-``` mpf-config
+``` yaml
 sound_pools:
   triangle:
     type: random
@@ -132,7 +132,7 @@ time. If the selection is random, excluded events will not be weighted
 in the distribution. If the selection is sequential, excluded events
 will simply be skipped.
 
-``` mpf-config
+``` yaml
 sound_pools:
   triangle:
     type: random

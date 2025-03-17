@@ -230,7 +230,7 @@ which port appears.
 
 So on Windows, you'll end up with something like:
 
-``` mpf-config
+``` yaml
 hardware:
   rgb_dmd: smartmatrix
 smartmatrix:
@@ -242,7 +242,7 @@ smartmatrix:
 
 And on Mac or Linux, it will look something like:
 
-``` mpf-config
+``` yaml
 hardware:
   rgb_dmd: smartmatrix
 smartmatrix:
@@ -274,7 +274,7 @@ one physical DMD.)
 To do this, create a section in your machine-wide config called
 `rgb_dmds:`, and then pick a name for the DMD, like this:
 
-``` mpf-config
+``` yaml
 rgb_dmds:
   smartmatrix_1:
     hardware_brightness: .17
@@ -340,7 +340,7 @@ Note that the [Using an RGB full-color LED DMD](../mc/displays/rgb_dmd.md)
 guide has more details on the window and slide settings used in this
 machine config.
 
-``` mpf-mc-config
+``` yaml
 hardware:
   rgb_dmd: smartmatrix
 displays:

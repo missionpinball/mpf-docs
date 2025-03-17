@@ -20,7 +20,7 @@ entry for it to your machine or mode config file.
 
 Let's take a look at an example:
 
-``` mpf-config
+``` yaml
 assets:
   images:
     default:

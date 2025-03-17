@@ -35,7 +35,7 @@ The example config files section of the documentation contains
 If you want to use your timer in a slide you have to set the value to a
 player variable first:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: your_mode
 # in your mode
 timers:
@@ -77,7 +77,7 @@ supports). Afterwards, you can use the variable in your slide.
 In this example, we'll display a count-down timer as minutes and seconds. Again, if you want to use your timer in a slide you have to set the value to a
 player variable first:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: your_mode
 # in your mode
 timers:

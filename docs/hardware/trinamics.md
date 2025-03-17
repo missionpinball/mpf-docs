@@ -18,7 +18,7 @@ to it.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual
   stepper_controllers: trinamics_steprocker

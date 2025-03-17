@@ -22,7 +22,7 @@ that individual achievement.
 
 Here's an example achievements section from Brooks & Dunn:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 achievements:
   world_tour:

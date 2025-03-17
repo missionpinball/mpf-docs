@@ -3,7 +3,7 @@
 If you got a lot of lights you might run into bus contention issues. You
 can reduce the light update rate in MPF:
 
-``` mpf-config
+``` yaml
 mpf:
   default_light_hw_update_hz: 30   # defaults to 50
 ```

@@ -34,7 +34,7 @@ Outgoing:
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: osc
 

@@ -44,7 +44,7 @@ List all of your states here, with their applicable settings. Go to
 [state_machine_states:](state_machine_states.md) to see a full list of all settings under `states:`. For
 example:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 state_machines:
   my_state:
@@ -77,7 +77,7 @@ to the first step, when a given event is posted.
 
 List all your transitions here (we start with the same steps as above):
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 state_machines:
   my_state:

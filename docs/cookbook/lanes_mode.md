@@ -51,7 +51,7 @@ we've given the lights and switches the same names (which is ok since
 they're different types of devices), so our `shots:` section looks like
 this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -93,7 +93,7 @@ shots:
 Next, configure a `shot group`, which is where you can group individual
 shots together so you can interact with as a single group, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -168,7 +168,7 @@ mode's active. In this tutorial we're going to configure them in the
 base mode as well but you could put that group in any other mode and
 load/unload it as you need it.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -223,7 +223,7 @@ rotate lane shots to the right, regardless of which flipper button is
 pressed. In that case you'd only have an entry for rotate_right_events,
 but you'd add both the left and right flipper events, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -286,7 +286,7 @@ shots to reset. To do that, go back into your `base.yaml`
 file and add another setting to your *indy_lanes* shot group for
 `reset_events:`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -382,7 +382,7 @@ scoring section to your base.yaml mode configuration. (Or you can add it
 to your machine-wide config if you want to keep all your scoring entries
 in one place.) It should look like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -478,7 +478,7 @@ you complete the lanes. To do this, let's first create a light show
 (details in Steps A and B `here`) called
 \`indy_lanes_complete.yaml\`:
 
-``` mpf-config
+``` yaml
 ##! show: indy_lanes_complete
 - duration: 1
   lights:
@@ -500,7 +500,7 @@ show, go back to your `base.yaml` mode config and add a
 `light_player:` entry which plays this show when the lanes
 are complete, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   indy_i:
 #!     number: 1
@@ -621,7 +621,7 @@ are lots of options you can play with.
 
 This is a full example:
 
-``` mpf-config
+``` yaml
 # switches and lights in your machine config
 switches:
   indy_i:

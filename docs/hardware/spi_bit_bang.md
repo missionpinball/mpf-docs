@@ -26,7 +26,7 @@ they are much more efficient.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: your_platform, spi_bit_bang      # add your platform first here
 spi_bit_bang:

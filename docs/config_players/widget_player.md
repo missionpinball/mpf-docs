@@ -27,7 +27,7 @@ Generically-speaking, there are two formats you can use for
 widget_player entries: "express" and "full" configs. Express configs
 will look like this:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget1: []
 #!   widget2: []
@@ -67,7 +67,7 @@ is posted, but it will also override the default settings and add widget
 to the slide called *slide_2*, even if that's not the current slide
 that's showing.
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget_1: []
 widget_player:

@@ -14,7 +14,7 @@ dump start MPF and MPF-MC without the production flag and post the
 `debug_dump_stats` events. For example, you can add a keyboard key `d`
 to do that:
 
-``` mpf-config
+``` yaml
 keyboard:
   d:
     event: debug_dump_stats

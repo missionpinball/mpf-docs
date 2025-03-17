@@ -19,7 +19,7 @@ active position for as long as you need.
 
 First we need to define the coils in our hardware section:
 
-``` mpf-config
+``` yaml
 coils:
   c_diverter_upper_right_main:
     number: 25
@@ -32,7 +32,7 @@ coils:
 
 Next we'll define the dual wound coil for the diverter to use:
 
-``` mpf-config
+``` yaml
 #! coils:
 #!   c_diverter_upper_right_main:
 #!     number: 25
@@ -49,7 +49,7 @@ dual_wound_coils:
 
 Then we define the Diverter itself:
 
-``` mpf-config
+``` yaml
 #! coils:
 #!   c_diverter_upper_right_main:
 #!     number: 25

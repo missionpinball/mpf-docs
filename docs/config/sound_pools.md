@@ -26,7 +26,7 @@ available if you're using MPF-MC for your media controller.)
 
 Here's an example of a typical sound_pool configuration.
 
-``` mpf-config
+``` yaml
 sound_pools:
   drain_callout:
     type: random_force_all

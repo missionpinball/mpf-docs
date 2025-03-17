@@ -68,7 +68,7 @@ display a slide showing the name of the mode to the player.
 You can then use the carousel_\(item)\_selected event to
 start the mode that was selected by the player.
 
-``` mpf-mc-config
+``` yaml
 ##! mode: my_carousel
 # in mode my_carousel
 #config_version=5
@@ -146,7 +146,7 @@ buttons control the carousel right and left. When the Launch Button is
 pressed, the game starts the mode selected by the player and launches
 the ball.
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 ##! mode: carousel
 # put this in your modes/carousel/config/carousel.yaml
@@ -268,7 +268,7 @@ event_player:
 Then, each mode that the carousel can start is set up with the
 following.
 
-``` mpf-config
+``` yaml
 #config_version=5
 ##! mode: Doctor_1
 ##Example:  Doctor_1.yaml

@@ -38,7 +38,7 @@ time.
 Let's start by creating our first shot in the base mode's config file
 (base.yaml).
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_right_inlane:
 #!     number: 1
@@ -60,7 +60,7 @@ Next, find the `variable_player:` section that you added in Step 15, and
 change the first entry from `s_right_inlane_active:` to
 `my_first_shot_hit`, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 variable_player:
   my_first_shot_hit:  # this was s_right_inlane_active
@@ -153,7 +153,7 @@ To do this, go back to the mode config where you defined the shot
 
 If you have LEDs in your machine, change it to this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_right_inlane:
 #!     number: 1
@@ -167,7 +167,7 @@ shots:
 
 If you have a lamp matrix, change it to this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_right_inlane:
 #!     number: 1
@@ -207,7 +207,7 @@ To do this, we'll add a section to the mode's config file (base.yaml)
 called `shot_profiles:`. Create that section now, and define a shot
 profile called "my_first_profile" with the following settings:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 shot_profiles:
   my_first_profile:
@@ -265,7 +265,7 @@ a show is separate from playing the show.
 So next we need to tell our shot that it should use the new profile we
 just created by adding a `profile:` setting.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_right_inlane:
 #!     number: 1
@@ -350,7 +350,7 @@ points when they hit that shot depending on what state the shot's in.
 
 Here's the existing variable_player section from the base mode config:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 variable_player:
   my_first_shot_hit:
@@ -368,7 +368,7 @@ event which does not include details of what state the shot is in.
 
 Now let's change the variable_player section to this:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 variable_player:
   my_first_shot_my_first_profile_unlit_hit:
@@ -419,7 +419,7 @@ mode configuration file for that mode.
 Open up the `mode2.yaml` file and add the following lines. (We'll
 explain them step-by-step next.)
 
-``` mpf-mc-config
+``` yaml
 ##! mode: mode2
 #config_version=5
 # mode2 config file
@@ -499,7 +499,7 @@ So what's happening here?
 First, notice that in the `mode2.yaml` file, we configured the following
 variable_player entry:
 
-``` mpf-config
+``` yaml
 ##! mode: mode2
 variable_player:
   my_first_shot_hit:
@@ -543,7 +543,7 @@ To illustrate this, open up your `mode2.yaml` file and:
 2.  Add the `shots:` section from below
 3.  Add the `shot_profiles:` section from below
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_right_inlane:
 #!     number: 1
@@ -593,7 +593,7 @@ what's going on.
 First, notice that we added a `shots:` section and then added
 "my_first_shot" to it, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode2
 #! shot_profiles:
 #!   mode2:
@@ -623,7 +623,7 @@ when that mode is active.)
 
 Next, take a look at the `shot_profiles:` section:
 
-``` mpf-config
+``` yaml
 ##! mode: mode2
 shot_profiles:
   mode2:

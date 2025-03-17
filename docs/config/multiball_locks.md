@@ -43,7 +43,7 @@ will add any additional balls it needs from the trough.)
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

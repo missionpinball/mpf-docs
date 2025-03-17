@@ -60,7 +60,7 @@ a very safe default starting point.)
 
 For example, for coils used in dual-wound flippers:
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left_main:
     number: 00
@@ -78,7 +78,7 @@ coils:
 
 Or for single-wound flipper coils:
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left:
     number: 0

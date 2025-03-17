@@ -28,7 +28,7 @@ controller.)
 
 This is an example:
 
-``` mpf-config
+``` yaml
 track_player:
   pause_music_track:
     music:

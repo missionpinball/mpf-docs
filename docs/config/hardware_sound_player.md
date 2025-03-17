@@ -22,7 +22,7 @@ control external sound modules (e.g. in LISY).
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware_sound_systems:
   default:
     label: Default external sound system

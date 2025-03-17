@@ -24,7 +24,7 @@ the settings for that group.
 Here's an example achievement_groups section from Brooks & Dunn. (This
 is related to the example in the achievements config documentation.)
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 #! # create some empty achievements for the group
 #! achievements:

@@ -39,7 +39,7 @@ connector mappings.)
 Direct switches are configured in your machine config file by starting
 the number with "SD", like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: SD0
@@ -54,7 +54,7 @@ switches:
 If you're using a switch matrix, then the switch numbers are entered
 using the column number, then a slash, then the row number.
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0/0    # column 0, row 0
@@ -130,7 +130,7 @@ Valid options are `normal`, `quick`, and `auto`.
 To disable debouncing for a switch, add `debounce: quick` to the switch
 config, like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0/0
@@ -140,7 +140,7 @@ switches:
 To force debouncing to always be used (which is also the default on the
 P-ROC, so not really needed), configure it like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0/0

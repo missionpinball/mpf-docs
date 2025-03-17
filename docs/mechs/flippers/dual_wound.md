@@ -53,7 +53,7 @@ flipper buttons.
 
 Here's an example `config.yaml` with two switches added:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_flipper:
     number: 1
@@ -87,7 +87,7 @@ config. These will be added to a section called `coils:`. Since we're
 using dual-wound coils, there will actually be two coil entries for each
 coil---one for the power (main) winding, and one for the hold winding.
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left_main:
     number: 0
@@ -132,7 +132,7 @@ flipper that you defined in Steps 1 and 2.
 Here's what you would create based on the switches and coils we've
 defined so far:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 1
@@ -178,7 +178,7 @@ following entry to each of your flippers in your config file:
 So now the `flippers:` section of your config file should look like
 this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 1

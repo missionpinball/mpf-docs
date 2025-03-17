@@ -91,7 +91,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `p_roc` config
 section:
 
-``` mpf-config
+``` yaml
 p_roc:
   debug: true
 ```
@@ -105,7 +105,7 @@ If your hardware behaves different from the way you told it to in MPF or
 if you are seeing lags or delays it might be wise to turn on bus
 tracing.
 
-``` mpf-config
+``` yaml
 p_roc:
   debug: true
   trace_bus: true

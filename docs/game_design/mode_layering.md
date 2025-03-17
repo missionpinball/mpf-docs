@@ -102,7 +102,7 @@ is to separate the various field mode behaviors into different yaml
 files and import all of them into the field helper mode. This keeps each
 file small while giving just a single mode to start and stop.
 
-``` mpf-config
+``` yaml
 ##! mode: field
 # modes/field/config/field.yaml
 
@@ -123,7 +123,7 @@ want to allow two or more missions to run concurrently. Giving every
 mission mode a few common event handlers allows the global mode to
 easily manage the transitions into and out of mission modes.
 
-``` mpf-config
+``` yaml
 ##! mode: trolls
 # modes/trolls/config/trolls.yaml
 
@@ -141,7 +141,7 @@ will automatically attempt to restart field when a mission mode stops,
 so we add a special handler: stop global mode when the ball ends, and
 only restart field mode if global isn't stopping.
 
-``` mpf-config
+``` yaml
 ##! mode: global
 # modes/global/config/global.yaml
 
@@ -170,7 +170,7 @@ event_player:
 **Wizard modes** replace global, and use a special set of event handlers
 just like the mission modes.
 
-``` mpf-config
+``` yaml
 ##! mode: madness
 # modes/madness/config/madness.yaml
 
@@ -186,7 +186,7 @@ handlers to manage the transition between global mode and wizard modes.
 Just like with global restarting field, base mode restarts global mode
 when a wizard mode stops (unless base mode itself is stopping).
 
-``` mpf-config
+``` yaml
 ##! mode: base
 # modes/base/config/base.yaml
 event_player:

@@ -16,7 +16,7 @@ of a standalone show file on disk. Basically you add a `shows:` section
 to a config, create sub-sections based on show name, and then add normal
 show items to the config. For example:
 
-``` mpf-config
+``` yaml
 shows:
   flash_red:
     - time: 0

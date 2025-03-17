@@ -38,7 +38,7 @@ which the next element in the list is played. Here is an example of a
 light show with three lights which sequentially turn blue over one
 second:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 #show_version=5
 - duration: .25

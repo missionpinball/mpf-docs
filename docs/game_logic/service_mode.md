@@ -17,7 +17,7 @@ during development.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 # include service mode in your modes list
 modes:
   - service

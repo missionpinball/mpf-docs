@@ -18,7 +18,7 @@ to control them.
 
 Here is an example:
 
-``` mpf-config
+``` yaml
 # configure the flasher as coil
 coils:
   flasher_01:

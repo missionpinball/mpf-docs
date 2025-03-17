@@ -18,7 +18,7 @@ details.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: opp
   driverboards: gen2
@@ -55,7 +55,7 @@ One or more sub-entries. Each in the format of `string` : `string`
 
 This is an example:
 
-``` mpf-config
+``` yaml
 opp:
   ports: /dev/ttyOPP0, /dev/ttyOPP1
   chains:

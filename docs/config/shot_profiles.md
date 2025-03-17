@@ -18,7 +18,7 @@ shots.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 shot_profiles:
   my_default_profile:
@@ -123,7 +123,7 @@ This setting lets you specify a custom rotation pattern that's used
 when an event from this profile's rotation_events: section is posted.
 You enter it as a list of Ls and Rs, for example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 shot_profiles:
   my_default_profile:

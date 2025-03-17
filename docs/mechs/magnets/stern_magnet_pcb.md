@@ -92,7 +92,7 @@ change. Caution: if the board is in a hold mode and MPF crashes the
 board will remain in the hold mode until power is lost or MPF instructs
 it to enter the OFF-state.
 
-``` mpf-config
+``` yaml
 digital_outputs:
   magnet_strobe:
     number: 1    # number depends on your platform

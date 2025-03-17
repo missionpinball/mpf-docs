@@ -46,7 +46,7 @@ multiplied by the *score*. This makes it very easy to award, for
 example, 200 points for every time the player captured a castle (tracked
 by the player variable "castles_captured").
 
-``` mpf-config
+``` yaml
 ##! mode: bonus
 #config_version=5
 mode_settings:
@@ -60,7 +60,7 @@ For advanced score calculation, the *score* value can utilize all of
 MPF's
 [dynamic and placeholder variables](../../config/instructions/dynamic_values.md).
 
-``` mpf-config
+``` yaml
 ##! mode: bonus
 #config_version=5
 mode_settings:
@@ -87,7 +87,7 @@ After all awards in the entries list have been posted, a final
 *bonus_total* event will post with the total amount awarded as bonus.
 This event can be used to show a final slide.
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 #! slides:
 #!   bonus_start_slide: []

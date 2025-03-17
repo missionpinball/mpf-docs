@@ -18,7 +18,7 @@ to be shown (or removed) based on events being posted.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 #!   slide2: []
@@ -65,7 +65,7 @@ Single value, type: one of the following options: play, remove. Default:
 For example, to remove *slide1* when the event *remove_slide_1* is
 posted:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 slide_player:
@@ -76,7 +76,7 @@ slide_player:
 
 You can also specify a transition for the removal, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 slide_player:
@@ -110,7 +110,7 @@ and the slide will still be removed when the timer expires.
 If a `transition_out:` is specified, it will be applied when the slide
 expires:
 
-``` mpf-mc-config
+``` yaml
 slides:
   base:
     widgets:
@@ -229,7 +229,7 @@ is shown, and it will be "attached" to the slide and used when that
 slide is removed (either with the slide player or when a new slide is
 created with a higher priority than it).
 
-``` mpf-mc-config
+``` yaml
 slides:
   base:
     widgets:

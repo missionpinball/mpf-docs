@@ -43,7 +43,7 @@ long they have to be held, and how long they have to be released.
 MPF's `mpfconfig.yaml` (the built-in machine config that's merged in
 with all machine configs) includes the following section:
 
-``` mpf-config
+``` yaml
 combo_switches:
   both_flippers:
     tag_1: left_flipper
@@ -63,7 +63,7 @@ default config.
 
 Here is an example of using flipper_cancel to cancel a show:
 
-``` mpf-mc-config
+``` yaml
 switches:
   s_flipper_left:
     tags: left_flipper

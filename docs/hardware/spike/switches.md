@@ -27,7 +27,7 @@ letters for extension boards. Here's an example from Wrestlemania Pro:
 
 This would result in the following switch entries:
 
-``` mpf-config
+``` yaml
 switches:
   s_left_inlane:
     number: 11-0

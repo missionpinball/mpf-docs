@@ -23,7 +23,7 @@ At the most basic level, you can use this to add to a player's score
 
 Here's an example which would work for player variables, but not for machine variables (see below why):
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   target_1_hit:
@@ -70,7 +70,7 @@ You can include any player or machine variable under an event to add a numeric v
 to that variable. This example is for player variables and not for machine variables. (If the variable doesn't exist, it will set the
 player variable to that.) For player variables there is a simplified syntax, for example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   some_event:
@@ -87,7 +87,7 @@ vars.
 
 The fully expanded config for player variables look like this
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   some_event:
@@ -130,7 +130,7 @@ then specify the value in the "int:" section. For example, if you want
 the example from the above section to reset the aliens player variable
 to 1 instead of adding 1 to the current value, it would look like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   some_event:
@@ -159,7 +159,7 @@ you don't also want the base mode to score the 500 points on top of the
 Note that when you use block, you also have to include the `int:`,
 `float:`, or `string:` setting indented. For example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   ramp_1_hit:
@@ -170,7 +170,7 @@ variable_player:
 
 There is also a shorthand way:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   ramp_1_hit:
@@ -203,7 +203,7 @@ takes priority over the `float:` setting so if both are present only the
 
 Single value, type: `integer`. Defaults to empty.
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   add_score_to_player_2:
@@ -233,7 +233,7 @@ value. We use the variable_player section tied to the events posted when
 the player variable changes and conditional events to set the current
 name of the album value, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   player_album_value{value==1}:

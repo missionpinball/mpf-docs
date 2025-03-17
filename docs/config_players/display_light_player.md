@@ -18,7 +18,7 @@ Video about display_light_player:
 
 To use this in a show you can use this:
 
-``` mpf-config
+``` yaml
 ##! show: test_show
 - display_lights:
     your_source_display:     # use any display defined in your machine
@@ -27,7 +27,7 @@ To use this in a show you can use this:
 
 Or standalone:
 
-``` mpf-config
+``` yaml
 display_light_player:
   your_event:
     your_source_display:
@@ -36,7 +36,7 @@ display_light_player:
 
 Then map your lights to a position on the display:
 
-``` mpf-config
+``` yaml
 lights:
   l_light1:
     number: 1

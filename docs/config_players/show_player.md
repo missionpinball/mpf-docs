@@ -18,7 +18,7 @@ Video about shows:
 
 This is an example:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event: your_show_name
   some_other_event: another_show
@@ -40,7 +40,7 @@ configure how it repeats. In that case, instead of putting the show name
 on the same line as the event, you can put the show name on a new line
 under the event, and then add additional settings under it, like this:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     your_show_name:
@@ -59,7 +59,7 @@ with a `speed: 2` and `sync_ms: 500`.
 
 You can also mix-and-match formats, like this:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event: your_show_name
   some_other_event:
@@ -75,7 +75,7 @@ unique `key`. The show_player will use the show name as key for the show
 by default if you do not specify a `key` (fine in most cases). This way
 it refences the show when starting or stopping it:
 
-``` mpf-config
+``` yaml
 show_player:
   start_my_show:
     your_show_name: play
@@ -92,7 +92,7 @@ However, in some cases you want to play multiple instances of one show
 in a single show. You can manually assign keys to run distinct shows.
 That way you can also specifically stop them later:
 
-``` mpf-config
+``` yaml
 show_player:
   start_my_show1:
     your_show_name:

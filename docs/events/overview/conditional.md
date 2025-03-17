@@ -53,7 +53,7 @@ your config files when you enter things that take action on events.
 For example, here's a section of a config file that would show a slide
 called "lets_go" when the *ball_started* event was posted:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   lets_go:
 #!     - type: text
@@ -81,7 +81,7 @@ AND if the parameters have certain values.
 
 For example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   first_ball_intro:
 #!     - type: text
@@ -107,7 +107,7 @@ ball 1 is started for any player.)
 
 Of course you can use multiple entries with different values, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   first_ball_intro:
 #!     - type: text
@@ -138,7 +138,7 @@ ball after Ball 1, the "lets_go" slide will be posted.
 
 You can also combine things here using `and` or `or`. For example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   special_slide: []
 slide_player:
@@ -149,7 +149,7 @@ Now the "special_slide" will be shown for either ball 1 *or* ball 3.
 
 You can also combine with "and", for example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   special_slide: []
 slide_player:
@@ -167,7 +167,7 @@ player variables from any player (x is the player index), `machine.` to
 access machine variables, `game.` game attributes, and `settings.` to
 access operator settings.
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   you_rule: []
 #!   you_stink: []
@@ -186,7 +186,7 @@ But wait, there's more!
 You can also use standard math operators (`+`, `-`, `*`, `/`, `//`,
 etc.) to evaluate whether the action should take place:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   uh_oh: []
 slide_player:
@@ -207,7 +207,7 @@ the `value` of a `counter` called `your_mode_counter` you would use
 `device.counters.your_mode_counter.value`. In the following example we
 show a slide when the value of the counter is above `5` in ball `3`
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   nearly_did_all_modes: []
 slide_player:
@@ -228,7 +228,7 @@ all) variables.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   led4:
 #!     number:

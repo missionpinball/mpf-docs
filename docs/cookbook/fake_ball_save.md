@@ -25,7 +25,7 @@ etc have an enable and disable event in their devices config file.
 
 This is an example for left sling:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_slingshot:
 #!     number:
@@ -47,7 +47,7 @@ In this example this mode had a multiball and the fake ball save is
 enabled when a multiball ends. In your mode it can be enabled whenever
 you want it to, mode start or when a shot is hit, etc.
 
-``` mpf-config
+``` yaml
 ##! mode: your_mode
 ball_saves:
   fake_MODE_NAME_ball_save:
@@ -67,7 +67,7 @@ show_player that flashes the shoot again light.
 
 We will call this mode ball_save_end_mode.
 
-``` mpf-config
+``` yaml
 ##! mode: your_mode
 mode:
   start_events:
@@ -108,7 +108,7 @@ what just happened. The queue_relay_player will hold the ball until the
 show is over. When this mode is ending you should enable the coils you
 disabled.
 
-``` mpf-mc-config
+``` yaml
 ##! mode: your_mode
 mode:
   start_events:

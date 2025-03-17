@@ -16,7 +16,7 @@ while adding the player score and wait after each digit. You can use
 [score_queue_player:](../../config/score_queue_player.md) to implement
 this in MPF.
 
-``` mpf-config
+``` yaml
 coils:
   c_chime_1000:
     number:

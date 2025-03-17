@@ -33,7 +33,7 @@ In this example, we have a large score for the current player, show the
 player's custom-variable "level" in the lower-left, and their current
 ball number in the lower-right
 
-``` mpf-mc-config
+``` yaml
 slides:
   base_slide: []
 slide_player:
@@ -92,7 +92,7 @@ interfere with other slide behavior (e.g. bonus slides and start/end of
 turn slides). We'll keep it clean and manually clear the score slide at
 the end of each ball.
 
-``` mpf-mc-config
+``` yaml
 slides:
   base_slide:
     - type: text

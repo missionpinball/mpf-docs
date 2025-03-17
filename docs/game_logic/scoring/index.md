@@ -14,7 +14,7 @@ player when a certain event is posted. This event could be a switch hit
 (i.e. for `s_your_switch` use the event
 `s_your_switch_active`).
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   s_your_switch_active:
@@ -31,7 +31,7 @@ simplest way to implement multipliers is to use a
 keep the multiplier and multiply it to your scoring entries in
 [variable_player](../../config/variable_player.md). This is an example for simple scoring with multiplier:
 
-``` mpf-config
+``` yaml
 # set initial value for your multiplier player variable (to have it start
 # at 1 instead of 0)
 player_vars:
@@ -63,7 +63,7 @@ entry in config for every player.
 
 You can also reset the multiplier on every ball if you want:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 # in your mode:
 variable_player:
@@ -93,7 +93,7 @@ Sometimes you want to increase your multipliers after multiple events
 were posted. For instance, you might want to increase the multiplier
 after the player completed two shot_groups:
 
-``` mpf-config
+``` yaml
 # set initial value for your multiplier player variable (to have it start
 # at 1 instead of 0)
 player_vars:
@@ -132,7 +132,7 @@ You can also combine two (or more) multipliers (see
 [dynamic values](../../config/instructions/dynamic_values.md) for details about other possible placeholders and math
 operators):
 
-``` mpf-config
+``` yaml
 # set initial value for your multiplier player variables (to have it start
 # at 1 instead of 0)
 player_vars:
@@ -188,7 +188,7 @@ is active and the player made more than two loops (just for the sake of
 the example - you could also move the scoring into super_multiball and
 remove the first condition):
 
-``` mpf-config
+``` yaml
 # set initial value for your multiplier player variables (to have it start
 # at 1 instead of 0)
 player_vars:

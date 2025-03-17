@@ -34,7 +34,7 @@ just have the node number and address number (with a dash between them).
 For example, the driver for the left flipper coil with the address
 `8-DR-0` would be entered into the MPF config as `8-0`, etc.
 
-``` mpf-config
+``` yaml
 coils:
   c_shaker:
     number: 1-10    # Node 1, coil 10

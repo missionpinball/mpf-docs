@@ -36,7 +36,7 @@ startup.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #config_version=5
 hardware:
   stepper_controllers: step_stick

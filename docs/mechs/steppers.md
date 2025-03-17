@@ -61,7 +61,7 @@ details.
 
 ## Example config
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_home:

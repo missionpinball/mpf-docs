@@ -20,7 +20,7 @@ this layout: one that covers the entire window area, and four smaller
 ones that will each be used for one of the four smaller quadrant
 displays.
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 window:
   width: 1280
@@ -68,7 +68,7 @@ we want to display in each quadrant.
     to fit in the widget boundaries, it is recommended you use the same size
     display widget as the source display for the best visual results.
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 1280
@@ -145,7 +145,7 @@ desired display when showing them. Here is our example from the previous
 steps that has now been extended to show a simple slide in each of the
 four quadrants:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 window:
   width: 1280

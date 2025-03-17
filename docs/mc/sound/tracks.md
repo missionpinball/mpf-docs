@@ -56,7 +56,7 @@ The following types of audio tracks are available in MPF:
 
 Example track configuration:
 
-``` mpf-config
+``` yaml
 sound_system:
   buffer: 2048
   frequency: 44100

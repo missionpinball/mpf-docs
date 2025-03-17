@@ -31,7 +31,7 @@ Video about state machines:
 
 This is an example:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 state_machines:
   my_state:
@@ -81,7 +81,7 @@ variable your can use a
 [variable_player](../../config/variable_player.md). You can then use it on slides or in places where conditions
 do not work (yet).
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 state_machines:
   my_state:

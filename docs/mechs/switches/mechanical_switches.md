@@ -116,7 +116,7 @@ platform documentation for details.
 
 This is an example of switches in MPF:
 
-``` mpf-config
+``` yaml
 switches:
   my_direct_switch:
     number: 23        # number depends on your platform

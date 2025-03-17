@@ -20,7 +20,7 @@ Here's an example. This example is actually built-in to MPF via the MPF
 default config file, so if you want to use these flipper cradle events,
 you don't have to enter them yourself as they're already there.
 
-``` mpf-config
+``` yaml
 timed_switches:
   flipper_cradle:
     switch_tags: left_flipper, right_flipper

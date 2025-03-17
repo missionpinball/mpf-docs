@@ -55,7 +55,7 @@ step, you could think of those like *OR*s. So you have Step 1 (event1
 *OR* event2) *AND THEN* Step 2 (event3) *AND THEN* Step 3 (event4 *OR*
 event5), like this:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 sequences:
   my_sequence:
@@ -75,7 +75,7 @@ to form complex logic.)
 
 For example:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 sequences:
   logic_block_1:

@@ -13,7 +13,7 @@ For instance, the settings of a
 [switch](../config/switches.md) are a
 dictionary (switches -> s_flipper_left).
 
-``` mpf-config
+``` yaml
 switches:
   s_flipper_left:
     number: 1

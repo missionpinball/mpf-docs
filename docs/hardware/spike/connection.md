@@ -21,7 +21,7 @@ the SPIKE board. On a Windows computer, use the Device Manager to
 determine which COM port the cable has been assigned by Windows. Update
 you machine configuration with the correct COM port (example, COM5).
 
-``` mpf-config
+``` yaml
 spike:
   port: COM5
 ```

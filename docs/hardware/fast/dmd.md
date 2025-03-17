@@ -42,7 +42,7 @@ one physical DMD.)
 To do this, create a section in your machine-wide config called `dmds:`,
 and then pick a name for the DMD, like this:
 
-``` mpf-config
+``` yaml
 dmds:
   my_dmd:
     shades: 16
@@ -106,7 +106,7 @@ Note that the [Using a traditional (single color) physical DMD](../../mc/display
 guide has more details on the window and slide settings used in this
 machine config.
 
-``` mpf-mc-config
+``` yaml
 hardware:
   platform: fast
 fast:

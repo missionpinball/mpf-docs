@@ -17,7 +17,7 @@ to control shows, lights, slides, and to restore them on the next ball.
 However it should not be used for scoring (to handle an event when the
 counter changes, consider the *(name)_hit* event instead).
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   my_counter:
@@ -46,7 +46,7 @@ Another way to achieve the same thing is this:
 
 You can even achieve this a bit simpler than in the example. Like this:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   my_counter:
@@ -74,7 +74,7 @@ show it stopped (but other behaviors are possible).
 
 `my_show` could look like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 #show_version=5
 - duration: -1
@@ -105,7 +105,7 @@ If you want something to happen only once when the logic_block advances
 (and not on mode restart) you should use the `_hit` event. E.g. for a
 callout use this:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 counters:
   my_counter:
@@ -133,7 +133,7 @@ being triggered by another event, using
 You can access the value directly from the device variable using
 `devices.counters.my_counter.value`:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 show_player:
   some_other_event{devices.counters.my_counter.value==0}: my_show_initial

@@ -28,7 +28,7 @@ Let's look at each of these options.
 The main way to do it is in the "slides" section of a config file,
 like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   some_slide:
     - type: text
@@ -106,7 +106,7 @@ section of the documentation.
 
 You can define slides in the slide_player like this:
 
-``` mpf-mc-config
+``` yaml
 slide_player:
   some_event:
     my_slide_1:
@@ -144,7 +144,7 @@ in one of the "_player" sections of the config (like the
 So here's an example of a slide created within a show for use within a
 specific step in that show:
 
-``` mpf-mc-config
+``` yaml
 #! show_player:
 #!   start_show: my_show
 ##! show: my_show

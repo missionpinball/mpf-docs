@@ -15,14 +15,14 @@ places we need lists. For example, device tags, logic block events,
 switches that make up shots, etc. For our explanation, we'll use a
 generic list item with generic configurations. Some examples:
 
-``` mpf-config
+``` yaml
 coils:
   flipperLeft:
     number: SD18
     tags: flipper, player   # this is a list
 ```
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   leftOutlane:
 #!     number:
@@ -34,7 +34,7 @@ shots:
     switch: leftOutlane, rightOutlane    #this is a list
 ```
 
-``` mpf-config
+``` yaml
 auditor:
   save_events:   # This config wants a list
     - game_started    # This is the first list item
@@ -42,7 +42,7 @@ auditor:
     - game_ended    # This is the third list item
 ```
 
-``` mpf-config
+``` yaml
 accruals:
   my_accrual:
     events:

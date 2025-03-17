@@ -43,7 +43,7 @@ into three channels.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   my_led:
     number: 7   # might also be 8-7 or 8-1-0 depending on your platform
@@ -61,7 +61,7 @@ be also `number * 3` or a more complex conversion.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   rainbow_star:
     type: rgb
@@ -86,7 +86,7 @@ by the hardware platform) figure out the channel number.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   rainbow_star:    # this will use red: 9-29, green: 9-30 and blue: 9-31
     type: rgb
@@ -120,7 +120,7 @@ corresponding to the multi-color channels of an RGB or RGBW LED. Each
 channel entry can contain any of the `lights` parameters listed on this
 page, but at least `number` is required.
 
-``` mpf-config
+``` yaml
 lights:
   rainbow_star:
     type: rgb
@@ -206,7 +206,7 @@ which has to be configured in the `number` setting. It can be used if
 you got a light which is connected to a driver in your platform. That
 might be the case for [GIs](../mechs/lights/gis.md) for example. This is an example for a driver as light:
 
-``` mpf-config
+``` yaml
 coils:
   light_connected_to_a_driver:
     number: 42           # number depends on your platform
@@ -233,7 +233,7 @@ use the previous setting. To do this only specify the number of the
 first light in the chain and then link all consequent light using the
 previous setting:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     number: 0
@@ -264,7 +264,7 @@ types of lights (such as RGBW LEDs) you can instead provide this
 internal address and the number of channels (i.e. using type). This is
 an example:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-0

@@ -13,7 +13,7 @@ Ball end modes delay the ball ending process. If you want your own mode
 to delay the ball ending process you can start the with the following
 config:
 
-``` mpf-config
+``` yaml
 ##! mode: custom_bonus
 #config_version=5
 mode:

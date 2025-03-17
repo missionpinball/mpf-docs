@@ -17,7 +17,7 @@ The `snux:` section of your config is where you configure the
 
 This is an example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual    # use your platform here
   driverboards: wpc

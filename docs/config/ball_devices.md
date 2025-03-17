@@ -365,7 +365,7 @@ Additional ejectors:
 
 * mpf.devices.ball_device.event_ejector.EventEjector
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball_switch1:
 #!     number:

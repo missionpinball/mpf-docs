@@ -61,7 +61,7 @@ device is used to add a new ball into play.
 To do that, add your trough device as `default_source_device` in the
 default `playfield`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough:
 #!     number: 2-6

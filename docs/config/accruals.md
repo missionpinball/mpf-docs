@@ -51,7 +51,7 @@ Step 3. But since you can enter more than one event for each step, you
 could think of those like *OR*s. So you have Step 1 (event1 *OR* event2)
 *AND* Step 2 (event3) *AND* Step 3 (event4 *OR* event5), like this:
 
-``` mpf-config
+``` yaml
 accruals:
   my_accrual:
     events:
@@ -70,7 +70,7 @@ to form complex logic.)
 
 For example:
 
-``` mpf-config
+``` yaml
 accruals:
   logic_block_1:
     events:

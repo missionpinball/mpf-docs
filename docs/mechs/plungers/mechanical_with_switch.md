@@ -29,7 +29,7 @@ coil fired option, then follow the [/mechs/playfields/ball_tracking](auto_manual
 The first step is to add your plunger lane switches to the `switches:`
 section of your machine config file. Here's an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_plunger_lane:
     number: 2-6
@@ -55,7 +55,7 @@ entries for the ball switch.
 Here's an example. Note that in this case, we've left out the other
 ball devices (such as your trough and/or drain):
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -88,7 +88,7 @@ been made.
 To do that, add `mechanical_eject: true` to your plunger device, like
 this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -154,7 +154,7 @@ Here are some examples of these settings in action.
 First, for a typical coil-fired plunger lane / catapult that ejects the
 ball directly to the playfield: (This is probably 99% of all cases)
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -170,7 +170,7 @@ Next, for a coil-fired plunger that has a switch at the exit of the
 plunger lane that is only hit if the ball has made it out of the plunger
 and cannot be hit by a random ball on the playfield:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -189,7 +189,7 @@ ball_devices:
 Next, if your plunger lane ejects into another ball device (a cannon, in
 this case):
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -217,7 +217,7 @@ Once you have your plunger device set up, you need to go back to your
 trough or ball drain device and add the new plunger to your trough's
 `eject_targets:`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -263,7 +263,7 @@ device is used to add a new ball into play.
 To do that, add your new plunger ball device as `default_source_device`
 in the default `playfield`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger_lane:
 #!     number: 2-6
@@ -295,7 +295,7 @@ does not include the switches and coils for the trough.
 This config is what probably 99% of machines with coil-fired plungers
 will use:
 
-``` mpf-config
+``` yaml
 switches:
   s_plunger_lane:
     number: 2-6

@@ -28,7 +28,7 @@ are shown below.
 This is an example using priorities of the events, which will affect the
 priority:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget_1: []
 widget_player:
@@ -62,7 +62,7 @@ logic on the same event (example: event_1{param1} and event_1{param2}.
 This is an example using unique conditional formatting for the same
 event:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget_1: []
 widget_player:
@@ -94,7 +94,7 @@ need to refer to the key of that widget. This is done by the following
 code, which has calls upon the generic widget and the key when an event
 is posted.
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget_1: []
 widget_player:

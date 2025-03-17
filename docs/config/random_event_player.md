@@ -20,7 +20,7 @@ title: "random_event_player:"
 The `random_event_player:` section of your config is where you can play
 a random event out of a list based on an event.
 
-``` mpf-config
+``` yaml
 # in your global config:
 random_event_player:
   play_random_event_global:

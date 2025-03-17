@@ -23,7 +23,7 @@ Here's an example which contains several different multiball configs.
 (In the real world, you'd probably only have one multiball for each
 mode.)
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

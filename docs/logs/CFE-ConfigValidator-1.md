@@ -17,7 +17,7 @@ Certain devices enforce the latter.
 For instance, a [counter](../config/counters.md) can store its state in a player variable which is only
 possible in a game mode:
 
-``` mpf-config
+``` yaml
 ##! mode: my_game_mode
 mode:
   start_events: ball_started
@@ -33,7 +33,7 @@ counters:
 However, if you set `persist_state: False` in your counter it can also
 be used outside of a mode:
 
-``` mpf-config
+``` yaml
 ##! mode: attract
 mode:
   game_mode: false

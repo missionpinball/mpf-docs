@@ -28,7 +28,7 @@ that you basically say, "play THIS slide when THAT event happens".
 For example, if you want to play a slide named "good_job" when the
 event "left_lane_hit" is posted, you would set your config like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   good_job:
 #!     - type: text
@@ -43,7 +43,7 @@ slide_player:
 
 You can have as many event/slide combinations as you want, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   good_job:
 #!     - type: text
@@ -68,7 +68,7 @@ slide name after the event name, you can also create a sub-entry with
 the slide name, then *another* sub-entry with additional options, like
 this:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   dmd:
 #!     width: 128
@@ -90,7 +90,7 @@ slide_player:
 
 You can mix-and-match all of these in a single config, like this:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   dmd:
 #!     width: 128
@@ -145,7 +145,7 @@ For example, if you want a slide called "happy_face" to play in a step
 in a show, you can do it like this (this is a snippet of a single step
 in a show):
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   happy_face:
 #!     - type: text
@@ -163,7 +163,7 @@ in a show):
 
 Again, you can use the sub-entry format to specify additional options:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   playfield_screen:
 #!     width: 200

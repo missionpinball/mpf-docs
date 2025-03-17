@@ -48,7 +48,7 @@ controllers.)
 To do this, add `servo_controllers: pololu_maestro` to the `hardware:`
 section of your machine-wide config file, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   servo_controllers: pololu_maestro
 ```
@@ -67,14 +67,14 @@ You want to use the first one (the lower number).
 
 Add a section to your machine-wide config like this:
 
-``` mpf-config
+``` yaml
 pololu_maestro:
   port: COM5
 ```
 
 On Linux or Mac, it will probably look like this:
 
-``` mpf-config
+``` yaml
 pololu_maestro:
   port: /dev/ttyACM0
 ```
@@ -88,7 +88,7 @@ and then create sub entries in there for each servo you have.
 
 For example:
 
-``` mpf-config
+``` yaml
 servos:
   servo1:
     servo_min: 0.2

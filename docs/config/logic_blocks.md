@@ -16,7 +16,7 @@ logic_blocks:
 
 just use:
 
-``` mpf-config
+``` yaml
 counters:
   your_counter:
     count_events: count_it_up

@@ -16,7 +16,7 @@ You create and configure your diverters in the *diverters:* section of
 your machine configuration file. Here's an example from *Star Trek: The
 Next Generation*:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_ball1:
 #!     number:

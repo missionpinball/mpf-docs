@@ -23,7 +23,7 @@ limit the maximum number of extra balls.
 Some games (especially EMs) award extra balls based on the score. This
 is an example:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 # in your base mode
 extra_balls:

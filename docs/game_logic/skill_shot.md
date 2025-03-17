@@ -22,7 +22,7 @@ Types of skill shots:
 
 A simple skill shot mode:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_lane_l:
 #!     number:

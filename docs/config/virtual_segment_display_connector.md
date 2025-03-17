@@ -16,7 +16,7 @@ The `virtual_segment_display_connector:` section of your config is where
 you configure the connector that establishes the link between segment
 displays and the virtual segment display emulator widgets in the MPF-MC.
 
-``` mpf-config
+``` yaml
 virtual_segment_display_connector:
   segment_displays: display1
 ```

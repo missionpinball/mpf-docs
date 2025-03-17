@@ -19,7 +19,7 @@ player round, the game can only kick up a ball in the default device.
 Here's what the hardware configuration for two plungers (and troughs)
 would look like:
 
-``` mpf-config
+``` yaml
 ##! no_fake_game
 #config_version=5
 switches:
@@ -103,7 +103,7 @@ the modes directory in your own game definitions. Let's look at the
 config file first
 ([mpf/modes/game/config/game.yaml](https://github.com/missionpinball/mpf/blob/dev/mpf/modes/game/config/game.yaml)):
 
-``` mpf-config
+``` yaml
 ##! mode: game
 #config_version=5
 mode:
@@ -224,7 +224,7 @@ doesn't work for your design.
 
 Here is a complete example:
 
-``` mpf-config
+``` yaml
 ##! no_fake_game
 #config_version=5
 switches:

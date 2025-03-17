@@ -42,7 +42,7 @@ your config file. Create an entry in your `switches:` section for the
 drain switch as well as each switch in your trough, like this: (This
 example has three switches in the trough. Yours may have more or less.)
 
-``` mpf-config
+``` yaml
 switches:
   s_drain:
     number: 1
@@ -72,7 +72,7 @@ coil and the trough release coil. Again, the names don't matter. We'll
 call them *c_drain_eject* and *c_trough_release* and enter them like
 this:
 
-``` mpf-config
+``` yaml
 coils:
   c_drain_eject:
     number: 3
@@ -104,7 +104,7 @@ platforms).
 
 In other words, a trough release time of 1s would look like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_trough_release:
     number: 4
@@ -147,7 +147,7 @@ ball device.
 
 Your drain device configuration should look now look like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 1
@@ -208,7 +208,7 @@ The configuration is pretty straightforward:
 
 Your trough device configuration should look now look like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 1
@@ -260,7 +260,7 @@ when you're running with one of the virtual hardware interfaces. To use
 it, simply add the section along with a list of the switches you want to
 start active. For example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -273,7 +273,7 @@ virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 
 ## Here's the complete config
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_drain:

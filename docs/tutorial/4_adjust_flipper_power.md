@@ -59,7 +59,7 @@ config, not the `flippers:` section.) So let's try changing your
 flipper coils from the default of 10ms to 20ms. Change your config file
 so it looks like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left_main:
     number: 00

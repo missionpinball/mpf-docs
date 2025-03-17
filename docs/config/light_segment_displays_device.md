@@ -22,7 +22,7 @@ List of one (or more) values, each is a type: dictionary consisting of
 In this setting you provide a list of mapping for each segment. This is
 an example for a two 7-segment display:
 
-``` mpf-config
+``` yaml
 #! hardware:
 #!   segment_displays: light_segment_displays
 #! light_segment_displays:

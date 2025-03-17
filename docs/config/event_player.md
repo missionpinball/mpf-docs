@@ -28,7 +28,7 @@ file, entries will only be active while that mode is active.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 event_player:
   ball_starting:
     - show_ball_start_animation

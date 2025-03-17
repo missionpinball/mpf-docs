@@ -50,7 +50,7 @@ to represent the following on a PD-16 driver board:
 
 For example:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number: A0-B1-6
@@ -64,7 +64,7 @@ coils:
 If you want to use burst switches as local outputs set DIP switch 1 to
 `on` on the P3-Roc. You can use those 64 output as direct outputs:
 
-``` mpf-config
+``` yaml
 coils:
   local_output0:
     number: direct-0    # direct driver 0
@@ -80,7 +80,7 @@ exactly the same way.
 You may also use outputs as `digital_outputs`. For instance, to control
 a motor driver circuit:
 
-``` mpf-config
+``` yaml
 digital_outputs:
   motor_left:
     number: direct-5
@@ -112,7 +112,7 @@ The P-Roc, P3-Roc and/or PD-16 have the ability to specify the "pulse
 time". Pulse time is the coil's initial kick time. For example,
 consider the following configuration:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number:
@@ -126,7 +126,7 @@ When MPF sends this coil a pulse command, the coil will be fired for
 
 You can also set the power of pulses on your coil:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number:
@@ -149,7 +149,7 @@ The P-Roc internally uses two parameters which determine how many
 milliseconds the coil will be on (pwm-on time) and off (pwm-off time).
 MPF will calculate those based on your power settings.
 
-``` mpf-config
+``` yaml
 coils:
   some_coil:
     number:
@@ -173,7 +173,7 @@ the P/P3-Roc) is `64ms`.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   some_coil_with_recycle:
     number:

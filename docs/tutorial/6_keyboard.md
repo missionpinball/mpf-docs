@@ -30,7 +30,7 @@ want to map them to. (Switches, in this case.)
 Here's an example where we map the left flipper button to the `Z` key
 and the right flipper button to the `?` key:
 
-``` mpf-config
+``` yaml
 keyboard:
   z:
     switch: s_left_flipper

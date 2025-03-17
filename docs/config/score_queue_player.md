@@ -15,7 +15,7 @@ title: "score_queue_player:"
 The `score_queue_player:` section of your config is where you configure
 your SS style scoring. This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   c_chime_1000:
     number:

@@ -61,7 +61,7 @@ folder since it keeps everything from one mode together.
 Here's a complete sample `attract_display_loop.yaml` file you can use
 as a starting point:
 
-``` mpf-mc-config
+``` yaml
 #show_version=5
 ##! show: attract_display_loop
 
@@ -202,7 +202,7 @@ running. To do this, go back to the config file for the attract mode (
 `<your_machine>/modes/attract/config/attract.yaml`) and add the
 following:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 ##! show: attract_display_loop
 #! - duration: .1
@@ -242,7 +242,7 @@ the attract_started slide from the `slides:` section, and the
 
 OLD machine-wide config (partial):
 
-``` mpf-mc-config
+``` yaml
 # old
 slides:
   welcome_slide:
@@ -268,7 +268,7 @@ slide_player:
 
 NEW machine-wide config:
 
-``` mpf-mc-config
+``` yaml
 slides:
   welcome_slide:
     widgets:

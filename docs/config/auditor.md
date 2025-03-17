@@ -22,7 +22,7 @@ its audits to `/audits/audits.yaml` in the folder for each machine.
 (Check out the documentation on the Auditor to see a sample audit log
 file.)
 
-``` mpf-config
+``` yaml
 auditor:
   save_events: ball_ended game_ended
   audit: shots switches events player

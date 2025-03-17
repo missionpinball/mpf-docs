@@ -34,7 +34,7 @@ event. After all the balls from the multiball drained all lock modes and
 the multiball mode will stop using the
 [multiball_(name)_ended](../../events/multiball_multiball_ended.md) event.
 
-``` mpf-config
+``` yaml
 coils:
   eject_coil1:
     number:

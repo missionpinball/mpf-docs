@@ -48,7 +48,7 @@ RGB LED, you specify four parts, separated by dashes:
 You separate those with dashes, so an example PD-LED configuration might
 look like this:
 
-``` mpf-config
+``` yaml
 lights:
   l_led0:
     number: 8-0-1-2
@@ -70,7 +70,7 @@ This is almost the same as above but it addresses only one output
 (instead of three). You can use the channel syntax as for
 `l_led0` above:
 
-``` mpf-config
+``` yaml
 lights:
   l_led0:
     channels:
@@ -85,7 +85,7 @@ lights:
 You might connect different color channels to your PD-LED. For instance
 you might have only a red channel:
 
-``` mpf-config
+``` yaml
 lights:
   my_red_only_insert:
     channels:
@@ -95,7 +95,7 @@ lights:
 
 Or you can configure a white LED:
 
-``` mpf-config
+``` yaml
 lights:
   my_white_light:
     channels:
@@ -106,7 +106,7 @@ lights:
 Starting from MPF 0.54 you can also have MPF calculate the numbers for
 you:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 8-0
@@ -147,7 +147,7 @@ Those LEDs are wired individually to the PD-LED.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   l_led_1:
     number: 4-0-1-2
@@ -167,7 +167,7 @@ whether you hook it up between the PD-LED's output and ground, or
 between the output and 3.3v.) You can then use the config file to
 specify which type of LED you have, such as:
 
-``` mpf-config
+``` yaml
 lights:
   l_shoot_again:
     number: 8-60-61-62
@@ -228,7 +228,7 @@ enable a serial LEDs you need to configure your PD-LED board in your
 `p_roc` section. Assuming your PD-LED has the address 4 you can use the
 following config to enable all serial LEDs and and define a few:
 
-``` mpf-config
+``` yaml
 p_roc:
   pd_led_boards:
     4:
