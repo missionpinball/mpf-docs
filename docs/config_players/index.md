@@ -87,7 +87,7 @@ example_player:
 
 For example (show_player; short syntax):
 
-``` mpf-config
+``` yaml
 show_player:
   event_which_is_posted_elsewhere:
     your_show: play
@@ -95,7 +95,7 @@ show_player:
 
 Another example (show_player; long syntax):
 
-``` mpf-config
+``` yaml
 show_player:
   event_which_is_posted_elsewhere:
     your_show:
@@ -115,7 +115,7 @@ example_player:
 
 An example (show_player):
 
-``` mpf-config
+``` yaml
 show_player:
   event_which_is_posted_elsewhere: your_show
 ```
@@ -135,7 +135,7 @@ example_player:
 
 An example (light_player):
 
-``` mpf-config
+``` yaml
 light_player:
   "{current_player.score > 1000000}":
     score_1M: white
@@ -163,7 +163,7 @@ note that instead of `example_player:` it becomes `examples:`.
 
 For example (show_player; short syntax):
 
-``` mpf-config
+``` yaml
 ##! show: test
 - duration: 2s
   shows:
@@ -172,7 +172,7 @@ For example (show_player; short syntax):
 
 Another example (show_player; long syntax):
 
-``` mpf-config
+``` yaml
 ##! show: test
 - duration: 2s
   shows:

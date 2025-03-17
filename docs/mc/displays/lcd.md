@@ -16,7 +16,7 @@ or The Hobbit.
 Here's what the final version of the relevant sections of your machine
 config file will look like. We'll step through everything one-by-one.
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     height: 600
@@ -37,7 +37,7 @@ window:
 The first part of the config file is where you create your display
 called "window" and set its size:
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     width: 800

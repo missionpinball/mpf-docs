@@ -20,7 +20,7 @@ title: "light_player:"
 The `light_player:` section of your config is where you can control
 lights in config or shows. Example in config:
 
-``` mpf-config
+``` yaml
 light_player:
   some_event:
     led1:
@@ -31,7 +31,7 @@ light_player:
       fade: 2000ms
 ```
 
-``` mpf-config
+``` yaml
 shows:
   rainbow:
     - lights:

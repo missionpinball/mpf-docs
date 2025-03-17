@@ -114,7 +114,7 @@ Video about electronics basics:
 
 This is an example for a single-wound coil:
 
-``` mpf-config
+``` yaml
 coils:
   c_your_coil:
     number: 00   # depends on your platform and hardware
@@ -123,7 +123,7 @@ coils:
 
 This is an example for dual-wound coils which are configured separately:
 
-``` mpf-config
+``` yaml
 coils:
   c_your_coil_main:
     number: 00   # depends on your platform and hardware

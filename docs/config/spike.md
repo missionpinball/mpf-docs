@@ -19,7 +19,7 @@ which includes
 [all the SPIKE-specific settings](../hardware/spike/index.md) throughout your entire config file, so be sure to read that
 if you have a SPIKE machine.
 
-``` mpf-config
+``` yaml
 hardware:
   platform: spike
 spike:

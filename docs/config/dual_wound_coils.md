@@ -18,7 +18,7 @@ be used anywhere in MPF.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 coils:
   c_hold:
     number:

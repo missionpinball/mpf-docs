@@ -21,7 +21,7 @@ documentation](https://kivy.org/docs/api-kivy.config.html#available-configuratio
 
 This is an example:
 
-``` mpf-config
+``` yaml
 kivy_config:
   kivy:
     desktop: 1

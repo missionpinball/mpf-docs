@@ -35,7 +35,7 @@ digging into the configuration options here.)
     enable relays to enable the flippers, and those are configured
     elsewhere. (See the How To guides for details.)
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_flipper_left:
 #!     number:
@@ -252,7 +252,7 @@ to adjust the power in service mode.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_main:
     number:

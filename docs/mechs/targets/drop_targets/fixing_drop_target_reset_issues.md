@@ -23,7 +23,7 @@ Behind the scenes MPF performs
 [some magic for you to prevent stress on your power supply unit](../../../hardware/voltages_and_power/power_management.md). The default should be fine for most machine but if your PSU
 is very weak try this config:
 
-``` mpf-config
+``` yaml
 psus:
   default:
     release_wait_ms: 50    # defaults to 10ms
@@ -52,7 +52,7 @@ much stress.
 The following example will try to reset your drop target bank up to
 three times on ball start:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drop_front:
 #!     number:

@@ -48,7 +48,7 @@ In this example, coil `c_player1_reel10` has number `0-0-0` meaning:
 Coil `c_player1_reel100` is driven by the same card, second output (that is wing 0, pin 1)
 
 
-``` mpf-config
+``` yaml
 #config_version=6
 
 hardware:

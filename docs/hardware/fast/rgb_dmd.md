@@ -14,7 +14,7 @@ for the [How to configure a "SmartMatrix" RGB LED DMD](../smartmatrix.md).
 You can copy the following example (and replace `com12` with your com
 port):
 
-``` mpf-config
+``` yaml
 hardware:
   rgb_dmd: smartmatrix
 smartmatrix:

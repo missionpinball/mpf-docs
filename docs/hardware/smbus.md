@@ -60,7 +60,7 @@ To configure MPF to use native I2C, you can add an entry to the
 default platform for your I2C devices and to instead use the `smbus2`
 platform, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   i2c: smbus2
 ```

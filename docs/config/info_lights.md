@@ -21,7 +21,7 @@ to tell the player whose turn it is, what ball they're on, etc.
 Here's an example `info_lights:` section from a machine configuration
 file:
 
-``` mpf-config
+``` yaml
 #! lights:
 #!   match00:
 #!     number:

@@ -33,7 +33,7 @@ MPF will benchmark latency and jitter of inputs, outputs and rules for
 your hardware setup (i.e. your controller with your OS and hardware).
 This needs to be configured:
 
-``` mpf-config
+``` yaml
 switches:
   s_test1:
     number:

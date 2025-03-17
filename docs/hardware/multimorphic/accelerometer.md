@@ -16,7 +16,7 @@ use to determine whether the machine is level).
 To use the accelerometer on the P3-ROC, add it to your machine-wide
 config file like this:
 
-``` mpf-config
+``` yaml
 accelerometers:
   p3_roc_accelerometer:
     number: 1

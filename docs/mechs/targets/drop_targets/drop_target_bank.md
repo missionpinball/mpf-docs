@@ -19,7 +19,7 @@ posted when the entire bank is up, down or in a mixed state.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drop_front:
 #!     number:

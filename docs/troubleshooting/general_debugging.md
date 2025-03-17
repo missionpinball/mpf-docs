@@ -76,7 +76,7 @@ a `debug` option. If in doubt check the
 instance if you suspect an issue with a switch add `debug: true` to
 it's config:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 42
@@ -88,7 +88,7 @@ not affect performance much.
 
 Most platforms support the same. For instance with a P-Roc:
 
-``` mpf-config
+``` yaml
 p_roc:
   debug: true
 ```

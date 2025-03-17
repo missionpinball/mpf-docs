@@ -17,7 +17,7 @@ Video about events in MPF:
 
 ## Basic Event Playing
 
-``` mpf-config
+``` yaml
 event_player:
   ball_starting:
     - cmd_flippers_enable
@@ -51,7 +51,7 @@ a target called "upper" to reset when a mode called "shoot_here"
 starts, you could create an entry like this in the shoot here mode's
 shoot_here.yaml mode configuration file:
 
-``` mpf-config
+``` yaml
 ##! mode: shoot_here
 event_player:
   mode_shoot_here_started: cmd_upper_target_reset
@@ -62,7 +62,7 @@ event_player:
 Events in the event player can be conditional, to allow precise control
 over when an event is played:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 event_player:
   mode_base_started{current_player.score>10000}:
@@ -82,7 +82,7 @@ completed.
 Conditions can also be applied to events within a list, to allow one
 event to trigger a variable number of handlers:
 
-``` mpf-config
+``` yaml
 ##! mode: base
 event_player:
   reenable_nonrecruit_modes:
@@ -115,7 +115,7 @@ device states, mathematical calculations) in events.
 An event name can use parenthetical values to dynamically determine the
 event.
 
-``` mpf-config
+``` yaml
 event_player:
   mode_dynamo_started:
     # Player variables can be dropped into event names
@@ -149,7 +149,7 @@ An event post can include arguments to provide event handlers with
 additional information about the event. An event configured as an object
 will post the object properties as its arguments:
 
-``` mpf-config
+``` yaml
 event_player:
   mode_carchase_started:
     # Objects can be expanded for a key/value pair per line
@@ -163,7 +163,7 @@ You can go a step further and include dynamic values as the values for
 event arguments. To indicate that an argument's value is dynamic, use
 the `value:` property.
 
-``` mpf-config
+``` yaml
 event_player:
   mode_dynamo_started:
     set_dynamo_phase:
@@ -182,7 +182,7 @@ to explicitly define types for the value's format. Acceptable types are
 **int**, **float**, **bool**, and **string**. If no type is configured,
 the value will be posted as a string.
 
-``` mpf-config
+``` yaml
 event_player:
   mode_dynamo_started:
     # This event arg will be correctly typed
@@ -203,7 +203,7 @@ priorties for events to be posted. This can be useful in scenarios such
 as where a player variable must be updated prior to a condtional check,
 so that they happen in the desired order.
 
-``` mpf-config
+``` yaml
 event_player:
   mode_dynamo_started:
     reset_pv_tokens_collected_to_0

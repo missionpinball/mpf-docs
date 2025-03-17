@@ -45,7 +45,7 @@ touching all your slides and widgets. For that reason it makes sense to
 define a [widget_style](styles.md) for all
 your fonts and sizes:
 
-``` mpf-mc-config
+``` yaml
 widget_styles:
   text_small:
     font_size: 15

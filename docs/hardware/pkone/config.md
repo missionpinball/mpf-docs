@@ -28,7 +28,7 @@ TODO: Finish this section
 To use MPF with a PKONE controller system, you need to configure your
 platform as `pkone` in your machine-wide config file, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: pkone
 ```

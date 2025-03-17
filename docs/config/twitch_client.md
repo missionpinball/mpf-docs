@@ -18,14 +18,14 @@ built-in Twitch chat monitor.
 Before using this plugin you must install the irc library with
 `pip3 install irc`
 
-``` mpf-config
+``` yaml
 twitch_client:
   user: TwitchBotAccount
   password: oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   channel: ChatChannel
 ```
 
-``` mpf-config
+``` yaml
 machine_vars:
   twitch_user:
     initial_value: 'TwitchBotAccount'

@@ -32,7 +32,7 @@ the case see [/mechs/plungers/index](classic_single_ball_no_shooter_lane.md).
 The first step is to add the drain and plunger switches to the
 `switches:` section of your machine config file.
 
-``` mpf-config
+``` yaml
 switches:
   s_drain:
     number: 01
@@ -50,7 +50,7 @@ Next, create the entry in your `coils:` section for the drain eject
 coil. Again, the name doesn't matter. We'll call it *c_drain_eject*
 and enter it like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_drain_eject:
     number: 03
@@ -103,7 +103,7 @@ ball device.
 
 Your drain device configuration should look now look like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -130,7 +130,7 @@ ball_devices:
 
 We also add the plunger as ball_device `bd_plunger_lane`:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -174,7 +174,7 @@ when you're running with one of the virtual hardware interfaces. To use
 it, simply add the section along with a list of the switches you want to
 start active. For example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_drain:
 #!     number: 01
@@ -183,7 +183,7 @@ virtual_platform_start_active_switches: s_drain
 
 ## Here's the complete config
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_drain:

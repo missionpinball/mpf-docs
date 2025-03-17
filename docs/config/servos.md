@@ -20,7 +20,7 @@ positions.
 Here's an example `servos:` section, with two servos defined called
 *servo1* and *servo2*:
 
-``` mpf-config
+``` yaml
 servos:
   servo1:
     servo_min: 0.1
@@ -130,7 +130,7 @@ converted to floating point) : `string`
 This is a sub-section mapping of servo positions to MPF event names. For
 example:
 
-``` mpf-config
+``` yaml
 #! servos:
 #!   servo1:
 #!     number: 1
@@ -177,7 +177,7 @@ Note that by default, *ball_starting* is a reset event, so if you don't
 want the servo to reset on the start of each ball, you can override that
 like this:
 
-``` mpf-config
+``` yaml
 #! servos:
 #!   servo1:
 #!     number: 1

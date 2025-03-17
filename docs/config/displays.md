@@ -23,7 +23,7 @@ DMD and also display an on-screen window, you'll actually have two
 Here's an example `displays:` section from *Demo Man* with two
 displays:
 
-``` mpf-config
+``` yaml
 displays:
   window:
     height: 200

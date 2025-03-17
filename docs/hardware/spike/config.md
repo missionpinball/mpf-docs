@@ -25,7 +25,7 @@ To use MPF with a SPIKE hardware, you need to configure your platform as
 `spike` in your machine-wide config file. You'll also need to add a
 "spike:" section with some additional settings:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: spike
 spike:
@@ -83,7 +83,7 @@ nodes:
 Once you got your game running you can increase the speed using
 `runtime_baud`:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: spike
 spike:

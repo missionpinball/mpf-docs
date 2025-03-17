@@ -19,7 +19,7 @@ interactive testing purposes.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #config_version=5
 switches:
   s_test1:

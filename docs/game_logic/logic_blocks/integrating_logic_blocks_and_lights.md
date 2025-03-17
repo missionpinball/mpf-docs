@@ -15,7 +15,7 @@ You might want to enable lights based on the state of a counter. This is
 an example for integrating lights via light_player using subscriptions
 on the value of the counter:
 
-``` mpf-config
+``` yaml
 lights:
   l_chest_matrix_green_2:
     number:

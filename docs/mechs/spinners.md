@@ -25,7 +25,7 @@ Part numbers:
 
 In MPF spinners are configured as follows:
 
-``` mpf-config
+``` yaml
 switches:
   s_my_spinner:
     number: 42    # number depends on your platform
@@ -40,7 +40,7 @@ It is very common to count the rotations of your spinner per player. You
 can either use a player variable or a counter for that. This is an
 example:
 
-``` mpf-config
+``` yaml
 switches:
   s_my_spinner:
     number: 42    # number depends on your platform

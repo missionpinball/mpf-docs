@@ -26,7 +26,7 @@ Note that there are no *height* and *width* settings here. The pixel
 size of your DMD is determined by the size of the `source:` display
 which drives the content for this DMD.
 
-``` mpf-config
+``` yaml
 displays:
   dmd:
     width: 128

@@ -33,7 +33,7 @@ specified for each asset.
 
 For example:
 
-``` mpf-config
+``` yaml
 videos:
   intro_video:
     width: 100

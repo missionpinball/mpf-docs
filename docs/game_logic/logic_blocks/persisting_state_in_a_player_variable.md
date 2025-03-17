@@ -27,7 +27,7 @@ state of the logic block itself, which is an object with
 attributes. Note the difference in accessing the logic block state as a
 dynamic value vs. placeholder text:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: my_mode
 counters:
   logic_block_1:

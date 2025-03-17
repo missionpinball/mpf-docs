@@ -48,7 +48,7 @@ use the I-N-D-Y lanes from the Indiana Jones pinball game. We'll assume
 that the machine has switches defined in the `switches:` config section
 for each of the top lanes, called `s_top_lane_1` through `s_top_lane_4`.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_top_lane_1:
 #!     number: 1
@@ -79,7 +79,7 @@ shots:
 We can create a [shot profile](../config/shot_profiles.md) for the top lanes that starts with the light on, and turns
 it off after the shot is hit.
 
-``` mpf-config
+``` yaml
 ##! mode: top_lanes
 shot_profiles:
   top_lane_profile:
@@ -105,7 +105,7 @@ show) for a specific shot, use the light that corresponds to that shot.
 We'll assume the machine has four lights defined in the `lights:`
 config section, called `l_top_lane_1` through `l_top_lane_4`
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_top_lane_1:
 #!     number: 1
@@ -159,7 +159,7 @@ together. In this case, we'll use our shot group to:
 * Trigger an event when all the shots are hit
 * Reset all the shots to be lit
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_top_lane_1:
 #!     number: 1
@@ -245,7 +245,7 @@ on *bonus_multiplier*.
 
 ## The full mode config code
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_top_lane_1:
 #!     number: 1

@@ -34,7 +34,7 @@ control up to six segment displays.
 
 Config looks like this:
 
-``` mpf-config
+``` yaml
 hardware:
   segment_displays: mypinballs
 mypinballs:
@@ -70,7 +70,7 @@ Part number:
 
 Config looks like this:
 
-``` mpf-config
+``` yaml
 hardware:
   segment_displays: mypinballs
 mypinballs:

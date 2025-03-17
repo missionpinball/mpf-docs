@@ -15,7 +15,7 @@ Related Config File Sections:
 To use MPF with OPP, you need to configure your platform as *opp*, like
 this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: opp
 ```
@@ -49,7 +49,7 @@ If you're using an OPP controller, you need to add the serial port to
 your MPF config. So if you plug in the OPP controller and see a port
 such as *COM7* appear, you'd set your config like this:
 
-``` mpf-config
+``` yaml
 opp:
   ports: COM7
 ```

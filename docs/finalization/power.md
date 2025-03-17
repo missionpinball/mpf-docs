@@ -107,7 +107,7 @@ class shutdown_computer(Mode):
 Create a `shutdown_computer.yaml` file in the `/config` folder with the
 following code:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number:

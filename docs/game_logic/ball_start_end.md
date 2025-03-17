@@ -21,7 +21,7 @@ delay the ball start and the ball will eject instantly.
 This might be useful to start music, flash some lights or start
 background shows:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 # in your mode
 mode:
@@ -48,7 +48,7 @@ This can simply be embedded in any mode (e.g. in your base mode).
 
 It is also very common to start a ball save on eject:
 
-``` mpf-config
+``` yaml
 playfields:
   playfield:
     default_source_device: bd_plunger
@@ -136,7 +136,7 @@ will never see the `ball_ended` event in a game mode. This approach will
 not delay the ball end and the next ball might eject in the meantime.
 Use it for very short sounds or light flashes:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 # in your mode
 mode:
@@ -173,7 +173,7 @@ To delay start and end of a ball use the following mode. It uses a
 be used to show longer sequences and delaying the game flow in the
 meantime:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 # in your mode
 mode:

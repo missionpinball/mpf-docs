@@ -17,7 +17,7 @@ strings which can be used in slides or widgets.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 text_strings:
   greeting: HELLO PLAYER. THIS IS YOUR BALL (ball)
 slides:

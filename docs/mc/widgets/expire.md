@@ -12,7 +12,7 @@ expire a widget:
 
 ## Option 1: In the widget or slide definition
 
-``` mpf-mc-config
+``` yaml
 widgets:
   my_widget:
     type: text
@@ -40,7 +40,7 @@ player.
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   my_widget:
     type: text
@@ -68,7 +68,7 @@ of time, remember you can use the widget player to remove a widget by
 name, which means you can use one event to show the widget and another
 event to remove it. For example:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   my_widget:
     type: text

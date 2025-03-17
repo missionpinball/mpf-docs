@@ -27,7 +27,7 @@ Like other hardware devices, you create a sub-entry for each
 accelerometer, then under there you configure additional settings. For
 example:
 
-``` mpf-config
+``` yaml
 accelerometers:
   test_accelerometer:
     number: 1

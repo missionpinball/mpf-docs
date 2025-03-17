@@ -47,7 +47,7 @@ The first part of the config file above is where you create your logical
 displays like we covered in the [Welcome to The Mission Pinball Framework!](../../index.md)
 section.
 
-``` mpf-mc-config
+``` yaml
 displays:
   window:
     width: 600
@@ -83,7 +83,7 @@ Next, we have a `window:` section which holds the settings for the
 actual on screen window itself. In this case we're just configuring it
 to be 800x600, with a window title of "Mission Pinball Framework".
 
-``` mpf-mc-config
+``` yaml
 window:
   width: 600
   height: 200
@@ -120,7 +120,7 @@ to show. In this case, we've decided to name that slide
 "window_slide_1". (Of course you can call this slide whatever you
 want.)
 
-``` mpf-mc-config
+``` yaml
 slides:
   window_slide_1:
 ##! test
@@ -136,7 +136,7 @@ The first widget will be a
 [dmd effect](../widgets/display/effects.md) which is a widget which renders a logical display onto a
 slide in a way that makes it look like a DMD:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 600
@@ -191,7 +191,7 @@ Next, we also added two more widgets to this slide---a text widget with
 the title of the machine, and a gray rectangle that's slightly larger
 than the DMD to give it a nice border.
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 600
@@ -232,7 +232,7 @@ Now we have a nice slide with the virtual DMD on it, but if you run MPF,
 you still won't see it because we didn't tell MPF to show that slide
 in the window. So that's what we're doing here:
 
-``` mpf-mc-config
+``` yaml
 #! displays:
 #!   window:
 #!     width: 600

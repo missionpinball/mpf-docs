@@ -37,7 +37,7 @@ sudo make install-python PYTHON=$(which python3)
 
 This is an example config:
 
-``` mpf-mc-config
+``` yaml
 hardware:
   platform: rpi_dmd
 rpi_dmd:

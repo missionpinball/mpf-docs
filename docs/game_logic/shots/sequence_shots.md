@@ -13,7 +13,7 @@ A sequence of switches which need to be hit in order with a timeout.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_ramp_entry:
     number: 1
@@ -46,7 +46,7 @@ on the [(sequence_shot_name)_hit](../../events/sequence_shot_hit.md) event of th
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_ramp_entry:
     number: 1

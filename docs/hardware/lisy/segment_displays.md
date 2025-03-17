@@ -13,7 +13,7 @@ Related Config File Sections:
 MPF can control all segment displays on your machine with LISY.
 Configure them like this:
 
-``` mpf-config
+``` yaml
 segment_displays:
   info_display:
     number: 0

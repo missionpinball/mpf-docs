@@ -26,7 +26,7 @@ allows the software to knock the target down.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_drop_target:
     number:

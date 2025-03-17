@@ -20,7 +20,7 @@ across all of MPF.
 
 For example:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
   driverboards: pdb
@@ -40,7 +40,7 @@ For example, if you want to use a P-ROC as the default for everything
 except for LEDs, which you want to be FadeCandy, you would do it like
 this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
   driverboards: pdb
@@ -71,7 +71,7 @@ For example, if you're using a FAST Pinball controller which can
 control up to 256 LEDs, but you also want to add some more LEDs that
 will be attached to a FadeCandy, you could set up your config like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
 lights:
@@ -88,7 +88,7 @@ platform (and the number 0 is a Fadecandy number).
 
 You could also invert this, like so:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
   lights: fadecandy

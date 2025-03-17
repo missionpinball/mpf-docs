@@ -17,7 +17,7 @@ different situations with different lights, slides, sounds, etc.
 To understand how tokens work, let's first look at a show that does not
 include any tokens, like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -34,7 +34,7 @@ loop to flash *led_01* between red and off.
 If you called this show *flash_red*, you could play it via the
 *show_player:* section of your config, like this:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event: flash_red
 ```
@@ -52,7 +52,7 @@ combination you'd ever want. :(
 This is where tokens come in. Consider a slightly modified version of
 the show above using a token instead of a hard-coded LED name:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -73,7 +73,7 @@ So in the second show here, when you run the show, you could tell it
 "replace the "leds" token with the value "led_02", which would make
 a show like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -91,7 +91,7 @@ For example, here's how you'd do it via the *show_player:*. (In this
 example, we also add `loops: -1` which will cause the show to loop
 (repeat) indefinitely.
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     flash_red:
@@ -105,7 +105,7 @@ run the above show multiple times (at the same time), passing different
 tokens to each one, meaning you could use the same show to flash lots of
 lights at once:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     flash_red:
@@ -124,7 +124,7 @@ show_player:
 You can also use tags to insert multiple values into a single token. For
 example, consider the following section from your machine config:
 
-``` mpf-config
+``` yaml
 lights:
   led_01:
     number: 00
@@ -138,7 +138,7 @@ You can see that both *led_01* and *led_02* have the *tag1* tag applied.
 So if you play the show above (with the *leds* token), you can actually
 pass the tag name to the token instead:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     flash_red:
@@ -149,7 +149,7 @@ show_player:
 
 This would result in a show that was equivalent to:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -171,7 +171,7 @@ names it was passed.
 
 For example, this is a perfectly valid show:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -184,7 +184,7 @@ For example, this is a perfectly valid show:
 In this case, you'd just pass a value for the *corndog* token when you
 play the show:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     flash_red:
@@ -202,7 +202,7 @@ the show starts.
 
 You can also pass multiple tokens. Consider the following show:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -216,7 +216,7 @@ Notice there are three tokens in this show: *led*, *color1*, and
 *color2*. You might call this show *color_cycle*, which you could then
 play like this:
 
-``` mpf-config
+``` yaml
 show_player:
   some_event:
     color_cycle:
@@ -239,7 +239,7 @@ INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <
 ```
 The event `player_turn_started` has for example the argument `number` for the number of the player whose turn has started.
 
-``` mpf-config
+``` yaml
 show_player:
   player_turn_started:
     player_num: #The name of the show to be started upon this event
@@ -252,7 +252,7 @@ The number of the player whose turn started is being displayed in the show where
 ### Variable values
 You can use as well variable values to be used in a token. For example if you want to access a player variable you can access it with `current_player.<variable>`
 
-``` mpf-config
+``` yaml
 show_player:
   player_turn_started:
     ball_num: #The name of the show to be started upon this event
@@ -267,7 +267,7 @@ You can as well access game variables, machine variables or settings. Just use t
 ### Formatting of variable values
 mpf is being build with Python, thus you find in some config files things which are Python specific. An example is how to tell mpf how to format the variable value. In some config files you might find something like this
 
-``` mpf-config
+``` yaml
 show_player:
   player_turn_started:
     ball_num: #The name of the show to be started upon this event

@@ -28,7 +28,7 @@ the chain, then the dash, then the switch input number. Note that the
 position number starts with zero, so the first IO board in the chain is
 0, the second is 1, etc.
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 0-0    # first board, switch 0
@@ -74,7 +74,7 @@ open and closed times.
 You can change any of these in the `fast:` section of your machine-wide
 config, like this:
 
-``` mpf-config
+``` yaml
 fast:
   default_quick_debounce_open: 2ms
   default_quick_debounce_close: 2ms
@@ -92,7 +92,7 @@ open and debounce closed settings on a per-switch basis. To do that,
 just add a `debounce_open:` and/or `debounce_close:` setting to an
 individual switch, like this:
 
-``` mpf-config
+``` yaml
 switches:
   my_switch:
     number: 1-0

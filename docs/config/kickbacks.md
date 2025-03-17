@@ -19,7 +19,7 @@ outlane.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_kickback:
     number: 1
@@ -87,7 +87,7 @@ of the coil for this device.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_kickback:
     number: 1

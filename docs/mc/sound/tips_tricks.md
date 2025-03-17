@@ -191,7 +191,7 @@ The basic concept is to add an event to the video that is triggered when
 the video is played and one when the video is stopped. Those events are
 then added to the `track_player` section of your config file:
 
-``` mpf-mc-config
+``` yaml
 track_player:
   my_video_is_playing:
     music:
@@ -226,7 +226,7 @@ period. Instead of using the target hit event to trigger the sound, the
 target hit event will trigger the counter which in turn will post a hit
 event that can be used to trigger the sound. Here is an example:
 
-``` mpf-mc-config
+``` yaml
 coils:
   reset_drop_targets:
     number: 1

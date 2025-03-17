@@ -54,7 +54,7 @@ add a section called `credits:`, and then under there, indent a few
 spaces (it doesn't matter how many, 2 or 4 or whatever you prefer) and
 add a section called `categories:`. Your file should now look like this:
 
-``` mpf-config
+``` yaml
 # in your machine wide config
 switches:
   s_coin_left:
@@ -148,7 +148,7 @@ the credits mode to the list of modes that are used in your machine. To
 do this, add `- credits` to the modes: section in your machine-wide
 config, like this:
 
-``` mpf-config
+``` yaml
 modes:
   - base
   - bonus
@@ -173,7 +173,7 @@ look at the built-in `credits` mode's config (at
 `mpf/modes/credits/config/credits.yaml`), you'll see it has the
 following `mode:` section:
 
-``` mpf-config
+``` yaml
 ##! mode: credits
 mode:
   code: mpf.modes.credits.code.credits.Credits
@@ -205,7 +205,7 @@ totally blank, add the required `#config_version=5` to the top line.
 There are several credit-related things you need to show the player on
 your display. Here are some settings you can use as a starting point:
 
-``` mpf-mc-config
+``` yaml
 switches:
   s_coin_left:
     number:
@@ -417,7 +417,7 @@ tiers. Luckily, there is the
 [more settings](../config/settings.md). Let us
 add two settings and use them in the credits config:
 
-``` mpf-config
+``` yaml
 # in your machine wide config
 switches:
   s_coin_left:
@@ -495,7 +495,7 @@ Here's the complete credits config file from the Demo Man sample game.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 # in your machine wide config
 #! displays:
 #!   window:

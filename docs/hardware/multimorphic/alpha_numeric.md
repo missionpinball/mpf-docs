@@ -13,7 +13,7 @@ Related Config File Sections:
 The P-ROC includes support four alpha-numeric displays (0-3). You can
 configure them in MPF:
 
-``` mpf-config
+``` yaml
 segment_displays:
   display1:
     number: 0

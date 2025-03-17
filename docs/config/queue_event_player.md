@@ -26,7 +26,7 @@ This section is particularly useful with the
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 queue_event_player:
   some_event:
     queue_event: my_queue

@@ -76,7 +76,7 @@ It's important to understand, however, that in order to achieve these different 
 
 This is an example of a shot in a mode:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   lane_l:
 #!     number:
@@ -116,7 +116,7 @@ For
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   lane_l:
 #!     number:

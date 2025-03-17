@@ -15,7 +15,7 @@ which allows a player to enter initials. To use the existing
 [high score mode](../../index.md) we can preset
 player initials using [player_vars:](../../config/player_vars.md).
 
-``` mpf-config
+``` yaml
 player_vars:
   initials:
     value_type: str

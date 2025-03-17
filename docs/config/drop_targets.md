@@ -19,7 +19,7 @@ group them into banks in the `drop_target_banks:` section.) Here's an
 example from *Judge Dredd*, with five drop targets we've given names
 *J*, *U*, *D*, *G*, and *E*.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   drop_target_j:
 #!     number:

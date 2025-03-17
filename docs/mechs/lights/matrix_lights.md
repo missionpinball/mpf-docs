@@ -36,7 +36,7 @@ Details differ by platform but the syntax for the number of such a light
 is usually `column:row` or `column:row` (see
 your platform for details). The config looks like this:
 
-``` mpf-config
+``` yaml
 lights:
   my_matrix_light:
     number: 2:10      # or 2/10

@@ -20,7 +20,7 @@ up logic which fires when any device with a certain tag is activated, for exampl
 
 For example, look at this config where we add a couple of tags to the start button switch:
 
-``` mpf-config
+``` yaml
 switches:
   mygame_switch_button_start:
     number: 1
@@ -61,7 +61,7 @@ way. To start we will give 100 points for every hit of a pop bumper.
 
 Firstly we define the popbumper switches.
 
-``` mpf-config
+``` yaml
 switches:
   mygame_popbumper_left:
     number: 55
@@ -80,7 +80,7 @@ with tags.
 
 Example with events:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   mygame_popbumper_left_active:
@@ -93,7 +93,7 @@ variable_player:
 
 Now with tags:
 
-``` mpf-config
+``` yaml
 ##! mode: my_mode
 variable_player:
   sw_mygame_popbumper:
@@ -120,7 +120,7 @@ ball search should not start.
 
 All we need to do is add a tag:
 
-``` mpf-config
+``` yaml
 switches:
   mygame_orbit_l:
     number: 55
@@ -137,7 +137,7 @@ example of this is a ball trough, as follows.
 
 ### Ball Device Tags
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_test1:
 #!     number: 1

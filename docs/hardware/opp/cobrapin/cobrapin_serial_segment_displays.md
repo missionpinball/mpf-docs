@@ -20,7 +20,7 @@ to segment display LEDs. Each LED channel is connected to a segment. You
 must add light_segment_displays as the segment_displays platform so MPF
 knows to send segment display commands to the light controller:
 
-``` mpf-config
+``` yaml
 hardware:
   segment_displays: light_segment_displays
 ```
@@ -34,7 +34,7 @@ creating a light_group using `neoseg_displays`. This is much easier
 than defining each light for each of the 120 segments in an 8-digit
 display.
 
-``` mpf-config
+``` yaml
 neoseg_displays:
   neoSeg_0:
     start_channel: 0-0-0
@@ -70,7 +70,7 @@ brightness of a NeoSeg display. This is especially handy when using
 NeoSeg displays of different colors since each color has a different
 default brightness. Use the whitepoint setting to vary the brightness:
 
-``` mpf-config
+``` yaml
 light_settings:
   color_correction_profiles:
     NeoSeg_orange:
@@ -82,7 +82,7 @@ light_settings:
 Once you have the light groups defined, you can arrange them into
 displays. The light group is a `neoseg_displays` object and the logical display a [`segment_displays`](../../../config/segment_displays.md) object. The  `segment_displays` object is not specific for Cobra serial segments, but being used for all kind of segment displays. You can combine multiple light groups into one logical display.  In other cases you might have a 1:1 mapping between light groups and segment displays. In the latter case it might seem to overcomplicate things but this concept gives you the flexibility you might need. These are the displays that can be targeted by a segment_display_player.
 
-``` mpf-config
+``` yaml
 segment_displays:
   neoSegTop:
     number: 1
@@ -114,7 +114,7 @@ Keep in mind that a `segment_display` is an own object regardless what `light_gr
 
 Below you find a complete example config file how to define your hardware. With this you can use a `segment_display_player` to diplay a certain text upon a given event.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:
@@ -201,7 +201,7 @@ light_settings:
 
 Below you find a complete example config file to display scored points. It is not using all possible hardware options like the example above, but it includes the display of a show on the LED segments. To keep this example simple the `neoseg_displays` object is mapped 1:1 to a `segment_displays` object.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:

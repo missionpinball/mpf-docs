@@ -26,7 +26,7 @@ of ball bonuses. The counter value lb_JAM_complete_count is used as the
 count value in the JAM_lanes_done{count==2} within the variable_player
 conditional event statements.
 
-``` mpf-config
+``` yaml
 # in your machine config
 #! switches:
 #!   s_top_lane_J:

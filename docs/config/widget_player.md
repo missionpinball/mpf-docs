@@ -23,7 +23,7 @@ frames) based on events being posted.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget_1: []
 widget_player:

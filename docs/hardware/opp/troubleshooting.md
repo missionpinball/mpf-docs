@@ -48,7 +48,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `opp` config
 section:
 
-``` mpf-config
+``` yaml
 opp:
   debug: true
 ```
@@ -63,7 +63,7 @@ processor boards can't answer MPF's polls fast enough) you may want to
 change it. This can be done by simply adding the `poll_hz:` line to the
 `opp:` section:
 
-``` mpf-config
+``` yaml
 opp:
   ports: COM7
   poll_hz: 50    # defaults to 100

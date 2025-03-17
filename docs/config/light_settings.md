@@ -20,7 +20,7 @@ If you are using LEDs in your machine you probably want to set
 and off very sharply and might look flickery. For instance, Stern uses a
 value of about 40ms for LEDs on modern machines:
 
-``` mpf-config
+``` yaml
 light_settings:
   default_fade_ms: 40
 ```
@@ -30,7 +30,7 @@ Different color channels might achive different brightnesses and white
 might look pinkish or blueish for example. You can set a
 color_correction_profile to compensate for that:
 
-``` mpf-config
+``` yaml
 light_settings:
   default_color_correction_profile: correction_profile_less_red
   color_correction_profiles:
@@ -51,7 +51,7 @@ You can also define more than one profile and configure them per
 `color_correction_profile` setting. This might be useful if you use
 different types of lights in your machine:
 
-``` mpf-config
+``` yaml
 light_settings:
   default_color_correction_profile: correction_profile_less_red
   color_correction_profiles:

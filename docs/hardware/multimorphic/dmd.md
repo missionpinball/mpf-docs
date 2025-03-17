@@ -43,7 +43,7 @@ one physical DMD.)
 To do this, create a section in your machine-wide config called `dmds:`,
 and then pick a name for the DMD, like this:
 
-``` mpf-config
+``` yaml
 dmds:
   my_dmd:
     shades: 16
@@ -114,7 +114,7 @@ For details on this, you can search the P-ROC forums (now defunct) for
 these settings. Then you can set them in the `p_roc: dmd_timing_cycles:`
 section of your machine-wide config, like this:
 
-``` mpf-config
+``` yaml
 p_roc:
   dmd_timing_cycles: 90, 190, 50, 377
 ```
@@ -152,7 +152,7 @@ Note that the [Using a traditional (single color) physical DMD](../../mc/display
 guide has more details on the window and slide settings used in this
 machine config.
 
-``` mpf-mc-config
+``` yaml
 hardware:
   platform: p_roc
 p_roc:

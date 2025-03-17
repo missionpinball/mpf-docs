@@ -28,7 +28,7 @@ chain to the controller.
 The `number:` setting for each servo is its board's Address ID number
 in the PKONE chain, then the dash, then the servo output number (11-14).
 
-``` mpf-config
+``` yaml
 servos:
   servo_1:
     number: 0-11    # Extension board with Address ID 0, servo 11 (the first one)

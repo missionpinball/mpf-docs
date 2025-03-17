@@ -13,7 +13,7 @@ Related Config File Sections:
 
 Example config for lane changing lights.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   lane_l:
 #!     number:

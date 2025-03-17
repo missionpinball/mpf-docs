@@ -25,7 +25,7 @@ your hardware).
 If you don't have or want phyiscal segment displays you can also
 emulate them using the following slides:
 
-``` mpf-mc-config
+``` yaml
 slides:
   segment_displays:
     widgets:

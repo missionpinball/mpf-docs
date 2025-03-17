@@ -17,7 +17,7 @@ Then after another second, the show is over. (Most likely you'd
 configure a show like this to *loop*, meaning this should could be used
 to flash *led1* on and off.)
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -42,7 +42,7 @@ could say that the example show above has three steps:
 
 Step 1:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -51,7 +51,7 @@ Step 1:
 
 Step 2:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: +1
   lights:
@@ -60,7 +60,7 @@ Step 2:
 
 Step 3:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: +1
 ```
@@ -121,7 +121,7 @@ Sometimes it's more convenient to specify the timing of a step in a
 show relative to the step before it. To do that, enter the *time* value
 with a + in front of it, like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: +1
 ```
@@ -134,7 +134,7 @@ You can mix-and-match incremental and absolute times in the same show,
 and you can also combine the plus sign for relative times with seconds
 or millisecond values. For example:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0   # plays right away, at 0 seconds
   # ...
@@ -160,7 +160,7 @@ useful in different situations.
 
 For example, the following to shows are identical:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -171,7 +171,7 @@ For example, the following to shows are identical:
 - time: +1
 ```
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - duration: 1
   lights:
@@ -199,7 +199,7 @@ what about your last step in the show? How long should it run for? If
 you just use time-based steps, you'd still want to specify a
 "duration" for the final step, like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:
@@ -221,7 +221,7 @@ you want to run and then hold something in their final state. For
 example, maybe you want a show that runs once (no loop) and flashes a
 light which then stays on. You could do that like this:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 - time: 0
   lights:

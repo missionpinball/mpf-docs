@@ -18,7 +18,7 @@ a configurable pattern called `type`.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! shows:
 #!   show1:
 #!     - duration: 1

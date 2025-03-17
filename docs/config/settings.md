@@ -18,7 +18,7 @@ which are configurable in
 
 This is an example:
 
-``` mpf-config
+``` yaml
 settings:
   replay_score:
     label: Replay Score

@@ -114,7 +114,7 @@ Part numbers:
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_popbumper_left:
     number: 7                 # depends on your platform

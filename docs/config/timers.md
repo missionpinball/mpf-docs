@@ -34,7 +34,7 @@ timers:
 Here's an example timers: section from the "Money Bags" mode in
 *Brooks 'n Dunn* which contains two timers:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 timers:
   mb_intro_timer:
@@ -69,7 +69,7 @@ flashing shot is hit.
 
 Here's another example of timers from *Demo Man's* skillshot mode:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 timers:
   mode_timer:

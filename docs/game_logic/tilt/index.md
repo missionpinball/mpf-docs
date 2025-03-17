@@ -41,7 +41,7 @@ for custom tilt logic or special modes.
 
 The minimal example is to just load the default `tilt` mode:
 
-``` mpf-config
+``` yaml
 modes:
   - tilt
 ```
@@ -51,7 +51,7 @@ modes:
 If you want to customize the mode you can also create a tilt mode inside
 your mode folder (config would be in `modes/tilt/config/tilt.yaml`):
 
-``` mpf-config
+``` yaml
 # in your machine config
 modes:
   - tilt
@@ -65,7 +65,7 @@ tilt:    # the following are the defaults only copy those if you want to change 
 
 ## Add operator settings to service mode
 
-``` mpf-config
+``` yaml
 # in your machine config
 modes:
   - tilt

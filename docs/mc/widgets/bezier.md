@@ -14,7 +14,7 @@ Here's an example:
 
 TODO This example just shows a blank slide in MPF 0.50?
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 slide_player:
   mc_ready:

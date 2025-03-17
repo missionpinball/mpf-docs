@@ -106,7 +106,7 @@ section of your machine config file. Create an entry in the `switches:`
 section for each switch in your trough, like this: (This example has six
 switches plus the jam switch. Yours may have more or less.)
 
-``` mpf-config
+``` yaml
 switches:
   s_trough1:
     number: 2
@@ -158,7 +158,7 @@ Next, create an entry in your `coils:` section for your trough's eject
 coil. Again, the name doesn't matter. We'll call this *c_trough_eject*
 and enter it like this:
 
-``` mpf-config
+``` yaml
 coils:
   c_trough_eject:
     number: 04
@@ -185,7 +185,7 @@ your machine config. (If you don't have that section add it now.)
 Then in your `ball_devices:` section, create an entry called
 `bd_trough:`, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -240,7 +240,7 @@ Indented under `bd_trough:`, create an entry called `ball_switches:` and
 then add a comma-separated list of all the switches in your trough, like
 this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -308,7 +308,7 @@ coil that MPF should fire when it wants to eject a ball from the trough.
 This should be the name of the coil you added in Step 2,
 *c_trough_eject* in our case:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -391,7 +391,7 @@ for now you have to add `trough`, `home`, and `drain` tags to your
 trough. You can specify the tags in any order, and your `tags:` entry
 should look something like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -439,7 +439,7 @@ ball_devices:
 If you have a jam switch, add a setting called `jam_switch:` and add it
 there, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -491,7 +491,7 @@ kick out two balls (the jammed ball and the one below it).
 
 So for our example, we'll set the jam pulse time to 15ms.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -558,7 +558,7 @@ when you're running with one of the virtual hardware interfaces. To use
 it, simply add the section along with a list of the switches you want to
 start active. For example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -608,7 +608,7 @@ full details since there are lots of different types of plungers.
 
 You add an eject target via the `eject_targets:` section, like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -682,7 +682,7 @@ measure how long the maximum time is until a ball cannot possibly return
 to your trough and plunger (with some safety margin). Usually this is
 about `2s - 4s` for a trough and `3s - 5s` for a plunger.
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 2
@@ -733,7 +733,7 @@ ball_devices:
 
 ## Here's the complete config
 
-``` mpf-config
+``` yaml
 switches:
   s_trough1:
     number: 2

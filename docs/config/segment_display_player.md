@@ -126,7 +126,7 @@ Note, that if you have set a duration in a show, that this duration **in**cludes
 
 Example:
 
-``` mpf-config
+``` yaml
 #! segment_displays:
 #!   display1:
 #!     number: 1

@@ -29,7 +29,7 @@ every switch which is hit by a ball that's active on the playfield.
 You do this in the `switches:` section of your machine config, like
 this:
 
-``` mpf-config
+``` yaml
 switches:
   s_trough1:
     number:

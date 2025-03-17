@@ -24,7 +24,7 @@ add. But other actions, like "start" or "stop" don't need values.
 
 Here's an example of control events in action:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 timers:
   my_timer:

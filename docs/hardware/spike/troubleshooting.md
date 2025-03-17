@@ -17,7 +17,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `spike` config
 section:
 
-``` mpf-config
+``` yaml
 spike:
   debug: true
 ```
@@ -52,7 +52,7 @@ ls /mnt
 
 Afterwards, add the following options to your spike config:
 
-``` mpf-config
+``` yaml
 spike:
   debug: true
   bridge_debug: true

@@ -52,7 +52,7 @@ add this to the second device (the one that feeds the plunger).
 
 Tell the playfield to use the plunger for new balls:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_plunger:
 #!     number: 10

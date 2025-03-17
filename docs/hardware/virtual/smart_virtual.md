@@ -20,7 +20,7 @@ To understand why the smart virtual platform exists, consider this
 simple machine config for a trough, a plunger lane, and keyboard key
 mappings to simulate their switches:
 
-``` mpf-config
+``` yaml
 switches:
   s_trough1:
     number: s31
@@ -128,7 +128,7 @@ MPF will use the smart virtual platform anyone you run it.
 You can also manually specify the smart virtual interface in the machine
 config, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: smart_virtual
 ```

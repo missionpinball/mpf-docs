@@ -29,7 +29,7 @@ different things.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 ball_saves:
   random_ball_save:
     active_time](5s

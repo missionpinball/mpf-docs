@@ -40,7 +40,7 @@ the MC reads to know what port it should listen on.
 
 Valid port numbers are anything between 1024 and 65535.
 
-``` mpf-config
+``` yaml
 # config_version=5
 
 bcp:

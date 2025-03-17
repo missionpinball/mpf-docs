@@ -40,7 +40,7 @@ Connect your stepper according to the Pololu manual.
 
 Afterwards, you can use steppers from MPF. This is an example:
 
-``` mpf-config
+``` yaml
 #config_version=5
 hardware:
   stepper_controllers: pololu_tic

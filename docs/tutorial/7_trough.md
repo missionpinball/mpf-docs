@@ -64,7 +64,7 @@ from filling up with too much gunk.
 For example, if you have a modern style trough with a jam switch, you'd
 add the debug setting like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_trough1:
 #!     number: 1

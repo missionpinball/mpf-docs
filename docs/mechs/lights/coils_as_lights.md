@@ -19,7 +19,7 @@ lights but it will be different from normal lights (and light shows).
 Alternatively, you can map the coils to a light (recommended). To map a
 coil as light you can use the following config:
 
-``` mpf-config
+``` yaml
 coils:
   your_light_coil:
     number: 42                 # number depends on your platform

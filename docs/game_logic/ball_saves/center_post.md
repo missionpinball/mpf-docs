@@ -23,7 +23,7 @@ logic. The diverter will already implement all that for us.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 # in your machine config
 coils:
   c_ball_save_post_up:

@@ -15,7 +15,7 @@ number from the game manual.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 lights:
   your_light:
     number: 03

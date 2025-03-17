@@ -18,7 +18,7 @@ tags, and specify power levels for coils that get held on. This section
 *can* be used in your machine-wide config files. This section *cannot*
 be used in mode-specific config files. Here's an example section:
 
-``` mpf-config
+``` yaml
 coils:
   flipper_right_main:
     number: A0-B0-0

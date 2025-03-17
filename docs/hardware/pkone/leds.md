@@ -66,7 +66,7 @@ configuration file and have MPF calculate the internal channel numbers
 for you (please note the `type` setting is required when using
 `start_channel`/`previous` settings):
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-1-0

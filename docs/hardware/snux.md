@@ -290,7 +290,7 @@ hardware section of your machine-wide config. You configure the main
 platform as *p_roc*, but then for *driverboards* you configure it as
 *snux*, like this:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual
   driverboards: wpc
@@ -305,7 +305,7 @@ driverboard. These options are set in the default *mpfconfig.yaml* file
 which means you don't have to add them to your own config file, but
 we're including them here just for completeness:
 
-``` mpf-config
+``` yaml
 coils:
   c_diag_led_driver:
     number: c24
@@ -334,7 +334,7 @@ via the Snux board, but they're technically separate settings since the
 architecture allows for future System 11 boards that may exist at some
 point. Here's the system11 configuration section from Pin\*Bot:
 
-``` mpf-config
+``` yaml
 system11:
   ac_relay_delay_ms: 75
   ac_relay_driver_number: c14
@@ -368,7 +368,7 @@ in the two System 11 machines we tested. (C14 in *Pin*Bot\* and C12 in
 
 The Snux board uses driver 23 to enable the flippers:
 
-``` mpf-config
+``` yaml
 digital_outputs:
   flipper_enable_relay:
     number: c23
@@ -417,7 +417,7 @@ switched solenoids which use the A/C relay, you also need to add an
 "A" or a "C" to the end of the driver number. Here's a snippet
 (incomplete) from the *Pin*Bot\* machine-wide config file:
 
-``` mpf-config
+``` yaml
 coils:
   outhole:
     number: c01a
@@ -471,7 +471,7 @@ column 1, 9-16 for column 2, etc. Basically since System 11 machines
 have an 8x8 lamp matrix, there should be no numbers 9 or 0 anywhere in
 your lamp numbers. Here's a snippet of the configuration from Pin\*Bot:
 
-``` mpf-config
+``` yaml
 lights:
   game_over_backbox:
     number: L11
@@ -508,7 +508,7 @@ So even though the manual says that the switch in column 5, row 6 is
 number 38, you actually enter "L56". Here's another snippet from
 *Pin*Bot\*:
 
-``` mpf-config
+``` yaml
 switches:
   left_outlane:
     number: S24
@@ -557,7 +557,7 @@ We have a separate How To guide which details how to setup a System 11
 aren't System 11), so you can read that for more details. The result
 though will look something like this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   outhole:
 #!     number: 1
@@ -611,7 +611,7 @@ expected.
 
 This is an example code block with the main Sys11 elements in.
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual
   driverboards: wpc

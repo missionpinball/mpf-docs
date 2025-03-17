@@ -44,7 +44,7 @@ In MPF, RGB.DMD works just like
 for details). Can copy the following example (and replace `com12` with
 your com port):
 
-``` mpf-config
+``` yaml
 hardware:
   rgb_dmd: smartmatrix
 smartmatrix:

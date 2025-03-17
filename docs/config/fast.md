@@ -18,7 +18,7 @@ that we have a how to guide which includes
 [all the FAST-specific settings](../hardware/fast/index.md) throughout your entire config file, so be sure to read that
 if you have FAST hardware.
 
-``` mpf-config
+``` yaml
 fast:
   ports: com3, com4, com5
 ```

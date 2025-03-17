@@ -24,7 +24,7 @@ media controller.)
 
 Here's an example of a typical sound configuration.
 
-``` mpf-config
+``` yaml
 machine_vars:
   master_volume:
     initial_value: 0.8
@@ -132,7 +132,7 @@ DEPRECATED! Will removed in future MPF versions.
 Master volume has been moved to the machine variable `master_volume`.
 You can use the following snippet:
 
-``` mpf-config
+``` yaml
 machine_vars:
   master_volume:
     initial_value: 0.8

@@ -21,7 +21,7 @@ To enable steppers you need to configure your PD-LED board in your
 `p_roc` section. Assuming your PD-LED has the ID 4 you can use the
 following config to enable and define two steppers:
 
-``` mpf-config
+``` yaml
 p_roc:
   pd_led_boards:
     4:

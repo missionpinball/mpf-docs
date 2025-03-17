@@ -23,7 +23,7 @@ A widget will use the style `(name)_default` if no other style is
 specified. For instance, a default style for all
 [text widgets](../mc/widgets/text/index.md) would look like:
 
-``` mpf-mc-config
+``` yaml
 widget_styles:
   text_default:
     font_size: 21
@@ -35,7 +35,7 @@ widget_styles:
 You can also specify re-usable styles and apply them to widgets. In the
 following example, the text "HELLO" will render at font size 100:
 
-``` mpf-mc-config
+``` yaml
 widget_styles:
   big_style:
     font_size: 100
@@ -49,7 +49,7 @@ slides:
 You can supply multiple styles to a single widget, and they will be
 applied in the order given.
 
-``` mpf-mc-config
+``` yaml
 widget_styles:
   warning_text:
     font_size: 12

@@ -15,7 +15,7 @@ title: "ball_saves:"
 The `ball_saves:` section of your config is where you create [ball save
 devices](#). Here's an example:
 
-``` mpf-config
+``` yaml
 ball_saves:
   default:
     active_time: 10s

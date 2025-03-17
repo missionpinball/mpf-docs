@@ -64,7 +64,7 @@ Most modern pinball machines have bonus scores based on multiple things.
 Use a [variable_player:](../../config/variable_player.md) to count
 some bonuses:
 
-``` mpf-config
+``` yaml
 ##! mode: mode1
 variable_player:
   ramp_shot_hit:
@@ -78,7 +78,7 @@ variable_player:
 Now go back into your bonus mode folder open up `bonus.yaml` config file
 (which should be empty at this point), and enter a basic config:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: bonus
 #config_version=5
 mode_settings:

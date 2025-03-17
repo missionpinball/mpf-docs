@@ -17,7 +17,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `fadecandy`
 config section:
 
-``` mpf-config
+``` yaml
 fadecandy:
   debug: true
 ```

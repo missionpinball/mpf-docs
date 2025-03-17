@@ -37,7 +37,7 @@ Some part numbers:
 
 Up-Down ramps are configured like a normal diverter:
 
-``` mpf-config
+``` yaml
 #! coils:
 #!   c_ramp1_up:
 #!     number:

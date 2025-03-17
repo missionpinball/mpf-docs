@@ -147,7 +147,7 @@ project. The config file is fully valid for the Cobra board connected to
 a Linux PC running MPF. If you have a Cobra board but run Windows or
 macOS you have to change the `ports`.
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 hardware:
@@ -304,7 +304,7 @@ have all inputs internally connected.
 
 ## Example Config
 
-``` mpf-config
+``` yaml
 #config_version=5
 
 #CobraPin Example Config

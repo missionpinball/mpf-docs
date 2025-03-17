@@ -8,7 +8,7 @@ title: How to configure Ball Search
 To enable ball search set `enable_ball_search` to True for
 your playfield(s). In most cases, this is as simple as this:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_flipper_left:
 #!     number:
@@ -41,7 +41,7 @@ you to configure their order in ball search using the
 [example ball_search](../../examples/index.md)). By default flippers are not included in ball search.
 However, you might want to enable it for upper playfield flippers:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_flipper_left:
 #!     number:

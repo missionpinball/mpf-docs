@@ -18,7 +18,7 @@ switches (similar to fliptronics).
 All you have to do is to configure the `game_over_relay` (which is
 connected as light) in LISY1 and LISY80:
 
-``` mpf-config
+``` yaml
 digital_outputs:
   game_over_relay:
     number: 1
@@ -30,7 +30,7 @@ digital_outputs:
 In LISY35 the same relay is connected to a driver. You can use this
 example to enable flippers:
 
-``` mpf-config
+``` yaml
 digital_outputs:
   flipper_enabling_relay:
     type: driver

@@ -23,7 +23,7 @@ the actual visual output of the logical display).
 
 Here's an example:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 displays:
   window:
@@ -115,7 +115,7 @@ the [effects](effects.md) documentation.
 
 An example of a display widget with a dmd effect:
 
-``` mpf-mc-config
+``` yaml
 #config_version=5
 #! displays:
 #!   window:

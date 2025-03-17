@@ -12,7 +12,7 @@ This error occurs when MPF expects a boolean value (i.e. `true` or
 For instance, the `debug` setting for a
 [switch](../config/switches.md) is a boolean:
 
-``` mpf-config
+``` yaml
 switches:
   s_flipper_left:
     number: 1

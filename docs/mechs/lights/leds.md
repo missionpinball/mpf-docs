@@ -76,7 +76,7 @@ Video about wiring of lights:
 
 You can define serial LEDS in MPF as [lights:](../../config/lights.md):
 
-``` mpf-config
+``` yaml
 lights:
   my_ws2811:
     number: 0         # first LED in chain (with three channels)
@@ -96,7 +96,7 @@ interal LEDs). The second will map to LED four to six and so on.
 The config above is equivalent to the following (again numbers may be
 different per platform):
 
-``` mpf-config
+``` yaml
 lights:
   my_ws2811:
     channels:
@@ -120,7 +120,7 @@ RGBW LEDs are special in most serial LED controllers since the
 controller assumes that every LED has exactly three channels. Therefore,
 you have to assign the channels directly:
 
-``` mpf-config
+``` yaml
 lights:
   my_rgbw_serial_led:
     channels:
@@ -148,7 +148,7 @@ any non-three-channel LEDs) as a separate chain.
 
 Starting with MPF 0.54 there is a new syntax to chain lights:
 
-``` mpf-config
+``` yaml
 lights:
   led_0:
     start_channel: 0-0    # the exact number format depends on your platform
@@ -174,7 +174,7 @@ channel for example. MPF cannot guess your hardware layout in most
 platforms. Therefore your have to explicitly tell MPF your channel
 layout:
 
-``` mpf-config
+``` yaml
 lights:
   my_red_only_insert:
     channels:
@@ -197,7 +197,7 @@ lights:
 You can also have multiple channels per color (if you do not want to
 make them different lights):
 
-``` mpf-config
+``` yaml
 lights:
   multi_white_channels:
     channels:
@@ -210,7 +210,7 @@ lights:
 With parallel LED you can also use `start_channel` to define the color
 (starting from MPF 0.54):
 
-``` mpf-config
+``` yaml
 lights:
   my_red_only_insert:
     start_channel: 0    # the exact number format depends on your platform

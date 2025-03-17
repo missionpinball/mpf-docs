@@ -36,7 +36,7 @@ high score mode without entering initials.
 
 This is an example (for machines with display):
 
-``` mpf-mc-config
+``` yaml
 ##! mode: my_mode
 #! variable_player:
 #!   score_100:
@@ -270,7 +270,7 @@ Additionally, there will be `loop1_label`, `loop1_value` and
 high scores. This is an example of an attract mode which shows high
 scores:
 
-``` mpf-mc-config
+``` yaml
 # in your machine wide config file
 widget_styles:
   attract_mode_high_score_display_label:

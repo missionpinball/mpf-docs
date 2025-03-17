@@ -39,7 +39,7 @@ groups at the same time.
 
 Here's a sample *shots:* section from a config file:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   lane_l:
 #!     number:
@@ -120,7 +120,7 @@ state is `0`.
 For instance in the following example `set_state_one` will set the state
 to `1`, which is the second state:
 
-``` mpf-config
+``` yaml
 shots:
   shot_with_control_events:
     control_events:
@@ -142,7 +142,7 @@ it might cause issues during multiball.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_my_shot:
 #!     number:
@@ -290,7 +290,7 @@ that's run when this shot is in a certain state.
 
 For example, consider the following shot config:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   switch1:
 #!     number:
@@ -321,7 +321,7 @@ could apply to any shot.
 For example, imagine if you wanted to create a shot to flash an LED
 between red and off. It might look like this:
 
-``` mpf-config
+``` yaml
 # show to flash an LED
 shows:
   flash_light:

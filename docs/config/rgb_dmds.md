@@ -27,7 +27,7 @@ the content for this DMD.
 
 Here's an example:
 
-``` mpf-config
+``` yaml
 displays:
   dmd:
     width: 128

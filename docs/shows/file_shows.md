@@ -26,7 +26,7 @@ Here is a sample show file. This file might be called something like
 `flash_red.yaml` and would be located in your machine's `/shows`
 folder:
 
-``` mpf-config
+``` yaml
 ##! show: my_show
 #show_version=5
 - time: 0

@@ -18,7 +18,7 @@ devices which transfer balls between
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_transfer:
     number:

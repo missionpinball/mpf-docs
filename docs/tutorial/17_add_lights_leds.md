@@ -78,7 +78,7 @@ to names that actually exist for you. If you have matrix lights, add
 entries to your `attract_light_show.yaml` file so that it looks
 something like like this:
 
-``` mpf-config
+``` yaml
 ##! show: attract_light_show
 #show_version=5
 - duration: 1
@@ -111,7 +111,7 @@ different colors for each light at each step. For example, if you just
 wanted to have a show that cycled three RGB LEDs through the colors of
 the rainbow, you could create a show like this:
 
-``` mpf-config
+``` yaml
 ##! show: attract_light_show
 #show_version=5
 - duration: 1
@@ -174,7 +174,7 @@ will exit and print a warning about the duplicate so you can fix it.)
 MPF offers a way around this though, in that you can add a `.1` to the
 end of the event name, like this:
 
-``` mpf-config
+``` yaml
 ##! mode: test_mode
 #config_version=5
 show_player:
@@ -252,7 +252,7 @@ it. The YAML processor doesn't know what to do?
 To fix this, we need to make a slight change to our YAML file, like
 this:
 
-``` mpf-config
+``` yaml
 ##! mode: test_mode
 #config_version=5
 show_player:
@@ -269,7 +269,7 @@ setting under there.
 If you wanted to, you could consolidate the duplicate
 `mode_attract_started` entries like so:
 
-``` mpf-config
+``` yaml
 ##! mode: test_mode
 #config_version=5
 show_player:

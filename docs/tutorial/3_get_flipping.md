@@ -31,7 +31,7 @@ line, type four spaces (these must be spaces, not a tab), and write
 
 So now your `config.yaml` file should look like this:
 
-``` mpf-config
+``` yaml
 #config_version=6
 
 switches:
@@ -133,7 +133,7 @@ hardware numbering works on each of the various hardware platforms MPF
 supports, so check that out now and enter your real numbers, not the
 made-up ones we use below.
 
-``` mpf-config
+``` yaml
 switches:
   s_left_flipper:
     number: 0  # this can be blank if you don't have physical hw yet
@@ -160,7 +160,7 @@ Here's an example of how you'd enter your coils for a machine with two
 dual-wound coils. If you have single-wound coils, or you have more than
 two flippers, refer to the [Flippers](../mechs/flippers/index.md) documentation for examples of how to configure them.
 
-``` mpf-config
+``` yaml
 coils:
   c_flipper_left_main:
     number: 0  # again, these numbers will probably be different for you
@@ -210,7 +210,7 @@ flipper. Since the flippers belong to a playfield we also create this
 now. Here's what you would create based on the switches and coils
 we've defined so far:
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 0
@@ -403,7 +403,7 @@ booting up, rather than them waiting for a ball to start.) So now the
 have single-wound coils, then you won't have the `hold_coil:` entries
 here.)
 
-``` mpf-config
+``` yaml
 #! switches:
 #!   s_left_flipper:
 #!     number: 0
@@ -470,7 +470,7 @@ list above.
 
 FAST Pinball with FAST IO driver boards:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: fast
   driverboards: fast
@@ -485,7 +485,7 @@ switches:
 
 P-ROC installed in an existing WPC machine:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p_roc
   driverboards: wpc
@@ -497,7 +497,7 @@ switches:
 
 P3-ROC with P-ROC driver & switch boards:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: p3_roc
   driverboards: pdb
@@ -510,7 +510,7 @@ switches:
 In case you are using
 [the Virtual Pinball (VPX) Platform](../hardware/virtual/virtual_pinball_vpx.md) the config file will look like:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual_pinball
 
@@ -562,7 +562,7 @@ affect your coil and switch numbers). But here's the general idea.
 (This is the exact file we use with a FAST WPC controller plugged into
 an existing *Demolition Man* machine.)
 
-``` mpf-config
+``` yaml
 #config_version=6
 
 hardware:

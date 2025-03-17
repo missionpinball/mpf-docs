@@ -39,7 +39,7 @@ python register_vpcom.py --register
 
 In your `config.yaml` configure virtual_pinball as your platform:
 
-``` mpf-config
+``` yaml
 hardware:
   platform: virtual_pinball
 ```

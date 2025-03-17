@@ -19,7 +19,7 @@ running `mpf -X`).
 
 This is an example:
 
-``` mpf-config
+``` yaml
 switches:
   s_ball_switch1:
     number:

@@ -24,7 +24,7 @@ that show step.
 
 Example from a config file:
 
-``` mpf-config
+``` yaml
 blinkenlight_player:
   some_event:
     my_blinkenlight1:
@@ -47,7 +47,7 @@ removed from the blinkenlight.
 
 Example blinkenlight player from a show:
 
-``` mpf-config
+``` yaml
 ##! show: test
 - time: 0
   blinkenlights:

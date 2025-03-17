@@ -11,7 +11,7 @@ your config sections.
 
 For instance, every switch has to have a number in MPF:
 
-``` mpf-config
+``` yaml
 switches:
   s_ball_switch1:
     number: 1

@@ -7,7 +7,7 @@ title: Match Mode
 
 To use the built-in MPF match mode add this config:
 
-``` mpf-mc-config
+``` yaml
 ##! mode: match
 # in modes/match/config/match.yaml
 queue_relay_player:

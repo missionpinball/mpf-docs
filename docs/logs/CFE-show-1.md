@@ -19,7 +19,7 @@ your global config folder.
 
 This is how a file show should look:
 
-``` mpf-config
+``` yaml
 ##! show: flash_red
 #show_version=5
 - duration: 1
@@ -38,7 +38,7 @@ MPF uses the filename as show name. See
 
 This is how a show inside your config should look:
 
-``` mpf-config
+``` yaml
 shows:
   flash_red:
     - duration: 1

@@ -26,7 +26,7 @@ to be shown (or removed) based on events being posted.
 
 This is an example:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 #!   slide2: []
@@ -92,7 +92,7 @@ Queues the slide for playback immediately. If an existing queued slide is playin
 For example, to remove *slide1* when the event *remove_slide_1* is
 posted:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 slide_player:
@@ -103,7 +103,7 @@ slide_player:
 
 You can also specify a transition for the removal, like this:
 
-``` mpf-mc-config
+``` yaml
 #! slides:
 #!   slide1: []
 slide_player:
@@ -129,7 +129,7 @@ and the slide will still be removed when the timer expires.
 When queueing a slide with the `action: queue` config, it's important to include an expiration time or else the queue will never advance.
 
 
-``` mpf-mc-config
+``` yaml
 slides:
   base:
     widgets:

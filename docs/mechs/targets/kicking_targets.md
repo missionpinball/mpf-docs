@@ -18,7 +18,7 @@ with a coil for kicking. Used rarely, these targets look like stationary
 targets, but when hit they kick the back in the opposite direction much
 like a [slingshot](../slingshots.md) or [bumper](../pop_bumpers/index.md).
 
-``` mpf-config
+``` yaml
 switches:
   s_kicking_target:
     number: 1

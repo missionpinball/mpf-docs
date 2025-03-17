@@ -70,7 +70,7 @@ described in the
 [troubleshooting guide](../../troubleshooting/index.md) this is done by adding `debug: true` to your `fast` config
 section:
 
-``` mpf-config
+``` yaml
 fast:
   debug: true
 ```

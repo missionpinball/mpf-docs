@@ -19,7 +19,7 @@ will not provide any position feedback to the software side.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 servos:
   servo1:
     servo_min: 0.1

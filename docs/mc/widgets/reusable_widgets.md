@@ -22,7 +22,7 @@ You probably know that you can have a `slides:` section of your config
 (either machine-wide or mode-specific configs), and when you define a
 slide, you can specify what widgets are on that slide, like this:
 
-``` mpf-mc-config
+``` yaml
 slides:
   my_slide:
     widgets:
@@ -58,7 +58,7 @@ machine-wide or a mode config file.)
 
 For example:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   laughing_jackal:
     - type: image
@@ -96,7 +96,7 @@ slide, etc.)
 If you just want to add your widget to whichever slide is current on the
 default display, you can use the "express" config, like this:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   laughing_jackal: []
 #!   another_widget: []
@@ -124,7 +124,7 @@ If you want to build a slide and include a reusable widget, you can
 reference the widget's name in your slide config by declaring `widget:`
 instead of `type:`.
 
-``` mpf-mc-config
+``` yaml
 widgets:
   jackpot_value_widget:
     - type: text
@@ -152,7 +152,7 @@ If you want to add your widget to a particular slide (versus whatever
 slide happens to be showing at the moment), you can do so by specifying
 that slide name in the `widget_player:`. For example:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   laughing_jackal: []
 widget_player:
@@ -171,7 +171,7 @@ Remember you can add as many events and widgets as you want to the
 `widget_player:` section of your config, and you can even mix-and-match
 formats, like this:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   laughing_jackal: []
 #!   another_widget: []
@@ -188,7 +188,7 @@ Rather than specifying a particular slide to add your widget to, you can
 target a display, and the widget will be added "on top" of whatever
 slide is currently being shown:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   laughing_jackal: []
 #! displays:
@@ -221,7 +221,7 @@ For example, if you use a widget for the tilt warning like in the
 previous example, you'd probably want that widget to be removed after a
 few seconds, which you could do like this:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   tilt_warning: []
 widget_player:
@@ -251,7 +251,7 @@ You can also use the widget player to remove named widgets from a slide
 that had been previous added. To do this, just add an `action: remove`
 setting to the widget player, like this:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   laughing_jackal: []
 widget_player:
@@ -272,7 +272,7 @@ widget. But you can actually define multiple widgets in a named widget
 (essentially meaning that your named widget is really a named group of
 widgets. For example:
 
-``` mpf-mc-config
+``` yaml
 widgets:
   widget3:
     - type: text
@@ -315,7 +315,7 @@ You can also add multiple named widgets from a single event. This is
 nice if you want to add widgets to multiple displays or slides at the
 same time. For example:
 
-``` mpf-mc-config
+``` yaml
 #! widgets:
 #!   widget1: []
 #!   widget2: []
@@ -353,7 +353,7 @@ with the standard
 For example, using the player variable "hero_class" to pick a text
 image (but could be an image widget as well):
 
-``` mpf-mc-config
+``` yaml
 widgets:
   hero_portrait_rogue:
     - type: text
@@ -395,7 +395,7 @@ include. In the following example from a game with different multiballs,
 the event `mball_lock_lit` might post with either "angel"
 or "demon" as the `mball_name` parameter.
 
-``` mpf-mc-config
+``` yaml
 slide_player:
   mball_lock_lit: mball_lock_slide
 slides:

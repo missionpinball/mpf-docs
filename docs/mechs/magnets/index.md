@@ -70,7 +70,7 @@ FETs with flyback diode and a logic buffer for further protection.
 
 This is an example:
 
-``` mpf-config
+``` yaml
 coils:
   magnet_coil:
     number:
